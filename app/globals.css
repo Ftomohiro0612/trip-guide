@@ -28,3 +28,42 @@ body {
     Meiryo, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
+
+/* Skip link — visible on focus only */
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: 0.75rem;
+  z-index: 100;
+  background: var(--brand);
+  color: #ffffff;
+  padding: 0.5rem 0.875rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  font-size: 0.75rem;
+  transform: translateY(-200%);
+  transition: transform 0.15s ease;
+}
+.skip-link:focus {
+  transform: translateY(0);
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+/* Consistent visible focus across the site */
+*:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

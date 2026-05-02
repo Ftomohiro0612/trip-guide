@@ -10,7 +10,7 @@ import {
 } from "@/lib/facilities";
 import { categoryIcon, prefectureEmoji, prefectureGradients } from "@/lib/icons";
 import { prefectureDescriptions } from "@/lib/descriptions";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 
 interface Props {
@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${meta.name}の子供向け遊び場 ${meta.count}選`,
     description: `${desc.lead} 雨の日OK・無料・年齢別など、家族で楽しめる${meta.count}施設をまとめて掲載。`,
+    alternates: { canonical: `/prefecture/${meta.id}` },
   };
 }
 
@@ -60,6 +61,13 @@ export default async function PrefecturePage({ params }: Props) {
           { name: "ホーム", href: "/" },
           { name: meta.name },
         ]}
+      />
+      <ItemListJsonLd
+        name={`${meta.name}の子供向け遊び場`}
+        items={list.map((f) => ({
+          name: f.name,
+          href: `/facilities/${f.slug}`,
+        }))}
       />
       <section className={`relative bg-gradient-to-br ${gradient} text-white`}>
         <div className="absolute inset-0 bg-black/10" />

@@ -16,6 +16,12 @@ export const metadata: Metadata = {
   title: "施設一覧",
   description:
     "静岡・長野・山梨の子供向け遊び場を、エリア・カテゴリ・雨対応・料金などで絞り込み検索。",
+  alternates: { canonical: "/facilities" },
+  robots: {
+    // Don't index filtered variants
+    index: true,
+    follow: true,
+  },
 };
 
 interface Props {

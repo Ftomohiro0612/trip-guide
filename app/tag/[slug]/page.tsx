@@ -5,7 +5,7 @@ import FacilityCard from "@/components/FacilityCard";
 import { facilities, prefectures } from "@/lib/facilities";
 import { TAG_META, getTagMetaBySlug } from "@/lib/tags";
 import { prefectureEmoji } from "@/lib/icons";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -48,6 +48,13 @@ export default async function TagPage({ params }: Props) {
           { name: "タグ", href: "/" },
           { name: meta.title },
         ]}
+      />
+      <ItemListJsonLd
+        name={meta.title}
+        items={list.map((f) => ({
+          name: f.name,
+          href: `/facilities/${f.slug}`,
+        }))}
       />
       <section className="relative bg-gradient-to-br from-sky-400 via-cyan-400 to-emerald-400 text-white">
         <div className="absolute inset-0 bg-black/10" />

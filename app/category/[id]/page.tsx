@@ -10,7 +10,7 @@ import {
 } from "@/lib/facilities";
 import { categoryDescriptions } from "@/lib/descriptions";
 import { categoryIcon, prefectureEmoji } from "@/lib/icons";
-import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -28,6 +28,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${meta.name} ${meta.count}選 (静岡・長野・山梨)`,
     description: `${desc} 静岡・長野・山梨の${meta.name}を${meta.count}施設まとめて掲載。`,
+    alternates: { canonical: `/category/${meta.id}` },
   };
 }
 
@@ -51,6 +52,13 @@ export default async function CategoryPage({ params }: Props) {
     <div>
       <BreadcrumbJsonLd
         items={[{ name: "ホーム", href: "/" }, { name: meta.name }]}
+      />
+      <ItemListJsonLd
+        name={meta.name}
+        items={list.map((f) => ({
+          name: f.name,
+          href: `/facilities/${f.slug}`,
+        }))}
       />
       <section className="relative bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-400 text-white">
         <div className="absolute inset-0 bg-black/10" />

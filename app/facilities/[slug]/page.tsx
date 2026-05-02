@@ -31,6 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: `${facility.name} (${facility.prefecture})`,
     description: `${desc} / 対象年齢: ${facility.target_age} / 雨対応: ${facility.rain_friendly}`,
+    alternates: { canonical: `/facilities/${facility.slug}` },
   };
 }
 
