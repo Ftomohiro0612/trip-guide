@@ -162,7 +162,9 @@ function mergeRow(
 
   if (val(row, "料金タイプ")) {
     const fee = val(row, "料金タイプ");
-    const isFree = fee === "無料";
+    // "無料(時之栖内)" や "無料(一部有料)" のような括弧付きも free 扱い。
+    // 入口・基本利用が無料かどうかが頭の単語で決まるため startsWith で判定。
+    const isFree = fee.startsWith("無料");
     if (base.fee_type !== fee) {
       base.fee_type = fee as Facility["fee_type"];
       changes.push("fee_type");
