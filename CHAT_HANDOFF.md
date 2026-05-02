@@ -126,6 +126,8 @@
 | 〃 | Vercel CLI セットアップ(v53.1.0、プロジェクトリンク済み) |
 | 〃 | Search Console プロパティ追加・HTML ファイル方式で所有権確認完了 |
 | 〃 | `public/google53d37859cb4831ab.html` を配置、`/sitemap.xml` 提出 → 「成功しました」確認 |
+| 〃 | 詳細ページ:ヒーロー画像をフル不透明度に変更、写真ギャラリーセクション新設 |
+| 〃 | データ運用を Google スプレッドシート→JSON 同期に切替(`npm run export-csv` / `npm run sync-sheet`) |
 
 ---
 
@@ -167,7 +169,9 @@
 - `data/facilities_data.json` — 151施設の最新データ(緯度経度・画像パス入り)
 - `data/facilities_data.json.bak` — Google ジオコード前のスナップショット
 - `data/facilities_data.json.images.bak` — 画像追加前のスナップショット
-- `scripts/` — geocode.ts / fetch-wiki-images.ts / cleanup-wiki-images.mjs / optimize-images.mjs / fetch-images.ts (Places New 対応、未実行)
+- `scripts/` — geocode.ts / fetch-wiki-images.ts / cleanup-wiki-images.mjs / optimize-images.mjs / fetch-images.ts (Places New 対応、未実行) / **export-to-csv.ts** / **sync-from-sheet.ts**
+- `data/facilities_master.csv` — JSON から書き出した完全版 CSV(スプレッドシート初期化用)
+- 詳しい運用フローは `HANDOFF.md` の「データ運用フロー」セクション参照
 - このメモ(`CHAT_HANDOFF.md`)
 
 ## 環境変数 (.env.local / Vercel)

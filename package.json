@@ -13,7 +13,9 @@
     "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",
     "fetch-images": "node --env-file=.env.local scripts/fetch-images.ts",
     "fetch-wiki": "node scripts/fetch-wiki-images.ts",
-    "fetch-wiki:check": "node scripts/fetch-wiki-images.ts --dry-run"
+    "fetch-wiki:check": "node scripts/fetch-wiki-images.ts --dry-run",
+    "export-csv": "node scripts/export-to-csv.ts",
+    "sync-sheet": "node scripts/sync-from-sheet.ts"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",
@@ -29,6 +31,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "csv-parse": "^6.2.1",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
     "sharp": "^0.34.5",

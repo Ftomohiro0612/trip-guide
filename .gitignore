@@ -46,6 +46,10 @@ next-env.d.ts
 # data backups (keep originals only)
 data/*.bak
 data/*.json.bak
+data/*.bak.*.json
+
+# derived CSV (regenerate with `npm run export-csv`)
+data/facilities_master.csv
 
 # script logs
 scripts/*-failures.log

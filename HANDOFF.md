@@ -209,6 +209,92 @@ trip-guide/
 
 ---
 
+## データ運用フロー(Google スプレッドシート ⇄ JSON)
+
+施設データの編集は **Google スプレッドシートをマスター** として運用する。
+JSON は同期スクリプトで生成される派生物として扱う(直接編集しない方針)。
+
+### スプレッドシート
+
+- **シートID**: `1p4bqL1Oq89k5c-9Wa0REXd8BojzUBBXfF5-iSYEeeH4`
+- **公開設定**: 「リンクを知っている全員が閲覧可」(認証なしで CSV ダウンロード可)
+- **CSV エクスポートURL**:
+  `https://docs.google.com/spreadsheets/d/{シートID}/export?format=csv`
+
+### 列の並び(全 18 列)
+
+```
+id | 県 | カテゴリ | 施設名 | 所在地 | 屋内・屋外 | 雨天対応 |
+料金タイプ | 大人料金目安 | 子供料金目安 | おすすめポイント詳細 |
+対象年齢 | URL/参考 | lat | lng | image | image_credit | tags
+```
+
+- `id`: 整数(JSON との同期キー、空欄なら新規追加)
+- `料金タイプ`: 「無料」または「有料」(`is_free` フラグはここから自動算出)
+- `lat` / `lng`: 緯度経度(数値)
+- `image`: `/images/facilities/facility-XXX.jpg` のような相対パス
+- `image_credit`: HTML タグを含むクレジット文字列
+- `tags`: カンマ区切り(例: `屋外,小学生向け`)
+
+### 通常運用
+
+スプレッドシートで編集 → ターミナルで以下:
+
+```powershell
+npm run sync-sheet
+```
+
+これで:
+1. `data/facilities_data.json.bak.{timestamp}.json` にバックアップ
+2. 公開URL から最新CSVを取得
+3. id をキーに既存JSONとマージ(空セルは既存値維持)
+4. JSON を上書き、変更点をログ出力
+
+最後に手動で `git commit` + `git push`(Vercel が自動デプロイ)。
+
+### マージのルール
+
+| 状況 | 挙動 |
+|---|---|
+| シート行に id があり JSON にも存在 | 各列の値で上書き(空セルはスキップ → 既存維持) |
+| シート行に id がない / JSON に存在しない id | 新規追加(id 自動採番、`prefecture_id`/`category_id`/`slug`/`is_free` は派生計算) |
+| JSON にあってシートにない | **削除しない**(警告ログのみ、JSONに保持) |
+| 重複id | 最初のものを採用、以降は警告 |
+| 県・カテゴリが既知マスターに無い | 警告のみ(値は格納される) |
+
+### スプレッドシート初期化(初回のみ)
+
+スプレッドシートに 18 列が揃っていない時点で sync を走らせると **151件すべてが新規扱い**になり、JSON 内の既存IDと重複した別IDで増殖する。最初に CSV を一括流し込みする手順:
+
+```powershell
+# 1. 現在の JSON から完全版 CSV を生成
+npm run export-csv
+# → data/facilities_master.csv (18列、UTF-8 BOM付き)
+
+# 2. このファイルを開いて全選択コピー
+#    Google スプレッドシートで「ファイル → インポート → ファイルを置換」
+#    または既存シートの A1 に貼り付け
+```
+
+これでスプレッドシート側も 18 列・151 行の完全版になり、以降は `npm run sync-sheet` だけで往復できる。
+
+### 新規追加施設の補完
+
+スプレッドシートで施設を新規追加した直後は `lat`/`lng`/`image` が空。`npm run sync-sheet` 後に:
+
+```powershell
+# 緯度経度: Nominatim → 失敗分は Google Geocoding API
+npm run geocode
+
+# 施設写真: Wikipedia 検索
+npm run fetch-wiki
+```
+
+を順に走らせる(両方とも JSON 直書きしてくれる)。
+完了したら、念のため `npm run export-csv` で派生CSVを再生成し、スプレッドシートに反映してフォーマットを保つ。
+
+---
+
 ## SEO戦略
 
 ### ターゲットキーワード（優先順位順）
