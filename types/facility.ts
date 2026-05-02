@@ -42,6 +42,8 @@ export interface Facility {
   geocode_source?: "nominatim" | "fallback" | "manual" | "google";
   image?: string | null;
   image_attribution?: string | null;
+  images?: string[] | null;
+  image_attributions?: string[] | null;
   image_source?: "google-places" | "manual" | null;
   place_id?: string | null;
 }

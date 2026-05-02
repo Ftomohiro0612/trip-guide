@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
+import FacilityGallery from "@/components/FacilityGallery";
 import ShareButtons from "@/components/ShareButtons";
 import {
   facilities,
@@ -48,6 +49,18 @@ export default async function FacilityDetailPage({ params }: Props) {
 
   const related = getRelatedFacilities(facility, 3);
   const rain = RAIN_LABELS[facility.rain_friendly];
+  const galleryImages =
+    facility.images && facility.images.length > 0
+      ? facility.images
+      : facility.image
+        ? [facility.image]
+        : [];
+  const galleryAttributions =
+    facility.image_attributions && facility.image_attributions.length > 0
+      ? facility.image_attributions
+      : facility.image_attribution
+        ? [facility.image_attribution]
+        : [];
   const gradient =
     prefectureGradients[facility.prefecture_id] ??
     "from-sky-400 to-emerald-400";
@@ -91,28 +104,40 @@ export default async function FacilityDetailPage({ params }: Props) {
       />
 
       <div
-        className={`relative ${facility.image ? "bg-slate-900" : `bg-gradient-to-br ${gradient}`} text-white`}
+        className={`relative text-white ${
+          facility.image
+            ? "bg-slate-900 min-h-[300px] sm:min-h-[460px]"
+            : `bg-gradient-to-br ${gradient}`
+        }`}
       >
-        {facility.image && (
-          <Image
-            src={facility.image}
-            alt={facility.name}
-            fill
-            priority
-            sizes="100vw"
-            className="object-cover opacity-60"
-          />
+        {facility.image ? (
+          <>
+            <Image
+              src={facility.image}
+              alt={facility.name}
+              fill
+              priority
+              sizes="100vw"
+              className="object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+          </>
+        ) : (
+          <div className="absolute inset-0 bg-black/10" />
         )}
-        <div
-          className={`absolute inset-0 ${facility.image ? `bg-gradient-to-br ${gradient} opacity-70` : "bg-black/10"}`}
-        />
         {facility.image && facility.image_attribution && (
           <div
-            className="absolute bottom-1 right-2 z-10 text-[10px] text-white/80 bg-black/30 px-1.5 py-0.5 rounded"
+            className="absolute top-2 right-2 z-10 text-[10px] text-white/85 bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
             dangerouslySetInnerHTML={{ __html: `画像: ${facility.image_attribution}` }}
           />
         )}
-        <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
+        <div
+          className={`relative mx-auto max-w-5xl px-4 ${
+            facility.image
+              ? "min-h-[300px] sm:min-h-[460px] pt-6 pb-8 sm:pb-10 flex flex-col justify-between"
+              : "py-10 sm:py-14"
+          }`}
+        >
           <nav aria-label="パンくず" className="text-xs text-white/90 mb-4">
             <Link href="/" className="hover:underline">
               ホーム
@@ -133,17 +158,17 @@ export default async function FacilityDetailPage({ params }: Props) {
             </Link>
           </nav>
           <div className="flex items-start gap-4">
-            <span className="text-5xl sm:text-6xl drop-shadow" aria-hidden>
+            <span className="text-5xl sm:text-6xl drop-shadow-lg" aria-hidden>
               {categoryIcon(facility.category_id)}
             </span>
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-medium opacity-95 mb-1">
+              <p className="text-xs font-medium opacity-95 mb-1 drop-shadow">
                 {facility.prefecture} · {facility.category}
               </p>
-              <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight">
+              <h1 className="text-2xl sm:text-4xl font-bold drop-shadow-lg tracking-tight">
                 {facility.name}
               </h1>
-              <p className="mt-2 text-sm sm:text-base opacity-95">
+              <p className="mt-2 text-sm sm:text-base opacity-95 drop-shadow">
                 📍 {facility.address}
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
@@ -157,7 +182,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                 >
                   ☂️ {facility.rain_friendly} {rain.label}
                 </span>
-                <span className="bg-white/30 text-white text-xs font-bold px-2.5 py-1 rounded-md">
+                <span className="bg-white/30 text-white text-xs font-bold px-2.5 py-1 rounded-md backdrop-blur-sm">
                   👶 {facility.target_age}
                 </span>
               </div>
@@ -172,6 +197,12 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
+
+          <FacilityGallery
+            images={galleryImages}
+            attributions={galleryAttributions}
+            facilityName={facility.name}
+          />
 
           <h2 className="text-xl font-bold mt-8 mb-3">基本情報</h2>
           <dl className="bg-white border border-slate-200 rounded-2xl divide-y divide-slate-100 overflow-hidden">
