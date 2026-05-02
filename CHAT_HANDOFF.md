@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-02 / Phase 1 + 2 完了 + 本番公開済み
+**最終更新**: 2026-05-02 / Phase 1 + 2 完了 + 本番公開済み + GA4 稼働中 / Search Console 登録途中
 
 ---
 
@@ -74,36 +74,46 @@
 
 ---
 
-## 🛑 現在ここで止まっている作業
+## ✅ 今セッションで完了した作業
 
-### Google Analytics 4 のプロパティ作成中
+### GitHub / Vercel 本番デプロイ
+- GitHub リポジトリ作成 + push 成功
+- Vercel デプロイ完了、本番稼働中: https://trip-guide.net (SSL有効)
+- Vercel CLI セットアップ完了(v53.1.0、`ftomohiro0612` でログイン済み、プロジェクトリンク済み)
 
-**目的**: アクセス計測を有効化して、検索流入や行動を追跡できる状態にする。
+### Google Analytics 4 セットアップ完了
+- 測定ID: `G-1V6K1ZJH6S`
+- Vercel 環境変数 `NEXT_PUBLIC_GA_ID` 登録済み(Production / Development)
+- Preview 環境のみ未登録(将来 feature branch 運用時に手動追加する想定)
+- 本番HTMLでGA4タグ埋め込み確認済み
+- リアルタイムレポートで動作確認済み
 
-**今までやったこと**:
-- コード側は対応済み: `components/Analytics.tsx` が `process.env.NEXT_PUBLIC_GA_ID` を読み込み、設定があれば自動で gtag スクリプトを埋め込む(`app/layout.tsx` で組み込み済み)
-- ユーザーは https://analytics.google.com/ で GA4 プロパティ作成手順を進めている途中
+---
 
-**次にやること**:
-1. **GA4 で測定 ID (`G-XXXXXXXXXX` 形式)を取得** ← ユーザーがいま進めているところ
-2. **Vercel に環境変数追加**:
-   - Vercel ダッシュボード → trip-guide → Settings → Environment Variables
-   - Name: `NEXT_PUBLIC_GA_ID`
-   - Value: `G-XXXXXXXXXX`(取得した測定ID)
-   - Environment: All(Production / Preview / Development 全部チェック)
-   - Save
-3. Vercel が自動再デプロイ → ブラウザで https://trip-guide.net を開いて DevTools → Network タブで `gtag/js` がロードされていれば成功
-4. GA4 のリアルタイムレポートに自分のアクセスが表示されればOK
+## 🛑 進行中の作業: Google Search Console 登録
 
-### その次にやること: Google Search Console 登録
-1. https://search.google.com/search-console で `trip-guide.net` を追加
-2. 認証方法は **「HTML タグ」** が一番簡単(`<meta name="google-site-verification" content="XXX" />` の `XXX` をコピー)
-3. **Vercel に環境変数追加**:
-   - Name: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
-   - Value: 上の `XXX`(content の中身だけ)
-4. 自動再デプロイ → Search Console で「確認」ボタンを押す
-5. 認証成功 → **「Sitemaps」 メニュー** に `https://trip-guide.net/sitemap.xml` を送信
-6. インデックスされ始めるまで数日〜数週間
+- プロパティ追加済み: `https://trip-guide.net`(URL プレフィックス方式)
+- 所有権確認方式: **HTML タグ方式** を選択予定
+- 認証コード(`<meta name="google-site-verification" content="XXX" />` の `XXX` 部分)はメモ帳に保存済み(ユーザー側で保管)
+- 確認ボタンはまだ押していない(再デプロイ後に押す予定)
+
+### 次セッションで最初にやること
+
+1. ユーザーから Search Console の認証コード(`content` の中身)を受け取る
+2. **Vercel に環境変数を追加**:
+   - Key: `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`
+   - Value: (ユーザーから受け取った値)
+   - Environments: Production / Development
+3. 再デプロイをトリガー
+4. デプロイ完了後、本番HTMLに meta タグが入っているか確認
+5. ユーザーに Search Console 画面で「確認」ボタンを押してもらう
+6. 認証成功後、**sitemap.xml を Search Console から提出**
+   - URL: `https://trip-guide.net/sitemap.xml`
+   - 入力欄には `sitemap.xml` だけ入れる
+
+### 残課題(優先度低)
+- `.gitignore` のローカル変更状態(`vercel link` が `.vercel/` を追加)→ 次回コミットで処理
+- Phase 3: 施設画像の追加(Wikimedia Commons をさらに探索する方向、汎用写真は使わない方針)
 
 ---
 
@@ -121,15 +131,18 @@
 | 〃 | Xserver 側で A レコード書き換え(@ → 216.198.79.1) |
 | 〃 | DNS 反映確認、SSL 自動発行成功、`https://trip-guide.net` 200 OK |
 | 〃 | シェアボタン / canonical / ItemList JSON-LD / a11y 追加 push |
-| 〃 | **GA4 セットアップ着手 (← いまここ)** |
+| 〃 | GA4 (`G-1V6K1ZJH6S`) を Vercel 環境変数に登録、本番で稼働確認 |
+| 〃 | Vercel CLI セットアップ(v53.1.0、プロジェクトリンク済み) |
+| 〃 | Search Console プロパティ追加・HTML タグ取得まで完了(認証ボタンは次回) |
+| 〃 | **Search Console 認証コードを Vercel env に登録 → 確認ボタン (← 次セッション開始地点)** |
 
 ---
 
 ## 今後やるべき残タスク
 
 ### Phase 3 候補
-1. **GA4 + Search Console の有効化**(現在進行中)
-2. **施設写真の追加カバレッジ**(Wikipedia で 54件、Google Places (New) を Cloud Console で有効化すれば残り97件もカバー可能。コスト ≈ $4)
+1. **Search Console の認証完了 + sitemap 提出**(進行中、次セッション最優先)
+2. **施設画像の追加カバレッジ**(Wikimedia Commons をさらに探索する方針。汎用写真は使わない。Google Places API は保留)
 3. **Wikipedia ファジーマッチの目視チェック**(54件のうちいくつかは関連サイト)
 4. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
 5. **お気に入り機能** (localStorage、軽量)
@@ -172,19 +185,19 @@
 | 変数名 | 用途 | 設定場所 |
 |---|---|---|
 | `GOOGLE_GEOCODING_API_KEY` | Geocoding 再実行・将来の Places API 用 | `.env.local` (ローカル) / Vercel Settings |
-| `NEXT_PUBLIC_GA_ID` | GA4 測定 ID (`G-XXXXXX`) | Vercel Settings(まだ未設定 ← 今ここ) |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console 認証 | Vercel Settings(まだ未設定) |
+| `NEXT_PUBLIC_GA_ID` | GA4 測定 ID (`G-1V6K1ZJH6S`) | Vercel Settings(Production / Development 登録済み、Preview のみ未設定) |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | Search Console 認証 | Vercel Settings(まだ未設定 ← 次セッションで登録) |
 
 ---
 
 ## 次セッション再開時のプロンプト例
 
 ```
-trip-guide.net は既に公開済みで、Phase 1 + 2 が完成しています。
+trip-guide.net は既に公開済みで、Phase 1 + 2 + GA4 まで完了しています。
 CHAT_HANDOFF.md を読んで現状を把握してください。
 
-いま「現在ここで止まっている作業」セクションにある GA4 のセットアップを続きから進めたいです。
-GA4 の測定ID(G-から始まるやつ)を取得したので、Vercel への登録手順を案内してください。
+いま「進行中の作業: Google Search Console 登録」を続きから進めたいです。
+HTML タグ方式の認証コードはメモ帳に保存済みなので、Vercel への登録手順から案内してください。
 ```
 
 または、別の作業に進みたい場合:
@@ -196,4 +209,4 @@ trip-guide.net は既に公開済みです。CHAT_HANDOFF.md を読んで現状�
 
 ---
 
-新セッションでは、まずユーザーが「現在 GA4 の測定 ID 取得まで来ている」状態かどうかを確認して、状態に応じて Vercel への env 登録手順を案内するのが自然です。
+新セッションでは、まずユーザーから Search Console の認証コード(`content` の中身)を受け取り、Vercel 環境変数 `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` への登録 → 再デプロイ → 確認ボタン → sitemap 提出、の順で案内するのが自然です。
