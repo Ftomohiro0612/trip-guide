@@ -39,3 +39,16 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# claude code local
+.claude/
+
+# data backups (keep originals only)
+data/*.bak
+data/*.json.bak
+
+# script logs
+scripts/*-failures.log
+
+# os
+Thumbs.db

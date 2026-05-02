@@ -5,13 +5,24 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "postbuild": "next-sitemap",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
+    "geocode": "node --env-file=.env.local scripts/geocode.ts",
+    "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",
+    "fetch-images": "node --env-file=.env.local scripts/fetch-images.ts",
+    "fetch-wiki": "node scripts/fetch-wiki-images.ts",
+    "fetch-wiki:check": "node scripts/fetch-wiki-images.ts --dry-run"
   },
   "dependencies": {
+    "@types/leaflet": "^1.9.21",
+    "leaflet": "^1.9.4",
     "next": "16.2.4",
+    "next-sitemap": "^4.2.3",
     "react": "19.2.4",
-    "react-dom": "19.2.4"
+    "react-dom": "19.2.4",
+    "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
@@ -20,6 +31,7 @@
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.2.4",
+    "sharp": "^0.34.5",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
