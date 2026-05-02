@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
+import ShareButtons from "@/components/ShareButtons";
 import {
   facilities,
   getFacilityBySlug,
@@ -240,6 +241,13 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-xs text-slate-500 mt-2">
             ※ 地図は施設名と住所からのGoogleマップ検索です。正確な位置は公式サイトでご確認ください。
           </p>
+
+          <div className="mt-8 pt-6 border-t border-slate-200">
+            <ShareButtons
+              url={`/facilities/${facility.slug}`}
+              title={facility.name}
+            />
+          </div>
         </article>
 
         <aside className="space-y-4">
