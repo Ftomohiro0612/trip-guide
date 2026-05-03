@@ -174,10 +174,27 @@ function chooseExt(imageUrl: string): string {
 async function main(): Promise<void> {
   const raw = await readFile(DATA_PATH, "utf-8");
   const json = JSON.parse(raw) as FacilitiesFile;
-  const targets = json.facilities.filter((f) => FORCE || !f.image);
+
+  // Manually rejected ids — past Wikipedia fuzzy matches the user reviewed
+  // and turned down. Skipped unless --force, otherwise every run re-fetches
+  // and re-rejects them.
+  const blacklistPath = resolve(ROOT, "data/wiki-image-blacklist.json");
+  const blacklist = new Set<number>(
+    existsSync(blacklistPath)
+      ? (JSON.parse(await readFile(blacklistPath, "utf-8"))
+          .rejected as number[])
+      : [],
+  );
+
+  const targets = json.facilities.filter(
+    (f) => FORCE || (!f.image && !blacklist.has(f.id)),
+  );
 
   console.log(`Total: ${json.facilities.length}`);
   console.log(`Targets needing images: ${targets.length}`);
+  if (blacklist.size > 0 && !FORCE) {
+    console.log(`Blacklisted (skipped): ${blacklist.size}`);
+  }
 
   if (DRY_RUN) {
     console.log("\n[DRY RUN]");

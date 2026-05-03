@@ -45,6 +45,10 @@ interface CsvRow {
   image?: string;
   image_credit?: string;
   tags?: string;
+  signature_experiences?: string;
+  unique_selling_point?: string;
+  experience_tags?: string;
+  summer_water_play?: string;
 }
 
 function val(row: CsvRow, key: keyof CsvRow): string {
@@ -70,6 +74,13 @@ function parseTags(s: string): FacilityTag[] {
     .split(",")
     .map((t) => t.trim())
     .filter(Boolean) as FacilityTag[];
+}
+
+function parseStringList(s: string): string[] {
+  return s
+    .split(",")
+    .map((t) => t.trim())
+    .filter(Boolean);
 }
 
 interface MergeResult {
@@ -186,6 +197,15 @@ function mergeRow(
   setIf("image", val(row, "image"), (s) => s || null);
   setIf("image_attribution", val(row, "image_credit"), (s) => s || null);
   setIf("tags", val(row, "tags"), parseTags);
+
+  setIf("signature_experiences", val(row, "signature_experiences"), parseStringList);
+  setIf("unique_selling_point", val(row, "unique_selling_point"), (s) => s || null);
+  setIf("experience_tags", val(row, "experience_tags"), parseStringList);
+  setIf(
+    "summer_water_play",
+    val(row, "summer_water_play"),
+    (s) => s as Facility["summer_water_play"],
+  );
 
   return { next: base, changedFields: changes };
 }

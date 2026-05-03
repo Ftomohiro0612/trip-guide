@@ -46,6 +46,10 @@ export interface Facility {
   image_attributions?: string[] | null;
   image_source?: "google-places" | "manual" | null;
   place_id?: string | null;
+  signature_experiences?: string[] | null;
+  unique_selling_point?: string | null;
+  experience_tags?: string[] | null;
+  summer_water_play?: RainFriendly | null;
 }
 
 export interface PrefectureMeta {

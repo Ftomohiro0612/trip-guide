@@ -32,6 +32,10 @@ const HEADERS = [
   "image",
   "image_credit",
   "tags",
+  "signature_experiences",
+  "unique_selling_point",
+  "experience_tags",
+  "summer_water_play",
 ] as const;
 
 function csvEscape(value: unknown): string {
@@ -74,6 +78,10 @@ async function main() {
         f.image ?? "",
         f.image_attribution ?? "",
         (f.tags ?? []).join(","),
+        (f.signature_experiences ?? []).join(","),
+        f.unique_selling_point ?? "",
+        (f.experience_tags ?? []).join(","),
+        f.summer_water_play ?? "",
       ]),
     );
   }
