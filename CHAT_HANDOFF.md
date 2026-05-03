@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-03 / 公開 + GA4 + Search Console + V4(173)+ V5(191)+ V6(214)+ Sheets API 双方向書き込み運用化
+**最終更新**: 2026-05-04 / V4-V6 + 東京都150件追加(計 364 / 4県 / 20カテゴリ)+ フィルタページ地図 + Sheets API 双方向書き込み
 
 ---
 
@@ -19,10 +19,10 @@
 ## プロジェクト概要
 
 - **サイト名**: trip-guide.net
-- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設214件)の検索サイト
+- **目的**: 子供向け遊び場(静岡・長野・山梨・東京の4県、施設364件)の検索サイト
 - **スタック**: Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Turbopack
 - **ホスティング**: Vercel
-- **データ**: `data/facilities_data.json` (214施設、全件緯度経度入り、画像68件)
+- **データ**: `data/facilities_data.json` (364施設、全件緯度経度入り、画像141件)
 - **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト + **Sheets API 直接書き込み**(append-to-sheet / push-to-sheet)
 - **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書、データ運用フローも記載)
 
@@ -63,9 +63,10 @@
 - スキップリンク / フォーカススタイル / 動きを抑制設定
 
 ### ✅ データ充実 (完了)
-- **施設数 214件**(V3:151 + V4:22 + V5:18 + V6:23)、全件緯度経度入り
-- **施設写真 68件**(32%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針(却下40件はブラックリスト管理)
-- カテゴリ数 18(15既存 + 3新規 nature-park / viewpoint / scenic)
+- **施設数 364件**(V3:151 + V4:22 + V5:18 + V6:23 + V7東京都:150)、全件緯度経度入り
+- **県別**: 静岡 68 / 長野 74 / 山梨 72 / **東京 150**
+- **施設写真 141件**(39%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針(却下72件はブラックリスト管理)
+- **カテゴリ数 20**(15既存 + 5新規:nature-park / viewpoint / scenic / indoor-theme-park / game-center)
 - スキーマ 22列(V5で signature_experiences / unique_selling_point / experience_tags / summer_water_play 追加)
 - ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-wiki-images.ts` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`** / **`append-to-sheet.ts`** / **`push-to-sheet.ts`**
 - バックアップ: `data/facilities_data.json.bak.*` — gitignore 対象
@@ -166,9 +167,37 @@
 
 ### 残課題(優先度低)
 - **既存68件画像の再精査**(strict matcher で今までのすり抜けを洗い出し)
-- **画像カバレッジ向上**: 残り146件を Google Places API (New) で取得検討。無料枠($200/月)で約 $1.50 程度
+- **画像カバレッジ向上**: 残り 223 件を Google Places API (New) で取得検討。無料枠($200/月)で約 $2.50 程度
 - **fetch-wiki の自動 strict フィルタ**(現状の手動分類 → 却下 → ブラックリスト追加 を 1 コマンド化)
 - **インデックス進捗の確認**: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
+
+---
+
+## ⚠️ データ取り込み時の予防策(Tokyo 拡張で踏んだ罠)
+
+新しい県や大量データを追加したら、**取り込み後の本番デプロイ前に**以下を必ずチェック。
+
+### 1. 値の正規化(列ごとに想定形式が決まっている)
+- `rain_friendly`: **`◎` / `△` / `×` の3記号のみ**(東京拡張で「雨天OK / 雨天NG / 雨天一部OK」が混入し prerender が全件落ちた)
+- `indoor_outdoor`: `屋内` / `屋外` / `両方`
+- `summer_water_play`: `◎` / `△` / `×` (rain_friendly と同じ記法)
+- `料金タイプ`: 「無料」または「有料」始まり(`is_free` は `startsWith("無料")` で判定)
+- `県`: 静岡県 / 長野県 / 山梨県 / 東京都(他県は新規追加マッピング必要)
+
+### 2. ローカルビルド検証
+大量追加 + sync 完了後、commit する**前に**:
+```powershell
+npm run build
+```
+- `Generating static pages` フェーズで全ページの prerender が走り、未知の列値による型エラーがあれば即発見できる
+- これを飛ばして push すると Vercel ビルド失敗 → production が古いまま静かに固定される(エラーバナーは出ないので気付きにくい)
+
+### 3. デプロイ後の即時確認
+push 後 1-2 分で Vercel ビルド結果を確認:
+```powershell
+vercel inspect https://trip-guide.net | grep status
+```
+status が `Error` なら最新の URL で `vercel inspect <URL>` してログ追跡。production が更新されていなくても DNS は古いビルドを返すので「変わらない」=「失敗してる」。
 
 ---
 
@@ -200,6 +229,10 @@
 | 〃 | V5 全件ジオコード + 4件画像採用、`wiki-image-blacklist.json` 機構導入 |
 | 〃 | **Sheets API 双方向書き込み構築**(サービスアカウント、append-to-sheet / push-to-sheet) |
 | 〃 | V6: 23施設追加(id 192-214)、大型遊具公園中心 + 7件画像採用、計214件で本日着地 |
+| 2026-05-04 | フィルタページ(タグ/カテゴリ/県/検索結果)上部に Leaflet 地図追加 |
+| 〃 | 東京都 150件追加(id 215-364)、4県運用に拡張、20カテゴリ(+ indoor-theme-park / game-center) |
+| 〃 | rain_friendly のテキスト値混入で prerender 全落ち → 正規化 + RAIN_FALLBACK で復旧 |
+| 〃 | Tokyo 73件 Wikipedia 完全一致採用、32件却下 → 画像 141件 / 39% カバレッジ |
 
 ---
 
@@ -261,7 +294,7 @@
 ## 次セッション再開時のプロンプト例
 
 ```
-trip-guide.net は 214施設で公開稼働中です(Phase 1+2、GA4、Search Console、Sheets API 双方向書き込みまで完了)。
+trip-guide.net は 4県364施設で公開稼働中です(東京都含む、Sheets API 双方向書き込み運用)。
 CHAT_HANDOFF.md を読んで現状を把握してください。
 今日は Phase 3 の「[進めたい項目]」を進めたいです。
 ```

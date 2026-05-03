@@ -308,6 +308,50 @@ npm run fetch-wiki
 `sync-from-sheet` は「added > 0 かつ orphaned > 0」を検知すると警告と
 ステップ3-4 の指示を出す。警告が出たら必ず CSV 再インポートを行うこと。
 
+### 列値の正規化(踏みやすい罠)
+
+シートに新しい県や項目を入れる前に、以下の列は厳密に決まった値しか
+取らないことを確認すること。違反すると詳細ページの prerender が落ち、
+**Vercel ビルドが失敗 → production が古いまま固定される**(2026-05-04
+東京都 150 件投入時に実際に発生)。
+
+| 列 | 取り得る値 |
+|---|---|
+| `屋内・屋外` | `屋内` / `屋外` / `両方` |
+| `雨天対応` | `◎` / `△` / `×` のみ(「雨天OK」「雨天NG」等の文字列は禁止) |
+| `summer_water_play` | `◎` / `△` / `×` のみ(雨天対応と同じ) |
+| `料金タイプ` | `無料` または `有料` で始まる文字列(`無料(時之栖内)` などの括弧付きOK) |
+| `県` | `静岡県` / `長野県` / `山梨県` / `東京都`(他県は `lib/icons.ts` ・ `lib/descriptions.ts` ・ `components/MapView.tsx` ・ `sync-from-sheet.ts` のマッピング追加が必要) |
+
+新規にカテゴリを追加する場合は `data/facilities_data.json` の
+`metadata.categories` に id+name を加え、`lib/icons.ts` と
+`lib/descriptions.ts` にも対応する emoji と説明文を追加する。
+
+### push 前のローカルビルド検証
+
+大量追加 + sync 完了後、commit する**前に**:
+
+```powershell
+npm run build
+```
+
+`Generating static pages` フェーズで全 facility ページの prerender が
+走るので、未知の列値による型エラーがあればここで即発見できる。
+これを飛ばして push すると Vercel ビルド失敗 → production が古い
+ビルドのまま静かに固定される(エラーバナー無し)。
+
+### push 後のデプロイ確認
+
+push の 1-2 分後に Vercel ビルド結果を確認:
+
+```powershell
+vercel inspect https://trip-guide.net | Select-String "status"
+```
+
+`status ● Error` なら最新の deployment URL で個別に inspect/logs を
+追う。production の見た目が変わらないときは「DNS が古いビルドを
+返している」だけのことが多いので、まず status を疑うこと。
+
 ---
 
 ## SEO戦略
