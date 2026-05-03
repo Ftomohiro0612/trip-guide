@@ -2,34 +2,34 @@
   "metadata": {
     "site_name": "trip-guide.net",
     "site_description": "静岡・長野・山梨の子供向け遊び場検索サイト",
-    "total_facilities": 151,
+    "total_facilities": 173,
     "prefectures": [
       {
         "id": "shizuoka",
         "name": "静岡県",
-        "count": 51
+        "count": 54
       },
       {
         "id": "nagano",
         "name": "長野県",
-        "count": 53
+        "count": 60
       },
       {
         "id": "yamanashi",
         "name": "山梨県",
-        "count": 47
+        "count": 59
       }
     ],
     "categories": [
       {
         "id": "theme-park",
         "name": "遊園地・テーマパーク",
-        "count": 20
+        "count": 22
       },
       {
         "id": "zoo",
         "name": "動物園",
-        "count": 20
+        "count": 22
       },
       {
         "id": "aquarium",
@@ -44,7 +44,7 @@
       {
         "id": "indoor-play",
         "name": "屋内遊び場",
-        "count": 27
+        "count": 28
       },
       {
         "id": "science-museum",
@@ -74,12 +74,12 @@
       {
         "id": "athletic",
         "name": "アスレチック",
-        "count": 4
+        "count": 6
       },
       {
         "id": "art-museum",
         "name": "美術館・体験",
-        "count": 1
+        "count": 10
       },
       {
         "id": "ski",
@@ -95,6 +95,21 @@
         "id": "experience",
         "name": "体験",
         "count": 4
+      },
+      {
+        "id": "nature-park",
+        "name": "公園・自然",
+        "count": 4
+      },
+      {
+        "id": "viewpoint",
+        "name": "展望台",
+        "count": 1
+      },
+      {
+        "id": "scenic",
+        "name": "自然・絶景",
+        "count": 1
       }
     ],
     "filters": {
@@ -1468,7 +1483,7 @@
       "name": "修善寺虹の郷",
       "prefecture": "静岡県",
       "prefecture_id": "shizuoka",
-      "category": "テーマパーク",
+      "category": "遊園地・テーマパーク",
       "category_id": "theme-park",
       "address": "伊豆市修善寺4279-3",
       "indoor_outdoor": "両方",
@@ -1497,7 +1512,7 @@
       "name": "めんたいパーク伊豆",
       "prefecture": "静岡県",
       "prefecture_id": "shizuoka",
-      "category": "テーマパーク",
+      "category": "遊園地・テーマパーク",
       "category_id": "theme-park",
       "address": "田方郡函南町塚本753-1",
       "indoor_outdoor": "屋内",
@@ -1525,7 +1540,7 @@
       "name": "自転車の国サイクルスポーツセンター",
       "prefecture": "静岡県",
       "prefecture_id": "shizuoka",
-      "category": "テーマパーク",
+      "category": "遊園地・テーマパーク",
       "category_id": "theme-park",
       "address": "伊豆市大野1826",
       "indoor_outdoor": "両方",
@@ -4440,6 +4455,529 @@
       "latitude": 35.606477,
       "longitude": 138.5839074,
       "geocode_source": "nominatim"
+    },
+    {
+      "id": 152,
+      "slug": "facility-152",
+      "name": "伊豆テディベア・ミュージアム",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "伊東市八幡野1064-2",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,500円",
+      "child_fee": "小学生800円・中高生1,000円",
+      "description": "ヴィンテージ・テディベアの展示と、トトロを含むジブリ展示で子供大喜びの美術館。テディベア手作りワークショップ(要予約・6,000円~)で世界に一つのテディベアが作れる。星評価4.2、雨の日にぴったり。",
+      "target_age": "幼児～大人",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 153,
+      "slug": "facility-153",
+      "name": "リンガフランカ城ヶ崎カルチャーミュージアム",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "伊東市八幡野1156",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "伊豆高原の隠れた地域文化ミュージアム。ヴィンテージ機械や農具の常設展示と、季節ごとの企画展(ガラス工芸・紫陽花等)。星評価4.4、地元アート作品の販売も。",
+      "target_age": "全年齢",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "無料",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 154,
+      "slug": "facility-154",
+      "name": "シャボテン狩り工房",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "伊東市富戸1317-416 (シャボテン動物公園敷地内)",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "要確認",
+      "child_fee": "要確認",
+      "description": "「お箸でサボテンを摘む」という日本でも珍しい体験ができる施設。自分の好きな容器を選び、好みのサボテンを寄せ植えにして持ち帰り可能。星評価4.2、子供から大人まで楽しめる小さな冒険。",
+      "target_age": "幼児～大人",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 155,
+      "slug": "facility-155",
+      "name": "河口湖音楽と森の美術館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町河口3077-20",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,800円",
+      "child_fee": "小学生1,000円(幼児無料)",
+      "description": "富士山と河口湖を望む音楽テーマパーク。世界最大級の自動演奏楽器・ダンスオルガン、毎日開催のオペラ歌手・サンドアートのライブ、ダンス噴水ショー、お姫様ドレス変身体験、バラ庭園、からくり時計まで。子供が一日中飽きない。星評価4.3、7480件のレビュー。",
+      "target_age": "全年齢",
+      "url": "https://kawaguchikomusicforest.jp/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 156,
+      "slug": "facility-156",
+      "name": "河口湖猿まわし劇場",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町河口2719-8",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,700円",
+      "child_fee": "子供小学生850円・幼児3歳以上450円",
+      "description": "毎日複数回の本格猿まわしショー。ジャパニーズ伝統芸能で、信頼関係を結んだ猿と師匠の絶妙な掛け合いに子供たちは大爆笑。屋外には小さな猿のエサやり体験コーナーも(100円)。星評価4.2、家族にも大人にも大人気。",
+      "target_age": "全年齢",
+      "url": "https://www.fuji-osaru.com/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 157,
+      "slug": "facility-157",
+      "name": "久保田一竹美術館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町河口2255",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,500円",
+      "child_fee": "高校生900円・中学生400円",
+      "description": "辻が花染めを蘇らせた久保田一竹の着物作品を展示。建築・庭園自体が圧巻のアート空間で、池やトンネルがあり、子供も探検気分で楽しめる。星評価4.5、1891件のレビュー。火曜定休。",
+      "target_age": "全年齢",
+      "url": "https://www.itchiku-museum.com/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 158,
+      "slug": "facility-158",
+      "name": "河口湖木ノ花美術館(猫のダヤン)",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町河口3026-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人500円",
+      "child_fee": "中・高生400円・小学生300円",
+      "description": "猫のダヤンの世界を表現した美術館。池田あきこの繊細でかわいい絵本の世界に子供がワクワク。庭にいる本物の猫たちと触れ合えるカフェも併設。星評価4.2、リーズナブルな500円という料金。",
+      "target_age": "全年齢",
+      "url": "http://www.konohana-muse.com/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 159,
+      "slug": "facility-159",
+      "name": "河口湖ミューズ館 与勇輝館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町小立923",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人600円",
+      "child_fee": "子供小・中学生400円",
+      "description": "創作人形作家・与勇輝の繊細な人形作品を展示。ラベンダー畑の前にある美術館で、ラベンダーソフトクリームが大人気で子供も大喜び。木曜定休。",
+      "target_age": "幼児～大人",
+      "url": "https://yuukimuse.jp/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 160,
+      "slug": "facility-160",
+      "name": "河口湖美術館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡富士河口湖町河口3170",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人800円",
+      "child_fee": "子供小・中学生500円",
+      "description": "湖と富士山を望む立地の美術館。富士山絵画コレクションが充実。ミュージアムショップのみの利用もOK。",
+      "target_age": "全年齢",
+      "url": "https://www.fkchannel.jp/facility-01/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 161,
+      "slug": "facility-161",
+      "name": "河口湖自然生活館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "南都留郡富士河口湖町大石2585",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "ラベンダー畑とブルーベリー園、富士山ビューを擁する自然公園。手作りジャム体験(夏は要予約)、地元グルメ、お土産も豊富。星評価4.3、1784件のレビュー。",
+      "target_age": "全年齢",
+      "url": "https://www.fkchannel.jp/",
+      "tags": [
+        "雨でも遊べる",
+        "無料",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 162,
+      "slug": "facility-162",
+      "name": "富士山デッキ(ハーブ庭園内)",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "富士河口湖町船津1996",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人500円",
+      "child_fee": "同左",
+      "description": "ハーブ庭園内にある富士山絶景展望デッキ。屋外+屋内デッキあり、雨の日もOK。星評価4.4、隠れた絶景スポット。",
+      "target_age": "全年齢",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 163,
+      "slug": "facility-163",
+      "name": "Trick Art Museum 富士河口湖",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "南都留郡富士河口湖町",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "要確認",
+      "child_fee": "要確認",
+      "description": "目の錯覚を活かしたトリックアートで子供大爆笑の美術館。雨の日にぴったり。",
+      "target_age": "幼児～大人",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 164,
+      "slug": "facility-164",
+      "name": "山中湖花の都公園",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "南都留郡山中湖村山中1650",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "季節有料",
+      "adult_fee": "大人600円(春夏秋)",
+      "child_fee": "小学生240円・3歳以上120円",
+      "description": "富士山を背景にした巨大な花畑(チューリップ・ヒマワリ・コスモス等)。屋内のフローラルドーム、清流の里では巨大滑り台や人工滝。星評価3.9、5247件のレビュー。冬は無料・イルミネーション・花火イベントあり。",
+      "target_age": "全年齢",
+      "url": "https://www.hananomiyakokouen.jp/",
+      "tags": [
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 165,
+      "slug": "facility-165",
+      "name": "山中湖長池親水公園",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "南都留郡山中湖村平野",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "山中湖と富士山の絶景スポット。星評価4.4、5142件のレビュー。芝生広場でピクニック、親子の朝散歩に最適、24時間開放。",
+      "target_age": "全年齢",
+      "url": "-",
+      "tags": [
+        "無料",
+        "屋外"
+      ]
+    },
+    {
+      "id": 166,
+      "slug": "facility-166",
+      "name": "サンタクロースミュージアム",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "南都留郡山中湖村平野506-133",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人500円",
+      "child_fee": "子供300円",
+      "description": "日本唯一のクリスマス専門美術館。1980-90年代のヨーロッパ・アメリカのクリスマスアート展示で、家中クリスマスムード一色。冬の雨の日にぴったり、子供大喜び。",
+      "target_age": "全年齢",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "完全屋内"
+      ]
+    },
+    {
+      "id": 167,
+      "slug": "facility-167",
+      "name": "軽井沢おもちゃ王国",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "嬬恋村大前細原2277",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,300円",
+      "child_fee": "子供900円",
+      "description": "11館のおもちゃ館で世界中のおもちゃで遊び放題、屋外には観覧車・メリーゴーランド・ゴーカートなど20以上の乗り物アトラクション、わくわく大冒険の森(アスレチック)、ニジマス釣り。星評価4.1、3250件のレビュー。",
+      "target_age": "幼児～小学生",
+      "url": "https://www.karuizawatoy-kingdom.jp/",
+      "tags": [
+        "雨でも遊べる",
+        "屋内外両方",
+        "小学生向け"
+      ]
+    },
+    {
+      "id": 168,
+      "slug": "facility-168",
+      "name": "わくわく大冒険の森",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "アスレチック",
+      "category_id": "athletic",
+      "address": "嬬恋村大前細原2277 軽井沢おもちゃ王国内",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料(王国共通)",
+      "adult_fee": "共通",
+      "child_fee": "共通",
+      "description": "軽井沢おもちゃ王国内の本格森林アスレチック。3歳から保護者同伴で挑戦可能。吊り橋・ブランコ・ロープライド・ハーネス&ヘルメット完備で安心。星評価5.0。",
+      "target_age": "3歳～大人",
+      "url": "-",
+      "tags": [
+        "屋外"
+      ]
+    },
+    {
+      "id": 169,
+      "slug": "facility-169",
+      "name": "アミーチアドベンチャー軽井沢 AMICI",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "アスレチック",
+      "category_id": "athletic",
+      "address": "北佐久郡軽井沢町軽井沢1016-75 プリンスホテルイースト",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "ツリートレッキング2,500円～",
+      "child_fee": "同左",
+      "description": "軽井沢プリンスホテル隣接の本格ツリートレッキング・ジップライン体験。星評価4.3、家族で挑戦できる難易度設定。",
+      "target_age": "小学生～大人",
+      "url": "https://amici-adventure.com/",
+      "tags": [
+        "屋外",
+        "小学生向け"
+      ]
+    },
+    {
+      "id": 170,
+      "slug": "facility-170",
+      "name": "カルプリの森 軽井沢あそびの森",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "北佐久郡軽井沢町1016 プリンスホテルウエストアクティビティホール",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "西パス利用",
+      "child_fee": "同左",
+      "description": "プリンスホテル軽井沢ウエスト併設の遊び場。屋内外のアクティビティ、午後3時からのお得なパスあり。",
+      "target_age": "幼児～小学生",
+      "url": "-",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方",
+        "小学生向け"
+      ]
+    },
+    {
+      "id": 171,
+      "slug": "facility-171",
+      "name": "八ヶ岳自然文化園",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "諏訪郡原村17217-1613",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料(エリア別)",
+      "adult_fee": "プラネタリウム600円",
+      "child_fee": "プラネタリウム400円",
+      "description": "八ヶ岳南麓の自然・文化体験施設。プラネタリウム、パターゴルフ、レンタル自転車、スワンボート、芝生広場、ジップライン、お子様向け広場、カフェレストラン、犬連れOKエリア。星評価4.2、子供と犬と一緒に1日過ごせる総合施設。",
+      "target_age": "全年齢",
+      "url": "https://www.yatsugatake-ncp.com/",
+      "tags": [
+        "雨の日OK",
+        "雨でも遊べる",
+        "屋内外両方"
+      ]
+    },
+    {
+      "id": 172,
+      "slug": "facility-172",
+      "name": "浅間牧場",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "嬬恋村北軽井沢",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "軽井沢北の浅間山麓にある牧場。牛・羊・ヤギの放牧風景、ソフトクリーム販売、5分の散策で絶景に到達。星評価4.1、3-5歳でも歩ける緩やかな道。",
+      "target_age": "幼児～大人",
+      "url": "-",
+      "tags": [
+        "無料",
+        "屋外"
+      ]
+    },
+    {
+      "id": 173,
+      "slug": "facility-173",
+      "name": "上高地",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "松本市安曇上高地",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料(マイカー規制あり)",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "日本を代表する山岳リゾート。河童橋・明神池・大正池の散策路で子供の体力に応じたコース選択可。標高1500mの清涼な空気と透き通る川は記憶に残る体験。バスでアクセス、4-11月開放。",
+      "target_age": "幼児～大人",
+      "url": "https://www.kamikochi.or.jp/",
+      "tags": [
+        "無料",
+        "屋外"
+      ]
     }
   ]
 }
