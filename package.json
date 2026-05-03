@@ -15,10 +15,13 @@
     "fetch-wiki": "node scripts/fetch-wiki-images.ts",
     "fetch-wiki:check": "node scripts/fetch-wiki-images.ts --dry-run",
     "export-csv": "node scripts/export-to-csv.ts",
-    "sync-sheet": "node scripts/sync-from-sheet.ts"
+    "sync-sheet": "node scripts/sync-from-sheet.ts",
+    "append-to-sheet": "node scripts/append-to-sheet.ts",
+    "push-to-sheet": "node scripts/push-to-sheet.ts"
   },
   "dependencies": {
     "@types/leaflet": "^1.9.21",
+    "googleapis": "^171.4.0",
     "leaflet": "^1.9.4",
     "next": "16.2.4",
     "next-sitemap": "^4.2.3",

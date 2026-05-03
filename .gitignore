@@ -51,6 +51,9 @@ data/*.bak.*.json
 # derived CSV (regenerate with `npm run export-csv`)
 data/facilities_master.csv
 
+# google service account key (local only)
+data/.gcp-sheets-credentials.json
+
 # script logs
 scripts/*-failures.log
 
@@ -58,3 +61,7 @@ scripts/*-failures.log
 Thumbs.db
 
 .vercel
+
+# Google Cloud Service Account credentials
+data/.gcp-sheets-credentials.json
+.gcp-*.json
