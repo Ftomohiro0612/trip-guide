@@ -1,4 +1,4 @@
-export type PrefectureId = "shizuoka" | "nagano" | "yamanashi";
+export type PrefectureId = "shizuoka" | "nagano" | "yamanashi" | "tokyo";
 
 export type RainFriendly = "◎" | "△" | "×";
 

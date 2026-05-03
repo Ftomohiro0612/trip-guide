@@ -50,6 +50,11 @@ data/*.bak.*.json
 
 # derived CSV (regenerate with `npm run export-csv`)
 data/facilities_master.csv
+data/facilities_master_*.csv
+
+# transient batch CSVs prepared for sheet append
+data/v*_additions_for_sheet.csv
+data/files.zip
 
 # google service account key (local only)
 data/.gcp-sheets-credentials.json

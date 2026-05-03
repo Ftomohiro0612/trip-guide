@@ -23,12 +23,14 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   shizuoka: "#0ea5e9",
   nagano: "#10b981",
   yamanashi: "#a855f7",
+  tokyo: "#f43f5e",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
   shizuoka: "🗻 静岡",
   nagano: "🏔️ 長野",
   yamanashi: "🍇 山梨",
+  tokyo: "🗼 東京",
 };
 
 interface PlacedFacility extends Facility {
@@ -53,6 +55,7 @@ export default function MapView({ facilities, height = 520 }: Props) {
       shizuoka: true,
       nagano: true,
       yamanashi: true,
+      tokyo: true,
     },
   );
   const [showRain, setShowRain] = useState(false);

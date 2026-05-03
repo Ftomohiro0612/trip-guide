@@ -24,6 +24,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   静岡県: "shizuoka",
   長野県: "nagano",
   山梨県: "yamanashi",
+  東京都: "tokyo",
 };
 
 interface CsvRow {
