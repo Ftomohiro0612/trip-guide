@@ -4,6 +4,7 @@ import FacilityCard from "@/components/FacilityCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
+import MapViewClient from "@/components/MapViewClient";
 import { facilities, prefectures, categories } from "@/lib/facilities";
 import {
   applyFilters,
@@ -59,6 +60,15 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           )}
         </p>
       </div>
+
+      {results.length > 0 && (
+        <section className="mb-8" aria-labelledby="facilities-map-heading">
+          <h2 id="facilities-map-heading" className="sr-only">
+            検索結果の地図
+          </h2>
+          <MapViewClient facilities={results} height={420} />
+        </section>
+      )}
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <FilterSidebar

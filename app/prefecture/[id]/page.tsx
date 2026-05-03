@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
+import MapViewClient from "@/components/MapViewClient";
 import {
   categories,
   getFacilitiesByPrefecture,
@@ -97,6 +98,21 @@ export default async function PrefecturePage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8">
+        {list.length > 0 && (
+          <section className="mb-8" aria-labelledby="prefecture-map-heading">
+            <h2
+              id="prefecture-map-heading"
+              className="text-xl font-bold text-slate-900 mb-3"
+            >
+              📍 {meta.name}内の施設マップ
+              <span className="text-sm font-normal text-slate-500 ml-2">
+                {list.length}件
+              </span>
+            </h2>
+            <MapViewClient facilities={list} height={420} />
+          </section>
+        )}
+
         <p className="text-slate-700 leading-relaxed max-w-3xl">{desc.long}</p>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">

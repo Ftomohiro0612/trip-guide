@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
+import MapViewClient from "@/components/MapViewClient";
 import {
   categories,
   getCategoryMeta,
@@ -88,6 +89,21 @@ export default async function CategoryPage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8">
+        {list.length > 0 && (
+          <section className="mb-8" aria-labelledby="category-map-heading">
+            <h2
+              id="category-map-heading"
+              className="text-xl font-bold text-slate-900 mb-3"
+            >
+              📍 地図で見る
+              <span className="text-sm font-normal text-slate-500 ml-2">
+                {list.length}件
+              </span>
+            </h2>
+            <MapViewClient facilities={list} height={420} />
+          </section>
+        )}
+
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Stat label="全施設" count={meta.count} emoji="🎈" />
           <Stat label="雨でも遊べる" count={rainCount} emoji="☂️" />
