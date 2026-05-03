@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-03 / Phase 1 + 2 + 公開 + GA4 + Search Console + sitemap 受理 + V4 22件追加(計173施設)+ Sheet⇄JSON 同期運用化
+**最終更新**: 2026-05-03 / 公開 + GA4 + Search Console + V4(173)+ V5(191)+ V6(214)+ Sheets API 双方向書き込み運用化
 
 ---
 
@@ -19,11 +19,11 @@
 ## プロジェクト概要
 
 - **サイト名**: trip-guide.net
-- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設173件)の検索サイト
+- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設214件)の検索サイト
 - **スタック**: Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Turbopack
 - **ホスティング**: Vercel
-- **データ**: `data/facilities_data.json` (173施設、全件に緯度経度あり、画像57件)
-- **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト
+- **データ**: `data/facilities_data.json` (214施設、全件緯度経度入り、画像68件)
+- **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト + **Sheets API 直接書き込み**(append-to-sheet / push-to-sheet)
 - **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書、データ運用フローも記載)
 
 ## 公開状況 (LIVE)
@@ -63,10 +63,11 @@
 - スキップリンク / フォーカススタイル / 動きを抑制設定
 
 ### ✅ データ充実 (完了)
-- **ジオコーディング 173/173 完了** (V3初期: Nominatim 83 + Google 68 / V4追加分: Nominatim 12 + Google 10)
-- **施設写真 57件**(33%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針
+- **施設数 214件**(V3:151 + V4:22 + V5:18 + V6:23)、全件緯度経度入り
+- **施設写真 68件**(32%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針(却下40件はブラックリスト管理)
 - カテゴリ数 18(15既存 + 3新規 nature-park / viewpoint / scenic)
-- ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-images.ts` / `fetch-wiki-images.ts` / `cleanup-wiki-images.mjs` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`**
+- スキーマ 22列(V5で signature_experiences / unique_selling_point / experience_tags / summer_water_play 追加)
+- ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-wiki-images.ts` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`** / **`append-to-sheet.ts`** / **`push-to-sheet.ts`**
 - バックアップ: `data/facilities_data.json.bak.*` — gitignore 対象
 
 ### ✅ 体験向上 (完了)
@@ -130,15 +131,43 @@
   - 配列前提のコンポーネント `FacilityGallery.tsx` で書いてあるので、将来 `images: string[]` に拡張可能
   - 画像なし施設はセクションごと非表示
 
-### Wikipedia 自動取得の精査
-- fetch-wiki が一度に 31件マッチしたが、ファジー検索で別施設・別概念がかなり混入
-- 完全一致の3件のみ採用(155 河口湖音楽と森の美術館 / 171 八ヶ岳自然文化園 / 173 上高地)、残り28件は画像ファイルごと削除して `image_*` フィールドを null に戻した
-- これでサイト全体で 57件画像 / 116件画像なし
+### Wikipedia 自動取得の精査(strict-match policy)
+- fetch-wiki はファジー検索で別施設・別概念をしばしば返すので、**Wikipedia 記事タイトルが施設名と完全一致するもののみ採用**が確立した運用方針
+- 却下されたid群は `data/wiki-image-blacklist.json` に登録され、`npm run fetch-wiki` で次回以降スキップされる(無限再取得防止)
+- 採用例: 155 河口湖音楽と森の美術館 / 171 八ヶ岳自然文化園 / 173 上高地 / 192 富士川クラフトパーク / 208 熱海城 など
+- 却下例: 152 伊豆テディベア・ミュージアム ← テディベア(概念)/ 150 あすなろ園 ← 青木あすなろ建設(建設会社)など
+
+### id=167 軽井沢おもちゃ王国 修正済み
+- 嬬恋村は実は群馬県だが「軽井沢エリア」として長野県表記している → ジオコーダが混乱
+- 施設名のみで再検索して正しい座標を取得・直接書き込み(`geocode_source: "manual"`)
+
+---
+
+## ✅ V5 + V6 拡張 + Sheets API 双方向化 (2026-05-03 完了)
+
+### V5: スキーマ4列追加 + 18施設追加(id 174〜191)
+- 新列: `signature_experiences`(配列)/ `unique_selling_point`(文字列)/ `experience_tags`(配列)/ `summer_water_play`(◎△×)
+- 18施設追加(主に Forest Adventure シリーズ、三島スカイウォーク、チビッ子忍者村など)
+- 22列スキーマで sync / export / type / 取り込み全て対応
+
+### V6: 23施設追加(id 192〜214)
+- 大型遊具公園が中心(山梨9 / 長野7 / 静岡7)
+- 富士川クラフトパーク、万力公園、熱海城、はままつフラワーパークなど
+- 全件 lat/lng 補完済み(13 Nominatim + 10 Google)、画像7件採用
+
+### Google Sheets API による双方向書き込み(運用革命)
+- **問題**: 旧フローでは新規行に id 空のまま sync すると毎回新規扱いで重複地獄
+- **解決**: サービスアカウント `trip-guide-bot@trip-guide-495213.iam.gserviceaccount.com` を作成 + シート編集権限付与 + JSON キー(`data/.gcp-sheets-credentials.json`、gitignore済)
+- **新スクリプト**:
+  - `npm run append-to-sheet -- file.csv` → 末尾追記
+  - `npm run push-to-sheet` → JSON 状態を全列フル書き戻し
+- **新フロー**: シート編集 → `sync-sheet` → `push-to-sheet` で id 自動書き戻し完了。重複事故ゼロ
+- **スプレッドシート初期化用 CSV** (`data/facilities_master.csv`) は、Sheets API 経由なら `push-to-sheet` で代替可能
 
 ### 残課題(優先度低)
-- **id=167 軽井沢おもちゃ王国 のジオコード誤り** — シートで「長野県」→「群馬県」に直して `npm run sync-sheet` + `npm run geocode` で復旧
-- **既存54件 Wikipedia 画像も再精査**(同じファジー混入が懸念、特に 9 / 52 / 62 / 77 / 82 / 88 / 91 / 101 / 102 / 104 / 106 / 118 / 145 / 150 等)
-- **画像カバレッジ向上**: 残り116件を Google Places API (New) で取得検討。無料枠($200/月)で約 $1.40 程度なので余裕で収まる
+- **既存68件画像の再精査**(strict matcher で今までのすり抜けを洗い出し)
+- **画像カバレッジ向上**: 残り146件を Google Places API (New) で取得検討。無料枠($200/月)で約 $1.50 程度
+- **fetch-wiki の自動 strict フィルタ**(現状の手動分類 → 却下 → ブラックリスト追加 を 1 コマンド化)
 - **インデックス進捗の確認**: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
 
 ---
@@ -165,20 +194,25 @@
 | 〃 | データ運用を Google スプレッドシート→JSON 同期に切替(`npm run export-csv` / `npm run sync-sheet`) |
 | 2026-05-03 | V4 22件追加(id 152-173)、3新カテゴリ(nature-park / viewpoint / scenic) |
 | 〃 | sync-from-sheet バグ修正(is_free, カテゴリ count, 重複 id 警告)|
-| 〃 | Nominatim + Google で V4 全件ジオコード(id=167 のみズレ要修正)|
+| 〃 | Nominatim + Google で V4 全件ジオコード、id=167 軽井沢おもちゃ王国 を手動再検索で修正 |
 | 〃 | Wikipedia ファジーマッチ 28件却下、完全一致3件のみ採用 → 画像57件 |
+| 〃 | V5: 22列スキーマ移行(signature_experiences ほか3列追加)+ 18施設追加(id 174-191) |
+| 〃 | V5 全件ジオコード + 4件画像採用、`wiki-image-blacklist.json` 機構導入 |
+| 〃 | **Sheets API 双方向書き込み構築**(サービスアカウント、append-to-sheet / push-to-sheet) |
+| 〃 | V6: 23施設追加(id 192-214)、大型遊具公園中心 + 7件画像採用、計214件で本日着地 |
 
 ---
 
 ## 今後やるべき残タスク
 
 ### Phase 3 候補(優先順)
-1. **id=167 軽井沢おもちゃ王国 のジオコード修正**(シート1セル + 1コマンドで完了、5分作業)
-2. **既存57件画像の再精査**(ファジーマッチ混入分を洗い出し)
-3. **Google Places API で残り116件の画像取得**(無料枠内、約 $1.40)
-4. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
-5. **お気に入り機能** (localStorage、軽量)
-6. **検索機能の強化**(現在は単純な部分一致)
+1. **既存68件画像の再精査**(strict matcher で今までのすり抜けを洗い出し、ブラックリストに追加)
+2. **fetch-wiki の自動 strict フィルタ**(分類 → 却下 → ブラックリスト追加を `--strict` フラグで1コマンド化)
+3. **Google Places API で残り146件の画像取得**(無料枠内、約 $1.50)
+4. **新4列のフロントエンド表示**(signature_experiences / unique_selling_point / experience_tags / summer_water_play は データに入っただけで UI 未対応)
+5. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
+6. **お気に入り機能** (localStorage、軽量)
+7. **検索機能の強化**(現在は単純な部分一致)
 
 ### コンテンツ拡充
 - 季節特集ページ(春の桜、夏の水遊び、秋の紅葉、冬のスキー)
@@ -204,42 +238,50 @@
 
 ## 参考ファイル(同フォルダ内)
 
-- `HANDOFF.md` — プロジェクト完全仕様書
+- `HANDOFF.md` — プロジェクト完全仕様書(運用フロー記載)
 - `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
-- `data/facilities_data.json` — 173施設の最新データ(全件緯度経度入り、57件画像付き)
+- `data/facilities_data.json` — 214施設の最新データ(全件緯度経度入り、68件画像付き)
 - `data/facilities_data.json.bak.*` — タイムスタンプ付きバックアップ(gitignore)
-- `scripts/` — geocode.ts / fetch-wiki-images.ts / cleanup-wiki-images.mjs / optimize-images.mjs / fetch-images.ts (Places New 対応、未実行) / **export-to-csv.ts** / **sync-from-sheet.ts**
-- `data/facilities_master.csv` — JSON から書き出した完全版 CSV(スプレッドシート初期化用)
-- 詳しい運用フローは `HANDOFF.md` の「データ運用フロー」セクション参照
+- `data/wiki-image-blacklist.json` — Wikipedia ファジーマッチ却下済み id 一覧(40件)
+- `data/.gcp-sheets-credentials.json` — Sheets API サービスアカウント鍵(gitignore)
+- `scripts/` — geocode.ts(Google fallback)/ geocode.mjs(Nominatim 一次)/ fetch-wiki-images.ts(blacklist対応済)/ optimize-images.mjs / **export-to-csv.ts** / **sync-from-sheet.ts** / **append-to-sheet.ts** / **push-to-sheet.ts**
 - このメモ(`CHAT_HANDOFF.md`)
 
-## 環境変数 (.env.local / Vercel)
+## 環境変数 / 認証ファイル
 
-| 変数名 | 用途 | 設定場所 |
+| 名前 | 用途 | 場所 |
 |---|---|---|
-| `GOOGLE_GEOCODING_API_KEY` | Geocoding 再実行・将来の Places API 用 | `.env.local` (ローカル) / Vercel Settings |
-| `NEXT_PUBLIC_GA_ID` | GA4 測定 ID (`G-1V6K1ZJH6S`) | Vercel Settings(Production / Development 登録済み、Preview のみ未設定) |
-| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | (使わなかった — HTML ファイル方式で認証完了) | — |
+| `GOOGLE_GEOCODING_API_KEY` | Geocoding API(2026-05-03 鍵更新済み)| `.env.local` |
+| `NEXT_PUBLIC_GA_ID` | GA4 測定 ID (`G-1V6K1ZJH6S`) | Vercel Settings(Prod / Dev) |
+| `data/.gcp-sheets-credentials.json` | Sheets API サービスアカウント鍵 | ローカルのみ(.gitignore済) |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | (未使用 — HTML ファイル方式で認証完了) | — |
 
 ---
 
 ## 次セッション再開時のプロンプト例
 
 ```
-trip-guide.net は 173施設で公開稼働中です(Phase 1+2、GA4、Search Console、Sheet⇄JSON 同期まで完了)。
+trip-guide.net は 214施設で公開稼働中です(Phase 1+2、GA4、Search Console、Sheets API 双方向書き込みまで完了)。
 CHAT_HANDOFF.md を読んで現状を把握してください。
 今日は Phase 3 の「[進めたい項目]」を進めたいです。
 ```
 
-データ編集をしたい時:
+データ追加をしたい時(V7+):
 ```
-スプレッドシートで V5 を 〇件追加しました。npm run sync-sheet で取り込んでください。
-(sync 後、export-csv 再生成 + シートに再インポートで id を書き戻すのを忘れずに)
+data/v7_additions_for_sheet.csv を作りました。標準フローで取り込んでください。
 ```
+→ Claude が以下を順次実行:
+1. `npm run append-to-sheet -- data/v7_additions_for_sheet.csv`
+2. `npm run sync-sheet`(自動採番)
+3. `npm run push-to-sheet`(id 書き戻し)
+4. `node scripts/geocode.mjs` + `npm run geocode`
+5. `npm run fetch-wiki` + 厳格フィルタ + ブラックリスト追加
+6. もう一度 `push-to-sheet` で完全同期
+7. commit & push
 
 ---
 
 新セッションで取りかかりやすいクイック作業:
-- **id=167 ジオコード修正**(シートで「長野県」→「群馬県」に変えて sync + geocode)
-- **Wikipedia 既存写真の精査**(ファジーマッチ混入を洗い出して却下)
-- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行)
+- **既存68件 Wikipedia 画像の strict 再精査**(ブラックリストに追加で再発防止)
+- **新4列(signature_experiences ほか)を施設詳細ページに表示**(データはあるが UI 未対応)
+- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行、約 $1.50)
