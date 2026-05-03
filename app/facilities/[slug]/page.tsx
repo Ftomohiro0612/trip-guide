@@ -42,13 +42,18 @@ const RAIN_LABELS: Record<string, { color: string; label: string }> = {
   "×": { color: "bg-slate-100 text-slate-500", label: "雨は不向き" },
 };
 
+const RAIN_FALLBACK = {
+  color: "bg-slate-100 text-slate-500",
+  label: "情報なし",
+};
+
 export default async function FacilityDetailPage({ params }: Props) {
   const { slug } = await params;
   const facility = getFacilityBySlug(slug);
   if (!facility) notFound();
 
   const related = getRelatedFacilities(facility, 3);
-  const rain = RAIN_LABELS[facility.rain_friendly];
+  const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
   const galleryImages =
     facility.images && facility.images.length > 0
       ? facility.images
