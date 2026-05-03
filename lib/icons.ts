@@ -30,6 +30,11 @@ export const prefectureGradients: Record<string, string> = {
   nagano: "from-emerald-500 via-teal-500 to-sky-500",
   yamanashi: "from-fuchsia-400 via-violet-500 to-indigo-500",
   tokyo: "from-rose-400 via-pink-400 to-orange-400",
+  tochigi: "from-yellow-400 via-amber-400 to-orange-500",
+  saitama: "from-lime-400 via-green-400 to-teal-400",
+  niigata: "from-blue-400 via-indigo-400 to-purple-500",
+  chiba: "from-cyan-400 via-blue-400 to-sky-500",
+  kanagawa: "from-violet-400 via-purple-400 to-pink-500",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -37,4 +42,9 @@ export const prefectureEmoji: Record<string, string> = {
   nagano: "🏔️",
   yamanashi: "🍇",
   tokyo: "🗼",
+  tochigi: "🍓",
+  saitama: "🌻",
+  niigata: "🌾",
+  chiba: "🥜",
+  kanagawa: "🌊",
 };

@@ -25,6 +25,11 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   長野県: "nagano",
   山梨県: "yamanashi",
   東京都: "tokyo",
+  栃木県: "tochigi",
+  埼玉県: "saitama",
+  新潟県: "niigata",
+  千葉県: "chiba",
+  神奈川県: "kanagawa",
 };
 
 interface CsvRow {

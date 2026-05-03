@@ -1,4 +1,13 @@
-export type PrefectureId = "shizuoka" | "nagano" | "yamanashi" | "tokyo";
+export type PrefectureId =
+  | "shizuoka"
+  | "nagano"
+  | "yamanashi"
+  | "tokyo"
+  | "tochigi"
+  | "saitama"
+  | "niigata"
+  | "chiba"
+  | "kanagawa";
 
 export type RainFriendly = "◎" | "△" | "×";
 

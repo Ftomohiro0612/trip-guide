@@ -24,6 +24,11 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   nagano: "#10b981",
   yamanashi: "#a855f7",
   tokyo: "#f43f5e",
+  tochigi: "#f59e0b",
+  saitama: "#84cc16",
+  niigata: "#6366f1",
+  chiba: "#06b6d4",
+  kanagawa: "#a855f7",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -31,6 +36,11 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   nagano: "🏔️ 長野",
   yamanashi: "🍇 山梨",
   tokyo: "🗼 東京",
+  tochigi: "🍓 栃木",
+  saitama: "🌻 埼玉",
+  niigata: "🌾 新潟",
+  chiba: "🥜 千葉",
+  kanagawa: "🌊 神奈川",
 };
 
 interface PlacedFacility extends Facility {
@@ -56,6 +66,11 @@ export default function MapView({ facilities, height = 520 }: Props) {
       nagano: true,
       yamanashi: true,
       tokyo: true,
+      tochigi: true,
+      saitama: true,
+      niigata: true,
+      chiba: true,
+      kanagawa: true,
     },
   );
   const [showRain, setShowRain] = useState(false);
