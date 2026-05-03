@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-02 / Phase 1 + 2 完了 + 本番公開済み + GA4 計測 + Search Console 認証 + sitemap 受理
+**最終更新**: 2026-05-03 / Phase 1 + 2 + 公開 + GA4 + Search Console + sitemap 受理 + V4 22件追加(計173施設)+ Sheet⇄JSON 同期運用化
 
 ---
 
@@ -19,11 +19,12 @@
 ## プロジェクト概要
 
 - **サイト名**: trip-guide.net
-- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設151件)の検索サイト
+- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設173件)の検索サイト
 - **スタック**: Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Turbopack
 - **ホスティング**: Vercel
-- **データ**: `data/facilities_data.json` (151施設、全件に正確な緯度経度あり)
-- **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書)
+- **データ**: `data/facilities_data.json` (173施設、全件に緯度経度あり、画像57件)
+- **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト
+- **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書、データ運用フローも記載)
 
 ## 公開状況 (LIVE)
 
@@ -62,10 +63,11 @@
 - スキップリンク / フォーカススタイル / 動きを抑制設定
 
 ### ✅ データ充実 (完了)
-- **ジオコーディング 151/151 完了** (Nominatim 83 + Google Geocoding API 68)
-- 施設写真 54件 (Wikipedia 由来、ライセンス表記付き、sharp で 152MB → 7MB に最適化)
-- ヘルパースクリプト: `geocode.ts`, `fetch-images.ts`, `fetch-wiki-images.ts`, `cleanup-wiki-images.mjs`, `optimize-images.mjs`
-- バックアップ: `data/facilities_data.json.bak` (Google ジオコード前) / `data/facilities_data.json.images.bak`(画像追加前) — どちらも `.gitignore` 対象
+- **ジオコーディング 173/173 完了** (V3初期: Nominatim 83 + Google 68 / V4追加分: Nominatim 12 + Google 10)
+- **施設写真 57件**(33%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針
+- カテゴリ数 18(15既存 + 3新規 nature-park / viewpoint / scenic)
+- ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-images.ts` / `fetch-wiki-images.ts` / `cleanup-wiki-images.mjs` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`**
+- バックアップ: `data/facilities_data.json.bak.*` — gitignore 対象
 
 ### ✅ 体験向上 (完了)
 - シェアボタン(X / LINE / Facebook / リンクコピー / OS標準シェア)
@@ -102,9 +104,42 @@
 - HTML タグ方式 (`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`) は使わなかった → 今回はその環境変数は未設定のままで OK
 - メモ帳に保存していた meta タグの content 値は捨てて問題なし
 
+---
+
+## ✅ V4 拡張 + 運用パイプライン構築 (2026-05-03 完了)
+
+### 22施設追加(id 152〜173)
+- 静岡 3 / 山梨 12 / 長野 7 件、主に河口湖・山中湖・軽井沢周辺の美術館 / 体験施設 / 自然系
+- 全件 緯度経度補完済み(例外: id=167 軽井沢おもちゃ王国は群馬県嬬恋村が長野県表記でジオコード結果がズレ)
+- 新カテゴリ3つ追加: `nature-park` 公園・自然 / `viewpoint` 展望台 / `scenic` 自然・絶景
+- アイコン・説明文も `lib/icons.ts` / `lib/descriptions.ts` に追加済み
+
+### Google スプレッドシート ⇄ JSON 同期運用化
+- スプレッドシートID: `1p4bqL1Oq89k5c-9Wa0REXd8BojzUBBXfF5-iSYEeeH4`
+- 「全件一覧」タブが先頭、18列(id / 県 / カテゴリ / 施設名 / 所在地 / 屋内・屋外 / 雨天対応 / 料金タイプ / 大人料金目安 / 子供料金目安 / おすすめポイント詳細 / 対象年齢 / URL/参考 / lat / lng / image / image_credit / tags)
+- 通常運用: シート編集 → `npm run sync-sheet` → JSON 反映
+- **重要な落とし穴**: シートに id 空のまま新規行追加 → 同期 → 自動採番されるが、**シートに id を書き戻さないと次回また新規扱いで重複**する
+  - 対策: 同期後 `npm run export-csv` → `data/facilities_master.csv` をシートに再インポート
+  - sync スクリプトは「added > 0 かつ orphaned > 0」を検知すると警告を出す
+  - 詳細手順は HANDOFF.md「データ運用フロー」セクション
+- バグ修正済み: `is_free` の startsWith("無料") 判定 / カテゴリ count 自動更新
+
+### 詳細ページ UX 改修
+- ヒーロー画像のフル不透明度化(以前は60%+グラデオーバーレイで写真が見えなかった)
+- 「写真ギャラリー」セクション新設(基本情報 直上、3列 PC / 2列 SP、4:3 比率)
+  - 配列前提のコンポーネント `FacilityGallery.tsx` で書いてあるので、将来 `images: string[]` に拡張可能
+  - 画像なし施設はセクションごと非表示
+
+### Wikipedia 自動取得の精査
+- fetch-wiki が一度に 31件マッチしたが、ファジー検索で別施設・別概念がかなり混入
+- 完全一致の3件のみ採用(155 河口湖音楽と森の美術館 / 171 八ヶ岳自然文化園 / 173 上高地)、残り28件は画像ファイルごと削除して `image_*` フィールドを null に戻した
+- これでサイト全体で 57件画像 / 116件画像なし
+
 ### 残課題(優先度低)
-- Phase 3: 施設画像の追加(Wikimedia Commons をさらに探索する方向、汎用写真は使わない方針)
-- インデックス進捗の確認: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
+- **id=167 軽井沢おもちゃ王国 のジオコード誤り** — シートで「長野県」→「群馬県」に直して `npm run sync-sheet` + `npm run geocode` で復旧
+- **既存54件 Wikipedia 画像も再精査**(同じファジー混入が懸念、特に 9 / 52 / 62 / 77 / 82 / 88 / 91 / 101 / 102 / 104 / 106 / 118 / 145 / 150 等)
+- **画像カバレッジ向上**: 残り116件を Google Places API (New) で取得検討。無料枠($200/月)で約 $1.40 程度なので余裕で収まる
+- **インデックス進捗の確認**: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
 
 ---
 
@@ -128,14 +163,19 @@
 | 〃 | `public/google53d37859cb4831ab.html` を配置、`/sitemap.xml` 提出 → 「成功しました」確認 |
 | 〃 | 詳細ページ:ヒーロー画像をフル不透明度に変更、写真ギャラリーセクション新設 |
 | 〃 | データ運用を Google スプレッドシート→JSON 同期に切替(`npm run export-csv` / `npm run sync-sheet`) |
+| 2026-05-03 | V4 22件追加(id 152-173)、3新カテゴリ(nature-park / viewpoint / scenic) |
+| 〃 | sync-from-sheet バグ修正(is_free, カテゴリ count, 重複 id 警告)|
+| 〃 | Nominatim + Google で V4 全件ジオコード(id=167 のみズレ要修正)|
+| 〃 | Wikipedia ファジーマッチ 28件却下、完全一致3件のみ採用 → 画像57件 |
 
 ---
 
 ## 今後やるべき残タスク
 
-### Phase 3 候補
-1. **施設画像の追加カバレッジ**(Wikimedia Commons をさらに探索する方針。汎用写真は使わない。Google Places API は保留)
-3. **Wikipedia ファジーマッチの目視チェック**(54件のうちいくつかは関連サイト)
+### Phase 3 候補(優先順)
+1. **id=167 軽井沢おもちゃ王国 のジオコード修正**(シート1セル + 1コマンドで完了、5分作業)
+2. **既存57件画像の再精査**(ファジーマッチ混入分を洗い出し)
+3. **Google Places API で残り116件の画像取得**(無料枠内、約 $1.40)
 4. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
 5. **お気に入り機能** (localStorage、軽量)
 6. **検索機能の強化**(現在は単純な部分一致)
@@ -166,9 +206,8 @@
 
 - `HANDOFF.md` — プロジェクト完全仕様書
 - `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
-- `data/facilities_data.json` — 151施設の最新データ(緯度経度・画像パス入り)
-- `data/facilities_data.json.bak` — Google ジオコード前のスナップショット
-- `data/facilities_data.json.images.bak` — 画像追加前のスナップショット
+- `data/facilities_data.json` — 173施設の最新データ(全件緯度経度入り、57件画像付き)
+- `data/facilities_data.json.bak.*` — タイムスタンプ付きバックアップ(gitignore)
 - `scripts/` — geocode.ts / fetch-wiki-images.ts / cleanup-wiki-images.mjs / optimize-images.mjs / fetch-images.ts (Places New 対応、未実行) / **export-to-csv.ts** / **sync-from-sheet.ts**
 - `data/facilities_master.csv` — JSON から書き出した完全版 CSV(スプレッドシート初期化用)
 - 詳しい運用フローは `HANDOFF.md` の「データ運用フロー」セクション参照
@@ -187,18 +226,20 @@
 ## 次セッション再開時のプロンプト例
 
 ```
-trip-guide.net は公開済みで、Phase 1 + 2 + GA4 + Search Console + sitemap まで完了しています。
+trip-guide.net は 173施設で公開稼働中です(Phase 1+2、GA4、Search Console、Sheet⇄JSON 同期まで完了)。
 CHAT_HANDOFF.md を読んで現状を把握してください。
-今日は Phase 3 の「[進めたい項目]」を相談したいです。
+今日は Phase 3 の「[進めたい項目]」を進めたいです。
 ```
 
-または、別の作業に進みたい場合:
-
+データ編集をしたい時:
 ```
-trip-guide.net は既に公開済みです。CHAT_HANDOFF.md を読んで現状を把握してください。
-今日は Phase 3 の「[XX]」を進めたいです。アプローチを相談したい。
+スプレッドシートで V5 を 〇件追加しました。npm run sync-sheet で取り込んでください。
+(sync 後、export-csv 再生成 + シートに再インポートで id を書き戻すのを忘れずに)
 ```
 
 ---
 
-新セッションでは、まずユーザーから Search Console の認証コード(`content` の中身)を受け取り、Vercel 環境変数 `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` への登録 → 再デプロイ → 確認ボタン → sitemap 提出、の順で案内するのが自然です。
+新セッションで取りかかりやすいクイック作業:
+- **id=167 ジオコード修正**(シートで「長野県」→「群馬県」に変えて sync + geocode)
+- **Wikipedia 既存写真の精査**(ファジーマッチ混入を洗い出して却下)
+- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行)
