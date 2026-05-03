@@ -14,6 +14,9 @@ export const categoryIcons: Record<string, string> = {
   ski: "⛷️",
   hotel: "🏨",
   experience: "✨",
+  "nature-park": "🌲",
+  viewpoint: "🔭",
+  scenic: "🏞️",
 };
 
 export function categoryIcon(categoryId: string): string {

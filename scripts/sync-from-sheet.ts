@@ -200,6 +200,9 @@ function recomputeCounts(data: FacilitiesData): void {
   data.metadata.prefectures = data.metadata.prefectures.map(
     (p): PrefectureMeta => ({ ...p, count: prefCounts.get(p.id) ?? 0 }),
   );
+  data.metadata.categories = data.metadata.categories.map(
+    (c): CategoryMeta => ({ ...c, count: catCounts.get(c.id) ?? 0 }),
+  );
   data.metadata.total_facilities = data.facilities.length;
 }
 
@@ -294,6 +297,30 @@ async function main() {
     );
     for (const f of orphaned) console.warn(`     id=${f.id} ${f.name}`);
     merged.push(...orphaned);
+
+    if (added > 0) {
+      console.warn("");
+      console.warn("⚠️  ───────────────────────────────────────────────────");
+      console.warn("⚠️  Both 'added' and 'orphaned' are non-zero.");
+      console.warn(
+        "⚠️  This usually means the sheet has rows with empty ids that JSON",
+      );
+      console.warn(
+        "⚠️  already received ids for in a previous sync. Running sync again",
+      );
+      console.warn("⚠️  will keep creating duplicate ids on every run.");
+      console.warn("⚠️");
+      console.warn("⚠️  Fix: write the freshly assigned ids back to the sheet by");
+      console.warn("⚠️    1) npm run export-csv");
+      console.warn(
+        "⚠️    2) re-import data/facilities_master.csv into the sheet",
+      );
+      console.warn(
+        "⚠️       (File → Import → Replace data) so the id column is filled.",
+      );
+      console.warn("⚠️  Then re-run npm run sync-sheet.");
+      console.warn("⚠️  ───────────────────────────────────────────────────");
+    }
   }
 
   // 7. Sort by id and write

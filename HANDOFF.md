@@ -278,20 +278,35 @@ npm run export-csv
 
 これでスプレッドシート側も 18 列・151 行の完全版になり、以降は `npm run sync-sheet` だけで往復できる。
 
-### 新規追加施設の補完
+### 新規追加施設の補完(重要:idの書き戻し)
 
-スプレッドシートで施設を新規追加した直後は `lat`/`lng`/`image` が空。`npm run sync-sheet` 後に:
+スプレッドシートに **id 列が空のまま新規行を追加 → sync** すると、JSON 側で
+ids が自動採番される。**この採番結果をスプレッドシートに戻さないと**、
+次回 sync で同じ行が再び「id 空 → 新規」と判定され、重複した別 id で
+増殖していく(既存 152-173 と新たな 174-195 が同内容で並ぶような状態)。
+
+そこで**毎回必ず**:
 
 ```powershell
-# 緯度経度: Nominatim → 失敗分は Google Geocoding API
-npm run geocode
+# 1. シートに新規行を追加して保存(id列は空でOK)
 
-# 施設写真: Wikipedia 検索
+# 2. JSON へ取り込み + 自動採番
+npm run sync-sheet
+
+# 3. 採番結果を含む CSV を再生成
+npm run export-csv
+
+# 4. data/facilities_master.csv をスプレッドシートに再インポート
+#    (ファイル → インポート → ファイルを置換)
+#    → これで id 列が埋まり、次回 sync は冪等になる
+
+# 5. 緯度経度・画像は別途補完
+npm run geocode
 npm run fetch-wiki
 ```
 
-を順に走らせる(両方とも JSON 直書きしてくれる)。
-完了したら、念のため `npm run export-csv` で派生CSVを再生成し、スプレッドシートに反映してフォーマットを保つ。
+`sync-from-sheet` は「added > 0 かつ orphaned > 0」を検知すると警告と
+ステップ3-4 の指示を出す。警告が出たら必ず CSV 再インポートを行うこと。
 
 ---
 
