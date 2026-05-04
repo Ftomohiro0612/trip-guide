@@ -85,6 +85,37 @@ export default function MapView({ facilities, height = 520 }: Props) {
     });
   }, [placed, activePrefs, showRain, showFree]);
 
+  // Spread overlapping markers in a small circle so each is clickable
+  // (e.g. キポキポ + 恩賜林庭園 at identical coords would otherwise stack
+  // and only the top one is visible). The offset is ~30-40m, smaller than
+  // street-level zoom resolution.
+  const rendered = useMemo(() => {
+    const groups = new Map<string, PlacedFacility[]>();
+    for (const f of visible) {
+      const key = `${f.latitude.toFixed(6)},${f.longitude.toFixed(6)}`;
+      const list = groups.get(key) ?? [];
+      list.push(f);
+      groups.set(key, list);
+    }
+    const out: PlacedFacility[] = [];
+    for (const list of groups.values()) {
+      if (list.length === 1) {
+        out.push(list[0]);
+        continue;
+      }
+      const radius = 0.0004; // ~40m
+      list.forEach((f, i) => {
+        const angle = (i / list.length) * Math.PI * 2;
+        out.push({
+          ...f,
+          latitude: f.latitude + Math.sin(angle) * radius,
+          longitude: f.longitude + Math.cos(angle) * radius,
+        });
+      });
+    }
+    return out;
+  }, [visible]);
+
   return (
     <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
       <div className="absolute z-[1000] top-3 left-3 right-3 sm:right-auto flex flex-wrap gap-2">
@@ -152,7 +183,7 @@ export default function MapView({ facilities, height = 520 }: Props) {
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         <FitBoundsOnChange points={visible} />
-        {visible.map((f) => (
+        {rendered.map((f) => (
           <FacilityMarker
             key={f.id}
             facility={f}
