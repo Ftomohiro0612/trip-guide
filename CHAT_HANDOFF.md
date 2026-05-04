@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-04 / V4-V6 + 東京都150件追加(計 364 / 4県 / 20カテゴリ)+ フィルタページ地図 + Sheets API 双方向書き込み
+**最終更新**: 2026-05-04 深夜 / 9県968施設 / V7東京 + V8関東5県(506) + V9第2弾(68) + V10 audit補完(35) / Sheets API 双方向 / マーカー重複オフセット
 
 ---
 
@@ -19,10 +19,11 @@
 ## プロジェクト概要
 
 - **サイト名**: trip-guide.net
-- **目的**: 子供向け遊び場(静岡・長野・山梨・東京の4県、施設364件)の検索サイト
+- **目的**: 子供向け遊び場(関東甲信越9県、施設968件)の検索サイト
 - **スタック**: Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Turbopack
 - **ホスティング**: Vercel
-- **データ**: `data/facilities_data.json` (364施設、全件緯度経度入り、画像141件)
+- **データ**: `data/facilities_data.json` (968施設、全件緯度経度入り、画像350件)
+- **県別**: 静岡 68 / 長野 73 / 山梨 72 / 東京 155 / 栃木 118 / 埼玉 118 / 新潟 120 / 千葉 115 / 神奈川 124
 - **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト + **Sheets API 直接書き込み**(append-to-sheet / push-to-sheet)
 - **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書、データ運用フローも記載)
 
@@ -63,9 +64,10 @@
 - スキップリンク / フォーカススタイル / 動きを抑制設定
 
 ### ✅ データ充実 (完了)
-- **施設数 364件**(V3:151 + V4:22 + V5:18 + V6:23 + V7東京都:150)、全件緯度経度入り
-- **県別**: 静岡 68 / 長野 74 / 山梨 72 / **東京 150**
-- **施設写真 141件**(39%)— Wikipedia 完全一致のみ採用、汎用写真は使わない方針(却下72件はブラックリスト管理)
+- **施設数 968件** — 全件緯度経度入り
+  - V3:151 → V4:+22 → V5:+18 → V6:+23 → V7 東京 +150 → V8 関東5県 +506 → V9 第2弾 +68 → V10 audit補完 +35 → 削除 5 (重複) = **968**
+- **9県カバー**: 静岡 68 / 長野 73 / 山梨 72 / 東京 155 / 栃木 118 / 埼玉 118 / 新潟 120 / 千葉 115 / 神奈川 124
+- **施設写真 350件**(36%)— Wikipedia 完全一致のみ採用、却下292件はブラックリスト管理(`data/wiki-image-blacklist.json`)
 - **カテゴリ数 20**(15既存 + 5新規:nature-park / viewpoint / scenic / indoor-theme-park / game-center)
 - スキーマ 22列(V5で signature_experiences / unique_selling_point / experience_tags / summer_water_play 追加)
 - ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-wiki-images.ts` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`** / **`append-to-sheet.ts`** / **`push-to-sheet.ts`**
@@ -166,10 +168,40 @@
 - **スプレッドシート初期化用 CSV** (`data/facilities_master.csv`) は、Sheets API 経由なら `push-to-sheet` で代替可能
 
 ### 残課題(優先度低)
-- **既存68件画像の再精査**(strict matcher で今までのすり抜けを洗い出し)
-- **画像カバレッジ向上**: 残り 223 件を Google Places API (New) で取得検討。無料枠($200/月)で約 $2.50 程度
-- **fetch-wiki の自動 strict フィルタ**(現状の手動分類 → 却下 → ブラックリスト追加 を 1 コマンド化)
+- **画像カバレッジ向上**: 残り 618 件を Google Places API (New) で取得検討。無料枠($200/月)で約 $5 程度
+- **fetch-wiki の自動 strict フィルタ**(現状は `scripts/.tmp-strict-wiki-filter.mjs` をその都度作成 → 1 コマンド化したい)
+- **V10 audit 追加分(id 941-975)の説明文・料金の精査**(Web検索ベースの暫定値、シートで磨ける)
 - **インデックス進捗の確認**: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
+
+---
+
+## ✅ V7-V10 追加履歴 (2026-05-04)
+
+### V7 東京都 +150件(id 215-364)
+- 新カテゴリ2つ追加:`indoor-theme-park` 屋内テーマパーク / `game-center` ゲームセンター
+- rain_friendly が「雨天OK / 雨天NG / 雨天一部OK」のテキストで、prerender 全落ち事故 → 正規化 + RAIN_FALLBACK で復旧
+
+### V8 関東5県 +506件(id 365-870)
+- **栃木 / 埼玉 / 新潟 / 千葉 / 神奈川**(各国 100件前後)を一括追加
+- PrefectureId 型 / 県別アイコン・色・説明文 / sync の PREFECTURE_MAP / MapView の PREF_COLORS &  LABELS / metadata.prefectures をそれぞれ 5県分拡張
+
+### V9 第2弾 +68件(id 871-940)
+- 6県横断の70件 CSV から、既存と同名2件(府中の森公園 / コニカミノルタ満天)を skip して 68件追加
+
+### V10 audit補完 +35件(id 941-975)
+- 9県完成度 audit(WebSearch ベース)で見つかった漏れ施設を補完
+- 静岡 5 / 長野 1 / 栃木 2 / 埼玉 8 / 新潟 7 / 千葉 3 / 神奈川 9
+- 神奈川キドキドは ラゾーナ川崎 / たまプラーザ / 武蔵小杉 / みなとみらい / 湘南 の 5店を追加
+- 説明文・料金は web 検索ベースの暫定値、要シート精査
+
+### MapView 同座標オフセット
+- キポキポ(id=131)と恩賜林庭園(id=200)が同じ住所内施設で完全同座標 → マーカー重なって片方しか見えない問題を解決
+- 同座標グループを ~40m 半径で円形に微小ジッタ、現在 27 組の親子施設すべて個別クリック可能に
+
+### 整合性チェックでの修正
+- 県外ジオコード 6件(京都・福岡・東京に飛んでいた栃木・千葉施設)を再ジオコード
+- indoor_outdoor「屋内・屋外」表記 7件 → 「両方」に正規化
+- 同名重複 5件削除(870 → 865)、その後 V9 / V10 で増加
 
 ---
 
@@ -182,7 +214,7 @@
 - `indoor_outdoor`: `屋内` / `屋外` / `両方`
 - `summer_water_play`: `◎` / `△` / `×` (rain_friendly と同じ記法)
 - `料金タイプ`: 「無料」または「有料」始まり(`is_free` は `startsWith("無料")` で判定)
-- `県`: 静岡県 / 長野県 / 山梨県 / 東京都(他県は新規追加マッピング必要)
+- `県`: 静岡県 / 長野県 / 山梨県 / 東京都 / 栃木県 / 埼玉県 / 新潟県 / 千葉県 / 神奈川県(他県は新規追加マッピング必要)
 
 ### 2. ローカルビルド検証
 大量追加 + sync 完了後、commit する**前に**:
@@ -230,26 +262,32 @@ status が `Error` なら最新の URL で `vercel inspect <URL>` してログ�
 | 〃 | **Sheets API 双方向書き込み構築**(サービスアカウント、append-to-sheet / push-to-sheet) |
 | 〃 | V6: 23施設追加(id 192-214)、大型遊具公園中心 + 7件画像採用、計214件で本日着地 |
 | 2026-05-04 | フィルタページ(タグ/カテゴリ/県/検索結果)上部に Leaflet 地図追加 |
-| 〃 | 東京都 150件追加(id 215-364)、4県運用に拡張、20カテゴリ(+ indoor-theme-park / game-center) |
+| 〃 | V7 東京都 150件追加(id 215-364)、4県運用に拡張、20カテゴリ(+ indoor-theme-park / game-center) |
 | 〃 | rain_friendly のテキスト値混入で prerender 全落ち → 正規化 + RAIN_FALLBACK で復旧 |
-| 〃 | Tokyo 73件 Wikipedia 完全一致採用、32件却下 → 画像 141件 / 39% カバレッジ |
+| 〃 | キポキポ + 恩賜林庭園 のジオコード/住所統合(同一住所内施設、(35.4548, 138.7942) で一致)|
+| 〃 | 整合性 audit:県外ジオコード 6件再修復、indoor_outdoor 7件正規化、同名重複 5件削除 |
+| 〃 | MapView の同座標オフセット実装(40m 半径、27 組の親子施設が個別クリック可能に)|
+| 〃 | V8 関東5県(栃木/埼玉/新潟/千葉/神奈川)506件追加(id 365-870)、9県運用に拡張 |
+| 〃 | V9 第2弾 68件追加(id 871-940)、夜遅く |
+| 〃 | 9県完成度 audit(WebSearch ベース)→ V10 35件追加(id 941-975)、計 968 件で着地 |
 
 ---
 
 ## 今後やるべき残タスク
 
 ### Phase 3 候補(優先順)
-1. **既存68件画像の再精査**(strict matcher で今までのすり抜けを洗い出し、ブラックリストに追加)
-2. **fetch-wiki の自動 strict フィルタ**(分類 → 却下 → ブラックリスト追加を `--strict` フラグで1コマンド化)
-3. **Google Places API で残り146件の画像取得**(無料枠内、約 $1.50)
-4. **新4列のフロントエンド表示**(signature_experiences / unique_selling_point / experience_tags / summer_water_play は データに入っただけで UI 未対応)
+1. **V10 audit追加分(id 941-975)の説明文・料金精査**(暫定値で取り込んだのでシートで磨ける)
+2. **fetch-wiki の自動 strict フィルタ**(都度 `.tmp-strict-wiki-filter.mjs` を作っているので `--strict` フラグで1コマンド化)
+3. **Google Places API で残り 618 件の画像取得**(無料枠内、約 $5)
+4. **新4列のフロントエンド表示**(signature_experiences / unique_selling_point / experience_tags / summer_water_play は データに入っただけで UI 未対応、SEO 強化に効きそう)
 5. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
 6. **お気に入り機能** (localStorage、軽量)
 7. **検索機能の強化**(現在は単純な部分一致)
+8. **群馬県の追加検討**(嬬恋村が長野県扱いで 3件混入しており、独立県化したい候補)
 
 ### コンテンツ拡充
 - 季節特集ページ(春の桜、夏の水遊び、秋の紅葉、冬のスキー)
-- 施設データ追加(神奈川・東京などへ拡大)
+- 関東他県(茨城・群馬)/ 東北・北陸への拡大
 - ブログ記事(fic-investment.biz の Make パイプライン応用)
 
 ---
@@ -294,27 +332,28 @@ status が `Error` なら最新の URL で `vercel inspect <URL>` してログ�
 ## 次セッション再開時のプロンプト例
 
 ```
-trip-guide.net は 4県364施設で公開稼働中です(東京都含む、Sheets API 双方向書き込み運用)。
+trip-guide.net は 9県968施設で公開稼働中です(関東甲信越カバー、Sheets API 双方向書き込み運用)。
 CHAT_HANDOFF.md を読んで現状を把握してください。
 今日は Phase 3 の「[進めたい項目]」を進めたいです。
 ```
 
-データ追加をしたい時(V7+):
+データ追加をしたい時(V11+):
 ```
-data/v7_additions_for_sheet.csv を作りました。標準フローで取り込んでください。
+data/v11_additions_for_sheet.csv を作りました。標準フローで取り込んでください。
 ```
 → Claude が以下を順次実行:
-1. `npm run append-to-sheet -- data/v7_additions_for_sheet.csv`
-2. `npm run sync-sheet`(自動採番)
+1. `npm run append-to-sheet -- data/v11_additions_for_sheet.csv`
+2. `npm run sync-sheet`(自動採番、warning 出ればカテゴリ正規化)
 3. `npm run push-to-sheet`(id 書き戻し)
-4. `node scripts/geocode.mjs` + `npm run geocode`
-5. `npm run fetch-wiki` + 厳格フィルタ + ブラックリスト追加
-6. もう一度 `push-to-sheet` で完全同期
-7. commit & push
+4. `node scripts/geocode.mjs` → `npm run geocode`(Nominatim → Google fallback)
+5. `npm run fetch-wiki` + 厳格フィルタ(`.tmp-strict-wiki-filter.mjs` をその都度作成)+ ブラックリスト追加
+6. **`npm run build`** で prerender 検証(これ抜かすと Vercel が静かに失敗する)
+7. もう一度 `push-to-sheet` で完全同期
+8. commit & push
 
 ---
 
 新セッションで取りかかりやすいクイック作業:
-- **既存68件 Wikipedia 画像の strict 再精査**(ブラックリストに追加で再発防止)
-- **新4列(signature_experiences ほか)を施設詳細ページに表示**(データはあるが UI 未対応)
-- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行、約 $1.50)
+- **V10 追加分(id 941-975)の説明文・料金を精査**(WebSearch ベース暫定値、シートで magic で磨く)
+- **新4列(signature_experiences ほか)を施設詳細ページに表示**(SEO とロングテール強化に効く)
+- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行、約 $5)
