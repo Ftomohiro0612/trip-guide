@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ChildAvatar from "@/components/ChildAvatar";
 import { createClient } from "@/lib/supabase/server";
+import ChildAvatarUploader from "./ChildAvatarUploader";
 import ChildrenForm from "./ChildrenForm";
+import DeleteButton from "./DeleteButton";
 
 export const metadata: Metadata = { title: "子どもプロフィール" };
 
@@ -11,6 +14,7 @@ type Child = {
   birth_year: number;
   birth_month: number;
   gender: string | null;
+  avatar_url: string | null;
 };
 
 function calcAge(birthYear: number, birthMonth: number): string {
@@ -32,8 +36,21 @@ export default async function ChildrenPage() {
   const supabase = await createClient();
   const { data: children } = await supabase
     .from("children")
-    .select("id, nickname, birth_year, birth_month, gender")
+    .select("id, nickname, birth_year, birth_month, gender, avatar_url")
     .order("sort_order", { ascending: true });
+  const childRows = (children ?? []) as Child[];
+  const avatarPaths = childRows
+    .map((child) => child.avatar_url)
+    .filter((path): path is string => Boolean(path));
+  const { data: signedAvatars } =
+    avatarPaths.length > 0
+      ? await supabase.storage
+          .from("child-avatars")
+          .createSignedUrls(avatarPaths, 60 * 60)
+      : { data: [] };
+  const avatarUrlByPath = new Map(
+    (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
+  );
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
@@ -52,29 +69,46 @@ export default async function ChildrenPage() {
 
       {/* 子ども一覧 */}
       <div className="space-y-3">
-        {children && children.length > 0 ? (
-          (children as Child[]).map((child) => (
+        {childRows.length > 0 ? (
+          childRows.map((child) => {
+            const avatarUrl = child.avatar_url
+              ? avatarUrlByPath.get(child.avatar_url) ?? null
+              : null;
+            return (
             <div
               key={child.id}
-              className="flex items-center justify-between bg-white border border-slate-200 rounded-xl px-4 py-3"
+              className="bg-white border border-slate-200 rounded-xl px-4 py-3 space-y-3"
             >
-              <div className="flex items-center gap-3">
-                <span className="text-2xl">
-                  {child.gender === "female" ? "👧" : "🧒"}
-                </span>
-                <div>
-                  <p className="font-semibold text-slate-800">{child.nickname}</p>
-                  <p className="text-xs text-slate-400">
-                    {child.birth_year}年{child.birth_month}月生まれ
-                    {" · "}
-                    {calcAge(child.birth_year, child.birth_month)}
-                    {child.gender ? ` · ${genderLabel(child.gender)}` : ""}
-                  </p>
+              <div className="flex items-center justify-between gap-3">
+                <div className="flex items-center gap-3 min-w-0">
+                  <ChildAvatar
+                    childId={child.id}
+                    nickname={child.nickname}
+                    avatarUrl={avatarUrl}
+                    size="md"
+                  />
+                  <div className="min-w-0">
+                    <p className="font-semibold text-slate-800 truncate">
+                      {child.nickname}
+                    </p>
+                    <p className="text-xs text-slate-400">
+                      {child.birth_year}年{child.birth_month}月生まれ
+                      {" · "}
+                      {calcAge(child.birth_year, child.birth_month)}
+                      {child.gender ? ` · ${genderLabel(child.gender)}` : ""}
+                    </p>
+                  </div>
                 </div>
+                <DeleteButton childId={child.id} nickname={child.nickname} />
               </div>
-              <DeleteButton childId={child.id} nickname={child.nickname} />
+              <ChildAvatarUploader
+                childId={child.id}
+                nickname={child.nickname}
+                avatarUrl={avatarUrl}
+              />
             </div>
-          ))
+            );
+          })
         ) : (
           <div className="text-center py-8 text-slate-400 text-sm">
             まだ登録されていません
@@ -83,15 +117,15 @@ export default async function ChildrenPage() {
       </div>
 
       {/* 追加フォーム（最大5人まで） */}
-      {(!children || children.length < 5) && <ChildrenForm />}
-      {children && children.length >= 5 && (
+      {childRows.length < 5 && <ChildrenForm />}
+      {childRows.length >= 5 && (
         <p className="text-xs text-slate-400 text-center">
           現在、最大5人まで登録できます
         </p>
       )}
 
       {/* マイページへ進む */}
-      {children && children.length > 0 && (
+      {childRows.length > 0 && (
         <div className="pt-2">
           <Link
             href="/mypage"
@@ -104,6 +138,3 @@ export default async function ChildrenPage() {
     </div>
   );
 }
-
-// 削除ボタン（クライアントコンポーネント）
-import DeleteButton from "./DeleteButton";

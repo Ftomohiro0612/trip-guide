@@ -209,7 +209,14 @@ export default async function VisitsPage({
               className="bg-white border border-slate-200 rounded-xl px-4 py-3 space-y-2"
             >
               <div className="flex items-start justify-between gap-3">
-                <h2 className="font-bold text-slate-900">{visit.facility_name}</h2>
+                <h2 className="font-bold text-slate-900">
+                  <Link
+                    href={`/mypage/visits/${visit.id}`}
+                    className="hover:text-brand transition-colors"
+                  >
+                    {visit.facility_name}
+                  </Link>
+                </h2>
                 <span className="text-xs text-slate-400 shrink-0">
                   {formatVisitedOn(visit.visited_on)}
                 </span>
@@ -250,6 +257,12 @@ export default async function VisitsPage({
                   <span />
                 )}
                 <div className="flex gap-2 shrink-0">
+                  <Link
+                    href={`/mypage/visits/${visit.id}`}
+                    className="px-2.5 py-1.5 border border-slate-200 text-slate-500 rounded-lg text-xs font-medium hover:bg-slate-50 transition-colors"
+                  >
+                    詳細を見る
+                  </Link>
                   <Link
                     href={`/mypage/visits/${visit.id}/edit`}
                     className="px-2.5 py-1.5 border border-slate-200 text-slate-500 rounded-lg text-xs font-medium hover:bg-slate-50 transition-colors"

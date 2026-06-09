@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import DeleteWishButton from "./DeleteWishButton";
+import WishlistAddForm from "./WishlistAddForm";
 
 export const metadata: Metadata = { title: "行きたいリスト" };
 
@@ -37,6 +38,8 @@ export default async function WishlistPage() {
         <h1 className="text-xl font-bold text-slate-900">行きたいリスト</h1>
         <p className="text-sm text-slate-500 mt-1">気になる施設をあとで見返せます。</p>
       </div>
+
+      <WishlistAddForm />
 
       {wishlists && wishlists.length > 0 ? (
         <div className="space-y-3">

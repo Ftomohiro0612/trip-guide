@@ -7,9 +7,11 @@ import { createClient } from "@/lib/supabase/client";
 export default function DeleteVisitButton({
   visitId,
   facilityName,
+  redirectTo,
 }: {
   visitId: string;
   facilityName: string;
+  redirectTo?: string;
 }) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
@@ -26,7 +28,11 @@ export default function DeleteVisitButton({
       setLoading(false);
       return;
     }
-    router.refresh();
+    if (redirectTo) {
+      router.push(redirectTo);
+    } else {
+      router.refresh();
+    }
   }
 
   return (

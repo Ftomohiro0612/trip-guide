@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ChildAvatar from "@/components/ChildAvatar";
 import facilitiesJson from "@/data/facilities_data.json";
 import { createClient } from "@/lib/supabase/server";
 import LogoutButton from "./LogoutButton";
@@ -11,6 +12,7 @@ type Child = {
   nickname: string;
   birth_year: number;
   birth_month: number;
+  avatar_url: string | null;
 };
 
 type VisitStat = {
@@ -171,7 +173,7 @@ export default async function MypagePage() {
       : Promise.resolve({ data: null }),
     supabase
       .from("children")
-      .select("id, nickname, birth_year, birth_month")
+      .select("id, nickname, birth_year, birth_month, avatar_url")
       .order("sort_order", { ascending: true }),
     user
       ? supabase
@@ -194,9 +196,22 @@ export default async function MypagePage() {
       typeof child.id === "string" &&
       typeof child.nickname === "string" &&
       typeof child.birth_year === "number" &&
-      typeof child.birth_month === "number"
+      typeof child.birth_month === "number" &&
+      (typeof child.avatar_url === "string" || child.avatar_url === null)
     );
   });
+  const avatarPaths = childRows
+    .map((child) => child.avatar_url)
+    .filter((path): path is string => Boolean(path));
+  const { data: signedAvatars } =
+    avatarPaths.length > 0
+      ? await supabase.storage
+          .from("child-avatars")
+          .createSignedUrls(avatarPaths, 60 * 60)
+      : { data: [] };
+  const avatarUrlByPath = new Map(
+    (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
+  );
   const visits = (visitStats ?? []).filter(isVisitStat);
   const visitIds = visits.map((v) => v.id);
   const { data: childVisitStats } =
@@ -288,7 +303,16 @@ export default async function MypagePage() {
                 key={child.id}
                 className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1.5"
               >
-                <span className="text-lg">🧒</span>
+                <ChildAvatar
+                  childId={child.id}
+                  nickname={child.nickname}
+                  avatarUrl={
+                    child.avatar_url
+                      ? avatarUrlByPath.get(child.avatar_url) ?? null
+                      : null
+                  }
+                  size="sm"
+                />
                 <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
                 <span className="text-xs text-slate-400">
                   {calcAge(child.birth_year, child.birth_month)}歳
@@ -409,9 +433,21 @@ export default async function MypagePage() {
               childCategorySummaries.map((summary) => (
                 <div key={summary.child.id}>
                   <div className="flex items-center justify-between mb-2">
-                    <p className="font-bold text-slate-800 text-sm">
-                      {summary.child.nickname}
-                    </p>
+                    <div className="flex items-center gap-2 min-w-0">
+                      <ChildAvatar
+                        childId={summary.child.id}
+                        nickname={summary.child.nickname}
+                        avatarUrl={
+                          summary.child.avatar_url
+                            ? avatarUrlByPath.get(summary.child.avatar_url) ?? null
+                            : null
+                        }
+                        size="sm"
+                      />
+                      <p className="font-bold text-slate-800 text-sm truncate">
+                        {summary.child.nickname}
+                      </p>
+                    </div>
                     <Link
                       href={`/mypage/visits?child_id=${summary.child.id}`}
                       className="text-xs text-brand hover:underline"
