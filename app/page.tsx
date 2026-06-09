@@ -5,7 +5,6 @@ import MapViewClient from "@/components/MapViewClient";
 import { JsonLd } from "@/components/JsonLd";
 import { categories, facilities, prefectures } from "@/lib/facilities";
 import { categoryIcon, prefectureEmoji, prefectureGradients } from "@/lib/icons";
-import { TAG_META } from "@/lib/tags";
 
 export default function HomePage() {
   const featured = facilities

@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect } from "react";
 
 export default function GlobalError({
@@ -47,8 +48,7 @@ export default function GlobalError({
               ref: {error.digest}
             </p>
           )}
-          {/* eslint-disable-next-line @next/next/no-html-link-for-pages */}
-          <a
+          <Link
             href="/"
             style={{
               display: "inline-block",
@@ -61,7 +61,7 @@ export default function GlobalError({
             }}
           >
             ホームに戻る
-          </a>
+          </Link>
         </div>
       </body>
     </html>

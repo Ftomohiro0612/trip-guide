@@ -12,7 +12,7 @@ import {
   getRelatedFacilities,
 } from "@/lib/facilities";
 import { categoryIcon, prefectureGradients } from "@/lib/icons";
-import { tagHref } from "@/lib/tags";
+import { TAG_META, tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 interface Props {
@@ -48,6 +48,20 @@ const RAIN_FALLBACK = {
   label: "情報なし",
 };
 
+const WATER_PLAY_BADGES: Record<string, { color: string; label: string }> = {
+  "◎": { color: "bg-sky-100 text-sky-700", label: "対応あり" },
+  "○": { color: "bg-sky-100 text-sky-700", label: "対応あり" },
+  あり: { color: "bg-sky-100 text-sky-700", label: "対応あり" },
+  "△": { color: "bg-amber-100 text-amber-700", label: "一部対応" },
+  "×": { color: "bg-slate-100 text-slate-500", label: "対応なし" },
+  なし: { color: "bg-slate-100 text-slate-500", label: "対応なし" },
+};
+
+const WATER_PLAY_FALLBACK = {
+  color: "bg-slate-100 text-slate-500",
+  label: "確認中",
+};
+
 export default async function FacilityDetailPage({ params }: Props) {
   const { slug } = await params;
   const facility = getFacilityBySlug(slug);
@@ -55,6 +69,29 @@ export default async function FacilityDetailPage({ params }: Props) {
 
   const related = getRelatedFacilities(facility, 3);
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
+  const uniqueSellingPoint =
+    typeof facility.unique_selling_point === "string"
+      ? facility.unique_selling_point.trim()
+      : "";
+  const signatureExperiences = Array.isArray(facility.signature_experiences)
+    ? facility.signature_experiences
+        .map((experience) =>
+          typeof experience === "string" ? experience.trim() : "",
+        )
+        .filter((experience) => experience.length > 0)
+    : [];
+  const experienceTags = Array.isArray(facility.experience_tags)
+    ? facility.experience_tags
+        .map((tag) => (typeof tag === "string" ? tag.trim() : ""))
+        .filter((tag) => tag.length > 0)
+    : [];
+  const summerWaterPlay =
+    typeof facility.summer_water_play === "string"
+      ? facility.summer_water_play.trim()
+      : "";
+  const summerWaterPlayBadge = summerWaterPlay
+    ? WATER_PLAY_BADGES[summerWaterPlay] ?? WATER_PLAY_FALLBACK
+    : null;
   const galleryImages =
     facility.images && facility.images.length > 0
       ? facility.images
@@ -200,9 +237,31 @@ export default async function FacilityDetailPage({ params }: Props) {
       <div className="mx-auto max-w-5xl px-4 py-8 grid gap-8 lg:grid-cols-[1fr_320px]">
         <article>
           <h2 className="text-xl font-bold mb-3">この施設について</h2>
+          {uniqueSellingPoint && (
+            <blockquote className="mb-4 border-l-4 border-brand bg-sky-50 px-4 py-3 text-slate-700 font-medium leading-relaxed">
+              {uniqueSellingPoint}
+            </blockquote>
+          )}
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
+          {signatureExperiences.length > 0 && (
+            <div className="mt-5">
+              <h3 className="text-sm font-bold text-slate-700 mb-2">
+                体験・ハイライト
+              </h3>
+              <div className="flex flex-wrap gap-2">
+                {signatureExperiences.map((experience) => (
+                  <span
+                    key={experience}
+                    className="text-xs px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100 font-medium"
+                  >
+                    {experience}
+                  </span>
+                ))}
+              </div>
+            </div>
+          )}
 
           <FacilityGallery
             images={galleryImages}
@@ -233,6 +292,15 @@ export default async function FacilityDetailPage({ params }: Props) {
             <Row label="雨天対応">
               {facility.rain_friendly} ({rain.label})
             </Row>
+            {summerWaterPlayBadge && (
+              <Row label="夏の水遊び">
+                <span
+                  className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs font-bold ${summerWaterPlayBadge.color}`}
+                >
+                  {summerWaterPlay} {summerWaterPlayBadge.label}
+                </span>
+              </Row>
+            )}
             <Row label="対象年齢">{facility.target_age}</Row>
             <Row label="料金区分">
               {facility.is_free ? "無料" : facility.fee_type}
@@ -249,6 +317,28 @@ export default async function FacilityDetailPage({ params }: Props) {
                   {facility.tags.map((t) => {
                     const href =
                       tagHref(t) ?? `/facilities?tags=${encodeURIComponent(t)}`;
+                    return (
+                      <Link
+                        key={t}
+                        href={href}
+                        className="text-xs px-2 py-1 bg-slate-100 hover:bg-sky-100 hover:text-brand rounded text-slate-700 transition-colors"
+                      >
+                        #{t}
+                      </Link>
+                    );
+                  })}
+                </div>
+              </Row>
+            )}
+            {experienceTags.length > 0 && (
+              <Row label="体験タグ">
+                <div className="flex flex-wrap gap-1.5">
+                  {experienceTags.map((t) => {
+                    const tagMeta = TAG_META.find((meta) => meta.tag === t);
+                    const href =
+                      tagMeta != null
+                        ? `/tag/${tagMeta.slug}`
+                        : `/facilities?tags=${encodeURIComponent(t)}`;
                     return (
                       <Link
                         key={t}

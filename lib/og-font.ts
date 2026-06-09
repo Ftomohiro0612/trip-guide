@@ -26,10 +26,12 @@ export function getJpFontSubset(text: string): Promise<ArrayBuffer | null> {
   // Dedupe by characters so different texts that share most chars hit different keys
   // (acceptable; cache is per-build worker)
   const key = [...new Set(text.split(""))].sort().join("");
-  let p = cache.get(key);
-  if (!p) {
-    p = fetchSubset(text);
-    cache.set(key, p);
+  const cached = cache.get(key);
+  if (cached) {
+    return cached;
   }
+
+  const p = fetchSubset(text);
+  cache.set(key, p);
   return p;
 }

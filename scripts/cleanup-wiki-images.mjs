@@ -6,7 +6,6 @@ import { fileURLToPath } from "node:url";
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const ROOT = resolve(__dirname, "..");
 const DATA_PATH = resolve(ROOT, "data/facilities_data.json");
-const IMAGES_DIR = resolve(ROOT, "public/images/facilities");
 
 const MIN_LEN = 5; // stricter than fetch-time minLen=3
 
