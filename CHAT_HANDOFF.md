@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-05-04 深夜 / 9県968施設 / V7東京 + V8関東5県(506) + V9第2弾(68) + V10 audit補完(35) / Sheets API 双方向 / マーカー重複オフセット
+**最終更新**: 2026-06-09 / Memorips Phase 2 完了（訪問記録・履歴・行きたいリスト・Supabase Auth）/ 施設情報サイト: 9県968施設稼働中
 
 ---
 
@@ -273,7 +273,66 @@ status が `Error` なら最新の URL で `vercel inspect <URL>` してログ�
 
 ---
 
-## 今後やるべき残タスク
+---
+
+## ✅ Memorips（マイページ機能）実装状況 (2026-06-09)
+
+### サービス概要
+
+trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — 家族のおでかけ記録機能。
+詳細設計は `product-direction.md` 参照。
+
+### 技術スタック追加分
+
+| 項目 | 内容 |
+|---|---|
+| DB | Supabase（trip-guide プロジェクト） |
+| 認証 | Google OAuth + メール認証（Supabase Auth） |
+| SSR認証 | `@supabase/ssr` + cookie ベース |
+| デプロイ | Vercel CLI（`npx vercel --prod`）— GitHub webhook は旧リポジトリ紐付けのため |
+
+### Supabase 手動作業済み（ダッシュボードで実行）
+
+- `001_phase1_schema.sql`: profiles / children テーブル + RLS + GRANT
+- `002_phase2_schema.sql`: visits / visit_children / wishlists テーブル + RLS + GRANT
+- Authentication → Providers → Google: OAuth Client ID/Secret 設定済み
+- Authentication → URL Configuration: `https://trip-guide.net/auth/callback` 登録済み
+
+### Phase 1 完了 ✅
+
+| 機能 | ルート |
+|---|---|
+| 認証（メール + Google OAuth） | `/auth/register`, `/auth/login`, `/auth/callback` |
+| マイページ | `/mypage` |
+| 子どもプロフィール登録・編集 | `/mypage/children` |
+| BottomNav（モバイル） | `components/BottomNav.tsx` |
+
+### Phase 2 完了 ✅
+
+| 機能 | ルート |
+|---|---|
+| 訪問記録フォーム（30秒入力） | `/mypage/visits/new` |
+| おでかけ履歴一覧 | `/mypage/visits` |
+| 行きたいリスト | `/mypage/wishlist` |
+
+### 既知のポイント・ハマりどころ
+
+- **GRANT は RLS と別**: `ENABLE ROW LEVEL SECURITY` だけでは 403 が出る。`GRANT ... TO authenticated;` が必須
+- **Google OAuth クライアントは「ウェブアプリケーション」型**で作る（デスクトップ型は `redirect_uri` が `localhost` になり使えない）
+- **Vercel は CLI デプロイ**: `npx vercel --prod --yes --token <token>`（token は `.codex/.sandbox-secrets/vercel.json`）
+- **package.json に `@supabase/supabase-js` と `@supabase/ssr` が必要**（ない場合 Vercel ビルド失敗）
+
+### Phase 3 候補（Memorips）
+
+1. 施設詳細ページ → 「行きたい」「行ったよ」ボタン
+2. `facility_slug` を `facilities_data.json` の slug と紐付け
+3. 訪問記録の編集・削除
+4. 写真アップロード（Supabase Storage）
+5. おでかけ年表・費用集計
+
+---
+
+## 今後やるべき残タスク（施設情報サイト側）
 
 ### Phase 3 候補(優先順)
 1. **V10 audit追加分(id 941-975)の説明文・料金精査**(暫定値で取り込んだのでシートで磨ける)

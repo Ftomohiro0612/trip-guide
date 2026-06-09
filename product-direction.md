@@ -319,4 +319,45 @@ AIが答えられないもの:
 
 ---
 
-*最終更新: 2026-06-09 v3*
+---
+
+## 16. 実装進捗
+
+### Phase 1: 認証 + 子どもプロフィール ✅ 完了（2026-06-09）
+
+| 機能 | 状態 |
+|---|---|
+| Supabase プロジェクト作成 | ✅ |
+| Google OAuth（Web アプリ型） | ✅ |
+| メール認証 | ✅ |
+| profiles / children テーブル + RLS + GRANT | ✅ |
+| マイページ（/mypage） | ✅ |
+| 子どもプロフィール登録・編集 | ✅ |
+| BottomNav（モバイル） | ✅ |
+| Vercel 本番デプロイ | ✅ |
+
+**Supabase 手動作業済み**:
+- SQL Editor で `001_phase1_schema.sql` 実行済み（profiles, children, GRANT）
+- SQL Editor で `002_phase2_schema.sql` 実行済み（visits, visit_children, wishlists, GRANT, RLS）
+- Authentication → Providers → Google: Client ID/Secret 設定済み
+- Authentication → URL Configuration: `https://trip-guide.net/auth/callback` 登録済み
+
+### Phase 2: 訪問記録・履歴・行きたいリスト ✅ 完了（2026-06-09）
+
+| 機能 | 状態 |
+|---|---|
+| visits / visit_children / wishlists テーブル | ✅（SQL Editor実行済み） |
+| 訪問記録フォーム `/mypage/visits/new` | ✅ |
+| おでかけ履歴一覧 `/mypage/visits` | ✅ |
+| 行きたいリスト `/mypage/wishlist` | ✅ |
+| 必須6項目（施設・日付・子ども・満足度・再訪・疲れ度） | ✅ |
+| 任意アコーディオン（期待比較・タグ・メモ） | ✅ |
+| 子なし訪問対応（`?no_child=1` フロー） | ✅ |
+
+### Phase 3: 施設連携（未着手）
+
+- 施設ページ → 「行きたい」「行ったよ」ボタン
+- facility_slug を facilities_data.json の slug と紐付け
+- 施設別おでかけ履歴の表示
+
+*最終更新: 2026-06-09 v3.1*
