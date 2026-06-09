@@ -19,6 +19,9 @@ export default async function SettingsPage() {
         .single()
     : { data: null };
 
+  const identities = (user?.identities ?? []) as { provider: string }[];
+  const isPasswordUser = identities.some((i) => i.provider === "email");
+
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
       <Link
@@ -38,6 +41,7 @@ export default async function SettingsPage() {
       <AccountForm
         email={user?.email ?? ""}
         initialDisplayName={profile?.display_name ?? ""}
+        isPasswordUser={isPasswordUser}
       />
     </div>
   );

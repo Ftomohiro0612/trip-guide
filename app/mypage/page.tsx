@@ -331,22 +331,26 @@ export default async function MypagePage() {
         <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
           {hasAchievementRecords ? (
             <>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-2 gap-1">
                 <AchievementMetric
                   label="行った施設"
                   value={`${achievementStats.distinctFacilityCount}か所`}
+                  href="/mypage/visits"
                 />
                 <AchievementMetric
                   label="おでかけ回数"
                   value={`${achievementStats.totalVisitCount}回`}
+                  href="/mypage/visits"
                 />
                 <AchievementMetric
                   label="行きたいリスト"
                   value={`${achievementStats.wishlistCount}件`}
+                  href="/mypage/wishlist"
                 />
                 <AchievementMetric
                   label="また行きたい"
                   value={`${achievementStats.revisitCount}件`}
+                  href="/mypage/visits?revisit=yes"
                 />
               </div>
               {hasMonthlyData && (
@@ -404,9 +408,17 @@ export default async function MypagePage() {
             {hasChildCategoryRecords ? (
               childCategorySummaries.map((summary) => (
                 <div key={summary.child.id}>
-                  <p className="font-bold text-slate-800 text-sm mb-2">
-                    {summary.child.nickname}
-                  </p>
+                  <div className="flex items-center justify-between mb-2">
+                    <p className="font-bold text-slate-800 text-sm">
+                      {summary.child.nickname}
+                    </p>
+                    <Link
+                      href={`/mypage/visits?child_id=${summary.child.id}`}
+                      className="text-xs text-brand hover:underline"
+                    >
+                      記録を見る ›
+                    </Link>
+                  </div>
                   {summary.categories.length > 0 ? (
                     <div className="space-y-2">
                       {summary.categories.map(({ category, count }) => (
@@ -477,12 +489,28 @@ function ActionCard({
   );
 }
 
-function AchievementMetric({ label, value }: { label: string; value: string }) {
+function AchievementMetric({
+  label,
+  value,
+  href,
+}: {
+  label: string;
+  value: string;
+  href: string;
+}) {
   return (
-    <div>
-      <p className="font-bold text-slate-900">{value}</p>
-      <p className="text-slate-500 text-xs mt-0.5">{label}</p>
-    </div>
+    <Link
+      href={href}
+      className="group block rounded-lg p-2 hover:bg-slate-50 transition-colors"
+    >
+      <p className="font-bold text-slate-900 group-hover:text-brand transition-colors">
+        {value}
+      </p>
+      <p className="text-slate-500 text-xs mt-0.5 flex items-center gap-0.5">
+        {label}
+        <span className="text-slate-300 group-hover:text-brand transition-colors">›</span>
+      </p>
+    </Link>
   );
 }
 

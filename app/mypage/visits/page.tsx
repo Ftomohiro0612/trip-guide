@@ -92,7 +92,7 @@ function childNickname(child: VisitChild["children"]): string {
 export default async function VisitsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ no_child?: string }>;
+  searchParams: Promise<{ no_child?: string; revisit?: string; child_id?: string }>;
 }) {
   const params = await searchParams;
   const supabase = await createClient();
@@ -100,25 +100,53 @@ export default async function VisitsPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  const { data: visits } = user
-      ? await supabase
-          .from("visits")
+  const filterRevisit = params.revisit === "yes";
+  const filterChildId = params.child_id ?? null;
+
+  let visitIds: string[] | null = null;
+  if (filterChildId && user) {
+    const { data: childVisitRows } = await supabase
+      .from("visit_children")
+      .select("visit_id")
+      .eq("child_id", filterChildId);
+    visitIds = (childVisitRows ?? []).map(
+      (row: { visit_id: string }) => row.visit_id,
+    );
+  }
+
+  let visitsQuery = user
+    ? supabase
+        .from("visits")
         .select(
           "id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, weather, crowding, stay_duration_min",
         )
         .eq("user_id", user.id)
         .order("visited_on", { ascending: false, nullsFirst: false })
         .order("created_at", { ascending: false })
-        .limit(50)
+        .limit(100)
+    : null;
+
+  if (visitsQuery && visitIds !== null) {
+    visitsQuery = visitIds.length > 0
+      ? visitsQuery.in("id", visitIds)
+      : visitsQuery.in("id", ["__no_match__"]);
+  }
+  if (visitsQuery && filterRevisit) {
+    visitsQuery = visitsQuery.eq("family_revisit", "yes");
+  }
+
+  const { data: visits } = visitsQuery
+    ? await visitsQuery
     : { data: [] };
+
   const visitRows = (visits ?? []) as Visit[];
-  const visitIds = visitRows.map((visit) => visit.id);
+  const visitIdsForChildren = visitRows.map((visit) => visit.id);
   const { data: allVisitChildren } =
-    visitIds.length > 0
+    visitIdsForChildren.length > 0
       ? await supabase
           .from("visit_children")
           .select("visit_id, satisfaction, child_id, children(nickname)")
-          .in("visit_id", visitIds)
+          .in("visit_id", visitIdsForChildren)
       : { data: [] };
   const childrenByVisit = new Map<string, VisitChild[]>();
   for (const childVisit of (allVisitChildren ?? []) as VisitChild[]) {
@@ -126,6 +154,10 @@ export default async function VisitsPage({
     current.push(childVisit);
     childrenByVisit.set(childVisit.visit_id, current);
   }
+
+  let filterLabel: string | null = null;
+  if (filterRevisit) filterLabel = "また行きたい";
+  if (filterChildId) filterLabel = "子ども別フィルター";
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
@@ -136,7 +168,11 @@ export default async function VisitsPage({
       <div className="flex items-start justify-between gap-3">
         <div>
           <h1 className="text-xl font-bold text-slate-900">おでかけ履歴</h1>
-          <p className="text-sm text-slate-500 mt-1">最近の記録を新しい順に表示します。</p>
+          <p className="text-sm text-slate-500 mt-1">
+            {filterLabel
+              ? `「${filterLabel}」でフィルター中`
+              : "最近の記録を新しい順に表示します。"}
+          </p>
         </div>
         <Link
           href="/mypage/visits/new"
@@ -145,6 +181,15 @@ export default async function VisitsPage({
           記録する
         </Link>
       </div>
+
+      {filterLabel && (
+        <Link
+          href="/mypage/visits"
+          className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 bg-slate-100 rounded-full px-3 py-1.5 transition-colors"
+        >
+          ✕ フィルターを解除
+        </Link>
+      )}
 
       {params.no_child === "1" && (
         <div className="bg-sky-50 border border-sky-200 rounded-xl p-3 text-xs text-sky-700 leading-relaxed">
