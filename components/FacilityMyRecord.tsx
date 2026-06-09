@@ -49,10 +49,8 @@ function formatVisitedOn(value: string | null) {
 
 export default function FacilityMyRecord({
   facilitySlug,
-  facilityName,
 }: {
   facilitySlug: string;
-  facilityName: string;
 }) {
   const [loadState, setLoadState] = useState<LoadState>("loading");
   const [visits, setVisits] = useState<VisitRow[]>([]);
@@ -132,10 +130,6 @@ export default function FacilityMyRecord({
   }
 
   if (loadState === "guest") return null;
-
-  const visitUrl = `/mypage/visits/new?facility=${encodeURIComponent(
-    facilitySlug,
-  )}&name=${encodeURIComponent(facilityName)}`;
 
   if (visits.length === 0) {
     return (

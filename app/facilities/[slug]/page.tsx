@@ -382,7 +382,6 @@ export default async function FacilityDetailPage({ params }: Props) {
         <aside className="space-y-4">
           <FacilityMyRecord
             facilitySlug={facility.slug}
-            facilityName={facility.name}
           />
           <FacilityActionButtons
             facilitySlug={facility.slug}
