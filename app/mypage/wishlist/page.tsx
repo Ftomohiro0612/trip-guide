@@ -7,6 +7,7 @@ export const metadata: Metadata = { title: "行きたいリスト" };
 
 type WishlistItem = {
   id: string;
+  facility_slug: string;
   facility_name: string;
   memo: string | null;
   created_at: string | null;
@@ -19,11 +20,11 @@ export default async function WishlistPage() {
   } = await supabase.auth.getUser();
 
   const { data: wishlists } = user
-    ? await supabase
-        .from("wishlists")
-        .select("id, facility_name, memo, created_at")
-        .eq("user_id", user.id)
-        .order("created_at", { ascending: false })
+      ? await supabase
+          .from("wishlists")
+          .select("id, facility_slug, facility_name, memo, created_at")
+          .eq("user_id", user.id)
+          .order("created_at", { ascending: false })
     : { data: [] };
 
   return (
@@ -39,7 +40,9 @@ export default async function WishlistPage() {
 
       {wishlists && wishlists.length > 0 ? (
         <div className="space-y-3">
-          {(wishlists as WishlistItem[]).map((item) => (
+          {(wishlists as WishlistItem[]).map((item) => {
+            const hasFacilityPage = !item.facility_slug.startsWith("manual-");
+            return (
             <article
               key={item.id}
               className="bg-white border border-slate-200 rounded-xl px-4 py-3"
@@ -54,15 +57,39 @@ export default async function WishlistPage() {
                       {item.memo}
                     </p>
                   )}
+                  <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
+                    {hasFacilityPage && (
+                      <Link
+                        href={`/facilities/${item.facility_slug}`}
+                        className="text-brand text-xs font-medium hover:underline"
+                      >
+                        施設ページを見る →
+                      </Link>
+                    )}
+                    <Link
+                      href={`/mypage/visits/new?facility=${encodeURIComponent(
+                        item.facility_slug,
+                      )}&name=${encodeURIComponent(item.facility_name)}`}
+                      className="text-brand text-xs font-medium hover:underline"
+                    >
+                      行ったよ！記録する
+                    </Link>
+                  </div>
                 </div>
-                <DeleteWishButton wishId={item.id} />
+                <DeleteWishButton wishId={item.id} facilityName={item.facility_name} />
               </div>
             </article>
-          ))}
+            );
+          })}
         </div>
       ) : (
-        <div className="text-center py-10 text-slate-400 text-sm">
-          まだ登録されていません
+        <div className="text-center py-10 text-sm space-y-3">
+          <p className="text-slate-500">
+            施設ページから「行きたい！」ボタンで登録できます
+          </p>
+          <Link href="/" className="text-brand font-medium hover:underline">
+            施設を探す →
+          </Link>
         </div>
       )}
     </div>

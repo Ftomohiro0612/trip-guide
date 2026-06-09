@@ -4,12 +4,20 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-export default function DeleteVisitButton({ visitId }: { visitId: string }) {
+export default function DeleteVisitButton({
+  visitId,
+  facilityName,
+}: {
+  visitId: string;
+  facilityName: string;
+}) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   async function handleDelete() {
-    if (!window.confirm("この記録を削除しますか？")) return;
+    if (!window.confirm(`「${facilityName}」の記録を削除しますか？この操作は取り消せません。`)) {
+      return;
+    }
     setLoading(true);
     const supabase = createClient();
     const { error } = await supabase.from("visits").delete().eq("id", visitId);

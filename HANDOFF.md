@@ -322,13 +322,46 @@ trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — �
 - **Vercel は CLI デプロイ**: `npx vercel --prod --yes --token <token>`（token は `.codex/.sandbox-secrets/vercel.json`）
 - **package.json に `@supabase/supabase-js` と `@supabase/ssr` が必要**（ない場合 Vercel ビルド失敗）
 
-### Phase 3 候補（Memorips）
+### Phase 3 完了 ✅ (2026-06-09)
 
-1. 施設詳細ページ → 「行きたい」「行ったよ」ボタン
-2. `facility_slug` を `facilities_data.json` の slug と紐付け
-3. 訪問記録の編集・削除
-4. 写真アップロード（Supabase Storage）
-5. おでかけ年表・費用集計
+| 機能 | ルート |
+|---|---|
+| 施設詳細ページ → 「行きたい♡」「行ったよ✓」ボタン | `components/FacilityActionButtons.tsx` |
+| facility_slug と facilities_data.json の紐付け | visits/new クエリパラメータ対応 |
+| 訪問記録の編集 | `/mypage/visits/[id]/edit` |
+| 訪問記録の削除 | `DeleteVisitButton.tsx` |
+
+### 優先方針（2026-06-09 オーナー確認済み）
+
+**「自分の家族の記録が気持ちよく見える」を最優先。他ユーザー集計は件数が十分になるまで非表示。**
+
+優先順位:
+1. **オーナー自身で10件記録してUX確認**（30秒以内・保存後の振り返り体験）
+2. **記録保存後の振り返りカード改善**（マイページの「自分の記録」表示を充実）
+3. **memorips.com 簡易LP + 事前登録フォーム**
+4. **施設ページへ「自分の記録」を還流**（他ユーザー集計ではなく自分の訪問歴）
+5. **匿名集計・再訪率の表示**（一定件数たまってから）
+
+### Phase 3 追加実装候補
+
+#### 訪問記録 任意項目追加（visits テーブル拡張）
+- 滞在時間（目安: 1時間未満 / 1〜2時間 / 2〜4時間 / 半日 / 終日）
+- 時間は足りたか（十分 / ちょうど / 足りなかった）
+- 食事・売店評価（なし / あり・満足 / あり・不満）
+
+#### マイページ おでかけマップ（`/mypage/visits/map`）
+- 行った場所（訪問済み施設ピン）
+- 行きたい場所（wishlist ピン）
+- また行きたい場所（family_revisit=yes のピン）
+- 既存 Leaflet コンポーネントを流用
+
+#### 地図ピンから自分の記録をポップアップ表示
+- 訪問回数
+- 子どもごとの満足度
+- また行きたいか
+- 親の疲れ度
+- 滞在時間（任意項目追加後）
+- 食事評価（任意項目追加後）
 
 ---
 

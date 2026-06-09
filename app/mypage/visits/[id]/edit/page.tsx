@@ -7,6 +7,9 @@ import { createClient } from "@/lib/supabase/client";
 
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
+type Weather = "sunny" | "cloudy" | "rainy" | "snowy" | "unknown";
+type Crowding = "empty" | "normal" | "busy" | "very_busy" | "unknown";
+type Parking = "easy" | "normal" | "difficult" | "full" | "none" | "not_used";
 type Expectation = "exceeded" | "met" | "below";
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
@@ -29,6 +32,31 @@ const expectationOptions: { value: Expectation; label: string }[] = [
   { value: "below", label: "期待以下" },
 ];
 
+const weatherOptions: { value: Weather; label: string }[] = [
+  { value: "sunny", label: "☀️晴れ" },
+  { value: "cloudy", label: "☁️くもり" },
+  { value: "rainy", label: "🌧雨" },
+  { value: "snowy", label: "❄️雪" },
+  { value: "unknown", label: "覚えていない" },
+];
+
+const crowdingOptions: { value: Crowding; label: string }[] = [
+  { value: "empty", label: "空いていた" },
+  { value: "normal", label: "ふつう" },
+  { value: "busy", label: "混んでいた" },
+  { value: "very_busy", label: "かなり混んでいた" },
+  { value: "unknown", label: "覚えていない" },
+];
+
+const parkingOptions: { value: Parking; label: string }[] = [
+  { value: "easy", label: "停めやすかった" },
+  { value: "normal", label: "ふつう" },
+  { value: "difficult", label: "停めにくかった" },
+  { value: "full", label: "満車だった" },
+  { value: "none", label: "駐車場なし" },
+  { value: "not_used", label: "使っていない" },
+];
+
 export default function EditVisitPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
@@ -42,6 +70,9 @@ export default function EditVisitPage() {
   const [familyRevisit, setFamilyRevisit] = useState<FamilyRevisit | "">("");
   const [parentFatigue, setParentFatigue] = useState<ParentFatigue | "">("");
   const [expectation, setExpectation] = useState<Expectation | "">("");
+  const [weather, setWeather] = useState<Weather | "">("");
+  const [crowding, setCrowding] = useState<Crowding | "">("");
+  const [parking, setParking] = useState<Parking | "">("");
   const [parentMemo, setParentMemo] = useState("");
   const [detailsOpen, setDetailsOpen] = useState(false);
 
@@ -52,7 +83,7 @@ export default function EditVisitPage() {
       const { data, error: fetchError } = await supabase
         .from("visits")
         .select(
-          "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo",
+          "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, parent_memo",
         )
         .eq("id", visitId)
         .single();
@@ -67,8 +98,19 @@ export default function EditVisitPage() {
       setFamilyRevisit((data.family_revisit as FamilyRevisit) ?? "");
       setParentFatigue((data.parent_fatigue as ParentFatigue) ?? "");
       setExpectation((data.expectation_vs_reality as Expectation) ?? "");
+      setWeather((data.weather as Weather) ?? "");
+      setCrowding((data.crowding as Crowding) ?? "");
+      setParking((data.parking as Parking) ?? "");
       setParentMemo(data.parent_memo ?? "");
-      if (data.expectation_vs_reality || data.parent_memo) setDetailsOpen(true);
+      if (
+        data.expectation_vs_reality ||
+        data.weather ||
+        data.crowding ||
+        data.parking ||
+        data.parent_memo
+      ) {
+        setDetailsOpen(true);
+      }
       setLoading(false);
     }
     load();
@@ -98,6 +140,9 @@ export default function EditVisitPage() {
         family_revisit: familyRevisit,
         parent_fatigue: parentFatigue,
         expectation_vs_reality: expectation || null,
+        weather: weather || null,
+        crowding: crowding || null,
+        parking: parking || null,
         parent_memo: parentMemo.trim() || null,
         updated_at: new Date().toISOString(),
       })
@@ -214,6 +259,30 @@ export default function EditVisitPage() {
                   ))}
                 </div>
               </div>
+              <OptionButtons
+                title="天気"
+                options={weatherOptions}
+                value={weather}
+                onChange={setWeather}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="混雑"
+                options={crowdingOptions}
+                value={crowding}
+                onChange={setCrowding}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="駐車場"
+                options={parkingOptions}
+                value={parking}
+                onChange={setParking}
+                allowClear
+                small
+              />
               <div className="space-y-2">
                 <label className="block text-xs font-bold text-slate-600">
                   親メモ
@@ -247,26 +316,34 @@ function OptionButtons<T extends string>({
   options,
   value,
   onChange,
+  allowClear = false,
+  small = false,
 }: {
   title: string;
   options: { value: T; label: string }[];
   value: T | "";
-  onChange: (value: T) => void;
+  onChange: (value: T | "") => void;
+  allowClear?: boolean;
+  small?: boolean;
 }) {
   return (
     <section className="space-y-2">
-      <p className="text-sm font-bold text-slate-800">{title}</p>
+      <p className={small ? "text-xs font-bold text-slate-600" : "text-sm font-bold text-slate-800"}>
+        {title}
+      </p>
       <div className="grid grid-cols-2 gap-2">
         {options.map((option) => (
           <button
             key={option.value}
             type="button"
-            onClick={() => onChange(option.value)}
-            className={`py-2 px-2 rounded-lg border text-sm font-medium transition-colors ${
+            onClick={() =>
+              onChange(allowClear && value === option.value ? "" : option.value)
+            }
+            className={`py-2 px-2 rounded-lg border font-medium transition-colors ${
               value === option.value
                 ? "bg-brand border-brand text-white"
                 : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-            }`}
+            } ${small ? "text-xs" : "text-sm"}`}
           >
             {option.label}
           </button>

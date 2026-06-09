@@ -14,6 +14,9 @@ type Child = {
 type DateChoice = "today" | "yesterday" | "custom";
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
+type Weather = "sunny" | "cloudy" | "rainy" | "snowy" | "unknown";
+type Crowding = "empty" | "normal" | "busy" | "very_busy" | "unknown";
+type Parking = "easy" | "normal" | "difficult" | "full" | "none" | "not_used";
 type Satisfaction =
   | "loved"
   | "enjoyed"
@@ -21,6 +24,13 @@ type Satisfaction =
   | "not_fit"
   | "could_not_join";
 type Expectation = "exceeded" | "met" | "below";
+
+type FacilitySuggestion = {
+  slug: string;
+  name: string;
+  category: string;
+  prefecture: string;
+};
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
   { value: "yes", label: "また行きたい" },
@@ -48,6 +58,31 @@ const expectationOptions: { value: Expectation; label: string }[] = [
   { value: "exceeded", label: "期待以上だった" },
   { value: "met", label: "期待どおり" },
   { value: "below", label: "期待以下" },
+];
+
+const weatherOptions: { value: Weather; label: string }[] = [
+  { value: "sunny", label: "☀️晴れ" },
+  { value: "cloudy", label: "☁️くもり" },
+  { value: "rainy", label: "🌧雨" },
+  { value: "snowy", label: "❄️雪" },
+  { value: "unknown", label: "覚えていない" },
+];
+
+const crowdingOptions: { value: Crowding; label: string }[] = [
+  { value: "empty", label: "空いていた" },
+  { value: "normal", label: "ふつう" },
+  { value: "busy", label: "混んでいた" },
+  { value: "very_busy", label: "かなり混んでいた" },
+  { value: "unknown", label: "覚えていない" },
+];
+
+const parkingOptions: { value: Parking; label: string }[] = [
+  { value: "easy", label: "停めやすかった" },
+  { value: "normal", label: "ふつう" },
+  { value: "difficult", label: "停めにくかった" },
+  { value: "full", label: "満車だった" },
+  { value: "none", label: "駐車場なし" },
+  { value: "not_used", label: "使っていない" },
 ];
 
 const reactionTagOptions = [
@@ -93,6 +128,9 @@ export default function NewVisitPage() {
   const nameFromUrl = searchParams.get("name") ?? "";
 
   const [facilityName, setFacilityName] = useState(nameFromUrl);
+  const [facilitySlug, setFacilitySlug] = useState(facilitySlugFromUrl);
+  const [suggestions, setSuggestions] = useState<FacilitySuggestion[]>([]);
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [dateChoice, setDateChoice] = useState<DateChoice>("today");
   const [customDate, setCustomDate] = useState("");
   const [children, setChildren] = useState<Child[]>([]);
@@ -102,6 +140,9 @@ export default function NewVisitPage() {
   const [parentFatigue, setParentFatigue] = useState<ParentFatigue | "">("");
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [expectation, setExpectation] = useState<Expectation | "">("");
+  const [weather, setWeather] = useState<Weather | "">("");
+  const [crowding, setCrowding] = useState<Crowding | "">("");
+  const [parking, setParking] = useState<Parking | "">("");
   const [reactionTags, setReactionTags] = useState<string[]>([]);
   const [parentMemo, setParentMemo] = useState("");
   const [loading, setLoading] = useState(false);
@@ -134,6 +175,35 @@ export default function NewVisitPage() {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    const query = facilityName.trim();
+    if (facilitySlugFromUrl || facilitySlug || query.length < 2) return;
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      try {
+        const response = await fetch(
+          `/api/facilities/search?q=${encodeURIComponent(query)}`,
+          { signal: controller.signal },
+        );
+        if (!response.ok) return;
+        const data = (await response.json()) as { results?: FacilitySuggestion[] };
+        setSuggestions(data.results ?? []);
+        setSuggestionsOpen(true);
+      } catch (fetchError) {
+        if ((fetchError as Error).name !== "AbortError") {
+          setSuggestions([]);
+          setSuggestionsOpen(false);
+        }
+      }
+    }, 300);
+
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [facilityName, facilitySlug, facilitySlugFromUrl]);
 
   const visitedOn = useMemo(
     () => dateForChoice(dateChoice, customDate),
@@ -200,7 +270,7 @@ export default function NewVisitPage() {
       .from("visits")
       .insert({
         user_id: user.id,
-        facility_slug: facilitySlugFromUrl || makeFacilitySlug(facilityName),
+        facility_slug: facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName),
         facility_name: facilityName.trim(),
         visited_on: visitedOn,
         visited_year: visitedYear,
@@ -210,6 +280,9 @@ export default function NewVisitPage() {
         family_revisit: familyRevisit,
         parent_fatigue: parentFatigue,
         expectation_vs_reality: expectation || null,
+        weather: weather || null,
+        crowding: crowding || null,
+        parking: parking || null,
         parent_memo: parentMemo.trim() || null,
       })
       .select("id")
@@ -267,10 +340,43 @@ export default function NewVisitPage() {
           <input
             type="text"
             value={facilityName}
-            onChange={(event) => setFacilityName(event.target.value)}
+            onChange={(event) => {
+              setFacilityName(event.target.value);
+              setFacilitySlug("");
+              setSuggestions([]);
+              setSuggestionsOpen(false);
+            }}
+            onFocus={() => {
+              if (!facilitySlugFromUrl && suggestions.length > 0) {
+                setSuggestionsOpen(true);
+              }
+            }}
             placeholder="施設名を入力、例: 富士山こどもの国"
             className="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
           />
+          {!facilitySlugFromUrl && suggestionsOpen && suggestions.length > 0 && (
+            <div className="bg-white border border-slate-200 rounded-lg py-2 shadow-sm">
+              {suggestions.map((suggestion) => (
+                <button
+                  key={suggestion.slug}
+                  type="button"
+                  onClick={() => {
+                    setFacilityName(suggestion.name);
+                    setFacilitySlug(suggestion.slug);
+                    setSuggestionsOpen(false);
+                  }}
+                  className="w-full px-3 py-2 text-left hover:bg-slate-50 transition-colors"
+                >
+                  <span className="block text-sm font-medium text-slate-800">
+                    {suggestion.name}
+                  </span>
+                  <span className="block text-xs text-slate-400">
+                    {suggestion.prefecture} / {suggestion.category}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="space-y-2">
@@ -406,6 +512,33 @@ export default function NewVisitPage() {
                 </div>
               </div>
 
+              <OptionButtons
+                title="天気"
+                options={weatherOptions}
+                value={weather}
+                onChange={setWeather}
+                allowClear
+                small
+              />
+
+              <OptionButtons
+                title="混雑"
+                options={crowdingOptions}
+                value={crowding}
+                onChange={setCrowding}
+                allowClear
+                small
+              />
+
+              <OptionButtons
+                title="駐車場"
+                options={parkingOptions}
+                value={parking}
+                onChange={setParking}
+                allowClear
+                small
+              />
+
               <div className="space-y-2">
                 <p className="text-xs font-bold text-slate-600">反応タグ</p>
                 <div className="flex flex-wrap gap-2">
@@ -457,26 +590,34 @@ function OptionButtons<T extends string>({
   options,
   value,
   onChange,
+  allowClear = false,
+  small = false,
 }: {
   title: string;
   options: { value: T; label: string }[];
   value: T | "";
-  onChange: (value: T) => void;
+  onChange: (value: T | "") => void;
+  allowClear?: boolean;
+  small?: boolean;
 }) {
   return (
     <section className="space-y-2">
-      <p className="text-sm font-bold text-slate-800">{title}</p>
+      <p className={small ? "text-xs font-bold text-slate-600" : "text-sm font-bold text-slate-800"}>
+        {title}
+      </p>
       <div className="grid grid-cols-2 gap-2">
         {options.map((option) => (
           <button
             key={option.value}
             type="button"
-            onClick={() => onChange(option.value)}
-            className={`py-2 px-2 rounded-lg border text-sm font-medium transition-colors ${
+            onClick={() =>
+              onChange(allowClear && value === option.value ? "" : option.value)
+            }
+            className={`py-2 px-2 rounded-lg border font-medium transition-colors ${
               value === option.value
                 ? "bg-brand border-brand text-white"
                 : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-            }`}
+            } ${small ? "text-xs" : "text-sm"}`}
           >
             {option.label}
           </button>

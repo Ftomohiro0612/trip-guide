@@ -4,11 +4,20 @@ import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-export default function DeleteWishButton({ wishId }: { wishId: string }) {
+export default function DeleteWishButton({
+  wishId,
+  facilityName,
+}: {
+  wishId: string;
+  facilityName: string;
+}) {
   const router = useRouter();
   const [loading, setLoading] = useState(false);
 
   async function handleDelete() {
+    if (!window.confirm(`「${facilityName}」を行きたいリストから削除しますか？`)) {
+      return;
+    }
     setLoading(true);
     const supabase = createClient();
     const { error } = await supabase.from("wishlists").delete().eq("id", wishId);
