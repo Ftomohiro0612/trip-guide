@@ -1,4 +1,5 @@
 import Link from "next/link";
+import HeaderAuthButton from "@/components/HeaderAuthButton";
 
 export default function Header() {
   return (
@@ -11,26 +12,29 @@ export default function Header() {
             <span className="text-brand">.net</span>
           </span>
         </Link>
-        <nav className="hidden sm:flex items-center gap-1 sm:gap-4 text-sm font-medium">
-          <Link
-            href="/facilities"
-            className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-sky-50 hover:text-brand transition-colors"
-          >
-            施設一覧
-          </Link>
-          <Link
-            href="/tag/rainy-day"
-            className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-sky-50 hover:text-brand transition-colors"
-          >
-            <span aria-hidden>☂️ </span>雨の日
-          </Link>
-          <Link
-            href="/tag/free"
-            className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
-          >
-            <span aria-hidden>🆓 </span>無料
-          </Link>
-        </nav>
+        <div className="flex items-center gap-2 sm:gap-4">
+          <nav className="hidden sm:flex items-center gap-1 sm:gap-4 text-sm font-medium">
+            <Link
+              href="/facilities"
+              className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-sky-50 hover:text-brand transition-colors"
+            >
+              施設一覧
+            </Link>
+            <Link
+              href="/tag/rainy-day"
+              className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-sky-50 hover:text-brand transition-colors"
+            >
+              <span aria-hidden>☂️ </span>雨の日
+            </Link>
+            <Link
+              href="/tag/free"
+              className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
+            >
+              <span aria-hidden>🆓 </span>無料
+            </Link>
+          </nav>
+          <HeaderAuthButton />
+        </div>
       </div>
     </header>
   );

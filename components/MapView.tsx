@@ -17,7 +17,16 @@ import { categoryIcon } from "@/lib/icons";
 interface Props {
   facilities: Facility[];
   height?: number;
+  userStatus?: UserStatusMap;
 }
+
+export type UserFacilityStatus = {
+  visitCount: number;
+  lastVisited: string | null;
+  wishlisted: boolean;
+};
+
+export type UserStatusMap = Map<string, UserFacilityStatus>;
 
 const PREF_COLORS: Record<PrefectureId, string> = {
   shizuoka: "#0ea5e9",
@@ -57,7 +66,7 @@ function hasCoords(f: Facility): f is PlacedFacility {
   );
 }
 
-export default function MapView({ facilities, height = 520 }: Props) {
+export default function MapView({ facilities, height = 520, userStatus }: Props) {
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
 
   const [activePrefs, setActivePrefs] = useState<Record<PrefectureId, boolean>>(
@@ -188,6 +197,7 @@ export default function MapView({ facilities, height = 520 }: Props) {
             key={f.id}
             facility={f}
             color={PREF_COLORS[f.prefecture_id]}
+            status={userStatus?.get(f.slug)}
           />
         ))}
       </MapContainer>
@@ -210,9 +220,11 @@ function FitBoundsOnChange({ points }: { points: PlacedFacility[] }) {
 function FacilityMarker({
   facility,
   color,
+  status,
 }: {
   facility: PlacedFacility;
   color: string;
+  status?: UserFacilityStatus;
 }) {
   const highlighted =
     facility.rain_friendly === "◎" || facility.is_free;
@@ -251,6 +263,17 @@ function FacilityMarker({
               👶 {facility.target_age}
             </span>
           </div>
+          {(status?.visitCount ?? 0) > 0 && (
+            <div className="text-[10px] bg-green-50 text-green-700 px-1.5 py-0.5 rounded font-medium mb-1">
+              ✅ 行ったことあり {status?.visitCount}回
+              {status?.lastVisited ? ` (${status.lastVisited})` : ""}
+            </div>
+          )}
+          {status?.wishlisted && (
+            <div className="text-[10px] bg-pink-50 text-pink-600 px-1.5 py-0.5 rounded font-medium mb-1">
+              ⭐ 行きたい登録済み
+            </div>
+          )}
           <Link
             href={`/facilities/${facility.slug}`}
             className="inline-block w-full text-center bg-brand hover:bg-brand-dark text-white text-xs font-bold px-2 py-1.5 rounded transition-colors"

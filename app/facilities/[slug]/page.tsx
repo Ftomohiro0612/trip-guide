@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityGallery from "@/components/FacilityGallery";
+import FacilityMyRecord from "@/components/FacilityMyRecord";
 import ShareButtons from "@/components/ShareButtons";
 import {
   facilities,
@@ -379,6 +380,10 @@ export default async function FacilityDetailPage({ params }: Props) {
         </article>
 
         <aside className="space-y-4">
+          <FacilityMyRecord
+            facilitySlug={facility.slug}
+            facilityName={facility.name}
+          />
           <FacilityActionButtons
             facilitySlug={facility.slug}
             facilityName={facility.name}
