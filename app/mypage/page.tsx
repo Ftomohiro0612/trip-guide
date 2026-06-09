@@ -50,17 +50,25 @@ export default async function MypagePage() {
       {!hasChildren && (
         <div className="bg-sky-50 border border-sky-200 rounded-xl p-4">
           <p className="font-semibold text-sky-900 text-sm">
-            まず子どもプロフィールを登録しましょう！
+            子どもプロフィールを登録すると便利です
           </p>
           <p className="text-sky-700 text-xs mt-1 leading-relaxed">
-            ニックネームと生年月を登録することで、訪問時の「当時の年齢」が自動で記録されます。
+            ニックネームと生年月を登録することで、おでかけ記録に「当時の年齢」が自動でつきます。本名・学校名は不要です。登録しなくてもおでかけ記録は使えます。
           </p>
-          <Link
-            href="/mypage/children"
-            className="mt-3 inline-flex items-center gap-1.5 px-4 py-2 bg-brand text-white text-sm font-bold rounded-lg hover:bg-brand-dark transition-colors"
-          >
-            子どもを登録する →
-          </Link>
+          <div className="mt-3 flex items-center gap-3">
+            <Link
+              href="/mypage/children"
+              className="inline-flex items-center gap-1.5 px-4 py-2 bg-brand text-white text-sm font-bold rounded-lg hover:bg-brand-dark transition-colors"
+            >
+              登録する →
+            </Link>
+            <Link
+              href="/mypage/visits/new"
+              className="text-xs text-sky-600 hover:underline"
+            >
+              あとで登録する
+            </Link>
+          </div>
         </div>
       )}
 
