@@ -1,5 +1,5 @@
 // Cache the font fetch per worker process to avoid re-fetching for every page
-let cache = new Map<string, Promise<ArrayBuffer | null>>();
+const cache = new Map<string, Promise<ArrayBuffer | null>>();
 
 async function fetchSubset(text: string): Promise<ArrayBuffer | null> {
   // Use a UA that prompts Google Fonts to serve a TTF/woff (satori-compatible).
