@@ -55,6 +55,12 @@ CREATE POLICY "自分の子どもプロフィールのみ"
   USING (auth.uid() = user_id);
 
 -- ----------------------------------------------------------------
+-- GRANT（authenticated ロールへのアクセス権付与）
+-- ----------------------------------------------------------------
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.profiles TO authenticated;
+GRANT SELECT, INSERT, UPDATE, DELETE ON public.children TO authenticated;
+
+-- ----------------------------------------------------------------
 -- Phase 1 完了確認クエリ（実行後の動作確認用）
 -- ----------------------------------------------------------------
 -- SELECT tablename, rowsecurity FROM pg_tables
