@@ -15,6 +15,7 @@ export default function FacilityActionButtons({
 }) {
   const router = useRouter();
   const [loadState, setLoadState] = useState<LoadState>("loading");
+  const [userId, setUserId] = useState<string | null>(null);
   const [wishlistId, setWishlistId] = useState<string | null>(null);
   const [toggling, setToggling] = useState(false);
 
@@ -27,9 +28,11 @@ export default function FacilityActionButtons({
       } = await supabase.auth.getUser();
       if (!active) return;
       if (!user) {
+        setUserId(null);
         setLoadState("guest");
         return;
       }
+      setUserId(user.id);
       const { data } = await supabase
         .from("wishlists")
         .select("id")
@@ -46,7 +49,7 @@ export default function FacilityActionButtons({
     };
   }, [facilitySlug]);
 
-  const visitUrl = `/mypage/visits/new?facility=${facilitySlug}&name=${encodeURIComponent(facilityName)}`;
+  const visitUrl = `/mypage/visits/new?facility=${encodeURIComponent(facilitySlug)}&name=${encodeURIComponent(facilityName)}`;
   const loginUrl = (next: string) =>
     `/auth/login?redirectTo=${encodeURIComponent(next)}`;
 
@@ -56,17 +59,28 @@ export default function FacilityActionButtons({
       router.push(loginUrl(`/facilities/${facilitySlug}`));
       return;
     }
+    if (!userId) return;
     setToggling(true);
     const supabase = createClient();
     if (wishlistId) {
-      await supabase.from("wishlists").delete().eq("id", wishlistId);
+      const { error } = await supabase.from("wishlists").delete().eq("id", wishlistId);
+      if (error) {
+        window.alert(error.message);
+        setToggling(false);
+        return;
+      }
       setWishlistId(null);
     } else {
-      const { data } = await supabase
+      const { data, error } = await supabase
         .from("wishlists")
-        .insert({ facility_slug: facilitySlug, facility_name: facilityName })
+        .insert({ user_id: userId, facility_slug: facilitySlug, facility_name: facilityName })
         .select("id")
         .single();
+      if (error) {
+        window.alert(error.message);
+        setToggling(false);
+        return;
+      }
       setWishlistId(data?.id ?? null);
     }
     setToggling(false);

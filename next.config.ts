@@ -7,7 +7,7 @@ const nextConfig: NextConfig = {
         source: "/:path*",
         has: [{ type: "host", value: "www.trip-guide.net" }],
         destination: "https://trip-guide.net/:path*",
-        permanent: true,
+        statusCode: 301,
       },
     ];
   },

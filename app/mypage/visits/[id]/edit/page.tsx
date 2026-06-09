@@ -5,7 +5,6 @@ import { useParams, useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
-type DateChoice = "custom";
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
 type Expectation = "exceeded" | "met" | "below";
