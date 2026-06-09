@@ -29,14 +29,15 @@
 
 ## 進捗状況
 
-詳細は `CHAT_HANDOFF.md` を参照。
+詳細は `HANDOFF.md` を参照。
 
-- Phase 1 MVP(ホーム/一覧/詳細/フィルタ)は完成済み
-- 次の優先タスクは GitHub & Vercel デプロイ
+- Memorips Phase 2（訪問記録・履歴・行きたいリスト）完了
+- 次は Phase 3（施設ページ連携）
 
 ## 参考ファイル
 
-- `HANDOFF.md` — プロジェクト完全仕様書
-- `CHAT_HANDOFF.md` — 直近のチャット引継ぎメモ
+- `HANDOFF.md` — 直近のチャット引継ぎメモ（最新の進捗はここ）
+- `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
+- `product-direction.md` — プロダクト方針書・実装進捗
 - `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
 - `facilities_data.json` — 151施設の元データ

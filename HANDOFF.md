@@ -1,498 +1,419 @@
-# trip-guide.net 子供向け遊び場検索サイト 開発仕様書
+# trip-guide.net プロジェクト 引継ぎメモ
+
+このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
+新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
+
+**最終更新**: 2026-06-09 / Memorips Phase 2 完了（訪問記録・履歴・行きたいリスト・Supabase Auth）/ 施設情報サイト: 9県968施設稼働中
+
+---
+
+## ユーザーについて
+
+- **役割**: trip-guide.net (子供向け遊び場検索サイト)のオーナー兼開発者
+- **技術レベル**: Node.js / Git / Next.js などの基礎は初体験スタートだったが、デプロイまで一通り完走済み
+- **環境**: Windows 11、PowerShell、Node.js v24.15.0、npm 11.12.1、Claude Code v2.1.126
+- **作業ディレクトリ**: `C:\Users\tomo-\projects\trip-guide`
+- **GitHub アカウント**: `Ftomohiro0612`
+- **メールアドレス**: info@fic-investment.biz
 
 ## プロジェクト概要
 
-**ドメイン**: trip-guide.net
-**サイトコンセプト**: 「子供が楽しめる場所がすぐに見つかる！」
-**対象エリア**: 静岡県・長野県・山梨県（将来的に全国展開も視野）
-**ターゲット**: 子育て世代の家族（特に未就学児〜小学生の親）
+- **サイト名**: trip-guide.net
+- **目的**: 子供向け遊び場(関東甲信越9県、施設968件)の検索サイト
+- **スタック**: Next.js 16 (App Router) + TypeScript + Tailwind CSS v4 + Turbopack
+- **ホスティング**: Vercel
+- **データ**: `data/facilities_data.json` (968施設、全件緯度経度入り、画像350件)
+- **県別**: 静岡 68 / 長野 73 / 山梨 72 / 東京 155 / 栃木 118 / 埼玉 118 / 新潟 120 / 千葉 115 / 神奈川 124
+- **データ運用**: Google スプレッドシート(マスター) ⇄ JSON 同期スクリプト + **Sheets API 直接書き込み**(append-to-sheet / push-to-sheet)
+- **詳細仕様**: `HANDOFF.md`(プロジェクトの完全な仕様書、データ運用フローも記載)
 
-## サイトの目的とユーザーのニーズ
+## 公開状況 (LIVE)
 
-### ユーザーが解決したい課題
-1. **「今日どこ行く？」問題**: 急に時間ができた時、雨が降った時、子供が退屈してる時にすぐに行き先を見つけたい
-2. **天候対応**: 雨の日でも遊べる場所が知りたい
-3. **年齢別の適切性**: 「うちの子の年齢で楽しめる？」を知りたい
-4. **コスト感**: 「無料で遊べる場所はないか？」を知りたい
-5. **エリア絞り込み**: 「家から1時間以内の場所」を知りたい
-
-### サイトの設計方針
-- **3秒で答えを返す**: トップページ→絞り込み→詳細まで最短3クリック
-- **モバイルファースト**: 出先での検索が多い、レスポンシブ必須
-- **SEO重視**: ロングテールキーワード（「山梨 雨の日 子供」等）で上位獲得を狙う
-
----
-
-## 技術スタック（推奨）
-
-### フロントエンド
-- **Next.js 14+ (App Router)**: SEO・SSG・SSR対応、画像最適化
-- **TypeScript**: 型安全性、保守性向上
-- **Tailwind CSS**: スタイリング、レスポンシブ対応
-- **shadcn/ui**: UIコンポーネント（必要に応じて）
-- **Lucide React**: アイコン
-
-### データ管理
-- **JSON**: facilities_data.json（添付）を直接読み込み
-- 将来的に増えたら **Markdown + フロントマター** または **Headless CMS（Sanity, Strapi等）** に移行も視野
-
-### マップ
-- **Leaflet + OpenStreetMap**: 無料で使える地図ライブラリ
-- または **Google Maps Embed**: 詳細ページのマップ表示用
-
-### デプロイ
-- **Vercel**（推奨）: Next.jsとの相性最高、無料枠で十分、独自ドメイン接続簡単
-- **Cloudflare Pages**: 代替案、より高速
-
-### SEO
-- **next-sitemap**: サイトマップ自動生成
-- **構造化データ (JSON-LD)**: Google検索でリッチリザルト表示
-
----
-
-## ディレクトリ構成（推奨）
-
-```
-trip-guide/
-├── app/
-│   ├── layout.tsx              # 全体レイアウト
-│   ├── page.tsx                # トップページ
-│   ├── facilities/
-│   │   ├── page.tsx            # 施設一覧ページ
-│   │   └── [slug]/page.tsx     # 施設詳細ページ
-│   ├── prefecture/
-│   │   └── [id]/page.tsx       # 県別ページ (shizuoka, nagano, yamanashi)
-│   ├── category/
-│   │   └── [id]/page.tsx       # カテゴリ別ページ
-│   ├── tag/
-│   │   └── [tag]/page.tsx      # タグ別ページ (rainy-day等)
-│   ├── search/
-│   │   └── page.tsx            # 検索結果ページ
-│   └── about/page.tsx          # サイトについて
-├── components/
-│   ├── FacilityCard.tsx        # 施設カード
-│   ├── FilterSidebar.tsx       # 絞り込みサイドバー
-│   ├── SearchBar.tsx           # 検索バー
-│   ├── MapView.tsx             # 地図表示
-│   ├── QuickFilter.tsx         # トップページのクイックフィルタ
-│   └── Header.tsx, Footer.tsx
-├── data/
-│   └── facilities_data.json    # 施設データ（添付ファイル）
-├── lib/
-│   ├── facilities.ts           # データアクセス関数
-│   └── filter.ts               # フィルタリングロジック
-├── public/
-│   └── images/                 # 画像（OGP画像、施設写真等）
-├── next.config.js
-├── tailwind.config.ts
-└── package.json
-```
-
----
-
-## ページ構成と機能
-
-### 1. トップページ (`/`)
-
-**目的**: ユーザーをすぐに目的の施設へ誘導する
-
-**要素**:
-- ヒーローセクション: 「子供が楽しめる遊び場がすぐ見つかる」キャッチコピー + 検索バー
-- **クイックフィルタ（最重要）**:
-  - 「今日は雨☂️」→ 雨◎の施設一覧へ
-  - 「お金をかけずに🆓」→ 無料施設一覧へ
-  - 「0-3歳の子と👶」→ 年齢タグでフィルタ
-  - 「小学生と🧒」→ 年齢タグでフィルタ
-  - 「冬の雪遊び⛄️」→ スキー場
-- **エリア別カード**: 静岡 / 長野 / 山梨（写真+件数）
-- **カテゴリ別カード**: 動物園 / 水族館 / 公園 / 屋内遊び場 / クラフト体験...
-- **おすすめピックアップ**: 編集おすすめ施設3-6件
-- **季節特集**: 春の桜 / 夏の水遊び / 秋の紅葉 / 冬のスキー
-
-### 2. 施設一覧ページ (`/facilities`)
-
-**機能**:
-- **左サイドバー（モバイルではドロワー）**:
-  - 県（チェックボックス）
-  - カテゴリ（チェックボックス）
-  - 屋内/屋外
-  - 雨天対応 ◎/△/×
-  - 料金（無料/有料）
-  - 対象年齢
-- **メインエリア**:
-  - 表示切り替え: カードビュー / 地図ビュー
-  - ソート: おすすめ順 / 県別 / 名前順
-  - **施設カード**: 名前、エリア、カテゴリ、対象年齢、雨◎マーク、料金、おすすめポイント抜粋
-
-### 3. 施設詳細ページ (`/facilities/[slug]`)
-
-**要素**:
-- 施設名、所在地、写真（あれば）
-- 基本情報テーブル: カテゴリ、屋内屋外、雨対応、料金、対象年齢
-- 詳細説明（descriptionの全文）
-- 地図（Leaflet/Google Maps）
-- 公式サイトリンク
-- 「同じカテゴリの近隣施設」レコメンド
-- 構造化データ（LocalBusiness JSON-LD）
-
-### 4. 県別ページ (`/prefecture/shizuoka` 等)
-
-**目的**: SEO対策、エリア軸での発見
-
-**要素**:
-- 県の説明（アクセス、特徴）
-- 県内のカテゴリ別件数サマリー
-- 全施設一覧（フィルタ可能）
-- 「○○県 子供 おすすめ」記事への内部リンク
-
-### 5. カテゴリ別ページ (`/category/zoo` 等)
-
-**目的**: SEO対策、目的軸での発見
-
-**要素**:
-- カテゴリの説明
-- 全施設一覧（県でフィルタ可能）
-
-### 6. タグページ (`/tag/雨の日OK` 等)
-
-**目的**: ロングテールSEO対策
-
-例:
-- `/tag/雨の日OK` → 雨◎の施設151件中50件以上
-- `/tag/無料` → 無料施設のみ
-- `/tag/0-3歳OK` → ベビー連れOK施設
-
----
-
-## データ構造（facilities_data.json）
-
-すでに変換済みのJSONを添付しました。以下の構造で151件を含みます：
-
-```json
-{
-  "metadata": {
-    "site_name": "trip-guide.net",
-    "total_facilities": 151,
-    "prefectures": [
-      {"id": "shizuoka", "name": "静岡県", "count": 51},
-      {"id": "nagano", "name": "長野県", "count": 53},
-      {"id": "yamanashi", "name": "山梨県", "count": 47}
-    ],
-    "categories": [...],
-    "filters": {...}
-  },
-  "facilities": [
-    {
-      "id": 1,
-      "slug": "facility-001",
-      "name": "ぐりんぱ",
-      "prefecture": "静岡県",
-      "prefecture_id": "shizuoka",
-      "category": "遊園地・テーマパーク",
-      "category_id": "theme-park",
-      "address": "裾野市須山字藤原2427",
-      "indoor_outdoor": "屋外",
-      "rain_friendly": "×",
-      "is_free": false,
-      "fee_type": "有料",
-      "adult_fee": "大人3,800円",
-      "child_fee": "子供2,800円(3歳以上)",
-      "description": "富士山の麓・標高1,300mに広がる広大な遊園地...",
-      "target_age": "2歳～小学生",
-      "url": "https://www.grinpa.com/",
-      "tags": ["屋外", "小学生向け"]
-    },
-    ...
-  ]
-}
-```
-
----
-
-## データ運用フロー(Google スプレッドシート ⇄ JSON)
-
-施設データの編集は **Google スプレッドシートをマスター** として運用する。
-JSON は同期スクリプトで生成される派生物として扱う(直接編集しない方針)。
-
-### スプレッドシート
-
-- **シートID**: `1p4bqL1Oq89k5c-9Wa0REXd8BojzUBBXfF5-iSYEeeH4`
-- **公開設定**: 「リンクを知っている全員が閲覧可」(認証なしで CSV ダウンロード可)
-- **CSV エクスポートURL**:
-  `https://docs.google.com/spreadsheets/d/{シートID}/export?format=csv`
-
-### 列の並び(全 18 列)
-
-```
-id | 県 | カテゴリ | 施設名 | 所在地 | 屋内・屋外 | 雨天対応 |
-料金タイプ | 大人料金目安 | 子供料金目安 | おすすめポイント詳細 |
-対象年齢 | URL/参考 | lat | lng | image | image_credit | tags
-```
-
-- `id`: 整数(JSON との同期キー、空欄なら新規追加)
-- `料金タイプ`: 「無料」または「有料」(`is_free` フラグはここから自動算出)
-- `lat` / `lng`: 緯度経度(数値)
-- `image`: `/images/facilities/facility-XXX.jpg` のような相対パス
-- `image_credit`: HTML タグを含むクレジット文字列
-- `tags`: カンマ区切り(例: `屋外,小学生向け`)
-
-### 通常運用
-
-スプレッドシートで編集 → ターミナルで以下:
-
-```powershell
-npm run sync-sheet
-```
-
-これで:
-1. `data/facilities_data.json.bak.{timestamp}.json` にバックアップ
-2. 公開URL から最新CSVを取得
-3. id をキーに既存JSONとマージ(空セルは既存値維持)
-4. JSON を上書き、変更点をログ出力
-
-最後に手動で `git commit` + `git push`(Vercel が自動デプロイ)。
-
-### マージのルール
-
-| 状況 | 挙動 |
+| 項目 | 値 |
 |---|---|
-| シート行に id があり JSON にも存在 | 各列の値で上書き(空セルはスキップ → 既存維持) |
-| シート行に id がない / JSON に存在しない id | 新規追加(id 自動採番、`prefecture_id`/`category_id`/`slug`/`is_free` は派生計算) |
-| JSON にあってシートにない | **削除しない**(警告ログのみ、JSONに保持) |
-| 重複id | 最初のものを採用、以降は警告 |
-| 県・カテゴリが既知マスターに無い | 警告のみ(値は格納される) |
+| **本番URL** | https://trip-guide.net (SSL有効、独自ドメイン稼働中) |
+| **Vercel preview** | https://trip-guide-nine.vercel.app |
+| **GitHub** | https://github.com/Ftomohiro0612/trip-guide |
+| **DNS** | Xserver管理(A レコードのみ Vercel 216.198.79.1 に変更、TXT/NS/MX は Xserver のまま) |
+| **メール** | Xserver 側でそのまま継続(SPF/DKIM保護) |
 
-### スプレッドシート初期化(初回のみ)
+---
 
-スプレッドシートに 18 列が揃っていない時点で sync を走らせると **151件すべてが新規扱い**になり、JSON 内の既存IDと重複した別IDで増殖する。最初に CSV を一括流し込みする手順:
+## 現在の進捗
 
-```powershell
-# 1. 現在の JSON から完全版 CSV を生成
-npm run export-csv
-# → data/facilities_master.csv (18列、UTF-8 BOM付き)
+### ✅ Phase 1 MVP (完了)
+- Next.js 16 + TypeScript + Tailwind v4 + Turbopack でセットアップ
+- ヒーロー / クイックフィルタ / エリアカード / カテゴリカード / ピックアップ
+- 施設一覧(サイドバーフィルタ + ソート + 空状態)
+- 施設詳細(JSON-LD `TouristAttraction` + Google Maps embed + 関連施設)
+- 大型 Leaflet 地図(151マーカー、県別カラー、フィルタ、自動 fitBounds)
+- データアクセス・フィルタ・アイコンの lib モジュール
 
-# 2. このファイルを開いて全選択コピー
-#    Google スプレッドシートで「ファイル → インポート → ファイルを置換」
-#    または既存シートの A1 に貼り付け
-```
+### ✅ Phase 2 SEO (完了)
+- 県別ページ `/prefecture/[id]` × 3
+- カテゴリ別ページ `/category/[id]` × 15
+- タグページ `/tag/[slug]` × 10 (ロングテールSEO)
+- About / 404 / Loading / error / global-error ページ
+- next-sitemap (188 URL) + robots.txt
+- 自動生成 OGP 画像(トップ・県・カテゴリ・タグ・施設詳細)、Noto Sans JP埋め込み
+- Twitter Cards / OGP / robots / keywords / format-detection / viewport / theme-color
+- favicon / apple-icon / PWA manifest
+- BreadcrumbList + WebSite SearchAction + ItemList JSON-LD
+- canonical URL を全主要ページに付与
+- 適用中フィルタチップ(× ボタンで個別解除)
+- スキップリンク / フォーカススタイル / 動きを抑制設定
 
-これでスプレッドシート側も 18 列・151 行の完全版になり、以降は `npm run sync-sheet` だけで往復できる。
+### ✅ データ充実 (完了)
+- **施設数 968件** — 全件緯度経度入り
+  - V3:151 → V4:+22 → V5:+18 → V6:+23 → V7 東京 +150 → V8 関東5県 +506 → V9 第2弾 +68 → V10 audit補完 +35 → 削除 5 (重複) = **968**
+- **9県カバー**: 静岡 68 / 長野 73 / 山梨 72 / 東京 155 / 栃木 118 / 埼玉 118 / 新潟 120 / 千葉 115 / 神奈川 124
+- **施設写真 350件**(36%)— Wikipedia 完全一致のみ採用、却下292件はブラックリスト管理(`data/wiki-image-blacklist.json`)
+- **カテゴリ数 20**(15既存 + 5新規:nature-park / viewpoint / scenic / indoor-theme-park / game-center)
+- スキーマ 22列(V5で signature_experiences / unique_selling_point / experience_tags / summer_water_play 追加)
+- ヘルパースクリプト: `geocode.ts` / `geocode.mjs` / `fetch-wiki-images.ts` / `optimize-images.mjs` / **`export-to-csv.ts`** / **`sync-from-sheet.ts`** / **`append-to-sheet.ts`** / **`push-to-sheet.ts`**
+- バックアップ: `data/facilities_data.json.bak.*` — gitignore 対象
 
-### 新規追加施設の補完(重要:idの書き戻し)
+### ✅ 体験向上 (完了)
+- シェアボタン(X / LINE / Facebook / リンクコピー / OS標準シェア)
+- GA4 / Search Console 連携の組み込み枠 (env で有効化)
+- アクセシビリティ強化(skip link, focus-visible, prefers-reduced-motion)
 
-スプレッドシートに **id 列が空のまま新規行を追加 → sync** すると、JSON 側で
-ids が自動採番される。**この採番結果をスプレッドシートに戻さないと**、
-次回 sync で同じ行が再び「id 空 → 新規」と判定され、重複した別 id で
-増殖していく(既存 152-173 と新たな 174-195 が同内容で並ぶような状態)。
+---
 
-そこで**毎回必ず**:
+## ✅ 今セッションで完了した作業
 
-```powershell
-# 1. シートに新規行を追加して保存(id列は空でOK)
+### GitHub / Vercel 本番デプロイ
+- GitHub リポジトリ作成 + push 成功
+- Vercel デプロイ完了、本番稼働中: https://trip-guide.net (SSL有効)
+- Vercel CLI セットアップ完了(v53.1.0、`ftomohiro0612` でログイン済み、プロジェクトリンク済み)
 
-# 2. JSON へ取り込み + 自動採番
-npm run sync-sheet
+### Google Analytics 4 セットアップ完了
+- 測定ID: `G-1V6K1ZJH6S`
+- Vercel 環境変数 `NEXT_PUBLIC_GA_ID` 登録済み(Production / Development)
+- Preview 環境のみ未登録(将来 feature branch 運用時に手動追加する想定)
+- 本番HTMLでGA4タグ埋め込み確認済み
+- リアルタイムレポートで動作確認済み
 
-# 3. 採番結果を含む CSV を再生成
-npm run export-csv
+---
 
-# 4. data/facilities_master.csv をスプレッドシートに再インポート
-#    (ファイル → インポート → ファイルを置換)
-#    → これで id 列が埋まり、次回 sync は冪等になる
+## ✅ 追加で完了した作業: Google Search Console + Sitemap
 
-# 5. 緯度経度・画像は別途補完
-npm run geocode
-npm run fetch-wiki
-```
+- プロパティ追加済み: `https://trip-guide.net`(URL プレフィックス方式)
+- 所有権確認方式: **HTML ファイル方式** を採用(`public/google53d37859cb4831ab.html`)
+- 認証完了: 「所有権が確認されました」を取得
+- Sitemap 提出済み: `/sitemap.xml`(サイトマップ インデックス、子に `sitemap-0.xml`、186 URL)
+- ステータス: **「成功しました」** を確認(検出ページ数の反映は数日〜数週間)
 
-`sync-from-sheet` は「added > 0 かつ orphaned > 0」を検知すると警告と
-ステップ3-4 の指示を出す。警告が出たら必ず CSV 再インポートを行うこと。
+### メモ
+- HTML タグ方式 (`NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION`) は使わなかった → 今回はその環境変数は未設定のままで OK
+- メモ帳に保存していた meta タグの content 値は捨てて問題なし
 
-### 列値の正規化(踏みやすい罠)
+---
 
-シートに新しい県や項目を入れる前に、以下の列は厳密に決まった値しか
-取らないことを確認すること。違反すると詳細ページの prerender が落ち、
-**Vercel ビルドが失敗 → production が古いまま固定される**(2026-05-04
-東京都 150 件投入時に実際に発生)。
+## ✅ V4 拡張 + 運用パイプライン構築 (2026-05-03 完了)
 
-| 列 | 取り得る値 |
-|---|---|
-| `屋内・屋外` | `屋内` / `屋外` / `両方` |
-| `雨天対応` | `◎` / `△` / `×` のみ(「雨天OK」「雨天NG」等の文字列は禁止) |
-| `summer_water_play` | `◎` / `△` / `×` のみ(雨天対応と同じ) |
-| `料金タイプ` | `無料` または `有料` で始まる文字列(`無料(時之栖内)` などの括弧付きOK) |
-| `県` | `静岡県` / `長野県` / `山梨県` / `東京都`(他県は `lib/icons.ts` ・ `lib/descriptions.ts` ・ `components/MapView.tsx` ・ `sync-from-sheet.ts` のマッピング追加が必要) |
+### 22施設追加(id 152〜173)
+- 静岡 3 / 山梨 12 / 長野 7 件、主に河口湖・山中湖・軽井沢周辺の美術館 / 体験施設 / 自然系
+- 全件 緯度経度補完済み(例外: id=167 軽井沢おもちゃ王国は群馬県嬬恋村が長野県表記でジオコード結果がズレ)
+- 新カテゴリ3つ追加: `nature-park` 公園・自然 / `viewpoint` 展望台 / `scenic` 自然・絶景
+- アイコン・説明文も `lib/icons.ts` / `lib/descriptions.ts` に追加済み
 
-新規にカテゴリを追加する場合は `data/facilities_data.json` の
-`metadata.categories` に id+name を加え、`lib/icons.ts` と
-`lib/descriptions.ts` にも対応する emoji と説明文を追加する。
+### Google スプレッドシート ⇄ JSON 同期運用化
+- スプレッドシートID: `1p4bqL1Oq89k5c-9Wa0REXd8BojzUBBXfF5-iSYEeeH4`
+- 「全件一覧」タブが先頭、18列(id / 県 / カテゴリ / 施設名 / 所在地 / 屋内・屋外 / 雨天対応 / 料金タイプ / 大人料金目安 / 子供料金目安 / おすすめポイント詳細 / 対象年齢 / URL/参考 / lat / lng / image / image_credit / tags)
+- 通常運用: シート編集 → `npm run sync-sheet` → JSON 反映
+- **重要な落とし穴**: シートに id 空のまま新規行追加 → 同期 → 自動採番されるが、**シートに id を書き戻さないと次回また新規扱いで重複**する
+  - 対策: 同期後 `npm run export-csv` → `data/facilities_master.csv` をシートに再インポート
+  - sync スクリプトは「added > 0 かつ orphaned > 0」を検知すると警告を出す
+  - 詳細手順は HANDOFF.md「データ運用フロー」セクション
+- バグ修正済み: `is_free` の startsWith("無料") 判定 / カテゴリ count 自動更新
 
-### push 前のローカルビルド検証
+### 詳細ページ UX 改修
+- ヒーロー画像のフル不透明度化(以前は60%+グラデオーバーレイで写真が見えなかった)
+- 「写真ギャラリー」セクション新設(基本情報 直上、3列 PC / 2列 SP、4:3 比率)
+  - 配列前提のコンポーネント `FacilityGallery.tsx` で書いてあるので、将来 `images: string[]` に拡張可能
+  - 画像なし施設はセクションごと非表示
 
+### Wikipedia 自動取得の精査(strict-match policy)
+- fetch-wiki はファジー検索で別施設・別概念をしばしば返すので、**Wikipedia 記事タイトルが施設名と完全一致するもののみ採用**が確立した運用方針
+- 却下されたid群は `data/wiki-image-blacklist.json` に登録され、`npm run fetch-wiki` で次回以降スキップされる(無限再取得防止)
+- 採用例: 155 河口湖音楽と森の美術館 / 171 八ヶ岳自然文化園 / 173 上高地 / 192 富士川クラフトパーク / 208 熱海城 など
+- 却下例: 152 伊豆テディベア・ミュージアム ← テディベア(概念)/ 150 あすなろ園 ← 青木あすなろ建設(建設会社)など
+
+### id=167 軽井沢おもちゃ王国 修正済み
+- 嬬恋村は実は群馬県だが「軽井沢エリア」として長野県表記している → ジオコーダが混乱
+- 施設名のみで再検索して正しい座標を取得・直接書き込み(`geocode_source: "manual"`)
+
+---
+
+## ✅ V5 + V6 拡張 + Sheets API 双方向化 (2026-05-03 完了)
+
+### V5: スキーマ4列追加 + 18施設追加(id 174〜191)
+- 新列: `signature_experiences`(配列)/ `unique_selling_point`(文字列)/ `experience_tags`(配列)/ `summer_water_play`(◎△×)
+- 18施設追加(主に Forest Adventure シリーズ、三島スカイウォーク、チビッ子忍者村など)
+- 22列スキーマで sync / export / type / 取り込み全て対応
+
+### V6: 23施設追加(id 192〜214)
+- 大型遊具公園が中心(山梨9 / 長野7 / 静岡7)
+- 富士川クラフトパーク、万力公園、熱海城、はままつフラワーパークなど
+- 全件 lat/lng 補完済み(13 Nominatim + 10 Google)、画像7件採用
+
+### Google Sheets API による双方向書き込み(運用革命)
+- **問題**: 旧フローでは新規行に id 空のまま sync すると毎回新規扱いで重複地獄
+- **解決**: サービスアカウント `trip-guide-bot@trip-guide-495213.iam.gserviceaccount.com` を作成 + シート編集権限付与 + JSON キー(`data/.gcp-sheets-credentials.json`、gitignore済)
+- **新スクリプト**:
+  - `npm run append-to-sheet -- file.csv` → 末尾追記
+  - `npm run push-to-sheet` → JSON 状態を全列フル書き戻し
+- **新フロー**: シート編集 → `sync-sheet` → `push-to-sheet` で id 自動書き戻し完了。重複事故ゼロ
+- **スプレッドシート初期化用 CSV** (`data/facilities_master.csv`) は、Sheets API 経由なら `push-to-sheet` で代替可能
+
+### 残課題(優先度低)
+- **画像カバレッジ向上**: 残り 618 件を Google Places API (New) で取得検討。無料枠($200/月)で約 $5 程度
+- **fetch-wiki の自動 strict フィルタ**(現状は `scripts/.tmp-strict-wiki-filter.mjs` をその都度作成 → 1 コマンド化したい)
+- **V10 audit 追加分(id 941-975)の説明文・料金の精査**(Web検索ベースの暫定値、シートで磨ける)
+- **インデックス進捗の確認**: 1〜2週間後に Search Console「カバレッジ」または `site:trip-guide.net` で実際にインデックスされた URL 数を確認
+
+---
+
+## ✅ V7-V10 追加履歴 (2026-05-04)
+
+### V7 東京都 +150件(id 215-364)
+- 新カテゴリ2つ追加:`indoor-theme-park` 屋内テーマパーク / `game-center` ゲームセンター
+- rain_friendly が「雨天OK / 雨天NG / 雨天一部OK」のテキストで、prerender 全落ち事故 → 正規化 + RAIN_FALLBACK で復旧
+
+### V8 関東5県 +506件(id 365-870)
+- **栃木 / 埼玉 / 新潟 / 千葉 / 神奈川**(各国 100件前後)を一括追加
+- PrefectureId 型 / 県別アイコン・色・説明文 / sync の PREFECTURE_MAP / MapView の PREF_COLORS &  LABELS / metadata.prefectures をそれぞれ 5県分拡張
+
+### V9 第2弾 +68件(id 871-940)
+- 6県横断の70件 CSV から、既存と同名2件(府中の森公園 / コニカミノルタ満天)を skip して 68件追加
+
+### V10 audit補完 +35件(id 941-975)
+- 9県完成度 audit(WebSearch ベース)で見つかった漏れ施設を補完
+- 静岡 5 / 長野 1 / 栃木 2 / 埼玉 8 / 新潟 7 / 千葉 3 / 神奈川 9
+- 神奈川キドキドは ラゾーナ川崎 / たまプラーザ / 武蔵小杉 / みなとみらい / 湘南 の 5店を追加
+- 説明文・料金は web 検索ベースの暫定値、要シート精査
+
+### MapView 同座標オフセット
+- キポキポ(id=131)と恩賜林庭園(id=200)が同じ住所内施設で完全同座標 → マーカー重なって片方しか見えない問題を解決
+- 同座標グループを ~40m 半径で円形に微小ジッタ、現在 27 組の親子施設すべて個別クリック可能に
+
+### 整合性チェックでの修正
+- 県外ジオコード 6件(京都・福岡・東京に飛んでいた栃木・千葉施設)を再ジオコード
+- indoor_outdoor「屋内・屋外」表記 7件 → 「両方」に正規化
+- 同名重複 5件削除(870 → 865)、その後 V9 / V10 で増加
+
+---
+
+## ⚠️ データ取り込み時の予防策(Tokyo 拡張で踏んだ罠)
+
+新しい県や大量データを追加したら、**取り込み後の本番デプロイ前に**以下を必ずチェック。
+
+### 1. 値の正規化(列ごとに想定形式が決まっている)
+- `rain_friendly`: **`◎` / `△` / `×` の3記号のみ**(東京拡張で「雨天OK / 雨天NG / 雨天一部OK」が混入し prerender が全件落ちた)
+- `indoor_outdoor`: `屋内` / `屋外` / `両方`
+- `summer_water_play`: `◎` / `△` / `×` (rain_friendly と同じ記法)
+- `料金タイプ`: 「無料」または「有料」始まり(`is_free` は `startsWith("無料")` で判定)
+- `県`: 静岡県 / 長野県 / 山梨県 / 東京都 / 栃木県 / 埼玉県 / 新潟県 / 千葉県 / 神奈川県(他県は新規追加マッピング必要)
+
+### 2. ローカルビルド検証
 大量追加 + sync 完了後、commit する**前に**:
-
 ```powershell
 npm run build
 ```
+- `Generating static pages` フェーズで全ページの prerender が走り、未知の列値による型エラーがあれば即発見できる
+- これを飛ばして push すると Vercel ビルド失敗 → production が古いまま静かに固定される(エラーバナーは出ないので気付きにくい)
 
-`Generating static pages` フェーズで全 facility ページの prerender が
-走るので、未知の列値による型エラーがあればここで即発見できる。
-これを飛ばして push すると Vercel ビルド失敗 → production が古い
-ビルドのまま静かに固定される(エラーバナー無し)。
-
-### push 後のデプロイ確認
-
-push の 1-2 分後に Vercel ビルド結果を確認:
-
+### 3. デプロイ後の即時確認
+push 後 1-2 分で Vercel ビルド結果を確認:
 ```powershell
-vercel inspect https://trip-guide.net | Select-String "status"
+vercel inspect https://trip-guide.net | grep status
+```
+status が `Error` なら最新の URL で `vercel inspect <URL>` してログ追跡。production が更新されていなくても DNS は古いビルドを返すので「変わらない」=「失敗してる」。
+
+---
+
+## 直近の作業ログ
+
+| 日付 | 主なできごと |
+|---|---|
+| 2026-05-02 早い時間 | Phase 1 MVP 実装、ジオコーディング(Nominatim)、地図ビュー追加 |
+| 〃 | Phase 2 SEO実装(県/カテゴリ/タグ/About/404/OGP/sitemap/robots) |
+| 〃 | Google Geocoding API でフォールバック68件を再ジオコード(完璧化) |
+| 〃 | 施設写真 73→54件取得・最適化(Wikipedia + sharp) |
+| 〃 | favicon / manifest / 構造化データ追加 |
+| 〃 | GitHub リポジトリ作成・初回 push |
+| 〃 | Vercel デプロイ、preview URL `trip-guide-nine.vercel.app` 公開 |
+| 〃 | Xserver 側で A レコード書き換え(@ → 216.198.79.1) |
+| 〃 | DNS 反映確認、SSL 自動発行成功、`https://trip-guide.net` 200 OK |
+| 〃 | シェアボタン / canonical / ItemList JSON-LD / a11y 追加 push |
+| 〃 | GA4 (`G-1V6K1ZJH6S`) を Vercel 環境変数に登録、本番で稼働確認 |
+| 〃 | Vercel CLI セットアップ(v53.1.0、プロジェクトリンク済み) |
+| 〃 | Search Console プロパティ追加・HTML ファイル方式で所有権確認完了 |
+| 〃 | `public/google53d37859cb4831ab.html` を配置、`/sitemap.xml` 提出 → 「成功しました」確認 |
+| 〃 | 詳細ページ:ヒーロー画像をフル不透明度に変更、写真ギャラリーセクション新設 |
+| 〃 | データ運用を Google スプレッドシート→JSON 同期に切替(`npm run export-csv` / `npm run sync-sheet`) |
+| 2026-05-03 | V4 22件追加(id 152-173)、3新カテゴリ(nature-park / viewpoint / scenic) |
+| 〃 | sync-from-sheet バグ修正(is_free, カテゴリ count, 重複 id 警告)|
+| 〃 | Nominatim + Google で V4 全件ジオコード、id=167 軽井沢おもちゃ王国 を手動再検索で修正 |
+| 〃 | Wikipedia ファジーマッチ 28件却下、完全一致3件のみ採用 → 画像57件 |
+| 〃 | V5: 22列スキーマ移行(signature_experiences ほか3列追加)+ 18施設追加(id 174-191) |
+| 〃 | V5 全件ジオコード + 4件画像採用、`wiki-image-blacklist.json` 機構導入 |
+| 〃 | **Sheets API 双方向書き込み構築**(サービスアカウント、append-to-sheet / push-to-sheet) |
+| 〃 | V6: 23施設追加(id 192-214)、大型遊具公園中心 + 7件画像採用、計214件で本日着地 |
+| 2026-05-04 | フィルタページ(タグ/カテゴリ/県/検索結果)上部に Leaflet 地図追加 |
+| 〃 | V7 東京都 150件追加(id 215-364)、4県運用に拡張、20カテゴリ(+ indoor-theme-park / game-center) |
+| 〃 | rain_friendly のテキスト値混入で prerender 全落ち → 正規化 + RAIN_FALLBACK で復旧 |
+| 〃 | キポキポ + 恩賜林庭園 のジオコード/住所統合(同一住所内施設、(35.4548, 138.7942) で一致)|
+| 〃 | 整合性 audit:県外ジオコード 6件再修復、indoor_outdoor 7件正規化、同名重複 5件削除 |
+| 〃 | MapView の同座標オフセット実装(40m 半径、27 組の親子施設が個別クリック可能に)|
+| 〃 | V8 関東5県(栃木/埼玉/新潟/千葉/神奈川)506件追加(id 365-870)、9県運用に拡張 |
+| 〃 | V9 第2弾 68件追加(id 871-940)、夜遅く |
+| 〃 | 9県完成度 audit(WebSearch ベース)→ V10 35件追加(id 941-975)、計 968 件で着地 |
+
+---
+
+---
+
+## ✅ Memorips（マイページ機能）実装状況 (2026-06-09)
+
+### サービス概要
+
+trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — 家族のおでかけ記録機能。
+詳細設計は `product-direction.md` 参照。
+
+### 技術スタック追加分
+
+| 項目 | 内容 |
+|---|---|
+| DB | Supabase（trip-guide プロジェクト） |
+| 認証 | Google OAuth + メール認証（Supabase Auth） |
+| SSR認証 | `@supabase/ssr` + cookie ベース |
+| デプロイ | Vercel CLI（`npx vercel --prod`）— GitHub webhook は旧リポジトリ紐付けのため |
+
+### Supabase 手動作業済み（ダッシュボードで実行）
+
+- `001_phase1_schema.sql`: profiles / children テーブル + RLS + GRANT
+- `002_phase2_schema.sql`: visits / visit_children / wishlists テーブル + RLS + GRANT
+- Authentication → Providers → Google: OAuth Client ID/Secret 設定済み
+- Authentication → URL Configuration: `https://trip-guide.net/auth/callback` 登録済み
+
+### Phase 1 完了 ✅
+
+| 機能 | ルート |
+|---|---|
+| 認証（メール + Google OAuth） | `/auth/register`, `/auth/login`, `/auth/callback` |
+| マイページ | `/mypage` |
+| 子どもプロフィール登録・編集 | `/mypage/children` |
+| BottomNav（モバイル） | `components/BottomNav.tsx` |
+
+### Phase 2 完了 ✅
+
+| 機能 | ルート |
+|---|---|
+| 訪問記録フォーム（30秒入力） | `/mypage/visits/new` |
+| おでかけ履歴一覧 | `/mypage/visits` |
+| 行きたいリスト | `/mypage/wishlist` |
+
+### 既知のポイント・ハマりどころ
+
+- **GRANT は RLS と別**: `ENABLE ROW LEVEL SECURITY` だけでは 403 が出る。`GRANT ... TO authenticated;` が必須
+- **Google OAuth クライアントは「ウェブアプリケーション」型**で作る（デスクトップ型は `redirect_uri` が `localhost` になり使えない）
+- **Vercel は CLI デプロイ**: `npx vercel --prod --yes --token <token>`（token は `.codex/.sandbox-secrets/vercel.json`）
+- **package.json に `@supabase/supabase-js` と `@supabase/ssr` が必要**（ない場合 Vercel ビルド失敗）
+
+### Phase 3 候補（Memorips）
+
+1. 施設詳細ページ → 「行きたい」「行ったよ」ボタン
+2. `facility_slug` を `facilities_data.json` の slug と紐付け
+3. 訪問記録の編集・削除
+4. 写真アップロード（Supabase Storage）
+5. おでかけ年表・費用集計
+
+---
+
+## 今後やるべき残タスク（施設情報サイト側）
+
+### Phase 3 候補(優先順)
+1. **V10 audit追加分(id 941-975)の説明文・料金精査**(暫定値で取り込んだのでシートで磨ける)
+2. **fetch-wiki の自動 strict フィルタ**(都度 `.tmp-strict-wiki-filter.mjs` を作っているので `--strict` フラグで1コマンド化)
+3. **Google Places API で残り 618 件の画像取得**(無料枠内、約 $5)
+4. **新4列のフロントエンド表示**(signature_experiences / unique_selling_point / experience_tags / summer_water_play は データに入っただけで UI 未対応、SEO 強化に効きそう)
+5. **www → 非www リダイレクト** (現在 `www.trip-guide.net` は SSL エラー)
+6. **お気に入り機能** (localStorage、軽量)
+7. **検索機能の強化**(現在は単純な部分一致)
+8. **群馬県の追加検討**(嬬恋村が長野県扱いで 3件混入しており、独立県化したい候補)
+
+### コンテンツ拡充
+- 季節特集ページ(春の桜、夏の水遊び、秋の紅葉、冬のスキー)
+- 関東他県(茨城・群馬)/ 東北・北陸への拡大
+- ブログ記事(fic-investment.biz の Make パイプライン応用)
+
+---
+
+## 役割分担
+
+- **チャット相棒の Claude (claude.ai)**: 戦略相談、手順案内、エラー翻訳、学習サポート
+- **実装担当の Claude Code**: コード作成、修正、テスト、デプロイコマンド実行
+
+ユーザーは「黒い画面(CLI)」より「チャット相棒との会話」を好むため、計画はチャット側で固めて、Claude Code には1つのまとまった指示を投げる流れが理想。
+
+## ユーザーへの接し方
+
+- 専門用語は最小限に。使うときは必ず一言で噛み砕く
+- 手順は番号付きで、コピペできる形で提示
+- 画面のスクショを送ってくることが多いので、それを見て状況判断 → 次の一手を案内
+- 「Yes / Enter / 矢印キーで↓」など具体的に
+- できたら一度区切って「次どうする?」と相談する
+
+## 参考ファイル(同フォルダ内)
+
+- `HANDOFF.md` — このファイル（引継ぎメモ）
+- `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
+- `product-direction.md` — プロダクト方針書・実装進捗
+- `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
+- `data/facilities_data.json` — 214施設の最新データ(全件緯度経度入り、68件画像付き)
+- `data/facilities_data.json.bak.*` — タイムスタンプ付きバックアップ(gitignore)
+- `data/wiki-image-blacklist.json` — Wikipedia ファジーマッチ却下済み id 一覧(40件)
+- `data/.gcp-sheets-credentials.json` — Sheets API サービスアカウント鍵(gitignore)
+- `scripts/` — geocode.ts(Google fallback)/ geocode.mjs(Nominatim 一次)/ fetch-wiki-images.ts(blacklist対応済)/ optimize-images.mjs / **export-to-csv.ts** / **sync-from-sheet.ts** / **append-to-sheet.ts** / **push-to-sheet.ts**
+
+## 環境変数 / 認証ファイル
+
+| 名前 | 用途 | 場所 |
+|---|---|---|
+| `GOOGLE_GEOCODING_API_KEY` | Geocoding API(2026-05-03 鍵更新済み)| `.env.local` |
+| `NEXT_PUBLIC_GA_ID` | GA4 測定 ID (`G-1V6K1ZJH6S`) | Vercel Settings(Prod / Dev) |
+| `data/.gcp-sheets-credentials.json` | Sheets API サービスアカウント鍵 | ローカルのみ(.gitignore済) |
+| `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | (未使用 — HTML ファイル方式で認証完了) | — |
+
+---
+
+## 次セッション再開時のプロンプト例
+
+```
+trip-guide.net は 9県968施設で公開稼働中です(関東甲信越カバー、Sheets API 双方向書き込み運用)。
+HANDOFF.md を読んで現状を把握してください。
+今日は Phase 3 の「[進めたい項目]」を進めたいです。
 ```
 
-`status ● Error` なら最新の deployment URL で個別に inspect/logs を
-追う。production の見た目が変わらないときは「DNS が古いビルドを
-返している」だけのことが多いので、まず status を疑うこと。
-
----
-
-## SEO戦略
-
-### ターゲットキーワード（優先順位順）
-
-**ロングテール（競合少なく上位狙いやすい）**
-- 「山梨 子供 雨の日」
-- 「河口湖 子連れ 遊び場」
-- 「軽井沢 子供 室内」
-- 「伊豆 子供 おすすめ」
-- 「八ヶ岳 子供 アスレチック」
-- 「笛吹市 公園 子供」
-
-**ミドル**
-- 「静岡 子供 おすすめ」
-- 「長野 子連れ 遊び場」
-- 「山梨 ファミリー 観光」
-
-**ビッグ（後回し）**
-- 「子供 遊び場」
-- 「子連れ 旅行」
-
-### SEO実装ポイント
-
-1. **構造化データ (JSON-LD)** を全施設詳細ページに埋め込む（`LocalBusiness` schema）
-2. **メタディスクリプション** を施設ごとに自動生成（descriptionから抜粋）
-3. **OGP画像** を県・カテゴリ別に用意
-4. **サイトマップ** をnext-sitemapで自動生成
-5. **内部リンク** を充実: 詳細ページから関連施設へ、県ページからカテゴリページへ
-6. **breadcrumb** をすべてのページに
-
----
-
-## デザイン方針
-
-### トーン&マナー
-- **明るい・楽しい**: 子供向けサイトらしいポップな雰囲気
-- **親が信頼できる**: 情報は正確、デザインは清潔感がある
-- **モバイル最優先**: スマホで使いやすいタップエリア、フォントサイズ
-
-### カラーパレット（提案）
-- メインカラー: 鮮やかな水色 / オレンジ / 黄緑（子供らしい元気な色）
-- アクセント: 雨アイコンは青、無料は緑、有料は控えめなグレー
-- ベース: 白 + ソフトな背景色
-
-### コンポーネントの工夫
-- 施設カードに大きな**雨対応バッジ** ◎ / △ / ×
-- **無料バッジ** を目立たせる
-- カテゴリごとに**アイコン**（動物園🦁、水族館🐠、公園🌳、屋内🏠等）
-
----
-
-## 段階的な開発ロードマップ
-
-### Phase 1: MVP（1-2週間）
-1. Next.jsプロジェクトセットアップ
-2. JSONデータ読み込み
-3. トップページ + 施設一覧 + 施設詳細
-4. 基本フィルタ（県・カテゴリ・雨対応）
-5. Vercelデプロイ + 独自ドメイン接続
-
-### Phase 2: SEO強化（1週間）
-1. 県別ページ・カテゴリ別ページ・タグページ
-2. 構造化データ（JSON-LD）
-3. サイトマップ自動生成
-4. メタディスクリプション最適化
-5. Google Analytics + Search Console連携
-
-### Phase 3: UX向上（1-2週間）
-1. 地図ビュー（Leaflet）
-2. 検索機能
-3. 「現在地から近い順」機能
-4. 関連施設レコメンド
-5. お気に入り機能（localStorage）
-
-### Phase 4: コンテンツ拡充（継続的）
-1. 施設写真の追加（公式サイトから許諾を得るか、撮影）
-2. ブログ記事の追加（fic-investment.bizのMakeパイプラインを応用）
-3. 季節特集記事
-4. ユーザーレビュー機能（v2）
-
----
-
-## fic-investment.biz の自動化との連携アイデア
-
-すでに記事自動生成のMakeパイプライン（Google Sheets → FMP API → Claude → WordPress）の知見があります。これをサイトに応用：
-
-### 施設記事の自動生成パイプライン
-- **Google Sheets**: 施設データの管理（追加・更新が容易）
-- **Claude API**: 施設詳細の魅力的な説明文を自動生成
-- **画像取得**: Google Places APIで写真URLを取得
-- **JSON更新 → GitHub Push → Vercelで自動デプロイ**
-
-これによって、新しい施設を追加するときも**Sheetsに行を追加するだけ**で本番サイトに反映される仕組みが作れます。
-
----
-
-## Claude Codeへの最初のプロンプト例
-
+データ追加をしたい時(V11+):
 ```
-trip-guide.net で運営する子供向け遊び場検索サイトを作りたい。
-静岡・長野・山梨の3県、151施設のデータがあります（添付 facilities_data.json 参照）。
-
-【要件】
-- Next.js 14 (App Router) + TypeScript + Tailwind CSS
-- モバイルファースト
-- SEO重視（県別・カテゴリ別ページを生成）
-- Vercelデプロイ予定
-
-【まずやってほしいこと】
-1. プロジェクトの初期セットアップ
-2. JSONデータの型定義（TypeScript）
-3. トップページの実装
-   - ヒーローセクション + 検索バー
-   - クイックフィルタ（雨の日 / 無料 / 0-3歳 / 小学生）
-   - エリアカード（静岡・長野・山梨）
-   - カテゴリカード
-4. 施設一覧ページ（フィルタ機能付き）
-5. 施設詳細ページ
-
-詳細仕様は HANDOFF.md を参照してください。
+data/v11_additions_for_sheet.csv を作りました。標準フローで取り込んでください。
 ```
+→ Claude が以下を順次実行:
+1. `npm run append-to-sheet -- data/v11_additions_for_sheet.csv`
+2. `npm run sync-sheet`(自動採番、warning 出ればカテゴリ正規化)
+3. `npm run push-to-sheet`(id 書き戻し)
+4. `node scripts/geocode.mjs` → `npm run geocode`(Nominatim → Google fallback)
+5. `npm run fetch-wiki` + 厳格フィルタ(`.tmp-strict-wiki-filter.mjs` をその都度作成)+ ブラックリスト追加
+6. **`npm run build`** で prerender 検証(これ抜かすと Vercel が静かに失敗する)
+7. もう一度 `push-to-sheet` で完全同期
+8. commit & push
 
 ---
 
-## 法的・コンプライアンス事項
-
-1. **施設情報の正確性**: 「料金は2025-2026年シーズンの目安」と明記、各施設の公式サイトを必ず参照させる
-2. **画像の著作権**: 公式サイトから無断転載しない、自分で撮影するか写真ACなどフリー素材を使う
-3. **Google Maps利用規約**: 商用利用ルールを確認
-4. **個人情報保護**: お問い合わせフォームを設ける場合はプライバシーポリシーを必ず公開
-
----
-
-## 連絡先・運営
-
-- ドメイン: trip-guide.net
-- 運営: FIC（FIC投資研究所）
-- 既存サイト: fic-investment.biz
-
----
-
-*このドキュメントは、claude.aiでの会話セッションで作成されました。Claude Codeでの開発時は、このファイルと facilities_data.json を一緒に読み込ませてください。*
+新セッションで取りかかりやすいクイック作業:
+- **V10 追加分(id 941-975)の説明文・料金を精査**(WebSearch ベース暫定値、シートで magic で磨く)
+- **新4列(signature_experiences ほか)を施設詳細ページに表示**(SEO とロングテール強化に効く)
+- **Places API 写真取得**(Cloud Console で API 有効化 + `npm run fetch-images` 実行、約 $5)
