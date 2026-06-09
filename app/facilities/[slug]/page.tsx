@@ -13,7 +13,7 @@ import {
   getRelatedFacilities,
 } from "@/lib/facilities";
 import { categoryIcon, prefectureGradients } from "@/lib/icons";
-import { TAG_META, tagHref } from "@/lib/tags";
+import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
 interface Props {
@@ -246,21 +246,28 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
-          {signatureExperiences.length > 0 && (
-            <div className="mt-5">
+          {(signatureExperiences.length > 0 || experienceTags.length > 0) && (
+            <div className="mt-6">
               <h3 className="text-sm font-bold text-slate-700 mb-2">
-                体験・ハイライト
+                この施設で楽しめそうなこと
               </h3>
-              <div className="flex flex-wrap gap-2">
-                {signatureExperiences.map((experience) => (
-                  <span
-                    key={experience}
-                    className="text-xs px-2.5 py-1 rounded-full bg-sky-50 text-sky-700 border border-sky-100 font-medium"
-                  >
-                    {experience}
-                  </span>
-                ))}
-              </div>
+              {signatureExperiences.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-2">
+                  {signatureExperiences.map((exp) => (
+                    <span
+                      key={exp}
+                      className="text-sm px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium"
+                    >
+                      {exp}
+                    </span>
+                  ))}
+                </div>
+              )}
+              {experienceTags.length > 0 && (
+                <p className="text-xs text-slate-500">
+                  体験タイプ：{experienceTags.join(' / ')}
+                </p>
+              )}
             </div>
           )}
 
@@ -269,6 +276,21 @@ export default async function FacilityDetailPage({ params }: Props) {
             attributions={galleryAttributions}
             facilityName={facility.name}
           />
+
+          <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
+            <h2 className="text-base font-bold text-emerald-900 mb-2">
+              子ども別におでかけ記録を残せます
+            </h2>
+            <p className="text-sm text-emerald-800 leading-relaxed mb-4">
+              行ったあとに、子どもごとの満足度や反応を記録できます。きょうだいで何を楽しんだか、また行きたいかを後から見返せます。
+            </p>
+            <ul className="text-sm text-emerald-700 space-y-1 mb-4">
+              <li>👧 どの子が楽しんだか</li>
+              <li>💡 何に反応したか</li>
+              <li>🔁 また行きたいか</li>
+              <li>📝 次回のメモ</li>
+            </ul>
+          </div>
 
           <h2 className="text-xl font-bold mt-8 mb-3">基本情報</h2>
           <dl className="bg-white border border-slate-200 rounded-2xl divide-y divide-slate-100 overflow-hidden">
@@ -318,28 +340,6 @@ export default async function FacilityDetailPage({ params }: Props) {
                   {facility.tags.map((t) => {
                     const href =
                       tagHref(t) ?? `/facilities?tags=${encodeURIComponent(t)}`;
-                    return (
-                      <Link
-                        key={t}
-                        href={href}
-                        className="text-xs px-2 py-1 bg-slate-100 hover:bg-sky-100 hover:text-brand rounded text-slate-700 transition-colors"
-                      >
-                        #{t}
-                      </Link>
-                    );
-                  })}
-                </div>
-              </Row>
-            )}
-            {experienceTags.length > 0 && (
-              <Row label="体験タグ">
-                <div className="flex flex-wrap gap-1.5">
-                  {experienceTags.map((t) => {
-                    const tagMeta = TAG_META.find((meta) => meta.tag === t);
-                    const href =
-                      tagMeta != null
-                        ? `/tag/${tagMeta.slug}`
-                        : `/facilities?tags=${encodeURIComponent(t)}`;
                     return (
                       <Link
                         key={t}

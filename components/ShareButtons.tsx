@@ -10,7 +10,7 @@ interface Props {
 export default function ShareButtons({ url, title }: Props) {
   const [copied, setCopied] = useState(false);
   const fullUrl = url.startsWith("http") ? url : `https://trip-guide.net${url}`;
-  const text = `${title} | trip-guide.net`;
+  const shareText = `${title}\n\n子どもとのおでかけ先探しや記録に使える\nメモリップ by Trip Guide`;
 
   async function copy() {
     try {
@@ -32,12 +32,12 @@ export default function ShareButtons({ url, title }: Props) {
 
   function nativeShare() {
     if (typeof navigator !== "undefined" && navigator.share) {
-      navigator.share({ title, text, url: fullUrl }).catch(() => {});
+      navigator.share({ title, text: shareText, url: fullUrl }).catch(() => {});
     }
   }
 
-  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(fullUrl)}`;
-  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(text)}`;
+  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(fullUrl)}`;
+  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(shareText)}`;
   const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`;
 
   return (

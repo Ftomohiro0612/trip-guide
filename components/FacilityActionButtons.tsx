@@ -106,7 +106,10 @@ export default function FacilityActionButtons({
   const isWishlisted = loadState === "ready" && !!wishlistId;
 
   return (
-    <div className="space-y-2">
+    <div className="space-y-3">
+      <p className="text-xs text-slate-500 leading-relaxed">
+        行ったあとに、子どもごとの反応や再訪意向を記録しておけます。
+      </p>
       <button
         onClick={toggleWishlist}
         disabled={toggling}
