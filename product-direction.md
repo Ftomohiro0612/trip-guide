@@ -354,10 +354,126 @@ AIが答えられないもの:
 | 任意アコーディオン（期待比較・タグ・メモ） | ✅ |
 | 子なし訪問対応（`?no_child=1` フロー） | ✅ |
 
-### Phase 3: 施設連携（未着手）
+### Phase 3: 施設連携 ✅ 完了（2026-06-09）
 
-- 施設ページ → 「行きたい」「行ったよ」ボタン
-- facility_slug を facilities_data.json の slug と紐付け
-- 施設別おでかけ履歴の表示
+| 機能 | 状態 |
+|---|---|
+| 施設ページ → 「行きたい！」「行ったよ！記録する」ボタン | ✅ |
+| FacilityMyRecord: 施設ページに「あなたの記録」カード表示 | ✅ |
+| ヘッダーにログイン/マイページ導線（HeaderAuthButton） | ✅ |
+| 訪問記録 編集・削除 | ✅ |
+| 任意フィールド追加: 天気・混雑・駐車場・滞在時間など | ✅（Migration 003 実行済み） |
+| 施設名インクリメンタルサジェスト（/api/facilities/search） | ✅ |
+| マイページ実績サマリー（4指標グリッド + 6ヶ月棒グラフ） | ✅ |
+| 子ども別あそび実績（横棒グラフ） | ✅ |
+| 最近のおでかけ3件（マイページ） | ✅ |
+| 実績メトリクスのリンク化・子どもフィルター | ✅ |
+| アカウント設定: 表示名編集・パスワード変更 | ✅ |
+| 履歴フィルター（また行きたい / 子ども別） | ✅ |
+| 地図ポップアップにユーザー訪問状態表示 | ✅ |
+| /map 地図専用ページ | ✅ |
 
-*最終更新: 2026-06-09 v3.1*
+**Supabase 手動作業済み**:
+- SQL Editor で `003_phase3_optional_fields.sql` 実行済み（visits 7列 + profiles.household_id）
+
+### Phase 3 残課題（近日対応）
+
+| 機能 | 状態 | 備考 |
+|---|---|---|
+| BottomNav重なりバグ | ❌ 未修正 | スマホでマイページ実績下段がBottomNavに隠れる |
+| React hydration error #418 | ❌ 未調査 | 本番コンソールで複数回発生 |
+| 訪問記録 詳細ページ `/mypage/visits/[id]` | ❌ 未実装 | |
+| 任意項目フォームUI（滞在時間・食事・気温感） | ❌ 未実装 | DBカラムは追加済み |
+| 行きたいリスト 手動追加フォーム | ❌ 未実装 | |
+
+---
+
+## 17. Phase 4 機能候補バックログ
+
+### 年パス（年間パスポート）登録機能
+
+**目的**:
+- 年パスの有効期限を忘れないようにする
+- 年パスがある施設への再訪を促す
+- 「また行きたい」より強い再訪シグナルとして使う
+- 家族のおでかけ計画に活かす
+
+**想定UI**:
+- 施設ページに「年パスを登録」ボタン
+- 登録済み: 「年パスあり」「有効期限」「対象者」を表示
+- マイページに「年パスのある施設」一覧
+- 有効期限が近いものを目立たせる
+
+**初期入力項目**:
+- 施設（facility_slug）
+- 有効期限（date）
+- 対象者（任意: 子ども名や「家族全員」等）
+- メモ（任意）
+
+**想定テーブル設計（案）**:
+```sql
+CREATE TABLE annual_passes (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  user_id UUID NOT NULL REFERENCES auth.users,
+  facility_slug TEXT NOT NULL,
+  facility_name TEXT NOT NULL,
+  expires_on DATE NOT NULL,
+  holder_note TEXT,          -- 対象者メモ
+  memo TEXT,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+-- RLS: user_id = auth.uid() のみ参照・操作可
+```
+
+**将来拡張**:
+- 購入日・金額
+- 有効期限が近い通知（Push/メール）
+- 家族共有（household_id 経由）
+- 年パスあり施設のおすすめ表示
+
+**実装タイミング**: Phase 4（Phase 3 残課題が完了してから検討）
+
+---
+
+### 写真登録機能
+
+**目的**: 訪問記録に非公開写真を紐づけ、思い出価値を高める
+
+**設計方針**:
+- 写真は「施設」ではなく「訪問記録（visit）」に紐づける
+- デフォルト非公開（家族のみ参照）
+- EXIF削除を前提（位置情報・端末情報の除去）
+- 子どもの顔写真を施設ページ等に公開利用しない
+- 削除機能必須
+- 退会時に全写真削除（Storageポリシーで設定）
+
+**容量制限案**:
+| プラン | 1記録あたり | 合計 |
+|--------|-----------|------|
+| 無料 | 1枚 | 〜100枚 |
+| 有料 | 5枚 | 無制限（要検討） |
+
+**想定テーブル設計（案）**:
+```sql
+CREATE TABLE visit_photos (
+  id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+  visit_id UUID NOT NULL REFERENCES visits ON DELETE CASCADE,
+  user_id UUID NOT NULL REFERENCES auth.users,
+  storage_path TEXT NOT NULL,   -- Supabase Storage パス
+  taken_on DATE,                -- 撮影日（EXIF から取得 or 手入力）
+  created_at TIMESTAMPTZ NOT NULL DEFAULT now()
+);
+-- RLS: user_id = auth.uid() のみ参照・操作可
+-- Storage policy: user_id フォルダ分離
+```
+
+**将来の有料機能候補**:
+- 写真保存枚数拡張
+- 年度別アルバム
+- PDF アルバム
+- 家族共有写真
+
+**実装タイミング**: Phase 4  
+→ 訪問記録詳細ページ・任意項目フォームUI・行きたいリスト手動追加が完了した後に着手
+
+*最終更新: 2026-06-09 v3.2*
