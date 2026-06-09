@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
+import DeleteVisitButton from "./DeleteVisitButton";
 
 export const metadata: Metadata = { title: "おでかけ履歴" };
 
@@ -82,9 +83,20 @@ export default async function VisitsPage({
                   {formatVisitedOn(visit.visited_on)}
                 </span>
               </div>
-              <p className="text-sm text-slate-600">
-                {revisitLabels[visit.family_revisit]}
-              </p>
+              <div className="flex items-center justify-between gap-3">
+                <p className="text-sm text-slate-600">
+                  {revisitLabels[visit.family_revisit]}
+                </p>
+                <div className="flex gap-2 shrink-0">
+                  <Link
+                    href={`/mypage/visits/${visit.id}/edit`}
+                    className="px-2.5 py-1.5 border border-slate-200 text-slate-500 rounded-lg text-xs font-medium hover:bg-slate-50 transition-colors"
+                  >
+                    編集
+                  </Link>
+                  <DeleteVisitButton visitId={visit.id} />
+                </div>
+              </div>
             </article>
           ))}
         </div>

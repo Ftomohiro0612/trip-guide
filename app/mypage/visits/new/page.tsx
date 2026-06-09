@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
 
@@ -88,7 +88,11 @@ function makeFacilitySlug(name: string): string {
 
 export default function NewVisitPage() {
   const router = useRouter();
-  const [facilityName, setFacilityName] = useState("");
+  const searchParams = useSearchParams();
+  const facilitySlugFromUrl = searchParams.get("facility") ?? "";
+  const nameFromUrl = searchParams.get("name") ?? "";
+
+  const [facilityName, setFacilityName] = useState(nameFromUrl);
   const [dateChoice, setDateChoice] = useState<DateChoice>("today");
   const [customDate, setCustomDate] = useState("");
   const [children, setChildren] = useState<Child[]>([]);
@@ -196,7 +200,7 @@ export default function NewVisitPage() {
       .from("visits")
       .insert({
         user_id: user.id,
-        facility_slug: makeFacilitySlug(facilityName),
+        facility_slug: facilitySlugFromUrl || makeFacilitySlug(facilityName),
         facility_name: facilityName.trim(),
         visited_on: visitedOn,
         visited_year: visitedYear,
@@ -257,6 +261,9 @@ export default function NewVisitPage() {
       <form onSubmit={handleSubmit} className="space-y-5">
         <section className="space-y-2">
           <label className="block text-sm font-bold text-slate-800">施設名</label>
+          {facilitySlugFromUrl && (
+            <p className="text-xs text-emerald-600 font-medium">施設ページから自動入力</p>
+          )}
           <input
             type="text"
             value={facilityName}

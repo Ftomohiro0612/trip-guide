@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityGallery from "@/components/FacilityGallery";
 import ShareButtons from "@/components/ShareButtons";
@@ -288,6 +289,10 @@ export default async function FacilityDetailPage({ params }: Props) {
         </article>
 
         <aside className="space-y-4">
+          <FacilityActionButtons
+            facilitySlug={facility.slug}
+            facilityName={facility.name}
+          />
           {facility.url && (
             <a
               href={facility.url}
