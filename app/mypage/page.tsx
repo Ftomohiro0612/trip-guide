@@ -16,6 +16,8 @@ type Child = {
 type VisitStat = {
   id: string;
   facility_slug: string;
+  facility_name: string;
+  visited_on: string | null;
   family_revisit: string;
 };
 
@@ -26,10 +28,7 @@ type ChildVisit = {
 
 type ChildCategorySummary = {
   child: Child;
-  categories: {
-    category: string;
-    count: number;
-  }[];
+  categories: { category: string; count: number }[];
 };
 
 type AchievementStats = {
@@ -39,10 +38,13 @@ type AchievementStats = {
   revisitCount: number;
 };
 
-type FacilityCategorySource = {
-  slug: string;
-  category: string;
+type MonthData = {
+  month: string;
+  label: string;
+  count: number;
 };
+
+type FacilityCategorySource = { slug: string; category: string };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
@@ -66,6 +68,7 @@ function isVisitStat(value: unknown): value is VisitStat {
     isRecord(value) &&
     typeof value.id === "string" &&
     typeof value.facility_slug === "string" &&
+    typeof value.facility_name === "string" &&
     typeof value.family_revisit === "string"
   );
 }
@@ -79,10 +82,7 @@ function isChildVisit(value: unknown): value is ChildVisit {
 }
 
 const slugToCategory = new Map(
-  getFacilityCategorySources(facilitiesJson).map((facility) => [
-    facility.slug,
-    facility.category,
-  ]),
+  getFacilityCategorySources(facilitiesJson).map((f) => [f.slug, f.category]),
 );
 
 function categoryForSlug(slug: string): string {
@@ -107,23 +107,18 @@ function buildChildCategorySummaries(
   visits: VisitStat[],
   childVisits: ChildVisit[],
 ): ChildCategorySummary[] {
-  const childIds = new Set(children.map((child) => child.id));
-  const visitSlugById = new Map(
-    visits.map((visit) => [visit.id, visit.facility_slug]),
-  );
+  const childIds = new Set(children.map((c) => c.id));
+  const visitSlugById = new Map(visits.map((v) => [v.id, v.facility_slug]));
   const categoryCountsByChild = new Map<string, Map<string, number>>();
 
-  for (const childVisit of childVisits) {
-    if (!childIds.has(childVisit.child_id)) continue;
-
-    const facilitySlug = visitSlugById.get(childVisit.visit_id);
+  for (const cv of childVisits) {
+    if (!childIds.has(cv.child_id)) continue;
+    const facilitySlug = visitSlugById.get(cv.visit_id);
     if (!facilitySlug) continue;
-
     const category = categoryForSlug(facilitySlug);
-    const currentCounts =
-      categoryCountsByChild.get(childVisit.child_id) ?? new Map<string, number>();
-    currentCounts.set(category, (currentCounts.get(category) ?? 0) + 1);
-    categoryCountsByChild.set(childVisit.child_id, currentCounts);
+    const counts = categoryCountsByChild.get(cv.child_id) ?? new Map<string, number>();
+    counts.set(category, (counts.get(category) ?? 0) + 1);
+    categoryCountsByChild.set(cv.child_id, counts);
   }
 
   return children.map((child) => {
@@ -131,11 +126,33 @@ function buildChildCategorySummaries(
     const categories = Array.from(counts.entries())
       .map(([category, count]) => ({ category, count }))
       .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"))
-      .slice(0, 3);
-
+      .slice(0, 5);
     return { child, categories };
   });
 }
+
+function buildMonthlyData(visits: VisitStat[]): MonthData[] {
+  const visitsByMonth = new Map<string, number>();
+  for (const visit of visits) {
+    if (!visit.visited_on) continue;
+    const month = visit.visited_on.slice(0, 7);
+    visitsByMonth.set(month, (visitsByMonth.get(month) ?? 0) + 1);
+  }
+
+  const now = new Date();
+  return Array.from({ length: 6 }, (_, i) => {
+    const d = new Date(now.getFullYear(), now.getMonth() - (5 - i), 1);
+    const month = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+    return { month, label: `${d.getMonth() + 1}月`, count: visitsByMonth.get(month) ?? 0 };
+  });
+}
+
+const revisitLabels: Record<string, string> = {
+  yes: "✅ また行きたい",
+  conditional: "🔄 条件次第",
+  once_enough: "👍 一度で十分",
+  no: "🙅 もう行かない",
+};
 
 export default async function MypagePage() {
   const supabase = await createClient();
@@ -150,11 +167,7 @@ export default async function MypagePage() {
     { count: exactWishlistCount },
   ] = await Promise.all([
     user
-      ? supabase
-          .from("profiles")
-          .select("display_name")
-          .eq("id", user.id)
-          .single()
+      ? supabase.from("profiles").select("display_name").eq("id", user.id).single()
       : Promise.resolve({ data: null }),
     supabase
       .from("children")
@@ -163,8 +176,10 @@ export default async function MypagePage() {
     user
       ? supabase
           .from("visits")
-          .select("id, facility_slug, family_revisit")
+          .select("id, facility_slug, facility_name, visited_on, family_revisit")
           .eq("user_id", user.id)
+          .order("visited_on", { ascending: false, nullsFirst: false })
+          .order("created_at", { ascending: false })
       : Promise.resolve({ data: [] }),
     user
       ? supabase
@@ -183,7 +198,7 @@ export default async function MypagePage() {
     );
   });
   const visits = (visitStats ?? []).filter(isVisitStat);
-  const visitIds = visits.map((visit) => visit.id);
+  const visitIds = visits.map((v) => v.id);
   const { data: childVisitStats } =
     visitIds.length > 0
       ? await supabase
@@ -195,23 +210,23 @@ export default async function MypagePage() {
 
   const hasChildren = childRows.length > 0;
   const achievementStats: AchievementStats = {
-    distinctFacilityCount: new Set(visits.map((visit) => visit.facility_slug)).size,
+    distinctFacilityCount: new Set(visits.map((v) => v.facility_slug)).size,
     totalVisitCount: visits.length,
     wishlistCount: exactWishlistCount ?? 0,
-    revisitCount: visits.filter((visit) => visit.family_revisit === "yes").length,
+    revisitCount: visits.filter((v) => v.family_revisit === "yes").length,
   };
   const hasAchievementRecords =
     achievementStats.distinctFacilityCount > 0 ||
     achievementStats.totalVisitCount > 0 ||
-    achievementStats.wishlistCount > 0 ||
-    achievementStats.revisitCount > 0;
-  const childCategorySummaries = buildChildCategorySummaries(
-    childRows,
-    visits,
-    childVisits,
-  );
+    achievementStats.wishlistCount > 0;
+
+  const monthlyData = buildMonthlyData(visits);
+  const hasMonthlyData = monthlyData.some((d) => d.count > 0);
+  const recentVisits = visits.slice(0, 3);
+
+  const childCategorySummaries = buildChildCategorySummaries(childRows, visits, childVisits);
   const hasChildCategoryRecords = childCategorySummaries.some(
-    (summary) => summary.categories.length > 0,
+    (s) => s.categories.length > 0,
   );
 
   return (
@@ -251,10 +266,7 @@ export default async function MypagePage() {
             >
               登録する →
             </Link>
-            <Link
-              href="/mypage/visits/new"
-              className="text-xs text-sky-600 hover:underline"
-            >
+            <Link href="/mypage/visits/new" className="text-xs text-sky-600 hover:underline">
               あとで登録する
             </Link>
           </div>
@@ -266,10 +278,7 @@ export default async function MypagePage() {
         <section>
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-bold text-slate-800">子どもプロフィール</h2>
-            <Link
-              href="/mypage/children"
-              className="text-brand text-sm hover:underline"
-            >
+            <Link href="/mypage/children" className="text-brand text-sm hover:underline">
               編集
             </Link>
           </div>
@@ -280,9 +289,7 @@ export default async function MypagePage() {
                 className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1.5"
               >
                 <span className="text-lg">🧒</span>
-                <span className="text-sm font-medium text-slate-800">
-                  {child.nickname}
-                </span>
+                <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
                 <span className="text-xs text-slate-400">
                   {calcAge(child.birth_year, child.birth_month)}歳
                 </span>
@@ -318,53 +325,99 @@ export default async function MypagePage() {
         </div>
       </section>
 
-      {/* おでかけ実績サマリー */}
+      {/* おでかけ実績 */}
       <section className="space-y-3">
         <h2 className="font-bold text-slate-800">おでかけ実績</h2>
-        <div className="bg-white border border-slate-200 rounded-xl p-4">
+        <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
           {hasAchievementRecords ? (
-            <div className="grid grid-cols-2 gap-3">
-              <AchievementMetric
-                label="行った施設"
-                value={`${achievementStats.distinctFacilityCount}か所`}
-              />
-              <AchievementMetric
-                label="おでかけ回数"
-                value={`${achievementStats.totalVisitCount}回`}
-              />
-              <AchievementMetric
-                label="行きたいリスト"
-                value={`${achievementStats.wishlistCount}件`}
-              />
-              <AchievementMetric
-                label="また行きたい"
-                value={`${achievementStats.revisitCount}件`}
-              />
-            </div>
+            <>
+              <div className="grid grid-cols-2 gap-3">
+                <AchievementMetric
+                  label="行った施設"
+                  value={`${achievementStats.distinctFacilityCount}か所`}
+                />
+                <AchievementMetric
+                  label="おでかけ回数"
+                  value={`${achievementStats.totalVisitCount}回`}
+                />
+                <AchievementMetric
+                  label="行きたいリスト"
+                  value={`${achievementStats.wishlistCount}件`}
+                />
+                <AchievementMetric
+                  label="また行きたい"
+                  value={`${achievementStats.revisitCount}件`}
+                />
+              </div>
+              {hasMonthlyData && (
+                <div>
+                  <p className="text-xs text-slate-400 mb-2">最近6ヶ月のおでかけ</p>
+                  <MonthlyBarChart data={monthlyData} />
+                </div>
+              )}
+            </>
           ) : (
-            <p className="text-slate-400 text-sm">
-              記録するとここに実績が表示されます
-            </p>
+            <p className="text-slate-400 text-sm">記録するとここに実績が表示されます</p>
           )}
         </div>
       </section>
 
+      {/* 最近のおでかけ */}
+      {recentVisits.length > 0 && (
+        <section className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="font-bold text-slate-800">最近のおでかけ</h2>
+            <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
+              すべて見る
+            </Link>
+          </div>
+          <div className="space-y-2">
+            {recentVisits.map((visit) => (
+              <div
+                key={visit.id}
+                className="bg-white border border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between gap-3"
+              >
+                <div className="min-w-0">
+                  <p className="font-medium text-slate-800 text-sm truncate">
+                    {visit.facility_name}
+                  </p>
+                  <p className="text-xs text-slate-400 mt-0.5">
+                    {visit.visited_on
+                      ? visit.visited_on.replaceAll("-", "/")
+                      : "日付未設定"}
+                  </p>
+                </div>
+                <span className="text-xs text-slate-500 shrink-0 text-right">
+                  {revisitLabels[visit.family_revisit] ?? ""}
+                </span>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 子ども別あそび実績 */}
       {hasChildren && (
         <section className="space-y-3">
           <h2 className="font-bold text-slate-800">子ども別あそび実績</h2>
-          <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
+          <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-5">
             {hasChildCategoryRecords ? (
               childCategorySummaries.map((summary) => (
-                <div key={summary.child.id} className="space-y-1">
-                  <p className="font-bold text-slate-800 text-sm">
+                <div key={summary.child.id}>
+                  <p className="font-bold text-slate-800 text-sm mb-2">
                     {summary.child.nickname}
                   </p>
                   {summary.categories.length > 0 ? (
-                    <p className="text-slate-600 text-sm leading-relaxed">
-                      {summary.categories
-                        .map(({ category, count }) => `${category} ${count}回`)
-                        .join(" / ")}
-                    </p>
+                    <div className="space-y-2">
+                      {summary.categories.map(({ category, count }) => (
+                        <CategoryBar
+                          key={category}
+                          category={category}
+                          count={count}
+                          max={summary.categories[0].count}
+                        />
+                      ))}
+                    </div>
                   ) : (
                     <p className="text-slate-400 text-sm">
                       まだ子ども別の記録がありません
@@ -412,9 +465,7 @@ function ActionCard({
       }`}
     >
       <span className="text-2xl">{icon}</span>
-      <span
-        className={`font-semibold text-sm ${primary ? "text-white" : "text-slate-800"}`}
-      >
+      <span className={`font-semibold text-sm ${primary ? "text-white" : "text-slate-800"}`}>
         {label}
       </span>
       <span
@@ -431,6 +482,55 @@ function AchievementMetric({ label, value }: { label: string; value: string }) {
     <div>
       <p className="font-bold text-slate-900">{value}</p>
       <p className="text-slate-500 text-xs mt-0.5">{label}</p>
+    </div>
+  );
+}
+
+function MonthlyBarChart({ data }: { data: MonthData[] }) {
+  const max = Math.max(...data.map((d) => d.count), 1);
+  return (
+    <div className="flex items-end gap-1" style={{ height: "64px" }}>
+      {data.map(({ month, label, count }) => {
+        const barHeight = count > 0 ? Math.max(Math.round((count / max) * 44), 6) : 0;
+        return (
+          <div key={month} className="flex-1 flex flex-col items-center justify-end gap-0.5">
+            {count > 0 && (
+              <span className="text-[10px] font-medium text-brand leading-none">{count}</span>
+            )}
+            <div
+              className="w-full rounded-t bg-brand/70"
+              style={{ height: `${barHeight}px` }}
+            />
+            <span className="text-[9px] text-slate-400 leading-none pt-0.5">{label}</span>
+          </div>
+        );
+      })}
+    </div>
+  );
+}
+
+function CategoryBar({
+  category,
+  count,
+  max,
+}: {
+  category: string;
+  count: number;
+  max: number;
+}) {
+  const pct = Math.round((count / Math.max(max, 1)) * 100);
+  return (
+    <div className="space-y-1">
+      <div className="flex items-center justify-between text-xs">
+        <span className="text-slate-700">{category}</span>
+        <span className="text-slate-500 font-medium tabular-nums">{count}回</span>
+      </div>
+      <div className="bg-slate-100 rounded-full h-1.5">
+        <div
+          className="bg-brand/70 rounded-full h-1.5 transition-all duration-500"
+          style={{ width: `${pct}%` }}
+        />
+      </div>
     </div>
   );
 }
