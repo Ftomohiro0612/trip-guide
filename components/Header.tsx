@@ -11,7 +11,7 @@ export default function Header() {
             <span className="text-brand">.net</span>
           </span>
         </Link>
-        <nav className="flex items-center gap-1 sm:gap-4 text-sm font-medium">
+        <nav className="hidden sm:flex items-center gap-1 sm:gap-4 text-sm font-medium">
           <Link
             href="/facilities"
             className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-sky-50 hover:text-brand transition-colors"

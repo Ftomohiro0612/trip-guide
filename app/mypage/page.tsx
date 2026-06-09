@@ -40,10 +40,11 @@ export default async function MypagePage() {
     <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
       {/* ウェルカム */}
       <div>
+        <p className="text-xs text-slate-400 mb-0.5">メモリップ by Trip Guide</p>
         <h1 className="text-xl font-bold text-slate-900">
           こんにちは 👋
         </h1>
-        <p className="text-slate-500 text-sm mt-0.5">{user?.email}</p>
+        <p className="text-slate-400 text-xs mt-0.5">{user?.email}</p>
       </div>
 
       {/* 子どもプロフィール未登録プロンプト */}

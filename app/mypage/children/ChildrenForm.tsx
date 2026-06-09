@@ -101,8 +101,12 @@ export default function ChildrenForm() {
           maxLength={20}
           className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent bg-white"
         />
-        <p className="text-xs text-slate-400 mt-1">本名でなくて大丈夫です</p>
+        <p className="text-xs text-slate-400 mt-1">本名でなくて大丈夫です（例: はなちゃん、たろう）</p>
       </div>
+
+      <p className="text-xs text-slate-400 -mt-2 leading-relaxed">
+        生年月はおでかけ当時の年齢計算にのみ使います。公開されません。
+      </p>
 
       <div className="grid grid-cols-2 gap-3">
         <div>
