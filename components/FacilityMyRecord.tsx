@@ -139,16 +139,8 @@ export default function FacilityMyRecord({
 
   if (visits.length === 0) {
     return (
-      <div className="bg-slate-50 border border-slate-200 rounded-xl p-4">
-        <p className="text-sm font-bold text-slate-800 mb-3">
-          まだこの施設の記録はありません
-        </p>
-        <Link
-          href={visitUrl}
-          className="block w-full text-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm py-2.5 rounded-lg transition-colors"
-        >
-          ✓ 行ったよ！記録する
-        </Link>
+      <div className="bg-slate-50 border border-slate-200 rounded-xl px-4 py-3">
+        <p className="text-sm text-slate-500">まだこの施設の記録はありません</p>
       </div>
     );
   }

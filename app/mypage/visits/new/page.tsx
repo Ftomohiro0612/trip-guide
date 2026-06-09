@@ -148,6 +148,7 @@ export default function NewVisitPage() {
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(true);
   const [error, setError] = useState<string | null>(null);
+  const [savedFromSlug, setSavedFromSlug] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -311,7 +312,39 @@ export default function NewVisitPage() {
       }
     }
 
-    router.push(children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits");
+    if (facilitySlugFromUrl) {
+      setSavedFromSlug(facilitySlugFromUrl);
+    } else {
+      router.push(children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits");
+    }
+  }
+
+  if (savedFromSlug) {
+    return (
+      <div className="max-w-lg mx-auto px-4 py-16 flex flex-col items-center gap-6 text-center">
+        <span className="text-5xl">🎉</span>
+        <div>
+          <p className="text-xl font-bold text-slate-900">記録しました！</p>
+          <p className="text-sm text-slate-500 mt-1">
+            施設ページで「あなたの記録」を確認できます。
+          </p>
+        </div>
+        <div className="w-full space-y-3">
+          <Link
+            href={`/facilities/${savedFromSlug}`}
+            className="block w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-colors"
+          >
+            施設ページへ戻る
+          </Link>
+          <Link
+            href="/mypage/visits"
+            className="block w-full py-3 bg-white border border-slate-200 text-slate-600 font-bold text-sm rounded-xl hover:bg-slate-50 transition-colors"
+          >
+            おでかけ履歴を見る
+          </Link>
+        </div>
+      </div>
+    );
   }
 
   return (
