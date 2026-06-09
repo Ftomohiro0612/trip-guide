@@ -31,7 +31,7 @@ export default function RegisterPage() {
       password,
       options: {
         // メール確認後に子どもプロフィール設定ページへ遷移
-        emailRedirectTo: `${SERVICE.baseUrl}/auth/callback?next=/mypage/children`,
+        emailRedirectTo: `${SERVICE.baseUrl}/auth/callback?next=/mypage`,
       },
     });
     if (err) {
@@ -47,7 +47,7 @@ export default function RegisterPage() {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?next=/mypage/children`,
+        redirectTo: `${window.location.origin}/auth/callback?next=/mypage`,
       },
     });
   }
