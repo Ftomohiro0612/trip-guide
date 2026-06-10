@@ -13,6 +13,7 @@ import {
   getRelatedFacilities,
 } from "@/lib/facilities";
 import { categoryIcon, prefectureGradients } from "@/lib/icons";
+import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 
@@ -86,6 +87,7 @@ export default async function FacilityDetailPage({ params }: Props) {
         .map((tag) => (typeof tag === "string" ? tag.trim() : ""))
         .filter((tag) => tag.length > 0)
     : [];
+  const recommendedForTags = facility.recommended_for_tags ?? [];
   const summerWaterPlay =
     typeof facility.summer_water_play === "string"
       ? facility.summer_water_play.trim()
@@ -246,6 +248,29 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
+          {recommendedForTags.length > 0 && (
+            <section className="mt-6" aria-labelledby="recommended-for-heading">
+              <h2
+                id="recommended-for-heading"
+                className="text-xl font-bold mb-3"
+              >
+                こんな子におすすめ 🎯
+              </h2>
+              <div className="flex flex-wrap gap-2">
+                {recommendedForTags.map((tag) => {
+                  const meta = getRecommendedForTagMeta(tag);
+                  return (
+                    <span
+                      key={tag}
+                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium"
+                    >
+                      <span aria-hidden>{meta.icon}</span> {meta.label}
+                    </span>
+                  );
+                })}
+              </div>
+            </section>
+          )}
           {(signatureExperiences.length > 0 || experienceTags.length > 0) && (
             <div className="mt-6">
               <h3 className="text-sm font-bold text-slate-700 mb-2">

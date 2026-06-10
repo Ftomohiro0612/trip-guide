@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { Facility } from "@/types/facility";
 import { categoryIcon } from "@/lib/icons";
+import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 
 interface Props {
   facility: Facility;
@@ -15,6 +16,8 @@ const rainStyles: Record<string, string> = {
 
 export default function FacilityCard({ facility }: Props) {
   const hasImage = !!facility.image;
+  const recommendedTags = (facility.recommended_for_tags ?? []).slice(0, 3);
+
   return (
     <Link
       href={`/facilities/${facility.slug}`}
@@ -71,6 +74,21 @@ export default function FacilityCard({ facility }: Props) {
             </span>
           )}
         </div>
+        {recommendedTags.length > 0 && (
+          <div className="flex flex-wrap gap-1.5 pt-1" aria-label="こんな子におすすめ">
+            {recommendedTags.map((tag) => {
+              const meta = getRecommendedForTagMeta(tag);
+              return (
+                <span
+                  key={tag}
+                  className="text-xs px-2 py-0.5 bg-sky-100 text-sky-700 rounded-full"
+                >
+                  <span aria-hidden>{meta.icon}</span> {meta.label}
+                </span>
+              );
+            })}
+          </div>
+        )}
       </div>
     </Link>
   );

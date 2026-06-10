@@ -27,6 +27,27 @@ export type FacilityTag =
   | "冬季限定"
   | "季節限定";
 
+export type RecommendedForTag =
+  | "animal"
+  | "animal_contact"
+  | "animal_feed"
+  | "water_play"
+  | "pool"
+  | "playground"
+  | "athletic"
+  | "slide"
+  | "running"
+  | "wide_space"
+  | "vehicle"
+  | "craft"
+  | "experience"
+  | "exhibition"
+  | "science"
+  | "dinosaur"
+  | "character"
+  | "nature"
+  | "food";
+
 export interface Facility {
   id: number;
   slug: string;
@@ -59,6 +80,7 @@ export interface Facility {
   unique_selling_point?: string | null;
   experience_tags?: string[] | null;
   summer_water_play?: RainFriendly | null;
+  recommended_for_tags?: RecommendedForTag[];
 }
 
 export interface PrefectureMeta {
