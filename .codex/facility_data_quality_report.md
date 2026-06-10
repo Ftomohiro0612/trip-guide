@@ -2,7 +2,7 @@
 
 Generated: 2026-06-11
 Total facilities: 1032
-Total issues: 2120
+Total issues: 1989
 
 ## Category Counts
 
@@ -10,9 +10,9 @@ Total issues: 2120
 | --- | --- | ---: | ---: |
 | address_pref_mismatch | - | 0 | 0 |
 | prefecture_missing_in_address | info | 879 | 0 |
-| invalid_address | high | 335 | 335 |
+| invalid_address | high | 205 | 205 |
 | invalid_coordinates | - | 0 | 0 |
-| coord_pref_mismatch | high | 5 | 5 |
+| coord_pref_mismatch | high | 4 | 4 |
 | tag_category_conflict | medium | 31 | 31 |
 | missing_experience | medium | 261 | 261 |
 | thin_description | medium | 3 | 3 |
@@ -22,7 +22,7 @@ Total issues: 2120
 
 | severity | count |
 | --- | ---: |
-| high | 340 |
+| high | 209 |
 | medium | 295 |
 | low | 606 |
 | info | 879 |
@@ -56,16 +56,16 @@ _該当なし_
 
 | id | name | prefecture | reason |
 | --- | --- | --- | --- |
-| 4 | 伊豆ぐらんぱる公園 | 静岡県 | address が 9文字（10文字未満） |
-| 15 | 屋内型ふれあい動物園 アニタッチ | 静岡県 | address が 3文字（10文字未満） |
-| 23 | 冒険の丘(時之栖) | 静岡県 | address が 9文字（10文字未満） |
-| 25 | 22世紀の丘公園 | 静岡県 | address が 9文字（10文字未満） |
-| 26 | 石人の星公園 遊具広場 | 静岡県 | address が 9文字（10文字未満） |
-| 27 | 雄踏総合公園(亀崎ファミリーランドプール) | 静岡県 | address に数字がなく、丁目・番・号も含まれていない |
-| 28 | 豊田ラブリバー公園 | 静岡県 | address が 6文字（10文字未満） |
-| 49 | 自転車の国サイクルスポーツセンター | 静岡県 | address が 9文字（10文字未満） |
-| 51 | ホテルテルメ温水プール | 静岡県 | address が 9文字（10文字未満） |
-| 52 | 白樺リゾート 池の平ファミリーランド | 長野県 | address が 6文字（10文字未満） |
+| 15 | 屋内型ふれあい動物園 アニタッチ | 静岡県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 27 | 雄踏総合公園(亀崎ファミリーランドプール) | 静岡県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 28 | 豊田ラブリバー公園 | 静岡県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 51 | ホテルテルメ温水プール | 静岡県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 52 | 白樺リゾート 池の平ファミリーランド | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 55 | 小諸市児童遊園地 | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 57 | フォレストアドベンチャー・タテシナ | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 58 | フォレストアドベンチャー・松川 | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 68 | 子供冒険広場(アルプス公園) | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 71 | 佐久平駅南口大型遊具 | 長野県 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
 
 ### invalid_coordinates
 
@@ -75,7 +75,6 @@ _該当なし_
 
 | id | name | prefecture | reason |
 | --- | --- | --- | --- |
-| 173 | 上高地 | 長野県 | latitude / longitude が 長野県 の粗いbbox外 |
 | 896 | 荒川公園(熊谷) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
 | 898 | 戸田市スポーツセンター | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
 | 901 | 武甲山資料館 (秩父) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |

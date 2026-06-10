@@ -58,6 +58,7 @@ const PREFS = [
 ];
 
 const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊", "周辺"];
+const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|[-‐‑‒–—―−ー－]/;
 
 const PREFECTURE_BBOXES = {
   茨城県: [{ minLat: 35.7, maxLat: 36.95, minLng: 139.6, maxLng: 140.95 }],
@@ -71,7 +72,7 @@ const PREFECTURE_BBOXES = {
   ],
   神奈川県: [{ minLat: 35.1, maxLat: 35.7, minLng: 138.9, maxLng: 139.8 }],
   山梨県: [{ minLat: 35.1, maxLat: 35.95, minLng: 138.15, maxLng: 139.2 }],
-  長野県: [{ minLat: 35.1, maxLat: 37.05, minLng: 137.7, maxLng: 138.85 }],
+  長野県: [{ minLat: 35.1, maxLat: 37.05, minLng: 137.55, maxLng: 138.85 }],
   新潟県: [{ minLat: 36.7, maxLat: 38.6, minLng: 137.6, maxLng: 139.9 }],
   静岡県: [{ minLat: 34.5, maxLat: 35.7, minLng: 137.4, maxLng: 139.2 }],
 };
@@ -295,15 +296,6 @@ function checkInvalidAddress(facility) {
     });
   }
 
-  if (address.length < 10) {
-    return createIssue(
-      facility,
-      "invalid_address",
-      `address が ${address.length}文字（10文字未満）`,
-      { severity: "high" },
-    );
-  }
-
   const fakePattern = FAKE_ADDRESS_PATTERNS.find((pattern) =>
     address.includes(pattern),
   );
@@ -317,14 +309,11 @@ function checkInvalidAddress(facility) {
     );
   }
 
-  const hasDigit = /[0-9０-９]/.test(address);
-  const hasAddressOrdinal = /丁目|番|号/.test(address);
-
-  if (!hasDigit && !hasAddressOrdinal) {
+  if (!ADDRESS_DETAIL_PATTERN.test(address)) {
     return createIssue(
       facility,
       "invalid_address",
-      "address に数字がなく、丁目・番・号も含まれていない",
+      "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
       { severity: "high" },
     );
   }
