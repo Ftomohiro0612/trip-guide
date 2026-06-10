@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import FacilityCard from "@/components/FacilityCard";
 import FilterSidebar from "@/components/FilterSidebar";
+import MobileFilterBar from "@/components/MobileFilterBar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
 import MapViewClient from "@/components/MapViewClient";
@@ -78,15 +79,30 @@ export default async function FacilitiesPage({ searchParams }: Props) {
         />
 
         <section>
+          <MobileFilterBar
+            prefectures={prefectures}
+            categories={categories}
+            resultCount={results.length}
+          />
           <ActiveFilterChips
             prefectures={prefectures}
             categories={categories}
           />
           <div className="flex items-center justify-between mb-4">
-            <p className="text-sm text-slate-600">
-              {results.length} 件{active && " ※ 絞り込み中"}
+            <p className="text-sm font-semibold text-slate-800">
+              {results.length}
+              <span className="font-normal text-slate-500">
+                件の施設が見つかりました
+              </span>
+              {active && (
+                <span className="ml-2 text-xs text-sky-600 font-normal">
+                  絞り込み中
+                </span>
+              )}
             </p>
-            <SortSelect />
+            <div className="hidden lg:block">
+              <SortSelect />
+            </div>
           </div>
 
           {results.length === 0 ? (
