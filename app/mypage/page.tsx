@@ -249,7 +249,7 @@ export default async function MypagePage() {
       {/* ウェルカム */}
       <div className="flex items-start justify-between gap-3">
         <div>
-          <p className="text-xs text-slate-400 mb-0.5">メモリップ by Trip Guide</p>
+          <p className="text-xs text-slate-400 mb-0.5">メモリップ</p>
           <h1 className="text-xl font-bold text-slate-900">
             {profile?.display_name
               ? `こんにちは、${profile.display_name}さん 👋`

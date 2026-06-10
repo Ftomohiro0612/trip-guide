@@ -6,10 +6,8 @@ export default function Header() {
     <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
       <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl">🎈</span>
           <span className="font-bold text-lg tracking-tight group-hover:text-brand transition-colors">
-            trip-guide
-            <span className="text-brand">.net</span>
+            メモリップ
           </span>
         </Link>
         <div className="flex items-center gap-2 sm:gap-4">

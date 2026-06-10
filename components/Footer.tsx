@@ -6,13 +6,10 @@ export default function Footer() {
       <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
         <div>
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-xl">🎈</span>
-            <span className="font-bold">
-              trip-guide<span className="text-brand">.net</span>
-            </span>
+            <span className="font-bold">メモリップ</span>
           </Link>
           <p className="mt-2 text-slate-500 leading-relaxed">
-            静岡・長野・山梨の、子供と楽しめる遊び場検索サイト。
+            子どもとのおでかけ先を探して、記録する。
           </p>
         </div>
         <div>
@@ -68,7 +65,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-slate-200">
         <div className="mx-auto max-w-6xl px-4 py-4 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
-          <span>© {new Date().getFullYear()} trip-guide.net / FIC</span>
+          <span>© {new Date().getFullYear()} メモリップ / FIC</span>
           <span>※ 料金・営業情報は変更されることがあります。各施設の公式サイトもご確認ください。</span>
         </div>
       </div>
