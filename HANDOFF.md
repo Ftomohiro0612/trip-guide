@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-10 / Phase 4-5 完了・デプロイ済み / Phase 5 カンドゥー修正完了・監査ロジック改善は別タスク
+**最終更新**: 2026-06-10 / Phase 4-6 完了・デプロイ済み / カンドゥー住所を公式住所へ修正済み / 監査ロジック改善は別タスク
 
 ---
 
@@ -407,13 +407,24 @@ trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — �
 - `app/facilities/[slug]/page.tsx`: タグチップ下にテキストリンク追加（最大3件）
 - **ブラウザ確認: ユーザー待ち**
 
-### Phase 5 カンドゥー修正 完了 ✅（commit `82ff4b2`）
-- カンドゥー（id=357）修正済み:
-  - `prefecture`: 東京都 → 千葉県
-  - `prefecture_id`: tokyo → chiba
-  - `address`: 千葉県浦安市舞浜1-4 イクスピアリ
-  - `recommended_for_tags`: ["experience"]（playground/craft を削除）
-  - `description`: 職業体験施設として更新
+### Phase 5 カンドゥー修正 完了 ✅（commit `43c613c`）
+- カンドゥー（id=357）修正済み（**公式住所で確認済み**）:
+  - `prefecture`: 千葉県
+  - `prefecture_id`: chiba
+  - `address`: 千葉県千葉市美浜区豊砂1-5 イオンモール幕張新都心 エキマエ3階
+  - `latitude`: 35.6575832 / `longitude`: 140.0251269（Nominatim直接ヒット）
+  - `recommended_for_tags`: ["experience"]
+  - `description`: 職業体験施設として更新（イクスピアリ記述削除）
+- **インシデント記録**: `.codex/kandu-address-incident-report.md`
+  - 原因: AI学習データから旧イクスピアリ店舗住所を公式確認なしで記入
+  - 再発防止: 住所修正は公式URL確認必須・座標も再ジオコード必須（memory保存済み）
+
+### Phase 4-6 完了 ✅ デプロイ済み（commit `3a62ecd`）
+仕様書: `.codex/phase4-6-prefecture-filter-fix.md`
+- `FilterSidebar.tsx`: `togglePrefecture()` 追加（サイドバーで県チェック時に `prefecture` を `prefectures` に吸収してから削除）
+- `page.tsx`: `allSelectedPrefNames` で単一+複数の統合リスト、OR 条件フィルター
+- 見出し: 0県 / 1県 / 複数県の3パターン対応
+- **ブラウザ確認: ユーザー待ち**
 
 ### Phase 5 監査スクリプト 暫定完了（改善は別タスク）
 スクリプト: `scripts/audit-data-quality.mjs`
