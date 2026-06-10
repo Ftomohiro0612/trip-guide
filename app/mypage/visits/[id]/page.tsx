@@ -1,11 +1,25 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
-import ChildAvatar from "@/components/ChildAvatar";
+import { notFound, redirect } from "next/navigation";
+import { getFacilityBySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteVisitButton from "../DeleteVisitButton";
+import {
+  getVisitChildProfile,
+  VisitChildCard,
+  type VisitChildCardData,
+} from "./VisitChildCard";
 
-export const metadata: Metadata = { title: "おでかけ記録詳細" };
+export const metadata: Metadata = {
+  title: "おでかけ記録詳細",
+  robots: {
+    index: false,
+    follow: false,
+    googleBot: { index: false, follow: false },
+  },
+  openGraph: null,
+  twitter: null,
+};
 
 type Visit = {
   id: string;
@@ -23,32 +37,6 @@ type Visit = {
   food_rating: string | null;
   crowding: string | null;
   parking: string | null;
-};
-
-type VisitChild = {
-  id: string;
-  child_id: string;
-  satisfaction: string | null;
-  children:
-    | {
-        nickname: string;
-        birth_year: number;
-        birth_month: number;
-        avatar_url: string | null;
-      }
-    | {
-        nickname: string;
-        birth_year: number;
-        birth_month: number;
-        avatar_url: string | null;
-      }[]
-    | null;
-  visit_child_tags: VisitChildTag[] | null;
-};
-
-type VisitChildTag = {
-  tag_id: string;
-  reaction_tags: { label: string } | { label: string }[] | null;
 };
 
 const familyRevisitLabels: Record<string, string> = {
@@ -110,13 +98,6 @@ const expectationLabels: Record<string, string> = {
   below: "期待以下",
 };
 
-const satisfactionLabels: Record<string, string> = {
-  loved: "大満足",
-  enjoyed: "楽しんだ",
-  neutral: "普通",
-  not_fit: "合わなかった",
-};
-
 function formatVisitedOn(value: string | null): string {
   if (!value) return "日付未設定";
   return value.replaceAll("-", "/");
@@ -131,29 +112,6 @@ function formatDuration(minutes: number | null): string {
     360: "6時間以上",
   };
   return durationLabels[minutes] ?? `${minutes}分`;
-}
-
-function normalizeChild(child: VisitChild["children"]) {
-  if (Array.isArray(child)) return child[0] ?? null;
-  return child;
-}
-
-function ageAtVisit(
-  visitedOn: string | null,
-  birthYear: number,
-  birthMonth: number,
-): string {
-  if (!visitedOn) return "訪問日未設定";
-  const [year, month] = visitedOn.split("-").map(Number);
-  if (!year || !month) return "訪問日未設定";
-
-  let months = (year - birthYear) * 12 + (month - birthMonth);
-  if (months < 0) months = 0;
-  const ageYears = Math.floor(months / 12);
-  const ageMonths = months % 12;
-  if (ageYears === 0) return `${ageMonths}か月`;
-  if (ageMonths === 0) return `${ageYears}歳`;
-  return `${ageYears}歳${ageMonths}か月`;
 }
 
 function DetailRow({ label, value }: { label: string; value: string | null }) {
@@ -178,7 +136,9 @@ export default async function VisitDetailPage({
     data: { user },
   } = await supabase.auth.getUser();
 
-  if (!user) notFound();
+  if (!user) {
+    redirect(`/auth/login?redirectTo=${encodeURIComponent(`/mypage/visits/${id}`)}`);
+  }
 
   const { data: visit } = await supabase
     .from("visits")
@@ -186,22 +146,23 @@ export default async function VisitDetailPage({
       "id, user_id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking",
     )
     .eq("id", id)
-    .eq("user_id", user.id)
     .maybeSingle();
 
   if (!visit) notFound();
 
   const visitRow = visit as Visit;
+  if (visitRow.user_id !== user.id) notFound();
+
   const { data: visitChildren } = await supabase
     .from("visit_children")
     .select(
-      "id, child_id, satisfaction, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+      "id, child_id, child_age_at_visit, satisfaction, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
     )
     .eq("visit_id", visitRow.id);
 
-  const childRows = (visitChildren ?? []) as VisitChild[];
+  const childRows = (visitChildren ?? []) as VisitChildCardData[];
   const avatarPaths = childRows
-    .map((row) => normalizeChild(row.children)?.avatar_url)
+    .map((row) => getVisitChildProfile(row.children)?.avatar_url)
     .filter((path): path is string => Boolean(path));
   const { data: signedAvatars } =
     avatarPaths.length > 0
@@ -212,7 +173,9 @@ export default async function VisitDetailPage({
   const avatarUrlByPath = new Map(
     (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
   );
-  const hasFacilityPage = !visitRow.facility_slug.startsWith("manual-");
+  const facility = visitRow.facility_slug.startsWith("manual-")
+    ? undefined
+    : getFacilityBySlug(visitRow.facility_slug);
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
@@ -229,9 +192,9 @@ export default async function VisitDetailPage({
             <h1 className="text-xl font-bold text-slate-900 break-words">
               {visitRow.facility_name}
             </h1>
-            {hasFacilityPage && (
+            {facility && (
               <Link
-                href={`/facilities/${visitRow.facility_slug}`}
+                href={`/facilities/${facility.slug}`}
                 className="mt-1 inline-block text-sm text-brand hover:underline"
               >
                 施設ページを見る →
@@ -315,69 +278,20 @@ export default async function VisitDetailPage({
       <section className="space-y-3">
         <h2 className="font-bold text-slate-800">子ども別満足度</h2>
         {childRows.length > 0 ? (
-          <div className="space-y-2">
+          <div className="space-y-3">
             {childRows.map((row) => {
-              const child = normalizeChild(row.children);
+              const child = getVisitChildProfile(row.children);
               if (!child) return null;
               const avatarUrl = child.avatar_url
                 ? avatarUrlByPath.get(child.avatar_url) ?? null
                 : null;
               return (
-                <div
+                <VisitChildCard
                   key={row.id}
-                  className="bg-white border border-slate-200 rounded-xl px-4 py-3"
-                >
-                  <div className="flex items-center justify-between gap-3">
-                    <div className="flex items-center gap-3 min-w-0">
-                      <ChildAvatar
-                        childId={row.child_id}
-                        nickname={child.nickname}
-                        avatarUrl={avatarUrl}
-                        size="md"
-                      />
-                      <div className="min-w-0">
-                        <p className="font-semibold text-slate-800 truncate">
-                          {child.nickname}
-                        </p>
-                        <p className="text-xs text-slate-400">
-                          訪問時 {ageAtVisit(
-                            visitRow.visited_on,
-                            child.birth_year,
-                            child.birth_month,
-                          )}
-                        </p>
-                      </div>
-                    </div>
-                    <span className="text-sm font-bold text-slate-700 text-right">
-                      {row.satisfaction
-                        ? satisfactionLabels[row.satisfaction] ?? row.satisfaction
-                        : "未記録"}
-                    </span>
-                  </div>
-                  {(() => {
-                    const tags = row.visit_child_tags ?? [];
-                    const labels = tags
-                      .map((tag) =>
-                        Array.isArray(tag.reaction_tags)
-                          ? tag.reaction_tags[0]?.label
-                          : tag.reaction_tags?.label,
-                      )
-                      .filter(Boolean);
-                    if (labels.length === 0) return null;
-                    return (
-                      <div className="flex flex-wrap gap-1 mt-2">
-                        {labels.map((label) => (
-                          <span
-                            key={label}
-                            className="text-xs px-2 py-0.5 rounded-full bg-brand/10 text-brand"
-                          >
-                            {label}
-                          </span>
-                        ))}
-                      </div>
-                    );
-                  })()}
-                </div>
+                  row={row}
+                  visitedOn={visitRow.visited_on}
+                  avatarUrl={avatarUrl}
+                />
               );
             })}
           </div>

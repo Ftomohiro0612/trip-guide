@@ -1,0 +1,166 @@
+import ChildAvatar from "@/components/ChildAvatar";
+
+type ChildProfile = {
+  nickname: string;
+  birth_year: number;
+  birth_month: number;
+  avatar_url: string | null;
+};
+
+export type VisitChildCardData = {
+  id: string;
+  child_id: string;
+  child_age_at_visit: number | null;
+  satisfaction: string | null;
+  children: ChildProfile | ChildProfile[] | null;
+  visit_child_tags: VisitChildTagData[] | null;
+};
+
+type VisitChildTagData = {
+  tag_id: string;
+  reaction_tags: { label: string } | { label: string }[] | null;
+};
+
+const satisfactionMeta: Record<string, { label: string; stars: string }> = {
+  loved: { label: "大満足", stars: "★★★★★" },
+  enjoyed: { label: "楽しんだ", stars: "★★★★☆" },
+  neutral: { label: "普通", stars: "★★★☆☆" },
+  not_fit: { label: "合わなかった", stars: "★★☆☆☆" },
+  could_not_join: { label: "参加できず", stars: "☆☆☆☆☆" },
+};
+
+const reactionTagIcons: Record<string, string> = {
+  animal: "🐾",
+  animal_contact: "🤲",
+  animal_feed: "🥕",
+  water_play: "💧",
+  pool: "🏊",
+  playground: "🛝",
+  athletic: "🧗",
+  slide: "🛝",
+  running: "🏃",
+  wide_space: "🌿",
+  vehicle: "🚂",
+  craft: "✂️",
+  experience: "🌾",
+  exhibition: "🔭",
+  science: "🔬",
+  dinosaur: "🦕",
+  character: "⭐",
+  nature: "🌲",
+  food: "🍓",
+  played_with_friends: "👫",
+  played_with_siblings: "👦",
+  first_time: "✨",
+  did_alone: "🙌",
+  brave_challenge: "💪",
+  other: "✍️",
+};
+
+export function getVisitChildProfile(child: VisitChildCardData["children"]) {
+  if (Array.isArray(child)) return child[0] ?? null;
+  return child;
+}
+
+function ageAtVisit(
+  visitedOn: string | null,
+  child: ChildProfile,
+  childAgeAtVisit: number | null,
+): string {
+  if (typeof childAgeAtVisit === "number") {
+    return `${childAgeAtVisit}歳ごろ`;
+  }
+
+  if (!visitedOn) return "訪問日未設定";
+  const [year, month] = visitedOn.split("-").map(Number);
+  if (!year || !month) return "訪問日未設定";
+
+  let months = (year - child.birth_year) * 12 + (month - child.birth_month);
+  if (months < 0) months = 0;
+  const ageYears = Math.floor(months / 12);
+  const ageMonths = months % 12;
+  if (ageYears === 0) return `${ageMonths}か月`;
+  if (ageMonths === 0) return `${ageYears}歳`;
+  return `${ageYears}歳${ageMonths}か月`;
+}
+
+function reactionTagLabel(tag: VisitChildTagData): string | null {
+  if (Array.isArray(tag.reaction_tags)) {
+    return tag.reaction_tags[0]?.label ?? null;
+  }
+  return tag.reaction_tags?.label ?? null;
+}
+
+export function VisitChildCard({
+  row,
+  visitedOn,
+  avatarUrl,
+}: {
+  row: VisitChildCardData;
+  visitedOn: string | null;
+  avatarUrl: string | null;
+}) {
+  const child = getVisitChildProfile(row.children);
+  if (!child) return null;
+
+  const satisfaction = row.satisfaction
+    ? satisfactionMeta[row.satisfaction] ?? {
+        label: row.satisfaction,
+        stars: "★★★☆☆",
+      }
+    : null;
+  const tags = (row.visit_child_tags ?? [])
+    .map((tag) => ({
+      id: tag.tag_id,
+      label: reactionTagLabel(tag),
+      icon: reactionTagIcons[tag.tag_id] ?? "🏷️",
+    }))
+    .filter((tag): tag is { id: string; label: string; icon: string } =>
+      Boolean(tag.label),
+    );
+
+  return (
+    <article className="bg-white border border-slate-200 rounded-2xl px-4 py-4 space-y-3 shadow-sm">
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex items-center gap-3 min-w-0">
+          <ChildAvatar
+            childId={row.child_id}
+            nickname={child.nickname}
+            avatarUrl={avatarUrl}
+            size="md"
+          />
+          <div className="min-w-0">
+            <h3 className="font-bold text-slate-900 truncate">{child.nickname}</h3>
+            <p className="text-xs text-slate-400">
+              訪問時 {ageAtVisit(visitedOn, child, row.child_age_at_visit)}
+            </p>
+          </div>
+        </div>
+        <div className="text-right shrink-0">
+          <p className="text-xs tracking-wide text-amber-500">
+            {satisfaction?.stars ?? "未記録"}
+          </p>
+          <p className="text-xs font-bold text-slate-700">
+            {satisfaction?.label ?? "満足度未記録"}
+          </p>
+        </div>
+      </div>
+
+      <div className="flex flex-wrap gap-1.5">
+        {tags.length > 0 ? (
+          tags.map((tag) => (
+            <span
+              key={tag.id}
+              className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-100"
+            >
+              <span aria-hidden>{tag.icon}</span>
+              {tag.label}
+            </span>
+          ))
+        ) : (
+          <span className="text-xs text-slate-400">反応タグ未記録</span>
+        )}
+      </div>
+    </article>
+  );
+}
