@@ -34,15 +34,23 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.4),transparent_50%),radial-gradient(circle_at_70%_80%,rgba(255,255,255,0.3),transparent_50%)]" />
         <div className="relative mx-auto max-w-6xl px-4 py-12 sm:py-20 text-center text-white">
           <p className="text-sm sm:text-base font-medium opacity-90 mb-3">
-            🗻 静岡 · 🏔️ 長野 · 🍇 山梨 / 全 {facilities.length} 施設
+            関東甲信越9県 · {facilities.length}施設の子供向け遊び場
           </p>
           <h1 className="text-3xl sm:text-5xl font-bold leading-tight tracking-tight mb-4 drop-shadow-sm">
-            子供が楽しめる遊び場が、
+            子どもの
+            <wbr />
+            <span className="inline">&quot;好き&quot;</span>
+            が見える、
             <br className="hidden sm:block" />
-            すぐ見つかる！
+            おでかけ記録サービス
           </h1>
           <p className="text-base sm:text-lg opacity-95 mb-8 max-w-2xl mx-auto">
-            「今日どこ行く？」を3秒で解決。雨の日も、無料も、年齢別も、ここから。
+            遊び場を探して、行きたい場所を保存。
+            <br className="hidden sm:block" />
+            行ったあとは、子どもの反応やまた行きたい場所を記録できます。
+          </p>
+          <p className="text-sm opacity-80 mb-2 font-medium">
+            まずは遊び場を探す ↓
           </p>
           <form action="/facilities" className="max-w-xl mx-auto">
             <div className="flex bg-white rounded-full shadow-xl overflow-hidden p-1.5">
