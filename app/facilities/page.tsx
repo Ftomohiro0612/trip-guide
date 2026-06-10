@@ -76,6 +76,17 @@ export default async function FacilitiesPage({ searchParams }: Props) {
   const selectedPrefecture = PREFECTURES.includes(prefectureParam)
     ? prefectureParam
     : "全国";
+  const sidebarPrefString = asSingleParam(sp.prefectures);
+  const sidebarPrefIds = sidebarPrefString
+    ? sidebarPrefString.split(",").filter(Boolean)
+    : [];
+  const sidebarPrefNames = sidebarPrefIds
+    .map((id) => prefectures.find((p) => p.id === id)?.name)
+    .filter((name): name is string => Boolean(name));
+  const allSelectedPrefNames =
+    selectedPrefecture !== "全国"
+      ? [selectedPrefecture, ...sidebarPrefNames]
+      : sidebarPrefNames;
   const baseResults = applyFilters(facilities, filters);
   const tagFilteredResults = recommendedTag
     ? baseResults.filter((f) =>
@@ -83,18 +94,24 @@ export default async function FacilitiesPage({ searchParams }: Props) {
       )
     : baseResults;
   const results =
-    selectedPrefecture !== "全国"
-      ? tagFilteredResults.filter((f) => f.prefecture === selectedPrefecture)
+    allSelectedPrefNames.length > 0
+      ? tagFilteredResults.filter((f) =>
+          allSelectedPrefNames.includes(f.prefecture ?? ""),
+        )
       : tagFilteredResults;
   const active =
     hasActiveFilters(filters) ||
     recommendedTag !== null ||
-    selectedPrefecture !== "全国";
+    allSelectedPrefNames.length > 0;
   const headline = recommendedTag
-    ? selectedPrefecture !== "全国"
-      ? `${selectedPrefecture}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
-      : RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]
+    ? allSelectedPrefNames.length === 1
+      ? `${allSelectedPrefNames[0]}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
+      : allSelectedPrefNames.length > 1
+        ? `選択したエリアの${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
+        : RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]
     : null;
+  const highlightedPrefecture =
+    sidebarPrefIds.length === 0 ? selectedPrefecture : "";
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -124,7 +141,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           <div className="mt-4" aria-label="都道府県で絞り込み">
             <div className="flex gap-2 overflow-x-auto pb-1">
               {PREFECTURES.map((prefecture) => {
-                const selected = prefecture === selectedPrefecture;
+                const selected = prefecture === highlightedPrefecture;
                 return (
                   <Link
                     key={prefecture}

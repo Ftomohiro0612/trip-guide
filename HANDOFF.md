@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-10 / Phase 4-3 実装済み（未コミット）/ recommended_for_tags 全1032件タグ付け完了・Migration 006 実行済み / Phase 4-4（チップクリック・フィルター）未完了・次セッションで継続
+**最終更新**: 2026-06-10 / Phase 4-5 完了・デプロイ済み / Phase 5 カンドゥー修正完了・監査ロジック改善は別タスク
 
 ---
 
@@ -386,30 +386,50 @@ trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — �
 ### Migration 006 手動実行済み ✅
 - `supabase/migrations/006_add_pool_reaction_tag.sql` — reaction_tags に pool を追加
 
-### Phase 4-3 実装済み（**未コミット・未デプロイ**）⚠️
+### Phase 4-3 完了 ✅ デプロイ済み
 - `data/facilities_data.json` に recommended_for_tags 反映済み（全1032件）
-- `types/facility.ts` に `RecommendedForTag` 型・`Facility.recommended_for_tags` 追加
-- `lib/recommended-tags.ts` 新規作成（タグラベル・アイコン定数）
+- `types/facility.ts` に `RecommendedForTag` 型追加
+- `lib/recommended-tags.ts` 新規作成
 - `components/FacilityCard.tsx` にチップ表示（最大3件）追加
-- `app/facilities/[slug]/page.tsx` に「こんな子におすすめ 🎯」セクション追加
-- **ブラウザ確認未実施・コミット未実施・デプロイ未実施**
+- `app/facilities/[slug]/page.tsx` に「こんな遊びが好きな子に 🎯」セクション追加
 
-### Phase 4-4 未完了 🚧（次セッションで継続）
-仕様書: `.codex/phase4-4-tag-filter.md`
+### Phase 4-4 完了 ✅ デプロイ済み
+- チップを Link 化（FacilityCard / 施設詳細）
+- `RECOMMENDED_FOR_TAG_HEADLINE` マップ追加
+- `/facilities` に recommended_tag + prefecture フィルター実装
+- 都道府県ボタン行（全国/各県）を recommended_tag 指定時に表示
 
-残り実装タスク:
-1. 見出し変更: 「こんな子におすすめ 🎯」→「こんな遊びが好きな子に 🎯」
-2. チップをクリック可能に（`<span>` → `<Link>`）
-   - FacilityCard: `/facilities?recommended_tag={key}`（e.stopPropagation() 必須）
-   - 施設詳細ページ: `/facilities?recommended_tag={key}&prefecture={施設のprefecture}`
-3. `lib/recommended-tags.ts` に `RECOMMENDED_FOR_TAG_HEADLINE` マップを追加
-4. 施設一覧ページ（`/facilities`）に recommended_tag + prefecture フィルター実装
-   - 都道府県フィルターUI（全国/東京都/神奈川県/千葉県/埼玉県/静岡県/山梨県/長野県/栃木県/新潟県）
-   - 見出し「山梨県の水遊びが好きな子におすすめの施設」のように動的変更
+### Phase 4-5 完了 ✅ デプロイ済み（commit `2877943b`, 2026-06-10）
+仕様書: `.codex/phase4-5-filter-ui-improve.md`
+- `ActiveFilterChips.tsx`: recommended_tag チップ + prefecture（単一）チップ追加
+- `FilterSidebar.tsx`: 「おすすめタイプ」折りたたみセクション追加（全19タグ、単一選択）
+- `FilterSidebar.tsx`: 都道府県を折りたたみチェックボックスに変更（複数選択は維持）
+- `app/facilities/[slug]/page.tsx`: タグチップ下にテキストリンク追加（最大3件）
+- **ブラウザ確認: ユーザー待ち**
 
-### Codex が止まっている件
-- 最後の更新: 2026-06-10 15:16（約5時間無応答）
-- 新しいセッションで再依頼する
+### Phase 5 カンドゥー修正 完了 ✅（commit `82ff4b2`）
+- カンドゥー（id=357）修正済み:
+  - `prefecture`: 東京都 → 千葉県
+  - `prefecture_id`: tokyo → chiba
+  - `address`: 千葉県浦安市舞浜1-4 イクスピアリ
+  - `recommended_for_tags`: ["experience"]（playground/craft を削除）
+  - `description`: 職業体験施設として更新
+
+### Phase 5 監査スクリプト 暫定完了（改善は別タスク）
+スクリプト: `scripts/audit-data-quality.mjs`
+レポート: `.codex/facility_data_quality_report.json` ほか3ファイル
+
+**現在の検出結果と判断**:
+| 問題 | 件数 | 判断 |
+|---|---|---|
+| 都道府県ミスマッチ | 881件 | **過剰検出**（ロジック要改善） |
+| 説明文80字未満 | 948件 | **過剰検出**（閾値と基準要見直し） |
+| タグ×カテゴリ矛盾 | 30件 | **有効**、次フェーズで確認対象 |
+
+**監査ロジック改善方針（次タスク用）**:
+- 都道府県: `prefecture_mismatch`（別県名明記）/ `invalid_address`（架空表現）/ `prefecture_missing_in_address`（都道府県名なし市区町村始まり、エラーでなく補完候補扱い）に分類
+- 説明文: 文字数だけでなく内容で判定 — `short_description`（60字未満）/ `thin_description`（何ができる施設か不明）/ `missing_experience`（体験・設備・対象年齢情報不足）の3カテゴリに分類
+- タグ矛盾30件: 職業体験なのにplayground / 水族館にanimal不在 / 科学館にscience不在 / 公園にwater_play根拠不明 を精査
 
 ---
 

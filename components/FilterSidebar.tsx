@@ -79,6 +79,31 @@ export default function FilterSidebar({
     update(params);
   }
 
+  function togglePrefecture(prefId: string) {
+    const params = new URLSearchParams(searchParams);
+    const singlePref = params.get("prefecture");
+    if (singlePref) {
+      const match = prefectures.find((p) => p.name === singlePref);
+      const existing = (params.get("prefectures") ?? "")
+        .split(",")
+        .filter(Boolean);
+      const merged =
+        match && !existing.includes(match.id)
+          ? [...existing, match.id]
+          : existing;
+      if (merged.length) params.set("prefectures", merged.join(","));
+      params.delete("prefecture");
+    }
+
+    const list = (params.get("prefectures") ?? "").split(",").filter(Boolean);
+    const next = list.includes(prefId)
+      ? list.filter((v) => v !== prefId)
+      : [...list, prefId];
+    if (next.length) params.set("prefectures", next.join(","));
+    else params.delete("prefectures");
+    update(params);
+  }
+
   function toggleRecommendedTag(value: RecommendedForTag) {
     const params = new URLSearchParams(searchParams);
     if (searchParams.get("recommended_tag") === value) {
@@ -111,13 +136,14 @@ export default function FilterSidebar({
   const rainList = getList("rain");
   const tagList = getList("tags");
   const recommendedTag = searchParams.get("recommended_tag");
+  const singlePref = searchParams.get("prefecture");
   const selectedPrefectureLabel =
     prefList.length > 0
       ? prefectures
           .filter((p) => prefList.includes(p.id))
           .map((p) => p.name)
           .join("・")
-      : "すべて";
+      : singlePref || "すべて";
   const hasDetailTag = DETAIL_TAG_OPTIONS.some((t) => tagList.includes(t.value));
 
   return (
@@ -156,7 +182,7 @@ export default function FilterSidebar({
                   <input
                     type="checkbox"
                     checked={checked}
-                    onChange={() => toggleList("prefectures", p.id)}
+                    onChange={() => togglePrefecture(p.id)}
                     className="rounded border-slate-300 text-sky-600 focus:ring-sky-400"
                   />
                   <span
