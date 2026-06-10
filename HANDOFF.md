@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-09 / Memorips Phase 2 完了（訪問記録・履歴・行きたいリスト・Supabase Auth）/ 施設情報サイト: 9県968施設稼働中
+**最終更新**: 2026-06-10 / Phase 4-3 実装済み（未コミット）/ recommended_for_tags 全1032件タグ付け完了・Migration 006 実行済み / Phase 4-4（チップクリック・フィルター）未完了・次セッションで継続
 
 ---
 
@@ -362,6 +362,54 @@ trip-guide.net に組み込んだ **「メモリップ by Trip Guide」** — �
 - 親の疲れ度
 - 滞在時間（任意項目追加後）
 - 食事評価（任意項目追加後）
+
+---
+
+---
+
+## ✅ Phase 4 実装状況 (2026-06-10)
+
+### Phase 4-1 完了 ✅ デプロイ済み
+- 反応タグ機能（Migration 005: reaction_tags / visit_child_tags テーブル）
+- 訪問記録フォームに per-child タグ UI
+- 施設詳細ページに反応タグ表示
+
+### Phase 4-2 / 4-2b 完了 ✅ デプロイ済み
+- フォーム改善（temp_feeling 削除・滞在時間4択・食事5択・満足度4択・アクセス6択）
+
+### recommended_for_tags タグ付け 完了 ✅
+- 全1032施設に AI タグ付け完了（Codex レビュー GO 済み）
+- 使用タグ19個: animal/animal_contact/animal_feed/water_play/pool/playground/athletic/slide/running/wide_space/vehicle/craft/experience/exhibition/science/dinosaur/character/nature/food
+- 生成ファイル: `.codex/all_tagged_facilities.json`（1032件）/ `needs_web_check_facilities.json`（421件）/ `needs_human_review_facilities.json`（10件）
+- タグルール: `.codex/recommended_for_tags_rules.md`
+
+### Migration 006 手動実行済み ✅
+- `supabase/migrations/006_add_pool_reaction_tag.sql` — reaction_tags に pool を追加
+
+### Phase 4-3 実装済み（**未コミット・未デプロイ**）⚠️
+- `data/facilities_data.json` に recommended_for_tags 反映済み（全1032件）
+- `types/facility.ts` に `RecommendedForTag` 型・`Facility.recommended_for_tags` 追加
+- `lib/recommended-tags.ts` 新規作成（タグラベル・アイコン定数）
+- `components/FacilityCard.tsx` にチップ表示（最大3件）追加
+- `app/facilities/[slug]/page.tsx` に「こんな子におすすめ 🎯」セクション追加
+- **ブラウザ確認未実施・コミット未実施・デプロイ未実施**
+
+### Phase 4-4 未完了 🚧（次セッションで継続）
+仕様書: `.codex/phase4-4-tag-filter.md`
+
+残り実装タスク:
+1. 見出し変更: 「こんな子におすすめ 🎯」→「こんな遊びが好きな子に 🎯」
+2. チップをクリック可能に（`<span>` → `<Link>`）
+   - FacilityCard: `/facilities?recommended_tag={key}`（e.stopPropagation() 必須）
+   - 施設詳細ページ: `/facilities?recommended_tag={key}&prefecture={施設のprefecture}`
+3. `lib/recommended-tags.ts` に `RECOMMENDED_FOR_TAG_HEADLINE` マップを追加
+4. 施設一覧ページ（`/facilities`）に recommended_tag + prefecture フィルター実装
+   - 都道府県フィルターUI（全国/東京都/神奈川県/千葉県/埼玉県/静岡県/山梨県/長野県/栃木県/新潟県）
+   - 見出し「山梨県の水遊びが好きな子におすすめの施設」のように動的変更
+
+### Codex が止まっている件
+- 最後の更新: 2026-06-10 15:16（約5時間無応答）
+- 新しいセッションで再依頼する
 
 ---
 

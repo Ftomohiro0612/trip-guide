@@ -88,6 +88,7 @@ export default async function FacilityDetailPage({ params }: Props) {
         .filter((tag) => tag.length > 0)
     : [];
   const recommendedForTags = facility.recommended_for_tags ?? [];
+  const prefecture = facility.prefecture ?? "";
   const summerWaterPlay =
     typeof facility.summer_water_play === "string"
       ? facility.summer_water_play.trim()
@@ -254,18 +255,19 @@ export default async function FacilityDetailPage({ params }: Props) {
                 id="recommended-for-heading"
                 className="text-xl font-bold mb-3"
               >
-                こんな子におすすめ 🎯
+                こんな遊びが好きな子に 🎯
               </h2>
               <div className="flex flex-wrap gap-2">
                 {recommendedForTags.map((tag) => {
                   const meta = getRecommendedForTagMeta(tag);
                   return (
-                    <span
+                    <Link
                       key={tag}
-                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium"
+                      href={`/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`}
+                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium hover:bg-sky-100 transition-colors"
                     >
                       <span aria-hidden>{meta.icon}</span> {meta.label}
-                    </span>
+                    </Link>
                   );
                 })}
               </div>

@@ -13,6 +13,8 @@ import {
   parseFilterParams,
   type RawSearchParams,
 } from "@/lib/filter";
+import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
+import type { RecommendedForTag } from "@/types/facility";
 
 export const metadata: Metadata = {
   title: "施設一覧",
@@ -30,11 +32,69 @@ interface Props {
   searchParams: Promise<RawSearchParams>;
 }
 
+const PREFECTURES = [
+  "全国",
+  "東京都",
+  "神奈川県",
+  "千葉県",
+  "埼玉県",
+  "静岡県",
+  "山梨県",
+  "長野県",
+  "栃木県",
+  "新潟県",
+];
+
+function asSingleParam(value: string | string[] | undefined): string {
+  if (!value) return "";
+  return Array.isArray(value) ? value[0] ?? "" : value;
+}
+
+function isRecommendedForTag(value: string): value is RecommendedForTag {
+  return Object.prototype.hasOwnProperty.call(
+    RECOMMENDED_FOR_TAG_HEADLINE,
+    value,
+  );
+}
+
+function buildPrefectureHref(tag: RecommendedForTag, prefecture: string) {
+  const params = new URLSearchParams({ recommended_tag: tag });
+  if (prefecture !== "全国") {
+    params.set("prefecture", prefecture);
+  }
+  return `/facilities?${params.toString()}`;
+}
+
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
   const filters = parseFilterParams(sp);
-  const results = applyFilters(facilities, filters);
-  const active = hasActiveFilters(filters);
+  const recommendedTagParam = asSingleParam(sp.recommended_tag);
+  const recommendedTag = isRecommendedForTag(recommendedTagParam)
+    ? recommendedTagParam
+    : null;
+  const prefectureParam = asSingleParam(sp.prefecture);
+  const selectedPrefecture = PREFECTURES.includes(prefectureParam)
+    ? prefectureParam
+    : "全国";
+  const baseResults = applyFilters(facilities, filters);
+  const tagFilteredResults = recommendedTag
+    ? baseResults.filter((f) =>
+        (f.recommended_for_tags ?? []).includes(recommendedTag),
+      )
+    : baseResults;
+  const results =
+    selectedPrefecture !== "全国"
+      ? tagFilteredResults.filter((f) => f.prefecture === selectedPrefecture)
+      : tagFilteredResults;
+  const active =
+    hasActiveFilters(filters) ||
+    recommendedTag !== null ||
+    selectedPrefecture !== "全国";
+  const headline = recommendedTag
+    ? selectedPrefecture !== "全国"
+      ? `${selectedPrefecture}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
+      : RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]
+    : null;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -48,7 +108,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
 
       <div className="mb-6">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-          施設一覧
+          {headline ?? "施設一覧"}
         </h1>
         <p className="text-sm text-slate-500 mt-1">
           {filters.q ? (
@@ -60,6 +120,28 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             <>全 {facilities.length} 施設 / 表示中 {results.length} 件</>
           )}
         </p>
+        {recommendedTag && (
+          <div className="mt-4" aria-label="都道府県で絞り込み">
+            <div className="flex gap-2 overflow-x-auto pb-1">
+              {PREFECTURES.map((prefecture) => {
+                const selected = prefecture === selectedPrefecture;
+                return (
+                  <Link
+                    key={prefecture}
+                    href={buildPrefectureHref(recommendedTag, prefecture)}
+                    className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
+                      selected
+                        ? "bg-sky-600 text-white"
+                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
+                    }`}
+                  >
+                    {prefecture}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        )}
       </div>
 
       {results.length > 0 && (

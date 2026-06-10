@@ -17,25 +17,40 @@ type Child = {
 type DateChoice = "today" | "yesterday" | "custom";
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
-type Weather = "sunny" | "cloudy" | "rainy" | "snowy" | "unknown";
-type Crowding = "empty" | "normal" | "busy" | "very_busy" | "unknown";
-type Parking = "easy" | "normal" | "difficult" | "full" | "none" | "not_used";
-type TempFeeling = "hot" | "comfortable" | "cold";
+type Weather = "sunny" | "cloudy" | "rainy" | "snowy";
+type Crowding = "empty" | "normal" | "busy" | "very_busy";
+type Parking =
+  | "car_easy"
+  | "car_normal"
+  | "car_trouble"
+  | "train"
+  | "bus"
+  | "walk_bike";
 type TimeWasEnough = "enough" | "want_more" | "too_long";
-type FoodRating = "great" | "ok" | "poor" | "no_food";
+type FoodRating =
+  | "no_meal"
+  | "ate_inside"
+  | "brought_food"
+  | "ate_outside"
+  | "had_trouble";
 type Satisfaction =
   | "loved"
   | "enjoyed"
   | "neutral"
-  | "not_fit"
-  | "could_not_join";
-type Expectation = "exceeded" | "met" | "below";
+  | "not_fit";
 
 type FacilitySuggestion = {
   slug: string;
   name: string;
   category: string;
   prefecture: string;
+};
+
+type ReactionTag = {
+  id: string;
+  label: string;
+  category: string;
+  sort_order: number;
 };
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
@@ -57,13 +72,6 @@ const satisfactionOptions: { value: Satisfaction; label: string }[] = [
   { value: "enjoyed", label: "楽しんだ" },
   { value: "neutral", label: "普通" },
   { value: "not_fit", label: "合わなかった" },
-  { value: "could_not_join", label: "参加できなかった" },
-];
-
-const expectationOptions: { value: Expectation; label: string }[] = [
-  { value: "exceeded", label: "期待以上だった" },
-  { value: "met", label: "期待どおり" },
-  { value: "below", label: "期待以下" },
 ];
 
 const weatherOptions: { value: Weather; label: string }[] = [
@@ -71,7 +79,6 @@ const weatherOptions: { value: Weather; label: string }[] = [
   { value: "cloudy", label: "☁️くもり" },
   { value: "rainy", label: "🌧雨" },
   { value: "snowy", label: "❄️雪" },
-  { value: "unknown", label: "覚えていない" },
 ];
 
 const crowdingOptions: { value: Crowding; label: string }[] = [
@@ -79,32 +86,21 @@ const crowdingOptions: { value: Crowding; label: string }[] = [
   { value: "normal", label: "ふつう" },
   { value: "busy", label: "混んでいた" },
   { value: "very_busy", label: "かなり混んでいた" },
-  { value: "unknown", label: "覚えていない" },
 ];
 
 const parkingOptions: { value: Parking; label: string }[] = [
-  { value: "easy", label: "あり・余裕" },
-  { value: "normal", label: "あり・普通" },
-  { value: "difficult", label: "あり・混雑" },
-  { value: "full", label: "満車" },
-  { value: "none", label: "なし" },
-  { value: "not_used", label: "使っていない" },
-];
-
-const tempFeelingOptions: { value: TempFeeling; label: string }[] = [
-  { value: "hot", label: "暑かった" },
-  { value: "comfortable", label: "ちょうどよかった" },
-  { value: "cold", label: "寒かった" },
+  { value: "car_easy", label: "車：駐車場に余裕あり" },
+  { value: "car_normal", label: "車：駐車場ふつう" },
+  { value: "car_trouble", label: "車：駐車場で困った" },
+  { value: "train", label: "電車で行った" },
+  { value: "bus", label: "バスで行った" },
+  { value: "walk_bike", label: "徒歩・自転車で行った" },
 ];
 
 const durationOptions = [
-  { value: "30", label: "0.5時間" },
-  { value: "60", label: "1時間" },
-  { value: "90", label: "1.5時間" },
-  { value: "120", label: "2時間" },
-  { value: "180", label: "3時間" },
-  { value: "240", label: "4時間" },
-  { value: "300", label: "5時間" },
+  { value: "60", label: "〜1時間" },
+  { value: "150", label: "2〜3時間" },
+  { value: "270", label: "4〜5時間" },
   { value: "360", label: "6時間以上" },
 ];
 
@@ -115,24 +111,11 @@ const timeWasEnoughOptions: { value: TimeWasEnough; label: string }[] = [
 ];
 
 const foodRatingOptions: { value: FoodRating; label: string }[] = [
-  { value: "no_food", label: "なし" },
-  { value: "great", label: "あり・満足" },
-  { value: "poor", label: "あり・不満" },
-  { value: "ok", label: "持参/普通" },
-];
-
-const reactionTagOptions = [
-  "動物",
-  "水遊び",
-  "乗り物",
-  "遊具",
-  "工作",
-  "体験",
-  "展示",
-  "食べ物",
-  "キャラクター",
-  "広い場所",
-  "その他",
+  { value: "no_meal", label: "食事なし" },
+  { value: "ate_inside", label: "施設内で食べた" },
+  { value: "brought_food", label: "持参した" },
+  { value: "ate_outside", label: "外で食べた" },
+  { value: "had_trouble", label: "食事で困った" },
 ];
 
 function formatDate(date: Date): string {
@@ -175,15 +158,14 @@ export default function NewVisitPage() {
   const [familyRevisit, setFamilyRevisit] = useState<FamilyRevisit | "">("");
   const [parentFatigue, setParentFatigue] = useState<ParentFatigue | "">("");
   const [detailsOpen, setDetailsOpen] = useState(false);
-  const [expectation, setExpectation] = useState<Expectation | "">("");
   const [weather, setWeather] = useState<Weather | "">("");
   const [crowding, setCrowding] = useState<Crowding | "">("");
   const [parking, setParking] = useState<Parking | "">("");
-  const [tempFeeling, setTempFeeling] = useState<TempFeeling | "">("");
   const [durationMinutes, setDurationMinutes] = useState("");
   const [timeWasEnough, setTimeWasEnough] = useState<TimeWasEnough | "">("");
   const [foodRating, setFoodRating] = useState<FoodRating | "">("");
-  const [reactionTags, setReactionTags] = useState<string[]>([]);
+  const [reactionTagMaster, setReactionTagMaster] = useState<ReactionTag[]>([]);
+  const [childTags, setChildTags] = useState<Record<string, string[]>>({});
   const [parentMemo, setParentMemo] = useState("");
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(true);
@@ -200,7 +182,14 @@ export default function NewVisitPage() {
         .select("id, nickname, birth_year, avatar_url")
         .order("sort_order", { ascending: true });
 
+      const { data: tagData } = await supabase
+        .from("reaction_tags")
+        .select("id, label, category, sort_order")
+        .eq("is_active", true)
+        .order("sort_order");
+
       if (!active) return;
+      if (tagData) setReactionTagMaster(tagData as ReactionTag[]);
       if (childrenError) {
         setError(childrenError.message);
       } else {
@@ -295,14 +284,6 @@ export default function NewVisitPage() {
     );
   }
 
-  function toggleReactionTag(tag: string) {
-    setReactionTags((current) =>
-      current.includes(tag)
-        ? current.filter((currentTag) => currentTag !== tag)
-        : [...current, tag],
-    );
-  }
-
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!canSubmit) return;
@@ -339,11 +320,9 @@ export default function NewVisitPage() {
         is_past_entry: visitedOn < today,
         family_revisit: familyRevisit,
         parent_fatigue: parentFatigue,
-        expectation_vs_reality: expectation || null,
         weather: weather || null,
         crowding: crowding || null,
         parking: parking || null,
-        temp_feeling: tempFeeling || null,
         stay_duration_min: durationMinutes ? parseInt(durationMinutes, 10) : null,
         time_was_enough: timeWasEnough || null,
         food_rating: foodRating || null,
@@ -364,14 +343,34 @@ export default function NewVisitPage() {
         child_id: child.id,
         satisfaction: satisfactions[child.id],
         child_age_at_visit: visitedYear - child.birth_year,
-        reaction_tags: reactionTags.length > 0 ? reactionTags : null,
       }));
 
-      const { error: childError } = await supabase.from("visit_children").insert(rows);
+      const { data: visitChildRows, error: childError } = await supabase
+        .from("visit_children")
+        .insert(rows)
+        .select("id, child_id");
       if (childError) {
         setError(childError.message);
         setLoading(false);
         return;
+      }
+
+      const tagRows = (visitChildRows ?? []).flatMap((row) =>
+        (childTags[row.child_id] ?? []).map((tagId) => ({
+          visit_child_id: row.id,
+          tag_id: tagId,
+        })),
+      );
+
+      if (tagRows.length > 0) {
+        const { error: tagError } = await supabase
+          .from("visit_child_tags")
+          .insert(tagRows);
+        if (tagError) {
+          setError(tagError.message);
+          setLoading(false);
+          return;
+        }
       }
     }
 
@@ -554,12 +553,12 @@ export default function NewVisitPage() {
                     <button
                       key={option.value}
                       type="button"
-                      onClick={() =>
+                      onClick={() => {
                         setSatisfactions((current) => ({
                           ...current,
                           [child.id]: option.value,
-                        }))
-                      }
+                        }));
+                      }}
                       className={`py-2 px-2 rounded-lg border text-xs font-medium transition-colors ${
                         satisfactions[child.id] === option.value
                           ? "bg-brand border-brand text-white"
@@ -570,6 +569,45 @@ export default function NewVisitPage() {
                     </button>
                   ))}
                 </div>
+                {reactionTagMaster.length > 0 && (
+                  <div className="mt-3 space-y-1.5">
+                    <p className="text-xs font-bold text-slate-600">
+                      {child.nickname}は何を楽しんでいた？
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {reactionTagMaster.map((tag) => {
+                        const selected = (childTags[child.id] ?? []).includes(tag.id);
+                        return (
+                          <button
+                            key={tag.id}
+                            type="button"
+                            onClick={() =>
+                              setChildTags((prev) => {
+                                const current = prev[child.id] ?? [];
+                                return {
+                                  ...prev,
+                                  [child.id]: selected
+                                    ? current.filter((tagId) => tagId !== tag.id)
+                                    : [...current, tag.id],
+                                };
+                              })
+                            }
+                            className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
+                              selected
+                                ? "bg-brand border-brand text-white"
+                                : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                            }`}
+                          >
+                            {tag.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {(childTags[child.id]?.length ?? 0) === 0 && (
+                      <p className="text-xs text-slate-400">スキップしてもOKです</p>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </section>
@@ -601,46 +639,6 @@ export default function NewVisitPage() {
           {detailsOpen && (
             <div className="px-4 pb-4 space-y-4">
               <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">おでかけ環境</p>
-                <OptionButtons
-                  title="天気"
-                  options={weatherOptions}
-                  value={weather}
-                  onChange={setWeather}
-                  allowClear
-                  small
-                />
-
-                <OptionButtons
-                  title="気温感"
-                  options={tempFeelingOptions}
-                  value={tempFeeling}
-                  onChange={setTempFeeling}
-                  allowClear
-                  small
-                />
-
-                <OptionButtons
-                  title="混雑度"
-                  options={crowdingOptions}
-                  value={crowding}
-                  onChange={setCrowding}
-                  allowClear
-                  small
-                />
-
-                <OptionButtons
-                  title="駐車場"
-                  options={parkingOptions}
-                  value={parking}
-                  onChange={setParking}
-                  allowClear
-                  small
-                />
-              </div>
-
-              <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">過ごし方</p>
                 <OptionButtons
                   title="滞在時間"
                   options={durationOptions}
@@ -660,58 +658,40 @@ export default function NewVisitPage() {
                 />
 
                 <OptionButtons
-                  title="食事"
+                  title="ごはん・食事"
                   options={foodRatingOptions}
                   value={foodRating}
                   onChange={setFoodRating}
                   allowClear
                   small
                 />
-              </div>
 
-              <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">振り返り</p>
-                <div className="space-y-2">
-                  <p className="text-xs font-bold text-slate-600">期待との比較</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    {expectationOptions.map((option) => (
-                      <button
-                        key={option.value}
-                        type="button"
-                        onClick={() =>
-                          setExpectation(expectation === option.value ? "" : option.value)
-                        }
-                        className={`py-2 rounded-lg border text-xs font-medium transition-colors ${
-                          expectation === option.value
-                            ? "bg-brand border-brand text-white"
-                            : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-                        }`}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              </div>
+                <OptionButtons
+                  title="天気"
+                  options={weatherOptions}
+                  value={weather}
+                  onChange={setWeather}
+                  allowClear
+                  small
+                />
 
-              <div className="space-y-2">
-                <p className="text-xs font-bold text-slate-600">反応タグ</p>
-                <div className="flex flex-wrap gap-2">
-                  {reactionTagOptions.map((tag) => (
-                    <button
-                      key={tag}
-                      type="button"
-                      onClick={() => toggleReactionTag(tag)}
-                      className={`px-3 py-1.5 rounded-full border text-xs font-medium transition-colors ${
-                        reactionTags.includes(tag)
-                          ? "bg-brand border-brand text-white"
-                          : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-                      }`}
-                    >
-                      {tag}
-                    </button>
-                  ))}
-                </div>
+                <OptionButtons
+                  title="混雑"
+                  options={crowdingOptions}
+                  value={crowding}
+                  onChange={setCrowding}
+                  allowClear
+                  small
+                />
+
+                <OptionButtons
+                  title="アクセス・移動"
+                  options={parkingOptions}
+                  value={parking}
+                  onChange={setParking}
+                  allowClear
+                  small
+                />
               </div>
 
               <div className="space-y-2">

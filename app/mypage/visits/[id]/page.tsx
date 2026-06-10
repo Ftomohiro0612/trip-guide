@@ -18,7 +18,6 @@ type Visit = {
   expectation_vs_reality: string | null;
   parent_memo: string | null;
   weather: string | null;
-  temp_feeling: string | null;
   stay_duration_min: number | null;
   time_was_enough: string | null;
   food_rating: string | null;
@@ -27,6 +26,7 @@ type Visit = {
 };
 
 type VisitChild = {
+  id: string;
   child_id: string;
   satisfaction: string | null;
   children:
@@ -43,6 +43,12 @@ type VisitChild = {
         avatar_url: string | null;
       }[]
     | null;
+  visit_child_tags: VisitChildTag[] | null;
+};
+
+type VisitChildTag = {
+  tag_id: string;
+  reaction_tags: { label: string } | { label: string }[] | null;
 };
 
 const familyRevisitLabels: Record<string, string> = {
@@ -67,12 +73,6 @@ const weatherLabels: Record<string, string> = {
   unknown: "覚えていない",
 };
 
-const tempLabels: Record<string, string> = {
-  hot: "暑かった",
-  comfortable: "ちょうどよかった",
-  cold: "寒かった",
-};
-
 const crowdingLabels: Record<string, string> = {
   empty: "空いていた",
   normal: "普通",
@@ -82,12 +82,12 @@ const crowdingLabels: Record<string, string> = {
 };
 
 const parkingLabels: Record<string, string> = {
-  easy: "あり・余裕",
-  normal: "あり・普通",
-  difficult: "あり・混雑",
-  full: "満車",
-  none: "なし",
-  not_used: "使っていない",
+  car_easy: "車：駐車場に余裕あり",
+  car_normal: "車：駐車場ふつう",
+  car_trouble: "車：駐車場で困った",
+  train: "電車で行った",
+  bus: "バスで行った",
+  walk_bike: "徒歩・自転車で行った",
 };
 
 const timeLabels: Record<string, string> = {
@@ -97,10 +97,11 @@ const timeLabels: Record<string, string> = {
 };
 
 const foodLabels: Record<string, string> = {
-  great: "あり・満足",
-  ok: "あり・普通",
-  poor: "あり・不満",
-  no_food: "なし",
+  no_meal: "食事なし",
+  ate_inside: "施設内で食べた",
+  brought_food: "持参した",
+  ate_outside: "外で食べた",
+  had_trouble: "食事で困った",
 };
 
 const expectationLabels: Record<string, string> = {
@@ -114,7 +115,6 @@ const satisfactionLabels: Record<string, string> = {
   enjoyed: "楽しんだ",
   neutral: "普通",
   not_fit: "合わなかった",
-  could_not_join: "参加できなかった",
 };
 
 function formatVisitedOn(value: string | null): string {
@@ -124,10 +124,13 @@ function formatVisitedOn(value: string | null): string {
 
 function formatDuration(minutes: number | null): string {
   if (!minutes) return "未記録";
-  if (minutes >= 360) return "6時間以上";
-  if (minutes % 60 === 0) return `${minutes / 60}時間`;
-  if (minutes < 60) return `${minutes}分`;
-  return `${Math.floor(minutes / 60)}時間${minutes % 60}分`;
+  const durationLabels: Record<number, string> = {
+    60: "〜1時間",
+    150: "2〜3時間",
+    270: "4〜5時間",
+    360: "6時間以上",
+  };
+  return durationLabels[minutes] ?? `${minutes}分`;
 }
 
 function normalizeChild(child: VisitChild["children"]) {
@@ -180,7 +183,7 @@ export default async function VisitDetailPage({
   const { data: visit } = await supabase
     .from("visits")
     .select(
-      "id, user_id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, temp_feeling, stay_duration_min, time_was_enough, food_rating, crowding, parking",
+      "id, user_id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking",
     )
     .eq("id", id)
     .eq("user_id", user.id)
@@ -192,7 +195,7 @@ export default async function VisitDetailPage({
   const { data: visitChildren } = await supabase
     .from("visit_children")
     .select(
-      "child_id, satisfaction, children(nickname, birth_year, birth_month, avatar_url)",
+      "id, child_id, satisfaction, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
     )
     .eq("visit_id", visitRow.id);
 
@@ -273,7 +276,7 @@ export default async function VisitDetailPage({
             }
           />
           <DetailRow
-            label="駐車場"
+            label="アクセス・移動"
             value={
               visitRow.parking
                 ? parkingLabels[visitRow.parking] ?? visitRow.parking
@@ -290,18 +293,10 @@ export default async function VisitDetailPage({
             }
           />
           <DetailRow
-            label="食事"
+            label="ごはん・食事"
             value={
               visitRow.food_rating
                 ? foodLabels[visitRow.food_rating] ?? visitRow.food_rating
-                : null
-            }
-          />
-          <DetailRow
-            label="気温感"
-            value={
-              visitRow.temp_feeling
-                ? tempLabels[visitRow.temp_feeling] ?? visitRow.temp_feeling
                 : null
             }
           />
@@ -329,34 +324,59 @@ export default async function VisitDetailPage({
                 : null;
               return (
                 <div
-                  key={row.child_id}
-                  className="flex items-center justify-between gap-3 bg-white border border-slate-200 rounded-xl px-4 py-3"
+                  key={row.id}
+                  className="bg-white border border-slate-200 rounded-xl px-4 py-3"
                 >
-                  <div className="flex items-center gap-3 min-w-0">
-                    <ChildAvatar
-                      childId={row.child_id}
-                      nickname={child.nickname}
-                      avatarUrl={avatarUrl}
-                      size="md"
-                    />
-                    <div className="min-w-0">
-                      <p className="font-semibold text-slate-800 truncate">
-                        {child.nickname}
-                      </p>
-                      <p className="text-xs text-slate-400">
-                        訪問時 {ageAtVisit(
-                          visitRow.visited_on,
-                          child.birth_year,
-                          child.birth_month,
-                        )}
-                      </p>
+                  <div className="flex items-center justify-between gap-3">
+                    <div className="flex items-center gap-3 min-w-0">
+                      <ChildAvatar
+                        childId={row.child_id}
+                        nickname={child.nickname}
+                        avatarUrl={avatarUrl}
+                        size="md"
+                      />
+                      <div className="min-w-0">
+                        <p className="font-semibold text-slate-800 truncate">
+                          {child.nickname}
+                        </p>
+                        <p className="text-xs text-slate-400">
+                          訪問時 {ageAtVisit(
+                            visitRow.visited_on,
+                            child.birth_year,
+                            child.birth_month,
+                          )}
+                        </p>
+                      </div>
                     </div>
+                    <span className="text-sm font-bold text-slate-700 text-right">
+                      {row.satisfaction
+                        ? satisfactionLabels[row.satisfaction] ?? row.satisfaction
+                        : "未記録"}
+                    </span>
                   </div>
-                  <span className="text-sm font-bold text-slate-700 text-right">
-                    {row.satisfaction
-                      ? satisfactionLabels[row.satisfaction] ?? row.satisfaction
-                      : "未記録"}
-                  </span>
+                  {(() => {
+                    const tags = row.visit_child_tags ?? [];
+                    const labels = tags
+                      .map((tag) =>
+                        Array.isArray(tag.reaction_tags)
+                          ? tag.reaction_tags[0]?.label
+                          : tag.reaction_tags?.label,
+                      )
+                      .filter(Boolean);
+                    if (labels.length === 0) return null;
+                    return (
+                      <div className="flex flex-wrap gap-1 mt-2">
+                        {labels.map((label) => (
+                          <span
+                            key={label}
+                            className="text-xs px-2 py-0.5 rounded-full bg-brand/10 text-brand"
+                          >
+                            {label}
+                          </span>
+                        ))}
+                      </div>
+                    );
+                  })()}
                 </div>
               );
             })}

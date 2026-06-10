@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import type { Facility } from "@/types/facility";
@@ -79,12 +81,14 @@ export default function FacilityCard({ facility }: Props) {
             {recommendedTags.map((tag) => {
               const meta = getRecommendedForTagMeta(tag);
               return (
-                <span
+                <Link
                   key={tag}
-                  className="text-xs px-2 py-0.5 bg-sky-100 text-sky-700 rounded-full"
+                  href={`/facilities?recommended_tag=${tag}`}
+                  onClick={(e) => e.stopPropagation()}
+                  className="text-xs px-2 py-0.5 bg-sky-100 text-sky-700 rounded-full hover:bg-sky-200 transition-colors cursor-pointer"
                 >
                   <span aria-hidden>{meta.icon}</span> {meta.label}
-                </span>
+                </Link>
               );
             })}
           </div>

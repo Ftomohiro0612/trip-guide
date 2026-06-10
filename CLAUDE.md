@@ -34,8 +34,17 @@
 - Memorips Phase 2（訪問記録・履歴・行きたいリスト）完了
 - 次は Phase 3（施設ページ連携）
 
+## AI役割分担
+
+**セッション開始時に必ず読むこと**: `MEMORIPS_AI_ROLES.md`
+
+- Claude Code PM（このスレッド）: 進行管理・仕様書作成・Codexへの指示出し・GO/NO-GO判定
+- Codex: 実装・lint/build・vercel deploy
+- GPT: 事業方針・優先順位の相談役
+
 ## 参考ファイル
 
+- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（セッション開始時に読む）
 - `HANDOFF.md` — 直近のチャット引継ぎメモ（最新の進捗はここ）
 - `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
 - `product-direction.md` — プロダクト方針書・実装進捗
