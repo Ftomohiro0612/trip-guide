@@ -271,6 +271,27 @@ export default async function FacilityDetailPage({ params }: Props) {
                   );
                 })}
               </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {recommendedForTags.slice(0, 3).map((tag) => {
+                  const meta = getRecommendedForTagMeta(tag);
+                  if (!meta) return null;
+                  const href = prefecture
+                    ? `/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`
+                    : `/facilities?recommended_tag=${tag}`;
+                  return (
+                    <Link
+                      key={tag}
+                      href={href}
+                      className="text-xs text-sky-600 hover:text-sky-800 hover:underline"
+                    >
+                      {prefecture
+                        ? `${prefecture}の${meta.label}が好きな子におすすめの施設をもっと見る`
+                        : `${meta.label}が好きな子におすすめの施設をもっと見る`}{" "}
+                      →
+                    </Link>
+                  );
+                })}
+              </div>
             </section>
           )}
           {(signatureExperiences.length > 0 || experienceTags.length > 0) && (

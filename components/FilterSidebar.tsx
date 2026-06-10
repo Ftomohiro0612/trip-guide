@@ -2,7 +2,12 @@
 
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
-import type { CategoryMeta, PrefectureMeta } from "@/types/facility";
+import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import type {
+  CategoryMeta,
+  PrefectureMeta,
+  RecommendedForTag,
+} from "@/types/facility";
 
 interface Props {
   prefectures: PrefectureMeta[];
@@ -33,6 +38,13 @@ const DETAIL_TAG_OPTIONS = [
   { value: "冬季限定", label: "⛄ 冬季限定" },
   { value: "季節限定", label: "🌸 季節限定" },
 ];
+
+const RECOMMENDED_TAG_OPTIONS = Object.entries(RECOMMENDED_FOR_TAG_META).map(
+  ([key, meta]) => ({
+    value: key as RecommendedForTag,
+    label: `${meta.icon} ${meta.label}`,
+  }),
+);
 
 export default function FilterSidebar({
   prefectures,
@@ -67,6 +79,17 @@ export default function FilterSidebar({
     update(params);
   }
 
+  function toggleRecommendedTag(value: RecommendedForTag) {
+    const params = new URLSearchParams(searchParams);
+    if (searchParams.get("recommended_tag") === value) {
+      params.delete("recommended_tag");
+    } else {
+      params.set("recommended_tag", value);
+    }
+    params.delete("prefecture");
+    update(params);
+  }
+
   function setFee(value: "free" | "paid" | "") {
     const params = new URLSearchParams(searchParams);
     if (value) params.set("fee", value);
@@ -87,6 +110,14 @@ export default function FilterSidebar({
   const indoorList = getList("indoor");
   const rainList = getList("rain");
   const tagList = getList("tags");
+  const recommendedTag = searchParams.get("recommended_tag");
+  const selectedPrefectureLabel =
+    prefList.length > 0
+      ? prefectures
+          .filter((p) => prefList.includes(p.id))
+          .map((p) => p.name)
+          .join("・")
+      : "すべて";
   const hasDetailTag = DETAIL_TAG_OPTIONS.some((t) => tagList.includes(t.value));
 
   return (
@@ -107,16 +138,67 @@ export default function FilterSidebar({
           {resultCount} 件の施設が該当
         </p>
 
-        <FilterGroup label="エリア">
-          {prefectures.map((p) => (
-            <CheckboxItem
-              key={p.id}
-              checked={prefList.includes(p.id)}
-              onChange={() => toggleList("prefectures", p.id)}
-              label={`${p.name} (${p.count})`}
-            />
-          ))}
-        </FilterGroup>
+        <details className="border-b border-slate-200 py-3">
+          <summary className="cursor-pointer text-sm font-semibold text-slate-800 flex items-center justify-between select-none list-none">
+            <span>エリア</span>
+            <span className="text-xs text-slate-500 font-normal truncate max-w-[120px] ml-2">
+              {selectedPrefectureLabel}
+            </span>
+          </summary>
+          <div className="mt-2 space-y-1 max-h-48 overflow-y-auto pr-1">
+            {prefectures.map((p) => {
+              const checked = prefList.includes(p.id);
+              return (
+                <label
+                  key={p.id}
+                  className="flex items-center gap-2 cursor-pointer group"
+                >
+                  <input
+                    type="checkbox"
+                    checked={checked}
+                    onChange={() => toggleList("prefectures", p.id)}
+                    className="rounded border-slate-300 text-sky-600 focus:ring-sky-400"
+                  />
+                  <span
+                    className={`text-sm transition-colors ${
+                      checked
+                        ? "text-sky-700 font-medium"
+                        : "text-slate-600 group-hover:text-slate-900"
+                    }`}
+                  >
+                    {p.name}
+                  </span>
+                </label>
+              );
+            })}
+          </div>
+        </details>
+
+        <details open className="border-b border-slate-200 py-3">
+          <summary className="cursor-pointer text-sm font-semibold text-slate-800 flex items-center justify-between select-none">
+            おすすめタイプ
+            <span className="text-slate-400 text-xs">▼</span>
+          </summary>
+          <div className="mt-2 grid grid-cols-2 gap-1">
+            {RECOMMENDED_TAG_OPTIONS.map(({ value, label }) => {
+              const isActive = recommendedTag === value;
+              return (
+                <button
+                  key={value}
+                  type="button"
+                  onClick={() => toggleRecommendedTag(value)}
+                  className={`text-left text-xs rounded-lg px-2 py-1.5 transition-colors ${
+                    isActive
+                      ? "bg-sky-100 text-sky-700 font-medium"
+                      : "text-slate-600 hover:bg-slate-100"
+                  }`}
+                >
+                  {label}
+                </button>
+              );
+            })}
+          </div>
+        </details>
 
         <FilterGroup label="カテゴリ">
           {categories.map((c) => (

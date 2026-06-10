@@ -2,6 +2,8 @@
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
+import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import type { RecommendedForTag } from "@/types/facility";
 
 interface ChipsProps {
   prefectures: { id: string; name: string }[];
@@ -51,6 +53,41 @@ export default function ActiveFilterChips({
   }
 
   const chips: { key: string; label: string; onRemove: () => void }[] = [];
+
+  const recommendedTag = searchParams.get("recommended_tag");
+  if (
+    recommendedTag &&
+    Object.prototype.hasOwnProperty.call(
+      RECOMMENDED_FOR_TAG_META,
+      recommendedTag,
+    )
+  ) {
+    const tag = recommendedTag as RecommendedForTag;
+    const meta = RECOMMENDED_FOR_TAG_META[tag];
+    chips.push({
+      key: "recommended_tag",
+      label: `${meta.icon} ${meta.label}`,
+      onRemove: () => {
+        const params = new URLSearchParams(searchParams);
+        params.delete("recommended_tag");
+        params.delete("prefecture");
+        update(params);
+      },
+    });
+  }
+
+  const prefecture = searchParams.get("prefecture");
+  if (prefecture && recommendedTag) {
+    chips.push({
+      key: "prefecture_tag",
+      label: `📍 ${prefecture}`,
+      onRemove: () => {
+        const params = new URLSearchParams(searchParams);
+        params.delete("prefecture");
+        update(params);
+      },
+    });
+  }
 
   const prefList = (searchParams.get("prefectures") ?? "")
     .split(",")
