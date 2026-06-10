@@ -59,6 +59,30 @@ const PREFS = [
 
 const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊", "周辺"];
 
+const PREFECTURE_BBOXES = {
+  茨城県: [{ minLat: 35.7, maxLat: 36.95, minLng: 139.6, maxLng: 140.95 }],
+  栃木県: [{ minLat: 36.1, maxLat: 37.2, minLng: 139.2, maxLng: 140.3 }],
+  群馬県: [{ minLat: 35.9, maxLat: 37.1, minLng: 138.3, maxLng: 139.8 }],
+  埼玉県: [{ minLat: 35.7, maxLat: 36.3, minLng: 138.7, maxLng: 139.95 }],
+  千葉県: [{ minLat: 34.8, maxLat: 36.15, minLng: 139.65, maxLng: 140.95 }],
+  東京都: [
+    { minLat: 35.4, maxLat: 35.95, minLng: 138.9, maxLng: 139.95 },
+    { minLat: 24, maxLat: 35.7, minLng: 138.9, maxLng: 142.3 },
+  ],
+  神奈川県: [{ minLat: 35.1, maxLat: 35.7, minLng: 138.9, maxLng: 139.8 }],
+  山梨県: [{ minLat: 35.1, maxLat: 35.95, minLng: 138.15, maxLng: 139.2 }],
+  長野県: [{ minLat: 35.1, maxLat: 37.05, minLng: 137.7, maxLng: 138.85 }],
+  新潟県: [{ minLat: 36.7, maxLat: 38.6, minLng: 137.6, maxLng: 139.9 }],
+  静岡県: [{ minLat: 34.5, maxLat: 35.7, minLng: 137.4, maxLng: 139.2 }],
+};
+
+const JAPAN_BBOX = {
+  minLat: 20,
+  maxLat: 46,
+  minLng: 122,
+  maxLng: 154,
+};
+
 const CORE_TAGS = {
   aquarium: ["animal", "exhibition"],
   zoo: ["animal", "animal_contact", "animal_feed"],
@@ -87,29 +111,143 @@ const SUSPICIOUS_SOLO_TAGS = {
   museum: ["playground"],
 };
 
+const CHILD_KEYWORDS = [
+  "子ども",
+  "子供",
+  "こども",
+  "親子",
+  "家族",
+  "キッズ",
+  "ファミリー",
+  "幼児",
+  "小学生",
+];
+
+const EXPERIENCE_KEYWORDS = [
+  "遊べる",
+  "遊び",
+  "遊具",
+  "体験",
+  "楽しめる",
+  "楽しむ",
+  "ふれあえる",
+  "触れ合える",
+  "見られる",
+  "見れる",
+  "学べる",
+  "乗れる",
+  "作れる",
+  "滑り台",
+  "プール",
+  "水遊び",
+  "アスレチック",
+  "工作",
+  "クラフト",
+  "観察",
+  "展示",
+  "ショー",
+  "アトラクション",
+  "収穫",
+  "キャンプ",
+  "自然",
+  "動物",
+  "餌やり",
+  "えさやり",
+  "ボールプール",
+  "トランポリン",
+  "迷路",
+  "冒険",
+  "散策",
+  "芝生",
+  "広場",
+  "走り回",
+  "泳げる",
+  "温泉",
+  "スキー",
+  "雪遊び",
+  "そり",
+  "釣り",
+  "乗馬",
+  "ワークショップ",
+  "手作り",
+  "ものづくり",
+  "レジャー",
+];
+
+const GENERIC_DESCRIPTION_PATTERNS = [
+  "に立地",
+  "に位置",
+  "にある",
+  "にあります",
+  "所在地",
+  "アクセス",
+  "徒歩",
+  "駅から",
+  "駐車場",
+  "営業時間",
+  "営業",
+  "定休日",
+  "入園料",
+  "入館料",
+  "料金",
+  "施設です",
+  "スポットです",
+  "併設",
+  "隣接",
+  "県内",
+  "市内",
+];
+
+const ISSUE_ORDER = [
+  "address_pref_mismatch",
+  "prefecture_missing_in_address",
+  "invalid_address",
+  "invalid_coordinates",
+  "coord_pref_mismatch",
+  "tag_category_conflict",
+  "missing_experience",
+  "thin_description",
+  "short_description",
+];
+
+function findPrefectureMatches(address) {
+  if (!address) return [];
+
+  return PREFS.map((prefecture) => ({
+    prefecture,
+    index: address.indexOf(prefecture),
+  }))
+    .filter((match) => match.index >= 0)
+    .sort((a, b) => a.index - b.index);
+}
+
 function extractPrefFromAddress(address) {
-  if (!address) return null;
-  for (const p of PREFS) {
-    if (address.includes(p)) return p;
-  }
-  return null;
+  return findPrefectureMatches(address)[0]?.prefecture ?? null;
 }
 
 function normalizeTags(tags) {
   return Array.isArray(tags) ? tags.filter((tag) => typeof tag === "string") : [];
 }
 
-function createIssue(facility, issueType, reason) {
+function createIssue(
+  facility,
+  issueType,
+  reason,
+  { severity = "medium", needsWebCheck = true } = {},
+) {
   return {
     id: facility.id,
     name: facility.name,
     prefecture: facility.prefecture,
     address: facility.address,
+    latitude: facility.latitude ?? null,
+    longitude: facility.longitude ?? null,
     category_id: facility.category_id,
     recommended_for_tags: normalizeTags(facility.recommended_for_tags),
     description: facility.description ?? null,
     issue_type: issueType,
-    needs_web_check: true,
+    severity,
+    needs_web_check: needsWebCheck,
     web_check_reason: reason,
     web_check_status: "pending",
     web_check_result: null,
@@ -119,8 +257,53 @@ function createIssue(facility, issueType, reason) {
   };
 }
 
-function checkPrefectureMismatch(facility) {
-  const address = facility.address ?? "";
+function checkAddressPrefMismatch(facility) {
+  const addrPref = extractPrefFromAddress(facility.address ?? "");
+  const pref = facility.prefecture ?? null;
+
+  if (addrPref && pref && addrPref !== pref) {
+    return createIssue(
+      facility,
+      "address_pref_mismatch",
+      `address内の都道府県(${addrPref})とprefecture(${pref})が不一致`,
+      { severity: "high" },
+    );
+  }
+
+  return null;
+}
+
+function checkPrefectureMissingInAddress(facility) {
+  if (findPrefectureMatches(facility.address ?? "").length > 0) {
+    return null;
+  }
+
+  return createIssue(
+    facility,
+    "prefecture_missing_in_address",
+    "address に都道府県名が含まれていない",
+    { severity: "info", needsWebCheck: false },
+  );
+}
+
+function checkInvalidAddress(facility) {
+  const address = typeof facility.address === "string" ? facility.address.trim() : "";
+
+  if (!address) {
+    return createIssue(facility, "invalid_address", "address が未入力", {
+      severity: "high",
+    });
+  }
+
+  if (address.length < 10) {
+    return createIssue(
+      facility,
+      "invalid_address",
+      `address が ${address.length}文字（10文字未満）`,
+      { severity: "high" },
+    );
+  }
+
   const fakePattern = FAKE_ADDRESS_PATTERNS.find((pattern) =>
     address.includes(pattern),
   );
@@ -128,34 +311,101 @@ function checkPrefectureMismatch(facility) {
   if (fakePattern) {
     return createIssue(
       facility,
-      "prefecture_mismatch",
+      "invalid_address",
       `address内に '${fakePattern}' パターンあり（架空アドレスの可能性）`,
+      { severity: "high" },
     );
   }
 
-  const addrPref = extractPrefFromAddress(address);
-  const pref = facility.prefecture ?? null;
+  const hasDigit = /[0-9０-９]/.test(address);
+  const hasAddressOrdinal = /丁目|番|号/.test(address);
 
-  if (addrPref === null) {
+  if (!hasDigit && !hasAddressOrdinal) {
     return createIssue(
       facility,
-      "prefecture_mismatch",
-      "住所に都道府県名が含まれておらず prefecture の自動判定不可",
-    );
-  }
-
-  if (addrPref !== pref) {
-    return createIssue(
-      facility,
-      "prefecture_mismatch",
-      `address内の都道府県(${addrPref})とprefecture(${pref})が不一致`,
+      "invalid_address",
+      "address に数字がなく、丁目・番・号も含まれていない",
+      { severity: "high" },
     );
   }
 
   return null;
 }
 
-function checkTagCategoryMismatch(facility) {
+function isNumber(value) {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
+function isWithinBbox(latitude, longitude, bbox) {
+  return (
+    latitude >= bbox.minLat &&
+    latitude <= bbox.maxLat &&
+    longitude >= bbox.minLng &&
+    longitude <= bbox.maxLng
+  );
+}
+
+function checkInvalidCoordinates(facility) {
+  const latitude = facility.latitude;
+  const longitude = facility.longitude;
+
+  if (!isNumber(latitude) || !isNumber(longitude)) {
+    return createIssue(
+      facility,
+      "invalid_coordinates",
+      "latitude / longitude が数値ではない、または未入力",
+      { severity: "high" },
+    );
+  }
+
+  if (latitude === 0 || longitude === 0) {
+    return createIssue(
+      facility,
+      "invalid_coordinates",
+      "latitude / longitude が 0",
+      { severity: "high" },
+    );
+  }
+
+  if (!isWithinBbox(latitude, longitude, JAPAN_BBOX)) {
+    return createIssue(
+      facility,
+      "invalid_coordinates",
+      "latitude / longitude が日本国外の粗い範囲外",
+      { severity: "high" },
+    );
+  }
+
+  return null;
+}
+
+function checkCoordPrefMismatch(facility) {
+  if (checkInvalidCoordinates(facility)) {
+    return null;
+  }
+
+  const bboxes = PREFECTURE_BBOXES[facility.prefecture];
+  if (!bboxes) {
+    return null;
+  }
+
+  const inPrefecture = bboxes.some((bbox) =>
+    isWithinBbox(facility.latitude, facility.longitude, bbox),
+  );
+
+  if (!inPrefecture) {
+    return createIssue(
+      facility,
+      "coord_pref_mismatch",
+      `latitude / longitude が ${facility.prefecture} の粗いbbox外`,
+      { severity: "high" },
+    );
+  }
+
+  return null;
+}
+
+function checkTagCategoryConflict(facility) {
   const category = facility.category_id;
   const coreTags = CORE_TAGS[category];
 
@@ -177,26 +427,67 @@ function checkTagCategoryMismatch(facility) {
   if (hasOnlySuspiciousTags) {
     return createIssue(
       facility,
-      "tag_category_mismatch",
+      "tag_category_conflict",
       `category(${category})に対してcoretags不在、suspicious tags(${tags.join(",")})のみ付与`,
+      { severity: "medium" },
     );
   }
 
   return createIssue(
     facility,
-    "tag_category_mismatch",
+    "tag_category_conflict",
     `category(${category})に対してcoretags(${coreTags.join(",")})が付与されていない`,
+    { severity: "medium" },
   );
 }
 
-function checkShortDescription(facility) {
-  const descriptionLength = facility.description?.length ?? 0;
+function includesAny(text, keywords) {
+  return keywords.some((keyword) => text.includes(keyword));
+}
 
-  if (!facility.description || descriptionLength < 80) {
+function looksLikeAdministrativeDescription(description) {
+  const matchedPatternCount = GENERIC_DESCRIPTION_PATTERNS.filter((pattern) =>
+    description.includes(pattern),
+  ).length;
+
+  return matchedPatternCount >= 2 || (matchedPatternCount >= 1 && description.length < 120);
+}
+
+function checkDescriptionQuality(facility) {
+  const description =
+    typeof facility.description === "string" ? facility.description.trim() : "";
+  const descriptionLength = description.length;
+  const hasChildKeyword = includesAny(description, CHILD_KEYWORDS);
+  const hasExperienceKeyword = includesAny(description, EXPERIENCE_KEYWORDS);
+
+  if (!hasChildKeyword && !hasExperienceKeyword) {
+    return createIssue(
+      facility,
+      "missing_experience",
+      "description に子ども向け体験への言及がない",
+      { severity: "medium" },
+    );
+  }
+
+  if (
+    descriptionLength >= 60 &&
+    !hasExperienceKeyword &&
+    looksLikeAdministrativeDescription(description)
+  ) {
+    return createIssue(
+      facility,
+      "thin_description",
+      "description が施設名・住所・営業情報中心で体験語彙が乏しい",
+      { severity: "medium" },
+    );
+  }
+
+  if (descriptionLength < 60) {
     return createIssue(
       facility,
       "short_description",
-      `description が ${descriptionLength}文字（80文字未満）`,
+      `description が ${descriptionLength}文字（60文字未満）`,
+      { severity: "low" },
     );
   }
 
@@ -220,6 +511,129 @@ function generatedDate() {
   }).format(new Date());
 }
 
+function countBy(items, getKey) {
+  return items.reduce((counts, item) => {
+    const key = getKey(item);
+    counts[key] = (counts[key] ?? 0) + 1;
+    return counts;
+  }, {});
+}
+
+function sortObjectByKey(value) {
+  return Object.fromEntries(Object.entries(value).sort(([a], [b]) => a.localeCompare(b)));
+}
+
+function escapeMarkdownCell(value) {
+  return String(value ?? "")
+    .replaceAll("\\", "\\\\")
+    .replaceAll("|", "\\|")
+    .replaceAll("\n", " ");
+}
+
+function markdownIssueTable(issues) {
+  const rows = issues.slice(0, 10).map((issue) =>
+    [
+      issue.id,
+      issue.name,
+      issue.prefecture,
+      issue.web_check_reason,
+    ]
+      .map(escapeMarkdownCell)
+      .join(" | "),
+  );
+
+  if (rows.length === 0) {
+    return "_該当なし_";
+  }
+
+  return [
+    "| id | name | prefecture | reason |",
+    "| --- | --- | --- | --- |",
+    ...rows.map((row) => `| ${row} |`),
+  ].join("\n");
+}
+
+function buildMarkdownReport(report, issueGroups) {
+  const countRows = ISSUE_ORDER.map((issueType) => {
+    const issues = issueGroups[issueType] ?? [];
+    const severity = issues[0]?.severity ?? "-";
+    const needsWebCheckCount = issues.filter((issue) => issue.needs_web_check).length;
+
+    return `| ${issueType} | ${severity} | ${issues.length} | ${needsWebCheckCount} |`;
+  });
+
+  const severityRows = ["high", "medium", "low", "info"].map(
+    (severity) => `| ${severity} | ${report.severity_counts[severity] ?? 0} |`,
+  );
+
+  const warningBlock =
+    report.warnings.length > 0
+      ? report.warnings.map((warning) => `- ${warning}`).join("\n")
+      : "_警告なし_";
+
+  const topIssueSections = ISSUE_ORDER.map(
+    (issueType) => `### ${issueType}\n\n${markdownIssueTable(issueGroups[issueType] ?? [])}`,
+  ).join("\n\n");
+
+  return [
+    "# Facility Data Quality Report",
+    "",
+    `Generated: ${report.generated_at}`,
+    `Total facilities: ${report.total_facilities}`,
+    `Total issues: ${report.total_issues}`,
+    "",
+    "## Category Counts",
+    "",
+    "| category | severity | count | needs_web_check |",
+    "| --- | --- | ---: | ---: |",
+    ...countRows,
+    "",
+    "## Severity Counts",
+    "",
+    "| severity | count |",
+    "| --- | ---: |",
+    ...severityRows,
+    "",
+    "## Warnings",
+    "",
+    warningBlock,
+    "",
+    "## Top 10 Issues",
+    "",
+    topIssueSections,
+    "",
+  ].join("\n");
+}
+
+function createIssueGroups(facilities) {
+  const issueGroups = Object.fromEntries(ISSUE_ORDER.map((issueType) => [issueType, []]));
+
+  for (const facility of facilities) {
+    const checks = [
+      checkAddressPrefMismatch,
+      checkPrefectureMissingInAddress,
+      checkInvalidAddress,
+      checkInvalidCoordinates,
+      checkCoordPrefMismatch,
+      checkTagCategoryConflict,
+    ];
+
+    for (const check of checks) {
+      const issue = check(facility);
+      if (issue) {
+        issueGroups[issue.issue_type].push(issue);
+      }
+    }
+
+    const descriptionIssue = checkDescriptionQuality(facility);
+    if (descriptionIssue) {
+      issueGroups[descriptionIssue.issue_type].push(descriptionIssue);
+    }
+  }
+
+  return issueGroups;
+}
+
 async function main() {
   const raw = await readFile(DATA_PATH, "utf-8");
   const json = JSON.parse(raw);
@@ -235,35 +649,72 @@ async function main() {
     console.log(`- ${category}`);
   }
 
-  const prefectureMismatchFacilities = facilities
-    .map(checkPrefectureMismatch)
-    .filter(Boolean);
-  const tagCategoryMismatchFacilities = facilities
-    .map(checkTagCategoryMismatch)
-    .filter(Boolean);
-  const shortDescriptionFacilities = facilities
-    .map(checkShortDescription)
-    .filter(Boolean);
+  const dataPrefectures = [
+    ...new Set(facilities.map((facility) => facility.prefecture).filter(Boolean)),
+  ].sort();
+  const missingBboxPrefectures = dataPrefectures.filter(
+    (prefecture) => !PREFECTURE_BBOXES[prefecture],
+  );
+  const warnings = missingBboxPrefectures.map(
+    (prefecture) => `bbox 未定義の prefecture: ${prefecture}`,
+  );
+
+  console.log("prefecture list:");
+  for (const prefecture of dataPrefectures) {
+    console.log(`- ${prefecture}`);
+  }
+
+  for (const warning of warnings) {
+    console.warn(`WARNING: ${warning}`);
+  }
+
+  const issueGroups = createIssueGroups(facilities);
+  const allIssues = ISSUE_ORDER.flatMap((issueType) => issueGroups[issueType]);
+  const categoryCounts = Object.fromEntries(
+    ISSUE_ORDER.map((issueType) => [issueType, issueGroups[issueType].length]),
+  );
+  const severityCounts = {
+    high: 0,
+    medium: 0,
+    low: 0,
+    info: 0,
+    ...countBy(allIssues, (issue) => issue.severity),
+  };
 
   const report = {
     generated_at: generatedDate(),
     total_facilities: facilities.length,
-    prefecture_mismatch_count: prefectureMismatchFacilities.length,
-    tag_category_mismatch_count: tagCategoryMismatchFacilities.length,
-    short_description_count: shortDescriptionFacilities.length,
-    total_needs_web_check:
-      prefectureMismatchFacilities.length +
-      tagCategoryMismatchFacilities.length +
-      shortDescriptionFacilities.length,
-    total_needs_human_review: 0,
+    prefectures: dataPrefectures,
+    category_counts: categoryCounts,
+    severity_counts: severityCounts,
+    ...Object.fromEntries(
+      ISSUE_ORDER.map((issueType) => [`${issueType}_count`, categoryCounts[issueType]]),
+    ),
+    total_issues: allIssues.length,
+    total_needs_web_check: allIssues.filter((issue) => issue.needs_web_check).length,
+    total_needs_human_review: allIssues.filter((issue) => issue.needs_human_review).length,
+    warnings,
   };
 
   await mkdir(REPORT_DIR, { recursive: true });
   await writeJson("facility_data_quality_report.json", report);
-  await writeJson("prefecture_mismatch_facilities.json", prefectureMismatchFacilities);
-  await writeJson("tag_category_mismatch_facilities.json", tagCategoryMismatchFacilities);
-  await writeJson("short_description_facilities.json", shortDescriptionFacilities);
+  await writeJson("facility_data_quality_issues.json", allIssues);
+  for (const issueType of ISSUE_ORDER) {
+    await writeJson(`${issueType}_facilities.json`, issueGroups[issueType]);
+  }
 
+  await writeFile(
+    resolve(REPORT_DIR, "facility_data_quality_report.md"),
+    buildMarkdownReport(report, issueGroups),
+    "utf-8",
+  );
+
+  console.log("category counts:");
+  for (const [issueType, count] of Object.entries(categoryCounts)) {
+    console.log(`- ${issueType}: ${count}`);
+  }
+  console.log("severity counts:");
+  console.log(JSON.stringify(sortObjectByKey(severityCounts), null, 2));
   console.log(JSON.stringify(report, null, 2));
 }
 

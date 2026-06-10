@@ -1,9 +1,45 @@
 {
-  "generated_at": "2026-06-10",
+  "generated_at": "2026-06-11",
   "total_facilities": 1032,
-  "prefecture_mismatch_count": 881,
-  "tag_category_mismatch_count": 30,
-  "short_description_count": 948,
-  "total_needs_web_check": 1859,
-  "total_needs_human_review": 0
+  "prefectures": [
+    "千葉県",
+    "埼玉県",
+    "山梨県",
+    "新潟県",
+    "東京都",
+    "栃木県",
+    "神奈川県",
+    "長野県",
+    "静岡県"
+  ],
+  "category_counts": {
+    "address_pref_mismatch": 0,
+    "prefecture_missing_in_address": 879,
+    "invalid_address": 335,
+    "invalid_coordinates": 0,
+    "coord_pref_mismatch": 5,
+    "tag_category_conflict": 31,
+    "missing_experience": 261,
+    "thin_description": 3,
+    "short_description": 606
+  },
+  "severity_counts": {
+    "high": 340,
+    "medium": 295,
+    "low": 606,
+    "info": 879
+  },
+  "address_pref_mismatch_count": 0,
+  "prefecture_missing_in_address_count": 879,
+  "invalid_address_count": 335,
+  "invalid_coordinates_count": 0,
+  "coord_pref_mismatch_count": 5,
+  "tag_category_conflict_count": 31,
+  "missing_experience_count": 261,
+  "thin_description_count": 3,
+  "short_description_count": 606,
+  "total_issues": 2120,
+  "total_needs_web_check": 1241,
+  "total_needs_human_review": 0,
+  "warnings": []
 }
