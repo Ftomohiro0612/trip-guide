@@ -1,20 +1,20 @@
 # Facility Data Quality Report
 
 Generated: 2026-06-11
-Total facilities: 1032
-Total issues: 1989
+Total facilities: 1031
+Total issues: 1985
 
 ## Category Counts
 
 | category | severity | count | needs_web_check |
 | --- | --- | ---: | ---: |
 | address_pref_mismatch | - | 0 | 0 |
-| prefecture_missing_in_address | info | 879 | 0 |
-| invalid_address | high | 205 | 205 |
+| prefecture_missing_in_address | info | 878 | 0 |
+| invalid_address | high | 204 | 204 |
 | invalid_coordinates | - | 0 | 0 |
-| coord_pref_mismatch | high | 4 | 4 |
+| coord_pref_mismatch | high | 3 | 3 |
 | tag_category_conflict | medium | 31 | 31 |
-| missing_experience | medium | 261 | 261 |
+| missing_experience | medium | 260 | 260 |
 | thin_description | medium | 3 | 3 |
 | short_description | low | 606 | 606 |
 
@@ -22,10 +22,10 @@ Total issues: 1989
 
 | severity | count |
 | --- | ---: |
-| high | 209 |
-| medium | 295 |
+| high | 207 |
+| medium | 294 |
 | low | 606 |
-| info | 879 |
+| info | 878 |
 
 ## Warnings
 
@@ -78,7 +78,6 @@ _該当なし_
 | 896 | 荒川公園(熊谷) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
 | 898 | 戸田市スポーツセンター | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
 | 901 | 武甲山資料館 (秩父) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
-| 929 | アクアマリンふくしま→該当県外(参考) | 新潟県 | latitude / longitude が 新潟県 の粗いbbox外 |
 
 ### tag_category_conflict
 
