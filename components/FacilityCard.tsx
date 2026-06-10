@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import type { Facility } from "@/types/facility";
 import { categoryIcon } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
@@ -17,6 +18,7 @@ const rainStyles: Record<string, string> = {
 };
 
 export default function FacilityCard({ facility }: Props) {
+  const router = useRouter();
   const hasImage = !!facility.image;
   const recommendedTags = (facility.recommended_for_tags ?? []).slice(0, 3);
 
@@ -77,18 +79,22 @@ export default function FacilityCard({ facility }: Props) {
           )}
         </div>
         {recommendedTags.length > 0 && (
-          <div className="flex flex-wrap gap-1.5 pt-1" aria-label="こんな子におすすめ">
+          <div className="flex flex-wrap gap-1.5 pt-1" aria-label="こんな遊びが好きな子に">
             {recommendedTags.map((tag) => {
               const meta = getRecommendedForTagMeta(tag);
               return (
-                <Link
+                <button
                   key={tag}
-                  href={`/facilities?recommended_tag=${tag}`}
-                  onClick={(e) => e.stopPropagation()}
+                  type="button"
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    router.push(`/facilities?recommended_tag=${tag}`);
+                  }}
                   className="text-xs px-2 py-0.5 bg-sky-100 text-sky-700 rounded-full hover:bg-sky-200 transition-colors cursor-pointer"
                 >
                   <span aria-hidden>{meta.icon}</span> {meta.label}
-                </Link>
+                </button>
               );
             })}
           </div>
