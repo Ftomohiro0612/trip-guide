@@ -56,8 +56,15 @@ export default function HomePage() {
               <p className="text-sm sm:text-base font-medium opacity-90 mb-3">
                 関東甲信越9県 · {facilities.length}施設の子供向け遊び場
               </p>
-              <h1 className="text-3xl sm:text-4xl font-bold leading-tight tracking-tight mb-4 drop-shadow-sm">
-                子どもの&quot;好き&quot;が見える、
+              <h1 className="text-2xl sm:text-4xl font-bold leading-tight tracking-tight mb-4 drop-shadow-sm">
+                <span className="sm:hidden">
+                  子どもの&quot;好き&quot;が
+                  <br />
+                  見える、
+                </span>
+                <span className="hidden sm:inline">
+                  子どもの&quot;好き&quot;が見える、
+                </span>
                 <br />
                 おでかけ記録サービス
               </h1>
@@ -72,18 +79,18 @@ export default function HomePage() {
               </p>
               <form
                 action="/facilities"
-                className="max-w-md mx-auto lg:mx-0 mb-4"
+                className="max-w-md mx-auto lg:mx-0 mb-4 w-full"
               >
-                <div className="flex bg-white rounded-full shadow-xl overflow-hidden p-1.5">
+                <div className="flex w-full bg-white rounded-full shadow-xl overflow-hidden p-1.5">
                   <input
                     type="search"
                     name="q"
                     placeholder="施設名・地域・カテゴリで検索"
-                    className="flex-1 px-4 py-2.5 text-slate-900 placeholder-slate-400 outline-none text-sm sm:text-base"
+                    className="w-0 min-w-0 flex-1 px-3 sm:px-4 py-2.5 text-slate-900 placeholder-slate-400 outline-none text-sm sm:text-base"
                   />
                   <button
                     type="submit"
-                    className="bg-brand hover:bg-brand-dark text-white font-bold px-5 sm:px-6 py-2.5 rounded-full transition-colors text-sm sm:text-base"
+                    className="shrink-0 bg-brand hover:bg-brand-dark text-white font-bold px-4 sm:px-6 py-2.5 rounded-full transition-colors text-sm sm:text-base whitespace-nowrap"
                   >
                     🔍 検索
                   </button>
