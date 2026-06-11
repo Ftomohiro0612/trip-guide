@@ -2,10 +2,10 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "メモリップ by Trip Guide",
+    name: "メモリップ",
     short_name: "メモリップ",
     description:
-      "静岡・長野・山梨の子供と楽しめる遊び場を簡単検索。雨の日OK・無料・年齢別など、目的にあわせてすぐ見つかる！",
+      "関東甲信越9県・1,000施設超から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの\"好き\"と成長が見えてきます。",
     start_url: "/",
     display: "standalone",
     background_color: "#fafbfc",
