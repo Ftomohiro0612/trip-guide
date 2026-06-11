@@ -25,9 +25,35 @@
 | フィールド | 型 | 必須 | 内容 |
 |---|---|---|---|
 | `source_urls` | string（カンマ区切り） | confirmed なら必須 | 確定根拠に使ったURL。**先頭を最重要ソース（公式/自治体）にする** |
-| `source_checked_at` | string YYYY-MM-DD | confirmed なら必須 | 最後に確認した日。情報鮮度の管理用 |
+| `source_checked_at` | string YYYY-MM-DD | confirmed なら必須 | **重要項目（住所・料金・営業時間・営業状況）を公式確認した日** |
 | `data_quality_status` | enum | 全件（段階導入） | confirmed / likely_ok / needs_web_check / needs_human_review / exclude_candidate |
-| `source_notes` | string | 任意 | 確認時の補足（「料金は公式記載なし」等）。なければ省略可 |
+| `source_notes` | string | 任意 | **根拠に関する補足のみ**（「料金は公式記載なし」等） |
+
+### フィールド運用ルール（2026-06-11 オーナー確定）
+
+**source_urls の型**
+- MVP では **Sheets 互換のためカンマ区切り string**
+- 将来 Supabase 移行時は `string[]` または `facility_sources` テーブル（facility_id × url × checked_at）へ移行する想定
+
+**confirmed の条件（すべて満たすこと）**
+1. source_urls の先頭が**公式サイト・自治体・運営会社など一次情報**であること
+2. source_checked_at があること
+3. 住所・営業状況・施設種別に重大な矛盾がないこと
+4. **AI推定のみ・まとめサイトのみでは confirmed にしない**
+
+**source_checked_at の更新ルール**
+- 住所・料金・営業時間・営業状況など**重要項目を公式確認した日**を入れる
+- description の軽微な文言修正だけでは更新しない
+- **Nominatim だけを見た日を source_checked_at にしない**（座標確認は geocode_source の領分）
+
+**source_notes の用途制限**
+- 根拠に関する補足だけを書く（「料金は公式に記載なし」「営業時間は2026年4月時点」等）
+- **作業メモ・除外メモ・PMへのコメントは書かない**（id929/id734 事件の再発防止）
+- 「参考のみ」「除外」等の状態は data_quality_status と監査レポートで扱う
+
+**likely_ok の定義**
+- 既存データで重大な監査エラーは出ていないが、**公式確認URL・確認日は未整備**の暫定状態
+- **confirmed ではない**（公式確認済みを意味しない）
 
 ### 既存フィールドとの関係
 

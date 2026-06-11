@@ -9,11 +9,21 @@
 
 | status | 定義 | 付与条件 |
 |---|---|---|
-| `confirmed` | 一次情報で確認済み | **source_urls（公式/自治体が先頭）+ source_checked_at が両方あること**。新規追加・修正時に公式確認できた施設のみ |
-| `likely_ok` | 大きな矛盾はないが根拠が弱い | 既存データのデフォルト。監査で high/medium 検出なし・url あり・座標 bbox 内 |
-| `needs_web_check` | Web で確認が必要 | 監査 high/medium 検出（invalid_address・coord mismatch 等）、または修正時に公式確認が取れなかった |
-| `needs_human_review` | 判断が必要 | タグ妥当性・カテゴリ・親子施設分割・県外の扱いなど、Web を見ても自動確定できない |
+| `confirmed` | 一次情報で確認済み | **source_urls（先頭=公式/自治体/運営会社）+ source_checked_at が両方あること**。新規追加・修正時に公式確認できた施設のみ。**禁止条件**: まとめサイト・個人ブログ・Google検索結果・AI回答のみでの confirmed 付与は不可 |
+| `likely_ok` | **暫定状態（confirmed ではない）** | 既存データのデフォルト。「公式確認済み」ではなく「現時点の自動監査で重大な矛盾が見つかっていない」だけの状態。監査で high/medium 検出なし・url あり・座標 bbox 内 |
+| `needs_web_check` | **Web/公式確認で解決できる**もの | 監査 high/medium 検出（invalid_address・coord mismatch 等）、または修正時に公式確認が取れなかった |
+| `needs_human_review` | **Web確認だけでは決められない**もの | PM判断・タグ方針・対象エリア方針が必要（タグ妥当性・カテゴリ・親子施設分割・県外の扱い等） |
 | `exclude_candidate` | 削除候補 | 県外・閉店確定・参考メモ行・重複。**削除は必ず PM 判断**（status を付けるだけ） |
+
+## confirmed 昇格時の連動ルール
+
+- confirmed へ昇格する場合は **source_checked_at を必ず設定**する（重要項目=住所・料金・営業時間・営業状況を公式確認した日）
+- 軽微な文言修正だけでは source_checked_at を更新しない
+
+## status の適用範囲
+
+- **新規・修正分**: facilities_data.json 本体に data_quality_status を持たせる（修正タスクの中で付与）
+- **既存1,030件への一括付与**: 別タスク。**監査v3第1弾の結果を見てから PM 判断で投入**する（本ポリシーの機械分類ルールはその時の設計図）
 
 ## 絶対ルール
 
