@@ -2,9 +2,12 @@
 
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
 import { createClient } from "@/lib/supabase/client";
+import VisitPhotoUploader, {
+  type VisitPhotoUploaderHandle,
+} from "../VisitPhotoUploader";
 
 type Child = {
   id: string;
@@ -145,6 +148,7 @@ export default function NewVisitPage() {
   const searchParams = useSearchParams();
   const facilitySlugFromUrl = searchParams.get("facility") ?? "";
   const nameFromUrl = searchParams.get("name") ?? "";
+  const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
 
   const [facilityName, setFacilityName] = useState(nameFromUrl);
   const [facilitySlug, setFacilitySlug] = useState(facilitySlugFromUrl);
@@ -169,8 +173,10 @@ export default function NewVisitPage() {
   const [parentMemo, setParentMemo] = useState("");
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(true);
+  const [photoBusy, setPhotoBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [savedFromSlug, setSavedFromSlug] = useState<string | null>(null);
+  const [createdVisitId, setCreatedVisitId] = useState<string | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -274,7 +280,8 @@ export default function NewVisitPage() {
     Boolean(parentFatigue) &&
     allSelectedChildrenRated &&
     !loading &&
-    !initializing;
+    !initializing &&
+    !photoBusy;
 
   function toggleChild(childId: string) {
     setSelectedChildIds((current) =>
@@ -284,12 +291,40 @@ export default function NewVisitPage() {
     );
   }
 
+  function finishAfterSave() {
+    setCreatedVisitId(null);
+    photoUploaderRef.current?.reset();
+    if (facilitySlugFromUrl) {
+      setSavedFromSlug(facilitySlugFromUrl);
+    } else {
+      router.push(children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits");
+    }
+  }
+
+  async function uploadPhotosForVisit(visitId: string) {
+    const photoResult = await photoUploaderRef.current?.upload(visitId);
+    if (photoResult && !photoResult.ok) {
+      setCreatedVisitId(visitId);
+      setError(`記録は保存済みです。写真だけ再試行できます。${photoResult.error}`);
+      setLoading(false);
+      return false;
+    }
+    return true;
+  }
+
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
     if (!canSubmit) return;
 
     setLoading(true);
     setError(null);
+
+    if (createdVisitId) {
+      if (await uploadPhotosForVisit(createdVisitId)) {
+        finishAfterSave();
+      }
+      return;
+    }
 
     const supabase = createClient();
     const {
@@ -374,11 +409,10 @@ export default function NewVisitPage() {
       }
     }
 
-    if (facilitySlugFromUrl) {
-      setSavedFromSlug(facilitySlugFromUrl);
-    } else {
-      router.push(children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits");
+    if (!(await uploadPhotosForVisit(visit.id))) {
+      return;
     }
+    finishAfterSave();
   }
 
   if (savedFromSlug) {
@@ -636,76 +670,81 @@ export default function NewVisitPage() {
             もっと詳しく記録する {detailsOpen ? "▲" : "▼"}
           </button>
 
-          {detailsOpen && (
-            <div className="px-4 pb-4 space-y-4">
-              <div className="space-y-3">
-                <OptionButtons
-                  title="滞在時間"
-                  options={durationOptions}
-                  value={durationMinutes}
-                  onChange={setDurationMinutes}
-                  allowClear
-                  small
-                />
+          <div className={`px-4 pb-4 space-y-4 ${detailsOpen ? "" : "hidden"}`}>
+            <div className="space-y-3">
+              <OptionButtons
+                title="滞在時間"
+                options={durationOptions}
+                value={durationMinutes}
+                onChange={setDurationMinutes}
+                allowClear
+                small
+              />
 
-                <OptionButtons
-                  title="時間は足りたか"
-                  options={timeWasEnoughOptions}
-                  value={timeWasEnough}
-                  onChange={setTimeWasEnough}
-                  allowClear
-                  small
-                />
+              <OptionButtons
+                title="時間は足りたか"
+                options={timeWasEnoughOptions}
+                value={timeWasEnough}
+                onChange={setTimeWasEnough}
+                allowClear
+                small
+              />
 
-                <OptionButtons
-                  title="ごはん・食事"
-                  options={foodRatingOptions}
-                  value={foodRating}
-                  onChange={setFoodRating}
-                  allowClear
-                  small
-                />
+              <OptionButtons
+                title="ごはん・食事"
+                options={foodRatingOptions}
+                value={foodRating}
+                onChange={setFoodRating}
+                allowClear
+                small
+              />
 
-                <OptionButtons
-                  title="天気"
-                  options={weatherOptions}
-                  value={weather}
-                  onChange={setWeather}
-                  allowClear
-                  small
-                />
+              <OptionButtons
+                title="天気"
+                options={weatherOptions}
+                value={weather}
+                onChange={setWeather}
+                allowClear
+                small
+              />
 
-                <OptionButtons
-                  title="混雑"
-                  options={crowdingOptions}
-                  value={crowding}
-                  onChange={setCrowding}
-                  allowClear
-                  small
-                />
+              <OptionButtons
+                title="混雑"
+                options={crowdingOptions}
+                value={crowding}
+                onChange={setCrowding}
+                allowClear
+                small
+              />
 
-                <OptionButtons
-                  title="アクセス・移動"
-                  options={parkingOptions}
-                  value={parking}
-                  onChange={setParking}
-                  allowClear
-                  small
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-600">親メモ</label>
-                <textarea
-                  value={parentMemo}
-                  onChange={(event) => setParentMemo(event.target.value)}
-                  placeholder="気づいたこと、次回メモなど"
-                  rows={4}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-                />
-              </div>
+              <OptionButtons
+                title="アクセス・移動"
+                options={parkingOptions}
+                value={parking}
+                onChange={setParking}
+                allowClear
+                small
+              />
             </div>
-          )}
+
+            <div className="space-y-2">
+              <label className="block text-xs font-bold text-slate-600">親メモ</label>
+              <textarea
+                value={parentMemo}
+                onChange={(event) => setParentMemo(event.target.value)}
+                placeholder="気づいたこと、次回メモなど"
+                rows={4}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+              />
+            </div>
+
+            <VisitPhotoUploader
+              ref={photoUploaderRef}
+              initialExistingCount={0}
+              disabled={loading}
+              onBusyChange={setPhotoBusy}
+            />
+          </div>
         </section>
 
         <button
@@ -713,7 +752,13 @@ export default function NewVisitPage() {
           disabled={!canSubmit}
           className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
         >
-          {loading ? "保存中..." : "保存する"}
+          {loading
+            ? createdVisitId
+              ? "写真を保存中..."
+              : "保存中..."
+            : createdVisitId
+              ? "写真を再試行"
+              : "保存する"}
         </button>
       </form>
     </div>

@@ -2,8 +2,11 @@
 
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { createClient } from "@/lib/supabase/client";
+import VisitPhotoUploader, {
+  type VisitPhotoUploaderHandle,
+} from "../../VisitPhotoUploader";
 
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
@@ -94,9 +97,11 @@ export default function EditVisitPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
   const visitId = params.id;
+  const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
+  const [photoBusy, setPhotoBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [facilityName, setFacilityName] = useState("");
   const [visitedOn, setVisitedOn] = useState("");
@@ -112,23 +117,36 @@ export default function EditVisitPage() {
   const [foodRating, setFoodRating] = useState<FoodRating | "">("");
   const [parentMemo, setParentMemo] = useState("");
   const [detailsOpen, setDetailsOpen] = useState(false);
+  const [existingPhotoCount, setExistingPhotoCount] = useState(0);
 
   useEffect(() => {
     let active = true;
     async function load() {
       const supabase = createClient();
-      const { data, error: fetchError } = await supabase
-        .from("visits")
-        .select(
-          "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, temp_feeling, stay_duration_min, time_was_enough, food_rating, parent_memo",
-        )
-        .eq("id", visitId)
-        .single();
+      const [visitResult, photoCountResult] = await Promise.all([
+        supabase
+          .from("visits")
+          .select(
+            "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, temp_feeling, stay_duration_min, time_was_enough, food_rating, parent_memo",
+          )
+          .eq("id", visitId)
+          .single(),
+        supabase
+          .from("visit_photos")
+          .select("id", { count: "exact", head: true })
+          .eq("visit_id", visitId),
+      ]);
       if (!active) return;
+      const { data, error: fetchError } = visitResult;
       if (fetchError || !data) {
         setError("記録の読み込みに失敗しました");
         setLoading(false);
         return;
+      }
+      if (photoCountResult.error) {
+        setError("写真枚数の読み込みに失敗しました");
+      } else {
+        setExistingPhotoCount(photoCountResult.count ?? 0);
       }
       setFacilityName(data.facility_name ?? "");
       setVisitedOn(data.visited_on ?? "");
@@ -169,7 +187,8 @@ export default function EditVisitPage() {
     Boolean(familyRevisit) &&
     Boolean(parentFatigue) &&
     !saving &&
-    !loading;
+    !loading &&
+    !photoBusy;
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -201,6 +220,14 @@ export default function EditVisitPage() {
       setSaving(false);
       return;
     }
+
+    const photoResult = await photoUploaderRef.current?.upload(visitId);
+    if (photoResult && !photoResult.ok) {
+      setError(`変更は保存済みです。写真だけ再試行できます。${photoResult.error}`);
+      setSaving(false);
+      return;
+    }
+
     router.push("/mypage/visits");
   }
 
@@ -283,110 +310,115 @@ export default function EditVisitPage() {
           >
             もっと詳しく記録する {detailsOpen ? "▲" : "▼"}
           </button>
-          {detailsOpen && (
-            <div className="px-4 pb-4 space-y-4">
-              <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">おでかけ環境</p>
-                <OptionButtons
-                  title="天気"
-                  options={weatherOptions}
-                  value={weather}
-                  onChange={setWeather}
-                  allowClear
-                  small
-                />
-                <OptionButtons
-                  title="気温感"
-                  options={tempFeelingOptions}
-                  value={tempFeeling}
-                  onChange={setTempFeeling}
-                  allowClear
-                  small
-                />
-                <OptionButtons
-                  title="混雑度"
-                  options={crowdingOptions}
-                  value={crowding}
-                  onChange={setCrowding}
-                  allowClear
-                  small
-                />
-                <OptionButtons
-                  title="駐車場"
-                  options={parkingOptions}
-                  value={parking}
-                  onChange={setParking}
-                  allowClear
-                  small
-                />
-              </div>
-              <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">過ごし方</p>
-                <OptionButtons
-                  title="滞在時間"
-                  options={durationOptions}
-                  value={durationMinutes}
-                  onChange={setDurationMinutes}
-                  allowClear
-                  small
-                />
-                <OptionButtons
-                  title="時間は足りたか"
-                  options={timeWasEnoughOptions}
-                  value={timeWasEnough}
-                  onChange={setTimeWasEnough}
-                  allowClear
-                  small
-                />
-                <OptionButtons
-                  title="食事"
-                  options={foodRatingOptions}
-                  value={foodRating}
-                  onChange={setFoodRating}
-                  allowClear
-                  small
-                />
-              </div>
-              <div className="space-y-3">
-                <p className="text-xs font-bold text-slate-400">振り返り</p>
-                <div className="space-y-2">
-                  <p className="text-xs font-bold text-slate-600">期待との比較</p>
-                  <div className="grid grid-cols-3 gap-2">
-                    {expectationOptions.map((option) => (
-                      <button
-                        key={option.value}
-                        type="button"
-                        onClick={() =>
-                          setExpectation(
-                            expectation === option.value ? "" : option.value,
-                          )
-                        }
-                        className={`py-2 rounded-lg border text-xs font-medium transition-colors ${
-                          expectation === option.value
-                            ? "bg-brand border-brand text-white"
-                            : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-                        }`}
-                      >
-                        {option.label}
-                      </button>
-                    ))}
-                  </div>
+          <div className={`px-4 pb-4 space-y-4 ${detailsOpen ? "" : "hidden"}`}>
+            <div className="space-y-3">
+              <p className="text-xs font-bold text-slate-400">おでかけ環境</p>
+              <OptionButtons
+                title="天気"
+                options={weatherOptions}
+                value={weather}
+                onChange={setWeather}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="気温感"
+                options={tempFeelingOptions}
+                value={tempFeeling}
+                onChange={setTempFeeling}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="混雑度"
+                options={crowdingOptions}
+                value={crowding}
+                onChange={setCrowding}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="駐車場"
+                options={parkingOptions}
+                value={parking}
+                onChange={setParking}
+                allowClear
+                small
+              />
+            </div>
+            <div className="space-y-3">
+              <p className="text-xs font-bold text-slate-400">過ごし方</p>
+              <OptionButtons
+                title="滞在時間"
+                options={durationOptions}
+                value={durationMinutes}
+                onChange={setDurationMinutes}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="時間は足りたか"
+                options={timeWasEnoughOptions}
+                value={timeWasEnough}
+                onChange={setTimeWasEnough}
+                allowClear
+                small
+              />
+              <OptionButtons
+                title="食事"
+                options={foodRatingOptions}
+                value={foodRating}
+                onChange={setFoodRating}
+                allowClear
+                small
+              />
+            </div>
+            <div className="space-y-3">
+              <p className="text-xs font-bold text-slate-400">振り返り</p>
+              <div className="space-y-2">
+                <p className="text-xs font-bold text-slate-600">期待との比較</p>
+                <div className="grid grid-cols-3 gap-2">
+                  {expectationOptions.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() =>
+                        setExpectation(
+                          expectation === option.value ? "" : option.value,
+                        )
+                      }
+                      className={`py-2 rounded-lg border text-xs font-medium transition-colors ${
+                        expectation === option.value
+                          ? "bg-brand border-brand text-white"
+                          : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
                 </div>
               </div>
-              <div className="space-y-2">
-                <label className="block text-xs font-bold text-slate-600">
-                  親メモ
-                </label>
-                <textarea
-                  value={parentMemo}
-                  onChange={(e) => setParentMemo(e.target.value)}
-                  placeholder="気づいたこと、次回メモなど"
-                  rows={4}
-                  className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-                />
-              </div>
             </div>
-          )}
+            <div className="space-y-2">
+              <label className="block text-xs font-bold text-slate-600">
+                親メモ
+              </label>
+              <textarea
+                value={parentMemo}
+                onChange={(e) => setParentMemo(e.target.value)}
+                placeholder="気づいたこと、次回メモなど"
+                rows={4}
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+              />
+            </div>
+
+            <VisitPhotoUploader
+              ref={photoUploaderRef}
+              initialExistingCount={existingPhotoCount}
+              disabled={saving}
+              onBusyChange={setPhotoBusy}
+            />
+          </div>
         </section>
 
         <button
