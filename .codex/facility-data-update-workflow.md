@@ -13,6 +13,10 @@
 | `facility-research-source-policy.md` | AI推定禁止・source_urls・Nominatim ルールの正本 |
 | `facility-data-quality-checklist.md` | 修正前後チェックリスト（仕様書に埋め込む） |
 | `facility-data-source-audit.md` | 現状の棚卸し・問題点・既存データ分類方針・監査v3案 |
+| `facility-provenance-schema.md` | 根拠管理4フィールドの設計（MVP/将来版） |
+| `facility-data-quality-status-policy.md` | data_quality_status 5分類の使い分け・既存1,030件の初期付与 |
+| `facility-source-requirements-by-field.md` | 項目別 確定根拠要件の**正本** |
+| `facility-audit-v3-provenance-plan.md` | provenance 監査 v3 の追加計画（未実装） |
 | `RESEARCH_METHODOLOGY.md`（リポジトリ直下） | 県単位の収集10ステップ |
 | `recommended_for_tags_rules.md` | タグ19キーの付与ルール |
 | `templates/spec-templates.md` テンプレート9 | 施設データ更新タスクの仕様書テンプレート |

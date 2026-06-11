@@ -38,7 +38,9 @@
 ## 実装要件
 - 修正値と現状値を Before/After で明記
 - 住所変更時は座標再取得（Nominatim 1req/s・bbox 検証・geocode_source 更新）
-- source_urls / source_checked_at / data_quality_status を更新
+- source_urls（先頭=公式/自治体）/ source_checked_at / data_quality_status を更新
+  - confirmed は公式確認できた場合のみ（.codex/facility-data-quality-status-policy.md）
+  - 確認できなかった項目は needs_web_check + source_notes に理由
 - .codex/facility-data-quality-checklist.md の全項目を実施
 
 ## やってはいけないこと

@@ -22,9 +22,10 @@
 "data_quality_status": "confirmed"
 ```
 
-- source_urls は確定根拠に使ったURL（公式優先）。複数あればカンマ区切り
+- source_urls は確定根拠に使ったURL（**先頭を公式/自治体に**）。複数あればカンマ区切り
 - まとめサイトしか根拠がない場合は confirmed にせず `needs_web_check`
-- 既存1,031件への遡及付与はしない（facility-data-source-audit.md §4 の分類運用に従う）
+- 既存データへの遡及付与はしない（status のみ機械分類: facility-data-quality-status-policy.md）
+- スキーマ詳細: facility-provenance-schema.md / 項目別要件の正本: facility-source-requirements-by-field.md
 
 ## 3. Nominatim 利用ルール
 
