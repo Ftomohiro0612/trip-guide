@@ -71,7 +71,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="border-t border-slate-200">
-        <div className="mx-auto max-w-6xl px-4 py-4 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
+        <div className="mx-auto max-w-6xl px-4 pt-4 pb-8 sm:py-4 text-xs text-slate-500 flex flex-wrap items-center justify-between gap-2">
           <span>© {new Date().getFullYear()} メモリップ</span>
           <span>※ 料金・営業情報は変更されることがあります。各施設の公式サイトもご確認ください。</span>
         </div>
