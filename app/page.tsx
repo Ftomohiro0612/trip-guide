@@ -704,26 +704,36 @@ function ValueRankingIcon() {
   );
 }
 
-function GrowthMiniExample() {
+function PreferenceRankingMiniExample() {
+  const rankings = [
+    ["1", "💧 水遊び", "8回", "100%"],
+    ["2", "✂️ クラフト", "5回", "62.5%"],
+    ["3", "🐾 動物ふれあい", "3回", "37.5%"],
+  ];
+
   return (
-    <div className="mt-5 space-y-2 rounded-2xl bg-white/75 p-3 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60">
-      <div className="rounded-2xl bg-white px-3 py-2 text-xs font-bold leading-relaxed text-slate-600 shadow-sm">
-        <span className="text-emerald-700">2025年5月</span>
-        <span className="mx-1" aria-hidden>
-          😢
-        </span>
-        すべり台怖がる
-      </div>
-      <div className="flex justify-center text-xs font-bold text-emerald-500">
-        →
-      </div>
-      <div className="rounded-2xl bg-emerald-500 px-3 py-2 text-xs font-bold leading-relaxed text-white shadow-sm">
-        <span>2026年6月</span>
-        <span className="mx-1" aria-hidden>
-          ✨
-        </span>
-        ひとりで5回
-      </div>
+    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60">
+      {rankings.map(([rank, label, count, width]) => (
+        <div key={rank}>
+          <div className="mb-1 flex items-center justify-between gap-2 text-xs">
+            <span className="min-w-0 font-bold text-slate-700">
+              {rank}. {label}
+            </span>
+            <span className="shrink-0 font-bold text-emerald-600">
+              {count}
+            </span>
+          </div>
+          <div
+            className="rounded-full"
+            style={{ height: 8, backgroundColor: "#d1fae5" }}
+          >
+            <div
+              className="rounded-full"
+              style={{ width, height: 8, backgroundColor: "#34d399" }}
+            />
+          </div>
+        </div>
+      ))}
     </div>
   );
 }
@@ -782,28 +792,39 @@ function MiniMapExample() {
   );
 }
 
-function RankingMiniExample() {
-  const rankings = [
-    ["1", "💧 水遊び", "8回", "w-full"],
-    ["2", "🐾 動物", "5回", "w-2/3"],
-    ["3", "🛝 遊具", "3回", "w-1/2"],
+function RecommendationMiniExample() {
+  const recommendations = [
+    ["01", "じゃぶじゃぶ池のある公園", "水遊びスポット"],
+    ["02", "屋内プール", "雨の日も遊びやすい"],
   ];
 
   return (
     <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60">
-      {rankings.map(([rank, label, count, width]) => (
-        <div key={rank}>
-          <div className="mb-1 flex items-center justify-between gap-2 text-xs">
-            <span className="min-w-0 font-bold text-slate-700">
-              {rank}. {label}
+      <div className="flex items-center justify-between gap-2 rounded-2xl bg-amber-100/80 px-3 py-2 text-xs font-bold text-amber-800">
+        <span>💧 水遊びが好き</span>
+        <span aria-hidden>→</span>
+        <span>次の遊び場候補</span>
+      </div>
+      <div className="space-y-2">
+        {recommendations.map(([number, title, tag]) => (
+          <div
+            key={number}
+            className="flex items-center gap-3 rounded-2xl bg-white px-3 py-2 shadow-sm"
+          >
+            <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-amber-400 text-xs font-bold text-white">
+              {number}
             </span>
-            <span className="shrink-0 font-bold text-amber-600">{count}</span>
+            <div className="min-w-0">
+              <p className="truncate text-xs font-bold text-slate-800">
+                {title}
+              </p>
+              <p className="mt-0.5 text-[11px] font-bold text-amber-600">
+                おすすめ: {tag}
+              </p>
+            </div>
           </div>
-          <div className="h-2.5 rounded-full bg-amber-100">
-            <div className={`h-2.5 rounded-full bg-amber-400 ${width}`} />
-          </div>
-        </div>
-      ))}
+        ))}
+      </div>
     </div>
   );
 }
@@ -812,17 +833,17 @@ function ValueProofSection() {
   const values = [
     {
       icon: <ValueGrowthIcon />,
-      title: "成長の変化に気づける",
-      body: "『去年は怖がってたのに、今年はひとりでできた！』——日々の子育てでは見過ごしがちな小さな成長に、記録を見返すことで気づけます。",
+      title: '気づかなかった"好き"が見えてくる',
+      body: '水遊びが多い、クラフトは長く集中する、動物とのふれあいが好き。記録を重ねるほど、子どもの"好き"や楽しみやすい遊びが見えてきます。',
       cardClass: "border-emerald-200/60 bg-emerald-50 shadow-emerald-100/50",
       iconClass: "bg-white/75 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60",
       titleClass: "text-emerald-900",
-      example: <GrowthMiniExample />,
+      example: <PreferenceRankingMiniExample />,
     },
     {
       icon: <ValueMapIcon />,
-      title: "家族の思い出として残せる",
-      body: "行った場所が家族だけの地図になって育っていきます。『ここ行ったね』と一緒に見返す時間も、おでかけの楽しみのひとつに。",
+      title: "わが家だけのおでかけ履歴が残る",
+      body: "行った場所が家族だけの記録としてたまっていきます。「ここ行ったね」と見返す時間も、おでかけの楽しみのひとつになります。",
       cardClass: "border-sky-200/60 bg-sky-50 shadow-sky-100/50",
       iconClass: "bg-white/75 shadow-sm shadow-sky-100/50 ring-1 ring-sky-200/60",
       titleClass: "text-sky-900",
@@ -830,12 +851,12 @@ function ValueProofSection() {
     },
     {
       icon: <ValueRankingIcon />,
-      title: "次のおでかけ先を選びやすい",
-      body: "『うちの子は水遊び派』がデータでわかるから、子どもが喜ぶ場所をすぐ選べます。『今日どこ行く？』の悩みが減ります。",
+      title: '"好き"に合う遊び場を見つけられる',
+      body: '水遊びが好きなら水遊びスポット、クラフトが好きなら工作体験。記録で見えてきた"好き"に合わせて、次のおでかけ先を選びやすくなります。',
       cardClass: "border-amber-200/60 bg-amber-50 shadow-amber-100/50",
       iconClass: "bg-white/75 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60",
       titleClass: "text-amber-900",
-      example: <RankingMiniExample />,
+      example: <RecommendationMiniExample />,
     },
   ];
 
