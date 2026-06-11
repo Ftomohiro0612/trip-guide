@@ -963,7 +963,7 @@ export default function HomePage() {
                 子どもの&quot;好き&quot;が見える、おでかけ記録サービス
               </p>
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
-                遊び場を探して、行ったあとは子どもの反応を30秒で記録。記録がたまるほど、うちの子が好きな遊びや、また行きたい場所が見えてきます。
+                遊び場を探して、行ったあとは子どもの反応を30秒で記録。記録がたまるほど、&quot;うちの子が好きな遊び&quot;と&quot;次に行きたい場所&quot;が見えてきます。
               </p>
 
               <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -979,7 +979,7 @@ export default function HomePage() {
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/55 bg-white/10 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:text-base"
                 >
                   <span aria-hidden>🗺️</span>
-                  遊び場を探す
+                  遊び場を見てみる
                 </Link>
               </div>
               <p className="mt-3 text-xs font-medium text-white/85">
