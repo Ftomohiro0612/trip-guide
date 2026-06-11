@@ -21,6 +21,10 @@ export const metadata: Metadata = {
   description:
     "静岡・長野・山梨の子供と楽しめる遊び場を簡単検索。雨の日OK・無料・年齢別など、目的にあわせてすぐ見つかる！",
   applicationName: "trip-guide.net",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/icons/icon-192.png",
+  },
   authors: [{ name: "FIC" }],
   keywords: [
     "子供",

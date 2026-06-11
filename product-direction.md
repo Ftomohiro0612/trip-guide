@@ -1269,10 +1269,10 @@ CREATE TABLE facility_recommended_tags (
 ```
 public/
   logo/
-    icon.svg            # アイコン単体（SVG）
-    logo-ja.svg         # 日本語ロゴ（星あり、タグラインなし）
-    logo-en.svg         # 英語ロゴ（タグラインなし）
-    logo-ja-dark.svg    # 日本語ロゴ（ダーク背景用反転版）
+    icon.png            # アイコン単体（PNG）
+    logo-ja.png         # 日本語ロゴ（星あり、タグラインなし）
+    logo-en.png         # 英語ロゴ（タグラインなし）
+    logo-ja-tagline.png # 日本語ロゴ + タグライン
   icons/
     icon-192.png        # PWA icon
     icon-512.png        # PWA icon
@@ -1287,8 +1287,8 @@ public/
 - マイページ: `by Trip Guide` 削除
 - manifest.ts: short_name → `メモリップ`
 
-**Phase 2（SVGアセット準備後）:**
-- ヘッダー: テキスト → `logo/icon.svg` + テキスト（Next.js Image）
+**Phase 2（PNGアセット準備後）:**
+- ヘッダー: テキスト → `logo/logo-ja-header.png`（Next.js Image）
 - PWA icon / favicon 差し替え
 - OGP 画像差し替え
 
@@ -1401,7 +1401,7 @@ Trip Guide は内部名称・ドメイン上の名残として残す。画面上
 | 高 | PWA short_name → メモリップ | `manifest.ts` |
 | 中 | layout.tsx の title/description を統合感ある文言へ | `layout.tsx` |
 | 中 | about ページをメモリップ説明に刷新 | `about/page.tsx` |
-| 低 | OGP 画像のブランド名変更 | `opengraph-image.tsx` 各種 |
+| 低 | OGP 画像のブランド名変更 | `opengraph-image` 各種 |
 
 ---
 

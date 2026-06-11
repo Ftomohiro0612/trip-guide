@@ -1,12 +1,19 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Footer() {
   return (
     <footer className="mt-20 border-t border-slate-200 bg-white">
       <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
         <div>
-          <Link href="/" className="flex items-center gap-2">
-            <span className="font-bold">メモリップ</span>
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/logo/logo-ja-header.png"
+              alt="メモリップ"
+              width={122}
+              height={32}
+              className="h-8 w-auto"
+            />
           </Link>
           <p className="mt-2 text-slate-500 leading-relaxed">
             子どもとのおでかけ先を探して、記録する。
