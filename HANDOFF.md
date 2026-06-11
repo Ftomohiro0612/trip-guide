@@ -233,6 +233,18 @@ status が `Error` なら最新の URL で `vercel inspect <URL>` してログ�
 
 ---
 
+## 次回セッションの推奨開始順（2026-06-11 オーナー確定）
+
+1. **規約・プライバシーポリシー v0.2 確認**（.codex/terms-privacy-draft.md）— 運営者正式表記・問い合わせ先・匿名集計/写真/オプトアウト文言 → 本番掲載可否判断
+2. **未デプロイ分のデプロイ判断** — 監査v3(70e60a8)・coord修正(6d591cd)・docs類。表示影響は地図ピン正常化が主で基本GO寄り
+3. **Sheets 同期4列対応** — provenance 4フィールド（source_urls / source_checked_at / data_quality_status / source_notes）を sync-sheet / append-to-sheet / push-to-sheet に対応させる
+4. **既存1,030件への data_quality_status 機械付与** — 一括 confirmed 禁止。likely_ok / needs_web_check / needs_human_review / exclude_candidate の機械分類（.codex/facility-data-quality-status-policy.md）
+5. **写真機能の公開前レビュー** — 規約掲載後に `PHOTO_UPLOAD_ENABLED=true` の判断（公開条件: .codex/phase4-photo-upload.md）
+
+既知残課題: url未入力102件 / invalid_address 202件 / missing_experience 259件 / 写真本番公開・規約正式掲載は未実施
+
+---
+
 ## 直近の作業ログ
 
 | 日付 | 主なできごと |
