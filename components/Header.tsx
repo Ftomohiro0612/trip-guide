@@ -34,7 +34,7 @@ export default function Header() {
               href="/tag/free"
               className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-emerald-50 hover:text-emerald-600 transition-colors"
             >
-              <span aria-hidden>🆓 </span>無料
+              <span aria-hidden>🆓 </span>無料で遊べる
             </Link>
           </nav>
           <HeaderAuthButton />

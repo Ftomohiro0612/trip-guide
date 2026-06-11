@@ -16,11 +16,11 @@ export default function Footer() {
             />
           </Link>
           <p className="mt-2 text-slate-500 leading-relaxed">
-            子どもとのおでかけ先を探して、記録する。
+            子どもの&quot;好き&quot;が見えてくる、家族のおでかけ記録。
           </p>
         </div>
         <div>
-          <h3 className="font-semibold mb-2">エリアから探す</h3>
+          <h3 className="font-semibold mb-2">人気エリアから探す</h3>
           <ul className="space-y-1 text-slate-600">
             <li>
               <Link href="/prefecture/shizuoka" className="hover:text-brand">
@@ -54,12 +54,12 @@ export default function Footer() {
             </li>
             <li>
               <Link href="/tag/kids-0-3" className="hover:text-brand">
-                👶 0-3歳と
+                👶 0〜3歳と行ける
               </Link>
             </li>
             <li>
               <Link href="/tag/elementary" className="hover:text-brand">
-                🧒 小学生と
+                🧒 小学生と行ける
               </Link>
             </li>
             <li>
