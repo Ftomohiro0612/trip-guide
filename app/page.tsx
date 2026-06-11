@@ -706,7 +706,7 @@ function ValueRankingIcon() {
 
 function GrowthMiniExample() {
   return (
-    <div className="mt-5 space-y-2 rounded-2xl bg-white/75 p-3 ring-1 ring-emerald-100">
+    <div className="mt-5 space-y-2 rounded-2xl bg-white/75 p-3 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60">
       <div className="rounded-2xl bg-white px-3 py-2 text-xs font-bold leading-relaxed text-slate-600 shadow-sm">
         <span className="text-emerald-700">2025年5月</span>
         <span className="mx-1" aria-hidden>
@@ -730,7 +730,7 @@ function GrowthMiniExample() {
 
 function MiniMapExample() {
   return (
-    <div className="mt-5 rounded-2xl bg-white/75 p-3 ring-1 ring-sky-100">
+    <div className="mt-5 rounded-2xl bg-white/75 p-3 shadow-sm shadow-sky-100/50 ring-1 ring-sky-200/60">
       <svg
         viewBox="0 0 220 112"
         fill="none"
@@ -790,7 +790,7 @@ function RankingMiniExample() {
   ];
 
   return (
-    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 ring-1 ring-amber-100">
+    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60">
       {rankings.map(([rank, label, count, width]) => (
         <div key={rank}>
           <div className="mb-1 flex items-center justify-between gap-2 text-xs">
@@ -812,28 +812,28 @@ function ValueProofSection() {
   const values = [
     {
       icon: <ValueGrowthIcon />,
-      title: "成長が見える",
-      body: "同じ場所でも、去年と今年で子どもの反応は変わります。記録を見返すと、できるようになったこと・興味の変化がはっきり見えます。",
-      cardClass: "border-emerald-100 bg-emerald-50",
-      iconClass: "bg-white/75 ring-1 ring-emerald-100",
+      title: "成長の変化に気づける",
+      body: "『去年は怖がってたのに、今年はひとりでできた！』——日々の子育てでは見過ごしがちな小さな成長に、記録を見返すことで気づけます。",
+      cardClass: "border-emerald-200/60 bg-emerald-50 shadow-emerald-100/50",
+      iconClass: "bg-white/75 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60",
       titleClass: "text-emerald-900",
       example: <GrowthMiniExample />,
     },
     {
       icon: <ValueMapIcon />,
-      title: "思い出が地図になる",
-      body: "行った場所にピンがたまって、家族だけのおでかけマップが育ちます。「次はどこ行く？」の相談も、地図を見ながら楽しくなります。",
-      cardClass: "border-sky-100 bg-sky-50",
-      iconClass: "bg-white/75 ring-1 ring-sky-100",
+      title: "家族の思い出として残せる",
+      body: "行った場所が家族だけの地図になって育っていきます。『ここ行ったね』と一緒に見返す時間も、おでかけの楽しみのひとつに。",
+      cardClass: "border-sky-200/60 bg-sky-50 shadow-sky-100/50",
+      iconClass: "bg-white/75 shadow-sm shadow-sky-100/50 ring-1 ring-sky-200/60",
       titleClass: "text-sky-900",
       example: <MiniMapExample />,
     },
     {
       icon: <ValueRankingIcon />,
-      title: "\"好き\"がランキングでわかる",
-      body: "ワンタップで残した反応タグが自動で集計。「うちの子は動物より水遊び派」みたいな発見が、次のおでかけ選びをラクにします。",
-      cardClass: "border-amber-100 bg-amber-50",
-      iconClass: "bg-white/75 ring-1 ring-amber-100",
+      title: "次のおでかけ先に迷わなくなる",
+      body: "『うちの子は水遊び派』がデータでわかるから、子どもが喜ぶ場所をすぐ選べます。『今日どこ行く？』の悩みが減ります。",
+      cardClass: "border-amber-200/60 bg-amber-50 shadow-amber-100/50",
+      iconClass: "bg-white/75 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60",
       titleClass: "text-amber-900",
       example: <RankingMiniExample />,
     },
@@ -849,8 +849,11 @@ function ValueProofSection() {
           id="value-proof-heading"
           className="text-center text-xl font-bold text-slate-900 sm:text-2xl"
         >
-          記録がたまると、こんなことが見えてきます
+          子どもの&quot;好き&quot;が見えると、こんないいことがあります
         </h2>
+        <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
+          記録は基本ワンタップ。たまっていくほど、家族のおでかけがもっと楽しく、もっとラクになります。
+        </p>
         <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
           {values.map((value) => (
             <div
