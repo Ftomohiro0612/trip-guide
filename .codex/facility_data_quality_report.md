@@ -2,16 +2,20 @@
 
 Generated: 2026-06-11
 Total facilities: 1030
-Total issues: 1982
+Total issues: 2084
 
 ## Category Counts
 
 | category | severity | count | needs_web_check |
 | --- | --- | ---: | ---: |
-| address_pref_mismatch | - | 0 | 0 |
+| name_memo_pollution | high | 0 | 0 |
+| out_of_scope_prefecture | high | 0 | 0 |
+| url_na_or_empty | medium | 102 | 102 |
+| prefecture_id_mismatch | high | 0 | 0 |
+| address_pref_mismatch | high | 0 | 0 |
 | prefecture_missing_in_address | info | 877 | 0 |
 | invalid_address | high | 203 | 203 |
-| invalid_coordinates | - | 0 | 0 |
+| invalid_coordinates | high | 0 | 0 |
 | coord_pref_mismatch | high | 3 | 3 |
 | tag_category_conflict | medium | 31 | 31 |
 | missing_experience | medium | 259 | 259 |
@@ -23,7 +27,7 @@ Total issues: 1982
 | severity | count |
 | --- | ---: |
 | high | 206 |
-| medium | 293 |
+| medium | 395 |
 | low | 606 |
 | info | 877 |
 
@@ -31,7 +35,112 @@ Total issues: 1982
 
 _警告なし_
 
+## Category Samples
+
+### url_na_or_empty
+
+| id | name | reason |
+| --- | --- | --- |
+| 6 | ピュアハートキッズランド浜松志都呂 | url が未入力 |
+| 7 | サープラ富士あそびタウン | url が未入力 |
+| 26 | 石人の星公園 遊具広場 | url が未入力 |
+| 27 | 雄踏総合公園(亀崎ファミリーランドプール) | url が未入力 |
+| 28 | 豊田ラブリバー公園 | url が未入力 |
+
+### prefecture_missing_in_address
+
+| id | name | reason |
+| --- | --- | --- |
+| 1 | ぐりんぱ | address に都道府県名が含まれていない |
+| 2 | 浜名湖パルパル | address に都道府県名が含まれていない |
+| 3 | ちびまる子ちゃんランド | address に都道府県名が含まれていない |
+| 4 | 伊豆ぐらんぱる公園 | address に都道府県名が含まれていない |
+| 5 | ららぽーと沼津 リトルプラネット | address に都道府県名が含まれていない |
+
+### invalid_address
+
+| id | name | reason |
+| --- | --- | --- |
+| 15 | 屋内型ふれあい動物園 アニタッチ | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 27 | 雄踏総合公園(亀崎ファミリーランドプール) | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 28 | 豊田ラブリバー公園 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 51 | ホテルテルメ温水プール | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+| 52 | 白樺リゾート 池の平ファミリーランド | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
+
+### coord_pref_mismatch
+
+| id | name | reason |
+| --- | --- | --- |
+| 896 | 荒川公園(熊谷) | latitude / longitude が 埼玉県 の粗いbbox外 |
+| 898 | 戸田市スポーツセンター | latitude / longitude が 埼玉県 の粗いbbox外 |
+| 901 | 武甲山資料館 (秩父) | latitude / longitude が 埼玉県 の粗いbbox外 |
+
+### tag_category_conflict
+
+| id | name | reason |
+| --- | --- | --- |
+| 357 | カンドゥー | category(indoor-play)に対してcoretags(playground,character,craft,vehicle)が付与されていない |
+| 368 | 那須りんどう湖レイクビュー | category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない |
+| 439 | あしかがフラワーパーク | category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない |
+| 530 | 行田市古代蓮の里 | category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない |
+| 546 | 越生梅林 | category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない |
+
+### missing_experience
+
+| id | name | reason |
+| --- | --- | --- |
+| 3 | ちびまる子ちゃんランド | description に子ども向け体験への言及がない |
+| 7 | サープラ富士あそびタウン | description に子ども向け体験への言及がない |
+| 47 | 修善寺虹の郷 | description に子ども向け体験への言及がない |
+| 78 | ファミリーモール and LIFE 木育ひろばぬくもく | description に子ども向け体験への言及がない |
+| 107 | リサとガスパールタウン | description に子ども向け体験への言及がない |
+
+### thin_description
+
+| id | name | reason |
+| --- | --- | --- |
+| 42 | 静岡ホビースクエア | description が施設名・住所・営業情報中心で体験語彙が乏しい |
+| 104 | 佐久平PA直結スキー場 | description が施設名・住所・営業情報中心で体験語彙が乏しい |
+| 127 | AEON MALL Kofu Showa(キッズコーナー) | description が施設名・住所・営業情報中心で体験語彙が乏しい |
+
+### short_description
+
+| id | name | reason |
+| --- | --- | --- |
+| 39 | ディスカバリーパーク焼津 | description が 58文字（60文字未満） |
+| 41 | ふじのくに地球環境史ミュージアム | description が 57文字（60文字未満） |
+| 44 | 熱海クラフト工房 | description が 56文字（60文字未満） |
+| 45 | 伊豆クラフトハウス | description が 52文字（60文字未満） |
+| 46 | 伊豆アート体験さくら坂 | description が 55文字（60文字未満） |
+
 ## Top 10 Issues
+
+### name_memo_pollution
+
+_該当なし_
+
+### out_of_scope_prefecture
+
+_該当なし_
+
+### url_na_or_empty
+
+| id | name | prefecture | reason |
+| --- | --- | --- | --- |
+| 6 | ピュアハートキッズランド浜松志都呂 | 静岡県 | url が未入力 |
+| 7 | サープラ富士あそびタウン | 静岡県 | url が未入力 |
+| 26 | 石人の星公園 遊具広場 | 静岡県 | url が未入力 |
+| 27 | 雄踏総合公園(亀崎ファミリーランドプール) | 静岡県 | url が未入力 |
+| 28 | 豊田ラブリバー公園 | 静岡県 | url が未入力 |
+| 29 | 遊具広場(長浜海浜公園) | 静岡県 | url が未入力 |
+| 30 | キッズランドUS 静岡清水店 | 静岡県 | url が未入力 |
+| 31 | キッズパークてん KIDS PARK X | 静岡県 | url が未入力 |
+| 32 | 藤枝市民プールキッズパーク | 静岡県 | url が未入力 |
+| 33 | Mooovi 浜名湖 | 静岡県 | url が未入力 |
+
+### prefecture_id_mismatch
+
+_該当なし_
 
 ### address_pref_mismatch
 

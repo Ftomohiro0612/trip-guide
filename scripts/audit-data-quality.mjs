@@ -57,6 +57,32 @@ const PREFS = [
   "沖縄県",
 ];
 
+const TARGET_PREFECTURES = new Set([
+  "静岡県",
+  "長野県",
+  "山梨県",
+  "東京都",
+  "栃木県",
+  "埼玉県",
+  "新潟県",
+  "千葉県",
+  "神奈川県",
+]);
+
+const PREFECTURE_ID_BY_PREFECTURE = {
+  静岡県: "shizuoka",
+  長野県: "nagano",
+  山梨県: "yamanashi",
+  東京都: "tokyo",
+  栃木県: "tochigi",
+  埼玉県: "saitama",
+  新潟県: "niigata",
+  千葉県: "chiba",
+  神奈川県: "kanagawa",
+};
+
+const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
+
 const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊", "周辺"];
 const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|[-‐‑‒–—―−ー－]/;
 
@@ -200,6 +226,10 @@ const GENERIC_DESCRIPTION_PATTERNS = [
 ];
 
 const ISSUE_ORDER = [
+  "name_memo_pollution",
+  "out_of_scope_prefecture",
+  "url_na_or_empty",
+  "prefecture_id_mismatch",
   "address_pref_mismatch",
   "prefecture_missing_in_address",
   "invalid_address",
@@ -211,19 +241,56 @@ const ISSUE_ORDER = [
   "short_description",
 ];
 
+const ISSUE_SEVERITIES = {
+  name_memo_pollution: "high",
+  out_of_scope_prefecture: "high",
+  url_na_or_empty: "medium",
+  prefecture_id_mismatch: "high",
+  address_pref_mismatch: "high",
+  prefecture_missing_in_address: "info",
+  invalid_address: "high",
+  invalid_coordinates: "high",
+  coord_pref_mismatch: "high",
+  tag_category_conflict: "medium",
+  missing_experience: "medium",
+  thin_description: "medium",
+  short_description: "low",
+};
+
 function findPrefectureMatches(address) {
   if (!address) return [];
 
-  return PREFS.map((prefecture) => ({
+  const matches = PREFS.map((prefecture) => ({
     prefecture,
     index: address.indexOf(prefecture),
   }))
     .filter((match) => match.index >= 0)
-    .sort((a, b) => a.index - b.index);
+    .sort((a, b) => a.index - b.index || b.prefecture.length - a.prefecture.length);
+
+  const nonOverlappingMatches = [];
+  for (const match of matches) {
+    const start = match.index;
+    const end = start + match.prefecture.length;
+    const overlapsPrevious = nonOverlappingMatches.some((previous) => {
+      const previousStart = previous.index;
+      const previousEnd = previousStart + previous.prefecture.length;
+      return start < previousEnd && end > previousStart;
+    });
+
+    if (!overlapsPrevious) {
+      nonOverlappingMatches.push(match);
+    }
+  }
+
+  return nonOverlappingMatches;
 }
 
 function extractPrefFromAddress(address) {
   return findPrefectureMatches(address)[0]?.prefecture ?? null;
+}
+
+function isTargetPrefecture(prefecture) {
+  return TARGET_PREFECTURES.has(prefecture);
 }
 
 function normalizeTags(tags) {
@@ -258,11 +325,107 @@ function createIssue(
   };
 }
 
+function checkNameMemoPollution(facility) {
+  const name = typeof facility.name === "string" ? facility.name : "";
+  const matchedToken = NAME_MEMO_TOKENS.find((token) => name.includes(token));
+
+  if (!matchedToken) {
+    return null;
+  }
+
+  return createIssue(
+    facility,
+    "name_memo_pollution",
+    `name にメモ混入トークン '${matchedToken}' を含む`,
+    { severity: "high", needsWebCheck: false },
+  );
+}
+
+function checkOutOfScopePrefecture(facility) {
+  const pref = typeof facility.prefecture === "string" ? facility.prefecture : "";
+  const addressPrefs = findPrefectureMatches(facility.address ?? "");
+  const outOfScopeAddressPrefs = addressPrefs
+    .map((match) => match.prefecture)
+    .filter((prefecture) => !isTargetPrefecture(prefecture));
+
+  const reasons = [];
+  if (!isTargetPrefecture(pref)) {
+    reasons.push(`prefecture(${pref || "未入力"})が対象9県外`);
+  }
+
+  if (outOfScopeAddressPrefs.length > 0) {
+    reasons.push(
+      `address内に対象9県外の都道府県(${[...new Set(outOfScopeAddressPrefs)].join(",")})を含む`,
+    );
+  }
+
+  if (reasons.length === 0) {
+    return null;
+  }
+
+  return createIssue(facility, "out_of_scope_prefecture", reasons.join("; "), {
+    severity: "high",
+  });
+}
+
+function checkUrlNaOrEmpty(facility) {
+  const url = typeof facility.url === "string" ? facility.url.trim() : "";
+
+  if (!url) {
+    return createIssue(facility, "url_na_or_empty", "url が未入力", {
+      severity: "medium",
+    });
+  }
+
+  if (url.toUpperCase() === "N/A") {
+    return createIssue(facility, "url_na_or_empty", 'url が "N/A"', {
+      severity: "medium",
+    });
+  }
+
+  if (!/^https?:\/\//i.test(url)) {
+    return createIssue(
+      facility,
+      "url_na_or_empty",
+      "url が http(s):// で始まらない",
+      { severity: "medium" },
+    );
+  }
+
+  return null;
+}
+
+function checkPrefectureIdMismatch(facility) {
+  const expectedPrefectureId = PREFECTURE_ID_BY_PREFECTURE[facility.prefecture];
+
+  if (!expectedPrefectureId) {
+    return null;
+  }
+
+  const actualPrefectureId =
+    typeof facility.prefecture_id === "string" ? facility.prefecture_id.trim() : "";
+
+  if (actualPrefectureId === expectedPrefectureId) {
+    return null;
+  }
+
+  return createIssue(
+    facility,
+    "prefecture_id_mismatch",
+    `prefecture(${facility.prefecture})の prefecture_id は ${expectedPrefectureId} が期待値、実値は ${actualPrefectureId || "未入力"}`,
+    { severity: "high", needsWebCheck: false },
+  );
+}
+
 function checkAddressPrefMismatch(facility) {
   const addrPref = extractPrefFromAddress(facility.address ?? "");
   const pref = facility.prefecture ?? null;
 
   if (addrPref && pref && addrPref !== pref) {
+    if (!isTargetPrefecture(addrPref) || !isTargetPrefecture(pref)) {
+      return null;
+    }
+
     return createIssue(
       facility,
       "address_pref_mismatch",
@@ -542,10 +705,39 @@ function markdownIssueTable(issues) {
   ].join("\n");
 }
 
+function markdownSampleTable(issues) {
+  const rows = issues.slice(0, 5).map((issue) =>
+    [issue.id, issue.name, issue.web_check_reason].map(escapeMarkdownCell).join(" | "),
+  );
+
+  if (rows.length === 0) {
+    return "_該当なし_";
+  }
+
+  return [
+    "| id | name | reason |",
+    "| --- | --- | --- |",
+    ...rows.map((row) => `| ${row} |`),
+  ].join("\n");
+}
+
+function createIssueSamples(issueGroups) {
+  return Object.fromEntries(
+    ISSUE_ORDER.map((issueType) => [
+      issueType,
+      (issueGroups[issueType] ?? []).slice(0, 5).map((issue) => ({
+        id: issue.id,
+        name: issue.name,
+        reason: issue.web_check_reason,
+      })),
+    ]),
+  );
+}
+
 function buildMarkdownReport(report, issueGroups) {
   const countRows = ISSUE_ORDER.map((issueType) => {
     const issues = issueGroups[issueType] ?? [];
-    const severity = issues[0]?.severity ?? "-";
+    const severity = issues[0]?.severity ?? ISSUE_SEVERITIES[issueType] ?? "-";
     const needsWebCheckCount = issues.filter((issue) => issue.needs_web_check).length;
 
     return `| ${issueType} | ${severity} | ${issues.length} | ${needsWebCheckCount} |`;
@@ -563,6 +755,19 @@ function buildMarkdownReport(report, issueGroups) {
   const topIssueSections = ISSUE_ORDER.map(
     (issueType) => `### ${issueType}\n\n${markdownIssueTable(issueGroups[issueType] ?? [])}`,
   ).join("\n\n");
+
+  const sampleIssueTypes = ISSUE_ORDER.filter(
+    (issueType) => (issueGroups[issueType] ?? []).length > 0,
+  );
+  const sampleSections =
+    sampleIssueTypes.length > 0
+      ? sampleIssueTypes
+          .map(
+            (issueType) =>
+              `### ${issueType}\n\n${markdownSampleTable(issueGroups[issueType] ?? [])}`,
+          )
+          .join("\n\n")
+      : "_該当なし_";
 
   return [
     "# Facility Data Quality Report",
@@ -587,6 +792,10 @@ function buildMarkdownReport(report, issueGroups) {
     "",
     warningBlock,
     "",
+    "## Category Samples",
+    "",
+    sampleSections,
+    "",
     "## Top 10 Issues",
     "",
     topIssueSections,
@@ -599,6 +808,10 @@ function createIssueGroups(facilities) {
 
   for (const facility of facilities) {
     const checks = [
+      checkNameMemoPollution,
+      checkOutOfScopePrefecture,
+      checkUrlNaOrEmpty,
+      checkPrefectureIdMismatch,
       checkAddressPrefMismatch,
       checkPrefectureMissingInAddress,
       checkInvalidAddress,
@@ -662,6 +875,7 @@ async function main() {
   const categoryCounts = Object.fromEntries(
     ISSUE_ORDER.map((issueType) => [issueType, issueGroups[issueType].length]),
   );
+  const categorySamples = createIssueSamples(issueGroups);
   const severityCounts = {
     high: 0,
     medium: 0,
@@ -675,6 +889,7 @@ async function main() {
     total_facilities: facilities.length,
     prefectures: dataPrefectures,
     category_counts: categoryCounts,
+    category_samples: categorySamples,
     severity_counts: severityCounts,
     ...Object.fromEntries(
       ISSUE_ORDER.map((issueType) => [`${issueType}_count`, categoryCounts[issueType]]),
