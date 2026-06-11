@@ -233,7 +233,7 @@ function MemoryPreviewCard() {
 
         <div className="mt-5 border-t border-slate-100 pt-4">
           <p className="text-xs font-bold text-slate-600">
-            📸 写真もまとめて思い出に
+            📸 写真もまとめて思い出に（近日公開）
           </p>
           <div className="mt-2 grid grid-cols-2 gap-2">
             <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-slate-100 text-lg text-slate-300">
@@ -729,7 +729,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-3 text-xs font-medium text-white/85">
-                登録は無料・記録は30秒で完了
+                登録は無料・基本の記録は30秒で完了
               </p>
 
               <form
