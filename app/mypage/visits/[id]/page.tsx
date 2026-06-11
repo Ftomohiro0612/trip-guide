@@ -1,9 +1,13 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getFacilityBySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteVisitButton from "../DeleteVisitButton";
+import VisitPhotoGallery, {
+  type VisitPhotoGalleryPhoto,
+} from "./VisitPhotoGallery";
 import {
   getVisitChildProfile,
   VisitChildCard,
@@ -37,6 +41,13 @@ type Visit = {
   food_rating: string | null;
   crowding: string | null;
   parking: string | null;
+};
+
+type VisitPhoto = {
+  id: string;
+  storage_path: string;
+  thumb_path: string;
+  taken_on: string | null;
 };
 
 const familyRevisitLabels: Record<string, string> = {
@@ -176,6 +187,37 @@ export default async function VisitDetailPage({
   const facility = visitRow.facility_slug.startsWith("manual-")
     ? undefined
     : getFacilityBySlug(visitRow.facility_slug);
+  let photos: VisitPhotoGalleryPhoto[] = [];
+
+  if (PHOTO_UPLOAD_ENABLED) {
+    const { data: photoRows } = await supabase
+      .from("visit_photos")
+      .select("id, storage_path, thumb_path, taken_on")
+      .eq("visit_id", visitRow.id)
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: true });
+    const visitPhotos = (photoRows ?? []) as VisitPhoto[];
+    const photoPaths = Array.from(
+      new Set(visitPhotos.flatMap((photo) => [photo.thumb_path, photo.storage_path])),
+    );
+    const { data: signedPhotoUrls } =
+      photoPaths.length > 0
+        ? await supabase.storage
+            .from("visit-photos")
+            .createSignedUrls(photoPaths, 60 * 60)
+        : { data: [] };
+    const signedPhotoUrlByPath = new Map(
+      (signedPhotoUrls ?? []).map((row) => [row.path, row.signedUrl]),
+    );
+    photos = visitPhotos.map((photo) => ({
+      id: photo.id,
+      storagePath: photo.storage_path,
+      thumbPath: photo.thumb_path,
+      thumbUrl: signedPhotoUrlByPath.get(photo.thumb_path) ?? null,
+      fullUrl: signedPhotoUrlByPath.get(photo.storage_path) ?? null,
+      takenOn: photo.taken_on,
+    }));
+  }
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
@@ -274,6 +316,10 @@ export default async function VisitDetailPage({
           />
         </dl>
       </section>
+
+      {PHOTO_UPLOAD_ENABLED && photos.length > 0 && (
+        <VisitPhotoGallery visitId={visitRow.id} initialPhotos={photos} />
+      )}
 
       <section className="space-y-3">
         <h2 className="font-bold text-slate-800">子ども別満足度</h2>
