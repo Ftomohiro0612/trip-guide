@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
+import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
@@ -281,7 +282,7 @@ export default function NewVisitPage() {
     allSelectedChildrenRated &&
     !loading &&
     !initializing &&
-    !photoBusy;
+    (!PHOTO_UPLOAD_ENABLED || !photoBusy);
 
   function toggleChild(childId: string) {
     setSelectedChildIds((current) =>
@@ -293,7 +294,9 @@ export default function NewVisitPage() {
 
   function finishAfterSave() {
     setCreatedVisitId(null);
-    photoUploaderRef.current?.reset();
+    if (PHOTO_UPLOAD_ENABLED) {
+      photoUploaderRef.current?.reset();
+    }
     if (facilitySlugFromUrl) {
       setSavedFromSlug(facilitySlugFromUrl);
     } else {
@@ -302,6 +305,8 @@ export default function NewVisitPage() {
   }
 
   async function uploadPhotosForVisit(visitId: string) {
+    if (!PHOTO_UPLOAD_ENABLED) return true;
+
     const photoResult = await photoUploaderRef.current?.upload(visitId);
     if (photoResult && !photoResult.ok) {
       setCreatedVisitId(visitId);
@@ -738,12 +743,14 @@ export default function NewVisitPage() {
               />
             </div>
 
-            <VisitPhotoUploader
-              ref={photoUploaderRef}
-              initialExistingCount={0}
-              disabled={loading}
-              onBusyChange={setPhotoBusy}
-            />
+            {PHOTO_UPLOAD_ENABLED && (
+              <VisitPhotoUploader
+                ref={photoUploaderRef}
+                initialExistingCount={0}
+                disabled={loading}
+                onBusyChange={setPhotoBusy}
+              />
+            )}
           </div>
         </section>
 
@@ -753,10 +760,10 @@ export default function NewVisitPage() {
           className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
         >
           {loading
-            ? createdVisitId
+            ? PHOTO_UPLOAD_ENABLED && createdVisitId
               ? "写真を保存中..."
               : "保存中..."
-            : createdVisitId
+            : PHOTO_UPLOAD_ENABLED && createdVisitId
               ? "写真を再試行"
               : "保存する"}
         </button>

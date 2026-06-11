@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
@@ -123,19 +124,19 @@ export default function EditVisitPage() {
     let active = true;
     async function load() {
       const supabase = createClient();
-      const [visitResult, photoCountResult] = await Promise.all([
-        supabase
-          .from("visits")
-          .select(
-            "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, temp_feeling, stay_duration_min, time_was_enough, food_rating, parent_memo",
-          )
-          .eq("id", visitId)
-          .single(),
-        supabase
+      const visitResult = await supabase
+        .from("visits")
+        .select(
+          "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, temp_feeling, stay_duration_min, time_was_enough, food_rating, parent_memo",
+        )
+        .eq("id", visitId)
+        .single();
+      const photoCountResult = PHOTO_UPLOAD_ENABLED
+        ? await supabase
           .from("visit_photos")
           .select("id", { count: "exact", head: true })
-          .eq("visit_id", visitId),
-      ]);
+          .eq("visit_id", visitId)
+        : null;
       if (!active) return;
       const { data, error: fetchError } = visitResult;
       if (fetchError || !data) {
@@ -143,10 +144,12 @@ export default function EditVisitPage() {
         setLoading(false);
         return;
       }
-      if (photoCountResult.error) {
-        setError("写真枚数の読み込みに失敗しました");
-      } else {
-        setExistingPhotoCount(photoCountResult.count ?? 0);
+      if (photoCountResult) {
+        if (photoCountResult.error) {
+          setError("写真枚数の読み込みに失敗しました");
+        } else {
+          setExistingPhotoCount(photoCountResult.count ?? 0);
+        }
       }
       setFacilityName(data.facility_name ?? "");
       setVisitedOn(data.visited_on ?? "");
@@ -188,7 +191,7 @@ export default function EditVisitPage() {
     Boolean(parentFatigue) &&
     !saving &&
     !loading &&
-    !photoBusy;
+    (!PHOTO_UPLOAD_ENABLED || !photoBusy);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
@@ -221,11 +224,13 @@ export default function EditVisitPage() {
       return;
     }
 
-    const photoResult = await photoUploaderRef.current?.upload(visitId);
-    if (photoResult && !photoResult.ok) {
-      setError(`変更は保存済みです。写真だけ再試行できます。${photoResult.error}`);
-      setSaving(false);
-      return;
+    if (PHOTO_UPLOAD_ENABLED) {
+      const photoResult = await photoUploaderRef.current?.upload(visitId);
+      if (photoResult && !photoResult.ok) {
+        setError(`変更は保存済みです。写真だけ再試行できます。${photoResult.error}`);
+        setSaving(false);
+        return;
+      }
     }
 
     router.push("/mypage/visits");
@@ -412,12 +417,14 @@ export default function EditVisitPage() {
               />
             </div>
 
-            <VisitPhotoUploader
-              ref={photoUploaderRef}
-              initialExistingCount={existingPhotoCount}
-              disabled={saving}
-              onBusyChange={setPhotoBusy}
-            />
+            {PHOTO_UPLOAD_ENABLED && (
+              <VisitPhotoUploader
+                ref={photoUploaderRef}
+                initialExistingCount={existingPhotoCount}
+                disabled={saving}
+                onBusyChange={setPhotoBusy}
+              />
+            )}
           </div>
         </section>
 
