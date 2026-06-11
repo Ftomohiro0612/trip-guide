@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!meta) return { title: "見つかりませんでした" };
   const list = facilities.filter((f) => f.tags.includes(meta.tag));
   return {
-    title: `${meta.title} ${list.length}選 (静岡・長野・山梨)`,
-    description: `${meta.lead} 静岡・長野・山梨で${meta.title}を${list.length}施設掲載。`,
+    title: `${meta.title} ${list.length}選 (関東甲信越)`,
+    description: `${meta.lead} 関東甲信越9県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },

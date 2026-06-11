@@ -27,8 +27,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!meta) return { title: "見つかりませんでした" };
   const desc = categoryDescriptions[meta.id] ?? "";
   return {
-    title: `${meta.name} ${meta.count}選 (静岡・長野・山梨)`,
-    description: `${desc} 静岡・長野・山梨の${meta.name}を${meta.count}施設まとめて掲載。`,
+    title: `${meta.name} ${meta.count}選 (関東甲信越)`,
+    description: `${desc} 関東甲信越9県の${meta.name}を${meta.count}施設まとめて掲載。`,
     alternates: { canonical: `/category/${meta.id}` },
   };
 }

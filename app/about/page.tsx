@@ -5,7 +5,7 @@ import { facilities, prefectures } from "@/lib/facilities";
 export const metadata: Metadata = {
   title: "サイトについて",
   description:
-    "trip-guide.net は、静岡・長野・山梨3県の子供向け遊び場を網羅的に検索できるサイトです。「今日どこ行く？」をすばやく解決します。",
+    "メモリップは、関東甲信越9県の子供向け遊び場を網羅的に検索できるサイトです。「今日どこ行く？」をすばやく解決します。",
   alternates: { canonical: "/about" },
 };
 
@@ -18,7 +18,7 @@ export default function AboutPage() {
             🎈
           </p>
           <h1 className="text-3xl sm:text-4xl font-bold drop-shadow tracking-tight">
-            trip-guide.net について
+            メモリップについて
           </h1>
           <p className="mt-3 opacity-95">
             子育て世代のための、子供向け遊び場検索サイト
@@ -33,7 +33,7 @@ export default function AboutPage() {
         <p className="text-slate-700 leading-relaxed">
           「今日どこ行こう？」「雨だけど楽しめる場所はある？」「無料で遊べる施設は？」
           こんな日常的な疑問に、3秒で答えを返すことを目指しています。
-          現在は静岡県・長野県・山梨県の {facilities.length}{" "}
+          現在は関東甲信越9県の {facilities.length}{" "}
           施設を掲載しています。
         </p>
 
