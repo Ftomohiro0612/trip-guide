@@ -482,6 +482,14 @@ CREATE TABLE visit_photos (
 **実装タイミング**: Phase 4  
 → 訪問記録詳細ページ・任意項目フォームUI・行きたいリスト手動追加が完了した後に着手
 
+**実装状況（2026-06-11）**: Phase A（Migration 006 / DB・Storage基盤・RLSテスト全PASS）+ Phase B（アップロードUI・EXIF除去）実装済み。
+
+**写真機能 残バックログ**:
+- [ ] Phase C: 詳細ページでの写真表示（signed URL）+ 削除UI
+- [ ] **退会時の写真全削除**: 退会フロー実装時に `{user_id}/` フォルダの一括削除を必ず組み込む（visit_photos は CASCADE で消えるが Storage ファイルは明示削除が必要）
+- [ ] ユーザー単位の総写真枚数上限（無料 合計100枚目安）を DB 層で強制
+- [ ] DB に行のない孤児 Storage ファイルの定期クリーンアップ
+
 ---
 
 ## 18. 有料プラン設計（Memorips Plus）

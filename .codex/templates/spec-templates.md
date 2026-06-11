@@ -16,6 +16,14 @@
 - UI 変更では、可能な限り PC 幅・スマホ幅のブラウザ確認結果を報告する
 - DB・データ変更・個人データ機能は、**実装コミットとデプロイを分ける**
 
+## Codex 環境の既知制約（毎回再発見しないこと）
+
+- `rg`（ripgrep）は未インストール → `git grep` / `Select-String` で代替
+- in-app Browser は `iab unavailable` で利用不可 → HTTP レスポンス検証 + headless Chrome/CDP で代替
+- `bash` は PATH 上にない → `C:\Program Files\Git\bin\bash.exe` を明示パスで使用
+- Vercel token: `C:\Users\tomo-\.codex\.sandbox-secrets\vercel.json` のフィールド名は **`VERCEL_TOKEN`**（`token` ではない）
+- `npm run build` は postbuild で `public/sitemap-0.xml` を再生成する（状況確認だけのときは build を避ける）
+
 ---
 
 ## 1. UI改善タスク
@@ -82,8 +90,9 @@ fix: <画面名> — <修正内容>（バグ修正の場合）
 - 関連するアプリコード
 
 ## 実装要件
+- **migration 番号は `ls supabase/migrations/` で最大番号を確認して +1 すること。同番号ファイルが既に存在する場合は作成せず NO-GO で PM に戻す**
 - テーブル定義 / カラム追加（型・NOT NULL・デフォルト・FK・ON DELETE を明示）
-- RLS: ENABLE ROW LEVEL SECURITY + ポリシー（SELECT/INSERT/UPDATE/DELETE それぞれ）
+- RLS: ENABLE ROW LEVEL SECURITY + ポリシー（SELECT/INSERT/UPDATE/DELETE それぞれ。**UPDATE ポリシーを作らない場合は「意図的に UPDATE 不可」と仕様書に明示する**）
 - GRANT を authenticated に限定（anon に出すのは集計RPCのみ）
 - インデックス（FK・検索キー）
 
@@ -224,6 +233,12 @@ GO / NO-GO: <どちらか明記。NO-GO の場合は理由>
 - npx tsc --noEmit: PASS/FAIL
 - npm run build: PASS/FAIL
 - <機能固有の検証（HTTP確認・RLSテスト等）と結果>
+
+## デプロイ
+実施 / 未実施
+
+- 実施した場合: 本番URL・deployment URL・deployment id
+- 未実施の場合: 未実施理由
 
 ## 未実施・できなかったこと
 - <正直に列挙。なければ「なし」>
