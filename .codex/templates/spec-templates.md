@@ -16,6 +16,50 @@
 - UI 変更では、可能な限り PC 幅・スマホ幅のブラウザ確認結果を報告する
 - DB・データ変更・個人データ機能は、**実装コミットとデプロイを分ける**
 
+## 9. 施設データ更新タスク（追加・修正・閉店/移転）
+
+```markdown
+# <タスク名>
+
+## 背景・目的
+<どの施設の何を、なぜ変えるか。検知のきっかけ（ユーザー報告/監査/まとめサイト表記等）>
+
+## 種別
+新規追加 / 既存修正 / 閉店・移転対応（→ それぞれ .codex/facility-research-workflow.md の §A/§B/§C に従う）
+
+## 対象
+- data/facilities_data.json の id=<id>（複数なら列挙。10件超は PM 承認必須）
+
+## 確認元（必須）
+- 一次情報URL: <公式/自治体のURL>
+- 確認日: <YYYY-MM-DD>
+- 住所・座標・閉店・移転は AI 推定で確定しない（.codex/facility-research-source-policy.md）
+
+## 実装要件
+- 修正値と現状値を Before/After で明記
+- 住所変更時は座標再取得（Nominatim 1req/s・bbox 検証・geocode_source 更新）
+- source_urls / source_checked_at / data_quality_status を更新
+- .codex/facility-data-quality-checklist.md の全項目を実施
+
+## やってはいけないこと
+- 監査スクリプトの変更を同コミットに混ぜる
+- id の再採番 / name へのメモ文字列混入
+- 県外施設の追加・削除の独断実行（PM 判断）
+- 確認できなかった項目の推測補完（needs_web_check で保留）
+
+## 実行コマンド
+node scripts/audit-data-quality.mjs / npm run lint / npm run build（sitemap 変化を確認）
+
+## 完了条件・報告すべき項目
+- commit hash / 変更 id 一覧と Before/After / 根拠URL / 監査前後の件数 / デプロイ: 実施 or 未実施
+- 確認できなかった項目（あれば needs_web_check として明示）
+
+## コミットメッセージ例
+fix: id<id> <施設名> — <変更内容>（確認元: 公式サイト）
+```
+
+---
+
 ## Codex 環境の既知制約（毎回再発見しないこと）
 
 - `rg`（ripgrep）は未インストール → `git grep` / `Select-String` で代替
