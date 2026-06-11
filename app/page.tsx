@@ -407,9 +407,10 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
   const steps = [
     {
       number: "01",
-      labelClass: "text-sky-400",
-      numberClass: "text-sky-100",
-      iconClass: "bg-sky-50",
+      cardClass: "border-sky-100 bg-sky-50",
+      labelClass: "text-sky-500",
+      numberClass: "text-sky-200",
+      iconClass: "bg-white/75 ring-1 ring-sky-100",
       icon: <StepSearchIcon />,
       title: "遊び場を探す",
       body: "年齢・エリア・遊びのタグから、今の家族に合う場所を見つけます。",
@@ -417,9 +418,10 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
     },
     {
       number: "02",
-      labelClass: "text-cyan-400",
-      numberClass: "text-cyan-100",
-      iconClass: "bg-cyan-50",
+      cardClass: "border-cyan-100 bg-cyan-50",
+      labelClass: "text-cyan-500",
+      numberClass: "text-cyan-200",
+      iconClass: "bg-white/75 ring-1 ring-cyan-100",
       icon: <StepRecordIcon />,
       title: "おでかけを記録する",
       body: "行ったあとに、子どもの反応・満足度・また行きたい気持ちを残します。",
@@ -427,9 +429,10 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
     },
     {
       number: "03",
-      labelClass: "text-emerald-400",
-      numberClass: "text-emerald-100",
-      iconClass: "bg-emerald-50",
+      cardClass: "border-emerald-100 bg-emerald-50",
+      labelClass: "text-emerald-500",
+      numberClass: "text-emerald-200",
+      iconClass: "bg-white/75 ring-1 ring-emerald-100",
       icon: <StepGrowthIcon />,
       title: "好きが見える",
       body: "記録がたまるほど、子どもの好きな遊びや成長の変化が見えてきます。",
@@ -552,7 +555,7 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
           {steps.map((step) => (
             <div
               key={step.number}
-              className="relative z-10 rounded-3xl border border-slate-100 bg-white p-7 shadow-md transition-all duration-200 hover:-translate-y-1 hover:shadow-lg sm:p-8"
+              className={`relative z-10 rounded-3xl border p-7 shadow-sm transition-all duration-200 hover:-translate-y-1 hover:shadow-md sm:p-8 ${step.cardClass}`}
             >
               <div className="mb-6 flex items-baseline gap-1">
                 <span
@@ -588,22 +591,251 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
   );
 }
 
+function ValueGrowthIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <path
+        d="M20 34 V19"
+        stroke="#10b981"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path d="M20 27 Q13 22 11 15 Q18 14 20 22Z" fill="#6ee7b7" />
+      <path d="M20 23 Q27 18 30 10 Q23 9 20 18Z" fill="#34d399" />
+      <path
+        d="M8 31 C14 30 26 30 32 31"
+        stroke="#a7f3d0"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M29 25 V12 M29 12 L24 17 M29 12 L34 17"
+        stroke="#0ea5e9"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M12 9 L12.7 11.6 L15.5 12.2 L12.7 12.8 L12 15.5 L11.3 12.8 L8.5 12.2 L11.3 11.6Z"
+        fill="#38bdf8"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+function ValueMapIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <path
+        d="M7 12 L16 8 L25 12 L33 8 V29 L25 33 L16 29 L7 33Z"
+        fill="#e0f2fe"
+      />
+      <path
+        d="M16 8 V29 M25 12 V33"
+        stroke="#bae6fd"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M10 26 C14 22 17 27 21 23 C25 19 27 23 31 17"
+        stroke="#38bdf8"
+        strokeWidth="1.8"
+        strokeDasharray="2 3"
+        strokeLinecap="round"
+      />
+      <path
+        d="M13 11 C10.8 11 9 12.8 9 15 C9 18 13 22.5 13 22.5 S17 18 17 15 C17 12.8 15.2 11 13 11Z"
+        fill="#0ea5e9"
+      />
+      <circle cx="13" cy="15" r="1.5" fill="white" />
+      <path
+        d="M29 15 C26.8 15 25 16.8 25 19 C25 22 29 26.5 29 26.5 S33 22 33 19 C33 16.8 31.2 15 29 15Z"
+        fill="#06b6d4"
+      />
+      <circle cx="29" cy="19" r="1.5" fill="white" />
+      <path
+        d="M21 20 C19 20 17.5 21.6 17.5 23.5 C17.5 26.1 21 30 21 30 S24.5 26.1 24.5 23.5 C24.5 21.6 23 20 21 20Z"
+        fill="#34d399"
+      />
+      <circle cx="21" cy="23.5" r="1.3" fill="white" />
+    </svg>
+  );
+}
+
+function ValueRankingIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <rect x="9" y="12" width="22" height="4" rx="2" fill="#fbbf24" />
+      <rect x="9" y="19" width="16" height="4" rx="2" fill="#fcd34d" />
+      <rect x="9" y="26" width="11" height="4" rx="2" fill="#fde68a" />
+      <circle cx="6" cy="14" r="1.6" fill="#f59e0b" />
+      <circle cx="6" cy="21" r="1.6" fill="#f59e0b" opacity="0.72" />
+      <circle cx="6" cy="28" r="1.6" fill="#f59e0b" opacity="0.48" />
+      <path
+        d="M31 5 L32.8 9 L37 9.4 L33.9 12.1 L34.8 16.3 L31 14.1 L27.2 16.3 L28.1 12.1 L25 9.4 L29.2 9Z"
+        fill="#f59e0b"
+      />
+      <path
+        d="M29 35 C32 34 34.5 32.5 36 30"
+        stroke="#fbbf24"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
+function GrowthMiniExample() {
+  return (
+    <div className="mt-5 space-y-2 rounded-2xl bg-white/75 p-3 ring-1 ring-emerald-100">
+      <div className="rounded-2xl bg-white px-3 py-2 text-xs font-bold leading-relaxed text-slate-600 shadow-sm">
+        <span className="text-emerald-700">2025年5月</span>
+        <span className="mx-1" aria-hidden>
+          😢
+        </span>
+        すべり台怖がる
+      </div>
+      <div className="flex justify-center text-xs font-bold text-emerald-500">
+        →
+      </div>
+      <div className="rounded-2xl bg-emerald-500 px-3 py-2 text-xs font-bold leading-relaxed text-white shadow-sm">
+        <span>2026年6月</span>
+        <span className="mx-1" aria-hidden>
+          ✨
+        </span>
+        ひとりで5回
+      </div>
+    </div>
+  );
+}
+
+function MiniMapExample() {
+  return (
+    <div className="mt-5 rounded-2xl bg-white/75 p-3 ring-1 ring-sky-100">
+      <svg
+        viewBox="0 0 220 112"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        className="h-auto w-full"
+        aria-hidden
+      >
+        <rect width="220" height="112" rx="18" fill="#f0f9ff" />
+        <path d="M35 0 V112 M85 0 V112 M135 0 V112 M185 0 V112" stroke="#bae6fd" />
+        <path d="M0 30 H220 M0 74 H220" stroke="#bae6fd" />
+        <path
+          d="M38 78 C70 45 95 91 125 58 C149 32 168 48 187 28"
+          stroke="#0ea5e9"
+          strokeWidth="3"
+          strokeDasharray="5 7"
+          strokeLinecap="round"
+        />
+        {[
+          [42, 76, "#0ea5e9"],
+          [124, 58, "#06b6d4"],
+          [188, 28, "#34d399"],
+        ].map(([x, y, color]) => (
+          <g key={`${x}-${y}`}>
+            <path
+              d={`M${x} ${Number(y) - 20} C${Number(x) - 7} ${
+                Number(y) - 20
+              } ${Number(x) - 12} ${Number(y) - 15} ${Number(x) - 12} ${
+                Number(y) - 8
+              } C${Number(x) - 12} ${Number(y) + 1} ${x} ${
+                Number(y) + 14
+              } ${x} ${Number(y) + 14} S${Number(x) + 12} ${
+                Number(y) + 1
+              } ${Number(x) + 12} ${Number(y) - 8} C${Number(x) + 12} ${
+                Number(y) - 15
+              } ${Number(x) + 7} ${Number(y) - 20} ${x} ${
+                Number(y) - 20
+              }Z`}
+              fill={String(color)}
+            />
+            <circle cx={Number(x)} cy={Number(y) - 8} r="4" fill="white" />
+          </g>
+        ))}
+      </svg>
+      <div className="mt-3 flex items-center justify-between gap-3 rounded-full bg-sky-500 px-3 py-2 text-xs font-bold text-white">
+        <span>今年のおでかけ</span>
+        <span>12か所</span>
+      </div>
+    </div>
+  );
+}
+
+function RankingMiniExample() {
+  const rankings = [
+    ["1", "💧 水遊び", "8回", "w-full"],
+    ["2", "🐾 動物", "5回", "w-2/3"],
+    ["3", "🛝 遊具", "3回", "w-1/2"],
+  ];
+
+  return (
+    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 ring-1 ring-amber-100">
+      {rankings.map(([rank, label, count, width]) => (
+        <div key={rank}>
+          <div className="mb-1 flex items-center justify-between gap-2 text-xs">
+            <span className="min-w-0 font-bold text-slate-700">
+              {rank}. {label}
+            </span>
+            <span className="shrink-0 font-bold text-amber-600">{count}</span>
+          </div>
+          <div className="h-2.5 rounded-full bg-amber-100">
+            <div className={`h-2.5 rounded-full bg-amber-400 ${width}`} />
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 function ValueProofSection() {
   const values = [
     {
-      icon: "🌱",
+      icon: <ValueGrowthIcon />,
       title: "成長が見える",
-      body: "「去年は怖がってた滑り台、今年はひとりで！」",
+      body: "同じ場所でも、去年と今年で子どもの反応は変わります。記録を見返すと、できるようになったこと・興味の変化がはっきり見えます。",
+      cardClass: "border-emerald-100 bg-emerald-50",
+      iconClass: "bg-white/75 ring-1 ring-emerald-100",
+      titleClass: "text-emerald-900",
+      example: <GrowthMiniExample />,
     },
     {
-      icon: "🗺️",
-      title: "思い出が地図に",
-      body: "行った場所がマップにたまっていく",
+      icon: <ValueMapIcon />,
+      title: "思い出が地図になる",
+      body: "行った場所にピンがたまって、家族だけのおでかけマップが育ちます。「次はどこ行く？」の相談も、地図を見ながら楽しくなります。",
+      cardClass: "border-sky-100 bg-sky-50",
+      iconClass: "bg-white/75 ring-1 ring-sky-100",
+      titleClass: "text-sky-900",
+      example: <MiniMapExample />,
     },
     {
-      icon: "📊",
-      title: "\"好き\"がわかる",
-      body: "反応タグから子どもの興味ランキング",
+      icon: <ValueRankingIcon />,
+      title: "\"好き\"がランキングでわかる",
+      body: "ワンタップで残した反応タグが自動で集計。「うちの子は動物より水遊び派」みたいな発見が、次のおでかけ選びをラクにします。",
+      cardClass: "border-amber-100 bg-amber-50",
+      iconClass: "bg-white/75 ring-1 ring-amber-100",
+      titleClass: "text-amber-900",
+      example: <RankingMiniExample />,
     },
   ];
 
@@ -619,23 +851,22 @@ function ValueProofSection() {
         >
           記録がたまると、こんなことが見えてきます
         </h2>
-        <div className="mt-6 grid grid-cols-1 gap-3 md:grid-cols-3">
+        <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-3">
           {values.map((value) => (
             <div
               key={value.title}
-              className="flex items-start gap-3 rounded-3xl border border-slate-100 bg-white px-5 py-4 shadow-sm"
+              className={`rounded-3xl border p-5 shadow-sm ${value.cardClass}`}
             >
-              <span className="text-2xl" aria-hidden>
+              <div className={`mb-4 flex h-14 w-14 items-center justify-center rounded-full ${value.iconClass}`}>
                 {value.icon}
-              </span>
-              <div>
-                <p className="text-sm font-bold text-slate-900">
-                  {value.title}
-                </p>
-                <p className="mt-1 text-sm leading-relaxed text-slate-500">
-                  {value.body}
-                </p>
               </div>
+              <p className={`text-base font-bold ${value.titleClass}`}>
+                {value.title}
+              </p>
+              <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                {value.body}
+              </p>
+              {value.example}
             </div>
           ))}
         </div>
