@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-11(夜) / トップ再設計v3〜v3.3 本番デプロイ済み(33a2cb3・metadata9県化・記録UIカード・ベネフィット価値セクション) / 写真機能: Phase A(Migration 006・RLS全PASS)+Phase B(アップロードUI・EXIF除去)実装済みだが `lib/config.ts` の `PHOTO_UPLOAD_ENABLED=false` で本番非表示 / 次タスク: 写真Phase C(詳細ページ表示+削除UI)→flag true で写真公開判断 / 訪問記録詳細ページ・Brand Phase 2 ロゴはデプロイ済み
+**最終更新**: 2026-06-11(深夜) / 本番=a8678c5(トップv3.6-3.8・3県表記→関東甲信越・写真PhaseA-C実装済みflag=false・id734削除・1,030施設) / 写真公開条件: 規約掲載+オーナーGO(→.codex/phase4-photo-upload.md) / 規約ドラフトv0.2 オーナー確認待ち(.codex/terms-privacy-draft.md) / 施設データ運用標準化済み(.codex/facility-data-update-workflow.md がマスター) / provenance 4フィールド初適用(coord3件修正 6d591cd・confirmed 3件) / 監査v3第1弾実装済み(汚染チェック全0件) / 未デプロイ: 監査v3(70e60a8)・coord修正(6d591cd)・ドキュメント類 / 残課題: url未入力102件・invalid_address 202件・missing_experience 259件・Sheets同期4列対応・status機械付与(PM判断待ち)
 
 ---
 
