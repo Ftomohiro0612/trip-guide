@@ -1,20 +1,20 @@
 # Facility Data Quality Report
 
 Generated: 2026-06-11
-Total facilities: 1031
-Total issues: 1985
+Total facilities: 1030
+Total issues: 1982
 
 ## Category Counts
 
 | category | severity | count | needs_web_check |
 | --- | --- | ---: | ---: |
 | address_pref_mismatch | - | 0 | 0 |
-| prefecture_missing_in_address | info | 878 | 0 |
-| invalid_address | high | 204 | 204 |
+| prefecture_missing_in_address | info | 877 | 0 |
+| invalid_address | high | 203 | 203 |
 | invalid_coordinates | - | 0 | 0 |
 | coord_pref_mismatch | high | 3 | 3 |
 | tag_category_conflict | medium | 31 | 31 |
-| missing_experience | medium | 260 | 260 |
+| missing_experience | medium | 259 | 259 |
 | thin_description | medium | 3 | 3 |
 | short_description | low | 606 | 606 |
 
@@ -22,10 +22,10 @@ Total issues: 1985
 
 | severity | count |
 | --- | ---: |
-| high | 207 |
-| medium | 294 |
+| high | 206 |
+| medium | 293 |
 | low | 606 |
-| info | 878 |
+| info | 877 |
 
 ## Warnings
 
