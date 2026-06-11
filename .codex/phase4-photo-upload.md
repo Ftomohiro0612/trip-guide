@@ -1,8 +1,26 @@
 # Phase 4: 写真登録機能（visit_photos）
 
-> 作成: 2026-06-11 / Claude Code PM
+> 作成: 2026-06-11 / 更新: 2026-06-11（Phase A-C 実装済み状態を反映）/ Claude Code PM
 > 前提: product-direction.md §17(写真登録) §35(写真から下書き・将来) を読むこと
-> 実行タイミング: PM の GO 後
+
+## 実装状況（2026-06-11 時点）
+
+| Phase | 状態 | commit |
+|---|---|---|
+| Phase A（Migration 006 / DB・Storage基盤） | ✅ 完了・Supabase 実行済み・**RLSテスト全8項目PASS** | ec0f45e |
+| Phase B（アップロードUI / EXIF除去） | ✅ 実装済み・`PHOTO_UPLOAD_ENABLED=false` | cd2b285 |
+| Phase C（詳細表示 / 削除 / visit削除時cleanup） | ✅ 実装済み・`PHOTO_UPLOAD_ENABLED=false` | e373403 |
+| **本番公開** | ❌ **未実施**（下記「公開条件」参照） |  |
+
+## 公開条件（flag を true にする条件）
+
+`lib/config.ts` の `PHOTO_UPLOAD_ENABLED` を true にできるのは、以下が**すべて**満たされたときのみ:
+
+1. Phase A / B / C の完了（✅ 済み）
+2. **利用規約・プライバシーポリシーの本番掲載**（写真の取り扱い・第三者の子どもの同意条項を含む。.codex/terms-privacy-draft.md v0.2 →確定→掲載）
+3. **PM / オーナーの公開 GO**
+
+コードが完成しているだけでは本番公開しない。
 
 ---
 
@@ -19,7 +37,17 @@
 
 ## DB スキーマ（Migration 006）
 
+> **正本は実行済みの `supabase/migrations/006_visit_photos.sql`**。下記 SQL は初期設計案であり、実装版では以下が追加強化されている:
+> - storage_path / thumb_path の `{user_id}/{visit_id}/` 形式 CHECK 制約 + UNIQUE
+> - トリガーでの所有者整合検証（NEW.user_id = visits.user_id）+ `FOR UPDATE` による同時INSERT直列化
+> - `SET search_path = public, pg_temp` の固定
+> - 上限値取得を `visit_photo_limit_for_user()` 関数に分離（将来の plan 分岐用）
+> - bucket 作成 SQL（ON CONFLICT・public=false 強制）と Storage RLS（UPDATE 含む4ポリシー）
+>
+> 注記: `006` は実行済みのためファイル名変更禁止。**今後の migration は `ls supabase/migrations/` の最大番号 +1 で採番**（現在の次番号は 008。007_add_pool_reaction_tag.sql は未実行で存在）。
+
 ```sql
+-- 初期設計案（参考。正本は 006_visit_photos.sql）
 CREATE TABLE visit_photos (
   id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
   visit_id UUID NOT NULL REFERENCES visits(id) ON DELETE CASCADE,
@@ -115,10 +143,10 @@ HEIC 対応: iOS Safari は accept="image/*" でカメラロールから JPEG �
 
 ---
 
-## 削除時の扱い
+## 削除時の扱い（順序厳守）
 
-- 写真単体削除: DB 行 + Storage 本体 + サムネイルを削除（Storage 削除失敗してもDB行は消す。孤児ファイルは後述のクリーンアップで対応）
-- visit 削除時: `ON DELETE CASCADE` で DB 行は消える。Storage ファイルは visit 削除処理の中で明示的に削除すること（既存の削除フローに追加）
+- 写真単体削除: **DELETE 前に必ず storage_path / thumb_path を取得してローカル変数に保持** → DB 行 DELETE → 保持したパスで Storage remove。**DB 行削除後にパスを読みに行く実装は禁止**（行が消えるとパスが取得できない）。Storage 削除失敗してもDB行は消す（孤児ファイルは後述のクリーンアップで対応）
+- visit 削除時: **visit 削除前に対象 visit の写真パス一覧を取得して保持** → visit 削除（DB 行は `ON DELETE CASCADE`）→ 保持したパスで Storage remove
 - 退会時: 将来の退会フロー実装時に `{user_id}/` フォルダ一括削除を組み込む（今回はコメントで TODO 残す）
 
 ---
@@ -132,19 +160,31 @@ HEIC 対応: iOS Safari は accept="image/*" でカメラロールから JPEG �
 
 ---
 
-## 完了条件
+## 完了条件（Phase 別）
 
-- [ ] `supabase/migrations/006_visit_photos.sql` 作成（スキーマ + RLS + trigger + Storage ポリシー）
-- [ ] アップロード前に EXIF が確実に除去される（canvas 再エンコード。アップロード後のファイルに EXIF がないことをバイナリ確認）
-- [ ] 公開 URL を一切発行していない（getPublicUrl 不使用を grep で確認）
-- [ ] 他ユーザーの写真パスに直接アクセスしても 403/404（RLS 確認、一時ユーザーA/B方式）
-- [ ] 3枚目のアップロードが DB 層で拒否される
-- [ ] 写真削除で DB 行 + Storage 2ファイルが消える
-- [ ] visit 削除で写真も消える
-- [ ] スマホ幅でアップロード UI・グリッドが崩れない
-- [ ] `npm run lint` / `npx tsc --noEmit` / `npm run build` 全パス
-- [ ] agmsg で memorips-claude に GO + commit hash + RLS/EXIF 確認結果を報告
-- [ ] デプロイは PM 確認後
+### Phase A（✅ 完了）
+- [x] `supabase/migrations/006_visit_photos.sql` 作成（スキーマ + RLS + trigger + Storage ポリシー + path CHECK + 所有者整合）
+- [x] RLS テスト全8項目 PASS（他人visit拒否・3枚目拒否・pathCHECK・Storageフォルダ分離・bucket private・cleanup）
+
+### Phase B（✅ 完了）
+- [x] アップロード前に EXIF が確実に除去される（canvas 再エンコード）
+- [x] 本体1600px / サムネ400px の WebP 生成・Storage upload・DB insert
+- [x] INSERT 失敗時の Storage ロールバック
+- [x] HEIC は「JPEG/PNGでお願いします」で拒否
+- [x] getPublicUrl / service role 不使用（grep 確認）
+- [x] スマホ幅でアップロード UI が崩れない
+
+### Phase C（✅ 完了）
+- [x] 詳細ページの写真グリッド（signed URL 3600秒以下・createSignedUrls 一括）
+- [x] 削除UI（パス保持→DB DELETE→Storage remove の順序厳守）
+- [x] visit 削除時 Storage cleanup（削除前パス取得）
+- [x] flag=false 時に写真関連 DOM が一切出ない
+- [x] alt に子ども名を含めない・0枚ならセクション非表示
+- [x] lint / tsc / build 全パス
+
+### 公開（❌ 未実施）
+- [ ] 規約・プライバシーポリシー本番掲載
+- [ ] PM/オーナー公開 GO → `PHOTO_UPLOAD_ENABLED=true` → デプロイ
 
 ---
 
