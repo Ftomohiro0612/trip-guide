@@ -19,9 +19,9 @@
     "prefecture_id_mismatch": 0,
     "address_pref_mismatch": 0,
     "prefecture_missing_in_address": 877,
-    "invalid_address": 203,
+    "invalid_address": 202,
     "invalid_coordinates": 0,
-    "coord_pref_mismatch": 3,
+    "coord_pref_mismatch": 0,
     "tag_category_conflict": 31,
     "missing_experience": 259,
     "thin_description": 3,
@@ -114,23 +114,7 @@
       }
     ],
     "invalid_coordinates": [],
-    "coord_pref_mismatch": [
-      {
-        "id": 896,
-        "name": "荒川公園(熊谷)",
-        "reason": "latitude / longitude が 埼玉県 の粗いbbox外"
-      },
-      {
-        "id": 898,
-        "name": "戸田市スポーツセンター",
-        "reason": "latitude / longitude が 埼玉県 の粗いbbox外"
-      },
-      {
-        "id": 901,
-        "name": "武甲山資料館 (秩父)",
-        "reason": "latitude / longitude が 埼玉県 の粗いbbox外"
-      }
-    ],
+    "coord_pref_mismatch": [],
     "tag_category_conflict": [
       {
         "id": 357,
@@ -231,7 +215,7 @@
     ]
   },
   "severity_counts": {
-    "high": 206,
+    "high": 202,
     "medium": 395,
     "low": 606,
     "info": 877
@@ -242,15 +226,15 @@
   "prefecture_id_mismatch_count": 0,
   "address_pref_mismatch_count": 0,
   "prefecture_missing_in_address_count": 877,
-  "invalid_address_count": 203,
+  "invalid_address_count": 202,
   "invalid_coordinates_count": 0,
-  "coord_pref_mismatch_count": 3,
+  "coord_pref_mismatch_count": 0,
   "tag_category_conflict_count": 31,
   "missing_experience_count": 259,
   "thin_description_count": 3,
   "short_description_count": 606,
-  "total_issues": 2084,
-  "total_needs_web_check": 1207,
+  "total_issues": 2080,
+  "total_needs_web_check": 1203,
   "total_needs_human_review": 0,
   "warnings": []
 }

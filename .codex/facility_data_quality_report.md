@@ -2,7 +2,7 @@
 
 Generated: 2026-06-11
 Total facilities: 1030
-Total issues: 2084
+Total issues: 2080
 
 ## Category Counts
 
@@ -14,9 +14,9 @@ Total issues: 2084
 | prefecture_id_mismatch | high | 0 | 0 |
 | address_pref_mismatch | high | 0 | 0 |
 | prefecture_missing_in_address | info | 877 | 0 |
-| invalid_address | high | 203 | 203 |
+| invalid_address | high | 202 | 202 |
 | invalid_coordinates | high | 0 | 0 |
-| coord_pref_mismatch | high | 3 | 3 |
+| coord_pref_mismatch | high | 0 | 0 |
 | tag_category_conflict | medium | 31 | 31 |
 | missing_experience | medium | 259 | 259 |
 | thin_description | medium | 3 | 3 |
@@ -26,7 +26,7 @@ Total issues: 2084
 
 | severity | count |
 | --- | ---: |
-| high | 206 |
+| high | 202 |
 | medium | 395 |
 | low | 606 |
 | info | 877 |
@@ -66,14 +66,6 @@ _警告なし_
 | 28 | 豊田ラブリバー公園 | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
 | 51 | ホテルテルメ温水プール | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
 | 52 | 白樺リゾート 池の平ファミリーランド | address に数字・丁目・番・号・番地・ハイフンが含まれていない |
-
-### coord_pref_mismatch
-
-| id | name | reason |
-| --- | --- | --- |
-| 896 | 荒川公園(熊谷) | latitude / longitude が 埼玉県 の粗いbbox外 |
-| 898 | 戸田市スポーツセンター | latitude / longitude が 埼玉県 の粗いbbox外 |
-| 901 | 武甲山資料館 (秩父) | latitude / longitude が 埼玉県 の粗いbbox外 |
 
 ### tag_category_conflict
 
@@ -182,11 +174,7 @@ _該当なし_
 
 ### coord_pref_mismatch
 
-| id | name | prefecture | reason |
-| --- | --- | --- | --- |
-| 896 | 荒川公園(熊谷) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
-| 898 | 戸田市スポーツセンター | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
-| 901 | 武甲山資料館 (秩父) | 埼玉県 | latitude / longitude が 埼玉県 の粗いbbox外 |
+_該当なし_
 
 ### tag_category_conflict
 
