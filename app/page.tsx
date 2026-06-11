@@ -158,34 +158,34 @@ function HeroBackground() {
 
 function MemoryPreviewCard() {
   return (
-    <div className="relative mx-auto w-[min(100%,20rem)] pb-8 pt-3 lg:mx-0">
+    <div className="relative mx-auto w-[min(100%,22.5rem)] pb-9 pt-3 lg:mx-0">
       <div className="absolute -right-3 top-8 h-[86%] w-[92%] rotate-6 rounded-[2rem] border border-white/70 bg-white/45 shadow-xl backdrop-blur-sm" />
       <div className="absolute -right-1 top-2 h-[86%] w-[92%] rotate-3 rounded-[2rem] border border-white/80 bg-white/65 shadow-xl backdrop-blur-sm" />
 
-      <div className="relative rotate-1 rounded-[2rem] border border-white/80 bg-white p-4 text-slate-900 shadow-2xl sm:rotate-2 sm:p-5">
-        <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-4">
+      <div className="relative rotate-1 rounded-[2rem] border border-white/80 bg-white p-5 text-slate-900 shadow-2xl sm:rotate-2 sm:p-6">
+        <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-5">
           <div className="flex items-center gap-3">
-            <div className="flex h-11 w-11 items-center justify-center rounded-full bg-sky-50 text-2xl">
+            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-50 text-2xl">
               🌸
             </div>
             <div>
-              <p className="text-sm font-bold">ゆいちゃん (7歳)</p>
+              <p className="text-[15px] font-bold">ゆいちゃん (7歳)</p>
               <p className="text-xs text-slate-400">おでかけ記録</p>
             </div>
           </div>
-          <div className="rounded-2xl bg-emerald-50 px-3 py-2 text-right">
+          <div className="rounded-2xl bg-emerald-50 px-3.5 py-2 text-right">
             <p className="text-[10px] font-bold text-emerald-600">今月</p>
-            <p className="text-sm font-bold text-emerald-700">3回</p>
+            <p className="text-[15px] font-bold text-emerald-700">3回</p>
           </div>
         </div>
 
-        <div className="mt-4 rounded-3xl bg-slate-50 p-4">
+        <div className="mt-5 rounded-3xl bg-slate-50 p-5">
           <div className="flex items-start justify-between gap-3">
             <div>
               <p className="text-xs font-semibold text-slate-400">
                 最近の記録
               </p>
-              <p className="mt-1 text-sm font-bold">📍 よこはまこどもの国</p>
+              <p className="mt-1 text-[15px] font-bold">📍 よこはまこどもの国</p>
               <p className="mt-1 text-xs text-slate-500">6月8日 · ☀️</p>
             </div>
             <div className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-sky-600 shadow-sm">
@@ -206,8 +206,8 @@ function MemoryPreviewCard() {
           </div>
         </div>
 
-        <div className="mt-4">
-          <p className="text-sm font-bold">ゆいちゃんの&quot;好き&quot; TOP3</p>
+        <div className="mt-5">
+          <p className="text-[15px] font-bold">ゆいちゃんの&quot;好き&quot; TOP3</p>
           <div className="mt-3 space-y-3">
             {[
               ["1", "🐾 動物", "12回", "w-full"],
@@ -231,7 +231,7 @@ function MemoryPreviewCard() {
           </div>
         </div>
 
-        <div className="mt-5 border-t border-slate-100 pt-4">
+        <div className="mt-6 border-t border-slate-100 pt-5">
           <p className="text-xs font-bold text-slate-600">
             📸 写真もまとめて思い出に（近日公開）
           </p>
@@ -407,7 +407,7 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
   const steps = [
     {
       number: "01",
-      cardClass: "border-sky-100 bg-sky-50",
+      cardClass: "border-sky-200/60 bg-sky-50 shadow-sky-100/50",
       labelClass: "text-sky-500",
       numberClass: "text-sky-200",
       iconClass: "bg-white/75 ring-1 ring-sky-100",
@@ -418,7 +418,7 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
     },
     {
       number: "02",
-      cardClass: "border-cyan-100 bg-cyan-50",
+      cardClass: "border-cyan-200/60 bg-cyan-50 shadow-cyan-100/50",
       labelClass: "text-cyan-500",
       numberClass: "text-cyan-200",
       iconClass: "bg-white/75 ring-1 ring-cyan-100",
@@ -429,7 +429,7 @@ function HowSection({ facilityCountLabel }: { facilityCountLabel: string }) {
     },
     {
       number: "03",
-      cardClass: "border-emerald-100 bg-emerald-50",
+      cardClass: "border-emerald-200/60 bg-emerald-50 shadow-emerald-100/50",
       labelClass: "text-emerald-500",
       numberClass: "text-emerald-200",
       iconClass: "bg-white/75 ring-1 ring-emerald-100",
@@ -830,7 +830,7 @@ function ValueProofSection() {
     },
     {
       icon: <ValueRankingIcon />,
-      title: "次のおでかけ先に迷わなくなる",
+      title: "次のおでかけ先を選びやすい",
       body: "『うちの子は水遊び派』がデータでわかるから、子どもが喜ぶ場所をすぐ選べます。『今日どこ行く？』の悩みが減ります。",
       cardClass: "border-amber-200/60 bg-amber-50 shadow-amber-100/50",
       iconClass: "bg-white/75 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60",
@@ -849,7 +849,7 @@ function ValueProofSection() {
           id="value-proof-heading"
           className="text-center text-xl font-bold text-slate-900 sm:text-2xl"
         >
-          子どもの&quot;好き&quot;が見えると、こんないいことがあります
+          子どもの&quot;好き&quot;が見えると、おでかけがもっと楽になります
         </h2>
         <p className="mx-auto mt-3 max-w-2xl text-center text-sm leading-relaxed text-slate-600 sm:text-base">
           記録は基本ワンタップ。たまっていくほど、家族のおでかけがもっと楽しく、もっとラクになります。
@@ -942,8 +942,7 @@ export default function HomePage() {
                 子どもの&quot;好き&quot;が見える、おでかけ記録サービス
               </p>
               <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
-                遊び場を探して、おでかけして、子どもの反応をワンタップで記録。
-                記録がたまるほど「うちの子はこれが好き」が見えてきます。
+                遊び場を探して、行ったあとは子どもの反応を30秒で記録。記録がたまるほど、うちの子が好きな遊びや、また行きたい場所が見えてきます。
               </p>
 
               <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
@@ -1002,10 +1001,10 @@ export default function HomePage() {
           <div className="flex items-end justify-between mb-4">
             <div>
               <h2 id="map-heading" className="text-2xl font-bold text-slate-900">
-                地図から探す
+                次のおでかけ先を地図から探す
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                マーカーをクリックすると詳細ページへ。県の絞り込みもできます。
+                気になる場所を見つけたら行きたいに保存。行ったあとは記録に残せます。
               </p>
             </div>
           </div>
