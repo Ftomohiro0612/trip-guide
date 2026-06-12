@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="mt-20 border-t border-slate-200 bg-white">
-      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-3 text-sm">
+      <div className="mx-auto max-w-6xl px-4 py-10 grid gap-8 md:grid-cols-4 text-sm">
         <div>
           <Link href="/" className="flex items-center">
             <Image
@@ -65,6 +65,21 @@ export default function Footer() {
             <li>
               <Link href="/tag/winter" className="hover:text-brand">
                 ⛄ 冬の雪遊び
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h3 className="font-semibold mb-2">サービス</h3>
+          <ul className="space-y-1 text-slate-600">
+            <li>
+              <Link href="/terms" className="hover:text-brand">
+                利用規約
+              </Link>
+            </li>
+            <li>
+              <Link href="/privacy" className="hover:text-brand">
+                プライバシーポリシー
               </Link>
             </li>
           </ul>

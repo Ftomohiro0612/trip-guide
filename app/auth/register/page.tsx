@@ -165,10 +165,14 @@ export default function RegisterPage() {
 
         <p className="mt-4 text-center text-xs text-slate-400">
           登録することで
-          <Link href="/legal/terms" className="text-brand hover:underline mx-1">利用規約</Link>
-          および
-          <Link href="/legal/privacy" className="text-brand hover:underline ml-1">プライバシーポリシー</Link>
-          に同意したものとみなします。
+          <Link href="/terms" className="text-brand hover:underline mx-1">
+            利用規約
+          </Link>
+          と
+          <Link href="/privacy" className="text-brand hover:underline mx-1">
+            プライバシーポリシー
+          </Link>
+          に同意したものとみなされます。
         </p>
 
         <p className="mt-6 text-center text-sm text-slate-500">
