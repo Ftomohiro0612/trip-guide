@@ -88,6 +88,7 @@ export interface Facility {
   experience_tags?: string[] | null;
   summer_water_play?: RainFriendly | null;
   recommended_for_tags?: RecommendedForTag[];
+  things_to_do?: string[];
   source_urls?: string;
   source_checked_at?: string;
   data_quality_status?: DataQualityStatus;

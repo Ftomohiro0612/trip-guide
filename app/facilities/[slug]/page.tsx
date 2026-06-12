@@ -17,6 +17,7 @@ import { categoryIcon, prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import type { RecommendedForTag } from "@/types/facility";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -72,7 +73,7 @@ export default async function FacilityDetailPage({ params }: Props) {
 
   const related = getRelatedFacilities(facility, 3);
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
-  const uniqueSellingPoint =
+  const rawUniqueSellingPoint =
     typeof facility.unique_selling_point === "string"
       ? facility.unique_selling_point.trim()
       : "";
@@ -89,6 +90,20 @@ export default async function FacilityDetailPage({ params }: Props) {
         .filter((tag) => tag.length > 0)
     : [];
   const recommendedForTags = facility.recommended_for_tags ?? [];
+  const thingsToDo = Array.isArray(facility.things_to_do)
+    ? facility.things_to_do
+        .map((thing) => (typeof thing === "string" ? thing.trim() : ""))
+        .filter((thing) => thing.length > 0)
+    : [];
+  const hasThingsToDo = thingsToDo.length > 0;
+  const uniqueSellingPoint =
+    hasThingsToDo && hasUnsupportedRatingExpression(rawUniqueSellingPoint)
+      ? ""
+      : rawUniqueSellingPoint;
+  const recommendedLead = buildRecommendedLead(
+    facility.target_age,
+    recommendedForTags,
+  );
   const prefecture = facility.prefecture ?? "";
   const summerWaterPlay =
     typeof facility.summer_water_play === "string"
@@ -256,8 +271,13 @@ export default async function FacilityDetailPage({ params }: Props) {
                 id="recommended-for-heading"
                 className="text-xl font-bold mb-3"
               >
-                こんな遊びが好きな子に 🎯
+                {hasThingsToDo ? "どんな子に合いそう？" : "こんな遊びが好きな子に 🎯"}
               </h2>
+              {hasThingsToDo && recommendedLead && (
+                <p className="mb-3 text-sm leading-relaxed text-slate-600">
+                  {recommendedLead}
+                </p>
+              )}
               <div className="flex flex-wrap gap-2">
                 {recommendedForTags.map((tag) => {
                   const meta = getRecommendedForTagMeta(tag);
@@ -295,7 +315,38 @@ export default async function FacilityDetailPage({ params }: Props) {
               </div>
             </section>
           )}
-          {(signatureExperiences.length > 0 || experienceTags.length > 0) && (
+          {hasThingsToDo ? (
+            <section className="mt-6" aria-labelledby="things-to-do-heading">
+              <h3
+                id="things-to-do-heading"
+                className="text-sm font-bold text-slate-700 mb-3"
+              >
+                この施設で楽しめそうなこと
+              </h3>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {thingsToDo.map((thing) => (
+                  <li
+                    key={thing}
+                    className="flex gap-2 rounded-lg border border-emerald-100 bg-emerald-50/60 px-3 py-2 text-sm leading-relaxed text-slate-700"
+                  >
+                    <span
+                      className="mt-0.5 font-bold text-emerald-600"
+                      aria-hidden
+                    >
+                      ✓
+                    </span>
+                    <span>{thing}</span>
+                  </li>
+                ))}
+              </ul>
+              {experienceTags.length > 0 && (
+                <p className="mt-3 text-xs text-slate-500">
+                  体験タイプ：{experienceTags.join(" / ")}
+                </p>
+              )}
+            </section>
+          ) : (
+            (signatureExperiences.length > 0 || experienceTags.length > 0) && (
             <div className="mt-6">
               <h3 className="text-sm font-bold text-slate-700 mb-2">
                 この施設で楽しめそうなこと
@@ -318,6 +369,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                 </p>
               )}
             </div>
+            )
           )}
 
           <FacilityGallery
@@ -484,4 +536,26 @@ function Row({
       <dd className="text-slate-800">{children}</dd>
     </div>
   );
+}
+
+function buildRecommendedLead(
+  targetAge: string,
+  recommendedForTags: RecommendedForTag[],
+) {
+  const labels = recommendedForTags
+    .map((tag) => getRecommendedForTagMeta(tag))
+    .filter((meta): meta is NonNullable<typeof meta> => Boolean(meta))
+    .map((meta) => meta.label)
+    .slice(0, 2);
+
+  if (labels.length === 0) {
+    return targetAge ? `${targetAge}の子に合いそうです。` : "";
+  }
+
+  const age = targetAge ? `${targetAge}、` : "";
+  return `${age}特に${labels.join("・")}が好きな子に合いそうです。`;
+}
+
+function hasUnsupportedRatingExpression(text: string) {
+  return /星\s*\d|星評価|口コミ高評価|最高評価/.test(text);
 }
