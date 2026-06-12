@@ -6,6 +6,7 @@ import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityGallery from "@/components/FacilityGallery";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
+import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import ShareButtons from "@/components/ShareButtons";
 import {
   facilities,
@@ -325,20 +326,10 @@ export default async function FacilityDetailPage({ params }: Props) {
             facilityName={facility.name}
           />
 
-          <div className="mt-8 bg-emerald-50 border border-emerald-200 rounded-2xl p-5">
-            <h2 className="text-base font-bold text-emerald-900 mb-2">
-              子ども別におでかけ記録を残せます
-            </h2>
-            <p className="text-sm text-emerald-800 leading-relaxed mb-4">
-              行ったあとに、子どもごとの満足度や反応を記録できます。きょうだいで何を楽しんだか、また行きたいかを後から見返せます。
-            </p>
-            <ul className="text-sm text-emerald-700 space-y-1 mb-4">
-              <li>👧 どの子が楽しんだか</li>
-              <li>💡 何に反応したか</li>
-              <li>🔁 また行きたいか</li>
-              <li>📝 次回のメモ</li>
-            </ul>
-          </div>
+          <FacilityPublicRecordsEmptyCard
+            facilitySlug={facility.slug}
+            facilityName={facility.name}
+          />
 
           <h2 className="text-xl font-bold mt-8 mb-3">基本情報</h2>
           <dl className="bg-white border border-slate-200 rounded-2xl divide-y divide-slate-100 overflow-hidden">
