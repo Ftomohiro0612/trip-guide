@@ -17,7 +17,7 @@ import { categoryIcon, prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
-import type { RecommendedForTag } from "@/types/facility";
+import type { Facility, RecommendedForTag } from "@/types/facility";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -255,6 +255,11 @@ export default async function FacilityDetailPage({ params }: Props) {
       </div>
 
       <div className="mx-auto max-w-5xl px-4 py-8 grid gap-8 lg:grid-cols-[1fr_320px]">
+        <div className="space-y-4 lg:hidden">
+          <FacilityCtaGroup facility={facility} />
+          <QuickCheckCard facility={facility} rain={rain} />
+        </div>
+
         <article>
           <h2 className="text-xl font-bold mb-3">この施設について</h2>
           {uniqueSellingPoint && (
@@ -446,6 +451,8 @@ export default async function FacilityDetailPage({ params }: Props) {
             )}
           </dl>
 
+          <FacilityNotice className="mt-4 lg:hidden" />
+
           <h2 className="text-xl font-bold mt-8 mb-3">アクセス</h2>
           <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
             <iframe
@@ -470,42 +477,10 @@ export default async function FacilityDetailPage({ params }: Props) {
           </div>
         </article>
 
-        <aside className="space-y-4">
-          <FacilityMyRecord
-            facilitySlug={facility.slug}
-          />
-          <FacilityActionButtons
-            facilitySlug={facility.slug}
-            facilityName={facility.name}
-          />
-          {facility.url && (
-            <a
-              href={facility.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block w-full bg-brand hover:bg-brand-dark text-white text-center font-bold py-3 rounded-xl shadow-sm transition-colors"
-            >
-              公式サイトを見る ↗
-            </a>
-          )}
-          <div className="bg-white border border-slate-200 rounded-2xl p-4">
-            <h3 className="font-bold mb-2">ひと目チェック</h3>
-            <ul className="text-sm space-y-1.5 text-slate-700">
-              <li>📍 {facility.prefecture}</li>
-              <li>🏷️ {facility.category}</li>
-              <li>👶 {facility.target_age}</li>
-              <li>
-                {facility.is_free ? "🆓 無料で楽しめる" : `💴 ${facility.fee_type}`}
-              </li>
-              <li>
-                ☂️ 雨対応 {facility.rain_friendly} ({rain.label})
-              </li>
-            </ul>
-          </div>
-          <div className="bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-800 leading-relaxed">
-            ⚠️ 料金・営業時間・対象年齢は変更されることがあります。
-            お出かけ前に公式サイトで最新情報をご確認ください。
-          </div>
+        <aside className="hidden space-y-4 lg:block">
+          <FacilityCtaGroup facility={facility} />
+          <QuickCheckCard facility={facility} rain={rain} />
+          <FacilityNotice />
         </aside>
       </div>
 
@@ -519,6 +494,64 @@ export default async function FacilityDetailPage({ params }: Props) {
           </div>
         </section>
       )}
+    </div>
+  );
+}
+
+function FacilityCtaGroup({ facility }: { facility: Facility }) {
+  return (
+    <>
+      <FacilityMyRecord facilitySlug={facility.slug} />
+      <FacilityActionButtons
+        facilitySlug={facility.slug}
+        facilityName={facility.name}
+      />
+      {facility.url && (
+        <a
+          href={facility.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="block w-full bg-brand hover:bg-brand-dark text-white text-center font-bold py-3 rounded-xl shadow-sm transition-colors"
+        >
+          公式サイトを見る ↗
+        </a>
+      )}
+    </>
+  );
+}
+
+function QuickCheckCard({
+  facility,
+  rain,
+}: {
+  facility: Facility;
+  rain: { label: string };
+}) {
+  return (
+    <div className="bg-white border border-slate-200 rounded-2xl p-4">
+      <h3 className="font-bold mb-2">ひと目チェック</h3>
+      <ul className="text-sm space-y-1.5 text-slate-700">
+        <li>📍 {facility.prefecture}</li>
+        <li>🏷️ {facility.category}</li>
+        <li>👶 {facility.target_age}</li>
+        <li>
+          {facility.is_free ? "🆓 無料で楽しめる" : `💴 ${facility.fee_type}`}
+        </li>
+        <li>
+          ☂️ 雨対応 {facility.rain_friendly} ({rain.label})
+        </li>
+      </ul>
+    </div>
+  );
+}
+
+function FacilityNotice({ className = "" }: { className?: string }) {
+  return (
+    <div
+      className={`${className ? `${className} ` : ""}bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-800 leading-relaxed`}
+    >
+      ⚠️ 料金・営業時間・対象年齢は変更されることがあります。
+      お出かけ前に公式サイトで最新情報をご確認ください。
     </div>
   );
 }
