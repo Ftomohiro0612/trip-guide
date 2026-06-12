@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-12(深夜) / 本番=cc81f47(施設ページv2第1弾・写真機能true・県アイコンナビ・みんなの記録空状態カード・規約掲載・1,030施設) / **url調査102件完了**(未デプロイ: c356e93+f397f3f=77件url/provenance反映+id145。url未入力102→25・confirmed 65/likely_ok 15/needs_web_check 1) / needs_human_review 24件は別タスク(A群10=所在地問題[GlassHouseねん岩手移転=exclude候補・アルパカ牧場=県移管候補・軽井沢エリア2件=id167とルール化]・B群9=番地ズレ・C群2=実体不明・D群3=名称/カテゴリ → .codex/url-research-review-package.md) / **次: things_to_do展開バッチ(設計3docs作成済み・オーナー確認待ち → フェーズ0=Sheets27列対応+rollbackスクリプト → 第1バッチ静岡50件)** / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / 残課題: status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
+**最終更新**: 2026-06-12(深夜2) / 本番=fee47a8(things_to_do第1バッチ静岡25施設+パイロット5・url調査78件provenance反映[url未入力102→25・confirmed 65/likely_ok 15]・Sheets27列[AA列=things_to_do「 / 」区切り]・写真機能true・県アイコンナビ・みんなの記録カード・規約掲載・1,030施設) / things_to_do展開: 設計=.codex/things-to-do-{batch-design,review-checklist,rollout-plan}.md・rollback=scripts/remove-things-to-do.mjs・**第2バッチ以降は50件単位(長野→山梨→…)でPMレビュー30%+境界例方式** / needs_human_review 24件は別タスク(A群10=所在地問題[GlassHouseねん岩手移転=exclude候補・アルパカ牧場=県移管候補・軽井沢2件=id167とルール化]・B群9=番地ズレ・C群2=実体不明・D群3=名称/カテゴリ → url-research-review-package.md) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / 残課題: status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
 
 ---
 
