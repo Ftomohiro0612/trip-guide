@@ -19,6 +19,16 @@
 
 まとめサイト・口コミサイト・個人ブログ・Google検索結果URLでは confirmed にしない。
 
+### Google Map の扱い（2026-06-12 オーナー追加ルール）
+
+1. 公式/自治体/観光協会/運営会社ページが見つかる場合はそれを最優先
+2. 公式系が見つからない場合、Google Map で名称・住所・営業実態が確認できれば**補助根拠として採用可**
+3. その場合 status は confirmed にせず **google_map_only**（または likely_ok_google_map）とする
+4. source_urls に Google Map URL を入れる場合は notes に「official source not found; confirmed via Google Map only」と明記
+5. Google Map 上で住所違い・旧称・移転・閉業疑い・重複地点・名称揺れがあれば needs_human_review
+6. SNS（Instagram/X/Facebook）のみの場合は本人確認できなければ source_urls に入れず notes に留める
+7. JSON反映は confirmed と、**オーナー承認済みの google_map_only / likely_ok_google_map** のみ
+
 ## status 判定基準
 
 | 状態 | 条件 |
