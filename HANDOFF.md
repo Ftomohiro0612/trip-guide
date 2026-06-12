@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-12(午後) / 本番=f074a4d(**写真機能公開 PHOTO_UPLOAD_ENABLED=true**・公開前レビュー全PASS 13項目本番確認済み・都道府県アイコン9県・規約/privacy /terms掲載・1,030施設) / 運営者=合同会社アルゴリズム(横浜)・問い合わせ=mail@memorips.com / Sheets同期 provenance 4列対応済み(26列運用) / キャラクター=案1「芽が出た地図ピン」確定(.codex/memorips-character-direction.md、SVG試し配置はこれから) / **公開直後の注意: 写真まわりの問い合わせ・削除依頼に即応する**(mail@memorips.com監視) / 残課題: status機械付与(PM判断待ち)・url未入力102件・invalid_address 202件・missing_experience 259件・旧/legal/*リダイレクトの308化(軽微)・RLS/写真E2Eの恒久テスト化(nice-to-have)
+**最終更新**: 2026-06-12(夕) / 本番=49de7c6(写真機能公開true・トップ=県アイコンナビ「エリアから遊び場を探す」PC横並び/スマホ3列・施設詳細=「みんなの記録は、ただいま集計中です」空状態カード・規約掲載・1,030施設) / 運営者=合同会社アルゴリズム(横浜)・問い合わせ=mail@memorips.com / Sheets同期 provenance 4列対応済み(26列運用) / キャラクター=案1「芽が出た地図ピン」確定(SVG試し配置はこれから) / みんなの記録: 空状態カードのみ先行実装済み・**集計RPC/段階表示はデータ蓄積後の別タスク**(.codex/phase5-anonymous-stats.md) / **写真公開直後: 問い合わせ・削除依頼に即応**(mail@memorips.com監視) / 残課題: status機械付与(PM判断待ち)・url未入力102件・invalid_address 202件・missing_experience 259件・旧/legal/*の308化(軽微)・RLS/写真E2E恒久テスト化(nice-to-have)
 
 ---
 
