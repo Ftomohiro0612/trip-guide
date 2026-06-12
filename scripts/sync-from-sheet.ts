@@ -42,6 +42,7 @@ const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
 ]);
 
 const SOURCE_CHECKED_AT_RE = /^\d{4}-\d{2}-\d{2}$/;
+const THINGS_TO_DO_DELIMITER = " / ";
 
 interface CsvRow {
   id?: string;
@@ -70,6 +71,7 @@ interface CsvRow {
   source_checked_at?: string;
   data_quality_status?: string;
   source_notes?: string;
+  things_to_do?: string;
 }
 
 function val(row: CsvRow, key: keyof CsvRow): string {
@@ -110,6 +112,13 @@ function parseSourceUrls(s: string): string {
     .map((url) => url.trim())
     .filter(Boolean)
     .join(",");
+}
+
+function parseThingsToDo(s: string): string[] {
+  return s
+    .split(THINGS_TO_DO_DELIMITER)
+    .map((item) => item.trim())
+    .filter(Boolean);
 }
 
 function isDataQualityStatus(s: string): s is DataQualityStatus {
@@ -287,6 +296,7 @@ function mergeRow(
   }
 
   setIf("source_notes", val(row, "source_notes"), (s) => s);
+  setIf("things_to_do", val(row, "things_to_do"), parseThingsToDo);
 
   return { next: base, changedFields: changes };
 }

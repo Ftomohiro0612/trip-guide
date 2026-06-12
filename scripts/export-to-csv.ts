@@ -40,7 +40,23 @@ const HEADERS = [
   "source_checked_at",
   "data_quality_status",
   "source_notes",
+  "things_to_do",
 ] as const;
+
+const THINGS_TO_DO_DELIMITER = " / ";
+
+function formatThingsToDo(items: string[] | undefined): string {
+  if (!items || items.length === 0) return "";
+  const normalized = items.map((item) => item.trim()).filter(Boolean);
+  for (const item of normalized) {
+    if (item.includes(THINGS_TO_DO_DELIMITER)) {
+      console.warn(
+        `Warning: things_to_do item contains delimiter "${THINGS_TO_DO_DELIMITER}": ${item}`,
+      );
+    }
+  }
+  return normalized.join(THINGS_TO_DO_DELIMITER);
+}
 
 function csvEscape(value: unknown): string {
   const s = value === null || value === undefined ? "" : String(value);
@@ -90,6 +106,7 @@ async function main() {
         f.source_checked_at ?? "",
         f.data_quality_status ?? "",
         f.source_notes ?? "",
+        formatThingsToDo(f.things_to_do),
       ]),
     );
   }
