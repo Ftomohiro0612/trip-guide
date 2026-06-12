@@ -7,6 +7,9 @@
 
 - [ ] 対象施設が eligibility 条件（confirmed / likely_ok / url有り）を満たしている
 - [ ] 除外対象（needs_human_review / needs_web_check / url未入力 / exclude候補）が混入していない
+  - **NHR は facilities_data.json の status では判定不可**。url-research-review-package.md の24件リスト（id 7,26,29,32,50,51,78,83,102,114,123,126,132,137,146,150,154,163,168,172,191,199,205,206）と必ず照合（batch-3 で id199 混入の教訓）
+- [ ] **語尾分布チェック**: 同一語尾が全体の50%を超えていない。「〜時間を家族で楽しむ」等の水増し定型がない（batch-3 初版で118/222件の定型化が発生した教訓）
+- [ ] 単語重複バグ（「じっくりじっくり」等）がない
 - [ ] スキップ施設（根拠3件未満）に理由が記録されている
 - [ ] facilities_data.json が未変更（レビュー段階では生成物JSONのみ）
 
