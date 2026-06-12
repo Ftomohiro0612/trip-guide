@@ -12,4 +12,4 @@ export const SERVICE = {
 
 // 写真 Phase C 完了までは本番ユーザーにアップロードUIを出さない。
 // 公開するときはここを true に切り替える。
-export const PHOTO_UPLOAD_ENABLED: boolean = false;
+export const PHOTO_UPLOAD_ENABLED: boolean = true;
