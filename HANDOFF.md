@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-12(夜) / 本番=cc81f47(**施設ページv2第1弾**=体験候補✓リスト・どんな子に合いそう？・代表5施設(id1/12/23/145/192)本文増強・SP順序改善 / 写真機能true / 県アイコンナビ / みんなの記録空状態カード / 規約掲載 / 1,030施設) / v2展開ルール: .codex/facility-page-content-enhancement.md(things_to_doありのみ新表示・フォールバック設計) / **次タスク: 展開バッチ設計 + url未入力102件の公式URL調査を先行** / things_to_do の Sheets 27列対応は小ロット展開前に必要 / 運営者=合同会社アルゴリズム・問い合わせ=mail@memorips.com / キャラ=案1確定(SVG試し配置未) / 残課題: status機械付与(PM判断待ち)・invalid_address 202件・missing_experience 259件・旧/legal/*の308化・RLS/写真E2E恒久テスト化
+**最終更新**: 2026-06-12(深夜) / 本番=cc81f47(施設ページv2第1弾・写真機能true・県アイコンナビ・みんなの記録空状態カード・規約掲載・1,030施設) / **url調査102件完了**(未デプロイ: c356e93+f397f3f=77件url/provenance反映+id145。url未入力102→25・confirmed 65/likely_ok 15/needs_web_check 1) / needs_human_review 24件は別タスク(A群10=所在地問題[GlassHouseねん岩手移転=exclude候補・アルパカ牧場=県移管候補・軽井沢エリア2件=id167とルール化]・B群9=番地ズレ・C群2=実体不明・D群3=名称/カテゴリ → .codex/url-research-review-package.md) / **次: things_to_do展開バッチ(設計3docs作成済み・オーナー確認待ち → フェーズ0=Sheets27列対応+rollbackスクリプト → 第1バッチ静岡50件)** / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / 残課題: status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
 
 ---
 
