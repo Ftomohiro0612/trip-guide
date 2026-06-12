@@ -37,6 +37,18 @@ export const prefectureGradients: Record<string, string> = {
   kanagawa: "from-violet-400 via-purple-400 to-pink-500",
 };
 
+export const prefectureIconImages: Record<string, string> = {
+  shizuoka: "/images/prefectures/shizuoka.webp",
+  nagano: "/images/prefectures/nagano.webp",
+  yamanashi: "/images/prefectures/yamanashi.webp",
+  tokyo: "/images/prefectures/tokyo.webp",
+  tochigi: "/images/prefectures/tochigi.webp",
+  saitama: "/images/prefectures/saitama.webp",
+  niigata: "/images/prefectures/niigata.webp",
+  chiba: "/images/prefectures/chiba.webp",
+  kanagawa: "/images/prefectures/kanagawa.webp",
+};
+
 export const prefectureEmoji: Record<string, string> = {
   shizuoka: "🗻",
   nagano: "🏔️",

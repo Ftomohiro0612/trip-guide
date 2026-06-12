@@ -1,11 +1,16 @@
 import Link from "next/link";
+import Image from "next/image";
 import QuickFilter from "@/components/QuickFilter";
 import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import MapViewClient from "@/components/MapViewClient";
 import { JsonLd } from "@/components/JsonLd";
 import { categories, facilities, prefectures } from "@/lib/facilities";
-import { categoryIcon, prefectureEmoji, prefectureGradients } from "@/lib/icons";
+import {
+  categoryIcon,
+  prefectureGradients,
+  prefectureIconImages,
+} from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type { RecommendedForTag } from "@/types/facility";
 
@@ -1072,9 +1077,14 @@ export default function HomePage() {
                 />
                 <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
                 <div className="relative h-full p-6 flex flex-col justify-between text-white">
-                  <span className="text-5xl drop-shadow" aria-hidden>
-                    {prefectureEmoji[p.id]}
-                  </span>
+                  <Image
+                    src={prefectureIconImages[p.id]}
+                    alt=""
+                    width={64}
+                    height={64}
+                    className="h-14 w-14 object-contain drop-shadow-lg sm:h-16 sm:w-16"
+                    aria-hidden
+                  />
                   <div>
                     <h3 className="text-2xl font-bold drop-shadow">{p.name}</h3>
                     <p className="text-sm opacity-95 mt-1">

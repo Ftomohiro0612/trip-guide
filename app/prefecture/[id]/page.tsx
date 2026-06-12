@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
@@ -9,7 +10,12 @@ import {
   getPrefectureMeta,
   prefectures,
 } from "@/lib/facilities";
-import { categoryIcon, prefectureEmoji, prefectureGradients } from "@/lib/icons";
+import {
+  categoryIcon,
+  prefectureEmoji,
+  prefectureGradients,
+  prefectureIconImages,
+} from "@/lib/icons";
 import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
@@ -81,9 +87,15 @@ export default async function PrefecturePage({ params }: Props) {
             <span>{meta.name}</span>
           </nav>
           <div className="flex items-start gap-4">
-            <span className="text-5xl sm:text-7xl drop-shadow" aria-hidden>
-              {prefectureEmoji[meta.id]}
-            </span>
+            <Image
+              src={prefectureIconImages[meta.id]}
+              alt=""
+              width={96}
+              height={96}
+              className="h-16 w-16 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24"
+              aria-hidden
+              priority
+            />
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">エリア特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
