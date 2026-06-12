@@ -8,16 +8,35 @@ export const metadata: Metadata = {
   alternates: { canonical: "/privacy" },
 };
 
-const h2Class = "text-xl font-bold text-slate-900";
-const h3Class = "text-lg font-bold text-slate-900 mt-5";
-const listClass = "mt-2 space-y-1.5 list-disc list-inside";
-const orderedListClass = "mt-2 space-y-1.5 list-decimal list-inside";
+const h2Class = "scroll-mt-24 text-xl font-bold leading-snug text-slate-900";
+const h3Class =
+  "mt-7 scroll-mt-24 text-lg font-bold leading-snug text-slate-900";
+const listClass =
+  "legal-list mt-3 space-y-2.5 list-disc marker:text-slate-400";
+const orderedListClass =
+  "legal-list mt-3 space-y-2.5 list-decimal marker:text-slate-400";
+
+const privacyToc = [
+  { id: "operator", label: "事業者情報" },
+  { id: "users", label: "本サービスの利用者について" },
+  { id: "collected-info", label: "取得する情報" },
+  { id: "purposes", label: "利用目的" },
+  { id: "aggregate", label: "匿名集計について" },
+  { id: "photos", label: "写真の取り扱い" },
+  { id: "third-party", label: "第三者提供" },
+  { id: "processors", label: "委託先・外部サービス" },
+  { id: "cookies", label: "Cookie 等の利用" },
+  { id: "retention", label: "保存期間" },
+  { id: "deletion", label: "データの削除" },
+  { id: "security", label: "安全管理" },
+  { id: "revisions", label: "改定" },
+];
 
 export default function PrivacyPage() {
   return (
-    <LegalDocument title="プライバシーポリシー">
+    <LegalDocument title="プライバシーポリシー" tableOfContents={privacyToc}>
       <section>
-        <h2 className={h2Class}>1. 事業者情報</h2>
+        <h2 id="operator" className={h2Class}>1. 事業者情報</h2>
         <ul className={listClass}>
           <li>サービス名: メモリップ（trip-guide.net 上で提供）</li>
           <li>運営者: 合同会社アルゴリズム</li>
@@ -30,14 +49,14 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>1-2. 本サービスの利用者について</h2>
-        <p className="mt-2">
+        <h2 id="users" className={h2Class}>1-2. 本サービスの利用者について</h2>
+        <p className="mt-3">
           本サービスは、<strong>保護者の方がご家庭のおでかけ記録を管理するためのサービス</strong>です。お子さまご本人による単独でのご利用は想定していません。アカウントの作成・記録の入力は保護者など成人の方が行ってください。
         </p>
       </section>
 
       <section>
-        <h2 className={h2Class}>2. 取得する情報</h2>
+        <h2 id="collected-info" className={h2Class}>2. 取得する情報</h2>
         <h3 className={h3Class}>2.1 アカウント情報</h3>
         <ul className={listClass}>
           <li>
@@ -76,7 +95,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>3. 利用目的</h2>
+        <h2 id="purposes" className={h2Class}>3. 利用目的</h2>
         <ol className={orderedListClass}>
           <li>サービスの提供（記録の保存・表示・振り返り機能）</li>
           <li>お子さまの反応の集計など、ご自身の家族向け分析機能の提供</li>
@@ -89,7 +108,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>4. 匿名集計について</h2>
+        <h2 id="aggregate" className={h2Class}>4. 匿名集計について</h2>
         <ul className={listClass}>
           <li>
             当社は、訪問記録のうち<strong>構造化された項目</strong>（反応タグ・満足度・また行きたい・滞在時間・お子さまの年齢帯など）を、<strong>個人を特定できない形に集計</strong>した上で、施設ページ等に「みんなの記録」として表示することがあります。
@@ -110,7 +129,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>5. 写真の取り扱い（写真機能の提供開始後）</h2>
+        <h2 id="photos" className={h2Class}>5. 写真の取り扱い（写真機能の提供開始後）</h2>
         <ul className={listClass}>
           <li>
             写真は<strong>非公開</strong>で保存され、ご本人（アカウント所有者）のみが閲覧できます。
@@ -128,7 +147,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>6. 第三者提供</h2>
+        <h2 id="third-party" className={h2Class}>6. 第三者提供</h2>
         <ul className={listClass}>
           <li>法令に基づく場合を除き、個人情報を第三者に提供しません。</li>
           <li>
@@ -138,7 +157,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>7. 委託先・外部サービス</h2>
+        <h2 id="processors" className={h2Class}>7. 委託先・外部サービス</h2>
         <ul className={listClass}>
           <li>データ保管: Supabase（データベース・ストレージ）</li>
           <li>ホスティング: Vercel</li>
@@ -148,7 +167,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>7-2. Cookie 等の利用</h2>
+        <h2 id="cookies" className={h2Class}>7-2. Cookie 等の利用</h2>
         <ul className={listClass}>
           <li>
             本サービスは、ログイン状態の維持・利用状況の分析（Google
@@ -162,7 +181,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>7-3. 保存期間</h2>
+        <h2 id="retention" className={h2Class}>7-3. 保存期間</h2>
         <ul className={listClass}>
           <li>
             おでかけ記録・写真・お子さま情報は、<strong>ユーザーご自身が削除するまで</strong>（または退会まで）保存されます。
@@ -174,7 +193,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>8. データの削除</h2>
+        <h2 id="deletion" className={h2Class}>8. データの削除</h2>
         <ul className={listClass}>
           <li>記録・写真・お子さま情報は、ユーザー自身がいつでも削除できます。</li>
           <li>退会時には、アカウントに紐づく記録・写真・お子さま情報を削除します。</li>
@@ -183,7 +202,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>9. 安全管理</h2>
+        <h2 id="security" className={h2Class}>9. 安全管理</h2>
         <ul className={listClass}>
           <li>通信は SSL/TLS で暗号化されます。</li>
           <li>
@@ -193,7 +212,7 @@ export default function PrivacyPage() {
       </section>
 
       <section>
-        <h2 className={h2Class}>10. 改定</h2>
+        <h2 id="revisions" className={h2Class}>10. 改定</h2>
         <ul className={listClass}>
           <li>
             本ポリシーを改定する場合は、サイト上で告知します。重要な変更（匿名集計の範囲拡大・第三者提供の開始等）は事前に告知します。
