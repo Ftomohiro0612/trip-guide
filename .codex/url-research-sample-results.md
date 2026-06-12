@@ -9,7 +9,8 @@
 |---|---|---|
 | confirmed | 5 | id6, id36, id100, id107, id139 |
 | likely_ok | 2 | id112, id83 |
-| needs_web_check | 2 | id32, id145 |
+| google_map_only | 1 | id145 |
+| needs_web_check | 1 | id32 |
 | needs_human_review | 1 | id26 |
 | exclude_candidate | 0 | — |
 
@@ -26,18 +27,19 @@
 | 112 | 万力公園動物広場 | https://www.city.yamanashi.yamanashi.jp/site/playground/2270.html | municipal(山梨市) | likely_ok | 住所一致。正式名称は「ふれあい動物広場」の可能性。運営者サイトはSSL切れ |
 | 83 | ナガノフォレストビレッジ 森の駅Daizahoushi | https://naganoforestvillage.eternal-story.com/morinoeki/ | official | likely_ok | 名称・内容一致。**所在地は長野市飯綱高原（大座法師池畔）と判明**（登録住所「長野県」のみ→住所補完は別タスク・公式確認ベースで） |
 | 139 | 富岳風穴 | https://www.mtfuji-cave.com/contents/wind_cave/ | official(富士急系) | confirmed | 住所・電話・営業時間まで完全一致 |
-| 145 | ガラス工房りゅう | null | none | needs_web_check | 公式サイトなし（予約サイト・Instagramのみ）。ルール上まとめサイトは採用せず null |
+| 145 | ガラス工房りゅう | https://www.google.com/maps/place/%E3%82%AC%E3%83%A9%E3%82%B9%E5%B7%A5%E6%88%BF%E3%82%8A%E3%82%85%E3%81%86/@35.6196376,138.4788445,17z/data=!3m1!4b1!4m6!3m5!1s0x601bf7066cece099:0x2ac8acc92c31398b!8m2!3d35.6196376!4d138.4788445!16s%2Fg%2F11ssd65yln | google_map | google_map_only | 公式サイトなし。Google Mapで名称・住所（南アルプス市吉田729-1）・営業実態を確認。notes: official source not found; confirmed via Google Map only |
 
 ## 代表的な判断例（基準の運用確認）
 
 1. **confirmed の典型**（id6/100/139）: 公式・運営元ページで名称+住所まで一致確認できたもの
 2. **likely_ok の典型**（id112）: 自治体ページで住所一致は取れたが、施設個別ページ（動物広場）の一次情報まで届かなかったもの
-3. **needs_web_check の典型**（id145）: 実在は複数ソースで裏付けられるが一次情報URLが存在しない → URLなしのまま status のみ記録
+3. **google_map_only の典型**（id145）: 公式系は見つからないが Google Map で名称・住所・営業実態を確認 → notes に `official source not found; confirmed via Google Map only` を明記し、confirmed にはしない
 4. **needs_human_review の典型**（id26）: 調査で**登録住所の誤り疑い**が発覚 → URL・statusの機械反映はせず、住所修正タスク（公式確認ベース）とセットで人手判断
 5. **副産物の扱い**: 名称変更（id32）・住所特定（id83）・カテゴリずれ（id6）は**このタスクでは反映しない**。調査メモとして残し、別タスクで公式確認ルールに従って修正
 
 ## 反映ルール（全件展開時）
 
 - confirmed / likely_ok: url（公式施設ページの場合）+ source_urls + source_checked_at + data_quality_status を反映
+- google_map_only: オーナー承認後に source_urls + source_checked_at + data_quality_status を反映。ユーザー向け url は公式ページがないため個別判断
 - needs_web_check: source_urls（あれば）+ status のみ。url 設定は公式ページがある場合のみ
 - needs_human_review / exclude_candidate: **JSON反映前に PM→オーナーレビュー必須**

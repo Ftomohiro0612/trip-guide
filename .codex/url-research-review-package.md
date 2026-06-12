@@ -11,12 +11,14 @@
 |---|---|---|
 | confirmed | **62** | 承認後に url + source_urls + source_checked_at + status を反映 |
 | likely_ok | **15** | 同上（オーナー承認対象） |
-| needs_web_check | **1**（id145） | status のみ記録。URL なし |
+| google_map_only | **1**（id145） | オーナー承認後に source_urls + source_checked_at + status を反映。url は公式ページがないため個別判断 |
+| needs_web_check | **0** | 該当なし |
 | needs_human_review | **24** | 反映保留。下記分類で個別判断 |
-| google_map_only | 0 | 該当なし（全件で公式系 or 不明のいずれかだった） |
 
-サンプル10件の統合判定: confirmed=6,100,112,139 / likely_ok=36,107 / needs_web_check=145 / needs_human_review=26,32,83
+サンプル10件の統合判定: confirmed=6,100,112,139 / likely_ok=36,107 / google_map_only=145 / needs_human_review=26,32,83
 （PMとCodexで判定が割れたものは保守側を採用）
+
+Google Map補正: id145「ガラス工房りゅう」は公式系不在だが、Google Mapで名称・住所（南アルプス市吉田729-1）・営業実態を確認できたため google_map_only に再分類。notes には `official source not found; confirmed via Google Map only` を明記する。
 
 ## needs_human_review 24件の分類と推奨対応
 
@@ -38,9 +40,11 @@
 id7 サープラ富士 / id50 うさみ農園 / id78 ぬくもく / id102 かまくら雪遊びパーク / id126 おしろらんど / id154 シャボテン狩り工房 / id191 広野海岸公園 / id199 押原公園 / id206 平成記念こどもの森公園
 → 推奨: **公式記載の住所に修正（provenance付き）した上で confirmed 反映**する後続タスク。番地ズレは公式側が正の前提でよいが、修正は1件ずつ公式URL根拠つきで
 
-### C. 公式特定不可（2件）
+### C. 公式特定不可（2件）— Google Map補正後も人手レビュー維持
 id51 ホテルテルメ温水プール / id163 Trick Art Museum 富士河口湖
 → 推奨: needs_human_review のまま。実体確認できなければ exclude_candidate 候補
+
+補足: id51 は Google Map 上では「自家源泉の宿 竜宮の使い宿泊者専用プール」が候補に出るが、登録名と異なるため旧称・名称混入疑いとして needs_human_review 維持。id163 は Google Map 検索でも同名施設が確認できず、河口湖美術館等の別施設に寄るため needs_human_review 維持。
 
 ### D. 名称・カテゴリ問題（3件）
 id32 藤枝市民プールキッズパーク（現名称「れんげじスマイルホール キッズパーク」）/ id83 ナガノフォレストビレッジ（住所が「長野県」のみ→公式系情報で長野市上ヶ屋2471-608と判明）/ id132 ふじやまべーす（実体は貸別荘でカテゴリ不一致）
@@ -48,6 +52,6 @@ id32 藤枝市民プールキッズパーク（現名称「れんげじスマイ
 
 ## 提案する次のステップ
 
-1. **承認フェーズ（オーナー）**: confirmed 62 + likely_ok 15 の反映可否 / A群10件の個別判断
-2. **反映フェーズ（Codex）**: 承認分の url / source_urls / source_checked_at(=2026-06-12) / data_quality_status を JSON 反映 → audit 実行（url_na_or_empty 102→約25に減る見込み）→ push-to-sheet → build → commit
+1. **承認フェーズ（オーナー）**: confirmed 62 + likely_ok 15 + google_map_only 1 の反映可否 / A群10件の個別判断
+2. **反映フェーズ（Codex）**: 承認分の url / source_urls / source_checked_at(=2026-06-12) / data_quality_status を JSON 反映 → audit 実行（url_na_or_empty 102→約24に減る見込み）→ push-to-sheet → build → commit
 3. **後続タスク**: B群9件の住所修正（公式根拠つき・別コミット）/ C群2件の実体確認 / D群3件の名称・カテゴリ修正
