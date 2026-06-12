@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-11(深夜) / 本番=a8678c5(トップv3.6-3.8・3県表記→関東甲信越・写真PhaseA-C実装済みflag=false・id734削除・1,030施設) / 写真公開条件: 規約掲載+オーナーGO(→.codex/phase4-photo-upload.md) / 規約ドラフトv0.2 オーナー確認待ち(.codex/terms-privacy-draft.md) / 施設データ運用標準化済み(.codex/facility-data-update-workflow.md がマスター) / provenance 4フィールド初適用(coord3件修正 6d591cd・confirmed 3件) / 監査v3第1弾実装済み(汚染チェック全0件) / 未デプロイ: 監査v3(70e60a8)・coord修正(6d591cd)・ドキュメント類 / 残課題: url未入力102件・invalid_address 202件・missing_experience 259件・Sheets同期4列対応・status機械付与(PM判断待ち)
+**最終更新**: 2026-06-12 / 本番=0e790cc(規約・プライバシーポリシー掲載完了 /privacy /terms・可読性改善・metadata整合・埼玉3施設coord修正・1,030施設) / 運営者=合同会社アルゴリズム(横浜)・問い合わせ=mail@memorips.com(Xserverで開設済み) / Sheets同期 provenance 4列対応済み(568ea2c・26列運用) / 監査v3第1弾デプロイ済み / キャラクター=案1「芽が出た地図ピン」確定(.codex/memorips-character-direction.md、SVG試し配置はこれから) / 写真公開条件: 規約掲載✅+オーナーGO待ち(→.codex/phase4-photo-upload.md) / 残課題: 写真公開前レビュー・status機械付与(PM判断待ち)・url未入力102件・invalid_address 202件・missing_experience 259件・旧/legal/* リダイレクトの308化(軽微)
 
 ---
 
