@@ -5,12 +5,8 @@ import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import MapViewClient from "@/components/MapViewClient";
 import { JsonLd } from "@/components/JsonLd";
-import { categories, facilities, prefectures } from "@/lib/facilities";
-import {
-  categoryIcon,
-  prefectureGradients,
-  prefectureIconImages,
-} from "@/lib/icons";
+import { categories, facilities, metadata, prefectures } from "@/lib/facilities";
+import { categoryIcon, prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type { RecommendedForTag } from "@/types/facility";
 
@@ -908,6 +904,7 @@ function ValueProofSection() {
 export default function HomePage() {
   const facilityCountLabel =
     facilities.length >= 1000 ? "1,000施設超" : `${facilities.length}施設`;
+  const totalFacilityCountLabel = metadata.total_facilities.toLocaleString("ja-JP");
   const tagList = (
     Object.entries(RECOMMENDED_FOR_TAG_META) as [
       RecommendedForTag,
@@ -1055,43 +1052,36 @@ export default function HomePage() {
         <QuickFilter />
 
         <section className="mt-14" aria-labelledby="area-heading">
-          <div className="flex items-end justify-between mb-5">
-            <div>
-              <h2 id="area-heading" className="text-2xl font-bold text-slate-900">
-                エリアから探す
-              </h2>
-              <p className="text-sm text-slate-500 mt-1">
-                {prefectures.length}県{facilities.length}施設をエリア別にチェック
-              </p>
-            </div>
+          <div className="mb-6 text-center">
+            <h2 id="area-heading" className="text-2xl font-bold text-slate-900">
+              エリアから遊び場を探す
+            </h2>
+            <p className="mt-2 text-sm text-slate-500">
+              関東甲信越{prefectures.length}県・{totalFacilityCountLabel}施設をチェック
+            </p>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-9 sm:gap-x-4">
             {prefectures.map((p) => (
               <Link
                 key={p.id}
                 href={`/prefecture/${p.id}`}
-                className="group relative rounded-3xl overflow-hidden aspect-[4/3] sm:aspect-[3/4] shadow-md hover:shadow-xl transition-all"
+                className="group flex min-w-0 flex-col items-center gap-2 rounded-lg px-1 py-2 text-center transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                aria-label={`${p.name}の遊び場を探す`}
               >
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${prefectureGradients[p.id]} group-hover:scale-105 transition-transform duration-500`}
+                <Image
+                  src={prefectureIconImages[p.id]}
+                  alt=""
+                  width={64}
+                  height={64}
+                  className="h-12 w-12 object-contain drop-shadow-sm transition-transform group-hover:scale-105 sm:h-14 sm:w-14"
+                  aria-hidden
                 />
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-black/0 transition-colors" />
-                <div className="relative h-full p-6 flex flex-col justify-between text-white">
-                  <Image
-                    src={prefectureIconImages[p.id]}
-                    alt=""
-                    width={64}
-                    height={64}
-                    className="h-14 w-14 object-contain drop-shadow-lg sm:h-16 sm:w-16"
-                    aria-hidden
-                  />
-                  <div>
-                    <h3 className="text-2xl font-bold drop-shadow">{p.name}</h3>
-                    <p className="text-sm opacity-95 mt-1">
-                      {p.count} 施設 / 詳細を見る →
-                    </p>
-                  </div>
-                </div>
+                <span className="text-sm font-bold leading-tight text-slate-800 group-hover:text-brand">
+                  {p.name}
+                </span>
+                <span className="text-[11px] leading-none text-slate-400">
+                  {p.count}施設
+                </span>
               </Link>
             ))}
           </div>
