@@ -48,6 +48,13 @@ export type RecommendedForTag =
   | "nature"
   | "food";
 
+export type DataQualityStatus =
+  | "confirmed"
+  | "likely_ok"
+  | "needs_web_check"
+  | "needs_human_review"
+  | "exclude_candidate";
+
 export interface Facility {
   id: number;
   slug: string;
@@ -81,6 +88,10 @@ export interface Facility {
   experience_tags?: string[] | null;
   summer_water_play?: RainFriendly | null;
   recommended_for_tags?: RecommendedForTag[];
+  source_urls?: string;
+  source_checked_at?: string;
+  data_quality_status?: DataQualityStatus;
+  source_notes?: string;
 }
 
 export interface PrefectureMeta {

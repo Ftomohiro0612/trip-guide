@@ -36,6 +36,10 @@ const HEADERS = [
   "unique_selling_point",
   "experience_tags",
   "summer_water_play",
+  "source_urls",
+  "source_checked_at",
+  "data_quality_status",
+  "source_notes",
 ] as const;
 
 function csvEscape(value: unknown): string {
@@ -82,6 +86,10 @@ async function main() {
         f.unique_selling_point ?? "",
         (f.experience_tags ?? []).join(","),
         f.summer_water_play ?? "",
+        f.source_urls ?? "",
+        f.source_checked_at ?? "",
+        f.data_quality_status ?? "",
+        f.source_notes ?? "",
       ]),
     );
   }

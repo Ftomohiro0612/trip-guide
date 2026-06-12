@@ -4,6 +4,7 @@ import { fileURLToPath } from "node:url";
 import { parse } from "csv-parse/sync";
 import type {
   CategoryMeta,
+  DataQualityStatus,
   Facility,
   FacilitiesData,
   FacilityTag,
@@ -32,6 +33,16 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   神奈川県: "kanagawa",
 };
 
+const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
+  "confirmed",
+  "likely_ok",
+  "needs_web_check",
+  "needs_human_review",
+  "exclude_candidate",
+]);
+
+const SOURCE_CHECKED_AT_RE = /^\d{4}-\d{2}-\d{2}$/;
+
 interface CsvRow {
   id?: string;
   県?: string;
@@ -55,6 +66,10 @@ interface CsvRow {
   unique_selling_point?: string;
   experience_tags?: string;
   summer_water_play?: string;
+  source_urls?: string;
+  source_checked_at?: string;
+  data_quality_status?: string;
+  source_notes?: string;
 }
 
 function val(row: CsvRow, key: keyof CsvRow): string {
@@ -87,6 +102,18 @@ function parseStringList(s: string): string[] {
     .split(",")
     .map((t) => t.trim())
     .filter(Boolean);
+}
+
+function parseSourceUrls(s: string): string {
+  return s
+    .split(",")
+    .map((url) => url.trim())
+    .filter(Boolean)
+    .join(",");
+}
+
+function isDataQualityStatus(s: string): s is DataQualityStatus {
+  return DATA_QUALITY_STATUSES.has(s as DataQualityStatus);
 }
 
 interface MergeResult {
@@ -137,6 +164,26 @@ function mergeRow(
     if (raw === "") return; // empty cell → keep existing
     const next = transform(raw);
     if (JSON.stringify(base[key]) !== JSON.stringify(next)) {
+      changes.push(String(key));
+      base[key] = next;
+    }
+  };
+
+  const setNumberIf = <K extends "latitude" | "longitude">(
+    key: K,
+    raw: string,
+  ) => {
+    if (raw === "") return; // empty cell → keep existing
+    const next = parseFloatOrNull(raw);
+    const current = base[key];
+    if (
+      typeof current === "number" &&
+      typeof next === "number" &&
+      Math.abs(current - next) < 1e-10
+    ) {
+      return;
+    }
+    if (current !== next) {
       changes.push(String(key));
       base[key] = next;
     }
@@ -198,8 +245,8 @@ function mergeRow(
   setIf("target_age", val(row, "対象年齢"), (s) => s);
   setIf("url", val(row, "URL/参考"), (s) => s || null);
 
-  setIf("latitude", val(row, "lat"), parseFloatOrNull);
-  setIf("longitude", val(row, "lng"), parseFloatOrNull);
+  setNumberIf("latitude", val(row, "lat"));
+  setNumberIf("longitude", val(row, "lng"));
   setIf("image", val(row, "image"), (s) => s || null);
   setIf("image_attribution", val(row, "image_credit"), (s) => s || null);
   setIf("tags", val(row, "tags"), parseTags);
@@ -212,6 +259,34 @@ function mergeRow(
     val(row, "summer_water_play"),
     (s) => s as Facility["summer_water_play"],
   );
+
+  const sourceUrls = parseSourceUrls(val(row, "source_urls"));
+  if (sourceUrls) {
+    setIf("source_urls", sourceUrls, (s) => s);
+  }
+
+  const sourceCheckedAt = val(row, "source_checked_at");
+  if (sourceCheckedAt) {
+    if (!SOURCE_CHECKED_AT_RE.test(sourceCheckedAt)) {
+      console.warn(
+        `⚠️  invalid source_checked_at: id=${id} name="${base.name || val(row, "施設名")}" value="${sourceCheckedAt}"`,
+      );
+    }
+    setIf("source_checked_at", sourceCheckedAt, (s) => s);
+  }
+
+  const dataQualityStatus = val(row, "data_quality_status");
+  if (dataQualityStatus) {
+    if (isDataQualityStatus(dataQualityStatus)) {
+      setIf("data_quality_status", dataQualityStatus, () => dataQualityStatus);
+    } else {
+      console.warn(
+        `⚠️  invalid data_quality_status: id=${id} name="${base.name || val(row, "施設名")}" value="${dataQualityStatus}"`,
+      );
+    }
+  }
+
+  setIf("source_notes", val(row, "source_notes"), (s) => s);
 
   return { next: base, changedFields: changes };
 }
@@ -352,8 +427,12 @@ async function main() {
   // 7. Sort by id and write
   merged.sort((a, b) => a.id - b.id);
   const out: FacilitiesData = { ...existing, facilities: merged };
-  recomputeCounts(out);
-  await writeFile(DATA_PATH, JSON.stringify(out, null, 2) + "\n", "utf-8");
+  const hasFacilityChanges =
+    added > 0 || orphaned.length > 0 || changeLog.length > 0;
+  if (hasFacilityChanges) {
+    recomputeCounts(out);
+    await writeFile(DATA_PATH, JSON.stringify(out, null, 2) + "\n", "utf-8");
+  }
 
   // 8. Summary
   console.log("");
@@ -362,6 +441,9 @@ async function main() {
   console.log(`  · updated: ${updated}`);
   console.log(`  · added:   ${added}`);
   console.log(`  · kept (not in sheet): ${orphaned.length}`);
+  if (!hasFacilityChanges) {
+    console.log("  · JSON write skipped: no facility changes");
+  }
   if (changeLog.length > 0) {
     console.log("");
     console.log("Updated rows:");

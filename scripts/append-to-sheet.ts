@@ -28,7 +28,7 @@ const rows = parse(csv, {
 
 console.log(`Loaded ${rows.length} rows from ${csvPath}`);
 
-// Column order must match the sheet exactly (22 columns).
+// Column order must match the sheet exactly (26 columns).
 const COLUMNS = [
   "id",
   "県",
@@ -52,6 +52,10 @@ const COLUMNS = [
   "unique_selling_point",
   "experience_tags",
   "summer_water_play",
+  "source_urls",
+  "source_checked_at",
+  "data_quality_status",
+  "source_notes",
 ] as const;
 
 const values = rows.map((r) => COLUMNS.map((c) => r[c] ?? ""));

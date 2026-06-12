@@ -36,9 +36,13 @@ const HEADERS = [
   "unique_selling_point",
   "experience_tags",
   "summer_water_play",
+  "source_urls",
+  "source_checked_at",
+  "data_quality_status",
+  "source_notes",
 ] as const;
 
-const COL_LAST = String.fromCharCode("A".charCodeAt(0) + HEADERS.length - 1); // V
+const COL_LAST = String.fromCharCode("A".charCodeAt(0) + HEADERS.length - 1); // Z
 
 function rowFor(f: Facility): unknown[] {
   return [
@@ -64,6 +68,10 @@ function rowFor(f: Facility): unknown[] {
     f.unique_selling_point ?? "",
     (f.experience_tags ?? []).join(","),
     f.summer_water_play ?? "",
+    f.source_urls ?? "",
+    f.source_checked_at ?? "",
+    f.data_quality_status ?? "",
+    f.source_notes ?? "",
   ];
 }
 
