@@ -12,9 +12,10 @@ import {
   prefectures,
   visibleFacilities,
 } from "@/lib/facilities";
+import { FEATURED_FACILITY_IDS } from "@/lib/config";
 import { categoryIcon, prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import type { RecommendedForTag } from "@/types/facility";
+import type { Facility, RecommendedForTag } from "@/types/facility";
 
 function HeroBackground() {
   return (
@@ -930,9 +931,9 @@ export default function HomePage() {
     .filter(([, , count]) => count > 0)
     .sort((a, b) => b[2] - a[2]);
 
-  const featured = visibleFacilities
-    .filter((f) => f.rain_friendly === "◎" || f.is_free)
-    .slice(0, 6);
+  const featured = FEATURED_FACILITY_IDS.map((id) =>
+    visibleFacilities.find((f) => f.id === id),
+  ).filter((f): f is Facility => Boolean(f));
 
   const websiteJsonLd = {
     "@context": "https://schema.org",
@@ -1144,10 +1145,10 @@ export default function HomePage() {
                 id="featured-heading"
                 className="text-2xl font-bold text-slate-900"
               >
-                ピックアップ
+                子どもの&quot;好き&quot;が見つかるおすすめ施設
               </h2>
               <p className="text-sm text-slate-500 mt-1">
-                雨の日OK・無料で遊べるおすすめ施設
+                大型公園・自然・科学館など、子どものタイプ別に選んだ定番スポット
               </p>
             </div>
             <Link

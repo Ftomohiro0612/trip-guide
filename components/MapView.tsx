@@ -69,6 +69,9 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   kanagawa: true,
 };
 
+const LOCATION_GUIDE_TEXT = "「📍 現在地」を押すと、現在地を表示できます。";
+const EARTH_RADIUS_KM = 6371;
+
 type PersistedMapViewState = {
   center: [number, number];
   zoom: number;
@@ -147,6 +150,39 @@ function hasCoords(f: Facility): f is PlacedFacility {
     Number.isFinite(f.latitude) &&
     Number.isFinite(f.longitude)
   );
+}
+
+function toRadians(degrees: number) {
+  return (degrees * Math.PI) / 180;
+}
+
+function haversineDistanceKm(
+  from: [number, number],
+  to: [number, number],
+) {
+  const [fromLat, fromLng] = from;
+  const [toLat, toLng] = to;
+  const deltaLat = toRadians(toLat - fromLat);
+  const deltaLng = toRadians(toLng - fromLng);
+  const lat1 = toRadians(fromLat);
+  const lat2 = toRadians(toLat);
+
+  const a =
+    Math.sin(deltaLat / 2) ** 2 +
+    Math.cos(lat1) * Math.cos(lat2) * Math.sin(deltaLng / 2) ** 2;
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  return EARTH_RADIUS_KM * c;
+}
+
+function driveTimeEstimateLabel(distanceKm: number) {
+  if (distanceKm <= 5) return "車で約10〜20分目安";
+  if (distanceKm <= 10) return "車で約20〜35分目安";
+  if (distanceKm <= 18) return "車で約30〜45分目安";
+  if (distanceKm <= 30) return "車で約45分〜1時間目安";
+  if (distanceKm <= 45) return "車で約1〜1.5時間目安";
+  if (distanceKm <= 70) return "車で約1.5〜2時間目安";
+  if (distanceKm <= 100) return "車で約2〜3時間目安";
+  return "車で約3時間以上目安";
 }
 
 export default function MapView({
@@ -270,8 +306,16 @@ export default function MapView({
   };
 
   return (
-    <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
-      <div className="absolute z-[1000] top-3 left-3 right-3 sm:right-auto flex flex-wrap gap-2">
+    <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+      <div className="flex flex-wrap gap-2 p-3 bg-slate-50/80 border-b border-slate-100">
+        <button
+          type="button"
+          onClick={handleLocate}
+          disabled={locating}
+          className="text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors bg-blue-600 text-white border-blue-600 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-wait"
+        >
+          {locating ? "📍 取得中..." : "📍 現在地"}
+        </button>
         {(Object.keys(PREF_LABELS) as PrefectureId[]).map((id) => (
           <button
             key={id}
@@ -319,55 +363,51 @@ export default function MapView({
         >
           🆓 無料のみ
         </button>
-        {storageKey && (
-          <button
-            type="button"
-            onClick={handleLocate}
-            disabled={locating}
-            className="text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors bg-white text-slate-700 border-slate-200 hover:border-blue-400 disabled:opacity-60 disabled:cursor-wait"
-          >
-            {locating ? "📍 取得中..." : "📍 現在地"}
-          </button>
+        <p className="w-full text-[11px] font-medium text-slate-500 bg-white/90 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-white/80 sm:max-w-max">
+          {LOCATION_GUIDE_TEXT}
+        </p>
+      </div>
+
+      <div className="relative overflow-hidden">
+        {locationNotice && (
+          <div className="absolute z-[1000] bottom-14 left-3 right-3 sm:left-auto sm:max-w-xs bg-white/95 backdrop-blur px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-xs font-medium text-slate-700">
+            {locationNotice}
+          </div>
         )}
-      </div>
 
-      {locationNotice && (
-        <div className="absolute z-[1000] bottom-14 left-3 right-3 sm:left-auto sm:max-w-xs bg-white/95 backdrop-blur px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-xs font-medium text-slate-700">
-          {locationNotice}
+        <div className="absolute z-[650] bottom-3 left-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-sm text-xs font-medium text-slate-700">
+          {visible.length} 施設を表示中
         </div>
-      )}
 
-      <div className="absolute z-[1000] bottom-3 left-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-sm text-xs font-medium text-slate-700">
-        {visible.length} 施設を表示中
-      </div>
-
-      <MapContainer
-        center={initialState?.center ?? DEFAULT_CENTER}
-        zoom={initialState?.zoom ?? DEFAULT_ZOOM}
-        scrollWheelZoom
-        style={{ height, width: "100%" }}
-      >
-        <TileLayer
-          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-        />
-        <FitBoundsOnChange
-          points={visible}
-          fitMode={
-            storageKey ? (initialState ? "never" : "initial-only") : "always"
-          }
-        />
-        {storageKey && <PersistMapPosition onChange={persistState} />}
-        {currentLocation && <CurrentLocationMarker position={currentLocation} />}
-        {rendered.map((f) => (
-          <FacilityMarker
-            key={f.id}
-            facility={f}
-            color={PREF_COLORS[f.prefecture_id]}
-            status={userStatus?.get(f.slug)}
+        <MapContainer
+          center={initialState?.center ?? DEFAULT_CENTER}
+          zoom={initialState?.zoom ?? DEFAULT_ZOOM}
+          scrollWheelZoom
+          style={{ height, width: "100%" }}
+        >
+          <TileLayer
+            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
-        ))}
-      </MapContainer>
+          <FitBoundsOnChange
+            points={visible}
+            fitMode={
+              storageKey ? (initialState ? "never" : "initial-only") : "always"
+            }
+          />
+          {storageKey && <PersistMapPosition onChange={persistState} />}
+          {currentLocation && <CurrentLocationMarker position={currentLocation} />}
+          {rendered.map((f) => (
+            <FacilityMarker
+              key={f.id}
+              facility={f}
+              color={PREF_COLORS[f.prefecture_id]}
+              status={userStatus?.get(f.slug)}
+              currentLocation={currentLocation}
+            />
+          ))}
+        </MapContainer>
+      </div>
     </div>
   );
 }
@@ -460,13 +500,29 @@ function FacilityMarker({
   facility,
   color,
   status,
+  currentLocation,
 }: {
   facility: PlacedFacility;
   color: string;
   status?: UserFacilityStatus;
+  currentLocation: [number, number] | null;
 }) {
   const highlighted =
     facility.rain_friendly === "◎" || facility.is_free;
+  const driveEstimate = currentLocation
+    ? driveTimeEstimateLabel(
+        haversineDistanceKm(currentLocation, [
+          facility.latitude,
+          facility.longitude,
+        ]),
+      )
+    : null;
+  const thingsToDo = Array.isArray(facility.things_to_do)
+    ? facility.things_to_do
+        .filter((item) => item.trim().length > 0)
+        .slice(0, 3)
+    : [];
+
   return (
     <CircleMarker
       center={[facility.latitude, facility.longitude]}
@@ -479,7 +535,7 @@ function FacilityMarker({
       }}
     >
       <Popup>
-        <div className="min-w-[200px]">
+        <div className="min-w-[200px] max-w-[240px]">
           <p className="text-xs text-slate-500 mb-1">
             {facility.prefecture} · {facility.category}
           </p>
@@ -511,6 +567,29 @@ function FacilityMarker({
           {status?.wishlisted && (
             <div className="text-[10px] bg-pink-50 text-pink-600 px-1.5 py-0.5 rounded font-medium mb-1">
               ⭐ 行きたい登録済み
+            </div>
+          )}
+          {driveEstimate && (
+            <p className="text-[11px] font-bold text-slate-700 bg-blue-50 px-2 py-1 rounded mb-2 truncate">
+              🚗 現在地から {driveEstimate}
+            </p>
+          )}
+          {thingsToDo.length > 0 && (
+            <div className="mb-2">
+              <p className="text-[10px] font-bold text-slate-500 mb-1">
+                この施設でできそうなこと
+              </p>
+              <ul className="space-y-0.5">
+                {thingsToDo.map((item) => (
+                  <li
+                    key={item}
+                    className="text-[11px] leading-snug text-slate-700 truncate"
+                    title={item}
+                  >
+                    ・{item}
+                  </li>
+                ))}
+              </ul>
             </div>
           )}
           <Link
