@@ -1023,7 +1023,11 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <MapViewClient facilities={visibleFacilities} height={520} />
+          <MapViewClient
+            facilities={visibleFacilities}
+            height={520}
+            storageKey="home"
+          />
         </section>
 
         <section className="mt-14" aria-labelledby="tag-heading">

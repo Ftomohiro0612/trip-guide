@@ -23,6 +23,7 @@ const MapView = dynamic(() => import("./MapView"), {
 interface Props {
   facilities: Facility[];
   height?: number;
+  storageKey?: string;
 }
 
 export default function MapViewClient(props: Props) {

@@ -20,7 +20,11 @@ export default function MapPage() {
           マーカーをクリックすると詳細ページへ移動できます。県や条件で表示施設を絞り込めます。
         </p>
       </div>
-      <MapViewClient facilities={visibleFacilities} height={680} />
+      <MapViewClient
+        facilities={visibleFacilities}
+        height={680}
+        storageKey="map"
+      />
     </div>
   );
 }

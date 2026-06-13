@@ -1,14 +1,16 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import {
   MapContainer,
   TileLayer,
   CircleMarker,
   Popup,
   useMap,
+  useMapEvents,
 } from "react-leaflet";
 import L from "leaflet";
+import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
 import type { Facility, PrefectureId } from "@/types/facility";
@@ -18,6 +20,7 @@ interface Props {
   facilities: Facility[];
   height?: number;
   userStatus?: UserStatusMap;
+  storageKey?: string;
 }
 
 export type UserFacilityStatus = {
@@ -52,6 +55,86 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   kanagawa: "🌊 神奈川",
 };
 
+const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
+const DEFAULT_ZOOM = 8;
+const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
+  shizuoka: true,
+  nagano: true,
+  yamanashi: true,
+  tokyo: true,
+  tochigi: true,
+  saitama: true,
+  niigata: true,
+  chiba: true,
+  kanagawa: true,
+};
+
+type PersistedMapViewState = {
+  center: [number, number];
+  zoom: number;
+  activePrefs: Record<PrefectureId, boolean>;
+  showRain: boolean;
+  showFree: boolean;
+};
+
+function persistenceKey(storageKey: string) {
+  return `mapview:${storageKey}`;
+}
+
+function validCenter(value: unknown): value is [number, number] {
+  return (
+    Array.isArray(value) &&
+    value.length === 2 &&
+    typeof value[0] === "number" &&
+    typeof value[1] === "number" &&
+    Number.isFinite(value[0]) &&
+    Number.isFinite(value[1]) &&
+    value[0] >= -90 &&
+    value[0] <= 90 &&
+    value[1] >= -180 &&
+    value[1] <= 180
+  );
+}
+
+function readPersistedState(storageKey?: string): PersistedMapViewState | null {
+  if (!storageKey || typeof window === "undefined") return null;
+
+  try {
+    const raw = window.sessionStorage.getItem(persistenceKey(storageKey));
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as Partial<PersistedMapViewState>;
+    if (
+      !validCenter(parsed.center) ||
+      typeof parsed.zoom !== "number" ||
+      !Number.isFinite(parsed.zoom)
+    ) {
+      return null;
+    }
+
+    const savedPrefs =
+      typeof parsed.activePrefs === "object" && parsed.activePrefs !== null
+        ? (parsed.activePrefs as Partial<Record<PrefectureId, unknown>>)
+        : {};
+    const activePrefs = { ...DEFAULT_PREFS };
+    for (const id of Object.keys(DEFAULT_PREFS) as PrefectureId[]) {
+      if (typeof savedPrefs[id] === "boolean") {
+        activePrefs[id] = savedPrefs[id];
+      }
+    }
+
+    return {
+      center: parsed.center,
+      zoom: parsed.zoom,
+      activePrefs,
+      showRain: parsed.showRain === true,
+      showFree: parsed.showFree === true,
+    };
+  } catch {
+    return null;
+  }
+}
+
 interface PlacedFacility extends Facility {
   latitude: number;
   longitude: number;
@@ -66,24 +149,64 @@ function hasCoords(f: Facility): f is PlacedFacility {
   );
 }
 
-export default function MapView({ facilities, height = 520, userStatus }: Props) {
+export default function MapView({
+  facilities,
+  height = 520,
+  userStatus,
+  storageKey,
+}: Props) {
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
+  const [initialState] = useState(() => readPersistedState(storageKey));
 
   const [activePrefs, setActivePrefs] = useState<Record<PrefectureId, boolean>>(
-    {
-      shizuoka: true,
-      nagano: true,
-      yamanashi: true,
-      tokyo: true,
-      tochigi: true,
-      saitama: true,
-      niigata: true,
-      chiba: true,
-      kanagawa: true,
-    },
+    () => initialState?.activePrefs ?? { ...DEFAULT_PREFS },
   );
-  const [showRain, setShowRain] = useState(false);
-  const [showFree, setShowFree] = useState(false);
+  const [showRain, setShowRain] = useState(() => initialState?.showRain ?? false);
+  const [showFree, setShowFree] = useState(() => initialState?.showFree ?? false);
+  const [currentLocation, setCurrentLocation] = useState<[number, number] | null>(
+    null,
+  );
+  const [locationNotice, setLocationNotice] = useState<string | null>(null);
+  const [locating, setLocating] = useState(false);
+  const savedSnapshot = useRef<PersistedMapViewState>({
+    center: initialState?.center ?? DEFAULT_CENTER,
+    zoom: initialState?.zoom ?? DEFAULT_ZOOM,
+    activePrefs,
+    showRain,
+    showFree,
+  });
+  const shouldPersist = Boolean(storageKey);
+
+  const persistState = useCallback(
+    (patch: Partial<PersistedMapViewState>) => {
+      if (!storageKey || typeof window === "undefined") return;
+
+      const next = { ...savedSnapshot.current, ...patch };
+      savedSnapshot.current = next;
+
+      try {
+        window.sessionStorage.setItem(
+          persistenceKey(storageKey),
+          JSON.stringify(next),
+        );
+      } catch {
+        // sessionStorage may be unavailable or full; the map should continue working.
+      }
+    },
+    [storageKey],
+  );
+
+  useEffect(() => {
+    if (!shouldPersist) return;
+    persistState({ activePrefs, showRain, showFree });
+  }, [activePrefs, persistState, shouldPersist, showFree, showRain]);
+
+  useEffect(() => {
+    if (!locationNotice) return;
+
+    const timeout = window.setTimeout(() => setLocationNotice(null), 5000);
+    return () => window.clearTimeout(timeout);
+  }, [locationNotice]);
 
   const visible = useMemo(() => {
     return placed.filter((f) => {
@@ -124,6 +247,27 @@ export default function MapView({ facilities, height = 520, userStatus }: Props)
     }
     return out;
   }, [visible]);
+
+  const handleLocate = () => {
+    if (typeof navigator === "undefined" || !navigator.geolocation) {
+      setLocationNotice("位置情報を取得できませんでした（ブラウザの許可が必要です）");
+      return;
+    }
+
+    setLocating(true);
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        setLocating(false);
+        setLocationNotice(null);
+        setCurrentLocation([position.coords.latitude, position.coords.longitude]);
+      },
+      () => {
+        setLocating(false);
+        setLocationNotice("位置情報を取得できませんでした（ブラウザの許可が必要です）");
+      },
+      { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 },
+    );
+  };
 
   return (
     <div className="relative rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
@@ -175,15 +319,31 @@ export default function MapView({ facilities, height = 520, userStatus }: Props)
         >
           🆓 無料のみ
         </button>
+        {storageKey && (
+          <button
+            type="button"
+            onClick={handleLocate}
+            disabled={locating}
+            className="text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors bg-white text-slate-700 border-slate-200 hover:border-blue-400 disabled:opacity-60 disabled:cursor-wait"
+          >
+            {locating ? "📍 取得中..." : "📍 現在地"}
+          </button>
+        )}
       </div>
+
+      {locationNotice && (
+        <div className="absolute z-[1000] bottom-14 left-3 right-3 sm:left-auto sm:max-w-xs bg-white/95 backdrop-blur px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-xs font-medium text-slate-700">
+          {locationNotice}
+        </div>
+      )}
 
       <div className="absolute z-[1000] bottom-3 left-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-sm text-xs font-medium text-slate-700">
         {visible.length} 施設を表示中
       </div>
 
       <MapContainer
-        center={[35.8, 138.5]}
-        zoom={8}
+        center={initialState?.center ?? DEFAULT_CENTER}
+        zoom={initialState?.zoom ?? DEFAULT_ZOOM}
         scrollWheelZoom
         style={{ height, width: "100%" }}
       >
@@ -191,7 +351,14 @@ export default function MapView({ facilities, height = 520, userStatus }: Props)
           attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
           url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
-        <FitBoundsOnChange points={visible} />
+        <FitBoundsOnChange
+          points={visible}
+          fitMode={
+            storageKey ? (initialState ? "never" : "initial-only") : "always"
+          }
+        />
+        {storageKey && <PersistMapPosition onChange={persistState} />}
+        {currentLocation && <CurrentLocationMarker position={currentLocation} />}
         {rendered.map((f) => (
           <FacilityMarker
             key={f.id}
@@ -205,16 +372,88 @@ export default function MapView({ facilities, height = 520, userStatus }: Props)
   );
 }
 
-function FitBoundsOnChange({ points }: { points: PlacedFacility[] }) {
+function FitBoundsOnChange({
+  points,
+  fitMode,
+}: {
+  points: PlacedFacility[];
+  fitMode: "always" | "initial-only" | "never";
+}) {
   const map = useMap();
+  const didInitialFit = useRef(false);
+
   useEffect(() => {
+    if (fitMode === "never") return;
+    if (fitMode === "initial-only" && didInitialFit.current) return;
     if (points.length < 2) return;
+
+    didInitialFit.current = true;
     const bounds = L.latLngBounds(
       points.map((p) => [p.latitude, p.longitude] as [number, number]),
     );
     map.flyToBounds(bounds, { padding: [40, 40], duration: 0.6, maxZoom: 11 });
-  }, [points, map]);
+  }, [fitMode, points, map]);
   return null;
+}
+
+function PersistMapPosition({
+  onChange,
+}: {
+  onChange: (patch: Partial<PersistedMapViewState>) => void;
+}) {
+  const saveMapView = useCallback(
+    (event: LeafletEvent) => {
+      const map = event.target as L.Map;
+      const center = map.getCenter();
+      onChange({
+        center: [center.lat, center.lng],
+        zoom: map.getZoom(),
+      });
+    },
+    [onChange],
+  );
+
+  useMapEvents({
+    moveend: saveMapView,
+    zoomend: saveMapView,
+  });
+
+  return null;
+}
+
+function CurrentLocationMarker({ position }: { position: [number, number] }) {
+  const map = useMap();
+
+  useEffect(() => {
+    map.setView(position, 13);
+  }, [map, position]);
+
+  return (
+    <>
+      <CircleMarker
+        center={position}
+        radius={18}
+        pathOptions={{
+          color: "#2563eb",
+          weight: 2,
+          fillColor: "#60a5fa",
+          fillOpacity: 0.18,
+        }}
+      />
+      <CircleMarker
+        center={position}
+        radius={6}
+        pathOptions={{
+          color: "#ffffff",
+          weight: 2,
+          fillColor: "#2563eb",
+          fillOpacity: 1,
+        }}
+      >
+        <Popup>現在地</Popup>
+      </CircleMarker>
+    </>
+  );
 }
 
 function FacilityMarker({
