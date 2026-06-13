@@ -3,6 +3,24 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
+## 🔄 新セッション即時引き継ぎ(2026-06-13 夜 時点・最重要)
+
+**いま進行中**: 山梨データ品質**第2弾(判断系9件)を Codex が実行中**(agmsg message id≒1156)。仕様=`.codex/data-quality-yamanashi-stage2-spec.md`(確定値)。**まだ反映・検証段階で、デプロイはしていない**。
+
+新セッションでまずやること:
+1. agmsg monitor を起動(SessionStart hook の指示どおり)。**第2弾の完了報告は agmsg履歴 か `%TEMP%\agmsg-codex-*\last-message.md` で確認**(過去、agmsgのsend.shが静かに失敗しProcessedだけ出た事例あり=運用メモ)。
+2. 第2弾の成果をPM独立検証(差分が9件+id134移植+metadata.categories再計算に限定か / カテゴリ整合 / id135移植・非表示 / id149鮮度 / audit・往復0・lint・tsc・build・スクショ)。
+3. 問題なければ**第2弾デプロイ可否をオーナーに上申**(判断系なので目視厚め)。
+
+**第2弾の後の待ち行列(オーナー確定の順)**:
+- 山梨**軽量サブバッチ**(P1の機械系): 公式URL差替9件(id198/197/195/194/176/159/141/116/132)＋water_play追加3件(id193/118/117)。**id145 ガラス工房りゅうは公式不明で要調査=機械的に混ぜない**。
+- **NHR C群裁定**(id51 + id163 Trick Art Museum): 公式確認不可なら raw残置のまま `exclude_candidate` 非表示。
+- 神奈川監査(山梨の型・住所精度ルール適用) → 神奈川修正 → 第6バッチ things_to_do。
+
+**未コミットのローカル変更**: 第2弾が触る `data/facilities_data.json` は Codex のコミット待ち。docsは随時 `docs:` で別コミット。
+
+---
+
 **最終更新**: 2026-06-13(午後) / 本番=**第5バッチ＋exclude非表示化＋山梨P0第1弾デプロイ済み**(**公開対象1,026施設 / raw1,030維持**・**things_to_do 228施設**=パイロット5+静岡25+長野50+山梨49+東京99[第4:50+第5:49]・A群所在地修正+exclude・住所修正12件・県count長野74/山梨71・1,030施設) / 第5バッチ単独デプロイ: **80da5f6**(things_to_do 第5バッチ東京49件・skip id305ボーネルンド系1件・id269/311/313は埋め草除去で3項目化・差分はthings_to_doキーのみ49件・audit/往復SHA256同一/build/lint/スクショ全PASS・Vercel Ready・本番facility-265で実表示確認済み) / 2026-06-13午前デプロイ3コミット: 4c7c93dd(A群: 住所修正4+県移管id114山梨→長野+exclude4[id146岩手移転・id167/168/172群馬所在])・577ee54(第4バッチ東京50件200項目)・b78c850(同名混同3件差し替え[id26石人の星公園に改名・id29熱海側・id123市川三郷町]+B群番地ズレ9件) / **確定原則: 県・住所・座標は実所在県を正、観光圏でprefectureを曲げない**(.codex/nhr-group-a-decision-memo.md) / things_to_do次=**第6バッチ(東京残り or 関東他県、50件単位)**・東京未適用は残り約65件・教訓: batch-3水増し定型に加え batch-4-5 で「仕様に字数下限を書くと詰め物(じっくり50件)が発生」「施設名プレフィックス禁止」「同一ブランド類似チェック(3項目以上同義NG)」「大型公園の『広い園内を歩く』系埋め草を固有要素へ/根拠なければ3項目に減らす」をチェックリスト反映済み / NHR残: C群2(id51/163実体不明)+D群3(id32/83/132名称・カテゴリ) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / **exclude_candidate 4件 非表示化=本番反映済み(411d7c1・公開UIのみvisibleFacilities/raw1030維持/total表示1026/直アクセス404/検索API個別除外/sitemap1026/マイページFB・案Bライブ算出・本番4件404確認済み)** / **県別データ品質監査レーン(.codex/data-quality-audit-spec.md): ①山梨監査=完了(指摘36件 P0=12/P1=20/P2=4・findings:.codex/data-quality-yamanashi-findings.json)→②山梨P0第1弾=本番反映済み(36bc2cb・住所7件公式+再ジオコード/id110休園/id105ド・ドドンパ削除)→残: 山梨P1重点レビュー・山梨第2弾(id135杜の8=id134へttd移植後に非表示候補/id149=休止中の二輪系をttdから外す。.codex/data-quality-yamanashi-stage2-plan.md)→③神奈川監査(住所精度ルール=番地・建物名一致/座標一致ならP0→P1適用)→④神奈川修正→⑤第6バッチthings_to_do。重い判断(exclude候補/同名混同/カテゴリ/タグ変更)は修正時PMレビュー対象** / 残課題: **NHR C群裁定=id51+id163 Trick Art Museum(実体不明・公式確認不可なら exclude_candidate非表示。.codex/data-quality-yamanashi-stage2-plan.md)**・**id275 上千葉砂原公園とid317 同交通公園の重複疑い(別タスク)**・status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
 
 ---
