@@ -54,12 +54,12 @@
       {
         "id": "theme-park",
         "name": "遊園地・テーマパーク",
-        "count": 43
+        "count": 44
       },
       {
         "id": "zoo",
         "name": "動物園",
-        "count": 53
+        "count": 52
       },
       {
         "id": "aquarium",
@@ -74,7 +74,7 @@
       {
         "id": "indoor-play",
         "name": "屋内遊び場",
-        "count": 109
+        "count": 108
       },
       {
         "id": "science-museum",
@@ -109,7 +109,7 @@
       {
         "id": "art-museum",
         "name": "美術館・体験",
-        "count": 37
+        "count": 36
       },
       {
         "id": "ski",
@@ -124,7 +124,7 @@
       {
         "id": "experience",
         "name": "体験",
-        "count": 111
+        "count": 113
       },
       {
         "id": "nature-park",
@@ -5548,8 +5548,8 @@
       "name": "ハイジの村",
       "prefecture": "山梨県",
       "prefecture_id": "yamanashi",
-      "category": "動物園",
-      "category_id": "zoo",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
       "address": "北杜市明野町浅尾2471",
       "indoor_outdoor": "両方",
       "rain_friendly": "△",
@@ -5585,7 +5585,8 @@
       ],
       "summer_water_play": "○",
       "recommended_for_tags": [
-        "animal",
+        "nature",
+        "character",
         "animal_contact"
       ],
       "things_to_do": [
@@ -6460,8 +6461,8 @@
       "name": "猫カフェMOCHA イオンモール甲府昭和店",
       "prefecture": "山梨県",
       "prefecture_id": "yamanashi",
-      "category": "屋内遊び場",
-      "category_id": "indoor-play",
+      "category": "体験",
+      "category_id": "experience",
       "address": "中巨摩郡昭和町飯喰1505-1 AEON MALL Kofu Showa 3F",
       "indoor_outdoor": "屋内",
       "rain_friendly": "◎",
@@ -6491,7 +6492,8 @@
       ],
       "summer_water_play": "×",
       "recommended_for_tags": [
-        "playground"
+        "animal",
+        "animal_contact"
       ],
       "source_urls": "https://catmocha.jp/shop/kofushowa/",
       "source_checked_at": "2026-06-12",
@@ -6738,7 +6740,12 @@
       ],
       "source_urls": "https://grand-mercure-yatsugatake-resortandspa.jp/",
       "source_checked_at": "2026-06-12",
-      "data_quality_status": "confirmed"
+      "data_quality_status": "confirmed",
+      "things_to_do": [
+        "ホテル内のキッズスペース「杜の8」で遊ぶ",
+        "館内の森のラウンジで休む",
+        "ホテルの八ヶ岳SoRaデッキ＆天体ドームで星空に親しむ"
+      ]
     },
     {
       "id": 135,
@@ -6784,13 +6791,14 @@
       ],
       "source_urls": "https://grand-mercure-yatsugatake-resortandspa.jp/",
       "source_checked_at": "2026-06-12",
-      "data_quality_status": "confirmed",
+      "data_quality_status": "exclude_candidate",
       "things_to_do": [
         "杜の8のキッズスペースで遊ぶ",
         "森のラウンジで休む",
         "天体ドームで星空に親しむ",
         "雨の日にホテル内で遊ぶ"
-      ]
+      ],
+      "source_notes": "id134グランドメルキュール館内のキッズスペース・公式URL同一の分割登録のため非表示、ttdはid134へ移植"
     },
     {
       "id": 136,
@@ -7388,7 +7396,7 @@
       ],
       "summer_water_play": "×",
       "recommended_for_tags": [
-        "running",
+        "playground",
         "nature"
       ],
       "things_to_do": [
@@ -7435,7 +7443,7 @@
       ],
       "summer_water_play": "×",
       "recommended_for_tags": [
-        "running",
+        "playground",
         "nature"
       ]
     },
@@ -7480,10 +7488,9 @@
         "nature"
       ],
       "things_to_do": [
-        "オフロードバイクに挑戦する",
-        "バギーで道志村の自然を走る",
-        "小型バイクに乗る",
-        "コースを選んで走る"
+        "四輪バギーで林間コースを走る",
+        "インストラクター同行でバギーに挑戦する",
+        "親子で二人乗りバギーを楽しむ"
       ]
     },
     {
@@ -7803,8 +7810,8 @@
       "name": "河口湖猿まわし劇場",
       "prefecture": "山梨県",
       "prefecture_id": "yamanashi",
-      "category": "美術館・体験",
-      "category_id": "art-museum",
+      "category": "体験",
+      "category_id": "experience",
       "address": "南都留郡富士河口湖町河口2719-8",
       "indoor_outdoor": "屋内",
       "rain_friendly": "◎",
@@ -7837,7 +7844,8 @@
       ],
       "summer_water_play": "×",
       "recommended_for_tags": [
-        "exhibition"
+        "animal",
+        "experience"
       ]
     },
     {
@@ -8051,8 +8059,9 @@
       ],
       "summer_water_play": "○",
       "recommended_for_tags": [
-        "playground",
-        "nature"
+        "nature",
+        "experience",
+        "food"
       ],
       "things_to_do": [
         "ラベンダー畑を歩く",
@@ -8248,8 +8257,8 @@
       ],
       "summer_water_play": "○",
       "recommended_for_tags": [
-        "playground",
-        "nature"
+        "nature",
+        "wide_space"
       ],
       "source_urls": "https://lake-yamanakako.com/spot/10351",
       "source_checked_at": "2026-06-12",
