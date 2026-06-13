@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import MapViewClient from "@/components/MapViewClient";
-import { facilities } from "@/lib/facilities";
+import { visibleFacilities } from "@/lib/facilities";
 
 export const metadata: Metadata = {
   title: "地図から探す",
@@ -20,7 +20,7 @@ export default function MapPage() {
           マーカーをクリックすると詳細ページへ移動できます。県や条件で表示施設を絞り込めます。
         </p>
       </div>
-      <MapViewClient facilities={facilities} height={680} />
+      <MapViewClient facilities={visibleFacilities} height={680} />
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteWishButton from "./DeleteWishButton";
 import WishlistAddForm from "./WishlistAddForm";
@@ -44,7 +45,13 @@ export default async function WishlistPage() {
       {wishlists && wishlists.length > 0 ? (
         <div className="space-y-3">
           {(wishlists as WishlistItem[]).map((item) => {
-            const hasFacilityPage = !item.facility_slug.startsWith("manual-");
+            const hasFacilityPage = isVisibleFacilitySlug(item.facility_slug);
+            const isStoredFacility = !item.facility_slug.startsWith("manual-");
+            const visitHref = hasFacilityPage
+              ? `/mypage/visits/new?facility=${encodeURIComponent(
+                  item.facility_slug,
+                )}&name=${encodeURIComponent(item.facility_name)}`
+              : `/mypage/visits/new?name=${encodeURIComponent(item.facility_name)}`;
             return (
             <article
               key={item.id}
@@ -61,18 +68,20 @@ export default async function WishlistPage() {
                     </p>
                   )}
                   <div className="mt-2 flex flex-wrap items-center gap-x-4 gap-y-1">
-                    {hasFacilityPage && (
+                    {hasFacilityPage ? (
                       <Link
                         href={`/facilities/${item.facility_slug}`}
                         className="text-brand text-xs font-medium hover:underline"
                       >
                         施設ページを見る →
                       </Link>
-                    )}
+                    ) : isStoredFacility ? (
+                      <span className="text-slate-400 text-xs">
+                        施設ページは現在公開していません
+                      </span>
+                    ) : null}
                     <Link
-                      href={`/mypage/visits/new?facility=${encodeURIComponent(
-                        item.facility_slug,
-                      )}&name=${encodeURIComponent(item.facility_name)}`}
+                      href={visitHref}
                       className="text-brand text-xs font-medium hover:underline"
                     >
                       行ったよ！記録する

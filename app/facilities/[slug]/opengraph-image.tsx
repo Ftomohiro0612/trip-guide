@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getFacilityBySlug } from "@/lib/facilities";
+import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { categoryIcon } from "@/lib/icons";
 import {
   OG_CONTENT_TYPE,
@@ -20,7 +20,7 @@ export default async function Image({
   const { slug } = await params;
   const facility = getFacilityBySlug(slug);
 
-  if (!facility) {
+  if (!isFacilityVisible(facility)) {
     return new ImageResponse(
       (
         <div

@@ -6,7 +6,7 @@ import MobileFilterBar from "@/components/MobileFilterBar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
 import MapViewClient from "@/components/MapViewClient";
-import { facilities, prefectures, categories } from "@/lib/facilities";
+import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
 import {
   applyFilters,
   hasActiveFilters,
@@ -87,7 +87,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
     selectedPrefecture !== "全国"
       ? [selectedPrefecture, ...sidebarPrefNames]
       : sidebarPrefNames;
-  const baseResults = applyFilters(facilities, filters);
+  const baseResults = applyFilters(visibleFacilities, filters);
   const tagFilteredResults = recommendedTag
     ? baseResults.filter((f) =>
         (f.recommended_for_tags ?? []).includes(recommendedTag),
@@ -99,6 +99,14 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           allSelectedPrefNames.includes(f.prefecture ?? ""),
         )
       : tagFilteredResults;
+  const visiblePrefectures = prefectures.map((p) => ({
+    ...p,
+    count: visibleFacilities.filter((f) => f.prefecture_id === p.id).length,
+  }));
+  const visibleCategories = categories.map((c) => ({
+    ...c,
+    count: visibleFacilities.filter((f) => f.category_id === c.id).length,
+  }));
   const active =
     hasActiveFilters(filters) ||
     recommendedTag !== null ||
@@ -134,7 +142,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
               」の検索結果: {results.length} 件
             </>
           ) : (
-            <>全 {facilities.length} 施設 / 表示中 {results.length} 件</>
+            <>全 {visibleFacilities.length} 施設 / 表示中 {results.length} 件</>
           )}
         </p>
         {recommendedTag && (
@@ -172,20 +180,20 @@ export default async function FacilitiesPage({ searchParams }: Props) {
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <FilterSidebar
-          prefectures={prefectures}
-          categories={categories}
+          prefectures={visiblePrefectures}
+          categories={visibleCategories}
           resultCount={results.length}
         />
 
         <section>
           <MobileFilterBar
-            prefectures={prefectures}
-            categories={categories}
+            prefectures={visiblePrefectures}
+            categories={visibleCategories}
             resultCount={results.length}
           />
           <ActiveFilterChips
-            prefectures={prefectures}
-            categories={categories}
+            prefectures={visiblePrefectures}
+            categories={visibleCategories}
           />
           <div className="flex items-center justify-between mb-4">
             <p className="text-sm font-semibold text-slate-800">

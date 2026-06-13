@@ -5,7 +5,13 @@ import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import MapViewClient from "@/components/MapViewClient";
 import { JsonLd } from "@/components/JsonLd";
-import { categories, facilities, metadata, prefectures } from "@/lib/facilities";
+import {
+  categories,
+  getFacilitiesByCategory,
+  getFacilitiesByPrefecture,
+  prefectures,
+  visibleFacilities,
+} from "@/lib/facilities";
 import { categoryIcon, prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type { RecommendedForTag } from "@/types/facility";
@@ -903,8 +909,11 @@ function ValueProofSection() {
 
 export default function HomePage() {
   const facilityCountLabel =
-    facilities.length >= 1000 ? "1,000施設超" : `${facilities.length}施設`;
-  const totalFacilityCountLabel = metadata.total_facilities.toLocaleString("ja-JP");
+    visibleFacilities.length >= 1000
+      ? "1,000施設超"
+      : `${visibleFacilities.length}施設`;
+  const totalFacilityCountLabel =
+    visibleFacilities.length.toLocaleString("ja-JP");
   const tagList = (
     Object.entries(RECOMMENDED_FOR_TAG_META) as [
       RecommendedForTag,
@@ -912,7 +921,7 @@ export default function HomePage() {
     ][]
   )
     .map(([tag, meta]) => {
-      const count = facilities.filter((facility) =>
+      const count = visibleFacilities.filter((facility) =>
         (facility.recommended_for_tags ?? []).includes(tag),
       ).length;
 
@@ -921,7 +930,7 @@ export default function HomePage() {
     .filter(([, , count]) => count > 0)
     .sort((a, b) => b[2] - a[2]);
 
-  const featured = facilities
+  const featured = visibleFacilities
     .filter((f) => f.rain_friendly === "◎" || f.is_free)
     .slice(0, 6);
 
@@ -1014,7 +1023,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <MapViewClient facilities={facilities} height={520} />
+          <MapViewClient facilities={visibleFacilities} height={520} />
         </section>
 
         <section className="mt-14" aria-labelledby="tag-heading">
@@ -1080,7 +1089,7 @@ export default function HomePage() {
                   {p.name}
                 </span>
                 <span className="text-[11px] leading-none text-slate-400">
-                  {p.count}施設
+                  {getFacilitiesByPrefecture(p.id).length}施設
                 </span>
               </Link>
             ))}
@@ -1115,7 +1124,9 @@ export default function HomePage() {
                   <p className="font-bold text-sm text-slate-900 group-hover:text-brand line-clamp-1">
                     {c.name}
                   </p>
-                  <p className="text-xs text-slate-500">{c.count} 施設</p>
+                  <p className="text-xs text-slate-500">
+                    {getFacilitiesByCategory(c.id).length} 施設
+                  </p>
                 </div>
               </Link>
             ))}

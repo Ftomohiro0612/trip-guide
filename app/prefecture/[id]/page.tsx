@@ -33,9 +33,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const meta = getPrefectureMeta(id as PrefectureId);
   if (!meta) return { title: "見つかりませんでした" };
   const desc = prefectureDescriptions[meta.id];
+  const visibleCount = getFacilitiesByPrefecture(meta.id).length;
   return {
-    title: `${meta.name}の子供向け遊び場 ${meta.count}選`,
-    description: `${desc.lead} 雨の日OK・無料・年齢別など、家族で楽しめる${meta.count}施設をまとめて掲載。`,
+    title: `${meta.name}の子供向け遊び場 ${visibleCount}選`,
+    description: `${desc.lead} 雨の日OK・無料・年齢別など、家族で楽しめる${visibleCount}施設をまとめて掲載。`,
     alternates: { canonical: `/prefecture/${meta.id}` },
   };
 }
@@ -47,6 +48,7 @@ export default async function PrefecturePage({ params }: Props) {
 
   const desc = prefectureDescriptions[meta.id];
   const list = getFacilitiesByPrefecture(meta.id);
+  const visibleCount = list.length;
   const gradient = prefectureGradients[meta.id];
 
   const categoryCounts = categories
@@ -99,7 +101,7 @@ export default async function PrefecturePage({ params }: Props) {
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">エリア特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {meta.name}の子供向け遊び場 {meta.count}選
+                {meta.name}の子供向け遊び場 {visibleCount}選
               </h1>
               <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
                 {desc.lead}
@@ -131,7 +133,7 @@ export default async function PrefecturePage({ params }: Props) {
           <StatCard
             href={`/facilities?prefectures=${meta.id}`}
             label="全施設"
-            count={meta.count}
+            count={visibleCount}
             emoji="🎈"
           />
           <StatCard
@@ -210,7 +212,9 @@ export default async function PrefecturePage({ params }: Props) {
                     <p className="font-bold text-slate-900 group-hover:text-brand">
                       {p.name}
                     </p>
-                    <p className="text-xs text-slate-500">{p.count} 施設</p>
+                    <p className="text-xs text-slate-500">
+                      {getFacilitiesByPrefecture(p.id).length} 施設
+                    </p>
                   </div>
                   <span className="text-slate-400 group-hover:text-brand">
                     →

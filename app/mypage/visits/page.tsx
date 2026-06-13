@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteVisitButton from "./DeleteVisitButton";
 
@@ -202,7 +203,8 @@ export default async function VisitsPage({
           {visitRows.map((visit) => {
             const visitChildren = childrenByVisit.get(visit.id) ?? [];
             const stayDuration = formatStayDuration(visit.stay_duration_min);
-            const hasFacilityPage = !visit.facility_slug.startsWith("manual-");
+            const hasFacilityPage = isVisibleFacilitySlug(visit.facility_slug);
+            const isStoredFacility = !visit.facility_slug.startsWith("manual-");
             return (
             <article
               key={visit.id}
@@ -253,6 +255,10 @@ export default async function VisitsPage({
                   >
                     施設ページ ↗
                   </Link>
+                ) : isStoredFacility ? (
+                  <span className="text-slate-400 text-xs">
+                    施設ページは現在公開していません
+                  </span>
                 ) : (
                   <span />
                 )}

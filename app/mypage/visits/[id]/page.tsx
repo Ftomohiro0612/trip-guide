@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
-import { getFacilityBySlug } from "@/lib/facilities";
+import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteVisitButton from "../DeleteVisitButton";
 import VisitPhotoGallery, {
@@ -187,6 +187,7 @@ export default async function VisitDetailPage({
   const facility = visitRow.facility_slug.startsWith("manual-")
     ? undefined
     : getFacilityBySlug(visitRow.facility_slug);
+  const hasFacilityPage = isFacilityVisible(facility);
   let photos: VisitPhotoGalleryPhoto[] = [];
 
   if (PHOTO_UPLOAD_ENABLED) {
@@ -234,14 +235,18 @@ export default async function VisitDetailPage({
             <h1 className="text-xl font-bold text-slate-900 break-words">
               {visitRow.facility_name}
             </h1>
-            {facility && (
+            {hasFacilityPage ? (
               <Link
                 href={`/facilities/${facility.slug}`}
                 className="mt-1 inline-block text-sm text-brand hover:underline"
               >
                 施設ページを見る →
               </Link>
-            )}
+            ) : facility ? (
+              <p className="mt-1 text-sm text-slate-400">
+                施設ページは現在公開していません
+              </p>
+            ) : null}
           </div>
           <span className="shrink-0 text-xs text-slate-400">
             {formatVisitedOn(visitRow.visited_on)}

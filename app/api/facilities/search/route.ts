@@ -21,8 +21,15 @@ function isFacilitySearchSource(value: unknown): value is FacilitySearchSource {
   );
 }
 
+function isVisibleFacilitySearchSource(
+  value: unknown,
+): value is FacilitySearchSource {
+  if (!isFacilitySearchSource(value)) return false;
+  return (value as Record<string, unknown>).data_quality_status !== "exclude_candidate";
+}
+
 const facilities = isRecord(facilitiesJson) && Array.isArray(facilitiesJson.facilities)
-  ? facilitiesJson.facilities.filter(isFacilitySearchSource)
+  ? facilitiesJson.facilities.filter(isVisibleFacilitySearchSource)
   : [];
 
 export async function GET(request: Request) {

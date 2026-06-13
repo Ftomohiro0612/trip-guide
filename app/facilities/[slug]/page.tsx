@@ -9,9 +9,10 @@ import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import ShareButtons from "@/components/ShareButtons";
 import {
-  facilities,
   getFacilityBySlug,
   getRelatedFacilities,
+  isFacilityVisible,
+  visibleFacilities,
 } from "@/lib/facilities";
 import { categoryIcon, prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
@@ -24,13 +25,15 @@ interface Props {
 }
 
 export function generateStaticParams() {
-  return facilities.map((f) => ({ slug: f.slug }));
+  return visibleFacilities.map((f) => ({ slug: f.slug }));
 }
+
+export const dynamicParams = false;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const facility = getFacilityBySlug(slug);
-  if (!facility) {
+  if (!isFacilityVisible(facility)) {
     return { title: "見つかりませんでした" };
   }
   const desc = facility.description.slice(0, 110);
@@ -69,7 +72,7 @@ const WATER_PLAY_FALLBACK = {
 export default async function FacilityDetailPage({ params }: Props) {
   const { slug } = await params;
   const facility = getFacilityBySlug(slug);
-  if (!facility) notFound();
+  if (!isFacilityVisible(facility)) notFound();
 
   const related = getRelatedFacilities(facility, 3);
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;

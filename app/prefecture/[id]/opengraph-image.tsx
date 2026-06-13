@@ -49,9 +49,9 @@ export default async function Image({
   return renderOgImage({
     emoji: prefectureEmoji[meta.id],
     eyebrow: "エリア特集",
-    title: `${meta.name}の子供向け遊び場 ${meta.count}選`,
+    title: `${meta.name}の子供向け遊び場 ${list.length}選`,
     badges: [
-      { label: `🎈 全 ${meta.count} 施設` },
+      { label: `🎈 全 ${list.length} 施設` },
       { label: `☂️ 雨の日OK ${rain} 件` },
       { label: `🆓 無料 ${free} 件`, bg: "#10b981" },
     ],

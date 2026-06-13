@@ -26,9 +26,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const meta = getCategoryMeta(id);
   if (!meta) return { title: "見つかりませんでした" };
   const desc = categoryDescriptions[meta.id] ?? "";
+  const visibleCount = getFacilitiesByCategory(meta.id).length;
   return {
-    title: `${meta.name} ${meta.count}選 (関東甲信越)`,
-    description: `${desc} 関東甲信越9県の${meta.name}を${meta.count}施設まとめて掲載。`,
+    title: `${meta.name} ${visibleCount}選 (関東甲信越)`,
+    description: `${desc} 関東甲信越9県の${meta.name}を${visibleCount}施設まとめて掲載。`,
     alternates: { canonical: `/category/${meta.id}` },
   };
 }
@@ -39,6 +40,7 @@ export default async function CategoryPage({ params }: Props) {
   if (!meta) notFound();
 
   const list = getFacilitiesByCategory(meta.id);
+  const visibleCount = list.length;
   const desc = categoryDescriptions[meta.id] ?? "";
 
   const byPref = prefectures.map((p) => ({
@@ -78,7 +80,7 @@ export default async function CategoryPage({ params }: Props) {
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">カテゴリ特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {meta.name} {meta.count}選
+                {meta.name} {visibleCount}選
               </h1>
               <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
                 {desc}
@@ -105,7 +107,7 @@ export default async function CategoryPage({ params }: Props) {
         )}
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-          <Stat label="全施設" count={meta.count} emoji="🎈" />
+          <Stat label="全施設" count={visibleCount} emoji="🎈" />
           <Stat label="雨でも遊べる" count={rainCount} emoji="☂️" />
           <Stat label="無料" count={freeCount} emoji="🆓" />
           <Stat label="エリア数" count={byPref.filter((p) => p.items.length > 0).length} emoji="📍" />
@@ -159,7 +161,9 @@ export default async function CategoryPage({ params }: Props) {
                     <p className="font-bold text-sm text-slate-900 group-hover:text-brand line-clamp-1">
                       {c.name}
                     </p>
-                    <p className="text-xs text-slate-500">{c.count} 施設</p>
+                    <p className="text-xs text-slate-500">
+                      {getFacilitiesByCategory(c.id).length} 施設
+                    </p>
                   </div>
                 </Link>
               ))}

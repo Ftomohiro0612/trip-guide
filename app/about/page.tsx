@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { facilities, prefectures } from "@/lib/facilities";
+import {
+  getFacilitiesByPrefecture,
+  prefectures,
+  visibleFacilities,
+} from "@/lib/facilities";
 
 export const metadata: Metadata = {
   title: "サイトについて",
@@ -33,7 +37,7 @@ export default function AboutPage() {
         <p className="text-slate-700 leading-relaxed">
           「今日どこ行こう？」「雨だけど楽しめる場所はある？」「無料で遊べる施設は？」
           こんな日常的な疑問に、3秒で答えを返すことを目指しています。
-          現在は関東甲信越9県の {facilities.length}{" "}
+          現在は関東甲信越9県の {visibleFacilities.length}{" "}
           施設を掲載しています。
         </p>
 
@@ -53,7 +57,7 @@ export default function AboutPage() {
         </h2>
         <p className="text-slate-700 leading-relaxed">
           {prefectures
-            .map((p) => `${p.name}（${p.count}施設）`)
+            .map((p) => `${p.name}（${getFacilitiesByPrefecture(p.id).length}施設）`)
             .join(" / ")}
           。順次、対象エリアを拡大していく予定です。
         </p>
