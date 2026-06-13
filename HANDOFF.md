@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-**最終更新**: 2026-06-12(深夜4) / 本番=バッチ3込み(**things_to_do 129施設**=パイロット5+静岡25+長野50+山梨49・url調査78件provenance[url未入力102→25]・Sheets27列・写真機能true・県アイコンナビ・みんなの記録カード・規約掲載・1,030施設) / things_to_do展開: 設計=.codex/things-to-do-{batch-design,review-checklist,rollout-plan}.md・rollback=scripts/remove-things-to-do.mjs・境界例boundary:trueフラグ+語尾分布+NHR24件リスト照合がレビュー標準・**次=第4バッチ(東京or関東5県、50件単位)** / 注意: batch-3初版で水増し定型(「〜時間を家族で楽しむ」118件)が発生し再生成した教訓あり(チェックリスト反映済み) / needs_human_review 24件は別タスク(A群10=所在地問題[GlassHouseねん岩手移転=exclude候補・アルパカ牧場=県移管候補・軽井沢2件=id167とルール化]・B群9=番地ズレ・C群2=実体不明・D群3=名称/カテゴリ → url-research-review-package.md) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / 残課題: status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
+**最終更新**: 2026-06-13(午前) / 本番=第4バッチ込みデプロイ済み(**things_to_do 179施設**=パイロット5+静岡25+長野50+山梨49+東京50・A群所在地修正+exclude・住所修正12件・県count長野74/山梨71・1,030施設) / 2026-06-13デプロイ3コミット: 4c7c93dd(A群: 住所修正4+県移管id114山梨→長野+exclude4[id146岩手移転・id167/168/172群馬所在])・577ee54(第4バッチ東京50件200項目)・b78c850(同名混同3件差し替え[id26石人の星公園に改名・id29熱海側・id123市川三郷町]+B群番地ズレ9件) / **確定原則: 県・住所・座標は実所在県を正、観光圏でprefectureを曲げない**(.codex/nhr-group-a-decision-memo.md) / things_to_do次=**第5バッチ(東京残り、50件単位)**・教訓: batch-3水増し定型に加え batch-4 で「仕様に字数下限を書くと詰め物(じっくり50件)が発生」「施設名プレフィックス禁止」「同一ブランド類似チェック(3項目以上同義NG)」をチェックリスト反映済み / NHR残: C群2(id51/163実体不明)+D群3(id32/83/132名称・カテゴリ) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / 残課題: exclude_candidate 4件の非表示化(別タスク切り出し済み)・status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
 
 ---
 
