@@ -1145,7 +1145,7 @@ export default function HomePage() {
                 id="featured-heading"
                 className="text-2xl font-bold text-slate-900"
               >
-                子どもの&quot;好き&quot;が見つかるおすすめ施設
+                子どもの“好き”が見つかるおすすめ施設
               </h2>
               <p className="text-sm text-slate-500 mt-1">
                 大型公園・自然・科学館など、子どものタイプ別に選んだ定番スポット
