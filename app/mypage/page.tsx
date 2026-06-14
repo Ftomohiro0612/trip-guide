@@ -326,13 +326,19 @@ export default async function MypagePage() {
       {/* クイックアクション */}
       <section>
         <h2 className="font-bold text-slate-800 mb-3">クイックアクション</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <ActionCard
             href="/mypage/visits/new"
             icon="✏️"
             label="おでかけを記録"
             desc="今日行った場所を30秒で記録"
             primary
+          />
+          <ActionCard
+            href="/mypage/visits/from-photo"
+            icon="📷"
+            label="写真からおでかけ記録をまとめて作る"
+            desc="撮影日と場所から候補を作成"
           />
           <ActionCard
             href="/mypage/wishlist"

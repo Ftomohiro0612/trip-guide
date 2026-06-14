@@ -468,6 +468,13 @@ export default function NewVisitPage() {
         <p className="text-sm text-slate-500 mt-1">必須項目だけなら30秒で残せます。</p>
       </div>
 
+      <Link
+        href="/mypage/visits/from-photo"
+        className="block rounded-xl border border-brand/20 bg-sky-50 px-4 py-3 text-center text-sm font-bold text-brand transition-colors hover:bg-sky-100"
+      >
+        📷 写真からおでかけ記録を作る
+      </Link>
+
       {error && (
         <div className="px-3 py-2 bg-red-50 border border-red-200 rounded-lg text-red-700 text-xs">
           {error}

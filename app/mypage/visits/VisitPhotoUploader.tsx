@@ -11,7 +11,7 @@ import {
 import { createClient } from "@/lib/supabase/client";
 
 const BUCKET = "visit-photos";
-const MAX_PHOTOS_PER_VISIT = 2;
+export const MAX_PHOTOS_PER_VISIT = 2;
 const MAIN_MAX_EDGE = 1600;
 const THUMB_MAX_EDGE = 400;
 const WEBP_QUALITY = 0.82;
@@ -73,7 +73,7 @@ function toErrorMessage(error: unknown): string {
   return error instanceof Error ? error.message : "写真の保存に失敗しました";
 }
 
-function validatePhotoFile(file: File): string | null {
+export function validatePhotoFile(file: File): string | null {
   const lowerName = file.name.toLowerCase();
   const isHeic =
     file.type === "image/heic" ||
@@ -194,6 +194,183 @@ function readIfdPointer(
   return null;
 }
 
+export type GpsCoordinates = {
+  latitude: number;
+  longitude: number;
+};
+
+function readAsciiEntryValue(
+  view: DataView,
+  tiffStart: number,
+  tiffEnd: number,
+  entryOffset: number,
+  count: number,
+  littleEndian: boolean,
+): string | null {
+  const valueOffset =
+    count <= 4
+      ? entryOffset + 8
+      : tiffStart + view.getUint32(entryOffset + 8, littleEndian);
+  if (valueOffset < tiffStart || valueOffset + count > tiffEnd) return null;
+  return readAscii(view, valueOffset, count).replace(/\0+$/, "");
+}
+
+function readRationalValue(
+  view: DataView,
+  offset: number,
+  tiffEnd: number,
+  littleEndian: boolean,
+  signed: boolean,
+): number | null {
+  if (offset < 0 || offset + 8 > tiffEnd) return null;
+  const numerator = signed
+    ? view.getInt32(offset, littleEndian)
+    : view.getUint32(offset, littleEndian);
+  const denominator = signed
+    ? view.getInt32(offset + 4, littleEndian)
+    : view.getUint32(offset + 4, littleEndian);
+  if (denominator === 0) return null;
+  return numerator / denominator;
+}
+
+function readGpsDmsValue(
+  view: DataView,
+  tiffStart: number,
+  tiffEnd: number,
+  entryOffset: number,
+  type: number,
+  count: number,
+  littleEndian: boolean,
+): number | null {
+  if (count !== 3 || (type !== 5 && type !== 10)) return null;
+  const valueOffset = tiffStart + view.getUint32(entryOffset + 8, littleEndian);
+  if (valueOffset < tiffStart || valueOffset + 24 > tiffEnd) return null;
+
+  const signed = type === 10;
+  const degrees = readRationalValue(
+    view,
+    valueOffset,
+    tiffEnd,
+    littleEndian,
+    signed,
+  );
+  const minutes = readRationalValue(
+    view,
+    valueOffset + 8,
+    tiffEnd,
+    littleEndian,
+    signed,
+  );
+  const seconds = readRationalValue(
+    view,
+    valueOffset + 16,
+    tiffEnd,
+    littleEndian,
+    signed,
+  );
+  if (degrees === null || minutes === null || seconds === null) return null;
+  return degrees + minutes / 60 + seconds / 3600;
+}
+
+function parseGpsFromIfd(
+  view: DataView,
+  tiffStart: number,
+  tiffEnd: number,
+  ifdOffset: number,
+  littleEndian: boolean,
+): GpsCoordinates | null {
+  if (ifdOffset < tiffStart || ifdOffset + 2 > tiffEnd) return null;
+  const entryCount = view.getUint16(ifdOffset, littleEndian);
+  const entriesStart = ifdOffset + 2;
+  const entriesEnd = entriesStart + entryCount * 12;
+  if (entriesEnd > tiffEnd) return null;
+
+  let latitudeRef: string | null = null;
+  let longitudeRef: string | null = null;
+  let latitude: number | null = null;
+  let longitude: number | null = null;
+
+  for (let index = 0; index < entryCount; index += 1) {
+    const entryOffset = entriesStart + index * 12;
+    const tag = view.getUint16(entryOffset, littleEndian);
+    const type = view.getUint16(entryOffset + 2, littleEndian);
+    const count = view.getUint32(entryOffset + 4, littleEndian);
+
+    if (tag === 0x0001 && type === 2 && count > 0) {
+      latitudeRef = readAsciiEntryValue(
+        view,
+        tiffStart,
+        tiffEnd,
+        entryOffset,
+        count,
+        littleEndian,
+      );
+      continue;
+    }
+    if (tag === 0x0003 && type === 2 && count > 0) {
+      longitudeRef = readAsciiEntryValue(
+        view,
+        tiffStart,
+        tiffEnd,
+        entryOffset,
+        count,
+        littleEndian,
+      );
+      continue;
+    }
+    if (tag === 0x0002) {
+      latitude = readGpsDmsValue(
+        view,
+        tiffStart,
+        tiffEnd,
+        entryOffset,
+        type,
+        count,
+        littleEndian,
+      );
+      continue;
+    }
+    if (tag === 0x0004) {
+      longitude = readGpsDmsValue(
+        view,
+        tiffStart,
+        tiffEnd,
+        entryOffset,
+        type,
+        count,
+        littleEndian,
+      );
+    }
+  }
+
+  if (
+    latitude === null ||
+    longitude === null ||
+    !latitudeRef ||
+    !longitudeRef
+  ) {
+    return null;
+  }
+
+  const signedLatitude = latitudeRef.toUpperCase().startsWith("S")
+    ? -latitude
+    : latitude;
+  const signedLongitude = longitudeRef.toUpperCase().startsWith("W")
+    ? -longitude
+    : longitude;
+
+  if (
+    signedLatitude < -90 ||
+    signedLatitude > 90 ||
+    signedLongitude < -180 ||
+    signedLongitude > 180
+  ) {
+    return null;
+  }
+
+  return { latitude: signedLatitude, longitude: signedLongitude };
+}
+
 function parseTiffForTakenOn(
   view: DataView,
   tiffStart: number,
@@ -234,6 +411,29 @@ function parseTiffForTakenOn(
     littleEndian,
     [0x0132],
   );
+}
+
+function parseTiffForGps(
+  view: DataView,
+  tiffStart: number,
+  tiffEnd: number,
+): GpsCoordinates | null {
+  const endian = readAscii(view, tiffStart, 2);
+  const littleEndian = endian === "II";
+  if (!littleEndian && endian !== "MM") return null;
+  if (view.getUint16(tiffStart + 2, littleEndian) !== 42) return null;
+
+  const firstIfdOffset = tiffStart + view.getUint32(tiffStart + 4, littleEndian);
+  const gpsIfdOffset = readIfdPointer(
+    view,
+    tiffStart,
+    tiffEnd,
+    firstIfdOffset,
+    littleEndian,
+    0x8825,
+  );
+  if (!gpsIfdOffset) return null;
+  return parseGpsFromIfd(view, tiffStart, tiffEnd, gpsIfdOffset, littleEndian);
 }
 
 function parseJpegTakenOn(buffer: ArrayBuffer): string | null {
@@ -281,8 +481,52 @@ function parseJpegTakenOn(buffer: ArrayBuffer): string | null {
   return null;
 }
 
-async function readTakenOn(file: File): Promise<string | null> {
-  // Date-only EXIF read. GPS IFD is intentionally never parsed or stored.
+function parseJpegGps(buffer: ArrayBuffer): GpsCoordinates | null {
+  const view = new DataView(buffer);
+  if (view.byteLength < 4 || view.getUint16(0, false) !== 0xffd8) return null;
+
+  let offset = 2;
+  while (offset + 4 <= view.byteLength) {
+    if (view.getUint8(offset) !== 0xff) {
+      offset += 1;
+      continue;
+    }
+
+    let markerOffset = offset + 1;
+    while (
+      markerOffset < view.byteLength &&
+      view.getUint8(markerOffset) === 0xff
+    ) {
+      markerOffset += 1;
+    }
+    if (markerOffset >= view.byteLength) return null;
+
+    const marker = view.getUint8(markerOffset);
+    offset = markerOffset + 1;
+    if (marker === 0xda || marker === 0xd9) return null;
+    if (marker >= 0xd0 && marker <= 0xd7) continue;
+    if (offset + 2 > view.byteLength) return null;
+
+    const segmentLength = view.getUint16(offset, false);
+    const segmentStart = offset + 2;
+    const segmentEnd = offset + segmentLength;
+    if (segmentLength < 2 || segmentEnd > view.byteLength) return null;
+
+    if (
+      marker === 0xe1 &&
+      segmentLength >= 8 &&
+      readAscii(view, segmentStart, 6) === "Exif\0\0"
+    ) {
+      return parseTiffForGps(view, segmentStart + 6, segmentEnd);
+    }
+
+    offset = segmentEnd;
+  }
+
+  return null;
+}
+
+export async function readTakenOn(file: File): Promise<string | null> {
   if (
     file.type !== "image/jpeg" &&
     !/\.(jpe?g)$/i.test(file.name)
@@ -293,6 +537,22 @@ async function readTakenOn(file: File): Promise<string | null> {
   try {
     const header = await file.slice(0, 512 * 1024).arrayBuffer();
     return parseJpegTakenOn(header);
+  } catch {
+    return null;
+  }
+}
+
+export async function readPhotoGps(file: File): Promise<GpsCoordinates | null> {
+  if (
+    file.type !== "image/jpeg" &&
+    !/\.(jpe?g)$/i.test(file.name)
+  ) {
+    return null;
+  }
+
+  try {
+    const header = await file.slice(0, 512 * 1024).arrayBuffer();
+    return parseJpegGps(header);
   } catch {
     return null;
   }
@@ -408,7 +668,7 @@ async function processPhoto(file: File): Promise<ProcessedPhoto> {
   }
 }
 
-async function uploadPhoto({
+export async function uploadPhoto({
   file,
   takenOn,
   visitId,
