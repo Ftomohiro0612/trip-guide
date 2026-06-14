@@ -3,11 +3,26 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-## 🔄 新セッション即時引き継ぎ(2026-06-14 時点・最重要)
+## 🔄 新セッション即時引き継ぎ(2026-06-15 時点・最重要)
 
-**進行中タスクなし**。直近の依頼はすべて本番反映・PM独立検証済み・作業ツリークリーン。
+**進行中タスク: なし(Codexワーカーはアイドル・lockのPIDが生きていれば再利用/死んでいれば必要時のみ再起動)**。直近の依頼はすべて本番反映・PM検証・**オーナー実機確認済み**。下記「待ち行列」に仕様確定済みの未着手あり(#5写真からおでかけ記録ほか)。
 
-**2026-06-14 にデプロイ済み(このセッション)**:
+**2026-06-15 完了: Memorips記録まわりの不具合つぶし(enum＋写真)を実機確認まで完走**。①enum不整合(`2651f41`)=新規/編集で駐車場・食事が日本語表示＋保存OK(オーナー実機確認済み)。②`visits_parking_check`違反=migration008が本番DB適用済みをSQL(`pg_get_constraintdef`に`car_easy`含有)で確認・フォーム送信値は全て008の許可集合内→再発なし。③写真がスマホで「WebP変換に対応していません」エラー=WebP非対応ブラウザでJPEGフォールバック対応(`7904df0`＋migration009)・オーナー実機で写真添付保存OK確認済み。
+
+**新セッション開始手順(教訓 メモリ `codex-worker-ops`)**: ①agmsg monitor起動(SessionStart hookどおり) ②Codexワーカー(memorips)死活確認=lockのPIDを`Get-Process`・ログ末尾。**ハングなら kill→lock削除→pwsh(PS7)で再起動**。再起動前に未処理(read_at IS NULL)の自分→codexメッセージを sqlite3 で既読化し再実行を防ぐ ③現セッション以外のmonitor(watch.sh)はkill(pidfile信用せず実プロセスのCommandLineで判定・パスは`/c/...`形式) ④agmsg履歴(`scripts/history.sh memorips`)でセッション切替の隙に届いたCodex報告の取りこぼし確認。**`send.sh`本文にbacktick禁止**(bashがコマンド置換し黙って欠落)＋PowerShellパス展開でも本文破損し得る(2026-06-14に本文破損→Codexが自己再送で復旧)。正本: `Ftomohiro0612/ai-agent-control-center` の `docs/agmsg-cross-agent-workflow.md`。
+
+**2026-06-15 にデプロイ済み(最新セッション)**:
+- **写真アップロードをWebP非対応ブラウザでJPEGフォールバック対応** = `7904df0`(`app/mypage/visits/VisitPhotoUploader.tsx`＋`supabase/migrations/009`)。スマホのアプリ内ブラウザ等で `canvas.toBlob('image/webp')` がWebPを返さず(PNGに化ける)、旧コードが「このブラウザではWebP変換に対応していません。」を投げて写真添付が失敗していた。修正: WebP優先・本体/サムネのどちらかでもWebP生成不可なら**両方JPEGに揃えて**再エンコード(`encodeCanvas`が`blob.type!==mimeType`でnull→フォールバック)、`storage_path`/`thumb_path`の拡張子と`contentType`を実フォーマット連動(`.webp`/`.jpg`)。canvas再エンコードでJPEGでもEXIF/GPS除去は維持。表示側([visits/[id]/page.tsx])はDBの`storage_path`を署名URL化で拡張子ハードコードなし→JPEG保存も表示OK。DB前提: Storageバケット`visit-photos`の`allowed_mime_types`が`image/webp`のみ(006)→**009で`image/webp`+`image/jpeg`に拡張をオーナーがSupabase SQL Editorで適用済み**。テーブルCHECKはパス先頭のみ検査で拡張子不問。PM独立検証: コードレビュー(フォールバック判定・表示側に.webpハードコード無し)・tsc/lint/build PASS・本番リダイレクト/overlay/console 0。**オーナー実機確認済み(スマホで写真添付保存OK)**。
+
+**2026-06-14 にデプロイ済み**:
+- **おでかけ記録のenum不整合修正＋編集フォーム施設サジェスト＋DB制約008** = `2651f41`(`lib/visit-labels.ts`新規＋`app/mypage/visits`配下5ファイル＋`supabase/migrations/008`)。編集フォームが旧enum(parking=easy/difficult系・food=great系)のまま放置→詳細で英語生値(difficult/great)漏れ。編集フォームを新enum(parking=car_easy/.../walk_bike・food=no_meal/...)に統一・詳細/履歴は新enum=日本語/旧値=レガシー読み替え/未知=「未記録」で英語生値ゼロ化・編集フォームに `/api/facilities/search` 施設サジェスト追加(御勅使南公園など施設リンク貼り直し可)。DB前提: visits.parking/food_ratingのCHECK制約(003)が旧値のみ→新フォーム保存失敗の問題があり、008(新値＋旧値＋NULL許可のスーパーセットCHECK)をオーナーがSupabase SQL Editorで適用済み。PM独立検証: tsc/build/lint PASS・本番で`/mypage/visits/new`・`/edit`が`/auth/login`へ正常リダイレクト＋`/api/facilities/search?q=御勅使`が御勅使南公園(id195)返却・Next overlay/console 0。**オーナー実機確認済み(新規作成・既存編集で駐車場/食事が日本語表示＋保存OK)**。また`visits_parking_check`違反は008適用確認で再発なし(上記2026-06-15サマリ参照)。
+- **共有文に楽しめそうなこと(things_to_do最大5件)追加＋先頭行=都道府県｜施設名** = `3b4dc17`(ShareButtons.tsx＋facilities/[slug]/page.tsx)。X/LINE/OSシェアの共有文を「{都道府県}｜{施設名}」＋「楽しめそうなこと：」＋things最大5件＋ブランド行「メモリップ | 子どもの“好き”が見える、おでかけ記録サービス」＋URL(別枠)に。空ならブロック省略・都道府県なしは施設名単独・新規生成なし・車時間なし。LINE/OS最大5、Xは本文250字超で3件化＋末尾…。先頭行は当初「{施設名}、子どもと行きたい。」だったがオーナー指示で「{都道府県}｜{施設名}」へ変更(感情代弁を避ける)。PM独立検証: tsc PASS・コードでブランド行/フォールバック/X抑制確認。
+- **地図のズーム/表示位置保持を全フィルタ地図へ拡張** = `3af7892`(カテゴリ/タグ/県/施設一覧の MapViewClient に一意 storageKey を付与=`category:${id}`/`tag:${slug}`/`prefecture:${id}`/施設一覧は searchParams 署名 `facilities:rt=...`。MapView.tsx/MapViewClient.tsx は無改修)。トップ/mapと同様に往復でズーム保持・復元時fitBounds抑止。本番6観点PASS(category/tag/prefecture/facilities往復復元・playground↔water_play独立・トップ/map非破壊)。/category/animal は無効id(animalはrecommended_tag・カテゴリは zoo)。PM独立検証: tsc/build PASS・コードでsignatureにrecommended_tag含むことを確認。
+- **山梨軽量サブバッチ** = `5658298d`(URL差替9件[id198/197/195/194/176/159/141/116/132]＋water_play追加3件[id193/118/117]＋provenance整備)。旧独自ドメイン7件がDNS解決不可(ENOTFOUND)→公式/自治体公式の施設個別ページへ差替・全9件200。water_playはrecommended_for_tagsへの追加のみ(category/summer_water_play不変)。**id145ガラス工房りゅうは要調査で分離・不変**。PM独立検証(URL4件スポット=verga.info[べるが]/wellnesspark.jp/midaiminamikoen.com/fkchannel facility-05 すべて施設名+山梨一致)＋本番facility-198で公式リンク=verga.info確認。差分=12件+provenanceのみ・id145/metadata不変・audit/往復diff/lint/tsc/build全PASS・クリーンworktreeでデプロイ。
+  - **後続マイクロ修正候補(未対応)**: ①id118さかな公園=water_play追加済だが summer_water_play が×のまま(別途○/◎へ揃える) ②id193万力公園=water_play根拠ページ(yamanashi-fruitpark.co.jp)のHTTPS証明書期限切れ(施設本体URLには影響なし)
+  - git状態: origin/main=`5658298d`。ローカルmainは docs commit `6c03cce`(.codex/*.md・未push)を上にrebase済みで線形・クリーン。
+
+**2026-06-14 にデプロイ済み(前セッション)**:
 - 山梨データ品質**第2弾(判断系9件)** = `4f29834`(カテゴリ3[id156/129/111]・タグ4[id165/161/148/147]・id135杜の8を非表示[ttdをid134へ移植]・id149バギー軸・metadata categories count再計算)
 - **id149 鮮度修正** = `573471b` + `ca54576`(things_to_do以外の description/USP/signature/料金からも休止中の二輪系を除去・source_notes追記)
 - **地図機能(現在地表示＋表示状態保持)** = `abf3e83`(トップ/mapで sessionStorage に center/zoom/フィルタ保存・往復復元・FitBounds抑止)
@@ -21,9 +36,15 @@
 2. 下記の待ち行列から着手。
 
 **待ち行列(オーナー確定の順)**:
-- 山梨**軽量サブバッチ**(P1の機械系): 公式URL差替9件(id198/197/195/194/176/159/141/116/132)＋water_play追加3件(id193/118/117)。**id145 ガラス工房りゅうは公式不明で要調査=機械的に混ぜない**。
+- ~~山梨軽量サブバッチ~~ = **2026-06-14 デプロイ済み `5658298d`**(上記)。
+- ~~地図のズーム/表示位置保持を全フィルタ地図へ拡張~~ = **2026-06-14 デプロイ済み `3af7892`**(上記)。
+- ~~共有文に things_to_do 最大5件追加~~ = **2026-06-14 デプロイ済み `3b4dc17`**(上記。先頭行は最終的に「{都道府県}｜{施設名}」)。
+- **(プラン作成済・着手前)写真からおでかけ記録を作る**(.codex/photo-to-visit-draft-spec.md): 専用画面新設(/mypage/visits/from-photo)・GPSで近い施設最大3件提案・まず1枚→1記録。EXIF撮影日(既存)＋GPS(新規・一時読み取り)→haversine近接3件→記録プリフィル。プライバシー: GPSは端末内で提案のみ・送信/保存/ログ禁止・使ったら破棄、保存画像はcanvas再エンコードでEXIF/GPS除去(既存)。新規核=EXIF GPS IFDパーサ＋近接3件＋プリフィル受け渡し。オーナーにプラン提示済・OK待ち。
+- **(進行中)id123 富士見ふれあいの森公園 単独データ更新**(.codex/facility-123-update-plan.md をCodexが作成→PMレビュー→実装): 所在地は市川三郷町岩間3965へ修正済み。公式/自治体で現行情報確認しURL/provenance/description/category/recommended_for_tags/things_to_do を精度向上。料金/駐車場/トイレ/遊具/水遊び/ベビーカー等は公式確認できるものだけ。新規創作禁止・他施設不可・差分はid123+provenanceのみ。プラン先出し→PMレビュー→実装→デプロイ(PMレビュー後すぐ)。
+- **id145 ガラス工房りゅう 要調査**(公式不明・分離済み): 公式URL判明すれば url/provenance を確定。判明しなければ needs_web_check 据置。
 - **NHR C群裁定**(id51 + id163 Trick Art Museum): 公式確認不可なら raw残置のまま `exclude_candidate` 非表示。
 - 神奈川監査(山梨の型・住所精度ルール適用) → 神奈川修正 → 第6バッチ things_to_do。
+- 後続マイクロ修正候補: id118 summer_water_play 揃え / id193 根拠ページ証明書(任意)。
 
 **未コミットのローカル変更**: コード(地図/詳細)は `b13ee4e` で commit 済み・クリーン。ただし `data/facilities_data.json` と `.codex/*` 監査レポートに作業前からの未コミット差分が残ることあり(audit再生成分・本番デプロイには未関与)。
 
