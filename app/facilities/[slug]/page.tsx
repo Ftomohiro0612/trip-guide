@@ -273,56 +273,6 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
-          {recommendedForTags.length > 0 && (
-            <section className="mt-6" aria-labelledby="recommended-for-heading">
-              <h2
-                id="recommended-for-heading"
-                className="text-xl font-bold mb-3"
-              >
-                {hasThingsToDo ? "どんな子に合いそう？" : "こんな遊びが好きな子に 🎯"}
-              </h2>
-              {hasThingsToDo && recommendedLead && (
-                <p className="mb-3 text-sm leading-relaxed text-slate-600">
-                  {recommendedLead}
-                </p>
-              )}
-              <div className="flex flex-wrap gap-2">
-                {recommendedForTags.map((tag) => {
-                  const meta = getRecommendedForTagMeta(tag);
-                  return (
-                    <Link
-                      key={tag}
-                      href={`/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`}
-                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium hover:bg-sky-100 transition-colors"
-                    >
-                      <span aria-hidden>{meta.icon}</span> {meta.label}
-                    </Link>
-                  );
-                })}
-              </div>
-              <div className="mt-3 flex flex-wrap gap-2">
-                {recommendedForTags.slice(0, 3).map((tag) => {
-                  const meta = getRecommendedForTagMeta(tag);
-                  if (!meta) return null;
-                  const href = prefecture
-                    ? `/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`
-                    : `/facilities?recommended_tag=${tag}`;
-                  return (
-                    <Link
-                      key={tag}
-                      href={href}
-                      className="text-xs text-sky-600 hover:text-sky-800 hover:underline"
-                    >
-                      {prefecture
-                        ? `${prefecture}の${meta.label}が好きな子におすすめの施設をもっと見る`
-                        : `${meta.label}が好きな子におすすめの施設をもっと見る`}{" "}
-                      →
-                    </Link>
-                  );
-                })}
-              </div>
-            </section>
-          )}
           {hasThingsToDo ? (
             <section className="mt-6" aria-labelledby="things-to-do-heading">
               <h3
@@ -378,6 +328,56 @@ export default async function FacilityDetailPage({ params }: Props) {
               )}
             </div>
             )
+          )}
+          {recommendedForTags.length > 0 && (
+            <section className="mt-6" aria-labelledby="recommended-for-heading">
+              <h2
+                id="recommended-for-heading"
+                className="text-xl font-bold mb-3"
+              >
+                {hasThingsToDo ? "どんな子に合いそう？" : "こんな遊びが好きな子に 🎯"}
+              </h2>
+              {hasThingsToDo && recommendedLead && (
+                <p className="mb-3 text-sm leading-relaxed text-slate-600">
+                  {recommendedLead}
+                </p>
+              )}
+              <div className="flex flex-wrap gap-2">
+                {recommendedForTags.map((tag) => {
+                  const meta = getRecommendedForTagMeta(tag);
+                  return (
+                    <Link
+                      key={tag}
+                      href={`/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`}
+                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium hover:bg-sky-100 transition-colors"
+                    >
+                      <span aria-hidden>{meta.icon}</span> {meta.label}
+                    </Link>
+                  );
+                })}
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {recommendedForTags.slice(0, 3).map((tag) => {
+                  const meta = getRecommendedForTagMeta(tag);
+                  if (!meta) return null;
+                  const href = prefecture
+                    ? `/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`
+                    : `/facilities?recommended_tag=${tag}`;
+                  return (
+                    <Link
+                      key={tag}
+                      href={href}
+                      className="text-xs text-sky-600 hover:text-sky-800 hover:underline"
+                    >
+                      {prefecture
+                        ? `${prefecture}の${meta.label}が好きな子におすすめの施設をもっと見る`
+                        : `${meta.label}が好きな子におすすめの施設をもっと見る`}{" "}
+                      →
+                    </Link>
+                  );
+                })}
+              </div>
+            </section>
           )}
 
           <FacilityGallery

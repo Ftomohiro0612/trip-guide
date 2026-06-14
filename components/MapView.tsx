@@ -71,6 +71,13 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
 
 const LOCATION_GUIDE_TEXT = "「📍 現在地」を押すと、現在地を表示できます。";
 const EARTH_RADIUS_KM = 6371;
+const CURRENT_LOCATION_STORAGE_KEY = "mapview:currentLocation";
+
+type CurrentLocationSource = "locate" | "restore";
+type CurrentLocationState = {
+  position: [number, number];
+  source: CurrentLocationSource;
+};
 
 type PersistedMapViewState = {
   center: [number, number];
@@ -138,6 +145,35 @@ function readPersistedState(storageKey?: string): PersistedMapViewState | null {
   }
 }
 
+function readPersistedCurrentLocation(): CurrentLocationState | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.sessionStorage.getItem(CURRENT_LOCATION_STORAGE_KEY);
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw);
+    if (!validCenter(parsed)) return null;
+
+    return { position: parsed, source: "restore" };
+  } catch {
+    return null;
+  }
+}
+
+function persistCurrentLocation(position: [number, number]) {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.sessionStorage.setItem(
+      CURRENT_LOCATION_STORAGE_KEY,
+      JSON.stringify(position),
+    );
+  } catch {
+    // sessionStorage may be unavailable or full; current location should still display.
+  }
+}
+
 interface PlacedFacility extends Facility {
   latitude: number;
   longitude: number;
@@ -199,9 +235,8 @@ export default function MapView({
   );
   const [showRain, setShowRain] = useState(() => initialState?.showRain ?? false);
   const [showFree, setShowFree] = useState(() => initialState?.showFree ?? false);
-  const [currentLocation, setCurrentLocation] = useState<[number, number] | null>(
-    null,
-  );
+  const [currentLocation, setCurrentLocation] =
+    useState<CurrentLocationState | null>(() => readPersistedCurrentLocation());
   const [locationNotice, setLocationNotice] = useState<string | null>(null);
   const [locating, setLocating] = useState(false);
   const savedSnapshot = useRef<PersistedMapViewState>({
@@ -295,7 +330,12 @@ export default function MapView({
       (position) => {
         setLocating(false);
         setLocationNotice(null);
-        setCurrentLocation([position.coords.latitude, position.coords.longitude]);
+        const nextPosition: [number, number] = [
+          position.coords.latitude,
+          position.coords.longitude,
+        ];
+        persistCurrentLocation(nextPosition);
+        setCurrentLocation({ position: nextPosition, source: "locate" });
       },
       () => {
         setLocating(false);
@@ -396,14 +436,19 @@ export default function MapView({
             }
           />
           {storageKey && <PersistMapPosition onChange={persistState} />}
-          {currentLocation && <CurrentLocationMarker position={currentLocation} />}
+          {currentLocation && (
+            <CurrentLocationMarker
+              position={currentLocation.position}
+              source={currentLocation.source}
+            />
+          )}
           {rendered.map((f) => (
             <FacilityMarker
               key={f.id}
               facility={f}
               color={PREF_COLORS[f.prefecture_id]}
               status={userStatus?.get(f.slug)}
-              currentLocation={currentLocation}
+              currentLocation={currentLocation?.position ?? null}
             />
           ))}
         </MapContainer>
@@ -461,12 +506,19 @@ function PersistMapPosition({
   return null;
 }
 
-function CurrentLocationMarker({ position }: { position: [number, number] }) {
+function CurrentLocationMarker({
+  position,
+  source,
+}: {
+  position: [number, number];
+  source: CurrentLocationSource;
+}) {
   const map = useMap();
 
   useEffect(() => {
+    if (source !== "locate") return;
     map.setView(position, 13);
-  }, [map, position]);
+  }, [map, position, source]);
 
   return (
     <>
