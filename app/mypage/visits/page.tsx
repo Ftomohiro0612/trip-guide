@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
+import {
+  crowdingLabels,
+  familyRevisitLabels,
+  satisfactionLabels,
+} from "@/lib/visit-labels";
 import DeleteVisitButton from "./DeleteVisitButton";
 
 export const metadata: Metadata = { title: "おでかけ履歴" };
@@ -11,62 +16,40 @@ type Visit = {
   facility_slug: string;
   facility_name: string;
   visited_on: string | null;
-  family_revisit: "yes" | "conditional" | "once_enough" | "no";
-  parent_fatigue: "easy" | "normal" | "tired" | "exhausted" | null;
-  weather: "sunny" | "cloudy" | "rainy" | "snowy" | "unknown" | null;
-  crowding: "empty" | "normal" | "busy" | "very_busy" | "unknown" | null;
+  family_revisit: string | null;
+  parent_fatigue: string | null;
+  weather: string | null;
+  crowding: string | null;
   stay_duration_min: number | null;
 };
 
 type VisitChild = {
   visit_id: string;
-  satisfaction:
-    | "loved"
-    | "enjoyed"
-    | "neutral"
-    | "not_fit"
-    | "could_not_join"
-    | null;
+  satisfaction: string | null;
   child_id: string;
   children: { nickname: string } | { nickname: string }[] | null;
 };
 
-const revisitLabels: Record<Visit["family_revisit"], string> = {
+const revisitLabels: Record<string, string> = {
   yes: "✅ また行きたい",
   conditional: "🔄 条件次第",
   once_enough: "👍 一度で十分",
   no: "🙅 もう行かない",
 };
 
-const satisfactionLabels: Record<NonNullable<VisitChild["satisfaction"]>, string> = {
-  loved: "大満足",
-  enjoyed: "楽しんだ",
-  neutral: "普通",
-  not_fit: "合わなかった",
-  could_not_join: "参加できず",
-};
-
-const fatigueEmojis: Record<NonNullable<Visit["parent_fatigue"]>, string> = {
+const fatigueEmojis: Record<string, string> = {
   easy: "😊",
   normal: "🙂",
   tired: "😴",
   exhausted: "😵",
 };
 
-const weatherEmojis: Record<NonNullable<Visit["weather"]>, string> = {
+const weatherEmojis: Record<string, string> = {
   sunny: "☀️",
   cloudy: "☁️",
   rainy: "🌧",
   snowy: "❄️",
   unknown: "",
-};
-
-const crowdingLabels: Record<NonNullable<Visit["crowding"]>, string> = {
-  empty: "空いてた",
-  normal: "ふつう",
-  busy: "混雑",
-  very_busy: "かなり混雑",
-  unknown: "覚えていない",
 };
 
 function formatVisitedOn(visitedOn: string | null): string {
@@ -205,6 +188,18 @@ export default async function VisitsPage({
             const stayDuration = formatStayDuration(visit.stay_duration_min);
             const hasFacilityPage = isVisibleFacilitySlug(visit.facility_slug);
             const isStoredFacility = !visit.facility_slug.startsWith("manual-");
+            const revisitLabel = visit.family_revisit
+              ? revisitLabels[visit.family_revisit] ??
+                familyRevisitLabels[visit.family_revisit] ??
+                "未記録"
+              : "未記録";
+            const fatigueEmoji = visit.parent_fatigue
+              ? fatigueEmojis[visit.parent_fatigue]
+              : null;
+            const weatherEmoji = visit.weather ? weatherEmojis[visit.weather] : null;
+            const crowdingLabel = visit.crowding
+              ? crowdingLabels[visit.crowding] ?? "未記録"
+              : null;
             return (
             <article
               key={visit.id}
@@ -232,20 +227,18 @@ export default async function VisitsPage({
                     >
                       {childNickname(childVisit.children)}:{" "}
                       {childVisit.satisfaction
-                        ? satisfactionLabels[childVisit.satisfaction]
+                        ? satisfactionLabels[childVisit.satisfaction] ?? "未記録"
                         : "未記録"}
                     </span>
                   ))}
                 </div>
               )}
               <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
-                <span>{revisitLabels[visit.family_revisit]}</span>
-                {visit.parent_fatigue && <span>{fatigueEmojis[visit.parent_fatigue]}</span>}
-                {visit.weather && weatherEmojis[visit.weather] && (
-                  <span>{weatherEmojis[visit.weather]}</span>
-                )}
+                <span>{revisitLabel}</span>
+                {fatigueEmoji && <span>{fatigueEmoji}</span>}
+                {weatherEmoji && <span>{weatherEmoji}</span>}
                 {stayDuration && <span>{stayDuration}</span>}
-                {visit.crowding && <span>{crowdingLabels[visit.crowding]}</span>}
+                {crowdingLabel && <span>{crowdingLabel}</span>}
               </div>
               <div className="flex items-center justify-between gap-3">
                 {hasFacilityPage ? (

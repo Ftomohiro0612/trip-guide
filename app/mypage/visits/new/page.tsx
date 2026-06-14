@@ -37,6 +37,7 @@ type FoodRating =
   | "brought_food"
   | "ate_outside"
   | "had_trouble";
+type Expectation = "exceeded" | "met" | "below";
 type Satisfaction =
   | "loved"
   | "enjoyed"
@@ -76,6 +77,12 @@ const satisfactionOptions: { value: Satisfaction; label: string }[] = [
   { value: "enjoyed", label: "楽しんだ" },
   { value: "neutral", label: "普通" },
   { value: "not_fit", label: "合わなかった" },
+];
+
+const expectationOptions: { value: Expectation; label: string }[] = [
+  { value: "exceeded", label: "期待以上だった" },
+  { value: "met", label: "期待どおり" },
+  { value: "below", label: "期待以下" },
 ];
 
 const weatherOptions: { value: Weather; label: string }[] = [
@@ -169,6 +176,7 @@ export default function NewVisitPage() {
   const [durationMinutes, setDurationMinutes] = useState("");
   const [timeWasEnough, setTimeWasEnough] = useState<TimeWasEnough | "">("");
   const [foodRating, setFoodRating] = useState<FoodRating | "">("");
+  const [expectation, setExpectation] = useState<Expectation | "">("");
   const [reactionTagMaster, setReactionTagMaster] = useState<ReactionTag[]>([]);
   const [childTags, setChildTags] = useState<Record<string, string[]>>({});
   const [parentMemo, setParentMemo] = useState("");
@@ -366,6 +374,7 @@ export default function NewVisitPage() {
         stay_duration_min: durationMinutes ? parseInt(durationMinutes, 10) : null,
         time_was_enough: timeWasEnough || null,
         food_rating: foodRating || null,
+        expectation_vs_reality: expectation || null,
         parent_memo: parentMemo.trim() || null,
       })
       .select("id")
@@ -727,6 +736,15 @@ export default function NewVisitPage() {
                 options={parkingOptions}
                 value={parking}
                 onChange={setParking}
+                allowClear
+                small
+              />
+
+              <OptionButtons
+                title="期待との比較"
+                options={expectationOptions}
+                value={expectation}
+                onChange={setExpectation}
                 allowClear
                 small
               />

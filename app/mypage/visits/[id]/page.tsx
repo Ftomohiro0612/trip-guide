@@ -4,6 +4,17 @@ import { notFound, redirect } from "next/navigation";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
+import {
+  crowdingLabels,
+  expectationLabels,
+  familyRevisitLabels,
+  fatigueLabels,
+  foodLabels,
+  parkingLabels,
+  timeWasEnoughLabels,
+  visitLabel,
+  weatherLabels,
+} from "@/lib/visit-labels";
 import DeleteVisitButton from "../DeleteVisitButton";
 import VisitPhotoGallery, {
   type VisitPhotoGalleryPhoto,
@@ -48,65 +59,6 @@ type VisitPhoto = {
   storage_path: string;
   thumb_path: string;
   taken_on: string | null;
-};
-
-const familyRevisitLabels: Record<string, string> = {
-  yes: "また行きたい",
-  conditional: "条件次第",
-  once_enough: "一度で十分",
-  no: "もう行かない",
-};
-
-const fatigueLabels: Record<string, string> = {
-  easy: "楽だった",
-  normal: "普通",
-  tired: "少し疲れた",
-  exhausted: "かなり疲れた",
-};
-
-const weatherLabels: Record<string, string> = {
-  sunny: "晴れ",
-  cloudy: "曇り",
-  rainy: "雨",
-  snowy: "雪",
-  unknown: "覚えていない",
-};
-
-const crowdingLabels: Record<string, string> = {
-  empty: "空いていた",
-  normal: "普通",
-  busy: "混んでいた",
-  very_busy: "かなり混んでいた",
-  unknown: "覚えていない",
-};
-
-const parkingLabels: Record<string, string> = {
-  car_easy: "車：駐車場に余裕あり",
-  car_normal: "車：駐車場ふつう",
-  car_trouble: "車：駐車場で困った",
-  train: "電車で行った",
-  bus: "バスで行った",
-  walk_bike: "徒歩・自転車で行った",
-};
-
-const timeLabels: Record<string, string> = {
-  enough: "十分だった",
-  want_more: "足りなかった",
-  too_long: "長かった",
-};
-
-const foodLabels: Record<string, string> = {
-  no_meal: "食事なし",
-  ate_inside: "施設内で食べた",
-  brought_food: "持参した",
-  ate_outside: "外で食べた",
-  had_trouble: "食事で困った",
-};
-
-const expectationLabels: Record<string, string> = {
-  exceeded: "期待以上",
-  met: "ほぼ期待通り",
-  below: "期待以下",
 };
 
 function formatVisitedOn(value: string | null): string {
@@ -259,65 +211,36 @@ export default async function VisitDetailPage({
           <DetailRow label="訪問日" value={formatVisitedOn(visitRow.visited_on)} />
           <DetailRow
             label="また行きたい"
-            value={familyRevisitLabels[visitRow.family_revisit] ?? visitRow.family_revisit}
+            value={visitLabel(familyRevisitLabels, visitRow.family_revisit)}
           />
           <DetailRow
             label="親の疲れ度"
-            value={
-              visitRow.parent_fatigue
-                ? fatigueLabels[visitRow.parent_fatigue] ?? visitRow.parent_fatigue
-                : null
-            }
+            value={visitLabel(fatigueLabels, visitRow.parent_fatigue)}
           />
           <DetailRow
             label="天気"
-            value={
-              visitRow.weather
-                ? weatherLabels[visitRow.weather] ?? visitRow.weather
-                : null
-            }
+            value={visitLabel(weatherLabels, visitRow.weather)}
           />
           <DetailRow
             label="混雑度"
-            value={
-              visitRow.crowding
-                ? crowdingLabels[visitRow.crowding] ?? visitRow.crowding
-                : null
-            }
+            value={visitLabel(crowdingLabels, visitRow.crowding)}
           />
           <DetailRow
             label="アクセス・移動"
-            value={
-              visitRow.parking
-                ? parkingLabels[visitRow.parking] ?? visitRow.parking
-                : null
-            }
+            value={visitLabel(parkingLabels, visitRow.parking)}
           />
           <DetailRow label="滞在時間" value={formatDuration(visitRow.stay_duration_min)} />
           <DetailRow
             label="時間は足りたか"
-            value={
-              visitRow.time_was_enough
-                ? timeLabels[visitRow.time_was_enough] ?? visitRow.time_was_enough
-                : null
-            }
+            value={visitLabel(timeWasEnoughLabels, visitRow.time_was_enough)}
           />
           <DetailRow
             label="ごはん・食事"
-            value={
-              visitRow.food_rating
-                ? foodLabels[visitRow.food_rating] ?? visitRow.food_rating
-                : null
-            }
+            value={visitLabel(foodLabels, visitRow.food_rating)}
           />
           <DetailRow
             label="期待との比較"
-            value={
-              visitRow.expectation_vs_reality
-                ? expectationLabels[visitRow.expectation_vs_reality] ??
-                  visitRow.expectation_vs_reality
-                : null
-            }
+            value={visitLabel(expectationLabels, visitRow.expectation_vs_reality)}
           />
         </dl>
       </section>

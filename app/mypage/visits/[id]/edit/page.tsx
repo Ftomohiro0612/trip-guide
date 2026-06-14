@@ -11,13 +11,30 @@ import VisitPhotoUploader, {
 
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
-type Weather = "sunny" | "cloudy" | "rainy" | "snowy" | "unknown";
-type Crowding = "empty" | "normal" | "busy" | "very_busy" | "unknown";
-type Parking = "easy" | "normal" | "difficult" | "full" | "none" | "not_used";
-type TempFeeling = "hot" | "comfortable" | "cold";
+type Weather = "sunny" | "cloudy" | "rainy" | "snowy";
+type Crowding = "empty" | "normal" | "busy" | "very_busy";
+type Parking =
+  | "car_easy"
+  | "car_normal"
+  | "car_trouble"
+  | "train"
+  | "bus"
+  | "walk_bike";
 type TimeWasEnough = "enough" | "want_more" | "too_long";
-type FoodRating = "great" | "ok" | "poor" | "no_food";
+type FoodRating =
+  | "no_meal"
+  | "ate_inside"
+  | "brought_food"
+  | "ate_outside"
+  | "had_trouble";
 type Expectation = "exceeded" | "met" | "below";
+
+type FacilitySuggestion = {
+  slug: string;
+  name: string;
+  category: string;
+  prefecture: string;
+};
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
   { value: "yes", label: "また行きたい" },
@@ -44,7 +61,6 @@ const weatherOptions: { value: Weather; label: string }[] = [
   { value: "cloudy", label: "☁️くもり" },
   { value: "rainy", label: "🌧雨" },
   { value: "snowy", label: "❄️雪" },
-  { value: "unknown", label: "覚えていない" },
 ];
 
 const crowdingOptions: { value: Crowding; label: string }[] = [
@@ -52,32 +68,21 @@ const crowdingOptions: { value: Crowding; label: string }[] = [
   { value: "normal", label: "ふつう" },
   { value: "busy", label: "混んでいた" },
   { value: "very_busy", label: "かなり混んでいた" },
-  { value: "unknown", label: "覚えていない" },
 ];
 
 const parkingOptions: { value: Parking; label: string }[] = [
-  { value: "easy", label: "あり・余裕" },
-  { value: "normal", label: "あり・普通" },
-  { value: "difficult", label: "あり・混雑" },
-  { value: "full", label: "満車" },
-  { value: "none", label: "なし" },
-  { value: "not_used", label: "使っていない" },
-];
-
-const tempFeelingOptions: { value: TempFeeling; label: string }[] = [
-  { value: "hot", label: "暑かった" },
-  { value: "comfortable", label: "ちょうどよかった" },
-  { value: "cold", label: "寒かった" },
+  { value: "car_easy", label: "車：駐車場に余裕あり" },
+  { value: "car_normal", label: "車：駐車場ふつう" },
+  { value: "car_trouble", label: "車：駐車場で困った" },
+  { value: "train", label: "電車で行った" },
+  { value: "bus", label: "バスで行った" },
+  { value: "walk_bike", label: "徒歩・自転車で行った" },
 ];
 
 const durationOptions = [
-  { value: "30", label: "0.5時間" },
-  { value: "60", label: "1時間" },
-  { value: "90", label: "1.5時間" },
-  { value: "120", label: "2時間" },
-  { value: "180", label: "3時間" },
-  { value: "240", label: "4時間" },
-  { value: "300", label: "5時間" },
+  { value: "60", label: "〜1時間" },
+  { value: "150", label: "2〜3時間" },
+  { value: "270", label: "4〜5時間" },
   { value: "360", label: "6時間以上" },
 ];
 
@@ -88,11 +93,55 @@ const timeWasEnoughOptions: { value: TimeWasEnough; label: string }[] = [
 ];
 
 const foodRatingOptions: { value: FoodRating; label: string }[] = [
-  { value: "no_food", label: "なし" },
-  { value: "great", label: "あり・満足" },
-  { value: "poor", label: "あり・不満" },
-  { value: "ok", label: "持参/普通" },
+  { value: "no_meal", label: "食事なし" },
+  { value: "ate_inside", label: "施設内で食べた" },
+  { value: "brought_food", label: "持参した" },
+  { value: "ate_outside", label: "外で食べた" },
+  { value: "had_trouble", label: "食事で困った" },
 ];
+
+const familyRevisitValues = new Set<FamilyRevisit>(
+  familyRevisitOptions.map((option) => option.value),
+);
+const fatigueValues = new Set<ParentFatigue>(
+  fatigueOptions.map((option) => option.value),
+);
+const expectationValues = new Set<Expectation>(
+  expectationOptions.map((option) => option.value),
+);
+const weatherValues = new Set<Weather>(weatherOptions.map((option) => option.value));
+const crowdingValues = new Set<Crowding>(
+  crowdingOptions.map((option) => option.value),
+);
+const parkingValues = new Set<Parking>(parkingOptions.map((option) => option.value));
+const durationValues = new Set(durationOptions.map((option) => option.value));
+const timeWasEnoughValues = new Set<TimeWasEnough>(
+  timeWasEnoughOptions.map((option) => option.value),
+);
+const foodRatingValues = new Set<FoodRating>(
+  foodRatingOptions.map((option) => option.value),
+);
+
+function makeFacilitySlug(name: string): string {
+  const encoded = Array.from(name.trim())
+    .map((char) => char.codePointAt(0)?.toString(36) ?? "")
+    .filter(Boolean)
+    .join("-");
+  return `manual-${encoded.slice(0, 120) || Date.now().toString(36)}`;
+}
+
+function coerceOption<T extends string>(
+  value: string | null | undefined,
+  values: Set<T>,
+): T | "" {
+  return value && values.has(value as T) ? (value as T) : "";
+}
+
+function coerceDuration(value: number | null | undefined): string {
+  if (!value) return "";
+  const duration = String(value);
+  return durationValues.has(duration) ? duration : "";
+}
 
 export default function EditVisitPage() {
   const params = useParams<{ id: string }>();
@@ -105,6 +154,9 @@ export default function EditVisitPage() {
   const [photoBusy, setPhotoBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [facilityName, setFacilityName] = useState("");
+  const [facilitySlug, setFacilitySlug] = useState("");
+  const [suggestions, setSuggestions] = useState<FacilitySuggestion[]>([]);
+  const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [visitedOn, setVisitedOn] = useState("");
   const [familyRevisit, setFamilyRevisit] = useState<FamilyRevisit | "">("");
   const [parentFatigue, setParentFatigue] = useState<ParentFatigue | "">("");
@@ -112,7 +164,6 @@ export default function EditVisitPage() {
   const [weather, setWeather] = useState<Weather | "">("");
   const [crowding, setCrowding] = useState<Crowding | "">("");
   const [parking, setParking] = useState<Parking | "">("");
-  const [tempFeeling, setTempFeeling] = useState<TempFeeling | "">("");
   const [durationMinutes, setDurationMinutes] = useState("");
   const [timeWasEnough, setTimeWasEnough] = useState<TimeWasEnough | "">("");
   const [foodRating, setFoodRating] = useState<FoodRating | "">("");
@@ -127,7 +178,7 @@ export default function EditVisitPage() {
       const visitResult = await supabase
         .from("visits")
         .select(
-          "facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, temp_feeling, stay_duration_min, time_was_enough, food_rating, parent_memo",
+          "facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, stay_duration_min, time_was_enough, food_rating, parent_memo",
         )
         .eq("id", visitId)
         .single();
@@ -152,24 +203,23 @@ export default function EditVisitPage() {
         }
       }
       setFacilityName(data.facility_name ?? "");
+      setFacilitySlug(data.facility_slug ?? "");
       setVisitedOn(data.visited_on ?? "");
-      setFamilyRevisit((data.family_revisit as FamilyRevisit) ?? "");
-      setParentFatigue((data.parent_fatigue as ParentFatigue) ?? "");
-      setExpectation((data.expectation_vs_reality as Expectation) ?? "");
-      setWeather((data.weather as Weather) ?? "");
-      setCrowding((data.crowding as Crowding) ?? "");
-      setParking((data.parking as Parking) ?? "");
-      setTempFeeling((data.temp_feeling as TempFeeling) ?? "");
-      setDurationMinutes(data.stay_duration_min ? String(data.stay_duration_min) : "");
-      setTimeWasEnough((data.time_was_enough as TimeWasEnough) ?? "");
-      setFoodRating((data.food_rating as FoodRating) ?? "");
+      setFamilyRevisit(coerceOption(data.family_revisit, familyRevisitValues));
+      setParentFatigue(coerceOption(data.parent_fatigue, fatigueValues));
+      setExpectation(coerceOption(data.expectation_vs_reality, expectationValues));
+      setWeather(coerceOption(data.weather, weatherValues));
+      setCrowding(coerceOption(data.crowding, crowdingValues));
+      setParking(coerceOption(data.parking, parkingValues));
+      setDurationMinutes(coerceDuration(data.stay_duration_min));
+      setTimeWasEnough(coerceOption(data.time_was_enough, timeWasEnoughValues));
+      setFoodRating(coerceOption(data.food_rating, foodRatingValues));
       setParentMemo(data.parent_memo ?? "");
       if (
         data.expectation_vs_reality ||
         data.weather ||
         data.crowding ||
         data.parking ||
-        data.temp_feeling ||
         data.stay_duration_min ||
         data.time_was_enough ||
         data.food_rating ||
@@ -184,6 +234,35 @@ export default function EditVisitPage() {
       active = false;
     };
   }, [visitId]);
+
+  useEffect(() => {
+    const query = facilityName.trim();
+    if (facilitySlug || query.length < 2) return;
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(async () => {
+      try {
+        const response = await fetch(
+          `/api/facilities/search?q=${encodeURIComponent(query)}`,
+          { signal: controller.signal },
+        );
+        if (!response.ok) return;
+        const data = (await response.json()) as { results?: FacilitySuggestion[] };
+        setSuggestions(data.results ?? []);
+        setSuggestionsOpen(true);
+      } catch (fetchError) {
+        if ((fetchError as Error).name !== "AbortError") {
+          setSuggestions([]);
+          setSuggestionsOpen(false);
+        }
+      }
+    }, 300);
+
+    return () => {
+      window.clearTimeout(timer);
+      controller.abort();
+    };
+  }, [facilityName, facilitySlug]);
 
   const canSubmit =
     facilityName.trim().length > 0 &&
@@ -203,6 +282,7 @@ export default function EditVisitPage() {
       .from("visits")
       .update({
         facility_name: facilityName.trim(),
+        facility_slug: facilitySlug || makeFacilitySlug(facilityName),
         visited_on: visitedOn || null,
         family_revisit: familyRevisit,
         parent_fatigue: parentFatigue,
@@ -210,7 +290,6 @@ export default function EditVisitPage() {
         weather: weather || null,
         crowding: crowding || null,
         parking: parking || null,
-        temp_feeling: tempFeeling || null,
         stay_duration_min: durationMinutes ? parseInt(durationMinutes, 10) : null,
         time_was_enough: timeWasEnough || null,
         food_rating: foodRating || null,
@@ -276,9 +355,44 @@ export default function EditVisitPage() {
           <input
             type="text"
             value={facilityName}
-            onChange={(e) => setFacilityName(e.target.value)}
+            onChange={(e) => {
+              setFacilityName(e.target.value);
+              setFacilitySlug("");
+              setSuggestions([]);
+              setSuggestionsOpen(false);
+            }}
+            onFocus={() => {
+              if (suggestions.length > 0) {
+                setSuggestionsOpen(true);
+              }
+            }}
+            placeholder="施設名を入力、例: 富士山こどもの国"
             className="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
           />
+          {suggestionsOpen && suggestions.length > 0 && (
+            <div className="bg-white border border-slate-200 rounded-lg py-2 shadow-sm">
+              {suggestions.map((suggestion) => (
+                <button
+                  key={suggestion.slug}
+                  type="button"
+                  onClick={() => {
+                    setFacilityName(suggestion.name);
+                    setFacilitySlug(suggestion.slug);
+                    setSuggestions([]);
+                    setSuggestionsOpen(false);
+                  }}
+                  className="w-full px-3 py-2 text-left hover:bg-slate-50 transition-colors"
+                >
+                  <span className="block text-sm font-medium text-slate-800">
+                    {suggestion.name}
+                  </span>
+                  <span className="block text-xs text-slate-400">
+                    {suggestion.prefecture} / {suggestion.category}
+                  </span>
+                </button>
+              ))}
+            </div>
+          )}
         </section>
 
         <section className="space-y-2">
@@ -327,14 +441,6 @@ export default function EditVisitPage() {
                 small
               />
               <OptionButtons
-                title="気温感"
-                options={tempFeelingOptions}
-                value={tempFeeling}
-                onChange={setTempFeeling}
-                allowClear
-                small
-              />
-              <OptionButtons
                 title="混雑度"
                 options={crowdingOptions}
                 value={crowding}
@@ -343,7 +449,7 @@ export default function EditVisitPage() {
                 small
               />
               <OptionButtons
-                title="駐車場"
+                title="アクセス・移動"
                 options={parkingOptions}
                 value={parking}
                 onChange={setParking}
@@ -370,7 +476,7 @@ export default function EditVisitPage() {
                 small
               />
               <OptionButtons
-                title="食事"
+                title="ごはん・食事"
                 options={foodRatingOptions}
                 value={foodRating}
                 onChange={setFoodRating}

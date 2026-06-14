@@ -1,4 +1,5 @@
 import ChildAvatar from "@/components/ChildAvatar";
+import { satisfactionLabels } from "@/lib/visit-labels";
 
 type ChildProfile = {
   nickname: string;
@@ -105,7 +106,7 @@ export function VisitChildCard({
 
   const satisfaction = row.satisfaction
     ? satisfactionMeta[row.satisfaction] ?? {
-        label: row.satisfaction,
+        label: satisfactionLabels[row.satisfaction] ?? "未記録",
         stars: "★★★☆☆",
       }
     : null;
