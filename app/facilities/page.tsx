@@ -50,6 +50,59 @@ function asSingleParam(value: string | string[] | undefined): string {
   return Array.isArray(value) ? value[0] ?? "" : value;
 }
 
+const MAP_SIGNATURE_KEYS = [
+  "categories",
+  "category",
+  "fee",
+  "indoor",
+  "prefecture",
+  "prefectures",
+  "q",
+  "rain",
+  "recommended_tag",
+  "tags",
+] as const;
+
+const MAP_SIGNATURE_KEY_ALIASES: Record<
+  (typeof MAP_SIGNATURE_KEYS)[number],
+  string
+> = {
+  categories: "cats",
+  category: "cat",
+  fee: "fee",
+  indoor: "in",
+  prefecture: "pref",
+  prefectures: "prefs",
+  q: "q",
+  rain: "rain",
+  recommended_tag: "rt",
+  tags: "tags",
+};
+
+function asSignatureValues(value: string | string[] | undefined): string[] {
+  if (!value) return [];
+  const values = Array.isArray(value) ? value : [value];
+  return values
+    .flatMap((item) => item.split(","))
+    .map((item) => item.trim())
+    .filter(Boolean)
+    .sort((a, b) => a.localeCompare(b, "ja"));
+}
+
+function buildFacilitiesMapStorageKey(sp: RawSearchParams): string {
+  const signature = MAP_SIGNATURE_KEYS.map((key) => {
+    const values = asSignatureValues(sp[key]);
+    if (values.length === 0) return null;
+    return `${MAP_SIGNATURE_KEY_ALIASES[key]}=${values
+      .map(encodeURIComponent)
+      .join(",")}`;
+  }).filter((entry): entry is string => Boolean(entry));
+
+  return signature.length > 0
+    ? `facilities:${signature.join("&")}`
+    : "facilities:all";
+}
+
 function isRecommendedForTag(value: string): value is RecommendedForTag {
   return Object.prototype.hasOwnProperty.call(
     RECOMMENDED_FOR_TAG_HEADLINE,
@@ -67,6 +120,7 @@ function buildPrefectureHref(tag: RecommendedForTag, prefecture: string) {
 
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
+  const mapStorageKey = buildFacilitiesMapStorageKey(sp);
   const filters = parseFilterParams(sp);
   const recommendedTagParam = asSingleParam(sp.recommended_tag);
   const recommendedTag = isRecommendedForTag(recommendedTagParam)
@@ -174,7 +228,11 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           <h2 id="facilities-map-heading" className="sr-only">
             検索結果の地図
           </h2>
-          <MapViewClient facilities={results} height={420} />
+          <MapViewClient
+            facilities={results}
+            height={420}
+            storageKey={mapStorageKey}
+          />
         </section>
       )}
 

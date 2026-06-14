@@ -98,7 +98,11 @@ export default async function TagPage({ params }: Props) {
                 {list.length}件
               </span>
             </h2>
-            <MapViewClient facilities={list} height={420} />
+            <MapViewClient
+              facilities={list}
+              height={420}
+              storageKey={`tag:${slug}`}
+            />
           </section>
         )}
 
