@@ -3,25 +3,33 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-## 🔄 新セッション即時引き継ぎ(2026-06-13 夜 時点・最重要)
+## 🔄 新セッション即時引き継ぎ(2026-06-14 時点・最重要)
 
-**いま進行中**: 山梨データ品質**第2弾(判断系9件)を Codex が実行中**(agmsg message id≒1156)。仕様=`.codex/data-quality-yamanashi-stage2-spec.md`(確定値)。**まだ反映・検証段階で、デプロイはしていない**。
+**進行中タスクなし**。直近の依頼はすべて本番反映・PM独立検証済み・作業ツリークリーン。
+
+**2026-06-14 にデプロイ済み(このセッション)**:
+- 山梨データ品質**第2弾(判断系9件)** = `4f29834`(カテゴリ3[id156/129/111]・タグ4[id165/161/148/147]・id135杜の8を非表示[ttdをid134へ移植]・id149バギー軸・metadata categories count再計算)
+- **id149 鮮度修正** = `573471b` + `ca54576`(things_to_do以外の description/USP/signature/料金からも休止中の二輪系を除去・source_notes追記)
+- **地図機能(現在地表示＋表示状態保持)** = `abf3e83`(トップ/mapで sessionStorage に center/zoom/フィルタ保存・往復復元・FitBounds抑止)
+- **トップ固定キュレーション＋地図UX強化** = `37d2520`(`FEATURED_FACILITY_IDS=[801,675,245,782,518,136]`・見出し「子どもの"好き"が見つかるおすすめ施設」・現在地ボタンを全地図化＋説明文「「📍 現在地」を押すと、現在地を表示できます。」・ポップアップに🚗車目安[直線距離概算・レンジ＋目安]＋できそうなこと[ttd最大3])
+- **現在地マーカーのセッション保持＋詳細ページ表示順入替** = `b13ee4e`(現在地を `mapview:currentLocation` で往復後も保持・復元時は地図を動かさない/詳細ページを「この施設で楽しめそうなこと→どんな子に合いそう？」の順に)
+
+**重要な訂正(2026-06-14)**: 写真アップロードは**本番公開済み**(`PHOTO_UPLOAD_ENABLED=true`・`f074a4d` 2026-06-12)。旧文書の「未公開」は誤り。詳細は本ファイル「写真機能の現状」。写真→日付/GPSでおでかけ履歴ドラフト自動作成は**将来候補**(本ファイル「将来候補(Phase 4.x〜5)」)。
 
 新セッションでまずやること:
-1. agmsg monitor を起動(SessionStart hook の指示どおり)。**第2弾の完了報告は agmsg履歴 か `%TEMP%\agmsg-codex-*\last-message.md` で確認**(過去、agmsgのsend.shが静かに失敗しProcessedだけ出た事例あり=運用メモ)。
-2. 第2弾の成果をPM独立検証(差分が9件+id134移植+metadata.categories再計算に限定か / カテゴリ整合 / id135移植・非表示 / id149鮮度 / audit・往復0・lint・tsc・build・スクショ)。
-3. 問題なければ**第2弾デプロイ可否をオーナーに上申**(判断系なので目視厚め)。
+1. agmsg monitor を起動(SessionStart hook どおり)。Codexワーカー(memorips)の死活確認(lock PID `Get-Process`・ログ末尾)。**ワーカーがハングしたら kill→lock削除→pwsh(PS7)で再起動**。再起動前に未処理(read_at IS NULL)の自分→codexメッセージを sqlite3 で read_at セットし再実行を防ぐ(教訓: メモリ `codex-worker-ops`)。**send.sh の本文に backtick を入れない**(bashがコマンド置換し黙って欠落)。
+2. 下記の待ち行列から着手。
 
-**第2弾の後の待ち行列(オーナー確定の順)**:
+**待ち行列(オーナー確定の順)**:
 - 山梨**軽量サブバッチ**(P1の機械系): 公式URL差替9件(id198/197/195/194/176/159/141/116/132)＋water_play追加3件(id193/118/117)。**id145 ガラス工房りゅうは公式不明で要調査=機械的に混ぜない**。
 - **NHR C群裁定**(id51 + id163 Trick Art Museum): 公式確認不可なら raw残置のまま `exclude_candidate` 非表示。
 - 神奈川監査(山梨の型・住所精度ルール適用) → 神奈川修正 → 第6バッチ things_to_do。
 
-**未コミットのローカル変更**: 第2弾が触る `data/facilities_data.json` は Codex のコミット待ち。docsは随時 `docs:` で別コミット。
+**未コミットのローカル変更**: コード(地図/詳細)は `b13ee4e` で commit 済み・クリーン。ただし `data/facilities_data.json` と `.codex/*` 監査レポートに作業前からの未コミット差分が残ることあり(audit再生成分・本番デプロイには未関与)。
 
 ---
 
-**最終更新**: 2026-06-13(午後) / 本番=**第5バッチ＋exclude非表示化＋山梨P0第1弾デプロイ済み**(**公開対象1,026施設 / raw1,030維持**・**things_to_do 228施設**=パイロット5+静岡25+長野50+山梨49+東京99[第4:50+第5:49]・A群所在地修正+exclude・住所修正12件・県count長野74/山梨71・1,030施設) / 第5バッチ単独デプロイ: **80da5f6**(things_to_do 第5バッチ東京49件・skip id305ボーネルンド系1件・id269/311/313は埋め草除去で3項目化・差分はthings_to_doキーのみ49件・audit/往復SHA256同一/build/lint/スクショ全PASS・Vercel Ready・本番facility-265で実表示確認済み) / 2026-06-13午前デプロイ3コミット: 4c7c93dd(A群: 住所修正4+県移管id114山梨→長野+exclude4[id146岩手移転・id167/168/172群馬所在])・577ee54(第4バッチ東京50件200項目)・b78c850(同名混同3件差し替え[id26石人の星公園に改名・id29熱海側・id123市川三郷町]+B群番地ズレ9件) / **確定原則: 県・住所・座標は実所在県を正、観光圏でprefectureを曲げない**(.codex/nhr-group-a-decision-memo.md) / things_to_do次=**第6バッチ(東京残り or 関東他県、50件単位)**・東京未適用は残り約65件・教訓: batch-3水増し定型に加え batch-4-5 で「仕様に字数下限を書くと詰め物(じっくり50件)が発生」「施設名プレフィックス禁止」「同一ブランド類似チェック(3項目以上同義NG)」「大型公園の『広い園内を歩く』系埋め草を固有要素へ/根拠なければ3項目に減らす」をチェックリスト反映済み / NHR残: C群2(id51/163実体不明)+D群3(id32/83/132名称・カテゴリ) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / **exclude_candidate 4件 非表示化=本番反映済み(411d7c1・公開UIのみvisibleFacilities/raw1030維持/total表示1026/直アクセス404/検索API個別除外/sitemap1026/マイページFB・案Bライブ算出・本番4件404確認済み)** / **県別データ品質監査レーン(.codex/data-quality-audit-spec.md): ①山梨監査=完了(指摘36件 P0=12/P1=20/P2=4・findings:.codex/data-quality-yamanashi-findings.json)→②山梨P0第1弾=本番反映済み(36bc2cb・住所7件公式+再ジオコード/id110休園/id105ド・ドドンパ削除)→残: 山梨P1重点レビュー・山梨第2弾(id135杜の8=id134へttd移植後に非表示候補/id149=休止中の二輪系をttdから外す。.codex/data-quality-yamanashi-stage2-plan.md)→③神奈川監査(住所精度ルール=番地・建物名一致/座標一致ならP0→P1適用)→④神奈川修正→⑤第6バッチthings_to_do。重い判断(exclude候補/同名混同/カテゴリ/タグ変更)は修正時PMレビュー対象** / 残課題: **NHR C群裁定=id51+id163 Trick Art Museum(実体不明・公式確認不可なら exclude_candidate非表示。.codex/data-quality-yamanashi-stage2-plan.md)**・**id275 上千葉砂原公園とid317 同交通公園の重複疑い(別タスク)**・status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
+**最終更新**: 2026-06-14 / **2026-06-14デプロイ(5件)**: 山梨第2弾`4f29834`・id149鮮度`573471b`/`ca54576`・地図機能`abf3e83`・トップキュレーション/地図UX`37d2520`・現在地保持/詳細順入替`b13ee4e`(詳細は冒頭「即時引き継ぎ」) / 本番=**第5バッチ＋exclude非表示化＋山梨P0第1弾デプロイ済み**(**公開対象1,026施設 / raw1,030維持**・**things_to_do 228施設**=パイロット5+静岡25+長野50+山梨49+東京99[第4:50+第5:49]・A群所在地修正+exclude・住所修正12件・県count長野74/山梨71・1,030施設) / 第5バッチ単独デプロイ: **80da5f6**(things_to_do 第5バッチ東京49件・skip id305ボーネルンド系1件・id269/311/313は埋め草除去で3項目化・差分はthings_to_doキーのみ49件・audit/往復SHA256同一/build/lint/スクショ全PASS・Vercel Ready・本番facility-265で実表示確認済み) / 2026-06-13午前デプロイ3コミット: 4c7c93dd(A群: 住所修正4+県移管id114山梨→長野+exclude4[id146岩手移転・id167/168/172群馬所在])・577ee54(第4バッチ東京50件200項目)・b78c850(同名混同3件差し替え[id26石人の星公園に改名・id29熱海側・id123市川三郷町]+B群番地ズレ9件) / **確定原則: 県・住所・座標は実所在県を正、観光圏でprefectureを曲げない**(.codex/nhr-group-a-decision-memo.md) / things_to_do次=**第6バッチ(東京残り or 関東他県、50件単位)**・東京未適用は残り約65件・教訓: batch-3水増し定型に加え batch-4-5 で「仕様に字数下限を書くと詰め物(じっくり50件)が発生」「施設名プレフィックス禁止」「同一ブランド類似チェック(3項目以上同義NG)」「大型公園の『広い園内を歩く』系埋め草を固有要素へ/根拠なければ3項目に減らす」をチェックリスト反映済み / NHR残: C群2(id51/163実体不明)+D群3(id32/83/132名称・カテゴリ) / 運営者=合同会社アルゴリズム・mail@memorips.com / キャラ=案1確定(SVG未) / **exclude_candidate 4件 非表示化=本番反映済み(411d7c1・公開UIのみvisibleFacilities/raw1030維持/total表示1026/直アクセス404/検索API個別除外/sitemap1026/マイページFB・案Bライブ算出・本番4件404確認済み)** / **県別データ品質監査レーン(.codex/data-quality-audit-spec.md): ①山梨監査=完了(指摘36件 P0=12/P1=20/P2=4・findings:.codex/data-quality-yamanashi-findings.json)→②山梨P0第1弾=本番反映済み(36bc2cb・住所7件公式+再ジオコード/id110休園/id105ド・ドドンパ削除)→残: 山梨P1重点レビュー・山梨第2弾(id135杜の8=id134へttd移植後に非表示候補/id149=休止中の二輪系をttdから外す。.codex/data-quality-yamanashi-stage2-plan.md)→③神奈川監査(住所精度ルール=番地・建物名一致/座標一致ならP0→P1適用)→④神奈川修正→⑤第6バッチthings_to_do。重い判断(exclude候補/同名混同/カテゴリ/タグ変更)は修正時PMレビュー対象** / 残課題: **NHR C群裁定=id51+id163 Trick Art Museum(実体不明・公式確認不可なら exclude_candidate非表示。.codex/data-quality-yamanashi-stage2-plan.md)**・**id275 上千葉砂原公園とid317 同交通公園の重複疑い(別タスク)**・status機械付与・invalid_address 202件・missing_experience 259件・旧/legal/*308化・RLS/写真E2E恒久テスト化
 
 ---
 
@@ -257,9 +265,31 @@ status が `Error` なら最新の URL で `vercel inspect <URL>` してログ�
 2. **未デプロイ分のデプロイ判断** — 監査v3(70e60a8)・coord修正(6d591cd)・docs類。表示影響は地図ピン正常化が主で基本GO寄り
 3. **Sheets 同期4列対応** — provenance 4フィールド（source_urls / source_checked_at / data_quality_status / source_notes）を sync-sheet / append-to-sheet / push-to-sheet に対応させる
 4. **既存1,030件への data_quality_status 機械付与** — 一括 confirmed 禁止。likely_ok / needs_web_check / needs_human_review / exclude_candidate の機械分類（.codex/facility-data-quality-status-policy.md）
-5. **写真機能の公開前レビュー** — 規約掲載後に `PHOTO_UPLOAD_ENABLED=true` の判断（公開条件: .codex/phase4-photo-upload.md）
+5. **写真機能の公開前レビュー** — 規約掲載後に `PHOTO_UPLOAD_ENABLED=true` の判断（公開条件: .codex/phase4-photo-upload.md）【2026-06-13 訂正: **実施済み**。`f074a4d "Enable photo uploads in production"`(2026-06-12 13:40)で flag=true 化・本番公開済み。下記「写真機能の現状」参照】
 
-既知残課題: url未入力102件 / invalid_address 202件 / missing_experience 259件 / 写真本番公開・規約正式掲載は未実施
+既知残課題: url未入力102件 / invalid_address 202件 / missing_experience 259件 ／ ~~写真本番公開・規約正式掲載は未実施~~ → **訂正: 写真本番公開＝実施済み（2026-06-12 `f074a4d` flag=true）／規約・プライバシー本番掲載済み（/terms・/privacy=200）**
+
+---
+
+## 写真機能の現状（2026-06-13 確認・文書訂正）
+
+**事実確認の結果、写真アップロードは本番公開済み**（過去文書 .codex/phase4-photo-upload.md 等が false のまま未更新で混乱の元。以後はこちらを正とする）。
+
+- `lib/config.ts` の `PHOTO_UPLOAD_ENABLED = true`（**origin/main にコミット済み**・コミット `f074a4d` 2026-06-12 13:40 "Enable photo uploads in production"）。以後の本番デプロイに含まれ反映済み。
+- 規約 `/terms`・プライバシー `/privacy` とも本番 200（掲載済み）。
+- Phase A（DB/Storage・RLS全PASS ec0f45e）/ Phase B（アップロードUI・EXIF除去 cd2b285）/ Phase C（詳細表示・削除・visit削除時cleanup e373403）すべて実装済み。
+- UI は `PHOTO_UPLOAD_ENABLED` フラグ配下（/mypage/visits/new・[id]/edit・[id]）。flag=true なのでログインユーザーに表示・利用可。
+- `app/mypage/visits/VisitPhotoUploader.tsx` に EXIF 日付読み取り処理あり（将来のドラフト機能で流用可能）。
+- ※本セッションでは認証フローの実アップロード/削除までは未再現（確認はコード+git+規約ページ200まで）。本番での実アップロード/表示/削除の最終目視は別途推奨。
+
+## 将来候補（Phase 4.x〜5・オーナー確認済み 2026-06-13／今は着手しない）
+
+**写真アップロード → 日付＋推定場所で「おでかけ履歴」ドラフト自動作成**
+
+- 概要: 写真をアップロードすると、撮影日付と推定場所（近い候補施設を最大3つ提示）から訪問記録のドラフトを自動生成。候補は既存施設の緯度経度DB＋地図の距離計算を流用すれば実現可能。
+- **プライバシー方針（オーナー賛成・確定）**: EXIF の撮影日時・GPS は**ブラウザ側でアップロード前に一時的に読み取り、日付と近くの候補施設の提案にのみ使用**。**画像保存時には EXIF/GPS を除去し、GPS 生データは保存しない**（[[freshness-all-fields]] とは別件。写真の EXIF 除去方針＝feedback-pm-operation-rules と整合）。
+- 既存資産: VisitPhotoUploader に EXIF 日付読み取りが既にある。GPS 読み取り＋近接施設マッチングが追加実装ポイント。
+- 優先度: 現行優先（①id149 hotfix ②地図機能 ③山梨軽量サブバッチ/NHR C群 ④神奈川監査）の後。仕様書はまだ作らない（記録のみ）。
 
 ---
 
