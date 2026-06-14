@@ -15,8 +15,27 @@ const MAX_PHOTOS_PER_VISIT = 2;
 const MAIN_MAX_EDGE = 1600;
 const THUMB_MAX_EDGE = 400;
 const WEBP_QUALITY = 0.82;
+const JPEG_QUALITY = 0.82;
 const MAX_SOURCE_BYTES = 20 * 1024 * 1024;
 const ACCEPTED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+
+type OutputFormat = {
+  mimeType: "image/webp" | "image/jpeg";
+  extension: "webp" | "jpg";
+  quality: number;
+};
+
+const WEBP_FORMAT: OutputFormat = {
+  mimeType: "image/webp",
+  extension: "webp",
+  quality: WEBP_QUALITY,
+};
+
+const JPEG_FORMAT: OutputFormat = {
+  mimeType: "image/jpeg",
+  extension: "jpg",
+  quality: JPEG_QUALITY,
+};
 
 type SelectedPhoto = {
   localId: string;
@@ -31,6 +50,7 @@ type ProcessedPhoto = {
   width: number;
   height: number;
   bytes: number;
+  format: OutputFormat;
 };
 
 export type VisitPhotoUploadResult =
@@ -306,14 +326,10 @@ function canvasToBlob(
   canvas: HTMLCanvasElement,
   type: string,
   quality: number,
-): Promise<Blob> {
-  return new Promise((resolve, reject) => {
+): Promise<Blob | null> {
+  return new Promise((resolve) => {
     canvas.toBlob(
       (blob) => {
-        if (!blob) {
-          reject(new Error("WebPへの変換に失敗しました。"));
-          return;
-        }
         resolve(blob);
       },
       type,
@@ -322,10 +338,10 @@ function canvasToBlob(
   });
 }
 
-async function renderWebp(
+function renderCanvas(
   image: HTMLImageElement,
   maxEdge: number,
-): Promise<{ blob: Blob; width: number; height: number }> {
+): { canvas: HTMLCanvasElement; width: number; height: number } {
   const sourceWidth = image.naturalWidth;
   const sourceHeight = image.naturalHeight;
   if (!sourceWidth || !sourceHeight) {
@@ -344,27 +360,52 @@ async function renderWebp(
   context.imageSmoothingQuality = "high";
   context.drawImage(image, 0, 0, size.width, size.height);
 
-  const blob = await canvasToBlob(canvas, "image/webp", WEBP_QUALITY);
-  if (blob.type !== "image/webp") {
-    throw new Error("このブラウザではWebP変換に対応していません。");
-  }
-  canvas.width = 0;
-  canvas.height = 0;
-  return { blob, width: size.width, height: size.height };
+  return { canvas, width: size.width, height: size.height };
+}
+
+async function encodeCanvas(
+  canvas: HTMLCanvasElement,
+  format: OutputFormat,
+): Promise<Blob | null> {
+  const blob = await canvasToBlob(canvas, format.mimeType, format.quality);
+  return blob?.type === format.mimeType ? blob : null;
 }
 
 async function processPhoto(file: File): Promise<ProcessedPhoto> {
   const image = await loadImage(file);
-  const body = await renderWebp(image, MAIN_MAX_EDGE);
-  const thumb = await renderWebp(image, THUMB_MAX_EDGE);
+  const body = renderCanvas(image, MAIN_MAX_EDGE);
+  const thumb = renderCanvas(image, THUMB_MAX_EDGE);
 
-  return {
-    bodyBlob: body.blob,
-    thumbBlob: thumb.blob,
-    width: body.width,
-    height: body.height,
-    bytes: body.blob.size,
-  };
+  try {
+    let bodyBlob = await encodeCanvas(body.canvas, WEBP_FORMAT);
+    let thumbBlob = await encodeCanvas(thumb.canvas, WEBP_FORMAT);
+    let format = WEBP_FORMAT;
+
+    if (!bodyBlob || !thumbBlob) {
+      // Canvas re-encoding strips source EXIF/GPS metadata for JPEG fallback too.
+      bodyBlob = await encodeCanvas(body.canvas, JPEG_FORMAT);
+      thumbBlob = await encodeCanvas(thumb.canvas, JPEG_FORMAT);
+      format = JPEG_FORMAT;
+    }
+
+    if (!bodyBlob || !thumbBlob) {
+      throw new Error("画像を変換できませんでした。別の画像でお試しください。");
+    }
+
+    return {
+      bodyBlob,
+      thumbBlob,
+      width: body.width,
+      height: body.height,
+      bytes: bodyBlob.size,
+      format,
+    };
+  } finally {
+    body.canvas.width = 0;
+    body.canvas.height = 0;
+    thumb.canvas.width = 0;
+    thumb.canvas.height = 0;
+  }
 }
 
 async function uploadPhoto({
@@ -383,15 +424,15 @@ async function uploadPhoto({
   const supabase = createClient();
   const processed = await processPhoto(file);
   const photoId = crypto.randomUUID();
-  const storagePath = `${userId}/${visitId}/${photoId}.webp`;
-  const thumbPath = `${userId}/${visitId}/${photoId}_thumb.webp`;
+  const storagePath = `${userId}/${visitId}/${photoId}.${processed.format.extension}`;
+  const thumbPath = `${userId}/${visitId}/${photoId}_thumb.${processed.format.extension}`;
   const uploadedPaths: string[] = [];
 
   try {
     const { error: bodyUploadError } = await supabase.storage
       .from(BUCKET)
       .upload(storagePath, processed.bodyBlob, {
-        contentType: "image/webp",
+        contentType: processed.format.mimeType,
         upsert: false,
       });
     if (bodyUploadError) throw bodyUploadError;
@@ -400,7 +441,7 @@ async function uploadPhoto({
     const { error: thumbUploadError } = await supabase.storage
       .from(BUCKET)
       .upload(thumbPath, processed.thumbBlob, {
-        contentType: "image/webp",
+        contentType: processed.format.mimeType,
         upsert: false,
       });
     if (thumbUploadError) throw thumbUploadError;
