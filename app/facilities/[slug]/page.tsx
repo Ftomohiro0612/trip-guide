@@ -476,6 +476,8 @@ export default async function FacilityDetailPage({ params }: Props) {
             <ShareButtons
               url={`/facilities/${facility.slug}`}
               title={facility.name}
+              prefecture={facility.prefecture}
+              thingsToDo={thingsToDo}
             />
           </div>
         </article>

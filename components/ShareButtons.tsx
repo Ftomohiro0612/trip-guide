@@ -1,16 +1,111 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 interface Props {
   url: string;
   title: string;
+  prefecture?: string;
+  thingsToDo?: string[];
 }
 
-export default function ShareButtons({ url, title }: Props) {
+const BRAND_LINE =
+  "メモリップ | 子どもの“好き”が見える、おでかけ記録サービス";
+const X_TEXT_LIMIT = 250;
+
+function getShareThings(thingsToDo: string[] | undefined, maxItems: number) {
+  return Array.isArray(thingsToDo)
+    ? thingsToDo
+        .map((thing) => (typeof thing === "string" ? thing.trim() : ""))
+        .filter((thing) => thing.length > 0)
+        .slice(0, maxItems)
+    : [];
+}
+
+function buildShareLead(title: string, prefecture: string | undefined) {
+  const trimmedPrefecture =
+    typeof prefecture === "string" ? prefecture.trim() : "";
+
+  return trimmedPrefecture ? `${trimmedPrefecture}｜${title}` : title;
+}
+
+function buildShareText(
+  title: string,
+  prefecture: string | undefined,
+  things: string[],
+) {
+  const lead = buildShareLead(title, prefecture);
+  const thingsBlock =
+    things.length > 0
+      ? `\n\n楽しめそうなこと：\n${things.map((thing) => `・${thing}`).join("\n")}`
+      : "";
+
+  return `${lead}${thingsBlock}\n\n${BRAND_LINE}`;
+}
+
+function buildXShareText(
+  title: string,
+  prefecture: string | undefined,
+  thingsToDo: string[] | undefined,
+) {
+  const fullThings = getShareThings(thingsToDo, 5);
+  const fullText = buildShareText(title, prefecture, fullThings);
+
+  if (fullText.length <= X_TEXT_LIMIT || fullThings.length <= 3) {
+    return fullText;
+  }
+
+  const reducedThings = fullThings.slice(0, 3);
+  const reducedText = buildShareText(title, prefecture, reducedThings);
+
+  if (reducedText.length <= X_TEXT_LIMIT || reducedThings.length === 0) {
+    return reducedText;
+  }
+
+  const lastIndex = reducedThings.length - 1;
+  const withoutLast = buildShareText(
+    title,
+    prefecture,
+    reducedThings.slice(0, lastIndex),
+  );
+  const bulletPrefixLength = "\n・".length;
+  const availableLastLength =
+    X_TEXT_LIMIT - withoutLast.length - bulletPrefixLength;
+  const ellipsis = "…";
+  const truncatedLast =
+    availableLastLength > ellipsis.length
+      ? `${reducedThings[lastIndex].slice(0, availableLastLength - ellipsis.length)}${ellipsis}`
+      : ellipsis;
+
+  return buildShareText(title, prefecture, [
+    ...reducedThings.slice(0, lastIndex),
+    truncatedLast,
+  ]);
+}
+
+export default function ShareButtons({
+  url,
+  title,
+  prefecture,
+  thingsToDo,
+}: Props) {
   const [copied, setCopied] = useState(false);
+  const [canNativeShare, setCanNativeShare] = useState(false);
   const fullUrl = url.startsWith("http") ? url : `https://trip-guide.net${url}`;
-  const shareText = `${title}\n\n子どもとのおでかけ先探しや記録に使える\nメモリップ by Trip Guide`;
+  const lineShareText = buildShareText(
+    title,
+    prefecture,
+    getShareThings(thingsToDo, 5),
+  );
+  const xShareText = buildXShareText(title, prefecture, thingsToDo);
+
+  useEffect(() => {
+    const timeoutId = window.setTimeout(() => {
+      setCanNativeShare("share" in navigator);
+    }, 0);
+
+    return () => window.clearTimeout(timeoutId);
+  }, []);
 
   async function copy() {
     try {
@@ -32,12 +127,14 @@ export default function ShareButtons({ url, title }: Props) {
 
   function nativeShare() {
     if (typeof navigator !== "undefined" && navigator.share) {
-      navigator.share({ title, text: shareText, url: fullUrl }).catch(() => {});
+      navigator
+        .share({ title, text: lineShareText, url: fullUrl })
+        .catch(() => {});
     }
   }
 
-  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(fullUrl)}`;
-  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(shareText)}`;
+  const xUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(xShareText)}&url=${encodeURIComponent(fullUrl)}`;
+  const lineUrl = `https://social-plugins.line.me/lineit/share?url=${encodeURIComponent(fullUrl)}&text=${encodeURIComponent(lineShareText)}`;
   const fbUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(fullUrl)}`;
 
   return (
@@ -86,7 +183,7 @@ export default function ShareButtons({ url, title }: Props) {
       >
         {copied ? "✓ コピーしました" : "🔗 リンク"}
       </button>
-      {typeof window !== "undefined" && "share" in navigator && (
+      {canNativeShare && (
         <button
           type="button"
           onClick={nativeShare}
