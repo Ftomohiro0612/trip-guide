@@ -470,9 +470,14 @@ export default function NewVisitPage() {
 
       <Link
         href="/mypage/visits/from-photo"
-        className="block rounded-xl border border-brand/20 bg-sky-50 px-4 py-3 text-center text-sm font-bold text-brand transition-colors hover:bg-sky-100"
+        className="block rounded-xl border border-brand/20 bg-sky-50 px-4 py-3 text-center transition-colors hover:bg-sky-100"
       >
-        📷 写真からおでかけ記録を作る
+        <span className="block text-sm font-bold text-brand">
+          📷 写真からおでかけ記録を作る
+        </span>
+        <span className="mt-1 block text-xs font-medium leading-relaxed text-slate-500">
+          写真を選ぶだけで日付・場所が入ります
+        </span>
       </Link>
 
       {error && (

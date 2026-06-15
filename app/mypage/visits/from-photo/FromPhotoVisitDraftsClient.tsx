@@ -45,6 +45,13 @@ type DraftPhoto = {
 
 type VisitStatus = "draft" | "published";
 
+type ExistingVisitPhoto = {
+  id: string;
+  storagePath: string;
+  thumbPath: string;
+  thumbUrl: string | null;
+};
+
 type ExistingVisitMatch = {
   id: string;
   status: VisitStatus;
@@ -52,6 +59,7 @@ type ExistingVisitMatch = {
   facilityName: string;
   visitedOn: string;
   photoCount: number;
+  photos: ExistingVisitPhoto[];
 };
 
 type VisitDraft = {
@@ -64,6 +72,7 @@ type VisitDraft = {
   candidates: FacilityCandidate[];
   photos: DraftPhoto[];
   selectedPhotoIds: string[];
+  selectedExistingPhotoIds: string[] | null;
   searchQuery: string;
   existingMatch: ExistingVisitMatch | null;
   createSeparate: boolean;
@@ -78,6 +87,13 @@ type ExistingVisitRow = {
   facility_name: string | null;
   visited_on: string | null;
   created_at: string | null;
+};
+
+type VisitPhotoRow = {
+  id: string;
+  visit_id: string;
+  storage_path: string;
+  thumb_path: string;
 };
 
 const MAX_BATCH_PHOTOS = 10;
@@ -185,6 +201,7 @@ function createDrafts(
       existing.selectedPhotoIds = existing.photos
         .slice(0, MAX_PHOTOS_PER_VISIT)
         .map((item) => item.localId);
+      existing.selectedExistingPhotoIds = null;
       if (existing.candidates.length === 0 && candidates.length > 0) {
         existing.candidates = candidates;
       }
@@ -201,6 +218,7 @@ function createDrafts(
       candidates,
       photos: [draftPhoto],
       selectedPhotoIds: [draftPhoto.localId],
+      selectedExistingPhotoIds: null,
       searchQuery: "",
       existingMatch: null,
       createSeparate: false,
@@ -240,12 +258,76 @@ function normalizeSelectedPhotoIds(draft: VisitDraft): string[] {
   return draft.photos.slice(0, getAttachLimit(draft)).map((photo) => photo.localId);
 }
 
+function normalizeFullMergeSelection(draft: VisitDraft): {
+  selectedExistingPhotoIds: string[];
+  selectedPhotoIds: string[];
+} {
+  const existingPhotos = draft.existingMatch?.photos ?? [];
+  const validExistingIds = new Set(existingPhotos.map((photo) => photo.id));
+  const selectedExistingPhotoIds = (
+    draft.selectedExistingPhotoIds ?? existingPhotos.map((photo) => photo.id)
+  )
+    .filter((id) => validExistingIds.has(id))
+    .slice(0, MAX_PHOTOS_PER_VISIT);
+  const remainingSlots = Math.max(
+    0,
+    MAX_PHOTOS_PER_VISIT - selectedExistingPhotoIds.length,
+  );
+  const selectedCurrentIds = new Set(draft.selectedPhotoIds);
+  const selectedPhotoIds = draft.photos
+    .filter((photo) => selectedCurrentIds.has(photo.localId))
+    .map((photo) => photo.localId)
+    .slice(0, remainingSlots);
+
+  return { selectedExistingPhotoIds, selectedPhotoIds };
+}
+
 function selectedPhotosForDraft(draft: VisitDraft): DraftPhoto[] {
   const selected = new Set(draft.selectedPhotoIds);
   return draft.photos.filter((photo) => selected.has(photo.localId));
 }
 
+function isFullMergeDraft(draft: VisitDraft): boolean {
+  return Boolean(
+    draft.existingMatch &&
+      !draft.createSeparate &&
+      draft.existingMatch.photoCount >= MAX_PHOTOS_PER_VISIT,
+  );
+}
+
+function selectedExistingPhotoIdsForDraft(draft: VisitDraft): string[] {
+  if (!draft.existingMatch) return [];
+  const validIds = new Set(draft.existingMatch.photos.map((photo) => photo.id));
+  const selectedIds =
+    draft.selectedExistingPhotoIds ??
+    draft.existingMatch.photos.map((photo) => photo.id);
+  return selectedIds.filter((id) => validIds.has(id));
+}
+
+function selectedReplacementCount(draft: VisitDraft): number {
+  return selectedExistingPhotoIdsForDraft(draft).length + selectedPhotosForDraft(draft).length;
+}
+
+function hasPhotoReplacement(draft: VisitDraft): boolean {
+  if (!isFullMergeDraft(draft) || !draft.existingMatch) return false;
+  const selectedExistingIds = selectedExistingPhotoIdsForDraft(draft);
+  const selectedNewCount = selectedPhotosForDraft(draft).length;
+  return (
+    selectedExistingIds.length < draft.existingMatch.photos.length &&
+    selectedNewCount > 0 &&
+    selectedExistingIds.length + selectedNewCount <= MAX_PHOTOS_PER_VISIT
+  );
+}
+
 function isPersistableDraft(draft: VisitDraft): boolean {
+  if (isFullMergeDraft(draft)) {
+    return (
+      draft.visitedOn.length > 0 &&
+      draft.facilityName.trim().length > 0 &&
+      hasPhotoReplacement(draft)
+    );
+  }
+
   return (
     draft.visitedOn.length > 0 &&
     draft.facilityName.trim().length > 0 &&
@@ -295,14 +377,46 @@ async function resolveExistingMatches(
   );
 
   const photoCountByVisit = new Map<string, number>();
+  const photosByVisit = new Map<string, ExistingVisitPhoto[]>();
   if (matchedIds.length > 0) {
     const { data: photoRows, error: photoError } = await supabase
       .from("visit_photos")
-      .select("visit_id")
-      .in("visit_id", matchedIds);
+      .select("id, visit_id, storage_path, thumb_path")
+      .in("visit_id", matchedIds)
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: true });
     if (photoError) throw new Error(photoError.message);
-    for (const row of (photoRows ?? []) as { visit_id: string }[]) {
+    const photos = (photoRows ?? []) as VisitPhotoRow[];
+    for (const row of photos) {
       photoCountByVisit.set(row.visit_id, (photoCountByVisit.get(row.visit_id) ?? 0) + 1);
+    }
+    const fullVisitIds = new Set(
+      Array.from(photoCountByVisit.entries())
+        .filter(([, count]) => count >= MAX_PHOTOS_PER_VISIT)
+        .map(([visitId]) => visitId),
+    );
+    const fullVisitPhotos = photos.filter((photo) => fullVisitIds.has(photo.visit_id));
+    const thumbPaths = Array.from(
+      new Set(fullVisitPhotos.map((photo) => photo.thumb_path)),
+    );
+    const { data: signedPhotoUrls } =
+      thumbPaths.length > 0
+        ? await supabase.storage
+            .from("visit-photos")
+            .createSignedUrls(thumbPaths, 60 * 60)
+        : { data: [] };
+    const thumbUrlByPath = new Map(
+      (signedPhotoUrls ?? []).map((row) => [row.path, row.signedUrl]),
+    );
+    for (const photo of fullVisitPhotos) {
+      const current = photosByVisit.get(photo.visit_id) ?? [];
+      current.push({
+        id: photo.id,
+        storagePath: photo.storage_path,
+        thumbPath: photo.thumb_path,
+        thumbUrl: thumbUrlByPath.get(photo.thumb_path) ?? null,
+      });
+      photosByVisit.set(photo.visit_id, current);
     }
   }
 
@@ -310,6 +424,7 @@ async function resolveExistingMatches(
     const visit = visits.find((row) => matchesExistingVisit(draft, row));
     const existingStatus: VisitStatus =
       visit?.status === "draft" ? "draft" : "published";
+    const photoCount = visit ? photoCountByVisit.get(visit.id) ?? 0 : 0;
     const existingMatch: ExistingVisitMatch | null = visit?.visited_on
       ? {
           id: visit.id,
@@ -317,22 +432,44 @@ async function resolveExistingMatches(
           facilitySlug: visit.facility_slug ?? "",
           facilityName: visit.facility_name ?? draft.facilityName,
           visitedOn: visit.visited_on,
-          photoCount: photoCountByVisit.get(visit.id) ?? 0,
+          photoCount,
+          photos:
+            photoCount >= MAX_PHOTOS_PER_VISIT
+              ? photosByVisit.get(visit.id) ?? []
+              : [],
         }
       : null;
     const nextDraft: VisitDraft = {
       ...draft,
       existingMatch,
     };
-    const selectedPhotoIds = normalizeSelectedPhotoIds(nextDraft);
+    const fullMerge = isFullMergeDraft(nextDraft);
+    const fullMergeSelection = fullMerge
+      ? normalizeFullMergeSelection(nextDraft)
+      : null;
+    const selectedPhotoIds = fullMerge
+      ? fullMergeSelection?.selectedPhotoIds ?? []
+      : normalizeSelectedPhotoIds(nextDraft);
+    const selectedExistingPhotoIds = fullMerge
+      ? fullMergeSelection?.selectedExistingPhotoIds ?? []
+      : null;
     const noMergeSlots =
       Boolean(existingMatch) &&
       !nextDraft.createSeparate &&
-      getAttachLimit(nextDraft) === 0;
-    return {
+      getAttachLimit(nextDraft) === 0 &&
+      !fullMerge;
+    const resolvedDraft = {
       ...nextDraft,
       selectedPhotoIds,
-      save: noMergeSlots ? false : draft.save,
+      selectedExistingPhotoIds,
+    };
+    return {
+      ...resolvedDraft,
+      save: noMergeSlots
+        ? false
+        : fullMerge
+          ? draft.save && hasPhotoReplacement(resolvedDraft)
+          : draft.save,
     };
   });
 }
@@ -423,6 +560,7 @@ export default function FromPhotoVisitDraftsClient({
                   ...draft,
                   existingMatch: next.existingMatch,
                   selectedPhotoIds: next.selectedPhotoIds,
+                  selectedExistingPhotoIds: next.selectedExistingPhotoIds,
                   save: next.save,
                 }
               : draft;
@@ -550,10 +688,21 @@ export default function FromPhotoVisitDraftsClient({
       withUpdatedDraft(current, draftId, (draft) => {
         const selected = draft.selectedPhotoIds.includes(photoId);
         if (selected) {
-          return {
+          const nextDraft = {
             ...draft,
             selectedPhotoIds: draft.selectedPhotoIds.filter((id) => id !== photoId),
           };
+          return isFullMergeDraft(nextDraft)
+            ? { ...nextDraft, save: hasPhotoReplacement(nextDraft) }
+            : nextDraft;
+        }
+        if (isFullMergeDraft(draft)) {
+          if (selectedReplacementCount(draft) >= MAX_PHOTOS_PER_VISIT) return draft;
+          const nextDraft = {
+            ...draft,
+            selectedPhotoIds: [...draft.selectedPhotoIds, photoId],
+          };
+          return { ...nextDraft, save: hasPhotoReplacement(nextDraft) };
         }
         if (draft.selectedPhotoIds.length >= getAttachLimit(draft)) return draft;
         return {
@@ -564,15 +713,50 @@ export default function FromPhotoVisitDraftsClient({
     );
   }
 
+  function toggleExistingPhoto(draftId: string, photoId: string) {
+    setDrafts((current) =>
+      withUpdatedDraft(current, draftId, (draft) => {
+        if (!isFullMergeDraft(draft)) return draft;
+        const selectedExistingIds = selectedExistingPhotoIdsForDraft(draft);
+        const selected = selectedExistingIds.includes(photoId);
+        const nextExistingIds = selected
+          ? selectedExistingIds.filter((id) => id !== photoId)
+          : selectedReplacementCount(draft) >= MAX_PHOTOS_PER_VISIT
+            ? selectedExistingIds
+            : [...selectedExistingIds, photoId];
+        const nextDraft = {
+          ...draft,
+          selectedExistingPhotoIds: nextExistingIds,
+        };
+        return { ...nextDraft, save: hasPhotoReplacement(nextDraft) };
+      }),
+    );
+  }
+
   function setCreateSeparate(draftId: string, createSeparate: boolean) {
     setDrafts((current) =>
       withUpdatedDraft(current, draftId, (draft) => {
         const nextDraft = { ...draft, createSeparate };
-        const selectedPhotoIds = normalizeSelectedPhotoIds(nextDraft);
-        return {
+        const fullMerge = isFullMergeDraft(nextDraft);
+        const fullMergeSelection = fullMerge
+          ? normalizeFullMergeSelection(nextDraft)
+          : null;
+        const selectedPhotoIds = fullMerge
+          ? fullMergeSelection?.selectedPhotoIds ?? []
+          : normalizeSelectedPhotoIds(nextDraft);
+        const selectedExistingPhotoIds = fullMerge
+          ? fullMergeSelection?.selectedExistingPhotoIds ?? []
+          : null;
+        const resolvedDraft = {
           ...nextDraft,
           selectedPhotoIds,
-          save: getAttachLimit(nextDraft) > 0 ? true : false,
+          selectedExistingPhotoIds,
+        };
+        return {
+          ...resolvedDraft,
+          save: fullMerge
+            ? hasPhotoReplacement(resolvedDraft)
+            : getAttachLimit(resolvedDraft) > 0,
         };
       }),
     );
@@ -612,6 +796,60 @@ export default function FromPhotoVisitDraftsClient({
     const effectiveDraft = draft.createSeparate
       ? draft
       : (await resolveExistingMatches([draft], userId))[0];
+
+    if (isFullMergeDraft(effectiveDraft)) {
+      if (!effectiveDraft.existingMatch || !hasPhotoReplacement(effectiveDraft)) {
+        throw new Error("入れ替える写真を選んでください。");
+      }
+
+      const supabase = createClient();
+      const selectedExistingIds = new Set(
+        selectedExistingPhotoIdsForDraft(effectiveDraft),
+      );
+      const removedPhotos = effectiveDraft.existingMatch.photos.filter(
+        (photo) => !selectedExistingIds.has(photo.id),
+      );
+      const selectedPhotos = selectedPhotosForDraft(effectiveDraft).slice(
+        0,
+        Math.max(0, MAX_PHOTOS_PER_VISIT - selectedExistingIds.size),
+      );
+
+      if (removedPhotos.length === 0 || selectedPhotos.length === 0) {
+        throw new Error("入れ替える写真を選んでください。");
+      }
+
+      for (const photo of removedPhotos) {
+        const pathsToRemove = Array.from(
+          new Set([photo.storagePath, photo.thumbPath]),
+        );
+        const { error: deleteError } = await supabase
+          .from("visit_photos")
+          .delete()
+          .eq("id", photo.id)
+          .eq("visit_id", effectiveDraft.existingMatch.id);
+        if (deleteError) throw new Error(deleteError.message);
+
+        const { error: removeError } = await supabase.storage
+          .from("visit-photos")
+          .remove(pathsToRemove);
+        if (removeError) {
+          throw new Error(removeError.message);
+        }
+      }
+
+      for (const [index, photo] of selectedPhotos.entries()) {
+        await uploadPhoto({
+          file: photo.file,
+          takenOn: photo.takenOn,
+          visitId: effectiveDraft.existingMatch.id,
+          userId,
+          sortOrder: selectedExistingIds.size + index,
+        });
+      }
+
+      return effectiveDraft.existingMatch.id;
+    }
+
     const selectedPhotos = selectedPhotosForDraft(effectiveDraft).slice(
       0,
       getAttachLimit(effectiveDraft),
@@ -696,12 +934,17 @@ export default function FromPhotoVisitDraftsClient({
         throw new Error("ログインが必要です。");
       }
 
+      let lastVisitId: string | null = null;
       for (const draft of selectedDrafts) {
-        await persistDraft(draft, user.id);
+        lastVisitId = await persistDraft(draft, user.id);
       }
 
       replaceDrafts([]);
-      router.push("/mypage/visits");
+      if (selectedDrafts.length === 1 && isFullMergeDraft(selectedDrafts[0]) && lastVisitId) {
+        router.push(`/mypage/visits/${lastVisitId}/edit`);
+      } else {
+        router.push("/mypage/visits");
+      }
     } catch (caughtError) {
       setError(
         caughtError instanceof Error
@@ -726,7 +969,8 @@ export default function FromPhotoVisitDraftsClient({
           写真からおでかけ記録を作る
         </h1>
         <p className="text-sm leading-relaxed text-slate-500">
-          複数写真の撮影日と位置情報から候補を作り、確認してからまとめて保存します。
+          スマホの写真を選ぶだけ。撮影日と撮影場所から、行った日付と施設を自動で下書きにします。
+          あとから子どもの様子を足して公開できます。
         </p>
       </div>
 
@@ -735,7 +979,8 @@ export default function FromPhotoVisitDraftsClient({
           <div className="space-y-1">
             <p className="text-sm font-bold text-slate-800">写真を選択</p>
             <p className="text-xs leading-relaxed text-slate-500">
-              最大{MAX_BATCH_PHOTOS}枚。選択時点ではアップロードしません。
+              最大{MAX_BATCH_PHOTOS}枚。日付と場所の候補を自動入力します。
+              選択時点ではアップロードしません。
               位置情報は端末内で候補提案にのみ使い、保存しません。
             </p>
           </div>
@@ -783,7 +1028,9 @@ export default function FromPhotoVisitDraftsClient({
           {drafts.map((draft, index) => {
             const attachLimit = getAttachLimit(draft);
             const isMerge = Boolean(draft.existingMatch) && !draft.createSeparate;
-            const isFullMerge = isMerge && attachLimit === 0;
+            const isFullMerge = isFullMergeDraft(draft);
+            const replacementSelectedCount = selectedReplacementCount(draft);
+            const replacementChanged = hasPhotoReplacement(draft);
             return (
             <article
               key={draft.id}
@@ -794,7 +1041,7 @@ export default function FromPhotoVisitDraftsClient({
                   <input
                     type="checkbox"
                     checked={draft.save}
-                    disabled={isFullMerge}
+                    disabled={isFullMerge && !replacementChanged}
                     onChange={() =>
                       setDrafts((current) =>
                         withUpdatedDraft(current, draft.id, (item) => ({
@@ -810,7 +1057,7 @@ export default function FromPhotoVisitDraftsClient({
                   </span>
                   {isMerge && (
                     <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
-                      写真追加
+                      {isFullMerge ? "写真入れ替え" : "写真追加"}
                     </span>
                   )}
                   {draft.createSeparate && (
@@ -827,12 +1074,17 @@ export default function FromPhotoVisitDraftsClient({
               {draft.existingMatch && (
                 <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs leading-relaxed text-emerald-800">
                   <p className="font-bold">
-                    この日の記録はすでにあります。写真だけ追加できます。
+                    {isFullMerge
+                      ? "この記録は写真が2枚あります。"
+                      : "この日の記録はすでにあります。写真だけ追加できます。"}
                   </p>
                   <p className="mt-1">
-                    既存写真 {draft.existingMatch.photoCount}枚 / 追加可能{" "}
-                    {Math.max(0, MAX_PHOTOS_PER_VISIT - draft.existingMatch.photoCount)}
-                    枚。公開状態は既存記録のままです。
+                    {isFullMerge
+                      ? "残す2枚を選ぶと、外した写真は削除して入れ替えます。公開状態は既存記録のままです。"
+                      : `既存写真 ${draft.existingMatch.photoCount}枚 / 追加可能 ${Math.max(
+                          0,
+                          MAX_PHOTOS_PER_VISIT - draft.existingMatch.photoCount,
+                        )}枚。公開状態は既存記録のままです。`}
                   </p>
                   <div className="mt-2 flex flex-wrap gap-2">
                     <Link
@@ -968,64 +1220,162 @@ export default function FromPhotoVisitDraftsClient({
 
               <section className="space-y-2">
                 <div className="flex items-center justify-between gap-3">
-                  <p className="text-xs font-bold text-slate-600">添付写真</p>
+                  <p className="text-xs font-bold text-slate-600">
+                    {isFullMerge ? "残す写真" : "添付写真"}
+                  </p>
                   <p className="text-[11px] text-slate-400">
-                    {draft.selectedPhotoIds.length}/{attachLimit}枚
+                    {isFullMerge
+                      ? `${replacementSelectedCount}/${MAX_PHOTOS_PER_VISIT}枚`
+                      : `${draft.selectedPhotoIds.length}/${attachLimit}枚`}
                   </p>
                 </div>
-                {draft.photos.length > attachLimit && attachLimit > 0 && (
-                  <p className="rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
-                    添付は{attachLimit}枚までです。残り
-                    {draft.photos.length - attachLimit}
-                    枚は記録に添付されません。
-                  </p>
+                {isFullMerge ? (
+                  <>
+                    <p className="rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">
+                      残す写真を2枚まで選んでください。既定は保存済み2枚のままです。
+                    </p>
+                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+                      {(draft.existingMatch?.photos ?? []).map((photo) => {
+                        const selected =
+                          selectedExistingPhotoIdsForDraft(draft).includes(photo.id);
+                        const cannotAdd =
+                          !selected &&
+                          replacementSelectedCount >= MAX_PHOTOS_PER_VISIT;
+                        return (
+                          <label
+                            key={photo.id}
+                            className={`overflow-hidden rounded-lg border bg-white ${
+                              selected ? "border-brand" : "border-slate-200"
+                            } ${cannotAdd ? "opacity-60" : ""}`}
+                          >
+                            <div className="relative aspect-square bg-slate-100">
+                              {photo.thumbUrl ? (
+                                // eslint-disable-next-line @next/next/no-img-element
+                                <img
+                                  src={photo.thumbUrl}
+                                  alt="保存済みの写真"
+                                  className="h-full w-full object-cover"
+                                />
+                              ) : (
+                                <span className="flex h-full w-full items-center justify-center px-2 text-xs text-slate-400">
+                                  写真を表示できません
+                                </span>
+                              )}
+                              <span className="absolute left-1.5 top-1.5 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-slate-600 shadow-sm">
+                                保存済み
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-2 px-2 py-1.5">
+                              <input
+                                type="checkbox"
+                                checked={selected}
+                                disabled={cannotAdd}
+                                onChange={() => toggleExistingPhoto(draft.id, photo.id)}
+                                className="mt-0.5 h-4 w-4 accent-brand"
+                              />
+                              <span className="min-w-0 text-[11px] leading-relaxed text-slate-500">
+                                {selected ? "残す" : "削除予定"}
+                              </span>
+                            </div>
+                          </label>
+                        );
+                      })}
+                      {draft.photos.map((photo) => {
+                        const selected = draft.selectedPhotoIds.includes(photo.localId);
+                        const cannotAdd =
+                          !selected &&
+                          replacementSelectedCount >= MAX_PHOTOS_PER_VISIT;
+                        return (
+                          <label
+                            key={photo.localId}
+                            className={`overflow-hidden rounded-lg border bg-white ${
+                              selected ? "border-brand" : "border-slate-200"
+                            } ${cannotAdd ? "opacity-60" : ""}`}
+                          >
+                            <div className="relative aspect-square bg-slate-100">
+                              <Image
+                                src={photo.previewUrl}
+                                alt="今回選んだ写真"
+                                fill
+                                sizes="180px"
+                                className="object-cover"
+                                unoptimized
+                              />
+                              <span className="absolute left-1.5 top-1.5 rounded-full bg-white/95 px-2 py-0.5 text-[10px] font-bold text-brand shadow-sm">
+                                今回
+                              </span>
+                            </div>
+                            <div className="flex items-start gap-2 px-2 py-1.5">
+                              <input
+                                type="checkbox"
+                                checked={selected}
+                                disabled={cannotAdd}
+                                onChange={() => togglePhoto(draft.id, photo.localId)}
+                                className="mt-0.5 h-4 w-4 accent-brand"
+                              />
+                              <span className="min-w-0 text-[11px] leading-relaxed text-slate-500">
+                                {photo.takenOn ?? "撮影日なし"}
+                                <br />
+                                {photo.hasGps ? "位置情報あり" : "位置情報なし"}
+                              </span>
+                            </div>
+                          </label>
+                        );
+                      })}
+                    </div>
+                  </>
+                ) : (
+                  <>
+                    {draft.photos.length > attachLimit && attachLimit > 0 && (
+                      <p className="rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
+                        添付は{attachLimit}枚までです。残り
+                        {draft.photos.length - attachLimit}
+                        枚は記録に添付されません。
+                      </p>
+                    )}
+                    <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
+                      {draft.photos.map((photo) => {
+                        const selected = draft.selectedPhotoIds.includes(photo.localId);
+                        const cannotAdd =
+                          !selected &&
+                          draft.selectedPhotoIds.length >= attachLimit;
+                        return (
+                          <label
+                            key={photo.localId}
+                            className={`overflow-hidden rounded-lg border bg-white ${
+                              selected ? "border-brand" : "border-slate-200"
+                            } ${cannotAdd ? "opacity-60" : ""}`}
+                          >
+                            <div className="relative aspect-square bg-slate-100">
+                              <Image
+                                src={photo.previewUrl}
+                                alt="添付候補の写真"
+                                fill
+                                sizes="180px"
+                                className="object-cover"
+                                unoptimized
+                              />
+                            </div>
+                            <div className="flex items-start gap-2 px-2 py-1.5">
+                              <input
+                                type="checkbox"
+                                checked={selected}
+                                disabled={cannotAdd}
+                                onChange={() => togglePhoto(draft.id, photo.localId)}
+                                className="mt-0.5 h-4 w-4 accent-brand"
+                              />
+                              <span className="min-w-0 text-[11px] leading-relaxed text-slate-500">
+                                {photo.takenOn ?? "撮影日なし"}
+                                <br />
+                                {photo.hasGps ? "位置情報あり" : "位置情報なし"}
+                              </span>
+                            </div>
+                          </label>
+                        );
+                      })}
+                    </div>
+                  </>
                 )}
-                {isFullMerge && (
-                  <p className="rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">
-                    既存記録の写真が上限に達しているため、この候補では追加できません。
-                  </p>
-                )}
-                <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
-                  {draft.photos.map((photo) => {
-                    const selected = draft.selectedPhotoIds.includes(photo.localId);
-                    const cannotAdd =
-                      !selected &&
-                      draft.selectedPhotoIds.length >= attachLimit;
-                    return (
-                      <label
-                        key={photo.localId}
-                        className={`overflow-hidden rounded-lg border bg-white ${
-                          selected ? "border-brand" : "border-slate-200"
-                        } ${cannotAdd ? "opacity-60" : ""}`}
-                      >
-                        <div className="relative aspect-square bg-slate-100">
-                          <Image
-                            src={photo.previewUrl}
-                            alt="添付候補の写真"
-                            fill
-                            sizes="180px"
-                            className="object-cover"
-                            unoptimized
-                          />
-                        </div>
-                        <div className="flex items-start gap-2 px-2 py-1.5">
-                          <input
-                            type="checkbox"
-                            checked={selected}
-                            disabled={cannotAdd}
-                            onChange={() => togglePhoto(draft.id, photo.localId)}
-                            className="mt-0.5 h-4 w-4 accent-brand"
-                          />
-                          <span className="min-w-0 text-[11px] leading-relaxed text-slate-500">
-                            {photo.takenOn ?? "撮影日なし"}
-                            <br />
-                            {photo.hasGps ? "位置情報あり" : "位置情報なし"}
-                          </span>
-                        </div>
-                      </label>
-                    );
-                  })}
-                </div>
               </section>
             </article>
             );

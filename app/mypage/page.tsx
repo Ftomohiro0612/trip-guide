@@ -339,7 +339,7 @@ export default async function MypagePage() {
             href="/mypage/visits/from-photo"
             icon="📷"
             label="写真からおでかけ記録をまとめて作る"
-            desc="撮影日と場所から候補を作成"
+            desc="写真を選ぶだけで日付・場所を自動入力"
           />
           <ActionCard
             href="/mypage/wishlist"

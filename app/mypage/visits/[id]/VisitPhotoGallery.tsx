@@ -18,9 +18,13 @@ export type VisitPhotoGalleryPhoto = {
 export default function VisitPhotoGallery({
   visitId,
   initialPhotos,
+  title = "写真",
+  onPhotosChange,
 }: {
   visitId: string;
   initialPhotos: VisitPhotoGalleryPhoto[];
+  title?: string;
+  onPhotosChange?: (count: number) => void;
 }) {
   const router = useRouter();
   const [photos, setPhotos] = useState(initialPhotos);
@@ -62,7 +66,9 @@ export default function VisitPhotoGallery({
       return;
     }
 
-    setPhotos((current) => current.filter((item) => item.id !== photo.id));
+    const nextPhotos = photos.filter((item) => item.id !== photo.id);
+    setPhotos(nextPhotos);
+    onPhotosChange?.(nextPhotos.length);
     if (activePhoto?.id === photo.id) {
       setActivePhoto(null);
     }
@@ -83,7 +89,7 @@ export default function VisitPhotoGallery({
   return (
     <section className="space-y-3">
       <div className="flex items-center justify-between gap-3">
-        <h2 className="font-bold text-slate-800">写真</h2>
+        <h2 className="font-bold text-slate-800">{title}</h2>
         <span className="text-xs text-slate-400">{photos.length}枚</span>
       </div>
 

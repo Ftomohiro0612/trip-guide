@@ -8,6 +8,9 @@ import { createClient } from "@/lib/supabase/client";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
 } from "../../VisitPhotoUploader";
+import VisitPhotoGallery, {
+  type VisitPhotoGalleryPhoto,
+} from "../VisitPhotoGallery";
 
 type FamilyRevisit = "yes" | "conditional" | "once_enough" | "no";
 type ParentFatigue = "easy" | "normal" | "tired" | "exhausted";
@@ -35,6 +38,13 @@ type FacilitySuggestion = {
   name: string;
   category: string;
   prefecture: string;
+};
+
+type VisitPhotoRow = {
+  id: string;
+  storage_path: string;
+  thumb_path: string;
+  taken_on: string | null;
 };
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
@@ -171,6 +181,7 @@ export default function EditVisitPage() {
   const [parentMemo, setParentMemo] = useState("");
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [existingPhotoCount, setExistingPhotoCount] = useState(0);
+  const [existingPhotos, setExistingPhotos] = useState<VisitPhotoGalleryPhoto[]>([]);
   const [visitStatus, setVisitStatus] = useState<VisitStatus>("published");
 
   useEffect(() => {
@@ -184,11 +195,13 @@ export default function EditVisitPage() {
         )
         .eq("id", visitId)
         .single();
-      const photoCountResult = PHOTO_UPLOAD_ENABLED
+      const photoResult = PHOTO_UPLOAD_ENABLED
         ? await supabase
           .from("visit_photos")
-          .select("id", { count: "exact", head: true })
+          .select("id, storage_path, thumb_path, taken_on")
           .eq("visit_id", visitId)
+          .order("sort_order", { ascending: true })
+          .order("created_at", { ascending: true })
         : null;
       if (!active) return;
       const { data, error: fetchError } = visitResult;
@@ -197,11 +210,36 @@ export default function EditVisitPage() {
         setLoading(false);
         return;
       }
-      if (photoCountResult) {
-        if (photoCountResult.error) {
+      if (photoResult) {
+        if (photoResult.error) {
           setError("写真枚数の読み込みに失敗しました");
         } else {
-          setExistingPhotoCount(photoCountResult.count ?? 0);
+          const visitPhotos = (photoResult.data ?? []) as VisitPhotoRow[];
+          const photoPaths = Array.from(
+            new Set(
+              visitPhotos.flatMap((photo) => [photo.thumb_path, photo.storage_path]),
+            ),
+          );
+          const { data: signedPhotoUrls } =
+            photoPaths.length > 0
+              ? await supabase.storage
+                  .from("visit-photos")
+                  .createSignedUrls(photoPaths, 60 * 60)
+              : { data: [] };
+          const signedPhotoUrlByPath = new Map(
+            (signedPhotoUrls ?? []).map((row) => [row.path, row.signedUrl]),
+          );
+          setExistingPhotoCount(visitPhotos.length);
+          setExistingPhotos(
+            visitPhotos.map((photo) => ({
+              id: photo.id,
+              storagePath: photo.storage_path,
+              thumbPath: photo.thumb_path,
+              thumbUrl: signedPhotoUrlByPath.get(photo.thumb_path) ?? null,
+              fullUrl: signedPhotoUrlByPath.get(photo.storage_path) ?? null,
+              takenOn: photo.taken_on,
+            })),
+          );
         }
       }
       setFacilityName(data.facility_name ?? "");
@@ -561,12 +599,22 @@ export default function EditVisitPage() {
             </div>
 
             {PHOTO_UPLOAD_ENABLED && (
-              <VisitPhotoUploader
-                ref={photoUploaderRef}
-                initialExistingCount={existingPhotoCount}
-                disabled={saving}
-                onBusyChange={setPhotoBusy}
-              />
+              <div className="space-y-4">
+                {existingPhotos.length > 0 && (
+                  <VisitPhotoGallery
+                    visitId={visitId}
+                    initialPhotos={existingPhotos}
+                    title="保存済みの写真"
+                    onPhotosChange={setExistingPhotoCount}
+                  />
+                )}
+                <VisitPhotoUploader
+                  ref={photoUploaderRef}
+                  initialExistingCount={existingPhotoCount}
+                  disabled={saving}
+                  onBusyChange={setPhotoBusy}
+                />
+              </div>
             )}
           </div>
         </section>
