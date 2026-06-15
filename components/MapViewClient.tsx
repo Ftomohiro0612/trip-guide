@@ -44,7 +44,8 @@ export default function MapViewClient(props: Props) {
         supabase
           .from("visits")
           .select("facility_slug, visited_on")
-          .eq("user_id", user.id),
+          .eq("user_id", user.id)
+          .eq("status", "published"),
         supabase.from("wishlists").select("facility_slug").eq("user_id", user.id),
       ]);
 

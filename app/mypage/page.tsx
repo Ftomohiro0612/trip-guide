@@ -180,6 +180,7 @@ export default async function MypagePage() {
           .from("visits")
           .select("id, facility_slug, facility_name, visited_on, family_revisit")
           .eq("user_id", user.id)
+          .eq("status", "published")
           .order("visited_on", { ascending: false, nullsFirst: false })
           .order("created_at", { ascending: false })
       : Promise.resolve({ data: [] }),

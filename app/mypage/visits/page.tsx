@@ -15,6 +15,7 @@ type Visit = {
   id: string;
   facility_slug: string;
   facility_name: string;
+  status: "draft" | "published";
   visited_on: string | null;
   family_revisit: string | null;
   parent_fatigue: string | null;
@@ -102,7 +103,7 @@ export default async function VisitsPage({
     ? supabase
         .from("visits")
         .select(
-          "id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, weather, crowding, stay_duration_min",
+          "id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, weather, crowding, stay_duration_min",
         )
         .eq("user_id", user.id)
         .order("visited_on", { ascending: false, nullsFirst: false })
@@ -200,6 +201,7 @@ export default async function VisitsPage({
             const crowdingLabel = visit.crowding
               ? crowdingLabels[visit.crowding] ?? "未記録"
               : null;
+            const isDraft = visit.status === "draft";
             return (
             <article
               key={visit.id}
@@ -213,6 +215,11 @@ export default async function VisitsPage({
                   >
                     {visit.facility_name}
                   </Link>
+                  {isDraft && (
+                    <span className="ml-2 inline-flex rounded-full bg-amber-100 px-2 py-0.5 align-middle text-[11px] font-bold text-amber-700">
+                      下書き
+                    </span>
+                  )}
                 </h2>
                 <span className="text-xs text-slate-400 shrink-0">
                   {formatVisitedOn(visit.visited_on)}

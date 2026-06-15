@@ -77,6 +77,7 @@ export default function FacilityMyRecord({
         .select("id, visited_on, family_revisit, parent_fatigue")
         .eq("facility_slug", facilitySlug)
         .eq("user_id", user.id)
+        .eq("status", "published")
         .order("visited_on", { ascending: false, nullsFirst: false });
 
       if (!active) return;

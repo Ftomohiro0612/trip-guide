@@ -41,6 +41,7 @@ type Visit = {
   user_id: string;
   facility_slug: string;
   facility_name: string;
+  status: "draft" | "published";
   visited_on: string | null;
   family_revisit: string;
   parent_fatigue: string | null;
@@ -106,7 +107,7 @@ export default async function VisitDetailPage({
   const { data: visit } = await supabase
     .from("visits")
     .select(
-      "id, user_id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking",
+      "id, user_id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking",
     )
     .eq("id", id)
     .maybeSingle();
@@ -115,6 +116,7 @@ export default async function VisitDetailPage({
 
   const visitRow = visit as Visit;
   if (visitRow.user_id !== user.id) notFound();
+  const isDraft = visitRow.status === "draft";
 
   const { data: visitChildren } = await supabase
     .from("visit_children")
@@ -187,6 +189,19 @@ export default async function VisitDetailPage({
             <h1 className="text-xl font-bold text-slate-900 break-words">
               {visitRow.facility_name}
             </h1>
+            {isDraft && (
+              <div className="mt-2 flex flex-wrap items-center gap-2">
+                <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">
+                  下書き
+                </span>
+                <Link
+                  href={`/mypage/visits/${visitRow.id}/edit`}
+                  className="text-xs font-bold text-brand hover:underline"
+                >
+                  編集して公開
+                </Link>
+              </div>
+            )}
             {hasFacilityPage ? (
               <Link
                 href={`/facilities/${facility.slug}`}

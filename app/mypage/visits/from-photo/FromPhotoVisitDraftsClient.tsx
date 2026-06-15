@@ -43,6 +43,17 @@ type DraftPhoto = {
   hasGps: boolean;
 };
 
+type VisitStatus = "draft" | "published";
+
+type ExistingVisitMatch = {
+  id: string;
+  status: VisitStatus;
+  facilitySlug: string;
+  facilityName: string;
+  visitedOn: string;
+  photoCount: number;
+};
+
 type VisitDraft = {
   id: string;
   save: boolean;
@@ -54,9 +65,20 @@ type VisitDraft = {
   photos: DraftPhoto[];
   selectedPhotoIds: string[];
   searchQuery: string;
+  existingMatch: ExistingVisitMatch | null;
+  createSeparate: boolean;
 };
 
 type SearchState = Record<string, FacilityChoice[]>;
+
+type ExistingVisitRow = {
+  id: string;
+  status: VisitStatus | string | null;
+  facility_slug: string | null;
+  facility_name: string | null;
+  visited_on: string | null;
+  created_at: string | null;
+};
 
 const MAX_BATCH_PHOTOS = 10;
 const NEARBY_THRESHOLD_KM = 10;
@@ -180,6 +202,8 @@ function createDrafts(
       photos: [draftPhoto],
       selectedPhotoIds: [draftPhoto.localId],
       searchQuery: "",
+      existingMatch: null,
+      createSeparate: false,
     });
   }
 
@@ -192,6 +216,138 @@ function withUpdatedDraft(
   updater: (draft: VisitDraft) => VisitDraft,
 ) {
   return drafts.map((draft) => (draft.id === draftId ? updater(draft) : draft));
+}
+
+function isStoredFacilitySlug(slug: string) {
+  return Boolean(slug) && !slug.startsWith("manual-");
+}
+
+function getAttachLimit(draft: VisitDraft): number {
+  if (draft.existingMatch && !draft.createSeparate) {
+    return Math.max(0, MAX_PHOTOS_PER_VISIT - draft.existingMatch.photoCount);
+  }
+  return MAX_PHOTOS_PER_VISIT;
+}
+
+function normalizeSelectedPhotoIds(draft: VisitDraft): string[] {
+  const selected = new Set(draft.selectedPhotoIds);
+  const validSelected = draft.photos
+    .filter((photo) => selected.has(photo.localId))
+    .map((photo) => photo.localId);
+  if (validSelected.length > 0) {
+    return validSelected.slice(0, getAttachLimit(draft));
+  }
+  return draft.photos.slice(0, getAttachLimit(draft)).map((photo) => photo.localId);
+}
+
+function selectedPhotosForDraft(draft: VisitDraft): DraftPhoto[] {
+  const selected = new Set(draft.selectedPhotoIds);
+  return draft.photos.filter((photo) => selected.has(photo.localId));
+}
+
+function isPersistableDraft(draft: VisitDraft): boolean {
+  return (
+    draft.visitedOn.length > 0 &&
+    draft.facilityName.trim().length > 0 &&
+    getAttachLimit(draft) > 0 &&
+    selectedPhotosForDraft(draft).length > 0
+  );
+}
+
+function matchesExistingVisit(draft: VisitDraft, visit: ExistingVisitRow): boolean {
+  if (!visit.visited_on || visit.visited_on !== draft.visitedOn) return false;
+
+  if (isStoredFacilitySlug(draft.facilitySlug)) {
+    return visit.facility_slug === draft.facilitySlug;
+  }
+
+  const draftName = draft.facilityName.trim();
+  const visitName = visit.facility_name?.trim() ?? "";
+  return draftName.length > 0 && draftName === visitName;
+}
+
+async function resolveExistingMatches(
+  drafts: VisitDraft[],
+  userId: string,
+): Promise<VisitDraft[]> {
+  const dates = Array.from(
+    new Set(drafts.map((draft) => draft.visitedOn).filter(Boolean)),
+  );
+  if (dates.length === 0) return drafts;
+
+  const supabase = createClient();
+  const { data: visitRows, error: visitError } = await supabase
+    .from("visits")
+    .select("id, status, facility_slug, facility_name, visited_on, created_at")
+    .eq("user_id", userId)
+    .in("visited_on", dates)
+    .order("created_at", { ascending: false });
+
+  if (visitError) throw new Error(visitError.message);
+
+  const visits = (visitRows ?? []) as ExistingVisitRow[];
+  const matchedIds = Array.from(
+    new Set(
+      drafts
+        .map((draft) => visits.find((visit) => matchesExistingVisit(draft, visit))?.id)
+        .filter((id): id is string => Boolean(id)),
+    ),
+  );
+
+  const photoCountByVisit = new Map<string, number>();
+  if (matchedIds.length > 0) {
+    const { data: photoRows, error: photoError } = await supabase
+      .from("visit_photos")
+      .select("visit_id")
+      .in("visit_id", matchedIds);
+    if (photoError) throw new Error(photoError.message);
+    for (const row of (photoRows ?? []) as { visit_id: string }[]) {
+      photoCountByVisit.set(row.visit_id, (photoCountByVisit.get(row.visit_id) ?? 0) + 1);
+    }
+  }
+
+  return drafts.map((draft) => {
+    const visit = visits.find((row) => matchesExistingVisit(draft, row));
+    const existingStatus: VisitStatus =
+      visit?.status === "draft" ? "draft" : "published";
+    const existingMatch: ExistingVisitMatch | null = visit?.visited_on
+      ? {
+          id: visit.id,
+          status: existingStatus,
+          facilitySlug: visit.facility_slug ?? "",
+          facilityName: visit.facility_name ?? draft.facilityName,
+          visitedOn: visit.visited_on,
+          photoCount: photoCountByVisit.get(visit.id) ?? 0,
+        }
+      : null;
+    const nextDraft: VisitDraft = {
+      ...draft,
+      existingMatch,
+    };
+    const selectedPhotoIds = normalizeSelectedPhotoIds(nextDraft);
+    const noMergeSlots =
+      Boolean(existingMatch) &&
+      !nextDraft.createSeparate &&
+      getAttachLimit(nextDraft) === 0;
+    return {
+      ...nextDraft,
+      selectedPhotoIds,
+      save: noMergeSlots ? false : draft.save,
+    };
+  });
+}
+
+function shouldSkipConfirmation(drafts: VisitDraft[]): boolean {
+  if (drafts.length !== 1) return false;
+  const draft = drafts[0];
+  const isMerge = Boolean(draft.existingMatch) && !draft.createSeparate;
+  const facilityConfirmed = isMerge || draft.candidates.length === 1;
+  return (
+    Boolean(draft.detectedDate) &&
+    facilityConfirmed &&
+    draft.photos.length <= getAttachLimit(draft) &&
+    isPersistableDraft(draft)
+  );
 }
 
 export default function FromPhotoVisitDraftsClient({
@@ -225,9 +381,7 @@ export default function FromPhotoVisitDraftsClient({
   const selectedDrafts = drafts.filter((draft) => draft.save);
   const canSave =
     selectedDrafts.length > 0 &&
-    selectedDrafts.every(
-      (draft) => draft.visitedOn && draft.facilityName.trim().length > 0,
-    ) &&
+    selectedDrafts.every(isPersistableDraft) &&
     !preparing &&
     !saving;
 
@@ -235,6 +389,60 @@ export default function FromPhotoVisitDraftsClient({
     () => drafts.reduce((sum, draft) => sum + draft.photos.length, 0),
     [drafts],
   );
+  const matchSignature = useMemo(
+    () =>
+      drafts
+        .map(
+          (draft) =>
+            `${draft.id}:${draft.visitedOn}:${draft.facilitySlug}:${draft.facilityName}:${draft.createSeparate ? "1" : "0"}`,
+        )
+        .join("|"),
+    [drafts],
+  );
+
+  useEffect(() => {
+    if (drafts.length === 0 || preparing || saving) return;
+    let active = true;
+
+    async function refreshExistingMatches() {
+      try {
+        const supabase = createClient();
+        const {
+          data: { user },
+          error: userError,
+        } = await supabase.auth.getUser();
+        if (userError || !user) return;
+
+        const resolved = await resolveExistingMatches(draftsRef.current, user.id);
+        if (!active) return;
+        setDrafts((current) =>
+          current.map((draft) => {
+            const next = resolved.find((item) => item.id === draft.id);
+            return next
+              ? {
+                  ...draft,
+                  existingMatch: next.existingMatch,
+                  selectedPhotoIds: next.selectedPhotoIds,
+                  save: next.save,
+                }
+              : draft;
+          }),
+        );
+      } catch (caughtError) {
+        if (!active) return;
+        setError(
+          caughtError instanceof Error
+            ? caughtError.message
+            : "既存記録の確認に失敗しました。",
+        );
+      }
+    }
+
+    refreshExistingMatches();
+    return () => {
+      active = false;
+    };
+  }, [drafts.length, matchSignature, preparing, saving]);
 
   function replaceDrafts(nextDrafts: VisitDraft[]) {
     draftsRef.current.forEach((draft) => {
@@ -261,6 +469,7 @@ export default function FromPhotoVisitDraftsClient({
 
     const accepted: (DraftPhoto & { gps: GpsCoordinates | null })[] = [];
     const errors: string[] = [];
+    let draftsWereReplaced = false;
 
     try {
       for (const file of files) {
@@ -290,15 +499,37 @@ export default function FromPhotoVisitDraftsClient({
         return;
       }
 
-      replaceDrafts(createDrafts(accepted, facilities));
+      const baseDrafts = createDrafts(accepted, facilities);
+      const supabase = createClient();
+      const {
+        data: { user },
+        error: userError,
+      } = await supabase.auth.getUser();
+      if (userError || !user) {
+        throw new Error("ログインが必要です。");
+      }
+
+      const resolvedDrafts = await resolveExistingMatches(baseDrafts, user.id);
+      replaceDrafts(resolvedDrafts);
+      draftsWereReplaced = true;
+      if (shouldSkipConfirmation(resolvedDrafts)) {
+        setSaving(true);
+        const visitId = await persistDraft(resolvedDrafts[0], user.id);
+        replaceDrafts([]);
+        router.push(`/mypage/visits/${visitId}/edit`);
+        return;
+      }
       if (errors.length > 0) setError(Array.from(new Set(errors))[0]);
     } catch (caughtError) {
-      accepted.forEach((photo) => URL.revokeObjectURL(photo.previewUrl));
+      if (!draftsWereReplaced) {
+        accepted.forEach((photo) => URL.revokeObjectURL(photo.previewUrl));
+      }
       setError(
         caughtError instanceof Error
           ? caughtError.message
           : "写真の読み取りに失敗しました。",
       );
+      setSaving(false);
     } finally {
       setPreparing(false);
     }
@@ -324,10 +555,24 @@ export default function FromPhotoVisitDraftsClient({
             selectedPhotoIds: draft.selectedPhotoIds.filter((id) => id !== photoId),
           };
         }
-        if (draft.selectedPhotoIds.length >= MAX_PHOTOS_PER_VISIT) return draft;
+        if (draft.selectedPhotoIds.length >= getAttachLimit(draft)) return draft;
         return {
           ...draft,
           selectedPhotoIds: [...draft.selectedPhotoIds, photoId],
+        };
+      }),
+    );
+  }
+
+  function setCreateSeparate(draftId: string, createSeparate: boolean) {
+    setDrafts((current) =>
+      withUpdatedDraft(current, draftId, (draft) => {
+        const nextDraft = { ...draft, createSeparate };
+        const selectedPhotoIds = normalizeSelectedPhotoIds(nextDraft);
+        return {
+          ...nextDraft,
+          selectedPhotoIds,
+          save: getAttachLimit(nextDraft) > 0 ? true : false,
         };
       }),
     );
@@ -363,6 +608,78 @@ export default function FromPhotoVisitDraftsClient({
     }
   }
 
+  async function persistDraft(draft: VisitDraft, userId: string): Promise<string> {
+    const effectiveDraft = draft.createSeparate
+      ? draft
+      : (await resolveExistingMatches([draft], userId))[0];
+    const selectedPhotos = selectedPhotosForDraft(effectiveDraft).slice(
+      0,
+      getAttachLimit(effectiveDraft),
+    );
+
+    if (selectedPhotos.length === 0) {
+      throw new Error("添付できる写真がありません。");
+    }
+
+    if (effectiveDraft.existingMatch && !effectiveDraft.createSeparate) {
+      const startOrder = effectiveDraft.existingMatch.photoCount;
+      for (const [index, photo] of selectedPhotos.entries()) {
+        await uploadPhoto({
+          file: photo.file,
+          takenOn: photo.takenOn,
+          visitId: effectiveDraft.existingMatch.id,
+          userId,
+          sortOrder: startOrder + index,
+        });
+      }
+      return effectiveDraft.existingMatch.id;
+    }
+
+    const supabase = createClient();
+    const visitedDate = new Date(`${effectiveDraft.visitedOn}T00:00:00`);
+    const visitedYear = visitedDate.getFullYear();
+    const visitedMonth = visitedDate.getMonth() + 1;
+    const today = todayString();
+    const facilityName = effectiveDraft.facilityName.trim();
+
+    const { data: visit, error: visitError } = await supabase
+      .from("visits")
+      .insert({
+        user_id: userId,
+        facility_slug:
+          effectiveDraft.facilitySlug || makeManualFacilitySlug(facilityName),
+        facility_name: facilityName,
+        status: "draft",
+        visited_on: effectiveDraft.visitedOn,
+        visited_year: visitedYear,
+        visited_month: visitedMonth,
+        date_precision: "exact",
+        is_past_entry: effectiveDraft.visitedOn < today,
+        family_revisit: "conditional",
+        parent_fatigue: "normal",
+      })
+      .select("id")
+      .single();
+
+    if (visitError || !visit) {
+      throw new Error(visitError?.message ?? "記録の保存に失敗しました。");
+    }
+
+    if (PHOTO_UPLOAD_ENABLED) {
+      for (const [sortOrder, photo] of selectedPhotos.entries()) {
+        await uploadPhoto({
+          file: photo.file,
+          takenOn: photo.takenOn,
+          visitId: visit.id,
+          userId,
+          sortOrder,
+        });
+      }
+    }
+
+    return visit.id;
+  }
+
   async function saveDrafts() {
     if (!canSave) return;
     setSaving(true);
@@ -380,47 +697,7 @@ export default function FromPhotoVisitDraftsClient({
       }
 
       for (const draft of selectedDrafts) {
-        const visitedDate = new Date(`${draft.visitedOn}T00:00:00`);
-        const visitedYear = visitedDate.getFullYear();
-        const visitedMonth = visitedDate.getMonth() + 1;
-        const today = todayString();
-        const facilityName = draft.facilityName.trim();
-
-        const { data: visit, error: visitError } = await supabase
-          .from("visits")
-          .insert({
-            user_id: user.id,
-            facility_slug: draft.facilitySlug || makeManualFacilitySlug(facilityName),
-            facility_name: facilityName,
-            visited_on: draft.visitedOn,
-            visited_year: visitedYear,
-            visited_month: visitedMonth,
-            date_precision: "exact",
-            is_past_entry: draft.visitedOn < today,
-            family_revisit: "conditional",
-            parent_fatigue: "normal",
-          })
-          .select("id")
-          .single();
-
-        if (visitError || !visit) {
-          throw new Error(visitError?.message ?? "記録の保存に失敗しました。");
-        }
-
-        if (PHOTO_UPLOAD_ENABLED) {
-          const selectedPhotos = draft.photos.filter((photo) =>
-            draft.selectedPhotoIds.includes(photo.localId),
-          );
-          for (const [sortOrder, photo] of selectedPhotos.entries()) {
-            await uploadPhoto({
-              file: photo.file,
-              takenOn: photo.takenOn,
-              visitId: visit.id,
-              userId: user.id,
-              sortOrder,
-            });
-          }
-        }
+        await persistDraft(draft, user.id);
       }
 
       replaceDrafts([]);
@@ -503,7 +780,11 @@ export default function FromPhotoVisitDraftsClient({
         </div>
       ) : (
         <div className="space-y-4">
-          {drafts.map((draft, index) => (
+          {drafts.map((draft, index) => {
+            const attachLimit = getAttachLimit(draft);
+            const isMerge = Boolean(draft.existingMatch) && !draft.createSeparate;
+            const isFullMerge = isMerge && attachLimit === 0;
+            return (
             <article
               key={draft.id}
               className="rounded-xl border border-slate-200 bg-white p-4 space-y-4"
@@ -513,6 +794,7 @@ export default function FromPhotoVisitDraftsClient({
                   <input
                     type="checkbox"
                     checked={draft.save}
+                    disabled={isFullMerge}
                     onChange={() =>
                       setDrafts((current) =>
                         withUpdatedDraft(current, draft.id, (item) => ({
@@ -526,11 +808,51 @@ export default function FromPhotoVisitDraftsClient({
                   <span className="font-bold text-slate-900">
                     候補 {index + 1}
                   </span>
+                  {isMerge && (
+                    <span className="rounded-full bg-emerald-100 px-2 py-0.5 text-[11px] font-bold text-emerald-700">
+                      写真追加
+                    </span>
+                  )}
+                  {draft.createSeparate && (
+                    <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                      新規下書き
+                    </span>
+                  )}
                 </label>
                 <span className="shrink-0 text-xs text-slate-400">
                   写真 {draft.photos.length}枚
                 </span>
               </div>
+
+              {draft.existingMatch && (
+                <div className="rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs leading-relaxed text-emerald-800">
+                  <p className="font-bold">
+                    この日の記録はすでにあります。写真だけ追加できます。
+                  </p>
+                  <p className="mt-1">
+                    既存写真 {draft.existingMatch.photoCount}枚 / 追加可能{" "}
+                    {Math.max(0, MAX_PHOTOS_PER_VISIT - draft.existingMatch.photoCount)}
+                    枚。公開状態は既存記録のままです。
+                  </p>
+                  <div className="mt-2 flex flex-wrap gap-2">
+                    <Link
+                      href={`/mypage/visits/${draft.existingMatch.id}`}
+                      className="font-bold text-emerald-700 underline underline-offset-2"
+                    >
+                      既存記録を開く
+                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => setCreateSeparate(draft.id, !draft.createSeparate)}
+                      className="font-bold text-emerald-700 underline underline-offset-2"
+                    >
+                      {draft.createSeparate
+                        ? "既存記録に写真追加へ戻す"
+                        : "別の記録として作成"}
+                    </button>
+                  </div>
+                </div>
+              )}
 
               <div className="grid gap-4 sm:grid-cols-[180px_1fr]">
                 <section className="space-y-2">
@@ -648,14 +970,19 @@ export default function FromPhotoVisitDraftsClient({
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-xs font-bold text-slate-600">添付写真</p>
                   <p className="text-[11px] text-slate-400">
-                    {draft.selectedPhotoIds.length}/{MAX_PHOTOS_PER_VISIT}枚
+                    {draft.selectedPhotoIds.length}/{attachLimit}枚
                   </p>
                 </div>
-                {draft.photos.length > MAX_PHOTOS_PER_VISIT && (
+                {draft.photos.length > attachLimit && attachLimit > 0 && (
                   <p className="rounded-lg bg-amber-50 px-3 py-2 text-xs text-amber-700">
-                    添付は2枚までです。残り
-                    {draft.photos.length - MAX_PHOTOS_PER_VISIT}
+                    添付は{attachLimit}枚までです。残り
+                    {draft.photos.length - attachLimit}
                     枚は記録に添付されません。
+                  </p>
+                )}
+                {isFullMerge && (
+                  <p className="rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">
+                    既存記録の写真が上限に達しているため、この候補では追加できません。
                   </p>
                 )}
                 <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -663,7 +990,7 @@ export default function FromPhotoVisitDraftsClient({
                     const selected = draft.selectedPhotoIds.includes(photo.localId);
                     const cannotAdd =
                       !selected &&
-                      draft.selectedPhotoIds.length >= MAX_PHOTOS_PER_VISIT;
+                      draft.selectedPhotoIds.length >= attachLimit;
                     return (
                       <label
                         key={photo.localId}
@@ -701,7 +1028,8 @@ export default function FromPhotoVisitDraftsClient({
                 </div>
               </section>
             </article>
-          ))}
+            );
+          })}
 
           <div className="sticky bottom-3 rounded-xl border border-slate-200 bg-white/95 p-3 shadow-sm backdrop-blur">
             <button

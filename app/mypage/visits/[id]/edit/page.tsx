@@ -28,6 +28,7 @@ type FoodRating =
   | "ate_outside"
   | "had_trouble";
 type Expectation = "exceeded" | "met" | "below";
+type VisitStatus = "draft" | "published";
 
 type FacilitySuggestion = {
   slug: string;
@@ -170,6 +171,7 @@ export default function EditVisitPage() {
   const [parentMemo, setParentMemo] = useState("");
   const [detailsOpen, setDetailsOpen] = useState(false);
   const [existingPhotoCount, setExistingPhotoCount] = useState(0);
+  const [visitStatus, setVisitStatus] = useState<VisitStatus>("published");
 
   useEffect(() => {
     let active = true;
@@ -178,7 +180,7 @@ export default function EditVisitPage() {
       const visitResult = await supabase
         .from("visits")
         .select(
-          "facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, stay_duration_min, time_was_enough, food_rating, parent_memo",
+          "facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, weather, crowding, parking, stay_duration_min, time_was_enough, food_rating, parent_memo",
         )
         .eq("id", visitId)
         .single();
@@ -204,6 +206,7 @@ export default function EditVisitPage() {
       }
       setFacilityName(data.facility_name ?? "");
       setFacilitySlug(data.facility_slug ?? "");
+      setVisitStatus(data.status === "draft" ? "draft" : "published");
       setVisitedOn(data.visited_on ?? "");
       setFamilyRevisit(coerceOption(data.family_revisit, familyRevisitValues));
       setParentFatigue(coerceOption(data.parent_fatigue, fatigueValues));
@@ -272,30 +275,48 @@ export default function EditVisitPage() {
     !loading &&
     (!PHOTO_UPLOAD_ENABLED || !photoBusy);
 
-  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-    event.preventDefault();
+  async function saveVisit(nextStatus?: VisitStatus) {
     if (!canSubmit) return;
     setSaving(true);
     setError(null);
+    const updatePayload: {
+      facility_name: string;
+      facility_slug: string;
+      visited_on: string | null;
+      family_revisit: FamilyRevisit | "";
+      parent_fatigue: ParentFatigue | "";
+      expectation_vs_reality: Expectation | null;
+      weather: Weather | null;
+      crowding: Crowding | null;
+      parking: Parking | null;
+      stay_duration_min: number | null;
+      time_was_enough: TimeWasEnough | null;
+      food_rating: FoodRating | null;
+      parent_memo: string | null;
+      updated_at: string;
+      status?: VisitStatus;
+    } = {
+      facility_name: facilityName.trim(),
+      facility_slug: facilitySlug || makeFacilitySlug(facilityName),
+      visited_on: visitedOn || null,
+      family_revisit: familyRevisit,
+      parent_fatigue: parentFatigue,
+      expectation_vs_reality: expectation || null,
+      weather: weather || null,
+      crowding: crowding || null,
+      parking: parking || null,
+      stay_duration_min: durationMinutes ? parseInt(durationMinutes, 10) : null,
+      time_was_enough: timeWasEnough || null,
+      food_rating: foodRating || null,
+      parent_memo: parentMemo.trim() || null,
+      updated_at: new Date().toISOString(),
+    };
+    if (nextStatus) updatePayload.status = nextStatus;
+
     const supabase = createClient();
     const { error: updateError } = await supabase
       .from("visits")
-      .update({
-        facility_name: facilityName.trim(),
-        facility_slug: facilitySlug || makeFacilitySlug(facilityName),
-        visited_on: visitedOn || null,
-        family_revisit: familyRevisit,
-        parent_fatigue: parentFatigue,
-        expectation_vs_reality: expectation || null,
-        weather: weather || null,
-        crowding: crowding || null,
-        parking: parking || null,
-        stay_duration_min: durationMinutes ? parseInt(durationMinutes, 10) : null,
-        time_was_enough: timeWasEnough || null,
-        food_rating: foodRating || null,
-        parent_memo: parentMemo.trim() || null,
-        updated_at: new Date().toISOString(),
-      })
+      .update(updatePayload)
       .eq("id", visitId);
     if (updateError) {
       setError(updateError.message);
@@ -314,6 +335,13 @@ export default function EditVisitPage() {
 
     router.push("/mypage/visits");
   }
+
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    await saveVisit();
+  }
+
+  const isDraft = visitStatus === "draft";
 
   if (loading) {
     return (
@@ -335,9 +363,18 @@ export default function EditVisitPage() {
       </Link>
 
       <div>
-        <h1 className="text-xl font-bold text-slate-900">記録を編集</h1>
+        <div className="flex flex-wrap items-center gap-2">
+          <h1 className="text-xl font-bold text-slate-900">記録を編集</h1>
+          {isDraft && (
+            <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">
+              下書き
+            </span>
+          )}
+        </div>
         <p className="text-sm text-slate-500 mt-1">
-          施設名・日付・評価を変更できます。
+          {isDraft
+            ? "公開すると施設ページや共有に表示されます。"
+            : "施設名・日付・評価を変更できます。"}
         </p>
       </div>
 
@@ -534,13 +571,33 @@ export default function EditVisitPage() {
           </div>
         </section>
 
-        <button
-          type="submit"
-          disabled={!canSubmit}
-          className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
-        >
-          {saving ? "保存中..." : "変更を保存"}
-        </button>
+        {isDraft ? (
+          <div className="grid gap-2 sm:grid-cols-2">
+            <button
+              type="button"
+              onClick={() => saveVisit("published")}
+              disabled={!canSubmit}
+              className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
+            >
+              {saving ? "保存中..." : "公開する"}
+            </button>
+            <button
+              type="submit"
+              disabled={!canSubmit}
+              className="w-full py-3 bg-white border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-colors disabled:opacity-40"
+            >
+              {saving ? "保存中..." : "下書きのまま保存"}
+            </button>
+          </div>
+        ) : (
+          <button
+            type="submit"
+            disabled={!canSubmit}
+            className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
+          >
+            {saving ? "保存中..." : "変更を保存"}
+          </button>
+        )}
       </form>
     </div>
   );
