@@ -784,23 +784,6 @@ export default function FromPhotoVisitDraftsClient({
     );
   }
 
-  function clearFacilitySelection(draftId: string) {
-    setSearchResults((current) => {
-      if (!current[draftId]) return current;
-      const next = { ...current };
-      delete next[draftId];
-      return next;
-    });
-    setDrafts((current) =>
-      withUpdatedDraft(current, draftId, (draft) => ({
-        ...draft,
-        facilitySlug: "",
-        facilityName: "",
-        searchQuery: "",
-      })),
-    );
-  }
-
   function setDraftSearchQuery(draftId: string, searchQuery: string) {
     if (searchQuery.trim().length < 2) {
       setSearchResults((current) => {
@@ -1247,7 +1230,7 @@ export default function FromPhotoVisitDraftsClient({
                 <section className="space-y-2">
                   <p className="text-xs font-bold text-slate-600">施設</p>
                   {showSelectedFacilityCard && (
-                    <div className="flex items-start justify-between gap-3 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2">
+                    <div className="rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2">
                       <div className="min-w-0">
                         <p className="text-[11px] font-bold text-emerald-700">
                           選択中
@@ -1261,13 +1244,6 @@ export default function FromPhotoVisitDraftsClient({
                           </p>
                         </div>
                       </div>
-                      <button
-                        type="button"
-                        onClick={() => clearFacilitySelection(draft.id)}
-                        className="shrink-0 rounded-md border border-emerald-200 bg-white px-2.5 py-1 text-xs font-bold text-emerald-700 transition-colors hover:bg-emerald-100"
-                      >
-                        変更
-                      </button>
                     </div>
                   )}
                   {draft.candidates.length > 0 ? (

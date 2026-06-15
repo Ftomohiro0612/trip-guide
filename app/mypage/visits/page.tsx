@@ -4,11 +4,11 @@ import Link from "next/link";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import {
-  crowdingLabels,
   familyRevisitLabels,
+  fatigueLabels,
   satisfactionLabels,
+  visitLabel,
 } from "@/lib/visit-labels";
-import DeleteVisitButton from "./DeleteVisitButton";
 
 export const metadata: Metadata = { title: "おでかけ履歴" };
 
@@ -20,6 +20,7 @@ type Visit = {
   visited_on: string | null;
   family_revisit: string | null;
   parent_fatigue: string | null;
+  parent_memo: string | null;
   weather: string | null;
   crowding: string | null;
   stay_duration_min: number | null;
@@ -30,6 +31,12 @@ type VisitChild = {
   satisfaction: string | null;
   child_id: string;
   children: { nickname: string } | { nickname: string }[] | null;
+  visit_child_tags: VisitChildTag[] | null;
+};
+
+type VisitChildTag = {
+  tag_id: string;
+  reaction_tags: { label: string } | { label: string }[] | null;
 };
 
 type VisitPhotoThumbRow = {
@@ -45,47 +52,42 @@ type VisitPhotoThumb = {
 
 const VISIT_THUMBNAILS_PER_CARD = 2;
 
-const revisitLabels: Record<string, string> = {
-  yes: "✅ また行きたい",
-  conditional: "🔄 条件次第",
-  once_enough: "👍 一度で十分",
-  no: "🙅 もう行かない",
-};
-
-const fatigueEmojis: Record<string, string> = {
-  easy: "😊",
-  normal: "🙂",
-  tired: "😴",
-  exhausted: "😵",
-};
-
-const weatherEmojis: Record<string, string> = {
-  sunny: "☀️",
-  cloudy: "☁️",
-  rainy: "🌧",
-  snowy: "❄️",
-  unknown: "",
-};
-
 function formatVisitedOn(visitedOn: string | null): string {
   if (!visitedOn) return "日付未設定";
   return visitedOn.replaceAll("-", "/");
 }
 
-function formatStayDuration(minutes: number | null): string | null {
-  if (!minutes) return null;
-  const hours = Math.floor(minutes / 60);
-  const remainingMinutes = minutes % 60;
-  if (hours > 0 && remainingMinutes > 0) {
-    return `${hours}時間${remainingMinutes}分`;
-  }
-  if (hours > 0) return `${hours}時間`;
-  return `${remainingMinutes}分`;
-}
-
 function childNickname(child: VisitChild["children"]): string {
   if (Array.isArray(child)) return child[0]?.nickname ?? "子ども";
   return child?.nickname ?? "子ども";
+}
+
+function reactionTagLabel(tag: VisitChildTag): string | null {
+  if (Array.isArray(tag.reaction_tags)) {
+    return tag.reaction_tags[0]?.label ?? null;
+  }
+  return tag.reaction_tags?.label ?? null;
+}
+
+function reactionTagsForVisit(children: VisitChild[]): string[] {
+  const labels = children.flatMap((child) =>
+    (child.visit_child_tags ?? [])
+      .map(reactionTagLabel)
+      .filter((label): label is string => Boolean(label)),
+  );
+  return Array.from(new Set(labels)).slice(0, 3);
+}
+
+function compactMemo(value: string | null): string | null {
+  const memo = value?.trim();
+  if (!memo) return null;
+  return memo.replace(/\s+/g, " ");
+}
+
+function chipLabel(labels: Record<string, string>, value: string | null): string | null {
+  if (!value) return null;
+  const label = visitLabel(labels, value);
+  return label === "未記録" ? null : label;
 }
 
 export default async function VisitsPage({
@@ -117,7 +119,7 @@ export default async function VisitsPage({
     ? supabase
         .from("visits")
         .select(
-          "id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, weather, crowding, stay_duration_min",
+          "id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, parent_memo, weather, crowding, stay_duration_min",
         )
         .eq("user_id", user.id)
         .order("visited_on", { ascending: false, nullsFirst: false })
@@ -145,7 +147,9 @@ export default async function VisitsPage({
       ? await Promise.all([
           supabase
             .from("visit_children")
-            .select("visit_id, satisfaction, child_id, children(nickname)")
+            .select(
+              "visit_id, satisfaction, child_id, children(nickname), visit_child_tags(tag_id, reaction_tags(label))",
+            )
             .in("visit_id", visitIdsForChildren),
           supabase
             .from("visit_photos")
@@ -236,126 +240,153 @@ export default async function VisitsPage({
         <div className="space-y-3">
           {visitRows.map((visit) => {
             const visitChildren = childrenByVisit.get(visit.id) ?? [];
-            const stayDuration = formatStayDuration(visit.stay_duration_min);
             const hasFacilityPage = isVisibleFacilitySlug(visit.facility_slug);
             const isStoredFacility = !visit.facility_slug.startsWith("manual-");
-            const revisitLabel = visit.family_revisit
-              ? revisitLabels[visit.family_revisit] ??
-                familyRevisitLabels[visit.family_revisit] ??
-                "未記録"
-              : "未記録";
-            const fatigueEmoji = visit.parent_fatigue
-              ? fatigueEmojis[visit.parent_fatigue]
-              : null;
-            const weatherEmoji = visit.weather ? weatherEmojis[visit.weather] : null;
-            const crowdingLabel = visit.crowding
-              ? crowdingLabels[visit.crowding] ?? "未記録"
-              : null;
+            const revisitLabel = chipLabel(familyRevisitLabels, visit.family_revisit);
+            const fatigueLabel = chipLabel(fatigueLabels, visit.parent_fatigue);
             const isDraft = visit.status === "draft";
             const visitPhotos = photosByVisit.get(visit.id) ?? [];
+            const childSatisfaction = visitChildren
+              .filter((childVisit) => Boolean(childVisit.satisfaction))
+              .slice(0, 2);
+            const reactionTags = reactionTagsForVisit(visitChildren);
+            const memo = compactMemo(visit.parent_memo);
             return (
             <article
               key={visit.id}
-              className="bg-white border border-slate-200 rounded-xl px-4 py-3 space-y-2"
+              className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm"
             >
-              <div className="flex items-start justify-between gap-3">
-                <h2 className="font-bold text-slate-900">
+              <div className="flex gap-3">
+                {visitPhotos.length > 0 && (
                   <Link
                     href={`/mypage/visits/${visit.id}`}
-                    className="hover:text-brand transition-colors"
+                    className={`grid h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-opacity hover:opacity-90 ${
+                      visitPhotos.length === 1 ? "grid-cols-1" : "grid-cols-2 gap-0.5"
+                    }`}
                   >
-                    {visit.facility_name}
+                    {visitPhotos.map((photo, photoIndex) => (
+                      <div
+                        key={`${photo.thumbPath}-${photoIndex}`}
+                        className="relative min-h-0 min-w-0"
+                      >
+                        {photo.thumbUrl ? (
+                          <Image
+                            src={photo.thumbUrl}
+                            alt={`${visit.facility_name}の写真`}
+                            fill
+                            sizes="96px"
+                            className="object-cover"
+                            unoptimized
+                          />
+                        ) : (
+                          <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] text-slate-400">
+                            写真なし
+                          </span>
+                        )}
+                      </div>
+                    ))}
                   </Link>
-                  {isDraft && (
-                    <span className="ml-2 inline-flex rounded-full bg-amber-100 px-2 py-0.5 align-middle text-[11px] font-bold text-amber-700">
-                      下書き
-                    </span>
-                  )}
-                </h2>
-                <span className="text-xs text-slate-400 shrink-0">
-                  {formatVisitedOn(visit.visited_on)}
-                </span>
-              </div>
-              {visitPhotos.length > 0 && (
-                <div className="flex gap-2">
-                  {visitPhotos.map((photo, photoIndex) => (
-                    <Link
-                      key={`${photo.thumbPath}-${photoIndex}`}
-                      href={`/mypage/visits/${visit.id}`}
-                      className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-opacity hover:opacity-90"
-                    >
-                      {photo.thumbUrl ? (
-                        <Image
-                          src={photo.thumbUrl}
-                          alt={`${visit.facility_name}の写真`}
-                          fill
-                          sizes="64px"
-                          className="object-cover"
-                          unoptimized
-                        />
-                      ) : (
-                        <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] text-slate-400">
-                          写真なし
+                )}
+
+                <div className="min-w-0 flex-1 space-y-2">
+                  <div className="space-y-1">
+                    <div className="flex flex-wrap items-center gap-1.5">
+                      {isDraft && (
+                        <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
+                          下書き
                         </span>
                       )}
-                    </Link>
-                  ))}
-                </div>
-              )}
-              {visitChildren.length > 0 && (
-                <div className="flex flex-wrap gap-1.5">
-                  {visitChildren.map((childVisit) => (
-                    <span
-                      key={`${childVisit.visit_id}-${childVisit.child_id}`}
-                      className="text-xs text-slate-600 bg-slate-50 rounded-full px-2 py-1"
-                    >
-                      {childNickname(childVisit.children)}:{" "}
-                      {childVisit.satisfaction
-                        ? satisfactionLabels[childVisit.satisfaction] ?? "未記録"
-                        : "未記録"}
-                    </span>
-                  ))}
-                </div>
-              )}
-              <div className="flex flex-wrap items-center gap-x-3 gap-y-1 text-xs text-slate-500">
-                <span>{revisitLabel}</span>
-                {fatigueEmoji && <span>{fatigueEmoji}</span>}
-                {weatherEmoji && <span>{weatherEmoji}</span>}
-                {stayDuration && <span>{stayDuration}</span>}
-                {crowdingLabel && <span>{crowdingLabel}</span>}
-              </div>
-              <div className="flex items-center justify-between gap-3">
-                {hasFacilityPage ? (
-                  <Link
-                    href={`/facilities/${visit.facility_slug}`}
-                    className="text-slate-400 text-xs hover:underline"
-                  >
-                    施設ページ ↗
-                  </Link>
-                ) : isStoredFacility ? (
-                  <span className="text-slate-400 text-xs">
-                    施設ページは現在公開していません
-                  </span>
-                ) : (
-                  <span />
-                )}
-                <div className="flex gap-2 shrink-0">
-                  <Link
-                    href={`/mypage/visits/${visit.id}`}
-                    className="px-2.5 py-1.5 border border-slate-200 text-slate-500 rounded-lg text-xs font-medium hover:bg-slate-50 transition-colors"
-                  >
-                    詳細を見る
-                  </Link>
-                  <Link
-                    href={`/mypage/visits/${visit.id}/edit`}
-                    className="px-2.5 py-1.5 border border-slate-200 text-slate-500 rounded-lg text-xs font-medium hover:bg-slate-50 transition-colors"
-                  >
-                    編集
-                  </Link>
-                  <DeleteVisitButton
-                    visitId={visit.id}
-                    facilityName={visit.facility_name}
-                  />
+                      <span className="text-xs text-slate-400">
+                        {formatVisitedOn(visit.visited_on)}
+                      </span>
+                    </div>
+                    <h2 className="font-bold leading-snug text-slate-900">
+                      <Link
+                        href={`/mypage/visits/${visit.id}`}
+                        className="hover:text-brand transition-colors"
+                      >
+                        {visit.facility_name}
+                      </Link>
+                    </h2>
+                  </div>
+
+                  {childSatisfaction.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {childSatisfaction.map((childVisit) => (
+                        <span
+                          key={`${childVisit.visit_id}-${childVisit.child_id}`}
+                          className="rounded-full bg-slate-50 px-2 py-1 text-xs text-slate-600"
+                        >
+                          {childNickname(childVisit.children)}:{" "}
+                          {satisfactionLabels[childVisit.satisfaction ?? ""] ??
+                            childVisit.satisfaction}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  {reactionTags.length > 0 && (
+                    <div className="flex flex-wrap gap-1.5">
+                      {reactionTags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="rounded-full bg-sky-50 px-2 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-100"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+
+                  <div className="flex flex-wrap gap-1.5">
+                    {revisitLabel && (
+                      <span className="rounded-full bg-emerald-50 px-2 py-1 text-xs font-bold text-emerald-700 ring-1 ring-emerald-100">
+                        また行きたい: {revisitLabel}
+                      </span>
+                    )}
+                    {fatigueLabel && (
+                      <span className="rounded-full bg-violet-50 px-2 py-1 text-xs font-bold text-violet-700 ring-1 ring-violet-100">
+                        疲れ: {fatigueLabel}
+                      </span>
+                    )}
+                  </div>
+
+                  {memo && (
+                    <p className="truncate text-xs leading-relaxed text-slate-500">
+                      {memo}
+                    </p>
+                  )}
+
+                  <div className="flex items-center justify-between gap-3 pt-1">
+                    {hasFacilityPage ? (
+                      <Link
+                        href={`/facilities/${visit.facility_slug}`}
+                        className="text-slate-400 text-xs hover:underline"
+                      >
+                        施設ページを見る
+                      </Link>
+                    ) : isStoredFacility ? (
+                      <span className="text-slate-400 text-xs">
+                        施設ページは現在公開していません
+                      </span>
+                    ) : (
+                      <span />
+                    )}
+                    <div className="flex shrink-0 items-center gap-2">
+                      <Link
+                        href={`/mypage/visits/${visit.id}/edit`}
+                        className="text-xs font-medium text-slate-400 hover:text-slate-600"
+                      >
+                        編集
+                      </Link>
+                      <Link
+                        href={`/mypage/visits/${visit.id}`}
+                        className="rounded-lg bg-brand px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-brand-dark"
+                      >
+                        詳細を見る
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
             </article>

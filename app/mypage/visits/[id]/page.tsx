@@ -43,7 +43,7 @@ type Visit = {
   facility_name: string;
   status: "draft" | "published";
   visited_on: string | null;
-  family_revisit: string;
+  family_revisit: string | null;
   parent_fatigue: string | null;
   expectation_vs_reality: string | null;
   parent_memo: string | null;
@@ -67,8 +67,8 @@ function formatVisitedOn(value: string | null): string {
   return value.replaceAll("-", "/");
 }
 
-function formatDuration(minutes: number | null): string {
-  if (!minutes) return "未記録";
+function formatDuration(minutes: number | null): string | null {
+  if (!minutes) return null;
   const durationLabels: Record<number, string> = {
     60: "〜1時間",
     150: "2〜3時間",
@@ -78,14 +78,38 @@ function formatDuration(minutes: number | null): string {
   return durationLabels[minutes] ?? `${minutes}分`;
 }
 
-function DetailRow({ label, value }: { label: string; value: string | null }) {
+function chipLabel(labels: Record<string, string>, value: string | null): string | null {
+  if (!value) return null;
+  const label = visitLabel(labels, value);
+  return label === "未記録" ? null : label;
+}
+
+function hasReactionTags(row: VisitChildCardData): boolean {
+  return (row.visit_child_tags ?? []).some((tag) => {
+    if (Array.isArray(tag.reaction_tags)) {
+      return Boolean(tag.reaction_tags[0]?.label);
+    }
+    return Boolean(tag.reaction_tags?.label);
+  });
+}
+
+function SummaryChip({
+  label,
+  value,
+  tone,
+}: {
+  label: string;
+  value: string;
+  tone: "green" | "violet";
+}) {
+  const className =
+    tone === "green"
+      ? "rounded-full bg-emerald-50 px-3 py-1.5 text-sm font-bold text-emerald-700 ring-1 ring-emerald-100"
+      : "rounded-full bg-violet-50 px-3 py-1.5 text-sm font-bold text-violet-700 ring-1 ring-violet-100";
   return (
-    <div className="flex justify-between gap-4 border-b border-slate-100 py-2.5 last:border-b-0">
-      <dt className="shrink-0 text-sm text-slate-500">{label}</dt>
-      <dd className="text-right text-sm font-medium text-slate-800">
-        {value || "未記録"}
-      </dd>
-    </div>
+    <span className={className}>
+      {label}: {value}
+    </span>
   );
 }
 
@@ -174,6 +198,28 @@ export default async function VisitDetailPage({
     }));
   }
 
+  const reflectiveChildRows = childRows.filter(
+    (row) => Boolean(row.satisfaction) || hasReactionTags(row),
+  );
+  const revisitLabel = chipLabel(familyRevisitLabels, visitRow.family_revisit);
+  const fatigueLabel = chipLabel(fatigueLabels, visitRow.parent_fatigue);
+  const optionalSummaryItems = [
+    { label: "天気", value: chipLabel(weatherLabels, visitRow.weather) },
+    { label: "混雑", value: chipLabel(crowdingLabels, visitRow.crowding) },
+    { label: "アクセス・移動", value: chipLabel(parkingLabels, visitRow.parking) },
+    { label: "滞在時間", value: formatDuration(visitRow.stay_duration_min) },
+    {
+      label: "時間は足りたか",
+      value: chipLabel(timeWasEnoughLabels, visitRow.time_was_enough),
+    },
+    { label: "ごはん・食事", value: chipLabel(foodLabels, visitRow.food_rating) },
+    {
+      label: "期待との比較",
+      value: chipLabel(expectationLabels, visitRow.expectation_vs_reality),
+    },
+  ].filter((item): item is { label: string; value: string } => Boolean(item.value));
+  const hasPrimarySummary = Boolean(revisitLabel || fatigueLabel);
+
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
       <Link
@@ -187,7 +233,16 @@ export default async function VisitDetailPage({
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <h1 className="text-xl font-bold text-slate-900 break-words">
-              {visitRow.facility_name}
+              {hasFacilityPage ? (
+                <Link
+                  href={`/facilities/${facility.slug}`}
+                  className="hover:text-brand transition-colors"
+                >
+                  {visitRow.facility_name}
+                </Link>
+              ) : (
+                visitRow.facility_name
+              )}
             </h1>
             {isDraft && (
               <div className="mt-2 flex flex-wrap items-center gap-2">
@@ -221,54 +276,20 @@ export default async function VisitDetailPage({
         </div>
       </header>
 
-      <section className="bg-white border border-slate-200 rounded-xl px-4 py-3">
-        <dl>
-          <DetailRow label="訪問日" value={formatVisitedOn(visitRow.visited_on)} />
-          <DetailRow
-            label="また行きたい"
-            value={visitLabel(familyRevisitLabels, visitRow.family_revisit)}
-          />
-          <DetailRow
-            label="親の疲れ度"
-            value={visitLabel(fatigueLabels, visitRow.parent_fatigue)}
-          />
-          <DetailRow
-            label="天気"
-            value={visitLabel(weatherLabels, visitRow.weather)}
-          />
-          <DetailRow
-            label="混雑度"
-            value={visitLabel(crowdingLabels, visitRow.crowding)}
-          />
-          <DetailRow
-            label="アクセス・移動"
-            value={visitLabel(parkingLabels, visitRow.parking)}
-          />
-          <DetailRow label="滞在時間" value={formatDuration(visitRow.stay_duration_min)} />
-          <DetailRow
-            label="時間は足りたか"
-            value={visitLabel(timeWasEnoughLabels, visitRow.time_was_enough)}
-          />
-          <DetailRow
-            label="ごはん・食事"
-            value={visitLabel(foodLabels, visitRow.food_rating)}
-          />
-          <DetailRow
-            label="期待との比較"
-            value={visitLabel(expectationLabels, visitRow.expectation_vs_reality)}
-          />
-        </dl>
-      </section>
-
       {PHOTO_UPLOAD_ENABLED && photos.length > 0 && (
-        <VisitPhotoGallery visitId={visitRow.id} initialPhotos={photos} />
+        <VisitPhotoGallery
+          visitId={visitRow.id}
+          initialPhotos={photos}
+          deletable={false}
+          variant="large"
+        />
       )}
 
-      <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">子ども別満足度</h2>
-        {childRows.length > 0 ? (
+      {reflectiveChildRows.length > 0 && (
+        <section className="space-y-3">
+          <h2 className="font-bold text-slate-800">子どもの反応</h2>
           <div className="space-y-3">
-            {childRows.map((row) => {
+            {reflectiveChildRows.map((row) => {
               const child = getVisitChildProfile(row.children);
               if (!child) return null;
               const avatarUrl = child.avatar_url
@@ -284,32 +305,66 @@ export default async function VisitDetailPage({
               );
             })}
           </div>
-        ) : (
-          <p className="text-sm text-slate-400">子ども別の記録はありません</p>
-        )}
-      </section>
+        </section>
+      )}
 
-      <section className="space-y-2">
-        <h2 className="font-bold text-slate-800">メモ</h2>
-        <div className="bg-white border border-slate-200 rounded-xl px-4 py-3">
-          <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
-            {visitRow.parent_memo || "未記録"}
-          </p>
-        </div>
-      </section>
+      {(hasPrimarySummary || optionalSummaryItems.length > 0) && (
+        <section className="space-y-3">
+          <h2 className="font-bold text-slate-800">評価サマリ</h2>
+          {hasPrimarySummary && (
+            <div className="flex flex-wrap gap-2">
+              {revisitLabel && (
+                <SummaryChip label="また行きたい" value={revisitLabel} tone="green" />
+              )}
+              {fatigueLabel && (
+                <SummaryChip label="親の疲れ度" value={fatigueLabel} tone="violet" />
+              )}
+            </div>
+          )}
+          {optionalSummaryItems.length > 0 && (
+            <dl className="grid gap-2 sm:grid-cols-2">
+              {optionalSummaryItems.map((item) => (
+                <div
+                  key={item.label}
+                  className="rounded-lg border border-slate-200 bg-white px-3 py-2"
+                >
+                  <dt className="text-xs font-bold text-slate-400">{item.label}</dt>
+                  <dd className="mt-0.5 text-sm font-medium text-slate-800">
+                    {item.value}
+                  </dd>
+                </div>
+              ))}
+            </dl>
+          )}
+        </section>
+      )}
 
-      <div className="flex gap-2 pt-2">
+      {visitRow.parent_memo?.trim() && (
+        <section className="space-y-2">
+          <h2 className="font-bold text-slate-800">メモ</h2>
+          <div className="bg-white border border-slate-200 rounded-xl px-4 py-3">
+            <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
+              {visitRow.parent_memo}
+            </p>
+          </div>
+        </section>
+      )}
+
+      <div className="space-y-3 pt-2">
         <Link
           href={`/mypage/visits/${visitRow.id}/edit`}
-          className="flex-1 py-3 bg-brand text-white text-center text-sm font-bold rounded-xl hover:bg-brand-dark transition-colors"
+          className="block w-full py-3 bg-brand text-white text-center text-sm font-bold rounded-xl hover:bg-brand-dark transition-colors"
         >
           編集する
         </Link>
-        <DeleteVisitButton
-          visitId={visitRow.id}
-          facilityName={visitRow.facility_name}
-          redirectTo="/mypage/visits"
-        />
+        <div className="text-right">
+          <DeleteVisitButton
+            visitId={visitRow.id}
+            facilityName={visitRow.facility_name}
+            redirectTo="/mypage/visits"
+            variant="subtle"
+          />
+        </div>
       </div>
     </div>
   );

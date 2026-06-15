@@ -606,6 +606,8 @@ export default function EditVisitPage() {
                     initialPhotos={existingPhotos}
                     title="保存済みの写真"
                     onPhotosChange={setExistingPhotoCount}
+                    deletable
+                    variant="grid"
                   />
                 )}
                 <VisitPhotoUploader

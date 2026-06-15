@@ -137,19 +137,21 @@ export function VisitChildCard({
             </p>
           </div>
         </div>
-        <div className="text-right shrink-0">
-          <p className="text-xs tracking-wide text-amber-500">
-            {satisfaction?.stars ?? "未記録"}
-          </p>
-          <p className="text-xs font-bold text-slate-700">
-            {satisfaction?.label ?? "満足度未記録"}
-          </p>
-        </div>
+        {satisfaction && (
+          <div className="text-right shrink-0">
+            <p className="text-xs tracking-wide text-amber-500">
+              {satisfaction.stars}
+            </p>
+            <p className="text-xs font-bold text-slate-700">
+              {satisfaction.label}
+            </p>
+          </div>
+        )}
       </div>
 
-      <div className="flex flex-wrap gap-1.5">
-        {tags.length > 0 ? (
-          tags.map((tag) => (
+      {tags.length > 0 && (
+        <div className="flex flex-wrap gap-1.5">
+          {tags.map((tag) => (
             <span
               key={tag.id}
               className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-100"
@@ -157,11 +159,9 @@ export function VisitChildCard({
               <span aria-hidden>{tag.icon}</span>
               {tag.label}
             </span>
-          ))
-        ) : (
-          <span className="text-xs text-slate-400">反応タグ未記録</span>
-        )}
-      </div>
+          ))}
+        </div>
+      )}
     </article>
   );
 }

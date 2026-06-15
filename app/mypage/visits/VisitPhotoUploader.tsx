@@ -964,10 +964,6 @@ const VisitPhotoUploader = forwardRef<
         className="hidden"
       />
 
-      {existingCount > 0 && (
-        <p className="text-xs text-slate-400">保存済み: {existingCount}枚</p>
-      )}
-
       {selectedPhotos.length > 0 && (
         <div className="grid grid-cols-2 gap-2">
           {selectedPhotos.map((photo) => (
@@ -991,7 +987,7 @@ const VisitPhotoUploader = forwardRef<
                   aria-label="選択した写真を外す"
                   className="absolute right-1.5 top-1.5 h-7 w-7 rounded-full bg-white/90 text-sm font-bold text-slate-600 shadow-sm transition-colors hover:bg-white disabled:opacity-50"
                 >
-                  x
+                  ×
                 </button>
               </div>
               <div className="min-h-8 px-2 py-1.5">

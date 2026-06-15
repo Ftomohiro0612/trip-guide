@@ -20,11 +20,15 @@ export default function VisitPhotoGallery({
   initialPhotos,
   title = "写真",
   onPhotosChange,
+  deletable = true,
+  variant = "grid",
 }: {
   visitId: string;
   initialPhotos: VisitPhotoGalleryPhoto[];
   title?: string;
   onPhotosChange?: (count: number) => void;
+  deletable?: boolean;
+  variant?: "large" | "grid";
 }) {
   const router = useRouter();
   const [photos, setPhotos] = useState(initialPhotos);
@@ -93,15 +97,31 @@ export default function VisitPhotoGallery({
         <span className="text-xs text-slate-400">{photos.length}枚</span>
       </div>
 
-      <div className="grid grid-cols-2 gap-2 sm:grid-cols-3">
+      <div
+        className={
+          variant === "large"
+            ? `grid gap-2 ${photos.length === 1 ? "grid-cols-1" : "grid-cols-2"}`
+            : "grid grid-cols-2 gap-2 sm:grid-cols-3"
+        }
+      >
         {photos.map((photo) => {
           const deleting = deletingId === photo.id;
           return (
             <div
               key={photo.id}
-              className="overflow-hidden rounded-lg border border-slate-200 bg-white"
+              className={
+                variant === "large"
+                  ? "overflow-hidden rounded-xl border border-slate-200 bg-white"
+                  : "overflow-hidden rounded-lg border border-slate-200 bg-white"
+              }
             >
-              <div className="relative aspect-square bg-slate-100">
+              <div
+                className={
+                  variant === "large"
+                    ? "relative aspect-[4/3] bg-slate-100"
+                    : "relative aspect-square bg-slate-100"
+                }
+              >
                 <button
                   type="button"
                   onClick={() => {
@@ -124,15 +144,17 @@ export default function VisitPhotoGallery({
                     </span>
                   )}
                 </button>
-                <button
-                  type="button"
-                  onClick={() => deletePhoto(photo)}
-                  disabled={deleting}
-                  aria-label="写真を削除"
-                  className="absolute right-1.5 top-1.5 rounded-full bg-white/95 px-2 py-1 text-xs font-bold text-red-600 shadow-sm transition-colors hover:bg-red-50 disabled:opacity-50"
-                >
-                  {deleting ? "..." : "削除"}
-                </button>
+                {deletable && (
+                  <button
+                    type="button"
+                    onClick={() => deletePhoto(photo)}
+                    disabled={deleting}
+                    aria-label="写真を削除"
+                    className="absolute right-1.5 top-1.5 flex h-7 w-7 items-center justify-center rounded-full bg-white/95 text-sm font-bold text-red-600 shadow-sm transition-colors hover:bg-red-50 disabled:opacity-50"
+                  >
+                    {deleting ? "..." : "×"}
+                  </button>
+                )}
               </div>
               {photo.takenOn && (
                 <p className="truncate px-2 py-1.5 text-[11px] text-slate-500">
