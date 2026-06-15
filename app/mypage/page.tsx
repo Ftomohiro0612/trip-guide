@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import ChildAvatar from "@/components/ChildAvatar";
 import facilitiesJson from "@/data/facilities_data.json";
+import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/server";
 import LogoutButton from "./LogoutButton";
 
@@ -46,6 +48,20 @@ type MonthData = {
   count: number;
 };
 
+type VisitPhotoThumbRow = {
+  visit_id: string;
+  thumb_path: string | null;
+  sort_order: number | null;
+};
+
+type RecentMemory = {
+  visitId: string;
+  facilityName: string;
+  visitedOn: string | null;
+  thumbPath: string;
+  thumbUrl: string | null;
+};
+
 type FacilityCategorySource = { slug: string; category: string };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -80,6 +96,15 @@ function isChildVisit(value: unknown): value is ChildVisit {
     isRecord(value) &&
     typeof value.child_id === "string" &&
     typeof value.visit_id === "string"
+  );
+}
+
+function isVisitPhotoThumbRow(value: unknown): value is VisitPhotoThumbRow {
+  return (
+    isRecord(value) &&
+    typeof value.visit_id === "string" &&
+    (typeof value.thumb_path === "string" || value.thumb_path === null) &&
+    (typeof value.sort_order === "number" || value.sort_order === null)
   );
 }
 
@@ -149,6 +174,11 @@ function buildMonthlyData(visits: VisitStat[]): MonthData[] {
   });
 }
 
+function formatVisitedOn(visitedOn: string | null): string {
+  if (!visitedOn) return "日付未設定";
+  return visitedOn.replaceAll("-", "/");
+}
+
 const revisitLabels: Record<string, string> = {
   yes: "✅ また行きたい",
   conditional: "🔄 条件次第",
@@ -215,6 +245,18 @@ export default async function MypagePage() {
   );
   const visits = (visitStats ?? []).filter(isVisitStat);
   const visitIds = visits.map((v) => v.id);
+  const candidateVisitIds = PHOTO_UPLOAD_ENABLED ? visitIds.slice(0, 12) : [];
+  const { data: visitPhotoRows } =
+    candidateVisitIds.length > 0
+      ? await supabase
+          .from("visit_photos")
+          .select("visit_id, thumb_path, sort_order")
+          .in("visit_id", candidateVisitIds)
+          .not("thumb_path", "is", null)
+          .order("visit_id", { ascending: true })
+          .order("sort_order", { ascending: true })
+          .order("created_at", { ascending: true })
+      : { data: [] };
   const { data: childVisitStats } =
     visitIds.length > 0
       ? await supabase
@@ -223,6 +265,42 @@ export default async function MypagePage() {
           .in("visit_id", visitIds)
       : { data: [] };
   const childVisits = (childVisitStats ?? []).filter(isChildVisit);
+  const firstThumbPathByVisit = new Map<string, string>();
+  for (const photo of (visitPhotoRows ?? []).filter(isVisitPhotoThumbRow)) {
+    if (!photo.thumb_path || firstThumbPathByVisit.has(photo.visit_id)) continue;
+    firstThumbPathByVisit.set(photo.visit_id, photo.thumb_path);
+  }
+  const recentMemoryCandidates = visits.flatMap((visit) => {
+    const thumbPath = firstThumbPathByVisit.get(visit.id);
+    return thumbPath
+      ? [
+          {
+            visitId: visit.id,
+            facilityName: visit.facility_name,
+            visitedOn: visit.visited_on,
+            thumbPath,
+          },
+        ]
+      : [];
+  }).slice(0, 4);
+  const { data: signedMemoryThumbs } =
+    recentMemoryCandidates.length > 0
+      ? await supabase.storage
+          .from("visit-photos")
+          .createSignedUrls(
+            recentMemoryCandidates.map((memory) => memory.thumbPath),
+            60 * 60,
+          )
+      : { data: [] };
+  const signedMemoryThumbUrlByPath = new Map(
+    (signedMemoryThumbs ?? []).map((row) => [row.path, row.signedUrl]),
+  );
+  const recentMemories: RecentMemory[] = PHOTO_UPLOAD_ENABLED
+    ? recentMemoryCandidates.map((memory) => ({
+        ...memory,
+        thumbUrl: signedMemoryThumbUrlByPath.get(memory.thumbPath) ?? null,
+      }))
+    : [];
 
   const hasChildren = childRows.length > 0;
   const achievementStats: AchievementStats = {
@@ -324,6 +402,50 @@ export default async function MypagePage() {
         </section>
       )}
 
+      {/* 最近の思い出 */}
+      {recentMemories.length > 0 && (
+        <section className="space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="font-bold text-slate-800">最近の思い出</h2>
+            <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
+              もっと見る →
+            </Link>
+          </div>
+          <div className="grid grid-cols-4 gap-2">
+            {recentMemories.map((memory) => (
+              <Link
+                key={memory.visitId}
+                href={`/mypage/visits/${memory.visitId}`}
+                className="min-w-0 rounded-lg transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+              >
+                <div className="aspect-square relative overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200">
+                  {memory.thumbUrl ? (
+                    <Image
+                      src={memory.thumbUrl}
+                      alt={`${memory.facilityName}の写真`}
+                      fill
+                      sizes="96px"
+                      className="object-cover"
+                      unoptimized
+                    />
+                  ) : (
+                    <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] text-slate-400">
+                      写真なし
+                    </span>
+                  )}
+                </div>
+                <p className="mt-1 truncate text-xs text-slate-700">
+                  {memory.facilityName}
+                </p>
+                <p className="text-[10px] text-slate-400">
+                  {formatVisitedOn(memory.visitedOn)}
+                </p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* クイックアクション */}
       <section>
         <h2 className="font-bold text-slate-800 mb-3">クイックアクション</h2>
@@ -418,9 +540,7 @@ export default async function MypagePage() {
                     {visit.facility_name}
                   </p>
                   <p className="text-xs text-slate-400 mt-0.5">
-                    {visit.visited_on
-                      ? visit.visited_on.replaceAll("-", "/")
-                      : "日付未設定"}
+                    {formatVisitedOn(visit.visited_on)}
                   </p>
                 </div>
                 <span className="text-xs text-slate-500 shrink-0 text-right">
