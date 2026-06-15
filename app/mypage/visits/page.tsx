@@ -302,7 +302,7 @@ export default async function VisitsPage({
                     </div>
                     <h2 className="font-bold leading-snug text-slate-900">
                       <Link
-                        href={`/mypage/visits/${visit.id}`}
+                        href={`/mypage/visits/facility/${visit.facility_slug}`}
                         className="hover:text-brand transition-colors"
                       >
                         {visit.facility_name}

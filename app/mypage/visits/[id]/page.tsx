@@ -233,16 +233,12 @@ export default async function VisitDetailPage({
         <div className="flex items-start justify-between gap-3">
           <div className="min-w-0">
             <h1 className="text-xl font-bold text-slate-900 break-words">
-              {hasFacilityPage ? (
-                <Link
-                  href={`/facilities/${facility.slug}`}
-                  className="hover:text-brand transition-colors"
-                >
-                  {visitRow.facility_name}
-                </Link>
-              ) : (
-                visitRow.facility_name
-              )}
+              <Link
+                href={`/mypage/visits/facility/${visitRow.facility_slug}`}
+                className="hover:text-brand transition-colors"
+              >
+                {visitRow.facility_name}
+              </Link>
             </h1>
             {isDraft && (
               <div className="mt-2 flex flex-wrap items-center gap-2">

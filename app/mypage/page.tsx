@@ -408,9 +408,10 @@ export default async function MypagePage() {
           </div>
           <div className="space-y-2">
             {recentVisits.map((visit) => (
-              <div
+              <Link
                 key={visit.id}
-                className="bg-white border border-slate-200 rounded-xl px-4 py-3 flex items-center justify-between gap-3"
+                href={`/mypage/visits/${visit.id}`}
+                className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <div className="min-w-0">
                   <p className="font-medium text-slate-800 text-sm truncate">
@@ -425,7 +426,7 @@ export default async function MypagePage() {
                 <span className="text-xs text-slate-500 shrink-0 text-right">
                   {revisitLabels[visit.family_revisit] ?? ""}
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
