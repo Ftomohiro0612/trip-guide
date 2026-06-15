@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
@@ -30,6 +31,19 @@ type VisitChild = {
   child_id: string;
   children: { nickname: string } | { nickname: string }[] | null;
 };
+
+type VisitPhotoThumbRow = {
+  visit_id: string;
+  thumb_path: string | null;
+  sort_order: number | null;
+};
+
+type VisitPhotoThumb = {
+  thumbPath: string;
+  thumbUrl: string | null;
+};
+
+const VISIT_THUMBNAILS_PER_CARD = 2;
 
 const revisitLabels: Record<string, string> = {
   yes: "✅ また行きたい",
@@ -126,18 +140,54 @@ export default async function VisitsPage({
 
   const visitRows = (visits ?? []) as Visit[];
   const visitIdsForChildren = visitRows.map((visit) => visit.id);
-  const { data: allVisitChildren } =
+  const [{ data: allVisitChildren }, { data: visitPhotoRows }] =
     visitIdsForChildren.length > 0
-      ? await supabase
-          .from("visit_children")
-          .select("visit_id, satisfaction, child_id, children(nickname)")
-          .in("visit_id", visitIdsForChildren)
-      : { data: [] };
+      ? await Promise.all([
+          supabase
+            .from("visit_children")
+            .select("visit_id, satisfaction, child_id, children(nickname)")
+            .in("visit_id", visitIdsForChildren),
+          supabase
+            .from("visit_photos")
+            .select("visit_id, thumb_path, sort_order")
+            .in("visit_id", visitIdsForChildren)
+            .order("visit_id", { ascending: true })
+            .order("sort_order", { ascending: true }),
+        ])
+      : [{ data: [] }, { data: [] }];
   const childrenByVisit = new Map<string, VisitChild[]>();
   for (const childVisit of (allVisitChildren ?? []) as VisitChild[]) {
     const current = childrenByVisit.get(childVisit.visit_id) ?? [];
     current.push(childVisit);
     childrenByVisit.set(childVisit.visit_id, current);
+  }
+  const thumbPathsByVisit = new Map<string, string[]>();
+  for (const photo of (visitPhotoRows ?? []) as VisitPhotoThumbRow[]) {
+    if (!photo.thumb_path) continue;
+    const current = thumbPathsByVisit.get(photo.visit_id) ?? [];
+    if (current.length >= VISIT_THUMBNAILS_PER_CARD) continue;
+    current.push(photo.thumb_path);
+    thumbPathsByVisit.set(photo.visit_id, current);
+  }
+  const thumbPaths = Array.from(new Set([...thumbPathsByVisit.values()].flat()));
+  const { data: signedThumbUrls } =
+    thumbPaths.length > 0
+      ? await supabase.storage
+          .from("visit-photos")
+          .createSignedUrls(thumbPaths, 60 * 60)
+      : { data: [] };
+  const signedThumbUrlByPath = new Map(
+    (signedThumbUrls ?? []).map((row) => [row.path, row.signedUrl]),
+  );
+  const photosByVisit = new Map<string, VisitPhotoThumb[]>();
+  for (const [visitId, paths] of thumbPathsByVisit.entries()) {
+    photosByVisit.set(
+      visitId,
+      paths.map((path) => ({
+        thumbPath: path,
+        thumbUrl: signedThumbUrlByPath.get(path) ?? null,
+      })),
+    );
   }
 
   let filterLabel: string | null = null;
@@ -202,6 +252,7 @@ export default async function VisitsPage({
               ? crowdingLabels[visit.crowding] ?? "未記録"
               : null;
             const isDraft = visit.status === "draft";
+            const visitPhotos = photosByVisit.get(visit.id) ?? [];
             return (
             <article
               key={visit.id}
@@ -225,6 +276,32 @@ export default async function VisitsPage({
                   {formatVisitedOn(visit.visited_on)}
                 </span>
               </div>
+              {visitPhotos.length > 0 && (
+                <div className="flex gap-2">
+                  {visitPhotos.map((photo, photoIndex) => (
+                    <Link
+                      key={`${photo.thumbPath}-${photoIndex}`}
+                      href={`/mypage/visits/${visit.id}`}
+                      className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-opacity hover:opacity-90"
+                    >
+                      {photo.thumbUrl ? (
+                        <Image
+                          src={photo.thumbUrl}
+                          alt={`${visit.facility_name}の写真`}
+                          fill
+                          sizes="64px"
+                          className="object-cover"
+                          unoptimized
+                        />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] text-slate-400">
+                          写真なし
+                        </span>
+                      )}
+                    </Link>
+                  ))}
+                </div>
+              )}
               {visitChildren.length > 0 && (
                 <div className="flex flex-wrap gap-1.5">
                   {visitChildren.map((childVisit) => (

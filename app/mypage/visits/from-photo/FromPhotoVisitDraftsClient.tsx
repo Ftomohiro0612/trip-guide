@@ -501,19 +501,101 @@ export default function FromPhotoVisitDraftsClient({
   const [error, setError] = useState<string | null>(null);
   const [notice, setNotice] = useState<string | null>(null);
   const [searchResults, setSearchResults] = useState<SearchState>({});
-  const [searchingDraftId, setSearchingDraftId] = useState<string | null>(null);
+  const [searchingDraftIds, setSearchingDraftIds] = useState<
+    Record<string, boolean>
+  >({});
+  const searchTimersRef = useRef<Record<string, number>>({});
+  const searchControllersRef = useRef<Record<string, AbortController>>({});
+  const lastSearchQueriesRef = useRef<Record<string, string>>({});
 
   useEffect(() => {
     draftsRef.current = drafts;
   }, [drafts]);
 
   useEffect(() => {
+    const searchTimers = searchTimersRef.current;
+    const searchControllers = searchControllersRef.current;
+
     return () => {
       draftsRef.current.forEach((draft) => {
         draft.photos.forEach((photo) => URL.revokeObjectURL(photo.previewUrl));
       });
+      Object.values(searchTimers).forEach((timer) => window.clearTimeout(timer));
+      Object.values(searchControllers).forEach((controller) =>
+        controller.abort(),
+      );
     };
   }, []);
+
+  useEffect(() => {
+    const activeDraftIds = new Set(drafts.map((draft) => draft.id));
+
+    for (const draftId of Object.keys(lastSearchQueriesRef.current)) {
+      if (activeDraftIds.has(draftId)) continue;
+      const timer = searchTimersRef.current[draftId];
+      if (timer) window.clearTimeout(timer);
+      searchControllersRef.current[draftId]?.abort();
+      delete searchTimersRef.current[draftId];
+      delete searchControllersRef.current[draftId];
+      delete lastSearchQueriesRef.current[draftId];
+    }
+
+    for (const draft of drafts) {
+      const query = draft.searchQuery.trim();
+      if (lastSearchQueriesRef.current[draft.id] === query) continue;
+      lastSearchQueriesRef.current[draft.id] = query;
+
+      const timer = searchTimersRef.current[draft.id];
+      if (timer) {
+        window.clearTimeout(timer);
+        delete searchTimersRef.current[draft.id];
+      }
+      searchControllersRef.current[draft.id]?.abort();
+      delete searchControllersRef.current[draft.id];
+
+      if (query.length < 2) {
+        continue;
+      }
+
+      searchTimersRef.current[draft.id] = window.setTimeout(async () => {
+        const controller = new AbortController();
+        searchControllersRef.current[draft.id] = controller;
+        setSearchingDraftIds((current) => ({ ...current, [draft.id]: true }));
+
+        try {
+          const response = await fetch(
+            `/api/facilities/search?q=${encodeURIComponent(query)}`,
+            { signal: controller.signal },
+          );
+          if (!response.ok) throw new Error("施設検索に失敗しました。");
+          const data = (await response.json()) as { results?: FacilityChoice[] };
+          setSearchResults((current) => ({
+            ...current,
+            [draft.id]: data.results ?? [],
+          }));
+        } catch (caughtError) {
+          if ((caughtError as Error).name !== "AbortError") {
+            setSearchResults((current) => ({ ...current, [draft.id]: [] }));
+            setError(
+              caughtError instanceof Error
+                ? caughtError.message
+                : "施設検索に失敗しました。",
+            );
+          }
+        } finally {
+          if (searchControllersRef.current[draft.id] === controller) {
+            delete searchControllersRef.current[draft.id];
+          }
+          setSearchingDraftIds((current) => {
+            if (!current[draft.id]) return current;
+            const next = { ...current };
+            delete next[draft.id];
+            return next;
+          });
+        }
+      }, 300);
+    }
+  }, [drafts]);
 
   const selectedDrafts = drafts.filter((draft) => draft.save);
   const canSave =
@@ -674,11 +756,64 @@ export default function FromPhotoVisitDraftsClient({
   }
 
   function selectFacility(draftId: string, facility: FacilityChoice) {
+    const timer = searchTimersRef.current[draftId];
+    if (timer) {
+      window.clearTimeout(timer);
+      delete searchTimersRef.current[draftId];
+    }
+    searchControllersRef.current[draftId]?.abort();
+    delete searchControllersRef.current[draftId];
+    setSearchResults((current) => {
+      if (!current[draftId]) return current;
+      const next = { ...current };
+      delete next[draftId];
+      return next;
+    });
+    setSearchingDraftIds((current) => {
+      if (!current[draftId]) return current;
+      const next = { ...current };
+      delete next[draftId];
+      return next;
+    });
     setDrafts((current) =>
       withUpdatedDraft(current, draftId, (draft) => ({
         ...draft,
         facilitySlug: facility.slug,
         facilityName: facility.name,
+      })),
+    );
+  }
+
+  function clearFacilitySelection(draftId: string) {
+    setSearchResults((current) => {
+      if (!current[draftId]) return current;
+      const next = { ...current };
+      delete next[draftId];
+      return next;
+    });
+    setDrafts((current) =>
+      withUpdatedDraft(current, draftId, (draft) => ({
+        ...draft,
+        facilitySlug: "",
+        facilityName: "",
+        searchQuery: "",
+      })),
+    );
+  }
+
+  function setDraftSearchQuery(draftId: string, searchQuery: string) {
+    if (searchQuery.trim().length < 2) {
+      setSearchResults((current) => {
+        if (!current[draftId]) return current;
+        const next = { ...current };
+        delete next[draftId];
+        return next;
+      });
+    }
+    setDrafts((current) =>
+      withUpdatedDraft(current, draftId, (draft) => ({
+        ...draft,
+        searchQuery,
       })),
     );
   }
@@ -760,36 +895,6 @@ export default function FromPhotoVisitDraftsClient({
         };
       }),
     );
-  }
-
-  async function searchFacility(draft: VisitDraft) {
-    const query = draft.searchQuery.trim();
-    if (query.length < 2) {
-      setSearchResults((current) => ({ ...current, [draft.id]: [] }));
-      return;
-    }
-
-    setSearchingDraftId(draft.id);
-    setError(null);
-    try {
-      const response = await fetch(
-        `/api/facilities/search?q=${encodeURIComponent(query)}`,
-      );
-      if (!response.ok) throw new Error("施設検索に失敗しました。");
-      const data = (await response.json()) as { results?: FacilityChoice[] };
-      setSearchResults((current) => ({
-        ...current,
-        [draft.id]: data.results ?? [],
-      }));
-    } catch (caughtError) {
-      setError(
-        caughtError instanceof Error
-          ? caughtError.message
-          : "施設検索に失敗しました。",
-      );
-    } finally {
-      setSearchingDraftId(null);
-    }
   }
 
   async function persistDraft(draft: VisitDraft, userId: string): Promise<string> {
@@ -934,13 +1039,14 @@ export default function FromPhotoVisitDraftsClient({
         throw new Error("ログインが必要です。");
       }
 
+      const draftsToSave = selectedDrafts;
       let lastVisitId: string | null = null;
-      for (const draft of selectedDrafts) {
+      for (const draft of draftsToSave) {
         lastVisitId = await persistDraft(draft, user.id);
       }
 
       replaceDrafts([]);
-      if (selectedDrafts.length === 1 && isFullMergeDraft(selectedDrafts[0]) && lastVisitId) {
+      if (draftsToSave.length === 1 && lastVisitId) {
         router.push(`/mypage/visits/${lastVisitId}/edit`);
       } else {
         router.push("/mypage/visits");
@@ -1031,6 +1137,13 @@ export default function FromPhotoVisitDraftsClient({
             const isFullMerge = isFullMergeDraft(draft);
             const replacementSelectedCount = selectedReplacementCount(draft);
             const replacementChanged = hasPhotoReplacement(draft);
+            const selectedCandidate = draft.candidates.find(
+              (candidate) => candidate.slug === draft.facilitySlug,
+            );
+            const showSelectedFacilityCard =
+              Boolean(draft.facilityName) && !selectedCandidate;
+            const draftSearchResults = searchResults[draft.id] ?? [];
+            const isSearchingFacility = Boolean(searchingDraftIds[draft.id]);
             return (
             <article
               key={draft.id}
@@ -1133,31 +1246,80 @@ export default function FromPhotoVisitDraftsClient({
 
                 <section className="space-y-2">
                   <p className="text-xs font-bold text-slate-600">施設</p>
+                  {showSelectedFacilityCard && (
+                    <div className="flex items-start justify-between gap-3 rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2">
+                      <div className="min-w-0">
+                        <p className="text-[11px] font-bold text-emerald-700">
+                          選択中
+                        </p>
+                        <div className="mt-0.5 flex items-center gap-2">
+                          <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">
+                            ✓
+                          </span>
+                          <p className="truncate text-sm font-bold text-emerald-950">
+                            {draft.facilityName}
+                          </p>
+                        </div>
+                      </div>
+                      <button
+                        type="button"
+                        onClick={() => clearFacilitySelection(draft.id)}
+                        className="shrink-0 rounded-md border border-emerald-200 bg-white px-2.5 py-1 text-xs font-bold text-emerald-700 transition-colors hover:bg-emerald-100"
+                      >
+                        変更
+                      </button>
+                    </div>
+                  )}
                   {draft.candidates.length > 0 ? (
                     <div className="space-y-2">
-                      {draft.candidates.map((candidate) => (
-                        <label
-                          key={candidate.slug}
-                          className="flex items-start gap-2 rounded-lg border border-slate-200 px-3 py-2 text-sm"
-                        >
-                          <input
-                            type="radio"
-                            name={`facility-${draft.id}`}
-                            checked={draft.facilitySlug === candidate.slug}
-                            onChange={() => selectFacility(draft.id, candidate)}
-                            className="mt-0.5 h-4 w-4 accent-brand"
-                          />
-                          <span className="min-w-0">
-                            <span className="block font-semibold text-slate-800">
-                              {candidate.name}
+                      {draft.candidates.map((candidate) => {
+                        const candidateSelected =
+                          draft.facilitySlug === candidate.slug;
+                        return (
+                          <label
+                            key={candidate.slug}
+                            className={`flex items-start gap-2 rounded-lg border px-3 py-2 text-sm transition-colors ${
+                              candidateSelected
+                                ? "border-brand bg-emerald-50 shadow-sm"
+                                : "border-slate-200 bg-white"
+                            }`}
+                          >
+                            <input
+                              type="radio"
+                              name={`facility-${draft.id}`}
+                              checked={candidateSelected}
+                              onChange={() => selectFacility(draft.id, candidate)}
+                              className="mt-0.5 h-4 w-4 accent-brand"
+                            />
+                            <span className="min-w-0 flex-1">
+                              <span
+                                className={`block font-semibold ${
+                                  candidateSelected
+                                    ? "text-emerald-950"
+                                    : "text-slate-800"
+                                }`}
+                              >
+                                {candidate.name}
+                              </span>
+                              <span
+                                className={`block text-xs ${
+                                  candidateSelected
+                                    ? "text-emerald-700"
+                                    : "text-slate-400"
+                                }`}
+                              >
+                                {candidate.prefecture} / {candidate.category} /{" "}
+                                {formatDistance(candidate.distanceKm)}
+                              </span>
                             </span>
-                            <span className="block text-xs text-slate-400">
-                              {candidate.prefecture} / {candidate.category} /{" "}
-                              {formatDistance(candidate.distanceKm)}
-                            </span>
-                          </span>
-                        </label>
-                      ))}
+                            {candidateSelected && (
+                              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-brand text-xs font-bold text-white">
+                                ✓
+                              </span>
+                            )}
+                          </label>
+                        );
+                      })}
                     </div>
                   ) : (
                     <p className="rounded-lg bg-slate-50 px-3 py-2 text-xs text-slate-500">
@@ -1165,34 +1327,26 @@ export default function FromPhotoVisitDraftsClient({
                     </p>
                   )}
 
-                  <div className="flex gap-2">
+                  <div className="relative">
                     <input
                       type="text"
                       value={draft.searchQuery}
                       onChange={(event) =>
-                        setDrafts((current) =>
-                          withUpdatedDraft(current, draft.id, (item) => ({
-                            ...item,
-                            searchQuery: event.target.value,
-                          })),
-                        )
+                        setDraftSearchQuery(draft.id, event.target.value)
                       }
                       placeholder="施設名を検索"
-                      className="min-w-0 flex-1 rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-brand"
+                      className="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-transparent focus:outline-none focus:ring-2 focus:ring-brand"
                     />
-                    <button
-                      type="button"
-                      onClick={() => searchFacility(draft)}
-                      disabled={searchingDraftId === draft.id}
-                      className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-bold text-slate-600 transition-colors hover:bg-slate-50 disabled:opacity-50"
-                    >
-                      {searchingDraftId === draft.id ? "検索中" : "検索"}
-                    </button>
+                    {isSearchingFacility && (
+                      <span className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-[11px] font-bold text-slate-400">
+                        検索中
+                      </span>
+                    )}
                   </div>
 
-                  {(searchResults[draft.id] ?? []).length > 0 && (
-                    <div className="rounded-lg border border-slate-200 bg-white py-1">
-                      {(searchResults[draft.id] ?? []).map((result) => (
+                  {draftSearchResults.length > 0 && (
+                    <div className="rounded-lg border border-slate-200 bg-white py-1 shadow-sm">
+                      {draftSearchResults.map((result) => (
                         <button
                           key={result.slug}
                           type="button"
@@ -1208,12 +1362,6 @@ export default function FromPhotoVisitDraftsClient({
                         </button>
                       ))}
                     </div>
-                  )}
-
-                  {draft.facilityName && (
-                    <p className="text-xs font-medium text-emerald-700">
-                      選択中: {draft.facilityName}
-                    </p>
                   )}
                 </section>
               </div>
