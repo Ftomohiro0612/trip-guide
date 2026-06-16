@@ -964,7 +964,7 @@ export default function HomePage() {
               <p className="mb-4 inline-flex items-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm">
                 <span aria-hidden>📍</span>
                 <span className="ml-1">
-                  関東甲信越9県 · {facilityCountLabel}
+                  関東甲信越9県 · {facilityCountLabel}（順次追加中）
                 </span>
               </p>
               <h1 className="text-3xl font-bold leading-tight tracking-tight drop-shadow-sm sm:text-5xl lg:text-[3.35rem]">
@@ -997,6 +997,15 @@ export default function HomePage() {
               </div>
               <p className="mt-3 text-xs font-medium text-white/85">
                 登録は無料・基本の記録は30秒で完了
+              </p>
+              <p className="mx-auto mt-2 max-w-xl text-xs font-medium leading-relaxed text-white/90 lg:mx-0">
+                写真からも記録OK。記録がたまると、子どもの“好き”や成長をあとから振り返りやすくなります。
+                <Link
+                  href="/guide"
+                  className="ml-1 font-bold text-white underline decoration-white/70 underline-offset-4 transition-colors hover:text-sky-50"
+                >
+                  メモリップでできること →
+                </Link>
               </p>
 
               <HeroSearch />
@@ -1071,7 +1080,7 @@ export default function HomePage() {
               エリアから遊び場を探す
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              関東甲信越{prefectures.length}県・{totalFacilityCountLabel}施設をチェック
+              関東甲信越{prefectures.length}県・{totalFacilityCountLabel}施設を掲載中（順次追加・更新中）
             </p>
           </div>
           <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-9 sm:gap-x-4">
