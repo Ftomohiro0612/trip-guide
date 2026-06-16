@@ -1,7 +1,9 @@
 import Script from "next/script";
 
 export default function Analytics() {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  let gaId = process.env.NEXT_PUBLIC_GA_ID ?? "";
+  if (gaId.charCodeAt(0) === 0xfeff) gaId = gaId.slice(1);
+  gaId = gaId.trim();
   if (!gaId) return null;
   return (
     <>
