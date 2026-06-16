@@ -9,6 +9,7 @@ import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 
 interface Props {
   facility: Facility;
+  proximityLabel?: string;
 }
 
 const rainStyles: Record<string, string> = {
@@ -17,7 +18,7 @@ const rainStyles: Record<string, string> = {
   "×": "bg-slate-100 text-slate-500 ring-1 ring-slate-200",
 };
 
-export default function FacilityCard({ facility }: Props) {
+export default function FacilityCard({ facility, proximityLabel }: Props) {
   const router = useRouter();
   const hasImage = !!facility.image;
   const recommendedTags = (facility.recommended_for_tags ?? []).slice(0, 3);
@@ -68,6 +69,11 @@ export default function FacilityCard({ facility }: Props) {
         <p className="text-sm text-slate-600 line-clamp-2 flex-1">
           {facility.description}
         </p>
+        {proximityLabel && (
+          <p className="text-xs font-bold text-slate-700 bg-blue-50 border border-blue-100 rounded-md px-2 py-1">
+            🚗 {proximityLabel}
+          </p>
+        )}
         <div className="flex flex-wrap gap-1.5 pt-1">
           <span className="text-xs px-2 py-0.5 bg-slate-100 text-slate-600 rounded">
             👶 {facility.target_age}

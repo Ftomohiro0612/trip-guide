@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import FacilityCard from "@/components/FacilityCard";
 import FilterSidebar from "@/components/FilterSidebar";
 import MobileFilterBar from "@/components/MobileFilterBar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
 import MapViewClient from "@/components/MapViewClient";
+import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
 import {
   applyFilters,
@@ -283,11 +283,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
               </p>
             </div>
           ) : (
-            <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-4">
-              {results.map((f) => (
-                <FacilityCard key={f.id} facility={f} />
-              ))}
-            </div>
+            <NearbyFilterableFacilityList facilities={results} />
           )}
         </section>
       </div>
