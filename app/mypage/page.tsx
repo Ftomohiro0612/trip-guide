@@ -42,10 +42,16 @@ type AchievementStats = {
   revisitCount: number;
 };
 
+type MonthCategory = {
+  category: string;
+  count: number;
+};
+
 type MonthData = {
   month: string;
   label: string;
   count: number;
+  categories: MonthCategory[];
 };
 
 type VisitPhotoThumbRow = {
@@ -112,9 +118,36 @@ const slugToCategory = new Map(
   getFacilityCategorySources(facilitiesJson).map((f) => [f.slug, f.category]),
 );
 
+const categoryColors: Record<string, string> = {
+  "遊園地・テーマパーク": "bg-rose-400",
+  "動物園": "bg-amber-400",
+  "水族館": "bg-sky-400",
+  "公園(大型遊具)": "bg-emerald-400",
+  "屋内遊び場": "bg-violet-400",
+  "科学館": "bg-cyan-400",
+  "博物館": "bg-orange-400",
+  "クラフト体験": "bg-pink-400",
+  "味覚狩り": "bg-lime-400",
+  "温泉プール": "bg-teal-400",
+  "アスレチック": "bg-green-500",
+  "美術館・体験": "bg-fuchsia-400",
+  "スキー場・雪遊び": "bg-indigo-400",
+  "体験": "bg-purple-400",
+  "ホテル": "bg-stone-400",
+  "公園・自然": "bg-lime-600",
+  "展望台": "bg-blue-400",
+  "自然・絶景": "bg-emerald-600",
+  "屋内テーマパーク": "bg-red-500",
+  "ゲームセンター": "bg-yellow-400",
+};
+
 function categoryForSlug(slug: string): string {
   if (slug.startsWith("manual-")) return "その他";
   return slugToCategory.get(slug) ?? "その他";
+}
+
+function categoryColor(category: string): string {
+  return categoryColors[category] ?? "bg-slate-300";
 }
 
 function calcAge(birthYear: number, birthMonth: number): number {
@@ -159,18 +192,31 @@ function buildChildCategorySummaries(
 }
 
 function buildMonthlyData(visits: VisitStat[]): MonthData[] {
-  const visitsByMonth = new Map<string, number>();
+  const visitsByMonth = new Map<string, Map<string, number>>();
   for (const visit of visits) {
     if (!visit.visited_on) continue;
     const month = visit.visited_on.slice(0, 7);
-    visitsByMonth.set(month, (visitsByMonth.get(month) ?? 0) + 1);
+    const category = categoryForSlug(visit.facility_slug);
+    const categoryCounts = visitsByMonth.get(month) ?? new Map<string, number>();
+    categoryCounts.set(category, (categoryCounts.get(category) ?? 0) + 1);
+    visitsByMonth.set(month, categoryCounts);
   }
 
   const now = new Date();
   return Array.from({ length: 6 }, (_, i) => {
     const d = new Date(now.getFullYear(), now.getMonth() - (5 - i), 1);
     const month = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
-    return { month, label: `${d.getMonth() + 1}月`, count: visitsByMonth.get(month) ?? 0 };
+    const categories = Array.from(
+      (visitsByMonth.get(month) ?? new Map<string, number>()).entries(),
+    )
+      .map(([category, count]) => ({ category, count }))
+      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"));
+    return {
+      month,
+      label: `${d.getMonth() + 1}月`,
+      count: categories.reduce((total, category) => total + category.count, 0),
+      categories,
+    };
   });
 }
 
@@ -680,23 +726,60 @@ function AchievementMetric({
 
 function MonthlyBarChart({ data }: { data: MonthData[] }) {
   const max = Math.max(...data.map((d) => d.count), 1);
+  const legendCategories = Array.from(
+    data
+      .flatMap((d) => d.categories)
+      .reduce((counts, { category, count }) => {
+        counts.set(category, (counts.get(category) ?? 0) + count);
+        return counts;
+      }, new Map<string, number>()),
+  )
+    .map(([category, count]) => ({ category, count }))
+    .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"));
   return (
-    <div className="flex items-end gap-1" style={{ height: "64px" }}>
-      {data.map(({ month, label, count }) => {
-        const barHeight = count > 0 ? Math.max(Math.round((count / max) * 44), 6) : 0;
-        return (
-          <div key={month} className="flex-1 flex flex-col items-center justify-end gap-0.5">
-            {count > 0 && (
-              <span className="text-[10px] font-medium text-brand leading-none">{count}</span>
-            )}
-            <div
-              className="w-full rounded-t bg-brand/70"
-              style={{ height: `${barHeight}px` }}
-            />
-            <span className="text-[9px] text-slate-400 leading-none pt-0.5">{label}</span>
-          </div>
-        );
-      })}
+    <div className="space-y-2">
+      <div className="flex items-end gap-1" style={{ height: "64px" }}>
+        {data.map(({ month, label, count, categories }) => {
+          const barHeight = count > 0 ? Math.max(Math.round((count / max) * 44), 6) : 0;
+          return (
+            <div key={month} className="flex-1 flex flex-col items-center justify-end gap-0.5">
+              {count > 0 && (
+                <span className="text-[10px] font-medium text-brand leading-none">{count}</span>
+              )}
+              {count > 0 && (
+                <div
+                  className="w-full overflow-hidden rounded-t"
+                  style={{ height: `${barHeight}px` }}
+                >
+                  <div className="flex h-full flex-col-reverse">
+                    {categories.map(({ category, count: categoryCount }) => (
+                      <div
+                        key={category}
+                        className={categoryColor(category)}
+                        style={{
+                          height: `${Math.round((categoryCount / count) * barHeight)}px`,
+                        }}
+                        title={`${category} ${categoryCount}回`}
+                      />
+                    ))}
+                  </div>
+                </div>
+              )}
+              <span className="text-[9px] text-slate-400 leading-none pt-0.5">{label}</span>
+            </div>
+          );
+        })}
+      </div>
+      {legendCategories.length > 0 && (
+        <div className="flex flex-wrap gap-x-3 gap-y-1">
+          {legendCategories.map(({ category }) => (
+            <div key={category} className="flex items-center gap-1.5">
+              <span className={`h-2.5 w-2.5 rounded-sm ${categoryColor(category)}`} />
+              <span className="text-[11px] text-slate-600">{category}</span>
+            </div>
+          ))}
+        </div>
+      )}
     </div>
   );
 }
