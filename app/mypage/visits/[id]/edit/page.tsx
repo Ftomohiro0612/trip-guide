@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
+import ChildAvatar from "@/components/ChildAvatar";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import VisitPhotoUploader, {
@@ -32,6 +33,16 @@ type FoodRating =
   | "had_trouble";
 type Expectation = "exceeded" | "met" | "below";
 type VisitStatus = "draft" | "published";
+type Satisfaction = "loved" | "enjoyed" | "neutral" | "not_fit";
+
+type Child = {
+  id: string;
+  nickname: string;
+  birth_year: number;
+  birth_month: number | null;
+  avatar_url: string | null;
+  avatarUrl?: string | null;
+};
 
 type FacilitySuggestion = {
   slug: string;
@@ -47,6 +58,29 @@ type VisitPhotoRow = {
   taken_on: string | null;
 };
 
+type ReactionTag = {
+  id: string;
+  label: string;
+  category: string;
+  sort_order: number;
+};
+
+type VisitChildRow = {
+  id: string;
+  child_id: string;
+  satisfaction: string | null;
+};
+
+type VisitChildTagRow = {
+  visit_child_id: string;
+  tag_id: string;
+};
+
+type ExistingVisitChild = {
+  id: string;
+  satisfaction: Satisfaction;
+};
+
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
   { value: "yes", label: "また行きたい" },
   { value: "conditional", label: "条件次第" },
@@ -59,6 +93,13 @@ const fatigueOptions: { value: ParentFatigue; label: string }[] = [
   { value: "normal", label: "普通" },
   { value: "tired", label: "少し疲れた" },
   { value: "exhausted", label: "かなり疲れた" },
+];
+
+const satisfactionOptions: { value: Satisfaction; label: string }[] = [
+  { value: "loved", label: "大満足" },
+  { value: "enjoyed", label: "楽しんだ" },
+  { value: "neutral", label: "普通" },
+  { value: "not_fit", label: "合わなかった" },
 ];
 
 const expectationOptions: { value: Expectation; label: string }[] = [
@@ -117,6 +158,9 @@ const familyRevisitValues = new Set<FamilyRevisit>(
 const fatigueValues = new Set<ParentFatigue>(
   fatigueOptions.map((option) => option.value),
 );
+const satisfactionValues = new Set<Satisfaction>(
+  satisfactionOptions.map((option) => option.value),
+);
 const expectationValues = new Set<Expectation>(
   expectationOptions.map((option) => option.value),
 );
@@ -154,6 +198,10 @@ function coerceDuration(value: number | null | undefined): string {
   return durationValues.has(duration) ? duration : "";
 }
 
+function sortedUnique(values: string[]): string[] {
+  return Array.from(new Set(values)).sort();
+}
+
 export default function EditVisitPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
@@ -183,6 +231,17 @@ export default function EditVisitPage() {
   const [existingPhotoCount, setExistingPhotoCount] = useState(0);
   const [existingPhotos, setExistingPhotos] = useState<VisitPhotoGalleryPhoto[]>([]);
   const [visitStatus, setVisitStatus] = useState<VisitStatus>("published");
+  const [children, setChildren] = useState<Child[]>([]);
+  const [selectedChildIds, setSelectedChildIds] = useState<string[]>([]);
+  const [satisfactions, setSatisfactions] = useState<Record<string, Satisfaction>>({});
+  const [reactionTagMaster, setReactionTagMaster] = useState<ReactionTag[]>([]);
+  const [childTags, setChildTags] = useState<Record<string, string[]>>({});
+  const [existingVisitChildren, setExistingVisitChildren] = useState<
+    Record<string, ExistingVisitChild>
+  >({});
+  const [existingChildTags, setExistingChildTags] = useState<Record<string, string[]>>(
+    {},
+  );
 
   useEffect(() => {
     let active = true;
@@ -195,6 +254,19 @@ export default function EditVisitPage() {
         )
         .eq("id", visitId)
         .single();
+      const childrenResult = await supabase
+        .from("children")
+        .select("id, nickname, birth_year, birth_month, avatar_url")
+        .order("sort_order", { ascending: true });
+      const visitChildrenResult = await supabase
+        .from("visit_children")
+        .select("id, child_id, satisfaction")
+        .eq("visit_id", visitId);
+      const tagMasterResult = await supabase
+        .from("reaction_tags")
+        .select("id, label, category, sort_order")
+        .eq("is_active", true)
+        .order("sort_order");
       const photoResult = PHOTO_UPLOAD_ENABLED
         ? await supabase
           .from("visit_photos")
@@ -210,6 +282,97 @@ export default function EditVisitPage() {
         setLoading(false);
         return;
       }
+      if (childrenResult.error) {
+        setError("子ども情報の読み込みに失敗しました");
+        setLoading(false);
+        return;
+      }
+      if (visitChildrenResult.error) {
+        setError("子ども別記録の読み込みに失敗しました");
+        setLoading(false);
+        return;
+      }
+      if (tagMasterResult.error) {
+        setError("反応タグの読み込みに失敗しました");
+        setLoading(false);
+        return;
+      }
+
+      const childRows = (childrenResult.data ?? []) as Child[];
+      const avatarPaths = childRows
+        .map((child) => child.avatar_url)
+        .filter((path): path is string => Boolean(path));
+      const { data: signedAvatars } =
+        avatarPaths.length > 0
+          ? await supabase.storage
+              .from("child-avatars")
+              .createSignedUrls(avatarPaths, 60 * 60)
+          : { data: [] };
+      const avatarUrlByPath = new Map(
+        (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
+      );
+      if (!active) return;
+      setChildren(
+        childRows.map((child) => ({
+          ...child,
+          avatarUrl: child.avatar_url
+            ? avatarUrlByPath.get(child.avatar_url) ?? null
+            : null,
+        })),
+      );
+      setReactionTagMaster((tagMasterResult.data ?? []) as ReactionTag[]);
+
+      const visitChildRows = (visitChildrenResult.data ?? []) as VisitChildRow[];
+      const visitChildIds = visitChildRows.map((row) => row.id);
+      const { data: childTagRows, error: childTagError } =
+        visitChildIds.length > 0
+          ? await supabase
+              .from("visit_child_tags")
+              .select("visit_child_id, tag_id")
+              .in("visit_child_id", visitChildIds)
+          : { data: [], error: null };
+      if (childTagError) {
+        setError("子ども別タグの読み込みに失敗しました");
+        setLoading(false);
+        return;
+      }
+      if (!active) return;
+      const nextExistingVisitChildren: Record<string, ExistingVisitChild> = {};
+      const nextSelectedChildIds: string[] = [];
+      const nextSatisfactions: Record<string, Satisfaction> = {};
+      for (const row of visitChildRows) {
+        const satisfaction = coerceOption(row.satisfaction, satisfactionValues);
+        if (!satisfaction) continue;
+        nextExistingVisitChildren[row.child_id] = {
+          id: row.id,
+          satisfaction,
+        };
+        nextSelectedChildIds.push(row.child_id);
+        nextSatisfactions[row.child_id] = satisfaction;
+      }
+      const nextExistingChildTags: Record<string, string[]> = {};
+      const nextChildTags: Record<string, string[]> = {};
+      const childIdByVisitChildId = new Map(
+        visitChildRows.map((row) => [row.id, row.child_id]),
+      );
+      for (const row of (childTagRows ?? []) as VisitChildTagRow[]) {
+        nextExistingChildTags[row.visit_child_id] = sortedUnique([
+          ...(nextExistingChildTags[row.visit_child_id] ?? []),
+          row.tag_id,
+        ]);
+        const childId = childIdByVisitChildId.get(row.visit_child_id);
+        if (childId) {
+          nextChildTags[childId] = sortedUnique([
+            ...(nextChildTags[childId] ?? []),
+            row.tag_id,
+          ]);
+        }
+      }
+      setExistingVisitChildren(nextExistingVisitChildren);
+      setExistingChildTags(nextExistingChildTags);
+      setSelectedChildIds(nextSelectedChildIds);
+      setSatisfactions(nextSatisfactions);
+      setChildTags(nextChildTags);
       if (photoResult) {
         if (photoResult.error) {
           setError("写真枚数の読み込みに失敗しました");
@@ -309,9 +472,22 @@ export default function EditVisitPage() {
     facilityName.trim().length > 0 &&
     Boolean(familyRevisit) &&
     Boolean(parentFatigue) &&
+    selectedChildIds.every((childId) => Boolean(satisfactions[childId])) &&
     !saving &&
     !loading &&
     (!PHOTO_UPLOAD_ENABLED || !photoBusy);
+
+  const selectedChildren = children.filter((child) =>
+    selectedChildIds.includes(child.id),
+  );
+
+  function toggleChild(childId: string) {
+    setSelectedChildIds((current) =>
+      current.includes(childId)
+        ? current.filter((id) => id !== childId)
+        : [...current, childId],
+    );
+  }
 
   async function saveVisit(nextStatus?: VisitStatus) {
     if (!canSubmit) return;
@@ -361,6 +537,136 @@ export default function EditVisitPage() {
       setSaving(false);
       return;
     }
+
+    const visitedDate = visitedOn ? new Date(`${visitedOn}T00:00:00`) : null;
+    const visitedYear = visitedDate ? visitedDate.getFullYear() : null;
+    const selectedChildIdSet = new Set(selectedChildIds);
+    const nextExistingVisitChildren = { ...existingVisitChildren };
+    const nextExistingChildTags = { ...existingChildTags };
+
+    for (const [childId, existing] of Object.entries(existingVisitChildren)) {
+      if (selectedChildIdSet.has(childId)) continue;
+
+      const { error: deleteTagsError } = await supabase
+        .from("visit_child_tags")
+        .delete()
+        .eq("visit_child_id", existing.id);
+      if (deleteTagsError) {
+        setError(deleteTagsError.message);
+        setSaving(false);
+        return;
+      }
+
+      const { error: deleteChildError } = await supabase
+        .from("visit_children")
+        .delete()
+        .eq("id", existing.id);
+      if (deleteChildError) {
+        setError(deleteChildError.message);
+        setSaving(false);
+        return;
+      }
+      delete nextExistingVisitChildren[childId];
+      delete nextExistingChildTags[existing.id];
+    }
+
+    for (const child of selectedChildren) {
+      const satisfaction = satisfactions[child.id];
+      if (!satisfaction) {
+        setError("選択した子どもの満足度を入力してください");
+        setSaving(false);
+        return;
+      }
+
+      let visitChildId = nextExistingVisitChildren[child.id]?.id;
+      if (visitChildId) {
+        const updateVisitChildPayload: {
+          satisfaction: Satisfaction;
+          child_age_at_visit?: number;
+        } = {
+          satisfaction,
+        };
+        if (visitedYear !== null) {
+          updateVisitChildPayload.child_age_at_visit = visitedYear - child.birth_year;
+        }
+        const { error: childUpdateError } = await supabase
+          .from("visit_children")
+          .update(updateVisitChildPayload)
+          .eq("id", visitChildId);
+        if (childUpdateError) {
+          setError(childUpdateError.message);
+          setSaving(false);
+          return;
+        }
+      } else {
+        const { data: insertedChild, error: childInsertError } = await supabase
+          .from("visit_children")
+          .insert({
+            visit_id: visitId,
+            child_id: child.id,
+            satisfaction,
+            child_age_at_visit:
+              visitedYear === null ? null : visitedYear - child.birth_year,
+          })
+          .select("id")
+          .single();
+        if (childInsertError || !insertedChild) {
+          setError(childInsertError?.message ?? "子ども別記録の保存に失敗しました");
+          setSaving(false);
+          return;
+        }
+        visitChildId = insertedChild.id;
+        nextExistingVisitChildren[child.id] = {
+          id: visitChildId,
+          satisfaction,
+        };
+        nextExistingChildTags[visitChildId] = [];
+      }
+
+      const selectedTags = sortedUnique(childTags[child.id] ?? []);
+      const currentTags = sortedUnique(nextExistingChildTags[visitChildId] ?? []);
+      const currentTagSet = new Set(currentTags);
+      const selectedTagSet = new Set(selectedTags);
+      const tagsToInsert = selectedTags.filter((tagId) => !currentTagSet.has(tagId));
+      const tagsToDelete = currentTags.filter((tagId) => !selectedTagSet.has(tagId));
+
+      if (tagsToDelete.length > 0) {
+        const { error: tagDeleteError } = await supabase
+          .from("visit_child_tags")
+          .delete()
+          .eq("visit_child_id", visitChildId)
+          .in("tag_id", tagsToDelete);
+        if (tagDeleteError) {
+          setError(tagDeleteError.message);
+          setSaving(false);
+          return;
+        }
+      }
+
+      if (tagsToInsert.length > 0) {
+        const { error: tagInsertError } = await supabase
+          .from("visit_child_tags")
+          .insert(
+            tagsToInsert.map((tagId) => ({
+              visit_child_id: visitChildId,
+              tag_id: tagId,
+            })),
+          );
+        if (tagInsertError) {
+          setError(tagInsertError.message);
+          setSaving(false);
+          return;
+        }
+      }
+      nextExistingChildTags[visitChildId] = selectedTags;
+      nextExistingVisitChildren[child.id] = {
+        id: visitChildId,
+        satisfaction,
+      };
+    }
+
+    setExistingVisitChildren(nextExistingVisitChildren);
+    setExistingChildTags(nextExistingChildTags);
 
     if (PHOTO_UPLOAD_ENABLED) {
       const photoResult = await photoUploaderRef.current?.upload(visitId);
@@ -481,6 +787,120 @@ export default function EditVisitPage() {
             className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
           />
         </section>
+
+        {children.length > 0 && (
+          <section className="space-y-2">
+            <p className="text-sm font-bold text-slate-800">今回行った子ども</p>
+            <div className="space-y-2">
+              {children.map((child) => (
+                <label
+                  key={child.id}
+                  className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm"
+                >
+                  <input
+                    type="checkbox"
+                    checked={selectedChildIds.includes(child.id)}
+                    onChange={() => toggleChild(child.id)}
+                    className="h-4 w-4 accent-brand"
+                  />
+                  <ChildAvatar
+                    childId={child.id}
+                    nickname={child.nickname}
+                    avatarUrl={child.avatarUrl ?? null}
+                    size="sm"
+                  />
+                  <span className="font-medium text-slate-800">
+                    {child.nickname}
+                  </span>
+                </label>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {selectedChildren.length > 0 && (
+          <section className="space-y-3">
+            <p className="text-sm font-bold text-slate-800">子どもごとの満足度</p>
+            {selectedChildren.map((child) => (
+              <div
+                key={child.id}
+                className="bg-white border border-slate-200 rounded-xl p-3 space-y-2"
+              >
+                <div className="flex items-center gap-2">
+                  <ChildAvatar
+                    childId={child.id}
+                    nickname={child.nickname}
+                    avatarUrl={child.avatarUrl ?? null}
+                    size="sm"
+                  />
+                  <p className="text-sm font-semibold text-slate-800">
+                    {child.nickname}
+                  </p>
+                </div>
+                <div className="grid grid-cols-2 gap-2">
+                  {satisfactionOptions.map((option) => (
+                    <button
+                      key={option.value}
+                      type="button"
+                      onClick={() => {
+                        setSatisfactions((current) => ({
+                          ...current,
+                          [child.id]: option.value,
+                        }));
+                      }}
+                      className={`py-2 px-2 rounded-lg border text-xs font-medium transition-colors ${
+                        satisfactions[child.id] === option.value
+                          ? "bg-brand border-brand text-white"
+                          : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
+                      }`}
+                    >
+                      {option.label}
+                    </button>
+                  ))}
+                </div>
+                {reactionTagMaster.length > 0 && (
+                  <div className="mt-3 space-y-1.5">
+                    <p className="text-xs font-bold text-slate-600">
+                      {child.nickname}は何を楽しんでいた？
+                    </p>
+                    <div className="flex flex-wrap gap-1.5">
+                      {reactionTagMaster.map((tag) => {
+                        const selected = (childTags[child.id] ?? []).includes(tag.id);
+                        return (
+                          <button
+                            key={tag.id}
+                            type="button"
+                            onClick={() =>
+                              setChildTags((prev) => {
+                                const current = prev[child.id] ?? [];
+                                return {
+                                  ...prev,
+                                  [child.id]: selected
+                                    ? current.filter((tagId) => tagId !== tag.id)
+                                    : [...current, tag.id],
+                                };
+                              })
+                            }
+                            className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
+                              selected
+                                ? "bg-brand border-brand text-white"
+                                : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                            }`}
+                          >
+                            {tag.label}
+                          </button>
+                        );
+                      })}
+                    </div>
+                    {(childTags[child.id]?.length ?? 0) === 0 && (
+                      <p className="text-xs text-slate-400">スキップしてもOKです</p>
+                    )}
+                  </div>
+                )}
+              </div>
+            ))}
+          </section>
+        )}
 
         <OptionButtons
           title="また行きたいか"
