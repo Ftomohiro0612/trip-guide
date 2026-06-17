@@ -70,8 +70,10 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   kanagawa: true,
 };
 
-const LOCATION_GUIDE_TEXT = "「📍 現在地」を押すと、現在地を表示できます。";
+const LOCATION_GUIDE_TEXT =
+  "「📍 現在地」を押すと地図に現在地を表示します。現在地はサーバーに送信せず、このタブ内で一時的に利用します。";
 const CURRENT_LOCATION_STORAGE_KEY = "mapview:currentLocation";
+const CURRENT_LOCATION_EVENT_NAME = "mapview:currentLocation";
 
 type CurrentLocationSource = "locate" | "restore";
 type CurrentLocationState = {
@@ -246,6 +248,25 @@ export default function MapView({
     return () => window.clearTimeout(timeout);
   }, [locationNotice]);
 
+  useEffect(() => {
+    function handleCurrentLocationEvent(event: Event) {
+      const { detail } = event as CustomEvent<unknown>;
+      if (!validCenter(detail)) return;
+
+      setCurrentLocation({ position: detail, source: "locate" });
+    }
+
+    window.addEventListener(
+      CURRENT_LOCATION_EVENT_NAME,
+      handleCurrentLocationEvent,
+    );
+    return () =>
+      window.removeEventListener(
+        CURRENT_LOCATION_EVENT_NAME,
+        handleCurrentLocationEvent,
+      );
+  }, []);
+
   const visible = useMemo(() => {
     return placed.filter((f) => {
       if (!activePrefs[f.prefecture_id]) return false;
@@ -402,7 +423,16 @@ export default function MapView({
               storageKey ? (initialState ? "never" : "initial-only") : "always"
             }
           />
-          {storageKey && <PersistMapPosition onChange={persistState} />}
+          {storageKey && (
+            <PersistMapPosition
+              onChange={persistState}
+              ignoredCenter={
+                currentLocation?.source === "locate"
+                  ? currentLocation.position
+                  : null
+              }
+            />
+          )}
           {currentLocation && (
             <CurrentLocationMarker
               position={currentLocation.position}
@@ -450,19 +480,29 @@ function FitBoundsOnChange({
 
 function PersistMapPosition({
   onChange,
+  ignoredCenter,
 }: {
   onChange: (patch: Partial<PersistedMapViewState>) => void;
+  ignoredCenter: [number, number] | null;
 }) {
   const saveMapView = useCallback(
     (event: LeafletEvent) => {
       const map = event.target as L.Map;
       const center = map.getCenter();
+      if (
+        ignoredCenter &&
+        Math.abs(center.lat - ignoredCenter[0]) < 0.000001 &&
+        Math.abs(center.lng - ignoredCenter[1]) < 0.000001
+      ) {
+        return;
+      }
+
       onChange({
         center: [center.lat, center.lng],
         zoom: map.getZoom(),
       });
     },
-    [onChange],
+    [ignoredCenter, onChange],
   );
 
   useMapEvents({

@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import FacilityCard from "@/components/FacilityCard";
 import {
   driveTimeEstimateLabel,
@@ -29,6 +29,16 @@ type NearbyFacility = {
 };
 
 const RANGE_OPTIONS: NearbyTravelMinutes[] = [30, 60, 90];
+const NEARBY_FILTER_STORAGE_KEY = "facilities:nearbyFilter";
+const CURRENT_LOCATION_STORAGE_KEY = "mapview:currentLocation";
+const CURRENT_LOCATION_EVENT_NAME = "mapview:currentLocation";
+
+type NearbyFilterSnapshot = {
+  enabled: boolean;
+  minutes: NearbyTravelMinutes;
+  lat: number;
+  lng: number;
+};
 
 function hasCoords(facility: Facility): facility is PlacedFacility {
   return (
@@ -50,6 +60,96 @@ function locationErrorMessage(error: GeolocationPositionError) {
     return "現在地の取得がタイムアウトしました。通常の一覧を表示しています。";
   }
   return "現在地を取得できませんでした。通常の一覧を表示しています。";
+}
+
+function isNearbyTravelMinutes(value: unknown): value is NearbyTravelMinutes {
+  return (
+    typeof value === "number" &&
+    RANGE_OPTIONS.includes(value as NearbyTravelMinutes)
+  );
+}
+
+function isValidCoordinate(lat: unknown, lng: unknown): boolean {
+  return (
+    typeof lat === "number" &&
+    typeof lng === "number" &&
+    Number.isFinite(lat) &&
+    Number.isFinite(lng) &&
+    lat >= -90 &&
+    lat <= 90 &&
+    lng >= -180 &&
+    lng <= 180
+  );
+}
+
+function readPersistedNearbyFilter(): NearbyFilterSnapshot | null {
+  if (typeof window === "undefined") return null;
+
+  try {
+    const raw = window.sessionStorage.getItem(NEARBY_FILTER_STORAGE_KEY);
+    if (!raw) return null;
+
+    const parsed = JSON.parse(raw) as Partial<NearbyFilterSnapshot>;
+    const { enabled, minutes, lat, lng } = parsed;
+    if (
+      enabled !== true ||
+      !isNearbyTravelMinutes(minutes) ||
+      !isValidCoordinate(lat, lng) ||
+      typeof lat !== "number" ||
+      typeof lng !== "number"
+    ) {
+      return null;
+    }
+
+    return {
+      enabled: true,
+      minutes,
+      lat,
+      lng,
+    };
+  } catch {
+    return null;
+  }
+}
+
+function persistNearbyFilter(snapshot: NearbyFilterSnapshot) {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.sessionStorage.setItem(
+      NEARBY_FILTER_STORAGE_KEY,
+      JSON.stringify(snapshot),
+    );
+  } catch {
+    // The nearby filter should still work for the current render.
+  }
+}
+
+function clearPersistedNearbyFilter() {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.sessionStorage.removeItem(NEARBY_FILTER_STORAGE_KEY);
+  } catch {
+    // Ignore storage failures and fall back to in-memory state.
+  }
+}
+
+function persistMapCurrentLocation(position: Coordinate) {
+  if (typeof window === "undefined") return;
+
+  try {
+    window.sessionStorage.setItem(
+      CURRENT_LOCATION_STORAGE_KEY,
+      JSON.stringify(position),
+    );
+  } catch {
+    // The map can still update through the in-page event below.
+  }
+
+  window.dispatchEvent(
+    new CustomEvent(CURRENT_LOCATION_EVENT_NAME, { detail: position }),
+  );
 }
 
 export default function NearbyFilterableFacilityList({ facilities }: Props) {
@@ -88,10 +188,40 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
 
   const showingNearby = nearbyEnabled && currentLocation !== null;
 
+  useEffect(() => {
+    const snapshot = readPersistedNearbyFilter();
+    if (!snapshot) return;
+
+    const timeout = window.setTimeout(() => {
+      setRangeMinutes(snapshot.minutes);
+      setCurrentLocation([snapshot.lat, snapshot.lng]);
+      setNearbyEnabled(true);
+      setStatus("ready");
+    }, 0);
+
+    return () => window.clearTimeout(timeout);
+  }, []);
+
+  useEffect(() => {
+    if (!showingNearby || !currentLocation) return;
+
+    persistNearbyFilter({
+      enabled: true,
+      minutes: rangeMinutes,
+      lat: currentLocation[0],
+      lng: currentLocation[1],
+    });
+  }, [currentLocation, rangeMinutes, showingNearby]);
+
+  function updateRangeMinutes(minutes: NearbyTravelMinutes) {
+    setRangeMinutes(minutes);
+  }
+
   function requestCurrentLocation() {
     if (typeof navigator === "undefined" || !navigator.geolocation) {
       setNearbyEnabled(false);
       setCurrentLocation(null);
+      clearPersistedNearbyFilter();
       setStatus("error");
       setNotice(
         "このブラウザでは位置情報を取得できません。通常の一覧を表示しています。",
@@ -103,17 +233,26 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
     setNotice(null);
     navigator.geolocation.getCurrentPosition(
       (position) => {
-        setCurrentLocation([
+        const nextLocation: Coordinate = [
           position.coords.latitude,
           position.coords.longitude,
-        ]);
+        ];
+        setCurrentLocation(nextLocation);
         setNearbyEnabled(true);
+        persistNearbyFilter({
+          enabled: true,
+          minutes: rangeMinutes,
+          lat: nextLocation[0],
+          lng: nextLocation[1],
+        });
+        persistMapCurrentLocation(nextLocation);
         setStatus("ready");
         setNotice(null);
       },
       (error) => {
         setNearbyEnabled(false);
         setCurrentLocation(null);
+        clearPersistedNearbyFilter();
         setStatus("error");
         setNotice(locationErrorMessage(error));
       },
@@ -124,6 +263,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
   function clearNearbyFilter() {
     setNearbyEnabled(false);
     setCurrentLocation(null);
+    clearPersistedNearbyFilter();
     setStatus("idle");
     setNotice(null);
   }
@@ -166,7 +306,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
                   <button
                     key={minutes}
                     type="button"
-                    onClick={() => setRangeMinutes(minutes)}
+                    onClick={() => updateRangeMinutes(minutes)}
                     className={`min-w-14 rounded-full px-2.5 py-1.5 text-xs font-bold transition-colors ${
                       selected
                         ? "bg-blue-600 text-white"
@@ -194,7 +334,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
           </div>
         ) : (
           <p className="mt-3 text-xs text-slate-500">
-            位置情報はこの画面内だけで距離計算に使います。保存・URL反映・サーバー送信はしません。
+            現在地はサーバーに送信せず、アカウントにも保存せず、URLにも表示しません。このタブ内で一時的に利用し、タブを閉じると消えます。
           </p>
         )}
 
