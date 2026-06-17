@@ -103,6 +103,18 @@ export default async function VisitsPage({
 
   const filterRevisit = params.revisit === "yes";
   const filterChildId = params.child_id ?? null;
+  let filterChildNickname: string | null = null;
+
+  if (filterChildId && user) {
+    const { data: filterChild } = await supabase
+      .from("children")
+      .select("nickname")
+      .eq("id", filterChildId)
+      .eq("user_id", user.id)
+      .maybeSingle();
+    filterChildNickname =
+      typeof filterChild?.nickname === "string" ? filterChild.nickname : null;
+  }
 
   let visitIds: string[] | null = null;
   if (filterChildId && user) {
@@ -196,7 +208,11 @@ export default async function VisitsPage({
 
   let filterLabel: string | null = null;
   if (filterRevisit) filterLabel = "また行きたい";
-  if (filterChildId) filterLabel = "子ども別フィルター";
+  if (filterChildId) {
+    filterLabel = filterChildNickname
+      ? `${filterChildNickname}の記録`
+      : "子ども別フィルター";
+  }
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-5">

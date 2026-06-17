@@ -150,6 +150,16 @@ function categoryColor(category: string): string {
   return categoryColors[category] ?? "bg-slate-300";
 }
 
+function compareCategoryEntries(
+  a: { category: string; count: number },
+  b: { category: string; count: number },
+): number {
+  const aOther = a.category === "その他";
+  const bOther = b.category === "その他";
+  if (aOther !== bOther) return aOther ? 1 : -1;
+  return b.count - a.count || a.category.localeCompare(b.category, "ja");
+}
+
 function calcAge(birthYear: number, birthMonth: number): number {
   const today = new Date();
   let age = today.getFullYear() - birthYear;
@@ -185,7 +195,7 @@ function buildChildCategorySummaries(
     const counts = categoryCountsByChild.get(child.id) ?? new Map<string, number>();
     const categories = Array.from(counts.entries())
       .map(([category, count]) => ({ category, count }))
-      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"))
+      .sort(compareCategoryEntries)
       .slice(0, 5);
     return { child, categories };
   });
@@ -210,7 +220,7 @@ function buildMonthlyData(visits: VisitStat[]): MonthData[] {
       (visitsByMonth.get(month) ?? new Map<string, number>()).entries(),
     )
       .map(([category, count]) => ({ category, count }))
-      .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"));
+      .sort(compareCategoryEntries);
     return {
       month,
       label: `${d.getMonth() + 1}月`,
@@ -424,9 +434,10 @@ export default async function MypagePage() {
           </div>
           <div className="flex flex-wrap gap-2">
             {childRows.map((child) => (
-              <div
+              <Link
                 key={child.id}
-                className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1.5"
+                href={`#child-achievement-${child.id}`}
+                className="flex items-center gap-2 bg-white border border-slate-200 rounded-full px-3 py-1.5 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ChildAvatar
                   childId={child.id}
@@ -442,7 +453,7 @@ export default async function MypagePage() {
                 <span className="text-xs text-slate-400">
                   {calcAge(child.birth_year, child.birth_month)}歳
                 </span>
-              </div>
+              </Link>
             ))}
           </div>
         </section>
@@ -601,11 +612,20 @@ export default async function MypagePage() {
       {/* 子ども別あそび実績 */}
       {hasChildren && (
         <section className="space-y-3">
-          <h2 className="font-bold text-slate-800">子ども別あそび実績</h2>
+          <div>
+            <h2 className="font-bold text-slate-800">子ども別あそび実績</h2>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">
+              お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。おでかけ実績とは数え方が違うため件数が一致しないことがあります。
+            </p>
+          </div>
           <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-5">
             {hasChildCategoryRecords ? (
               childCategorySummaries.map((summary) => (
-                <div key={summary.child.id}>
+                <div
+                  key={summary.child.id}
+                  id={`child-achievement-${summary.child.id}`}
+                  className="scroll-mt-4"
+                >
                   <div className="flex items-center justify-between mb-2">
                     <div className="flex items-center gap-2 min-w-0">
                       <ChildAvatar
@@ -648,9 +668,18 @@ export default async function MypagePage() {
                 </div>
               ))
             ) : (
-              <p className="text-slate-400 text-sm">
-                子どもごとの記録をするとここに表示されます
-              </p>
+              <>
+                {childCategorySummaries.map((summary) => (
+                  <span
+                    key={summary.child.id}
+                    id={`child-achievement-${summary.child.id}`}
+                    className="block scroll-mt-4"
+                  />
+                ))}
+                <p className="text-slate-400 text-sm">
+                  子どもごとの記録をするとここに表示されます
+                </p>
+              </>
             )}
           </div>
         </section>
@@ -735,7 +764,7 @@ function MonthlyBarChart({ data }: { data: MonthData[] }) {
       }, new Map<string, number>()),
   )
     .map(([category, count]) => ({ category, count }))
-    .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, "ja"));
+    .sort(compareCategoryEntries);
   return (
     <div className="space-y-2">
       <div className="flex items-end gap-1" style={{ height: "64px" }}>

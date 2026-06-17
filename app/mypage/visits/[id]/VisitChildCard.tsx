@@ -68,21 +68,24 @@ function ageAtVisit(
   child: ChildProfile,
   childAgeAtVisit: number | null,
 ): string {
+  if (visitedOn && child.birth_month >= 1 && child.birth_month <= 12) {
+    const [year, month] = visitedOn.split("-").map(Number);
+    if (year && month) {
+      let months = (year - child.birth_year) * 12 + (month - child.birth_month);
+      if (months < 0) months = 0;
+      const ageYears = Math.floor(months / 12);
+      const ageMonths = months % 12;
+      if (ageYears === 0) return `${ageMonths}か月`;
+      if (ageMonths === 0) return `${ageYears}歳`;
+      return `${ageYears}歳${ageMonths}か月`;
+    }
+  }
+
   if (typeof childAgeAtVisit === "number") {
     return `${childAgeAtVisit}歳ごろ`;
   }
 
-  if (!visitedOn) return "訪問日未設定";
-  const [year, month] = visitedOn.split("-").map(Number);
-  if (!year || !month) return "訪問日未設定";
-
-  let months = (year - child.birth_year) * 12 + (month - child.birth_month);
-  if (months < 0) months = 0;
-  const ageYears = Math.floor(months / 12);
-  const ageMonths = months % 12;
-  if (ageYears === 0) return `${ageMonths}か月`;
-  if (ageMonths === 0) return `${ageYears}歳`;
-  return `${ageYears}歳${ageMonths}か月`;
+  return "訪問日未設定";
 }
 
 function reactionTagLabel(tag: VisitChildTagData): string | null {
