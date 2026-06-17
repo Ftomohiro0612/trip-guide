@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "メモリップでできること",
   description:
-    "子どものおでかけを記録して、“好き”と成長をあとから振り返りやすくする無料サービス。いまできること・これから広げたい機能・対象施設について。",
+    "子どものおでかけを、行った場所と子どもの反応で記録。写真があってもなくても、あとから家族の成長記録になります。いまできること・今後の構想・対象施設について。",
   alternates: { canonical: "/guide" },
   robots: {
     index: true,
@@ -16,35 +16,57 @@ const currentFeatures = [
   {
     icon: "📝",
     title: "おでかけを記録できる",
-    body: "行った日や場所を、家族のおでかけ記録として残せます。",
+    body: "行った日と場所を家族の記録に。",
   },
   {
     icon: "📸",
     title: "写真から記録を作れる",
-    body: "写真をきっかけに、その日のおでかけを記録できます。",
+    body: "写真と行った場所を選ぶだけで記録を作成。対応している写真では、撮影日なども手がかりにできます。",
   },
   {
     icon: "😊",
     title: "子どもごとの反応・満足度を残せる",
-    body: "楽しかった気持ちやまた行きたい度を、子どもごとに残せます。",
+    body: "「楽しんだ」「また行きたい」を子どもごとに。",
   },
   {
     icon: "🗺️",
-    title: "行った場所をあとから見返せる",
-    body: "家族で訪れた場所を、あとから振り返りやすくします。",
+    title: "行った場所・行きたい場所を残せる",
+    body: "訪問済みと、次の候補(行きたいリスト)を。",
   },
   {
-    icon: "⭐",
-    title: "施設を探して「行きたい」「行った」を残せる",
-    body: "気になる施設を見つけて、次のおでかけ候補や行った記録にできます。",
+    icon: "🖼️",
+    title: "写真と記録をあとから見返せる",
+    body: "思い出として時系列で振り返り。",
+  },
+];
+
+const storySections = [
+  {
+    icon: "✍️",
+    eyebrow: "A little record",
+    title: "おでかけを、少しだけ記録に",
+    body: "毎回きれいな文章を書かなくても大丈夫。写真がある日は写真を添えて、ない日は場所と子どもの反応だけでも。その日のおでかけが、あとから見返せる家族の記録になります。",
+  },
+  {
+    icon: "😊",
+    eyebrow: "Child's favorites",
+    title: "子どもの“好き”が見えてくる",
+    body: "反応タグ(遊具・水遊び・きょうだいで遊んだ…)、満足度、また行きたい度を子どもごとに記録。写真だけでは残りにくい“何に夢中だったか”が、記録として積み重なります。",
+  },
+  {
+    icon: "🌱",
+    eyebrow: "Growth record",
+    title: "同じ場所で、成長を振り返る",
+    body: "同じ施設に行くほど、その場所での記録がたまります。子どもの反応や“好き”の変化は、記録が増えるほど見えてきます。月に一度、少し見返すだけでも、家族の記録は続いていきます。",
   },
 ];
 
 const futureIdeas = [
-  "同じ施設での成長を振り返れるページ",
-  "写真アルバム",
-  "成長日記",
-  "目的地までの途中で寄れる施設検索",
+  "月ごとの思い出アルバム",
+  "子どもごとの成長日記",
+  "写真プリント・アルバム化",
+  "家族で見返せる思い出レポート",
+  "将来的には家族向けの有料サービス",
 ];
 
 function GuideBackground() {
@@ -99,15 +121,43 @@ export default function GuidePage() {
             <span className="ml-1">メモリップでできること</span>
           </p>
           <h1 className="text-3xl font-bold leading-tight tracking-tight drop-shadow-sm sm:text-5xl">
-            “行った”が、家族の記録になる。
+            行った場所が、家族の成長記録になる。
           </h1>
           <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg">
-            メモリップは、子どものおでかけを記録して、“好き”と成長をあとから振り返りやすくする無料サービスです。
+            写真があっても、なくても大丈夫。行った場所に、子どもの反応を少し添えるだけで、あとから“好き”と成長を見返せる思い出になります。
           </p>
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-slate-50 py-14 sm:py-16" aria-labelledby="current-features-heading">
+      <section className="bg-gradient-to-b from-white to-sky-50/60 py-8 sm:py-10" aria-label="中心メッセージ">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="rounded-3xl border border-sky-100 bg-white p-6 text-center shadow-sm shadow-sky-100/70 sm:p-8">
+            <p className="mx-auto max-w-3xl text-lg font-bold leading-relaxed text-slate-900 sm:text-2xl">
+              写真があっても、なくても大丈夫。行った場所と子どもの反応が少し残るだけで、あとから家族の成長記録になります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-sky-50/60 py-14 sm:py-16" aria-labelledby="memory-flow-heading">
+        <div className="mx-auto grid max-w-5xl gap-6 px-4 lg:grid-cols-[0.85fr_1.15fr] lg:items-center">
+          <div>
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-sky-500">
+              Why Memorip
+            </p>
+            <h2 id="memory-flow-heading" className="text-2xl font-bold leading-tight text-slate-900 sm:text-3xl">
+              写真はあるのに、思い出は流れていく
+            </h2>
+          </div>
+          <div className="rounded-3xl border border-sky-100 bg-white p-6 shadow-sm shadow-sky-100/60 sm:p-8">
+            <p className="text-sm leading-relaxed text-slate-700 sm:text-base">
+              スマホには家族の写真がたくさん。でも、きちんと日記を書こうとすると続きません。そして“いつ・どこで・何に夢中だったか”は、時間がたつと思い出せなくなりがち。だからメモリップは、行った場所や写真をきっかけに、あとから少しずつ記録を足せる設計にしました。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="bg-gradient-to-b from-sky-50/60 to-slate-50 py-14 sm:py-16" aria-labelledby="current-features-heading">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-sky-500">
@@ -116,6 +166,9 @@ export default function GuidePage() {
             <h2 id="current-features-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
               いまできること
             </h2>
+            <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              メモリップで、今すぐできることです。
+            </p>
           </div>
           <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
             {currentFeatures.map((feature) => (
@@ -138,6 +191,35 @@ export default function GuidePage() {
         </div>
       </section>
 
+      <section className="bg-white py-14 sm:py-16" aria-labelledby="recording-heading">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="grid gap-5 lg:grid-cols-3">
+            {storySections.map((section) => (
+              <article
+                key={section.title}
+                className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm shadow-emerald-100/50"
+              >
+                <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-full bg-emerald-50 text-2xl">
+                  <span aria-hidden>{section.icon}</span>
+                </div>
+                <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
+                  {section.eyebrow}
+                </p>
+                <h2
+                  id={section.title === "おでかけを、少しだけ記録に" ? "recording-heading" : undefined}
+                  className="text-xl font-bold leading-tight text-slate-900 sm:text-2xl"
+                >
+                  {section.title}
+                </h2>
+                <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
+                  {section.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-slate-50 py-14 sm:py-16" aria-labelledby="future-ideas-heading">
         <div className="mx-auto max-w-5xl px-4">
           <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm shadow-emerald-100/50 sm:p-8">
@@ -148,7 +230,7 @@ export default function GuidePage() {
               これから広げたいこと
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-              以下は構想中・順次追加予定の機能です（提供時期は未定）。
+              以下は今後広げたい構想です(提供時期は未定)。
             </p>
             <div className="mt-6 grid gap-3 sm:grid-cols-2">
               {futureIdeas.map((idea) => (
@@ -178,7 +260,7 @@ export default function GuidePage() {
             施設情報について
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            関東甲信越を中心に、親子で行ける施設を順次追加・更新中です。完全網羅ではありませんが、少しずつ増やしています。
+            関東甲信越を中心に、親子で行ける施設を順次追加・更新中です。すべての施設を網羅しているものではなく、少しずつ増やしています。
           </p>
         </div>
       </section>
@@ -186,7 +268,7 @@ export default function GuidePage() {
       <section className="bg-gradient-to-br from-sky-50 via-cyan-50 to-emerald-50 py-14 sm:py-16" aria-labelledby="guide-cta-heading">
         <div className="mx-auto max-w-4xl px-4 text-center">
           <h2 id="guide-cta-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
-            家族のおでかけを、今日から記録に。
+            おでかけを、家族の記録に。
           </h2>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
@@ -194,14 +276,14 @@ export default function GuidePage() {
               className="inline-flex items-center justify-center gap-2 rounded-full bg-slate-900 px-6 py-3 text-sm font-bold text-white shadow-xl transition-all hover:-translate-y-0.5 hover:bg-slate-800 hover:shadow-2xl sm:text-base"
             >
               <span aria-hidden>✨</span>
-              無料で家族の記録をはじめる
+              家族の記録をはじめる
             </Link>
             <Link
               href="/facilities"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-sky-200 bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-sm transition-all hover:-translate-y-0.5 hover:border-sky-300 hover:bg-sky-50 sm:text-base"
             >
               <span aria-hidden>🗺️</span>
-              遊び場を見てみる
+              遊び場を探す
             </Link>
           </div>
         </div>
