@@ -284,7 +284,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
             >
               {status === "locating"
                 ? "📍 現在地を取得中..."
-                : "📍現在地から近い施設を探す"}
+                : "📍現在地から近い順に並べる"}
             </button>
             {showingNearby && (
               <button
@@ -292,7 +292,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
                 onClick={clearNearbyFilter}
                 className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-bold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50"
               >
-                近い施設を解除
+                近い順を解除
               </button>
             )}
           </div>
@@ -359,10 +359,10 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
         ) : (
           <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
             <p className="text-slate-700 font-medium">
-              現在地から約{rangeMinutes}分以内（目安）の施設は見つかりませんでした
+              この条件では{rangeMinutes}分以内に施設が見つかりません。
             </p>
             <p className="mt-1 text-sm text-slate-500">
-              時間を広げるか、近い施設フィルタを解除して通常の一覧をご確認ください。
+              時間を広げる、または絞り込みを外すと、近くの施設が見つかりやすくなります。
             </p>
           </div>
         )
