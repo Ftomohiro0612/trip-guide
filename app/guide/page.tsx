@@ -17,35 +17,35 @@ const currentFeatures = [
   {
     icon: "📝",
     title: "おでかけを記録できる",
-    body: "行った日と場所を家族の記録に。",
+    body: "公園、遊園地、水遊び、雨の日のおでかけ。どこに行ったかを残しておくと、あとから「この頃はここが好きだったね」と振り返れます。",
     image: "/guide/photo-now-record.png",
     imageAlt: "おでかけの記録を残す様子のイメージ",
   },
   {
     icon: "📸",
     title: "写真から記録を作れる",
-    body: "写真と行った場所を選ぶだけで記録を作成。対応している写真では、撮影日なども手がかりにできます。",
+    body: "写真がある日は、写真をきっかけに記録を作れます。撮影日などを手がかりにしながら、あとから場所や子どもの反応を足していけます。",
     image: "/guide/photo-now-fromphoto.png",
     imageAlt: "写真から記録を作る様子のイメージ",
   },
   {
     icon: "😊",
     title: "子どもごとの反応・満足度を残せる",
-    body: "「楽しんだ」「また行きたい」を子どもごとに。",
+    body: "同じ場所に行っても、子どもによって楽しかったことは違います。満足度や反応タグを残すことで、その子が何に夢中だったかが見えてきます。",
     image: "/guide/photo-now-reaction.png",
     imageAlt: "子どもの反応を記録する様子のイメージ",
   },
   {
     icon: "🗺️",
     title: "行った場所・行きたい場所を残せる",
-    body: "訪問済みと、次の候補(行きたいリスト)を。",
+    body: "行った場所は家族の思い出として、行きたい場所は次のおでかけ候補として残せます。あとから「次はどこに行こうか」を考えやすくなります。",
     image: "/guide/photo-now-places.png",
     imageAlt: "行った場所や行きたい場所を残す様子のイメージ",
   },
   {
     icon: "🖼️",
     title: "写真と記録をあとから見返せる",
-    body: "思い出として時系列で振り返り。",
+    body: "写真だけでは思い出しにくい、その日の反応や気持ちも一緒に見返せます。家族で振り返る時間が、次のおでかけのヒントにもなります。",
     image: "/guide/photo-now-lookback.png",
     imageAlt: "写真と記録を見返す様子のイメージ",
   },
@@ -189,8 +189,11 @@ export default function GuidePage() {
             >
               👣
             </span>
-            <p className="relative mx-auto max-w-3xl text-lg font-bold leading-relaxed text-slate-900 sm:text-2xl">
-              写真があっても、なくても大丈夫。行った場所と子どもの反応が少し残るだけで、あとから家族の成長記録になります。
+            <p className="relative mx-auto max-w-3xl text-balance text-lg font-bold leading-relaxed text-slate-900 sm:text-2xl">
+              子どもが、どこで、何に夢中だったか。おでかけの記録が増えるほど、家族だけの成長アルバムになっていきます。
+            </p>
+            <p className="relative mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+              写真がある日も、ない日も。場所と子どもの反応だけでも残せます。
             </p>
           </div>
         </div>
@@ -228,8 +231,8 @@ export default function GuidePage() {
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-sky-500">
               Available now
             </p>
-            <h2 id="current-features-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
-              いまできること
+            <h2 id="current-features-heading" className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
+              メモリップでできること
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
               メモリップで、今すぐできることです。
@@ -241,9 +244,6 @@ export default function GuidePage() {
                 key={feature.title}
                 className="rounded-3xl border border-sky-100 bg-white p-5 shadow-sm shadow-sky-100/60"
               >
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-sky-50 text-2xl">
-                  <span aria-hidden>{feature.icon}</span>
-                </div>
                 <Image
                   src={feature.image}
                   alt={feature.imageAlt}
@@ -252,7 +252,7 @@ export default function GuidePage() {
                   className="mb-4 aspect-[4/3] w-full rounded-2xl object-cover"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <h3 className="text-base font-bold leading-snug text-slate-900">
+                <h3 className="text-balance text-base font-bold leading-snug text-slate-900">
                   {feature.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
@@ -287,7 +287,7 @@ export default function GuidePage() {
                 </p>
                 <h2
                   id={section.title === "おでかけを、少しだけ記録に" ? "recording-heading" : undefined}
-                  className="text-xl font-bold leading-tight text-slate-900 sm:text-2xl"
+                  className="text-balance text-xl font-bold leading-tight text-slate-900 sm:text-2xl"
                 >
                   {section.title}
                 </h2>
@@ -306,7 +306,7 @@ export default function GuidePage() {
             <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
               Future ideas
             </p>
-            <h2 id="future-ideas-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
+            <h2 id="future-ideas-heading" className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
               これから広げたいこと
             </h2>
             <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
@@ -335,7 +335,7 @@ export default function GuidePage() {
                       <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-white px-2 text-xs font-bold text-emerald-600 shadow-sm">
                         {String(index + 1).padStart(2, "0")}
                       </span>
-                      <h3 className="mt-3 text-base font-bold leading-snug text-slate-900">
+                      <h3 className="mt-3 text-balance text-base font-bold leading-snug text-slate-900">
                         {idea.title}
                       </h3>
                       <p className="mt-2 text-sm leading-relaxed text-slate-600">
