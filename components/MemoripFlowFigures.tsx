@@ -205,7 +205,13 @@ export function StepGrowthIcon() {
   );
 }
 
-export function PreferenceRankingMiniExample() {
+type MiniExampleProps = {
+  compact?: boolean;
+};
+
+export function PreferenceRankingMiniExample({
+  compact = false,
+}: MiniExampleProps) {
   const rankings = [
     ["1", "💧 水遊び", "8回", "100%"],
     ["2", "✂️ クラフト", "5回", "62.5%"],
@@ -213,7 +219,11 @@ export function PreferenceRankingMiniExample() {
   ];
 
   return (
-    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60">
+    <div
+      className={`rounded-2xl bg-white/75 p-3 shadow-sm shadow-emerald-100/50 ring-1 ring-emerald-200/60 ${
+        compact ? "mt-3 space-y-2" : "mt-5 space-y-3"
+      }`}
+    >
       {rankings.map(([rank, label, count, width]) => (
         <div key={rank}>
           <div className="mb-1 flex items-center justify-between gap-2 text-xs">
@@ -239,21 +249,26 @@ export function PreferenceRankingMiniExample() {
   );
 }
 
-export function RecommendationMiniExample() {
+export function RecommendationMiniExample({ compact = false }: MiniExampleProps) {
   const recommendations = [
-    ["01", "じゃぶじゃぶ池のある公園", "水遊びスポット"],
-    ["02", "屋内プール", "雨の日も遊びやすい"],
+    ["01", "水遊びが好き", "じゃぶじゃぶ池のある公園", "水遊びスポット"],
+    ["02", "クラフトが好き", "ものづくり体験のある施設", "クラフト・工作"],
   ];
+  const visibleRecommendations = recommendations.slice(0, 2);
 
   return (
-    <div className="mt-5 space-y-3 rounded-2xl bg-white/75 p-3 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60">
+    <div
+      className={`rounded-2xl bg-white/75 p-3 shadow-sm shadow-amber-100/50 ring-1 ring-amber-200/60 ${
+        compact ? "mt-3 space-y-2" : "mt-5 space-y-3"
+      }`}
+    >
       <div className="flex items-center justify-between gap-2 rounded-2xl bg-amber-100/80 px-3 py-2 text-xs font-bold text-amber-800">
-        <span>💧 水遊びが好き</span>
+        <span>好きに合わせて</span>
         <span aria-hidden>→</span>
         <span>次の遊び場候補</span>
       </div>
       <div className="space-y-2">
-        {recommendations.map(([number, title, tag]) => (
+        {visibleRecommendations.map(([number, preference, title, tag]) => (
           <div
             key={number}
             className="flex items-center gap-3 rounded-2xl bg-white px-3 py-2 shadow-sm"
@@ -262,8 +277,8 @@ export function RecommendationMiniExample() {
               {number}
             </span>
             <div className="min-w-0">
-              <p className="truncate text-xs font-bold text-slate-800">
-                {title}
+              <p className="text-xs font-bold leading-snug text-slate-800">
+                {preference} → {title}
               </p>
               <p className="mt-0.5 text-[11px] font-bold text-amber-600">
                 おすすめ: {tag}

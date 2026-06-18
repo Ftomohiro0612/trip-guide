@@ -176,103 +176,112 @@ function HeroBackground() {
   );
 }
 
-function MemoryPreviewCard() {
+function HeroMemoryCardCluster() {
   return (
-    <div className="relative mx-auto w-[min(100%,22.5rem)] pb-8 pt-2 lg:mx-0 lg:pb-9 lg:pt-3">
-      <div className="absolute -right-3 top-8 h-[86%] w-[92%] rotate-6 rounded-[2rem] border border-white/70 bg-white/45 shadow-xl backdrop-blur-sm" />
-      <div className="absolute -right-1 top-2 h-[86%] w-[92%] rotate-3 rounded-[2rem] border border-white/80 bg-white/65 shadow-xl backdrop-blur-sm" />
-
-      <div className="relative rotate-1 rounded-[2rem] border border-white/80 bg-white p-5 text-slate-900 shadow-2xl sm:rotate-2 sm:p-6">
-        <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-5">
-          <div className="flex items-center gap-3">
-            <div className="flex h-12 w-12 items-center justify-center rounded-full bg-sky-50 text-2xl">
-              🌸
-            </div>
-            <div>
-              <p className="text-[15px] font-bold">ゆいちゃん (7歳)</p>
-              <p className="text-xs text-slate-400">おでかけ記録</p>
+    // W5: 薄いスマホ画面風コンテナ。検索導線が主役のまま、PC幅は抑える。
+    <div
+      className="relative mx-auto w-full max-w-[19.5rem] rounded-[2rem] border border-white/65 bg-white/28 p-2.5 text-slate-900 shadow-lg shadow-sky-900/10 backdrop-blur-md lg:mx-0 lg:max-w-[18.5rem] xl:max-w-[19rem]"
+      aria-label="メモリップに家族の記録がたまっていくスマホ画面風コンテナ"
+    >
+      <div className="overflow-hidden rounded-[1.55rem] border border-slate-900/10 bg-sky-50/95 shadow-sm shadow-slate-900/5">
+        <div className="border-b border-slate-200/80 bg-white/92 px-4 pb-3 pt-3.5">
+          <div className="flex items-center justify-between gap-3">
+            <p className="text-sm font-bold tracking-normal text-slate-900">
+              メモリップ
+            </p>
+            <div
+              className="flex items-center gap-1.5 text-slate-400"
+              aria-hidden
+            >
+              <span className="h-1.5 w-5 rounded-full bg-slate-300" />
+              <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
             </div>
           </div>
-          <div className="rounded-2xl bg-emerald-50 px-3.5 py-2 text-right">
-            <p className="text-[10px] font-bold text-emerald-600">今月</p>
-            <p className="text-[15px] font-bold text-emerald-700">3回</p>
+          <div className="mt-2 flex items-center gap-1.5" aria-hidden>
+            <span className="h-1 rounded-full bg-sky-300/80 w-12" />
+            <span className="h-1 rounded-full bg-emerald-300/80 w-8" />
+            <span className="h-1 rounded-full bg-slate-200 w-16" />
           </div>
         </div>
 
-        <div className="mt-5 rounded-3xl bg-slate-50 p-5">
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold text-slate-400">
-                最近の記録
-              </p>
-              <p className="mt-1 text-[15px] font-bold">
-                📍 よこはまこどもの国
-              </p>
-              <p className="mt-1 text-xs text-slate-500">6月8日 · ☀️</p>
-            </div>
-            <div className="rounded-full bg-white px-2.5 py-1 text-xs font-bold text-sky-600 shadow-sm">
-              累計 24回
-            </div>
-          </div>
-          <div className="mt-3 flex flex-wrap gap-1.5">
-            <span className="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-bold text-sky-700">
-              😊 たのしかった
-            </span>
-            <span className="rounded-full bg-sky-100 px-2.5 py-1 text-xs font-bold text-sky-700">
-              🔥 また行きたい
-            </span>
-          </div>
-          <div className="mt-3 flex items-center gap-1 text-sm">
-            <span className="text-amber-400">★★★★</span>
-            <span className="text-slate-300">★</span>
-          </div>
-        </div>
-
-        <div className="mt-5">
-          <p className="text-[15px] font-bold">
-            ゆいちゃんの&quot;好き&quot; TOP3
-          </p>
-          <div className="mt-3 space-y-3">
-            {[
-              ["1", "🐾 動物", "12回", "w-full"],
-              ["2", "💧 水遊び", "8回", "w-2/3"],
-              ["3", "🛝 遊具", "5回", "w-1/2"],
-            ].map(([rank, label, count, width]) => (
-              <div key={rank}>
-                <div className="mb-1 flex items-center justify-between text-xs">
-                  <span className="font-bold text-slate-700">
-                    {rank}. {label}
-                  </span>
-                  <span className="text-slate-400">{count}</span>
-                </div>
-                <div className="h-2 rounded-full bg-slate-100">
-                  <div
-                    className={`h-2 rounded-full bg-emerald-400 ${width}`}
-                  />
-                </div>
+        <div className="grid grid-cols-2 gap-2.5 p-3">
+          <div className="col-span-2 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-bold text-sky-500">最近の記録</p>
+                <p className="mt-1 text-sm font-bold leading-snug">
+                  📍 こども自然公園
+                </p>
+                <p className="mt-1 text-xs text-slate-500">
+                  水遊びに夢中 · また行きたい
+                </p>
               </div>
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-6 border-t border-slate-100 pt-5">
-          <p className="text-xs font-bold text-slate-600">
-            📸 写真もまとめて思い出に（近日公開）
-          </p>
-          <div className="mt-2 grid grid-cols-2 gap-2">
-            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-slate-100 text-lg text-slate-300">
-              🖼️
+              <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-600">
+                24件
+              </span>
             </div>
-            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl bg-slate-100 text-lg text-slate-300">
-              ✨
+          </div>
+
+          <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
+            <p className="text-xs font-bold text-emerald-600">好きTOP3</p>
+            <div className="mt-3 space-y-2">
+              {[
+                ["水遊び", "w-full"],
+                ["大型遊具", "w-3/4"],
+                ["動物", "w-1/2"],
+              ].map(([label, width]) => (
+                <div key={label}>
+                  <div className="mb-1 text-[11px] font-bold text-slate-700">
+                    {label}
+                  </div>
+                  <div className="h-2 rounded-full bg-emerald-50">
+                    <div
+                      className={`h-2 rounded-full bg-emerald-400 ${width}`}
+                    />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-sm shadow-sky-900/5">
+            <Image
+              src="/guide/photo-now-lookback.png"
+              alt=""
+              width={1448}
+              height={1086}
+              className="aspect-[4/3] w-full rounded-xl object-cover"
+              sizes="152px"
+              aria-hidden
+            />
+            <p className="mt-2 px-1 text-xs font-bold text-slate-700">
+              写真も一緒に
+            </p>
+          </div>
+
+          <div className="col-span-2 grid grid-cols-[0.82fr_1.18fr] gap-2.5">
+            <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-sm shadow-sky-900/5">
+              <Image
+                src="/guide/photo-now-record.png"
+                alt=""
+                width={1448}
+                height={1086}
+                className="aspect-square w-full rounded-xl object-cover"
+                sizes="110px"
+                aria-hidden
+              />
+            </div>
+            <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
+              <p className="text-xs font-bold text-cyan-600">行った場所</p>
+              <div className="mt-3 space-y-2 text-xs font-bold text-slate-700">
+                <p>6月 じゃぶじゃぶ池</p>
+                <p>5月 科学館</p>
+                <p>4月 大きな公園</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
-      <p className="relative mt-4 text-center text-xs font-medium text-white/85 drop-shadow-sm">
-        あなたの家族の記録がここにたまっていきます
-      </p>
     </div>
   );
 }
@@ -380,7 +389,7 @@ export default function HomePage() {
         <HeroBackground />
 
         <div className="relative mx-auto max-w-6xl px-4 py-10 text-white sm:py-12 lg:py-14">
-          <div className="grid grid-cols-1 items-center gap-9 lg:grid-cols-[1.02fr_0.98fr] lg:gap-12">
+          <div className="grid grid-cols-1 items-center gap-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div className="flex flex-col text-center lg:text-left">
               <p className="mb-4 inline-flex items-center self-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm lg:self-start">
                 <span aria-hidden>📍</span>
@@ -388,8 +397,10 @@ export default function HomePage() {
                   関東甲信越{prefectures.length}県 · {facilityCountLabel}掲載中
                 </span>
               </p>
-              <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3.35rem]">
-                子どもと行ける場所を、近くから探す。
+              <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
+                <span className="inline-block">子どもと行ける場所を、</span>
+                <br className="hidden sm:block" />
+                <span className="inline-block">近くから探す。</span>
               </h1>
               <p className="sr-only">子どもと行ける場所を探せるメモリップ</p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
@@ -438,7 +449,7 @@ export default function HomePage() {
             </div>
 
             <div className="flex justify-center lg:justify-end">
-              <MemoryPreviewCard />
+              <HeroMemoryCardCluster />
             </div>
           </div>
         </div>
@@ -626,85 +637,92 @@ export default function HomePage() {
             </p>
           </div>
           <div
-            className="mt-7 flex flex-col gap-3 lg:grid lg:grid-cols-[minmax(0,0.76fr)_auto_minmax(0,0.76fr)_auto_minmax(0,0.76fr)_auto_minmax(0,1.2fr)_auto_minmax(0,1.2fr)] lg:items-stretch lg:gap-3"
-            aria-label="記録から次のおでかけにつながる5段階フロー"
+            className="mt-7 grid grid-cols-1 gap-3 lg:grid-cols-[0.54fr_auto_0.54fr_auto_1.08fr_auto_1.18fr] lg:items-stretch"
+            aria-label="記録から次のおでかけにつながる4ステップ"
           >
-            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-sky-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 ring-1 ring-sky-100">
-                <StepSearchIcon />
-              </span>
-              <p className="mt-3 text-xs font-bold text-sky-500">STEP 01</p>
-              <h3 className="mt-1 text-sm font-bold text-slate-900">探す</h3>
+            {[
+              {
+                label: "探す",
+                icon: StepSearchIcon,
+                step: "STEP 01",
+                iconShellClass: "bg-sky-50 ring-sky-100",
+                stepClass: "text-sky-500",
+              },
+              {
+                label: "行く",
+                icon: StepOutingIcon,
+                step: "STEP 02",
+                iconShellClass: "bg-cyan-50 ring-cyan-100",
+                stepClass: "text-cyan-500",
+              },
+            ].map((item, index) => (
+              <div key={item.label} className="contents">
+                <div className="flex min-h-16 items-center justify-center gap-3 rounded-full border border-emerald-100 bg-white/85 px-4 py-3 text-center shadow-sm shadow-emerald-100/40 lg:min-h-32 lg:flex-col lg:rounded-2xl lg:p-4">
+                  <span
+                    className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl ring-1 lg:h-14 lg:w-14 ${item.iconShellClass}`}
+                  >
+                    <item.icon />
+                  </span>
+                  <div>
+                    <p
+                      className={`text-[10px] font-bold lg:text-xs ${item.stepClass}`}
+                    >
+                      {item.step}
+                    </p>
+                    <h3 className="mt-0.5 text-sm font-bold text-slate-900 lg:mt-1">
+                      {item.label}
+                    </h3>
+                  </div>
+                </div>
+
+                {index < 1 && (
+                  <div
+                    className="hidden items-center justify-center text-xl font-bold text-emerald-400 lg:flex lg:px-1"
+                    aria-hidden
+                  >
+                    →
+                  </div>
+                )}
+              </div>
+            ))}
+
+            <div
+              className="hidden items-center justify-center text-xl font-bold text-emerald-400 lg:flex lg:px-1"
+              aria-hidden
+            >
+              →
             </div>
 
-            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
-              <span className="hidden lg:inline" aria-hidden>
-                →
-              </span>
-              <span className="lg:hidden" aria-hidden>
-                ↓
-              </span>
+            <div className="rounded-2xl border border-emerald-100 bg-white/90 p-4 shadow-sm shadow-emerald-100/40 sm:p-5">
+              <div className="flex items-center gap-3">
+                <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 ring-1 ring-emerald-100 lg:h-14 lg:w-14">
+                  <StepRecordIcon />
+                </span>
+                <div>
+                  <p className="text-[10px] font-bold text-emerald-500 lg:text-xs">
+                    STEP 03
+                  </p>
+                  <h3 className="mt-0.5 text-base font-bold leading-snug text-slate-900 sm:text-lg">
+                    記録がたまると、“好き”が見えてくる
+                  </h3>
+                </div>
+              </div>
+              <PreferenceRankingMiniExample compact />
             </div>
 
-            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-cyan-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-50 ring-1 ring-cyan-100">
-                <StepOutingIcon />
-              </span>
-              <p className="mt-3 text-xs font-bold text-cyan-500">STEP 02</p>
-              <h3 className="mt-1 text-sm font-bold text-slate-900">行く</h3>
+            <div
+              className="hidden items-center justify-center text-xl font-bold text-emerald-400 lg:flex lg:px-1"
+              aria-hidden
+            >
+              →
             </div>
 
-            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
-              <span className="hidden lg:inline" aria-hidden>
-                →
-              </span>
-              <span className="lg:hidden" aria-hidden>
-                ↓
-              </span>
-            </div>
-
-            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-emerald-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
-              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 ring-1 ring-emerald-100">
-                <StepRecordIcon />
-              </span>
-              <p className="mt-3 text-xs font-bold text-emerald-500">STEP 03</p>
-              <h3 className="mt-1 text-sm font-bold text-slate-900">
-                記録する
+            <div className="rounded-2xl border border-amber-100 bg-white/90 p-4 shadow-sm shadow-amber-100/40 sm:p-5">
+              <p className="text-xs font-bold text-amber-500">STEP 04</p>
+              <h3 className="mt-1 text-base font-bold leading-snug text-slate-900 sm:text-lg">
+                好きから、次の候補が見つかる
               </h3>
-            </div>
-
-            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
-              <span className="hidden lg:inline" aria-hidden>
-                →
-              </span>
-              <span className="lg:hidden" aria-hidden>
-                ↓
-              </span>
-            </div>
-
-            <div className="rounded-2xl border border-emerald-100 bg-white/85 p-4 shadow-sm shadow-emerald-100/40">
-              <p className="text-xs font-bold text-emerald-500">STEP 04</p>
-              <h3 className="mt-1 text-sm font-bold leading-snug text-slate-900">
-                子どもの“好き”が見える
-              </h3>
-              <PreferenceRankingMiniExample />
-            </div>
-
-            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
-              <span className="hidden lg:inline" aria-hidden>
-                →
-              </span>
-              <span className="lg:hidden" aria-hidden>
-                ↓
-              </span>
-            </div>
-
-            <div className="rounded-2xl border border-amber-100 bg-white/85 p-4 shadow-sm shadow-emerald-100/40">
-              <p className="text-xs font-bold text-amber-500">STEP 05</p>
-              <h3 className="mt-1 text-sm font-bold leading-snug text-slate-900">
-                次のおでかけにつながる
-              </h3>
-              <RecommendationMiniExample />
+              <RecommendationMiniExample compact />
             </div>
           </div>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
@@ -716,9 +734,9 @@ export default function HomePage() {
             </Link>
             <Link
               href="/guide"
-              className="inline-flex items-center justify-center rounded-full border border-emerald-200 bg-white px-6 py-3 text-sm font-bold text-slate-900 transition-colors hover:border-emerald-300 hover:bg-emerald-50 sm:text-base"
+              className="inline-flex items-center justify-center px-3 py-3 text-sm font-bold text-emerald-700 underline decoration-emerald-300 underline-offset-4 transition-colors hover:text-emerald-800 sm:text-base"
             >
-              メモリップでできることを見る
+              メモリップでできることを見る →
             </Link>
           </div>
         </section>

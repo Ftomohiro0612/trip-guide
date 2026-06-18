@@ -197,37 +197,6 @@ export default function GuidePage() {
         </div>
       </section>
 
-      <section className="bg-gradient-to-b from-white to-sky-50/60 py-8 sm:py-10" aria-label="中心メッセージ">
-        <div className="mx-auto max-w-5xl px-4">
-          <div className="relative overflow-hidden rounded-3xl border border-sky-100 bg-gradient-to-br from-sky-50 via-white to-emerald-50 p-6 text-center shadow-sm shadow-sky-100/70 sm:p-8">
-            <span
-              className="absolute left-6 top-5 text-xl text-sky-300/80 sm:left-10 sm:text-2xl"
-              aria-hidden
-            >
-              ♡
-            </span>
-            <span
-              className="absolute right-8 top-7 text-xl text-emerald-300/80 sm:right-12 sm:text-2xl"
-              aria-hidden
-            >
-              🌱
-            </span>
-            <span
-              className="absolute bottom-5 left-1/2 text-lg text-cyan-300/70"
-              aria-hidden
-            >
-              👣
-            </span>
-            <p className="relative mx-auto max-w-3xl text-balance text-lg font-bold leading-relaxed text-slate-900 sm:text-2xl">
-              子どもが、どこで、何に夢中だったか。おでかけの記録が増えるほど、家族だけの成長アルバムになっていきます。
-            </p>
-            <p className="relative mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-              写真がある日も、ない日も。場所と子どもの反応だけでも残せます。
-            </p>
-          </div>
-        </div>
-      </section>
-
       <section className="bg-sky-50/60 py-14 sm:py-16" aria-labelledby="memory-flow-heading">
         <div className="mx-auto grid max-w-5xl gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-3xl border border-white bg-white p-2 shadow-sm shadow-sky-100/70">
@@ -287,6 +256,9 @@ export default function GuidePage() {
               </article>
             ))}
           </div>
+          <p className="mx-auto mt-8 max-w-2xl rounded-full border border-sky-100 bg-white px-5 py-3 text-center text-sm font-bold leading-relaxed text-slate-700 shadow-sm shadow-sky-100/50">
+            使い方の流れがわかったら、次はメモリップで今できることを見てみてください。
+          </p>
         </div>
       </section>
 
