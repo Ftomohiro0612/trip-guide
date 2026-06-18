@@ -75,24 +75,231 @@ const storySections = [
   },
 ];
 
+function StepSearchIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <path
+        d="M8 34 Q12 26 20 20"
+        stroke="#38bdf8"
+        strokeWidth="1.7"
+        strokeDasharray="2 3"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path
+        d="M20 6 C15.5 6 11 10 11 15.5 C11 22 20 32 20 32 S29 22 29 15.5 C29 10 24.5 6 20 6Z"
+        fill="#38bdf8"
+      />
+      <circle cx="20" cy="15.5" r="4.2" fill="white" />
+      <path
+        d="M32 10 L32.8 12.8 L36 13.5 L32.8 14.2 L32 17 L31.2 14.2 L28 13.5 L31.2 12.8Z"
+        fill="#34d399"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+function StepOutingIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <path
+        d="M8 31 C12 28 15 27 20 28 C25 29 28 27 32 24"
+        stroke="#38bdf8"
+        strokeWidth="1.7"
+        strokeDasharray="2 3"
+        strokeLinecap="round"
+      />
+      <path
+        d="M13.5 12 C11.5 12.5 10.5 14.5 11.2 16.8 L13.2 23.2 C14 25.8 16.3 27 18.5 26.2 C20.9 25.4 21.8 23.1 20.9 20.5 L18.8 14.4 C18 12.1 15.8 11.4 13.5 12Z"
+        fill="#38bdf8"
+        opacity="0.18"
+      />
+      <path
+        d="M13.5 12 C11.5 12.5 10.5 14.5 11.2 16.8 L13.2 23.2 C14 25.8 16.3 27 18.5 26.2 C20.9 25.4 21.8 23.1 20.9 20.5 L18.8 14.4 C18 12.1 15.8 11.4 13.5 12Z"
+        stroke="#38bdf8"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M24.8 10 C22.5 9.8 20.8 11.2 20.6 13.6 L20 20.1 C19.8 22.9 21.5 24.8 24 25 C26.4 25.2 28.2 23.5 28.5 20.9 L29 14.2 C29.2 11.8 27.3 10.2 24.8 10Z"
+        fill="#34d399"
+        opacity="0.2"
+      />
+      <path
+        d="M24.8 10 C22.5 9.8 20.8 11.2 20.6 13.6 L20 20.1 C19.8 22.9 21.5 24.8 24 25 C26.4 25.2 28.2 23.5 28.5 20.9 L29 14.2 C29.2 11.8 27.3 10.2 24.8 10Z"
+        stroke="#34d399"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M12.2 19.4 C14 18.2 17.4 17.2 20.4 18.4"
+        stroke="#38bdf8"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20.4 16.4 C22.5 15.2 26.2 15.4 28.6 17"
+        stroke="#34d399"
+        strokeWidth="1.5"
+        strokeLinecap="round"
+      />
+      <path
+        d="M32 8 L32.7 10.6 L35.5 11.2 L32.7 11.8 L32 14.5 L31.3 11.8 L28.5 11.2 L31.3 10.6Z"
+        fill="#38bdf8"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+function StepRecordIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <rect
+        x="9"
+        y="7"
+        width="20"
+        height="25"
+        rx="3"
+        fill="#06b6d4"
+        opacity="0.12"
+      />
+      <rect
+        x="9"
+        y="7"
+        width="20"
+        height="25"
+        rx="3"
+        stroke="#06b6d4"
+        strokeWidth="1.7"
+      />
+      <line
+        x1="14"
+        y1="14"
+        x2="26"
+        y2="14"
+        stroke="#06b6d4"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+      <line
+        x1="14"
+        y1="19"
+        x2="22"
+        y2="19"
+        stroke="#06b6d4"
+        strokeWidth="1.4"
+        strokeLinecap="round"
+      />
+      <path
+        d="M14 24.5 L17 27.5 L23 22"
+        stroke="#34d399"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path
+        d="M31 10 L31.6 12.4 L34 13 L31.6 13.6 L31 16 L30.4 13.6 L28 13 L30.4 12.4Z"
+        fill="#38bdf8"
+        opacity="0.9"
+      />
+    </svg>
+  );
+}
+
+function StepGrowthIcon() {
+  return (
+    <svg
+      viewBox="0 0 40 40"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className="h-10 w-10"
+      aria-hidden
+    >
+      <path
+        d="M20 34 L20 20"
+        stroke="#34d399"
+        strokeWidth="2"
+        strokeLinecap="round"
+      />
+      <path
+        d="M20 26 Q13 21 10 13 Q17 12 20 20"
+        fill="#34d399"
+        opacity="0.75"
+      />
+      <path
+        d="M20 23 Q27 18 30 10 Q23 9 20 17"
+        fill="#34d399"
+        opacity="0.55"
+      />
+      <path
+        d="M29 30 L29.7 32.8 L33 33.5 L29.7 34.2 L29 37 L28.3 34.2 L25 33.5 L28.3 32.8Z"
+        fill="#38bdf8"
+        opacity="0.9"
+      />
+      <path
+        d="M10 26 L10.5 28 L13 28.5 L10.5 29 L10 31 L9.5 29 L7 28.5 L9.5 28Z"
+        fill="#06b6d4"
+        opacity="0.7"
+      />
+      <rect
+        x="14"
+        y="34"
+        width="12"
+        height="4.5"
+        rx="2.25"
+        fill="#34d399"
+        opacity="0.2"
+      />
+      <rect
+        x="14"
+        y="34"
+        width="12"
+        height="4.5"
+        rx="2.25"
+        stroke="#34d399"
+        strokeWidth="1"
+      />
+    </svg>
+  );
+}
+
 const howToSteps = [
   {
-    icon: "🔎",
+    icon: StepSearchIcon,
     title: "遊び場を探す",
     body: "雨の日、無料、水遊び、近くの施設など、家族に合うおでかけ先を探します。",
   },
   {
-    icon: "👟",
+    icon: StepOutingIcon,
     title: "おでかけする",
     body: "実際に行って、子どもが何を楽しんだかを見ます。写真があっても、なくても大丈夫です。",
   },
   {
-    icon: "📝",
+    icon: StepRecordIcon,
     title: "少しだけ記録する",
     body: "行った場所、子どもの反応、満足度、また行きたい気持ちを残します。",
   },
   {
-    icon: "🌱",
+    icon: StepGrowthIcon,
     title: "子どもの“好き”が見えてくる",
     body: "記録が増えるほど、どんな場所や遊びが好きなのかが見えてきます。",
   },
@@ -265,8 +472,8 @@ export default function GuidePage() {
                 className="rounded-3xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-100/50"
               >
                 <div className="flex items-center justify-between gap-3">
-                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-2xl ring-1 ring-emerald-100">
-                    {step.icon}
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/75 ring-1 ring-emerald-100">
+                    <step.icon />
                   </span>
                   <span className="text-xs font-bold text-emerald-500">
                     {String(index + 1).padStart(2, "0")}
