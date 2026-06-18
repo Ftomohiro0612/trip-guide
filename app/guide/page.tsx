@@ -55,23 +55,46 @@ const storySections = [
   {
     icon: "/guide/icon-story-record.png",
     iconAlt: "記録を表す3Dアイコン",
-    eyebrow: "A little record",
-    title: "おでかけを、少しだけ記録に",
-    body: "毎回きれいな文章を書かなくても大丈夫。写真がある日は写真を添えて、ない日は場所と子どもの反応だけでも。その日のおでかけが、あとから見返せる家族の記録になります。",
+    eyebrow: "Find favorites",
+    title: "気づかなかった“好き”が見えてくる",
+    body: "水遊びが好き、広い公園が好き、電車が好きなど、記録が増えるほど子どもの好みが見えてきます。",
   },
   {
     icon: "/guide/icon-story-favorites.png",
     iconAlt: "好きなことを表す3Dアイコン",
-    eyebrow: "Child's favorites",
-    title: "子どもの“好き”が見えてくる",
-    body: "反応タグ(遊具・水遊び・きょうだいで遊んだ…)、満足度、また行きたい度を子どもごとに記録。写真だけでは残りにくい“何に夢中だったか”が、記録として積み重なります。",
+    eyebrow: "Family history",
+    title: "わが家だけのおでかけ履歴が残る",
+    body: "どこに行ったか、誰が楽しんだか、また行きたいかが家族ごとの記録として残ります。同じ場所にまた行ったときには、子どもの反応の変化や成長も振り返れます。",
   },
   {
     icon: "/guide/icon-story-growth.png",
     iconAlt: "成長を表す3Dアイコン",
-    eyebrow: "Growth record",
-    title: "同じ場所で、成長を振り返る",
-    body: "同じ施設に行くほど、その場所での記録がたまります。子どもの反応や“好き”の変化は、記録が増えるほど見えてきます。月に一度、少し見返すだけでも、家族の記録は続いていきます。",
+    eyebrow: "Next outing",
+    title: "“好き”に合う遊び場を見つけやすくなる",
+    body: "反応や行きたい場所をもとに、次のおでかけ候補を考えやすくなります。",
+  },
+];
+
+const howToSteps = [
+  {
+    icon: "🔎",
+    title: "遊び場を探す",
+    body: "雨の日、無料、水遊び、近くの施設など、家族に合うおでかけ先を探します。",
+  },
+  {
+    icon: "👟",
+    title: "おでかけする",
+    body: "実際に行って、子どもが何を楽しんだかを見ます。写真があっても、なくても大丈夫です。",
+  },
+  {
+    icon: "📝",
+    title: "少しだけ記録する",
+    body: "行った場所、子どもの反応、満足度、また行きたい気持ちを残します。",
+  },
+  {
+    icon: "🌱",
+    title: "子どもの“好き”が見えてくる",
+    body: "記録が増えるほど、どんな場所や遊びが好きなのかが見えてきます。",
   },
 ];
 
@@ -225,6 +248,42 @@ export default function GuidePage() {
         </div>
       </section>
 
+      <section className="bg-gradient-to-b from-sky-50/60 to-white py-14 sm:py-16" aria-labelledby="how-to-heading">
+        <div className="mx-auto max-w-6xl px-4">
+          <div className="text-center">
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
+              How to use
+            </p>
+            <h2 id="how-to-heading" className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
+              メモリップの使い方
+            </h2>
+          </div>
+          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {howToSteps.map((step, index) => (
+              <article
+                key={step.title}
+                className="rounded-3xl border border-emerald-100 bg-white p-5 shadow-sm shadow-emerald-100/50"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-50 text-2xl ring-1 ring-emerald-100">
+                    {step.icon}
+                  </span>
+                  <span className="text-xs font-bold text-emerald-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
+                </div>
+                <h3 className="mt-5 text-base font-bold leading-snug text-slate-900">
+                  {step.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {step.body}
+                </p>
+              </article>
+            ))}
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gradient-to-b from-sky-50/60 to-slate-50 py-14 sm:py-16" aria-labelledby="current-features-heading">
         <div className="mx-auto max-w-6xl px-4">
           <div className="text-center">
@@ -266,6 +325,14 @@ export default function GuidePage() {
 
       <section className="bg-white py-14 sm:py-16" aria-labelledby="recording-heading">
         <div className="mx-auto max-w-6xl px-4">
+          <div className="mb-8 text-center">
+            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
+              Memorip value
+            </p>
+            <h2 id="recording-heading" className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
+              子どもの“好き”が見えると、おでかけがもっと楽になります
+            </h2>
+          </div>
           <div className="grid gap-5 lg:grid-cols-3">
             {storySections.map((section) => (
               <article
@@ -285,12 +352,11 @@ export default function GuidePage() {
                 <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
                   {section.eyebrow}
                 </p>
-                <h2
-                  id={section.title === "おでかけを、少しだけ記録に" ? "recording-heading" : undefined}
+                <h3
                   className="text-balance text-xl font-bold leading-tight text-slate-900 sm:text-2xl"
                 >
                   {section.title}
-                </h2>
+                </h3>
                 <p className="mt-4 text-sm leading-relaxed text-slate-600 sm:text-base">
                   {section.body}
                 </p>
