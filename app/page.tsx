@@ -4,6 +4,13 @@ import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import { JsonLd } from "@/components/JsonLd";
 import MapViewClient from "@/components/MapViewClient";
+import {
+  PreferenceRankingMiniExample,
+  RecommendationMiniExample,
+  StepOutingIcon,
+  StepRecordIcon,
+  StepSearchIcon,
+} from "@/components/MemoripFlowFigures";
 import QuickFilter from "@/components/QuickFilter";
 import { FEATURED_FACILITY_IDS } from "@/lib/config";
 import {
@@ -344,20 +351,6 @@ export default function HomePage() {
       count: countByFacilityTag("小学生向け"),
     },
   ];
-  const recordValueItems = [
-    {
-      title: "行った場所を残せる",
-      body: "行った日と場所が、家族のおでかけ履歴になります。",
-    },
-    {
-      title: "子どもの反応が見える",
-      body: "「楽しかった」「また行きたい」を子どもごとに残せます。",
-    },
-    {
-      title: "次のおでかけ候補が見つかる",
-      body: "好きなテーマや行きたい場所から、次の候補を考えやすくなります。",
-    },
-  ];
   const featured = FEATURED_FACILITY_IDS.map((id) =>
     visibleFacilities.find((facility) => facility.id === id),
   ).filter((facility): facility is Facility => Boolean(facility));
@@ -632,20 +625,87 @@ export default function HomePage() {
               行った場所と子どもの反応を少し残しておくと、あとから“この子は何が好きだったか”を振り返れます。記録が増えるほど、次に行きたい場所も見つけやすくなります。
             </p>
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-3">
-            {recordValueItems.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-2xl border border-emerald-100 bg-white/85 p-4 shadow-sm shadow-emerald-100/40"
-              >
-                <h3 className="text-sm font-bold text-slate-900">
-                  {item.title}
-                </h3>
-                <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  {item.body}
-                </p>
-              </div>
-            ))}
+          <div
+            className="mt-7 flex flex-col gap-3 lg:grid lg:grid-cols-[minmax(0,0.76fr)_auto_minmax(0,0.76fr)_auto_minmax(0,0.76fr)_auto_minmax(0,1.2fr)_auto_minmax(0,1.2fr)] lg:items-stretch lg:gap-3"
+            aria-label="記録から次のおでかけにつながる5段階フロー"
+          >
+            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-sky-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-sky-50 ring-1 ring-sky-100">
+                <StepSearchIcon />
+              </span>
+              <p className="mt-3 text-xs font-bold text-sky-500">STEP 01</p>
+              <h3 className="mt-1 text-sm font-bold text-slate-900">探す</h3>
+            </div>
+
+            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
+              <span className="hidden lg:inline" aria-hidden>
+                →
+              </span>
+              <span className="lg:hidden" aria-hidden>
+                ↓
+              </span>
+            </div>
+
+            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-cyan-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-50 ring-1 ring-cyan-100">
+                <StepOutingIcon />
+              </span>
+              <p className="mt-3 text-xs font-bold text-cyan-500">STEP 02</p>
+              <h3 className="mt-1 text-sm font-bold text-slate-900">行く</h3>
+            </div>
+
+            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
+              <span className="hidden lg:inline" aria-hidden>
+                →
+              </span>
+              <span className="lg:hidden" aria-hidden>
+                ↓
+              </span>
+            </div>
+
+            <div className="flex min-h-32 flex-col items-center justify-center rounded-2xl border border-emerald-100 bg-white/85 p-4 text-center shadow-sm shadow-emerald-100/40">
+              <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-50 ring-1 ring-emerald-100">
+                <StepRecordIcon />
+              </span>
+              <p className="mt-3 text-xs font-bold text-emerald-500">STEP 03</p>
+              <h3 className="mt-1 text-sm font-bold text-slate-900">
+                記録する
+              </h3>
+            </div>
+
+            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
+              <span className="hidden lg:inline" aria-hidden>
+                →
+              </span>
+              <span className="lg:hidden" aria-hidden>
+                ↓
+              </span>
+            </div>
+
+            <div className="rounded-2xl border border-emerald-100 bg-white/85 p-4 shadow-sm shadow-emerald-100/40">
+              <p className="text-xs font-bold text-emerald-500">STEP 04</p>
+              <h3 className="mt-1 text-sm font-bold leading-snug text-slate-900">
+                子どもの“好き”が見える
+              </h3>
+              <PreferenceRankingMiniExample />
+            </div>
+
+            <div className="flex items-center justify-center text-xl font-bold text-emerald-400 lg:px-1">
+              <span className="hidden lg:inline" aria-hidden>
+                →
+              </span>
+              <span className="lg:hidden" aria-hidden>
+                ↓
+              </span>
+            </div>
+
+            <div className="rounded-2xl border border-amber-100 bg-white/85 p-4 shadow-sm shadow-emerald-100/40">
+              <p className="text-xs font-bold text-amber-500">STEP 05</p>
+              <h3 className="mt-1 text-sm font-bold leading-snug text-slate-900">
+                次のおでかけにつながる
+              </h3>
+              <RecommendationMiniExample />
+            </div>
           </div>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
