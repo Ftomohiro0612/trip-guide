@@ -107,33 +107,21 @@ const howToSteps = [
 const futureIdeas = [
   {
     title: "月ごとの思い出アルバム",
-    body: "1か月のおでかけや写真・記録を自動でまとめて、家族で見返しやすい思い出アルバムに。毎月少し見返すだけで、家族の歩みが残っていきます。",
+    body: "1か月のおでかけや写真・記録をまとめて、家族で見返しやすく。",
     icon: "/guide/icon-future-album.png",
     iconAlt: "月ごとの思い出アルバムを表す3Dアイコン",
   },
   {
     title: "子どもごとの成長日記",
-    body: "子どもごとに「好き」や反応の変化を、時系列でやさしく振り返れるように。写真がなくても、行った場所と反応だけで成長が見えてきます。",
+    body: "子どもごとの「好き」や反応の変化を、時系列で振り返れるように。",
     icon: "/guide/icon-future-growth.png",
     iconAlt: "子どもごとの成長日記を表す3Dアイコン",
   },
   {
     title: "写真プリント・アルバム化",
-    body: "デジタルの記録を、そのまま手元に残せる写真プリントやアルバムに。気に入った思い出を形にして残せるようにしたいと考えています。",
+    body: "気に入った思い出を、写真プリントやアルバムとして形に残せるように。",
     icon: "/guide/icon-future-print.png",
     iconAlt: "写真プリントやアルバム化を表す3Dアイコン",
-  },
-  {
-    title: "家族で見返せる思い出レポート",
-    body: "よく行った場所やその月の思い出を、家族で見返しやすい形に整理。一年の歩みをふり返る時間につなげたいと考えています。",
-    icon: "/guide/icon-future-report.png",
-    iconAlt: "家族で見返せる思い出レポートを表す3Dアイコン",
-  },
-  {
-    title: "将来的には家族向けの有料サービス",
-    body: "記録が増えた家族向けに、より便利なまとめ機能や保存体験を。これらは将来的に検討している構想で、提供時期は未定です。",
-    icon: "/guide/icon-future-premium.png",
-    iconAlt: "家族向けの有料サービス構想を表す3Dアイコン",
   },
 ];
 
@@ -344,67 +332,58 @@ export default function GuidePage() {
         </div>
       </section>
 
-      <section className="bg-slate-50 py-14 sm:py-16" aria-labelledby="future-ideas-heading">
+      <section className="bg-slate-50 py-10 sm:py-12" aria-labelledby="future-ideas-heading">
         <div className="mx-auto max-w-5xl px-4">
-          <div className="rounded-3xl border border-emerald-100 bg-white p-6 shadow-sm shadow-emerald-100/50 sm:p-8">
-            <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
-              Future ideas
-            </p>
-            <h2 id="future-ideas-heading" className="text-balance text-2xl font-bold text-slate-900 sm:text-3xl">
-              これから広げたいこと
-            </h2>
-            <p className="mt-3 text-sm leading-relaxed text-slate-600 sm:text-base">
-              以下は今後広げたい構想です(提供時期は未定)。
-            </p>
-            <div className="mt-6 grid gap-4 sm:grid-cols-2">
-              {futureIdeas.map((idea, index) => (
-                <div
-                  key={idea.title}
-                  className={`rounded-2xl border border-emerald-100 bg-emerald-50/70 p-5 ${
-                    index === futureIdeas.length - 1 ? "sm:col-span-2" : ""
-                  }`}
-                >
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-emerald-100">
-                      <Image
-                        src={idea.icon}
-                        alt={idea.iconAlt}
-                        width={1254}
-                        height={1254}
-                        className="h-14 w-14 object-contain"
-                        sizes="56px"
-                      />
-                    </div>
-                    <div>
-                      <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-white px-2 text-xs font-bold text-emerald-600 shadow-sm">
-                        {String(index + 1).padStart(2, "0")}
-                      </span>
-                      <h3 className="mt-3 text-balance text-base font-bold leading-snug text-slate-900">
-                        {idea.title}
-                      </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                        {idea.body}
-                      </p>
-                    </div>
+          <p className="mb-2 text-xs font-bold uppercase tracking-widest text-emerald-500">
+            Future ideas
+          </p>
+          <h2 id="future-ideas-heading" className="text-balance text-xl font-bold text-slate-900 sm:text-2xl">
+            これから広げたいこと
+          </h2>
+          <p className="mt-2 text-xs leading-relaxed text-slate-500 sm:text-sm">
+            以下は今後広げたい構想です(提供時期は未定)。
+          </p>
+          <div className="mt-5 grid gap-3 sm:grid-cols-3">
+            {futureIdeas.map((idea, index) => (
+              <div
+                key={idea.title}
+                className="rounded-2xl border border-emerald-100 bg-white/80 p-4 shadow-sm shadow-emerald-100/40"
+              >
+                <div className="flex items-center gap-3">
+                  <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-emerald-50 ring-1 ring-emerald-100">
+                    <Image
+                      src={idea.icon}
+                      alt={idea.iconAlt}
+                      width={1254}
+                      height={1254}
+                      className="h-10 w-10 object-contain"
+                      sizes="40px"
+                    />
                   </div>
+                  <span className="text-xs font-bold text-emerald-500">
+                    {String(index + 1).padStart(2, "0")}
+                  </span>
                 </div>
-              ))}
-            </div>
+                <h3 className="mt-4 text-balance text-sm font-bold leading-snug text-slate-900 sm:text-base">
+                  {idea.title}
+                </h3>
+                <p className="mt-2 text-sm leading-relaxed text-slate-600">
+                  {idea.body}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
-      <section className="bg-white py-14 sm:py-16" aria-labelledby="facility-info-heading">
-        <div className="mx-auto max-w-3xl px-4 text-center">
-          <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-full bg-amber-50 text-2xl ring-1 ring-amber-100">
-            <span aria-hidden>📍</span>
+      <section className="bg-white py-5" aria-label="施設情報について">
+        <div className="mx-auto max-w-4xl px-4">
+          <div className="rounded-2xl border border-amber-100 bg-amber-50/40 px-4 py-3 text-left text-sm leading-relaxed text-slate-600 sm:flex sm:items-start sm:gap-2">
+            <span className="shrink-0 font-bold text-slate-800">施設情報について：</span>
+            <span>
+              関東甲信越を中心に、親子で行ける施設を順次追加・更新中です。すべての施設を網羅しているものではなく、少しずつ増やしています。
+            </span>
           </div>
-          <h2 id="facility-info-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
-            施設情報について
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            関東甲信越を中心に、親子で行ける施設を順次追加・更新中です。すべての施設を網羅しているものではなく、少しずつ増やしています。
-          </p>
         </div>
       </section>
 
@@ -413,6 +392,9 @@ export default function GuidePage() {
           <h2 id="guide-cta-heading" className="text-2xl font-bold text-slate-900 sm:text-3xl">
             おでかけを、家族の記録に。
           </h2>
+          <p className="mx-auto mt-3 max-w-2xl text-sm leading-relaxed text-slate-600 sm:text-base">
+            まずは気になる遊び場を探して、行った日を記録に残してみてください。
+          </p>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
             <Link
               href="/auth/register"
