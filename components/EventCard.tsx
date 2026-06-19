@@ -7,11 +7,19 @@ interface EventCardProps {
   showPrefecture?: boolean;
 }
 
+function isPdfOfficialUrl(url: string) {
+  const path = url.split(/[?#]/, 1)[0];
+  return path.toLowerCase().endsWith(".pdf");
+}
+
 export default function EventCard({
   view,
   showPrefecture = true,
 }: EventCardProps) {
   const { event, facilityName, facilitySlug, prefectureLabel } = view;
+  const officialLinkLabel = isPdfOfficialUrl(event.official_url)
+    ? "公式PDFを見る"
+    : "公式で詳細を見る";
   const labels = [
     event.price_label && {
       key: "price",
@@ -74,7 +82,7 @@ export default function EventCard({
           rel="noopener noreferrer"
           className="inline-flex shrink-0 items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-slate-800"
         >
-          公式で詳細を見る
+          {officialLinkLabel}
         </a>
       </div>
 
