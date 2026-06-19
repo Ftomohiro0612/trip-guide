@@ -29,7 +29,6 @@ const AGE_TAG_OPTIONS = [
 ];
 
 const DETAIL_TAG_OPTIONS = [
-  { value: "雨の日OK", label: "☂️ 雨の日OK" },
   { value: "完全屋内", label: "🏠 完全屋内" },
   { value: "冬季限定", label: "⛄ 冬季限定" },
   { value: "季節限定", label: "🌸 季節限定" },

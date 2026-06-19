@@ -1,8 +1,9 @@
-import type { FacilityTag } from "@/types/facility";
+import type { Facility, FacilityTag } from "@/types/facility";
 
 interface TagMeta {
   slug: string;
   tag: FacilityTag;
+  match?: (f: Facility) => boolean;
   emoji: string;
   title: string;
   lead: string;
@@ -13,10 +14,11 @@ export const TAG_META: TagMeta[] = [
   {
     slug: "rainy-day",
     tag: "雨の日OK",
+    match: (f) => f.rain_friendly === "◎",
     emoji: "☂️",
     title: "雨の日でも遊べるスポット",
     lead: "急な雨でもがっかりしない。屋根のある屋内施設や雨でも快適に過ごせる遊び場をピックアップ。",
-    long: "予定の日にあいにくの雨…そんな時こそ屋内遊び場・水族館・科学館・博物館の出番。子供は退屈知らず、親もゆったり。雨の日OKタグの全施設を県別にチェックできます。",
+    long: "予定の日にあいにくの雨…そんな時こそ屋内遊び場・水族館・科学館・博物館の出番。子供は退屈知らず、親もゆったり。雨でも快適(◎)な全施設を県別にチェックできます。",
   },
   {
     slug: "indoor-rainy",
@@ -101,6 +103,14 @@ export function getTagMetaBySlug(slug: string): TagMeta | undefined {
 
 export function getTagMetaByTag(tag: FacilityTag): TagMeta | undefined {
   return TAG_INDEX.get(tag);
+}
+
+export function getTagFacilities(
+  meta: TagMeta,
+  facilities: Facility[],
+): Facility[] {
+  if (meta.match) return facilities.filter(meta.match);
+  return facilities.filter((f) => f.tags.includes(meta.tag));
 }
 
 export function tagHref(tag: FacilityTag): string | null {

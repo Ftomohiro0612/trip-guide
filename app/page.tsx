@@ -327,7 +327,7 @@ export default function HomePage() {
       label: "雨の日OK",
       icon: "☔",
       href: "/tag/rainy-day",
-      count: countByFacilityTag("雨の日OK"),
+      count: visibleFacilities.filter((f) => f.rain_friendly === "◎").length,
     },
     {
       label: "無料",

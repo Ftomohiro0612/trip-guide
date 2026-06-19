@@ -4,7 +4,7 @@ import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
 import MapViewClient from "@/components/MapViewClient";
 import { visibleFacilities, prefectures } from "@/lib/facilities";
-import { TAG_META, getTagMetaBySlug } from "@/lib/tags";
+import { TAG_META, getTagFacilities, getTagMetaBySlug } from "@/lib/tags";
 import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const meta = getTagMetaBySlug(slug);
   if (!meta) return { title: "見つかりませんでした" };
-  const list = visibleFacilities.filter((f) => f.tags.includes(meta.tag));
+  const list = getTagFacilities(meta, visibleFacilities);
   return {
     title: `${meta.title} ${list.length}選 (関東甲信越)`,
     description: `${meta.lead} 関東甲信越9県で${meta.title}を${list.length}施設掲載。`,
@@ -35,7 +35,7 @@ export default async function TagPage({ params }: Props) {
   const meta = getTagMetaBySlug(slug);
   if (!meta) notFound();
 
-  const list = visibleFacilities.filter((f) => f.tags.includes(meta.tag));
+  const list = getTagFacilities(meta, visibleFacilities);
   const byPref = prefectures.map((p) => ({
     ...p,
     items: list.filter((f) => f.prefecture_id === p.id),

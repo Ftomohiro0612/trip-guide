@@ -141,7 +141,7 @@ export default async function PrefecturePage({ params }: Props) {
             emoji="🎈"
           />
           <StatCard
-            href={`/facilities?prefectures=${meta.id}&tags=雨の日OK`}
+            href={`/facilities?prefectures=${meta.id}&rain=◎`}
             label="雨でも遊べる"
             count={rainCount}
             emoji="☂️"
