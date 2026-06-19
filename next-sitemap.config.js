@@ -21,6 +21,7 @@ module.exports = {
       await config.transform(config, "/events"),
       await config.transform(config, "/events/tokyo"),
       await config.transform(config, "/events/kanagawa"),
+      await config.transform(config, "/events/yamanashi"),
       await config.transform(config, "/events/chiba"),
       await config.transform(config, "/events/saitama"),
     ];
