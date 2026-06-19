@@ -18,6 +18,11 @@ module.exports = {
   additionalPaths: async (config) => {
     return [
       await config.transform(config, "/facilities"),
+      await config.transform(config, "/events"),
+      await config.transform(config, "/events/tokyo"),
+      await config.transform(config, "/events/kanagawa"),
+      await config.transform(config, "/events/chiba"),
+      await config.transform(config, "/events/saitama"),
     ];
   },
   transform: async (config, path) => {
@@ -25,6 +30,8 @@ module.exports = {
     if (path === "/") priority = 1.0;
     else if (path.startsWith("/prefecture/") || path.startsWith("/category/"))
       priority = 0.9;
+    else if (path === "/events") priority = 0.85;
+    else if (path.startsWith("/events/")) priority = 0.75;
     else if (path === "/facilities") priority = 0.8;
     else if (path.startsWith("/facilities/")) priority = 0.6;
     return {
