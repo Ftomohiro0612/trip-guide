@@ -5,24 +5,23 @@
 
 ## ⏩ 2026-06-19 セッション後半・最新状態(ここが最新・最優先で読む)
 
-**本番 HEAD = origin/main = `d96fe80`**(コード実体=`e99c205`)。線形・履歴破壊なし: …`f53281e` → `0a69adf`(HANDOFF) → `8b79898`(fix: facility URLs+休館注記 id801/485/488) → `e99c205`(feat: event PDF label) → `d96fe80`(docs: HANDOFF)。
+**本番 HEAD = origin/main = `cbe534b`**。線形・履歴破壊なし: …`e99c205` → `d96fe80`(docs) → `4e6c510`(docs: HANDOFF) → `e3adfbb`(feat: Events Step2) → `2635c6d`(雨の日 code) → `cbe534b`(雨の日 data)。
 
 **1) ✅ データ衛生ミニバッチ=本番リリース済み**(`8b79898`+`e99c205`・下の「施設データ衛生」節に詳細)。id801/485 旧URL(404)→公式へ差替・id488 長期休館注記・EventCard PDF表記。本番7観点PASS。**重要教訓(メモリ`feedback_address_verification`追記済)**: 404 URLの差替先は「200が返る」だけで採用せず施設名/運営者まで実体確認(id485で`seibuen-yuuenchi.jp`=消費者金融の詐称ドメインを回避・正=`seibuen-amusement-park.jp`)。
 
-**2) 🟡 Events Step2(施設ページのイベント表示)= preview実装が作業ツリーに未コミットで存在(レビュー待ち)**
-- 正本仕様(確定): `.codex/events-step2-facility-display-spec.md`。配置=「どんな子に合いそう？」の後・写真ギャラリー前。カード=コンパクト(日付/イベント名/summary2行/🎯recommended_for_label/公式リンクのみ・PDFは「公式PDFを見る」)。0件施設は非表示・最大3件・`isVisibleEvent`同条件。施設名リンク/県/確認日/タグ群は出さない。
-- **未コミット変更(Codex msg 1884 のpreview)**: `lib/events.ts`(getVisibleEventsByFacility追加)・`components/FacilityEvents.tsx`(新規)・`app/facilities/[slug]/page.tsx`(挿入)・`components/EventCard.tsx`(isPdfOfficialUrl共有化)。
-- **スクショ**: `.codex/screenshots/agmsg-1884-step2-preview/`(facility-471=PDF/813=通常/001=セクション非表示・各PC1280/SP375)。**PM/オーナー未レビュー**。
-- **次の一手**: スクショをオーナーがレビュー→見た目GO→lint/build確認→commit(A=実装)→デプロイ。⚠️**未コミットなので、別タスクのデプロイ(Codexのtree-clean)前にStep2を先にcommitして退避**(未コミットtrackedはtree-cleanで飛ぶ教訓)。
-- イベント紐づき8施設: 245/247/471/519/675/684/781/813(各1件・全有効)。
+**2) ✅ Events Step2(施設ページのイベント表示)= 本番リリース完了(2026-06-19)= `e3adfbb`**
+- 正本仕様: `.codex/events-step2-facility-display-spec.md`。配置=「どんな子に合いそう？」の後・写真ギャラリー前。カード=コンパクト(日付/イベント名/summary2行/🎯recommended_for_label/公式リンクのみ・PDFは「公式PDFを見る」)。0件施設は非表示・最大3件。施設名リンク/県/確認日/タグ群は出さない。
+- 実装4ファイル: `lib/events.ts`(getVisibleEventsByFacility)・`components/FacilityEvents.tsx`(新規)・`app/facilities/[slug]/page.tsx`(挿入)・`components/EventCard.tsx`(isPdfOfficialUrl共有化)。**commitは4ファイル限定**(.codex/未追跡の混入なし)。
+- スクショ(オーナー見た目GO済み): `.codex/screenshots/agmsg-1884-step2-preview/`。本番裏取りPASS: facility-471=「公式PDFを見る」/813=「公式で詳細を見る」/001=節非表示。lint/build PASS・Vercel READY。
+- イベント紐づき8施設: 245/247/471/519/675/684/781/813(各1件)。
 
-**3) 🟢 雨の日ページ rain_friendly 一本化 = 仕様GO済み・Codex未投入(次セッションで投入)**
-- 正本仕様(確定・オーナーGO): `.codex/rainy-day-tag-consolidation-spec.md`。**Events Step2とは別タスク(混ぜない)**。
-- 要旨: `/tag/rainy-day` は残し掲載判定を `tags`文字列「雨の日OK」→ **`rain_friendly==="◎"`(≒511件)**に。**△は載せない**。「雨の日OK」タグ完全引退(データtags文字列・/facilitiesタグ絞り込み・一覧判定ロジック すべて不使用)。TAG_METAにページ定義は残し`match: f=>f.rain_friendly==="◎"`を正本。詳細/カードの雨バッジは`rain_friendly`正本で不変(検証例=ちびまる子ちゃんランド facility-003)。**Commit A=コード**(tags.ts/tag page/FilterSidebar/MobileFilterBar/トップ件数 countByFacilityTag→rain◎/県page ?tags=雨の日OK→?rain=◎)**Commit B=データ**(144施設のtagsから「雨の日OK」文字列除去のみ・型は触らない最小差分)。旧URL`?tags=雨の日OK`→rain◎のシムは任意。
-- 発端=HUGHUG(京王あそびの森 HUG HUG・facility-241)が◎なのにrainy-dayから漏れていた。原因=詳細バッジは`rain_friendly`、rainy-dayは`tags`文字列という2系統不整合(◎511 vs タグ142)。
-- 進め方: Codex実装(push/deployせず報告)→PM裏取り(511件・HUGHUG掲載・三島スカイウォーク等△非掲載・/facilities雨フィルタ二重解消・詳細バッジ存続・構造diff144施設のみ・build/lint)→デプロイ。
+**3) ✅ 雨の日ページ rain_friendly 一本化 = 本番リリース完了(2026-06-19)= `2635c6d`(code)+ `cbe534b`(data)**
+- 正本仕様: `.codex/rainy-day-tag-consolidation-spec.md`。掲載判定を `tags`文字列「雨の日OK」→ **`rain_friendly==="◎"`** に切替・**△は載せない**・「雨の日OK」タグ完全引退。TAG_METAにページ定義は残し`getTagFacilities`+`match: f=>f.rain_friendly==="◎"`を正本。詳細/カードの雨バッジは`rain_friendly`で不変。
+- **Commit A=コード6ファイル**(lib/tags.ts に match?+getTagFacilities / tag page metadata+本体を getTagFacilities 経由 / FilterSidebar・MobileFilterBar から「雨の日OK」option削除 / トップ件数 countByFacilityTag→rain◎ / 県page `?tags=雨の日OK`→`?rain=◎` / long文言)。types/facility.ts は不変(最小差分)。lib/filter.ts 旧URL互換シムは省略(内部リンクを ?rain=◎ に直したため不要)。
+- **Commit B=データ**: facilities_data.json の tags から「雨の日OK」除去(**144施設ちょうど**)。意味的deep-diff=タグ以外の変更0・他施設0・件数1056不変。
+- 本番裏取り全PASS: **/tag/rainy-day=511選/511施設**(142→正常化)・**HUGHUG(facility-241)掲載**(元バグ解消)・三島スカイウォーク等△/×は0件非掲載・/facilities フィルタ二重解消(「雨天対応◎/△/×」のみ・footer動線は維持)・トップカード件数511。raw◎513−exclude_candidate◎2件(id135/id146)=visible511。
 
-**ワーカー**: PID1136(健全・1本)。msg `1884`(Step2 preview)を 15:53 実行開始、本セッション終了時点で `Processed id=1884` 未記録(実行中の可能性)→ 次セッションで worker ログの `Processed message id=1884` を確認してから次タスク投入。
+**ワーカー(教訓・最重要)**: 本セッションで msg `1884`(Step2 preview)が「Running のまま Processed 出ない凍結」に。真因=**preview撮影用 Next dev サーバ(port3024)＋孤児codexが `& codex` の出力ファイルハンドルを保持**しワーカーが永久ブロック(report hang ではない)。復旧=1884既読化→handle保持者だけスコープkill→クリーン全再起動(新PID36920)。**作業ツリーの未コミット変更はプロセスkillでは消えない**。教訓は永続メモリ`project_codex_worker_ops`に詳細記録。**現ワーカー=PID36920(健全・1本)**。デプロイ系の完了裏取りは worker ログでなく origin/main前進＋本番curl(SSGは数十秒の伝播ラグあり・再curlで反映)。
 
 ---
 
