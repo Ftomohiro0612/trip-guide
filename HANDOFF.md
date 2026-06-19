@@ -22,7 +22,15 @@
 - **直近の戦略コンテキストは永続メモリに健在**(自動ロード): `project_friday_release_plan`(金曜リリース→継続育成へ転換)/`project_top_guide_roles`(トップ=探す入口・/guide=価値LP、round2本番反映`cb484ab`)/`project_events_system_direction`/`feedback_*`各種。直近コミットは `git log --oneline` 参照(featured6=`6d40e61`/`24c8022`、/guide後半軽量化=`11fc4bd`、/facilities画像400修正=`f836c5d`、top/guide round2=`cb484ab`)。
 - **教訓**: 重要な docs 編集は早めに commit する(Codexのデプロイ前ツリークリーンで未コミット doc が飛ぶ)。
 
-**🔜 次の一手(オーナーGO待ち)**: イベント継続運用の仕組み化(週次 水取得/木裏取り/金 県別X投稿/土日 反応確認)・トップ掲載・施設ページ掲載・X告知。設計=`.codex/events-system-design-spec.md`。
+**✅ 施設データ衛生ミニバッチ + イベントPDF表記 = 本番リリース完了(2026-06-19)**:
+- 本番 HEAD=`e99c205`(`8b79898` fix: refresh facility URLs and add closure note (id801/id485/id488) → `e99c205` feat: label PDF official links on event cards)。線形・履歴破壊なし(親=…f53281e→0a69adf→8b79898→e99c205)。facilities件数1056不変・変更は id485/488/801 の3施設のみ。
+- id801 ソレイユの丘: 旧url `seibu-la.co.jp/soleil-park/`(404)→ 公式 `soleil-park.jp`。id485 西武園ゆうえんち: 旧url `seibu-leisure.co.jp/amusementpark/`(404)→ 公式 `seibuen-amusement-park.jp`(**★差替候補 `seibuen-yuuenchi.jp` は消費者金融の詐称ドメインで不採用=URL補完禁止ルールが効いた事例**)。id488 所沢航空発祥記念館: description末尾に「※2025/9/1〜2027/3末(予定)リニューアル工事のため長期休館中」注記(url不変・掲載継続・閉館表現なし)。各 provenance(source_urls/source_checked_at/source_notes)整備。
+- EventCard: `official_url` がPDF(?/#除去→.pdf)のとき右上ボタンを「公式PDFを見る」表記(データ駆動・非PDFは「公式で詳細を見る」維持)。鉄道博物館イベント evt-471 で適用。
+- PM裏取り全PASS: 構造diff(変更=id485/488/801のみ・件数不変)・lint/build PASS・本番7観点(各リンク先URL差替・詐称ドメイン不在・休館注記・PDF表記・他イベント通常表記維持)。正本仕様 `.codex/facility-url-hygiene-spec.md`。
+- 任意(別バッチ判断): id675 アンデルセン公園「TripAdvisor日本1位」は年・出典欠落の断定(2015年実績)→今回スコープ外。後続で年・出典付与か表現緩和を判断。
+- 教訓(メモリ `feedback_address_verification` 追記済み): 404URLの差替先は「200が返る」だけで採用せず施設名/所在地/運営者まで実体確認する(類似ドメインに別運営の詐称サイトが居る)。
+
+**🔜 次の一手**: **Events Step2(施設ページへのイベント表示)**=オーナー次の本命。並行で残る継続運用の仕組み化(週次 水取得/木裏取り/金 県別X投稿/土日 反応確認)・トップ掲載・X告知。設計=`.codex/events-system-design-spec.md`。
 
 ---
 
