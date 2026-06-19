@@ -1,15 +1,10 @@
 import Link from "next/link";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import type { EventView } from "@/lib/events";
+import { isPdfOfficialUrl, type EventView } from "@/lib/events";
 
 interface EventCardProps {
   view: EventView;
   showPrefecture?: boolean;
-}
-
-function isPdfOfficialUrl(url: string) {
-  const path = url.split(/[?#]/, 1)[0];
-  return path.toLowerCase().endsWith(".pdf");
 }
 
 export default function EventCard({

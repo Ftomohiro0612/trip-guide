@@ -126,6 +126,17 @@ export function getVisibleEventsByPrefecture(
   );
 }
 
+export function getVisibleEventsByFacility(
+  facilityId: number,
+  today = getBuildDateString(),
+  maxAgeDays = EVENT_PAGE_MAX_AGE_DAYS,
+  limit = 3,
+): EventItem[] {
+  return getVisibleEvents(today, maxAgeDays)
+    .filter((event) => event.facility_id === facilityId)
+    .slice(0, limit);
+}
+
 export function getFacilityForEvent(event: EventItem): Facility | undefined {
   return facilityById.get(event.facility_id);
 }
@@ -149,6 +160,11 @@ export function toEventView(
 
 export function isEventPrefecture(value: string): value is EventPrefecture {
   return (eventPrefectures as string[]).includes(value);
+}
+
+export function isPdfOfficialUrl(url: string) {
+  const path = url.split(/[?#]/, 1)[0];
+  return path.toLowerCase().endsWith(".pdf");
 }
 
 export function isThisWeekend(

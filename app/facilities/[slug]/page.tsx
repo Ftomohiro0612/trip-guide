@@ -4,6 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
+import FacilityEvents from "@/components/FacilityEvents";
 import FacilityGallery from "@/components/FacilityGallery";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
@@ -379,6 +380,11 @@ export default async function FacilityDetailPage({ params }: Props) {
               </div>
             </section>
           )}
+
+          <FacilityEvents
+            facilityId={facility.id}
+            prefectureId={facility.prefecture_id}
+          />
 
           <FacilityGallery
             images={galleryImages}
