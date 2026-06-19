@@ -43,6 +43,7 @@ export type RecommendedForTag =
   | "experience"
   | "exhibition"
   | "science"
+  | "space"
   | "dinosaur"
   | "character"
   | "nature"
