@@ -3,6 +3,29 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
+## 🆕 新セッション即時引き継ぎ(2026-06-19・最重要・ここを最初に読む)
+
+**本番 HEAD = origin/main = `f53281e`**(線形: …24c8022 → `c789278`(feat: events hub) → `10131bf`(fix: sitemap config) → `f53281e`(Update generated sitemap))。履歴破壊なし・facilities_data.json 無変更。
+
+**✅ イベント仕組み化 Step1 = 本番リリース完了(2026-06-19)**:
+- `/events` を「県カードだけの入口」→ **イベントハブ**へ格上げ。構成: Hero → 県カード → 全アクティブイベント一覧(開催日順) → フィルタ(都道府県/今週末/今月/屋内/無料/予約不要/**好き**=recommended_for_tags)。`/events/[県]`(tokyo/kanagawa/chiba/saitama)は共通 `EventCard` で県別表示。h1=「子どもと行けるイベントを、エリアや"好き"から探す」。
+- データ: `data/events_data.json`(公式一次情報のみ・4県×2=8件)。各イベントに `recommended_for_tags`(既存 `RecommendedForTag` 語彙に統一＋`space`新規追加=星/宇宙)/`recommended_for_label`/`recommended_for_note`(非断定「〜に合いそう」)/`is_free`/`is_indoor`/`reservation`。`isVisibleEvent` の**5条件フィルタ不変**(終了/鮮度切れ30日/official_url無/施設未紐づき/draft・cancelled 非表示)。
+- 正本仕様: `.codex/events-step1-spec.md` + `.codex/events-step1-hub-spec.md`。実装はCodex・PM裏取り全PASS(本番直接grep: /events+4県200・他県404・sitemapに/events+4県・公式リンク別タブ8・施設リンク8・console0)。
+- 任意の後磨き(未対応): 鉄道博物館の公式リンクがPDF → カードで「公式PDF」表記(必須でない)。
+
+**★今回の重要教訓(永続メモリ化済み)**:
+- **`project_sitemap_committed_static`**: `public/sitemap-0.xml` はコミット済み静的ファイルを本番が配信。新ページをsitemapに載せるには `npm run build` で再生成 → **public/sitemap-0.xml を commit 必須**(next-sitemap.config.js の設定変更だけ/CDN purge/`vercel --prod --force` では本番に出ない)。squashで再生成sitemapが脱落して/eventsが出ず、`f53281e`で解決。
+- **Codexワーカー**: deploy系タスク(commit+push+vercel)で**報告ステップのハングが頻発**。実装・push・vercel自体は成功し報告だけ固まる→**報告を待たずPMが git/本番で直接裏取り**。復旧手順は `codex-worker-ops`。
+
+**⚠️ HANDOFF.md は今セッション中に巻き戻った(2026-06-16〜06-18 の詳細が消失)**:
+- 原因=Codexがデプロイ用にツリーをクリーン化した際、**未コミットだった docs(HANDOFF.md / MEMORIPS_AI_ROLES.md / RESEARCH_METHODOLOGY.md)の編集が破棄**された。コード/本番は無影響。
+- **直近の戦略コンテキストは永続メモリに健在**(自動ロード): `project_friday_release_plan`(金曜リリース→継続育成へ転換)/`project_top_guide_roles`(トップ=探す入口・/guide=価値LP、round2本番反映`cb484ab`)/`project_events_system_direction`/`feedback_*`各種。直近コミットは `git log --oneline` 参照(featured6=`6d40e61`/`24c8022`、/guide後半軽量化=`11fc4bd`、/facilities画像400修正=`f836c5d`、top/guide round2=`cb484ab`)。
+- **教訓**: 重要な docs 編集は早めに commit する(Codexのデプロイ前ツリークリーンで未コミット doc が飛ぶ)。
+
+**🔜 次の一手(オーナーGO待ち)**: イベント継続運用の仕組み化(週次 水取得/木裏取り/金 県別X投稿/土日 反応確認)・トップ掲載・施設ページ掲載・X告知。設計=`.codex/events-system-design-spec.md`。
+
+---
+
 ## 🔄 新セッション即時引き継ぎ(2026-06-15 時点・最重要)
 
 **進行中タスク: なし(Codexワーカーはアイドル・lockのPIDが生きていれば再利用/死んでいれば必要時のみ再起動)**。直近の依頼はすべて本番反映・PM検証・**オーナー実機確認済み**。下記「待ち行列」に仕様確定済みの未着手あり(#5写真からおでかけ記録ほか)。
