@@ -78,7 +78,7 @@ type VisitChildTagRow = {
 
 type ExistingVisitChild = {
   id: string;
-  satisfaction: Satisfaction;
+  satisfaction?: Satisfaction;
 };
 
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
@@ -254,10 +254,16 @@ export default function EditVisitPage() {
         )
         .eq("id", visitId)
         .single();
-      const childrenResult = await supabase
+      let childrenResult = await supabase
         .from("children")
         .select("id, nickname, birth_year, birth_month, avatar_url")
         .order("sort_order", { ascending: true });
+      if (childrenResult.error?.message.includes("sort_order")) {
+        childrenResult = await supabase
+          .from("children")
+          .select("id, nickname, birth_year, birth_month, avatar_url")
+          .order("created_at", { ascending: true });
+      }
       const visitChildrenResult = await supabase
         .from("visit_children")
         .select("id, child_id, satisfaction")
@@ -342,13 +348,14 @@ export default function EditVisitPage() {
       const nextSatisfactions: Record<string, Satisfaction> = {};
       for (const row of visitChildRows) {
         const satisfaction = coerceOption(row.satisfaction, satisfactionValues);
-        if (!satisfaction) continue;
         nextExistingVisitChildren[row.child_id] = {
           id: row.id,
-          satisfaction,
+          ...(satisfaction ? { satisfaction } : {}),
         };
         nextSelectedChildIds.push(row.child_id);
-        nextSatisfactions[row.child_id] = satisfaction;
+        if (satisfaction) {
+          nextSatisfactions[row.child_id] = satisfaction;
+        }
       }
       const nextExistingChildTags: Record<string, string[]> = {};
       const nextChildTags: Record<string, string[]> = {};
@@ -791,6 +798,9 @@ export default function EditVisitPage() {
         {children.length > 0 && (
           <section className="space-y-2">
             <p className="text-sm font-bold text-slate-800">今回行った子ども</p>
+            <p className="text-xs text-slate-500">
+              子どもを選ぶと、満足度と「何を楽しんでいた？」を記録できます
+            </p>
             <div className="space-y-2">
               {children.map((child) => (
                 <label

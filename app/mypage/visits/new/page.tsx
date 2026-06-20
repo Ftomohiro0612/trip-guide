@@ -192,10 +192,16 @@ export default function NewVisitPage() {
 
     async function loadChildren() {
       const supabase = createClient();
-      const { data, error: childrenError } = await supabase
+      let childrenResult = await supabase
         .from("children")
         .select("id, nickname, birth_year, avatar_url")
         .order("sort_order", { ascending: true });
+      if (childrenResult.error?.message.includes("sort_order")) {
+        childrenResult = await supabase
+          .from("children")
+          .select("id, nickname, birth_year, avatar_url")
+          .order("created_at", { ascending: true });
+      }
 
       const { data: tagData } = await supabase
         .from("reaction_tags")
@@ -205,6 +211,7 @@ export default function NewVisitPage() {
 
       if (!active) return;
       if (tagData) setReactionTagMaster(tagData as ReactionTag[]);
+      const { data, error: childrenError } = childrenResult;
       if (childrenError) {
         setError(childrenError.message);
       } else {
