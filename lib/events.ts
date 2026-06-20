@@ -81,10 +81,18 @@ const facilityIdSet = new Set(facilities.map((facility) => facility.id));
 const facilityById = new Map(facilities.map((facility) => [facility.id, facility]));
 
 export function getBuildDateString(date = new Date()): string {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
+  // 日本向けサイトのため "今日" は Asia/Tokyo 基準で判定する。
+  // Vercel ビルドサーバは UTC のため、日本で当日確認したイベントが
+  // 未来(age<0)扱いになり非表示になる問題があった。
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Asia/Tokyo",
+    year: "numeric",
+    month: "2-digit",
+    day: "2-digit",
+  }).formatToParts(date);
+  const pick = (type: string) =>
+    parts.find((part) => part.type === type)?.value ?? "";
+  return `${pick("year")}-${pick("month")}-${pick("day")}`;
 }
 
 export function isVisibleEvent(
