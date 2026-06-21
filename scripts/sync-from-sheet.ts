@@ -26,6 +26,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   長野県: "nagano",
   山梨県: "yamanashi",
   東京都: "tokyo",
+  茨城県: "ibaraki",
   栃木県: "tochigi",
   埼玉県: "saitama",
   新潟県: "niigata",

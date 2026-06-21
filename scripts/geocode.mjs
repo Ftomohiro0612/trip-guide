@@ -10,6 +10,7 @@ const PREFECTURE_CENTROIDS = {
   shizuoka: { lat: 34.9769, lng: 138.3831 },
   nagano: { lat: 36.2048, lng: 138.2529 },
   yamanashi: { lat: 35.6635, lng: 138.5683 },
+  ibaraki: { lat: 36.3418, lng: 140.4468 },
 };
 
 const USER_AGENT =

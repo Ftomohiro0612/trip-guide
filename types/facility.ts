@@ -7,7 +7,8 @@ export type PrefectureId =
   | "saitama"
   | "niigata"
   | "chiba"
-  | "kanagawa";
+  | "kanagawa"
+  | "ibaraki";
 
 export type RainFriendly = "◎" | "△" | "×";
 

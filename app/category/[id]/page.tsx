@@ -29,7 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const visibleCount = getFacilitiesByCategory(meta.id).length;
   return {
     title: `${meta.name} ${visibleCount}選 (関東甲信越)`,
-    description: `${desc} 関東甲信越9県の${meta.name}を${visibleCount}施設まとめて掲載。`,
+    description: `${desc} 関東甲信越10県の${meta.name}を${visibleCount}施設まとめて掲載。`,
     alternates: { canonical: `/category/${meta.id}` },
   };
 }

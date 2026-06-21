@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const list = getTagFacilities(meta, visibleFacilities);
   return {
     title: `${meta.title} ${list.length}選 (関東甲信越)`,
-    description: `${meta.lead} 関東甲信越9県で${meta.title}を${list.length}施設掲載。`,
+    description: `${meta.lead} 関東甲信越10県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },
