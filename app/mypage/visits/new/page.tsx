@@ -59,6 +59,13 @@ type ReactionTag = {
   tag_type: "interest" | "behavior";
 };
 
+type OtherNotes = {
+  interest: string;
+  behavior: string;
+};
+
+const otherNoteMaxLength = 100;
+
 const familyRevisitOptions: { value: FamilyRevisit; label: string }[] = [
   { value: "yes", label: "また行きたい" },
   { value: "conditional", label: "条件次第" },
@@ -152,6 +159,16 @@ function makeFacilitySlug(name: string): string {
   return `manual-${encoded.slice(0, 120) || Date.now().toString(36)}`;
 }
 
+function normalizeOtherNote(value: string, selected: boolean): string | null {
+  if (!selected) return null;
+  const note = value.trim();
+  return note ? note : null;
+}
+
+function isBehaviorOtherTag(tag: ReactionTag): boolean {
+  return tag.tag_type !== "interest" && (tag.id === "other" || tag.label === "その他");
+}
+
 export default function NewVisitPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
@@ -180,6 +197,12 @@ export default function NewVisitPage() {
   const [expectation, setExpectation] = useState<Expectation | "">("");
   const [reactionTagMaster, setReactionTagMaster] = useState<ReactionTag[]>([]);
   const [childTags, setChildTags] = useState<Record<string, string[]>>({});
+  const [interestOtherSelected, setInterestOtherSelected] = useState<
+    Record<string, boolean>
+  >({});
+  const [childOtherNotes, setChildOtherNotes] = useState<Record<string, OtherNotes>>(
+    {},
+  );
   const [parentMemo, setParentMemo] = useState("");
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(true);
@@ -286,7 +309,7 @@ export default function NewVisitPage() {
     selectedChildIds.includes(child.id),
   );
   const interestTags = reactionTagMaster.filter(
-    (tag) => tag.tag_type === "interest",
+    (tag) => tag.tag_type === "interest" && tag.id !== "other" && tag.label !== "その他",
   );
   const behaviorTags = reactionTagMaster.filter(
     (tag) => tag.tag_type !== "interest",
@@ -312,6 +335,21 @@ export default function NewVisitPage() {
         ? current.filter((id) => id !== childId)
         : [...current, childId],
     );
+  }
+
+  function updateOtherNote(
+    childId: string,
+    field: keyof OtherNotes,
+    value: string,
+  ) {
+    setChildOtherNotes((current) => ({
+      ...current,
+      [childId]: {
+        interest: current[childId]?.interest ?? "",
+        behavior: current[childId]?.behavior ?? "",
+        [field]: value,
+      },
+    }));
   }
 
   function finishAfterSave() {
@@ -406,6 +444,17 @@ export default function NewVisitPage() {
         child_id: child.id,
         satisfaction: satisfactions[child.id],
         child_age_at_visit: visitedYear - child.birth_year,
+        interest_other_note: normalizeOtherNote(
+          childOtherNotes[child.id]?.interest ?? "",
+          Boolean(interestOtherSelected[child.id]),
+        ),
+        behavior_other_note: normalizeOtherNote(
+          childOtherNotes[child.id]?.behavior ?? "",
+          (childTags[child.id] ?? []).some((tagId) => {
+            const tag = reactionTagMaster.find((item) => item.id === tagId);
+            return tag ? isBehaviorOtherTag(tag) : false;
+          }),
+        ),
       }));
 
       const { data: visitChildRows, error: childError } = await supabase
@@ -647,20 +696,53 @@ export default function NewVisitPage() {
                   <div className="mt-3 space-y-3">
                     {[
                       {
+                        kind: "interest" as const,
                         title: `${child.nickname}は何を楽しんでいた？`,
                         tags: interestTags,
                       },
                       {
+                        kind: "behavior" as const,
                         title: `${child.nickname}はどんな様子だった？`,
                         tags: behaviorTags,
                       },
-                    ].map(({ title, tags }) =>
-                      tags.length > 0 ? (
+                    ].map(({ kind, title, tags }) => {
+                      const behaviorOtherTag = tags.find(isBehaviorOtherTag);
+                      const otherSelected =
+                        kind === "interest"
+                          ? Boolean(interestOtherSelected[child.id])
+                          : Boolean(
+                              behaviorOtherTag &&
+                                (childTags[child.id] ?? []).includes(
+                                  behaviorOtherTag.id,
+                                ),
+                            );
+                      const otherNote =
+                        childOtherNotes[child.id]?.[kind] ?? "";
+                      const showBlock = tags.length > 0 || kind === "interest";
+                      return showBlock ? (
                         <div key={title} className="space-y-1.5">
                           <p className="text-xs font-bold text-slate-600">
                             {title}
                           </p>
                           <div className="flex flex-wrap gap-1.5">
+                            {kind === "interest" && (
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setInterestOtherSelected((prev) => ({
+                                    ...prev,
+                                    [child.id]: !prev[child.id],
+                                  }))
+                                }
+                                className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
+                                  otherSelected
+                                    ? "bg-brand border-brand text-white"
+                                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                                }`}
+                              >
+                                その他
+                              </button>
+                            )}
                             {tags.map((tag) => {
                               const selected = (childTags[child.id] ?? []).includes(tag.id);
                               return (
@@ -689,10 +771,23 @@ export default function NewVisitPage() {
                               );
                             })}
                           </div>
+                          {otherSelected && (
+                            <input
+                              type="text"
+                              value={otherNote}
+                              onChange={(event) =>
+                                updateOtherNote(child.id, kind, event.target.value)
+                              }
+                              maxLength={otherNoteMaxLength}
+                              placeholder="自由に書けます（任意）"
+                              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                            />
+                          )}
                         </div>
-                      ) : null,
-                    )}
-                    {(childTags[child.id]?.length ?? 0) === 0 && (
+                      ) : null;
+                    })}
+                    {(childTags[child.id]?.length ?? 0) === 0 &&
+                      !interestOtherSelected[child.id] && (
                       <p className="text-xs text-slate-400">スキップしてもOKです</p>
                     )}
                   </div>

@@ -66,10 +66,19 @@ type ReactionTag = {
   tag_type: "interest" | "behavior";
 };
 
+type OtherNotes = {
+  interest: string;
+  behavior: string;
+};
+
+const otherNoteMaxLength = 100;
+
 type VisitChildRow = {
   id: string;
   child_id: string;
   satisfaction: string | null;
+  interest_other_note: string | null;
+  behavior_other_note: string | null;
 };
 
 type VisitChildTagRow = {
@@ -203,6 +212,16 @@ function sortedUnique(values: string[]): string[] {
   return Array.from(new Set(values)).sort();
 }
 
+function normalizeOtherNote(value: string, selected: boolean): string | null {
+  if (!selected) return null;
+  const note = value.trim();
+  return note ? note : null;
+}
+
+function isBehaviorOtherTag(tag: ReactionTag): boolean {
+  return tag.tag_type !== "interest" && (tag.id === "other" || tag.label === "その他");
+}
+
 export default function EditVisitPage() {
   const params = useParams<{ id: string }>();
   const router = useRouter();
@@ -237,6 +256,12 @@ export default function EditVisitPage() {
   const [satisfactions, setSatisfactions] = useState<Record<string, Satisfaction>>({});
   const [reactionTagMaster, setReactionTagMaster] = useState<ReactionTag[]>([]);
   const [childTags, setChildTags] = useState<Record<string, string[]>>({});
+  const [interestOtherSelected, setInterestOtherSelected] = useState<
+    Record<string, boolean>
+  >({});
+  const [childOtherNotes, setChildOtherNotes] = useState<Record<string, OtherNotes>>(
+    {},
+  );
   const [existingVisitChildren, setExistingVisitChildren] = useState<
     Record<string, ExistingVisitChild>
   >({});
@@ -267,7 +292,9 @@ export default function EditVisitPage() {
       }
       const visitChildrenResult = await supabase
         .from("visit_children")
-        .select("id, child_id, satisfaction")
+        .select(
+          "id, child_id, satisfaction, interest_other_note, behavior_other_note",
+        )
         .eq("visit_id", visitId);
       const tagMasterResult = await supabase
         .from("reaction_tags")
@@ -360,6 +387,11 @@ export default function EditVisitPage() {
       }
       const nextExistingChildTags: Record<string, string[]> = {};
       const nextChildTags: Record<string, string[]> = {};
+      const nextInterestOtherSelected: Record<string, boolean> = {};
+      const nextChildOtherNotes: Record<string, OtherNotes> = {};
+      const behaviorOtherTagId = ((tagMasterResult.data ?? []) as ReactionTag[]).find(
+        isBehaviorOtherTag,
+      )?.id;
       const childIdByVisitChildId = new Map(
         visitChildRows.map((row) => [row.id, row.child_id]),
       );
@@ -376,11 +408,32 @@ export default function EditVisitPage() {
           ]);
         }
       }
+      for (const row of visitChildRows) {
+        const interestNote = row.interest_other_note ?? "";
+        const behaviorNote = row.behavior_other_note ?? "";
+        if (interestNote || behaviorNote) {
+          nextChildOtherNotes[row.child_id] = {
+            interest: interestNote,
+            behavior: behaviorNote,
+          };
+        }
+        if (interestNote) {
+          nextInterestOtherSelected[row.child_id] = true;
+        }
+        if (behaviorNote && behaviorOtherTagId) {
+          nextChildTags[row.child_id] = sortedUnique([
+            ...(nextChildTags[row.child_id] ?? []),
+            behaviorOtherTagId,
+          ]);
+        }
+      }
       setExistingVisitChildren(nextExistingVisitChildren);
       setExistingChildTags(nextExistingChildTags);
       setSelectedChildIds(nextSelectedChildIds);
       setSatisfactions(nextSatisfactions);
       setChildTags(nextChildTags);
+      setInterestOtherSelected(nextInterestOtherSelected);
+      setChildOtherNotes(nextChildOtherNotes);
       if (photoResult) {
         if (photoResult.error) {
           setError("写真枚数の読み込みに失敗しました");
@@ -489,7 +542,7 @@ export default function EditVisitPage() {
     selectedChildIds.includes(child.id),
   );
   const interestTags = reactionTagMaster.filter(
-    (tag) => tag.tag_type === "interest",
+    (tag) => tag.tag_type === "interest" && tag.id !== "other" && tag.label !== "その他",
   );
   const behaviorTags = reactionTagMaster.filter(
     (tag) => tag.tag_type !== "interest",
@@ -501,6 +554,21 @@ export default function EditVisitPage() {
         ? current.filter((id) => id !== childId)
         : [...current, childId],
     );
+  }
+
+  function updateOtherNote(
+    childId: string,
+    field: keyof OtherNotes,
+    value: string,
+  ) {
+    setChildOtherNotes((current) => ({
+      ...current,
+      [childId]: {
+        interest: current[childId]?.interest ?? "",
+        behavior: current[childId]?.behavior ?? "",
+        [field]: value,
+      },
+    }));
   }
 
   async function saveVisit(nextStatus?: VisitStatus) {
@@ -594,11 +662,25 @@ export default function EditVisitPage() {
 
       let visitChildId = nextExistingVisitChildren[child.id]?.id;
       if (visitChildId) {
+        const behaviorOtherSelected = (childTags[child.id] ?? []).some((tagId) => {
+          const tag = reactionTagMaster.find((item) => item.id === tagId);
+          return tag ? isBehaviorOtherTag(tag) : false;
+        });
         const updateVisitChildPayload: {
           satisfaction: Satisfaction;
           child_age_at_visit?: number;
+          interest_other_note: string | null;
+          behavior_other_note: string | null;
         } = {
           satisfaction,
+          interest_other_note: normalizeOtherNote(
+            childOtherNotes[child.id]?.interest ?? "",
+            Boolean(interestOtherSelected[child.id]),
+          ),
+          behavior_other_note: normalizeOtherNote(
+            childOtherNotes[child.id]?.behavior ?? "",
+            behaviorOtherSelected,
+          ),
         };
         if (visitedYear !== null) {
           updateVisitChildPayload.child_age_at_visit = visitedYear - child.birth_year;
@@ -613,6 +695,10 @@ export default function EditVisitPage() {
           return;
         }
       } else {
+        const behaviorOtherSelected = (childTags[child.id] ?? []).some((tagId) => {
+          const tag = reactionTagMaster.find((item) => item.id === tagId);
+          return tag ? isBehaviorOtherTag(tag) : false;
+        });
         const { data: insertedChild, error: childInsertError } = await supabase
           .from("visit_children")
           .insert({
@@ -621,6 +707,14 @@ export default function EditVisitPage() {
             satisfaction,
             child_age_at_visit:
               visitedYear === null ? null : visitedYear - child.birth_year,
+            interest_other_note: normalizeOtherNote(
+              childOtherNotes[child.id]?.interest ?? "",
+              Boolean(interestOtherSelected[child.id]),
+            ),
+            behavior_other_note: normalizeOtherNote(
+              childOtherNotes[child.id]?.behavior ?? "",
+              behaviorOtherSelected,
+            ),
           })
           .select("id")
           .single();
@@ -879,20 +973,53 @@ export default function EditVisitPage() {
                   <div className="mt-3 space-y-3">
                     {[
                       {
+                        kind: "interest" as const,
                         title: `${child.nickname}は何を楽しんでいた？`,
                         tags: interestTags,
                       },
                       {
+                        kind: "behavior" as const,
                         title: `${child.nickname}はどんな様子だった？`,
                         tags: behaviorTags,
                       },
-                    ].map(({ title, tags }) =>
-                      tags.length > 0 ? (
+                    ].map(({ kind, title, tags }) => {
+                      const behaviorOtherTag = tags.find(isBehaviorOtherTag);
+                      const otherSelected =
+                        kind === "interest"
+                          ? Boolean(interestOtherSelected[child.id])
+                          : Boolean(
+                              behaviorOtherTag &&
+                                (childTags[child.id] ?? []).includes(
+                                  behaviorOtherTag.id,
+                                ),
+                            );
+                      const otherNote =
+                        childOtherNotes[child.id]?.[kind] ?? "";
+                      const showBlock = tags.length > 0 || kind === "interest";
+                      return showBlock ? (
                         <div key={title} className="space-y-1.5">
                           <p className="text-xs font-bold text-slate-600">
                             {title}
                           </p>
                           <div className="flex flex-wrap gap-1.5">
+                            {kind === "interest" && (
+                              <button
+                                type="button"
+                                onClick={() =>
+                                  setInterestOtherSelected((prev) => ({
+                                    ...prev,
+                                    [child.id]: !prev[child.id],
+                                  }))
+                                }
+                                className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
+                                  otherSelected
+                                    ? "bg-brand border-brand text-white"
+                                    : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                                }`}
+                              >
+                                その他
+                              </button>
+                            )}
                             {tags.map((tag) => {
                               const selected = (childTags[child.id] ?? []).includes(tag.id);
                               return (
@@ -921,10 +1048,23 @@ export default function EditVisitPage() {
                               );
                             })}
                           </div>
+                          {otherSelected && (
+                            <input
+                              type="text"
+                              value={otherNote}
+                              onChange={(event) =>
+                                updateOtherNote(child.id, kind, event.target.value)
+                              }
+                              maxLength={otherNoteMaxLength}
+                              placeholder="自由に書けます（任意）"
+                              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                            />
+                          )}
                         </div>
-                      ) : null,
-                    )}
-                    {(childTags[child.id]?.length ?? 0) === 0 && (
+                      ) : null;
+                    })}
+                    {(childTags[child.id]?.length ?? 0) === 0 &&
+                      !interestOtherSelected[child.id] && (
                       <p className="text-xs text-slate-400">スキップしてもOKです</p>
                     )}
                   </div>

@@ -13,6 +13,8 @@ export type VisitChildCardData = {
   child_id: string;
   child_age_at_visit: number | null;
   satisfaction: string | null;
+  interest_other_note: string | null;
+  behavior_other_note: string | null;
   children: ChildProfile | ChildProfile[] | null;
   visit_child_tags: VisitChildTagData[] | null;
 };
@@ -122,6 +124,9 @@ export function VisitChildCard({
     .filter((tag): tag is { id: string; label: string; icon: string } =>
       Boolean(tag.label),
     );
+  const otherNotes = [row.interest_other_note, row.behavior_other_note]
+    .map((note) => note?.trim())
+    .filter((note): note is string => Boolean(note));
 
   return (
     <article className="bg-white border border-slate-200 rounded-2xl px-4 py-4 space-y-3 shadow-sm">
@@ -162,6 +167,19 @@ export function VisitChildCard({
               <span aria-hidden>{tag.icon}</span>
               {tag.label}
             </span>
+          ))}
+        </div>
+      )}
+
+      {otherNotes.length > 0 && (
+        <div className="space-y-1 border-t border-slate-100 pt-2">
+          {otherNotes.map((note, index) => (
+            <p
+              key={`${index}-${note}`}
+              className="text-sm leading-relaxed text-slate-700"
+            >
+              <span className="font-bold text-slate-500">その他:</span> {note}
+            </p>
           ))}
         </div>
       )}

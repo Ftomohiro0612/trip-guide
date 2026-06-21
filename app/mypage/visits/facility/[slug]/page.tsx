@@ -68,6 +68,10 @@ function hasReactionTags(row: VisitChildCardData): boolean {
   });
 }
 
+function hasOtherNotes(row: VisitChildCardData): boolean {
+  return Boolean(row.interest_other_note?.trim() || row.behavior_other_note?.trim());
+}
+
 function reactionTagLabel(
   tag: NonNullable<VisitChildCardData["visit_child_tags"]>[number],
 ): string | null {
@@ -261,7 +265,7 @@ export default async function FacilityVisitHistoryPage({
           supabase
             .from("visit_children")
             .select(
-              "id, visit_id, child_id, child_age_at_visit, satisfaction, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+              "id, visit_id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
             )
             .in("visit_id", visitIds),
           PHOTO_UPLOAD_ENABLED
@@ -345,7 +349,12 @@ export default async function FacilityVisitHistoryPage({
   }
 
   const growthGroups = Array.from(growthByChild.values()).filter((entries) =>
-    entries.some((entry) => Boolean(entry.row.satisfaction) || hasReactionTags(entry.row)),
+    entries.some(
+      (entry) =>
+        Boolean(entry.row.satisfaction) ||
+        hasReactionTags(entry.row) ||
+        hasOtherNotes(entry.row),
+    ),
   );
 
   return (
@@ -423,7 +432,8 @@ export default async function FacilityVisitHistoryPage({
         <div className="space-y-4">
           {visitRows.map((visit) => {
             const rows = (childrenByVisit.get(visit.id) ?? []).filter(
-              (row) => Boolean(row.satisfaction) || hasReactionTags(row),
+              (row) =>
+                Boolean(row.satisfaction) || hasReactionTags(row) || hasOtherNotes(row),
             );
             const photos = photosByVisit.get(visit.id) ?? [];
             const memo = compactMemo(visit.parent_memo);

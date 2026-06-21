@@ -93,6 +93,10 @@ function hasReactionTags(row: VisitChildCardData): boolean {
   });
 }
 
+function hasOtherNotes(row: VisitChildCardData): boolean {
+  return Boolean(row.interest_other_note?.trim() || row.behavior_other_note?.trim());
+}
+
 function SummaryChip({
   label,
   value,
@@ -145,7 +149,7 @@ export default async function VisitDetailPage({
   const { data: visitChildren } = await supabase
     .from("visit_children")
     .select(
-      "id, child_id, child_age_at_visit, satisfaction, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+      "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
     )
     .eq("visit_id", visitRow.id);
 
@@ -199,7 +203,7 @@ export default async function VisitDetailPage({
   }
 
   const reflectiveChildRows = childRows.filter(
-    (row) => Boolean(row.satisfaction) || hasReactionTags(row),
+    (row) => Boolean(row.satisfaction) || hasReactionTags(row) || hasOtherNotes(row),
   );
   const revisitLabel = chipLabel(familyRevisitLabels, visitRow.family_revisit);
   const fatigueLabel = chipLabel(fatigueLabels, visitRow.parent_fatigue);
