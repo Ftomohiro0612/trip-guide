@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ChildAvatar from "@/components/ChildAvatar";
+import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/server";
+import { buildVisitedPlacesMapData } from "@/lib/visited-places";
 import LogoutButton from "./LogoutButton";
 
 export const metadata: Metadata = { title: "マイページ" };
@@ -373,6 +375,7 @@ export default async function MypagePage() {
   const monthlyData = buildMonthlyData(visits);
   const hasMonthlyData = monthlyData.some((d) => d.count > 0);
   const recentVisits = visits.slice(0, 3);
+  const visitedMapFacilities = buildVisitedPlacesMapData(visits);
 
   const childCategorySummaries = buildChildCategorySummaries(childRows, visits, childVisits);
   const hasChildCategoryRecords = childCategorySummaries.some(
@@ -458,6 +461,15 @@ export default async function MypagePage() {
           </div>
         </section>
       )}
+
+      <section className="space-y-3">
+        <h2 className="font-bold text-slate-800">行った場所マップ</h2>
+        <VisitedPlacesMapClient
+          visitedFacilities={visitedMapFacilities}
+          height={{ mobile: 200, desktop: 260 }}
+          showDetailLink
+        />
+      </section>
 
       {/* 最近の思い出 */}
       {recentMemories.length > 0 && (

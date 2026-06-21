@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
+import { buildVisitedPlacesMapData } from "@/lib/visited-places";
 import {
   familyRevisitLabels,
   fatigueLabels,
@@ -48,6 +50,11 @@ type VisitPhotoThumbRow = {
 type VisitPhotoThumb = {
   thumbPath: string;
   thumbUrl: string | null;
+};
+
+type VisitMapRow = {
+  facility_slug: string | null;
+  visited_on: string | null;
 };
 
 const VISIT_THUMBNAILS_PER_CARD = 2;
@@ -148,11 +155,25 @@ export default async function VisitsPage({
     visitsQuery = visitsQuery.eq("family_revisit", "yes");
   }
 
-  const { data: visits } = visitsQuery
-    ? await visitsQuery
-    : { data: [] };
+  const publishedMapVisitsQuery = user
+    ? supabase
+        .from("visits")
+        .select("facility_slug, visited_on")
+        .eq("user_id", user.id)
+        .eq("status", "published")
+    : null;
+
+  const [{ data: visits }, { data: publishedMapVisits }] = await Promise.all([
+    visitsQuery ? visitsQuery : Promise.resolve({ data: [] }),
+    publishedMapVisitsQuery
+      ? publishedMapVisitsQuery
+      : Promise.resolve({ data: [] }),
+  ]);
 
   const visitRows = (visits ?? []) as Visit[];
+  const visitedMapFacilities = buildVisitedPlacesMapData(
+    (publishedMapVisits ?? []) as VisitMapRow[],
+  );
   const visitIdsForChildren = visitRows.map((visit) => visit.id);
   const [{ data: allVisitChildren }, { data: visitPhotoRows }] =
     visitIdsForChildren.length > 0
@@ -251,6 +272,14 @@ export default async function VisitsPage({
           子どもプロフィールなしで保存しました。あとから登録すると、次回以降は子どもごとの満足度も残せます。
         </div>
       )}
+
+      <section className="space-y-3">
+        <h2 className="font-bold text-slate-800">行った場所マップ</h2>
+        <VisitedPlacesMapClient
+          visitedFacilities={visitedMapFacilities}
+          height={{ mobile: 240, desktop: 360 }}
+        />
+      </section>
 
       {visitRows.length > 0 ? (
         <div className="space-y-3">
