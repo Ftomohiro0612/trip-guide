@@ -63,6 +63,7 @@ type ReactionTag = {
   label: string;
   category: string;
   sort_order: number;
+  tag_type: "interest" | "behavior";
 };
 
 type VisitChildRow = {
@@ -270,7 +271,7 @@ export default function EditVisitPage() {
         .eq("visit_id", visitId);
       const tagMasterResult = await supabase
         .from("reaction_tags")
-        .select("id, label, category, sort_order")
+        .select("id, label, category, sort_order, tag_type")
         .eq("is_active", true)
         .order("sort_order");
       const photoResult = PHOTO_UPLOAD_ENABLED
@@ -486,6 +487,12 @@ export default function EditVisitPage() {
 
   const selectedChildren = children.filter((child) =>
     selectedChildIds.includes(child.id),
+  );
+  const interestTags = reactionTagMaster.filter(
+    (tag) => tag.tag_type === "interest",
+  );
+  const behaviorTags = reactionTagMaster.filter(
+    (tag) => tag.tag_type !== "interest",
   );
 
   function toggleChild(childId: string) {
@@ -869,39 +876,54 @@ export default function EditVisitPage() {
                   ))}
                 </div>
                 {reactionTagMaster.length > 0 && (
-                  <div className="mt-3 space-y-1.5">
-                    <p className="text-xs font-bold text-slate-600">
-                      {child.nickname}は何を楽しんでいた？
-                    </p>
-                    <div className="flex flex-wrap gap-1.5">
-                      {reactionTagMaster.map((tag) => {
-                        const selected = (childTags[child.id] ?? []).includes(tag.id);
-                        return (
-                          <button
-                            key={tag.id}
-                            type="button"
-                            onClick={() =>
-                              setChildTags((prev) => {
-                                const current = prev[child.id] ?? [];
-                                return {
-                                  ...prev,
-                                  [child.id]: selected
-                                    ? current.filter((tagId) => tagId !== tag.id)
-                                    : [...current, tag.id],
-                                };
-                              })
-                            }
-                            className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
-                              selected
-                                ? "bg-brand border-brand text-white"
-                                : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
-                            }`}
-                          >
-                            {tag.label}
-                          </button>
-                        );
-                      })}
-                    </div>
+                  <div className="mt-3 space-y-3">
+                    {[
+                      {
+                        title: `${child.nickname}は何を楽しんでいた？`,
+                        tags: interestTags,
+                      },
+                      {
+                        title: `${child.nickname}はどんな様子だった？`,
+                        tags: behaviorTags,
+                      },
+                    ].map(({ title, tags }) =>
+                      tags.length > 0 ? (
+                        <div key={title} className="space-y-1.5">
+                          <p className="text-xs font-bold text-slate-600">
+                            {title}
+                          </p>
+                          <div className="flex flex-wrap gap-1.5">
+                            {tags.map((tag) => {
+                              const selected = (childTags[child.id] ?? []).includes(tag.id);
+                              return (
+                                <button
+                                  key={tag.id}
+                                  type="button"
+                                  onClick={() =>
+                                    setChildTags((prev) => {
+                                      const current = prev[child.id] ?? [];
+                                      return {
+                                        ...prev,
+                                        [child.id]: selected
+                                          ? current.filter((tagId) => tagId !== tag.id)
+                                          : [...current, tag.id],
+                                      };
+                                    })
+                                  }
+                                  className={`px-2.5 py-1 rounded-full border text-xs font-medium transition-colors ${
+                                    selected
+                                      ? "bg-brand border-brand text-white"
+                                      : "bg-white border-slate-200 text-slate-600 hover:bg-slate-50"
+                                  }`}
+                                >
+                                  {tag.label}
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ) : null,
+                    )}
                     {(childTags[child.id]?.length ?? 0) === 0 && (
                       <p className="text-xs text-slate-400">スキップしてもOKです</p>
                     )}
