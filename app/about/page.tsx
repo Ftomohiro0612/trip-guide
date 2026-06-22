@@ -9,7 +9,7 @@ import {
 export const metadata: Metadata = {
   title: "サイトについて",
   description:
-    "メモリップは、関東甲信越9県の親子で行ける子供向け遊び場を順次追加・更新中の検索サイトです。「今日どこ行く？」をすばやく解決します。",
+    "メモリップは、関東甲信越11県の親子で行ける子供向け遊び場を順次追加・更新中の検索サイトです。「今日どこ行く？」をすばやく解決します。",
   alternates: { canonical: "/about" },
 };
 
@@ -37,7 +37,7 @@ export default function AboutPage() {
         <p className="text-slate-700 leading-relaxed">
           「今日どこ行こう？」「雨だけど楽しめる場所はある？」「無料で遊べる施設は？」
           こんな日常的な疑問に、3秒で答えを返すことを目指しています。
-          現在は関東甲信越9県の {visibleFacilities.length}{" "}
+          現在は関東甲信越11県の {visibleFacilities.length}{" "}
           施設を掲載しています。
         </p>
 

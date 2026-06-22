@@ -64,6 +64,7 @@ const TARGET_PREFECTURES = new Set([
   "東京都",
   "茨城県",
   "栃木県",
+  "群馬県",
   "埼玉県",
   "新潟県",
   "千葉県",
@@ -77,6 +78,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   東京都: "tokyo",
   茨城県: "ibaraki",
   栃木県: "tochigi",
+  群馬県: "gunma",
   埼玉県: "saitama",
   新潟県: "niigata",
   千葉県: "chiba",
@@ -352,12 +354,12 @@ function checkOutOfScopePrefecture(facility) {
 
   const reasons = [];
   if (!isTargetPrefecture(pref)) {
-    reasons.push(`prefecture(${pref || "未入力"})が対象9県外`);
+    reasons.push(`prefecture(${pref || "未入力"})が対象県外`);
   }
 
   if (outOfScopeAddressPrefs.length > 0) {
     reasons.push(
-      `address内に対象9県外の都道府県(${[...new Set(outOfScopeAddressPrefs)].join(",")})を含む`,
+      `address内に対象県外の都道府県(${[...new Set(outOfScopeAddressPrefs)].join(",")})を含む`,
     );
   }
 

@@ -11,6 +11,7 @@ const PREFECTURE_CENTROIDS = {
   nagano: { lat: 36.2048, lng: 138.2529 },
   yamanashi: { lat: 35.6635, lng: 138.5683 },
   ibaraki: { lat: 36.3418, lng: 140.4468 },
+  gunma: { lat: 36.3912, lng: 139.0609 },
 };
 
 const USER_AGENT =
