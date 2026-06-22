@@ -24,6 +24,7 @@ module.exports = {
       await config.transform(config, "/events/yamanashi"),
       await config.transform(config, "/events/chiba"),
       await config.transform(config, "/events/saitama"),
+      await config.transform(config, "/events/ibaraki"),
     ];
   },
   transform: async (config, path) => {

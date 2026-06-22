@@ -15,7 +15,7 @@ export type EventStatus =
 
 export type EventPrefecture = Extract<
   PrefectureId,
-  "tokyo" | "kanagawa" | "yamanashi" | "chiba" | "saitama"
+  "tokyo" | "kanagawa" | "yamanashi" | "chiba" | "saitama" | "ibaraki"
 >;
 
 export type EventReservation = "not_required" | "required" | "unknown";
