@@ -92,7 +92,7 @@
 - [ ] `/map` に対象県マーカー描画(「N施設を表示中」・マーカー数一致)。
 - [ ] `/events/<pref>` 200・掲載中N>0、`/events` ハブに県カード。
 - [ ] 既存県/既存イベント退行なし。
-- [ ] **console / pageerror 0**(`/prefecture/<pref>`・`/map`・新規/既存施設ページ・`/events/<pref>` × PC1280/SP375。PMはブラウザ非保有→Codex本番Playwright)。
+- [ ] **console / pageerror 0**(`/prefecture/<pref>`・`/map`・新規/既存施設ページ・`/events/<pref>` × PC1280/SP375。PMはブラウザ非保有→Codex本番Playwright)。※判定は **error/warning + pageerror**。施設詳細のGoogle Maps埋め込み(`init_embed.js`「Search endpoint requested!」)が出す **`console.debug` は全県共通・第三者由来でブロッカーでない**(群馬で厳密解釈の誤NO-GO実例)。
 - [ ] served hash = origin/main = 期待commit。total施設数・対象県件数・registry件数を報告。
 
 ---
