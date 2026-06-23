@@ -15,11 +15,13 @@
 
 - **兵庫(hyogo)Phase1=本番LIVE完了(2026-06-24・origin/main=`9c9c68d`・13都府県目)**。施設**75件**(新規ID 1444〜1518・主力10=神戸どうぶつ王国/須磨シーワールド/王子動物園/六甲GREENIA/キッザニア甲子園/姫路セントラルパーク/明石公園/東条湖おもちゃ王国/城崎マリンワールド/淡路イングランドの丘)・total1433→**1508**・registry1032→**1107**。候補240→PM4分類(`.codex/hyogo-stepB-review.md`:採用75/次回74/保留88/不採用3)→実装スペック`.codex/hyogo-facilities-phase1-spec.md`。**新県コード波及**(PrefectureId/icons+原画webp/MapView/descriptions/audit bbox・geocode重心/「12→13都府県」7ファイル/sitemap)。events_data不変・**/events/hyogo は未公開(後続)**。PM裏取りで2点修正(①category表示ラベル49件を正規名へ統一 ②牧場系4件=六甲山牧場/ヨーデルの森/但馬牧場公園/イングランドの丘を park→zoo に整合=マザー牧場precedent)。全ゲートGREEN(既存12都府県/既存施設不変・events不変・registry既存1032不変・新カテゴリ0・兵庫audit high/medium0・bbox外0・lint/tsc/build)。**本番検証GO**(PM curl+Codex Playwright PC/SP突合): /prefecture/hyogo「75選」リンク75・/map兵庫マーカー75/全体1503(=1508−exclude5)・/category/動物園にイングランドの丘+六甲山牧場・既存退行なし(osaka132/tokyo191)・全国13都府県・console/pageerror 0。
 
-**本番 HEAD = origin/main = `9c9c68d`**(兵庫Phase1公開時点)。
+- **/events/hyogo イベント公開=本番LIVE完了(2026-06-24・origin/main=`54d213e`・9県目のイベント対象県)**。巡回38件→候補抽出(`.codex/event-candidates-hyogo-2026-06-24.md`:採用29/保留2/不採用17施設)→PMレビュー+オーナー全採用GO→正規化(events_data 92→**121**件)+配線4点(EventPrefecture+hyogo / metadata.prefectures / ハブtitle・description「・兵庫」 / next-sitemap + sitemap-0.xml再生成)。**コード波及なし**(facilities_data/registry 不変)。PM裏取り全GREEN(可視29・既存8県deep-equal不変・タグ統制20語・title整理[1450星空ウォッチング/1498ビーバーお誕生日会]・status scheduled25/ongoing4)→push→**Codex本番Playwright GO**(/events/hyogo掲載中29 PC1280/SP375・フィルタ[兵庫29/今週末41/今月43/屋内69/無料19/予約不要45/好き科学30]・既存osaka25/gunma12退行なし・施設節1461=2件/1495=3件/1444=非表示・console/pageerror 全0)。保留=手塚治虫記念館(マクロスΔ展=大人寄り)/明石海峡公園サマーフェスタ(日付・詳細弱い→夏前再確認)。
+
+**本番 HEAD = origin/main = `54d213e`**(兵庫イベント /events/hyogo 公開時点)。
 
 **次の一手**:
 1. ✅ 大阪Phase2・兵庫Phase1 push→本番検証=完了(GO)。
-2. **兵庫のイベント取得+`/events/hyogo`配線**(registry巡回対象38件=weekly6/biweekly5/monthly12/seasonal15。優先=姫路セントラルパーク/神戸どうぶつ王国/須磨シーワールド/城崎マリンワールド/ニジゲンノモリ等)。
+2. ✅ **兵庫のイベント取得+`/events/hyogo`配線=完了(2026-06-24・29件/19施設・origin/main=`54d213e`)**。
 3. **兵庫Phase2(~100件)**(次回採用候補74から早めに追加)。
 4. **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回**(後回しの小タスク)。
 5. 次県=人気観光地ライン(大阪→兵庫→**京都**→愛知)。北海道/沖縄は後ろ(大型県)。
