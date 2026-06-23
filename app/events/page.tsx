@@ -17,9 +17,9 @@ import {
 import { prefectureIconImages } from "@/lib/icons";
 
 export const metadata: Metadata = {
-  title: "東京・神奈川・山梨・千葉・埼玉・茨城・群馬の子ども向けイベント",
+  title: "東京・神奈川・山梨・千葉・埼玉・茨城・群馬・大阪の子ども向けイベント",
   description:
-    "東京・神奈川・山梨・千葉・埼玉・茨城・群馬の子どもと行けるイベントを、公式情報で確認できたものだけ掲載しています。",
+    "東京・神奈川・山梨・千葉・埼玉・茨城・群馬・大阪の子どもと行けるイベントを、公式情報で確認できたものだけ掲載しています。",
   alternates: { canonical: "/events" },
 };
 
