@@ -10,7 +10,8 @@ export type PrefectureId =
   | "kanagawa"
   | "ibaraki"
   | "gunma"
-  | "osaka";
+  | "osaka"
+  | "hyogo";
 
 export type RainFriendly = "◎" | "△" | "×";
 

@@ -45,6 +45,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   ibaraki: "#0ea5e9",
   gunma: "#f97316",
   osaka: "#e11d48",
+  hyogo: "#14b8a6",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -60,6 +61,7 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   ibaraki: "🌊 茨城",
   gunma: "♨️ 群馬",
   osaka: "🏯 大阪",
+  hyogo: "🌉 兵庫",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -77,6 +79,7 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   ibaraki: true,
   gunma: true,
   osaka: true,
+  hyogo: true,
 };
 
 const LOCATION_GUIDE_TEXT =

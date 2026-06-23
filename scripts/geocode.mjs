@@ -13,6 +13,7 @@ const PREFECTURE_CENTROIDS = {
   ibaraki: { lat: 36.3418, lng: 140.4468 },
   gunma: { lat: 36.3912, lng: 139.0609 },
   osaka: { lat: 34.65, lng: 135.52 },
+  hyogo: { lat: 34.69, lng: 135.19 },
 };
 
 const USER_AGENT =

@@ -66,6 +66,7 @@ const TARGET_PREFECTURES = new Set([
   "栃木県",
   "群馬県",
   "大阪府",
+  "兵庫県",
   "埼玉県",
   "新潟県",
   "千葉県",
@@ -81,6 +82,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   栃木県: "tochigi",
   群馬県: "gunma",
   大阪府: "osaka",
+  兵庫県: "hyogo",
   埼玉県: "saitama",
   新潟県: "niigata",
   千葉県: "chiba",
@@ -97,6 +99,7 @@ const PREFECTURE_BBOXES = {
   栃木県: [{ minLat: 36.1, maxLat: 37.2, minLng: 139.2, maxLng: 140.3 }],
   群馬県: [{ minLat: 35.9, maxLat: 37.1, minLng: 138.3, maxLng: 139.8 }],
   大阪府: [{ minLat: 34.25, maxLat: 35.1, minLng: 135.05, maxLng: 135.8 }],
+  兵庫県: [{ minLat: 34.15, maxLat: 35.7, minLng: 134.2, maxLng: 135.5 }],
   埼玉県: [{ minLat: 35.7, maxLat: 36.3, minLng: 138.7, maxLng: 139.95 }],
   千葉県: [{ minLat: 34.8, maxLat: 36.15, minLng: 139.65, maxLng: 140.95 }],
   東京都: [
