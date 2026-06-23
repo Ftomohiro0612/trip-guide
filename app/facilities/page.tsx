@@ -19,7 +19,8 @@ import type { RecommendedForTag } from "@/types/facility";
 export const metadata: Metadata = {
   title: "施設一覧",
   description:
-    "関東甲信越11県の子供向け遊び場を、エリア・カテゴリ・雨対応・料金などで絞り込み検索。",
+    "全国12都府県の子供向け遊び場を、エリア・カテゴリ・雨対応・料金などで絞り込み検索。",
+  keywords: ["大阪", "関西", "近畿"],
   alternates: { canonical: "/facilities" },
   robots: {
     // Don't index filtered variants
@@ -45,6 +46,7 @@ const PREFECTURES = [
   "山梨県",
   "長野県",
   "新潟県",
+  "大阪府",
 ];
 
 function asSingleParam(value: string | string[] | undefined): string {

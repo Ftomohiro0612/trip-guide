@@ -381,7 +381,7 @@ export default function GuidePage() {
           <div className="rounded-2xl border border-amber-100 bg-amber-50/40 px-4 py-3 text-left text-sm leading-relaxed text-slate-600 sm:flex sm:items-start sm:gap-2">
             <span className="shrink-0 font-bold text-slate-800">施設情報について：</span>
             <span>
-              関東甲信越を中心に、親子で行ける施設を順次追加・更新中です。すべての施設を網羅しているものではなく、少しずつ増やしています。
+              全国各地で、親子で行ける施設を順次追加・更新中です。すべての施設を網羅しているものではなく、少しずつ増やしています。
             </span>
           </div>
         </div>

@@ -12,6 +12,7 @@ const PREFECTURE_CENTROIDS = {
   yamanashi: { lat: 35.6635, lng: 138.5683 },
   ibaraki: { lat: 36.3418, lng: 140.4468 },
   gunma: { lat: 36.3912, lng: 139.0609 },
+  osaka: { lat: 34.65, lng: 135.52 },
 };
 
 const USER_AGENT =

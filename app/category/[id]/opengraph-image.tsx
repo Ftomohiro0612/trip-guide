@@ -47,7 +47,7 @@ export default async function Image({
   return renderOgImage({
     emoji: categoryIcon(meta.id),
     eyebrow: "カテゴリ特集",
-    title: `${meta.name} ${list.length}選 (関東甲信越)`,
+    title: `${meta.name} ${list.length}選 (全国)`,
     badges: [
       { label: `🎈 全 ${list.length} 施設` },
       { label: `☂️ 雨の日OK ${rain} 件` },

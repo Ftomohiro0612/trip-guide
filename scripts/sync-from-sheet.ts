@@ -29,6 +29,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   茨城県: "ibaraki",
   栃木県: "tochigi",
   群馬県: "gunma",
+  大阪府: "osaka",
   埼玉県: "saitama",
   新潟県: "niigata",
   千葉県: "chiba",

@@ -28,8 +28,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const desc = categoryDescriptions[meta.id] ?? "";
   const visibleCount = getFacilitiesByCategory(meta.id).length;
   return {
-    title: `${meta.name} ${visibleCount}選 (関東甲信越)`,
-    description: `${desc} 関東甲信越11県の${meta.name}を${visibleCount}施設まとめて掲載。`,
+    title: `${meta.name} ${visibleCount}選 (全国)`,
+    description: `${desc} 全国12都府県の${meta.name}を${visibleCount}施設まとめて掲載。`,
     alternates: { canonical: `/category/${meta.id}` },
   };
 }

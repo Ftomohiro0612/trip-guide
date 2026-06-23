@@ -394,7 +394,7 @@ export default function HomePage() {
               <p className="mb-4 inline-flex items-center self-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm lg:self-start">
                 <span aria-hidden>📍</span>
                 <span className="ml-1">
-                  関東甲信越{prefectures.length}県 · {facilityCountLabel}掲載中
+                  全国{prefectures.length}都府県 · {facilityCountLabel}掲載中
                 </span>
               </p>
               <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
@@ -563,7 +563,7 @@ export default function HomePage() {
               エリアで探す
             </h2>
             <p className="mt-2 text-sm text-slate-500">
-              関東甲信越{prefectures.length}県・
+              全国{prefectures.length}都府県・
               {totalFacilityCountLabel}施設を掲載中（順次追加・更新中）
             </p>
           </div>

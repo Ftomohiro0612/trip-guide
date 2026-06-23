@@ -22,8 +22,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!meta) return { title: "見つかりませんでした" };
   const list = getTagFacilities(meta, visibleFacilities);
   return {
-    title: `${meta.title} ${list.length}選 (関東甲信越)`,
-    description: `${meta.lead} 関東甲信越11県で${meta.title}を${list.length}施設掲載。`,
+    title: `${meta.title} ${list.length}選 (全国)`,
+    description: `${meta.lead} 全国12都府県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },
