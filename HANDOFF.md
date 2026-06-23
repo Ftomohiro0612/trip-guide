@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-## ⏩ 2026-06-23 最新状態(ここが最新・最優先で読む)
+## ⏩ 2026-06-24 最新状態(ここが最新・最優先で読む)
 
 **全国展開フェーズ進行中**。直近の主題=人気観光地ラインの施設追加＋イベント取得(正本フロー=`.codex/new-prefecture-rollout-checklist.md`・詳細は永続メモリ `project_national_rollout_flow` / `project_events_system_direction` が自動ロード)。
 
@@ -13,18 +13,24 @@
 - **/events/osaka=本番LIVE完了(2026-06-23・origin/main=`a7d011c`・8県目のイベント対象県・25件/18施設)**。Codex本番Playwright=GO(掲載中25・フィルタ6種・ハブ大阪カード・施設イベント節・既存県退行なし・console/pageerror 0)。USJは見送り(自前集客が強い)。クラフトパーク1387除外・鶴見緑地1356見送り。正本=`.codex/event-candidates-osaka-2026-06-23.md`。
 - **大阪Phase2(施設+52件)=本番LIVE完了(2026-06-23・origin/main=`1eb818f`)**。大阪80→**132**・total1381→**1433**・registry980→**1032**(新規ID 1392〜1443の52件)。採用案正本=`.codex/osaka-phase2-review.md`(主力10厚く＋他42最低限・registry同梱・**コード波及なし=データ+registry+sitemapのみ**)。PM裏取り全PASS=既存80大阪/他11県の施設が意味的に無変更・events_data不変・registry既存980行無変更・新カテゴリ0・audit大阪high/medium0(新52件はlow1=短文のみ)・bbox外0・必須欠落0/slug重複0・lint/build PASS・sitemap新52ページ掲載(URL集合は再生成と完全一致)。**本番検証GO**(PM curl + Codex本番Playwright PC1280/SP375突合): served=1eb818f・/prefecture/osaka「132選」施設リンク132・/map大阪マーカー132/全体1428施設(=1433−exclude5)・新規3施設200本文正常・tokyo191/ibaraki100/gunma145/yamanashi69 退行なし・console/pageerror 0。
 
-**本番 HEAD = origin/main = `1eb818f`**(大阪Phase2公開時点)。
+- **兵庫(hyogo)Phase1=本番LIVE完了(2026-06-24・origin/main=`9c9c68d`・13都府県目)**。施設**75件**(新規ID 1444〜1518・主力10=神戸どうぶつ王国/須磨シーワールド/王子動物園/六甲GREENIA/キッザニア甲子園/姫路セントラルパーク/明石公園/東条湖おもちゃ王国/城崎マリンワールド/淡路イングランドの丘)・total1433→**1508**・registry1032→**1107**。候補240→PM4分類(`.codex/hyogo-stepB-review.md`:採用75/次回74/保留88/不採用3)→実装スペック`.codex/hyogo-facilities-phase1-spec.md`。**新県コード波及**(PrefectureId/icons+原画webp/MapView/descriptions/audit bbox・geocode重心/「12→13都府県」7ファイル/sitemap)。events_data不変・**/events/hyogo は未公開(後続)**。PM裏取りで2点修正(①category表示ラベル49件を正規名へ統一 ②牧場系4件=六甲山牧場/ヨーデルの森/但馬牧場公園/イングランドの丘を park→zoo に整合=マザー牧場precedent)。全ゲートGREEN(既存12都府県/既存施設不変・events不変・registry既存1032不変・新カテゴリ0・兵庫audit high/medium0・bbox外0・lint/tsc/build)。**本番検証GO**(PM curl+Codex Playwright PC/SP突合): /prefecture/hyogo「75選」リンク75・/map兵庫マーカー75/全体1503(=1508−exclude5)・/category/動物園にイングランドの丘+六甲山牧場・既存退行なし(osaka132/tokyo191)・全国13都府県・console/pageerror 0。
+
+**本番 HEAD = origin/main = `9c9c68d`**(兵庫Phase1公開時点)。
 
 **次の一手**:
-1. ✅ 大阪Phase2 push→本番検証=完了(GO)。
-2. **Phase2追加52施設(ID1392〜1443)のイベント再巡回**(/events/osaka候補に追加され得る・registryに巡回区分は同梱済み)。
-3. 次県=人気観光地ライン(大阪→**兵庫**→京都→愛知)。北海道/沖縄は後ろ(大型県)。
+1. ✅ 大阪Phase2・兵庫Phase1 push→本番検証=完了(GO)。
+2. **兵庫のイベント取得+`/events/hyogo`配線**(registry巡回対象38件=weekly6/biweekly5/monthly12/seasonal15。優先=姫路セントラルパーク/神戸どうぶつ王国/須磨シーワールド/城崎マリンワールド/ニジゲンノモリ等)。
+3. **兵庫Phase2(~100件)**(次回採用候補74から早めに追加)。
+4. **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回**(後回しの小タスク)。
+5. 次県=人気観光地ライン(大阪→兵庫→**京都**→愛知)。北海道/沖縄は後ろ(大型県)。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。
 - 本番pushはオーナー明示GO後。preview/裏取り→GO→PMがpush。docとコード/データのpushは分ける(`project_vercel_autodeploy`: main pushでVercel自動デプロイ・webhook取りこぼし時は空コミット再push)。
 - ★map検証の罠: /mapの件数は可視(生total−exclude_candidate)。検証の期待値を生totalにすると誤NO-GO(大阪で実例。現exclude_candidate=5件=山梨2/長野3)。
 - Codexワーカー運用・report-hang対処=`project_codex_worker_ops`。新規施設→registryゲート=`feedback_new_facility_registry_gate`。worker Running中はPMが共有作業コピーでgit操作しない。
+- **新ハマり(2026-06-24)**: Codex自動アップデートで稼働中ワーカーがキャッシュした codex.exe パスが陳腐化し全タスク起動失敗(`...codex.exe is not recognized`)→**ワーカークリーン再起動で復旧**(新インスタンスが最新bin hashを再検出)。失敗タスクは失敗時に既読化されるので**再送が必要**。詳細=`project_codex_worker_ops`。
+- **新県コード波及の正本**=`project_new_prefecture_code_surfaces`。データ駆動の要点: 県一覧は `facilities_data.json` の `metadata.prefectures`(これで /prefecture 静的生成+top「全国N都府県」が動的更新)。`category` 表示ラベルは `metadata.categories` の正規名に必ず合わせる(独自表記NG=兵庫で49件修正の教訓)。牧場/ファーム系は既存precedent=`zoo`。
 
 ---
 
