@@ -17,14 +17,16 @@
 
 - **/events/hyogo イベント公開=本番LIVE完了(2026-06-24・origin/main=`54d213e`・9県目のイベント対象県)**。巡回38件→候補抽出(`.codex/event-candidates-hyogo-2026-06-24.md`:採用29/保留2/不採用17施設)→PMレビュー+オーナー全採用GO→正規化(events_data 92→**121**件)+配線4点(EventPrefecture+hyogo / metadata.prefectures / ハブtitle・description「・兵庫」 / next-sitemap + sitemap-0.xml再生成)。**コード波及なし**(facilities_data/registry 不変)。PM裏取り全GREEN(可視29・既存8県deep-equal不変・タグ統制20語・title整理[1450星空ウォッチング/1498ビーバーお誕生日会]・status scheduled25/ongoing4)→push→**Codex本番Playwright GO**(/events/hyogo掲載中29 PC1280/SP375・フィルタ[兵庫29/今週末41/今月43/屋内69/無料19/予約不要45/好き科学30]・既存osaka25/gunma12退行なし・施設節1461=2件/1495=3件/1444=非表示・console/pageerror 全0)。保留=手塚治虫記念館(マクロスΔ展=大人寄り)/明石海峡公園サマーフェスタ(日付・詳細弱い→夏前再確認)。
 
-**本番 HEAD = origin/main = `54d213e`**(兵庫イベント /events/hyogo 公開時点)。
+- **兵庫Phase2 施設拡張=本番LIVE完了(2026-06-24・origin/main=`d8eefaa`・兵庫=施設123+イベント29で一次完成)**。採用案50(`.codex/hyogo-phase2-review.md`・PM選定:エリア偏り是正で北播磨丹波/但馬/西播磨を厚く・乗り物テーマ強化・水遊びは管理3施設のみ・砂浜海水浴/潮干狩りは保留Phase3)→Codex本データ化で**48件採用**(facility-1519〜1566・公式確認で2件除外=スカイランドHARADA[公式住所が大阪府豊中市]/柳田國男記念館[既存1499辻川山公園と同住所重複])。兵庫75→**123**・total1508→**1556**・registry1107→**1155**。**コード波及なし**(データ+registry+sitemap)。PM裏取り全GREEN(既存75兵庫+12都府県deep-equal不変・新カテゴリ0・牧場系=zoo・公式URL/住所/座標/bbox全件・**兵庫audit issue総数0**・施設↔registry名称一致)。**PM裏取りで名称defect検出→修正**: facility-1537初版「たんようウェルネスパーク」をWebFetchで公式確認(kakogawawellness.jp=「加古川ウェルネスパーク」正式名称・「たんよう」愛称併記)→オーナー指示で正式名先頭「加古川ウェルネスパーク（たんよう）」に統一(name-only・3コミット a2353b4→701eaa7→d8eefaa)。**Codex本番Playwright GO**(/map兵庫123・全体1551[=1556−exclude5]・既存osaka132/tokyo191/gunma145/ibaraki100退行なし・/prefecture/hyogo123選PC/SP・1537正式名先頭表示・console/pageerror 全10ページ0)。
+
+**本番 HEAD = origin/main = `d8eefaa`**(兵庫Phase2 公開時点)。
 
 **次の一手**:
 1. ✅ 大阪Phase2・兵庫Phase1 push→本番検証=完了(GO)。
-2. ✅ **兵庫のイベント取得+`/events/hyogo`配線=完了(2026-06-24・29件/19施設・origin/main=`54d213e`)**。
-3. **兵庫Phase2(~100件)**(次回採用候補74から早めに追加)。
+2. ✅ **兵庫のイベント取得+`/events/hyogo`配線=完了(2026-06-24・29件/19施設・`54d213e`)**。
+3. ✅ **兵庫Phase2施設拡張=完了(2026-06-24・+48→兵庫123・`d8eefaa`)**。
 4. **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回**(後回しの小タスク)。
-5. 次県=人気観光地ライン(大阪→兵庫→**京都**→愛知)。北海道/沖縄は後ろ(大型県)。
+5. 次県=人気観光地ライン(大阪→兵庫→**京都**→愛知)。北海道/沖縄は後ろ(大型県)。京都は10STEP候補収集から標準フロー。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。
