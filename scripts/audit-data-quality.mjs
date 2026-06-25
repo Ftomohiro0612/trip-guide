@@ -68,6 +68,7 @@ const TARGET_PREFECTURES = new Set([
   "大阪府",
   "兵庫県",
   "京都府",
+  "愛知県",
   "埼玉県",
   "新潟県",
   "千葉県",
@@ -85,6 +86,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   大阪府: "osaka",
   兵庫県: "hyogo",
   京都府: "kyoto",
+  愛知県: "aichi",
   埼玉県: "saitama",
   新潟県: "niigata",
   千葉県: "chiba",
@@ -103,6 +105,7 @@ const PREFECTURE_BBOXES = {
   大阪府: [{ minLat: 34.25, maxLat: 35.1, minLng: 135.05, maxLng: 135.8 }],
   兵庫県: [{ minLat: 34.15, maxLat: 35.7, minLng: 134.2, maxLng: 135.5 }],
   京都府: [{ minLat: 34.7, maxLat: 35.8, minLng: 134.8, maxLng: 136.1 }],
+  愛知県: [{ minLat: 34.55, maxLat: 35.45, minLng: 136.65, maxLng: 137.85 }],
   埼玉県: [{ minLat: 35.7, maxLat: 36.3, minLng: 138.7, maxLng: 139.95 }],
   千葉県: [{ minLat: 34.8, maxLat: 36.15, minLng: 139.65, maxLng: 140.95 }],
   東京都: [

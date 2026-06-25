@@ -12,7 +12,8 @@ export type PrefectureId =
   | "gunma"
   | "osaka"
   | "hyogo"
-  | "kyoto";
+  | "kyoto"
+  | "aichi";
 
 export type RainFriendly = "◎" | "△" | "×";
 

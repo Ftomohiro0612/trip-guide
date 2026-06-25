@@ -19,7 +19,7 @@ import type { RecommendedForTag } from "@/types/facility";
 export const metadata: Metadata = {
   title: "施設一覧",
   description:
-    "全国14都府県の子供向け遊び場を、エリア・カテゴリ・雨対応・料金などで絞り込み検索。",
+    "全国15都府県の子供向け遊び場を、エリア・カテゴリ・雨対応・料金などで絞り込み検索。",
   keywords: ["大阪", "関西", "近畿"],
   alternates: { canonical: "/facilities" },
   robots: {
@@ -43,11 +43,13 @@ const PREFECTURES = [
   "栃木県",
   "群馬県",
   "静岡県",
+  "愛知県",
   "山梨県",
   "長野県",
   "新潟県",
   "大阪府",
   "兵庫県",
+  "京都府",
 ];
 
 function asSingleParam(value: string | string[] | undefined): string {

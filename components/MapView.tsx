@@ -47,6 +47,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   osaka: "#e11d48",
   hyogo: "#14b8a6",
   kyoto: "#b91c1c",
+  aichi: "#16a34a",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -64,6 +65,7 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   osaka: "🏯 大阪",
   hyogo: "🌉 兵庫",
   kyoto: "⛩️ 京都",
+  aichi: "🏮 愛知",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -83,6 +85,7 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   osaka: true,
   hyogo: true,
   kyoto: true,
+  aichi: true,
 };
 
 const LOCATION_GUIDE_TEXT =
