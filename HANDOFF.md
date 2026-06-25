@@ -21,14 +21,19 @@
 
 - **大阪Phase2追加52施設のイベント再巡回=本番LIVE完了(2026-06-25・origin/main=`687166f`・commit「Add Osaka Phase2 events (18) to /events/osaka」)**。registry巡回対象43件(monthly20/seasonal23・not_suitable9除外。母数はPMが`.codex/_phase2_osaka_patrol_worklist.json`へ機械抽出)→Codex読み取り専用巡回→候補doc`.codex/event-candidates-osaka-phase2-2026-06-25.md`(採用22/保留1/不採用28施設)→PMレビュー+オーナーGOで**18件採用/13施設**。**除外4件=会期が長すぎ実質常設のものをfreshness観点で落とす**(今城塚 勾玉づくり182日/hu+gMUSEUM XR体験302日/クレヨンしんちゃんキッチン207日/樽井サザンビーチ ミャクミャク像=撮影スポット参加性弱)+SUP保留1。events_data 121→**139**(osaka可視25→**43**)・**配線不要**(/events/osaka既存)・facilities/registry/コード diff0・既存121件deep-equal不変。PM裏取り全GREEN(統制20語0逸脱・source_checked_at未来日0・第三者URL0・id重複0・終了済み0)→push(`5edd8f9..687166f`クリーンFF)→Codex本番Playwright **GO**(PC1280/SP375: /events/osaka掲載中43・全リンク別タブ・施設節1437=1/1405=2/1428=2・ハブ大阪43/今週末3[竹水鉄砲6/28含む]/フィルタ件数変化・既存hyogo29/gunma12/ibaraki31/osaka132選 退行なし・console/pageerror 0。デプロイ反映~73秒)。**大阪=施設132+イベント43で完全クローズ**。
 
-**本番 HEAD = origin/main = `687166f`**(大阪Phase2イベント 公開時点)。
+- **京都(kyoto)Phase1=本番LIVE完了(2026-06-25・origin/main=`ed25984`・14都府県目)**。候補180(`.codex/kyoto-candidates-full-2026-06-25.md`・Codex 10STEP・全市町村0件なし)→PM4分類(`.codex/kyoto-phase1-review.md`:採用61/次回~38/保留~15/不採用~66)→実装スペック(`.codex/kyoto-facilities-phase1-spec.md`)→Codex本データ化で**72件確定**(基準61+保留再確認で11追加・けいはんなプラザ1件は公式URL/住所/運営が揃わず除外・新規ID **1567〜1638**)。total1556→**1628**・registry1155→**1227**。**寺社偏り回避**(寺社44候補→Phase1は公園/自然/乗り物兼用の約6件のみ・金閣寺/清水寺/平等院等の拝観中心弱価値は不採用で台帳温存)。主力10=京都水族館/京都鉄道博物館/京都市動物園/梅小路公園/宝が池子どもの楽園/太秦映画村/青少年科学センター/嵯峨野トロッコ/丹波自然運動公園/天橋立ビューランド。**親子重複ルール(オーナー新指示)**=同一敷地の分解要素は独立価値ある場合のみ別施設化・内部要素は親things_to_doに吸収(すざくゆめ広場/SLスチーム号/宝が池親/太陽が丘プール/ローラースライダー/丹波こどもの広場/緑化植物園=親に吸収・福知山動物園/児童科学館=独立)。**新県コード波及**(hyogo §4同型: PrefectureId/icons[原画kyoto.png→webp・絵文字⛩️・色#b91c1c]/MapView/descriptions/geocode重心/audit bbox/「13→14都府県」7ファイル/sitemap)。events_data不変・**/events/kyoto未公開(後続)**。お茶の京都DMO URL2件(竜王こどもの王国→ryuoh-kodomo.com・大正池→taishoike.com)を施設自前URLへ差替。PM裏取り全GREEN(既存13都府県count不変・既存施設deep-equal・events diff0・registry既存1155不変・新カテゴリ0・モンキーパーク/綾部ふれあい牧場=zoo・京都audit high/medium0・bbox外0・slug重複0・PM自身でtsc/lint PASS再実行)→push(`f131128..ed25984`クリーンFF)→**Codex本番Playwright GO**(PC1280/SP375: /prefecture/kyoto「72選」72カード・/map京都72/全体1623[=1628−exclude5]・主力詳細・/category/zooにモンキーパーク+綾部ふれあい牧場+両動物園・既存osaka132/hyogo123/tokyo191退行なし・全国14都府県・events京都404・console/pageerror0・横スクロールなし)。
+
+**本番 HEAD = origin/main = `ed25984`**(京都Phase1 公開時点)。
+
+**将来タスク(温存・オーナー確定 2026-06-25)**: MapViewの地図マーカー色重複2組(#a855f7・#0ea5e9)+絵文字🌊重複は**既存県どうしの問題(京都由来でない)**。今は触らず「地図視認性改善タスク」として残す。
 
 **次の一手**:
 1. ✅ 大阪Phase2・兵庫Phase1 push→本番検証=完了(GO)。
 2. ✅ **兵庫のイベント取得+`/events/hyogo`配線=完了(2026-06-24・29件/19施設・`54d213e`)**。
 3. ✅ **兵庫Phase2施設拡張=完了(2026-06-24・+48→兵庫123・`d8eefaa`)**。
 4. ✅ **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回=完了(2026-06-25・採用18→大阪イベント43・`687166f`)**。
-5. **▶進行中: 次県=京都(kyoto)。新県=10STEP候補収集から(まずは読み取り専用の候補台帳のみ・コード/データ/registry/events/sitemap/アイコン不変)**。京都特有テーマ=寺社文化財(子連れ価値弱は増やしすぎない)/鉄道乗り物/科学館博物館/大型公園/水族館動物/体験工房/川遊び自然/雨の日屋内。Codex収集→PM4分類+Phase1案(50〜80・主力10・registry見通し・イベント当たり)→オーナーGOで本データ化。順序は大阪→兵庫→京都→愛知(北海道/沖縄は後ろ=大型県)。
+5. ✅ **京都(kyoto)Phase1=完了(2026-06-25・候補180→採用72・新規ID1567〜1638・`ed25984`・14都府県目)**。詳細は上記「京都Phase1」節。
+6. **▶次=京都の続き(イベント取得 `/events/kyoto`=10県目 or Phase2拡張~100)→その後 愛知(aichi)**。順序=大阪→兵庫→京都→愛知(北海道/沖縄は後ろ=大型県)。京都イベント取得対象の当たり=台帳「イベント頁○」かつ子連れ価値高の約30施設(`.codex/kyoto-phase1-review.md`)。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。
