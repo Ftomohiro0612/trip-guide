@@ -3,7 +3,7 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-## ⏩ 2026-06-24 最新状態(ここが最新・最優先で読む)
+## ⏩ 2026-06-25 最新状態(ここが最新・最優先で読む)
 
 **全国展開フェーズ進行中**。直近の主題=人気観光地ラインの施設追加＋イベント取得(正本フロー=`.codex/new-prefecture-rollout-checklist.md`・詳細は永続メモリ `project_national_rollout_flow` / `project_events_system_direction` が自動ロード)。
 
@@ -19,14 +19,16 @@
 
 - **兵庫Phase2 施設拡張=本番LIVE完了(2026-06-24・origin/main=`d8eefaa`・兵庫=施設123+イベント29で一次完成)**。採用案50(`.codex/hyogo-phase2-review.md`・PM選定:エリア偏り是正で北播磨丹波/但馬/西播磨を厚く・乗り物テーマ強化・水遊びは管理3施設のみ・砂浜海水浴/潮干狩りは保留Phase3)→Codex本データ化で**48件採用**(facility-1519〜1566・公式確認で2件除外=スカイランドHARADA[公式住所が大阪府豊中市]/柳田國男記念館[既存1499辻川山公園と同住所重複])。兵庫75→**123**・total1508→**1556**・registry1107→**1155**。**コード波及なし**(データ+registry+sitemap)。PM裏取り全GREEN(既存75兵庫+12都府県deep-equal不変・新カテゴリ0・牧場系=zoo・公式URL/住所/座標/bbox全件・**兵庫audit issue総数0**・施設↔registry名称一致)。**PM裏取りで名称defect検出→修正**: facility-1537初版「たんようウェルネスパーク」をWebFetchで公式確認(kakogawawellness.jp=「加古川ウェルネスパーク」正式名称・「たんよう」愛称併記)→オーナー指示で正式名先頭「加古川ウェルネスパーク（たんよう）」に統一(name-only・3コミット a2353b4→701eaa7→d8eefaa)。**Codex本番Playwright GO**(/map兵庫123・全体1551[=1556−exclude5]・既存osaka132/tokyo191/gunma145/ibaraki100退行なし・/prefecture/hyogo123選PC/SP・1537正式名先頭表示・console/pageerror 全10ページ0)。
 
-**本番 HEAD = origin/main = `d8eefaa`**(兵庫Phase2 公開時点)。
+- **大阪Phase2追加52施設のイベント再巡回=本番LIVE完了(2026-06-25・origin/main=`687166f`・commit「Add Osaka Phase2 events (18) to /events/osaka」)**。registry巡回対象43件(monthly20/seasonal23・not_suitable9除外。母数はPMが`.codex/_phase2_osaka_patrol_worklist.json`へ機械抽出)→Codex読み取り専用巡回→候補doc`.codex/event-candidates-osaka-phase2-2026-06-25.md`(採用22/保留1/不採用28施設)→PMレビュー+オーナーGOで**18件採用/13施設**。**除外4件=会期が長すぎ実質常設のものをfreshness観点で落とす**(今城塚 勾玉づくり182日/hu+gMUSEUM XR体験302日/クレヨンしんちゃんキッチン207日/樽井サザンビーチ ミャクミャク像=撮影スポット参加性弱)+SUP保留1。events_data 121→**139**(osaka可視25→**43**)・**配線不要**(/events/osaka既存)・facilities/registry/コード diff0・既存121件deep-equal不変。PM裏取り全GREEN(統制20語0逸脱・source_checked_at未来日0・第三者URL0・id重複0・終了済み0)→push(`5edd8f9..687166f`クリーンFF)→Codex本番Playwright **GO**(PC1280/SP375: /events/osaka掲載中43・全リンク別タブ・施設節1437=1/1405=2/1428=2・ハブ大阪43/今週末3[竹水鉄砲6/28含む]/フィルタ件数変化・既存hyogo29/gunma12/ibaraki31/osaka132選 退行なし・console/pageerror 0。デプロイ反映~73秒)。**大阪=施設132+イベント43で完全クローズ**。
+
+**本番 HEAD = origin/main = `687166f`**(大阪Phase2イベント 公開時点)。
 
 **次の一手**:
 1. ✅ 大阪Phase2・兵庫Phase1 push→本番検証=完了(GO)。
 2. ✅ **兵庫のイベント取得+`/events/hyogo`配線=完了(2026-06-24・29件/19施設・`54d213e`)**。
 3. ✅ **兵庫Phase2施設拡張=完了(2026-06-24・+48→兵庫123・`d8eefaa`)**。
-4. **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回**(後回しの小タスク)。
-5. 次県=人気観光地ライン(大阪→兵庫→**京都**→愛知)。北海道/沖縄は後ろ(大型県)。京都は10STEP候補収集から標準フロー。
+4. ✅ **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回=完了(2026-06-25・採用18→大阪イベント43・`687166f`)**。
+5. **▶進行中: 次県=京都(kyoto)。新県=10STEP候補収集から(まずは読み取り専用の候補台帳のみ・コード/データ/registry/events/sitemap/アイコン不変)**。京都特有テーマ=寺社文化財(子連れ価値弱は増やしすぎない)/鉄道乗り物/科学館博物館/大型公園/水族館動物/体験工房/川遊び自然/雨の日屋内。Codex収集→PM4分類+Phase1案(50〜80・主力10・registry見通し・イベント当たり)→オーナーGOで本データ化。順序は大阪→兵庫→京都→愛知(北海道/沖縄は後ろ=大型県)。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。
