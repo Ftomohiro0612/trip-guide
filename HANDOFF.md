@@ -29,7 +29,9 @@
 
 - **愛知(aichi)Phase1=本番LIVE完了(2026-06-26・origin/main=`b6f1e3c`・15都府県目・人気観光地ライン最後)**。候補186(`.codex/aichi-candidates-full-2026-06-25.md`・Codex 10STEP・全68市区町村0件なし・大物29/29・県境除外=なばなの里/ナガシマ/鈴鹿[三重]・アクアトトぎふ/河川環境楽園[岐阜]・浜名湖系[静岡])→PM4分類(`.codex/aichi-stepB-review.md`:採用75/次回~67/保留~38/不採用~6)→実装スペック(`.codex/aichi-facilities-phase1-spec.md`)→Codex本データ化**75件**(新規ID 1667〜1741)・total1656→**1731**・registry1255→**1330**。主力10=名古屋港水族館/東山動植物園/レゴランド/リニア鉄道館/名古屋市科学館/トヨタ産業技術記念館/ジブリパーク(+モリコロ)/のんほいパーク/南知多ビーチランド/博物館明治村。ものづくり体験を最重点(10件)。コード波及7面(色#16a34a/絵文字🏮/原画aichi.png→透過webp/audit bbox 34.55-35.45・136.65-137.85/geocode重心35.18,136.91/「14→15都府県」7ファイル)。**親子吸収**=戸田川緑地→とだがわこどもランド・フラワープラザ→名古屋城(独立施設化せず)。**ジブリパーク(1704)本文に「完全予約制・有料・モリコロと別運営/別チケット」明記**(オーナー指示・別施設だが親子導線はセット説明)。events_data不変・**/events/aichi未公開(後続)**。**+おまけ修正=施設一覧の県プルダウン`PREFECTURES`に京都府も追加**(京都Phase1以降の既存漏れをCodexが一緒に補修。このプルダウンはJP県名ハードコードで新県ごと手当て要)。PM裏取り全GREEN(既存14都府県count不変・既存施設1656 deep-equal・events diff0・registry既存1255不変・新カテゴリ0[牧場系=zoo]・愛知audit high/medium0[id突合]・bbox外0・slug重複0・統制20語逸脱0・PM自身でtsc/lint PASS)→push(`b657942..b6f1e3c`クリーンFF・DNS問題なし)→**Codex本番Playwright + PM curl 両方GO**(/prefecture/aichi75選/75カード/75マーカー・/map愛知75/全体**1726**[=生1731−exclude5]・主力詳細[1667/1671/1704/1719/1731]・ジブリ予約制本文・/category/zooに愛知牧場/delaふぁーむ/サンテパルク/モンキーセンター・既存osaka132/hyogo123/kyoto100/tokyo191/gunma145/ibaraki100退行なし・全国15都府県・events/aichi404・console/pageerror0・横スクロールなし)。**愛知=施設75で公開・人気観光地ライン4県完(大阪132/兵庫123/京都100/愛知75)**。
 
-**本番 HEAD = origin/main = `b6f1e3c`**(愛知Phase1 公開時点)。
+- **/events/aichi イベント公開=本番LIVE完了(2026-06-26・origin/main=`2a50c13`・11県目のイベント対象県)**。registry巡回75施設(weekly11/biweekly17/monthly25/seasonal22・母数はPMが`_aichi_events_patrol_worklist.json`へ機械抽出)→Codex読み取り巡回→候補doc`.codex/event-candidates-aichi-2026-06-26.md`→PMレビュー(4トリム=1734赤塚山招待制/1680東谷山サマースクール・カブトムシ/1688 138タワー親子自然工作)→オーナーGO「46で確定」で**採用46件/31施設**。events_data 171→**217**(aichi可視46)+配線4点(EventPrefecture+aichi/metadata.prefectures+aichi/ハブtitle・desc「…京都・愛知」/next-sitemap+/events/aichi)+sitemap再生成。**facilities_data/registry不変**(events-onlyバッチ)。PM裏取り全GREEN(既存171件deep-equal・facilities/registry diff0・46件 facility_id実在/prefecture/official_url/status/日付/source_checked_at=2026-06-26/タグ統制・終了済み0・`getVisibleEventsByPrefecture('aichi')=46`・tsc/lint PASS)→push(`350731e..2a50c13`クリーンFF)→**Codex本番Playwright+PM curl両GO**(掲載中46 PC/SP・TZ罠なし・フィルタ[県216→46/今週末8/今月8/屋内17/無料10/予約不要24/好きテーマ4]・ハブ愛知カード・デンパーク1725=施設3件/ハブ4件・既存osaka43/hyogo29/kyoto32/gunma12/ibaraki31退行なし・console/pageerror0・横スクロールなし)。**★教訓=候補docはサマリ件数でなく『採用候補テーブルの実行数』と『最終events_data投入数』を機械照合**(愛知でサマリ「50採用」だが実55行→Codexが4トリム+独自5間引きで46に到達。落ちた5件[1689プラネ×2/1700馬ごはん/1707 SUMMER SPLASH重複/1726ゲーム]は妥当・オーナー判断で46確定)。**愛知=施設75+イベント46で施設・イベント両用に到達。人気観光地ライン4県(大阪・兵庫・京都・愛知)が施設もイベントも完了**。
+
+**本番 HEAD = origin/main = `2a50c13`**(愛知イベント /events/aichi 公開時点)。
 
 **将来タスク(温存・オーナー確定 2026-06-25)**: MapViewの地図マーカー色重複2組(#a855f7・#0ea5e9)+絵文字🌊重複は**既存県どうしの問題(京都由来でない)**。今は触らず「地図視認性改善タスク」として残す。
 
@@ -42,7 +44,9 @@
 6. ✅ **京都イベント `/events/kyoto`=完了(2026-06-25・採用32/18施設・10県目・`32eb170`)**。詳細は上記「/events/kyoto」節。
 7. ✅ **京都Phase2施設拡張=完了(2026-06-25・+28→京都100・`ae7f27a`)。京都=施設100+イベント32で一次完成**。詳細は上記「京都Phase2」節。
 8. ✅ **愛知(aichi)Phase1=完了(2026-06-26・候補186→採用75・新規ID1667〜1741・`b6f1e3c`・15都府県目)。愛知=施設75で公開**。詳細は上記「愛知Phase1」節。
-9. **▶次=愛知のイベント取得+`/events/aichi`配線**(オーナー方針=Phase1公開後にevents・標準フロー)。愛知はイベント母数が非常に厚い(台帳イベント頁○が大半)→中身は楽に埋まる見込み。registry巡回対象(weekly11/biweekly17/monthly25/seasonal22)を1巡→日付確定のみ採用→`/events/aichi`配線4点(山梨§9同型)。**その後 愛知Phase2(~100+・次回採用候補67温存)**。北海道/沖縄は後ろ(大型県)。
+9. ✅ **愛知イベント `/events/aichi`=完了(2026-06-26・採用46件/31施設・11県目・`2a50c13`)。愛知=施設75+イベント46で両用到達**。詳細は上記「/events/aichi」節。
+10. **▶次=愛知Phase2施設拡張(~100+へ・次回採用候補67/保留38を母数に温存)、または新県へ展開(北海道/沖縄は後ろ=大型県)。オーナー方針確認から**。人気観光地ライン4県(大阪132/兵庫123/京都100/愛知75)は施設もイベントも完了。
+11. **★再発防止(イベント候補doc照合・恒久)**: 候補docはサマリ件数を信じず、**採用候補テーブルの実行数 と 最終events_data投入数 を機械照合**する(愛知でサマリ「50採用」だが実テーブル55行→件数基数がズレた)。PM裏取りで「候補表の実行数=承認件数+トリム=最終投入数」が一致するか必ず確認。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。

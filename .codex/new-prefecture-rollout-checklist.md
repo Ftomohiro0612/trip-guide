@@ -29,6 +29,7 @@
 ## 3. イベント取得 + `/events/<pref>` 公開(Phase 1直後に続けて)
 - [ ] registryの巡回対象(`patrol_tier ∈ {weekly,biweekly,monthly,seasonal}`)を1巡 → `.codex/event-candidates-<pref>-<date>.md`(採用/保留/不採用+理由)。
 - [ ] **採用は日付確定のみ**:`start_date`/`end_date` が明確なもの。**日付未定・会期未定・通年・常設・「公式参照」のみ=不採用**(古く残るため。例外=公式に明確な開催期間/定期開催条件があるものだけ保留)。今週末/今月＋公式告知済みの先(夏休み等)も可。
+- [ ] **★件数照合(恒久・愛知2026-06-26の教訓)**: 候補docの**サマリ件数を信じない**。`event-candidates` の**採用候補テーブルの実行数**を機械カウントし、`採用候補数 − PMトリム数 = 承認件数`、さらに `承認件数 = 最終 events_data 投入数(可視)` が一致するかPM裏取りで突合する(愛知=docサマリ「50採用」だが実テーブル55行→Codexが4トリム+独自5間引きで46に到達し、承認の基数がズレた)。差があればCodexが何を落としたかを facility_id+title で diff して確認。
 - [ ] 採用分のみ `events_data.json` に `EventItem` 正規化(`recommended_for_tags`=統制20語・`source_checked_at`=実確認日JST・status=scheduled/ongoing・official_url=公式http(s))。既存イベントは追記のみで不変。
 - [ ] **`/events/<pref>` 配線(山梨§9同型・コード4点)**:
   - `lib/events.ts` の `EventPrefecture` に `<pref>` 追加(型)
