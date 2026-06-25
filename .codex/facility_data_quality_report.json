@@ -1,60 +1,65 @@
 {
-  "generated_at": "2026-06-11",
-  "total_facilities": 1030,
+  "generated_at": "2026-06-25",
+  "total_facilities": 1628,
   "prefectures": [
+    "京都府",
+    "兵庫県",
     "千葉県",
     "埼玉県",
+    "大阪府",
     "山梨県",
     "新潟県",
     "東京都",
     "栃木県",
     "神奈川県",
+    "群馬県",
+    "茨城県",
     "長野県",
     "静岡県"
   ],
   "category_counts": {
     "name_memo_pollution": 0,
     "out_of_scope_prefecture": 0,
-    "url_na_or_empty": 102,
+    "url_na_or_empty": 5,
     "prefecture_id_mismatch": 0,
     "address_pref_mismatch": 0,
-    "prefecture_missing_in_address": 877,
-    "invalid_address": 202,
+    "prefecture_missing_in_address": 854,
+    "invalid_address": 195,
     "invalid_coordinates": 0,
     "coord_pref_mismatch": 0,
-    "tag_category_conflict": 31,
-    "missing_experience": 259,
+    "tag_category_conflict": 34,
+    "missing_experience": 264,
     "thin_description": 3,
-    "short_description": 606
+    "short_description": 722
   },
   "category_samples": {
     "name_memo_pollution": [],
     "out_of_scope_prefecture": [],
     "url_na_or_empty": [
       {
-        "id": 6,
-        "name": "ピュアハートキッズランド浜松志都呂",
+        "id": 32,
+        "name": "藤枝市民プールキッズパーク",
         "reason": "url が未入力"
       },
       {
-        "id": 7,
-        "name": "サープラ富士あそびタウン",
+        "id": 51,
+        "name": "ホテルテルメ温水プール",
         "reason": "url が未入力"
       },
       {
-        "id": 26,
-        "name": "石人の星公園 遊具広場",
+        "id": 83,
+        "name": "ナガノフォレストビレッジ 森の駅Daizahoushi",
         "reason": "url が未入力"
       },
       {
-        "id": 27,
-        "name": "雄踏総合公園(亀崎ファミリーランドプール)",
+        "id": 145,
+        "name": "ガラス工房りゅう",
         "reason": "url が未入力"
       },
       {
-        "id": 28,
-        "name": "豊田ラブリバー公園",
-        "reason": "url が未入力"
+        "id": 163,
+        "name": "Trick Art Museum 富士河口湖",
+        "reason": "url が http(s):// で始まらない"
       }
     ],
     "prefecture_id_mismatch": [],
@@ -103,19 +108,24 @@
         "reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない"
       },
       {
-        "id": 51,
-        "name": "ホテルテルメ温水プール",
+        "id": 29,
+        "name": "遊具広場(長浜海浜公園)",
         "reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない"
       },
       {
-        "id": 52,
-        "name": "白樺リゾート 池の平ファミリーランド",
+        "id": 51,
+        "name": "ホテルテルメ温水プール",
         "reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない"
       }
     ],
     "invalid_coordinates": [],
     "coord_pref_mismatch": [],
     "tag_category_conflict": [
+      {
+        "id": 129,
+        "name": "猫カフェMOCHA イオンモール甲府昭和店",
+        "reason": "category(experience)に対してcoretags(experience,craft)が付与されていない"
+      },
       {
         "id": 357,
         "name": "カンドゥー",
@@ -135,11 +145,6 @@
         "id": 530,
         "name": "行田市古代蓮の里",
         "reason": "category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない"
-      },
-      {
-        "id": 546,
-        "name": "越生梅林",
-        "reason": "category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない"
       }
     ],
     "missing_experience": [
@@ -154,6 +159,11 @@
         "reason": "description に子ども向け体験への言及がない"
       },
       {
+        "id": 12,
+        "name": "掛川花鳥園",
+        "reason": "description に子ども向け体験への言及がない"
+      },
+      {
         "id": 47,
         "name": "修善寺虹の郷",
         "reason": "description に子ども向け体験への言及がない"
@@ -161,11 +171,6 @@
       {
         "id": 78,
         "name": "ファミリーモール and LIFE 木育ひろばぬくもく",
-        "reason": "description に子ども向け体験への言及がない"
-      },
-      {
-        "id": 107,
-        "name": "リサとガスパールタウン",
         "reason": "description に子ども向け体験への言及がない"
       }
     ],
@@ -215,26 +220,26 @@
     ]
   },
   "severity_counts": {
-    "high": 202,
-    "medium": 395,
-    "low": 606,
-    "info": 877
+    "high": 195,
+    "medium": 306,
+    "low": 722,
+    "info": 854
   },
   "name_memo_pollution_count": 0,
   "out_of_scope_prefecture_count": 0,
-  "url_na_or_empty_count": 102,
+  "url_na_or_empty_count": 5,
   "prefecture_id_mismatch_count": 0,
   "address_pref_mismatch_count": 0,
-  "prefecture_missing_in_address_count": 877,
-  "invalid_address_count": 202,
+  "prefecture_missing_in_address_count": 854,
+  "invalid_address_count": 195,
   "invalid_coordinates_count": 0,
   "coord_pref_mismatch_count": 0,
-  "tag_category_conflict_count": 31,
-  "missing_experience_count": 259,
+  "tag_category_conflict_count": 34,
+  "missing_experience_count": 264,
   "thin_description_count": 3,
-  "short_description_count": 606,
-  "total_issues": 2080,
-  "total_needs_web_check": 1203,
+  "short_description_count": 722,
+  "total_issues": 2077,
+  "total_needs_web_check": 1223,
   "total_needs_human_review": 0,
   "warnings": []
 }

@@ -14,6 +14,7 @@ const PREFECTURE_CENTROIDS = {
   gunma: { lat: 36.3912, lng: 139.0609 },
   osaka: { lat: 34.65, lng: 135.52 },
   hyogo: { lat: 34.69, lng: 135.19 },
+  kyoto: { lat: 35.01, lng: 135.77 },
 };
 
 const USER_AGENT =

@@ -69,6 +69,30 @@
     "human_review_reason": null
   },
   {
+    "id": 29,
+    "name": "遊具広場(長浜海浜公園)",
+    "prefecture": "静岡県",
+    "address": "静岡県熱海市上多賀",
+    "latitude": 35.0561852,
+    "longitude": 139.0690894,
+    "category_id": "park",
+    "recommended_for_tags": [
+      "playground",
+      "slide",
+      "nature"
+    ],
+    "description": "海岸沿いに広がる開放的な公園。海風を感じながら長い滑り台や複合遊具で遊べる。透き通った海と空の青さに包まれる絶景立地で、写真映えも抜群。",
+    "issue_type": "invalid_address",
+    "severity": "high",
+    "needs_web_check": true,
+    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
+    "web_check_status": "pending",
+    "web_check_result": null,
+    "web_checked_sources": [],
+    "needs_human_review": false,
+    "human_review_reason": null
+  },
+  {
     "id": 51,
     "name": "ホテルテルメ温水プール",
     "prefecture": "静岡県",
@@ -525,51 +549,6 @@
     "human_review_reason": null
   },
   {
-    "id": 132,
-    "name": "ふじやまべーす",
-    "prefecture": "山梨県",
-    "address": "河口湖畔",
-    "latitude": 35.503948,
-    "longitude": 138.7721302,
-    "category_id": "indoor-play",
-    "recommended_for_tags": [
-      "playground",
-      "athletic"
-    ],
-    "description": "BESSの本格ログハウス貸別荘。2階一面プレイルーム(卓球・テーブルサッカー・ボルダリング・トランポリン)。デッキでBBQも。小学生以下無料という破格設定。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 134,
-    "name": "グランドメルキュール八ヶ岳リゾート＆スパ",
-    "prefecture": "山梨県",
-    "address": "北杜市",
-    "latitude": 35.7764838,
-    "longitude": 138.4235673,
-    "category_id": "hotel",
-    "recommended_for_tags": [
-      "pool"
-    ],
-    "description": "八ヶ岳南麓エリア最大規模を誇る大型リゾートホテル。温泉露天風呂、屋内プール、子供向けプログラムも充実。雨の日でも家族で楽しめる。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
     "id": 135,
     "name": "杜の8(もりのえいと) 八ヶ岳ホテル",
     "prefecture": "山梨県",
@@ -583,121 +562,6 @@
       "nature"
     ],
     "description": "八ヶ岳と南アルプスに囲まれた大泉高原のホテル内、全天候型キッズスペース「杜の8」と森のラウンジが家族みんなを笑顔に。天体ドームも完備。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 137,
-    "name": "山梨いちごの王さまミュージアム サンリオ創業者辻信太郎記念館",
-    "prefecture": "山梨県",
-    "address": "甲府市",
-    "latitude": 35.6652481,
-    "longitude": 138.5710441,
-    "category_id": "museum",
-    "recommended_for_tags": [
-      "exhibition",
-      "character"
-    ],
-    "description": "サンリオ創業者の辻信太郎氏(甲府市出身)を讃える記念館。サンリオキャラクターの歴史や辻氏の足跡を学べる。いこーよで注目度急上昇の新スポット。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 138,
-    "name": "宝石発掘体験SAGASO石和",
-    "prefecture": "山梨県",
-    "address": "笛吹市石和町",
-    "latitude": 35.641016,
-    "longitude": 138.6250182,
-    "category_id": "experience",
-    "recommended_for_tags": [
-      "experience",
-      "nature"
-    ],
-    "description": "宝石を実際に発掘体験できるユニークな施設。山梨は宝石加工で有名な地域、子供にとって本物の宝石を持ち帰れる感動体験。いこーよ満足度・注目度No.1。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 140,
-    "name": "より道の湯",
-    "prefecture": "山梨県",
-    "address": "都留市",
-    "latitude": 35.5516184,
-    "longitude": 138.9054872,
-    "category_id": "experience",
-    "recommended_for_tags": [
-      "experience"
-    ],
-    "description": "赤ちゃんや小さなお子さま連れでも安心の温泉施設。ベビーベッド・ベビーバス完備で温泉デビューに最適。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 149,
-    "name": "R413どうし 道志レジャーランド",
-    "prefecture": "山梨県",
-    "address": "南都留郡道志村",
-    "latitude": 35.5280748,
-    "longitude": 139.0335498,
-    "category_id": "experience",
-    "recommended_for_tags": [
-      "experience",
-      "nature"
-    ],
-    "description": "道志村の自然の中でオフロードバイクやバギー体験。星評価4.8、子供でも乗れる小型バイクから大人向け本格バイクまで揃う。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 150,
-    "name": "あすなろ園",
-    "prefecture": "山梨県",
-    "address": "甲府市",
-    "latitude": 35.6652481,
-    "longitude": 138.5710441,
-    "category_id": "fruit-picking",
-    "recommended_for_tags": [
-      "experience",
-      "nature",
-      "food"
-    ],
-    "description": "巨峰をはじめ、さくらんぼ・桃・いちご狩りができる総合フルーツ園。土地改良された低農薬栽培で安心。広大なハウスで天候に左右されずに楽しめる。",
     "issue_type": "invalid_address",
     "severity": "high",
     "needs_web_check": true,
@@ -763,8 +627,8 @@
     "longitude": 138.8900805,
     "category_id": "nature-park",
     "recommended_for_tags": [
-      "playground",
-      "nature"
+      "nature",
+      "wide_space"
     ],
     "description": "山中湖と富士山の絶景スポット。星評価4.4、5142件のレビュー。芝生広場でピクニック、親子の朝散歩に最適、24時間開放。",
     "issue_type": "invalid_address",
@@ -907,29 +771,6 @@
       "athletic"
     ],
     "description": "白馬村の屋内トランポリンパーク。20面以上のフリースタイルトランポリン、競技用トランポリン2台、ランニングウォール、エアマット、スポンジプールなどがある。スキーシーズンの雨や山の天候不良時にも遊べる、家族の救世主。じゃらん長野ランキング1位。",
-    "issue_type": "invalid_address",
-    "severity": "high",
-    "needs_web_check": true,
-    "web_check_reason": "address に数字・丁目・番・号・番地・ハイフンが含まれていない",
-    "web_check_status": "pending",
-    "web_check_result": null,
-    "web_checked_sources": [],
-    "needs_human_review": false,
-    "human_review_reason": null
-  },
-  {
-    "id": 205,
-    "name": "KOMOROBI Athletic & Camp",
-    "prefecture": "長野県",
-    "address": "佐久穂町",
-    "latitude": 36.1603674,
-    "longitude": 138.4835097,
-    "category_id": "athletic",
-    "recommended_for_tags": [
-      "athletic",
-      "nature"
-    ],
-    "description": "佐久穂町の山の中にある本格アスレチック&キャンプ施設。森林の中で本格的なアスレチック体験ができる。じゃらん長野テーマパークランキングTOP3。家族で挑戦できる難易度設定。",
     "issue_type": "invalid_address",
     "severity": "high",
     "needs_web_check": true,

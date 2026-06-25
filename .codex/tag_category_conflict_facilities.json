@@ -1,5 +1,28 @@
 [
   {
+    "id": 129,
+    "name": "猫カフェMOCHA イオンモール甲府昭和店",
+    "prefecture": "山梨県",
+    "address": "中巨摩郡昭和町飯喰1505-1 AEON MALL Kofu Showa 3F",
+    "latitude": 35.6227823,
+    "longitude": 138.5271606,
+    "category_id": "experience",
+    "recommended_for_tags": [
+      "animal",
+      "animal_contact"
+    ],
+    "description": "雨の日でも安心の全天候型猫カフェ。3歳以下は入場無料、ペット好きの子供にぴったり。",
+    "issue_type": "tag_category_conflict",
+    "severity": "medium",
+    "needs_web_check": true,
+    "web_check_reason": "category(experience)に対してcoretags(experience,craft)が付与されていない",
+    "web_check_status": "pending",
+    "web_check_result": null,
+    "web_checked_sources": [],
+    "needs_human_review": false,
+    "human_review_reason": null
+  },
+  {
     "id": 357,
     "name": "カンドゥー",
     "prefecture": "千葉県",
@@ -676,6 +699,52 @@
     "severity": "medium",
     "needs_web_check": true,
     "web_check_reason": "category(nature-park)に対してcoretags(nature,wide_space,running)が付与されていない",
+    "web_check_status": "pending",
+    "web_check_result": null,
+    "web_checked_sources": [],
+    "needs_human_review": false,
+    "human_review_reason": null
+  },
+  {
+    "id": 1055,
+    "name": "板橋交通公園",
+    "prefecture": "東京都",
+    "address": "東京都板橋区大山西町21番1号（板橋公園内）",
+    "latitude": 35.7461404,
+    "longitude": 139.6952636,
+    "category_id": "park",
+    "recommended_for_tags": [
+      "vehicle",
+      "exhibition"
+    ],
+    "description": "横断歩道や信号などの交通安全施設を備えた交通公園。交通ルールを学べるが、板橋公園再整備に伴い乗り物貸出と車両展示は休止中。",
+    "issue_type": "tag_category_conflict",
+    "severity": "medium",
+    "needs_web_check": true,
+    "web_check_reason": "category(park)に対してcoretags(playground,wide_space,running,nature)が付与されていない",
+    "web_check_status": "pending",
+    "web_check_result": null,
+    "web_checked_sources": [],
+    "needs_human_review": false,
+    "human_review_reason": null
+  },
+  {
+    "id": 1059,
+    "name": "府中市交通遊園",
+    "prefecture": "東京都",
+    "address": "東京都府中市矢崎町5丁目5番地",
+    "latitude": 35.6566253,
+    "longitude": 139.4780848,
+    "category_id": "park",
+    "recommended_for_tags": [
+      "vehicle",
+      "exhibition"
+    ],
+    "description": "教習コース、足踏みゴーカート、エンジン式・電動式ゴーカート、電気自動車、バスや蒸気機関車などの展示車両を備える交通遊園。",
+    "issue_type": "tag_category_conflict",
+    "severity": "medium",
+    "needs_web_check": true,
+    "web_check_reason": "category(park)に対してcoretags(playground,wide_space,running,nature)が付与されていない",
     "web_check_status": "pending",
     "web_check_result": null,
     "web_checked_sources": [],

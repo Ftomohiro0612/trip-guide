@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
     name: "メモリップ",
     short_name: "メモリップ",
     description:
-      "全国13都府県・1,000施設超から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの\"好き\"と成長が見えてきます。",
+      "全国14都府県・1,000施設超から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの\"好き\"と成長が見えてきます。",
     start_url: "/",
     display: "standalone",
     background_color: "#fafbfc",
