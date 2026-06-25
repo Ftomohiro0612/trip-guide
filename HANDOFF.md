@@ -25,7 +25,9 @@
 
 - **/events/kyoto イベント公開=本番LIVE完了(2026-06-25・origin/main=`32eb170`・10県目のイベント対象県)**。registry巡回70件(weekly5/monthly43/seasonal21/manual_hard1)→Codex読み取り巡回→候補doc`.codex/event-candidates-kyoto-2026-06-25.md`(採用35/保留4/不採用49施設・寺社ガード効=二条城/御苑/石清水/長岡天満宮/天橋立/植物園ライトアップ全て不採用)→PMトリム3件(京エコロジー タイ体験[受付6/26締切]/ダンボール迷路[7/1終了]/宇治植物公園 園長と散歩[子ども訴求弱])→オーナーGOで**32件採用/18施設**。1592太陽が丘プールは1件限定再確認も2026料金未確定で不採用(32維持)。1597ロケットend_date=仮8/31→確定7/29補正。events_data139→**171**(kyoto可視32・scheduled31/ongoing1)+**配線4点**(EventPrefecture+kyoto / metadata.prefectures+kyoto / app/events/page.tsxハブtitle・desc「京都」/ next-sitemap+/events/kyoto)+sitemap再生成。PM裏取り全GREEN(既存139件deep-equal不変・facilities/registry diff0・統制20語0逸脱・未来日0・第三者URL0・PM自身でtsc/lint PASS)→push(`d03c2ff..32eb170`クリーンFF)→**Codex本番Playwright GO**(/events/kyoto掲載中32 PC/SP・公式リンク別タブ・ハブ京都32絞り込み・既存osaka43/hyogo29/gunma12/ibaraki31退行なし・console/pageerror0・横スクロールなし・TZ罠回避)。**★検証教訓=施設ページのイベント節は設計上最大3件**(getVisibleEventsByFacility limit=3)→施設1602/1637(各4件)が施設ページ3件表示で一旦誤NO-GO・実際はハブに4件目も出てGO。今後の検証依頼は施設ページ期待=min(実数,3)。**京都=施設72+イベント32で施設・イベント両用に到達**。
 
-**本番 HEAD = origin/main = `32eb170`**(京都イベント公開時点)。
+- **京都Phase2 施設拡張=本番LIVE完了(2026-06-25・origin/main=`ae7f27a`・京都=施設100+イベント32で一次完成)**。採用案`.codex/kyoto-phase2-review.md`(+28基準・全件公式URL確認済・寺社4件のみ[糺の森/伏見稲荷/美山かやぶき/福知山城]・地方部補強・要確認17は保留)→Codex本データ化で**+28確定**(★安全ゲート未充足で160天橋立海水浴/174本庄浜海水浴を除外・保留から33船岡山公園/113勝竜寺城公園を公式確認で補充・173泊海水浴/122保津川下り/114サントリー工場は公式安全条件確認済)。新規ID **1639〜1666**・京都72→**100**・total1628→**1656**・registry1227→**1255**。**コード波及なし**(データ+registry+sitemapの3面のみ・大阪/兵庫Phase2同型)。親子重複=1647ボウケンノモリ太陽が丘(既存1592太陽が丘と別運営)/1649石清水八幡宮参道ケーブル(=男山ケーブル公式名・既存1599と別)を独立採用。PM裏取り全GREEN(既存京都72+14都府県deep-equal不変・events_data不変・registry既存1227不変・新カテゴリ0・京都audit high/medium0・bbox外0・slug重複0)→push(`68eed78..ae7f27a`・**★環境DNS不調でpush4回失敗→バックグラウンド再試行18回目で成功**。git/Playwright両方が一時的にgithub.com/trip-guide.net解決不能=環境起因。Codexは--host-resolver-rulesで回避)→**Codex本番Playwright GO**(PC/SP: /prefecture/kyoto100選・施設カード100・/map京都100/全体1651[=1656−exclude5]・主力詳細[福知山城/傘松/京都国立博物館/岡崎公園]・退行なし[/events/kyoto32・osaka132/hyogo123/tokyo191/全国14都府県]・console/pageerror0・横スクロールなし)。**京都=施設100+イベント32で一次完成**(大阪132・兵庫123に次ぐ3番目規模)。
+
+**本番 HEAD = origin/main = `ae7f27a`**(京都Phase2 公開時点)。
 
 **将来タスク(温存・オーナー確定 2026-06-25)**: MapViewの地図マーカー色重複2組(#a855f7・#0ea5e9)+絵文字🌊重複は**既存県どうしの問題(京都由来でない)**。今は触らず「地図視認性改善タスク」として残す。
 
@@ -36,7 +38,8 @@
 4. ✅ **大阪Phase2追加52施設(ID1392〜1443)のイベント再巡回=完了(2026-06-25・採用18→大阪イベント43・`687166f`)**。
 5. ✅ **京都(kyoto)Phase1=完了(2026-06-25・候補180→採用72・新規ID1567〜1638・`ed25984`・14都府県目)**。詳細は上記「京都Phase1」節。
 6. ✅ **京都イベント `/events/kyoto`=完了(2026-06-25・採用32/18施設・10県目・`32eb170`)**。詳細は上記「/events/kyoto」節。
-7. **▶次=京都Phase2施設拡張(~100・保留群/次回候補から)→その後 愛知(aichi)**。順序=大阪→兵庫→京都→愛知(北海道/沖縄は後ろ=大型県)。京都Phase2の母集団=`.codex/kyoto-candidates-full-2026-06-25.md`(180候補)の次回採用候補~38+保留~15。
+7. ✅ **京都Phase2施設拡張=完了(2026-06-25・+28→京都100・`ae7f27a`)。京都=施設100+イベント32で一次完成**。詳細は上記「京都Phase2」節。
+8. **▶次=次県=愛知(aichi・人気観光地ライン最後)を候補10STEP収集から標準フローで**。順序=大阪→兵庫→京都→**愛知**(北海道/沖縄は後ろ=大型県)。愛知=名古屋港水族館/東山動植物園/レゴランド/リニア鉄道館/トヨタ産業技術記念館 等の大物想定。新県=コード波及あり([[project_new_prefecture_code_surfaces]]・原画`.codex/prefecture_aicon/aichi.png`確認済)。
 
 **運用の要点(永続メモリに詳細)**:
 - 役割=実装/調査Codex・レビュー/裏取り/GO判定/push PM(`feedback_role_split`)。実装はGO後・1件ずつ承認しない。
