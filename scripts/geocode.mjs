@@ -16,6 +16,7 @@ const PREFECTURE_CENTROIDS = {
   hyogo: { lat: 34.69, lng: 135.19 },
   kyoto: { lat: 35.01, lng: 135.77 },
   aichi: { lat: 35.18, lng: 136.91 },
+  fukuoka: { lat: 33.59, lng: 130.4 },
 };
 
 const USER_AGENT =

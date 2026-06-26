@@ -1,8 +1,8 @@
 {
   "metadata": {
     "site_name": "trip-guide.net",
-    "site_description": "全国15都府県の子供向け遊び場検索サイト",
-    "total_facilities": 1781,
+    "site_description": "全国16都府県の子供向け遊び場検索サイト",
+    "total_facilities": 1856,
     "prefectures": [
       {
         "id": "shizuoka",
@@ -78,43 +78,48 @@
         "id": "aichi",
         "name": "愛知県",
         "count": 125
+      },
+      {
+        "id": "fukuoka",
+        "name": "福岡県",
+        "count": 75
       }
     ],
     "categories": [
       {
         "id": "theme-park",
         "name": "遊園地・テーマパーク",
-        "count": 79
+        "count": 80
       },
       {
         "id": "zoo",
         "name": "動物園",
-        "count": 94
+        "count": 99
       },
       {
         "id": "aquarium",
         "name": "水族館",
-        "count": 37
+        "count": 38
       },
       {
         "id": "park",
         "name": "公園(大型遊具)",
-        "count": 387
+        "count": 406
       },
       {
         "id": "indoor-play",
         "name": "屋内遊び場",
-        "count": 152
+        "count": 157
       },
       {
         "id": "science-museum",
         "name": "科学館",
-        "count": 93
+        "count": 100
       },
       {
         "id": "museum",
         "name": "博物館",
-        "count": 217
+        "count": 232
       },
       {
         "id": "craft",
@@ -134,12 +139,12 @@
       {
         "id": "athletic",
         "name": "アスレチック",
-        "count": 35
+        "count": 36
       },
       {
         "id": "art-museum",
         "name": "美術館・体験",
-        "count": 44
+        "count": 46
       },
       {
         "id": "ski",
@@ -154,27 +159,27 @@
       {
         "id": "experience",
         "name": "体験",
-        "count": 169
+        "count": 172
       },
       {
         "id": "nature-park",
         "name": "公園・自然",
-        "count": 169
+        "count": 173
       },
       {
         "id": "viewpoint",
         "name": "展望台",
-        "count": 36
+        "count": 39
       },
       {
         "id": "scenic",
         "name": "自然・絶景",
-        "count": 115
+        "count": 121
       },
       {
         "id": "indoor-theme-park",
         "name": "屋内テーマパーク",
-        "count": 17
+        "count": 20
       },
       {
         "id": "game-center",
@@ -89141,6 +89146,4062 @@
       "source_checked_at": "2026-06-26",
       "data_quality_status": "confirmed",
       "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに愛知県bbox内で確認。"
+    },
+    {
+      "id": 1792,
+      "slug": "facility-1792",
+      "name": "マリンワールド海の中道",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "福岡県福岡市東区西戸崎18-28",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "マリンワールド海の中道は、九州の海をテーマにした大型水族館です。外洋大水槽、イルカ・アシカショー、近海の生きもの展示を屋内中心に回れ、天候に左右されにくい福岡の看板施設です。",
+      "target_age": "全年齢",
+      "url": "https://marine-world.jp/",
+      "tags": [
+        "完全屋内"
+      ],
+      "latitude": 33.661,
+      "longitude": 130.363,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "九州の海をテーマにした水槽を親子で巡る",
+        "イルカ・アシカショーや館内展示を楽しむ",
+        "海の中道海浜公園と組み合わせて一日過ごす"
+      ],
+      "unique_selling_point": "九州の海をテーマにした水槽を親子で巡る。",
+      "experience_tags": [
+        "九州の海をテーマにした水槽を親子で巡る",
+        "イルカ・アシカショーや館内展示を楽しむ",
+        "海の中道海浜公園と組み合わせて一日過ごす"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "九州の海をテーマにした水槽を親子で巡る",
+        "イルカ・アシカショーや館内展示を楽しむ",
+        "海の中道海浜公園と組み合わせて一日過ごす"
+      ],
+      "source_urls": "https://marine-world.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1793,
+      "slug": "facility-1793",
+      "name": "海の中道海浜公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県福岡市東区大字西戸崎18-25",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部施設別料金）",
+      "child_fee": "有料（一部施設別料金）",
+      "description": "海の中道海浜公園は、動物の森、大型遊具、サイクリング、季節の花畑、夏のサンシャインプールを持つ国営公園です。広い園内を年齢に合わせて組み立てやすく、夏の水遊びは公式の開設期間と安全案内を確認して利用します。",
+      "target_age": "全年齢",
+      "url": "https://uminaka-park.jp/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.663,
+      "longitude": 130.366,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "動物の森で動物を見て回る",
+        "大型遊具やサイクリングで広い園内を遊ぶ",
+        "サンシャインプールは開設期間・注意事項を公式で確認して利用する"
+      ],
+      "unique_selling_point": "動物の森で動物を見て回る。",
+      "experience_tags": [
+        "動物の森で動物を見て回る",
+        "大型遊具やサイクリングで広い園内を遊ぶ",
+        "サンシャインプールは開設期間・注意事項を公式で確認して利用する"
+      ],
+      "summer_water_play": "△",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "動物の森で動物を見て回る",
+        "大型遊具やサイクリングで広い園内を遊ぶ",
+        "サンシャインプールは開設期間・注意事項を公式で確認して利用する"
+      ],
+      "source_urls": "https://uminaka-park.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 安全注記: 公式サンシャインプールページで営業期間中の管理所、救護施設、休憩時間、荒天時中止、飛び込み・潜水禁止等の安全条件を確認。海辺は散策中心、遊泳は公式に確認できる管理エリア・期間だけを案内。"
+    },
+    {
+      "id": 1794,
+      "slug": "facility-1794",
+      "name": "福岡アンパンマンこどもミュージアムinモール",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内テーマパーク",
+      "category_id": "indoor-theme-park",
+      "address": "福岡県福岡市博多区下川端町3-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "アンパンマンの世界観を再現した屋内テーマ施設で、ステージ、キャラクター展示、幼児向けの遊びを親子で楽しめます。未就学児が安心して遊びやすく、雨の日でも滞在しやすい構成です。",
+      "target_age": "0-6歳",
+      "url": "https://www.fukuoka-anpanman.jp/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK"
+      ],
+      "latitude": 33.594,
+      "longitude": 130.406,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "アンパンマンの世界で遊ぶ",
+        "ステージやグリーティングを楽しむ",
+        "雨の日の未就学児おでかけに使う"
+      ],
+      "unique_selling_point": "アンパンマンの世界で遊ぶ。",
+      "experience_tags": [
+        "アンパンマンの世界で遊ぶ",
+        "ステージやグリーティングを楽しむ",
+        "雨の日の未就学児おでかけに使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "character",
+        "experience",
+        "playground"
+      ],
+      "things_to_do": [
+        "アンパンマンの世界で遊ぶ",
+        "ステージやグリーティングを楽しむ",
+        "雨の日の未就学児おでかけに使う"
+      ],
+      "source_urls": "https://www.fukuoka-anpanman.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1795,
+      "slug": "facility-1795",
+      "name": "キッザニア福岡",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内テーマパーク",
+      "category_id": "indoor-theme-park",
+      "address": "福岡県福岡市博多区那珂6丁目23-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（予約制）",
+      "child_fee": "有料（予約制）",
+      "description": "キッザニア福岡は福岡市博多区にある屋内テーマパークです。職業体験のパビリオンを予約して回ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "3歳以上",
+      "url": "https://www.kidzania.jp/fukuoka/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.566,
+      "longitude": 130.44,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "職業体験のパビリオンを予約して回る",
+        "仕事の成果物や給料の仕組みを体験する",
+        "ららぽーと福岡内で食事や買い物と組み合わせる"
+      ],
+      "unique_selling_point": "職業体験のパビリオンを予約して回る。",
+      "experience_tags": [
+        "職業体験のパビリオンを予約して回る",
+        "仕事の成果物や給料の仕組みを体験する",
+        "ららぽーと福岡内で食事や買い物と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "character",
+        "experience",
+        "playground"
+      ],
+      "things_to_do": [
+        "職業体験のパビリオンを予約して回る",
+        "仕事の成果物や給料の仕組みを体験する",
+        "ららぽーと福岡内で食事や買い物と組み合わせる"
+      ],
+      "source_urls": "https://www.kidzania.jp/fukuoka/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1796,
+      "slug": "facility-1796",
+      "name": "三井ショッピングパーク ららぽーと福岡",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "福岡県福岡市博多区那珂6丁目23-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "店舗により有料",
+      "child_fee": "店舗により有料",
+      "description": "三井ショッピングパーク ららぽーと福岡は福岡市博多区にある屋内遊び場です。実物大ガンダム立像を見に行くことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/",
+      "tags": [
+        "完全屋内"
+      ],
+      "latitude": 33.565,
+      "longitude": 130.44,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "実物大ガンダム立像を見に行く",
+        "屋内で食事・買い物・休憩をまとめる",
+        "キッザニア福岡と別施設として予定を組む"
+      ],
+      "unique_selling_point": "実物大ガンダム立像を見に行く。",
+      "experience_tags": [
+        "実物大ガンダム立像を見に行く",
+        "屋内で食事・買い物・休憩をまとめる",
+        "キッザニア福岡と別施設として予定を組む"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "character"
+      ],
+      "things_to_do": [
+        "実物大ガンダム立像を見に行く",
+        "屋内で食事・買い物・休憩をまとめる",
+        "キッザニア福岡と別施設として予定を組む"
+      ],
+      "source_urls": "https://mitsui-shopping-park.com/lalaport/fukuoka/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1797,
+      "slug": "facility-1797",
+      "name": "福岡空港展望デッキ",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "福岡県福岡市博多区下臼井778-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "飛行機の離着陸を間近に眺められる展望スポットで、乗り物好きの子どもと短時間でも楽しめます。空港内の食事や休憩を組み合わせ、天候に合わせて屋内外を切り替えられます。",
+      "target_age": "全年齢",
+      "url": "https://www.fukuoka-airport.jp/",
+      "tags": [
+        "屋内外両方",
+        "無料"
+      ],
+      "latitude": 33.585,
+      "longitude": 130.451,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "飛行機の離着陸を展望デッキから見る",
+        "空港内で食事や休憩をする",
+        "短時間の乗り物好きおでかけに使う"
+      ],
+      "unique_selling_point": "飛行機の離着陸を展望デッキから見る。",
+      "experience_tags": [
+        "飛行機の離着陸を展望デッキから見る",
+        "空港内で食事や休憩をする",
+        "短時間の乗り物好きおでかけに使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "飛行機の離着陸を展望デッキから見る",
+        "空港内で食事や休憩をする",
+        "短時間の乗り物好きおでかけに使う"
+      ],
+      "source_urls": "https://www.fukuoka-airport.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1798,
+      "slug": "facility-1798",
+      "name": "博多町家ふるさと館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県福岡市博多区冷泉町6-10",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "博多町家ふるさと館は福岡市博多区にある博物館です。博多の暮らしや祭りの展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.hakatamachiya.com/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.593,
+      "longitude": 130.411,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "博多の暮らしや祭りの展示を見る",
+        "工芸実演や体験企画を確認する",
+        "櫛田神社周辺のまち歩きと組み合わせる"
+      ],
+      "unique_selling_point": "博多の暮らしや祭りの展示を見る。",
+      "experience_tags": [
+        "博多の暮らしや祭りの展示を見る",
+        "工芸実演や体験企画を確認する",
+        "櫛田神社周辺のまち歩きと組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "博多の暮らしや祭りの展示を見る",
+        "工芸実演や体験企画を確認する",
+        "櫛田神社周辺のまち歩きと組み合わせる"
+      ],
+      "source_urls": "https://www.hakatamachiya.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1799,
+      "slug": "facility-1799",
+      "name": "福岡市動植物園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "福岡県福岡市中央区南公園1-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "福岡市動植物園は、動物園・植物園・こども動物園をまとめて楽しめる都市型の大型施設です。動物観察、植物園の温室、季節イベントを組み合わせられ、未就学児から小学生まで親子で過ごしやすい福岡市中心部の看板スポットです。",
+      "target_age": "全年齢",
+      "url": "https://zoo.city.fukuoka.lg.jp/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.573,
+      "longitude": 130.389,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "動物園と植物園を年齢に合わせて回る",
+        "こども動物園や観察展示で生きものを学ぶ",
+        "坂の多い園内を休憩しながら一日楽しむ"
+      ],
+      "unique_selling_point": "動物園と植物園を年齢に合わせて回る。",
+      "experience_tags": [
+        "動物園と植物園を年齢に合わせて回る",
+        "こども動物園や観察展示で生きものを学ぶ",
+        "坂の多い園内を休憩しながら一日楽しむ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact"
+      ],
+      "things_to_do": [
+        "動物園と植物園を年齢に合わせて回る",
+        "こども動物園や観察展示で生きものを学ぶ",
+        "坂の多い園内を休憩しながら一日楽しむ"
+      ],
+      "source_urls": "https://zoo.city.fukuoka.lg.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1800,
+      "slug": "facility-1800",
+      "name": "福岡市科学館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県福岡市中央区六本松4丁目2-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "福岡市科学館は、基本展示、サイエンスショー、ドームシアターを備えた体験型科学館です。駅前の屋内施設なので雨の日でも使いやすく、未就学児の短時間利用から小学生の理科体験まで幅広く組み立てられます。",
+      "target_age": "小学生以上",
+      "url": "https://www.fukuokacity-kagakukan.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.577,
+      "longitude": 130.378,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "体験展示で科学の仕組みを触って学ぶ",
+        "ドームシアターやサイエンスショーを見る",
+        "六本松駅前で雨の日でも移動しやすく遊ぶ"
+      ],
+      "unique_selling_point": "体験展示で科学の仕組みを触って学ぶ。",
+      "experience_tags": [
+        "体験展示で科学の仕組みを触って学ぶ",
+        "ドームシアターやサイエンスショーを見る",
+        "六本松駅前で雨の日でも移動しやすく遊ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "体験展示で科学の仕組みを触って学ぶ",
+        "ドームシアターやサイエンスショーを見る",
+        "六本松駅前で雨の日でも移動しやすく遊ぶ"
+      ],
+      "source_urls": "https://www.fukuokacity-kagakukan.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1801,
+      "slug": "facility-1801",
+      "name": "大濠公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県福岡市中央区大濠公園1-2",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "大濠公園は福岡市中央区にある公園(大型遊具)です。池の周回園路を散歩することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.ohorikouen.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.586,
+      "longitude": 130.377,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "池の周回園路を散歩する",
+        "ボートや広場で親子時間を過ごす",
+        "福岡市美術館と隣接して回る"
+      ],
+      "unique_selling_point": "池の周回園路を散歩する。",
+      "experience_tags": [
+        "池の周回園路を散歩する",
+        "ボートや広場で親子時間を過ごす",
+        "福岡市美術館と隣接して回る"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "池の周回園路を散歩する",
+        "ボートや広場で親子時間を過ごす",
+        "福岡市美術館と隣接して回る"
+      ],
+      "source_urls": "https://www.ohorikouen.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1802,
+      "slug": "facility-1802",
+      "name": "福岡市美術館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "福岡県福岡市中央区大濠公園1-6",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "展覧会により有料",
+      "child_fee": "展覧会により有料",
+      "description": "福岡市美術館は福岡市中央区にある美術館・体験です。常設展や企画展を親子で見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.fukuoka-art-museum.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.584,
+      "longitude": 130.38,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "常設展や企画展を親子で見る",
+        "子ども向けワークショップを確認する",
+        "大濠公園散策と組み合わせる"
+      ],
+      "unique_selling_point": "常設展や企画展を親子で見る。",
+      "experience_tags": [
+        "常設展や企画展を親子で見る",
+        "子ども向けワークショップを確認する",
+        "大濠公園散策と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "craft"
+      ],
+      "things_to_do": [
+        "常設展や企画展を親子で見る",
+        "子ども向けワークショップを確認する",
+        "大濠公園散策と組み合わせる"
+      ],
+      "source_urls": "https://www.fukuoka-art-museum.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1803,
+      "slug": "facility-1803",
+      "name": "舞鶴公園・福岡城跡",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県福岡市中央区城内1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "舞鶴公園・福岡城跡は福岡市中央区にある公園(大型遊具)です。福岡城跡の石垣や門を歩いて見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.midorimachi.jp/maiduru/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.586,
+      "longitude": 130.383,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "福岡城跡の石垣や門を歩いて見る",
+        "芝生広場や季節の花を楽しむ",
+        "歴史散策と外遊びを組み合わせる"
+      ],
+      "unique_selling_point": "福岡城跡の石垣や門を歩いて見る。",
+      "experience_tags": [
+        "福岡城跡の石垣や門を歩いて見る",
+        "芝生広場や季節の花を楽しむ",
+        "歴史散策と外遊びを組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "福岡城跡の石垣や門を歩いて見る",
+        "芝生広場や季節の花を楽しむ",
+        "歴史散策と外遊びを組み合わせる"
+      ],
+      "source_urls": "https://www.midorimachi.jp/maiduru/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1804,
+      "slug": "facility-1804",
+      "name": "チームラボフォレスト 福岡",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内テーマパーク",
+      "category_id": "indoor-theme-park",
+      "address": "福岡県福岡市中央区地行浜2丁目2-6",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（別チケット）",
+      "child_fee": "有料（別チケット）",
+      "description": "デジタルアートの森を歩き、作品に触れたり体を動かしたりしながら親子で没入体験できます。屋内で天候に左右されず、BOSS E・ZO内でも別チケットの目的地として計画します。",
+      "target_age": "全年齢",
+      "url": "https://www.teamlab.art/jp/e/forest/",
+      "tags": [
+        "完全屋内"
+      ],
+      "latitude": 33.595,
+      "longitude": 130.363,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "デジタルアート空間の中を歩いて探索する",
+        "運動量のある作品を親子で体験する",
+        "BOSS E・ZO内でも別チケット施設として計画する"
+      ],
+      "unique_selling_point": "デジタルアート空間の中を歩いて探索する。",
+      "experience_tags": [
+        "デジタルアート空間の中を歩いて探索する",
+        "運動量のある作品を親子で体験する",
+        "BOSS E・ZO内でも別チケット施設として計画する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "character",
+        "experience",
+        "playground"
+      ],
+      "things_to_do": [
+        "デジタルアート空間の中を歩いて探索する",
+        "運動量のある作品を親子で体験する",
+        "BOSS E・ZO内でも別チケット施設として計画する"
+      ],
+      "source_urls": "https://www.teamlab.art/jp/e/forest/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1805,
+      "slug": "facility-1805",
+      "name": "ABURAYAMA FUKUOKA",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "福岡県福岡市南区柏原710-2",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "ABURAYAMA FUKUOKAは福岡市南区にある動物園です。牧場エリアで動物や自然にふれることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.aburayama-fukuoka.com/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.519,
+      "longitude": 130.377,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "牧場エリアで動物や自然にふれる",
+        "キャンプ・森遊び・体験企画を確認する",
+        "油山市民の森とは別施設として目的を分ける"
+      ],
+      "unique_selling_point": "牧場エリアで動物や自然にふれる。",
+      "experience_tags": [
+        "牧場エリアで動物や自然にふれる",
+        "キャンプ・森遊び・体験企画を確認する",
+        "油山市民の森とは別施設として目的を分ける"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact"
+      ],
+      "things_to_do": [
+        "牧場エリアで動物や自然にふれる",
+        "キャンプ・森遊び・体験企画を確認する",
+        "油山市民の森とは別施設として目的を分ける"
+      ],
+      "source_urls": "https://www.aburayama-fukuoka.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1806,
+      "slug": "facility-1806",
+      "name": "福岡タワー",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "福岡県福岡市早良区百道浜2丁目3-26",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "博多湾と福岡市街を高い場所から眺められる展望施設で、海浜エリアの景色を親子で楽しめます。館内展示や周辺散策を組み合わせ、雨の日や短時間観光にも使いやすいスポットです。",
+      "target_age": "全年齢",
+      "url": "https://www.fukuokatower.co.jp/",
+      "tags": [
+        "完全屋内"
+      ],
+      "latitude": 33.594,
+      "longitude": 130.351,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "展望室から博多湾と市街地を眺める",
+        "ももち海浜公園や博物館と回遊する",
+        "短時間の雨の日観光に使う"
+      ],
+      "unique_selling_point": "展望室から博多湾と市街地を眺める。",
+      "experience_tags": [
+        "展望室から博多湾と市街地を眺める",
+        "ももち海浜公園や博物館と回遊する",
+        "短時間の雨の日観光に使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "展望室から博多湾と市街地を眺める",
+        "ももち海浜公園や博物館と回遊する",
+        "短時間の雨の日観光に使う"
+      ],
+      "source_urls": "https://www.fukuokatower.co.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1807,
+      "slug": "facility-1807",
+      "name": "福岡市博物館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県福岡市早良区百道浜3丁目1-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "福岡市博物館は福岡市早良区にある博物館です。金印など福岡の歴史展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://museum.city.fukuoka.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.591,
+      "longitude": 130.352,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "金印など福岡の歴史展示を見る",
+        "企画展や体験講座を確認する",
+        "福岡タワー周辺と組み合わせる"
+      ],
+      "unique_selling_point": "金印など福岡の歴史展示を見る。",
+      "experience_tags": [
+        "金印など福岡の歴史展示を見る",
+        "企画展や体験講座を確認する",
+        "福岡タワー周辺と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "金印など福岡の歴史展示を見る",
+        "企画展や体験講座を確認する",
+        "福岡タワー周辺と組み合わせる"
+      ],
+      "source_urls": "https://museum.city.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1808,
+      "slug": "facility-1808",
+      "name": "シーサイドももち海浜公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県福岡市早良区百道浜2丁目902-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "シーサイドももち海浜公園は福岡市早良区にある自然・絶景です。砂浜を散歩して海辺の景色を楽しむことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.marizon-kankyo.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.596,
+      "longitude": 130.353,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "砂浜を散歩して海辺の景色を楽しむ",
+        "水際遊びは公式の利用区分と監視条件を確認する",
+        "福岡タワーや博物館と回遊する"
+      ],
+      "unique_selling_point": "砂浜を散歩して海辺の景色を楽しむ。",
+      "experience_tags": [
+        "砂浜を散歩して海辺の景色を楽しむ",
+        "水際遊びは公式の利用区分と監視条件を確認する",
+        "福岡タワーや博物館と回遊する"
+      ],
+      "summer_water_play": "△",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "砂浜を散歩して海辺の景色を楽しむ",
+        "水際遊びは公式の利用区分と監視条件を確認する",
+        "福岡タワーや博物館と回遊する"
+      ],
+      "source_urls": "https://www.marizon-kankyo.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 安全注記: 公式で通常は親水エリアで水際の水遊び程度、遊泳はライフセーバー常駐の期間・時間・百道浜東側エリアのみ可能と確認。期間外・指定区域外の遊泳不可を明記。"
+    },
+    {
+      "id": 1809,
+      "slug": "facility-1809",
+      "name": "ロボスクエア",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県福岡市早良区百道浜2丁目3-2",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "ロボスクエアは福岡市早良区にある科学館です。ロボット展示や実演を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://robosquare.city.fukuoka.lg.jp/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.593,
+      "longitude": 130.351,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ロボット展示や実演を見る",
+        "工作・プログラミング系イベントを確認する",
+        "ももちエリアの雨の日学習に使う"
+      ],
+      "unique_selling_point": "ロボット展示や実演を見る。",
+      "experience_tags": [
+        "ロボット展示や実演を見る",
+        "工作・プログラミング系イベントを確認する",
+        "ももちエリアの雨の日学習に使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "ロボット展示や実演を見る",
+        "工作・プログラミング系イベントを確認する",
+        "ももちエリアの雨の日学習に使う"
+      ],
+      "source_urls": "https://robosquare.city.fukuoka.lg.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1810,
+      "slug": "facility-1810",
+      "name": "のこのしまアイランドパーク",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "福岡県福岡市西区能古島1624",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "のこのしまアイランドパークは、博多湾に浮かぶ能古島の花畑・芝生・動物ふれあいを楽しめる公園です。船移動そのものが体験になり、菜の花・コスモスなど季節の景色と広い外遊びを組み合わせられます。",
+      "target_age": "全年齢",
+      "url": "https://nokonoshima.com/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.619,
+      "longitude": 130.303,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "船で能古島へ渡り花畑を歩く",
+        "芝生広場や動物とのふれあいを楽しむ",
+        "季節の花と海の景色を親子で写真に残す"
+      ],
+      "unique_selling_point": "船で能古島へ渡り花畑を歩く。",
+      "experience_tags": [
+        "船で能古島へ渡り花畑を歩く",
+        "芝生広場や動物とのふれあいを楽しむ",
+        "季節の花と海の景色を親子で写真に残す"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "船で能古島へ渡り花畑を歩く",
+        "芝生広場や動物とのふれあいを楽しむ",
+        "季節の花と海の景色を親子で写真に残す"
+      ],
+      "source_urls": "https://nokonoshima.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1811,
+      "slug": "facility-1811",
+      "name": "門司港レトロ",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県北九州市門司区港町9-11",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "門司港レトロは北九州市門司区にある自然・絶景です。レトロ建築と港町を親子で散策することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.mojiko.info/",
+      "tags": [
+        "屋内外両方",
+        "無料"
+      ],
+      "latitude": 33.946,
+      "longitude": 130.967,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "レトロ建築と港町を親子で散策する",
+        "駅や海峡の景色を見て回る",
+        "屋内施設と外歩きを天候で切り替える"
+      ],
+      "unique_selling_point": "レトロ建築と港町を親子で散策する。",
+      "experience_tags": [
+        "レトロ建築と港町を親子で散策する",
+        "駅や海峡の景色を見て回る",
+        "屋内施設と外歩きを天候で切り替える"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "レトロ建築と港町を親子で散策する",
+        "駅や海峡の景色を見て回る",
+        "屋内施設と外歩きを天候で切り替える"
+      ],
+      "source_urls": "https://www.mojiko.info/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1812,
+      "slug": "facility-1812",
+      "name": "九州鉄道記念館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県北九州市門司区清滝2丁目3-29",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "九州鉄道記念館は北九州市門司区にある博物館です。実車展示や運転シミュレーターを体験することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.k-rhm.jp/",
+      "tags": [
+        "小学生向け"
+      ],
+      "latitude": 33.944,
+      "longitude": 130.962,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "実車展示や運転シミュレーターを体験する",
+        "ミニ鉄道に乗って遊ぶ",
+        "門司港レトロ散策と組み合わせる"
+      ],
+      "unique_selling_point": "実車展示や運転シミュレーターを体験する。",
+      "experience_tags": [
+        "実車展示や運転シミュレーターを体験する",
+        "ミニ鉄道に乗って遊ぶ",
+        "門司港レトロ散策と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "実車展示や運転シミュレーターを体験する",
+        "ミニ鉄道に乗って遊ぶ",
+        "門司港レトロ散策と組み合わせる"
+      ],
+      "source_urls": "https://www.k-rhm.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1813,
+      "slug": "facility-1813",
+      "name": "到津の森公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "福岡県北九州市小倉北区上到津4丁目1-8",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "到津の森公園は、動物園と緑豊かな公園、小さな乗り物を合わせて楽しめる北九州市の看板施設です。動物観察だけでなく、坂道や広場を使った外遊びもでき、半日から一日のおでかけに組み立てやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.itozu-zoo.jp/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.876,
+      "longitude": 130.853,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "動物展示と緑の園内をゆっくり回る",
+        "小さな乗り物や広場で低年齢も遊ぶ",
+        "動物イベントや餌やり時間を確認する"
+      ],
+      "unique_selling_point": "動物展示と緑の園内をゆっくり回る。",
+      "experience_tags": [
+        "動物展示と緑の園内をゆっくり回る",
+        "小さな乗り物や広場で低年齢も遊ぶ",
+        "動物イベントや餌やり時間を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact"
+      ],
+      "things_to_do": [
+        "動物展示と緑の園内をゆっくり回る",
+        "小さな乗り物や広場で低年齢も遊ぶ",
+        "動物イベントや餌やり時間を確認する"
+      ],
+      "source_urls": "https://www.itozu-zoo.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1814,
+      "slug": "facility-1814",
+      "name": "小倉城",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県北九州市小倉北区城内2-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "小倉城は北九州市小倉北区にある博物館です。天守の展示で小倉の歴史を学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.kokura-castle.jp/",
+      "tags": [
+        "小学生向け"
+      ],
+      "latitude": 33.884,
+      "longitude": 130.875,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "天守の展示で小倉の歴史を学ぶ",
+        "城内の体験展示を親子で回る",
+        "勝山公園は周辺回遊として扱う"
+      ],
+      "unique_selling_point": "天守の展示で小倉の歴史を学ぶ。",
+      "experience_tags": [
+        "天守の展示で小倉の歴史を学ぶ",
+        "城内の体験展示を親子で回る",
+        "勝山公園は周辺回遊として扱う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "天守の展示で小倉の歴史を学ぶ",
+        "城内の体験展示を親子で回る",
+        "勝山公園は周辺回遊として扱う"
+      ],
+      "source_urls": "https://www.kokura-castle.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1815,
+      "slug": "facility-1815",
+      "name": "TOTOミュージアム",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県北九州市小倉北区中島2丁目1-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "TOTOミュージアムは北九州市小倉北区にある博物館です。水まわり製品の歴史とものづくり展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://jp.toto.com/knowledge/visit/museum/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.874,
+      "longitude": 130.873,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "水まわり製品の歴史とものづくり展示を見る",
+        "予約不要の少人数見学として親子で回る",
+        "団体・バス利用時は公式予約条件を確認する"
+      ],
+      "unique_selling_point": "水まわり製品の歴史とものづくり展示を見る。",
+      "experience_tags": [
+        "水まわり製品の歴史とものづくり展示を見る",
+        "予約不要の少人数見学として親子で回る",
+        "団体・バス利用時は公式予約条件を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "水まわり製品の歴史とものづくり展示を見る",
+        "予約不要の少人数見学として親子で回る",
+        "団体・バス利用時は公式予約条件を確認する"
+      ],
+      "source_urls": "https://jp.toto.com/knowledge/visit/museum/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 工場見学確認: 公式で少人数・貸切バス以外の来館は予約不要、団体等は見学予約サイトから申込、開館中で無料と確認。工場ライン見学ではなくミュージアム見学型として採用。"
+    },
+    {
+      "id": 1816,
+      "slug": "facility-1816",
+      "name": "平尾台",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県北九州市小倉南区平尾台1丁目1-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "平尾台は北九州市小倉南区にある自然・絶景です。カルスト台地の景色を見ながら散策することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.hiraodai.jp/",
+      "tags": [
+        "屋外",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.764,
+      "longitude": 130.903,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "カルスト台地の景色を見ながら散策する",
+        "洞窟や自然観察は公式条件を確認する",
+        "平尾台自然の郷とは独立して自然景観を楽しむ"
+      ],
+      "unique_selling_point": "カルスト台地の景色を見ながら散策する。",
+      "experience_tags": [
+        "カルスト台地の景色を見ながら散策する",
+        "洞窟や自然観察は公式条件を確認する",
+        "平尾台自然の郷とは独立して自然景観を楽しむ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "カルスト台地の景色を見ながら散策する",
+        "洞窟や自然観察は公式条件を確認する",
+        "平尾台自然の郷とは独立して自然景観を楽しむ"
+      ],
+      "source_urls": "https://www.hiraodai.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1817,
+      "slug": "facility-1817",
+      "name": "平尾台自然の郷",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "福岡県北九州市小倉南区平尾台1丁目1-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "平尾台自然の郷は北九州市小倉南区にある公園・自然です。草原広場や遊具で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.hiraodai.jp/sato/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.757,
+      "longitude": 130.91,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "草原広場や遊具で遊ぶ",
+        "体験工房や季節イベントを確認する",
+        "平尾台の自然散策と組み合わせる"
+      ],
+      "unique_selling_point": "草原広場や遊具で遊ぶ。",
+      "experience_tags": [
+        "草原広場や遊具で遊ぶ",
+        "体験工房や季節イベントを確認する",
+        "平尾台の自然散策と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "草原広場や遊具で遊ぶ",
+        "体験工房や季節イベントを確認する",
+        "平尾台の自然散策と組み合わせる"
+      ],
+      "source_urls": "https://www.hiraodai.jp/sato/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1818,
+      "slug": "facility-1818",
+      "name": "響灘緑地グリーンパーク",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県北九州市若松区竹並1006",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "響灘緑地グリーンパークは、大型遊具、芝生広場、熱帯生態園、カンガルー広場を備えた北九州の大規模公園です。ひびき動物ワールドは独立施設にせず、園内の動物エリアとして things_to_do に吸収しています。",
+      "target_age": "全年齢",
+      "url": "https://www.hibikinadagp.org/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.919,
+      "longitude": 130.739,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型ブランコや芝生広場で体を動かす",
+        "熱帯生態園やカンガルー広場を見て回る",
+        "ひびき動物ワールド相当の動物体験を親施設内で楽しむ"
+      ],
+      "unique_selling_point": "大型ブランコや芝生広場で体を動かす。",
+      "experience_tags": [
+        "大型ブランコや芝生広場で体を動かす",
+        "熱帯生態園やカンガルー広場を見て回る",
+        "ひびき動物ワールド相当の動物体験を親施設内で楽しむ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型ブランコや芝生広場で体を動かす",
+        "熱帯生態園やカンガルー広場を見て回る",
+        "ひびき動物ワールド相当の動物体験を親施設内で楽しむ"
+      ],
+      "source_urls": "https://www.hibikinadagp.org/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1819,
+      "slug": "facility-1819",
+      "name": "北九州市立いのちのたび博物館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県北九州市八幡東区東田2丁目4-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "北九州市立いのちのたび博物館は、恐竜骨格、自然史、地域の歴史を大スケールで見られる屋内博物館です。展示量が多く、恐竜好きの未就学児から小学生の調べ学習まで使いやすい北九州の代表施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.kmnh.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.87,
+      "longitude": 130.811,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "恐竜骨格と自然史展示を迫力ある空間で見る",
+        "歴史・自然・生命の展示を順に学ぶ",
+        "東田エリアの科学館と組み合わせる"
+      ],
+      "unique_selling_point": "恐竜骨格と自然史展示を迫力ある空間で見る。",
+      "experience_tags": [
+        "恐竜骨格と自然史展示を迫力ある空間で見る",
+        "歴史・自然・生命の展示を順に学ぶ",
+        "東田エリアの科学館と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "恐竜骨格と自然史展示を迫力ある空間で見る",
+        "歴史・自然・生命の展示を順に学ぶ",
+        "東田エリアの科学館と組み合わせる"
+      ],
+      "source_urls": "https://www.kmnh.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1820,
+      "slug": "facility-1820",
+      "name": "スペースLABO（北九州市科学館）",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県北九州市八幡東区東田4丁目1-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "スペースLABO（北九州市科学館）は北九州市八幡東区にある科学館です。体験展示で科学を触って学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://kitakyushuspacelabo.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.867,
+      "longitude": 130.81,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "体験展示で科学を触って学ぶ",
+        "プラネタリウムを予約して見る",
+        "いのちのたび博物館と東田で回遊する"
+      ],
+      "unique_selling_point": "体験展示で科学を触って学ぶ。",
+      "experience_tags": [
+        "体験展示で科学を触って学ぶ",
+        "プラネタリウムを予約して見る",
+        "いのちのたび博物館と東田で回遊する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "体験展示で科学を触って学ぶ",
+        "プラネタリウムを予約して見る",
+        "いのちのたび博物館と東田で回遊する"
+      ],
+      "source_urls": "https://kitakyushuspacelabo.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1821,
+      "slug": "facility-1821",
+      "name": "皿倉山ケーブルカー・スロープカー",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "福岡県北九州市八幡東区大字尾倉1481-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "ケーブルカーとスロープカーを乗り継いで山頂へ向かう、乗り物体験と展望を一度に楽しめる施設です。山頂から北九州の街と海を眺め、運行状況を確認して親子で計画できます。",
+      "target_age": "全年齢",
+      "url": "https://www.sarakurayama-cablecar.co.jp/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.846,
+      "longitude": 130.796,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ケーブルカーとスロープカーを乗り継ぐ",
+        "山頂から北九州の街と海を眺める",
+        "夜景や季節イベントは公式運行情報を確認する"
+      ],
+      "unique_selling_point": "ケーブルカーとスロープカーを乗り継ぐ。",
+      "experience_tags": [
+        "ケーブルカーとスロープカーを乗り継ぐ",
+        "山頂から北九州の街と海を眺める",
+        "夜景や季節イベントは公式運行情報を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "ケーブルカーとスロープカーを乗り継ぐ",
+        "山頂から北九州の街と海を眺める",
+        "夜景や季節イベントは公式運行情報を確認する"
+      ],
+      "source_urls": "https://www.sarakurayama-cablecar.co.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1822,
+      "slug": "facility-1822",
+      "name": "とびくる",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "福岡県北九州市八幡西区陣原1丁目2-4",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "とびくるは北九州市八幡西区にある屋内遊び場です。トランポリンで体を動かすことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://kitakyushu-tobikuru.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.86,
+      "longitude": 130.744,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "トランポリンで体を動かす",
+        "年齢・利用ルールを確認して遊ぶ",
+        "雨の日の運動遊びに使う"
+      ],
+      "unique_selling_point": "トランポリンで体を動かす。",
+      "experience_tags": [
+        "トランポリンで体を動かす",
+        "年齢・利用ルールを確認して遊ぶ",
+        "雨の日の運動遊びに使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "character"
+      ],
+      "things_to_do": [
+        "トランポリンで体を動かす",
+        "年齢・利用ルールを確認して遊ぶ",
+        "雨の日の運動遊びに使う"
+      ],
+      "source_urls": "https://kitakyushu-tobikuru.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1823,
+      "slug": "facility-1823",
+      "name": "北九州市立子どもの館 HOW!?",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "福岡県北九州市八幡西区黒崎3丁目15-3",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "北九州市立子どもの館 HOW!?は北九州市八幡西区にある屋内遊び場です。屋内の遊び場で年齢別に遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "0-12歳",
+      "url": "https://www.kodomo-how.com/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 33.865,
+      "longitude": 130.767,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "屋内の遊び場で年齢別に遊ぶ",
+        "親子イベントや工作を確認する",
+        "黒崎駅前で雨の日でも移動しやすく過ごす"
+      ],
+      "unique_selling_point": "屋内の遊び場で年齢別に遊ぶ。",
+      "experience_tags": [
+        "屋内の遊び場で年齢別に遊ぶ",
+        "親子イベントや工作を確認する",
+        "黒崎駅前で雨の日でも移動しやすく過ごす"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "character"
+      ],
+      "things_to_do": [
+        "屋内の遊び場で年齢別に遊ぶ",
+        "親子イベントや工作を確認する",
+        "黒崎駅前で雨の日でも移動しやすく過ごす"
+      ],
+      "source_urls": "https://www.kodomo-how.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1824,
+      "slug": "facility-1824",
+      "name": "フォレストアドベンチャー・糸島",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "アスレチック",
+      "category_id": "athletic",
+      "address": "福岡県糸島市二丈一貴山312-390",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（予約推奨）",
+      "child_fee": "有料（予約推奨）",
+      "description": "フォレストアドベンチャー・糸島は糸島市にあるアスレチックです。森の中のアスレチックコースに挑戦することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://fa-itoshima.foret-aventure.jp/",
+      "tags": [
+        "屋外",
+        "小学生向け"
+      ],
+      "latitude": 33.502,
+      "longitude": 130.169,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "森の中のアスレチックコースに挑戦する",
+        "身長・年齢条件を公式で確認する",
+        "糸島の自然ドライブと組み合わせる"
+      ],
+      "unique_selling_point": "森の中のアスレチックコースに挑戦する。",
+      "experience_tags": [
+        "森の中のアスレチックコースに挑戦する",
+        "身長・年齢条件を公式で確認する",
+        "糸島の自然ドライブと組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "athletic",
+        "playground"
+      ],
+      "things_to_do": [
+        "森の中のアスレチックコースに挑戦する",
+        "身長・年齢条件を公式で確認する",
+        "糸島の自然ドライブと組み合わせる"
+      ],
+      "source_urls": "https://fa-itoshima.foret-aventure.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1825,
+      "slug": "facility-1825",
+      "name": "伊都国歴史博物館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県糸島市井原916",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "伊都国歴史博物館は糸島市にある博物館です。伊都国の歴史展示を親子で見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.city.itoshima.lg.jp/m043/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.552,
+      "longitude": 130.219,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "伊都国の歴史展示を親子で見る",
+        "古代史や出土品を学ぶ",
+        "糸島観光の雨の日候補にする"
+      ],
+      "unique_selling_point": "伊都国の歴史展示を親子で見る。",
+      "experience_tags": [
+        "伊都国の歴史展示を親子で見る",
+        "古代史や出土品を学ぶ",
+        "糸島観光の雨の日候補にする"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "伊都国の歴史展示を親子で見る",
+        "古代史や出土品を学ぶ",
+        "糸島観光の雨の日候補にする"
+      ],
+      "source_urls": "https://www.city.itoshima.lg.jp/m043/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1826,
+      "slug": "facility-1826",
+      "name": "五ケ山クロス",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "福岡県那珂川市五ケ山1291",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "五ケ山クロスは那珂川市にある公園・自然です。ダム湖周辺でアウトドア気分を楽しむことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://nakagawa-gokayama.com/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.459,
+      "longitude": 130.402,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ダム湖周辺でアウトドア気分を楽しむ",
+        "キャンプやモンベル施設の利用条件を確認する",
+        "山あいの自然散策を親子で組み立てる"
+      ],
+      "unique_selling_point": "ダム湖周辺でアウトドア気分を楽しむ。",
+      "experience_tags": [
+        "ダム湖周辺でアウトドア気分を楽しむ",
+        "キャンプやモンベル施設の利用条件を確認する",
+        "山あいの自然散策を親子で組み立てる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "ダム湖周辺でアウトドア気分を楽しむ",
+        "キャンプやモンベル施設の利用条件を確認する",
+        "山あいの自然散策を親子で組み立てる"
+      ],
+      "source_urls": "https://nakagawa-gokayama.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1827,
+      "slug": "facility-1827",
+      "name": "春日公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県春日市原町3丁目1-4",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "春日公園は春日市にある公園(大型遊具)です。大型遊具や芝生広場で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://kasugapark.com/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.529,
+      "longitude": 130.473,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生広場で遊ぶ",
+        "ジョギングコースや池周辺を散策する",
+        "県営公園のイベントや施設利用を確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生広場で遊ぶ。",
+      "experience_tags": [
+        "大型遊具や芝生広場で遊ぶ",
+        "ジョギングコースや池周辺を散策する",
+        "県営公園のイベントや施設利用を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生広場で遊ぶ",
+        "ジョギングコースや池周辺を散策する",
+        "県営公園のイベントや施設利用を確認する"
+      ],
+      "source_urls": "https://kasugapark.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1828,
+      "slug": "facility-1828",
+      "name": "大野城いこいの森中央公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県大野城市牛頸667-58",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "大野城いこいの森中央公園は大野城市にある公園(大型遊具)です。大型遊具と芝生で外遊びをすることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://onojo-ikoi.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.488,
+      "longitude": 130.476,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具と芝生で外遊びをする",
+        "水辺やキャンプ場周辺を散策する",
+        "季節の利用案内を確認して遊ぶ"
+      ],
+      "unique_selling_point": "大型遊具と芝生で外遊びをする。",
+      "experience_tags": [
+        "大型遊具と芝生で外遊びをする",
+        "水辺やキャンプ場周辺を散策する",
+        "季節の利用案内を確認して遊ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具と芝生で外遊びをする",
+        "水辺やキャンプ場周辺を散策する",
+        "季節の利用案内を確認して遊ぶ"
+      ],
+      "source_urls": "https://onojo-ikoi.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1829,
+      "slug": "facility-1829",
+      "name": "大野城心のふるさと館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県大野城市曙町3丁目8-3",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "大野城心のふるさと館は大野城市にある博物館です。地域の歴史展示を見て学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.onojo-occm.jp/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.536,
+      "longitude": 130.478,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "地域の歴史展示を見て学ぶ",
+        "体験型展示やワークショップを確認する",
+        "雨の日の短時間学習に使う"
+      ],
+      "unique_selling_point": "地域の歴史展示を見て学ぶ。",
+      "experience_tags": [
+        "地域の歴史展示を見て学ぶ",
+        "体験型展示やワークショップを確認する",
+        "雨の日の短時間学習に使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "地域の歴史展示を見て学ぶ",
+        "体験型展示やワークショップを確認する",
+        "雨の日の短時間学習に使う"
+      ],
+      "source_urls": "https://www.onojo-occm.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1830,
+      "slug": "facility-1830",
+      "name": "筑紫野市総合公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県筑紫野市大字山口382-6",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "筑紫野市総合公園は筑紫野市にある公園(大型遊具)です。大型船型遊具で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.city.chikushino.fukuoka.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.48,
+      "longitude": 130.506,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型船型遊具で遊ぶ",
+        "芝生広場で走って遊ぶ",
+        "天候と駐車場情報を確認して出かける"
+      ],
+      "unique_selling_point": "大型船型遊具で遊ぶ。",
+      "experience_tags": [
+        "大型船型遊具で遊ぶ",
+        "芝生広場で走って遊ぶ",
+        "天候と駐車場情報を確認して出かける"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型船型遊具で遊ぶ",
+        "芝生広場で走って遊ぶ",
+        "天候と駐車場情報を確認して出かける"
+      ],
+      "source_urls": "https://www.city.chikushino.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1831,
+      "slug": "facility-1831",
+      "name": "九州国立博物館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県太宰府市石坂4丁目7-2",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料（一部無料）",
+      "child_fee": "有料（一部無料）",
+      "description": "九州国立博物館は、太宰府天満宮の近くにある国立博物館です。文化交流展示や子ども向け体験スペースを屋内で楽しめ、歴史学習と太宰府散策を一日で組み合わせやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.kyuhaku.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.519,
+      "longitude": 130.536,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "文化交流展示でアジアと日本の歴史を学ぶ",
+        "あじっぱなど子ども向け体験を確認する",
+        "太宰府天満宮と徒歩で回遊する"
+      ],
+      "unique_selling_point": "文化交流展示でアジアと日本の歴史を学ぶ。",
+      "experience_tags": [
+        "文化交流展示でアジアと日本の歴史を学ぶ",
+        "あじっぱなど子ども向け体験を確認する",
+        "太宰府天満宮と徒歩で回遊する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "文化交流展示でアジアと日本の歴史を学ぶ",
+        "あじっぱなど子ども向け体験を確認する",
+        "太宰府天満宮と徒歩で回遊する"
+      ],
+      "source_urls": "https://www.kyuhaku.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1832,
+      "slug": "facility-1832",
+      "name": "太宰府天満宮",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県太宰府市宰府4丁目7-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "太宰府天満宮は太宰府市にある自然・絶景です。参道と境内を親子で散策することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.dazaifutenmangu.or.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.521,
+      "longitude": 130.535,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "参道と境内を親子で散策する",
+        "季節行事や梅の時期を楽しむ",
+        "九州国立博物館・だざいふ遊園地と別施設で回る"
+      ],
+      "unique_selling_point": "参道と境内を親子で散策する。",
+      "experience_tags": [
+        "参道と境内を親子で散策する",
+        "季節行事や梅の時期を楽しむ",
+        "九州国立博物館・だざいふ遊園地と別施設で回る"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "参道と境内を親子で散策する",
+        "季節行事や梅の時期を楽しむ",
+        "九州国立博物館・だざいふ遊園地と別施設で回る"
+      ],
+      "source_urls": "https://www.dazaifutenmangu.or.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1833,
+      "slug": "facility-1833",
+      "name": "だざいふ遊園地",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "福岡県太宰府市宰府4丁目7-8",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "小さな子ども向けの乗り物が多い遊園地で、太宰府天満宮参拝とあわせて親子で遊べます。低年齢でも乗りやすいアトラクションを中心に、天候と営業状況を確認して回ります。",
+      "target_age": "0-8歳",
+      "url": "https://www.dazaifuyuuenchi.com/",
+      "tags": [
+        "0-3歳OK",
+        "屋外"
+      ],
+      "latitude": 33.522,
+      "longitude": 130.536,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "小さい子向けの乗り物で遊ぶ",
+        "太宰府天満宮参拝と組み合わせる",
+        "雨天時の営業状況を公式で確認する"
+      ],
+      "unique_selling_point": "小さい子向けの乗り物で遊ぶ。",
+      "experience_tags": [
+        "小さい子向けの乗り物で遊ぶ",
+        "太宰府天満宮参拝と組み合わせる",
+        "雨天時の営業状況を公式で確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience"
+      ],
+      "things_to_do": [
+        "小さい子向けの乗り物で遊ぶ",
+        "太宰府天満宮参拝と組み合わせる",
+        "雨天時の営業状況を公式で確認する"
+      ],
+      "source_urls": "https://www.dazaifuyuuenchi.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1834,
+      "slug": "facility-1834",
+      "name": "海の道むなかた館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県宗像市深田588",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "海の道むなかた館は宗像市にある博物館です。宗像の歴史と世界遺産関連展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://searoad.city.munakata.lg.jp/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.833,
+      "longitude": 130.515,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "宗像の歴史と世界遺産関連展示を見る",
+        "体験展示や企画を確認する",
+        "宗像大社周辺の学習拠点として使う"
+      ],
+      "unique_selling_point": "宗像の歴史と世界遺産関連展示を見る。",
+      "experience_tags": [
+        "宗像の歴史と世界遺産関連展示を見る",
+        "体験展示や企画を確認する",
+        "宗像大社周辺の学習拠点として使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "宗像の歴史と世界遺産関連展示を見る",
+        "体験展示や企画を確認する",
+        "宗像大社周辺の学習拠点として使う"
+      ],
+      "source_urls": "https://searoad.city.munakata.lg.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1835,
+      "slug": "facility-1835",
+      "name": "宗像ユリックス",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県宗像市久原400",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "プラネタリウム、図書館、ホールを備えた文化複合施設で、親子向けイベントや星空学習を楽しめます。雨の日は屋内で過ごしやすく、宗像エリアの学習・休憩拠点になります。",
+      "target_age": "全年齢",
+      "url": "https://yurix.munakata.com/",
+      "tags": [
+        "完全屋内"
+      ],
+      "latitude": 33.803,
+      "longitude": 130.558,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "プラネタリウムや図書館を利用する",
+        "親子向けイベントを確認する",
+        "雨の日の文化複合施設として過ごす"
+      ],
+      "unique_selling_point": "プラネタリウムや図書館を利用する。",
+      "experience_tags": [
+        "プラネタリウムや図書館を利用する",
+        "親子向けイベントを確認する",
+        "雨の日の文化複合施設として過ごす"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "プラネタリウムや図書館を利用する",
+        "親子向けイベントを確認する",
+        "雨の日の文化複合施設として過ごす"
+      ],
+      "source_urls": "https://yurix.munakata.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1836,
+      "slug": "facility-1836",
+      "name": "古賀グリーンパーク",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県古賀市青柳町587-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "古賀グリーンパークは古賀市にある公園(大型遊具)です。大型遊具や芝生広場で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.city.koga.fukuoka.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.735,
+      "longitude": 130.492,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生広場で遊ぶ",
+        "公園内を散策して体を動かす",
+        "季節イベントや駐車場情報を確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生広場で遊ぶ。",
+      "experience_tags": [
+        "大型遊具や芝生広場で遊ぶ",
+        "公園内を散策して体を動かす",
+        "季節イベントや駐車場情報を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生広場で遊ぶ",
+        "公園内を散策して体を動かす",
+        "季節イベントや駐車場情報を確認する"
+      ],
+      "source_urls": "https://www.city.koga.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1837,
+      "slug": "facility-1837",
+      "name": "宮地嶽神社",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県福津市宮司元町7-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "宮地嶽神社は福津市にある自然・絶景です。参道と境内を親子で歩くことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.miyajidake.or.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.783,
+      "longitude": 130.486,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "参道と境内を親子で歩く",
+        "光の道や季節行事の時期を確認する",
+        "海辺ドライブと組み合わせる"
+      ],
+      "unique_selling_point": "参道と境内を親子で歩く。",
+      "experience_tags": [
+        "参道と境内を親子で歩く",
+        "光の道や季節行事の時期を確認する",
+        "海辺ドライブと組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "参道と境内を親子で歩く",
+        "光の道や季節行事の時期を確認する",
+        "海辺ドライブと組み合わせる"
+      ],
+      "source_urls": "https://www.miyajidake.or.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1838,
+      "slug": "facility-1838",
+      "name": "ファンタジーキッズリゾート福岡",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "福岡県糟屋郡志免町別府北2丁目14-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "ファンタジーキッズリゾート福岡は志免町にある屋内遊び場です。大型屋内遊具で体を動かすことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "0-12歳",
+      "url": "https://www.fantasyresort.jp/fukuoka/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 33.599,
+      "longitude": 130.459,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型屋内遊具で体を動かす",
+        "乳幼児エリアやイベントを確認する",
+        "雨の日の長時間遊びに使う"
+      ],
+      "unique_selling_point": "大型屋内遊具で体を動かす。",
+      "experience_tags": [
+        "大型屋内遊具で体を動かす",
+        "乳幼児エリアやイベントを確認する",
+        "雨の日の長時間遊びに使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "character"
+      ],
+      "things_to_do": [
+        "大型屋内遊具で体を動かす",
+        "乳幼児エリアやイベントを確認する",
+        "雨の日の長時間遊びに使う"
+      ],
+      "source_urls": "https://www.fantasyresort.jp/fukuoka/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1839,
+      "slug": "facility-1839",
+      "name": "駕与丁公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県糟屋郡粕屋町駕与丁3丁目2-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "駕与丁公園は粕屋町にある公園(大型遊具)です。池の周回路を散策することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.town.kasuya.fukuoka.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.611,
+      "longitude": 130.482,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "池の周回路を散策する",
+        "大型遊具や広場で遊ぶ",
+        "バラ園など季節の景色を楽しむ"
+      ],
+      "unique_selling_point": "池の周回路を散策する。",
+      "experience_tags": [
+        "池の周回路を散策する",
+        "大型遊具や広場で遊ぶ",
+        "バラ園など季節の景色を楽しむ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "池の周回路を散策する",
+        "大型遊具や広場で遊ぶ",
+        "バラ園など季節の景色を楽しむ"
+      ],
+      "source_urls": "https://www.town.kasuya.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1840,
+      "slug": "facility-1840",
+      "name": "直方市石炭記念館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県直方市直方692-4",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "筑豊の石炭産業を実物資料や屋外展示で学べる記念館で、社会科見学として親子で回れます。炭鉱の歴史や地域の暮らしを、展示を見ながら具体的に理解できます。",
+      "target_age": "小学生以上",
+      "url": "https://yumenity.jp/sekitan/",
+      "tags": [
+        "小学生向け"
+      ],
+      "latitude": 33.745,
+      "longitude": 130.724,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "筑豊の石炭産業史を学ぶ",
+        "屋外展示の車両や機械を見る",
+        "小学生の社会科見学として回る"
+      ],
+      "unique_selling_point": "筑豊の石炭産業史を学ぶ。",
+      "experience_tags": [
+        "筑豊の石炭産業史を学ぶ",
+        "屋外展示の車両や機械を見る",
+        "小学生の社会科見学として回る"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "筑豊の石炭産業史を学ぶ",
+        "屋外展示の車両や機械を見る",
+        "小学生の社会科見学として回る"
+      ],
+      "source_urls": "https://yumenity.jp/sekitan/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1841,
+      "slug": "facility-1841",
+      "name": "筑豊緑地",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県飯塚市仁保8-25",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "筑豊緑地は飯塚市にある公園(大型遊具)です。大型遊具や芝生広場で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://chikuhou-ryokuchi.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.654,
+      "longitude": 130.709,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生広場で遊ぶ",
+        "スポーツ施設や散策路を利用する",
+        "県営公園のイベントを確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生広場で遊ぶ。",
+      "experience_tags": [
+        "大型遊具や芝生広場で遊ぶ",
+        "スポーツ施設や散策路を利用する",
+        "県営公園のイベントを確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生広場で遊ぶ",
+        "スポーツ施設や散策路を利用する",
+        "県営公園のイベントを確認する"
+      ],
+      "source_urls": "https://chikuhou-ryokuchi.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1842,
+      "slug": "facility-1842",
+      "name": "田川市石炭・歴史博物館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県田川市大字伊田2734-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "田川市石炭・歴史博物館は田川市にある博物館です。筑豊炭田の歴史展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.joho.tagawa.fukuoka.jp/sekitan/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.643,
+      "longitude": 130.816,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "筑豊炭田の歴史展示を見る",
+        "世界記憶遺産関連資料を学ぶ",
+        "屋外展示も天候に合わせて見学する"
+      ],
+      "unique_selling_point": "筑豊炭田の歴史展示を見る。",
+      "experience_tags": [
+        "筑豊炭田の歴史展示を見る",
+        "世界記憶遺産関連資料を学ぶ",
+        "屋外展示も天候に合わせて見学する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "筑豊炭田の歴史展示を見る",
+        "世界記憶遺産関連資料を学ぶ",
+        "屋外展示も天候に合わせて見学する"
+      ],
+      "source_urls": "https://www.joho.tagawa.fukuoka.jp/sekitan/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1843,
+      "slug": "facility-1843",
+      "name": "トヨタ自動車九州 PR館・工場見学",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "福岡県宮若市上有木1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "トヨタ自動車九州 PR館・工場見学は宮若市にある体験です。PR館でレクサスや生産工程展示を見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.toyota-kyushu.com/plant_tour/visitor.html",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.724,
+      "longitude": 130.648,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "PR館でレクサスや生産工程展示を見る",
+        "工場見学は予約画面の受付日程を確認する",
+        "12歳未満は大人引率など公式注意事項を守る"
+      ],
+      "unique_selling_point": "PR館でレクサスや生産工程展示を見る。",
+      "experience_tags": [
+        "PR館でレクサスや生産工程展示を見る",
+        "工場見学は予約画面の受付日程を確認する",
+        "12歳未満は大人引率など公式注意事項を守る"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "craft"
+      ],
+      "things_to_do": [
+        "PR館でレクサスや生産工程展示を見る",
+        "工場見学は予約画面の受付日程を確認する",
+        "12歳未満は大人引率など公式注意事項を守る"
+      ],
+      "source_urls": "https://www.toyota-kyushu.com/plant_tour/visitor.html",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 工場見学確認: 公式で一般向け対象にご家族を含み、12歳未満は大人引率、無料・要予約、2026年6〜12月は一部休止と予約画面確認条件を確認。受付対象期間が限定されるためmanual_hard。"
+    },
+    {
+      "id": 1844,
+      "slug": "facility-1844",
+      "name": "道の駅歓遊舎ひこさん",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県田川郡添田町野田1113-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "道の駅歓遊舎ひこさんは添田町にある公園(大型遊具)です。遊具や広場で休憩しながら遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://kanyuusya.com/",
+      "tags": [
+        "屋内外両方",
+        "無料"
+      ],
+      "latitude": 33.574,
+      "longitude": 130.86,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "物産館で地域の食に触れる",
+        "英彦山方面のおでかけ拠点にする"
+      ],
+      "unique_selling_point": "遊具や広場で休憩しながら遊ぶ。",
+      "experience_tags": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "物産館で地域の食に触れる",
+        "英彦山方面のおでかけ拠点にする"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "物産館で地域の食に触れる",
+        "英彦山方面のおでかけ拠点にする"
+      ],
+      "source_urls": "https://kanyuusya.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1845,
+      "slug": "facility-1845",
+      "name": "道の駅おおとう桜街道",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県田川郡大任町今任原1339",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "道の駅おおとう桜街道は大任町にある公園(大型遊具)です。遊具や広場で休憩しながら遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.town.oto.fukuoka.jp/",
+      "tags": [
+        "屋内外両方",
+        "無料"
+      ],
+      "latitude": 33.612,
+      "longitude": 130.855,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "花公園やイルミネーション時期を確認する",
+        "温浴・物産とドライブ休憩を組み合わせる"
+      ],
+      "unique_selling_point": "遊具や広場で休憩しながら遊ぶ。",
+      "experience_tags": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "花公園やイルミネーション時期を確認する",
+        "温浴・物産とドライブ休憩を組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "遊具や広場で休憩しながら遊ぶ",
+        "花公園やイルミネーション時期を確認する",
+        "温浴・物産とドライブ休憩を組み合わせる"
+      ],
+      "source_urls": "https://www.town.oto.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1846,
+      "slug": "facility-1846",
+      "name": "源じいの森",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "福岡県田川郡赤村赤6933-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "源じいの森は赤村にある公園・自然です。キャンプや自然散策を楽しむことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.genjii.com/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.598,
+      "longitude": 130.889,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "キャンプや自然散策を楽しむ",
+        "川沿い利用は天候と現地条件を確認する",
+        "温浴施設と組み合わせて過ごす"
+      ],
+      "unique_selling_point": "キャンプや自然散策を楽しむ。",
+      "experience_tags": [
+        "キャンプや自然散策を楽しむ",
+        "川沿い利用は天候と現地条件を確認する",
+        "温浴施設と組み合わせて過ごす"
+      ],
+      "summer_water_play": "△",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "キャンプや自然散策を楽しむ",
+        "川沿い利用は天候と現地条件を確認する",
+        "温浴施設と組み合わせて過ごす"
+      ],
+      "source_urls": "https://www.genjii.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 安全注記: 川沿い・キャンプ利用は公式の営業条件と現地天候を確認し、増水時や悪天候時は入水せず散策・宿泊利用中心にする。"
+    },
+    {
+      "id": 1847,
+      "slug": "facility-1847",
+      "name": "福岡県青少年科学館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県久留米市東櫛原町1713",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "福岡県青少年科学館は久留米市にある科学館です。体験展示で科学を学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.science.pref.fukuoka.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.319,
+      "longitude": 130.521,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "体験展示で科学を学ぶ",
+        "プラネタリウムや実験イベントを確認する",
+        "久留米の雨の日学習に使う"
+      ],
+      "unique_selling_point": "体験展示で科学を学ぶ。",
+      "experience_tags": [
+        "体験展示で科学を学ぶ",
+        "プラネタリウムや実験イベントを確認する",
+        "久留米の雨の日学習に使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "体験展示で科学を学ぶ",
+        "プラネタリウムや実験イベントを確認する",
+        "久留米の雨の日学習に使う"
+      ],
+      "source_urls": "https://www.science.pref.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1848,
+      "slug": "facility-1848",
+      "name": "久留米市鳥類センター",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "福岡県久留米市東櫛原町1667",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "久留米市鳥類センターは久留米市にある動物園です。鳥類を中心に動物展示を見て回ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://kurumekoen.org/birdc/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.32,
+      "longitude": 130.52,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "鳥類を中心に動物展示を見て回る",
+        "公園内の遊具や広場と組み合わせる",
+        "久留米市中心部の短時間おでかけに使う"
+      ],
+      "unique_selling_point": "鳥類を中心に動物展示を見て回る。",
+      "experience_tags": [
+        "鳥類を中心に動物展示を見て回る",
+        "公園内の遊具や広場と組み合わせる",
+        "久留米市中心部の短時間おでかけに使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact"
+      ],
+      "things_to_do": [
+        "鳥類を中心に動物展示を見て回る",
+        "公園内の遊具や広場と組み合わせる",
+        "久留米市中心部の短時間おでかけに使う"
+      ],
+      "source_urls": "https://kurumekoen.org/birdc/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1849,
+      "slug": "facility-1849",
+      "name": "久留米百年公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県久留米市百年公園1-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "久留米百年公園は久留米市にある公園(大型遊具)です。芝生広場で走って遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.city.kurume.fukuoka.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.324,
+      "longitude": 130.524,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "芝生広場で走って遊ぶ",
+        "筑後川沿いを散策する",
+        "季節イベントや花の時期を確認する"
+      ],
+      "unique_selling_point": "芝生広場で走って遊ぶ。",
+      "experience_tags": [
+        "芝生広場で走って遊ぶ",
+        "筑後川沿いを散策する",
+        "季節イベントや花の時期を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "芝生広場で走って遊ぶ",
+        "筑後川沿いを散策する",
+        "季節イベントや花の時期を確認する"
+      ],
+      "source_urls": "https://www.city.kurume.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1850,
+      "slug": "facility-1850",
+      "name": "石橋文化センター",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "美術館・体験",
+      "category_id": "art-museum",
+      "address": "福岡県久留米市野中町1015",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "石橋文化センターは久留米市にある美術館・体験です。庭園やバラ園を親子で散策することができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.ishibashi-bunka.jp/",
+      "tags": [
+        "屋内外両方",
+        "無料"
+      ],
+      "latitude": 33.311,
+      "longitude": 130.535,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "庭園やバラ園を親子で散策する",
+        "美術館や文化イベントを確認する",
+        "季節の花と屋内鑑賞を組み合わせる"
+      ],
+      "unique_selling_point": "庭園やバラ園を親子で散策する。",
+      "experience_tags": [
+        "庭園やバラ園を親子で散策する",
+        "美術館や文化イベントを確認する",
+        "季節の花と屋内鑑賞を組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "craft"
+      ],
+      "things_to_do": [
+        "庭園やバラ園を親子で散策する",
+        "美術館や文化イベントを確認する",
+        "季節の花と屋内鑑賞を組み合わせる"
+      ],
+      "source_urls": "https://www.ishibashi-bunka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1851,
+      "slug": "facility-1851",
+      "name": "久留米サイクルファミリーパーク",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県久留米市御井町2028",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "久留米サイクルファミリーパークは久留米市にある公園(大型遊具)です。変わり自転車に親子で乗ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://kurume-cfp.com/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.305,
+      "longitude": 130.56,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "変わり自転車に親子で乗る",
+        "交通ルールを意識しながら遊ぶ",
+        "天候と営業日を公式で確認する"
+      ],
+      "unique_selling_point": "変わり自転車に親子で乗る。",
+      "experience_tags": [
+        "変わり自転車に親子で乗る",
+        "交通ルールを意識しながら遊ぶ",
+        "天候と営業日を公式で確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "変わり自転車に親子で乗る",
+        "交通ルールを意識しながら遊ぶ",
+        "天候と営業日を公式で確認する"
+      ],
+      "source_urls": "https://kurume-cfp.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1852,
+      "slug": "facility-1852",
+      "name": "大牟田市動物園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "福岡県大牟田市昭和町163",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "大牟田市動物園は、動物福祉の取り組みで知られる県南の代表的な動物園です。動物を観察するだけでなく、いきものの暮らし方や飼育の工夫を親子で話しながら回れる学びの多い施設です。",
+      "target_age": "全年齢",
+      "url": "https://omutacityzoo.org/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.028,
+      "longitude": 130.448,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "動物福祉の取り組みを感じながら展示を回る",
+        "ガイドやイベントの時間を確認する",
+        "延命公園周辺とあわせてゆっくり過ごす"
+      ],
+      "unique_selling_point": "動物福祉の取り組みを感じながら展示を回る。",
+      "experience_tags": [
+        "動物福祉の取り組みを感じながら展示を回る",
+        "ガイドやイベントの時間を確認する",
+        "延命公園周辺とあわせてゆっくり過ごす"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact"
+      ],
+      "things_to_do": [
+        "動物福祉の取り組みを感じながら展示を回る",
+        "ガイドやイベントの時間を確認する",
+        "延命公園周辺とあわせてゆっくり過ごす"
+      ],
+      "source_urls": "https://omutacityzoo.org/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1853,
+      "slug": "facility-1853",
+      "name": "大牟田市石炭産業科学館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県大牟田市岬町6-23",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "大牟田市石炭産業科学館は大牟田市にある科学館です。模擬坑道で炭鉱の仕事を体験的に学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.sekitan-omuta.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.03,
+      "longitude": 130.425,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "模擬坑道で炭鉱の仕事を体験的に学ぶ",
+        "三池炭鉱の産業史展示を見る",
+        "雨の日の社会科見学に使う"
+      ],
+      "unique_selling_point": "模擬坑道で炭鉱の仕事を体験的に学ぶ。",
+      "experience_tags": [
+        "模擬坑道で炭鉱の仕事を体験的に学ぶ",
+        "三池炭鉱の産業史展示を見る",
+        "雨の日の社会科見学に使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "模擬坑道で炭鉱の仕事を体験的に学ぶ",
+        "三池炭鉱の産業史展示を見る",
+        "雨の日の社会科見学に使う"
+      ],
+      "source_urls": "https://www.sekitan-omuta.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1854,
+      "slug": "facility-1854",
+      "name": "柳川川下り",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "福岡県柳川市三橋町高畑329",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "柳川川下りは柳川市にある体験です。どんこ舟で掘割を巡ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.yanagawa-net.com/",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.165,
+      "longitude": 130.405,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "どんこ舟で掘割を巡る",
+        "船頭の案内を聞きながら町並みを見る",
+        "雨天・増水・運航状況を公式で確認する"
+      ],
+      "unique_selling_point": "どんこ舟で掘割を巡る。",
+      "experience_tags": [
+        "どんこ舟で掘割を巡る",
+        "船頭の案内を聞きながら町並みを見る",
+        "雨天・増水・運航状況を公式で確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "craft"
+      ],
+      "things_to_do": [
+        "どんこ舟で掘割を巡る",
+        "船頭の案内を聞きながら町並みを見る",
+        "雨天・増水・運航状況を公式で確認する"
+      ],
+      "source_urls": "https://www.yanagawa-net.com/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1855,
+      "slug": "facility-1855",
+      "name": "八女市ふるさとわらべ館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "福岡県八女市上陽町下横山4838",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "八女市ふるさとわらべ館は八女市にある屋内遊び場です。昔の遊びや木のおもちゃで遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "0-12歳",
+      "url": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 33.241,
+      "longitude": 130.65,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "昔の遊びや木のおもちゃで遊ぶ",
+        "工作・体験企画を確認する",
+        "雨の日の八女エリア候補にする"
+      ],
+      "unique_selling_point": "昔の遊びや木のおもちゃで遊ぶ。",
+      "experience_tags": [
+        "昔の遊びや木のおもちゃで遊ぶ",
+        "工作・体験企画を確認する",
+        "雨の日の八女エリア候補にする"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "character"
+      ],
+      "things_to_do": [
+        "昔の遊びや木のおもちゃで遊ぶ",
+        "工作・体験企画を確認する",
+        "雨の日の八女エリア候補にする"
+      ],
+      "source_urls": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1856,
+      "slug": "facility-1856",
+      "name": "星の文化館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "福岡県八女市星野村10828-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "天文台や星空学習を通じて宇宙に親しめる施設で、親子で星や天体について学べます。観望条件やプログラムを公式で確認し、星野村の自然体験と組み合わせられます。",
+      "target_age": "小学生以上",
+      "url": "https://www.hoshinofurusato.jp/constellation/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.238,
+      "longitude": 130.779,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "天文台で星や宇宙について学ぶ",
+        "プラネタリウムや観望条件を確認する",
+        "星野村の自然と組み合わせて過ごす"
+      ],
+      "unique_selling_point": "天文台で星や宇宙について学ぶ。",
+      "experience_tags": [
+        "天文台で星や宇宙について学ぶ",
+        "プラネタリウムや観望条件を確認する",
+        "星野村の自然と組み合わせて過ごす"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "天文台で星や宇宙について学ぶ",
+        "プラネタリウムや観望条件を確認する",
+        "星野村の自然と組み合わせて過ごす"
+      ],
+      "source_urls": "https://www.hoshinofurusato.jp/constellation/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1857,
+      "slug": "facility-1857",
+      "name": "岩戸山歴史文化交流館 いわいの郷",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県八女市吉田1562-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "古墳や筑紫君磐井の歴史を展示で学び、周辺の岩戸山古墳散策にもつなげられる交流館です。小学生の歴史学習や雨の日の屋内見学として、親子で体験講座も確認できます。",
+      "target_age": "小学生以上",
+      "url": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.229,
+      "longitude": 130.559,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "古墳や筑紫君磐井の歴史を学ぶ",
+        "展示や体験講座を確認する",
+        "岩戸山古墳散策と組み合わせる"
+      ],
+      "unique_selling_point": "古墳や筑紫君磐井の歴史を学ぶ。",
+      "experience_tags": [
+        "古墳や筑紫君磐井の歴史を学ぶ",
+        "展示や体験講座を確認する",
+        "岩戸山古墳散策と組み合わせる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "古墳や筑紫君磐井の歴史を学ぶ",
+        "展示や体験講座を確認する",
+        "岩戸山古墳散策と組み合わせる"
+      ],
+      "source_urls": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1858,
+      "slug": "facility-1858",
+      "name": "筑後広域公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県筑後市津島831-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "筑後広域公園は筑後市にある公園(大型遊具)です。大型遊具や芝生で外遊びをすることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://chikugokoen.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.204,
+      "longitude": 130.492,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生で外遊びをする",
+        "広い園路を散策する",
+        "スポーツ施設やイベントを確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生で外遊びをする。",
+      "experience_tags": [
+        "大型遊具や芝生で外遊びをする",
+        "広い園路を散策する",
+        "スポーツ施設やイベントを確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生で外遊びをする",
+        "広い園路を散策する",
+        "スポーツ施設やイベントを確認する"
+      ],
+      "source_urls": "https://chikugokoen.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1859,
+      "slug": "facility-1859",
+      "name": "あまぎ水の文化村",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県朝倉市矢野竹831",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "施設により有料",
+      "child_fee": "施設により有料",
+      "description": "あまぎ水の文化村は朝倉市にある公園(大型遊具)です。水とダムについて展示で学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.water.go.jp/chikugo/amagimizu/",
+      "tags": [
+        "屋内外両方"
+      ],
+      "latitude": 33.427,
+      "longitude": 130.687,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "水とダムについて展示で学ぶ",
+        "夏の水遊びは公式開放条件を確認する",
+        "芝生広場で体を動かす"
+      ],
+      "unique_selling_point": "水とダムについて展示で学ぶ。",
+      "experience_tags": [
+        "水とダムについて展示で学ぶ",
+        "夏の水遊びは公式開放条件を確認する",
+        "芝生広場で体を動かす"
+      ],
+      "summer_water_play": "△",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "水とダムについて展示で学ぶ",
+        "夏の水遊びは公式開放条件を確認する",
+        "芝生広場で体を動かす"
+      ],
+      "source_urls": "https://www.water.go.jp/chikugo/amagimizu/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 安全注記: 水遊びや屋外施設は公式の開放期間・現地掲示・天候を確認し、荒天時や増水時は展示・芝生中心にする。"
+    },
+    {
+      "id": 1860,
+      "slug": "facility-1860",
+      "name": "キリンビール福岡工場",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "福岡県朝倉市馬田3601",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "20歳以上有料・20歳未満無料（要予約）",
+      "child_fee": "20歳以上有料・20歳未満無料（要予約）",
+      "description": "キリンビール福岡工場は朝倉市にある体験です。工場見学を事前予約して製造工程を学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://www.kirin.co.jp/experience/factory/fukuoka/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.403,
+      "longitude": 130.631,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "工場見学を事前予約して製造工程を学ぶ",
+        "未成年は酒類試飲不可など公式注意を守る",
+        "花園やショップを見学前後に楽しむ"
+      ],
+      "unique_selling_point": "工場見学を事前予約して製造工程を学ぶ。",
+      "experience_tags": [
+        "工場見学を事前予約して製造工程を学ぶ",
+        "未成年は酒類試飲不可など公式注意を守る",
+        "花園やショップを見学前後に楽しむ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "craft"
+      ],
+      "things_to_do": [
+        "工場見学を事前予約して製造工程を学ぶ",
+        "未成年は酒類試飲不可など公式注意を守る",
+        "花園やショップを見学前後に楽しむ"
+      ],
+      "source_urls": "https://www.kirin.co.jp/experience/factory/fukuoka/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 工場見学確認: 公式で工場見学は事前予約制、社会科見学ツアーあり、公的観光ページで20歳未満無料を確認。未成年は酒類試飲不可の注意を前提に採用。"
+    },
+    {
+      "id": 1861,
+      "slug": "facility-1861",
+      "name": "夜須高原記念の森",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県朝倉郡筑前町櫛木3-6",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "夜須高原記念の森は筑前町にある公園(大型遊具)です。大型遊具や芝生広場で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://yasukogen.q-rin.co.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.445,
+      "longitude": 130.646,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生広場で遊ぶ",
+        "森林の散策路を歩く",
+        "高原の天候と開園情報を確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生広場で遊ぶ。",
+      "experience_tags": [
+        "大型遊具や芝生広場で遊ぶ",
+        "森林の散策路を歩く",
+        "高原の天候と開園情報を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生広場で遊ぶ",
+        "森林の散策路を歩く",
+        "高原の天候と開園情報を確認する"
+      ],
+      "source_urls": "https://yasukogen.q-rin.co.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1862,
+      "slug": "facility-1862",
+      "name": "筑前町立大刀洗平和記念館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県朝倉郡筑前町高田2561-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "有料",
+      "child_fee": "有料",
+      "description": "筑前町立大刀洗平和記念館は筑前町にある博物館です。平和学習の展示を親子で見ることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "小学生以上",
+      "url": "https://tachiarai-heiwa.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 33.413,
+      "longitude": 130.618,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "平和学習の展示を親子で見る",
+        "航空機や資料から地域の歴史を学ぶ",
+        "小学生以上の学習目的で訪れる"
+      ],
+      "unique_selling_point": "平和学習の展示を親子で見る。",
+      "experience_tags": [
+        "平和学習の展示を親子で見る",
+        "航空機や資料から地域の歴史を学ぶ",
+        "小学生以上の学習目的で訪れる"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "平和学習の展示を親子で見る",
+        "航空機や資料から地域の歴史を学ぶ",
+        "小学生以上の学習目的で訪れる"
+      ],
+      "source_urls": "https://tachiarai-heiwa.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1863,
+      "slug": "facility-1863",
+      "name": "行橋総合公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県行橋市今井3759",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "行橋総合公園は行橋市にある公園(大型遊具)です。大型遊具や芝生で遊ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.city.yukuhashi.fukuoka.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.714,
+      "longitude": 130.99,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具や芝生で遊ぶ",
+        "スポーツ施設や海辺の散策を組み合わせる",
+        "市公式の施設利用案内を確認する"
+      ],
+      "unique_selling_point": "大型遊具や芝生で遊ぶ。",
+      "experience_tags": [
+        "大型遊具や芝生で遊ぶ",
+        "スポーツ施設や海辺の散策を組み合わせる",
+        "市公式の施設利用案内を確認する"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具や芝生で遊ぶ",
+        "スポーツ施設や海辺の散策を組み合わせる",
+        "市公式の施設利用案内を確認する"
+      ],
+      "source_urls": "https://www.city.yukuhashi.fukuoka.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1864,
+      "slug": "facility-1864",
+      "name": "天地山公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "福岡県豊前市大字大村1140-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "天地山公園は豊前市にある公園(大型遊具)です。大型遊具で体を動かすことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.city.buzen.lg.jp/",
+      "tags": [
+        "屋外",
+        "無料"
+      ],
+      "latitude": 33.611,
+      "longitude": 131.08,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具で体を動かす",
+        "自然の中を散策する",
+        "豊前エリアの外遊び候補にする"
+      ],
+      "unique_selling_point": "大型遊具で体を動かす。",
+      "experience_tags": [
+        "大型遊具で体を動かす",
+        "自然の中を散策する",
+        "豊前エリアの外遊び候補にする"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "大型遊具で体を動かす",
+        "自然の中を散策する",
+        "豊前エリアの外遊び候補にする"
+      ],
+      "source_urls": "https://www.city.buzen.lg.jp/",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。"
+    },
+    {
+      "id": 1865,
+      "slug": "facility-1865",
+      "name": "芦屋海浜公園・芦屋海水浴場",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "福岡県遠賀郡芦屋町大字芦屋1455-284",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "海水浴場無料・駐車場等有料",
+      "child_fee": "海水浴場無料・駐車場等有料",
+      "description": "芦屋海浜公園・芦屋海水浴場は芦屋町にある自然・絶景です。白砂の海岸で砂浜遊びをすることができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "target_age": "全年齢",
+      "url": "https://www.town.ashiya.lg.jp/site/kanko/24418.html",
+      "tags": [
+        "屋外"
+      ],
+      "latitude": 33.897,
+      "longitude": 130.663,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "白砂の海岸で砂浜遊びをする",
+        "海水浴は開設期間とライフセーバー駐在を確認して利用する",
+        "隣接するアクアシアン等と季節に合わせて組み合わせる"
+      ],
+      "unique_selling_point": "白砂の海岸で砂浜遊びをする。",
+      "experience_tags": [
+        "白砂の海岸で砂浜遊びをする",
+        "海水浴は開設期間とライフセーバー駐在を確認して利用する",
+        "隣接するアクアシアン等と季節に合わせて組み合わせる"
+      ],
+      "summer_water_play": "△",
+      "recommended_for_tags": [
+        "nature"
+      ],
+      "things_to_do": [
+        "白砂の海岸で砂浜遊びをする",
+        "海水浴は開設期間とライフセーバー駐在を確認して利用する",
+        "隣接するアクアシアン等と季節に合わせて組み合わせる"
+      ],
+      "source_urls": "https://www.town.ashiya.lg.jp/site/kanko/24418.html",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 安全注記: 芦屋町公式で2026年7月4日〜8月16日開催、シーズン中ライフセーバー駐在を確認。開設期間外や荒天時は砂浜散策中心にする。"
+    },
+    {
+      "id": 1866,
+      "slug": "facility-1866",
+      "name": "苅田町歴史資料館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "福岡県京都郡苅田町富久町1丁目19-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "無料",
+      "adult_fee": "無料",
+      "child_fee": "無料",
+      "description": "苅田町歴史資料館は、京築地域の歴史資料を展示する屋内資料館です。日産自動車九州の一般工場見学が公式に一時休止中のため、同じ苅田町内で公式・公的情報が確認できる屋内学習施設として補充採用します。",
+      "target_age": "小学生以上",
+      "url": "https://www.crossroadfukuoka.jp/spot/14907",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 33.776,
+      "longitude": 130.982,
+      "geocode_source": "manual",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "京築地域の歴史資料を見学する",
+        "石器・土器など地域史を親子で学ぶ",
+        "苅田エリアの屋内補充施設として使う"
+      ],
+      "unique_selling_point": "京築地域の歴史資料を見学する。",
+      "experience_tags": [
+        "京築地域の歴史資料を見学する",
+        "石器・土器など地域史を親子で学ぶ",
+        "苅田エリアの屋内補充施設として使う"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "京築地域の歴史資料を見学する",
+        "石器・土器など地域史を親子で学ぶ",
+        "苅田エリアの屋内補充施設として使う"
+      ],
+      "source_urls": "https://www.crossroadfukuoka.jp/spot/14907",
+      "source_checked_at": "2026-06-26",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式施設サイト、自治体公式ページまたは公的観光サイトで公式URL、所在地、施設内容を確認。座標は公式所在地と地図掲載位置をもとに福岡県bbox内で確認。 補充理由: 台帳No.199は公式で一般工場見学一時休止を確認したため、同一エリアの公式確認済み屋内学習施設で補充。"
     }
   ]
 }
