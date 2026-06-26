@@ -424,6 +424,13 @@ export default function HomePage() {
                 </Link>
               </div>
               <Link
+                href="/events"
+                className="mt-3 inline-flex items-center justify-center gap-1.5 self-center rounded-full border border-white/40 bg-white/18 px-4 py-2 text-xs font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/28 sm:text-sm lg:self-start"
+              >
+                <span aria-hidden>🎪</span>
+                季節のイベントを見る
+              </Link>
+              <Link
                 href="/auth/register"
                 className="mt-3 text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50 lg:self-start"
               >
@@ -515,6 +522,33 @@ export default function HomePage() {
                 </div>
               </Link>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-8" aria-labelledby="top-events-heading">
+          <div className="flex flex-col gap-3 rounded-2xl border border-amber-100 bg-amber-50/55 px-4 py-4 shadow-sm shadow-amber-100/40 sm:flex-row sm:items-center sm:justify-between sm:px-5">
+            <div className="flex min-w-0 gap-3">
+              <span className="mt-0.5 shrink-0 text-2xl" aria-hidden>
+                🎪
+              </span>
+              <div className="min-w-0">
+                <h2
+                  id="top-events-heading"
+                  className="text-base font-bold text-slate-900 sm:text-lg"
+                >
+                  季節・週末のイベントから探す
+                </h2>
+                <p className="mt-1 text-sm leading-relaxed text-slate-600">
+                  公式情報をもとに、親子向けの日付確定イベントを掲載しています。週末や夏休みのおでかけ先選びにどうぞ。
+                </p>
+              </div>
+            </div>
+            <Link
+              href="/events"
+              className="inline-flex shrink-0 items-center justify-center rounded-full border border-amber-200 bg-white/80 px-4 py-2 text-sm font-bold text-amber-700 transition-colors hover:border-amber-300 hover:bg-white hover:text-amber-800"
+            >
+              イベントを見る →
+            </Link>
           </div>
         </section>
 
