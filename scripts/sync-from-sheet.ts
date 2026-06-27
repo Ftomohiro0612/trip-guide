@@ -34,6 +34,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   新潟県: "niigata",
   千葉県: "chiba",
   神奈川県: "kanagawa",
+  広島県: "hiroshima",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
