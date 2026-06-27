@@ -177,7 +177,7 @@ export default function HeroSearch() {
           aria-activedescendant={
             activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined
           }
-          placeholder="施設名・地域・カテゴリで検索"
+          placeholder="キーワードで検索（施設名・地域・カテゴリ・特徴など）"
           className="min-w-0 flex-1 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
         />
         <button
