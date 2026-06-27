@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CategoryIcon from "@/components/CategoryIcon";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityEvents from "@/components/FacilityEvents";
@@ -15,7 +16,7 @@ import {
   isFacilityVisible,
   visibleFacilities,
 } from "@/lib/facilities";
-import { categoryIcon, prefectureGradients } from "@/lib/icons";
+import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
@@ -225,9 +226,12 @@ export default async function FacilityDetailPage({ params }: Props) {
             </Link>
           </nav>
           <div className="flex items-start gap-4">
-            <span className="text-5xl sm:text-6xl drop-shadow-lg" aria-hidden>
-              {categoryIcon(facility.category_id)}
-            </span>
+            <CategoryIcon
+              categoryId={facility.category_id}
+              width={64}
+              height={64}
+              className="h-14 w-14 shrink-0 drop-shadow-lg sm:h-16 sm:w-16"
+            />
             <div className="flex-1 min-w-0">
               <p className="text-xs font-medium opacity-95 mb-1 drop-shadow">
                 {facility.prefecture} · {facility.category}

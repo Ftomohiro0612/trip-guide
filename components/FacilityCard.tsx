@@ -3,8 +3,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import CategoryIcon from "@/components/CategoryIcon";
 import type { Facility } from "@/types/facility";
-import { categoryIcon } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 
 interface Props {
@@ -39,9 +39,12 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
           />
         ) : (
           <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-5xl drop-shadow-sm" aria-hidden>
-              {categoryIcon(facility.category_id)}
-            </span>
+            <CategoryIcon
+              categoryId={facility.category_id}
+              width={64}
+              height={64}
+              className="h-16 w-16 drop-shadow-sm"
+            />
           </div>
         )}
         {facility.is_free && (
@@ -58,7 +61,12 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
       </div>
       <div className="p-4 flex flex-col flex-1 gap-2">
         <div className="flex items-center gap-1.5 text-xs text-slate-500">
-          <span aria-hidden>{categoryIcon(facility.category_id)}</span>
+          <CategoryIcon
+            categoryId={facility.category_id}
+            width={20}
+            height={20}
+            className="h-4 w-4 shrink-0 sm:h-5 sm:w-5"
+          />
           <span>{facility.prefecture}</span>
           <span aria-hidden>·</span>
           <span>{facility.category}</span>

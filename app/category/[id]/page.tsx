@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import MapViewClient from "@/components/MapViewClient";
 import {
@@ -10,7 +11,7 @@ import {
   prefectures,
 } from "@/lib/facilities";
 import { categoryDescriptions } from "@/lib/descriptions";
-import { categoryIcon, prefectureEmoji } from "@/lib/icons";
+import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 
 interface Props {
@@ -74,9 +75,12 @@ export default async function CategoryPage({ params }: Props) {
             <span>{meta.name}</span>
           </nav>
           <div className="flex items-start gap-4">
-            <span className="text-5xl sm:text-7xl drop-shadow" aria-hidden>
-              {categoryIcon(meta.id)}
-            </span>
+            <CategoryIcon
+              categoryId={meta.id}
+              width={80}
+              height={80}
+              className="h-16 w-16 shrink-0 drop-shadow sm:h-20 sm:w-20"
+            />
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">カテゴリ特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
@@ -158,9 +162,12 @@ export default async function CategoryPage({ params }: Props) {
                   href={`/category/${c.id}`}
                   className="group flex items-center gap-3 bg-white border border-slate-200 hover:border-brand rounded-2xl p-3 transition-colors"
                 >
-                  <span className="text-2xl shrink-0" aria-hidden>
-                    {categoryIcon(c.id)}
-                  </span>
+                  <CategoryIcon
+                    categoryId={c.id}
+                    width={32}
+                    height={32}
+                    className="h-8 w-8 shrink-0"
+                  />
                   <div className="min-w-0">
                     <p className="font-bold text-sm text-slate-900 group-hover:text-brand line-clamp-1">
                       {c.name}

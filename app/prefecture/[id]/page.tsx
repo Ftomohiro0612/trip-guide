@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import MapViewClient from "@/components/MapViewClient";
 import {
@@ -11,7 +12,6 @@ import {
   prefectures,
 } from "@/lib/facilities";
 import {
-  categoryIcon,
   prefectureEmoji,
   prefectureGradients,
   prefectureIconImages,
@@ -171,7 +171,12 @@ export default async function PrefecturePage({ params }: Props) {
                 href={`/facilities?prefectures=${meta.id}&categories=${c.id}`}
                 className="inline-flex items-center gap-1.5 bg-white border border-slate-200 hover:border-brand hover:text-brand rounded-full px-3 py-1.5 text-sm transition-colors"
               >
-                <span aria-hidden>{categoryIcon(c.id)}</span>
+                <CategoryIcon
+                  categoryId={c.id}
+                  width={24}
+                  height={24}
+                  className="h-6 w-6 shrink-0"
+                />
                 {c.name}
                 <span className="text-xs text-slate-500">({c.countInPref})</span>
               </Link>

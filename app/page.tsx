@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import { JsonLd } from "@/components/JsonLd";
@@ -20,11 +21,7 @@ import {
   prefectures,
   visibleFacilities,
 } from "@/lib/facilities";
-import {
-  categoryIcon,
-  categoryIconImages,
-  prefectureIconImages,
-} from "@/lib/icons";
+import { prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type {
   Facility,
@@ -579,20 +576,12 @@ export default function HomePage() {
                 href={`/category/${category.id}`}
                 className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 transition-all hover:border-brand hover:shadow-md"
               >
-                {categoryIconImages[category.id] ? (
-                  <Image
-                    src={categoryIconImages[category.id]}
-                    alt=""
-                    width={64}
-                    height={64}
-                    className="h-10 w-10 shrink-0 object-contain drop-shadow-sm transition-transform group-hover:scale-105"
-                    aria-hidden
-                  />
-                ) : (
-                  <span className="shrink-0 text-3xl" aria-hidden>
-                    {categoryIcon(category.id)}
-                  </span>
-                )}
+                <CategoryIcon
+                  categoryId={category.id}
+                  width={64}
+                  height={64}
+                  className="h-10 w-10 shrink-0 drop-shadow-sm transition-transform group-hover:scale-105"
+                />
                 <div className="min-w-0">
                   <p className="line-clamp-1 text-sm font-bold text-slate-900 group-hover:text-brand">
                     {category.name}

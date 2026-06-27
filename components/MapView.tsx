@@ -13,8 +13,8 @@ import L from "leaflet";
 import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
+import CategoryIcon from "@/components/CategoryIcon";
 import type { Facility, PrefectureId } from "@/types/facility";
-import { categoryIcon } from "@/lib/icons";
 import { driveTimeEstimateLabel, haversineDistanceKm } from "@/lib/distance";
 
 interface Props {
@@ -623,9 +623,12 @@ function FacilityMarker({
             {facility.prefecture} · {facility.category}
           </p>
           <p className="font-bold text-slate-900 text-sm leading-tight mb-2">
-            <span className="mr-1" aria-hidden>
-              {categoryIcon(facility.category_id)}
-            </span>
+            <CategoryIcon
+              categoryId={facility.category_id}
+              width={16}
+              height={16}
+              className="mr-1 inline h-4 w-4 align-[-2px]"
+            />
             {facility.name}
           </p>
           <div className="flex flex-wrap gap-1 mb-2">
