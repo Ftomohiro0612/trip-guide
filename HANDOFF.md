@@ -3,9 +3,12 @@
 このメモは、Claude(チャット相棒)に状況を引き継ぐためのものです。
 新しいセッションで「このメモを読んで状況を把握してください」と最初に伝えれば、続きから相談できます。
 
-## ⏩ 2026-06-26 最新状態(ここが最新・最優先で読む)
+## ⏩ 2026-06-27 最新状態(ここが最新・最優先で読む)
 
-**全国展開フェーズ進行中**。直近の主題=人気観光地ラインの施設追加＋イベント取得(正本フロー=`.codex/new-prefecture-rollout-checklist.md`・詳細は永続メモリ `project_national_rollout_flow` / `project_events_system_direction` が自動ロード)。
+**🆕 広島(hiroshima)Phase1=本番LIVE完了(2026-06-27・origin/main=`7dd999d`・17都府県目・中国地方初)**。施設**75件**(新規ID 1917〜1991)・total1906→**1981**・registry1505→**1580**・prefectures16→**17**。10STEP候補193→PM4分類(`.codex/hiroshima-stepB-review.md`)→オーナーがPhase1を65→75増強指定(大型公園/博物館/運動公園/屋内系で+10昇格・安芸区を瀬野川公園で初Phase1補完)。主力10+準2=平和記念公園・資料館/こども文化科学館/ヌマジ交通ミュージアム/安佐動物公園/マツダミュージアム/大和ミュージアム/みろくの里/福山市立動物園/国営備北丘陵公園/宮島水族館/嚴島神社(+準=シン・マリホ水族館/大久野島)。コード波及7面(色#dc2626/絵文字🦪/hiroshima.webp)。PM独立裏取り全GREEN(既存16都府県deep-equal・events287不変・/events/hiroshima未公開維持・新カテゴリ0・広島audit全0・sitemap+76/-0・lint/tsc/build)→クリーンFF push→デプロイ反映~180秒→PM curl+Codex本番Playwright(/prefecture/hiroshima75選・/map広島75/全体1976[raw1981−exclude5]・全国17都府県・既存県退行なし・console0)。**★Codex NO-GOは誤検出**(prod-verify期待値ミス=長野/山梨にraw74/71を渡したが/prefecture表示は可視71/69=exclude_candidate長野3+山梨2由来・退行でない→`feedback_prefecture_visible_count_trap`に教訓化)。**広島=施設75で公開**。
+**▶次=広島イベント取得(標準フロー#3)**: registry75行のpatrol_tier巡回→候補doc→PM4分類→採用(日付確定のみ)→/events/hiroshima配線→裏取り→push。その後 広島Phase2(~100〜125)。**着手は次のオーナーGO待ち**。
+
+**全国展開フェーズ進行中**。直近の主題=施設追加＋イベント取得(正本フロー=`.codex/new-prefecture-rollout-checklist.md`・詳細は永続メモリ `project_national_rollout_flow` / `project_events_system_direction` が自動ロード)。
 
 **到達状況**:
 - 関東1都6県=**茨城・群馬とも完成**(施設＋イベント両方)。
