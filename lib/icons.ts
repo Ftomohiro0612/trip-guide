@@ -25,6 +25,29 @@ export function categoryIcon(categoryId: string): string {
   return categoryIcons[categoryId] ?? "📍";
 }
 
+export const categoryIconImages: Record<string, string> = {
+  "theme-park": "/images/categories/theme-park.webp",
+  zoo: "/images/categories/zoo.webp",
+  aquarium: "/images/categories/aquarium.webp",
+  park: "/images/categories/park.webp",
+  "indoor-play": "/images/categories/indoor-play.webp",
+  "science-museum": "/images/categories/science-museum.webp",
+  museum: "/images/categories/museum.webp",
+  craft: "/images/categories/craft.webp",
+  "fruit-picking": "/images/categories/fruit-picking.webp",
+  "hot-spring-pool": "/images/categories/hot-spring-pool.webp",
+  athletic: "/images/categories/athletic.webp",
+  "art-museum": "/images/categories/art-museum.webp",
+  ski: "/images/categories/ski.webp",
+  hotel: "/images/categories/hotel.webp",
+  experience: "/images/categories/experience.webp",
+  "nature-park": "/images/categories/nature-park.webp",
+  viewpoint: "/images/categories/viewpoint.webp",
+  scenic: "/images/categories/scenic.webp",
+  "indoor-theme-park": "/images/categories/indoor-theme-park.webp",
+  "game-center": "/images/categories/game-center.webp",
+};
+
 export const prefectureGradients: Record<string, string> = {
   shizuoka: "from-sky-400 via-cyan-400 to-emerald-400",
   nagano: "from-emerald-500 via-teal-500 to-sky-500",

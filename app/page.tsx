@@ -20,7 +20,11 @@ import {
   prefectures,
   visibleFacilities,
 } from "@/lib/facilities";
-import { categoryIcon, prefectureIconImages } from "@/lib/icons";
+import {
+  categoryIcon,
+  categoryIconImages,
+  prefectureIconImages,
+} from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type {
   Facility,
@@ -575,9 +579,20 @@ export default function HomePage() {
                 href={`/category/${category.id}`}
                 className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 transition-all hover:border-brand hover:shadow-md"
               >
-                <span className="shrink-0 text-3xl" aria-hidden>
-                  {categoryIcon(category.id)}
-                </span>
+                {categoryIconImages[category.id] ? (
+                  <Image
+                    src={categoryIconImages[category.id]}
+                    alt=""
+                    width={64}
+                    height={64}
+                    className="h-10 w-10 shrink-0 object-contain drop-shadow-sm transition-transform group-hover:scale-105"
+                    aria-hidden
+                  />
+                ) : (
+                  <span className="shrink-0 text-3xl" aria-hidden>
+                    {categoryIcon(category.id)}
+                  </span>
+                )}
                 <div className="min-w-0">
                   <p className="line-clamp-1 text-sm font-bold text-slate-900 group-hover:text-brand">
                     {category.name}
