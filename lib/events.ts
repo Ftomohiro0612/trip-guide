@@ -27,6 +27,7 @@ export type EventPrefecture = Extract<
   | "kyoto"
   | "aichi"
   | "fukuoka"
+  | "hiroshima"
 >;
 
 export type EventReservation = "not_required" | "required" | "unknown";
