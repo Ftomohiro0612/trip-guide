@@ -23,6 +23,9 @@ const FAILURE_LOG = resolve(ROOT, "scripts/fetch-wiki-failures.log");
 
 const DRY_RUN = process.argv.includes("--dry-run");
 const FORCE = process.argv.includes("--force");
+const PREFECTURE_FILTER = process.argv
+  .find((arg) => arg.startsWith("--prefecture="))
+  ?.split("=", 2)[1];
 const RATE_LIMIT_MS = 150;
 
 const UA = "trip-guide.net image fetcher (info@fic-investment.biz)";
@@ -187,10 +190,15 @@ async function main(): Promise<void> {
   );
 
   const targets = json.facilities.filter(
-    (f) => FORCE || (!f.image && !blacklist.has(f.id)),
+    (f) =>
+      (PREFECTURE_FILTER ? f.prefecture_id === PREFECTURE_FILTER : true) &&
+      (FORCE || (!f.image && !blacklist.has(f.id))),
   );
 
   console.log(`Total: ${json.facilities.length}`);
+  if (PREFECTURE_FILTER) {
+    console.log(`Prefecture filter: ${PREFECTURE_FILTER}`);
+  }
   console.log(`Targets needing images: ${targets.length}`);
   if (blacklist.size > 0 && !FORCE) {
     console.log(`Blacklisted (skipped): ${blacklist.size}`);
