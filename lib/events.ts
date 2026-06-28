@@ -18,6 +18,7 @@ export type EventPrefecture = Extract<
   | "tokyo"
   | "kanagawa"
   | "yamanashi"
+  | "shizuoka"
   | "chiba"
   | "saitama"
   | "ibaraki"
