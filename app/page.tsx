@@ -300,8 +300,12 @@ function countByRecommendedTag(tag: RecommendedForTag) {
 
 export default function HomePage() {
   const facilityCountLabel =
-    visibleFacilities.length >= 1000
-      ? "1,000施設超"
+    visibleFacilities.length >= 2000
+      ? "2,000施設超"
+      : visibleFacilities.length >= 1000
+      ? `${Math.floor(visibleFacilities.length / 1000).toLocaleString(
+          "ja-JP",
+        )},000施設超`
       : `${visibleFacilities.length}施設`;
   const totalFacilityCountLabel =
     visibleFacilities.length.toLocaleString("ja-JP");
@@ -395,7 +399,7 @@ export default function HomePage() {
               <p className="mb-4 inline-flex items-center self-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm lg:self-start">
                 <span aria-hidden>📍</span>
                 <span className="ml-1">
-                  全国{prefectures.length}都府県 · {facilityCountLabel}掲載中
+                  {`無料で遊び場検索｜全国${prefectures.length}都府県・${facilityCountLabel}掲載中`}
                 </span>
               </p>
               <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
@@ -424,6 +428,9 @@ export default function HomePage() {
                   メモリップでできること
                 </Link>
               </div>
+              <p className="mt-2 text-xs font-medium text-white/85">
+                登録なしで、無料で遊び場を探せます。
+              </p>
               <Link
                 href="/events"
                 className="mt-3 inline-flex items-center justify-center gap-1.5 self-center rounded-full border border-white/40 bg-white/18 px-4 py-2 text-xs font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/28 sm:text-sm lg:self-start"
@@ -437,6 +444,9 @@ export default function HomePage() {
               >
                 家族の記録をはじめる →
               </Link>
+              <p className="mt-1 text-xs font-medium text-white/80 lg:self-start">
+                無料ではじめられます
+              </p>
 
               <div className="order-5 mx-auto mt-7 w-full max-w-2xl lg:order-6 lg:mx-0">
                 <HeroSearch />

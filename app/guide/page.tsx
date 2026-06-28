@@ -185,6 +185,14 @@ export default function GuidePage() {
         </div>
       </section>
 
+      <section className="bg-white py-5" aria-label="無料で使える基本機能">
+        <div className="mx-auto max-w-5xl px-4">
+          <div className="rounded-2xl border border-sky-100 bg-sky-50/55 px-4 py-3 text-sm leading-relaxed text-slate-600 shadow-sm shadow-sky-100/40">
+            メモリップの基本機能は無料で使えます。遊び場検索・行った場所の記録・写真メモ・子どもの反応メモを、気軽に始められます。
+          </div>
+        </div>
+      </section>
+
       <section className="bg-sky-50/60 py-14 sm:py-16" aria-labelledby="memory-flow-heading">
         <div className="mx-auto grid max-w-5xl gap-6 px-4 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
           <div className="overflow-hidden rounded-3xl border border-white bg-white p-2 shadow-sm shadow-sky-100/70">
@@ -411,6 +419,9 @@ export default function GuidePage() {
               遊び場を探す
             </Link>
           </div>
+          <p className="mt-2 text-xs font-medium text-slate-500">
+            無料ではじめられます
+          </p>
         </div>
       </section>
     </div>
