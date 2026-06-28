@@ -373,6 +373,7 @@ export default function HomePage() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     name: "メモリップ",
+    alternateName: "Memorips",
     url: "https://trip-guide.net",
     inLanguage: "ja",
     potentialAction: {
