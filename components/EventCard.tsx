@@ -5,11 +5,13 @@ import { isPdfOfficialUrl, type EventView } from "@/lib/events";
 interface EventCardProps {
   view: EventView;
   showPrefecture?: boolean;
+  showFacilityLink?: boolean;
 }
 
 export default function EventCard({
   view,
   showPrefecture = true,
+  showFacilityLink = true,
 }: EventCardProps) {
   const { event, facilityName, facilitySlug, prefectureLabel } = view;
   const officialLinkLabel = isPdfOfficialUrl(event.official_url)
@@ -50,18 +52,18 @@ export default function EventCard({
                 {prefectureLabel}
               </span>
             ) : null}
-            {facilitySlug && facilityName ? (
+            {showFacilityLink && facilitySlug && facilityName ? (
               <Link
                 href={`/facilities/${facilitySlug}`}
                 className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
               >
                 {facilityName}
               </Link>
-            ) : (
+            ) : showFacilityLink ? (
               <span className="text-sm font-bold text-slate-500">
                 施設情報確認中
               </span>
-            )}
+            ) : null}
           </div>
           <h2 className="mt-2 break-words text-xl font-bold leading-snug text-slate-900">
             {event.title}
@@ -135,18 +137,18 @@ export default function EventCard({
       ) : null}
 
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
-        {facilitySlug ? (
+        {showFacilityLink && facilitySlug ? (
           <Link
             href={`/facilities/${facilitySlug}`}
             className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
           >
             施設ページを見る →
           </Link>
-        ) : (
+        ) : showFacilityLink ? (
           <span className="text-sm font-bold text-slate-400">
             施設ページ確認中
           </span>
-        )}
+        ) : null}
         <p className="text-[11px] leading-relaxed text-slate-400">
           公式確認日: {event.source_checked_at}
         </p>

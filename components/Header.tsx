@@ -36,6 +36,12 @@ export default function Header() {
             >
               <span aria-hidden>🆓 </span>無料で遊べる
             </Link>
+            <Link
+              href="/events"
+              className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-violet-50 hover:text-violet-600 transition-colors"
+            >
+              <span aria-hidden>🎪 </span>イベント一覧
+            </Link>
           </nav>
           <HeaderAuthButton />
         </div>
