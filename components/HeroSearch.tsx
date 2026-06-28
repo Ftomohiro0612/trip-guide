@@ -148,7 +148,7 @@ export default function HeroSearch() {
     <form
       ref={formRef}
       action="/facilities"
-      className="relative mx-auto mt-6 w-full max-w-sm lg:mx-0"
+      className="relative mx-auto mt-6 w-full max-w-xl lg:mx-0"
     >
       <div className="flex w-full overflow-hidden rounded-full bg-white p-1.5 shadow-lg">
         <input
