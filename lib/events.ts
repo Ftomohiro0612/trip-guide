@@ -16,6 +16,7 @@ export type EventStatus =
 export type EventPrefecture = Extract<
   PrefectureId,
   | "tokyo"
+  | "tochigi"
   | "kanagawa"
   | "yamanashi"
   | "shizuoka"
