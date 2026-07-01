@@ -12,7 +12,6 @@ import {
   StepRecordIcon,
   StepSearchIcon,
 } from "@/components/MemoripFlowFigures";
-import QuickFilter from "@/components/QuickFilter";
 import { FEATURED_FACILITY_IDS } from "@/lib/config";
 import {
   categories,
@@ -333,36 +332,60 @@ export default function HomePage() {
       icon: "☔",
       href: "/tag/rainy-day",
       count: visibleFacilities.filter((f) => f.rain_friendly === "◎").length,
+      bg: "bg-sky-50",
+      border: "border-sky-200",
+      hoverBorder: "hover:border-sky-400 focus-visible:border-sky-400",
+      focusRing: "focus-visible:ring-sky-200",
     },
     {
       label: "無料",
       icon: "🆓",
       href: "/tag/free",
       count: countByFacilityTag("無料"),
+      bg: "bg-emerald-50",
+      border: "border-emerald-200",
+      hoverBorder: "hover:border-emerald-400 focus-visible:border-emerald-400",
+      focusRing: "focus-visible:ring-emerald-200",
     },
     {
       label: "水遊び",
       icon: RECOMMENDED_FOR_TAG_META.water_play.icon,
       href: "/facilities?recommended_tag=water_play",
       count: countByRecommendedTag("water_play"),
+      bg: "bg-violet-50",
+      border: "border-violet-200",
+      hoverBorder: "hover:border-violet-400 focus-visible:border-violet-400",
+      focusRing: "focus-visible:ring-violet-200",
     },
     {
       label: "大型遊具",
       icon: RECOMMENDED_FOR_TAG_META.playground.icon,
       href: "/facilities?recommended_tag=playground",
       count: countByRecommendedTag("playground"),
+      bg: "bg-amber-50",
+      border: "border-amber-200",
+      hoverBorder: "hover:border-amber-400 focus-visible:border-amber-400",
+      focusRing: "focus-visible:ring-amber-200",
     },
     {
       label: "0〜3歳",
       icon: "👶",
       href: "/tag/kids-0-3",
       count: countByFacilityTag("0-3歳OK"),
+      bg: "bg-pink-50",
+      border: "border-pink-200",
+      hoverBorder: "hover:border-pink-400 focus-visible:border-pink-400",
+      focusRing: "focus-visible:ring-pink-200",
     },
     {
       label: "小学生向け",
       icon: "🧒",
       href: "/tag/elementary",
       count: countByFacilityTag("小学生向け"),
+      bg: "bg-orange-50",
+      border: "border-orange-200",
+      hoverBorder: "hover:border-orange-400 focus-visible:border-orange-400",
+      focusRing: "focus-visible:ring-orange-200",
     },
   ];
   const featured = FEATURED_FACILITY_IDS.map((id) =>
@@ -521,7 +544,7 @@ export default function HomePage() {
               <Link
                 key={theme.href}
                 href={theme.href}
-                className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-3 transition-all hover:border-sky-400 hover:shadow-md"
+                className={`group flex items-center gap-3 rounded-2xl border ${theme.border} ${theme.bg} p-3 shadow-sm transition-all ${theme.hoverBorder} hover:shadow-md focus-visible:shadow-md focus-visible:outline-none focus-visible:ring-2 ${theme.focusRing}`}
               >
                 <span className="shrink-0 text-2xl" aria-hidden>
                   {theme.icon}
@@ -563,8 +586,6 @@ export default function HomePage() {
             </Link>
           </div>
         </section>
-
-        <QuickFilter />
 
         <section className="mt-14" aria-labelledby="category-heading">
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
