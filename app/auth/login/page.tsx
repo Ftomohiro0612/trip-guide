@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
@@ -115,6 +116,26 @@ export default function LoginPage() {
           <GoogleIcon />
           Google でログイン
         </button>
+
+        <div className="mt-3 rounded-lg border border-amber-200 bg-amber-50 p-3">
+          <p className="mb-1.5 flex items-center gap-1 text-xs font-bold text-amber-700">
+            <span aria-hidden>ℹ️</span> お知らせ
+          </p>
+          <p className="text-xs leading-relaxed text-slate-600">
+            Googleログイン時に{" "}
+            <span className="font-mono break-all text-slate-700">
+              ilhtklvdtbwdgntokhmh.supabase.co
+            </span>{" "}
+            と表示される場合があります。Supabaseはメモリップが利用している安全な認証サービスです。
+          </p>
+          <Image
+            src="/images/supabase.png"
+            alt="Googleログイン画面の例。「ilhtklvdtbwdgntokhmh.supabase.co に移動」と表示されます。"
+            width={1624}
+            height={968}
+            className="mt-2 w-full h-auto rounded-md border border-amber-200/70"
+          />
+        </div>
 
         <div className="mt-6 text-center text-sm text-slate-500 space-y-2">
           <p>

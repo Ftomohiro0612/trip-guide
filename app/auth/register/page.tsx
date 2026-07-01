@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
 import { SERVICE } from "@/lib/config";
@@ -96,11 +97,31 @@ export default function RegisterPage() {
 
         <button
           onClick={handleGoogle}
-          className="w-full py-2.5 border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors flex items-center justify-center gap-2 mb-5"
+          className="w-full py-2.5 border border-slate-300 rounded-lg text-sm font-medium text-slate-700 hover:bg-slate-50 transition-colors flex items-center justify-center gap-2 mb-2"
         >
           <GoogleIcon />
           Google で登録（かんたん）
         </button>
+
+        <div className="mt-2 mb-5 rounded-lg border border-amber-200 bg-amber-50 p-3">
+          <p className="mb-1.5 flex items-center gap-1 text-xs font-bold text-amber-700">
+            <span aria-hidden>ℹ️</span> お知らせ
+          </p>
+          <p className="text-xs leading-relaxed text-slate-600">
+            Googleログイン時に{" "}
+            <span className="font-mono break-all text-slate-700">
+              ilhtklvdtbwdgntokhmh.supabase.co
+            </span>{" "}
+            と表示される場合があります。Supabaseはメモリップが利用している安全な認証サービスです。
+          </p>
+          <Image
+            src="/images/supabase.png"
+            alt="Googleログイン画面の例。「ilhtklvdtbwdgntokhmh.supabase.co に移動」と表示されます。"
+            width={1624}
+            height={968}
+            className="mt-2 w-full h-auto rounded-md border border-amber-200/70"
+          />
+        </div>
 
         <div className="mb-5 flex items-center gap-3">
           <div className="flex-1 h-px bg-slate-200" />
@@ -162,6 +183,15 @@ export default function RegisterPage() {
             {loading ? "送信中..." : "確認メールを送る"}
           </button>
         </form>
+
+        <div className="mt-4 rounded-lg border border-amber-200 bg-amber-50 p-3">
+          <p className="mb-1.5 flex items-center gap-1 text-xs font-bold text-amber-700">
+            <span aria-hidden>ℹ️</span> お知らせ
+          </p>
+          <p className="text-xs leading-relaxed text-slate-600">
+            メールで登録すると、Supabase から確認メールが届きます。これはメモリップが利用している安全なサービスです。
+          </p>
+        </div>
 
         <p className="mt-4 text-center text-xs text-slate-400">
           登録することで
