@@ -441,9 +441,9 @@ export default async function MypagePage() {
   const childCategorySummaries = buildChildCategorySummaries(childRows, visits, childVisits);
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
+    <div className="mx-auto max-w-lg space-y-6 px-4 py-6 lg:grid lg:max-w-5xl lg:grid-cols-[minmax(0,7fr)_minmax(0,5fr)] lg:items-start lg:gap-x-8 lg:gap-y-6 lg:space-y-0">
       {/* ウェルカム */}
-      <div className="flex items-start justify-between gap-3">
+      <div className="flex items-start justify-between gap-3 lg:col-span-2 lg:order-1">
         <div>
           <p className="text-xs text-slate-400 mb-0.5">メモリップ</p>
           <h1 className="text-xl font-bold text-slate-900">
@@ -468,7 +468,7 @@ export default async function MypagePage() {
 
       {/* 子どもプロフィール未登録プロンプト */}
       {!hasChildren && (
-        <div className="bg-sky-50 border border-sky-200 rounded-xl p-4">
+        <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-2">
           <p className="font-semibold text-sky-900 text-sm">
             子どもプロフィールを登録すると便利です
           </p>
@@ -490,7 +490,7 @@ export default async function MypagePage() {
       )}
 
       {memoryPhotosWithUrls.length > 0 && (
-        <section className="space-y-3">
+        <section className="space-y-3 lg:col-span-2 lg:order-4">
           <div className="flex items-center justify-between gap-3">
             <h2 className="font-bold text-slate-800">📷 思い出の写真</h2>
             <Link href="/mypage/visits" className="shrink-0 text-brand text-sm hover:underline">
@@ -522,7 +522,7 @@ export default async function MypagePage() {
 
       {/* 子どもプロフィール一覧 */}
       {hasChildren && (
-        <section>
+        <section className="lg:col-span-2 lg:order-3">
           <div className="flex items-center justify-between mb-3">
             <h2 className="font-bold text-slate-800">子どもプロフィール</h2>
             <Link href="/mypage/children" className="text-brand text-sm hover:underline">
@@ -556,7 +556,7 @@ export default async function MypagePage() {
         </section>
       )}
 
-      <section className="space-y-3">
+      <section className="space-y-3 lg:col-start-1 lg:order-5">
         <h2 className="font-bold text-slate-800">
           家族の足あと
           {visitedMapFacilities.length > 0 && (
@@ -567,7 +567,7 @@ export default async function MypagePage() {
         </h2>
         <VisitedPlacesMapClient
           visitedFacilities={visitedMapFacilities}
-          height={{ mobile: 200, desktop: 260 }}
+          height={{ mobile: 200, desktop: 340 }}
           showDetailLink
         />
         {recentFootprintFacilities.length > 0 && (
@@ -588,7 +588,7 @@ export default async function MypagePage() {
 
       {/* 最近の思い出 */}
       {recentVisits.length > 0 && (
-        <section className="space-y-3">
+        <section className="space-y-3 lg:col-start-2 lg:order-6">
           <div className="flex items-center justify-between">
             <h2 className="font-bold text-slate-800">最近の思い出</h2>
             <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
@@ -647,7 +647,7 @@ export default async function MypagePage() {
       )}
 
       {/* 記録する・さがす */}
-      <section>
+      <section className="lg:col-span-2 lg:order-9">
         <h2 className="font-bold text-slate-800 mb-3">記録する・さがす</h2>
         <div className="grid grid-cols-2 gap-3">
           <ActionCard
@@ -687,7 +687,7 @@ export default async function MypagePage() {
       </section>
 
       {/* 家族のあしあと帳 */}
-      <section className="space-y-3">
+      <section className="space-y-3 lg:col-start-1 lg:order-7">
         <h2 className="font-bold text-slate-800">家族のあしあと帳</h2>
         <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
           {hasAchievementRecords ? (
@@ -782,7 +782,7 @@ export default async function MypagePage() {
 
       {/* 子どもたちの「好き」 */}
       {hasChildren && (
-        <section className="space-y-3">
+        <section className="space-y-3 lg:col-start-2 lg:order-8">
           <div>
             <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
             <p className="mt-1 text-xs leading-relaxed text-slate-400">
@@ -857,7 +857,7 @@ export default async function MypagePage() {
       )}
 
       {/* ログアウト */}
-      <div className="pt-2">
+      <div className="pt-2 lg:col-span-2 lg:order-10">
         <LogoutButton />
       </div>
     </div>
