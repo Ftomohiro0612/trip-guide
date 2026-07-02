@@ -55,6 +55,8 @@ type VisitPhotoThumb = {
 type VisitMapRow = {
   facility_slug: string | null;
   visited_on: string | null;
+  family_revisit: string | null;
+  parent_fatigue: string | null;
 };
 
 const VISIT_THUMBNAILS_PER_CARD = 2;
@@ -158,7 +160,7 @@ export default async function VisitsPage({
   const publishedMapVisitsQuery = user
     ? supabase
         .from("visits")
-        .select("facility_slug, visited_on")
+        .select("facility_slug, visited_on, family_revisit, parent_fatigue")
         .eq("user_id", user.id)
         .eq("status", "published")
     : null;

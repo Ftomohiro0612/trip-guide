@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef } from "react";
 import {
   CircleMarker,
@@ -10,6 +11,7 @@ import {
 } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { familyRevisitLabels, fatigueLabels } from "@/lib/visit-labels";
 import type { VisitedPlaceFacility } from "@/lib/visited-places";
 
 type RenderedVisitedFacility = VisitedPlaceFacility & {
@@ -115,6 +117,23 @@ export default function VisitedPlacesMap({
               <p className="text-xs text-slate-500">
                 最終訪問日: {formatVisitedOn(facility.lastVisited)}
               </p>
+              {facility.latestRevisit &&
+                familyRevisitLabels[facility.latestRevisit] && (
+                  <p className="text-xs text-slate-600">
+                    また行きたい: {familyRevisitLabels[facility.latestRevisit]}
+                  </p>
+                )}
+              {facility.latestFatigue && fatigueLabels[facility.latestFatigue] && (
+                <p className="text-xs text-slate-600">
+                  疲れ: {fatigueLabels[facility.latestFatigue]}
+                </p>
+              )}
+              <Link
+                href={`/mypage/visits/facility/${facility.slug}`}
+                className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
+              >
+                この場所の記録を見る →
+              </Link>
             </div>
           </Popup>
         </CircleMarker>

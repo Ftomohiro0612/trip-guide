@@ -25,6 +25,7 @@ type VisitStat = {
   facility_name: string;
   visited_on: string | null;
   family_revisit: string;
+  parent_fatigue: string | null;
 };
 
 type ChildVisit = {
@@ -266,7 +267,9 @@ export default async function MypagePage() {
     user
       ? supabase
           .from("visits")
-          .select("id, facility_slug, facility_name, visited_on, family_revisit")
+          .select(
+            "id, facility_slug, facility_name, visited_on, family_revisit, parent_fatigue",
+          )
           .eq("user_id", user.id)
           .eq("status", "published")
           .order("visited_on", { ascending: false, nullsFirst: false })
