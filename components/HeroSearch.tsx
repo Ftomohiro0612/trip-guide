@@ -148,7 +148,7 @@ export default function HeroSearch() {
     <form
       ref={formRef}
       action="/facilities"
-      className="relative mx-auto mt-6 w-full max-w-xl lg:mx-0"
+      className="relative mx-auto w-full max-w-xl lg:mx-0"
     >
       <div className="flex w-full overflow-hidden rounded-full bg-white p-1.5 shadow-lg">
         <input
@@ -177,7 +177,7 @@ export default function HeroSearch() {
           aria-activedescendant={
             activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined
           }
-          placeholder="キーワードで検索（施設名・地域・カテゴリ・特徴など）"
+          placeholder="施設名・エリア名で検索"
           className="min-w-0 flex-1 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
         />
         <button

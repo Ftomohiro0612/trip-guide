@@ -338,7 +338,7 @@ export default function HomePage() {
       focusRing: "focus-visible:ring-sky-200",
     },
     {
-      label: "無料",
+      label: "入場無料",
       icon: "🆓",
       href: "/tag/free",
       count: countByFacilityTag("無料"),
@@ -436,13 +436,30 @@ export default function HomePage() {
                 雨の日、無料、水遊び、遊具、近くの施設。行った場所を記録すると、子どもの“好き”も少しずつ見えてきます。
               </p>
 
-              <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+              <div className="mx-auto mt-7 w-full max-w-2xl lg:mx-0">
+                <HeroSearch />
+              </div>
+
+              <div className="mx-auto mt-4 flex max-w-3xl flex-wrap justify-center gap-2 lg:mx-0 lg:justify-start">
+                {heroQuickLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    className="inline-flex items-center gap-1.5 rounded-full border border-white/35 bg-white/18 px-3 py-2 text-xs font-bold text-white shadow-sm backdrop-blur-sm transition-colors hover:bg-white/28 sm:text-sm"
+                  >
+                    <span aria-hidden>{link.icon}</span>
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+
+              <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
                 <Link
                   href="/facilities"
                   className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-xl transition-all hover:-translate-y-0.5 hover:bg-sky-50 hover:shadow-2xl sm:text-base"
                 >
-                  <span aria-hidden>🗺️</span>
-                  遊び場を探す
+                  <span aria-hidden>📋</span>
+                  一覧から探す
                 </Link>
                 <Link
                   href="/guide"
@@ -466,28 +483,8 @@ export default function HomePage() {
                 href="/auth/register"
                 className="mt-3 text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50 lg:self-start"
               >
-                家族の記録をはじめる →
+                家族の記録をはじめる（無料）→
               </Link>
-              <p className="mt-1 text-xs font-medium text-white/80 lg:self-start">
-                無料ではじめられます
-              </p>
-
-              <div className="order-5 mx-auto mt-7 w-full max-w-2xl lg:order-6 lg:mx-0">
-                <HeroSearch />
-              </div>
-
-              <div className="order-6 mx-auto mt-5 flex max-w-3xl flex-wrap justify-center gap-2 lg:order-5 lg:mx-0 lg:justify-start">
-                {heroQuickLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="inline-flex items-center gap-1.5 rounded-full border border-white/35 bg-white/18 px-3 py-2 text-xs font-bold text-white shadow-sm backdrop-blur-sm transition-colors hover:bg-white/28 sm:text-sm"
-                  >
-                    <span aria-hidden>{link.icon}</span>
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">
@@ -497,8 +494,11 @@ export default function HomePage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4">
-        <section className="mt-8" aria-labelledby="map-heading">
+      <div className="mx-auto flex max-w-6xl flex-col px-4">
+        <section
+          className="order-3 mt-8 lg:order-1"
+          aria-labelledby="map-heading"
+        >
           <div className="mb-4 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2
@@ -525,7 +525,10 @@ export default function HomePage() {
           />
         </section>
 
-        <section className="mt-14" aria-labelledby="tag-heading">
+        <section
+          className="order-1 mt-8 lg:order-2 lg:mt-14"
+          aria-labelledby="tag-heading"
+        >
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2
@@ -539,7 +542,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-6">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
             {themeLinks.map((theme) => (
               <Link
                 key={theme.href}
@@ -560,7 +563,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-8" aria-labelledby="top-events-heading">
+        <section
+          className="order-2 mt-8 lg:order-3"
+          aria-labelledby="top-events-heading"
+        >
           <div className="flex flex-col gap-3 rounded-2xl border border-amber-100 bg-amber-50/55 px-4 py-4 shadow-sm shadow-amber-100/40 sm:flex-row sm:items-center sm:justify-between sm:px-5">
             <div className="flex min-w-0 gap-3">
               <span className="mt-0.5 shrink-0 text-2xl" aria-hidden>
@@ -582,12 +588,15 @@ export default function HomePage() {
               href="/events"
               className="inline-flex shrink-0 items-center justify-center rounded-full border border-amber-200 bg-white/80 px-4 py-2 text-sm font-bold text-amber-700 transition-colors hover:border-amber-300 hover:bg-white hover:text-amber-800"
             >
-              イベントを見る →
+              週末のイベントを見る →
             </Link>
           </div>
         </section>
 
-        <section className="mt-14" aria-labelledby="category-heading">
+        <section
+          className="order-4 mt-14 lg:order-4"
+          aria-labelledby="category-heading"
+        >
           <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2
@@ -601,7 +610,7 @@ export default function HomePage() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 lg:grid-cols-5">
+          <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-5">
             {categories.map((category) => (
               <Link
                 key={category.id}
@@ -627,7 +636,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-14" aria-labelledby="area-heading">
+        <section
+          className="order-5 mt-14 lg:order-5"
+          aria-labelledby="area-heading"
+        >
           <div className="mb-6 text-center">
             <h2 id="area-heading" className="text-2xl font-bold text-slate-900">
               エリアで探す
@@ -664,7 +676,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="mt-14" aria-labelledby="featured-heading">
+        <section
+          className="order-6 mt-14 lg:order-6"
+          aria-labelledby="featured-heading"
+        >
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <h2
@@ -692,7 +707,7 @@ export default function HomePage() {
         </section>
 
         <section
-          className="my-14 rounded-3xl border border-emerald-100 bg-gradient-to-b from-white to-emerald-50/50 p-6 shadow-sm shadow-emerald-100/50 sm:p-8"
+          className="order-7 my-14 rounded-3xl border border-emerald-100 bg-gradient-to-b from-white to-emerald-50/50 p-6 shadow-sm shadow-emerald-100/50 sm:p-8 lg:order-7"
           aria-labelledby="record-value-heading"
         >
           <div className="mx-auto max-w-3xl text-center">
