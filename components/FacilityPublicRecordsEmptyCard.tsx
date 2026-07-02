@@ -54,7 +54,7 @@ export default function FacilityPublicRecordsEmptyCard({
             id="public-records-heading"
             className="text-base font-bold text-emerald-950"
           >
-            みんなの記録は、ただいま集計中です
+            みんなの記録は、これから集まっていきます
           </h2>
           <p className="mt-2 text-sm leading-relaxed text-emerald-900">
             この施設に行ったら、お子さまの反応や「また行きたい」を記録してみてください。記録が集まると、どんな遊びが人気か、どの年齢の子が楽しみやすいかが見えるようになります。

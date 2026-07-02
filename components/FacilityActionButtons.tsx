@@ -108,7 +108,9 @@ export default function FacilityActionButtons({
   return (
     <div className="space-y-3">
       <p className="text-xs text-slate-500 leading-relaxed">
-        行ったあとに、子どもごとの反応や再訪意向を記録しておけます。
+        {loadState === "guest"
+          ? "記録・行きたいリストは無料登録で使えます。"
+          : "行ったあとに、子どもごとの反応や再訪意向を記録しておけます。"}
       </p>
       <button
         onClick={toggleWishlist}

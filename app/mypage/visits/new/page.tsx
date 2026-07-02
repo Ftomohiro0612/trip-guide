@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
@@ -49,6 +49,17 @@ type FacilitySuggestion = {
   name: string;
   category: string;
   prefecture: string;
+};
+
+type SaveCompleteInfo = {
+  fromSlug: string | null;
+  hasCoordinates: boolean;
+  noChild: boolean;
+};
+
+type VisitCompletionContext = {
+  facilitySlug: string;
+  noChild: boolean;
 };
 
 type ReactionTag = {
@@ -170,7 +181,6 @@ function isBehaviorOtherTag(tag: ReactionTag): boolean {
 }
 
 export default function NewVisitPage() {
-  const router = useRouter();
   const searchParams = useSearchParams();
   const facilitySlugFromUrl = searchParams.get("facility") ?? "";
   const nameFromUrl = searchParams.get("name") ?? "";
@@ -208,8 +218,11 @@ export default function NewVisitPage() {
   const [initializing, setInitializing] = useState(true);
   const [photoBusy, setPhotoBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [savedFromSlug, setSavedFromSlug] = useState<string | null>(null);
+  const [saveCompleteInfo, setSaveCompleteInfo] =
+    useState<SaveCompleteInfo | null>(null);
   const [createdVisitId, setCreatedVisitId] = useState<string | null>(null);
+  const [createdVisitContext, setCreatedVisitContext] =
+    useState<VisitCompletionContext | null>(null);
 
   useEffect(() => {
     let active = true;
@@ -352,24 +365,53 @@ export default function NewVisitPage() {
     }));
   }
 
-  function finishAfterSave() {
-    setCreatedVisitId(null);
-    if (PHOTO_UPLOAD_ENABLED) {
-      photoUploaderRef.current?.reset();
-    }
-    if (facilitySlugFromUrl) {
-      setSavedFromSlug(facilitySlugFromUrl);
-    } else {
-      router.push(children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits");
+  async function checkFacilityHasCoordinates(slug: string): Promise<boolean> {
+    const trimmedSlug = slug.trim();
+    if (!trimmedSlug) return false;
+
+    const controller = new AbortController();
+    const timer = window.setTimeout(() => controller.abort(), 1500);
+
+    try {
+      const response = await fetch(
+        `/api/facilities/search?slug=${encodeURIComponent(trimmedSlug)}`,
+        { signal: controller.signal },
+      );
+      if (!response.ok) return false;
+      const data = (await response.json()) as { hasCoordinates?: unknown };
+      return data.hasCoordinates === true;
+    } catch {
+      return false;
+    } finally {
+      window.clearTimeout(timer);
     }
   }
 
-  async function uploadPhotosForVisit(visitId: string) {
+  async function finishAfterSave(context: VisitCompletionContext) {
+    setCreatedVisitId(null);
+    setCreatedVisitContext(null);
+    if (PHOTO_UPLOAD_ENABLED) {
+      photoUploaderRef.current?.reset();
+    }
+    const hasCoordinates = await checkFacilityHasCoordinates(context.facilitySlug);
+    setLoading(false);
+    setSaveCompleteInfo({
+      fromSlug: facilitySlugFromUrl || null,
+      hasCoordinates,
+      noChild: context.noChild,
+    });
+  }
+
+  async function uploadPhotosForVisit(
+    visitId: string,
+    context: VisitCompletionContext,
+  ) {
     if (!PHOTO_UPLOAD_ENABLED) return true;
 
     const photoResult = await photoUploaderRef.current?.upload(visitId);
     if (photoResult && !photoResult.ok) {
       setCreatedVisitId(visitId);
+      setCreatedVisitContext(context);
       setError(`記録は保存済みです。写真だけ再試行できます。${photoResult.error}`);
       setLoading(false);
       return false;
@@ -385,8 +427,12 @@ export default function NewVisitPage() {
     setError(null);
 
     if (createdVisitId) {
-      if (await uploadPhotosForVisit(createdVisitId)) {
-        finishAfterSave();
+      const retryContext = createdVisitContext ?? {
+        facilitySlug: facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName),
+        noChild: children.length === 0,
+      };
+      if (await uploadPhotosForVisit(createdVisitId, retryContext)) {
+        await finishAfterSave(retryContext);
       }
       return;
     }
@@ -406,12 +452,18 @@ export default function NewVisitPage() {
     const visitedYear = visitedDate.getFullYear();
     const visitedMonth = visitedDate.getMonth() + 1;
     const today = formatDate(new Date());
+    const savedFacilitySlug =
+      facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName);
+    const visitCompletionContext: VisitCompletionContext = {
+      facilitySlug: savedFacilitySlug,
+      noChild: children.length === 0,
+    };
 
     const { data: visit, error: visitError } = await supabase
       .from("visits")
       .insert({
         user_id: user.id,
-        facility_slug: facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName),
+        facility_slug: savedFacilitySlug,
         facility_name: facilityName.trim(),
         visited_on: visitedOn,
         visited_year: visitedYear,
@@ -486,35 +538,45 @@ export default function NewVisitPage() {
       }
     }
 
-    if (!(await uploadPhotosForVisit(visit.id))) {
+    if (!(await uploadPhotosForVisit(visit.id, visitCompletionContext))) {
       return;
     }
-    finishAfterSave();
+    await finishAfterSave(visitCompletionContext);
   }
 
-  if (savedFromSlug) {
+  if (saveCompleteInfo) {
+    const visitsHref = saveCompleteInfo.noChild
+      ? "/mypage/visits?no_child=1"
+      : "/mypage/visits";
+
     return (
       <div className="max-w-lg mx-auto px-4 py-16 flex flex-col items-center gap-6 text-center">
         <span className="text-5xl">🎉</span>
         <div>
           <p className="text-xl font-bold text-slate-900">記録しました！</p>
           <p className="text-sm text-slate-500 mt-1">
-            施設ページで「あなたの記録」を確認できます。
+            {saveCompleteInfo.hasCoordinates
+              ? "🗺️ 行った場所マップにピンが増えました"
+              : "おでかけの記録が増えました"}
           </p>
         </div>
         <div className="w-full space-y-3">
           <Link
-            href={`/facilities/${savedFromSlug}`}
+            href={visitsHref}
             className="block w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-colors"
           >
-            施設ページへ戻る
+            {saveCompleteInfo.hasCoordinates
+              ? "マップと履歴を見る"
+              : "おでかけ履歴を見る"}
           </Link>
-          <Link
-            href="/mypage/visits"
-            className="block w-full py-3 bg-white border border-slate-200 text-slate-600 font-bold text-sm rounded-xl hover:bg-slate-50 transition-colors"
-          >
-            おでかけ履歴を見る
-          </Link>
+          {saveCompleteInfo.fromSlug && (
+            <Link
+              href={`/facilities/${saveCompleteInfo.fromSlug}`}
+              className="block w-full py-3 bg-white border border-slate-200 text-slate-600 font-bold text-sm rounded-xl hover:bg-slate-50 transition-colors"
+            >
+              施設ページへ戻る
+            </Link>
+          )}
         </div>
       </div>
     );

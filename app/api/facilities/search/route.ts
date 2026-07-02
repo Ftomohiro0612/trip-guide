@@ -5,6 +5,8 @@ type FacilitySearchSource = {
   name: string;
   category: string;
   prefecture: string;
+  latitude?: unknown;
+  longitude?: unknown;
 };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -32,8 +34,25 @@ const facilities = isRecord(facilitiesJson) && Array.isArray(facilitiesJson.faci
   ? facilitiesJson.facilities.filter(isVisibleFacilitySearchSource)
   : [];
 
+function isFiniteCoordinate(value: unknown): value is number {
+  return typeof value === "number" && Number.isFinite(value);
+}
+
 export async function GET(request: Request) {
-  const q = new URL(request.url).searchParams.get("q")?.trim() ?? "";
+  const searchParams = new URL(request.url).searchParams;
+  const slug = searchParams.get("slug")?.trim();
+  if (slug !== undefined) {
+    const facility = facilities.find((item) => item.slug === slug);
+    return Response.json({
+      hasCoordinates: Boolean(
+        facility &&
+          isFiniteCoordinate(facility.latitude) &&
+          isFiniteCoordinate(facility.longitude),
+      ),
+    });
+  }
+
+  const q = searchParams.get("q")?.trim() ?? "";
   if (q.length < 2) {
     return Response.json({ results: [] });
   }
