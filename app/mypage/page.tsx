@@ -63,14 +63,6 @@ type VisitPhotoThumbRow = {
   sort_order: number | null;
 };
 
-type RecentMemory = {
-  visitId: string;
-  facilityName: string;
-  visitedOn: string | null;
-  thumbPath: string;
-  thumbUrl: string | null;
-};
-
 type FacilityCategorySource = { slug: string; category: string };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -331,37 +323,35 @@ export default async function MypagePage() {
     if (!photo.thumb_path || firstThumbPathByVisit.has(photo.visit_id)) continue;
     firstThumbPathByVisit.set(photo.visit_id, photo.thumb_path);
   }
-  const recentMemoryCandidates = visits.flatMap((visit) => {
-    const thumbPath = firstThumbPathByVisit.get(visit.id);
-    return thumbPath
-      ? [
-          {
-            visitId: visit.id,
-            facilityName: visit.facility_name,
-            visitedOn: visit.visited_on,
-            thumbPath,
-          },
-        ]
-      : [];
-  }).slice(0, 4);
-  const { data: signedMemoryThumbs } =
-    recentMemoryCandidates.length > 0
+  const recentVisits = visits.slice(0, 3);
+  const recentRecordThumbs = PHOTO_UPLOAD_ENABLED
+    ? recentVisits
+        .map((visit) => ({
+          visitId: visit.id,
+          thumbPath: firstThumbPathByVisit.get(visit.id),
+        }))
+        .filter((thumb): thumb is { visitId: string; thumbPath: string } =>
+          Boolean(thumb.thumbPath),
+        )
+    : [];
+  const { data: signedRecentRecordThumbs } =
+    recentRecordThumbs.length > 0
       ? await supabase.storage
           .from("visit-photos")
           .createSignedUrls(
-            recentMemoryCandidates.map((memory) => memory.thumbPath),
+            recentRecordThumbs.map((record) => record.thumbPath),
             60 * 60,
           )
       : { data: [] };
-  const signedMemoryThumbUrlByPath = new Map(
-    (signedMemoryThumbs ?? []).map((row) => [row.path, row.signedUrl]),
+  const signedRecentRecordThumbUrlByPath = new Map(
+    (signedRecentRecordThumbs ?? []).map((row) => [row.path, row.signedUrl]),
   );
-  const recentMemories: RecentMemory[] = PHOTO_UPLOAD_ENABLED
-    ? recentMemoryCandidates.map((memory) => ({
-        ...memory,
-        thumbUrl: signedMemoryThumbUrlByPath.get(memory.thumbPath) ?? null,
-      }))
-    : [];
+  const recentRecordThumbUrlByVisitId = new Map(
+    recentRecordThumbs.map((record) => [
+      record.visitId,
+      signedRecentRecordThumbUrlByPath.get(record.thumbPath) ?? null,
+    ]),
+  );
 
   const hasChildren = childRows.length > 0;
   const achievementStats: AchievementStats = {
@@ -377,13 +367,9 @@ export default async function MypagePage() {
 
   const monthlyData = buildMonthlyData(visits);
   const hasMonthlyData = monthlyData.some((d) => d.count > 0);
-  const recentVisits = visits.slice(0, 3);
   const visitedMapFacilities = buildVisitedPlacesMapData(visits);
 
   const childCategorySummaries = buildChildCategorySummaries(childRows, visits, childVisits);
-  const hasChildCategoryRecords = childCategorySummaries.some(
-    (s) => s.categories.length > 0,
-  );
 
   return (
     <div className="max-w-lg mx-auto px-4 py-6 space-y-6">
@@ -486,46 +472,62 @@ export default async function MypagePage() {
         />
       </section>
 
-      {/* 最近の思い出 */}
-      {recentMemories.length > 0 && (
+      {/* 最近の記録 */}
+      {recentVisits.length > 0 && (
         <section className="space-y-3">
           <div className="flex items-center justify-between">
-            <h2 className="font-bold text-slate-800">最近の思い出</h2>
+            <h2 className="font-bold text-slate-800">最近の記録</h2>
             <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
-              もっと見る →
+              すべて見る →
             </Link>
           </div>
-          <div className="grid grid-cols-4 gap-2">
-            {recentMemories.map((memory) => (
+          <div className="space-y-2">
+            {recentVisits.map((visit) => {
+              const thumbUrl = recentRecordThumbUrlByVisitId.get(visit.id) ?? null;
+              const revisitLabel = revisitLabels[visit.family_revisit] ?? "";
+              return (
               <Link
-                key={memory.visitId}
-                href={`/mypage/visits/${memory.visitId}`}
-                className="min-w-0 rounded-lg transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                key={visit.id}
+                href={`/mypage/visits/${visit.id}`}
+                className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
-                <div className="aspect-square relative overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200">
-                  {memory.thumbUrl ? (
+                <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200">
+                  {thumbUrl ? (
                     <Image
-                      src={memory.thumbUrl}
-                      alt={`${memory.facilityName}の写真`}
+                      src={thumbUrl}
+                      alt={`${visit.facility_name}の写真`}
                       fill
-                      sizes="96px"
+                      sizes="56px"
                       className="object-cover"
                       unoptimized
                     />
                   ) : (
-                    <span className="flex h-full w-full items-center justify-center px-1 text-center text-[10px] text-slate-400">
-                      写真なし
+                    <span
+                      className="flex h-full w-full items-center justify-center text-2xl"
+                      aria-hidden="true"
+                    >
+                      🗺️
                     </span>
                   )}
                 </div>
-                <p className="mt-1 truncate text-xs text-slate-700">
-                  {memory.facilityName}
-                </p>
-                <p className="text-[10px] text-slate-400">
-                  {formatVisitedOn(memory.visitedOn)}
-                </p>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-start justify-between gap-2">
+                    <p className="truncate text-sm font-medium text-slate-800">
+                      {visit.facility_name}
+                    </p>
+                    {revisitLabel && (
+                      <span className="shrink-0 text-right text-[11px] leading-tight text-slate-500">
+                        {revisitLabel}
+                      </span>
+                    )}
+                  </div>
+                  <p className="mt-0.5 text-xs text-slate-400">
+                    {formatVisitedOn(visit.visited_on)}
+                  </p>
+                </div>
               </Link>
-            ))}
+              );
+            })}
           </div>
         </section>
       )}
@@ -533,7 +535,7 @@ export default async function MypagePage() {
       {/* 記録する・さがす */}
       <section>
         <h2 className="font-bold text-slate-800 mb-3">記録する・さがす</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+        <div className="grid grid-cols-2 gap-3">
           <ActionCard
             href="/mypage/visits/new"
             icon="✏️"
@@ -542,23 +544,31 @@ export default async function MypagePage() {
             primary
           />
           <ActionCard
+            href="/facilities"
+            icon="🔍"
+            label="遊び場を探す"
+            desc="エリア・目的から遊び場をさがす"
+          />
+        </div>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+          <Link
             href="/mypage/visits/from-photo"
-            icon="📷"
-            label="写真からおでかけ記録をまとめて作る"
-            desc="写真を選ぶだけで日付・場所を自動入力"
-          />
-          <ActionCard
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            📷 写真から記録
+          </Link>
+          <Link
             href="/mypage/wishlist"
-            icon="⭐"
-            label="行きたいリスト"
-            desc="候補の施設をまとめておく"
-          />
-          <ActionCard
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            ⭐ 行きたいリスト
+          </Link>
+          <Link
             href="/mypage/visits"
-            icon="📖"
-            label="おでかけ履歴"
-            desc="これまでの記録を振り返る"
-          />
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            📖 おでかけ履歴
+          </Link>
         </div>
       </section>
 
@@ -591,10 +601,15 @@ export default async function MypagePage() {
                 />
               </div>
               {hasMonthlyData && (
-                <div>
-                  <p className="text-xs text-slate-400 mb-2">最近6ヶ月のおでかけ</p>
-                  <MonthlyBarChart data={monthlyData} />
-                </div>
+                <details>
+                  <summary className="inline-flex cursor-pointer list-none text-sm font-medium text-brand hover:underline [&::-webkit-details-marker]:hidden">
+                    最近6ヶ月の推移を見る
+                  </summary>
+                  <div className="mt-3">
+                    <p className="text-xs text-slate-400 mb-2">最近6ヶ月のおでかけ</p>
+                    <MonthlyBarChart data={monthlyData} />
+                  </div>
+                </details>
               )}
             </>
           ) : (
@@ -602,39 +617,6 @@ export default async function MypagePage() {
           )}
         </div>
       </section>
-
-      {/* 最近のおでかけ */}
-      {recentVisits.length > 0 && (
-        <section className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="font-bold text-slate-800">最近のおでかけ</h2>
-            <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
-              すべて見る
-            </Link>
-          </div>
-          <div className="space-y-2">
-            {recentVisits.map((visit) => (
-              <Link
-                key={visit.id}
-                href={`/mypage/visits/${visit.id}`}
-                className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-              >
-                <div className="min-w-0">
-                  <p className="font-medium text-slate-800 text-sm truncate">
-                    {visit.facility_name}
-                  </p>
-                  <p className="text-xs text-slate-400 mt-0.5">
-                    {formatVisitedOn(visit.visited_on)}
-                  </p>
-                </div>
-                <span className="text-xs text-slate-500 shrink-0 text-right">
-                  {revisitLabels[visit.family_revisit] ?? ""}
-                </span>
-              </Link>
-            ))}
-          </div>
-        </section>
-      )}
 
       {/* 子ども別あそび実績 */}
       {hasChildren && (
@@ -646,38 +628,41 @@ export default async function MypagePage() {
             </p>
           </div>
           <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-5">
-            {hasChildCategoryRecords ? (
-              childCategorySummaries.map((summary) => (
-                <div
-                  key={summary.child.id}
-                  id={`child-achievement-${summary.child.id}`}
-                  className="scroll-mt-4"
-                >
-                  <div className="flex items-center justify-between mb-2">
-                    <div className="flex items-center gap-2 min-w-0">
-                      <ChildAvatar
-                        childId={summary.child.id}
-                        nickname={summary.child.nickname}
-                        avatarUrl={
-                          summary.child.avatar_url
-                            ? avatarUrlByPath.get(summary.child.avatar_url) ?? null
-                            : null
-                        }
-                        size="sm"
-                      />
-                      <p className="font-bold text-slate-800 text-sm truncate">
-                        {summary.child.nickname}
-                      </p>
-                    </div>
-                    <Link
-                      href={`/mypage/visits?child_id=${summary.child.id}`}
-                      className="text-xs text-brand hover:underline"
-                    >
-                      記録を見る ›
-                    </Link>
+            {childCategorySummaries.map((summary) => (
+              <div
+                key={summary.child.id}
+                id={`child-achievement-${summary.child.id}`}
+                className="scroll-mt-4"
+              >
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2 min-w-0">
+                    <ChildAvatar
+                      childId={summary.child.id}
+                      nickname={summary.child.nickname}
+                      avatarUrl={
+                        summary.child.avatar_url
+                          ? avatarUrlByPath.get(summary.child.avatar_url) ?? null
+                          : null
+                      }
+                      size="sm"
+                    />
+                    <p className="font-bold text-slate-800 text-sm truncate">
+                      {summary.child.nickname}
+                    </p>
                   </div>
-                  {summary.categories.length > 0 ? (
-                    <div className="space-y-2">
+                  <Link
+                    href={`/mypage/visits?child_id=${summary.child.id}`}
+                    className="text-xs text-brand hover:underline"
+                  >
+                    記録を見る ›
+                  </Link>
+                </div>
+                {summary.categories.length > 0 ? (
+                  <details>
+                    <summary className="inline-flex cursor-pointer list-none text-sm font-medium text-brand hover:underline [&::-webkit-details-marker]:hidden">
+                      カテゴリ内訳を見る
+                    </summary>
+                    <div className="mt-3 space-y-2">
                       {summary.categories.map(({ category, count }) => (
                         <CategoryBar
                           key={category}
@@ -687,27 +672,14 @@ export default async function MypagePage() {
                         />
                       ))}
                     </div>
-                  ) : (
-                    <p className="text-slate-400 text-sm">
-                      まだ子ども別の記録がありません
-                    </p>
-                  )}
-                </div>
-              ))
-            ) : (
-              <>
-                {childCategorySummaries.map((summary) => (
-                  <span
-                    key={summary.child.id}
-                    id={`child-achievement-${summary.child.id}`}
-                    className="block scroll-mt-4"
-                  />
-                ))}
-                <p className="text-slate-400 text-sm">
-                  子どもごとの記録をするとここに表示されます
-                </p>
-              </>
-            )}
+                  </details>
+                ) : (
+                  <p className="text-slate-400 text-sm">
+                    まだ子ども別の記録がありません
+                  </p>
+                )}
+              </div>
+            ))}
           </div>
         </section>
       )}
