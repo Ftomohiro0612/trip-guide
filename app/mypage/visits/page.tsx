@@ -274,7 +274,14 @@ export default async function VisitsPage({
       )}
 
       <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">行った場所マップ</h2>
+        <h2 className="font-bold text-slate-800">
+          家族の足あとマップ
+          {visitedMapFacilities.length > 0 && (
+            <span className="ml-2 text-sm font-normal text-slate-400">
+              · {visitedMapFacilities.length}か所
+            </span>
+          )}
+        </h2>
         <VisitedPlacesMapClient
           visitedFacilities={visitedMapFacilities}
           height={{ mobile: 240, desktop: 360 }}

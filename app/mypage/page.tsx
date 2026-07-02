@@ -393,6 +393,11 @@ export default async function MypagePage() {
               ? `こんにちは、${profile.display_name}さん 👋`
               : "こんにちは 👋"}
           </h1>
+          <p className="mt-1 text-sm text-slate-500">
+            {achievementStats.totalVisitCount > 0
+              ? `これまで ${achievementStats.totalVisitCount}回 のおでかけを記録しました 🗺️`
+              : "家族のおでかけ記録を、ここにためていきましょう"}
+          </p>
         </div>
         <Link
           href="/mypage/settings"
@@ -463,7 +468,14 @@ export default async function MypagePage() {
       )}
 
       <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">行った場所マップ</h2>
+        <h2 className="font-bold text-slate-800">
+          家族の足あとマップ
+          {visitedMapFacilities.length > 0 && (
+            <span className="ml-2 text-sm font-normal text-slate-400">
+              · {visitedMapFacilities.length}か所
+            </span>
+          )}
+        </h2>
         <VisitedPlacesMapClient
           visitedFacilities={visitedMapFacilities}
           height={{ mobile: 200, desktop: 260 }}
@@ -515,9 +527,9 @@ export default async function MypagePage() {
         </section>
       )}
 
-      {/* クイックアクション */}
+      {/* 記録する・さがす */}
       <section>
-        <h2 className="font-bold text-slate-800 mb-3">クイックアクション</h2>
+        <h2 className="font-bold text-slate-800 mb-3">記録する・さがす</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <ActionCard
             href="/mypage/visits/new"

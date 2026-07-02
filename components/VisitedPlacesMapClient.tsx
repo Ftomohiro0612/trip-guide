@@ -61,8 +61,26 @@ export default function VisitedPlacesMapClient({
           </div>
         </div>
       ) : (
-        <div className="rounded-xl border border-slate-200 bg-white px-4 py-5 text-sm text-slate-500 shadow-sm">
-          記録すると、家族のおでかけの足あとがここに残ります
+        <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+          <div
+            className="grid h-[var(--visited-map-height-mobile)] w-full place-items-center bg-gradient-to-br from-sky-50 to-emerald-50 px-4 py-6 text-center sm:h-[var(--visited-map-height-desktop)]"
+            style={heightStyle(height)}
+          >
+            <div>
+              <p className="text-3xl" aria-hidden>
+                🗺️
+              </p>
+              <p className="mt-2 text-sm text-slate-500">
+                記録すると、家族のおでかけの足あとがここに残ります
+              </p>
+              <Link
+                href="/mypage/visits/new"
+                className="mt-3 inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+              >
+                最初のおでかけを記録する
+              </Link>
+            </div>
+          </div>
         </div>
       )}
 
@@ -72,7 +90,7 @@ export default function VisitedPlacesMapClient({
             href="/mypage/visits"
             className="text-sm font-medium text-brand hover:underline"
           >
-            地図で詳しく見る →
+            おでかけ履歴を見る →
           </Link>
         </div>
       )}
