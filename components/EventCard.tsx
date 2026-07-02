@@ -53,12 +53,9 @@ export default function EventCard({
               </span>
             ) : null}
             {showFacilityLink && facilitySlug && facilityName ? (
-              <Link
-                href={`/facilities/${facilitySlug}`}
-                className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
-              >
+              <span className="text-sm font-bold text-slate-700">
                 {facilityName}
-              </Link>
+              </span>
             ) : showFacilityLink ? (
               <span className="text-sm font-bold text-slate-500">
                 施設情報確認中
@@ -68,10 +65,29 @@ export default function EventCard({
           <h2 className="mt-2 break-words text-xl font-bold leading-snug text-slate-900">
             {event.title}
           </h2>
-          <p className="mt-2 text-sm font-bold text-slate-700">
-            {event.date_label}
-            {event.time_label ? ` / ${event.time_label}` : ""}
-          </p>
+          <div className="mt-2 flex flex-wrap items-center gap-2">
+            <p className="text-sm font-bold text-slate-700">
+              {event.date_label}
+              {event.time_label ? ` / ${event.time_label}` : ""}
+            </p>
+            {view.isThisWeekend ? (
+              <span className="rounded-md bg-rose-50 px-2 py-0.5 text-xs font-bold text-rose-700">
+                🗓️ 今週末
+              </span>
+            ) : null}
+          </div>
+          {labels.length > 0 ? (
+            <div className="mt-3 flex flex-wrap gap-2">
+              {labels.map((item) => (
+                <span
+                  key={item.key}
+                  className={`rounded-md px-2.5 py-1 text-xs font-bold ${item.color}`}
+                >
+                  {item.label}
+                </span>
+              ))}
+            </div>
+          ) : null}
         </div>
         <a
           href={event.official_url}
@@ -91,10 +107,11 @@ export default function EventCard({
         <p className="text-sm font-bold text-slate-900">
           {event.recommended_for_label ?? "こんな子に合いそう"}
         </p>
-        <p className="mt-1 text-sm leading-relaxed text-slate-700">
-          {event.recommended_for_note ??
-            "公式情報をもとに、興味に合いそうなポイントを整理しています。"}
-        </p>
+        {event.recommended_for_note ? (
+          <p className="mt-1 text-sm leading-relaxed text-slate-700">
+            {event.recommended_for_note}
+          </p>
+        ) : null}
         <div className="mt-3 flex flex-wrap gap-1.5">
           {event.recommended_for_tags.map((tag) => {
             const meta = RECOMMENDED_FOR_TAG_META[tag];
@@ -109,19 +126,6 @@ export default function EventCard({
           })}
         </div>
       </section>
-
-      {labels.length > 0 ? (
-        <div className="mt-4 flex flex-wrap gap-2">
-          {labels.map((item) => (
-            <span
-              key={item.key}
-              className={`rounded-md px-2.5 py-1 text-xs font-bold ${item.color}`}
-            >
-              {item.label}
-            </span>
-          ))}
-        </div>
-      ) : null}
 
       {event.tags.length > 0 ? (
         <div className="mt-3 flex flex-wrap gap-1.5">

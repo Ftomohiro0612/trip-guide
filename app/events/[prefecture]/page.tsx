@@ -83,7 +83,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
             {meta.name}の子ども向けイベント
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            日程・料金は変わることがあります。最新は各公式サイトでご確認ください。
+            公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。
           </p>
           <p className="mt-3 text-xs font-medium text-slate-500">
             掲載中 {visibleEvents.length}件

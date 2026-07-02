@@ -61,13 +61,13 @@ export default function EventsIndexPage() {
             子どもと行けるイベントを、エリアや“好き”から探す
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
-            日程・料金は変わることがあります。最新は各公式サイトでご確認ください。
+            公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。
           </p>
         </div>
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
-        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
             const meta = getPrefectureMeta(prefectureId);
             if (!meta) return null;
