@@ -63,6 +63,12 @@ type VisitPhotoThumbRow = {
   sort_order: number | null;
 };
 
+type MemoryPhoto = {
+  visitId: string;
+  facilityName: string;
+  thumbPath: string;
+};
+
 type FacilityCategorySource = { slug: string; category: string };
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -230,6 +236,15 @@ function formatVisitedOn(visitedOn: string | null): string {
   return visitedOn.replaceAll("-", "/");
 }
 
+function formatMonthDay(date: string | null): string {
+  if (!date) return "";
+  const [, month, day] = date.split("-");
+  const monthNumber = Number(month);
+  const dayNumber = Number(day);
+  if (!Number.isFinite(monthNumber) || !Number.isFinite(dayNumber)) return "";
+  return `${monthNumber}/${dayNumber}`;
+}
+
 const revisitLabels: Record<string, string> = {
   yes: "✅ また行きたい",
   conditional: "🔄 条件次第",
@@ -318,11 +333,38 @@ export default async function MypagePage() {
           .in("visit_id", visitIds)
       : { data: [] };
   const childVisits = (childVisitStats ?? []).filter(isChildVisit);
+  const visitPhotoThumbRows = (visitPhotoRows ?? []).filter(isVisitPhotoThumbRow);
+  const visitById = new Map(visits.map((visit) => [visit.id, visit]));
+  const visitOrderById = new Map(candidateVisitIds.map((id, index) => [id, index]));
   const firstThumbPathByVisit = new Map<string, string>();
-  for (const photo of (visitPhotoRows ?? []).filter(isVisitPhotoThumbRow)) {
+  for (const photo of visitPhotoThumbRows) {
     if (!photo.thumb_path || firstThumbPathByVisit.has(photo.visit_id)) continue;
     firstThumbPathByVisit.set(photo.visit_id, photo.thumb_path);
   }
+  const memoryPhotos: MemoryPhoto[] = PHOTO_UPLOAD_ENABLED
+    ? visitPhotoThumbRows
+        .filter((photo): photo is VisitPhotoThumbRow & { thumb_path: string } =>
+          Boolean(photo.thumb_path),
+        )
+        .sort((a, b) => {
+          const byVisitOrder =
+            (visitOrderById.get(a.visit_id) ?? Number.MAX_SAFE_INTEGER) -
+            (visitOrderById.get(b.visit_id) ?? Number.MAX_SAFE_INTEGER);
+          return byVisitOrder || (a.sort_order ?? 0) - (b.sort_order ?? 0);
+        })
+        .slice(0, 8)
+        .flatMap((photo) => {
+          const visit = visitById.get(photo.visit_id);
+          if (!visit) return [];
+          return [
+            {
+              visitId: photo.visit_id,
+              facilityName: visit.facility_name,
+              thumbPath: photo.thumb_path,
+            },
+          ];
+        })
+    : [];
   const recentVisits = visits.slice(0, 3);
   const recentRecordThumbs = PHOTO_UPLOAD_ENABLED
     ? recentVisits
@@ -334,24 +376,35 @@ export default async function MypagePage() {
           Boolean(thumb.thumbPath),
         )
     : [];
-  const { data: signedRecentRecordThumbs } =
-    recentRecordThumbs.length > 0
+  const photoPathsToSign = Array.from(
+    new Set([
+      ...recentRecordThumbs.map((record) => record.thumbPath),
+      ...memoryPhotos.map((photo) => photo.thumbPath),
+    ]),
+  );
+  const { data: signedPhotoUrls } =
+    photoPathsToSign.length > 0
       ? await supabase.storage
           .from("visit-photos")
-          .createSignedUrls(
-            recentRecordThumbs.map((record) => record.thumbPath),
-            60 * 60,
-          )
+          .createSignedUrls(photoPathsToSign, 60 * 60)
       : { data: [] };
-  const signedRecentRecordThumbUrlByPath = new Map(
-    (signedRecentRecordThumbs ?? []).map((row) => [row.path, row.signedUrl]),
+  const signedPhotoUrlByPath = new Map(
+    (signedPhotoUrls ?? []).map((row) => [row.path, row.signedUrl]),
   );
   const recentRecordThumbUrlByVisitId = new Map(
     recentRecordThumbs.map((record) => [
       record.visitId,
-      signedRecentRecordThumbUrlByPath.get(record.thumbPath) ?? null,
+      signedPhotoUrlByPath.get(record.thumbPath) ?? null,
     ]),
   );
+  const memoryPhotosWithUrls = memoryPhotos
+    .map((photo) => ({
+      ...photo,
+      thumbUrl: signedPhotoUrlByPath.get(photo.thumbPath) ?? null,
+    }))
+    .filter((photo): photo is MemoryPhoto & { thumbUrl: string } =>
+      Boolean(photo.thumbUrl),
+    );
 
   const hasChildren = childRows.length > 0;
   const achievementStats: AchievementStats = {
@@ -368,6 +421,22 @@ export default async function MypagePage() {
   const monthlyData = buildMonthlyData(visits);
   const hasMonthlyData = monthlyData.some((d) => d.count > 0);
   const visitedMapFacilities = buildVisitedPlacesMapData(visits);
+  const recentFootprintFacilities = visitedMapFacilities
+    .filter((facility) => facility.lastVisited)
+    .slice(0, 2);
+  const classicSpot =
+    visitedMapFacilities
+      .filter((facility) => facility.visitCount >= 2)
+      .sort(
+        (a, b) =>
+          b.visitCount - a.visitCount ||
+          (b.lastVisited ?? "").localeCompare(a.lastVisited ?? "") ||
+          a.name.localeCompare(b.name, "ja"),
+      )[0] ?? null;
+  const firstTimeSpot =
+    visitedMapFacilities.find(
+      (facility) => facility.visitCount === 1 && facility.lastVisited,
+    ) ?? null;
 
   const childCategorySummaries = buildChildCategorySummaries(childRows, visits, childVisits);
 
@@ -384,7 +453,7 @@ export default async function MypagePage() {
           </h1>
           <p className="mt-1 text-sm text-slate-500">
             {achievementStats.totalVisitCount > 0
-              ? `これまで ${achievementStats.totalVisitCount}回 のおでかけを記録しました 🗺️`
+              ? `家族のおでかけ記録が、${achievementStats.totalVisitCount}回分たまっています`
               : "家族のおでかけ記録を、ここにためていきましょう"}
           </p>
         </div>
@@ -418,6 +487,37 @@ export default async function MypagePage() {
             </Link>
           </div>
         </div>
+      )}
+
+      {memoryPhotosWithUrls.length > 0 && (
+        <section className="space-y-3">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="font-bold text-slate-800">📷 思い出の写真</h2>
+            <Link href="/mypage/visits" className="shrink-0 text-brand text-sm hover:underline">
+              すべて見る →
+            </Link>
+          </div>
+          <div className="-mx-4 overflow-x-auto px-4 pb-1">
+            <div className="flex w-max gap-2.5">
+              {memoryPhotosWithUrls.map((photo) => (
+                <Link
+                  key={`${photo.visitId}-${photo.thumbPath}`}
+                  href={`/mypage/visits/${photo.visitId}`}
+                  className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200 transition-opacity hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-24 sm:w-24"
+                >
+                  <Image
+                    src={photo.thumbUrl}
+                    alt={`${photo.facilityName}の写真`}
+                    fill
+                    sizes="(min-width: 640px) 96px, 80px"
+                    className="object-cover"
+                    unoptimized
+                  />
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {/* 子どもプロフィール一覧 */}
@@ -458,10 +558,10 @@ export default async function MypagePage() {
 
       <section className="space-y-3">
         <h2 className="font-bold text-slate-800">
-          家族の足あとマップ
+          家族の足あと
           {visitedMapFacilities.length > 0 && (
             <span className="ml-2 text-sm font-normal text-slate-400">
-              · {visitedMapFacilities.length}か所
+              {visitedMapFacilities.length}か所に思い出があります
             </span>
           )}
         </h2>
@@ -470,13 +570,27 @@ export default async function MypagePage() {
           height={{ mobile: 200, desktop: 260 }}
           showDetailLink
         />
+        {recentFootprintFacilities.length > 0 && (
+          <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
+            <span>最近増えた足あと:</span>
+            {recentFootprintFacilities.map((facility) => (
+              <Link
+                key={facility.slug}
+                href={`/mypage/visits/facility/${facility.slug}`}
+                className="inline-flex max-w-full items-center rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 font-medium text-sky-700 transition-colors hover:border-brand/40 hover:bg-sky-100"
+              >
+                🆕 {facility.name} {formatMonthDay(facility.lastVisited)}
+              </Link>
+            ))}
+          </div>
+        )}
       </section>
 
-      {/* 最近の記録 */}
+      {/* 最近の思い出 */}
       {recentVisits.length > 0 && (
         <section className="space-y-3">
           <div className="flex items-center justify-between">
-            <h2 className="font-bold text-slate-800">最近の記録</h2>
+            <h2 className="font-bold text-slate-800">最近の思い出</h2>
             <Link href="/mypage/visits" className="text-brand text-sm hover:underline">
               すべて見る →
             </Link>
@@ -572,33 +686,79 @@ export default async function MypagePage() {
         </div>
       </section>
 
-      {/* おでかけ実績 */}
+      {/* 家族のあしあと帳 */}
       <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">おでかけ実績</h2>
+        <h2 className="font-bold text-slate-800">家族のあしあと帳</h2>
         <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-4">
           {hasAchievementRecords ? (
             <>
-              <div className="grid grid-cols-2 gap-1">
-                <AchievementMetric
-                  label="行った施設"
-                  value={`${achievementStats.distinctFacilityCount}か所`}
-                  href="/mypage/visits"
-                />
-                <AchievementMetric
-                  label="おでかけ回数"
-                  value={`${achievementStats.totalVisitCount}回`}
-                  href="/mypage/visits"
-                />
-                <AchievementMetric
-                  label="行きたいリスト"
-                  value={`${achievementStats.wishlistCount}件`}
-                  href="/mypage/wishlist"
-                />
-                <AchievementMetric
-                  label="また行きたい"
-                  value={`${achievementStats.revisitCount}件`}
-                  href="/mypage/visits?revisit=yes"
-                />
+              <div className="space-y-2 text-sm leading-relaxed text-slate-700">
+                {achievementStats.totalVisitCount > 0 && (
+                  <Link
+                    href="/mypage/visits"
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    これまで{" "}
+                    <span className="font-bold text-brand">
+                      {achievementStats.totalVisitCount}回
+                    </span>{" "}
+                    のおでかけを記録しました
+                  </Link>
+                )}
+                {achievementStats.distinctFacilityCount > 0 && (
+                  <Link
+                    href="/mypage/visits"
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    <span className="font-bold text-brand">
+                      {achievementStats.distinctFacilityCount}か所
+                    </span>{" "}
+                    に家族の足あとが残っています
+                  </Link>
+                )}
+                {achievementStats.wishlistCount > 0 && (
+                  <Link
+                    href="/mypage/wishlist"
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    ⭐ また行きたい場所が{" "}
+                    <span className="font-bold text-brand">
+                      {achievementStats.wishlistCount}件
+                    </span>{" "}
+                    あります
+                  </Link>
+                )}
+                {achievementStats.revisitCount > 0 && (
+                  <Link
+                    href="/mypage/visits?revisit=yes"
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    ✅ また行きたい と評価したおでかけが{" "}
+                    <span className="font-bold text-brand">
+                      {achievementStats.revisitCount}件
+                    </span>
+                  </Link>
+                )}
+                {classicSpot && (
+                  <Link
+                    href={`/mypage/visits/facility/${classicSpot.slug}`}
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    🏅 定番スポット: {classicSpot.name}
+                    <span className="font-bold text-brand">({classicSpot.visitCount}回)</span>
+                  </Link>
+                )}
+                {firstTimeSpot && (
+                  <Link
+                    href={`/mypage/visits/facility/${firstTimeSpot.slug}`}
+                    className="block rounded-lg px-1 py-0.5 transition-colors hover:bg-slate-50 hover:text-brand"
+                  >
+                    🌱 最近の初めて: {firstTimeSpot.name}
+                    <span className="font-bold text-brand">
+                      ({formatMonthDay(firstTimeSpot.lastVisited)})
+                    </span>
+                  </Link>
+                )}
               </div>
               {hasMonthlyData && (
                 <details>
@@ -613,18 +773,20 @@ export default async function MypagePage() {
               )}
             </>
           ) : (
-            <p className="text-slate-400 text-sm">記録するとここに実績が表示されます</p>
+            <p className="text-slate-400 text-sm">
+              記録すると、ここに家族のあしあとがたまっていきます
+            </p>
           )}
         </div>
       </section>
 
-      {/* 子ども別あそび実績 */}
+      {/* 子どもたちの「好き」 */}
       {hasChildren && (
         <section className="space-y-3">
           <div>
-            <h2 className="font-bold text-slate-800">子ども別あそび実績</h2>
+            <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
             <p className="mt-1 text-xs leading-relaxed text-slate-400">
-              お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。おでかけ実績とは数え方が違うため件数が一致しないことがあります。
+              お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。家族のあしあと帳とは数え方が違うため件数が一致しないことがあります。
             </p>
           </div>
           <div className="bg-white border border-slate-200 rounded-xl p-4 space-y-5">
@@ -657,6 +819,16 @@ export default async function MypagePage() {
                     記録を見る ›
                   </Link>
                 </div>
+                {summary.categories[0] &&
+                  summary.categories[0].category !== "その他" &&
+                  summary.categories[0].count >= 2 && (
+                    <p className="mb-2 text-sm text-slate-600">
+                      {summary.categories[0].category}がいちばん多いね
+                      <span className="font-bold text-brand">
+                        ({summary.categories[0].count}回)
+                      </span>
+                    </p>
+                  )}
                 {summary.categories.length > 0 ? (
                   <details>
                     <summary className="inline-flex cursor-pointer list-none text-sm font-medium text-brand hover:underline [&::-webkit-details-marker]:hidden">
@@ -723,31 +895,6 @@ function ActionCard({
       >
         {desc}
       </span>
-    </Link>
-  );
-}
-
-function AchievementMetric({
-  label,
-  value,
-  href,
-}: {
-  label: string;
-  value: string;
-  href: string;
-}) {
-  return (
-    <Link
-      href={href}
-      className="group block rounded-lg p-2 hover:bg-slate-50 transition-colors"
-    >
-      <p className="font-bold text-slate-900 group-hover:text-brand transition-colors">
-        {value}
-      </p>
-      <p className="text-slate-500 text-xs mt-0.5 flex items-center gap-0.5">
-        {label}
-        <span className="text-slate-300 group-hover:text-brand transition-colors">›</span>
-      </p>
     </Link>
   );
 }
