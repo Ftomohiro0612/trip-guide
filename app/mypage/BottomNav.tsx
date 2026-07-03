@@ -18,7 +18,7 @@ export default function BottomNav() {
   return (
     <nav
       aria-label="マイページナビゲーション"
-      className="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-slate-200 flex safe-bottom"
+      className="fixed bottom-0 left-0 right-0 z-20 bg-white border-t border-slate-200 flex safe-bottom lg:hidden"
     >
       {items.map((item) => {
         const active = item.exact

@@ -15,7 +15,7 @@ export default function MypageLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="pb-24 min-h-screen">
+    <div className="pb-24 lg:pb-0 min-h-screen">
       {children}
       <BottomNav />
     </div>
