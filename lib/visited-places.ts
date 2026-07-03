@@ -18,6 +18,20 @@ export type VisitedPlaceFacility = {
   latestFatigue: string | null;
 };
 
+export type FamilyMapPlace = {
+  slug: string;
+  name: string;
+  latitude: number;
+  longitude: number;
+  kind: "visited" | "wishlist" | "both";
+  visited?: {
+    visitCount: number;
+    lastVisited: string | null;
+    latestRevisit: string | null;
+    latestFatigue: string | null;
+  };
+};
+
 type VisitAggregate = {
   visitCount: number;
   lastVisited: string | null;
@@ -94,4 +108,65 @@ export function buildVisitedPlacesMapData(
       );
       return byLastVisited || a.name.localeCompare(b.name, "ja");
     });
+}
+
+export function buildFamilyOutingMapData(
+  visits: VisitForVisitedPlacesMap[],
+  wishlistSlugs: string[],
+): FamilyMapPlace[] {
+  const visitedPlaces = buildVisitedPlacesMapData(visits);
+  const bySlug = new Map<string, FamilyMapPlace>();
+
+  for (const place of visitedPlaces) {
+    bySlug.set(place.slug, {
+      slug: place.slug,
+      name: place.name,
+      latitude: place.latitude,
+      longitude: place.longitude,
+      kind: "visited",
+      visited: {
+        visitCount: place.visitCount,
+        lastVisited: place.lastVisited,
+        latestRevisit: place.latestRevisit,
+        latestFatigue: place.latestFatigue,
+      },
+    });
+  }
+
+  for (const slug of Array.from(new Set(wishlistSlugs.map((s) => s.trim())))) {
+    if (!slug) continue;
+
+    const facility = getFacilityBySlug(slug);
+    if (
+      !facility ||
+      !isFiniteCoordinate(facility.latitude) ||
+      !isFiniteCoordinate(facility.longitude)
+    ) {
+      continue;
+    }
+
+    const existing = bySlug.get(slug);
+    if (existing) {
+      bySlug.set(slug, {
+        ...existing,
+        kind: "both",
+      });
+      continue;
+    }
+
+    bySlug.set(slug, {
+      slug,
+      name: facility.name,
+      latitude: facility.latitude,
+      longitude: facility.longitude,
+      kind: "wishlist",
+    });
+  }
+
+  return Array.from(bySlug.values()).sort((a, b) => {
+    const aLastVisited = a.visited?.lastVisited ?? "";
+    const bLastVisited = b.visited?.lastVisited ?? "";
+    const byLastVisited = bLastVisited.localeCompare(aLastVisited);
+    return byLastVisited || a.name.localeCompare(b.name, "ja");
+  });
 }

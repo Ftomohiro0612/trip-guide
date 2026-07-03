@@ -3,7 +3,7 @@
 import dynamic from "next/dynamic";
 import Link from "next/link";
 import type { CSSProperties } from "react";
-import type { VisitedPlaceFacility } from "@/lib/visited-places";
+import type { FamilyMapPlace } from "@/lib/visited-places";
 
 export type VisitedPlacesMapHeight =
   | number
@@ -13,7 +13,7 @@ export type VisitedPlacesMapHeight =
     };
 
 type Props = {
-  visitedFacilities: VisitedPlaceFacility[];
+  places: FamilyMapPlace[];
   height: VisitedPlacesMapHeight;
   showDetailLink?: boolean;
 };
@@ -43,23 +43,26 @@ function heightStyle(height: VisitedPlacesMapHeight): CSSProperties {
 }
 
 export default function VisitedPlacesMapClient({
-  visitedFacilities,
+  places,
   height,
   showDetailLink = false,
 }: Props) {
-  const hasFacilities = visitedFacilities.length > 0;
+  const hasPlaces = places.length > 0;
 
   return (
     <section className="space-y-2" data-testid="visited-places-map">
-      {hasFacilities ? (
-        <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
-          <div
-            className="h-[var(--visited-map-height-mobile)] w-full sm:h-[var(--visited-map-height-desktop)]"
-            style={heightStyle(height)}
-          >
-            <VisitedPlacesMap visitedFacilities={visitedFacilities} />
+      {hasPlaces ? (
+        <>
+          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+            <div
+              className="h-[var(--visited-map-height-mobile)] w-full sm:h-[var(--visited-map-height-desktop)]"
+              style={heightStyle(height)}
+            >
+              <VisitedPlacesMap places={places} />
+            </div>
           </div>
-        </div>
+          <MapLegend places={places} />
+        </>
       ) : (
         <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
           <div
@@ -95,5 +98,34 @@ export default function VisitedPlacesMapClient({
         </div>
       )}
     </section>
+  );
+}
+
+function MapLegend({ places }: { places: FamilyMapPlace[] }) {
+  const hasVisited = places.some((place) => place.kind === "visited");
+  const hasWishlist = places.some((place) => place.kind === "wishlist");
+  const hasBoth = places.some((place) => place.kind === "both");
+
+  return (
+    <div className="flex flex-wrap gap-1.5 text-[11px] font-medium">
+      {hasVisited && (
+        <span className="inline-flex items-center gap-1 rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 text-sky-700">
+          <span aria-hidden>🐾</span>
+          行った場所
+        </span>
+      )}
+      {hasWishlist && (
+        <span className="inline-flex items-center gap-1 rounded-full border border-pink-100 bg-pink-50 px-2.5 py-1 text-pink-700">
+          <span aria-hidden>♥</span>
+          行きたい場所
+        </span>
+      )}
+      {hasBoth && (
+        <span className="inline-flex items-center gap-1 rounded-full border border-violet-100 bg-violet-50 px-2.5 py-1 text-violet-700">
+          <span aria-hidden>🐾♥</span>
+          行った・行きたい
+        </span>
+      )}
+    </div>
   );
 }

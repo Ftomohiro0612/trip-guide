@@ -6,7 +6,10 @@ import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/server";
-import { buildVisitedPlacesMapData } from "@/lib/visited-places";
+import {
+  buildFamilyOutingMapData,
+  buildVisitedPlacesMapData,
+} from "@/lib/visited-places";
 import LogoutButton from "./LogoutButton";
 
 export const metadata: Metadata = { title: "マイページ" };
@@ -67,6 +70,10 @@ type MemoryPhoto = {
   visitId: string;
   facilityName: string;
   thumbPath: string;
+};
+
+type WishlistSlugRow = {
+  facility_slug: string | null;
 };
 
 type FacilityCategorySource = { slug: string; category: string };
@@ -252,6 +259,15 @@ const revisitLabels: Record<string, string> = {
   no: "🙅 もう行かない",
 };
 
+function familyMapBadgeText(visitedCount: number, wishlistCount: number): string {
+  return [
+    visitedCount > 0 ? `🐾 行った${visitedCount}か所` : null,
+    wishlistCount > 0 ? `♥ 行きたい${wishlistCount}か所` : null,
+  ]
+    .filter((item): item is string => Boolean(item))
+    .join(" · ");
+}
+
 export default async function MypagePage() {
   const supabase = await createClient();
   const {
@@ -262,7 +278,7 @@ export default async function MypagePage() {
     { data: profile },
     { data: children },
     { data: visitStats },
-    { count: exactWishlistCount },
+    { data: wishlistRows },
   ] = await Promise.all([
     user
       ? supabase.from("profiles").select("display_name").eq("id", user.id).single()
@@ -285,9 +301,9 @@ export default async function MypagePage() {
     user
       ? supabase
           .from("wishlists")
-          .select("id", { count: "exact", head: true })
+          .select("facility_slug")
           .eq("user_id", user.id)
-      : Promise.resolve({ count: 0 }),
+      : Promise.resolve({ data: [] }),
   ]);
 
   const childRows = (children ?? []).filter(isRecord).filter((child): child is Child => {
@@ -312,6 +328,10 @@ export default async function MypagePage() {
     (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
   );
   const visits = (visitStats ?? []).filter(isVisitStat);
+  const wishlistSlugRows = (wishlistRows ?? []) as WishlistSlugRow[];
+  const wishlistSlugs = wishlistSlugRows
+    .map((row) => row.facility_slug)
+    .filter((slug): slug is string => Boolean(slug));
   const visitIds = visits.map((v) => v.id);
   const candidateVisitIds = PHOTO_UPLOAD_ENABLED ? visitIds.slice(0, 12) : [];
   const { data: visitPhotoRows } =
@@ -410,7 +430,7 @@ export default async function MypagePage() {
   const achievementStats: AchievementStats = {
     distinctFacilityCount: new Set(visits.map((v) => v.facility_slug)).size,
     totalVisitCount: visits.length,
-    wishlistCount: exactWishlistCount ?? 0,
+    wishlistCount: wishlistSlugRows.length,
     revisitCount: visits.filter((v) => v.family_revisit === "yes").length,
   };
   const hasAchievementRecords =
@@ -421,6 +441,17 @@ export default async function MypagePage() {
   const monthlyData = buildMonthlyData(visits);
   const hasMonthlyData = monthlyData.some((d) => d.count > 0);
   const visitedMapFacilities = buildVisitedPlacesMapData(visits);
+  const familyMapPlaces = buildFamilyOutingMapData(visits, wishlistSlugs);
+  const familyMapVisitedCount = familyMapPlaces.filter(
+    (place) => place.kind === "visited" || place.kind === "both",
+  ).length;
+  const familyMapWishlistCount = familyMapPlaces.filter(
+    (place) => place.kind === "wishlist" || place.kind === "both",
+  ).length;
+  const familyMapBadge = familyMapBadgeText(
+    familyMapVisitedCount,
+    familyMapWishlistCount,
+  );
   const recentFootprintFacilities = visitedMapFacilities
     .filter((facility) => facility.lastVisited)
     .slice(0, 2);
@@ -558,15 +589,15 @@ export default async function MypagePage() {
 
       <section className="space-y-3 lg:col-start-1 lg:order-5">
         <h2 className="font-bold text-slate-800">
-          家族の足あと
-          {visitedMapFacilities.length > 0 && (
+          家族のおでかけマップ
+          {familyMapBadge && (
             <span className="ml-2 text-sm font-normal text-slate-400">
-              {visitedMapFacilities.length}か所に思い出があります
+              {familyMapBadge}
             </span>
           )}
         </h2>
         <VisitedPlacesMapClient
-          visitedFacilities={visitedMapFacilities}
+          places={familyMapPlaces}
           height={{ mobile: 200, desktop: 340 }}
           showDetailLink
         />

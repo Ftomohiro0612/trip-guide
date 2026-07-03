@@ -4,7 +4,7 @@ import Link from "next/link";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
-import { buildVisitedPlacesMapData } from "@/lib/visited-places";
+import { buildFamilyOutingMapData } from "@/lib/visited-places";
 import {
   familyRevisitLabels,
   fatigueLabels,
@@ -59,6 +59,10 @@ type VisitMapRow = {
   parent_fatigue: string | null;
 };
 
+type WishlistSlugRow = {
+  facility_slug: string | null;
+};
+
 const VISIT_THUMBNAILS_PER_CARD = 2;
 
 function formatVisitedOn(visitedOn: string | null): string {
@@ -99,10 +103,23 @@ function chipLabel(labels: Record<string, string>, value: string | null): string
   return label === "未記録" ? null : label;
 }
 
+function familyMapBadgeText(visitedCount: number, wishlistCount: number): string {
+  return [
+    visitedCount > 0 ? `🐾${visitedCount}` : null,
+    wishlistCount > 0 ? `♥${wishlistCount}` : null,
+  ]
+    .filter((item): item is string => Boolean(item))
+    .join(" · ");
+}
+
 export default async function VisitsPage({
   searchParams,
 }: {
-  searchParams: Promise<{ no_child?: string; revisit?: string; child_id?: string }>;
+  searchParams: Promise<{
+    no_child?: string;
+    revisit?: string;
+    child_id?: string;
+  }>;
 }) {
   const params = await searchParams;
   const supabase = await createClient();
@@ -165,16 +182,36 @@ export default async function VisitsPage({
         .eq("status", "published")
     : null;
 
-  const [{ data: visits }, { data: publishedMapVisits }] = await Promise.all([
-    visitsQuery ? visitsQuery : Promise.resolve({ data: [] }),
-    publishedMapVisitsQuery
-      ? publishedMapVisitsQuery
-      : Promise.resolve({ data: [] }),
-  ]);
+  const wishlistSlugsQuery = user
+    ? supabase.from("wishlists").select("facility_slug").eq("user_id", user.id)
+    : null;
+
+  const [{ data: visits }, { data: publishedMapVisits }, { data: wishlistRows }] =
+    await Promise.all([
+      visitsQuery ? visitsQuery : Promise.resolve({ data: [] }),
+      publishedMapVisitsQuery
+        ? publishedMapVisitsQuery
+        : Promise.resolve({ data: [] }),
+      wishlistSlugsQuery ? wishlistSlugsQuery : Promise.resolve({ data: [] }),
+    ]);
 
   const visitRows = (visits ?? []) as Visit[];
-  const visitedMapFacilities = buildVisitedPlacesMapData(
+  const wishlistSlugs = ((wishlistRows ?? []) as WishlistSlugRow[])
+    .map((row) => row.facility_slug)
+    .filter((slug): slug is string => Boolean(slug));
+  const familyMapPlaces = buildFamilyOutingMapData(
     (publishedMapVisits ?? []) as VisitMapRow[],
+    wishlistSlugs,
+  );
+  const familyMapVisitedCount = familyMapPlaces.filter(
+    (place) => place.kind === "visited" || place.kind === "both",
+  ).length;
+  const familyMapWishlistCount = familyMapPlaces.filter(
+    (place) => place.kind === "wishlist" || place.kind === "both",
+  ).length;
+  const familyMapBadge = familyMapBadgeText(
+    familyMapVisitedCount,
+    familyMapWishlistCount,
   );
   const visitIdsForChildren = visitRows.map((visit) => visit.id);
   const [{ data: allVisitChildren }, { data: visitPhotoRows }] =
@@ -277,15 +314,15 @@ export default async function VisitsPage({
 
       <section className="space-y-3">
         <h2 className="font-bold text-slate-800">
-          家族の足あとマップ
-          {visitedMapFacilities.length > 0 && (
+          家族のおでかけマップ
+          {familyMapBadge && (
             <span className="ml-2 text-sm font-normal text-slate-400">
-              · {visitedMapFacilities.length}か所
+              · {familyMapBadge}
             </span>
           )}
         </h2>
         <VisitedPlacesMapClient
-          visitedFacilities={visitedMapFacilities}
+          places={familyMapPlaces}
           height={{ mobile: 240, desktop: 360 }}
         />
       </section>

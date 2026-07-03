@@ -12,9 +12,9 @@ import {
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { familyRevisitLabels, fatigueLabels } from "@/lib/visit-labels";
-import type { VisitedPlaceFacility } from "@/lib/visited-places";
+import type { FamilyMapPlace } from "@/lib/visited-places";
 
-type RenderedVisitedFacility = VisitedPlaceFacility & {
+type RenderedFamilyMapPlace = FamilyMapPlace & {
   markerLatitude: number;
   markerLongitude: number;
 };
@@ -27,37 +27,41 @@ function formatVisitedOn(value: string | null): string {
   return value ? value.replaceAll("-", "/") : "日付未設定";
 }
 
-function offsetOverlappingMarkers(
-  facilities: VisitedPlaceFacility[],
-): RenderedVisitedFacility[] {
-  const groups = new Map<string, VisitedPlaceFacility[]>();
+function markerFillColor(kind: FamilyMapPlace["kind"]): string {
+  if (kind === "wishlist") return "#ec4899";
+  if (kind === "both") return "#8b5cf6";
+  return "#0ea5e9";
+}
 
-  for (const facility of facilities) {
-    const key = `${facility.latitude.toFixed(6)},${facility.longitude.toFixed(6)}`;
+function offsetOverlappingMarkers(places: FamilyMapPlace[]): RenderedFamilyMapPlace[] {
+  const groups = new Map<string, FamilyMapPlace[]>();
+
+  for (const place of places) {
+    const key = `${place.latitude.toFixed(6)},${place.longitude.toFixed(6)}`;
     const list = groups.get(key) ?? [];
-    list.push(facility);
+    list.push(place);
     groups.set(key, list);
   }
 
-  const rendered: RenderedVisitedFacility[] = [];
+  const rendered: RenderedFamilyMapPlace[] = [];
   for (const list of groups.values()) {
     if (list.length === 1) {
-      const facility = list[0];
+      const place = list[0];
       rendered.push({
-        ...facility,
-        markerLatitude: facility.latitude,
-        markerLongitude: facility.longitude,
+        ...place,
+        markerLatitude: place.latitude,
+        markerLongitude: place.longitude,
       });
       continue;
     }
 
     const radius = 0.0004;
-    list.forEach((facility, index) => {
+    list.forEach((place, index) => {
       const angle = (index / list.length) * Math.PI * 2;
       rendered.push({
-        ...facility,
-        markerLatitude: facility.latitude + Math.sin(angle) * radius,
-        markerLongitude: facility.longitude + Math.cos(angle) * radius,
+        ...place,
+        markerLatitude: place.latitude + Math.sin(angle) * radius,
+        markerLongitude: place.longitude + Math.cos(angle) * radius,
       });
     });
   }
@@ -65,21 +69,13 @@ function offsetOverlappingMarkers(
   return rendered;
 }
 
-export default function VisitedPlacesMap({
-  visitedFacilities,
-}: {
-  visitedFacilities: VisitedPlaceFacility[];
-}) {
-  const renderedFacilities = useMemo(
-    () => offsetOverlappingMarkers(visitedFacilities),
-    [visitedFacilities],
-  );
+export default function VisitedPlacesMap({ places }: { places: FamilyMapPlace[] }) {
+  const renderedPlaces = useMemo(() => offsetOverlappingMarkers(places), [places]);
   const initialCenter: [number, number] =
-    visitedFacilities.length === 1
-      ? [visitedFacilities[0].latitude, visitedFacilities[0].longitude]
+    places.length === 1
+      ? [places[0].latitude, places[0].longitude]
       : DEFAULT_CENTER;
-  const initialZoom =
-    visitedFacilities.length === 1 ? SINGLE_MARKER_ZOOM : DEFAULT_ZOOM;
+  const initialZoom = places.length === 1 ? SINGLE_MARKER_ZOOM : DEFAULT_ZOOM;
 
   return (
     <MapContainer
@@ -93,52 +89,80 @@ export default function VisitedPlacesMap({
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
       />
       <InvalidateSizeOnMount />
-      <FitBounds points={visitedFacilities} />
-      {renderedFacilities.map((facility) => (
+      <FitBounds points={places} />
+      {renderedPlaces.map((place) => (
         <CircleMarker
-          key={facility.slug}
-          center={[facility.markerLatitude, facility.markerLongitude]}
+          key={place.slug}
+          center={[place.markerLatitude, place.markerLongitude]}
           radius={8}
           pathOptions={{
             color: "#ffffff",
             weight: 2,
-            fillColor: "#0ea5e9",
+            fillColor: markerFillColor(place.kind),
             fillOpacity: 0.92,
           }}
         >
           <Popup>
-            <div className="min-w-[180px] max-w-[220px] space-y-1">
-              <p className="text-sm font-bold leading-snug text-slate-900">
-                {facility.name}
-              </p>
-              <p className="text-xs text-slate-600">
-                訪問{facility.visitCount}回
-              </p>
-              <p className="text-xs text-slate-500">
-                最終訪問日: {formatVisitedOn(facility.lastVisited)}
-              </p>
-              {facility.latestRevisit &&
-                familyRevisitLabels[facility.latestRevisit] && (
-                  <p className="text-xs text-slate-600">
-                    また行きたい: {familyRevisitLabels[facility.latestRevisit]}
-                  </p>
-                )}
-              {facility.latestFatigue && fatigueLabels[facility.latestFatigue] && (
-                <p className="text-xs text-slate-600">
-                  疲れ: {fatigueLabels[facility.latestFatigue]}
-                </p>
-              )}
-              <Link
-                href={`/mypage/visits/facility/${facility.slug}`}
-                className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
-              >
-                この場所の記録を見る →
-              </Link>
-            </div>
+            <PlacePopup place={place} />
           </Popup>
         </CircleMarker>
       ))}
     </MapContainer>
+  );
+}
+
+function PlacePopup({ place }: { place: FamilyMapPlace }) {
+  if (place.kind === "wishlist") {
+    return (
+      <div className="min-w-[180px] max-w-[220px] space-y-1">
+        <p className="text-sm font-bold leading-snug text-slate-900">
+          {place.name}
+        </p>
+        <p className="text-xs text-slate-600">行きたいリストに追加済み</p>
+        <Link
+          href={`/facilities/${place.slug}`}
+          className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
+        >
+          施設ページを見る →
+        </Link>
+      </div>
+    );
+  }
+
+  const visited = place.visited;
+  if (!visited) return null;
+
+  return (
+    <div className="min-w-[180px] max-w-[220px] space-y-1">
+      <p className="text-sm font-bold leading-snug text-slate-900">
+        {place.name}
+      </p>
+      {place.kind === "both" && (
+        <p className="text-xs font-medium text-violet-700">
+          行ったことあり · 行きたいリストにも追加済み
+        </p>
+      )}
+      <p className="text-xs text-slate-600">訪問{visited.visitCount}回</p>
+      <p className="text-xs text-slate-500">
+        最終訪問日: {formatVisitedOn(visited.lastVisited)}
+      </p>
+      {visited.latestRevisit && familyRevisitLabels[visited.latestRevisit] && (
+        <p className="text-xs text-slate-600">
+          また行きたい: {familyRevisitLabels[visited.latestRevisit]}
+        </p>
+      )}
+      {visited.latestFatigue && fatigueLabels[visited.latestFatigue] && (
+        <p className="text-xs text-slate-600">
+          疲れ: {fatigueLabels[visited.latestFatigue]}
+        </p>
+      )}
+      <Link
+        href={`/mypage/visits/facility/${place.slug}`}
+        className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
+      >
+        この場所の記録を見る →
+      </Link>
+    </div>
   );
 }
 
@@ -153,7 +177,7 @@ function InvalidateSizeOnMount() {
   return null;
 }
 
-function FitBounds({ points }: { points: VisitedPlaceFacility[] }) {
+function FitBounds({ points }: { points: FamilyMapPlace[] }) {
   const map = useMap();
   const didFit = useRef(false);
 
