@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import ChildAvatar from "@/components/ChildAvatar";
+import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
+import { getMyPlacesEvents } from "@/lib/my-places-events";
 import { createClient } from "@/lib/supabase/server";
 import {
   buildFamilyOutingMapData,
@@ -332,6 +334,8 @@ export default async function MypagePage() {
   const wishlistSlugs = wishlistSlugRows
     .map((row) => row.facility_slug)
     .filter((slug): slug is string => Boolean(slug));
+  const visitedSlugs = visits.map((visit) => visit.facility_slug);
+  const myPlacesEvents = getMyPlacesEvents({ visitedSlugs, wishlistSlugs });
   const visitIds = visits.map((v) => v.id);
   const candidateVisitIds = PHOTO_UPLOAD_ENABLED ? visitIds.slice(0, 12) : [];
   const { data: visitPhotoRows } =
@@ -677,46 +681,6 @@ export default async function MypagePage() {
         </section>
       )}
 
-      {/* 記録する・さがす */}
-      <section className="lg:col-span-2 lg:order-9">
-        <h2 className="font-bold text-slate-800 mb-3">記録する・さがす</h2>
-        <div className="grid grid-cols-2 gap-3">
-          <ActionCard
-            href="/mypage/visits/new"
-            icon="✏️"
-            label="おでかけを記録"
-            desc="今日行った場所を30秒で記録"
-            primary
-          />
-          <ActionCard
-            href="/facilities"
-            icon="🔍"
-            label="遊び場を探す"
-            desc="エリア・目的から遊び場をさがす"
-          />
-        </div>
-        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
-          <Link
-            href="/mypage/visits/from-photo"
-            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
-          >
-            📷 写真から記録
-          </Link>
-          <Link
-            href="/mypage/wishlist"
-            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
-          >
-            ⭐ 行きたいリスト
-          </Link>
-          <Link
-            href="/mypage/visits"
-            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
-          >
-            📖 おでかけ履歴
-          </Link>
-        </div>
-      </section>
-
       {/* 家族のあしあと帳 */}
       <section className="space-y-3 lg:col-start-1 lg:order-7">
         <h2 className="font-bold text-slate-800">家族のあしあと帳</h2>
@@ -887,8 +851,66 @@ export default async function MypagePage() {
         </section>
       )}
 
+      {myPlacesEvents.length > 0 && (
+        <section className="space-y-3 lg:col-span-2 lg:order-9">
+          <div>
+            <h2 className="font-bold text-slate-800">
+              行きたい・行った場所のイベント
+            </h2>
+            <p className="mt-1 text-xs leading-relaxed text-slate-400">
+              行きたいリストと家族の足あとから見つけました
+            </p>
+          </div>
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+            {myPlacesEvents.map((item) => (
+              <MyPlacesEventCard key={item.event.id} item={item} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* 記録する・さがす */}
+      <section className="lg:col-span-2 lg:order-10">
+        <h2 className="font-bold text-slate-800 mb-3">記録する・さがす</h2>
+        <div className="grid grid-cols-2 gap-3">
+          <ActionCard
+            href="/mypage/visits/new"
+            icon="✏️"
+            label="おでかけを記録"
+            desc="今日行った場所を30秒で記録"
+            primary
+          />
+          <ActionCard
+            href="/facilities"
+            icon="🔍"
+            label="遊び場を探す"
+            desc="エリア・目的から遊び場をさがす"
+          />
+        </div>
+        <div className="mt-3 flex flex-wrap gap-x-4 gap-y-2">
+          <Link
+            href="/mypage/visits/from-photo"
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            📷 写真から記録
+          </Link>
+          <Link
+            href="/mypage/wishlist"
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            ⭐ 行きたいリスト
+          </Link>
+          <Link
+            href="/mypage/visits"
+            className="text-sm text-slate-600 transition-colors hover:text-brand hover:underline"
+          >
+            📖 おでかけ履歴
+          </Link>
+        </div>
+      </section>
+
       {/* ログアウト */}
-      <div className="pt-2 lg:col-span-2 lg:order-10">
+      <div className="pt-2 lg:col-span-2 lg:order-11">
         <LogoutButton />
       </div>
     </div>
