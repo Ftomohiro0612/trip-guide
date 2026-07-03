@@ -10,8 +10,8 @@ export default function Footer() {
             <Image
               src="/logo/logo-ja-header.png"
               alt="メモリップ"
-              width={122}
-              height={32}
+              width={243}
+              height={64}
               className="h-8 w-auto"
             />
           </Link>
