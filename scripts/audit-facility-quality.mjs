@@ -139,19 +139,18 @@ const PARENT_WORDS = [
   "休憩",
 ];
 
-const WATER_KEYWORDS = [
-  "海",
-  "川",
-  "湖",
-  "滝",
-  "ダム",
-  "渓谷",
+const STRONG_WATER_KEYWORDS = [
   "海水浴",
   "ビーチ",
+  "川遊び",
+  "磯遊び",
+  "沢遊び",
+  "渓谷",
+  "じゃぶじゃぶ",
   "水遊び",
-  "沢",
-  "磯",
 ];
+const NATURE_WATER_KEYWORDS = ["海", "川", "湖", "滝", "沢", "磯", "ダム"];
+const INDOOR_SAFETY_EXEMPTION_KEYWORDS = ["海水浴", "川遊び", "磯遊び", "沢遊び", "潮干狩り"];
 
 const SAFETY_WORDS = [
   "注意",
@@ -170,6 +169,29 @@ const SAFETY_WORDS = [
 ];
 
 const NATURE_SAFETY_CATEGORIES = new Set(["nature-park", "scenic", "viewpoint"]);
+const INDOOR_FIRST_CATEGORIES = new Set([
+  "aquarium",
+  "museum",
+  "science-museum",
+  "art-museum",
+  "indoor-play",
+  "indoor-theme-park",
+  "game-center",
+  "hotel",
+]);
+const OUTDOOR_WATER_PLAY_CATEGORIES = new Set([
+  "athletic",
+  "experience",
+  "fruit-picking",
+  "hot-spring-pool",
+  "nature-park",
+  "park",
+  "scenic",
+  "ski",
+  "theme-park",
+  "viewpoint",
+  "zoo",
+]);
 const FACTORY_WORDS = ["工場", "見学", "ツアー"];
 const SEASONAL_WORDS = ["プール", "花畑", "雪", "スキー", "いちご狩り", "潮干狩り"];
 const SEASONAL_CATEGORIES = new Set(["hot-spring-pool", "ski", "fruit-picking"]);
@@ -301,11 +323,15 @@ function arraysMatch(a, b) {
   return left.length > 0 && left.length === right.length && left.every((item, index) => item === right[index]);
 }
 
+function normalizeThingEnding(item) {
+  return text(item)
+    .replace(/[。．.!！?？\s]+$/g, "")
+    .replace(/(?:（[^（）]*）|\([^()]*\))$/g, "")
+    .replace(/[。．.!！?？\s]+$/g, "");
+}
+
 function isVerbLikeThing(item) {
-  const normalized = text(item).replace(/[。．.!！?？\s]+$/g, "");
-  return /(する|確認する|学ぶ|見る|見られる|見れる|乗る|遊ぶ|過ごす|歩く|泳ぐ|滑る|作る|触れる|挑戦する|楽しむ|観察する|体験する|回る|巡る|使う|向かう|読む|聞く|撮る|休む|選ぶ|運ぶ|飛ぶ|跳ぶ|描く|歩き回る|走る|登る|眺める|味わう)$/.test(
-    normalized,
-  );
+  return /[うくぐすつぬぶむる]$/.test(normalizeThingEnding(item));
 }
 
 function checkThingsIssues(facility, issues) {
@@ -399,24 +425,48 @@ function checkStaleIssues(facility, issues) {
 }
 
 function checkSafetyIssues(facility, issues) {
-  const combined = [
-    facility.name,
-    facility.description,
-    ...textArray(facility.tags),
-    ...textArray(facility.recommended_for_tags),
-  ].join(" ");
-  const waterKeywords = WATER_KEYWORDS.filter((keyword) => combined.includes(keyword));
+  const description = text(facility.description);
+  const nameAndTags = [facility.name, ...textArray(facility.tags)].map(text).join(" ");
+  const strongSignalText = [facility.name, description, ...textArray(facility.tags)].map(text).join(" ");
+  const indoorExempt = INDOOR_FIRST_CATEGORIES.has(facility.category_id);
+  if (indoorExempt && !includesAny(description, INDOOR_SAFETY_EXEMPTION_KEYWORDS)) return;
+
+  const matchedKeywords = [];
+  const addMatchedKeyword = (keyword, rule) => {
+    if (!matchedKeywords.some((match) => match.keyword === keyword && match.rule === rule)) {
+      matchedKeywords.push({ keyword, rule });
+    }
+  };
+
+  for (const keyword of STRONG_WATER_KEYWORDS) {
+    if (strongSignalText.includes(keyword)) addMatchedKeyword(keyword, "strong_keyword");
+  }
+
   const categoryTarget = NATURE_SAFETY_CATEGORIES.has(facility.category_id);
+  if (["nature-park", "scenic"].includes(facility.category_id)) {
+    for (const keyword of NATURE_WATER_KEYWORDS) {
+      if (nameAndTags.includes(keyword)) addMatchedKeyword(keyword, "nature_category_water");
+    }
+  }
+
   const waterPlayValue = text(facility.summer_water_play);
-  const waterPlayTarget = ["◎", "○", "あり"].some((value) => waterPlayValue.includes(value));
-  const isTarget = categoryTarget || waterKeywords.length > 0 || waterPlayTarget;
+  const waterPlayTarget =
+    OUTDOOR_WATER_PLAY_CATEGORIES.has(facility.category_id) &&
+    ["◎", "○", "あり"].some((value) => waterPlayValue.includes(value));
+  const hasStrongSignal = matchedKeywords.some(
+    (match) => match.rule === "strong_keyword" || match.rule === "nature_category_water",
+  );
+  if (!hasStrongSignal && categoryTarget) addMatchedKeyword(facility.category_id, "nature_category");
+  if (!hasStrongSignal && waterPlayTarget) addMatchedKeyword(waterPlayValue, "water_play_only");
+
+  const isTarget = hasStrongSignal || categoryTarget || waterPlayTarget;
   if (!isTarget) return;
 
   const safetyText = [facility.description, facility.source_notes].map(text).join(" ");
   if (includesAny(safetyText, SAFETY_WORDS)) return;
 
-  addIssue(issues, "safety_missing", waterKeywords.length > 0 || waterPlayTarget ? "high" : "medium", {
-    matched_keywords: waterKeywords,
+  addIssue(issues, "safety_missing", hasStrongSignal ? "high" : "medium", {
+    matched_keywords: matchedKeywords,
     category_target: categoryTarget,
     summer_water_play: waterPlayValue || null,
   });
@@ -608,6 +658,12 @@ function compactFacility(facility, selectionReason = null) {
   return value;
 }
 
+function appendSelectionReason(reasonsByFacility, facility, reason) {
+  const reasons = reasonsByFacility.get(facility.id) ?? [];
+  if (!reasons.includes(reason)) reasons.push(reason);
+  reasonsByFacility.set(facility.id, reasons);
+}
+
 function hasIssue(facility, code) {
   return facility.issues.some((issue) => issue.code === code);
 }
@@ -654,23 +710,58 @@ function createBatchCandidates(facilities) {
   const flagship = facilities.filter((facility) => hasIssue(facility, "flagship_weak_desc")).sort(sortByPriority);
 
   const batch1Reasons = new Map();
-  for (const facility of templateCleanup) batch1Reasons.set(facility.id, "template_phrase cleanup");
-  for (const facility of stalePrice) batch1Reasons.set(facility.id, "stale wording cleanup");
-  for (const facility of safety.filter((facility) => getIssue(facility, "safety_missing")?.severity === "high")) {
-    batch1Reasons.set(facility.id, "high severity safety note gap");
+  const isBatchEligible = (facility) => !HIGH_SEVERITY_THINGS_PREFS.has(facility.prefecture_id);
+  for (const facility of templateCleanup.filter(isBatchEligible)) {
+    appendSelectionReason(batch1Reasons, facility, "template_phrase cleanup");
   }
-  for (const facility of flagship) batch1Reasons.set(facility.id, "event-backed flagship with weak description");
+  for (const facility of stalePrice.filter(isBatchEligible)) {
+    appendSelectionReason(batch1Reasons, facility, "stale wording cleanup");
+  }
+
+  const requiredBatch1Ids = new Set(batch1Reasons.keys());
+  const flexibleCandidates = [
+    ...safety
+      .filter(
+        (facility) =>
+          isBatchEligible(facility) &&
+          getIssue(facility, "safety_missing")?.severity === "high" &&
+          !requiredBatch1Ids.has(facility.id),
+      )
+      .map((facility) => ({ facility, reason: "high severity safety note gap" })),
+    ...flagship
+      .filter((facility) => isBatchEligible(facility) && !requiredBatch1Ids.has(facility.id))
+      .map((facility) => ({
+        facility,
+        reason: "event-backed flagship with weak description",
+      })),
+  ].sort((a, b) => sortByPriority(a.facility, b.facility));
+
+  for (const { facility, reason } of flexibleCandidates) {
+    if (batch1Reasons.size >= 50) break;
+    appendSelectionReason(batch1Reasons, facility, reason);
+  }
+
+  for (const facility of safety.filter(
+    (facility) =>
+      isBatchEligible(facility) &&
+      getIssue(facility, "safety_missing")?.severity === "high" &&
+      batch1Reasons.has(facility.id),
+  )) {
+    appendSelectionReason(batch1Reasons, facility, "high severity safety note gap");
+  }
+  for (const facility of flagship.filter((facility) => isBatchEligible(facility) && batch1Reasons.has(facility.id))) {
+    appendSelectionReason(batch1Reasons, facility, "event-backed flagship with weak description");
+  }
 
   const batch1 = [...batch1Reasons.keys()]
     .map((id) => facilities.find((facility) => facility.id === id))
     .filter(Boolean)
     .sort(sortByPriority)
-    .slice(0, 45)
-    .map((facility) => compactFacility(facility, batch1Reasons.get(facility.id)));
+    .map((facility) => compactFacility(facility, batch1Reasons.get(facility.id).join(" / ")));
   const batch1Ids = new Set(batch1.map((facility) => facility.id));
 
   const batch2 = facilities
-    .filter((facility) => !batch1Ids.has(facility.id) && facility.priority_score > 0)
+    .filter((facility) => isBatchEligible(facility) && !batch1Ids.has(facility.id) && facility.priority_score > 0)
     .sort(sortByPriority)
     .slice(0, 50)
     .map((facility) => compactFacility(facility));
@@ -693,6 +784,11 @@ function createBatchCandidates(facilities) {
     lane_flagship: flagship.map((facility) => compactFacility(facility)),
     batch1_proposal: batch1,
     batch2_proposal: batch2,
+    batch_meta: {
+      excluded_prefectures_from_batch1_and_batch2: FIVE_PREF_ORDER,
+      exclusion_reason:
+        "5県は県単位バッチ lane_things_5pref で things_to_do と description をまとめて改善する想定のため、batch1_proposal / batch2_proposal から除外。",
+    },
   };
 }
 
@@ -868,6 +964,8 @@ async function main() {
         "4要素判定、固有名詞判定、安全注記、予約・条件確認候補は機械推定です。公式確認やPM/人間レビューの代替ではありません。",
       deterministic_note:
         "ネットワークアクセスなし・入力JSONのみを読み取り、監査ロジックは決定的に実行します。",
+      batch_recomposition_note:
+        "batch1_proposal / batch2_proposal は things_to_do 未整備5県(tochigi/niigata/chiba/saitama/kanagawa)を除外し、5県は lane_things_5pref で県単位改善する想定です。",
     },
     summary: summaryFor(facilities),
     facilities,
