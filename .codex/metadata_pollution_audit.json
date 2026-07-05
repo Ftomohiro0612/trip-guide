@@ -1,0 +1,1945 @@
+{
+  "generated_note": "AUDIT-ONLY metadata pollution scan (id345-type). No data mutated.",
+  "source": "data/facilities_data.json",
+  "total_facilities": 2180,
+  "total_findings": 84,
+  "high": 1,
+  "medium": 83,
+  "tokens": [
+    "都内ではなく",
+    "該当なし",
+    "代替",
+    "注:",
+    "注：",
+    "予定",
+    "候補",
+    "差し替え",
+    "元は",
+    "ではないため",
+    "代わり",
+    "要確認",
+    "未確認",
+    "→",
+    "参考",
+    "除外",
+    "TODO",
+    "(削除",
+    "（削除"
+  ],
+  "signals_by_field": {
+    "name": 2,
+    "description": 83
+  },
+  "signals_by_token": {
+    "代替": 2,
+    "予定": 19,
+    "注:": 2,
+    "候補": 55,
+    "差し替え": 2,
+    "ではないため": 3,
+    "要確認": 2
+  },
+  "findings": [
+    {
+      "id": 353,
+      "slug": "facility-353",
+      "name": "オービィ横浜(都内代替: 川崎駅近く)/コニカミノルタ プラネタリア TOKYO",
+      "prefecture": "東京都",
+      "address": "東京都千代田区有楽町2-5-1 有楽町マリオン9F",
+      "url": "https://planetarium.konicaminolta.jp/planetariatokyo/",
+      "description": "都心のプラネタリウム。ヒーリング系番組・子供向け番組も",
+      "severity": "high",
+      "signal_fields": [
+        "name"
+      ],
+      "signals": [
+        {
+          "field": "name",
+          "kind": "token",
+          "token": "代替"
+        },
+        {
+          "field": "name",
+          "kind": "bracket_memo",
+          "cue": "代替",
+          "inner": "都内代替: 川崎駅近く"
+        }
+      ],
+      "triage": "true_positive",
+      "triage_note": "id345型: user可視のname/address汚染(生成メモ/代替施設判断の残留)"
+    },
+    {
+      "id": 38,
+      "slug": "facility-038",
+      "name": "静岡科学館る・く・る",
+      "prefecture": "静岡県",
+      "address": "静岡市駿河区南町14-25 エスパティオ8-10F",
+      "url": "https://www.rukuru.jp/",
+      "description": "静岡駅前で立ち寄りやすい体験型科学館。触れて試せる展示が多く、まっくら迷路やさかさま世界など、遊びながら科学の不思議に気づけます。幼児は感覚遊び、小学生は仕組みへの興味を深めやすく、雨の日の親子予定にも組み込みやすい施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 44,
+      "slug": "facility-044",
+      "name": "熱海クラフト工房",
+      "prefecture": "静岡県",
+      "address": "熱海市春日町12-6",
+      "url": "https://www.atami-craft.jp/",
+      "description": "電動ろくろを本格的に体験できる熱海の陶芸工房です。小学生以上が親子で複数の陶芸作品を作り、9色から選んで色付けまで楽しめます。屋内工房なので雨の日にも予定に入れやすく、所要時間を見て観光と組み合わせやすい体験施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 90,
+      "slug": "facility-090",
+      "name": "軽井沢ガラス工房",
+      "prefecture": "長野県",
+      "address": "北佐久郡軽井沢町長倉664-9",
+      "url": "https://www.karuizawaglassstudio.com/",
+      "description": "軽井沢の屋内ガラス体験工房で、吹きガラスのコップ作りやウィンドチャイム作りに挑戦できます。小学生以上が自分だけのガラス作品を作りやすく、雨の日にもものづくりの予定を立てやすい施設です。体験内容や対象条件を確認してから訪れると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 101,
+      "slug": "facility-101",
+      "name": "池の平スノーパーク",
+      "prefecture": "長野県",
+      "address": "茅野市白樺湖 池の平ホテル併設",
+      "url": "https://www.shirakabaresort.jp/snowpark/",
+      "description": "2025シーズン12/20オープン予定。子供の雪遊び&スキーデビューにぴったりのファミリー向けゲレンデ。池の平ホテル直結で滞在も便利。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 110,
+      "slug": "facility-110",
+      "name": "遊亀公園附属動物園",
+      "prefecture": "山梨県",
+      "address": "甲府市太田町10-1",
+      "url": "https://www.city.kofu.yamanashi.jp/zoo/",
+      "description": "1919年開園の県内最古の動物園ですが、現在は整備工事のため休園中で、再開は令和9年度予定です。再開後は身近な動物観察やレトロ遊具を目的にできる施設として扱います。訪問予定に入れる前に、甲府市の公式情報で再開時期と利用条件を必ず確認してください。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 143,
+      "slug": "facility-143",
+      "name": "自在ガラス体験工房&ギャラリー",
+      "prefecture": "山梨県",
+      "address": "南都留郡富士河口湖町船津6590-5",
+      "url": "https://jizaibeads.jp/",
+      "description": "夫婦経営の温かい雰囲気があるガラス体験工房です。小学生以上がとんぼ玉を作り、その場でアクセサリーに加工する体験を楽しめます。屋内工房なので雨の日にも予定を立てやすく、英語対応が必要な家族も利用条件を確認して検討しやすい施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 152,
+      "slug": "facility-152",
+      "name": "伊豆テディベア・ミュージアム",
+      "prefecture": "静岡県",
+      "address": "伊東市八幡野1064-2",
+      "url": "https://www.teddynet.co.jp/",
+      "description": "ヴィンテージ・テディベアの展示とトトロを含むジブリ展示を見られる屋内美術館です。幼児から大人まで、テディベアの世界を見て回ったり写真を撮ったりしやすく、雨の日にも予定に入れやすい施設です。テディベア手作り体験は予約条件を確認してから利用しましょう。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 156,
+      "slug": "facility-156",
+      "name": "河口湖猿まわし劇場",
+      "prefecture": "山梨県",
+      "address": "南都留郡富士河口湖町河口2719-8",
+      "url": "https://www.fuji-osaru.com/",
+      "description": "本格的な猿まわしを屋内で見られる河口湖の劇場です。全年齢で伝統芸能としての猿まわしを観覧し、屋外では小さな猿のエサやり体験も目的にできます。雨の日にも予定に入れやすく、動物との距離が近い体験は保護者が付き添って楽しむと安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 342,
+      "slug": "facility-342",
+      "name": "東白鬚公園 防災広場",
+      "prefecture": "東京都",
+      "address": "東京都墨田区堤通1-4-2",
+      "url": "https://www.tokyo-park.or.jp/park/format/index052.html",
+      "description": "(注: 113の同公園内別エリア)",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "注:"
+        }
+      ],
+      "triage": "true_positive",
+      "triage_note": "descに生成メモ『注: <id>と同…』が残留(user可視)"
+    },
+    {
+      "id": 355,
+      "slug": "facility-355",
+      "name": "東京メトロポリタンプラネタリウム(コスモプラネタリウム渋谷)",
+      "prefecture": "東京都",
+      "address": "東京都渋谷区桜丘町23-21 渋谷区文化総合センター大和田12F",
+      "url": "https://cosmoplanetarium.jp/",
+      "description": "渋谷の高層階で星空投映を楽しめるプラネタリウム。子ども向けプログラムの有無を公式情報で確認しながら、天候に左右されない屋内予定に組み込みやすい施設です。5歳前後から星や宇宙に興味を持つきっかけを作れます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 364,
+      "slug": "facility-364",
+      "name": "サンリオピューロランドアンサンブル(団体プラン)",
+      "prefecture": "東京都",
+      "address": "東京都多摩市落合1-31",
+      "url": "https://www.puroland.jp/event/",
+      "description": "(注: 024と同施設のサブプラン。スイーツビュッフェやコラボイベントを定期開催)",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "注:"
+        }
+      ],
+      "triage": "true_positive",
+      "triage_note": "descに生成メモ『注: <id>と同…』が残留(user可視)"
+    },
+    {
+      "id": 488,
+      "slug": "facility-488",
+      "name": "所沢航空発祥記念館",
+      "prefecture": "埼玉県",
+      "address": "所沢市並木1-13",
+      "url": "https://tam-web.jsf.or.jp/",
+      "description": "日本初の飛行場跡地に建つ航空博物館。実機展示+大型映像館。※2025/9/1〜2027/3末(予定)リニューアル工事のため長期休館中。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 618,
+      "slug": "facility-618",
+      "name": "佐渡金山(史跡 佐渡金山)",
+      "prefecture": "新潟県",
+      "address": "佐渡市下相川1305",
+      "url": "https://www.sado-kinzan.com/",
+      "description": "400年の歴史を持つ金銀山遺跡。江戸時代の鉱山労働を再現。世界遺産候補。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1067,
+      "slug": "facility-1067",
+      "name": "霞ケ浦 どうぶつとみんなのいえ",
+      "prefecture": "茨城県",
+      "address": "茨城県行方市甲1234",
+      "url": "https://doubutsutominna.jp/",
+      "description": "霞ヶ浦ふれあいランド内の動物ふれあい施設で、親子でキリンガイドやどうぶつおやつタイム、地場産品の買い物を組み合わせて楽しめます。体験は動物の体調で変更があるため、3歳以上は当日の予定確認が安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1114,
+      "slug": "facility-1114",
+      "name": "ふれあい動物園ANIMA",
+      "prefecture": "茨城県",
+      "address": "茨城県稲敷郡阿見町塙293-1",
+      "url": "https://www.animazoolife.com/",
+      "description": "阿見町の古民家を活用したふれあい動物園で、動物とのふれあいや命を学ぶ体験を親子で楽しめます。開園日が限られるため、土日月祝の営業予定と夏季・冬季の時間を確認して出かける施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1129,
+      "slug": "facility-1129",
+      "name": "キッズユーエスランド 茨城守谷店",
+      "prefecture": "茨城県",
+      "address": "茨城県守谷市松ケ丘6-6-1 アクロスモール守谷2階",
+      "url": "https://kidslandus.com/shop/ibaraki-moriya/",
+      "description": "守谷の商業施設内にある屋内キッズパークで、遊具やゲームを時間制で楽しめます。雨の日や暑い日でも予定を組みやすく、買い物や食事と合わせて親子で過ごしやすい施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1172,
+      "slug": "facility-1172",
+      "name": "アースケア桐生が岡遊園地",
+      "prefecture": "群馬県",
+      "address": "群馬県桐生市宮本町4-1-1",
+      "url": "https://gunma-kanko.jp/spots/75",
+      "description": "入園無料で小型遊具を楽しめ、隣の桐生が岡動物園と組み合わせやすい遊園地。乗り物遊びと動物観察を半日で回れるため、子どもの集中力に合わせて予定を組めます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1179,
+      "slug": "facility-1179",
+      "name": "群馬県立ぐんま天文台",
+      "prefecture": "群馬県",
+      "address": "群馬県吾妻郡高山村中山6860-86",
+      "url": "https://www.astron.pref.gunma.jp/",
+      "description": "大型望遠鏡や天文展示で宇宙を学べる県立天文台。小学生は星や惑星への興味を深めやすく、親子で昼の展示見学から星空観察の予定づくりまで楽しめます。山あいの施設なので、天候に合わせて公式情報を確認しながら訪れたいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1186,
+      "slug": "facility-1186",
+      "name": "伊香保おもちゃと人形 自動車博物館",
+      "prefecture": "群馬県",
+      "address": "群馬県北群馬郡吉岡町上野田2145",
+      "url": "https://gunma-kanko.jp/spots/10",
+      "description": "おもちゃ、人形、クラシックカー、昭和レトロ展示を一度に見られる屋内博物館。親子三世代で会話しながら楽しみやすく、雨の日の伊香保方面候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1196,
+      "slug": "facility-1196",
+      "name": "草津温泉 ホテルヴィレッジ テルメテルメ",
+      "prefecture": "群馬県",
+      "address": "群馬県吾妻郡草津町草津618",
+      "url": "https://www.hotelvillage.co.jp/therme",
+      "description": "草津温泉でプールと温浴を組み合わせられる屋内施設。天候に左右されにくく、家族旅行中に子どもが水遊びできる候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1213,
+      "slug": "facility-1213",
+      "name": "榛名湖",
+      "prefecture": "群馬県",
+      "address": "群馬県高崎市榛名湖町845",
+      "url": "https://gunma-kanko.jp/spots/659",
+      "description": "湖畔散策、ボート、榛名山ロープウェイを組み合わせられる高原湖。家族で景色を見ながら歩け、短時間から半日まで予定を調整しやすいです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1229,
+      "slug": "facility-1229",
+      "name": "丸沼高原スキー場",
+      "prefecture": "群馬県",
+      "address": "群馬県利根郡片品村東小川4658-58",
+      "url": "https://www.marunuma.jp/winter/",
+      "description": "ロープウェイや雪遊びを楽しめ、グリーンシーズンも強い高原スキー場。冬は子どもと雪に触れる体験、季節外は自然散策の候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1230,
+      "slug": "facility-1230",
+      "name": "かたしな高原スキー場",
+      "prefecture": "群馬県",
+      "address": "群馬県利根郡片品村越本2990",
+      "url": "https://katashinakogen.co.jp/",
+      "description": "ファミリー向けの雰囲気が強く、子どもの雪遊びやスキーデビューに使いやすいスキー場。ゲレンデ規模と親子導線のバランスがよく、冬のおでかけ候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1258,
+      "slug": "facility-1258",
+      "name": "ヤマキ みなかみ工場",
+      "prefecture": "群馬県",
+      "address": "群馬県利根郡みなかみ町月夜野4000",
+      "url": "https://gunma-kanko.jp/spots/214",
+      "description": "だし製造工程の見学や削り体験を楽しめる工場見学施設。親子で和食の身近な素材について学べる雨天候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1259,
+      "slug": "facility-1259",
+      "name": "岩秀織物",
+      "prefecture": "群馬県",
+      "address": "群馬県桐生市東久方町2-1-43",
+      "url": "https://gunma-kanko.jp/spots/176",
+      "description": "桐生織の製作見学や体験候補になる工房。親子で織物ができる工程を見て、地域のものづくりに触れられます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1260,
+      "slug": "facility-1260",
+      "name": "USUI AKIKO GALLERY",
+      "prefecture": "群馬県",
+      "address": "群馬県桐生市東久方町1-1-55",
+      "url": "https://gunma-kanko.jp/spots/178",
+      "description": "ソックスや小物づくり体験の候補になる桐生のギャラリー。親子で地域のものづくりを見たり、手を動かす体験を探したりできます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1276,
+      "slug": "facility-1276",
+      "name": "境御嶽山自然の森公園",
+      "prefecture": "群馬県",
+      "address": "群馬県伊勢崎市境上武士1039-1",
+      "url": "https://gunma-kanko.jp/spots/661",
+      "description": "里山の自然を感じながら散策できる公園。親子で木々や生き物を観察し、季節によってはホタル観賞の候補にもなります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1282,
+      "slug": "facility-1282",
+      "name": "ふるさとの広場 ちびっこベース",
+      "prefecture": "群馬県",
+      "address": "群馬県邑楽郡明和町南大島1073-1",
+      "url": "https://www.town.meiwa.gunma.jp/life/soshiki/toshikensetsu/sonota8toshikensetu/3/1/327.html",
+      "description": "明和町が整備する、子ども向け遊具を備えた公園。親子で短時間でも立ち寄りやすく、外遊びの候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1286,
+      "slug": "facility-1286",
+      "name": "バラギ湖",
+      "prefecture": "群馬県",
+      "address": "群馬県吾妻郡嬬恋村干俣2401",
+      "url": "https://gunma-kanko.jp/spots/675",
+      "description": "嬬恋村の高原にある湖で、湖畔散策や釣り、ボートの候補になります。親子で水辺の景色を楽しみ、周辺キャンプや高原滞在と組み合わせられます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1299,
+      "slug": "facility-1299",
+      "name": "町営温川キャンプ場",
+      "prefecture": "群馬県",
+      "address": "群馬県吾妻郡長野原町応桑1984-160",
+      "url": "https://gunma-kanko.jp/spots/2199",
+      "description": "小川や釣り池、バンガローを備えるキャンプ候補地。親子で自然の中に滞在し、川辺の観察やアウトドア体験を楽しめます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1301,
+      "slug": "facility-1301",
+      "name": "グリーンパークふきわれ",
+      "prefecture": "群馬県",
+      "address": "群馬県沼田市利根町大楊1098",
+      "url": "https://gunma-kanko.jp/spots/1373",
+      "description": "川遊びや雪遊びも候補になる通年型のキャンプ場。親子で自然の中に滞在し、季節に合わせた外遊びを楽しめます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1305,
+      "slug": "facility-1305",
+      "name": "オグナほたかスキー場",
+      "prefecture": "群馬県",
+      "address": "群馬県利根郡片品村花咲2797-2",
+      "url": "https://oze-katashina.info/kanko/144/",
+      "description": "片品村で雪遊びやスキーを楽しめるスキー場。親子でゲレンデデビューやそり遊びを計画する冬のおでかけ候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1306,
+      "slug": "facility-1306",
+      "name": "ホワイトワールド尾瀬岩鞍",
+      "prefecture": "群馬県",
+      "address": "群馬県利根郡片品村土出2609",
+      "url": "https://www.oze-iwakura.co.jp/ski/",
+      "description": "片品村の大規模ゲレンデで、ファミリーのスキー利用候補になるスノーリゾート。親子でレベルに合わせたコースや雪遊び情報を確認して楽しめます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1316,
+      "slug": "facility-1316",
+      "name": "ATCあそびマーレ",
+      "prefecture": "大阪府",
+      "address": "大阪府大阪市住之江区南港北2丁目1-10 ATC ITM棟5F",
+      "url": "https://atc-asobimare.jimdofree.com/",
+      "description": "大型室内遊園地。南港エリアの雨天核候補。 屋内遊び場として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1323,
+      "slug": "facility-1323",
+      "name": "ピュアハートキッズランド フレスポしんかな",
+      "prefecture": "大阪府",
+      "address": "大阪府堺市北区新金岡町5丁1-1 フレスポしんかな内",
+      "url": "https://www.nikke-purekids.jp/shop/shinkana/",
+      "description": "超大型室内公園。堺市北区の雨天核候補。 屋内遊び場として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1331,
+      "slug": "facility-1331",
+      "name": "ワールド牧場",
+      "prefecture": "大阪府",
+      "address": "大阪府南河内郡河南町白木1456-2",
+      "url": "https://www.worldranch.co.jp/",
+      "description": "動物ふれあい、エサやり、乗馬等の南河内大型候補。 動物園として親子で体験・観察・遊びを組み合わせやすく、天候を見ながら楽しみたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1350,
+      "slug": "facility-1350",
+      "name": "造幣博物館",
+      "prefecture": "大阪府",
+      "address": "大阪府大阪市北区天満1丁目1-79",
+      "url": "https://www.mint.go.jp/enjoy/plant-osaka/plant_museum.html",
+      "description": "貨幣・造幣の社会科見学候補。 博物館として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1357,
+      "slug": "facility-1357",
+      "name": "箕面公園",
+      "prefecture": "大阪府",
+      "address": "大阪府箕面市箕面公園1-18",
+      "url": "https://www.mino-park.jp/",
+      "description": "滝と渓流散策、昆虫館を組み合わせる北摂自然候補。 自然・絶景として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1364,
+      "slug": "facility-1364",
+      "name": "長居植物園",
+      "prefecture": "大阪府",
+      "address": "大阪府大阪市東住吉区長居公園1-23",
+      "url": "https://botanical-garden.nagai-park.jp/",
+      "description": "長居公園内。花・自然観察の分解候補。 公園・自然として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1374,
+      "slug": "facility-1374",
+      "name": "原山公園",
+      "prefecture": "大阪府",
+      "address": "大阪府堺市南区原山台2丁5",
+      "url": "https://www.harayama-park.com/",
+      "description": "大型遊具と屋外プール。南区の子連れ強候補。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1380,
+      "slug": "facility-1380",
+      "name": "星のブランコ（府民の森 ほしだ園地）",
+      "prefecture": "大阪府",
+      "address": "大阪府交野市星田5019-1",
+      "url": "https://o-wonderforest.com/hoshida/",
+      "description": "吊り橋とハイキング。小学生以上の自然体験候補。 自然・絶景として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1382,
+      "slug": "facility-1382",
+      "name": "せんなん里海公園 さとうみ磯浜",
+      "prefecture": "大阪府",
+      "address": "大阪府泉南郡岬町淡輪地先 第1駐車場付近",
+      "url": "https://sennan.osaka-park.or.jp/facilities/",
+      "description": "磯浜と生き物観察の軸。海岸線テーマの最重要候補。 自然・絶景として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1383,
+      "slug": "facility-1383",
+      "name": "ぴちぴちビーチ（箱作海水浴場）",
+      "prefecture": "大阪府",
+      "address": "大阪府阪南市箱作3346",
+      "url": "https://shimoshou-gyokyou.com/clamming/",
+      "description": "下荘漁協の潮干狩り。砂浜・海遊び候補。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1386,
+      "slug": "facility-1386",
+      "name": "堺伝匠館",
+      "prefecture": "大阪府",
+      "address": "大阪府堺市堺区材木町西1丁1-30",
+      "url": "https://www.sakaidensan.jp/",
+      "description": "堺刃物・注染など伝統産業の見学候補。 クラフト体験として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1390,
+      "slug": "facility-1390",
+      "name": "永楽ゆめの森公園",
+      "prefecture": "大阪府",
+      "address": "大阪府泉南郡熊取町野田65-10",
+      "url": "https://www.town.kumatori.lg.jp/soshiki/mizutomidori/gyomu/koen/eiraku_yumenomori/",
+      "description": "大型遊具と芝生で泉州内陸の強候補。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1428,
+      "slug": "facility-1428",
+      "name": "堺市博物館",
+      "prefecture": "大阪府",
+      "address": "大阪府堺市堺区百舌鳥夕雲町2丁 大仙公園内",
+      "url": "https://www.city.sakai.lg.jp/kanko/hakubutsukan/",
+      "description": "大仙公園内にある博物館で、古墳や堺の歴史を屋内展示で学べます。小学生以上は歴史学習と結びつけやすく、幼児連れでも公園散策と組み合わせれば無理なく過ごせます。雨の日や暑い日には屋内展示を中心に予定を立てやすい施設です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1598,
+      "slug": "facility-1598",
+      "name": "文化パルク城陽",
+      "prefecture": "京都府",
+      "address": "京都府城陽市寺田今堀1",
+      "url": "https://www.bunkaparcjoyo.net/",
+      "description": "プラネタリウムを備えた文化施設。コンサートや展示イベントもあり、雨の日に屋内で過ごす山城エリアの候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1600,
+      "slug": "facility-1600",
+      "name": "京田辺市野外活動センター 竜王こどもの王国",
+      "prefecture": "京都府",
+      "address": "京都府京田辺市大住竜王谷9-1",
+      "url": "https://ryuoh-kodomo.com/",
+      "description": "アスレチックやキャンプ、自然体験ができる野外活動センター。お茶の京都DMOではなく施設自前の公式URLへ差し替えています。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "差し替え"
+        }
+      ],
+      "triage": "true_positive",
+      "triage_note": "descに編集メモ『URLへ差し替えています』が残留(user可視)"
+    },
+    {
+      "id": 1604,
+      "slug": "facility-1604",
+      "name": "大正池グリーンパーク",
+      "prefecture": "京都府",
+      "address": "京都府綴喜郡井手町多賀一ノ谷20-1",
+      "url": "https://taishoike.com/",
+      "description": "池のほとりでキャンプ、BBQ、自然体験を楽しめる施設。お茶の京都DMO URLから施設自前の公式URLへ差し替えています。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "差し替え"
+        }
+      ],
+      "triage": "true_positive",
+      "triage_note": "descに編集メモ『URLへ差し替えています』が残留(user可視)"
+    },
+    {
+      "id": 1613,
+      "slug": "facility-1613",
+      "name": "ハピろー！の森 京都（府民の森ひよし）",
+      "prefecture": "京都府",
+      "address": "京都府南丹市日吉町天若上ノ所25",
+      "url": "https://forest-hiyoshi.jp/",
+      "description": "森の散策、木工、キャンプなどを楽しめる森林体験施設。自然の中でゆっくり過ごす南丹エリアの家族向け候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1629,
+      "slug": "facility-1629",
+      "name": "サープラ京都あそびタウン",
+      "prefecture": "京都府",
+      "address": "京都府京都市中京区西ノ京栂尾町107 BiVi二条2階",
+      "url": "https://3rd-planet.jp/sp-kyoto/",
+      "description": "BiVi二条内の大型アミューズメント施設。屋内でゲームやクレーンゲームを楽しむ小学生以上向けの雨天候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1637,
+      "slug": "facility-1637",
+      "name": "綾部市天文館パオ",
+      "prefecture": "京都府",
+      "address": "京都府綾部市里町久田21-8",
+      "url": "https://www.city.ayabe.lg.jp/category/4-5-0-0-0-0-0-0-0-0.html",
+      "description": "天文展示や天体観察を通じて宇宙に親しめる綾部市の科学系施設。幼児は星や月への興味を持つきっかけに、小学生は天体の仕組みを学ぶ目的地にしやすい場所です。天候や投映・観察の実施条件を公式情報で確認して訪れると予定を立てやすいです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1674,
+      "slug": "facility-1674",
+      "name": "名古屋港シートレインランド",
+      "prefecture": "愛知県",
+      "address": "愛知県名古屋市港区西倉町1-51",
+      "url": "https://nagoyaportseatrainland.com/",
+      "description": "名古屋港シートレインランドは名古屋市港区の親子向け施設で、水族館隣接の観覧車・小型遊園地。別運営で独立候補。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1684,
+      "slug": "facility-1684",
+      "name": "有松・鳴海絞会館",
+      "prefecture": "愛知県",
+      "address": "愛知県名古屋市緑区有松3008",
+      "url": "https://shibori-kaikan.com/",
+      "description": "有松・鳴海絞会館は名古屋市緑区の親子向け施設で、有松絞りの実演・体験。愛知の手仕事候補。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1698,
+      "slug": "facility-1698",
+      "name": "こまきこども未来館",
+      "prefecture": "愛知県",
+      "address": "愛知県小牧市小牧3-555",
+      "url": "https://www.komaki-kodomo-miraikan.jp/",
+      "description": "こまきこども未来館は小牧市の親子向け施設で、体験型児童館。雨天の核候補。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1741,
+      "slug": "facility-1741",
+      "name": "香嵐渓",
+      "prefecture": "愛知県",
+      "address": "愛知県豊田市足助町飯盛36",
+      "url": "https://www.tourismtoyota.jp/",
+      "description": "香嵐渓は豊田市の親子向け施設で、巴川沿い・紅葉・川遊び候補。本文は紅葉・渓谷散策を中心にし、川遊びは公式に確認できる安全条件の範囲で扱う。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1744,
+      "slug": "facility-1744",
+      "name": "エコパルなごや",
+      "prefecture": "愛知県",
+      "address": "愛知県名古屋市中区栄1-23-13 伏見ライフプラザ13階",
+      "url": "https://www.kankyo-net.city.nagoya.jp/ecopal/",
+      "description": "エコパルなごやは環境学習をテーマにした屋内施設で、展示やワークショップを通じてごみ、自然、エネルギーを親子で学べます。短時間でも体験型の学びを入れやすい雨の日候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1754,
+      "slug": "facility-1754",
+      "name": "文化のみち二葉館",
+      "prefecture": "愛知県",
+      "address": "愛知県名古屋市東区橦木町3-23",
+      "url": "https://www.futabakan.jp/",
+      "description": "文化のみち二葉館は大正期の建築と地域文化を見学できる屋内施設です。部屋ごとの意匠や展示を親子で見比べながら学べるため、小学生以上の歴史・建築学習に使いやすい雨の日候補です。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1774,
+      "slug": "facility-1774",
+      "name": "知立神社・知立公園",
+      "prefecture": "愛知県",
+      "address": "愛知県知立市西町神田12",
+      "url": "https://www.chiryu-jinja.com/",
+      "description": "知立神社・知立公園は歴史ある境内と花しょうぶなど季節の景色を楽しめる散策スポットです。遊具中心ではないため、歴史や花の観察を親子で短時間楽しむ使い方が向きます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "ではないため"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1879,
+      "slug": "facility-1879",
+      "name": "JOYPOLIS SPORTS 北九州",
+      "prefecture": "福岡県",
+      "address": "福岡県北九州市八幡西区美吉野町16-1",
+      "url": "https://joypolis-sports.com/kitakyushu/",
+      "description": "JOYPOLIS SPORTS 北九州は、屋内でスポーツ系アクティビティを楽しめる施設です。天候に左右されず体を動かせるため、小学生以上の親子の雨の日候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1898,
+      "slug": "facility-1898",
+      "name": "諏訪公園",
+      "prefecture": "福岡県",
+      "address": "福岡県大牟田市岬町1",
+      "url": "https://www.city.omuta.lg.jp/",
+      "description": "諏訪公園は、大型遊具、芝生、スポーツ施設を備えた大牟田市の公園です。広い園内で体を動かせ、筑後南部の親子外遊び候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1906,
+      "slug": "facility-1906",
+      "name": "高田濃施山公園",
+      "prefecture": "福岡県",
+      "address": "福岡県みやま市高田町下楠田480",
+      "url": "https://www.city.miyama.lg.jp/",
+      "description": "高田濃施山公園は、遊具、自然、スポーツ施設を利用できるみやま市の公園です。筑後南部で外遊びをしたい親子の候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1911,
+      "slug": "facility-1911",
+      "name": "遠賀総合運動公園",
+      "prefecture": "福岡県",
+      "address": "福岡県遠賀郡遠賀町広渡23-6",
+      "url": "https://www.town.onga.lg.jp/",
+      "description": "遠賀総合運動公園は、運動施設や広場を備えた遠賀町の公園です。外で体を動かしたい親子の散策・運動候補になります。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1924,
+      "slug": "facility-1924",
+      "name": "広島市森林公園",
+      "prefecture": "広島県",
+      "address": "広島県広島市東区福田町藤ヶ丸10173",
+      "url": "https://midori-gr.com/shinrin/",
+      "description": "広島市森林公園は、広島市東区で芝生、デイキャンプ、ジャブジャブ川、展望。こんちゅう館は別候補。 親子では大型公園を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1933,
+      "slug": "facility-1933",
+      "name": "THE OUTLETS HIROSHIMA",
+      "prefecture": "広島県",
+      "address": "広島県広島市佐伯区石内東4丁目1-1",
+      "url": "https://the-outlets-hiroshima.com/",
+      "description": "THE OUTLETS HIROSHIMAは、広島市佐伯区で雨天退避、キッズ系テナント、映画館候補。 親子では屋内遊び場・雨の日を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1943,
+      "slug": "facility-1943",
+      "name": "ベイサイドビーチ坂・親水公園",
+      "prefecture": "広島県",
+      "address": "広島県安芸郡坂町水尻9075-4",
+      "url": "https://www.town.saka.lg.jp/",
+      "description": "ベイサイドビーチ坂・親水公園は、安芸郡坂町で広島市近郊の人工砂浜・海水浴候補。 親子では島・海・砂浜・潮干狩りを軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。 夏の海水浴期は監視体制と遊泳区域を確認し、砂浜散策や海辺観察を短時間で楽しむ使い方が向きます。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1951,
+      "slug": "facility-1951",
+      "name": "東広島運動公園",
+      "prefecture": "広島県",
+      "address": "広島県東広島市西条町田口67-1",
+      "url": "https://www.city.higashihiroshima.lg.jp/",
+      "description": "東広島運動公園は、東広島市で大型運動公園、遊具・芝生候補。 親子では大型公園を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1959,
+      "slug": "facility-1959",
+      "name": "千光寺山ロープウェイ",
+      "prefecture": "広島県",
+      "address": "広島県尾道市長江1丁目3-3",
+      "url": "https://mt-senkoji-rw.jp/",
+      "description": "千光寺山ロープウェイは、尾道市でロープウェイ体験と尾道水道展望。公園とは別運営候補。 親子ではものづくり・工場見学・乗り物系を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1961,
+      "slug": "facility-1961",
+      "name": "尾道市立美術館",
+      "prefecture": "広島県",
+      "address": "広島県尾道市西土堂町17-19",
+      "url": "https://www.onomichi-museum.jp/",
+      "description": "尾道市立美術館は、尾道市で千光寺公園内。企画展・ワークショップ時に候補。 親子では科学館・博物館を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1975,
+      "slug": "facility-1975",
+      "name": "平田観光農園",
+      "prefecture": "広島県",
+      "address": "広島県三次市上田町1740-3",
+      "url": "https://marumero.com/",
+      "description": "平田観光農園は、三次市で果物狩り・体験・動物ふれあい候補。 親子ではものづくり・工場見学・乗り物系を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1978,
+      "slug": "facility-1978",
+      "name": "ひろしま県民の森",
+      "prefecture": "広島県",
+      "address": "広島県庄原市西城町油木156-14",
+      "url": "https://www.kenmori.jp/",
+      "description": "ひろしま県民の森は、庄原市で比婆山麓の森林・キャンプ・雪遊び候補。 親子では川遊び・自然・渓谷を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1981,
+      "slug": "facility-1981",
+      "name": "神楽門前湯治村",
+      "prefecture": "広島県",
+      "address": "広島県安芸高田市美土里町本郷4627",
+      "url": "https://toujimura.com/",
+      "description": "神楽門前湯治村は、安芸高田市で神楽鑑賞・温泉・町並み。夜公演や年齢条件要確認。 親子では歴史文化・平和学習を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "要確認"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1983,
+      "slug": "facility-1983",
+      "name": "道の駅豊平どんぐり村",
+      "prefecture": "広島県",
+      "address": "広島県山県郡北広島町都志見12609",
+      "url": "https://www.donguri.gr.jp/",
+      "description": "道の駅豊平どんぐり村は、山県郡北広島町で運動・そば打ち・温浴・芝生。家族ドライブ候補。 親子では大型公園を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1986,
+      "slug": "facility-1986",
+      "name": "宮島ロープウエー・弥山",
+      "prefecture": "広島県",
+      "address": "広島県廿日市市宮島町紅葉谷公園1",
+      "url": "https://miyajima-ropeway.info/",
+      "description": "宮島ロープウエー・弥山は、廿日市市でロープウェーと山頂展望。天候・年齢体力要確認。 親子ではものづくり・工場見学・乗り物系を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "要確認"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1987,
+      "slug": "facility-1987",
+      "name": "峰高公園",
+      "prefecture": "広島県",
+      "address": "広島県廿日市市串戸6丁目1",
+      "url": "https://www.city.hatsukaichi.hiroshima.jp/",
+      "description": "峰高公園は、廿日市市でローラーすべり台・芝生・プール候補。 親子では大型公園を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 1991,
+      "slug": "facility-1991",
+      "name": "晴海臨海公園",
+      "prefecture": "広島県",
+      "address": "広島県大竹市晴海2丁目",
+      "url": "https://www.city.otake.hiroshima.jp/",
+      "description": "晴海臨海公園は、大竹市で海辺の大型公園・遊具候補。大竹市の県内カバレッジ補完。 親子では大型公園を軸に、公式情報で営業日や利用条件を確認して短時間から使いやすいスポットです。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2000,
+      "slug": "facility-2000",
+      "name": "イオンモール広島祇園",
+      "prefecture": "広島県",
+      "address": "広島県広島市安佐南区祇園3丁目2-1",
+      "url": "https://gion.aeonmall.com/",
+      "description": "イオンモール広島祇園は、映画館やキッズ向け店舗、食事をまとめやすい大型商業施設です。雨の日は館内を親子で回遊しながら楽しむ予定にしやすく、子どもの休憩、食事、買い物を一か所で済ませられます。買い物ついでの短時間利用にも向くため、各テナントの対象年齢や料金は店舗ごとに確認してください。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "予定"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2018,
+      "slug": "facility-2018",
+      "name": "ばら公園",
+      "prefecture": "広島県",
+      "address": "広島県福山市花園町1-6",
+      "url": "https://www.city.fukuyama.hiroshima.jp/",
+      "description": "ばら公園は、福山市中心部で多品種のばらを楽しめる公園です。公式情報では毎年5月・10月にばらが咲き乱れる季節施設として案内されており、見頃の時期に短時間散策するのが向いています。通年の大型遊具公園ではないため、花の状態や周辺イベントを確認して訪れてください。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "ではないため"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2035,
+      "slug": "facility-2035",
+      "name": "Flower village 花夢の里",
+      "prefecture": "広島県",
+      "address": "広島県世羅郡世羅町上津田3-3",
+      "url": "https://sera.ne.jp/km/",
+      "description": "Flower village 花夢の里は、芝桜、ネモフィラ、あじさい、タチアオイなど季節の花を楽しむ世羅高原農場グループの花観光施設です。2026年は芝桜とネモフィラの丘が3月28日〜5月10日、あじさいとタチアオイの丘が6月6日〜7月5日の営業案内が出ています。通年公園ではないため、開園イベント・開花状況・料金を公式で確認してください。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "ではないため"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2099,
+      "slug": "facility-2099",
+      "name": "韮崎大村美術館",
+      "prefecture": "山梨県",
+      "address": "韮崎市神山町鍋山1830-1",
+      "url": "https://nirasakiomura.art/",
+      "description": "韮崎市出身の大村智博士が収集した作品を中心に楽しめる美術館。静かな展示室で絵を見る体験ができ、企画展やワークショップ開催時は親子の文化体験にも向く。雨の日の屋内おでかけ候補として使いやすい。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2106,
+      "slug": "facility-2106",
+      "name": "平山郁夫シルクロード美術館",
+      "prefecture": "山梨県",
+      "address": "北杜市長坂町小荒間2000-6",
+      "url": "https://silkroad-museum.jp/",
+      "description": "平山郁夫作品とシルクロードの文化に触れられる北杜市の美術館。絵画鑑賞に加えて、企画や夏休み体験がある時期は親子の学習要素も強い。完全屋内なので清里・小淵沢方面の雨の日候補にしやすい。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2109,
+      "slug": "facility-2109",
+      "name": "スパティオ体験工房",
+      "prefecture": "山梨県",
+      "address": "北杜市小淵沢町2968-1",
+      "url": "https://taiken.mkobuchisawa.jp/",
+      "description": "小淵沢で陶芸やそば打ちなど複数の体験メニューを選べる工房。屋内で手を動かす時間を作れるため、天候に左右されにくい親子のものづくり候補になる。メニューごとの年齢条件と予約要否は事前確認したい。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    },
+    {
+      "id": 2133,
+      "slug": "facility-2133",
+      "name": "新湯治場 秋山温泉",
+      "prefecture": "山梨県",
+      "address": "上野原市秋山2210",
+      "url": "https://www.akiyamaonsen.com/",
+      "description": "上野原市秋山地区の温泉施設で、温泉とプールを組み合わせて利用できる。雨の日や寒い日の親子レジャーにしやすく、東部エリアの屋内水遊び候補になる。利用時間、水着、子どもの水深条件は公式で確認したい。",
+      "severity": "medium",
+      "signal_fields": [
+        "description"
+      ],
+      "signals": [
+        {
+          "field": "description",
+          "kind": "token",
+          "token": "候補"
+        }
+      ],
+      "triage": "false_positive",
+      "triage_note": "本文prose(候補/予定/ではないため/要確認は自然な説明文)"
+    }
+  ],
+  "triage_summary": {
+    "true_positive": 5,
+    "false_positive": 79,
+    "pending": 0,
+    "true_positive_ids": [
+      {
+        "id": 353,
+        "pref": "東京都",
+        "fields": [
+          "name"
+        ],
+        "name": "オービィ横浜(都内代替: 川崎駅近く)/コニカミノルタ プラネタリア TOKYO"
+      },
+      {
+        "id": 342,
+        "pref": "東京都",
+        "fields": [
+          "description"
+        ],
+        "name": "東白鬚公園 防災広場"
+      },
+      {
+        "id": 364,
+        "pref": "東京都",
+        "fields": [
+          "description"
+        ],
+        "name": "サンリオピューロランドアンサンブル(団体プラン)"
+      },
+      {
+        "id": 1600,
+        "pref": "京都府",
+        "fields": [
+          "description"
+        ],
+        "name": "京田辺市野外活動センター 竜王こどもの王国"
+      },
+      {
+        "id": 1604,
+        "pref": "京都府",
+        "fields": [
+          "description"
+        ],
+        "name": "大正池グリーンパーク"
+      }
+    ]
+  }
+}
