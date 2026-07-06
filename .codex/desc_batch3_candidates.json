@@ -1,0 +1,3403 @@
+{
+  "generated_note": "PROPOSAL-ONLY description batch3 candidates. Recomposed from facility_quality_audit.json (2026-07-04). No data mutated.",
+  "source_audit": ".codex/facility_quality_audit.json",
+  "excluded_prefectures": [
+    "tochigi",
+    "niigata",
+    "chiba",
+    "saitama",
+    "kanagawa"
+  ],
+  "excluded_done_batches": [
+    "batch1_proposal",
+    "batch2_proposal"
+  ],
+  "desc_codes_considered": [
+    "desc_under_100",
+    "desc_under_150",
+    "desc_no_proper_noun",
+    "desc_elements_missing",
+    "flagship_weak_desc",
+    "template_phrase",
+    "stale_price_in_desc",
+    "stale_hours",
+    "stale_temporal",
+    "stale_event_name",
+    "safety_missing"
+  ],
+  "pool_after_exclusions": 1429,
+  "still_weak_after_current_recheck": 1417,
+  "candidate_count": 100,
+  "quota": {
+    "A_flagship": 45,
+    "B_safety": 25,
+    "C_event": 15,
+    "D_quality": 14
+  },
+  "prefecture_cap": 12,
+  "bucket_histogram": {
+    "D_quality": 15,
+    "A_flagship": 45,
+    "B_safety": 25,
+    "C_event": 15
+  },
+  "axis_histogram": {
+    "短文<100": 81,
+    "4要素欠落": 93,
+    "固有名詞なし": 52,
+    "flagship_weak": 45,
+    "event掲載あり": 63,
+    "safety": 30,
+    "薄文<150": 19
+  },
+  "prefecture_histogram": {
+    "東京都": 12,
+    "長野県": 12,
+    "群馬県": 12,
+    "兵庫県": 7,
+    "京都府": 4,
+    "愛知県": 6,
+    "福岡県": 4,
+    "静岡県": 8,
+    "山梨県": 11,
+    "茨城県": 12,
+    "大阪府": 10,
+    "広島県": 2
+  },
+  "candidates": [
+    {
+      "id": 342,
+      "name": "東白鬚公園 防災広場",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 17,
+      "current_desc_length": 17,
+      "current_description": "(注: 113の同公園内別エリア)",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落"
+      ],
+      "desc_score": 8,
+      "forced_include": true,
+      "adopt": "adopt",
+      "adopt_note": "本文欠落(forced); 短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 88,
+      "name": "信州新町化石博物館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 52,
+      "current_desc_length": 52,
+      "current_description": "恐竜好きの子供が目を輝かせる、リアルな化石博物館。月曜定休、写真映えする恐竜展示の数々が思い出の一枚に。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95; 禁止表現除去:映え",
+      "bucket": "A_flagship",
+      "banned_expr": [
+        "映え"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1187,
+      "name": "こんにゃくパーク",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "experience",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 74,
+      "current_desc_length": 74,
+      "current_description": "こんにゃく工場見学、試食、手作り体験を楽しめる雨の日向けの大型施設。無料で学べる範囲が広く、子どもが食べ物の製造工程を見てから味わえるのが魅力です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1245,
+      "name": "群馬県立歴史博物館",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 56,
+      "current_desc_length": 56,
+      "current_description": "群馬の歴史を通史で学べる県立博物館。展示を見たあとに群馬の森を散策でき、雨天時は屋内中心の学習プランにできます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1247,
+      "name": "群馬県立館林美術館",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 3,
+      "audit_desc_length": 50,
+      "current_desc_length": 50,
+      "current_description": "広い芝生と屋外空間を備えた県立美術館。親子で美術鑑賞をしたあと、天気がよければ外の景色も楽しめます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1524,
+      "name": "六甲高山植物園",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "nature-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 73,
+      "current_desc_length": 73,
+      "current_description": "六甲山上で高山植物や季節の花を観察できる植物園です。親子で花や昆虫を探しながら歩く自然学習に向き、六甲山の他施設と合わせて巡りやすいスポットです。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1531,
+      "name": "尼崎の森中央緑地",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "nature-park",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 69,
+      "current_desc_length": 69,
+      "current_description": "尼崎臨海部で森づくりや自然観察ができる県立緑地です。親子で広場や自然エリアを歩き、公式イベントがある日は体験活動にも参加しやすい公園です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1536,
+      "name": "多木化学海洋文化センター",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 73,
+      "current_desc_length": 73,
+      "current_description": "海をテーマにした加古川市の文化施設で、あそびの広場や図書室を備えています。親子で海の展示や屋内遊びを組み合わせられ、雨の日でも使いやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1545,
+      "name": "兵庫県立やしろの森公園",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "nature-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 77,
+      "current_desc_length": 77,
+      "current_description": "里山の自然をテーマにした加東市の県立公園です。親子で水田、ため池、森を歩きながら自然観察ができ、体験プログラムの開催日を確認して訪れると学びが深まります。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1554,
+      "name": "兵庫県立国見の森公園",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "nature-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 73,
+      "current_desc_length": 73,
+      "current_description": "森林学習軌道のミニモノレールや山上の自然観察を楽しめる県立公園です。親子で乗り物体験と森歩きを組み合わせられ、利用案内を確認して訪れると安心です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1559,
+      "name": "あさご芸術の森美術館",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "art-museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 64,
+      "current_desc_length": 64,
+      "current_description": "屋外彫刻と美術館展示を楽しめる朝来市の芸術施設です。親子で屋外作品を探しながら散策し、天候が崩れる日は館内展示を中心に回れます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1609,
+      "name": "アサヒグループ大山崎山荘美術館",
+      "prefecture": "京都府",
+      "prefecture_id": "kyoto",
+      "category_id": "art-museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 61,
+      "current_desc_length": 61,
+      "current_description": "山荘建築、庭園、美術展示を楽しめる美術館。静かに鑑賞できる年齢の子なら、建物と庭を含めた文化体験として訪れやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1747,
+      "name": "mozoワンダーシティ",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "indoor-play",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 87,
+      "current_desc_length": 87,
+      "current_description": "mozoワンダーシティは名古屋市西区の大型商業施設で、キッズ向け店舗、映画館、飲食を雨の日にまとめやすい屋内拠点です。買い物だけでなく休憩や食事を挟みながら親子で過ごせます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1764,
+      "name": "新美南吉記念館",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 72,
+      "current_desc_length": 72,
+      "current_description": "新美南吉記念館は童話作家・新美南吉の作品と生涯を学べる文学館です。ごんぎつねなど学校で親しむ作品を、展示や周辺散策と合わせて親子で深められます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1813,
+      "name": "到津の森公園",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category_id": "zoo",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 96,
+      "current_desc_length": 96,
+      "current_description": "到津の森公園は、動物園と緑豊かな公園、小さな乗り物を合わせて楽しめる北九州市の看板施設です。動物観察だけでなく、坂道や広場を使った外遊びもでき、半日から一日のおでかけに組み立てやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T2_polish",
+      "batch3_selected": false
+    },
+    {
+      "id": 1820,
+      "name": "スペースLABO（北九州市科学館）",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 98,
+      "current_desc_length": 98,
+      "current_description": "スペースLABO（北九州市科学館）は北九州市八幡東区にある科学館です。体験展示で科学を触って学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T2_polish",
+      "batch3_selected": false
+    },
+    {
+      "id": 1847,
+      "name": "福岡県青少年科学館",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 83,
+      "current_desc_length": 83,
+      "current_description": "福岡県青少年科学館は久留米市にある科学館です。体験展示で科学を学ぶことができ、公式情報で営業日や利用条件を確認しながら、親子のおでかけや学習に組み込みやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1875,
+      "name": "響灘ビオトープ",
+      "prefecture": "福岡県",
+      "prefecture_id": "fukuoka",
+      "category_id": "nature-park",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 83,
+      "current_desc_length": 83,
+      "current_description": "響灘ビオトープは、湿地、淡水池、草原にすむ野鳥や昆虫を観察できる北九州市の自然観察施設です。グリーンパークとは別施設として、希少な生きものや環境再生を親子で学べます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2055,
+      "name": "富士山かぐや姫ミュージアム",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 64,
+      "current_desc_length": 64,
+      "current_description": "富士山信仰や富士市の歴史を学べる市立博物館。無料で入館でき、かぐや姫伝説や地域資料を通して、富士山のふもとの文化を親子で学べる。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2057,
+      "name": "竜洋昆虫自然観察公園",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 65,
+      "current_desc_length": 65,
+      "current_description": "昆虫館と自然観察エリアを備えた公園。生きた昆虫や標本を見て、屋外では身近な自然を観察できるため、虫好きの子どもの学びと探究に向く。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2091,
+      "name": "山梨県立文学館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 88,
+      "current_desc_length": 88,
+      "current_description": "山梨ゆかりの作家や文学資料を学べる県立館。絵本や物語に関心が出てきた子と、展示や企画を通じて言葉の世界に触れられる。県立美術館と隣接しており、雨の日の屋内文化コースにしやすい。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2179,
+      "name": "松本市立博物館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 48,
+      "current_desc_length": 48,
+      "current_description": "松本城近くの市立博物館。松本の歴史や文化を新しい展示空間で学べ、城下町散策とも組み合わせやすい。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2182,
+      "name": "松本市四賀化石館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 3,
+      "audit_desc_length": 44,
+      "current_desc_length": 44,
+      "current_description": "四賀地域の化石を展示する博物館。クジラ化石などを通して、長野の大地の歴史を親子で学べる。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2184,
+      "name": "安曇野ちひろ美術館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "art-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 56,
+      "current_desc_length": 56,
+      "current_description": "いわさきちひろの作品を中心に、絵本と美術に親しめる美術館。周囲の公園とあわせて、鑑賞と外遊びを組み合わせやすい。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 39.6,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 79,
+      "name": "レイクウォーク岡谷",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "indoor-play",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 59,
+      "current_desc_length": 59,
+      "current_description": "諏訪湖近くのショッピングモール。フードコート内に巨大スクリーン付きキッズプレイエリアがあり、食事しながら子供が遊べる。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 82,
+      "name": "ながのこども館「ながノビ！」",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "indoor-play",
+      "has_event": true,
+      "event_count": 3,
+      "audit_desc_length": 69,
+      "current_desc_length": 69,
+      "current_description": "長野市の子育て支援施設。ボールプール、クライミングウォール、年齢別の遊具が満載。乳幼児専用スペースも完備、親子で参加できるイベントも開催。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 85,
+      "name": "sakumo佐久市子ども未来館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 81,
+      "current_desc_length": 81,
+      "current_description": "佐久平駅から徒歩圏の宇宙科学ミュージアム。長野県最大級プラネタリウム、巨大シャボン玉・風で浮くボール装置等、見て触れて学べる体験展示満載。いこーよ満足度No.1。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95; 禁止表現除去:満足度/No.1",
+      "bucket": "A_flagship",
+      "banned_expr": [
+        "満足度",
+        "No.1"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 99,
+      "name": "野沢温泉スキー場",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "ski",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 59,
+      "current_desc_length": 59,
+      "current_description": "国内屈指の名門スキー場。子供向けのキッズパーク、託児所完備で安心して家族で楽しめる。日本一とも称される温泉街と一体化。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 108,
+      "name": "富士すばるランド",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "theme-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 82,
+      "current_desc_length": 82,
+      "current_description": "富士山西麓の森の中にあるドギーパーク。犬と触れ合えるエリアと、巨大迷路・わんぱくの森アスレチック・ミニ遊園地が一体化。じゃらん遊び体験ランキング受賞、星評価4.0。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95; 禁止表現除去:星評価/評価4/ランキング",
+      "bucket": "A_flagship",
+      "banned_expr": [
+        "星評価",
+        "評価4",
+        "ランキング"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 115,
+      "name": "山梨県立富士湧水の里水族館 森の中の水族館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "aquarium",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 68,
+      "current_desc_length": 68,
+      "current_description": "「森の中の水族館」の愛称で親しまれる淡水魚特化型施設。透明度抜群の水槽で泳ぐイトウやニジマスは、まるで空中を泳ぐよう。さかな公園に隣接。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 217,
+      "name": "東京ジョイポリス",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "game-center",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 48,
+      "current_desc_length": 48,
+      "current_description": "セガが運営する日本最大級の屋内型テーマパーク。VR・絶叫マシン・体感型アトラクションが20種以上",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 219,
+      "name": "キッザニア東京",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "experience",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 52,
+      "current_desc_length": 52,
+      "current_description": "約100種類の仕事・サービスが体験できる「こどもが主役の街」。実在する企業のパビリオンで本格的な職業体験",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 221,
+      "name": "日本科学未来館",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 68,
+      "current_desc_length": 68,
+      "current_description": "「ジオ・コスモス」直径6mの地球ディスプレイが圧巻。量子コンピュータ・ディスコ等の最新展示。※2026/10/1〜2027/4 工事休館",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 222,
+      "name": "東京都水の科学館",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 47,
+      "current_desc_length": 47,
+      "current_description": "水と水道を科学の視点で紹介する体感型ミュージアム。1階の水遊びエリアが大人気で子供が夢中になる",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95; 禁止表現除去:人気",
+      "bucket": "A_flagship",
+      "banned_expr": [
+        "人気"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 223,
+      "name": "ナンジャタウン",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "game-center",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 62,
+      "current_desc_length": 62,
+      "current_description": "ドッキンガム広場(街歩きアトラクション)・もののけ番外地(お化けゾーン)・福袋七丁目商店街の3エリア構成の屋内型テーマパーク",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 224,
+      "name": "サンシャイン水族館",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "aquarium",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 41,
+      "current_desc_length": 41,
+      "current_description": "天空のオアシスをコンセプトとした屋上水族館。マンボウやペンギンの空中遊泳が見どころ",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 226,
+      "name": "国立科学博物館",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 56,
+      "current_desc_length": 56,
+      "current_description": "1877年設立の総合科学博物館。日本館と地球館で恐竜化石や巨大クジラ骨格、剥製を展示。「シアター36○」も体験可",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 229,
+      "name": "地下鉄博物館",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 54,
+      "current_desc_length": 54,
+      "current_description": "地下鉄のすべてが分かる専門博物館。銀座線・丸ノ内線の旧型車両を展示。運転シミュレーター・鉄道模型レイアウトも",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 233,
+      "name": "江戸川区自然動物園",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "zoo",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 48,
+      "current_desc_length": 48,
+      "current_description": "行船公園内の無料動物園。レッサーパンダ・オオアリクイ・ペンギン・ふれあいコーナー(ヤギ・ヒツジ)",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 238,
+      "name": "サンリオピューロランド",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "indoor-theme-park",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 54,
+      "current_desc_length": 54,
+      "current_description": "ハローキティをはじめサンリオキャラクターと触れ合える全館屋内型テーマパーク。ショー・パレード・アトラクション",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 240,
+      "name": "多摩動物公園",
+      "prefecture": "東京都",
+      "prefecture_id": "tokyo",
+      "category_id": "zoo",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 53,
+      "current_desc_length": 53,
+      "current_description": "東京ドーム約12個分の広大な動物園。ライオンバス・コアラ・チーター。アジア・アフリカ・オーストラリアエリア",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1073,
+      "name": "日立シビックセンター科学館・天球劇場（サクリエ）",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 5,
+      "audit_desc_length": 51,
+      "current_desc_length": 51,
+      "current_description": "科学展示と天球劇場を備えた屋内科学館で、親子でサイエンスショー、工作、プラネタリウム上映を楽しめます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1074,
+      "name": "大洗わくわく科学館",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 5,
+      "audit_desc_length": 46,
+      "current_desc_length": 46,
+      "current_description": "海をテーマにした屋内科学館で、親子で水やエネルギー、科学技術に関する展示を見ながら学べます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1095,
+      "name": "かみねレジャーランド",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "theme-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 51,
+      "current_desc_length": 51,
+      "current_description": "かみね公園内の遊園地で、親子で観覧車や各種アトラクションを楽しみ、動物園と組み合わせて一日過ごせます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1169,
+      "name": "渋川スカイランドパーク",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "theme-park",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 69,
+      "current_desc_length": 69,
+      "current_description": "観覧車、コースター、迷路、アスレチック広場を備えた渋川の遊園地。小学生は乗り物でしっかり遊べ、幼児は広場や穏やかな遊具を中心に過ごせます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1177,
+      "name": "向井千秋記念子ども科学館",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 66,
+      "current_desc_length": 66,
+      "current_description": "宇宙や科学の展示、プラネタリウムを楽しめる館林市の科学館。雨の日でも子どもが展示を見て学べ、近隣公園と合わせたおでかけにも向きます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "flagship_weak_desc"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "flagship_weak",
+        "event掲載あり"
+      ],
+      "desc_score": 32.4,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "flagship marquee; 短文<95",
+      "bucket": "A_flagship",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 117,
+      "name": "笛吹川フルーツ公園",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 103,
+      "current_desc_length": 103,
+      "current_description": "「花とフルーツとワインの公園」をテーマにした広大な都市公園。アクアアスレチック(水遊び)、地下のフルーツ博物館、ロードトレイン、屋外大型アスレチック、足湯まで揃う。アニメ「ゆるキャン△」聖地。星評価4.2。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 24,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "禁止表現除去:星評価/評価4",
+      "bucket": "B_safety",
+      "banned_expr": [
+        "星評価",
+        "評価4"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1720,
+      "name": "南知多おもちゃ王国",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "theme-park",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 111,
+      "current_desc_length": 111,
+      "current_description": "南知多おもちゃ王国は美浜町の親子向け施設で、ビーチランドと同一公式内。おもちゃ遊び・乗り物は独立価値があり、隣接・共通券あり。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 24,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1738,
+      "name": "ラグーナテンボス（ラグナシア）",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "theme-park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 120,
+      "current_desc_length": 120,
+      "current_description": "ラグーナテンボス（ラグナシア）は蒲郡市の親子向け施設で、テーマパーク・プール・イルミ。プール等の水遊びは公式の営業期間・利用条件を確認して使う。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "safety",
+        "event掲載あり"
+      ],
+      "desc_score": 24,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1144,
+      "name": "YAWARA福岡堰さくら公園",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 86,
+      "current_desc_length": 86,
+      "current_description": "大型複合遊具、芝生広場、水遊び施設を備えた福岡堰近くの公園です。春は桜、夏は水遊びと季節ごとの目的が作りやすく、幼児連れは水遊びの稼働状況と着替えを確認して行くと安心です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1193,
+      "name": "小平の里",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "experience",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 64,
+      "current_desc_length": 64,
+      "current_description": "そば打ち、マスつかみ、鍾乳洞、親水公園を複合利用できる自然体験施設。水遊びや食の体験を選びやすく、夏の家族のおでかけに向きます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1197,
+      "name": "桐生市新里温水プール カリビアンビーチ",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "hot-spring-pool",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 53,
+      "current_desc_length": 53,
+      "current_description": "波のプールなどを備えた屋内温水プール。雨の日や寒い時期でも水遊びができ、家族で長めに過ごしやすい施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1201,
+      "name": "観音山公園 ケルナー広場",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 65,
+      "current_desc_length": 65,
+      "current_description": "斬新な遊具と夏のじゃぶじゃぶ池で遊べる観音山公園内の広場。子どもが体を使って遊具に挑戦しやすく、高崎市街からも立ち寄りやすいです。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1205,
+      "name": "ハイウェイオアシスららん藤岡（道の駅ららん藤岡）",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 68,
+      "current_desc_length": 68,
+      "current_description": "噴水水遊び、観覧車、ミニ遊園地、食事を組み合わせられる道の駅。高速道路利用時も一般道からも立ち寄りやすく、短時間の親子休憩にも使えます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1234,
+      "name": "道の駅 中山盆地・高山ふれあいパーク",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "hot-spring-pool",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 65,
+      "current_desc_length": 65,
+      "current_description": "大型遊具、ミスト水遊び、日帰り温泉、足湯を複合利用できる道の駅周辺施設。休憩しながら子どもが外遊びでき、温泉も組み合わせられます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1296,
+      "name": "道の駅うえの",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 57,
+      "current_desc_length": 57,
+      "current_description": "上野村観光の休憩拠点になる道の駅。親子で食事や買い物をしながら、川遊びや鍾乳洞など周辺の自然体験につなげられます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1420,
+      "name": "りんくうマーブルビーチ",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "scenic",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 59,
+      "current_desc_length": 59,
+      "current_description": "白い玉石の海岸と夕景が特徴のりんくう公園の海辺エリアです。泳ぐ目的よりも景色を見ながら海辺を散策する使い方に向きます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2059,
+      "name": "掛川城公園",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 59,
+      "current_desc_length": 59,
+      "current_description": "掛川城の天守や御殿に隣接する城郭公園。広場や池を歩きながら歴史ある建物を見られ、城好きの小学生や散策したい親子に向く。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 2077,
+      "name": "柿田川公園・柿田川湧水群",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 68,
+      "current_desc_length": 68,
+      "current_description": "富士山の湧水を展望台や遊歩道から観察できる公園。湧水広場以外の水辺や湧き間には立ち入らず、天然記念物の水辺を守りながら親子で散策したい。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 22,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1355,
+      "name": "服部緑地",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 123,
+      "current_desc_length": 123,
+      "current_description": "大型遊具、芝生、プール、植物園、日本民家集落博物館まで揃う北摂の代表的な府営公園。幼児は遊具と広場、小学生は水遊びや博物館、自然散策まで広げられます。屋外中心で園内が広いので、目的エリアを絞り、暑さや雨の日は短めの滞在にすると無理なく楽しめます。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "固有名詞なし",
+        "safety"
+      ],
+      "desc_score": 20,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 22,
+      "name": "富士山こどもの国",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 89,
+      "current_desc_length": 89,
+      "current_description": "94.5haの広大な敷地に「街」「水の国」「草原の国」3エリア。ジェットコースターはないが大地と自然そのものが遊具。春-秋は水遊び・カヌー、冬はソリ遊び。スリル満点忍者水流路も。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 24,
+      "name": "島田市ゆめ・みらいパーク",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 76,
+      "current_desc_length": 76,
+      "current_description": "国内有数の大型複合遊具と、3種類の長い滑り台が揃う子育て世代の聖地。芝生広場、水遊び場、室内のキッズスペースまで完備。授乳室・おむつ替えスペースも整備。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 25,
+      "name": "22世紀の丘公園",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 75,
+      "current_desc_length": 75,
+      "current_description": "屋外の大型遊具と屋内の遊び場「たまりーな」を併設した万能型公園。雨が降っても室内でじゃぶじゃぶ遊べる安心設計。温泉・プール・カフェまでそろう複合施設。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 69,
+      "name": "湯川ふるさと公園",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 59,
+      "current_desc_length": 59,
+      "current_description": "軽井沢の大型複合遊具を擁する人気公園。星評価4.3。ふわふわドーム、長いローラー滑り台、芝生広場、川遊びまで楽しめる。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95; 禁止表現除去:星評価/評価4/人気",
+      "bucket": "B_safety",
+      "banned_expr": [
+        "星評価",
+        "評価4",
+        "人気"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 161,
+      "name": "河口湖自然生活館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 77,
+      "current_desc_length": 77,
+      "current_description": "ラベンダー畑とブルーベリー園、富士山ビューを擁する自然公園。手作りジャム体験(夏は要予約)、地元グルメ、お土産も豊富。星評価4.3、1784件のレビュー。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95; 禁止表現除去:星評価/評価4",
+      "bucket": "B_safety",
+      "banned_expr": [
+        "星評価",
+        "評価4"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 176,
+      "name": "フレンドパークむかわ",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 94,
+      "current_desc_length": 94,
+      "current_description": "南アルプスと八ヶ岳に囲まれた大武川沿いの親水公園。キャンプ・BBQ・アスレチック・川遊び・釣りが楽しめる。甲斐駒ヶ岳ビュー、子供連れファミリー向け、自然と野鳥に囲まれて過ごせる癒しの空間。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1213,
+      "name": "榛名湖",
+      "prefecture": "群馬県",
+      "prefecture_id": "gunma",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 65,
+      "current_desc_length": 65,
+      "current_description": "湖畔散策、ボート、榛名山ロープウェイを組み合わせられる高原湖。家族で景色を見ながら歩け、短時間から半日まで予定を調整しやすいです。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1552,
+      "name": "グリーンエコー笠形",
+      "prefecture": "兵庫県",
+      "prefecture_id": "hyogo",
+      "category_id": "athletic",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 83,
+      "current_desc_length": 83,
+      "current_description": "川遊び、アスレチック、キャンプを備える神河町の自然レジャー施設です。夏は水遊びを主目的にしやすく、幼児は浅い場所中心、小学生はアスレチックや自然散策まで広げられます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1591,
+      "name": "アクトパル宇治",
+      "prefecture": "京都府",
+      "prefecture_id": "kyoto",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 65,
+      "current_desc_length": 65,
+      "current_description": "アスレチック、キャンプ、自然体験、川遊びを組み合わせられる宇治市の野外活動施設。季節や宿泊利用に合わせて親子で自然に触れられます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1614,
+      "name": "美山町自然文化村",
+      "prefecture": "京都府",
+      "prefecture_id": "kyoto",
+      "category_id": "nature-park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 63,
+      "current_desc_length": 63,
+      "current_description": "由良川沿いで宿泊、キャンプ、川遊び、自然体験を組み合わせられる美山の滞在拠点。かやぶきの里方面と合わせる家族旅行にも向きます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1632,
+      "name": "西山公園ジャブジャブ池・子どもの森",
+      "prefecture": "京都府",
+      "prefecture_id": "kyoto",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 53,
+      "current_desc_length": 53,
+      "current_description": "西山公園内にジャブジャブ池や子どもの森を備える長岡京市の公園。水遊びは季節・運用条件を確認して利用します。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_elements_missing",
+        "safety_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "safety"
+      ],
+      "desc_score": 18,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "B_safety",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1931,
+      "name": "広島市安佐動物公園",
+      "prefecture": "広島県",
+      "prefecture_id": "hiroshima",
+      "category_id": "zoo",
+      "has_event": true,
+      "event_count": 2,
+      "audit_desc_length": 107,
+      "current_desc_length": 107,
+      "current_description": "広島市安佐動物公園は、広島市安佐北区の動物園です。広い園内で多様な動物を見て回れる広島市の代表的な動物園です。坂道や移動距離があるため、午前中からゆっくり回り、年齢に合わせて観察エリアを絞ると過ごしやすい施設です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 15,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 2017,
+      "name": "ふくやま美術館",
+      "prefecture": "広島県",
+      "prefecture_id": "hiroshima",
+      "category_id": "art-museum",
+      "has_event": true,
+      "event_count": 4,
+      "audit_desc_length": 100,
+      "current_desc_length": 100,
+      "current_description": "ふくやま美術館は、福山城公園に近い屋内美術館です。常設展や企画展を通じて、雨の日でも落ち着いて親子で作品を鑑賞できます。福山城や広島県立歴史博物館と近く、歴史とアートを半日で組み合わせやすい立地です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 15,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 86,
+      "name": "長野市少年科学センター",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "science-museum",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 39,
+      "current_desc_length": 39,
+      "current_description": "長野市の老舗科学館。古さはあるが体験型展示が充実し、週末は予約必須の人気ぶり。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95; 禁止表現除去:人気",
+      "bucket": "D_quality",
+      "banned_expr": [
+        "人気"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 87,
+      "name": "森のおうち絵本美術館",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "art-museum",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 55,
+      "current_desc_length": 55,
+      "current_description": "森の中にひっそり佇む絵本専門美術館。世界中の絵本に囲まれた静謐な空間は、まるで物語の中に入ったよう。木曜定休。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 113,
+      "name": "動物ふれあい広場(まきば公園)",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "zoo",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 73,
+      "current_desc_length": 73,
+      "current_description": "八ヶ岳南麓の高原にある無料の動物ふれあい広場。羊・ヤギに触れて餌やりが無料。星評価4.6、夏でも涼しい高原の風が心地よい。八ヶ岳が一望できる絶景。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95; 禁止表現除去:星評価/評価4",
+      "bucket": "D_quality",
+      "banned_expr": [
+        "星評価",
+        "評価4"
+      ],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 118,
+      "name": "さかな公園",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 72,
+      "current_desc_length": 72,
+      "current_description": "森の中の水族館に隣接する無料の自然公園。木陰の遊具、湧水の池、開放的な芝生広場で、忍野八海観光のついでに立ち寄るのに最適。富士山ビューも美しい。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 129,
+      "name": "猫カフェMOCHA イオンモール甲府昭和店",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "experience",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 41,
+      "current_desc_length": 41,
+      "current_description": "雨の日でも安心の全天候型猫カフェ。3歳以下は入場無料、ペット好きの子供にぴったり。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1079,
+      "name": "道の駅 グランテラス筑西",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "indoor-play",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 53,
+      "current_desc_length": 53,
+      "current_description": "道の駅内に屋外遊具、芝生広場、室内遊び場があり、親子で休憩、買い物、外遊びを短時間から組み合わせられます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1084,
+      "name": "笠間芸術の森公園",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 51,
+      "current_desc_length": 51,
+      "current_description": "大型複合遊具やふわふわドーム、芝生広場を備えた公園で、親子で体を動かしながら陶芸文化の施設も巡れます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1103,
+      "name": "笠間工芸の丘",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "craft",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 51,
+      "current_desc_length": 51,
+      "current_description": "笠間焼や陶芸体験、現代アートにふれられる複合施設で、親子でろくろ、手ひねり、絵付けなどを体験できます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1114,
+      "name": "ふれあい動物園ANIMA",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "zoo",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 89,
+      "current_desc_length": 89,
+      "current_description": "阿見町の古民家を活用したふれあい動物園で、動物とのふれあいや命を学ぶ体験を親子で楽しめます。開園日が限られるため、土日月祝の営業予定と夏季・冬季の時間を確認して出かける施設です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1138,
+      "name": "古河公方公園（古河総合公園）",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 70,
+      "current_desc_length": 70,
+      "current_description": "広い園内に桃林、池、民家園、芝生広場がある古河市の公園です。花の季節は散策、普段は芝生や水辺を中心に、幼児から小学生までのんびり過ごせます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1139,
+      "name": "西山公園",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 74,
+      "current_desc_length": 74,
+      "current_description": "徳川光圀公ゆかりの西山荘に近い公園で、桜をはじめ季節の景観と広い敷地の散策を楽しめます。遊具目的よりも花見や歴史散策と合わせた外歩き向きの公園です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1140,
+      "name": "静峰ふるさと公園",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "park",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 86,
+      "current_desc_length": 86,
+      "current_description": "八重桜の名所として知られる那珂市の公園で、広場や遊歩道を歩きながら季節の景観を楽しめます。春の花見時期は混雑や交通情報を確認し、普段は自然散策と外遊びに使いやすい公園です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1150,
+      "name": "花園渓谷",
+      "prefecture": "茨城県",
+      "prefecture_id": "ibaraki",
+      "category_id": "scenic",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 80,
+      "current_desc_length": 80,
+      "current_description": "花園花貫県立自然公園内の渓谷で、新緑や紅葉の季節に親子で自然散策を楽しめます。山道や川沿いを歩くため、未就学児は短い区間にし、滑りにくい靴と天候確認が必要です。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 1395,
+      "name": "ちきゅうのにわ 堺鉄砲町店",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "indoor-play",
+      "has_event": false,
+      "event_count": 0,
+      "audit_desc_length": 71,
+      "current_desc_length": 71,
+      "current_description": "イオンモール堺鉄砲町内の屋内キッズ施設で、低年齢の子どもが天候に左右されず遊べます。買い物や食事と合わせやすく、短時間の親子利用にも向きます。",
+      "issue_codes": [
+        "desc_under_100",
+        "desc_no_proper_noun",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "短文<100",
+        "4要素欠落",
+        "固有名詞なし"
+      ],
+      "desc_score": 12,
+      "forced_include": false,
+      "adopt": "adopt",
+      "adopt_note": "短文<95",
+      "bucket": "D_quality",
+      "banned_expr": [],
+      "tier": "T1_must",
+      "batch3_selected": true
+    },
+    {
+      "id": 136,
+      "name": "山梨県立科学館",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 7,
+      "audit_desc_length": 125,
+      "current_desc_length": 125,
+      "current_description": "プラネタリウム、常設展示室、サイエンスショー、実験工作などを通じて科学に触れられる屋内の科学館。天候に左右されにくく、宇宙や実験に興味のある子とじっくり過ごす日に向く。外遊び目的ではなく、科学館内の体験展示や星空を楽しむ施設として期待値を合わせたい。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 174,
+      "name": "フォレストアドベンチャー・フジ",
+      "prefecture": "山梨県",
+      "prefecture_id": "yamanashi",
+      "category_id": "athletic",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 128,
+      "current_desc_length": 128,
+      "current_description": "日本第一号のフォレストアドベンチャー(2006年オープン)。富士山麓10万平方メートルの森に高さ10mのつり橋、長さ140mのジップスライダーなど全5サイトに43アクティビティ。富士山もよく見える絶景立地。身長90cmからキッズコース可能で家族で楽しめる。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 183,
+      "name": "かざこし子どもの森公園",
+      "prefecture": "長野県",
+      "prefecture_id": "nagano",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 3,
+      "audit_desc_length": 119,
+      "current_desc_length": 119,
+      "current_description": "中央アルプス山麓・南信州の自然公園。森林浴しながらウッドチップが敷かれた小道を散策、キャンプ・マットゴルフ・BBQも楽しめる。フィールドアスレチックは木とロープのシンプル設計、吊橋や丸太斜面で森を進む。テーマごとに地域文化を学べる仕掛け。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 186,
+      "name": "三島スカイウォーク",
+      "prefecture": "静岡県",
+      "prefecture_id": "shizuoka",
+      "category_id": "athletic",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 128,
+      "current_desc_length": 128,
+      "current_description": "日本最長400mの歩行者専用吊橋。富士山と駿河湾の絶景、橋を渡るスリル満点体験。家族でゆっくり散策しながら、橋を渡った先のアクティビティエリアでフォレストアドベンチャーや、KICKERS(ロングジップ)、ドラゴンキャッスル(タワーアスレチック)も楽しめる。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1326,
+      "name": "堺・緑のミュージアム ハーベストの丘",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "experience",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 117,
+      "current_desc_length": 117,
+      "current_description": "動物ふれあい、手作り体験、遊具を含む農業公園。 体験として親子で体験・観察・遊びを組み合わせやすく、天候を見ながら楽しみたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1337,
+      "name": "大阪市立自然史博物館",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 111,
+      "current_desc_length": 111,
+      "current_description": "長居公園内。恐竜・自然史好きに強い。 博物館として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1340,
+      "name": "国立民族学博物館",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 114,
+      "current_desc_length": 114,
+      "current_description": "万博記念公園内。世界の文化を親子で学べる。 博物館として親子で体験・観察・遊びを組み合わせやすく、雨の日でも使いやすい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1358,
+      "name": "寝屋川公園",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 115,
+      "current_desc_length": 115,
+      "current_description": "芝生広場・児童遊戯場のある府営公園。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1359,
+      "name": "山田池公園",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 120,
+      "current_desc_length": 120,
+      "current_description": "水辺・芝生・児童遊戯場を備える北河内大型公園。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1363,
+      "name": "長居公園",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 119,
+      "current_desc_length": 119,
+      "current_description": "自然史博物館、植物園、遊具、広場の大型拠点。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1368,
+      "name": "蜻蛉池公園",
+      "prefecture": "大阪府",
+      "prefecture_id": "osaka",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 118,
+      "current_desc_length": 118,
+      "current_description": "子供の国、大型遊具、花木園の泉州大型公園。 公園(大型遊具)として親子で体験・観察・遊びを組み合わせやすく、晴れた日に行きたい施設です。公式情報を確認しながら、対象年齢や季節、混雑しやすい時間帯に合わせて無理のない滞在にすると安心です。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_no_proper_noun"
+      ],
+      "axes": [
+        "薄文<150",
+        "固有名詞なし",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1679,
+      "name": "メタウォーター下水道科学館なごや",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "science-museum",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 100,
+      "current_desc_length": 100,
+      "current_description": "メタウォーター下水道科学館なごやは名古屋市北区の親子向け施設で、下水道を体験型展示で学べる無料系科学館。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    },
+    {
+      "id": 1683,
+      "name": "大高緑地",
+      "prefecture": "愛知県",
+      "prefecture_id": "aichi",
+      "category_id": "park",
+      "has_event": true,
+      "event_count": 1,
+      "audit_desc_length": 118,
+      "current_desc_length": 118,
+      "current_description": "大高緑地は名古屋市緑区の親子向け施設で、恐竜広場、交通公園、芝生を親子で回れる。プールなど季節施設は公式の営業期間と利用条件を確認して使う。 公式情報で確認できる展示・遊具・体験を中心に、短時間のおでかけにも組み込みやすいスポットです。",
+      "issue_codes": [
+        "desc_under_150",
+        "desc_elements_missing"
+      ],
+      "axes": [
+        "薄文<150",
+        "4要素欠落",
+        "event掲載あり"
+      ],
+      "desc_score": 9,
+      "forced_include": false,
+      "adopt": "defer",
+      "adopt_note": "現desc≥95字・flagship外・禁止表現なし=heuristic過検出の可能性→保留",
+      "bucket": "C_event",
+      "banned_expr": [],
+      "tier": "defer",
+      "batch3_selected": false
+    }
+  ],
+  "triage_summary": {
+    "adopt": 82,
+    "defer": 18,
+    "adopt_by_bucket": {
+      "D_quality": 15,
+      "A_flagship": 45,
+      "B_safety": 22
+    },
+    "banned_expr_count": 9
+  },
+  "tier_summary": {
+    "T1_must": 80,
+    "T2_polish": 2,
+    "defer": 18
+  },
+  "batch3_selected_ids": [
+    88,
+    1187,
+    1245,
+    1247,
+    1524,
+    1531,
+    1536,
+    1545,
+    1554,
+    1559,
+    1609,
+    1747,
+    1764,
+    1847,
+    1875,
+    2055,
+    2057,
+    2091,
+    2179,
+    2182,
+    2184,
+    79,
+    82,
+    85,
+    99,
+    108,
+    115,
+    217,
+    219,
+    221,
+    222,
+    223,
+    224,
+    226,
+    229,
+    233,
+    238,
+    240,
+    1073,
+    1074,
+    1095,
+    1169,
+    1177,
+    117,
+    1144,
+    1193,
+    1197,
+    1201,
+    1205,
+    1234,
+    1296,
+    1420,
+    2059,
+    2077,
+    22,
+    24,
+    25,
+    69,
+    161,
+    176,
+    1213,
+    1552,
+    1591,
+    1614,
+    1632,
+    86,
+    87,
+    113,
+    118,
+    129,
+    1079,
+    1084,
+    1103,
+    1114,
+    1138,
+    1139,
+    1140,
+    1150,
+    1395,
+    342
+  ],
+  "batch3_selection": {
+    "set": "T1_must",
+    "count": 80,
+    "by_bucket": {
+      "A_flagship": 43,
+      "B_safety": 22,
+      "D_quality": 15
+    },
+    "banned_expr_ids": [
+      {
+        "id": 88,
+        "name": "信州新町化石博物館",
+        "banned": [
+          "映え"
+        ]
+      },
+      {
+        "id": 85,
+        "name": "sakumo佐久市子ども未来館",
+        "banned": [
+          "満足度",
+          "No.1"
+        ]
+      },
+      {
+        "id": 108,
+        "name": "富士すばるランド",
+        "banned": [
+          "星評価",
+          "評価4",
+          "ランキング"
+        ]
+      },
+      {
+        "id": 222,
+        "name": "東京都水の科学館",
+        "banned": [
+          "人気"
+        ]
+      },
+      {
+        "id": 117,
+        "name": "笛吹川フルーツ公園",
+        "banned": [
+          "星評価",
+          "評価4"
+        ]
+      },
+      {
+        "id": 69,
+        "name": "湯川ふるさと公園",
+        "banned": [
+          "星評価",
+          "評価4",
+          "人気"
+        ]
+      },
+      {
+        "id": 161,
+        "name": "河口湖自然生活館",
+        "banned": [
+          "星評価",
+          "評価4"
+        ]
+      },
+      {
+        "id": 86,
+        "name": "長野市少年科学センター",
+        "banned": [
+          "人気"
+        ]
+      },
+      {
+        "id": 113,
+        "name": "動物ふれあい広場(まきば公園)",
+        "banned": [
+          "星評価",
+          "評価4"
+        ]
+      }
+    ],
+    "excluded_from_batch3": {
+      "T2_polish": [
+        1813,
+        1820
+      ],
+      "defer": [
+        1720,
+        1738,
+        1355,
+        1931,
+        2017,
+        136,
+        174,
+        183,
+        186,
+        1326,
+        1337,
+        1340,
+        1358,
+        1359,
+        1363,
+        1368,
+        1679,
+        1683
+      ]
+    }
+  }
+}
