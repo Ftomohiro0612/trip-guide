@@ -3,6 +3,7 @@ import { Noto_Sans_JP } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import { WishlistProvider } from "@/components/WishlistProvider";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -96,11 +97,13 @@ export default function RootLayout({
         <a href="#main-content" className="skip-link">
           メインコンテンツへスキップ
         </a>
-        <Header />
-        <main id="main-content" className="flex-1">
-          {children}
-        </main>
-        <Footer />
+        <WishlistProvider>
+          <Header />
+          <main id="main-content" className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </WishlistProvider>
         <Analytics />
       </body>
     </html>
