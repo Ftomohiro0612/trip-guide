@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
+import ChildRegistrationNudge from "@/components/ChildRegistrationNudge";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import VisitPhotoUploader, {
@@ -690,6 +691,8 @@ export default function NewVisitPage() {
             />
           )}
         </section>
+
+        {children.length === 0 && <ChildRegistrationNudge />}
 
         {children.length > 0 && (
           <section className="space-y-2">

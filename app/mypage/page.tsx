@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { redirect } from "next/navigation";
 import ChildAvatar from "@/components/ChildAvatar";
 import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
@@ -317,6 +318,11 @@ export default async function MypagePage() {
       (typeof child.avatar_url === "string" || child.avatar_url === null)
     );
   });
+  const visits = (visitStats ?? []).filter(isVisitStat);
+  if (user && childRows.length === 0 && visits.length === 0) {
+    redirect("/mypage/onboarding");
+  }
+
   const avatarPaths = childRows
     .map((child) => child.avatar_url)
     .filter((path): path is string => Boolean(path));
@@ -329,7 +335,6 @@ export default async function MypagePage() {
   const avatarUrlByPath = new Map(
     (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
   );
-  const visits = (visitStats ?? []).filter(isVisitStat);
   const wishlistSlugRows = (wishlistRows ?? []) as WishlistSlugRow[];
   const wishlistSlugs = wishlistSlugRows
     .map((row) => row.facility_slug)
