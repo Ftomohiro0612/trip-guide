@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { sanitizeAuthRedirect } from "@/lib/auth-dest";
+import { FALLBACK_AUTH_DEST, sanitizeAuthRedirect } from "@/lib/auth-dest";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
@@ -22,5 +22,11 @@ export async function GET(request: Request) {
     });
   }
 
-  return NextResponse.redirect(new URL(next, url.origin));
+  const redirectUrl = new URL(next, url.origin);
+  const safeRedirectUrl =
+    redirectUrl.origin === url.origin
+      ? redirectUrl
+      : new URL(FALLBACK_AUTH_DEST, url.origin);
+
+  return NextResponse.redirect(safeRedirectUrl);
 }

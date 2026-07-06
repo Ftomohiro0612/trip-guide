@@ -1,9 +1,16 @@
 export type AuthIntentType = "record" | "wishlist";
 
-const FALLBACK_AUTH_DEST = "/mypage";
+export const FALLBACK_AUTH_DEST = "/mypage";
+const CONTROL_CHAR_PATTERN = /[\u0000-\u001F\u007F]/;
 
 export function isSafeRelativePath(path: string | null | undefined): path is string {
-  return typeof path === "string" && path.startsWith("/") && !path.startsWith("//");
+  return (
+    typeof path === "string" &&
+    path.startsWith("/") &&
+    !path.startsWith("//") &&
+    !path.includes("\\") &&
+    !CONTROL_CHAR_PATTERN.test(path)
+  );
 }
 
 export function sanitizeAuthRedirect(
