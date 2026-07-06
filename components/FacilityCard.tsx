@@ -142,7 +142,11 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
               event.stopPropagation();
               handleWishlist();
             }}
-            className="min-h-10 rounded-lg border border-slate-300 bg-white px-2 text-xs font-bold text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+            className={`min-h-10 rounded-lg px-2 text-xs font-bold transition-colors disabled:opacity-50 ${
+              isWishlisted
+                ? "bg-pink-50 border border-pink-300 text-pink-600 hover:bg-pink-100"
+                : "border border-slate-300 bg-white text-slate-700 hover:bg-slate-50"
+            }`}
           >
             {isWishlisted ? "♥ 行きたい済み" : "♡ 行きたい"}
           </button>
