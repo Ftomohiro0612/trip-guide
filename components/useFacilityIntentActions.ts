@@ -14,6 +14,10 @@ type Options = {
   loadWishlistState?: boolean;
 };
 
+type SessionUser = {
+  id: string;
+};
+
 declare global {
   interface Window {
     gtag?: (...args: unknown[]) => void;
@@ -21,6 +25,50 @@ declare global {
 }
 
 const INTENT_STORAGE_KEY = "memorip.intent";
+let sessionUserPromise: Promise<SessionUser | null> | null = null;
+let authCacheInvalidationStarted = false;
+
+function isSupabaseAuthTokenKey(name: string) {
+  return name.startsWith("sb-") && name.includes("-auth-token");
+}
+
+function hasStoredSupabaseSession() {
+  if (typeof window === "undefined") return true;
+
+  try {
+    if (Object.keys(window.localStorage).some(isSupabaseAuthTokenKey)) return true;
+  } catch {
+    // Fall back to cookies below.
+  }
+
+  return document.cookie
+    .split(";")
+    .some((part) => isSupabaseAuthTokenKey(part.trim().split("=")[0] ?? ""));
+}
+
+function ensureAuthCacheInvalidation(supabase: ReturnType<typeof createClient>) {
+  if (authCacheInvalidationStarted) return;
+  authCacheInvalidationStarted = true;
+  supabase.auth.onAuthStateChange(() => {
+    sessionUserPromise = null;
+  });
+}
+
+function getCachedSessionUser(supabase: ReturnType<typeof createClient>) {
+  ensureAuthCacheInvalidation(supabase);
+  if (!hasStoredSupabaseSession()) return Promise.resolve(null);
+
+  if (!sessionUserPromise) {
+    sessionUserPromise = supabase.auth
+      .getSession()
+      .then(({ data: { session } }) => session?.user ?? null)
+      .catch((error) => {
+        sessionUserPromise = null;
+        throw error;
+      });
+  }
+  return sessionUserPromise;
+}
 
 function trackIntentClick(
   facilityId: number | string | undefined,
@@ -51,19 +99,19 @@ export function useFacilityIntentActions({
   const [loadState, setLoadState] = useState<LoadState>("loading");
   const [userId, setUserId] = useState<string | null>(null);
   const [wishlistId, setWishlistId] = useState<string | null>(null);
+  const [wishlisted, setWishlisted] = useState(false);
   const [toggling, setToggling] = useState(false);
 
   useEffect(() => {
     let active = true;
     async function init() {
       const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const user = await getCachedSessionUser(supabase);
       if (!active) return;
       if (!user) {
         setUserId(null);
         setWishlistId(null);
+        setWishlisted(false);
         setLoadState("guest");
         return;
       }
@@ -78,6 +126,10 @@ export function useFacilityIntentActions({
           .maybeSingle();
         if (!active) return;
         setWishlistId(data?.id ?? null);
+        setWishlisted(!!data?.id);
+      } else {
+        setWishlistId(null);
+        setWishlisted(false);
       }
       setLoadState("ready");
     }
@@ -127,6 +179,7 @@ export function useFacilityIntentActions({
         return;
       }
       setWishlistId(null);
+      setWishlisted(false);
       setToggling(false);
       return;
     }
@@ -148,6 +201,7 @@ export function useFacilityIntentActions({
     }
 
     if (data?.id) setWishlistId(data.id);
+    setWishlisted(true);
     setToggling(false);
   }, [
     facilityId,
@@ -164,7 +218,7 @@ export function useFacilityIntentActions({
   return {
     handleRecord,
     handleWishlist,
-    isWishlisted: loadState === "ready" && !!wishlistId,
+    isWishlisted: loadState === "ready" && wishlisted,
     loadState,
     toggling,
   };

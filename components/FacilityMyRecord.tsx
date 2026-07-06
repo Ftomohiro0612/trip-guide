@@ -47,6 +47,22 @@ function formatVisitedOn(value: string | null) {
   return `${year}/${month}/${day}`;
 }
 
+function isSupabaseAuthTokenKey(name: string) {
+  return name.startsWith("sb-") && name.includes("-auth-token");
+}
+
+function hasStoredSupabaseSession() {
+  try {
+    if (Object.keys(window.localStorage).some(isSupabaseAuthTokenKey)) return true;
+  } catch {
+    // Fall back to cookies below.
+  }
+
+  return document.cookie
+    .split(";")
+    .some((part) => isSupabaseAuthTokenKey(part.trim().split("=")[0] ?? ""));
+}
+
 export default function FacilityMyRecord({
   facilitySlug,
 }: {
@@ -62,9 +78,9 @@ export default function FacilityMyRecord({
 
     async function loadRecords() {
       const supabase = createClient();
-      const {
-        data: { user },
-      } = await supabase.auth.getUser();
+      const user = hasStoredSupabaseSession()
+        ? (await supabase.auth.getSession()).data.session?.user ?? null
+        : null;
 
       if (!active) return;
       if (!user) {

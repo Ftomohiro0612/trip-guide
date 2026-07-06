@@ -21,7 +21,7 @@ const rainStyles: Record<string, string> = {
 
 export default function FacilityCard({ facility, proximityLabel }: Props) {
   const router = useRouter();
-  const { handleRecord, handleWishlist, loadState, toggling } =
+  const { handleRecord, handleWishlist, isWishlisted, loadState, toggling } =
     useFacilityIntentActions({
       facilityId: facility.id,
       facilitySlug: facility.slug,
@@ -144,7 +144,7 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
             }}
             className="min-h-10 rounded-lg border border-slate-300 bg-white px-2 text-xs font-bold text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
           >
-            ♡ 行きたい
+            {isWishlisted ? "♥ 行きたい済み" : "♡ 行きたい"}
           </button>
         </div>
       </div>
