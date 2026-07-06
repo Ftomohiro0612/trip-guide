@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useRouter, useSearchParams } from "next/navigation";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import { sanitizeAuthRedirect } from "@/lib/auth-dest";
 
 export default function LoginPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const redirectTo = searchParams.get("redirectTo") ?? "/mypage";
+  const redirectTo = sanitizeAuthRedirect(searchParams.get("redirectTo"));
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -43,7 +44,7 @@ export default function LoginPage() {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?next=${redirectTo}`,
+        redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
       },
     });
   }
@@ -145,7 +146,10 @@ export default function LoginPage() {
           </p>
           <p>
             アカウントをお持ちでない方は{" "}
-            <Link href="/auth/register" className="text-brand font-semibold hover:underline">
+            <Link
+              href={`/auth/register?redirectTo=${encodeURIComponent(redirectTo)}`}
+              className="text-brand font-semibold hover:underline"
+            >
               新規登録
             </Link>
           </p>

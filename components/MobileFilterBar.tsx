@@ -316,6 +316,7 @@ function CheckboxItem({
         type="checkbox"
         checked={checked}
         onChange={onChange}
+        suppressHydrationWarning
         className="h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand"
       />
       <span className="text-slate-700 transition-colors group-hover:text-brand">

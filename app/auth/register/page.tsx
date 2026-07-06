@@ -3,10 +3,14 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { sanitizeAuthRedirect } from "@/lib/auth-dest";
 import { createClient } from "@/lib/supabase/client";
 import { SERVICE } from "@/lib/config";
 
 export default function RegisterPage() {
+  const searchParams = useSearchParams();
+  const redirectTo = sanitizeAuthRedirect(searchParams.get("redirectTo"));
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [passwordConfirm, setPasswordConfirm] = useState("");
@@ -31,8 +35,7 @@ export default function RegisterPage() {
       email,
       password,
       options: {
-        // メール確認後に子どもプロフィール設定ページへ遷移
-        emailRedirectTo: `${SERVICE.baseUrl}/auth/callback?next=/mypage`,
+        emailRedirectTo: `${SERVICE.baseUrl}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
       },
     });
     if (err) {
@@ -48,7 +51,7 @@ export default function RegisterPage() {
     await supabase.auth.signInWithOAuth({
       provider: "google",
       options: {
-        redirectTo: `${window.location.origin}/auth/callback?next=/mypage`,
+        redirectTo: `${window.location.origin}/auth/callback?next=${encodeURIComponent(redirectTo)}`,
       },
     });
   }
@@ -70,7 +73,7 @@ export default function RegisterPage() {
             メールが届かない場合は迷惑メールフォルダをご確認ください。
           </p>
           <Link
-            href="/auth/login"
+            href={`/auth/login?redirectTo=${encodeURIComponent(redirectTo)}`}
             className="mt-6 inline-block text-brand text-sm hover:underline"
           >
             ← ログインページへ戻る
@@ -207,7 +210,10 @@ export default function RegisterPage() {
 
         <p className="mt-6 text-center text-sm text-slate-500">
           すでにアカウントをお持ちの方は{" "}
-          <Link href="/auth/login" className="text-brand font-semibold hover:underline">
+          <Link
+            href={`/auth/login?redirectTo=${encodeURIComponent(redirectTo)}`}
+            className="text-brand font-semibold hover:underline"
+          >
             ログイン
           </Link>
         </p>

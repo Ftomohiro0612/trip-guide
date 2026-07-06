@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { sanitizeAuthRedirect } from "@/lib/auth-dest";
 import { createClient } from "@/lib/supabase/server";
 
 export async function GET(request: Request) {
@@ -6,7 +7,7 @@ export async function GET(request: Request) {
   const code = url.searchParams.get("code");
   const tokenHash = url.searchParams.get("token_hash");
   const type = url.searchParams.get("type");
-  const next = url.searchParams.get("next") ?? "/mypage";
+  const next = sanitizeAuthRedirect(url.searchParams.get("next"));
 
   const supabase = await createClient();
 

@@ -4,6 +4,7 @@ import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import DeleteWishButton from "./DeleteWishButton";
 import WishlistAddForm from "./WishlistAddForm";
+import WishlistAutoAdd from "./WishlistAutoAdd";
 
 export const metadata: Metadata = { title: "行きたいリスト" };
 
@@ -15,7 +16,12 @@ type WishlistItem = {
   created_at: string | null;
 };
 
-export default async function WishlistPage() {
+export default async function WishlistPage({
+  searchParams,
+}: {
+  searchParams: Promise<{ add?: string; name?: string }>;
+}) {
+  const { add, name } = await searchParams;
   const supabase = await createClient();
   const {
     data: { user },
@@ -39,6 +45,8 @@ export default async function WishlistPage() {
         <h1 className="text-xl font-bold text-slate-900">行きたいリスト</h1>
         <p className="text-sm text-slate-500 mt-1">気になる施設をあとで見返せます。</p>
       </div>
+
+      <WishlistAutoAdd facilitySlug={add} facilityName={name} />
 
       <WishlistAddForm />
 

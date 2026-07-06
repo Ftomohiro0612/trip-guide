@@ -182,6 +182,7 @@ export default function FilterSidebar({
                     type="checkbox"
                     checked={checked}
                     onChange={() => togglePrefecture(p.id)}
+                    suppressHydrationWarning
                     className="rounded border-slate-300 text-sky-600 focus:ring-sky-400"
                   />
                   <span
@@ -383,6 +384,7 @@ function CheckboxItem({
         type="checkbox"
         checked={checked}
         onChange={onChange}
+        suppressHydrationWarning
         className="h-4 w-4 rounded border-slate-300 text-brand focus:ring-brand"
       />
       <span className="text-slate-700 group-hover:text-brand transition-colors">

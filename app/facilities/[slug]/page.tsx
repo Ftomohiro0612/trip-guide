@@ -518,6 +518,7 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
     <>
       <FacilityMyRecord facilitySlug={facility.slug} />
       <FacilityActionButtons
+        facilityId={facility.id}
         facilitySlug={facility.slug}
         facilityName={facility.name}
       />
@@ -526,7 +527,7 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
           href={facility.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="block w-full bg-brand hover:bg-brand-dark text-white text-center font-bold py-3 rounded-xl shadow-sm transition-colors"
+          className="block w-full rounded-xl border border-slate-200 bg-white py-2.5 text-center text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-800"
         >
           公式サイトを見る ↗
         </a>

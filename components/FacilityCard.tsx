@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
 import type { Facility } from "@/types/facility";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
+import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
 
 interface Props {
   facility: Facility;
@@ -20,8 +21,15 @@ const rainStyles: Record<string, string> = {
 
 export default function FacilityCard({ facility, proximityLabel }: Props) {
   const router = useRouter();
+  const { handleRecord, handleWishlist, loadState, toggling } =
+    useFacilityIntentActions({
+      facilityId: facility.id,
+      facilitySlug: facility.slug,
+      facilityName: facility.name,
+    });
   const hasImage = !!facility.image;
   const recommendedTags = (facility.recommended_for_tags ?? []).slice(0, 3);
+  const actionsDisabled = loadState === "loading";
 
   return (
     <Link
@@ -113,6 +121,32 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
             })}
           </div>
         )}
+        <div className="mt-2 grid grid-cols-2 gap-2 border-t border-slate-100 pt-3">
+          <button
+            type="button"
+            disabled={actionsDisabled}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              handleRecord();
+            }}
+            className="min-h-10 rounded-lg bg-emerald-600 px-2 text-xs font-bold text-white transition-colors hover:bg-emerald-700 disabled:opacity-50"
+          >
+            ✓ 行ったことを記録
+          </button>
+          <button
+            type="button"
+            disabled={actionsDisabled || toggling}
+            onClick={(event) => {
+              event.preventDefault();
+              event.stopPropagation();
+              handleWishlist();
+            }}
+            className="min-h-10 rounded-lg border border-slate-300 bg-white px-2 text-xs font-bold text-slate-700 transition-colors hover:bg-slate-50 disabled:opacity-50"
+          >
+            ♡ 行きたい
+          </button>
+        </div>
       </div>
     </Link>
   );
