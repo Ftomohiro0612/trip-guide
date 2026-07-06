@@ -19,6 +19,7 @@ import {
 import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
+import { isPilotCross } from "@/lib/crossings";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -168,7 +169,11 @@ export default async function PrefecturePage({ params }: Props) {
             {categoryCounts.map((c) => (
               <Link
                 key={c.id}
-                href={`/facilities?prefectures=${meta.id}&categories=${c.id}`}
+                href={
+                  isPilotCross(meta.id, c.id)
+                    ? `/prefecture/${meta.id}/category/${c.id}`
+                    : `/facilities?prefectures=${meta.id}&categories=${c.id}`
+                }
                 className="inline-flex items-center gap-1.5 bg-white border border-slate-200 hover:border-brand hover:text-brand rounded-full px-3 py-1.5 text-sm transition-colors"
               >
                 <CategoryIcon

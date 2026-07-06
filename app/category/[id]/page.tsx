@@ -13,6 +13,7 @@ import {
 import { categoryDescriptions } from "@/lib/descriptions";
 import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
+import { isPilotCross } from "@/lib/crossings";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -124,7 +125,7 @@ export default async function CategoryPage({ params }: Props) {
         {byPref.map((p) =>
           p.items.length === 0 ? null : (
             <section key={p.id} className="mt-10" aria-labelledby={`pref-${p.id}`}>
-              <div className="flex items-end justify-between mb-3">
+              <div className="flex flex-col gap-2 mb-3 sm:flex-row sm:items-end sm:justify-between">
                 <h2
                   id={`pref-${p.id}`}
                   className="text-xl font-bold text-slate-900 flex items-center gap-2"
@@ -135,12 +136,22 @@ export default async function CategoryPage({ params }: Props) {
                     {p.items.length}件
                   </span>
                 </h2>
-                <Link
-                  href={`/prefecture/${p.id}`}
-                  className="text-sm text-brand hover:text-brand-dark"
-                >
-                  {p.name}全体を見る →
-                </Link>
+                <div className="flex flex-wrap gap-x-4 gap-y-1">
+                  {isPilotCross(p.id, meta.id) && (
+                    <Link
+                      href={`/prefecture/${p.id}/category/${meta.id}`}
+                      className="text-sm text-brand hover:text-brand-dark"
+                    >
+                      {p.name}の{meta.name}だけ見る →
+                    </Link>
+                  )}
+                  <Link
+                    href={`/prefecture/${p.id}`}
+                    className="text-sm text-brand hover:text-brand-dark"
+                  >
+                    {p.name}全体を見る →
+                  </Link>
+                </div>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 {p.items.map((f) => (

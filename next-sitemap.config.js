@@ -1,3 +1,23 @@
+/* eslint-disable @typescript-eslint/no-require-imports */
+const fs = require("fs");
+const ts = require("typescript");
+
+require.extensions[".ts"] = (module, filename) => {
+  const source = fs.readFileSync(filename, "utf8");
+  const output = ts.transpileModule(source, {
+    compilerOptions: {
+      esModuleInterop: true,
+      jsx: ts.JsxEmit.ReactJSX,
+      module: ts.ModuleKind.CommonJS,
+      resolveJsonModule: true,
+      target: ts.ScriptTarget.ES2017,
+    },
+  }).outputText;
+  module._compile(output, filename);
+};
+
+const { getPilotCrossParams } = require("./lib/crossings.ts");
+
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
   siteUrl: process.env.SITE_URL || "https://trip-guide.net",
@@ -5,7 +25,20 @@ module.exports = {
   sitemapSize: 5000,
   changefreq: "weekly",
   priority: 0.7,
-  exclude: ["/server-sitemap.xml", "/legal/privacy", "/legal/terms"],
+  exclude: [
+    "/server-sitemap.xml",
+    "/legal/privacy",
+    "/legal/terms",
+    "/auth",
+    "/auth/*",
+    "/mypage",
+    "/mypage/*",
+    "/opengraph-image",
+    "/opengraph-image.png",
+    "/manifest.webmanifest",
+    "/terms",
+    "/privacy",
+  ],
   robotsTxtOptions: {
     policies: [
       {
@@ -16,6 +49,12 @@ module.exports = {
     additionalSitemaps: [],
   },
   additionalPaths: async (config) => {
+    const crossPaths = await Promise.all(
+      getPilotCrossParams().map(({ id, categoryId }) =>
+        config.transform(config, `/prefecture/${id}/category/${categoryId}`),
+      ),
+    );
+
     return [
       await config.transform(config, "/facilities"),
       await config.transform(config, "/events"),
@@ -33,11 +72,14 @@ module.exports = {
       await config.transform(config, "/events/aichi"),
       await config.transform(config, "/events/fukuoka"),
       await config.transform(config, "/events/hiroshima"),
+      ...crossPaths,
     ];
   },
   transform: async (config, path) => {
     let priority = config.priority;
     if (path === "/") priority = 1.0;
+    else if (/^\/prefecture\/[^/]+\/category\/[^/]+$/.test(path))
+      priority = 0.8;
     else if (path.startsWith("/prefecture/") || path.startsWith("/category/"))
       priority = 0.9;
     else if (path === "/events") priority = 0.85;
