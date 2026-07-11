@@ -21,24 +21,33 @@ export default function MypageHero({
   return (
     <section className="rounded-2xl bg-gradient-to-br from-sky-50 via-white to-amber-50 p-4 ring-1 ring-sky-100 sm:p-5">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 flex-wrap gap-2">
-          {kids.map((child) => (
+        <div className="flex min-w-0 items-center gap-2">
+          <div className="flex min-w-0 flex-wrap gap-2">
+            {kids.map((child) => (
+              <Link
+                key={child.id}
+                href={`#child-achievement-${child.id}`}
+                className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40"
+              >
+                <ChildAvatar
+                  childId={child.id}
+                  nickname={child.nickname}
+                  avatarUrl={child.avatarUrl}
+                  size="sm"
+                />
+                <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
+                <span className="text-xs text-slate-400">{child.age}歳</span>
+              </Link>
+            ))}
+          </div>
+          {kids.length > 0 && (
             <Link
-              key={child.id}
-              id={`child-achievement-${child.id}`}
-              href={`#child-achievement-${child.id}`}
-              className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40"
+              href="/mypage/children"
+              className="shrink-0 text-xs font-medium text-brand hover:underline"
             >
-              <ChildAvatar
-                childId={child.id}
-                nickname={child.nickname}
-                avatarUrl={child.avatarUrl}
-                size="sm"
-              />
-              <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
-              <span className="text-xs text-slate-400">{child.age}歳</span>
+              編集
             </Link>
-          ))}
+          )}
         </div>
         <Link
           href="/mypage/settings"

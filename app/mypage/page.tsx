@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import CategoryBar from "@/components/CategoryBar";
+import ChildAvatar from "@/components/ChildAvatar";
 import MypageHero from "@/components/MypageHero";
 import MonthlyBarChart, { type MonthData } from "@/components/MonthlyBarChart";
 import MonthlyDiffCard from "@/components/MonthlyDiffCard";
@@ -10,7 +12,7 @@ import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
-import { buildChildStats, buildFamilyStats } from "@/lib/mypage-stats";
+import { buildFamilyStats } from "@/lib/mypage-stats";
 import { createClient } from "@/lib/supabase/server";
 import {
   buildFamilyOutingMapData,
@@ -41,6 +43,11 @@ type VisitStat = {
 type ChildVisit = {
   child_id: string;
   visit_id: string;
+};
+
+type ChildCategorySummary = {
+  child: Child;
+  categories: { category: string; count: number }[];
 };
 
 type AchievementStats = {
@@ -140,6 +147,35 @@ function calcAge(birthYear: number, birthMonth: number): number {
     age -= 1;
   }
   return age;
+}
+
+function buildChildCategorySummaries(
+  children: Child[],
+  visits: VisitStat[],
+  childVisits: ChildVisit[],
+): ChildCategorySummary[] {
+  const childIds = new Set(children.map((child) => child.id));
+  const visitSlugById = new Map(visits.map((visit) => [visit.id, visit.facility_slug]));
+  const categoryCountsByChild = new Map<string, Map<string, number>>();
+
+  for (const childVisit of childVisits) {
+    if (!childIds.has(childVisit.child_id)) continue;
+    const facilitySlug = visitSlugById.get(childVisit.visit_id);
+    if (!facilitySlug) continue;
+    const category = categoryForSlug(facilitySlug);
+    const counts = categoryCountsByChild.get(childVisit.child_id) ?? new Map<string, number>();
+    counts.set(category, (counts.get(category) ?? 0) + 1);
+    categoryCountsByChild.set(childVisit.child_id, counts);
+  }
+
+  return children.map((child) => {
+    const counts = categoryCountsByChild.get(child.id) ?? new Map<string, number>();
+    const categories = Array.from(counts.entries())
+      .map(([category, count]) => ({ category, count }))
+      .sort(compareCategoryEntries)
+      .slice(0, 5);
+    return { child, categories };
+  });
 }
 
 function buildMonthlyData(visits: VisitStat[]): MonthData[] {
@@ -368,12 +404,6 @@ export default async function MypagePage() {
 
   const hasChildren = childRows.length > 0;
   const familyStats = buildFamilyStats(visits, new Date());
-  // 子ども別件数は家族総数を流用せず、visit_childrenのdistinct visit_idで算出する。
-  const childStats = buildChildStats(
-    childRows.map((child) => child.id),
-    childVisits,
-  );
-  void childStats;
   const achievementStats: AchievementStats = {
     wishlistCount: wishlistSlugRows.length,
     revisitCount: visits.filter((v) => v.family_revisit === "yes").length,
@@ -421,6 +451,11 @@ export default async function MypagePage() {
     avatarUrl: child.avatar_url ? avatarUrlByPath.get(child.avatar_url) ?? null : null,
   }));
   const isEmptyWithChildren = familyStats.totalVisitCount === 0 && hasChildren;
+  const childCategorySummaries = buildChildCategorySummaries(
+    childRows,
+    visits,
+    childVisits,
+  );
 
   return (
     <div className="mx-auto max-w-lg space-y-4 px-4 py-4 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-6 lg:space-y-0 lg:py-6">
@@ -446,7 +481,7 @@ export default async function MypagePage() {
       </section>
 
       {!hasChildren && (
-        <div className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-4">
+        <div data-mypage-section="child-profile-prompt" className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-4">
           <p className="text-sm font-semibold text-sky-900">子どもプロフィールを登録すると便利です</p>
           <p className="mt-1 text-xs leading-relaxed text-sky-700">ニックネームと生年月を登録すると、おでかけ記録に当時の年齢が自動でつきます。</p>
           <Link href="/mypage/children" className="mt-3 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
@@ -515,6 +550,83 @@ export default async function MypagePage() {
                   {hasMonthlyData && <div><p className="mb-2 text-xs text-slate-400">最近6ヶ月のおでかけ</p><MonthlyBarChart data={monthlyData} /></div>}
                 </>
               ) : <p className="text-sm text-slate-400">記録すると、ここに家族のあしあとがたまっていきます</p>}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <div data-mypage-section="children-likes" className="lg:col-start-2 lg:order-7">
+        {hasChildren && (
+          <section className="space-y-3">
+            <div>
+              <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
+              <p className="mt-1 text-xs leading-relaxed text-slate-400">
+                お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。家族のあしあと帳とは数え方が違うため件数が一致しないことがあります。
+              </p>
+            </div>
+            <div className="space-y-5 rounded-xl border border-slate-200 bg-white p-4">
+              {childCategorySummaries.map((summary) => (
+                <div
+                  key={summary.child.id}
+                  id={`child-achievement-${summary.child.id}`}
+                  className="scroll-mt-20"
+                >
+                  <div className="mb-2 flex items-center justify-between">
+                    <div className="flex min-w-0 items-center gap-2">
+                      <ChildAvatar
+                        childId={summary.child.id}
+                        nickname={summary.child.nickname}
+                        avatarUrl={
+                          summary.child.avatar_url
+                            ? avatarUrlByPath.get(summary.child.avatar_url) ?? null
+                            : null
+                        }
+                        size="sm"
+                      />
+                      <p className="truncate text-sm font-bold text-slate-800">
+                        {summary.child.nickname}
+                      </p>
+                    </div>
+                    <Link
+                      href={`/mypage/visits?child_id=${summary.child.id}`}
+                      className="text-xs text-brand hover:underline"
+                    >
+                      記録を見る ›
+                    </Link>
+                  </div>
+                  {summary.categories[0] &&
+                    summary.categories[0].category !== "その他" &&
+                    summary.categories[0].count >= 2 && (
+                      <p className="mb-2 text-sm text-slate-600">
+                        {summary.categories[0].category}がいちばん多いね
+                        <span className="font-bold text-brand">
+                          ({summary.categories[0].count}回)
+                        </span>
+                      </p>
+                    )}
+                  {summary.categories.length > 0 ? (
+                    <details>
+                      <summary className="inline-flex cursor-pointer list-none text-sm font-medium text-brand hover:underline [&::-webkit-details-marker]:hidden">
+                        カテゴリ内訳を見る
+                      </summary>
+                      <div className="mt-3 space-y-2">
+                        {summary.categories.map(({ category, count }) => (
+                          <CategoryBar
+                            key={category}
+                            category={category}
+                            count={count}
+                            max={summary.categories[0].count}
+                          />
+                        ))}
+                      </div>
+                    </details>
+                  ) : (
+                    <p className="text-sm text-slate-400">
+                      まだ子ども別の記録がありません
+                    </p>
+                  )}
+                </div>
+              ))}
             </div>
           </section>
         )}
