@@ -44,24 +44,29 @@ export function hasMeaningfulChildLikes(
   );
 }
 
-export function buildChildLikeRanking(
+function selectChildLikeCategoryGroups(
   categories: readonly ChildLikeCategory[],
-  limit = 5,
-): RankedChildLikeCategory[] {
+  limit: number,
+): ChildLikeCategory[] {
   if (!Number.isInteger(limit) || limit <= 0) return [];
 
-  const sorted = [...categories]
-    .filter(({ category }) => category !== "その他")
-    .sort(compareChildLikeCategories);
-  if (sorted.length === 0) return [];
-
+  const sorted = [...categories].sort(compareChildLikeCategories);
   const selected: ChildLikeCategory[] = [];
   for (let index = 0; index < sorted.length; ) {
-    const count = sorted[index].count;
-    const group: ChildLikeCategory[] = [];
-    while (index < sorted.length && sorted[index].count === count) {
-      group.push(sorted[index]);
-      index += 1;
+    const first = sorted[index];
+    const group: ChildLikeCategory[] = [first];
+    index += 1;
+
+    // 「その他」は順位・同率グループに含めず、常に単独で末尾に置く。
+    if (first.category !== "その他") {
+      while (
+        index < sorted.length &&
+        sorted[index].category !== "その他" &&
+        sorted[index].count === first.count
+      ) {
+        group.push(sorted[index]);
+        index += 1;
+      }
     }
 
     if (selected.length === 0 && group.length > limit) {
@@ -71,6 +76,25 @@ export function buildChildLikeRanking(
     if (selected.length + group.length > limit) break;
     selected.push(...group);
   }
+
+  return selected;
+}
+
+export function buildChildLikeCategoryBreakdown(
+  categories: readonly ChildLikeCategory[],
+  limit = 5,
+): ChildLikeCategory[] {
+  return selectChildLikeCategoryGroups(categories, limit);
+}
+
+export function buildChildLikeRanking(
+  categories: readonly ChildLikeCategory[],
+  limit = 5,
+): RankedChildLikeCategory[] {
+  const selected = selectChildLikeCategoryGroups(
+    categories.filter(({ category }) => category !== "その他"),
+    limit,
+  );
 
   let previousCount: number | null = null;
   let previousRank = 0;

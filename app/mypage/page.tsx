@@ -11,6 +11,7 @@ import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import {
+  buildChildLikeCategoryBreakdown,
   buildChildLikeRanking,
   compareChildLikeCategories,
   hasMeaningfulChildLikes,
@@ -205,8 +206,7 @@ function buildChildCategorySummaries(
     const categories = Array.from(counts.entries())
       .map(([category, count]) => ({ category, count }))
       .sort(compareChildLikeCategories);
-    const displayCategories = categories
-      .slice(0, 5);
+    const displayCategories = buildChildLikeCategoryBreakdown(categories);
     const stats = statsByChild.get(child.id) ?? {
       childId: child.id,
       visitCount: 0,
