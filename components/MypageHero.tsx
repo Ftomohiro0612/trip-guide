@@ -27,7 +27,7 @@ export default function MypageHero({
               <Link
                 key={child.id}
                 href={`#child-achievement-${child.id}`}
-                className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40"
+                className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ChildAvatar
                   childId={child.id}

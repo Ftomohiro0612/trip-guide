@@ -44,6 +44,22 @@ export function currentMonthKeyJst(now: Date): string {
   return monthKey(now);
 }
 
+export function recentMonthKeysJst(now: Date, count: number): string[] {
+  if (!Number.isInteger(count) || count < 0) {
+    throw new RangeError("月数は0以上の整数で指定してください");
+  }
+
+  const [yearText, monthText] = currentMonthKeyJst(now).split("-");
+  const currentMonthIndex = Number(yearText) * 12 + Number(monthText) - 1;
+
+  return Array.from({ length: count }, (_, index) => {
+    const monthIndex = currentMonthIndex - (count - 1 - index);
+    const year = Math.floor(monthIndex / 12);
+    const month = (monthIndex % 12) + 1;
+    return `${year}-${String(month).padStart(2, "0")}`;
+  });
+}
+
 export function monthKeyOfJst(iso: string): string {
   const date = new Date(iso);
   if (Number.isNaN(date.getTime())) throw new RangeError("無効なISO日時です");

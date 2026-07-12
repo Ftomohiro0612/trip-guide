@@ -12,7 +12,7 @@ import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
-import { buildFamilyStats } from "@/lib/mypage-stats";
+import { buildFamilyStats, recentMonthKeysJst } from "@/lib/mypage-stats";
 import { createClient } from "@/lib/supabase/server";
 import {
   buildFamilyOutingMapData,
@@ -178,7 +178,7 @@ function buildChildCategorySummaries(
   });
 }
 
-function buildMonthlyData(visits: VisitStat[]): MonthData[] {
+function buildMonthlyData(visits: VisitStat[], now: Date): MonthData[] {
   // 6ヶ月推移は「いつ行ったか」の可視化なのでvisited_on、ヒーローの今月だけcreated_atで集計する。
   const visitsByMonth = new Map<string, Map<string, number>>();
   for (const visit of visits) {
@@ -190,10 +190,7 @@ function buildMonthlyData(visits: VisitStat[]): MonthData[] {
     visitsByMonth.set(month, categoryCounts);
   }
 
-  const now = new Date();
-  return Array.from({ length: 6 }, (_, i) => {
-    const d = new Date(now.getFullYear(), now.getMonth() - (5 - i), 1);
-    const month = `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, "0")}`;
+  return recentMonthKeysJst(now, 6).map((month) => {
     const categories = Array.from(
       (visitsByMonth.get(month) ?? new Map<string, number>()).entries(),
     )
@@ -201,7 +198,7 @@ function buildMonthlyData(visits: VisitStat[]): MonthData[] {
       .sort(compareCategoryEntries);
     return {
       month,
-      label: `${d.getMonth() + 1}月`,
+      label: `${Number(month.slice(5, 7))}月`,
       count: categories.reduce((total, category) => total + category.count, 0),
       categories,
     };
@@ -244,15 +241,8 @@ export default async function MypagePage() {
     data: { user },
   } = await supabase.auth.getUser();
 
-  const [
-    { data: profile },
-    { data: children },
-    { data: visitStats },
-    { data: wishlistRows },
-  ] = await Promise.all([
-    user
-      ? supabase.from("profiles").select("display_name").eq("id", user.id).single()
-      : Promise.resolve({ data: null }),
+  const [{ data: children }, { data: visitStats }, { data: wishlistRows }] =
+    await Promise.all([
     supabase
       .from("children")
       .select("id, nickname, birth_year, birth_month, avatar_url")
@@ -403,7 +393,8 @@ export default async function MypagePage() {
     );
 
   const hasChildren = childRows.length > 0;
-  const familyStats = buildFamilyStats(visits, new Date());
+  const now = new Date();
+  const familyStats = buildFamilyStats(visits, now);
   const achievementStats: AchievementStats = {
     wishlistCount: wishlistSlugRows.length,
     revisitCount: visits.filter((v) => v.family_revisit === "yes").length,
@@ -412,7 +403,7 @@ export default async function MypagePage() {
     familyStats.totalVisitCount > 0 ||
     achievementStats.wishlistCount > 0;
 
-  const monthlyData = buildMonthlyData(visits);
+  const monthlyData = buildMonthlyData(visits, now);
   const hasMonthlyData = monthlyData.some((d) => d.count > 0);
   const visitedMapFacilities = buildVisitedPlacesMapData(visits);
   const familyMapPlaces = buildFamilyOutingMapData(visits, wishlistSlugs);
@@ -443,7 +434,6 @@ export default async function MypagePage() {
       (facility) => facility.visitCount === 1 && facility.lastVisited,
     ) ?? null;
 
-  void profile;
   const heroChildren = childRows.map((child) => ({
     id: child.id,
     nickname: child.nickname,
@@ -483,8 +473,11 @@ export default async function MypagePage() {
       {!hasChildren && (
         <div data-mypage-section="child-profile-prompt" className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-4">
           <p className="text-sm font-semibold text-sky-900">子どもプロフィールを登録すると便利です</p>
-          <p className="mt-1 text-xs leading-relaxed text-sky-700">ニックネームと生年月を登録すると、おでかけ記録に当時の年齢が自動でつきます。</p>
-          <Link href="/mypage/children" className="mt-3 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
+          <p className="mt-1 text-xs leading-relaxed text-sky-700">ニックネームと生年月を登録することで、おでかけ記録に「当時の年齢」が自動でつきます。本名・学校名は不要です。登録しなくてもおでかけ記録は使えます。</p>
+          <div className="mt-3 flex items-center gap-3">
+            <Link href="/mypage/children" className="inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
+            <Link href="/mypage/visits/new" className="text-xs text-sky-600 hover:underline">あとで登録する</Link>
+          </div>
         </div>
       )}
 
@@ -500,7 +493,7 @@ export default async function MypagePage() {
                 const thumbUrl = recentRecordThumbUrlByVisitId.get(visit.id) ?? null;
                 const revisitLabel = revisitLabels[visit.family_revisit] ?? "";
                 return (
-                  <Link key={visit.id} href={`/mypage/visits/${visit.id}`} className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 transition-colors hover:border-brand/40 hover:bg-slate-50">
+                  <Link key={visit.id} href={`/mypage/visits/${visit.id}`} className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
                     <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200">
                       {thumbUrl ? <Image src={thumbUrl} alt={`${visit.facility_name}の写真`} fill sizes="56px" className="object-cover" unoptimized /> : <span className="flex h-full w-full items-center justify-center text-2xl" aria-hidden="true">🗺️</span>}
                     </div>
@@ -646,7 +639,7 @@ export default async function MypagePage() {
           <section className="space-y-3">
             <div className="flex items-center justify-between gap-3"><h2 className="font-bold text-slate-800">📷 思い出の写真</h2><Link href="/mypage/visits" className="text-sm text-brand hover:underline">すべて見る →</Link></div>
             <div className="-mx-4 overflow-x-auto px-4 pb-1"><div className="flex w-max gap-2.5">{memoryPhotosWithUrls.map((photo) => (
-              <Link key={`${photo.visitId}-${photo.thumbPath}`} href={`/mypage/visits/${photo.visitId}`} className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200 sm:h-24 sm:w-24"><Image src={photo.thumbUrl} alt={`${photo.facilityName}の写真`} fill sizes="(min-width: 640px) 96px, 80px" className="object-cover" unoptimized /></Link>
+              <Link key={`${photo.visitId}-${photo.thumbPath}`} href={`/mypage/visits/${photo.visitId}`} className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-24 sm:w-24"><Image src={photo.thumbUrl} alt={`${photo.facilityName}の写真`} fill sizes="(min-width: 640px) 96px, 80px" className="object-cover" unoptimized /></Link>
             ))}</div></div>
           </section>
         )}
