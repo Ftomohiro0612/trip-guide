@@ -1,12 +1,16 @@
 "use client";
 
 import Link from "next/link";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
 import ChildRegistrationNudge from "@/components/ChildRegistrationNudge";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
+import {
+  storeVisitCompletion,
+  takeVisitPresetChildren,
+} from "@/lib/visit-flow-session";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
 } from "../VisitPhotoUploader";
@@ -52,15 +56,8 @@ type FacilitySuggestion = {
   prefecture: string;
 };
 
-type SaveCompleteInfo = {
-  fromSlug: string | null;
-  hasCoordinates: boolean;
-  noChild: boolean;
-};
-
 type VisitCompletionContext = {
   facilitySlug: string;
-  noChild: boolean;
 };
 
 type ReactionTag = {
@@ -183,9 +180,11 @@ function isBehaviorOtherTag(tag: ReactionTag): boolean {
 
 export default function NewVisitPage() {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const facilitySlugFromUrl = searchParams.get("facility") ?? "";
   const nameFromUrl = searchParams.get("name") ?? "";
   const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
+  const submissionLockedRef = useRef(false);
 
   const [facilityName, setFacilityName] = useState(nameFromUrl);
   const [facilitySlug, setFacilitySlug] = useState(facilitySlugFromUrl);
@@ -219,8 +218,6 @@ export default function NewVisitPage() {
   const [initializing, setInitializing] = useState(true);
   const [photoBusy, setPhotoBusy] = useState(false);
   const [error, setError] = useState<string | null>(null);
-  const [saveCompleteInfo, setSaveCompleteInfo] =
-    useState<SaveCompleteInfo | null>(null);
   const [createdVisitId, setCreatedVisitId] = useState<string | null>(null);
   const [createdVisitContext, setCreatedVisitContext] =
     useState<VisitCompletionContext | null>(null);
@@ -274,7 +271,13 @@ export default function NewVisitPage() {
               : null,
           })),
         );
-        setSelectedChildIds(childRows.map((child) => child.id));
+        const childIdSet = new Set(childRows.map((child) => child.id));
+        const presetChildIds = takeVisitPresetChildren();
+        setSelectedChildIds(
+          presetChildIds === null
+            ? childRows.map((child) => child.id)
+            : presetChildIds.filter((childId) => childIdSet.has(childId)),
+        );
       }
       setInitializing(false);
     }
@@ -284,6 +287,10 @@ export default function NewVisitPage() {
       active = false;
     };
   }, []);
+
+  useEffect(() => {
+    if (!loading) submissionLockedRef.current = false;
+  }, [loading]);
 
   useEffect(() => {
     const query = facilityName.trim();
@@ -366,41 +373,18 @@ export default function NewVisitPage() {
     }));
   }
 
-  async function checkFacilityHasCoordinates(slug: string): Promise<boolean> {
-    const trimmedSlug = slug.trim();
-    if (!trimmedSlug) return false;
-
-    const controller = new AbortController();
-    const timer = window.setTimeout(() => controller.abort(), 1500);
-
-    try {
-      const response = await fetch(
-        `/api/facilities/search?slug=${encodeURIComponent(trimmedSlug)}`,
-        { signal: controller.signal },
-      );
-      if (!response.ok) return false;
-      const data = (await response.json()) as { hasCoordinates?: unknown };
-      return data.hasCoordinates === true;
-    } catch {
-      return false;
-    } finally {
-      window.clearTimeout(timer);
-    }
-  }
-
-  async function finishAfterSave(context: VisitCompletionContext) {
+  function finishAfterSave(visitId: string) {
     setCreatedVisitId(null);
     setCreatedVisitContext(null);
     if (PHOTO_UPLOAD_ENABLED) {
       photoUploaderRef.current?.reset();
     }
-    const hasCoordinates = await checkFacilityHasCoordinates(context.facilitySlug);
-    setLoading(false);
-    setSaveCompleteInfo({
-      fromSlug: facilitySlugFromUrl || null,
-      hasCoordinates,
-      noChild: context.noChild,
+    storeVisitCompletion({
+      visitId,
+      entryMethod: "standard",
+      returnFacility: facilitySlugFromUrl || undefined,
     });
+    router.replace("/mypage/visits/complete");
   }
 
   async function uploadPhotosForVisit(
@@ -422,7 +406,8 @@ export default function NewVisitPage() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!canSubmit) return;
+    if (submissionLockedRef.current || !canSubmit) return;
+    submissionLockedRef.current = true;
 
     setLoading(true);
     setError(null);
@@ -430,10 +415,9 @@ export default function NewVisitPage() {
     if (createdVisitId) {
       const retryContext = createdVisitContext ?? {
         facilitySlug: facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName),
-        noChild: children.length === 0,
       };
       if (await uploadPhotosForVisit(createdVisitId, retryContext)) {
-        await finishAfterSave(retryContext);
+        finishAfterSave(createdVisitId);
       }
       return;
     }
@@ -457,7 +441,6 @@ export default function NewVisitPage() {
       facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName);
     const visitCompletionContext: VisitCompletionContext = {
       facilitySlug: savedFacilitySlug,
-      noChild: children.length === 0,
     };
 
     const { data: visit, error: visitError } = await supabase
@@ -542,45 +525,7 @@ export default function NewVisitPage() {
     if (!(await uploadPhotosForVisit(visit.id, visitCompletionContext))) {
       return;
     }
-    await finishAfterSave(visitCompletionContext);
-  }
-
-  if (saveCompleteInfo) {
-    const visitsHref = saveCompleteInfo.noChild
-      ? "/mypage/visits?no_child=1"
-      : "/mypage/visits";
-
-    return (
-      <div className="max-w-lg mx-auto px-4 py-16 flex flex-col items-center gap-6 text-center">
-        <span className="text-5xl">🎉</span>
-        <div>
-          <p className="text-xl font-bold text-slate-900">記録しました！</p>
-          <p className="text-sm text-slate-500 mt-1">
-            {saveCompleteInfo.hasCoordinates
-              ? "🗺️ 行った場所マップにピンが増えました"
-              : "おでかけの記録が増えました"}
-          </p>
-        </div>
-        <div className="w-full space-y-3">
-          <Link
-            href={visitsHref}
-            className="block w-full py-3 bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-sm rounded-xl transition-colors"
-          >
-            {saveCompleteInfo.hasCoordinates
-              ? "マップと履歴を見る"
-              : "おでかけ履歴を見る"}
-          </Link>
-          {saveCompleteInfo.fromSlug && (
-            <Link
-              href={`/facilities/${saveCompleteInfo.fromSlug}`}
-              className="block w-full py-3 bg-white border border-slate-200 text-slate-600 font-bold text-sm rounded-xl hover:bg-slate-50 transition-colors"
-            >
-              施設ページへ戻る
-            </Link>
-          )}
-        </div>
-      </div>
-    );
+    finishAfterSave(visit.id);
   }
 
   return (

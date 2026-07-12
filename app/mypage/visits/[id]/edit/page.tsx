@@ -1,11 +1,15 @@
 "use client";
 
 import Link from "next/link";
-import { useParams, useRouter } from "next/navigation";
+import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
+import {
+  readVisitEdit,
+  storeVisitCompletion,
+} from "@/lib/visit-flow-session";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
 } from "../../VisitPhotoUploader";
@@ -223,10 +227,19 @@ function isBehaviorOtherTag(tag: ReactionTag): boolean {
 }
 
 export default function EditVisitPage() {
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id?: string }>();
   const router = useRouter();
-  const visitId = params.id;
+  const searchParams = useSearchParams();
+  const [sessionEdit, setSessionEdit] = useState<ReturnType<typeof readVisitEdit>>(null);
+  const visitId = params.id ?? sessionEdit?.visitId ?? "";
+  const photoBatchIds = sessionEdit?.batchIds ??
+    (searchParams.get("photo_batch") ?? "").split(",").filter(Boolean);
   const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
+  const saveLockedRef = useRef(false);
+
+  useEffect(() => {
+    if (!params.id) queueMicrotask(() => setSessionEdit(readVisitEdit()));
+  }, [params.id]);
 
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -270,6 +283,7 @@ export default function EditVisitPage() {
   );
 
   useEffect(() => {
+    if (!visitId) return;
     let active = true;
     async function load() {
       const supabase = createClient();
@@ -501,6 +515,10 @@ export default function EditVisitPage() {
   }, [visitId]);
 
   useEffect(() => {
+    if (!saving) saveLockedRef.current = false;
+  }, [saving]);
+
+  useEffect(() => {
     const query = facilityName.trim();
     if (facilitySlug || query.length < 2) return;
 
@@ -572,7 +590,9 @@ export default function EditVisitPage() {
   }
 
   async function saveVisit(nextStatus?: VisitStatus) {
-    if (!canSubmit) return;
+    if (saveLockedRef.current || !canSubmit) return;
+    saveLockedRef.current = true;
+    const publishingDraft = visitStatus === "draft" && nextStatus === "published";
     setSaving(true);
     setError(null);
     const updatePayload: {
@@ -785,6 +805,15 @@ export default function EditVisitPage() {
       }
     }
 
+    if (publishingDraft) {
+      storeVisitCompletion({
+        visitId,
+        entryMethod: "photo_publish",
+        batchIds: photoBatchIds,
+      });
+      router.replace("/mypage/visits/complete");
+      return;
+    }
     router.push("/mypage/visits");
   }
 
@@ -813,6 +842,13 @@ export default function EditVisitPage() {
       >
         ← 履歴に戻る
       </Link>
+
+      {isDraft && (
+        <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm leading-relaxed text-amber-900">
+          <p className="font-bold">あと少しで記録が完成します</p>
+          <p className="mt-1">内容を確認し、子どもの紐付けは必要なときだけ選んで公開してください。</p>
+        </div>
+      )}
 
       <div>
         <div className="flex flex-wrap items-center gap-2">

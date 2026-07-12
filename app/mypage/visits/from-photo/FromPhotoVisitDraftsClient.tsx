@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
+import { storeVisitEdit } from "@/lib/visit-flow-session";
 import {
   MAX_PHOTOS_PER_VISIT,
   readPhotoGps,
@@ -734,9 +735,10 @@ export default function FromPhotoVisitDraftsClient({
       draftsWereReplaced = true;
       if (shouldSkipConfirmation(resolvedDrafts)) {
         setSaving(true);
-        const visitId = await persistDraft(resolvedDrafts[0], user.id);
+        const { visitId } = await persistDraft(resolvedDrafts[0], user.id);
         replaceDrafts([]);
-        router.push(`/mypage/visits/${visitId}/edit`);
+        storeVisitEdit({ visitId });
+        router.push("/mypage/visits/edit");
         return;
       }
       if (errors.length > 0) setError(Array.from(new Set(errors))[0]);
@@ -880,7 +882,10 @@ export default function FromPhotoVisitDraftsClient({
     );
   }
 
-  async function persistDraft(draft: VisitDraft, userId: string): Promise<string> {
+  async function persistDraft(
+    draft: VisitDraft,
+    userId: string,
+  ): Promise<{ visitId: string; createdDraft: boolean }> {
     const effectiveDraft = draft.createSeparate
       ? draft
       : (await resolveExistingMatches([draft], userId))[0];
@@ -935,7 +940,7 @@ export default function FromPhotoVisitDraftsClient({
         });
       }
 
-      return effectiveDraft.existingMatch.id;
+      return { visitId: effectiveDraft.existingMatch.id, createdDraft: false };
     }
 
     const selectedPhotos = selectedPhotosForDraft(effectiveDraft).slice(
@@ -958,7 +963,7 @@ export default function FromPhotoVisitDraftsClient({
           sortOrder: startOrder + index,
         });
       }
-      return effectiveDraft.existingMatch.id;
+      return { visitId: effectiveDraft.existingMatch.id, createdDraft: false };
     }
 
     const supabase = createClient();
@@ -1003,7 +1008,7 @@ export default function FromPhotoVisitDraftsClient({
       }
     }
 
-    return visit.id;
+    return { visitId: visit.id, createdDraft: true };
   }
 
   async function saveDrafts() {
@@ -1023,14 +1028,25 @@ export default function FromPhotoVisitDraftsClient({
       }
 
       const draftsToSave = selectedDrafts;
+      const createdDraftIds: string[] = [];
       let lastVisitId: string | null = null;
       for (const draft of draftsToSave) {
-        lastVisitId = await persistDraft(draft, user.id);
+        const result = await persistDraft(draft, user.id);
+        lastVisitId = result.visitId;
+        if (result.createdDraft) createdDraftIds.push(result.visitId);
       }
 
       replaceDrafts([]);
-      if (draftsToSave.length === 1 && lastVisitId) {
-        router.push(`/mypage/visits/${lastVisitId}/edit`);
+      if (createdDraftIds.length === 1) {
+        const createdId = createdDraftIds[0];
+        storeVisitEdit({ visitId: createdId, batchIds: createdDraftIds });
+        router.push("/mypage/visits/edit");
+      } else if (createdDraftIds.length > 1) {
+        storeVisitEdit({ visitId: createdDraftIds[0], batchIds: createdDraftIds });
+        router.push("/mypage/visits/from-photo/complete");
+      } else if (lastVisitId && draftsToSave.length === 1) {
+        storeVisitEdit({ visitId: lastVisitId });
+        router.push("/mypage/visits/edit");
       } else {
         router.push("/mypage/visits");
       }
