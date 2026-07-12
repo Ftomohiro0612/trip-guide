@@ -118,7 +118,7 @@ export default async function VisitsPage({
   searchParams: Promise<{
     no_child?: string;
     revisit?: string;
-    child_id?: string;
+    child?: string;
   }>;
 }) {
   const params = await searchParams;
@@ -128,16 +128,22 @@ export default async function VisitsPage({
   } = await supabase.auth.getUser();
 
   const filterRevisit = params.revisit === "yes";
-  const filterChildId = params.child_id ?? null;
+  const filterChildSlot = /^[1-9]\d{0,2}$/.test(params.child ?? "")
+    ? Number(params.child)
+    : null;
+  let filterChildId: string | null = null;
   let filterChildNickname: string | null = null;
 
-  if (filterChildId && user) {
-    const { data: filterChild } = await supabase
+  if (filterChildSlot && user) {
+    const { data: orderedChildren } = await supabase
       .from("children")
-      .select("nickname")
-      .eq("id", filterChildId)
+      .select("id, nickname")
       .eq("user_id", user.id)
-      .maybeSingle();
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: true })
+      .order("id", { ascending: true });
+    const filterChild = orderedChildren?.[filterChildSlot - 1];
+    filterChildId = typeof filterChild?.id === "string" ? filterChild.id : null;
     filterChildNickname =
       typeof filterChild?.nickname === "string" ? filterChild.nickname : null;
   }

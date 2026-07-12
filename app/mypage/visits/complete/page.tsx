@@ -90,7 +90,7 @@ export default function VisitCompletePage() {
             </>
           )}
           {data.primaryCopy?.showLikesLink && (
-            <Link href="/mypage" className="mt-3 inline-flex rounded-lg px-2 py-1 text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+            <Link href={`/mypage#child-likes-${data.displayChildSlot ?? 1}`} className="mt-3 inline-flex rounded-lg px-2 py-1 text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
               「好き」のヒントを見る
             </Link>
           )}

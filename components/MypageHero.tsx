@@ -4,6 +4,7 @@ import type { FamilyStats } from "@/lib/mypage-stats";
 
 type HeroChild = {
   id: string;
+  anchorId: string;
   nickname: string;
   age: number;
   avatarUrl: string | null;
@@ -26,7 +27,7 @@ export default function MypageHero({
             {kids.map((child) => (
               <Link
                 key={child.id}
-                href={`#child-achievement-${child.id}`}
+                href={`#${child.anchorId}`}
                 className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ChildAvatar

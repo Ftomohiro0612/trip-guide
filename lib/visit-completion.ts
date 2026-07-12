@@ -1,4 +1,8 @@
 import { buildChildStats, type ChildVisitLink } from "@/lib/mypage-stats";
+import {
+  hasMeaningfulChildLikes,
+  normalizeChildLikeCategory,
+} from "@/lib/child-likes";
 
 export type CompletionChild = {
   id: string;
@@ -52,11 +56,13 @@ export function buildCompletionSummary({
       const categories = new Map<string, number>();
       for (const visit of visits) {
         if (!visit.childIds.includes(child.id)) continue;
-        const category = categoryForSlug(visit.facilitySlug);
+        const category = normalizeChildLikeCategory(
+          categoryForSlug(visit.facilitySlug),
+        );
         categories.set(category, (categories.get(category) ?? 0) + 1);
       }
-      const meaningfulLikes = Array.from(categories.entries()).some(
-        ([category, count]) => category !== "その他" && count >= 2,
+      const meaningfulLikes = hasMeaningfulChildLikes(
+        Array.from(categories, ([category, count]) => ({ category, count })),
       );
       return {
         ...child,
@@ -66,9 +72,25 @@ export function buildCompletionSummary({
     })
     .sort((a, b) => a.sortOrder - b.sortOrder || a.nickname.localeCompare(b.nickname, "ja"));
 
+  const rankingReached = progress.find(
+    (child) => child.visitCount === 10 && child.meaningfulLikes,
+  );
   const reached = progress.find((child) => child.visitCount === 3);
   const approaching = progress
     .filter((child) => child.visitCount > 0 && child.visitCount < 3)
+    .sort(
+      (a, b) =>
+        b.visitCount - a.visitCount ||
+        a.sortOrder - b.sortOrder ||
+        a.nickname.localeCompare(b.nickname, "ja"),
+    )[0];
+  const rankingApproaching = progress
+    .filter(
+      (child) =>
+        child.visitCount >= 4 &&
+        child.visitCount <= 9 &&
+        child.meaningfulLikes,
+    )
     .sort(
       (a, b) =>
         b.visitCount - a.visitCount ||
@@ -79,7 +101,8 @@ export function buildCompletionSummary({
   return {
     familyTotal: visits.length,
     children: progress,
-    primaryChild: reached ?? approaching ?? null,
+    primaryChild:
+      rankingReached ?? reached ?? approaching ?? rankingApproaching ?? progress[0] ?? null,
   };
 }
 
@@ -108,6 +131,27 @@ export function childProgressCopy(child: CompletionChildProgress): {
           hint: null,
           showLikesLink: false,
         };
+  }
+  if (!child.meaningfulLikes) {
+    return {
+      progress: `${child.nickname}の記録が${child.visitCount}件になりました`,
+      hint: null,
+      showLikesLink: false,
+    };
+  }
+  if (child.visitCount >= 4 && child.visitCount <= 9) {
+    return {
+      progress: `${child.nickname}の記録が${child.visitCount}件になりました`,
+      hint: `あと${10 - child.visitCount}件で${child.nickname}の「好き」ランキング`,
+      showLikesLink: true,
+    };
+  }
+  if (child.visitCount === 10) {
+    return {
+      progress: `${child.nickname}の記録が10件たまりました。ランキングが出せます`,
+      hint: null,
+      showLikesLink: true,
+    };
   }
   return {
     progress: `${child.nickname}の記録が${child.visitCount}件になりました`,
