@@ -57,16 +57,20 @@ export default function Analytics() {
                 return maskText(value);
               }
             }
+            function hasOwn(value, key) {
+              return Object.prototype.hasOwnProperty.call(value, key);
+            }
             function sanitizedBody(body) {
-              if (typeof body === 'string') return maskText(body);
+              if (body == null) return { ok: true, body: body };
+              if (typeof body === 'string') return { ok: true, body: maskText(body) };
               if (body instanceof URLSearchParams) {
                 var params = new URLSearchParams();
                 body.forEach(function(paramValue, key) {
-                  params.append(key, maskText(paramValue));
+                  params.append(maskText(key), maskText(paramValue));
                 });
-                return params;
+                return { ok: true, body: params };
               }
-              return body;
+              return { ok: false, body: undefined };
             }
             function bodyTextForInspection(body) {
               if (typeof body === 'string') return body;
@@ -92,8 +96,11 @@ export default function Analytics() {
               var originalSendBeacon = navigator.sendBeacon && navigator.sendBeacon.bind(navigator);
               if (originalSendBeacon) {
                 navigator.sendBeacon = function(url, data) {
+                  if (!isGa4CollectUrl(url)) return originalSendBeacon(url, data);
+                  var sanitized = sanitizedBody(data);
+                  if (!sanitized.ok) return true;
                   if (isUnmarkedPageView(url, data)) return true;
-                  return originalSendBeacon(sanitizedCollectUrl(url), sanitizedBody(data));
+                  return originalSendBeacon(sanitizedCollectUrl(url), sanitized.body);
                 };
               }
 
@@ -102,12 +109,15 @@ export default function Analytics() {
                 window.fetch = function(input, init) {
                   var isRequest = typeof Request !== 'undefined' && input instanceof Request;
                   var url = isRequest ? input.url : String(input);
-                  var body = init && init.body;
-                  if (isUnmarkedPageView(url, body)) {
-                    return Promise.resolve(new Response(null, { status: 204, statusText: 'No Content' }));
-                  }
                   if (isGa4CollectUrl(url)) {
-                    var nextInit = init ? Object.assign({}, init, { body: sanitizedBody(init.body) }) : init;
+                    var hasInitBody = !!(init && hasOwn(init, 'body'));
+                    var body = hasInitBody ? init.body : undefined;
+                    var sanitized = sanitizedBody(body);
+                    if ((isRequest && input.body !== null) || !sanitized.ok || isUnmarkedPageView(url, body)) {
+                      return Promise.resolve(new Response(null, { status: 204, statusText: 'No Content' }));
+                    }
+                    var nextInit = init ? Object.assign({}, init) : init;
+                    if (hasInitBody) nextInit.body = sanitized.body;
                     if (isRequest) {
                       return originalFetch(new Request(sanitizedCollectUrl(input.url), input), nextInit);
                     }
@@ -125,8 +135,11 @@ export default function Analytics() {
                 return originalOpen.apply(this, arguments);
               };
               XMLHttpRequest.prototype.send = function(body) {
+                if (!isGa4CollectUrl(this.__memoripGa4Url)) return originalSend.call(this, body);
+                var sanitized = sanitizedBody(body);
+                if (!sanitized.ok) return;
                 if (isUnmarkedPageView(this.__memoripGa4Url, body)) return;
-                return originalSend.call(this, sanitizedBody(body));
+                return originalSend.call(this, sanitized.body);
               };
 
               var imageSrc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
