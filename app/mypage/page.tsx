@@ -17,6 +17,7 @@ import {
   hasMeaningfulChildLikes,
   normalizeChildLikeCategory,
   type ChildLikeCategory,
+  type ChildLikeRankingEntry,
   type RankedChildLikeCategory,
 } from "@/lib/child-likes";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
@@ -66,7 +67,7 @@ type ChildCategorySummary = {
   stage: ChildStats["stage"];
   meaningful: boolean;
   categories: ChildLikeCategory[];
-  ranking: RankedChildLikeCategory[];
+  ranking: ChildLikeRankingEntry[];
 };
 
 type AchievementStats = {
@@ -308,6 +309,13 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
     );
   }
 
+  const rankedCategories = summary.ranking.filter(
+    (category): category is RankedChildLikeCategory => "rank" in category,
+  );
+  const otherCategory = summary.ranking.find(
+    ({ category }) => category === "その他",
+  );
+
   return (
     <div className="space-y-3">
       <div className="rounded-lg bg-amber-50 px-3 py-2.5">
@@ -319,7 +327,7 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
         </p>
       </div>
       <ol className="space-y-2" aria-label={`${summary.child.nickname}の好きランキング`}>
-        {summary.ranking.map(({ category, count, rank }) => (
+        {rankedCategories.map(({ category, count, rank }) => (
           <li
             key={category}
             className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
@@ -336,6 +344,20 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
           </li>
         ))}
       </ol>
+      {otherCategory && (
+        <div
+          className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
+          aria-label={`その他 ${otherCategory.count}回`}
+        >
+          <span className="w-9 shrink-0" aria-hidden="true" />
+          <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
+            その他
+          </span>
+          <span className="shrink-0 text-sm font-bold tabular-nums text-brand">
+            {otherCategory.count}回
+          </span>
+        </div>
+      )}
     </div>
   );
 }
