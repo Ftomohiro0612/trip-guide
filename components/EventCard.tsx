@@ -13,7 +13,7 @@ export default function EventCard({
   showPrefecture = true,
   showFacilityLink = true,
 }: EventCardProps) {
-  const { event, facilityName, facilitySlug, prefectureLabel } = view;
+  const { event, facilitySlug, venueName, prefectureLabel } = view;
   const officialLinkLabel = isPdfOfficialUrl(event.official_url)
     ? "公式PDFを見る"
     : "公式で詳細を見る";
@@ -42,6 +42,7 @@ export default function EventCard({
       className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm shadow-slate-100 sm:p-5"
       data-event-card
       data-event-id={event.id}
+      data-event-type={event.event_type ?? "unclassified"}
       data-recommended-for={event.recommended_for_tags.join(",")}
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-start sm:justify-between">
@@ -52,9 +53,9 @@ export default function EventCard({
                 {prefectureLabel}
               </span>
             ) : null}
-            {showFacilityLink && facilitySlug && facilityName ? (
+            {showFacilityLink && venueName ? (
               <span className="text-sm font-bold text-slate-700">
-                {facilityName}
+                {venueName}
               </span>
             ) : showFacilityLink ? (
               <span className="text-sm font-bold text-slate-500">
@@ -148,7 +149,7 @@ export default function EventCard({
           >
             施設ページを見る →
           </Link>
-        ) : showFacilityLink ? (
+        ) : showFacilityLink && event.facility_id !== null ? (
           <span className="text-sm font-bold text-slate-400">
             施設ページ確認中
           </span>

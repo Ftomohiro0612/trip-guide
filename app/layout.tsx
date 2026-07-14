@@ -1,9 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Noto_Sans_JP } from "next/font/google";
+import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import { WishlistProvider } from "@/components/WishlistProvider";
+import {
+  getFeatureHubVisibilityScript,
+  SUMMER_2026_HUB_CONFIG,
+} from "@/lib/feature-hubs";
 import "./globals.css";
 
 const notoSansJP = Noto_Sans_JP({
@@ -105,6 +110,13 @@ export default function RootLayout({
           <Footer />
         </WishlistProvider>
         <Analytics />
+        <Script
+          id="summer-2026-runtime-visibility"
+          strategy="beforeInteractive"
+          dangerouslySetInnerHTML={{
+            __html: getFeatureHubVisibilityScript(SUMMER_2026_HUB_CONFIG),
+          }}
+        />
       </body>
     </html>
   );

@@ -5,7 +5,7 @@ import HeaderAuthButton from "@/components/HeaderAuthButton";
 export default function Header() {
   return (
     <header className="sticky top-0 z-30 bg-white/90 backdrop-blur border-b border-slate-200">
-      <div className="mx-auto max-w-6xl px-4 h-14 flex items-center justify-between">
+      <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-2 px-3 sm:px-4">
         <Link href="/" className="flex items-center">
           <Image
             src="/logo/logo-ja-header.png"
@@ -13,7 +13,7 @@ export default function Header() {
             width={243}
             height={64}
             priority
-            className="h-8 w-auto"
+            className="h-7 w-auto sm:h-8"
           />
         </Link>
         <div className="flex items-center gap-2 sm:gap-4">
@@ -36,13 +36,55 @@ export default function Header() {
             >
               <span aria-hidden>🆓 </span>無料で遊べる
             </Link>
+            <span
+              data-seasonal-slot="summer-2026"
+              data-seasonal-device="desktop"
+              className="grid"
+            >
+              <Link
+                href="/events"
+                data-seasonal-panel="summer-2026"
+                data-seasonal-fallback="summer-2026"
+                data-seasonal-layout="inline-flex"
+                className="items-center rounded-md px-2 py-1.5 transition-colors hover:bg-violet-50 hover:text-violet-600 sm:px-3"
+              >
+                <span aria-hidden>🎪 </span>イベント一覧
+              </Link>
+              <Link
+                href="/events/summer"
+                data-seasonal-panel="summer-2026"
+                data-seasonal-hub="summer-2026"
+                data-seasonal-layout="inline-flex"
+                className="items-center rounded-md bg-indigo-50 px-2 py-1.5 font-bold text-indigo-700 transition-colors hover:bg-indigo-100 sm:px-3"
+              >
+                🎆 夏祭り・花火
+              </Link>
+            </span>
+          </nav>
+          <span
+            data-seasonal-slot="summer-2026"
+            data-seasonal-device="mobile"
+            className="grid sm:hidden"
+          >
             <Link
               href="/events"
-              className="px-2 sm:px-3 py-1.5 rounded-md hover:bg-violet-50 hover:text-violet-600 transition-colors"
+              data-seasonal-panel="summer-2026"
+              data-seasonal-fallback="summer-2026"
+              data-seasonal-layout="inline-flex"
+              className="min-h-11 items-center justify-center whitespace-nowrap rounded-full bg-violet-50 px-2.5 py-1.5 text-[11px] font-bold text-violet-700"
             >
-              <span aria-hidden>🎪 </span>イベント一覧
+              🎪 イベント
             </Link>
-          </nav>
+            <Link
+              href="/events/summer"
+              data-seasonal-panel="summer-2026"
+              data-seasonal-hub="summer-2026"
+              data-seasonal-layout="inline-flex"
+              className="min-h-11 items-center justify-center whitespace-nowrap rounded-full bg-indigo-50 px-2.5 py-1.5 text-[11px] font-bold text-indigo-700"
+            >
+              🎆 夏祭り・花火
+            </Link>
+          </span>
           <HeaderAuthButton />
         </div>
       </div>

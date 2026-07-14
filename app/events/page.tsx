@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
+import SummerSeasonalCta from "@/components/SummerSeasonalCta";
 import {
   eventPrefectures,
   getBuildDateString,
@@ -58,7 +59,7 @@ export default function EventsIndexPage() {
           </nav>
           <p className="text-sm font-bold text-brand">公式確認済みイベント</p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            子どもと行けるイベントを、エリアや“好き”から探す
+            子どもと行けるイベントを、エリア・種類・“好き”から探す
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
             公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。
@@ -67,6 +68,8 @@ export default function EventsIndexPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+        <SummerSeasonalCta placement="events" />
+
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
             const meta = getPrefectureMeta(prefectureId);
@@ -110,6 +113,7 @@ export default function EventsIndexPage() {
           <EventFilterBar
             views={eventViews}
             prefectureOptions={prefectureOptions}
+            showEventTypeFilter
           />
         </div>
       </div>

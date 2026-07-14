@@ -29,6 +29,56 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Seasonal navigation is fail-closed. The beforeInteractive guard enables it
+   before first paint only while the shared JST interval is active. */
+[data-seasonal-hub="summer-2026"] {
+  display: none !important;
+}
+
+html[data-summer-2026-active="true"]
+  [data-seasonal-hub="summer-2026"][data-seasonal-layout="block"] {
+  display: block !important;
+}
+
+html[data-summer-2026-active="true"]
+  [data-seasonal-hub="summer-2026"][data-seasonal-layout="inline-flex"] {
+  display: inline-flex !important;
+}
+
+[data-seasonal-slot="summer-2026"] > [data-seasonal-panel="summer-2026"] {
+  grid-area: 1 / 1;
+}
+
+[data-seasonal-slot="summer-2026"]
+  > [data-seasonal-panel="summer-2026"][data-seasonal-layout="block"] {
+  display: block !important;
+}
+
+[data-seasonal-slot="summer-2026"]
+  > [data-seasonal-panel="summer-2026"][data-seasonal-layout="inline-flex"] {
+  display: inline-flex !important;
+}
+
+[data-seasonal-slot="summer-2026"]
+  > [data-seasonal-panel="summer-2026"][data-seasonal-hub="summer-2026"] {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+html[data-summer-2026-active="true"]
+  [data-seasonal-slot="summer-2026"]
+  > [data-seasonal-panel="summer-2026"][data-seasonal-hub="summer-2026"] {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+html[data-summer-2026-active="true"]
+  [data-seasonal-slot="summer-2026"]
+  > [data-seasonal-panel="summer-2026"][data-seasonal-fallback="summer-2026"] {
+  pointer-events: none;
+  visibility: hidden;
+}
+
 /* Skip link — visible on focus only */
 .skip-link {
   position: absolute;
