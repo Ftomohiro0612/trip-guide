@@ -58,6 +58,7 @@ module.exports = {
     return [
       await config.transform(config, "/facilities"),
       await config.transform(config, "/events"),
+      await config.transform(config, "/events/summer"),
       await config.transform(config, "/events/tokyo"),
       await config.transform(config, "/events/kanagawa"),
       await config.transform(config, "/events/yamanashi"),
@@ -82,6 +83,7 @@ module.exports = {
       priority = 0.8;
     else if (path.startsWith("/prefecture/") || path.startsWith("/category/"))
       priority = 0.9;
+    else if (path === "/events/summer") priority = 0.9;
     else if (path === "/events") priority = 0.85;
     else if (path.startsWith("/events/")) priority = 0.75;
     else if (path === "/facilities") priority = 0.8;

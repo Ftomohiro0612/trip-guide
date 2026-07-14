@@ -67,6 +67,21 @@ export default function EventsIndexPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+        <Link
+          href="/events/summer"
+          data-seasonal-hub="summer-2026"
+          data-seasonal-layout="block"
+          className="mb-8 rounded-2xl border border-indigo-200 bg-gradient-to-r from-indigo-950 to-violet-800 p-5 text-white shadow-sm sm:p-6"
+        >
+          <span className="text-xs font-bold text-amber-200">2026年夏の特集</span>
+          <span className="mt-1 block text-xl font-bold sm:text-2xl">
+            🎆 夏祭り・花火大会を開催日の近い順から探す
+          </span>
+          <span className="mt-2 block text-sm text-indigo-100">
+            東京・神奈川・千葉・埼玉の対象イベントだけを掲載 →
+          </span>
+        </Link>
+
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
             const meta = getPrefectureMeta(prefectureId);

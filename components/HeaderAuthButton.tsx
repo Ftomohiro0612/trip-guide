@@ -35,9 +35,10 @@ export default function HeaderAuthButton() {
     return (
       <Link
         href="/mypage"
-        className="text-sm font-medium px-3 py-1.5 rounded-lg bg-brand/10 text-brand"
+        aria-label="マイページ"
+        className="rounded-lg bg-brand/10 px-2.5 py-1.5 text-sm font-medium text-brand sm:px-3"
       >
-        👤 マイページ
+        👤 <span className="hidden md:inline">マイページ</span>
       </Link>
     );
   }
@@ -45,7 +46,7 @@ export default function HeaderAuthButton() {
   return (
     <Link
       href="/auth/login"
-      className="text-sm font-medium px-3 py-1.5 rounded-lg border border-slate-200 text-slate-600 hover:bg-slate-50 transition-colors"
+      className="whitespace-nowrap rounded-lg border border-slate-200 px-2.5 py-1.5 text-xs font-medium text-slate-600 transition-colors hover:bg-slate-50 sm:px-3 sm:text-sm"
     >
       ログイン
     </Link>

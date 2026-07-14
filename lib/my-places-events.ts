@@ -50,7 +50,11 @@ export function getMyPlacesEvents({
   );
 
   const candidates: MyPlacesEvent[] = visibleEvents.flatMap((event) => {
-    if (seenEventIds.has(event.id) || !targetFacilityIds.has(event.facility_id)) {
+    if (
+      event.facility_id === null ||
+      seenEventIds.has(event.id) ||
+      !targetFacilityIds.has(event.facility_id)
+    ) {
       return [];
     }
     const facility = facilityById.get(event.facility_id);

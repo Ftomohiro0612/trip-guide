@@ -25,7 +25,7 @@ export function BreadcrumbJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonStringify(data) }}
     />
   );
 }
@@ -38,7 +38,7 @@ export function JsonLd({ data }: JsonLdProps) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonStringify(data) }}
     />
   );
 }
@@ -74,7 +74,11 @@ export function ItemListJsonLd({
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: safeJsonStringify(data) }}
     />
   );
+}
+
+function safeJsonStringify(value: unknown): string {
+  return JSON.stringify(value).replace(/</gu, "\\u003c");
 }
