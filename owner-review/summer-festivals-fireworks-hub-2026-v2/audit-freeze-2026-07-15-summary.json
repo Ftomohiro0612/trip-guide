@@ -1,0 +1,71 @@
+{
+  "candidate": {
+    "branch": "codex/summer-festivals-fireworks-hub-2026-v1-release",
+    "commit": "386fad7b9abbec79e262f0f21320fb02c9cce310",
+    "base": "1725f4459e8a0b876169de4349a68507ecf7b25e",
+    "commits_from_base": 1,
+    "previous_candidate_is_ancestor": false
+  },
+  "audit": {
+    "today": "2026-07-15",
+    "base_events": 766,
+    "new_events": 41,
+    "existing_classifications": 16,
+    "adopted_candidates": 57,
+    "type_counts": {
+      "fireworks": 24,
+      "summer_festival": 24,
+      "summer_tradition": 3,
+      "night_outing": 6
+    },
+    "prefecture_type_counts": {
+      "tokyo": { "fireworks": 6, "summer_festival": 8, "summer_tradition": 1, "night_outing": 1, "total": 16 },
+      "kanagawa": { "fireworks": 6, "summer_festival": 5, "summer_tradition": 1, "night_outing": 3, "total": 15 },
+      "chiba": { "fireworks": 6, "summer_festival": 5, "summer_tradition": 0, "night_outing": 1, "total": 12 },
+      "saitama": { "fireworks": 6, "summer_festival": 6, "summer_tradition": 1, "night_outing": 1, "total": 14 }
+    },
+    "main_ratio_percent": 84.2,
+    "night_ratio_percent": 10.5,
+    "null_facility_events": 41,
+    "occurrence_dates_events": 9,
+    "free_filter_events": 23,
+    "no_reservation_filter_events": 25,
+    "hero_pool": 12,
+    "max_end_date": "2026-09-27",
+    "ends_at": "2026-09-28T00:00:00+09:00",
+    "next_source_review_due": "2026-07-16",
+    "warnings": 0,
+    "errors": 0
+  },
+  "freeze": {
+    "today": "2026-07-15",
+    "freeze_check": true,
+    "warnings": 0,
+    "errors": 0
+  },
+  "rows_due_on_2026_07_15": [
+    {
+      "id": "evt-326-202607-01",
+      "title": "うえの夏まつり2026",
+      "previous_source_checked_at": "2026-07-14",
+      "source_checked_at": "2026-07-15",
+      "official_url": "https://enjoy.ueno.or.jp/summer2026/",
+      "official_update_url": "https://x.com/uenokanko/status/2076876132469924111",
+      "cancellation": false,
+      "postponement": false,
+      "date_change": false,
+      "next_due_at": "2026-07-16"
+    }
+  ],
+  "commands": {
+    "events_summer_audit": "PASS",
+    "events_summer_freeze": "PASS",
+    "events_validate": "PASS",
+    "typescript": "PASS",
+    "lint": "PASS_WITH_1_PREEXISTING_WARNING",
+    "build": "PASS_2279_PAGES",
+    "diff_check": "PASS",
+    "tests": "PASS_12_OF_12",
+    "vercel_preview": "READY"
+  }
+}

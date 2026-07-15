@@ -1,0 +1,41 @@
+Summer Festivals & Fireworks Hub 2026 v1 — Codex Diff Audit
+
+Candidate: 386fad7b9abbec79e262f0f21320fb02c9cce310
+Parent: 1725f4459e8a0b876169de4349a68507ecf7b25e
+Commits from base: 1
+Previous candidate 440a7b1b55ddddb922a9a96ecfd02bcd7c2757e8 is ancestor: NO
+Product changed files: 23
+Review Markdown in product diff: 0
+public/sitemap-0.xml in product diff: 0
+public/sitemap.xml in product diff: 0
+public/robots.txt in product diff: 0
+data/events_data.json blob: efd60996848143cc7f4e6f54c1584307b417fbe7 (unchanged)
+git diff --check: PASS
+Product worktree after push: clean
+Local product SHA equals remote product SHA: YES
+Vercel Preview: Ready
+
+Product allowlist:
+app/events/page.tsx
+app/events/summer/page.tsx
+app/globals.css
+app/layout.tsx
+app/page.tsx
+components/EventCard.tsx
+components/EventFilterBar.tsx
+components/Header.tsx
+components/HeaderAuthButton.tsx
+components/JsonLd.tsx
+components/SummerEventExplorer.tsx
+components/SummerSeasonalCta.tsx
+data/summer_events_2026.json
+lib/event-filter.ts
+lib/events.ts
+lib/feature-hub-runtime.ts
+lib/feature-hubs.ts
+lib/my-places-events.ts
+lib/summer-event-hub.ts
+next-sitemap.config.js
+package.json
+scripts/test-summer-hub.mjs
+scripts/validate-events.mjs

@@ -1,0 +1,14 @@
+TAP result: PASS — 12 tests, 0 failures
+
+1. PASS — Hero selection independently keeps four fireworks and four festivals across dates
+2. PASS — Hero selection falls back within each category as approved events end
+3. PASS — Hero selection does not fill a short category from the other category
+4. PASS — non-contiguous occurrence dates become separate Event entries
+5. PASS — continuous events retain their true start and end dates
+6. PASS — feature hub hard-stops exactly at endsAt
+7. PASS — generic event type filters match the frozen candidate counts
+8. PASS — generic event types are OR while filter groups combine with AND
+9. PASS — unclassified legacy events remain only when no event type is selected
+10. PASS — generic event pagination slices 562 items on first, second, and final pages
+11. PASS — 24 fireworks and 24 festivals paginate as 20 plus 4
+12. PASS — combined prefecture, type, condition, and preference filters keep correct pages
