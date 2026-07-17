@@ -82,6 +82,10 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   ehime: "愛媛県",
   tokushima: "徳島県",
   kochi: "高知県",
+  hokkaido: "北海道",
+  aomori: "青森県",
+  akita: "秋田県",
+  miyagi: "宮城県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

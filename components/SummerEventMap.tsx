@@ -41,6 +41,10 @@ const PREFECTURE_COLORS: Record<string, string> = {
   ehime: "#2563eb",
   tokushima: "#7e22ce",
   kochi: "#15803d",
+  hokkaido: "#0369a1",
+  aomori: "#047857",
+  akita: "#b45309",
+  miyagi: "#7c3aed",
 };
 
 const PRECISION_LABELS = {

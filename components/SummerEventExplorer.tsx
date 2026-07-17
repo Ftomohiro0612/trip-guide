@@ -47,6 +47,10 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "ehime", label: "愛媛" },
   { id: "tokushima", label: "徳島" },
   { id: "kochi", label: "高知" },
+  { id: "hokkaido", label: "北海道" },
+  { id: "aomori", label: "青森" },
+  { id: "akita", label: "秋田" },
+  { id: "miyagi", label: "宮城" },
 ];
 
 const EVENT_TYPES: {
