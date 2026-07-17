@@ -43,6 +43,8 @@ const TYPE_LABELS: Record<SummerEventType, string> = {
   night_outing: "夜のおでかけ",
 };
 
+const SUMMER_HERO_TITLE = "全国の夏祭り・花火大会2026";
+
 export default async function SummerEventsPage({ searchParams }: Props) {
   await connection();
   const query = await searchParams;
@@ -64,6 +66,9 @@ export default async function SummerEventsPage({ searchParams }: Props) {
       event.event_type === "fireworks" ||
       event.event_type === "summer_festival",
   ).length;
+  const prefectureCount = new Set(
+    visibleEvents.map((event) => event.prefecture),
+  ).size;
 
   const eventListJsonLd = buildSummerEventListJsonLd(
     views.flatMap((view) =>
@@ -110,7 +115,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
           </nav>
           <p className="text-sm font-bold text-amber-200">2026年・公式一次情報を確認</p>
           <h1 className="mt-2 max-w-4xl text-3xl font-bold tracking-tight text-balance sm:text-5xl">
-            東京・神奈川・千葉・埼玉・山梨・静岡・長野・茨城・栃木・群馬・新潟・愛知・京都・大阪・兵庫・広島・福岡・岡山・香川・熊本・長崎・大分・鹿児島・佐賀・宮崎・愛媛・徳島・高知・北海道・青森・秋田・宮城・岩手・山形・福島の夏祭り・花火大会2026
+            {SUMMER_HERO_TITLE}
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-indigo-50 sm:text-base">
             花火大会と地域の夏祭りを主役に、開催中・次回開催日の近い順で掲載しています。夜間開園は別の補助枠に分けています。
@@ -142,7 +147,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
             </a>
           </div>
           <div className="mt-7 flex flex-wrap gap-x-5 gap-y-2 text-xs font-bold text-indigo-100 sm:text-sm">
-            <span>公開中 {visibleEvents.length}件</span>
+            <span>全国{prefectureCount}都道府県・{visibleEvents.length}件を掲載</span>
             <span>花火・夏祭り {mainCount}件</span>
             <span>基準日 {today}</span>
           </div>

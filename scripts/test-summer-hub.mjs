@@ -36,6 +36,10 @@ const summerLocationsSource = JSON.parse(
     "utf8",
   ),
 );
+const summerPageSource = readFileSync(
+  new URL("../app/events/summer/page.tsx", import.meta.url),
+  "utf8",
+);
 
 function fixture(
   id,
@@ -176,6 +180,23 @@ test("Hero events map to stable and unique detail-card anchors", () => {
   assert.equal(
     anchors.every((anchor) => /^summer-event-[a-z0-9-]+$/u.test(anchor)),
     true,
+  );
+});
+
+test("Summer Hero title stays fixed when supported prefectures grow", () => {
+  const titleMatch = summerPageSource.match(
+    /const SUMMER_HERO_TITLE = "([^"]+)";/u,
+  );
+
+  assert.equal(titleMatch?.[1], "全国の夏祭り・花火大会2026");
+  assert.equal(titleMatch?.[1].length <= 20, true);
+  assert.match(
+    summerPageSource,
+    /<h1[^>]*>\s*\{SUMMER_HERO_TITLE\}\s*<\/h1>/su,
+  );
+  assert.match(
+    summerPageSource,
+    /全国\{prefectureCount\}都道府県・\{visibleEvents\.length\}件を掲載/u,
   );
 });
 
