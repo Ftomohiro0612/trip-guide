@@ -3,9 +3,9 @@
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map pilot location overlay keyed by canonical event ID",
     "source_checked_at": "2026-07-17",
-    "overlay_count": 26,
+    "overlay_count": 37,
     "mappable_count": 22,
-    "hold_count": 4,
+    "hold_count": 15,
     "pilot_target_range": {
       "minimum": 20,
       "maximum": 30
@@ -330,6 +330,138 @@
       ],
       "coordinate_reference": "hold: official event covers multiple parks and waterfront areas",
       "location_basis": "公式情報では臨港パークほか複数会場を使用するため、一会場だけを大会全体の位置として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-shizuoka-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "富士市中央公園・青葉通り（確認保留）",
+      "location_source_urls": [
+        "https://www.city.fuji.shizuoka.jp/1035170000/event/p007770.html"
+      ],
+      "coordinate_reference": "hold: official event spans the park and a city street",
+      "location_basis": "公式一次情報で中央公園と青葉通りを確認済みだが、複数エリアを一点の会場として誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-shizuoka-006": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "島田市本通商店街・駅前中央通り（確認保留）",
+      "location_source_urls": [
+        "https://www.city.shimada.shizuoka.jp/kanko-docs/kankouevent-kawadomenatsumatsuri.html"
+      ],
+      "coordinate_reference": "hold: official event spans several shopping-street blocks",
+      "location_basis": "公式一次情報で本通一〜七丁目商店街と駅前中央通りを確認済みだが、広い街路型会場を一点で示さないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-shizuoka-007": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "富士山本宮浅間大社・中心市街地（確認保留）",
+      "location_source_urls": [
+        "https://www.city.fujinomiya.lg.jp/1025200000/event/p000075.html"
+      ],
+      "coordinate_reference": "hold: official event includes the shrine and a city procession route",
+      "location_basis": "公式一次情報で浅間大社と中心市街地を確認済みだが、神社の一点をみこし巡行を含む祭り全体の位置と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-shizuoka-008": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "蓮華寺池公園（確認保留）",
+      "location_source_urls": [
+        "https://www.fujieda.gr.jp/news/n24551/"
+      ],
+      "coordinate_reference": "hold: official page confirms the park but does not expose a safely reusable point",
+      "location_basis": "公式一次情報で蓮華寺池公園を確認済みだが、池畔の観覧範囲と打上地点を一点で誤認させないよう、根拠座標を確定するまで非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-shizuoka-009": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "伊東海岸一帯（確認保留）",
+      "location_source_urls": [
+        "https://itospa.com/event/detail_10020.html"
+      ],
+      "coordinate_reference": "hold: official event launches from multiple points along the coast",
+      "location_basis": "公式一次情報で伊東海岸一帯の複数地点打上げを確認済みのため、任意の海岸一点を大会全体の位置として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "野尻湖周辺（確認保留）",
+      "location_source_urls": [
+        "https://www.town.shinano.lg.jp/docs/1194550.html"
+      ],
+      "coordinate_reference": "hold: official venue is the broad lake surroundings",
+      "location_basis": "公式一次情報で野尻湖周辺を確認済みだが、湖上打上げと広い観覧域を安全に代表する一点を確定できないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-006": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "戸倉上山田温泉・千曲川河畔（確認保留）",
+      "location_source_urls": [
+        "https://www.chikuma-hanabi.jp/"
+      ],
+      "coordinate_reference": "hold: official venue map covers riverbank viewing areas and the hot-spring town",
+      "location_basis": "公式一次情報で千曲川河畔と温泉街側の観覧域を確認済みだが、会場全体を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-007": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "飯綱高原・大座法師池周辺（確認保留）",
+      "location_source_urls": [
+        "https://www.nagano-cvb.or.jp/modules/event/page/204"
+      ],
+      "coordinate_reference": "hold: official event spans the mountain, lakeside, and activity areas",
+      "location_basis": "公式一次情報で飯縄山から大座法師池周辺に広がる行事を確認済みのため、池の一点だけを祭り全体の位置として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-008": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "イルフプラザ広場周辺（確認保留）",
+      "location_source_urls": [
+        "https://okaya-taiko.jp/"
+      ],
+      "coordinate_reference": "hold: official event includes a square and city parade areas",
+      "location_basis": "公式一次情報でイルフプラザ広場周辺と街なかパレードを確認済みだが、広場一点を複数企画の全会場と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-009": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "明科犀川河川敷・御宝田遊水池周辺（確認保留）",
+      "location_source_urls": [
+        "https://www.city.azumino.nagano.jp/soshiki/32/129490.html"
+      ],
+      "coordinate_reference": "hold: official venue is a broad riverbed and retarding-basin area",
+      "location_basis": "公式一次情報で犀川河川敷内の御宝田遊水池周辺を確認済みだが、広域河川敷を過度に正確な一点として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-nagano-010": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "千曲川中央橋上流河川敷（確認保留）",
+      "location_source_urls": [
+        "https://www.naganohanabi.jp/"
+      ],
+      "coordinate_reference": "hold: official event separates launch and viewing areas along the river",
+      "location_basis": "公式一次情報で中央橋上流左岸の打上地点と両岸の観覧域を確認済みだが、打上地点を観覧会場の位置と誤認させないため非表示。",
       "source_checked_at": "2026-07-17",
       "coordinate_precision": "hold"
     }

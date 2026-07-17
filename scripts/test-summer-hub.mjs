@@ -225,8 +225,8 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
     ([, location]) => location.coordinate_precision === "hold",
   );
 
-  assert.equal(entries.length, 26);
-  assert.equal(holds.length, 4);
+  assert.equal(entries.length, 37);
+  assert.equal(holds.length, 15);
   assert.equal(
     holds.every(
       ([, location]) =>
@@ -355,8 +355,8 @@ test("generic event type filters match the frozen candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 44,
-    summer_festival: 42,
+    fireworks: 50,
+    summer_festival: 47,
     summer_tradition: 7,
     night_outing: 6,
   };
@@ -500,19 +500,19 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("44 fireworks and 42 festivals paginate to their expected final pages", () => {
+test("50 fireworks and 47 festivals paginate to their expected final pages", () => {
   const views = [
-    ...Array.from({ length: 44 }, (_, index) =>
+    ...Array.from({ length: 50 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 42 }, (_, index) =>
+    ...Array.from({ length: 47 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
   for (const [eventType, finalPage, finalPageLength] of [
-    ["fireworks", 3, 4],
-    ["summer_festival", 3, 2],
+    ["fireworks", 3, 10],
+    ["summer_festival", 3, 7],
   ]) {
     const filtered = filterEventViews(
       views,
@@ -584,17 +584,17 @@ test("Shizuoka and Nagano regional waves use only the accepted data model", () =
   const expectedByPrefecture = {
     shizuoka: {
       ids: Array.from(
-        { length: 4 },
+        { length: 9 },
         (_, index) => `evt-summer-2026-shizuoka-${String(index + 1).padStart(3, "0")}`,
       ),
-      counts: { fireworks: 2, summer_festival: 2 },
+      counts: { fireworks: 4, summer_festival: 5 },
     },
     nagano: {
       ids: Array.from(
-        { length: 4 },
+        { length: 10 },
         (_, index) => `evt-summer-2026-nagano-${String(index + 1).padStart(3, "0")}`,
       ),
-      counts: { fireworks: 1, summer_festival: 3 },
+      counts: { fireworks: 5, summer_festival: 5 },
     },
   };
 
