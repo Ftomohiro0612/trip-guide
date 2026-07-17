@@ -4,6 +4,7 @@ import path from "node:path";
 const root = process.cwd();
 const base = readJson("data/events_data.json");
 const summer = readJson("data/summer_events_2026.json");
+const summerLocations = readJson("data/summer_event_locations_2026.json");
 const datePattern = /^\d{4}-\d{2}-\d{2}$/u;
 const urlPattern = /^https?:\/\/\S+$/u;
 const today = readToday(process.argv);
@@ -131,6 +132,161 @@ for (const [id, requiredHost] of requiredPrimaryHosts) {
   }
   if (!(actualHost === requiredHost || actualHost.endsWith(`.${requiredHost}`))) {
     error(id, `official_url must use organizer/venue host ${requiredHost}`);
+  }
+}
+
+const allowedCoordinatePrecisions = new Set([
+  "exact_venue",
+  "area_representative",
+  "geocoded_venue",
+  "hold",
+]);
+const locationEntries = Object.entries(
+  summerLocations.locations_by_event_id ?? {},
+);
+const adoptedById = new Map(adoptedEvents.map((event) => [event.id, event]));
+let mappableLocationCount = 0;
+let holdLocationCount = 0;
+const mappedPrefectures = new Set();
+
+checkCount(
+  "summer location metadata.overlay_count",
+  summerLocations.metadata?.overlay_count,
+  locationEntries.length,
+);
+validateDate(
+  summerLocations.metadata?.source_checked_at,
+  "summer location metadata.source_checked_at",
+);
+if (
+  datePattern.test(summerLocations.metadata?.source_checked_at ?? "") &&
+  summerLocations.metadata.source_checked_at > today
+) {
+  errors.push("summer location metadata.source_checked_at must not be in the future");
+}
+const declaredPrecisions = summerLocations.metadata?.coordinate_precision_values;
+if (
+  !Array.isArray(declaredPrecisions) ||
+  declaredPrecisions.length !== allowedCoordinatePrecisions.size ||
+  declaredPrecisions.some((value) => !allowedCoordinatePrecisions.has(value))
+) {
+  errors.push(
+    "summer location metadata.coordinate_precision_values must declare exact_venue, area_representative, geocoded_venue, and hold",
+  );
+}
+
+for (const [eventId, location] of locationEntries) {
+  const event = adoptedById.get(eventId);
+  if (!event) {
+    error(eventId, "location overlay references an event outside the adopted Summer Hub population");
+    continue;
+  }
+  if (!allowedCoordinatePrecisions.has(location.coordinate_precision)) {
+    error(eventId, `invalid coordinate_precision: ${location.coordinate_precision}`);
+  }
+  if (typeof location.map_label !== "string" || location.map_label.trim() === "") {
+    error(eventId, "map_label must not be empty");
+  }
+  if (
+    !Array.isArray(location.location_source_urls) ||
+    location.location_source_urls.length === 0 ||
+    location.location_source_urls.some((value) => !urlPattern.test(value))
+  ) {
+    error(eventId, "location_source_urls must contain valid source URLs");
+  }
+  if (
+    typeof location.location_basis !== "string" ||
+    location.location_basis.trim() === ""
+  ) {
+    error(eventId, "location_basis must not be empty");
+  }
+  if (
+    typeof location.coordinate_reference !== "string" ||
+    location.coordinate_reference.trim() === ""
+  ) {
+    error(eventId, "coordinate_reference must not be empty");
+  }
+  validateDate(location.source_checked_at, `${eventId}.location.source_checked_at`);
+  if (
+    datePattern.test(location.source_checked_at ?? "") &&
+    location.source_checked_at > today
+  ) {
+    error(eventId, `location source_checked_at is in the future: ${location.source_checked_at}`);
+  }
+
+  if (location.coordinate_precision === "hold") {
+    holdLocationCount += 1;
+    if (location.latitude !== null || location.longitude !== null) {
+      error(eventId, "hold locations must use latitude=null and longitude=null");
+    }
+    continue;
+  }
+
+  mappableLocationCount += 1;
+  mappedPrefectures.add(event.prefecture);
+  if (
+    typeof location.latitude !== "number" ||
+    !Number.isFinite(location.latitude) ||
+    location.latitude < 20 ||
+    location.latitude > 46
+  ) {
+    error(eventId, `latitude is outside the supported Japan bounds: ${location.latitude}`);
+  }
+  if (
+    typeof location.longitude !== "number" ||
+    !Number.isFinite(location.longitude) ||
+    location.longitude < 122 ||
+    location.longitude > 154
+  ) {
+    error(eventId, `longitude is outside the supported Japan bounds: ${location.longitude}`);
+  }
+  if (
+    location.coordinate_precision === "area_representative" &&
+    !/代表点/u.test(`${location.map_label} ${location.location_basis}`)
+  ) {
+    error(eventId, "area_representative must explicitly state that it is a representative point");
+  }
+  if (location.coordinate_precision === "geocoded_venue") {
+    const facilityMatch = location.coordinate_reference.match(/facility-(\d+)$/u);
+    if (!facilityMatch || Number(facilityMatch[1]) !== event.facility_id) {
+      error(eventId, "geocoded_venue must reference the event's real facility_id");
+    }
+  }
+}
+
+checkCount(
+  "summer location metadata.mappable_count",
+  summerLocations.metadata?.mappable_count,
+  mappableLocationCount,
+);
+checkCount(
+  "summer location metadata.hold_count",
+  summerLocations.metadata?.hold_count,
+  holdLocationCount,
+);
+const pilotMinimum = summerLocations.metadata?.pilot_target_range?.minimum;
+const pilotMaximum = summerLocations.metadata?.pilot_target_range?.maximum;
+if (
+  !Number.isInteger(pilotMinimum) ||
+  !Number.isInteger(pilotMaximum) ||
+  mappableLocationCount < pilotMinimum ||
+  mappableLocationCount > pilotMaximum
+) {
+  errors.push(
+    `summer map pilot has ${mappableLocationCount} mappable events; expected within declared range ${pilotMinimum}-${pilotMaximum}`,
+  );
+}
+for (const prefecture of [
+  "tokyo",
+  "kanagawa",
+  "chiba",
+  "saitama",
+  "yamanashi",
+  "shizuoka",
+  "nagano",
+]) {
+  if (!mappedPrefectures.has(prefecture)) {
+    errors.push(`summer map pilot is missing approved prefecture: ${prefecture}`);
   }
 }
 
@@ -274,6 +430,10 @@ const summary = {
   free_filter_events: freeCount,
   no_reservation_filter_events: noReservationCount,
   hero_pool: summer.metadata.hero_event_ids.length,
+  summer_map_overlay_events: locationEntries.length,
+  summer_map_mappable_events: mappableLocationCount,
+  summer_map_hold_events: holdLocationCount,
+  summer_map_prefectures: [...mappedPrefectures].sort(),
   max_end_date: maxEndDate,
   ends_at: summer.metadata.ends_at,
   next_source_review_due: nextReviewAt,

@@ -11,6 +11,7 @@ import {
   getSummerEventAnchorId,
   selectSummerHeroEventsByType,
 } from "../lib/summer-event-hub.ts";
+import { spreadNearbySummerEventMarkers } from "../lib/summer-event-map.ts";
 import { isFeatureHubActive } from "../lib/feature-hub-runtime.ts";
 
 const TEST_DATES = [
@@ -23,6 +24,15 @@ const TEST_DATES = [
 const summerSource = JSON.parse(
   readFileSync(
     new URL("../data/summer_events_2026.json", import.meta.url),
+    "utf8",
+  ),
+);
+const baseSource = JSON.parse(
+  readFileSync(new URL("../data/events_data.json", import.meta.url), "utf8"),
+);
+const summerLocationsSource = JSON.parse(
+  readFileSync(
+    new URL("../data/summer_event_locations_2026.json", import.meta.url),
     "utf8",
   ),
 );
@@ -166,6 +176,101 @@ test("Hero events map to stable and unique detail-card anchors", () => {
   assert.equal(
     anchors.every((anchor) => /^summer-event-[a-z0-9-]+$/u.test(anchor)),
     true,
+  );
+});
+
+test("Summer map pilot builds 22 mappable points across all seven prefectures", () => {
+  const baseById = new Map(baseSource.events.map((event) => [event.id, event]));
+  const adoptedById = new Map([
+    ...summerSource.events,
+    ...summerSource.existing_event_classifications.map((classification) => ({
+      ...baseById.get(classification.id),
+      ...classification,
+    })),
+  ].map((event) => [event.id, event]));
+  const mappableEntries = Object.entries(
+    summerLocationsSource.locations_by_event_id,
+  ).filter(([, location]) => location.coordinate_precision !== "hold");
+
+  assert.equal(mappableEntries.length, 22);
+  assert.deepEqual(
+    [
+      ...new Set(
+        mappableEntries.map(([eventId]) => adoptedById.get(eventId).prefecture),
+      ),
+    ].sort(),
+    [
+      "chiba",
+      "kanagawa",
+      "nagano",
+      "saitama",
+      "shizuoka",
+      "tokyo",
+      "yamanashi",
+    ],
+  );
+  assert.equal(
+    mappableEntries.every(
+      ([eventId]) =>
+        adoptedById.has(eventId) &&
+        /^summer-event-[a-z0-9-]+$/u.test(getSummerEventAnchorId(eventId)),
+    ),
+    true,
+  );
+});
+
+test("Summer map overlay keeps coordinates separate and excludes hold rows", () => {
+  const entries = Object.entries(summerLocationsSource.locations_by_event_id);
+  const holds = entries.filter(
+    ([, location]) => location.coordinate_precision === "hold",
+  );
+
+  assert.equal(entries.length, 26);
+  assert.equal(holds.length, 4);
+  assert.equal(
+    holds.every(
+      ([, location]) =>
+        location.latitude === null && location.longitude === null,
+    ),
+    true,
+  );
+  assert.equal(
+    entries.every(([, location]) => !("facility_id" in location)),
+    true,
+  );
+  assert.equal(
+    summerSource.events.every(
+      (event) => !("latitude" in event) && !("longitude" in event),
+    ),
+    true,
+  );
+});
+
+test("Nearby Summer map markers are spread without moving isolated markers", () => {
+  const nearbyA = mapPointFixture("near-a", 35.7, 139.7);
+  const nearbyB = mapPointFixture("near-b", 35.7001, 139.7001);
+  const isolated = mapPointFixture("isolated", 35.9, 139.9);
+  const displayed = spreadNearbySummerEventMarkers([
+    nearbyA,
+    nearbyB,
+    isolated,
+  ]);
+  const byId = new Map(displayed.map((point) => [point.eventId, point]));
+
+  assert.notDeepEqual(
+    [byId.get("near-a").displayLatitude, byId.get("near-a").displayLongitude],
+    [nearbyA.latitude, nearbyA.longitude],
+  );
+  assert.notDeepEqual(
+    [byId.get("near-b").displayLatitude, byId.get("near-b").displayLongitude],
+    [nearbyB.latitude, nearbyB.longitude],
+  );
+  assert.deepEqual(
+    [
+      byId.get("isolated").displayLatitude,
+      byId.get("isolated").displayLongitude,
+    ],
+    [isolated.latitude, isolated.longitude],
   );
 });
 
@@ -604,6 +709,21 @@ function filterFixture(id, eventType, overrides = {}) {
     },
     isThisWeekend: false,
     isThisMonth: false,
+  };
+}
+
+function mapPointFixture(eventId, latitude, longitude) {
+  return {
+    eventId,
+    title: eventId,
+    prefecture: "tokyo",
+    prefectureLabel: "東京都",
+    nextDate: "2026-07-25",
+    latitude,
+    longitude,
+    mapLabel: eventId,
+    coordinatePrecision: "exact_venue",
+    detailAnchor: getSummerEventAnchorId(eventId),
   };
 }
 

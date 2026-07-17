@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { connection } from "next/server";
 import SummerEventExplorer from "@/components/SummerEventExplorer";
+import SummerEventMapClient from "@/components/SummerEventMapClient";
 import { BreadcrumbJsonLd, JsonLd } from "@/components/JsonLd";
 import {
   getBuildDateString,
@@ -16,6 +17,7 @@ import {
   buildSummerEventListJsonLd,
   getSummerEventAnchorId,
 } from "@/lib/summer-event-hub";
+import { buildSummerEventMapPoints } from "@/lib/summer-event-locations";
 
 export const metadata: Metadata = {
   title: "夏祭り・花火大会2026｜東京・神奈川・千葉・埼玉・山梨・静岡・長野",
@@ -49,6 +51,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
   const views = visibleEvents.map((event) => toEventView(event, today));
   const heroFireworks = getSummerHeroEvents("fireworks", today, 4);
   const heroFestivals = getSummerHeroEvents("summer_festival", today, 4);
+  const mapPoints = buildSummerEventMapPoints(visibleEvents, today);
   const initialType = isSummerEventType(query.type) ? query.type : undefined;
   const initialQuickFilter =
     query.quick === "weekend" ||
@@ -126,6 +129,12 @@ export default async function SummerEventsPage({ searchParams }: Props) {
               夏祭りを見る
             </a>
             <a
+              href="#summer-event-map"
+              className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-white"
+            >
+              地図で探す
+            </a>
+            <a
               href="#summer-filters"
               className="rounded-full border border-white/30 bg-white/10 px-4 py-2 text-white"
             >
@@ -157,6 +166,42 @@ export default async function SummerEventsPage({ searchParams }: Props) {
             />
           </div>
         ) : null}
+
+        <section
+          id="summer-event-map"
+          aria-labelledby="summer-event-map-heading"
+          className="mt-12 scroll-mt-24"
+        >
+          <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-xs font-bold text-indigo-600">
+                主要イベント {mapPoints.length}件のパイロット
+              </p>
+              <h2
+                id="summer-event-map-heading"
+                className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl"
+              >
+                地図で探す
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
+                マーカーを選ぶとイベント名・開催日・都県を確認できます。地図からは、まずメモリップ内の詳しい紹介へ移動します。
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-2 text-[11px] font-bold">
+              <span className="rounded-full bg-slate-100 px-3 py-1.5 text-slate-700">
+                ● 会場名から確認した座標
+              </span>
+              <span className="rounded-full border border-dashed border-amber-500 bg-amber-50 px-3 py-1.5 text-amber-800">
+                ◌ 河川敷・湖・海岸などの代表点
+              </span>
+            </div>
+          </div>
+
+          <SummerEventMapClient points={mapPoints} />
+          <p className="mt-3 text-xs leading-relaxed text-slate-500">
+            広域会場の点は、正確な打上地点や観覧範囲を示すものではありません。地図が読み込めない場合も、下のイベント一覧は通常どおり利用できます。
+          </p>
+        </section>
 
         <div className="mt-12">
           <SummerEventExplorer
