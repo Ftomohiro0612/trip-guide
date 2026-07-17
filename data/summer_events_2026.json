@@ -4,9 +4,9 @@
     "research_checked_at": "2026-07-17",
     "starts_at": "2026-07-14T00:00:00+09:00",
     "ends_at": "2026-09-28T00:00:00+09:00",
-    "new_event_count": 56,
+    "new_event_count": 59,
     "existing_event_count": 16,
-    "candidate_count": 72,
+    "candidate_count": 75,
     "freshness_days_hub": 14,
     "freshness_days_hero": 7,
     "excluded_existing_event_ids": [
@@ -1540,6 +1540,86 @@
       ],
       "source_checked_at": "2026-07-17",
       "source_notes": "2026-07-17に熊谷観光局公式の大会日程と有料観覧席ページを個別再確認。8月8日19:00〜21:00、荒川河畔、荒天時9日順延・再延期なし、有料席7,000〜40,000円を確認。新たな中止・延期・日時・会場変更なし。一般観覧の無料・予約不要は明記不足のためnull/unknown。"
+    },
+    {
+      "id": "evt-summer-2026-chiba-025",
+      "facility_id": null,
+      "prefecture": "chiba",
+      "venue_name": "千葉JPFドーム",
+      "title": "PIST6夏まつり2026",
+      "summary": "涼しい屋内ドームで縁日・屋台やバンクウォーク盆踊りを楽しむ夏祭りです。個別コンテンツの料金・申込条件と靴の注意を公式案内で確認してください。",
+      "event_type": "summer_festival",
+      "feature_hubs": ["summer-2026"],
+      "start_date": "2026-07-25",
+      "end_date": "2026-07-26",
+      "occurrence_dates": ["2026-07-25", "2026-07-26"],
+      "date_label": "2026年7月25日・26日",
+      "time_label": "25日12:00〜19:00、26日12:00〜18:00（盆踊りは25日18:30〜、26日17:30〜）",
+      "price_label": "一般入場無料。屋台購入・一部体験は有料",
+      "reservation_label": "一般入場は予約不要。一部体験は定員・事前申込枠あり",
+      "is_free": true,
+      "reservation": "not_required",
+      "tags": ["夏祭り", "盆踊り", "屋内"],
+      "official_url": "https://www.city.chiba.jp/keizainosei/keizai/koeijigyo/pist6-summer2026-event.html",
+      "source_urls": [
+        "https://www.city.chiba.jp/keizainosei/keizai/koeijigyo/pist6-summer2026-event.html",
+        "https://chiba.pist6.com/news/9819.html"
+      ],
+      "source_checked_at": "2026-07-17",
+      "source_notes": "2026-07-17に千葉市公式とPIST6運営公式を個別再確認。7月25日12:00〜19:00、26日12:00〜18:00、千葉JPFドーム、バンクウォーク盆踊りは25日18:30〜18:50・26日17:30〜17:50を確認。新たな中止・延期・日時・会場変更なし。一般入場は無料・申込不要だが、屋台購入や一部体験は有料、Myシール帳づくりは定員・事前申込枠あり。"
+    },
+    {
+      "id": "evt-summer-2026-tokyo-022",
+      "facility_id": null,
+      "prefecture": "tokyo",
+      "venue_name": "中野セントラルパーク内 パークアベニュー",
+      "title": "第14回中野駅前大盆踊り大会",
+      "summary": "中野区民謡連盟の生演奏で全国の民謡盆踊りを楽しむ、中野駅前の盆踊り大会です。各日の時間と出演情報は公式スケジュールを確認してください。",
+      "event_type": "summer_festival",
+      "feature_hubs": ["summer-2026"],
+      "start_date": "2026-08-01",
+      "end_date": "2026-08-02",
+      "occurrence_dates": ["2026-08-01", "2026-08-02"],
+      "date_label": "2026年8月1日・2日",
+      "time_label": "各日の開催時間は公式GUEST & TIME SCHEDULEを確認",
+      "price_label": "参加費無料",
+      "reservation_label": "一般参加の予約条件は公式案内を確認",
+      "is_free": true,
+      "reservation": "unknown",
+      "tags": ["盆踊り", "中野", "民謡"],
+      "official_url": "https://nakabon.jp/",
+      "source_urls": [
+        "https://nakabon.jp/",
+        "https://nakabon.jp/guest-time-schedule"
+      ],
+      "source_checked_at": "2026-07-17",
+      "source_notes": "2026-07-17に実行委員会公式の2026年トップページとGUEST & TIME SCHEDULEを個別再確認。8月1日・2日、中野セントラルパーク内パークアベニュー、参加費無料を確認。新たな中止・延期・日程・会場変更なし。開催時間は画像や出演者情報から推測せず公式スケジュール確認とし、一般参加の予約不要は本文に明記不足のためunknown。"
+    },
+    {
+      "id": "evt-summer-2026-saitama-021",
+      "facility_id": null,
+      "prefecture": "saitama",
+      "venue_name": "唐子地区体育館駐車場",
+      "title": "第58回唐子地区納涼盆踊り大会",
+      "summary": "盆踊りに加えて、こども花火の配布と打上げ花火も楽しめる唐子地区の納涼大会です。荒天時の順延条件を市公式で確認してください。",
+      "event_type": "summer_festival",
+      "feature_hubs": ["summer-2026"],
+      "start_date": "2026-08-01",
+      "end_date": "2026-08-01",
+      "date_label": "2026年8月1日（荒天時は8月2日に順延、2日も荒天なら中止）",
+      "time_label": "18:00〜20:10（盆踊り18:15〜、打上げ花火20:00〜）",
+      "price_label": "参加料金は公式案内を確認",
+      "reservation_label": "大会本番の予約条件は公式案内を確認",
+      "is_free": null,
+      "reservation": "unknown",
+      "tags": ["盆踊り", "打上げ花火", "地域祭"],
+      "official_url": "https://www.city.higashimatsuyama.lg.jp/soshiki/22/26596.html",
+      "source_urls": [
+        "https://www.city.higashimatsuyama.lg.jp/soshiki/22/26596.html",
+        "https://www.city.higashimatsuyama.lg.jp/uploaded/attachment/19791.pdf"
+      ],
+      "source_checked_at": "2026-07-17",
+      "source_notes": "2026-07-17に東松山市公式本文と公式PDFチラシを個別再確認し、PDFはA4 1ページをrenderして目視確認。8月1日18:00〜20:10、唐子地区体育館駐車場、18:15盆踊り、19:30こども花火配布、20:00打上げ花火、荒天時2日順延・2日も荒天なら中止を確認。新たな中止・延期・日時・会場変更なし。大会本番の料金・予約条件は明記不足のためnull/unknown。本文の申込不要は7月14日の練習会だけを指すため転用していない。"
     }
   ]
 }
