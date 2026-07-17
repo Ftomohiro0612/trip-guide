@@ -28,6 +28,10 @@ const PREFECTURE_COLORS: Record<string, string> = {
   kyoto: "#7e22ce",
   osaka: "#dc2626",
   hyogo: "#4338ca",
+  hiroshima: "#0f766e",
+  fukuoka: "#a21caf",
+  okayama: "#ca8a04",
+  kagawa: "#0891b2",
 };
 
 const PRECISION_LABELS = {

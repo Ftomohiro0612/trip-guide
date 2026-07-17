@@ -10,7 +10,7 @@ import {
   getVisibleEvents,
   toEventView,
 } from "@/lib/events";
-import type { EventPrefecture } from "@/lib/events";
+import type { PrefectureId } from "@/types/facility";
 import {
   getFacilitiesByPrefecture,
   getPrefectureMeta,
@@ -40,7 +40,7 @@ export default function EventsIndexPage() {
       return meta ? { id: prefectureId, name: meta.name } : null;
     })
     .filter(
-      (item): item is { id: EventPrefecture; name: string } => Boolean(item),
+      (item): item is { id: PrefectureId; name: string } => Boolean(item),
     );
 
   return (

@@ -34,6 +34,10 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "kyoto", label: "京都" },
   { id: "osaka", label: "大阪" },
   { id: "hyogo", label: "兵庫" },
+  { id: "hiroshima", label: "広島" },
+  { id: "fukuoka", label: "福岡" },
+  { id: "okayama", label: "岡山" },
+  { id: "kagawa", label: "香川" },
 ];
 
 const EVENT_TYPES: {

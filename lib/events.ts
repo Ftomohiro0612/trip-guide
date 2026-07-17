@@ -37,7 +37,14 @@ export type EventPrefecture = Extract<
   | "aichi"
   | "fukuoka"
   | "hiroshima"
->;
+> | "okayama" | "kagawa";
+
+const EVENT_PREFECTURE_FALLBACK_LABELS: Partial<
+  Record<EventPrefecture, string>
+> = {
+  okayama: "岡山県",
+  kagawa: "香川県",
+};
 
 export type EventReservation = "not_required" | "required" | "unknown";
 
@@ -96,7 +103,7 @@ interface EventsData {
   metadata: {
     purpose: string;
     total_events: number;
-    prefectures: EventPrefecture[];
+    prefectures: PrefectureId[];
     freshness_days_page: number;
     freshness_days_top_x: number;
   };
@@ -308,20 +315,23 @@ export function toEventView(
   today = getBuildDateString(),
 ): EventView {
   const facility = getFacilityForEvent(event);
-  const prefecture = getPrefectureMeta(event.prefecture);
+  const prefecture = getPrefectureMeta(event.prefecture as PrefectureId);
 
   return {
     event,
     facilityName: facility?.name ?? null,
     facilitySlug: facility?.slug ?? null,
     venueName: facility?.name ?? event.venue_name?.trim() ?? null,
-    prefectureLabel: prefecture?.name ?? event.prefecture,
+    prefectureLabel:
+      prefecture?.name ??
+      EVENT_PREFECTURE_FALLBACK_LABELS[event.prefecture] ??
+      event.prefecture,
     isThisWeekend: isThisWeekend(event, today),
     isThisMonth: isThisMonth(event, today),
   };
 }
 
-export function isEventPrefecture(value: string): value is EventPrefecture {
+export function isEventPrefecture(value: string): value is PrefectureId {
   return (eventPrefectures as string[]).includes(value);
 }
 

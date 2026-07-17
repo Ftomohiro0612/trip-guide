@@ -3,9 +3,9 @@
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map pilot location overlay keyed by canonical event ID",
     "source_checked_at": "2026-07-17",
-    "overlay_count": 74,
+    "overlay_count": 94,
     "mappable_count": 22,
-    "hold_count": 52,
+    "hold_count": 72,
     "pilot_target_range": {
       "minimum": 20,
       "maximum": 30
@@ -832,6 +832,206 @@
       "location_source_urls": ["https://www.city.himeji.lg.jp/shisei/0000033517.html"],
       "coordinate_reference": "hold: official marine fireworks and seating area span the port district",
       "location_basis": "公式一次情報で姫路港飾磨地区を確認済みだが、海上打上げ・指定席域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-hiroshima-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "広島港1万トンバース（確認保留）",
+      "location_source_urls": ["https://www.city.hiroshima.lg.jp/tourism-culture/tourism/1021450/1021418/1021420/1049557.html"],
+      "coordinate_reference": "hold: official waterfront venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で港湾会場を確認済みだが、観覧域と打上げ域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-hiroshima-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "住吉神社一帯・尾道水道周辺（確認保留）",
+      "location_source_urls": ["https://www.ononavi.jp/sightseeing/calendar/detail.html?detail_id=4155&ym=202607"],
+      "coordinate_reference": "hold: official event spans shrine surroundings and the Onomichi Channel",
+      "location_basis": "公式一次情報で陸上観覧域と海上打上げ域を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-hiroshima-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "福山市中心部・芦田川大橋上流（確認保留）",
+      "location_source_urls": ["https://www.city.fukuyama.hiroshima.jp/koho-detail02/koho-202606/392313.html"],
+      "coordinate_reference": "hold: three-day festival uses separate city-centre and river venues",
+      "location_basis": "公式一次情報で踊りと花火の別会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-hiroshima-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "竹原市高崎町・J-POWER竹原火力発電所沖周辺（確認保留）",
+      "location_source_urls": ["https://www.takeharakankou.jp/event/8297/"],
+      "coordinate_reference": "hold: official marine fireworks venue confirmed without a safe representative point",
+      "location_basis": "公式一次情報で海上打上げ会場を確認済みだが、観覧域を含む安全な代表点を確定できないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-hiroshima-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "因島アメニティ公園しまなみビーチ（確認保留）",
+      "location_source_urls": ["https://www.city.onomichi.hiroshima.jp/soshiki/38/1038.html"],
+      "coordinate_reference": "hold: official beach venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-fukuoka-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "小倉城周辺・小倉北区内各所（確認保留）",
+      "location_source_urls": ["https://www.city.kitakyushu.lg.jp/kokurakita/w2100020.html"],
+      "coordinate_reference": "hold: official festival takes place across the castle area and local districts",
+      "location_basis": "公式一次情報で複数町内と競演会場を確認済みのため、小倉城一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-fukuoka-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "戸畑区役所前・浅生一号公園周辺（確認保留）",
+      "location_source_urls": ["https://www.crossroadfukuoka.jp/event/13130"],
+      "coordinate_reference": "hold: official competition area spans streets and park surroundings",
+      "location_basis": "公式一次情報で競演会の広域会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-fukuoka-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "遠賀川河口付近（確認保留）",
+      "location_source_urls": ["https://www.town.ashiya.lg.jp/site/kanko/24391.html"],
+      "coordinate_reference": "hold: river-mouth venue has broad viewing and launch areas",
+      "location_basis": "公式一次情報で遠賀川河口付近を確認済みだが、広域会場を過度に正確な一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-fukuoka-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "筑後川河川敷6会場（確認保留）",
+      "location_source_urls": ["https://www.city.kurume.fukuoka.jp/1050kurashi/2135kouhou/32607kouhoushi/2026-0626-1527-8.html"],
+      "coordinate_reference": "hold: official event uses six distinct riverbank venues",
+      "location_basis": "公式一次情報で6会場を確認済みのため、特定会場だけを代表点にせず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-fukuoka-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "志井公園（確認保留）",
+      "location_source_urls": ["https://www.city.kitakyushu.lg.jp/kokuraminami/vw3200093.html"],
+      "coordinate_reference": "hold: official venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-okayama-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "吉井川河岸緑地公園ほか津山市中心部（確認保留）",
+      "location_source_urls": ["https://www.tsuyamakan.jp/news/gfIw3TDE"],
+      "coordinate_reference": "hold: dance and fireworks use separate city and riverbank areas",
+      "location_basis": "公式一次情報で二日間の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-okayama-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "宇野港第1突堤（確認保留）",
+      "location_source_urls": ["https://www.okayama-kanko.jp/feature/hanabi/top"],
+      "coordinate_reference": "hold: official port venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-okayama-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "岡山市中心部（確認保留）",
+      "location_source_urls": ["https://uraja.jp/information/information_4698/"],
+      "coordinate_reference": "hold: organizer has not yet published safely adoptable venue-level coordinates",
+      "location_basis": "公式一次情報で岡山市中心部開催を確認済みだが、会場別詳細が未確定のため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-okayama-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "旧真庭市落合振興局前 旭川河川敷（確認保留）",
+      "location_source_urls": ["https://www.okayama-kanko.jp/feature/hanabi/top"],
+      "coordinate_reference": "hold: broad riverbank venue confirmed without a safe representative point",
+      "location_basis": "公式一次情報で旭川河川敷会場を確認済みだが、広域会場を過度に正確な一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-okayama-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "笠岡港（住吉港〜伏越港）一帯（確認保留）",
+      "location_source_urls": ["https://www.okayama-kanko.jp/feature/hanabi/top"],
+      "coordinate_reference": "hold: official venue spans multiple port districts",
+      "location_basis": "公式一次情報で住吉港から伏越港までの広域会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kagawa-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "サンポート高松周辺・高松港玉藻防波堤（確認保留）",
+      "location_source_urls": ["https://www.city.takamatsu.kagawa.jp/kanko/takamatsumatsuri/matsuri.html"],
+      "coordinate_reference": "hold: multi-day festival uses separate port and dance areas",
+      "location_basis": "公式一次情報で花火と総おどりの複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kagawa-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "坂出港中央ふ頭（確認保留）",
+      "location_source_urls": ["https://www.city.sakaide.lg.jp/soshiki/sangyoukankou/oohashimaturi-tokusetu.html"],
+      "coordinate_reference": "hold: official marine fireworks venue confirmed without a safe representative point",
+      "location_basis": "公式一次情報で港湾会場を確認済みだが、海上打上げと観覧域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kagawa-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "多度津港（確認保留）",
+      "location_source_urls": ["https://www.town.tadotsu.kagawa.jp/soshikikarasagasu/sangyoka/kanko/2950.html"],
+      "coordinate_reference": "hold: official port venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kagawa-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "レオマリゾート園内（確認保留）",
+      "location_source_urls": ["https://www.city.marugame.lg.jp/page/15520.html"],
+      "coordinate_reference": "hold: official resort venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で施設内開催を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kagawa-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "内海総合運動公園（確認保留）",
+      "location_source_urls": ["https://www.town.shodoshima.lg.jp/kanko/news/8451.html"],
+      "coordinate_reference": "hold: official park venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
       "source_checked_at": "2026-07-17",
       "coordinate_precision": "hold"
     }
