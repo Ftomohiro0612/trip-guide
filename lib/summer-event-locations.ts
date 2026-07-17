@@ -94,6 +94,13 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   toyama: "富山県",
   ishikawa: "石川県",
   fukui: "福井県",
+  shiga: "滋賀県",
+  nara: "奈良県",
+  wakayama: "和歌山県",
+  tottori: "鳥取県",
+  shimane: "島根県",
+  yamaguchi: "山口県",
+  okinawa: "沖縄県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

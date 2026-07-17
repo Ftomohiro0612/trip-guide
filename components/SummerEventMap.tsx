@@ -53,6 +53,13 @@ const PREFECTURE_COLORS: Record<string, string> = {
   toyama: "#0369a1",
   ishikawa: "#be123c",
   fukui: "#15803d",
+  shiga: "#0369a1",
+  nara: "#a21caf",
+  wakayama: "#c2410c",
+  tottori: "#0f766e",
+  shimane: "#7e22ce",
+  yamaguchi: "#be123c",
+  okinawa: "#0891b2",
 };
 
 const PRECISION_LABELS = {

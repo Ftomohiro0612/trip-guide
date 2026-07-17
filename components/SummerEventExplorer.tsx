@@ -59,6 +59,13 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "toyama", label: "富山" },
   { id: "ishikawa", label: "石川" },
   { id: "fukui", label: "福井" },
+  { id: "shiga", label: "滋賀" },
+  { id: "nara", label: "奈良" },
+  { id: "wakayama", label: "和歌山" },
+  { id: "tottori", label: "鳥取" },
+  { id: "shimane", label: "島根" },
+  { id: "yamaguchi", label: "山口" },
+  { id: "okinawa", label: "沖縄" },
 ];
 
 const EVENT_TYPES: {
