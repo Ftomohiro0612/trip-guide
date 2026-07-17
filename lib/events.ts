@@ -37,13 +37,17 @@ export type EventPrefecture = Extract<
   | "aichi"
   | "fukuoka"
   | "hiroshima"
-> | "okayama" | "kagawa";
+> | "okayama" | "kagawa" | "kumamoto" | "nagasaki" | "oita" | "kagoshima";
 
 const EVENT_PREFECTURE_FALLBACK_LABELS: Partial<
   Record<EventPrefecture, string>
 > = {
   okayama: "岡山県",
   kagawa: "香川県",
+  kumamoto: "熊本県",
+  nagasaki: "長崎県",
+  oita: "大分県",
+  kagoshima: "鹿児島県",
 };
 
 export type EventReservation = "not_required" | "required" | "unknown";

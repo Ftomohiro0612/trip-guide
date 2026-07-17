@@ -32,6 +32,10 @@ const PREFECTURE_COLORS: Record<string, string> = {
   fukuoka: "#a21caf",
   okayama: "#ca8a04",
   kagawa: "#0891b2",
+  kumamoto: "#dc2626",
+  nagasaki: "#2563eb",
+  oita: "#16a34a",
+  kagoshima: "#9333ea",
 };
 
 const PRECISION_LABELS = {

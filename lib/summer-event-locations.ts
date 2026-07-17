@@ -73,6 +73,10 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   fukuoka: "福岡県",
   okayama: "岡山県",
   kagawa: "香川県",
+  kumamoto: "熊本県",
+  nagasaki: "長崎県",
+  oita: "大分県",
+  kagoshima: "鹿児島県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;
