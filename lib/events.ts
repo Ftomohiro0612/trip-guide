@@ -37,7 +37,7 @@ export type EventPrefecture = Extract<
   | "aichi"
   | "fukuoka"
   | "hiroshima"
-> | "okayama" | "kagawa" | "kumamoto" | "nagasaki" | "oita" | "kagoshima" | "saga" | "miyazaki" | "ehime" | "tokushima" | "kochi" | "hokkaido" | "aomori" | "akita" | "miyagi" | "iwate" | "yamagata" | "fukushima";
+> | "okayama" | "kagawa" | "kumamoto" | "nagasaki" | "oita" | "kagoshima" | "saga" | "miyazaki" | "ehime" | "tokushima" | "kochi" | "hokkaido" | "aomori" | "akita" | "miyagi" | "iwate" | "yamagata" | "fukushima" | "mie" | "gifu" | "toyama" | "ishikawa" | "fukui";
 
 const EVENT_PREFECTURE_FALLBACK_LABELS: Partial<
   Record<EventPrefecture, string>
@@ -60,6 +60,11 @@ const EVENT_PREFECTURE_FALLBACK_LABELS: Partial<
   iwate: "岩手県",
   yamagata: "山形県",
   fukushima: "福島県",
+  mie: "三重県",
+  gifu: "岐阜県",
+  toyama: "富山県",
+  ishikawa: "石川県",
+  fukui: "福井県",
 };
 
 export type EventReservation = "not_required" | "required" | "unknown";

@@ -40,6 +40,10 @@ const summerPageSource = readFileSync(
   new URL("../app/events/summer/page.tsx", import.meta.url),
   "utf8",
 );
+const summerExplorerSource = readFileSync(
+  new URL("../components/SummerEventExplorer.tsx", import.meta.url),
+  "utf8",
+);
 
 function fixture(
   id,
@@ -246,8 +250,8 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
     ([, location]) => location.coordinate_precision === "hold",
   );
 
-  assert.equal(entries.length, 158);
-  assert.equal(holds.length, 136);
+  assert.equal(entries.length, 178);
+  assert.equal(holds.length, 156);
   assert.equal(
     holds.every(
       ([, location]) =>
@@ -376,9 +380,9 @@ test("generic event type filters match the current candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 99,
-    summer_festival: 97,
-    summer_tradition: 29,
+    fireworks: 113,
+    summer_festival: 99,
+    summer_tradition: 33,
     night_outing: 6,
   };
 
@@ -439,7 +443,7 @@ test("generic event types are OR while filter groups combine with AND", () => {
   );
 });
 
-test("all thirty-five approved prefectures can be selected independently", () => {
+test("all forty approved prefectures can be selected independently", () => {
   const prefectures = [
     "tokyo",
     "kanagawa",
@@ -476,6 +480,11 @@ test("all thirty-five approved prefectures can be selected independently", () =>
     "iwate",
     "yamagata",
     "fukushima",
+    "mie",
+    "gifu",
+    "toyama",
+    "ishikawa",
+    "fukui",
   ];
   const views = prefectures.map((prefecture) =>
     filterFixture(`${prefecture}-event`, "summer_festival", { prefecture }),
@@ -549,19 +558,19 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("99 fireworks and 97 festivals paginate to their expected final pages", () => {
+test("113 fireworks and 99 festivals paginate to their expected final pages", () => {
   const views = [
-    ...Array.from({ length: 99 }, (_, index) =>
+    ...Array.from({ length: 113 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 97 }, (_, index) =>
+    ...Array.from({ length: 99 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
   for (const [eventType, finalPage, finalPageLength] of [
-    ["fireworks", 5, 19],
-    ["summer_festival", 5, 17],
+    ["fireworks", 6, 13],
+    ["summer_festival", 5, 19],
   ]) {
     const filtered = filterEventViews(
       views,
@@ -1083,8 +1092,8 @@ test("Iwate, Yamagata, and Fukushima expansion completes the combined northern b
     fukushima: { total: 4, fireworks: 2, summer_festival: 1, summer_tradition: 1 },
   };
 
-  assert.equal(summerSource.metadata.new_event_count, 215);
-  assert.equal(summerSource.metadata.candidate_count, 231);
+  assert.equal(summerSource.metadata.new_event_count, 235);
+  assert.equal(summerSource.metadata.candidate_count, 251);
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
     const regional = summerSource.events.filter(
@@ -1136,6 +1145,83 @@ test("Iwate, Yamagata, and Fukushima expansion completes the combined northern b
       `${prefecture} overlays`,
     );
   }
+});
+
+test("Mie, Gifu, Toyama, Ishikawa, and Fukui expansion uses only the accepted data model", () => {
+  const expectedByPrefecture = {
+    mie: { total: 4, fireworks: 4, summer_festival: 0, summer_tradition: 0 },
+    gifu: { total: 4, fireworks: 3, summer_festival: 0, summer_tradition: 1 },
+    toyama: { total: 4, fireworks: 1, summer_festival: 2, summer_tradition: 1 },
+    ishikawa: { total: 4, fireworks: 2, summer_festival: 0, summer_tradition: 2 },
+    fukui: { total: 4, fireworks: 4, summer_festival: 0, summer_tradition: 0 },
+  };
+
+  assert.equal(summerSource.metadata.new_event_count, 235);
+  assert.equal(summerSource.metadata.candidate_count, 251);
+  assert.equal(summerLocationsSource.metadata.overlay_count, 178);
+  assert.equal(summerLocationsSource.metadata.mappable_count, 22);
+  assert.equal(summerLocationsSource.metadata.hold_count, 156);
+
+  for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const regional = summerSource.events.filter(
+      (event) => event.prefecture === prefecture,
+    );
+    assert.equal(regional.length, expected.total, prefecture);
+    assert.deepEqual(
+      {
+        fireworks: regional.filter((event) => event.event_type === "fireworks")
+          .length,
+        summer_festival: regional.filter(
+          (event) => event.event_type === "summer_festival",
+        ).length,
+        summer_tradition: regional.filter(
+          (event) => event.event_type === "summer_tradition",
+        ).length,
+      },
+      {
+        fireworks: expected.fireworks,
+        summer_festival: expected.summer_festival,
+        summer_tradition: expected.summer_tradition,
+      },
+      prefecture,
+    );
+    assert.equal(
+      regional.every(
+        (event) =>
+          event.facility_id === null &&
+          event.source_checked_at === "2026-07-17" &&
+          event.source_urls.length > 0 &&
+          event.feature_hubs.length === 1 &&
+          event.feature_hubs[0] === "summer-2026",
+      ),
+      true,
+      prefecture,
+    );
+    assert.match(summerExplorerSource, new RegExp(`id: "${prefecture}"`));
+
+    const overlays = regional.map(
+      (event) => summerLocationsSource.locations_by_event_id[event.id],
+    );
+    assert.equal(
+      overlays.every(
+        (location) =>
+          location?.coordinate_precision === "hold" &&
+          location.latitude === null &&
+          location.longitude === null,
+      ),
+      true,
+      `${prefecture} overlays`,
+    );
+  }
+
+  const gujoOdori = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-gifu-004",
+  );
+  const katayamazuFireworks = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-ishikawa-003",
+  );
+  assert.equal(gujoOdori?.occurrence_dates?.length, 30);
+  assert.equal(katayamazuFireworks?.occurrence_dates?.length, 30);
 });
 
 test("combined prefecture, type, condition, and preference filters keep correct pages", () => {

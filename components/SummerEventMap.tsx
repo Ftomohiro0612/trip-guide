@@ -48,6 +48,11 @@ const PREFECTURE_COLORS: Record<string, string> = {
   iwate: "#0f766e",
   yamagata: "#be123c",
   fukushima: "#a16207",
+  mie: "#0d9488",
+  gifu: "#a21caf",
+  toyama: "#0369a1",
+  ishikawa: "#be123c",
+  fukui: "#15803d",
 };
 
 const PRECISION_LABELS = {
