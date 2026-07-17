@@ -73,7 +73,7 @@ export function buildSummerEventListJsonLd(
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: "東京・神奈川・千葉・埼玉の夏祭り・花火大会2026",
+    name: "東京・神奈川・千葉・埼玉・山梨・静岡・長野の夏祭り・花火大会2026",
     numberOfItems: eventItems.length,
     itemListElement: eventItems.map(
       ({ event, startDate, endDate, occurrenceDate }, index) => ({

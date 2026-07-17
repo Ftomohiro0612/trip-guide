@@ -22,6 +22,9 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "kanagawa", label: "神奈川" },
   { id: "chiba", label: "千葉" },
   { id: "saitama", label: "埼玉" },
+  { id: "yamanashi", label: "山梨" },
+  { id: "shizuoka", label: "静岡" },
+  { id: "nagano", label: "長野" },
 ];
 
 const EVENT_TYPES: {

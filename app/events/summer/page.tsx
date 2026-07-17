@@ -15,14 +15,14 @@ import {
 import { buildSummerEventListJsonLd } from "@/lib/summer-event-hub";
 
 export const metadata: Metadata = {
-  title: "夏祭り・花火大会2026｜東京・神奈川・千葉・埼玉",
+  title: "夏祭り・花火大会2026｜東京・神奈川・千葉・埼玉・山梨・静岡・長野",
   description:
-    "東京・神奈川・千葉・埼玉の2026年夏祭り・花火大会を公式一次情報から掲載。開催日順、都県、今週末、無料、予約不要で探せます。",
+    "東京・神奈川・千葉・埼玉・山梨・静岡・長野の2026年夏祭り・花火大会を公式一次情報から掲載。開催日順、都県、今週末、無料、予約不要で探せます。",
   alternates: { canonical: "/events/summer" },
   openGraph: {
     title: "夏祭り・花火大会2026｜メモリップ",
     description:
-      "東京・神奈川・千葉・埼玉の花火大会と夏祭りを開催日の近い順から探せます。",
+      "東京・神奈川・千葉・埼玉・山梨・静岡・長野の花火大会と夏祭りを開催日の近い順から探せます。",
     url: "/events/summer",
   },
 };
@@ -104,7 +104,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
           </nav>
           <p className="text-sm font-bold text-amber-200">2026年・公式一次情報を確認</p>
           <h1 className="mt-2 max-w-4xl text-3xl font-bold tracking-tight text-balance sm:text-5xl">
-            東京・神奈川・千葉・埼玉の夏祭り・花火大会2026
+            東京・神奈川・千葉・埼玉・山梨・静岡・長野の夏祭り・花火大会2026
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-indigo-50 sm:text-base">
             花火大会と地域の夏祭りを主役に、開催中・次回開催日の近い順で掲載しています。夜間開園は別の補助枠に分けています。

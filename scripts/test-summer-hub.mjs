@@ -234,9 +234,9 @@ test("generic event type filters match the frozen candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 35,
-    summer_festival: 35,
-    summer_tradition: 5,
+    fireworks: 44,
+    summer_festival: 42,
+    summer_tradition: 7,
     night_outing: 6,
   };
 
@@ -297,6 +297,32 @@ test("generic event types are OR while filter groups combine with AND", () => {
   );
 });
 
+test("all seven approved prefectures can be selected independently", () => {
+  const prefectures = [
+    "tokyo",
+    "kanagawa",
+    "chiba",
+    "saitama",
+    "yamanashi",
+    "shizuoka",
+    "nagano",
+  ];
+  const views = prefectures.map((prefecture) =>
+    filterFixture(`${prefecture}-event`, "summer_festival", { prefecture }),
+  );
+
+  for (const prefecture of prefectures) {
+    assert.deepEqual(
+      filterEventViews(
+        views,
+        emptySelection({ prefectures: [prefecture] }),
+      ).map((view) => view.event.id),
+      [`${prefecture}-event`],
+      prefecture,
+    );
+  }
+});
+
 test("unclassified legacy events remain only when no event type is selected", () => {
   const views = [
     filterFixture("legacy"),
@@ -353,32 +379,147 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("35 fireworks and 35 festivals paginate across two pages", () => {
+test("44 fireworks and 42 festivals paginate to their expected final pages", () => {
   const views = [
-    ...Array.from({ length: 35 }, (_, index) =>
+    ...Array.from({ length: 44 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 35 }, (_, index) =>
+    ...Array.from({ length: 42 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
-  for (const [eventType, finalPageLength] of [
-    ["fireworks", 15],
-    ["summer_festival", 15],
+  for (const [eventType, finalPage, finalPageLength] of [
+    ["fireworks", 3, 4],
+    ["summer_festival", 3, 2],
   ]) {
     const filtered = filterEventViews(
       views,
       emptySelection({ eventTypes: [eventType] }),
     );
     const first = paginateEventViews(filtered, 1);
-    const second = paginateEventViews(filtered, 2);
+    const final = paginateEventViews(filtered, finalPage);
 
     assert.equal(first.items.length, 20, eventType);
-    assert.equal(second.items.length, finalPageLength, eventType);
-    assert.equal(second.totalPages, 2, eventType);
-    assert.equal(second.hasNextPage, false, eventType);
+    assert.equal(final.items.length, finalPageLength, eventType);
+    assert.equal(final.totalPages, finalPage, eventType);
+    assert.equal(final.hasNextPage, false, eventType);
   }
+});
+
+test("Yamanashi regional wave keeps the accepted schema and source boundaries", () => {
+  const expectedIds = Array.from(
+    { length: 10 },
+    (_, index) => `evt-summer-2026-yamanashi-${String(index + 1).padStart(3, "0")}`,
+  );
+  const yamanashi = summerSource.events.filter(
+    (event) => event.prefecture === "yamanashi",
+  );
+  const counts = Object.fromEntries(
+    ["fireworks", "summer_festival", "summer_tradition", "night_outing"].map(
+      (eventType) => [
+        eventType,
+        yamanashi.filter((event) => event.event_type === eventType).length,
+      ],
+    ),
+  );
+
+  assert.deepEqual(
+    yamanashi.map((event) => event.id).sort(),
+    expectedIds,
+  );
+  assert.deepEqual(counts, {
+    fireworks: 6,
+    summer_festival: 2,
+    summer_tradition: 2,
+    night_outing: 0,
+  });
+  assert.equal(yamanashi.every((event) => event.facility_id === null), true);
+  assert.equal(
+    yamanashi.every(
+      (event) =>
+        event.source_checked_at === "2026-07-17" &&
+        /^https:\/\//u.test(event.official_url),
+    ),
+    true,
+  );
+
+  const isawa = yamanashi.find(
+    (event) => event.id === "evt-summer-2026-yamanashi-008",
+  );
+  assert.equal(isawa.is_free, true);
+  assert.equal(isawa.reservation, "unknown");
+
+  const cityFestival = yamanashi.find(
+    (event) => event.id === "evt-summer-2026-yamanashi-010",
+  );
+  assert.equal(cityFestival.is_free, null);
+  assert.equal(cityFestival.reservation, "unknown");
+  assert.match(cityFestival.source_notes, /限定企画だけの条件/u);
+  assert.equal(summerSource.metadata.hero_event_ids.length, 12);
+});
+
+test("Shizuoka and Nagano regional waves use only the accepted data model", () => {
+  const expectedByPrefecture = {
+    shizuoka: {
+      ids: Array.from(
+        { length: 4 },
+        (_, index) => `evt-summer-2026-shizuoka-${String(index + 1).padStart(3, "0")}`,
+      ),
+      counts: { fireworks: 2, summer_festival: 2 },
+    },
+    nagano: {
+      ids: Array.from(
+        { length: 4 },
+        (_, index) => `evt-summer-2026-nagano-${String(index + 1).padStart(3, "0")}`,
+      ),
+      counts: { fireworks: 1, summer_festival: 3 },
+    },
+  };
+
+  for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const regional = summerSource.events.filter(
+      (event) => event.prefecture === prefecture,
+    );
+    assert.deepEqual(
+      regional.map((event) => event.id).sort(),
+      expected.ids,
+      prefecture,
+    );
+    assert.deepEqual(
+      {
+        fireworks: regional.filter((event) => event.event_type === "fireworks").length,
+        summer_festival: regional.filter(
+          (event) => event.event_type === "summer_festival",
+        ).length,
+      },
+      expected.counts,
+      prefecture,
+    );
+    assert.equal(regional.every((event) => event.facility_id === null), true);
+    assert.equal(
+      regional.every(
+        (event) =>
+          event.source_checked_at === "2026-07-17" &&
+          event.feature_hubs.length === 1 &&
+          event.feature_hubs[0] === "summer-2026",
+      ),
+      true,
+    );
+  }
+
+  const numazu = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-shizuoka-002",
+  );
+  assert.equal(numazu.is_free, null);
+  assert.equal(numazu.reservation, "unknown");
+  assert.match(numazu.source_notes, /観覧席券の条件を一般来場へ転用していない/u);
+
+  const ueda = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-nagano-001",
+  );
+  assert.equal(ueda.reservation, "unknown");
+  assert.match(ueda.source_notes, /踊り参加の限定条件/u);
 });
 
 test("combined prefecture, type, condition, and preference filters keep correct pages", () => {
