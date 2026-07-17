@@ -250,8 +250,8 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
     ([, location]) => location.coordinate_precision === "hold",
   );
 
-  assert.equal(entries.length, 227);
-  assert.equal(holds.length, 205);
+  assert.equal(entries.length, 249);
+  assert.equal(holds.length, 227);
   assert.equal(
     holds.every(
       ([, location]) =>
@@ -380,10 +380,10 @@ test("generic event type filters match the current candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 135,
-    summer_festival: 117,
-    summer_tradition: 42,
-    night_outing: 6,
+    fireworks: 143,
+    summer_festival: 126,
+    summer_tradition: 46,
+    night_outing: 7,
   };
 
   for (const [eventType, expected] of Object.entries(expectedCounts)) {
@@ -565,19 +565,19 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("135 fireworks and 117 festivals paginate to their expected final pages", () => {
+test("143 fireworks and 126 festivals paginate to their expected final pages", () => {
   const views = [
-    ...Array.from({ length: 135 }, (_, index) =>
+    ...Array.from({ length: 143 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 117 }, (_, index) =>
+    ...Array.from({ length: 126 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
   for (const [eventType, finalPage, finalPageLength] of [
-    ["fireworks", 7, 15],
-    ["summer_festival", 6, 17],
+    ["fireworks", 8, 3],
+    ["summer_festival", 7, 6],
   ]) {
     const filtered = filterEventViews(
       views,
@@ -757,8 +757,13 @@ test("Aichi, Kyoto, Osaka, and Hyogo regional batch uses only the accepted data 
   };
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const originalWaveId = new RegExp(
+      `^evt-summer-2026-${prefecture}-00[1-${expected.total}]$`,
+      "u",
+    );
     const regional = summerSource.events.filter(
-      (event) => event.prefecture === prefecture,
+      (event) =>
+        event.prefecture === prefecture && originalWaveId.test(event.id),
     );
     assert.equal(regional.length, expected.total, prefecture);
     assert.deepEqual(
@@ -827,8 +832,13 @@ test("Hiroshima, Fukuoka, Okayama, and Kagawa regional batch uses only the accep
   };
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const originalWaveId = new RegExp(
+      `^evt-summer-2026-${prefecture}-00[1-${expected.total}]$`,
+      "u",
+    );
     const regional = summerSource.events.filter(
-      (event) => event.prefecture === prefecture,
+      (event) =>
+        event.prefecture === prefecture && originalWaveId.test(event.id),
     );
     assert.equal(regional.length, expected.total, prefecture);
     assert.deepEqual(
@@ -1041,8 +1051,13 @@ test("Hokkaido, Aomori, Akita, and Miyagi expansion uses only the accepted data 
   };
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const originalWaveId = new RegExp(
+      `^evt-summer-2026-${prefecture}-00[1-${expected.total}]$`,
+      "u",
+    );
     const regional = summerSource.events.filter(
-      (event) => event.prefecture === prefecture,
+      (event) =>
+        event.prefecture === prefecture && originalWaveId.test(event.id),
     );
     assert.equal(regional.length, expected.total, prefecture);
     assert.deepEqual(
@@ -1099,8 +1114,8 @@ test("Iwate, Yamagata, and Fukushima expansion completes the combined northern b
     fukushima: { total: 4, fireworks: 2, summer_festival: 1, summer_tradition: 1 },
   };
 
-  assert.equal(summerSource.metadata.new_event_count, 284);
-  assert.equal(summerSource.metadata.candidate_count, 300);
+  assert.equal(summerSource.metadata.new_event_count, 306);
+  assert.equal(summerSource.metadata.candidate_count, 322);
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
     const regional = summerSource.events.filter(
@@ -1163,11 +1178,11 @@ test("Mie, Gifu, Toyama, Ishikawa, and Fukui expansion uses only the accepted da
     fukui: { total: 4, fireworks: 4, summer_festival: 0, summer_tradition: 0 },
   };
 
-  assert.equal(summerSource.metadata.new_event_count, 284);
-  assert.equal(summerSource.metadata.candidate_count, 300);
-  assert.equal(summerLocationsSource.metadata.overlay_count, 227);
+  assert.equal(summerSource.metadata.new_event_count, 306);
+  assert.equal(summerSource.metadata.candidate_count, 322);
+  assert.equal(summerLocationsSource.metadata.overlay_count, 249);
   assert.equal(summerLocationsSource.metadata.mappable_count, 22);
-  assert.equal(summerLocationsSource.metadata.hold_count, 205);
+  assert.equal(summerLocationsSource.metadata.hold_count, 227);
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
     const regional = summerSource.events.filter(
@@ -1261,19 +1276,24 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
     summerSource.events.map((event) => event.prefecture),
   );
 
-  assert.equal(summerSource.metadata.new_event_count, 284);
+  assert.equal(summerSource.metadata.new_event_count, 306);
   assert.equal(summerSource.metadata.existing_event_count, 16);
-  assert.equal(summerSource.metadata.candidate_count, 300);
+  assert.equal(summerSource.metadata.candidate_count, 322);
   assert.equal(prefectures.size, 47);
-  assert.equal(summerLocationsSource.metadata.overlay_count, 227);
+  assert.equal(summerLocationsSource.metadata.overlay_count, 249);
   assert.equal(summerLocationsSource.metadata.mappable_count, 22);
-  assert.equal(summerLocationsSource.metadata.hold_count, 205);
+  assert.equal(summerLocationsSource.metadata.hold_count, 227);
 
   for (const [prefecture, expected] of Object.entries(
     expectedNewPrefectures,
   )) {
+    const originalWaveId = new RegExp(
+      `^evt-summer-2026-${prefecture}-00[1-5]$`,
+      "u",
+    );
     const regional = summerSource.events.filter(
-      (event) => event.prefecture === prefecture,
+      (event) =>
+        event.prefecture === prefecture && originalWaveId.test(event.id),
     );
     assert.equal(regional.length, 5, prefecture);
     assert.deepEqual(
@@ -1315,6 +1335,103 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
     true,
   );
   assert.match(summerPageSource, /全国47都道府県/u);
+});
+
+test("high-demand regional gap wave adds only the 22 officially sourced rows", () => {
+  const expectedByPrefecture = {
+    tokyo: 2,
+    hokkaido: 4,
+    aichi: 3,
+    osaka: 3,
+    kyoto: 2,
+    hyogo: 3,
+    fukuoka: 3,
+    okinawa: 2,
+  };
+  const expectedIds = [
+    "evt-summer-2026-tokyo-023",
+    "evt-summer-2026-tokyo-024",
+    "evt-summer-2026-hokkaido-005",
+    "evt-summer-2026-hokkaido-006",
+    "evt-summer-2026-hokkaido-007",
+    "evt-summer-2026-hokkaido-008",
+    "evt-summer-2026-aichi-006",
+    "evt-summer-2026-aichi-007",
+    "evt-summer-2026-aichi-008",
+    "evt-summer-2026-osaka-006",
+    "evt-summer-2026-osaka-007",
+    "evt-summer-2026-osaka-008",
+    "evt-summer-2026-kyoto-007",
+    "evt-summer-2026-kyoto-008",
+    "evt-summer-2026-hyogo-006",
+    "evt-summer-2026-hyogo-007",
+    "evt-summer-2026-hyogo-008",
+    "evt-summer-2026-fukuoka-006",
+    "evt-summer-2026-fukuoka-007",
+    "evt-summer-2026-fukuoka-008",
+    "evt-summer-2026-okinawa-006",
+    "evt-summer-2026-okinawa-007",
+  ];
+  const additions = expectedIds.map((eventId) =>
+    summerSource.events.find((event) => event.id === eventId),
+  );
+
+  assert.equal(summerSource.metadata.new_event_count, 306);
+  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(summerSource.metadata.candidate_count, 322);
+  assert.equal(summerLocationsSource.metadata.overlay_count, 249);
+  assert.equal(summerLocationsSource.metadata.mappable_count, 22);
+  assert.equal(summerLocationsSource.metadata.hold_count, 227);
+  assert.equal(additions.every(Boolean), true);
+  assert.deepEqual(
+    Object.fromEntries(
+      Object.keys(expectedByPrefecture).map((prefecture) => [
+        prefecture,
+        additions.filter((event) => event.prefecture === prefecture).length,
+      ]),
+    ),
+    expectedByPrefecture,
+  );
+  assert.deepEqual(
+    {
+      fireworks: additions.filter((event) => event.event_type === "fireworks")
+        .length,
+      summer_festival: additions.filter(
+        (event) => event.event_type === "summer_festival",
+      ).length,
+      summer_tradition: additions.filter(
+        (event) => event.event_type === "summer_tradition",
+      ).length,
+      night_outing: additions.filter(
+        (event) => event.event_type === "night_outing",
+      ).length,
+    },
+    {
+      fireworks: 8,
+      summer_festival: 9,
+      summer_tradition: 4,
+      night_outing: 1,
+    },
+  );
+  assert.equal(
+    additions.every(
+      (event) =>
+        event.facility_id === null &&
+        event.source_checked_at === "2026-07-18" &&
+        event.source_urls.length > 0 &&
+        event.feature_hubs.length === 1 &&
+        event.feature_hubs[0] === "summer-2026" &&
+        summerLocationsSource.locations_by_event_id[event.id]
+          ?.coordinate_precision === "hold",
+    ),
+    true,
+  );
+  assert.equal(
+    summerSource.events.find(
+      (event) => event.id === "evt-summer-2026-saitama-007",
+    )?.source_checked_at,
+    "2026-07-18",
+  );
 });
 
 test("combined prefecture, type, condition, and preference filters keep correct pages", () => {
