@@ -30,6 +30,10 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "tochigi", label: "栃木" },
   { id: "gunma", label: "群馬" },
   { id: "niigata", label: "新潟" },
+  { id: "aichi", label: "愛知" },
+  { id: "kyoto", label: "京都" },
+  { id: "osaka", label: "大阪" },
+  { id: "hyogo", label: "兵庫" },
 ];
 
 const EVENT_TYPES: {

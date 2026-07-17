@@ -225,8 +225,8 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
     ([, location]) => location.coordinate_precision === "hold",
   );
 
-  assert.equal(entries.length, 55);
-  assert.equal(holds.length, 33);
+  assert.equal(entries.length, 74);
+  assert.equal(holds.length, 52);
   assert.equal(
     holds.every(
       ([, location]) =>
@@ -355,9 +355,9 @@ test("generic event type filters match the frozen candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 60,
-    summer_festival: 55,
-    summer_tradition: 7,
+    fireworks: 65,
+    summer_festival: 68,
+    summer_tradition: 8,
     night_outing: 6,
   };
 
@@ -418,7 +418,7 @@ test("generic event types are OR while filter groups combine with AND", () => {
   );
 });
 
-test("all eleven approved prefectures can be selected independently", () => {
+test("all fifteen approved prefectures can be selected independently", () => {
   const prefectures = [
     "tokyo",
     "kanagawa",
@@ -431,6 +431,10 @@ test("all eleven approved prefectures can be selected independently", () => {
     "tochigi",
     "gunma",
     "niigata",
+    "aichi",
+    "kyoto",
+    "osaka",
+    "hyogo",
   ];
   const views = prefectures.map((prefecture) =>
     filterFixture(`${prefecture}-event`, "summer_festival", { prefecture }),
@@ -504,19 +508,19 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("60 fireworks and 55 festivals paginate to their expected final pages", () => {
+test("65 fireworks and 68 festivals paginate to their expected final pages", () => {
   const views = [
-    ...Array.from({ length: 60 }, (_, index) =>
+    ...Array.from({ length: 65 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 55 }, (_, index) =>
+    ...Array.from({ length: 68 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
   for (const [eventType, finalPage, finalPageLength] of [
-    ["fireworks", 3, 20],
-    ["summer_festival", 3, 15],
+    ["fireworks", 4, 5],
+    ["summer_festival", 4, 8],
   ]) {
     const filtered = filterEventViews(
       views,
@@ -685,6 +689,76 @@ test("Ibaraki, Tochigi, Gunma, and Niigata regional batch uses only the accepted
       prefecture,
     );
   }
+});
+
+test("Aichi, Kyoto, Osaka, and Hyogo regional batch uses only the accepted data model", () => {
+  const expectedByPrefecture = {
+    aichi: { total: 5, fireworks: 2, summer_festival: 3, summer_tradition: 0 },
+    kyoto: { total: 4, fireworks: 0, summer_festival: 3, summer_tradition: 1 },
+    osaka: { total: 5, fireworks: 1, summer_festival: 4, summer_tradition: 0 },
+    hyogo: { total: 5, fireworks: 2, summer_festival: 3, summer_tradition: 0 },
+  };
+
+  for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const regional = summerSource.events.filter(
+      (event) => event.prefecture === prefecture,
+    );
+    assert.equal(regional.length, expected.total, prefecture);
+    assert.deepEqual(
+      {
+        fireworks: regional.filter((event) => event.event_type === "fireworks").length,
+        summer_festival: regional.filter(
+          (event) => event.event_type === "summer_festival",
+        ).length,
+        summer_tradition: regional.filter(
+          (event) => event.event_type === "summer_tradition",
+        ).length,
+      },
+      {
+        fireworks: expected.fireworks,
+        summer_festival: expected.summer_festival,
+        summer_tradition: expected.summer_tradition,
+      },
+      prefecture,
+    );
+    assert.equal(
+      regional.every(
+        (event) =>
+          event.facility_id === null &&
+          event.source_checked_at === "2026-07-17" &&
+          event.feature_hubs.length === 1 &&
+          event.feature_hubs[0] === "summer-2026",
+      ),
+      true,
+      prefecture,
+    );
+  }
+
+  const sumiyoshi = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-osaka-004",
+  );
+  assert.deepEqual(sumiyoshi.occurrence_dates, [
+    "2026-07-20",
+    "2026-07-26",
+    "2026-07-30",
+    "2026-07-31",
+    "2026-08-01",
+  ]);
+
+  for (const eventId of [
+    "evt-summer-2026-hyogo-001",
+    "evt-summer-2026-hyogo-005",
+  ]) {
+    const event = summerSource.events.find((candidate) => candidate.id === eventId);
+    assert.equal(event.is_free, false, eventId);
+    assert.equal(event.reservation, "required", eventId);
+  }
+
+  const benten = summerSource.events.find(
+    (event) => event.id === "evt-summer-2026-osaka-003",
+  );
+  assert.equal(benten.is_free, true);
+  assert.equal(benten.reservation, "unknown");
 });
 
 test("combined prefecture, type, condition, and preference filters keep correct pages", () => {

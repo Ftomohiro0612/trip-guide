@@ -65,6 +65,10 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   tochigi: "栃木県",
   gunma: "群馬県",
   niigata: "新潟県",
+  aichi: "愛知県",
+  kyoto: "京都府",
+  osaka: "大阪府",
+  hyogo: "兵庫県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

@@ -24,6 +24,10 @@ const PREFECTURE_COLORS: Record<string, string> = {
   tochigi: "#a16207",
   gunma: "#be123c",
   niigata: "#0369a1",
+  aichi: "#c2410c",
+  kyoto: "#7e22ce",
+  osaka: "#dc2626",
+  hyogo: "#4338ca",
 };
 
 const PRECISION_LABELS = {
