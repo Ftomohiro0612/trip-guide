@@ -36,6 +36,11 @@ const PREFECTURE_COLORS: Record<string, string> = {
   nagasaki: "#2563eb",
   oita: "#16a34a",
   kagoshima: "#9333ea",
+  saga: "#0f766e",
+  miyazaki: "#c2410c",
+  ehime: "#2563eb",
+  tokushima: "#7e22ce",
+  kochi: "#15803d",
 };
 
 const PRECISION_LABELS = {

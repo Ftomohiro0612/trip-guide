@@ -49,8 +49,8 @@ export default function SummerSeasonalCta({
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-indigo-50 sm:text-base">
                 {isEventsPage
-                  ? "東京・神奈川・千葉・埼玉・山梨・静岡・長野・茨城・栃木・群馬・新潟・愛知・京都・大阪・兵庫・広島・福岡・岡山・香川・熊本・長崎・大分・鹿児島の公式確認済みの花火大会・夏祭りをまとめました。"
-                  : "今週末に行ける花火やお祭りを、全国23都府県から探せます。"}
+                  ? "東京・神奈川・千葉・埼玉・山梨・静岡・長野・茨城・栃木・群馬・新潟・愛知・京都・大阪・兵庫・広島・福岡・岡山・香川・熊本・長崎・大分・鹿児島・佐賀・宮崎・愛媛・徳島・高知の公式確認済みの花火大会・夏祭りをまとめました。"
+                  : "今週末に行ける花火やお祭りを、全国28都府県から探せます。"}
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold sm:text-sm">
                 <ShortcutLink href="/events/summer?quick=weekend#summer-filters">

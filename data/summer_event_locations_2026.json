@@ -3,9 +3,9 @@
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map pilot location overlay keyed by canonical event ID",
     "source_checked_at": "2026-07-17",
-    "overlay_count": 110,
+    "overlay_count": 130,
     "mappable_count": 22,
-    "hold_count": 88,
+    "hold_count": 108,
     "pilot_target_range": {
       "minimum": 20,
       "maximum": 30
@@ -1192,6 +1192,206 @@
       "location_source_urls": ["https://www.kagoshima-kankou.com/event/20257"],
       "coordinate_reference": "hold: official port festival venue confirmed without a safe representative point",
       "location_basis": "公式一次情報で志布志港周辺を確認済みだが、観覧域と打上げ域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-saga-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "吉野ヶ里歴史公園 北口エリア（確認保留）",
+      "location_source_urls": ["https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"],
+      "coordinate_reference": "hold: official park area confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で公園内の会場エリアを確認済みだが、安全な代表点を採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-saga-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "肥前鹿島駅前付近（確認保留）",
+      "location_source_urls": ["https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"],
+      "coordinate_reference": "hold: official station-front area is not a single confirmed viewing point",
+      "location_basis": "公式一次情報で駅前付近を確認済みだが、観覧席を設けない広域会場を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-saga-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "みゆき公園（確認保留）",
+      "location_source_urls": ["https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"],
+      "coordinate_reference": "hold: official park venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-saga-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "太良町B&G海洋センター運動広場（確認保留）",
+      "location_source_urls": ["https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"],
+      "coordinate_reference": "hold: official venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で会場名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-miyazaki-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "上田島本町通り周辺（確認保留）",
+      "location_source_urls": ["https://www.miyazaki-city.tourism.or.jp/feature/miyazaki_festival"],
+      "coordinate_reference": "hold: official street festival spans a broad route",
+      "location_basis": "公式一次情報で通り周辺の開催を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-miyazaki-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "岡ノ下公園（確認保留）",
+      "location_source_urls": ["https://www.miyazaki-city.tourism.or.jp/feature/miyazaki_festival"],
+      "coordinate_reference": "hold: official park venue confirmed without an adopted verified coordinate source",
+      "location_basis": "公式一次情報で公園名を確認済みだが、検証済み座標ソースを採用していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-miyazaki-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "宮崎市中心市街地・橘通周辺（確認保留）",
+      "location_source_urls": ["https://www.miyazaki-city.tourism.or.jp/feature/miyazaki_festival", "https://www.erekocha.com/"],
+      "coordinate_reference": "hold: official city-centre festival spans multiple streets and stages",
+      "location_basis": "公式一次情報で中心市街地の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-miyazaki-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "宮崎市鶴島 大淀川河畔（確認保留）",
+      "location_source_urls": ["https://www.miyazaki-city.tourism.or.jp/event/10080"],
+      "coordinate_reference": "hold: official riverbank venue spans viewing and launch areas",
+      "location_basis": "公式一次情報で広域河川会場を確認済みのため、過度に正確な一点と誤認させず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ehime-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "宇和島市中心部・宇和島湾（確認保留）",
+      "location_source_urls": ["https://www.city.uwajima.ehime.jp/event/ushionimatsuri60.html", "https://www.iyokannet.jp/event/1762"],
+      "coordinate_reference": "hold: official festival spans city streets, river and bay areas",
+      "location_basis": "公式一次情報で複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ehime-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "松山市大街道・千舟町・堀之内地区（確認保留）",
+      "location_source_urls": ["https://www.iyokannet.jp/event/821"],
+      "coordinate_reference": "hold: official dance event spans multiple streets and a park district",
+      "location_basis": "公式一次情報で複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ehime-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "三津ふ頭（確認保留）",
+      "location_source_urls": ["https://www.iyokannet.jp/event/3526", "https://www.mitsuhama-hanabi.com/"],
+      "coordinate_reference": "hold: official waterfront venue confirmed without a safe representative point",
+      "location_basis": "公式一次情報でふ頭会場を確認済みだが、観覧域と打上げ域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ehime-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "国領川河川敷（確認保留）",
+      "location_source_urls": ["https://www.iyokannet.jp/event/5691"],
+      "coordinate_reference": "hold: official riverbank venue spans viewing and launch areas",
+      "location_basis": "公式一次情報で広域河川敷会場を確認済みのため、過度に正確な一点と誤認させず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tokushima-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "小松島町新港地区一帯（確認保留）",
+      "location_source_urls": ["https://www.city.komatsushima.lg.jp/docs/5724321.html", "https://www.awanavi.jp/archives/event/70853"],
+      "coordinate_reference": "hold: official port festival spans halls, streets and waterfront areas",
+      "location_basis": "公式一次情報で港周辺の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tokushima-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "阿南市中心部の複数会場（確認保留）",
+      "location_source_urls": ["https://www.city.anan.tokushima.jp/docs/2026041000067/", "https://www.awanavi.jp/archives/event/1863"],
+      "coordinate_reference": "hold: official festival spans parks, city hall, station and shopping streets",
+      "location_basis": "公式一次情報で中心部の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tokushima-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "JR鳴門駅周辺特設演舞場（確認保留）",
+      "location_source_urls": ["https://www.narutocci.or.jp/awaodori/awaodori.html", "https://www.city.naruto.lg.jp/news/2026061000047/"],
+      "coordinate_reference": "hold: official dance event spans multiple performance areas around the station",
+      "location_basis": "公式一次情報で駅周辺の複数演舞場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tokushima-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "徳島市中心部の演舞場・桟敷（確認保留）",
+      "location_source_urls": ["https://www.awaodorimirai.com/", "https://www.city.tokushima.tokushima.jp/kankou/awaodori/2026awaodori.html"],
+      "coordinate_reference": "hold: official festival spans multiple indoor and outdoor venues",
+      "location_basis": "公式一次情報で市中心部の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kochi-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "高知市中心部の競演場・演舞場（確認保留）",
+      "location_source_urls": ["https://welcome-kochi.jp/yosakoi.html", "https://www.yosakoi.com/jp/"],
+      "coordinate_reference": "hold: official festival spans multiple competition and performance venues",
+      "location_basis": "公式一次情報で市中心部の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kochi-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "高知市みどりの広場・鏡川河畔（確認保留）",
+      "location_source_urls": ["https://welcome-kochi.jp/event/hanabi/index.html", "https://www.city.kochi.kochi.jp/site/kanko/hanabi.html"],
+      "coordinate_reference": "hold: official riverbank event uses multiple launch points and a viewing area",
+      "location_basis": "公式一次情報で複数打上げ地点を含む河川会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kochi-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "富士ヶ浜（確認保留）",
+      "location_source_urls": ["https://www.city.susaki.lg.jp/life/detail.php?hdnKey=5668"],
+      "coordinate_reference": "hold: official coastal venue confirmed without a safe representative point",
+      "location_basis": "公式一次情報で海岸会場を確認済みだが、観覧域と打上げ域を一点と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-kochi-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "四万十川赤鉄橋付近・お祭り広場（確認保留）",
+      "location_source_urls": ["https://www.city.shimanto.lg.jp/site/scp/1777.html", "https://www.shimanto-kankou.com/kanko/culture/hanabi.html"],
+      "coordinate_reference": "hold: official river event spans the festival and launch areas",
+      "location_basis": "公式一次情報で広域河川会場を確認済みのため、過度に正確な一点と誤認させず非表示。",
       "source_checked_at": "2026-07-17",
       "coordinate_precision": "hold"
     }

@@ -77,6 +77,11 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   nagasaki: "長崎県",
   oita: "大分県",
   kagoshima: "鹿児島県",
+  saga: "佐賀県",
+  miyazaki: "宮崎県",
+  ehime: "愛媛県",
+  tokushima: "徳島県",
+  kochi: "高知県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

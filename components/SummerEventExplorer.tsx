@@ -42,6 +42,11 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "nagasaki", label: "長崎" },
   { id: "oita", label: "大分" },
   { id: "kagoshima", label: "鹿児島" },
+  { id: "saga", label: "佐賀" },
+  { id: "miyazaki", label: "宮崎" },
+  { id: "ehime", label: "愛媛" },
+  { id: "tokushima", label: "徳島" },
+  { id: "kochi", label: "高知" },
 ];
 
 const EVENT_TYPES: {
