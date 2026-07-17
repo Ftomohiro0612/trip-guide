@@ -51,6 +51,9 @@ const PREFECTURES: { id: EventPrefecture; label: string }[] = [
   { id: "aomori", label: "青森" },
   { id: "akita", label: "秋田" },
   { id: "miyagi", label: "宮城" },
+  { id: "iwate", label: "岩手" },
+  { id: "yamagata", label: "山形" },
+  { id: "fukushima", label: "福島" },
 ];
 
 const EVENT_TYPES: {

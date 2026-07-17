@@ -86,6 +86,9 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   aomori: "青森県",
   akita: "秋田県",
   miyagi: "宮城県",
+  iwate: "岩手県",
+  yamagata: "山形県",
+  fukushima: "福島県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

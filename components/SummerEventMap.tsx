@@ -45,6 +45,9 @@ const PREFECTURE_COLORS: Record<string, string> = {
   aomori: "#047857",
   akita: "#b45309",
   miyagi: "#7c3aed",
+  iwate: "#0f766e",
+  yamagata: "#be123c",
+  fukushima: "#a16207",
 };
 
 const PRECISION_LABELS = {
