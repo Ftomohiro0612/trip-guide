@@ -235,7 +235,7 @@ test("generic event type filters match the frozen candidate counts", () => {
   );
   const expectedCounts = {
     fireworks: 35,
-    summer_festival: 30,
+    summer_festival: 33,
     summer_tradition: 4,
     night_outing: 6,
   };
@@ -353,19 +353,19 @@ test("generic event pagination slices 562 items on first, second, and final page
   assert.equal(paginateEventViews(items, 999).currentPage, 29);
 });
 
-test("35 fireworks and 30 festivals paginate across two pages", () => {
+test("35 fireworks and 33 festivals paginate across two pages", () => {
   const views = [
     ...Array.from({ length: 35 }, (_, index) =>
       filterFixture(`fireworks-${index + 1}`, "fireworks"),
     ),
-    ...Array.from({ length: 30 }, (_, index) =>
+    ...Array.from({ length: 33 }, (_, index) =>
       filterFixture(`festival-${index + 1}`, "summer_festival"),
     ),
   ];
 
   for (const [eventType, finalPageLength] of [
     ["fireworks", 15],
-    ["summer_festival", 10],
+    ["summer_festival", 13],
   ]) {
     const filtered = filterEventViews(
       views,
