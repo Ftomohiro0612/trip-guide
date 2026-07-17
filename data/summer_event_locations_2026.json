@@ -3,9 +3,9 @@
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map pilot location overlay keyed by canonical event ID",
     "source_checked_at": "2026-07-17",
-    "overlay_count": 37,
+    "overlay_count": 55,
     "mappable_count": 22,
-    "hold_count": 15,
+    "hold_count": 33,
     "pilot_target_range": {
       "minimum": 20,
       "maximum": 30
@@ -462,6 +462,186 @@
       ],
       "coordinate_reference": "hold: official event separates launch and viewing areas along the river",
       "location_basis": "公式一次情報で中央橋上流左岸の打上地点と両岸の観覧域を確認済みだが、打上地点を観覧会場の位置と誤認させないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ibaraki-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "千波湖・水戸市中心市街地（確認保留）",
+      "location_source_urls": ["https://mitokoumon.com/koumon/hanabi.html"],
+      "coordinate_reference": "hold: official program spans the lakeside and central-city festival areas",
+      "location_basis": "公式一次情報で花火の千波湖と本祭の中心市街地を確認済みだが、複数会場を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ibaraki-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "古河市渡良瀬川河川敷（確認保留）",
+      "location_source_urls": ["https://www.city.ibaraki-koga.lg.jp/soshiki/kanko/4_1/2026hanabi.html"],
+      "coordinate_reference": "hold: official venue is a broad riverbed area",
+      "location_basis": "公式一次情報で渡良瀬川河川敷を確認済みだが、広域会場を過度に正確な一点として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ibaraki-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "取手緑地運動公園・利根川河川敷（確認保留）",
+      "location_source_urls": ["https://www.city.toride.ibaraki.jp/sanshin/bunkakatsudo/kanko/oshirase/71kaihanabitaikai.html"],
+      "coordinate_reference": "hold: official venue covers a riverside sports park and viewing areas",
+      "location_basis": "公式一次情報で取手緑地運動公園の利根川河川敷を確認済みだが、観覧域全体を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-ibaraki-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "鬼怒川河畔・橋本運動公園周辺（確認保留）",
+      "location_source_urls": ["https://joso-hanabi.jp/about.html"],
+      "coordinate_reference": "hold: official venue is a broad riverbank and park area",
+      "location_basis": "公式一次情報で鬼怒川河畔の会場域を確認済みだが、打上地点と観覧域を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tochigi-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "渡良瀬川田中橋下流河川敷（確認保留）",
+      "location_source_urls": ["https://www.ashikaga-kankou.jp/event/ashikaga_hanabi"],
+      "coordinate_reference": "hold: official venue spans the riverbed and sports-ground viewing areas",
+      "location_basis": "公式一次情報で渡良瀬川田中橋下流の河川敷を確認済みだが、広域会場を一点として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tochigi-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "宇都宮市道場宿緑地・鬼怒川河川敷（確認保留）",
+      "location_source_urls": ["https://www.utsunomiya-hanabi.jp/summary"],
+      "coordinate_reference": "hold: official venue is a broad riverside green space",
+      "location_basis": "公式一次情報で道場宿緑地を確認済みだが、河川敷の観覧域を過度に正確な一点として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tochigi-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "日光だいや川公園・丸山公園周辺（確認保留）",
+      "location_source_urls": ["https://www.nikko-hanabi.com/"],
+      "coordinate_reference": "hold: official viewing areas span two parks and a riverbed",
+      "location_basis": "公式一次情報で日光だいや川公園と丸山公園の観覧エリアを確認済みだが、複数エリアを一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-tochigi-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "壬生町総合公園陸上競技場（確認保留）",
+      "location_source_urls": ["https://www.town.mibu.tochigi.jp/docs/2026062300047/"],
+      "coordinate_reference": "hold: venue confirmed but no verified coordinate source was adopted",
+      "location_basis": "公式一次情報で会場名を確認済みだが、公式な一点座標を安全に確定していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-gunma-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "沼田市中心市街地（確認保留）",
+      "location_source_urls": ["https://www.city.numata.gunma.jp/kanko/numatamatsuri/"],
+      "coordinate_reference": "hold: official festival spans multiple streets and venues",
+      "location_basis": "公式一次情報で中心市街地一帯の複数行事を確認済みのため、代表施設一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-gunma-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "利根川河畔・大渡橋周辺（確認保留）",
+      "location_source_urls": ["https://www.city.maebashi.gunma.jp/soshiki/sangyokeizai/kankoseisaku/gyomu/1/2194.html"],
+      "coordinate_reference": "hold: official venue is a broad riverside viewing area",
+      "location_basis": "公式一次情報で利根川河畔の大渡橋周辺を確認済みだが、打上地点と観覧域を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-gunma-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "高崎市中心市街地・烏川河川敷（確認保留）",
+      "location_source_urls": ["https://www.takasaki-matsuri.jp/"],
+      "coordinate_reference": "hold: official program spans city streets, a square, and a riverbed",
+      "location_basis": "公式一次情報で中心市街地の祭りと烏川河川敷の花火を確認済みだが、複数会場を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-gunma-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "高崎市倉渕支所駐車場（確認保留）",
+      "location_source_urls": ["https://www.city.takasaki.gunma.jp/site/sightseeing/42722.html"],
+      "coordinate_reference": "hold: venue confirmed but no verified coordinate source was adopted",
+      "location_basis": "公式一次情報で会場名を確認済みだが、公式な一点座標を安全に確定していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-gunma-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "上毛野はにわの里公園（確認保留）",
+      "location_source_urls": ["https://www.city.takasaki.gunma.jp/page/5265.html"],
+      "coordinate_reference": "hold: venue confirmed but no verified coordinate source was adopted",
+      "location_basis": "公式一次情報で会場名を確認済みだが、公式な一点座標を安全に確定していないため非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-niigata-001": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "柏崎市中央海岸・みなとまち海浜公園一帯（確認保留）",
+      "location_source_urls": ["https://kashiwazaki-hanabi.jp/"],
+      "coordinate_reference": "hold: official venue spans a coastline and seaside park",
+      "location_basis": "公式一次情報で中央海岸と海浜公園一帯を確認済みだが、広域海岸会場を一点として示さず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-niigata-002": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "長生橋下流・信濃川河川敷（確認保留）",
+      "location_source_urls": ["https://nagaokamatsuri.com/"],
+      "coordinate_reference": "hold: official venue spans both banks and ticketed viewing areas",
+      "location_basis": "公式一次情報で長生橋下流の信濃川河川敷を確認済みだが、両岸の観覧域を一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-niigata-003": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "新潟市中心市街地・信濃川河畔（確認保留）",
+      "location_source_urls": ["https://niigata-matsuri.com/news/808/"],
+      "coordinate_reference": "hold: official program spans streets, procession routes, and the riverfront",
+      "location_basis": "公式一次情報で大民謡流し・行列・みこし・花火の複数会場を確認済みのため、一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-niigata-004": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "三条市中心市街地・六ノ町河川緑地（確認保留）",
+      "location_source_urls": ["https://niigata-kankou.or.jp/event/2440"],
+      "coordinate_reference": "hold: official program spans city streets and a riverside fireworks area",
+      "location_basis": "公式一次情報で踊り・みこし・花火の複数会場を確認済みのため、河川緑地一点に固定せず非表示。",
+      "source_checked_at": "2026-07-17",
+      "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-niigata-005": {
+      "latitude": null,
+      "longitude": null,
+      "map_label": "小千谷市片貝町・浅原神社周辺（確認保留）",
+      "location_source_urls": ["https://katakaimachi-enkakyokai.info/index.html"],
+      "coordinate_reference": "hold: official festival and viewing areas span the town around the shrine",
+      "location_basis": "公式一次情報で浅原神社周辺の祭りと花火を確認済みだが、町内の複数地点を一点に固定せず非表示。",
       "source_checked_at": "2026-07-17",
       "coordinate_precision": "hold"
     }

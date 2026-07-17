@@ -61,6 +61,10 @@ const PREFECTURE_LABELS: Partial<Record<EventPrefecture, string>> = {
   yamanashi: "山梨県",
   shizuoka: "静岡県",
   nagano: "長野県",
+  ibaraki: "茨城県",
+  tochigi: "栃木県",
+  gunma: "群馬県",
+  niigata: "新潟県",
 };
 
 const locationOverlay = locationOverlayJson as SummerEventLocationOverlay;

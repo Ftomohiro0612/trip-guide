@@ -20,6 +20,10 @@ const PREFECTURE_COLORS: Record<string, string> = {
   yamanashi: "#9333ea",
   shizuoka: "#0284c7",
   nagano: "#059669",
+  ibaraki: "#0f766e",
+  tochigi: "#a16207",
+  gunma: "#be123c",
+  niigata: "#0369a1",
 };
 
 const PRECISION_LABELS = {
