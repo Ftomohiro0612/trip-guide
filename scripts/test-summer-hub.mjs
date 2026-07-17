@@ -8,6 +8,7 @@ import {
 } from "../lib/event-filter.ts";
 import {
   buildSummerEventListJsonLd,
+  getSummerEventAnchorId,
   selectSummerHeroEventsByType,
 } from "../lib/summer-event-hub.ts";
 import { isFeatureHubActive } from "../lib/feature-hub-runtime.ts";
@@ -150,6 +151,21 @@ test("Hero selection does not fill a short category from the other category", ()
   assert.deepEqual(
     selectedFestivals.map((event) => event.id),
     ["festival-1", "festival-2"],
+  );
+});
+
+test("Hero events map to stable and unique detail-card anchors", () => {
+  const heroIds = summerSource.metadata.hero_event_ids;
+  const anchors = heroIds.map(getSummerEventAnchorId);
+
+  assert.equal(new Set(anchors).size, heroIds.length);
+  assert.deepEqual(
+    anchors,
+    heroIds.map((eventId) => `summer-event-${eventId}`),
+  );
+  assert.equal(
+    anchors.every((anchor) => /^summer-event-[a-z0-9-]+$/u.test(anchor)),
+    true,
   );
 });
 

@@ -20,6 +20,10 @@ export interface SummerStructuredDataEvent {
   prefecture_label: string;
 }
 
+export function getSummerEventAnchorId(eventId: string): string {
+  return `summer-event-${eventId}`;
+}
+
 export function selectSummerHeroEventsByType<
   T extends SummerHeroSelectable,
 >(

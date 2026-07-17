@@ -6,12 +6,14 @@ interface EventCardProps {
   view: EventView;
   showPrefecture?: boolean;
   showFacilityLink?: boolean;
+  anchorId?: string;
 }
 
 export default function EventCard({
   view,
   showPrefecture = true,
   showFacilityLink = true,
+  anchorId,
 }: EventCardProps) {
   const { event, facilitySlug, venueName, prefectureLabel } = view;
   const officialLinkLabel = isPdfOfficialUrl(event.official_url)
@@ -39,9 +41,15 @@ export default function EventCard({
 
   return (
     <article
-      className="rounded-lg border border-slate-200 bg-white p-4 shadow-sm shadow-slate-100 sm:p-5"
+      id={anchorId}
+      className={`rounded-lg border border-slate-200 bg-white p-4 shadow-sm shadow-slate-100 sm:p-5 ${
+        anchorId
+          ? "scroll-mt-20 transition-[border-color,background-color,box-shadow] duration-300 target:border-indigo-400 target:bg-indigo-50/40 target:ring-4 target:ring-indigo-100 motion-reduce:transition-none"
+          : ""
+      }`}
       data-event-card
       data-event-id={event.id}
+      data-event-anchor={anchorId ? "true" : undefined}
       data-event-type={event.event_type ?? "unclassified"}
       data-recommended-for={event.recommended_for_tags.join(",")}
     >

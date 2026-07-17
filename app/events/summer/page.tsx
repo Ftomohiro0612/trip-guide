@@ -12,7 +12,10 @@ import {
   type EventItem,
   type SummerEventType,
 } from "@/lib/events";
-import { buildSummerEventListJsonLd } from "@/lib/summer-event-hub";
+import {
+  buildSummerEventListJsonLd,
+  getSummerEventAnchorId,
+} from "@/lib/summer-event-hub";
 
 export const metadata: Metadata = {
   title: "夏祭り・花火大会2026｜東京・神奈川・千葉・埼玉・山梨・静岡・長野",
@@ -231,12 +234,11 @@ function HeroGroup({
                 {view.venueName}
               </p>
               <a
-                href={event.official_url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="mt-auto pt-4 text-sm font-bold text-brand hover:underline"
+                href={`#${getSummerEventAnchorId(event.id)}`}
+                className="mt-auto inline-flex min-h-11 items-center justify-center rounded-lg bg-indigo-700 px-4 py-2.5 text-sm font-bold text-white transition-colors hover:bg-indigo-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-700"
+                aria-label={`${event.title}の詳しい紹介を見る`}
               >
-                公式情報を見る →
+                詳しい紹介を見る ↓
               </a>
             </article>
           );

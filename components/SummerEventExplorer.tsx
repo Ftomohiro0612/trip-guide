@@ -8,6 +8,7 @@ import type {
   EventView,
   SummerEventType,
 } from "@/lib/events";
+import { getSummerEventAnchorId } from "@/lib/summer-event-hub";
 
 type QuickFilter = "weekend" | "free" | "noReservation";
 
@@ -214,7 +215,11 @@ export default function SummerEventExplorer({
                 </div>
                 <div className="grid gap-4">
                   {group.map((view) => (
-                    <EventCard key={view.event.id} view={view} />
+                    <EventCard
+                      key={view.event.id}
+                      view={view}
+                      anchorId={getSummerEventAnchorId(view.event.id)}
+                    />
                   ))}
                 </div>
               </section>
