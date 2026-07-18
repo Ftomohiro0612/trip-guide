@@ -15,7 +15,10 @@ export type PrefectureId =
   | "kyoto"
   | "aichi"
   | "fukuoka"
-  | "hiroshima";
+  | "hiroshima"
+  | "miyagi"
+  | "kagawa"
+  | "kumamoto";
 
 export type RainFriendly = "◎" | "△" | "×";
 

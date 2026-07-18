@@ -5,7 +5,7 @@ import { visibleFacilities } from "@/lib/facilities";
 export const metadata: Metadata = {
   title: "地図から探す",
   description:
-    "全国17都府県の子供向け遊び場を地図から探せます。雨の日OK、無料、県別の絞り込みにも対応。",
+    "全国20都府県の子供向け遊び場を地図から探せます。雨の日OK、無料、県別の絞り込みにも対応。",
   alternates: { canonical: "/map" },
 };
 
