@@ -46,11 +46,11 @@ const summerExplorerSource = readFileSync(
 );
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
-  newEventCount: 409,
-  candidateCount: 425,
-  overlayCount: 352,
+  newEventCount: 449,
+  candidateCount: 465,
+  overlayCount: 392,
   mappableCount: 22,
-  holdCount: 330,
+  holdCount: 370,
 });
 
 function fixture(
@@ -388,9 +388,9 @@ test("generic event type filters match the current candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 177,
-    summer_festival: 169,
-    summer_tradition: 71,
+    fireworks: 185,
+    summer_festival: 195,
+    summer_tradition: 77,
     night_outing: 8,
   };
 
@@ -931,8 +931,12 @@ test("Kumamoto, Nagasaki, Oita, and Kagoshima regional batch uses only the accep
   };
 
   for (const [prefecture, expected] of Object.entries(expectedByPrefecture)) {
+    const originalWaveId = new RegExp(
+      `^evt-summer-2026-${prefecture}-00[1-${expected.total}]$`,
+    );
     const regional = summerSource.events.filter(
-      (event) => event.prefecture === prefecture,
+      (event) =>
+        event.prefecture === prefecture && originalWaveId.test(event.id),
     );
     assert.equal(regional.length, expected.total, prefecture);
     assert.deepEqual(
@@ -1892,11 +1896,19 @@ test("national density expansion reaches the 425-event checkpoint with 50 hold r
     Object.fromEntries(fourEventPrefectures.map((prefecture) => [prefecture, 9])),
   );
   assert.equal(
-    summerSource.events.filter((event) => event.prefecture === "ehime").length,
+    summerSource.events.filter(
+      (event) =>
+        event.prefecture === "ehime" &&
+        /^evt-summer-2026-ehime-00[1-7]$/u.test(event.id),
+    ).length,
     7,
   );
   assert.equal(
-    summerSource.events.filter((event) => event.prefecture === "fukui").length,
+    summerSource.events.filter(
+      (event) =>
+        event.prefecture === "fukui" &&
+        /^evt-summer-2026-fukui-00[1-7]$/u.test(event.id),
+    ).length,
     7,
   );
   assert.deepEqual(
@@ -1917,6 +1929,107 @@ test("national density expansion reaches the 425-event checkpoint with 50 hold r
       "evt-summer-2026-shimane-007": 2,
       "evt-summer-2026-tottori-009": 20,
       "evt-summer-2026-wakayama-007": 7,
+    },
+  );
+});
+
+test("national density expansion reaches the 465-event checkpoint with 40 additional hold rows", () => {
+  const threeEventPrefectures = [
+    "fukushima",
+    "gifu",
+    "ibaraki",
+    "ishikawa",
+    "kagoshima",
+    "kochi",
+    "kumamoto",
+    "miyagi",
+    "miyazaki",
+    "nagasaki",
+    "oita",
+    "saga",
+  ];
+  const expectedIds = [
+    ...["ehime", "fukui"].flatMap((prefecture) =>
+      [8, 9].map(
+        (number) =>
+          `evt-summer-2026-${prefecture}-${String(number).padStart(3, "0")}`,
+      ),
+    ),
+    ...threeEventPrefectures.flatMap((prefecture) =>
+      [7, 8, 9].map(
+        (number) =>
+          `evt-summer-2026-${prefecture}-${String(number).padStart(3, "0")}`,
+      ),
+    ),
+  ];
+  const additions = expectedIds.map((eventId) =>
+    summerSource.events.find((event) => event.id === eventId),
+  );
+
+  assert.equal(expectedIds.length, 40);
+  assert.equal(new Set(expectedIds).size, 40);
+  assert.equal(additions.every(Boolean), true);
+  assert.equal(
+    additions.every(
+      (event) =>
+        event.facility_id === null &&
+        event.title.trim().length > 0 &&
+        event.venue_name.trim().length > 0 &&
+        event.source_checked_at === "2026-07-18" &&
+        event.official_url.startsWith("https://") &&
+        event.source_urls.length >= 1 &&
+        event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
+        event.feature_hubs.length === 1 &&
+        event.feature_hubs[0] === "summer-2026" &&
+        summerLocationsSource.locations_by_event_id[event.id]
+          ?.coordinate_precision === "hold" &&
+        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
+          null &&
+        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
+          null,
+    ),
+    true,
+  );
+  assert.deepEqual(
+    Object.fromEntries(
+      [...threeEventPrefectures, "ehime", "fukui"].map((prefecture) => [
+        prefecture,
+        summerSource.events.filter((event) => event.prefecture === prefecture)
+          .length,
+      ]),
+    ),
+    Object.fromEntries(
+      [...threeEventPrefectures, "ehime", "fukui"].map((prefecture) => [
+        prefecture,
+        9,
+      ]),
+    ),
+  );
+  assert.deepEqual(
+    {
+      fireworks: additions.filter((event) => event.event_type === "fireworks")
+        .length,
+      summer_festival: additions.filter(
+        (event) => event.event_type === "summer_festival",
+      ).length,
+      summer_tradition: additions.filter(
+        (event) => event.event_type === "summer_tradition",
+      ).length,
+    },
+    { fireworks: 8, summer_festival: 26, summer_tradition: 6 },
+  );
+  assert.deepEqual(
+    {
+      candidateCount: summerSource.metadata.candidate_count,
+      overlayCount: summerLocationsSource.metadata.overlay_count,
+      mappableCount: summerLocationsSource.metadata.mappable_count,
+      holdCount: summerLocationsSource.metadata.hold_count,
+    },
+    {
+      candidateCount: CURRENT_SUMMER_MILESTONE.candidateCount,
+      overlayCount: CURRENT_SUMMER_MILESTONE.overlayCount,
+      mappableCount: CURRENT_SUMMER_MILESTONE.mappableCount,
+      holdCount: CURRENT_SUMMER_MILESTONE.holdCount,
     },
   );
 });
