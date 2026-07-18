@@ -20,6 +20,7 @@ const PREFECTURE_CENTROIDS = {
   hiroshima: { lat: 34.4, lng: 132.46 },
   miyagi: { lat: 38.2682, lng: 140.8694 },
   kagawa: { lat: 34.3401, lng: 134.0434 },
+  kumamoto: { lat: 32.7898, lng: 130.7417 },
 };
 
 const USER_AGENT =

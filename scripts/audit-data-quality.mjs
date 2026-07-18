@@ -77,6 +77,7 @@ const TARGET_PREFECTURES = new Set([
   "神奈川県",
   "宮城県",
   "香川県",
+  "熊本県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -99,6 +100,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   神奈川県: "kanagawa",
   宮城県: "miyagi",
   香川県: "kagawa",
+  熊本県: "kumamoto",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
@@ -129,6 +131,7 @@ const PREFECTURE_BBOXES = {
   静岡県: [{ minLat: 34.5, maxLat: 35.7, minLng: 137.4, maxLng: 139.2 }],
   宮城県: [{ minLat: 37.75, maxLat: 39.05, minLng: 140.2, maxLng: 141.75 }],
   香川県: [{ minLat: 33.95, maxLat: 34.65, minLng: 133.4, maxLng: 134.5 }],
+  熊本県: [{ minLat: 32.0, maxLat: 33.35, minLng: 129.9, maxLng: 131.45 }],
 };
 
 const JAPAN_BBOX = {
