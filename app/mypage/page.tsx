@@ -10,9 +10,24 @@ import MonthlyDiffCard from "@/components/MonthlyDiffCard";
 import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
+import {
+  buildChildLikeCategoryBreakdown,
+  buildChildLikeRanking,
+  compareChildLikeCategories,
+  hasMeaningfulChildLikes,
+  normalizeChildLikeCategory,
+  type ChildLikeCategory,
+  type ChildLikeRankingEntry,
+  type RankedChildLikeCategory,
+} from "@/lib/child-likes";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
-import { buildFamilyStats, recentMonthKeysJst } from "@/lib/mypage-stats";
+import {
+  buildChildStats,
+  buildFamilyStats,
+  recentMonthKeysJst,
+  type ChildStats,
+} from "@/lib/mypage-stats";
 import { createClient } from "@/lib/supabase/server";
 import {
   buildFamilyOutingMapData,
@@ -47,7 +62,12 @@ type ChildVisit = {
 
 type ChildCategorySummary = {
   child: Child;
-  categories: { category: string; count: number }[];
+  anchorId: string;
+  visitCount: number;
+  stage: ChildStats["stage"];
+  meaningful: boolean;
+  categories: ChildLikeCategory[];
+  ranking: ChildLikeRankingEntry[];
 };
 
 type AchievementStats = {
@@ -157,25 +177,189 @@ function buildChildCategorySummaries(
   const childIds = new Set(children.map((child) => child.id));
   const visitSlugById = new Map(visits.map((visit) => [visit.id, visit.facility_slug]));
   const categoryCountsByChild = new Map<string, Map<string, number>>();
+  const distinctVisitIdsByChild = new Map<string, Set<string>>();
 
   for (const childVisit of childVisits) {
     if (!childIds.has(childVisit.child_id)) continue;
     const facilitySlug = visitSlugById.get(childVisit.visit_id);
     if (!facilitySlug) continue;
-    const category = categoryForSlug(facilitySlug);
+    const childVisitIds =
+      distinctVisitIdsByChild.get(childVisit.child_id) ?? new Set<string>();
+    if (childVisitIds.has(childVisit.visit_id)) continue;
+    childVisitIds.add(childVisit.visit_id);
+    distinctVisitIdsByChild.set(childVisit.child_id, childVisitIds);
+
+    const category = normalizeChildLikeCategory(categoryForSlug(facilitySlug));
     const counts = categoryCountsByChild.get(childVisit.child_id) ?? new Map<string, number>();
     counts.set(category, (counts.get(category) ?? 0) + 1);
     categoryCountsByChild.set(childVisit.child_id, counts);
   }
 
-  return children.map((child) => {
+  const statsByChild = new Map(
+    buildChildStats(children.map((child) => child.id), childVisits).map((stats) => [
+      stats.childId,
+      stats,
+    ]),
+  );
+
+  return children.map((child, index) => {
     const counts = categoryCountsByChild.get(child.id) ?? new Map<string, number>();
     const categories = Array.from(counts.entries())
       .map(([category, count]) => ({ category, count }))
-      .sort(compareCategoryEntries)
-      .slice(0, 5);
-    return { child, categories };
+      .sort(compareChildLikeCategories);
+    const displayCategories = buildChildLikeCategoryBreakdown(categories);
+    const stats = statsByChild.get(child.id) ?? {
+      childId: child.id,
+      visitCount: 0,
+      stage: "none" as const,
+    };
+    return {
+      child,
+      anchorId: `child-likes-${index + 1}`,
+      visitCount: stats.visitCount,
+      stage: stats.stage,
+      meaningful: hasMeaningfulChildLikes(categories),
+      categories: displayCategories,
+      ranking: buildChildLikeRanking(categories),
+    };
   });
+}
+
+function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
+  if (summary.stage === "none") {
+    return (
+      <div className="space-y-2">
+        <p className="text-sm text-slate-400">
+          まだ{summary.child.nickname}の記録がありません
+        </p>
+        <Link
+          href="/mypage/visits/new"
+          className="inline-flex rounded text-xs font-medium text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
+        >
+          おでかけを記録する →
+        </Link>
+      </div>
+    );
+  }
+
+  if (summary.stage === "pre_sprout") {
+    return (
+      <div className="space-y-1">
+        <p className="text-sm font-medium text-slate-700">
+          {summary.child.nickname}の記録が{summary.visitCount}件たまりました
+        </p>
+        <p className="text-sm leading-relaxed text-emerald-700">
+          あと{3 - summary.visitCount}件で{summary.child.nickname}の「好き」のヒントが見えはじめます
+        </p>
+      </div>
+    );
+  }
+
+  if (!summary.meaningful) {
+    return (
+      <div className="space-y-1">
+        <p className="text-sm font-medium text-slate-700">
+          {summary.child.nickname}の記録が{summary.visitCount}件たまりました
+        </p>
+        <p className="text-xs leading-relaxed text-slate-500">
+          カテゴリの分かる施設から記録すると、「好き」が少しずつ見えてきます
+        </p>
+      </div>
+    );
+  }
+
+  if (summary.stage === "sprout") {
+    const topCount = summary.categories.find(
+      ({ category }) => category !== "その他",
+    )?.count;
+    const topCategories = summary.categories
+      .filter(
+        ({ category, count }) => category !== "その他" && count === topCount,
+      )
+      .map(({ category }) => category);
+    const tendency = topCategories.join("や");
+
+    return (
+      <div className="space-y-3">
+        <div className="rounded-lg bg-emerald-50 px-3 py-2.5">
+          <p className="text-xs font-bold tracking-wide text-emerald-700">🌱 好きの芽</p>
+          <p className="mt-1 text-sm font-bold text-emerald-950">
+            {summary.child.nickname}は{tendency}が好きかも
+          </p>
+          <p className="mt-1 text-xs text-emerald-700">
+            {summary.visitCount}件の記録から見えてきたヒントです
+          </p>
+        </div>
+        <div className="space-y-2" aria-label={`${summary.child.nickname}のカテゴリ内訳`}>
+          {summary.categories.map(({ category, count }) => (
+            <CategoryBar
+              key={category}
+              category={category}
+              count={count}
+              max={summary.categories[0]?.count ?? 1}
+            />
+          ))}
+        </div>
+        {summary.visitCount >= 4 && (
+          <p className="text-sm font-medium text-brand">
+            あと{10 - summary.visitCount}件で「好き」ランキング
+          </p>
+        )}
+      </div>
+    );
+  }
+
+  const rankedCategories = summary.ranking.filter(
+    (category): category is RankedChildLikeCategory => "rank" in category,
+  );
+  const otherCategory = summary.ranking.find(
+    ({ category }) => category === "その他",
+  );
+
+  return (
+    <div className="space-y-3">
+      <div className="rounded-lg bg-amber-50 px-3 py-2.5">
+        <p className="text-xs font-bold tracking-wide text-amber-700">🏆 好きランキング</p>
+        <p className="mt-1 text-sm font-medium text-amber-950">
+          {summary.visitCount === 10
+            ? "10件たまりました。ランキングが出せます"
+            : `${summary.visitCount}件の記録から見えた回数です`}
+        </p>
+      </div>
+      <ol className="space-y-2" aria-label={`${summary.child.nickname}の好きランキング`}>
+        {rankedCategories.map(({ category, count, rank }) => (
+          <li
+            key={category}
+            className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
+          >
+            <span className="w-9 shrink-0 text-sm font-bold text-amber-700">
+              {rank}位
+            </span>
+            <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
+              {category}
+            </span>
+            <span className="shrink-0 text-sm font-bold tabular-nums text-brand">
+              {count}回
+            </span>
+          </li>
+        ))}
+      </ol>
+      {otherCategory && (
+        <div
+          className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
+          aria-label={`その他 ${otherCategory.count}回`}
+        >
+          <span className="w-9 shrink-0" aria-hidden="true" />
+          <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
+            その他
+          </span>
+          <span className="shrink-0 text-sm font-bold tabular-nums text-brand">
+            {otherCategory.count}回
+          </span>
+        </div>
+      )}
+    </div>
+  );
 }
 
 function buildMonthlyData(visits: VisitStat[], now: Date): MonthData[] {
@@ -246,7 +430,9 @@ export default async function MypagePage() {
     supabase
       .from("children")
       .select("id, nickname, birth_year, birth_month, avatar_url")
-      .order("sort_order", { ascending: true }),
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: true })
+      .order("id", { ascending: true }),
     user
       ? supabase
           .from("visits")
@@ -434,8 +620,9 @@ export default async function MypagePage() {
       (facility) => facility.visitCount === 1 && facility.lastVisited,
     ) ?? null;
 
-  const heroChildren = childRows.map((child) => ({
+  const heroChildren = childRows.map((child, index) => ({
     id: child.id,
+    anchorId: `child-likes-${index + 1}`,
     nickname: child.nickname,
     age: calcAge(child.birth_year, child.birth_month),
     avatarUrl: child.avatar_url ? avatarUrlByPath.get(child.avatar_url) ?? null : null,
@@ -558,11 +745,11 @@ export default async function MypagePage() {
               </p>
             </div>
             <div className="space-y-5 rounded-xl border border-slate-200 bg-white p-4">
-              {childCategorySummaries.map((summary) => (
+              {childCategorySummaries.map((summary, childIndex) => (
                 <div
                   key={summary.child.id}
-                  id={`child-achievement-${summary.child.id}`}
-                  className="scroll-mt-20"
+                  id={summary.anchorId}
+                  className="scroll-mt-20 border-b border-slate-100 pb-5 last:border-b-0 last:pb-0"
                 >
                   <div className="mb-2 flex items-center justify-between">
                     <div className="flex min-w-0 items-center gap-2">
@@ -581,43 +768,13 @@ export default async function MypagePage() {
                       </p>
                     </div>
                     <Link
-                      href={`/mypage/visits?child_id=${summary.child.id}`}
-                      className="text-xs text-brand hover:underline"
+                      href={`/mypage/visits?child=${childIndex + 1}`}
+                      className="rounded px-1 py-0.5 text-xs text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
                     >
                       記録を見る ›
                     </Link>
                   </div>
-                  {summary.categories[0] &&
-                    summary.categories[0].category !== "その他" &&
-                    summary.categories[0].count >= 2 && (
-                      <p className="mb-2 text-sm text-slate-600">
-                        {summary.categories[0].category}がいちばん多いね
-                        <span className="font-bold text-brand">
-                          ({summary.categories[0].count}回)
-                        </span>
-                      </p>
-                    )}
-                  {summary.categories.length > 0 ? (
-                    <details>
-                      <summary className="inline-flex cursor-pointer list-none text-sm font-medium text-brand hover:underline [&::-webkit-details-marker]:hidden">
-                        カテゴリ内訳を見る
-                      </summary>
-                      <div className="mt-3 space-y-2">
-                        {summary.categories.map(({ category, count }) => (
-                          <CategoryBar
-                            key={category}
-                            category={category}
-                            count={count}
-                            max={summary.categories[0].count}
-                          />
-                        ))}
-                      </div>
-                    </details>
-                  ) : (
-                    <p className="text-sm text-slate-400">
-                      まだ子ども別の記録がありません
-                    </p>
-                  )}
+                  <ChildLikesContent summary={summary} />
                 </div>
               ))}
             </div>

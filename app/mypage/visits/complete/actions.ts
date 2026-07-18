@@ -45,7 +45,9 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
       .from("children")
       .select("id, nickname, sort_order")
       .eq("user_id", user.id)
-      .order("sort_order", { ascending: true }),
+      .order("sort_order", { ascending: true })
+      .order("created_at", { ascending: true })
+      .order("id", { ascending: true }),
     safeBatchIds.length > 0
       ? supabase
           .from("visits")
@@ -97,7 +99,9 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
       nickname,
       visitCount,
     })),
-    displayChildId: displayChild?.id ?? null,
+    displayChildSlot: displayChild
+      ? children.findIndex((child) => child.id === displayChild.id) + 1
+      : null,
     primaryCopy: displayChild ? childProgressCopy(displayChild) : null,
     hasCoordinates: Boolean(facility?.latitude && facility?.longitude),
     remainingDraftIds,
