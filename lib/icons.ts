@@ -67,6 +67,7 @@ export const prefectureGradients: Record<string, string> = {
   fukuoka: "from-purple-500 via-cyan-400 to-lime-400",
   hiroshima: "from-red-600 via-amber-300 to-teal-500",
   miyagi: "from-cyan-500 via-sky-400 to-emerald-500",
+  kagawa: "from-lime-500 via-emerald-400 to-sky-400",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -88,6 +89,7 @@ export const prefectureIconImages: Record<string, string> = {
   fukuoka: "/images/prefectures/fukuoka.webp",
   hiroshima: "/images/prefectures/hiroshima.webp",
   miyagi: "/images/prefectures/miyagi.webp",
+  kagawa: "/images/prefectures/kagawa.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -109,4 +111,5 @@ export const prefectureEmoji: Record<string, string> = {
   fukuoka: "🍜",
   hiroshima: "🦪",
   miyagi: "🌙",
+  kagawa: "🫒",
 };

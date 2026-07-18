@@ -36,6 +36,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   神奈川県: "kanagawa",
   広島県: "hiroshima",
   宮城県: "miyagi",
+  香川県: "kagawa",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
