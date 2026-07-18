@@ -46,11 +46,11 @@ const summerExplorerSource = readFileSync(
 );
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
-  newEventCount: 449,
-  candidateCount: 465,
-  overlayCount: 392,
+  newEventCount: 484,
+  candidateCount: 500,
+  overlayCount: 427,
   mappableCount: 22,
-  holdCount: 370,
+  holdCount: 405,
 });
 
 function fixture(
@@ -388,9 +388,9 @@ test("generic event type filters match the current candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 185,
-    summer_festival: 195,
-    summer_tradition: 77,
+    fireworks: 201,
+    summer_festival: 205,
+    summer_tradition: 86,
     night_outing: 8,
   };
 
@@ -606,8 +606,8 @@ test("Yamanashi regional wave keeps the accepted schema and source boundaries", 
     { length: 10 },
     (_, index) => `evt-summer-2026-yamanashi-${String(index + 1).padStart(3, "0")}`,
   );
-  const yamanashi = summerSource.events.filter(
-    (event) => event.prefecture === "yamanashi",
+  const yamanashi = expectedIds.map((eventId) =>
+    summerSource.events.find((event) => event.id === eventId),
   );
   const counts = Object.fromEntries(
     ["fireworks", "summer_festival", "summer_tradition", "night_outing"].map(
@@ -1641,15 +1641,21 @@ test("350-event milestone wave adds only 12 sourced rows to the three selected f
     true,
   );
   assert.equal(
-    summerSource.events.filter((event) => event.prefecture === "akita").length,
+    summerSource.events.filter((event) =>
+      /^evt-summer-2026-akita-00[1-8]$/u.test(event.id),
+    ).length,
     8,
   );
   assert.equal(
-    summerSource.events.filter((event) => event.prefecture === "aomori").length,
+    summerSource.events.filter((event) =>
+      /^evt-summer-2026-aomori-00[1-8]$/u.test(event.id),
+    ).length,
     8,
   );
   assert.equal(
-    summerSource.events.filter((event) => event.prefecture === "mie").length,
+    summerSource.events.filter((event) =>
+      /^evt-summer-2026-mie-00[1-8]$/u.test(event.id),
+    ).length,
     8,
   );
 });
@@ -2030,6 +2036,164 @@ test("national density expansion reaches the 465-event checkpoint with 40 additi
       overlayCount: CURRENT_SUMMER_MILESTONE.overlayCount,
       mappableCount: CURRENT_SUMMER_MILESTONE.mappableCount,
       holdCount: CURRENT_SUMMER_MILESTONE.holdCount,
+    },
+  );
+});
+
+test("national density expansion reaches the 500-event milestone with 35 additional hold rows", () => {
+  const expectedIds = [
+    ...["tochigi", "tokushima", "toyama", "yamagata"].flatMap(
+      (prefecture) =>
+        [7, 8, 9].map(
+          (number) =>
+            `evt-summer-2026-${prefecture}-${String(number).padStart(3, "0")}`,
+        ),
+    ),
+    ...["akita", "aomori", "kyoto", "mie"].flatMap((prefecture) =>
+      [9, 10].map(
+        (number) =>
+          `evt-summer-2026-${prefecture}-${String(number).padStart(3, "0")}`,
+      ),
+    ),
+    ...["okinawa", "shizuoka"].flatMap((prefecture) =>
+      [10, 11].map(
+        (number) =>
+          `evt-summer-2026-${prefecture}-${String(number).padStart(3, "0")}`,
+      ),
+    ),
+    "evt-summer-2026-aichi-011",
+    "evt-summer-2026-nagano-011",
+    "evt-summer-2026-osaka-011",
+    "evt-summer-2026-yamanashi-011",
+    "evt-summer-2026-hokkaido-012",
+    "evt-summer-2026-hyogo-012",
+    "evt-summer-2026-fukuoka-013",
+    "evt-summer-2026-chiba-026",
+    "evt-summer-2026-kanagawa-019",
+    "evt-summer-2026-saitama-022",
+    "evt-summer-2026-tokyo-025",
+  ];
+  const additions = expectedIds.map((eventId) =>
+    summerSource.events.find((event) => event.id === eventId),
+  );
+
+  assert.equal(expectedIds.length, 35);
+  assert.equal(new Set(expectedIds).size, 35);
+  assert.equal(additions.every(Boolean), true);
+  assert.equal(
+    additions.every(
+      (event) =>
+        event.facility_id === null &&
+        event.title.trim().length > 0 &&
+        event.venue_name.trim().length > 0 &&
+        event.source_checked_at === "2026-07-18" &&
+        event.official_url.startsWith("https://") &&
+        event.source_urls.length >= 1 &&
+        event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
+        event.feature_hubs.length === 1 &&
+        event.feature_hubs[0] === "summer-2026" &&
+        summerLocationsSource.locations_by_event_id[event.id]
+          ?.coordinate_precision === "hold" &&
+        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
+          null &&
+        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
+          null,
+    ),
+    true,
+  );
+  assert.deepEqual(
+    Object.fromEntries(
+      [
+        "tochigi",
+        "tokushima",
+        "toyama",
+        "yamagata",
+        "akita",
+        "aomori",
+        "kyoto",
+        "mie",
+        "okinawa",
+        "shizuoka",
+        "aichi",
+        "nagano",
+        "osaka",
+        "yamanashi",
+        "hokkaido",
+        "hyogo",
+        "fukuoka",
+        "chiba",
+        "kanagawa",
+        "saitama",
+        "tokyo",
+      ].map((prefecture) => [
+        prefecture,
+        summerSource.events.filter((event) => event.prefecture === prefecture)
+          .length,
+      ]),
+    ),
+    {
+      tochigi: 9,
+      tokushima: 9,
+      toyama: 9,
+      yamagata: 9,
+      akita: 10,
+      aomori: 10,
+      kyoto: 10,
+      mie: 10,
+      okinawa: 11,
+      shizuoka: 11,
+      aichi: 11,
+      nagano: 11,
+      osaka: 11,
+      yamanashi: 11,
+      hokkaido: 12,
+      hyogo: 12,
+      fukuoka: 13,
+      chiba: 17,
+      kanagawa: 15,
+      saitama: 20,
+      tokyo: 19,
+    },
+  );
+  assert.deepEqual(
+    {
+      fireworks: additions.filter((event) => event.event_type === "fireworks")
+        .length,
+      summer_festival: additions.filter(
+        (event) => event.event_type === "summer_festival",
+      ).length,
+      summer_tradition: additions.filter(
+        (event) => event.event_type === "summer_tradition",
+      ).length,
+    },
+    { fireworks: 16, summer_festival: 10, summer_tradition: 9 },
+  );
+  assert.deepEqual(
+    {
+      yokote: summerSource.events.find(
+        (event) => event.id === "evt-summer-2026-akita-010",
+      )?.occurrence_dates?.length,
+      toyohama: summerSource.events.find(
+        (event) => event.id === "evt-summer-2026-aichi-011",
+      )?.occurrence_dates?.length,
+      suwa: summerSource.events.find(
+        (event) => event.id === "evt-summer-2026-nagano-011",
+      )?.occurrence_dates?.length,
+    },
+    { yokote: 3, toyohama: 2, suwa: 30 },
+  );
+  assert.deepEqual(
+    {
+      candidateCount: summerSource.metadata.candidate_count,
+      overlayCount: summerLocationsSource.metadata.overlay_count,
+      mappableCount: summerLocationsSource.metadata.mappable_count,
+      holdCount: summerLocationsSource.metadata.hold_count,
+    },
+    {
+      candidateCount: 500,
+      overlayCount: 427,
+      mappableCount: 22,
+      holdCount: 405,
     },
   );
 });
