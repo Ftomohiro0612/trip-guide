@@ -14,6 +14,12 @@ import {
   type RawSearchParams,
 } from "@/lib/filter";
 import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
+import {
+  buildRecommendedTagPrefectureHref,
+  buildRecommendedTagPrefectureOptions,
+  filterFacilitiesByPrefectureNames,
+  resolveRecommendedTagPrefecture,
+} from "@/lib/facility-recommended-filter";
 import type { RecommendedForTag } from "@/types/facility";
 
 export const metadata: Metadata = {
@@ -33,8 +39,7 @@ interface Props {
   searchParams: Promise<RawSearchParams>;
 }
 
-const PREFECTURES = [
-  "全国",
+const LEGACY_RECOMMENDED_TAG_PREFECTURE_ORDER = [
   "東京都",
   "神奈川県",
   "千葉県",
@@ -53,6 +58,11 @@ const PREFECTURES = [
   "福岡県",
   "広島県",
 ];
+
+const PREFECTURES = buildRecommendedTagPrefectureOptions(
+  prefectures,
+  LEGACY_RECOMMENDED_TAG_PREFECTURE_ORDER,
+);
 
 function asSingleParam(value: string | string[] | undefined): string {
   if (!value) return "";
@@ -119,14 +129,6 @@ function isRecommendedForTag(value: string): value is RecommendedForTag {
   );
 }
 
-function buildPrefectureHref(tag: RecommendedForTag, prefecture: string) {
-  const params = new URLSearchParams({ recommended_tag: tag });
-  if (prefecture !== "全国") {
-    params.set("prefecture", prefecture);
-  }
-  return `/facilities?${params.toString()}`;
-}
-
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
   const mapStorageKey = buildFacilitiesMapStorageKey(sp);
@@ -136,9 +138,10 @@ export default async function FacilitiesPage({ searchParams }: Props) {
     ? recommendedTagParam
     : null;
   const prefectureParam = asSingleParam(sp.prefecture);
-  const selectedPrefecture = PREFECTURES.includes(prefectureParam)
-    ? prefectureParam
-    : "全国";
+  const selectedPrefecture = resolveRecommendedTagPrefecture(
+    prefectureParam,
+    PREFECTURES,
+  );
   const sidebarPrefString = asSingleParam(sp.prefectures);
   const sidebarPrefIds = sidebarPrefString
     ? sidebarPrefString.split(",").filter(Boolean)
@@ -156,12 +159,10 @@ export default async function FacilitiesPage({ searchParams }: Props) {
         (f.recommended_for_tags ?? []).includes(recommendedTag),
       )
     : baseResults;
-  const results =
-    allSelectedPrefNames.length > 0
-      ? tagFilteredResults.filter((f) =>
-          allSelectedPrefNames.includes(f.prefecture ?? ""),
-        )
-      : tagFilteredResults;
+  const results = filterFacilitiesByPrefectureNames(
+    tagFilteredResults,
+    allSelectedPrefNames,
+  );
   const visiblePrefectures = prefectures.map((p) => ({
     ...p,
     count: visibleFacilities.filter((f) => f.prefecture_id === p.id).length,
@@ -216,7 +217,10 @@ export default async function FacilitiesPage({ searchParams }: Props) {
                 return (
                   <Link
                     key={prefecture}
-                    href={buildPrefectureHref(recommendedTag, prefecture)}
+                    href={buildRecommendedTagPrefectureHref(
+                      recommendedTag,
+                      prefecture,
+                    )}
                     className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
                       selected
                         ? "bg-sky-600 text-white"

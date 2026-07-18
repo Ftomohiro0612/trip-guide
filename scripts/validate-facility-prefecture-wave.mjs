@@ -63,6 +63,11 @@ const activeTargets = Object.entries(TARGETS).filter(([id]) =>
 
 assert(activeTargets.length > 0, "no target prefecture has been added");
 assert.equal(data.metadata.total_facilities, data.facilities.length, "metadata total mismatch");
+assert.equal(
+  data.metadata.site_description,
+  `全国${data.metadata.prefectures.length}都府県の子供向け遊び場検索サイト`,
+  "site description prefecture count mismatch",
+);
 assertUnique(data.facilities, (facility) => String(facility.id), "facility id");
 assertUnique(data.facilities, (facility) => facility.slug, "facility slug");
 assertUnique(

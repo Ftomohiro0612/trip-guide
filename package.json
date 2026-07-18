@@ -13,6 +13,7 @@
     "events:summer:freeze": "node scripts/validate-events.mjs --freeze",
     "events:summer:test": "node --test scripts/test-summer-hub.mjs",
     "facilities:wave:validate": "node scripts/validate-facility-prefecture-wave.mjs",
+    "facilities:recommended-tag:test": "node --test scripts/test-facility-recommended-tag-routing.mjs",
     "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
     "geocode": "node --env-file=.env.local scripts/geocode.ts",
     "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",
