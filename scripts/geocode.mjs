@@ -21,6 +21,9 @@ const PREFECTURE_CENTROIDS = {
   miyagi: { lat: 38.2682, lng: 140.8694 },
   kagawa: { lat: 34.3401, lng: 134.0434 },
   kumamoto: { lat: 32.7898, lng: 130.7417 },
+  okayama: { lat: 34.6618, lng: 133.935 },
+  ishikawa: { lat: 36.5947, lng: 136.6256 },
+  oita: { lat: 33.2382, lng: 131.6126 },
 };
 
 const USER_AGENT =

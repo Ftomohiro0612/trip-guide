@@ -53,6 +53,9 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   miyagi: "#0891b2",
   kagawa: "#65a30d",
   kumamoto: "#be123c",
+  okayama: "#7c3aed",
+  ishikawa: "#0284c7",
+  oita: "#ea580c",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -76,6 +79,9 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   miyagi: "🌙 宮城",
   kagawa: "🫒 香川",
   kumamoto: "🏯 熊本",
+  okayama: "🍑 岡山",
+  ishikawa: "🪭 石川",
+  oita: "♨️ 大分",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -101,6 +107,9 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   miyagi: true,
   kagawa: true,
   kumamoto: true,
+  okayama: true,
+  ishikawa: true,
+  oita: true,
 };
 
 const LOCATION_GUIDE_TEXT =

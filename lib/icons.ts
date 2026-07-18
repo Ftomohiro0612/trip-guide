@@ -69,6 +69,9 @@ export const prefectureGradients: Record<string, string> = {
   miyagi: "from-cyan-500 via-sky-400 to-emerald-500",
   kagawa: "from-lime-500 via-emerald-400 to-sky-400",
   kumamoto: "from-rose-600 via-amber-400 to-emerald-500",
+  okayama: "from-pink-500 via-rose-400 to-amber-300",
+  ishikawa: "from-sky-600 via-cyan-400 to-indigo-500",
+  oita: "from-orange-500 via-amber-400 to-emerald-500",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -92,6 +95,9 @@ export const prefectureIconImages: Record<string, string> = {
   miyagi: "/images/prefectures/miyagi.webp",
   kagawa: "/images/prefectures/kagawa.webp",
   kumamoto: "/images/prefectures/kumamoto.webp",
+  okayama: "/images/prefectures/okayama.webp",
+  ishikawa: "/images/prefectures/ishikawa.webp",
+  oita: "/images/prefectures/oita.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -115,4 +121,7 @@ export const prefectureEmoji: Record<string, string> = {
   miyagi: "🌙",
   kagawa: "🫒",
   kumamoto: "🏯",
+  okayama: "🍑",
+  ishikawa: "🪭",
+  oita: "♨️",
 };

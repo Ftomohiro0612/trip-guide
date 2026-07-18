@@ -101,6 +101,9 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   宮城県: "miyagi",
   香川県: "kagawa",
   熊本県: "kumamoto",
+  岡山県: "okayama",
+  石川県: "ishikawa",
+  大分県: "oita",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
@@ -132,6 +135,9 @@ const PREFECTURE_BBOXES = {
   宮城県: [{ minLat: 37.75, maxLat: 39.05, minLng: 140.2, maxLng: 141.75 }],
   香川県: [{ minLat: 33.95, maxLat: 34.65, minLng: 133.4, maxLng: 134.5 }],
   熊本県: [{ minLat: 32.0, maxLat: 33.35, minLng: 129.9, maxLng: 131.45 }],
+  岡山県: [{ minLat: 34.25, maxLat: 35.35, minLng: 133.25, maxLng: 134.55 }],
+  石川県: [{ minLat: 36.05, maxLat: 37.95, minLng: 136.15, maxLng: 137.4 }],
+  大分県: [{ minLat: 32.65, maxLat: 33.75, minLng: 130.75, maxLng: 132.15 }],
 };
 
 const JAPAN_BBOX = {
