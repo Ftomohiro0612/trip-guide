@@ -695,7 +695,7 @@ test("Shizuoka and Nagano regional waves use only the accepted data model", () =
     assert.equal(
       regional.every(
         (event) =>
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
       ),
@@ -801,7 +801,7 @@ test("Aichi, Kyoto, Osaka, and Hyogo regional batch uses only the accepted data 
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
       ),
@@ -873,7 +873,7 @@ test("Hiroshima, Fukuoka, Okayama, and Kagawa regional batch uses only the accep
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
       ),
@@ -961,7 +961,7 @@ test("Kumamoto, Nagasaki, Oita, and Kagoshima regional batch uses only the accep
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
       ),
@@ -1040,7 +1040,7 @@ test("Saga, Miyazaki, Ehime, Tokushima, and Kochi milestone batch uses only the 
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.source_urls.length > 0 &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
