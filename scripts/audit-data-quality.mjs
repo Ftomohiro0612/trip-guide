@@ -104,6 +104,9 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   岡山県: "okayama",
   石川県: "ishikawa",
   大分県: "oita",
+  福島県: "fukushima",
+  愛媛県: "ehime",
+  長崎県: "nagasaki",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
@@ -138,6 +141,9 @@ const PREFECTURE_BBOXES = {
   岡山県: [{ minLat: 34.25, maxLat: 35.35, minLng: 133.25, maxLng: 134.55 }],
   石川県: [{ minLat: 36.05, maxLat: 37.95, minLng: 136.15, maxLng: 137.4 }],
   大分県: [{ minLat: 32.65, maxLat: 33.75, minLng: 130.75, maxLng: 132.15 }],
+  福島県: [{ minLat: 36.7, maxLat: 38.0, minLng: 139.1, maxLng: 141.1 }],
+  愛媛県: [{ minLat: 32.85, maxLat: 34.35, minLng: 131.9, maxLng: 133.75 }],
+  長崎県: [{ minLat: 31.8, maxLat: 34.8, minLng: 128.0, maxLng: 130.4 }],
 };
 
 const JAPAN_BBOX = {

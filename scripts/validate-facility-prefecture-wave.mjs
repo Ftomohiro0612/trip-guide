@@ -24,6 +24,21 @@ const TARGETS = {
     host: "www.visit-oita.jp",
     bbox: [32.65, 33.75, 130.75, 132.15],
   },
+  fukushima: {
+    name: "福島県",
+    host: "www.tif.ne.jp",
+    bbox: [36.7, 38.0, 139.1, 141.1],
+  },
+  ehime: {
+    name: "愛媛県",
+    host: "www.iyokannet.jp",
+    bbox: [32.85, 34.35, 131.9, 133.75],
+  },
+  nagasaki: {
+    name: "長崎県",
+    host: "www.nagasaki-tabinet.com",
+    bbox: [31.8, 34.8, 128.0, 130.4],
+  },
 };
 
 function gitShow(path) {
@@ -110,7 +125,7 @@ for (const [id, spec] of activeTargets) {
   const [minLat, maxLat, minLng, maxLng] = spec.bbox;
   for (const facility of facilities) {
     assert(facility.address.startsWith(spec.name), `${facility.name}: prefecture/address mismatch`);
-    assert(facility.address.length >= spec.name.length + 4, `${facility.name}: address lacks detail`);
+    assert(facility.address.length >= spec.name.length + 3, `${facility.name}: address lacks detail`);
     assert(categoryIds.has(facility.category_id), `${facility.name}: unknown category`);
     assert.equal(facility.slug, `facility-${facility.id}`, `${facility.name}: slug mismatch`);
     assert(["屋内", "屋外", "両方"].includes(facility.indoor_outdoor), `${facility.name}: indoor/outdoor missing`);

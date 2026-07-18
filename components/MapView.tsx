@@ -56,6 +56,9 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   okayama: "#7c3aed",
   ishikawa: "#0284c7",
   oita: "#ea580c",
+  fukushima: "#16a34a",
+  ehime: "#f59e0b",
+  nagasaki: "#2563eb",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -82,6 +85,9 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   okayama: "🍑 岡山",
   ishikawa: "🪭 石川",
   oita: "♨️ 大分",
+  fukushima: "🍑 福島",
+  ehime: "🍊 愛媛",
+  nagasaki: "⛵ 長崎",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -110,6 +116,9 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   okayama: true,
   ishikawa: true,
   oita: true,
+  fukushima: true,
+  ehime: true,
+  nagasaki: true,
 };
 
 const LOCATION_GUIDE_TEXT =
