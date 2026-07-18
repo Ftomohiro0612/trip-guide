@@ -18,6 +18,7 @@ const PREFECTURE_CENTROIDS = {
   aichi: { lat: 35.18, lng: 136.91 },
   fukuoka: { lat: 33.59, lng: 130.4 },
   hiroshima: { lat: 34.4, lng: 132.46 },
+  miyagi: { lat: 38.2682, lng: 140.8694 },
 };
 
 const USER_AGENT =

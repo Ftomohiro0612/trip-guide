@@ -50,6 +50,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   aichi: "#16a34a",
   fukuoka: "#7c3aed",
   hiroshima: "#dc2626",
+  miyagi: "#0891b2",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -70,6 +71,7 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   aichi: "🏮 愛知",
   fukuoka: "🍜 福岡",
   hiroshima: "🦪 広島",
+  miyagi: "🌙 宮城",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -92,6 +94,7 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   aichi: true,
   fukuoka: true,
   hiroshima: true,
+  miyagi: true,
 };
 
 const LOCATION_GUIDE_TEXT =

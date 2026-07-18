@@ -75,6 +75,7 @@ const TARGET_PREFECTURES = new Set([
   "新潟県",
   "千葉県",
   "神奈川県",
+  "宮城県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -95,12 +96,13 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   新潟県: "niigata",
   千葉県: "chiba",
   神奈川県: "kanagawa",
+  宮城県: "miyagi",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
 
 const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊", "周辺"];
-const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|[-‐‑‒–—―−ー－]/;
+const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|地内|[-‐‑‒–—―−ー－]/;
 
 const PREFECTURE_BBOXES = {
   茨城県: [{ minLat: 35.7, maxLat: 36.95, minLng: 139.6, maxLng: 140.95 }],
@@ -123,6 +125,7 @@ const PREFECTURE_BBOXES = {
   長野県: [{ minLat: 35.1, maxLat: 37.05, minLng: 137.55, maxLng: 138.85 }],
   新潟県: [{ minLat: 36.7, maxLat: 38.6, minLng: 137.6, maxLng: 139.9 }],
   静岡県: [{ minLat: 34.5, maxLat: 35.7, minLng: 137.4, maxLng: 139.2 }],
+  宮城県: [{ minLat: 37.75, maxLat: 39.05, minLng: 140.2, maxLng: 141.75 }],
 };
 
 const JAPAN_BBOX = {
