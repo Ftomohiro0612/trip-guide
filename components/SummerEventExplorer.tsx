@@ -1,14 +1,29 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
+import {
+  EVENT_PAGE_SIZE,
+  paginateEventViews,
+} from "@/lib/event-filter";
 import type {
   EventPrefecture,
   EventView,
   SummerEventType,
 } from "@/lib/events";
 import { getSummerEventAnchorId } from "@/lib/summer-event-hub";
+import {
+  getSummerEventIdFromHash,
+  getSummerEventPageForHash,
+  getSummerEventTypePage,
+} from "@/lib/summer-event-pagination";
 
 type QuickFilter = "weekend" | "free" | "noReservation";
 
@@ -16,6 +31,11 @@ interface SummerEventExplorerProps {
   views: EventView[];
   initialType?: SummerEventType;
   initialQuickFilter?: QuickFilter;
+}
+
+interface SummerAnchorTarget {
+  elementId: string;
+  page: number;
 }
 
 const PREFECTURES: { id: EventPrefecture; label: string }[] = [
@@ -112,6 +132,11 @@ export default function SummerEventExplorer({
   initialType,
   initialQuickFilter,
 }: SummerEventExplorerProps) {
+  const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
+  const filteredViewsRef = useRef<EventView[]>([]);
+  const allOrderedViewsRef = useRef<EventView[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [pendingFocusId, setPendingFocusId] = useState<string | null>(null);
   const [selectedTypes, setSelectedTypes] = useState<SummerEventType[]>(
     initialType ? [initialType] : [],
   );
@@ -142,32 +167,107 @@ export default function SummerEventExplorer({
       }),
     [selectedPrefectures, selectedQuickFilters, selectedTypes, views],
   );
+  const allOrderedViews = useMemo(
+    () => orderViewsByEventType(views),
+    [views],
+  );
+  const orderedFilteredViews = useMemo(
+    () => orderViewsByEventType(filteredViews),
+    [filteredViews],
+  );
+  const page = useMemo(
+    () => paginateEventViews(orderedFilteredViews, currentPage),
+    [currentPage, orderedFilteredViews],
+  );
 
   const hasActiveFilters =
     selectedTypes.length > 0 ||
     selectedPrefectures.length > 0 ||
     selectedQuickFilters.length > 0;
 
+  const revealHashTarget = useCallback((hash: string) => {
+    let target = resolveSummerAnchorTarget(
+      filteredViewsRef.current,
+      hash,
+    );
+
+    if (!target) {
+      target = resolveSummerAnchorTarget(allOrderedViewsRef.current, hash);
+      if (!target) return;
+
+      setSelectedTypes([]);
+      setSelectedPrefectures([]);
+      setSelectedQuickFilters([]);
+    }
+
+    setCurrentPage(target.page);
+    setPendingFocusId(target.elementId);
+  }, []);
+
+  useEffect(() => {
+    filteredViewsRef.current = orderedFilteredViews;
+    allOrderedViewsRef.current = allOrderedViews;
+  }, [allOrderedViews, orderedFilteredViews]);
+
+  useEffect(() => {
+    const handleHashNavigation = () => revealHashTarget(window.location.hash);
+
+    handleHashNavigation();
+    window.addEventListener("hashchange", handleHashNavigation);
+    return () => window.removeEventListener("hashchange", handleHashNavigation);
+  }, [revealHashTarget]);
+
+  useEffect(() => {
+    if (!pendingFocusId) return;
+
+    const frame = window.requestAnimationFrame(() => {
+      const target = document.getElementById(pendingFocusId);
+      if (!target) return;
+
+      focusAndScrollTo(target);
+      setPendingFocusId(null);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, [page.currentPage, pendingFocusId]);
+
+  function handlePageChange(nextPage: number) {
+    const targetPage = Math.min(
+      Math.max(nextPage, 1),
+      Math.max(page.totalPages, 1),
+    );
+    if (targetPage === page.currentPage) return;
+
+    setPendingFocusId(null);
+    setCurrentPage(targetPage);
+    window.requestAnimationFrame(() => {
+      const heading = eventListHeadingRef.current;
+      if (heading) focusAndScrollTo(heading);
+    });
+  }
+
+  function clearFilters() {
+    setCurrentPage(1);
+    setSelectedTypes([]);
+    setSelectedPrefectures([]);
+    setSelectedQuickFilters([]);
+  }
+
   return (
     <section id="summer-filters" aria-labelledby="summer-filter-heading">
       <div className="rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
-          <div>
-            <h2 id="summer-filter-heading" className="text-2xl font-bold text-slate-900">
-              条件から探す
-            </h2>
-            <p className="mt-1 text-sm text-slate-600" aria-live="polite">
-              表示中 {filteredViews.length}件 / 公開中{views.length}件
-            </p>
-          </div>
+          <h2
+            id="summer-filter-heading"
+            className="text-2xl font-bold text-slate-900"
+          >
+            条件から探す
+          </h2>
           <button
             type="button"
             disabled={!hasActiveFilters}
-            onClick={() => {
-              setSelectedTypes([]);
-              setSelectedPrefectures([]);
-              setSelectedQuickFilters([]);
-            }}
+            onClick={clearFilters}
+            data-summer-filter-clear
             className="rounded-full border border-slate-200 px-4 py-2 text-sm font-bold text-slate-600 transition-colors hover:border-indigo-300 hover:text-indigo-700 disabled:cursor-not-allowed disabled:opacity-40"
           >
             全解除
@@ -180,7 +280,10 @@ export default function SummerEventExplorer({
               <FilterButton
                 key={type.id}
                 active={selectedTypes.includes(type.id)}
-                onClick={() => setSelectedTypes((current) => toggle(current, type.id))}
+                onClick={() => {
+                  setCurrentPage(1);
+                  setSelectedTypes((current) => toggle(current, type.id));
+                }}
                 dataFilter={`type:${type.id}`}
               >
                 {type.label}
@@ -192,11 +295,12 @@ export default function SummerEventExplorer({
               <FilterButton
                 key={prefecture.id}
                 active={selectedPrefectures.includes(prefecture.id)}
-                onClick={() =>
+                onClick={() => {
+                  setCurrentPage(1);
                   setSelectedPrefectures((current) =>
                     toggle(current, prefecture.id),
-                  )
-                }
+                  );
+                }}
                 dataFilter={`prefecture:${prefecture.id}`}
               >
                 {prefecture.label}
@@ -208,9 +312,12 @@ export default function SummerEventExplorer({
               <FilterButton
                 key={filter.id}
                 active={selectedQuickFilters.includes(filter.id)}
-                onClick={() =>
-                  setSelectedQuickFilters((current) => toggle(current, filter.id))
-                }
+                onClick={() => {
+                  setCurrentPage(1);
+                  setSelectedQuickFilters((current) =>
+                    toggle(current, filter.id),
+                  );
+                }}
                 dataFilter={`quick:${filter.id}`}
               >
                 {filter.label}
@@ -220,14 +327,35 @@ export default function SummerEventExplorer({
         </div>
       </div>
 
-      {filteredViews.length === 0 ? (
+      <div className="mt-8">
+        <h2
+          id="summer-event-list-heading"
+          ref={eventListHeadingRef}
+          tabIndex={-1}
+          className="scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
+        >
+          開催中・これからのイベント
+        </h2>
+        <p
+          className="mt-1 text-sm text-slate-600"
+          aria-live="polite"
+          data-summer-event-count
+        >
+          {page.totalItems === 0
+            ? "0件を表示"
+            : `${page.startNumber}〜${page.endNumber}件を表示`}{" "}
+          / 全{page.totalItems}件
+        </p>
+      </div>
+
+      {page.totalItems === 0 ? (
         <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-600">
           条件に合う、開催中・これからのイベントはありません。
         </div>
       ) : (
         <div className="mt-10 grid gap-12">
           {EVENT_TYPES.map((type) => {
-            const group = filteredViews.filter(
+            const group = page.items.filter(
               (view) => view.event.event_type === type.id,
             );
             if (group.length === 0) return null;
@@ -236,16 +364,21 @@ export default function SummerEventExplorer({
                 key={type.id}
                 id={`summer-${type.id}`}
                 aria-labelledby={`summer-${type.id}-heading`}
+                data-summer-event-group={type.id}
               >
                 <div className="mb-5">
                   <div className="flex items-center gap-3">
                     <h2
                       id={`summer-${type.id}-heading`}
-                      className="text-2xl font-bold text-slate-900 sm:text-3xl"
+                      tabIndex={-1}
+                      className="scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
                     >
                       {type.heading}
                     </h2>
-                    <span className="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-bold text-indigo-700">
+                    <span
+                      className="rounded-full bg-indigo-50 px-2.5 py-1 text-xs font-bold text-indigo-700"
+                      data-summer-event-group-count
+                    >
                       {group.length}件
                     </span>
                   </div>
@@ -267,11 +400,111 @@ export default function SummerEventExplorer({
           })}
         </div>
       )}
+
+      {page.totalPages > 1 ? (
+        <nav
+          aria-label="Summerイベント一覧のページ"
+          data-summer-event-pagination
+          className="mt-6 flex items-center justify-center gap-3 rounded-lg border border-slate-200 bg-white p-3 sm:gap-5"
+        >
+          <button
+            type="button"
+            data-page-action="previous"
+            disabled={!page.hasPreviousPage}
+            onClick={() => handlePageChange(page.currentPage - 1)}
+            className="inline-flex min-h-11 min-w-20 items-center justify-center rounded-md border border-slate-200 px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:border-indigo-400 hover:text-indigo-700 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            前へ
+          </button>
+          <p
+            aria-live="polite"
+            aria-atomic="true"
+            aria-current="page"
+            data-summer-event-page
+            className="min-w-24 text-center text-sm font-bold text-slate-700"
+          >
+            <span className="sr-only">現在 </span>
+            {page.currentPage} / {page.totalPages}ページ
+          </p>
+          <button
+            type="button"
+            data-page-action="next"
+            disabled={!page.hasNextPage}
+            onClick={() => handlePageChange(page.currentPage + 1)}
+            className="inline-flex min-h-11 min-w-20 items-center justify-center rounded-md border border-slate-200 px-4 py-2 text-sm font-bold text-slate-700 transition-colors hover:border-indigo-400 hover:text-indigo-700 disabled:cursor-not-allowed disabled:opacity-40"
+          >
+            次へ
+          </button>
+        </nav>
+      ) : null}
     </section>
   );
 }
 
-function FilterGroup({ label, children }: { label: string; children: ReactNode }) {
+function resolveSummerAnchorTarget(
+  items: readonly EventView[],
+  hash: string,
+): SummerAnchorTarget | null {
+  const eventId = getSummerEventIdFromHash(hash);
+  if (eventId) {
+    const page = getSummerEventPageForHash(items, hash, EVENT_PAGE_SIZE);
+    return page
+      ? { elementId: getSummerEventAnchorId(eventId), page }
+      : null;
+  }
+
+  const eventType = getSummerEventTypeFromHeadingHash(hash);
+  if (!eventType) return null;
+  const page = getSummerEventTypePage(items, eventType, EVENT_PAGE_SIZE);
+  return page
+    ? { elementId: `summer-${eventType}-heading`, page }
+    : null;
+}
+
+function getSummerEventTypeFromHeadingHash(
+  hash: string,
+): SummerEventType | null {
+  const rawAnchor = hash.startsWith("#") ? hash.slice(1) : hash;
+  let anchor: string;
+
+  try {
+    anchor = decodeURIComponent(rawAnchor);
+  } catch {
+    return null;
+  }
+
+  return (
+    EVENT_TYPES.find(
+      (type) => anchor === `summer-${type.id}-heading`,
+    )?.id ?? null
+  );
+}
+
+function orderViewsByEventType(views: readonly EventView[]): EventView[] {
+  return EVENT_TYPES.flatMap((type) =>
+    views.filter((view) => view.event.event_type === type.id),
+  );
+}
+
+function focusAndScrollTo(target: HTMLElement) {
+  target.focus({ preventScroll: true });
+  const top = window.scrollY + target.getBoundingClientRect().top - 80;
+  const reduceMotion = window.matchMedia(
+    "(prefers-reduced-motion: reduce)",
+  ).matches;
+  window.scrollTo({
+    top: Math.max(0, top),
+    behavior: reduceMotion ? "auto" : "smooth",
+  });
+}
+
+function FilterGroup({
+  label,
+  children,
+}: {
+  label: string;
+  children: ReactNode;
+}) {
   return (
     <div>
       <p className="mb-2 text-xs font-bold text-slate-500">{label}</p>

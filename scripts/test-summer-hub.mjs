@@ -12,6 +12,11 @@ import {
   selectSummerHeroEventsByType,
 } from "../lib/summer-event-hub.ts";
 import { spreadNearbySummerEventMarkers } from "../lib/summer-event-map.ts";
+import {
+  getSummerEventIdFromHash,
+  getSummerEventPageForHash,
+  getSummerEventTypePage,
+} from "../lib/summer-event-pagination.ts";
 import { isFeatureHubActive } from "../lib/feature-hub-runtime.ts";
 
 const TEST_DATES = [
@@ -52,6 +57,13 @@ const CURRENT_SUMMER_MILESTONE = Object.freeze({
   mappableCount: 22,
   holdCount: 405,
 });
+const PAGINATION_TEST_DATE = "2026-07-19";
+const SUMMER_EVENT_TYPE_ORDER = [
+  "fireworks",
+  "summer_festival",
+  "summer_tradition",
+  "night_outing",
+];
 
 function fixture(
   id,
@@ -599,6 +611,184 @@ test("163 fireworks and 144 festivals paginate to their expected final pages", (
     assert.equal(final.totalPages, finalPage, eventType);
     assert.equal(final.hasNextPage, false, eventType);
   }
+});
+
+test("Summer Hub fixed-date list paginates all types together in groups of 20", () => {
+  const visibleViews = getFixedDateVisibleSummerViews(PAGINATION_TEST_DATE);
+  const orderedViews = orderSummerViewsByType(visibleViews);
+  const first = paginateEventViews(orderedViews, 1);
+  const second = paginateEventViews(orderedViews, 2);
+  const final = paginateEventViews(orderedViews, 25);
+
+  assert.equal(visibleViews.length, 496);
+  assert.equal(EVENT_PAGE_SIZE, 20);
+  assert.deepEqual(
+    {
+      firstCount: first.items.length,
+      secondCount: second.items.length,
+      finalCount: final.items.length,
+      totalPages: first.totalPages,
+      firstPrevious: first.hasPreviousPage,
+      firstNext: first.hasNextPage,
+      finalPrevious: final.hasPreviousPage,
+      finalNext: final.hasNextPage,
+      firstRange: `${first.startNumber}〜${first.endNumber}件を表示 / 全${first.totalItems}件`,
+      finalRange: `${final.startNumber}〜${final.endNumber}件を表示 / 全${final.totalItems}件`,
+    },
+    {
+      firstCount: 20,
+      secondCount: 20,
+      finalCount: 16,
+      totalPages: 25,
+      firstPrevious: false,
+      firstNext: true,
+      finalPrevious: true,
+      finalNext: false,
+      firstRange: "1〜20件を表示 / 全496件",
+      finalRange: "481〜496件を表示 / 全496件",
+    },
+  );
+  assert.equal(
+    Array.from({ length: first.totalPages }, (_, index) =>
+      paginateEventViews(orderedViews, index + 1),
+    ).every((candidatePage) => candidatePage.items.length <= EVENT_PAGE_SIZE),
+    true,
+  );
+  assert.deepEqual(getTypesOnPage(first.items), ["fireworks"]);
+  assert.deepEqual(getTypesOnPage(final.items), [
+    "summer_tradition",
+    "night_outing",
+  ]);
+  assert.deepEqual(
+    getTypesOnPage(final.items).map((eventType) =>
+      final.items.filter((view) => view.event.event_type === eventType).length,
+    ),
+    [8, 8],
+  );
+});
+
+test("Summer Hub filters recalculate pages, clamp safely, and reset through every control", () => {
+  const visibleViews = orderSummerViewsByType(
+    getFixedDateVisibleSummerViews(PAGINATION_TEST_DATE),
+  );
+  const fireworks = visibleViews.filter(
+    (view) => view.event.event_type === "fireworks",
+  );
+  const clamped = paginateEventViews(fireworks, 999);
+
+  assert.equal(fireworks.length, 198);
+  assert.equal(clamped.currentPage, 10);
+  assert.equal(clamped.totalPages, 10);
+  assert.equal(clamped.items.length, 18);
+  assert.equal(clamped.hasNextPage, false);
+  assert.equal(
+    (summerExplorerSource.match(/setCurrentPage\(1\);/gu) ?? []).length >= 4,
+    true,
+  );
+  assert.match(
+    summerExplorerSource,
+    /function clearFilters\(\) \{\s*setCurrentPage\(1\);\s*setSelectedTypes\(\[\]\);\s*setSelectedPrefectures\(\[\]\);\s*setSelectedQuickFilters\(\[\]\);/su,
+  );
+  assert.match(summerExplorerSource, /paginateEventViews\(orderedFilteredViews, currentPage\)/u);
+  assert.match(summerExplorerSource, /disabled=\{!page\.hasPreviousPage\}/u);
+  assert.match(summerExplorerSource, /disabled=\{!page\.hasNextPage\}/u);
+  assert.match(summerExplorerSource, /\{page\.currentPage\} \/ \{page\.totalPages\}ページ/u);
+  assert.match(summerExplorerSource, /page\.items\.filter\(/u);
+});
+
+test("Summer event anchors resolve later pages and ignore invalid hashes safely", () => {
+  const orderedViews = orderSummerViewsByType(
+    getFixedDateVisibleSummerViews(PAGINATION_TEST_DATE),
+  );
+  const pageTwoEvent = orderedViews[20].event.id;
+  const pageThreeEvent = orderedViews[40].event.id;
+  const heroPages = summerSource.metadata.hero_event_ids.map((eventId) =>
+    getSummerEventPageForHash(
+      orderedViews,
+      `#${getSummerEventAnchorId(eventId)}`,
+      EVENT_PAGE_SIZE,
+    ),
+  );
+  const mapPages = Object.entries(
+    summerLocationsSource.locations_by_event_id,
+  )
+    .filter(([, location]) => location.coordinate_precision !== "hold")
+    .map(([eventId]) =>
+      getSummerEventPageForHash(
+        orderedViews,
+        `#${getSummerEventAnchorId(eventId)}`,
+        EVENT_PAGE_SIZE,
+      ),
+    );
+
+  assert.equal(
+    getSummerEventPageForHash(
+      orderedViews,
+      `#${getSummerEventAnchorId(pageTwoEvent)}`,
+      EVENT_PAGE_SIZE,
+    ),
+    2,
+  );
+  assert.equal(
+    getSummerEventPageForHash(
+      orderedViews,
+      `#${getSummerEventAnchorId(pageThreeEvent)}`,
+      EVENT_PAGE_SIZE,
+    ),
+    3,
+  );
+  assert.equal(heroPages.some((pageNumber) => pageNumber === 1), true);
+  assert.equal(heroPages.some((pageNumber) => pageNumber > 1), true);
+  assert.equal(mapPages.some((pageNumber) => pageNumber > 1), true);
+  assert.equal(
+    getSummerEventTypePage(
+      orderedViews,
+      "summer_festival",
+      EVENT_PAGE_SIZE,
+    ),
+    10,
+  );
+  assert.equal(getSummerEventIdFromHash("#summer-event-missing"), "missing");
+  assert.equal(
+    getSummerEventPageForHash(
+      orderedViews,
+      "#summer-event-missing",
+      EVENT_PAGE_SIZE,
+    ),
+    null,
+  );
+  assert.equal(getSummerEventIdFromHash("#summer-event-%E0%A4%A"), null);
+  assert.match(summerExplorerSource, /window\.addEventListener\("hashchange"/u);
+  assert.match(summerExplorerSource, /setPendingFocusId\(target\.elementId\)/u);
+  assert.match(summerExplorerSource, /focusAndScrollTo\(target\)/u);
+});
+
+test("Summer pagination only receives visible views and cannot revive excluded events", () => {
+  const visibleViews = getFixedDateVisibleSummerViews(PAGINATION_TEST_DATE);
+  const candidateEvents = getSummerCandidateEvents();
+  const visibleIds = new Set(visibleViews.map((view) => view.event.id));
+  const ended = candidateEvents.filter(
+    (event) => event.end_date && event.end_date < PAGINATION_TEST_DATE,
+  );
+
+  assert.equal(candidateEvents.length, 500);
+  assert.equal(ended.length, 4);
+  assert.equal(ended.every((event) => !visibleIds.has(event.id)), true);
+  assert.equal(
+    visibleViews.every(
+      (view) =>
+        view.event.end_date >= PAGINATION_TEST_DATE &&
+        daysBetween(view.event.source_checked_at, PAGINATION_TEST_DATE) <=
+          summerSource.metadata.freshness_days_hub,
+    ),
+    true,
+  );
+  assert.match(
+    summerPageSource,
+    /const visibleEvents = getVisibleSummerHubEvents\(today\);\s*const views = visibleEvents\.map/u,
+  );
+  assert.match(summerPageSource, /<SummerEventExplorer\s+views=\{views\}/u);
+  assert.doesNotMatch(summerExplorerSource, /summer_events_2026|events_data\.json/u);
 });
 
 test("Yamanashi regional wave keeps the accepted schema and source boundaries", () => {
@@ -2249,6 +2439,84 @@ test("combined prefecture, type, condition, and preference filters keep correct 
   assert.equal(final.items.length, 3);
   assert.deepEqual([final.startNumber, final.endNumber], [41, 43]);
 });
+
+function getFixedDateVisibleSummerViews(today) {
+  const visibleEvents = getSummerCandidateEvents()
+    .filter((event) => {
+      const checkedAge = daysBetween(event.source_checked_at, today);
+      return (
+        ["scheduled", "ongoing"].includes(event.status) &&
+        (!event.end_date || event.end_date >= today) &&
+        checkedAge >= 0 &&
+        checkedAge <= summerSource.metadata.freshness_days_hub &&
+        getNextSummerDate(event, today) !== null
+      );
+    })
+    .sort((a, b) => {
+      const nextA = getNextSummerDate(a, today);
+      const nextB = getNextSummerDate(b, today);
+      return (
+        nextA.localeCompare(nextB) ||
+        b.display_priority - a.display_priority ||
+        a.id.localeCompare(b.id)
+      );
+    });
+
+  return visibleEvents.map((event) => ({
+    event,
+    isThisWeekend: false,
+    isThisMonth: false,
+  }));
+}
+
+function getSummerCandidateEvents() {
+  const baseById = new Map(
+    baseSource.events.map((event) => [event.id, event]),
+  );
+  const existing = summerSource.existing_event_classifications.map(
+    (classification) => ({
+      ...baseById.get(classification.id),
+      ...classification,
+    }),
+  );
+  const heroIds = new Set(summerSource.metadata.hero_event_ids);
+  const added = summerSource.events.map((event) => ({
+    ...event,
+    status: "scheduled",
+    display_priority: heroIds.has(event.id) ? 90 : 80,
+  }));
+  return [...existing, ...added];
+}
+
+function getNextSummerDate(event, today) {
+  if (event.occurrence_dates?.length > 0) {
+    return event.occurrence_dates.find((date) => date >= today) ?? null;
+  }
+  if (!event.start_date) return null;
+  const endDate = event.end_date ?? event.start_date;
+  if (endDate < today) return null;
+  return event.start_date <= today ? today : event.start_date;
+}
+
+function daysBetween(fromDate, toDate) {
+  return Math.floor(
+    (Date.parse(`${toDate}T00:00:00Z`) -
+      Date.parse(`${fromDate}T00:00:00Z`)) /
+      86_400_000,
+  );
+}
+
+function orderSummerViewsByType(views) {
+  return SUMMER_EVENT_TYPE_ORDER.flatMap((eventType) =>
+    views.filter((view) => view.event.event_type === eventType),
+  );
+}
+
+function getTypesOnPage(views) {
+  return SUMMER_EVENT_TYPE_ORDER.filter((eventType) =>
+    views.some((view) => view.event.event_type === eventType),
+  );
+}
 
 function filterFixture(id, eventType, overrides = {}) {
   return {

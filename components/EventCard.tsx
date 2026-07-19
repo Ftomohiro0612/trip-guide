@@ -42,9 +42,10 @@ export default function EventCard({
   return (
     <article
       id={anchorId}
+      tabIndex={anchorId ? -1 : undefined}
       className={`rounded-lg border border-slate-200 bg-white p-4 shadow-sm shadow-slate-100 sm:p-5 ${
         anchorId
-          ? "scroll-mt-20 transition-[border-color,background-color,box-shadow] duration-300 target:border-indigo-400 target:bg-indigo-50/40 target:ring-4 target:ring-indigo-100 motion-reduce:transition-none"
+          ? "scroll-mt-24 transition-[border-color,background-color,box-shadow] duration-300 target:border-indigo-400 target:bg-indigo-50/40 target:ring-4 target:ring-indigo-100 motion-reduce:transition-none"
           : ""
       }`}
       data-event-card
