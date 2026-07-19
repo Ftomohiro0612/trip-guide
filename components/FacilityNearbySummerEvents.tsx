@@ -1,6 +1,5 @@
 "use client";
 
-import Link from "next/link";
 import { useCrosslinkAnalytics } from "@/components/useCrosslinkAnalytics";
 import {
   formatStraightLineDistance,
@@ -52,7 +51,7 @@ export default function FacilityNearbySummerEvents({
       <ul className="mt-4 grid gap-2.5">
         {recommendations.map((recommendation, index) => (
           <li key={recommendation.eventId}>
-            <Link
+            <a
               href={`/events/summer#${getSummerEventAnchorId(recommendation.eventId)}`}
               onClick={() => trackClick(index + 1)}
               data-crosslink-position={index + 1}
@@ -77,7 +76,7 @@ export default function FacilityNearbySummerEvents({
               <span className="shrink-0 text-xs font-bold text-indigo-700">
                 {formatStraightLineDistance(recommendation.distanceKm)} →
               </span>
-            </Link>
+            </a>
           </li>
         ))}
       </ul>
