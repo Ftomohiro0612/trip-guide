@@ -18,6 +18,7 @@ import {
   getSummerEventAnchorId,
 } from "@/lib/summer-event-hub";
 import { buildSummerEventMapPoints } from "@/lib/summer-event-locations";
+import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 
 export const metadata: Metadata = {
   title: "夏祭り・花火大会2026｜全国47都道府県",
@@ -54,6 +55,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
   const heroFireworks = getSummerHeroEvents("fireworks", today, 4);
   const heroFestivals = getSummerHeroEvents("summer_festival", today, 4);
   const mapPoints = buildSummerEventMapPoints(visibleEvents, today);
+  const crosslinks = getSummerCrosslinkData(today);
   const initialType = isSummerEventType(query.type) ? query.type : undefined;
   const initialQuickFilter =
     query.quick === "weekend" ||
@@ -212,6 +214,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
         <div className="mt-12">
           <SummerEventExplorer
             views={views}
+            eventFacilityRecommendations={crosslinks.eventToFacilities}
             initialType={initialType}
             initialQuickFilter={initialQuickFilter}
           />

@@ -9,6 +9,7 @@ import {
 } from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
+import EventNearbyFacilities from "@/components/EventNearbyFacilities";
 import {
   EVENT_PAGE_SIZE,
   paginateEventViews,
@@ -19,6 +20,7 @@ import type {
   SummerEventType,
 } from "@/lib/events";
 import { getSummerEventAnchorId } from "@/lib/summer-event-hub";
+import type { EventFacilityRecommendation } from "@/lib/event-facility-crosslinks";
 import {
   getSummerEventIdFromHash,
   getSummerEventPageForHash,
@@ -30,6 +32,10 @@ type QuickFilter = "weekend" | "free" | "noReservation";
 
 interface SummerEventExplorerProps {
   views: EventView[];
+  eventFacilityRecommendations: Record<
+    string,
+    EventFacilityRecommendation[]
+  >;
   initialType?: SummerEventType;
   initialQuickFilter?: QuickFilter;
 }
@@ -130,6 +136,7 @@ const QUICK_FILTERS: { id: QuickFilter; label: string }[] = [
 
 export default function SummerEventExplorer({
   views,
+  eventFacilityRecommendations,
   initialType,
   initialQuickFilter,
 }: SummerEventExplorerProps) {
@@ -400,11 +407,18 @@ export default function SummerEventExplorer({
                 </div>
                 <div className="grid gap-4">
                   {group.map((view) => (
-                    <EventCard
-                      key={view.event.id}
-                      view={view}
-                      anchorId={getSummerEventAnchorId(view.event.id)}
-                    />
+                    <div key={view.event.id} className="grid gap-2.5">
+                      <EventCard
+                        view={view}
+                        anchorId={getSummerEventAnchorId(view.event.id)}
+                      />
+                      <EventNearbyFacilities
+                        eventId={view.event.id}
+                        recommendations={
+                          eventFacilityRecommendations[view.event.id] ?? []
+                        }
+                      />
+                    </div>
                   ))}
                 </div>
               </section>
