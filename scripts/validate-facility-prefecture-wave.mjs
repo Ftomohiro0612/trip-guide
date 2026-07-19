@@ -4,40 +4,30 @@ import { readFile } from "node:fs/promises";
 import { resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dirname, "..");
-const BASE_COMMIT = "69b7efcdf123bbf5735e085e5982a01b493584a6";
+const BASE_COMMIT = "ec29b17a19354bcaaf47f873600a48158821bff9";
 const CHECK_DATE = "2026-07-19";
 const online = process.argv.includes("--online");
 
 const TARGETS = {
-  okayama: {
-    name: "岡山県",
-    host: "www.okayama-kanko.jp",
-    bbox: [34.25, 35.35, 133.25, 134.55],
+  toyama: {
+    name: "富山県",
+    host: "www.info-toyama.com",
+    bbox: [36.25, 36.99, 136.75, 137.8],
   },
-  ishikawa: {
-    name: "石川県",
-    host: "www.hot-ishikawa.jp",
-    bbox: [36.05, 37.95, 136.15, 137.4],
+  fukui: {
+    name: "福井県",
+    host: "www.fuku-e.com",
+    bbox: [35.32, 36.33, 135.42, 136.83],
   },
-  oita: {
-    name: "大分県",
-    host: "www.visit-oita.jp",
-    bbox: [32.65, 33.75, 130.75, 132.15],
+  gifu: {
+    name: "岐阜県",
+    host: "www.kankou-gifu.jp",
+    bbox: [35.08, 36.47, 136.27, 137.66],
   },
-  fukushima: {
-    name: "福島県",
-    host: "www.tif.ne.jp",
-    bbox: [36.7, 38.0, 139.1, 141.1],
-  },
-  ehime: {
-    name: "愛媛県",
-    host: "www.iyokannet.jp",
-    bbox: [32.85, 34.35, 131.9, 133.75],
-  },
-  nagasaki: {
-    name: "長崎県",
-    host: "www.nagasaki-tabinet.com",
-    bbox: [31.8, 34.8, 128.0, 130.4],
+  mie: {
+    name: "三重県",
+    host: "www.kankomie.or.jp",
+    bbox: [33.66, 35.26, 135.85, 136.99],
   },
 };
 
@@ -91,6 +81,8 @@ assertUnique(
   "facility name/address",
 );
 
+const baseOfficialUrls = new Set(baseData.facilities.map((facility) => facility.url).filter(Boolean));
+
 const currentById = new Map(data.facilities.map((facility) => [facility.id, facility]));
 for (const baseFacility of baseData.facilities) {
   assert.deepEqual(
@@ -121,6 +113,7 @@ for (const [id, spec] of activeTargets) {
   assert.equal(meta?.name, spec.name, `${id}: prefecture metadata name mismatch`);
   assert.equal(meta?.count, facilities.length, `${id}: prefecture metadata count mismatch`);
   assertUnique(facilities, (facility) => normalize(facility.name), `${id} facility name`);
+  assertUnique(facilities, (facility) => facility.url, `${id} official URL`);
 
   const [minLat, maxLat, minLng, maxLng] = spec.bbox;
   for (const facility of facilities) {
@@ -143,6 +136,7 @@ for (const [id, spec] of activeTargets) {
     assert(facility.latitude >= minLat && facility.latitude <= maxLat && facility.longitude >= minLng && facility.longitude <= maxLng, `${facility.name}: coordinate/prefecture mismatch`);
     assert.equal(facility.geocode_source, "manual", `${facility.name}: coordinate provenance mismatch`);
     const url = new URL(facility.url);
+    assert(!baseOfficialUrls.has(facility.url), `${facility.name}: official URL duplicates an existing facility`);
     assert.equal(url.protocol, "https:", `${facility.name}: non-HTTPS source`);
     assert.equal(url.hostname, spec.host, `${facility.name}: source is not the official prefectural tourism site`);
     assert.equal(facility.source_urls, facility.url, `${facility.name}: canonical source mismatch`);

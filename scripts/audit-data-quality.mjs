@@ -78,6 +78,8 @@ const TARGET_PREFECTURES = new Set([
   "宮城県",
   "香川県",
   "熊本県",
+  "富山県",
+  "福井県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -107,6 +109,8 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   福島県: "fukushima",
   愛媛県: "ehime",
   長崎県: "nagasaki",
+  富山県: "toyama",
+  福井県: "fukui",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
@@ -144,6 +148,8 @@ const PREFECTURE_BBOXES = {
   福島県: [{ minLat: 36.7, maxLat: 38.0, minLng: 139.1, maxLng: 141.1 }],
   愛媛県: [{ minLat: 32.85, maxLat: 34.35, minLng: 131.9, maxLng: 133.75 }],
   長崎県: [{ minLat: 31.8, maxLat: 34.8, minLng: 128.0, maxLng: 130.4 }],
+  富山県: [{ minLat: 36.25, maxLat: 36.99, minLng: 136.75, maxLng: 137.8 }],
+  福井県: [{ minLat: 35.32, maxLat: 36.33, minLng: 135.42, maxLng: 136.83 }],
 };
 
 const JAPAN_BBOX = {

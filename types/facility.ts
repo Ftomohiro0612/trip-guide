@@ -24,7 +24,9 @@ export type PrefectureId =
   | "oita"
   | "fukushima"
   | "ehime"
-  | "nagasaki";
+  | "nagasaki"
+  | "toyama"
+  | "fukui";
 
 export type RainFriendly = "◎" | "△" | "×";
 

@@ -44,6 +44,8 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   福島県: "fukushima",
   愛媛県: "ehime",
   長崎県: "nagasaki",
+  富山県: "toyama",
+  福井県: "fukui",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([

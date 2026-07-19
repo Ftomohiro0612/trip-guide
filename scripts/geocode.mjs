@@ -27,6 +27,8 @@ const PREFECTURE_CENTROIDS = {
   fukushima: { lat: 37.7503, lng: 140.4676 },
   ehime: { lat: 33.8416, lng: 132.7657 },
   nagasaki: { lat: 32.7503, lng: 129.8777 },
+  toyama: { lat: 36.6953, lng: 137.2113 },
+  fukui: { lat: 36.0652, lng: 136.2216 },
 };
 
 const USER_AGENT =
