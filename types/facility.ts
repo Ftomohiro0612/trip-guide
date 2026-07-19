@@ -18,7 +18,13 @@ export type PrefectureId =
   | "hiroshima"
   | "miyagi"
   | "kagawa"
-  | "kumamoto";
+  | "kumamoto"
+  | "okayama"
+  | "ishikawa"
+  | "oita"
+  | "fukushima"
+  | "ehime"
+  | "nagasaki";
 
 export type RainFriendly = "◎" | "△" | "×";
 

@@ -79,11 +79,17 @@ test("recommended-tag prefecture chips include every facility metadata prefectur
   assert.deepEqual(prefectureOptions.slice(1, 18), legacyOrder);
 });
 
-test("new prefectures retain recommended-tag filters across reload", async (t) => {
+test("expanded prefectures retain recommended-tag filters across reload", async (t) => {
   const cases = [
     ["宮城県", "experience"],
     ["香川県", "exhibition"],
     ["熊本県", "nature"],
+    ["岡山県", "nature"],
+    ["石川県", "exhibition"],
+    ["大分県", "experience"],
+    ["福島県", "nature"],
+    ["愛媛県", "nature"],
+    ["長崎県", "exhibition"],
   ];
   for (const [prefecture, tag] of cases) {
     await t.test(`${prefecture} + ${tag}`, () => {
@@ -104,9 +110,9 @@ test("existing 17 prefectures keep the recommended-tag route behavior", () => {
   }
 });
 
-test("facility metadata description matches the 20-prefecture milestone", () => {
+test("facility metadata description matches its prefecture count", () => {
   assert.equal(
     data.metadata.site_description,
-    "全国20都府県の子供向け遊び場検索サイト",
+    `全国${data.metadata.prefectures.length}都府県の子供向け遊び場検索サイト`,
   );
 });

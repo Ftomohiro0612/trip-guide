@@ -38,6 +38,12 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   宮城県: "miyagi",
   香川県: "kagawa",
   熊本県: "kumamoto",
+  岡山県: "okayama",
+  石川県: "ishikawa",
+  大分県: "oita",
+  福島県: "fukushima",
+  愛媛県: "ehime",
+  長崎県: "nagasaki",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
