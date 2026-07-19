@@ -300,12 +300,10 @@ function countByRecommendedTag(tag: RecommendedForTag) {
 
 export default function HomePage() {
   const facilityCountLabel =
-    visibleFacilities.length >= 2000
-      ? "2,000施設超"
-      : visibleFacilities.length >= 1000
-      ? `${Math.floor(visibleFacilities.length / 1000).toLocaleString(
-          "ja-JP",
-        )},000施設超`
+    visibleFacilities.length >= 1000
+      ? `${(
+          Math.floor(visibleFacilities.length / 100) * 100
+        ).toLocaleString("ja-JP")}施設超`
       : `${visibleFacilities.length}施設`;
   const totalFacilityCountLabel =
     visibleFacilities.length.toLocaleString("ja-JP");
