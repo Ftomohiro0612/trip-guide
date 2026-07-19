@@ -22,6 +22,7 @@ import { getSummerEventAnchorId } from "@/lib/summer-event-hub";
 import {
   getSummerEventIdFromHash,
   getSummerEventPageForHash,
+  getSummerStaticAnchorTargetId,
   getSummerEventTypePage,
 } from "@/lib/summer-event-pagination";
 
@@ -186,6 +187,12 @@ export default function SummerEventExplorer({
     selectedQuickFilters.length > 0;
 
   const revealHashTarget = useCallback((hash: string) => {
+    const staticTargetId = getSummerStaticAnchorTargetId(hash);
+    if (staticTargetId) {
+      setPendingFocusId(staticTargetId);
+      return;
+    }
+
     let target = resolveSummerAnchorTarget(
       filteredViewsRef.current,
       hash,
@@ -254,12 +261,17 @@ export default function SummerEventExplorer({
   }
 
   return (
-    <section id="summer-filters" aria-labelledby="summer-filter-heading">
+    <section
+      id="summer-filters"
+      aria-labelledby="summer-filter-heading"
+      className="scroll-mt-24"
+    >
       <div className="rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <h2
             id="summer-filter-heading"
-            className="text-2xl font-bold text-slate-900"
+            tabIndex={-1}
+            className="scroll-mt-24 text-2xl font-bold text-slate-900"
           >
             条件から探す
           </h2>
@@ -474,8 +486,11 @@ function getSummerEventTypeFromHeadingHash(
   }
 
   return (
-    EVENT_TYPES.find(
-      (type) => anchor === `summer-${type.id}-heading`,
+    EVENT_TYPES.find((type) =>
+      [
+        `summer-${type.id}`,
+        `summer-${type.id}-heading`,
+      ].includes(anchor),
     )?.id ?? null
   );
 }

@@ -15,6 +15,7 @@ import { spreadNearbySummerEventMarkers } from "../lib/summer-event-map.ts";
 import {
   getSummerEventIdFromHash,
   getSummerEventPageForHash,
+  getSummerStaticAnchorTargetId,
   getSummerEventTypePage,
 } from "../lib/summer-event-pagination.ts";
 import { isFeatureHubActive } from "../lib/feature-hub-runtime.ts";
@@ -761,6 +762,50 @@ test("Summer event anchors resolve later pages and ignore invalid hashes safely"
   assert.match(summerExplorerSource, /window\.addEventListener\("hashchange"/u);
   assert.match(summerExplorerSource, /setPendingFocusId\(target\.elementId\)/u);
   assert.match(summerExplorerSource, /focusAndScrollTo\(target\)/u);
+});
+
+test("all Summer query entry anchors keep filters and clear the sticky header", () => {
+  const staticAnchors = new Map([
+    ["#summer-event-map", "summer-event-map-heading"],
+    ["#summer-event-map-heading", "summer-event-map-heading"],
+    ["#summer-filters", "summer-filter-heading"],
+    ["#summer-filter-heading", "summer-filter-heading"],
+    ["#summer-event-list-heading", "summer-event-list-heading"],
+  ]);
+
+  for (const [hash, targetId] of staticAnchors) {
+    assert.equal(getSummerStaticAnchorTargetId(hash), targetId);
+  }
+  assert.equal(getSummerStaticAnchorTargetId("#summer-event-missing"), null);
+  assert.equal(getSummerStaticAnchorTargetId("#summer-filters%E0%A4%A"), null);
+
+  for (const eventType of SUMMER_EVENT_TYPE_ORDER) {
+    assert.match(summerPageSource, new RegExp(`\\b${eventType}\\b`, "u"));
+  }
+  for (const quickFilter of ["weekend", "free", "noReservation"]) {
+    assert.match(
+      summerPageSource,
+      new RegExp(`query\\.quick === "${quickFilter}"`, "u"),
+    );
+    assert.match(summerExplorerSource, new RegExp(`id: "${quickFilter}"`, "u"));
+  }
+
+  assert.match(
+    summerExplorerSource,
+    /const staticTargetId = getSummerStaticAnchorTargetId\(hash\);/u,
+  );
+  assert.match(
+    summerExplorerSource,
+    /id="summer-filter-heading"\s+tabIndex=\{-1\}\s+className="scroll-mt-24/u,
+  );
+  assert.match(
+    summerPageSource,
+    /id="summer-event-map-heading"\s+tabIndex=\{-1\}\s+className="mt-1 scroll-mt-24/u,
+  );
+  assert.match(
+    summerExplorerSource,
+    /`summer-\$\{type\.id\}`,[\s\S]*`summer-\$\{type\.id\}-heading`/u,
+  );
 });
 
 test("Summer pagination only receives visible views and cannot revive excluded events", () => {

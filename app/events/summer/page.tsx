@@ -184,7 +184,8 @@ export default async function SummerEventsPage({ searchParams }: Props) {
               </p>
               <h2
                 id="summer-event-map-heading"
-                className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl"
+                tabIndex={-1}
+                className="mt-1 scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
               >
                 地図で探す
               </h2>
