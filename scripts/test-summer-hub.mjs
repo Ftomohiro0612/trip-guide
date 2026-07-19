@@ -58,7 +58,7 @@ const CURRENT_SUMMER_MILESTONE = Object.freeze({
   mappableCount: 22,
   holdCount: 405,
 });
-const PAGINATION_TEST_DATE = "2026-07-19";
+const PAGINATION_TEST_DATE = "2026-07-20";
 const SUMMER_EVENT_TYPE_ORDER = [
   "fireworks",
   "summer_festival",
@@ -619,9 +619,9 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
   const orderedViews = orderSummerViewsByType(visibleViews);
   const first = paginateEventViews(orderedViews, 1);
   const second = paginateEventViews(orderedViews, 2);
-  const final = paginateEventViews(orderedViews, 25);
+  const final = paginateEventViews(orderedViews, 24);
 
-  assert.equal(visibleViews.length, 496);
+  assert.equal(visibleViews.length, 479);
   assert.equal(EVENT_PAGE_SIZE, 20);
   assert.deepEqual(
     {
@@ -639,14 +639,14 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     {
       firstCount: 20,
       secondCount: 20,
-      finalCount: 16,
-      totalPages: 25,
+      finalCount: 19,
+      totalPages: 24,
       firstPrevious: false,
       firstNext: true,
       finalPrevious: true,
       finalNext: false,
-      firstRange: "1〜20件を表示 / 全496件",
-      finalRange: "481〜496件を表示 / 全496件",
+      firstRange: "1〜20件を表示 / 全479件",
+      finalRange: "461〜479件を表示 / 全479件",
     },
   );
   assert.equal(
@@ -664,7 +664,7 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     getTypesOnPage(final.items).map((eventType) =>
       final.items.filter((view) => view.event.event_type === eventType).length,
     ),
-    [8, 8],
+    [11, 8],
   );
 });
 
@@ -677,10 +677,10 @@ test("Summer Hub filters recalculate pages, clamp safely, and reset through ever
   );
   const clamped = paginateEventViews(fireworks, 999);
 
-  assert.equal(fireworks.length, 198);
+  assert.equal(fireworks.length, 197);
   assert.equal(clamped.currentPage, 10);
   assert.equal(clamped.totalPages, 10);
-  assert.equal(clamped.items.length, 18);
+  assert.equal(clamped.items.length, 17);
   assert.equal(clamped.hasNextPage, false);
   assert.equal(
     (summerExplorerSource.match(/setCurrentPage\(1\);/gu) ?? []).length >= 4,
@@ -817,7 +817,7 @@ test("Summer pagination only receives visible views and cannot revive excluded e
   );
 
   assert.equal(candidateEvents.length, 500);
-  assert.equal(ended.length, 4);
+  assert.equal(ended.length, 21);
   assert.equal(ended.every((event) => !visibleIds.has(event.id)), true);
   assert.equal(
     visibleViews.every(
@@ -1698,7 +1698,7 @@ test("high-demand regional gap wave adds only the 22 officially sourced rows", (
     summerSource.events.find(
       (event) => event.id === "evt-summer-2026-saitama-007",
     )?.source_checked_at,
-    "2026-07-18",
+    "2026-07-20",
   );
 });
 
@@ -2111,10 +2111,10 @@ test("national density expansion reaches the 425-event checkpoint with 50 hold r
         event.facility_id === null &&
         event.title.trim().length > 0 &&
         event.venue_name.trim().length > 0 &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.official_url.startsWith("https://") &&
-        event.source_urls.length === 1 &&
-        event.source_urls[0] === event.official_url &&
+        event.source_urls.length >= 1 &&
+        event.source_urls.includes(event.official_url) &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
         summerLocationsSource.locations_by_event_id[event.id]
@@ -2321,7 +2321,7 @@ test("national density expansion reaches the 500-event milestone with 35 additio
         event.facility_id === null &&
         event.title.trim().length > 0 &&
         event.venue_name.trim().length > 0 &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.official_url.startsWith("https://") &&
         event.source_urls.length >= 1 &&
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&

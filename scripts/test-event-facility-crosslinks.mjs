@@ -15,6 +15,7 @@ import {
 } from "../lib/event-facility-crosslinks.ts";
 
 const TODAY = "2026-07-19";
+const SNAPSHOT_TODAY = "2026-07-20";
 const encodedDistance = (from, to) =>
   Math.hypot(to[0] - from[0], to[1] - from[1]);
 
@@ -289,17 +290,17 @@ test("analytics payloads expose only the approved non-personal contract", () => 
   ]);
 });
 
-test("fixed 2026-07-19 canonical snapshot remains deterministic and clean", () => {
-  const fixtures = loadCanonicalFixtures(TODAY);
+test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () => {
+  const fixtures = loadCanonicalFixtures(SNAPSHOT_TODAY);
   const first = deriveSummerCrosslinks({
     ...fixtures,
-    today: TODAY,
+    today: SNAPSHOT_TODAY,
     calculateDistanceKm: haversineDistanceKm,
   });
   const second = deriveSummerCrosslinks({
     ...fixtures,
     facilities: [...fixtures.facilities].reverse(),
-    today: TODAY,
+    today: SNAPSHOT_TODAY,
     calculateDistanceKm: haversineDistanceKm,
   });
   const eventLists = Object.values(first.eventToFacilities);
@@ -309,9 +310,9 @@ test("fixed 2026-07-19 canonical snapshot remains deterministic and clean", () =
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 496);
-  assert.equal(first.diagnostics.mappableEventCount, 22);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 22);
+  assert.equal(fixtures.events.length, 479);
+  assert.equal(first.diagnostics.mappableEventCount, 21);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 21);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -325,7 +326,7 @@ test("fixed 2026-07-19 canonical snapshot remains deterministic and clean", () =
   assert.equal(
     facilityLists
       .flat()
-      .every(({ nextDate }) => daysBetween(TODAY, nextDate) <= 30),
+      .every(({ nextDate }) => daysBetween(SNAPSHOT_TODAY, nextDate) <= 30),
     true,
   );
   assert.equal(hasVenueSelfMix(first, fixtures), false);
@@ -349,16 +350,16 @@ test("fixed 2026-07-19 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 496,
-      mappableEventCount: 22,
-      holdEventCount: 401,
-      missingLocationCount: 73,
+      inputEventCount: 479,
+      mappableEventCount: 21,
+      holdEventCount: 388,
+      missingLocationCount: 70,
       excludedFacilityCount: 6,
-      eventToFacilityEventCount: 22,
-      eventToFacilityRecommendationCount: 110,
-      facilityToEventFacilityCount: 488,
-      facilityToEventThreeCandidateCount: 194,
-      facilityToEventRecommendationCount: 980,
+      eventToFacilityEventCount: 21,
+      eventToFacilityRecommendationCount: 105,
+      facilityToEventFacilityCount: 486,
+      facilityToEventThreeCandidateCount: 186,
+      facilityToEventRecommendationCount: 959,
     },
   );
 });
