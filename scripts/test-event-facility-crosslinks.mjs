@@ -6,6 +6,8 @@ import {
   EVENT_TO_FACILITY_MAX_LIMIT,
   FACILITY_TO_EVENT_MAX_LIMIT,
   SUMMER_CROSSLINK_RULESET_VERSION,
+  buildCrosslinkClickAnalyticsPayload,
+  buildCrosslinkViewAnalyticsPayload,
   deriveSummerCrosslinks,
   extractReferencedFacilityIds,
   selectEventsForFacility,
@@ -253,6 +255,38 @@ test("facility event ranking uses date, tag matches, distance, then event ID", (
     idTies.map(({ eventId }) => eventId),
     ["event-a", "event-z"],
   );
+});
+
+test("analytics payloads expose only the approved non-personal contract", () => {
+  const viewPayload = buildCrosslinkViewAnalyticsPayload(
+    "event_to_facility",
+    5,
+  );
+  const clickPayload = buildCrosslinkClickAnalyticsPayload(
+    "facility_to_event",
+    2,
+  );
+
+  assert.deepEqual(viewPayload, {
+    direction: "event_to_facility",
+    item_count: 5,
+    ruleset_version: "summer-crosslink-v1",
+  });
+  assert.deepEqual(clickPayload, {
+    direction: "facility_to_event",
+    position: 2,
+    ruleset_version: "summer-crosslink-v1",
+  });
+  assert.deepEqual(Object.keys(viewPayload).sort(), [
+    "direction",
+    "item_count",
+    "ruleset_version",
+  ]);
+  assert.deepEqual(Object.keys(clickPayload).sort(), [
+    "direction",
+    "position",
+    "ruleset_version",
+  ]);
 });
 
 test("fixed 2026-07-19 canonical snapshot remains deterministic and clean", () => {

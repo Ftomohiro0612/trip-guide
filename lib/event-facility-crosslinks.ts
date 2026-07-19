@@ -12,6 +12,23 @@ export type CrosslinkDirection =
   | "event_to_facility"
   | "facility_to_event";
 
+export const CROSSLINK_VIEW_ANALYTICS_EVENT =
+  "crosslink_recommendation_view";
+export const CROSSLINK_CLICK_ANALYTICS_EVENT =
+  "crosslink_recommendation_click";
+
+export interface CrosslinkViewAnalyticsPayload {
+  direction: CrosslinkDirection;
+  item_count: number;
+  ruleset_version: typeof SUMMER_CROSSLINK_RULESET_VERSION;
+}
+
+export interface CrosslinkClickAnalyticsPayload {
+  direction: CrosslinkDirection;
+  position: number;
+  ruleset_version: typeof SUMMER_CROSSLINK_RULESET_VERSION;
+}
+
 export type CrosslinkDistanceCalculator = (
   from: readonly [number, number],
   to: readonly [number, number],
@@ -339,6 +356,28 @@ export function formatStraightLineDistance(distanceKm: number): string {
       ? distanceKm.toFixed(1)
       : Math.round(distanceKm).toString();
   return `直線約${rounded}km`;
+}
+
+export function buildCrosslinkViewAnalyticsPayload(
+  direction: CrosslinkDirection,
+  itemCount: number,
+): CrosslinkViewAnalyticsPayload {
+  return {
+    direction,
+    item_count: Math.max(0, Math.trunc(itemCount)),
+    ruleset_version: SUMMER_CROSSLINK_RULESET_VERSION,
+  };
+}
+
+export function buildCrosslinkClickAnalyticsPayload(
+  direction: CrosslinkDirection,
+  position: number,
+): CrosslinkClickAnalyticsPayload {
+  return {
+    direction,
+    position: Math.max(1, Math.trunc(position)),
+    ruleset_version: SUMMER_CROSSLINK_RULESET_VERSION,
+  };
 }
 
 function getVenueFacilityIds(

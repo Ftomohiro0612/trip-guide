@@ -6,6 +6,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityEvents from "@/components/FacilityEvents";
+import FacilityNearbySummerEvents from "@/components/FacilityNearbySummerEvents";
 import FacilityGallery from "@/components/FacilityGallery";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
@@ -18,6 +19,8 @@ import {
 } from "@/lib/facilities";
 import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
+import { getBuildDateString } from "@/lib/events";
+import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import type { Facility, RecommendedForTag } from "@/types/facility";
@@ -77,6 +80,9 @@ export default async function FacilityDetailPage({ params }: Props) {
   if (!isFacilityVisible(facility)) notFound();
 
   const related = getRelatedFacilities(facility, 3);
+  const today = getBuildDateString();
+  const nearbySummerEvents =
+    getSummerCrosslinkData(today).facilityToEvents[String(facility.id)] ?? [];
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
   const rawUniqueSellingPoint =
     typeof facility.unique_selling_point === "string"
@@ -389,6 +395,8 @@ export default async function FacilityDetailPage({ params }: Props) {
             facilityId={facility.id}
             prefectureId={facility.prefecture_id}
           />
+
+          <FacilityNearbySummerEvents recommendations={nearbySummerEvents} />
 
           <FacilityGallery
             images={galleryImages}

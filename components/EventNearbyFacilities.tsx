@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import { useCrosslinkAnalytics } from "@/components/useCrosslinkAnalytics";
 import {
   EVENT_TO_FACILITY_INITIAL_LIMIT,
   formatStraightLineDistance,
@@ -18,6 +19,10 @@ export default function EventNearbyFacilities({
   recommendations,
 }: EventNearbyFacilitiesProps) {
   const [expanded, setExpanded] = useState(false);
+  const { sectionRef, trackClick } = useCrosslinkAnalytics(
+    "event_to_facility",
+    recommendations.length,
+  );
   if (recommendations.length === 0) return null;
 
   const visibleRecommendations = expanded
@@ -28,6 +33,7 @@ export default function EventNearbyFacilities({
 
   return (
     <section
+      ref={sectionRef}
       aria-labelledby={headingId}
       data-crosslink-section="event_to_facility"
       data-crosslink-item-count={recommendations.length}
@@ -54,10 +60,12 @@ export default function EventNearbyFacilities({
         id={`${headingId}-items`}
         className="mt-3 grid gap-2 sm:grid-cols-2 lg:grid-cols-3"
       >
-        {visibleRecommendations.map((recommendation) => (
+        {visibleRecommendations.map((recommendation, index) => (
           <li key={recommendation.facilityId}>
             <Link
               href={`/facilities/${recommendation.facilitySlug}`}
+              onClick={() => trackClick(index + 1)}
+              data-crosslink-position={index + 1}
               className="group flex h-full min-h-24 flex-col rounded-md border border-emerald-100 bg-white px-3 py-2.5 shadow-sm transition-colors hover:border-emerald-300 hover:bg-emerald-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-emerald-600"
             >
               <span className="flex flex-wrap items-center gap-1.5">
