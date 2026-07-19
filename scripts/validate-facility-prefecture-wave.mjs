@@ -155,6 +155,8 @@ for (const [id, spec] of activeTargets) {
   targetFacilities.push(...facilities);
 }
 
+assertUnique(targetFacilities, (facility) => facility.url, "new facility official URL");
+
 for (const prefecture of data.metadata.prefectures) {
   assert.equal(
     prefecture.count,

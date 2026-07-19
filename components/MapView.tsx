@@ -61,6 +61,8 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   nagasaki: "#2563eb",
   toyama: "#0891b2",
   fukui: "#059669",
+  gifu: "#15803d",
+  mie: "#7c3aed",
 };
 
 const PREF_LABELS: Record<PrefectureId, string> = {
@@ -92,6 +94,8 @@ const PREF_LABELS: Record<PrefectureId, string> = {
   nagasaki: "⛵ 長崎",
   toyama: "🏔️ 富山",
   fukui: "🦖 福井",
+  gifu: "🏞️ 岐阜",
+  mie: "🥷 三重",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
@@ -125,6 +129,8 @@ const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
   nagasaki: true,
   toyama: true,
   fukui: true,
+  gifu: true,
+  mie: true,
 };
 
 const LOCATION_GUIDE_TEXT =

@@ -80,6 +80,8 @@ const TARGET_PREFECTURES = new Set([
   "熊本県",
   "富山県",
   "福井県",
+  "岐阜県",
+  "三重県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -111,6 +113,8 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   長崎県: "nagasaki",
   富山県: "toyama",
   福井県: "fukui",
+  岐阜県: "gifu",
+  三重県: "mie",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
@@ -150,6 +154,8 @@ const PREFECTURE_BBOXES = {
   長崎県: [{ minLat: 31.8, maxLat: 34.8, minLng: 128.0, maxLng: 130.4 }],
   富山県: [{ minLat: 36.25, maxLat: 36.99, minLng: 136.75, maxLng: 137.8 }],
   福井県: [{ minLat: 35.32, maxLat: 36.33, minLng: 135.42, maxLng: 136.83 }],
+  岐阜県: [{ minLat: 35.08, maxLat: 36.47, minLng: 136.27, maxLng: 137.66 }],
+  三重県: [{ minLat: 33.66, maxLat: 35.26, minLng: 135.85, maxLng: 136.99 }],
 };
 
 const JAPAN_BBOX = {

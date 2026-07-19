@@ -31,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const visibleCount = getFacilitiesByCategory(meta.id).length;
   return {
     title: `${meta.name} ${visibleCount}選 (全国)`,
-    description: `${desc} 全国28都府県の${meta.name}を${visibleCount}施設まとめて掲載。`,
+    description: `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`,
     alternates: { canonical: `/category/${meta.id}` },
   };
 }

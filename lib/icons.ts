@@ -77,6 +77,8 @@ export const prefectureGradients: Record<string, string> = {
   nagasaki: "from-blue-600 via-cyan-400 to-amber-300",
   toyama: "from-cyan-500 via-sky-400 to-emerald-500",
   fukui: "from-emerald-600 via-teal-400 to-amber-400",
+  gifu: "from-emerald-600 via-lime-400 to-sky-500",
+  mie: "from-indigo-600 via-violet-400 to-amber-400",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -108,6 +110,8 @@ export const prefectureIconImages: Record<string, string> = {
   nagasaki: "/images/prefectures/nagasaki.webp",
   toyama: "/images/prefectures/toyama.webp",
   fukui: "/images/prefectures/fukui.webp",
+  gifu: "/images/prefectures/gifu.webp",
+  mie: "/images/prefectures/mie.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -139,4 +143,6 @@ export const prefectureEmoji: Record<string, string> = {
   nagasaki: "⛵",
   toyama: "🏔️",
   fukui: "🦖",
+  gifu: "🏞️",
+  mie: "🥷",
 };

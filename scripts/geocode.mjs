@@ -29,6 +29,8 @@ const PREFECTURE_CENTROIDS = {
   nagasaki: { lat: 32.7503, lng: 129.8777 },
   toyama: { lat: 36.6953, lng: 137.2113 },
   fukui: { lat: 36.0652, lng: 136.2216 },
+  gifu: { lat: 35.3912, lng: 136.7223 },
+  mie: { lat: 34.7303, lng: 136.5086 },
 };
 
 const USER_AGENT =

@@ -119,6 +119,13 @@ const MANUAL_EXCLUDES = {
     "森林レンタルサービスforenta 子ノ原高原キャンプエリア",
     "森林レンタルサービスforenta 東白川キャンプエリア",
     "飛騨市図書館",
+    "加子母森林組合モクモクセンター",
+    "奥矢作レクリエーションセンター",
+    "山楠公園",
+    "人道の丘公園",
+    "天生県立自然公園",
+    "東光寺公園",
+    "北山公園 鮎崎城址公園",
   ]),
   mie: new Set([
     "大伸丸渡船",
@@ -134,6 +141,16 @@ const MANUAL_EXCLUDES = {
     "牛の背",
     "市木のいぶき【県指定天然記念物】",
     "STUDIO 672（VISON）",
+    "LIFE＆HOTEL UMIMORI",
+    "irokuma kids",
+    "【まちかど博物館】フリーギャラリー",
+    "【まちかど博物館】我楽多瓢箪工房",
+    "【まちかど博物館】古き道具の館 生活工房かめだや",
+    "伊勢かぐらばリゾート 千の杜「流水プール」",
+    "河内不動の滝",
+    "古和浦不動の滝",
+    "村山不動の滝（朝日滝）",
+    "鳥羽竜発見現場",
   ]),
 };
 
@@ -158,8 +175,27 @@ const MANUAL_INCLUDES = {
     "福井県海浜自然センター",
     "福井総合植物園プラントピア",
   ]),
-  gifu: new Set(),
-  mie: new Set(),
+  gifu: new Set([
+    "岐阜公園",
+    "小屋垣内農園（権太農園）いちご狩り",
+    "森の文化博物館",
+    "枡工房ますや",
+    "鷲ヶ岳アルプスアドベンチャー",
+    "フェザーミュージアム",
+    "木曽三川公園センター【海津市】",
+  ]),
+  mie: new Set([
+    "いなべ公園",
+    "伊賀流忍者体験施設「万川集海」",
+    "亀山里山公園「みちくさ」",
+    "霞ヶ浦緑地公園",
+    "四季の森ふれあい広場",
+    "川越緑地公園",
+    "体験学習 味の素株式会社 東海工場",
+    "和具サンシャインビーチ",
+    "おえかき水族館＿鳥羽水族館店",
+    "西藤原駅前公園",
+  ]),
 };
 
 const ID_STARTS = {
@@ -187,6 +223,7 @@ const CATEGORY_NAMES = {
   "nature-park": "公園・自然",
   viewpoint: "展望台",
   scenic: "自然・絶景",
+  "game-center": "ゲームセンター",
 };
 
 const CATEGORY_OVERRIDES = {
@@ -201,32 +238,55 @@ const CATEGORY_OVERRIDES = {
   "ますのすし手作り体験（ますのすしミュージアム）": "experience",
   "みどりと自然の村「太陽広場」": "park",
   "アクアパーク（黒部浄化センター内）": "park",
+  "アソビックスあさひ": "game-center",
+  "アトリエ・トミカ": "craft",
   "シーパーク丹生": "experience",
   "トリムパークかなづ": "park",
+  "サイエンスワールド": "science-museum",
   "一乗滝小次郎の里ファミリーパーク": "park",
   "五箇山和紙漉き体験館": "craft",
   "八ヶ峰家族旅行村": "nature-park",
   "六呂師高原キャンプ場「SORA to DAICHI」": "nature-park",
   "勝山自然塾": "experience",
+  "下呂温泉合掌村": "museum",
   "奥越高原牧場": "nature-park",
+  "中部山岳国立公園奥飛騨ビジターセンター": "museum",
+  "三重県民の森": "nature-park",
   "富山市ファミリーパーク": "zoo",
   "富山県海浜自然センター": "science-museum",
   "御食国若狭おばま食文化館": "museum",
   "恐竜の森": "theme-park",
+  "月夜谷ふれあいの里": "nature-park",
   "新庄渓流の里": "nature-park",
   "桜町JOMONパーク": "park",
+  "松幸農産これから村": "fruit-picking",
   "水島": "nature-park",
   "津沢あんどんふれあい会館": "museum",
+  "牧歌の里": "zoo",
   "石田フィッシャリーナ つり桟橋": "experience",
   "福井県総合グリーンセンター": "nature-park",
   "福井総合植物園プラントピア": "nature-park",
   "立山山麓家族旅行村": "nature-park",
+  "研究栽培農園 鈴鹿の森庭園（赤塚植物園）": "nature-park",
   "細工かまぼこづくり体験（梅かまミュージアム U-mei館）": "experience",
   "芝政ワールドオートキャンプ場": "nature-park",
   "若狭たかはま エルどらんど": "science-museum",
+  "落合の郷": "nature-park",
   "赤川焼（越山房）": "craft",
   "越前水仙の里公園": "park",
   "錫のアクセサリー体験（大寺幸八郎商店 茶房ギャラリーおおてら）": "craft",
+  "楠中央緑地": "park",
+  "五桂池": "nature-park",
+  "かぶとの森テラス": "nature-park",
+  "マリーナ河芸": "experience",
+  "山県市香り会館": "museum",
+  "東濃牧場": "nature-park",
+  "のほほんパークひだおさか（飛騨小坂ふれあいの森）": "park",
+  "八滝ウッディランド": "nature-park",
+  "かさはら潮見の森": "nature-park",
+  "四季の森ふれあい広場": "park",
+  "宇賀渓諸瀑": "nature-park",
+  "竜吟峡": "nature-park",
   "黒部市尾の沼体験交流施設とちの湯": "hot-spring-pool",
   "ナビゲートシアター＆小物手作り体験（入善町）": "craft",
 };
@@ -240,6 +300,7 @@ function decodeHtml(value = "") {
     .replace(/&ldquo;|&rdquo;/g, '"')
     .replace(/&times;/g, "×")
     .replace(/&rarr;/g, "→")
+    .replace(/&rArr;/g, "⇒")
     .replace(/&copy;/g, "©")
     .replace(/&deg;/g, "°")
     .replace(/&hellip;/g, "…")
@@ -579,7 +640,7 @@ function classifyFacility(row) {
 function indoorOutdoor(categoryId, row) {
   const text = `${row.name} ${row.description}`;
   if (/海水浴|キャンプ|スキー|公園|渓谷|滝|海岸|ビーチ|釣り桟橋/.test(text)) return "屋外";
-  if (["indoor-play", "science-museum", "museum", "craft", "art-museum", "aquarium"].includes(categoryId)) return "屋内";
+  if (["indoor-play", "science-museum", "museum", "craft", "art-museum", "aquarium", "game-center"].includes(categoryId)) return "屋内";
   if (["theme-park", "zoo", "experience", "hot-spring-pool"].includes(categoryId)) return "両方";
   return "屋外";
 }
@@ -604,6 +665,7 @@ function recommendedTags(categoryId, row) {
     "nature-park": ["nature", "wide_space", "running"],
     viewpoint: ["nature", "wide_space"],
     scenic: ["nature", "wide_space"],
+    "game-center": ["playground", "experience"],
   };
   const tags = [...byCategory[categoryId]];
   if (/恐竜|化石/.test(text)) tags.unshift("dinosaur");
@@ -653,12 +715,12 @@ function buildFacility(row, spec, id) {
   const category = CATEGORY_NAMES[categoryId];
   assert(category, `${row.name}: category missing`);
   const indoor = indoorOutdoor(categoryId, row);
-  const fee = (row.fee || "料金は公式案内を確認").slice(0, 500);
+  const fee = decodeHtml(row.fee || "料金は公式案内を確認").slice(0, 500);
   const sourceText = `${fee} ${row.description}`;
   const free =
     /^(無料|入場無料|見学無料|観覧無料)/.test(fee) &&
     !/[0-9０-９][,，]?[0-9０-９]*円|有料|一部/.test(fee);
-  const officialDescription = row.description.replace(/\s+/g, " ").trim();
+  const officialDescription = decodeHtml(row.description).replace(/\s+/g, " ").trim();
   const description = `${row.name}は、${officialDescription}。公式掲載の見どころや体験内容を親子で確かめ、対象年齢・料金・営業時間も公式案内で確認してください。`;
   const experiences = experienceCopy(categoryId, row.name);
   const waterPlay = /海水浴|プール|川遊び|水遊び|ビーチ|海浜/.test(sourceText) ? "◎" : "×";
@@ -670,7 +732,7 @@ function buildFacility(row, spec, id) {
     prefecture_id: spec.id,
     category,
     category_id: categoryId,
-    address: normalizeAddress(row.address, spec.name),
+    address: normalizeAddress(decodeHtml(row.address), spec.name),
     indoor_outdoor: indoor,
     rain_friendly: indoor === "屋内" ? "◎" : indoor === "両方" ? "△" : "×",
     is_free: free,

@@ -46,6 +46,8 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   長崎県: "nagasaki",
   富山県: "toyama",
   福井県: "fukui",
+  岐阜県: "gifu",
+  三重県: "mie",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
