@@ -357,57 +357,84 @@ const freshnessRows = adoptedEvents.map((event) => {
   const age = daysBetween(event.source_checked_at, today);
   const isHero = summer.metadata.hero_event_ids.includes(event.id);
   const nextOccurrence = getNextOccurrenceDate(event, today);
-  const daysUntil = nextOccurrence
+  const daysUntilNext = nextOccurrence
     ? daysBetween(today, nextOccurrence)
     : null;
-  const isUpcoming =
-    daysUntil !== null && daysUntil >= 0 && daysUntil <= 7;
+  const firstOccurrence = getFirstOccurrenceDate(event);
+  const daysUntilFirst = firstOccurrence
+    ? daysBetween(today, firstOccurrence)
+    : null;
+  const isEnded = event.end_date < today;
   const isWeatherSensitive = isMainType(event.event_type);
-  const isImmediateWeatherCheck =
-    isWeatherSensitive &&
-    daysUntil !== null &&
-    daysUntil >= 0 &&
-    daysUntil <= 1;
-  const maxAge = isImmediateWeatherCheck
-    ? 1
-    : isHero || isUpcoming
-      ? summer.metadata.freshness_days_hero
-      : summer.metadata.freshness_days_hub;
+  const maxAge = summer.metadata.freshness_days_hub;
+  const preStartReviewOpensAt = firstOccurrence
+    ? addDays(firstOccurrence, -7)
+    : null;
+  const preStartReviewDueAt = firstOccurrence
+    ? addDays(firstOccurrence, -5)
+    : null;
+  const hasPreStartReview = Boolean(
+    preStartReviewOpensAt &&
+      firstOccurrence &&
+      event.source_checked_at >= preStartReviewOpensAt &&
+      event.source_checked_at <= firstOccurrence,
+  );
+  const isPreStartReviewDue = Boolean(
+    !isEnded &&
+      daysUntilFirst !== null &&
+      daysUntilFirst > 0 &&
+      daysUntilFirst <= 5 &&
+      !hasPreStartReview,
+  );
   if (age === null) {
     error(event.id, `invalid source_checked_at: ${event.source_checked_at}`);
   } else if (age < 0) {
     error(event.id, `source_checked_at is in the future: ${event.source_checked_at}`);
-  } else if (age > maxAge) {
-    error(
-      event.id,
-      `source confirmation is ${age} days old; maximum is ${maxAge}${isHero ? " for Hero candidates" : ""}`,
+  } else if (!isEnded && age > maxAge) {
+    warnings.push(
+      `${event.id}: source confirmation is ${age} days old; monthly review target is ${maxAge} days`,
     );
   }
-  const cadenceDueAt = addDays(event.source_checked_at, maxAge);
-  const weatherDueAt =
-    isWeatherSensitive && daysUntil !== null && daysUntil > 1
-      ? addDays(nextOccurrence, -1)
+  if (isPreStartReviewDue) {
+    warnings.push(
+      `${event.id}: pre-start source review is due around ${preStartReviewDueAt}; confirm once before the first occurrence ${firstOccurrence}`,
+    );
+  }
+  const cadenceDueAt = isEnded
+    ? null
+    : addDays(event.source_checked_at, maxAge);
+  const pendingPreStartDueAt =
+    !isEnded &&
+    daysUntilFirst !== null &&
+    daysUntilFirst > 0 &&
+    !hasPreStartReview
+      ? preStartReviewDueAt
       : null;
-  const dueAt = [cadenceDueAt, weatherDueAt].filter(Boolean).sort()[0];
+  const dueAt = [cadenceDueAt, pendingPreStartDueAt]
+    .filter(Boolean)
+    .sort()[0];
   return {
     id: event.id,
     title: event.title,
     source_checked_at: event.source_checked_at,
     age_days: age,
+    first_occurrence: firstOccurrence,
+    days_until_first: daysUntilFirst,
     next_occurrence: nextOccurrence,
-    days_until_next: daysUntil,
+    days_until_next: daysUntilNext,
     due_at: dueAt,
     cadence_days: maxAge,
     hero: isHero,
-    upcoming_within_7_days: isUpcoming,
+    pre_start_review_due_at: preStartReviewDueAt,
+    pre_start_review_completed: hasPreStartReview,
     weather_sensitive: isWeatherSensitive,
-    review_tier: isImmediateWeatherCheck
-      ? "weather-immediate"
-      : isHero
-        ? "hero-7d"
-        : isUpcoming
-          ? "upcoming-7d"
-          : "hub-14d",
+    review_tier: isEnded
+      ? "ended-hidden"
+      : isPreStartReviewDue
+        ? "prestart-5d-due"
+        : hasPreStartReview && daysUntilFirst !== null && daysUntilFirst >= 0
+          ? "prestart-reviewed"
+          : "monthly-30d",
   };
 });
 
@@ -633,4 +660,14 @@ function getNextOccurrenceDate(event, referenceDate) {
   }
   if (event.end_date < referenceDate) return null;
   return event.start_date <= referenceDate ? referenceDate : event.start_date;
+}
+
+function getFirstOccurrenceDate(event) {
+  if (
+    Array.isArray(event.occurrence_dates) &&
+    event.occurrence_dates.length > 0
+  ) {
+    return [...event.occurrence_dates].sort()[0] ?? null;
+  }
+  return event.start_date;
 }

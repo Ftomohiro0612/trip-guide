@@ -1,5 +1,7 @@
 import assert from "node:assert/strict";
+import { spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
+import { fileURLToPath } from "node:url";
 import test from "node:test";
 import {
   EVENT_PAGE_SIZE,
@@ -389,6 +391,35 @@ test("feature hub hard-stops exactly at endsAt", () => {
   assert.equal(
     isFeatureHubActive(config, new Date("2026-09-28T00:00:00+09:00")),
     false,
+  );
+});
+
+test("Summer freshness uses monthly warnings and one pre-start review without daily rechecks", () => {
+  assert.equal(summerSource.metadata.freshness_days_hub, 30);
+  assert.equal(summerSource.metadata.freshness_days_hero, 30);
+
+  for (const today of ["2026-07-20", "2026-07-21", "2026-07-23"]) {
+    const result = runEventValidator(today);
+    const reviewed = result.freshness.find(
+      (row) => row.id === "evt-summer-2026-nagano-011",
+    );
+    assert.deepEqual(result.errors, []);
+    assert.equal(reviewed.pre_start_review_completed, true);
+    assert.equal(
+      result.warnings.some((warning) =>
+        warning.startsWith("evt-summer-2026-nagano-011:"),
+      ),
+      false,
+    );
+  }
+
+  const monthlyResult = runEventValidator("2026-08-20");
+  assert.deepEqual(monthlyResult.errors, []);
+  assert.equal(
+    monthlyResult.warnings.some((warning) =>
+      warning.startsWith("evt-summer-2026-kanagawa-004: source confirmation"),
+    ),
+    true,
   );
 });
 
@@ -2603,4 +2634,17 @@ function emptySelection(overrides = {}) {
     recommendedTags: [],
     ...overrides,
   };
+}
+
+function runEventValidator(today) {
+  const validatorPath = fileURLToPath(
+    new URL("./validate-events.mjs", import.meta.url),
+  );
+  const result = spawnSync(
+    process.execPath,
+    [validatorPath, `--today=${today}`, "--json"],
+    { encoding: "utf8" },
+  );
+  assert.equal(result.status, 0, result.stderr || result.stdout);
+  return JSON.parse(result.stdout);
 }
