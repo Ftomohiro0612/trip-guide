@@ -1,247 +1,244 @@
-# C3 施設紹介文強化（200施設）
+# C3 facility description rewrite manifest
 
-- 起点: `e2a8f8240568a8a83f09a1a3c9081d02f207339d`
-- 対象: 30都府県・200施設
-- 内部チェックポイント: 50 / 100 / 150 / 200
-- 変更許可: `description` のみ
-- 除外: C1 60施設、C2 120施設、Q1 11施設、公開除外施設
+- approved sample HEAD: `27a179528cce5edca6030408e2f590f310798054`
+- applied through: 50 / 200
+- official source resolved: 147 / 200
+- separated quality issues: 53
+- before length: total 89745, average 448.73, min 321, max 712
+- after length: total 36354, average 181.77, min 150, max 283
 
-## 県別件数
+## Prefecture counts
 
-| 都府県 | 件数 |
-|---|---:|
-| 愛知県 | 7 |
-| 愛媛県 | 6 |
-| 茨城県 | 7 |
-| 岡山県 | 6 |
-| 岐阜県 | 6 |
-| 宮城県 | 7 |
-| 京都府 | 7 |
-| 熊本県 | 6 |
-| 群馬県 | 7 |
-| 広島県 | 7 |
-| 香川県 | 7 |
-| 埼玉県 | 7 |
-| 三重県 | 6 |
-| 山梨県 | 7 |
-| 新潟県 | 7 |
-| 神奈川県 | 7 |
-| 静岡県 | 7 |
-| 石川県 | 6 |
-| 千葉県 | 7 |
-| 大阪府 | 7 |
-| 大分県 | 6 |
-| 長崎県 | 6 |
-| 長野県 | 7 |
-| 東京都 | 7 |
-| 栃木県 | 7 |
-| 富山県 | 6 |
-| 福井県 | 6 |
-| 福岡県 | 7 |
-| 福島県 | 7 |
-| 兵庫県 | 7 |
+- 愛知県: 7
+- 愛媛県: 6
+- 茨城県: 7
+- 岡山県: 6
+- 岐阜県: 6
+- 宮城県: 7
+- 京都府: 7
+- 熊本県: 6
+- 群馬県: 7
+- 広島県: 7
+- 香川県: 7
+- 埼玉県: 7
+- 三重県: 6
+- 山梨県: 7
+- 新潟県: 7
+- 神奈川県: 7
+- 静岡県: 7
+- 石川県: 6
+- 千葉県: 7
+- 大阪府: 7
+- 大分県: 6
+- 長崎県: 6
+- 長野県: 7
+- 東京都: 7
+- 栃木県: 7
+- 富山県: 6
+- 福井県: 6
+- 福岡県: 7
+- 福島県: 7
+- 兵庫県: 7
 
-## 対象一覧
+## Official sources and separated findings
 
-| # | CP | ID | 都府県 | 施設 | 旧文字数 | 新文字数 |
-|---:|---:|---:|---|---|---:|---:|
-| 1 | 1 | 1759 | 愛知県 | すいとぴあ江南 | 67 | 461 |
-| 2 | 1 | 3143 | 愛媛県 | 【西条市】戸田果樹園 | 170 | 485 |
-| 3 | 1 | 1082 | 茨城県 | 取手ウェルネスプラザ キッズプレイルーム | 48 | 487 |
-| 4 | 1 | 2632 | 岡山県 | 遙照山目鑑展望台 | 106 | 492 |
-| 5 | 1 | 3610 | 岐阜県 | 蘇原自然公園 | 145 | 516 |
-| 6 | 1 | 2276 | 宮城県 | 山元いちご農園 | 86 | 456 |
-| 7 | 1 | 1604 | 京都府 | 大正池グリーンパーク | 27 | 400 |
-| 8 | 1 | 2528 | 熊本県 | みのだ農園 | 104 | 431 |
-| 9 | 1 | 1293 | 群馬県 | 桜山公園 | 46 | 405 |
-| 10 | 1 | 1971 | 広島県 | 鞆の浦 | 77 | 395 |
-| 11 | 1 | 2387 | 香川県 | たからだの里「環の湯」 | 90 | 494 |
-| 12 | 1 | 1022 | 埼玉県 | 三芳町総合運動公園 | 20 | 358 |
-| 13 | 1 | 3723 | 三重県 | 御薗Ｂ＆Ｇ海洋センター・プール | 110 | 558 |
-| 14 | 1 | 163 | 山梨県 | Trick Art Museum 富士河口湖 | 36 | 459 |
-| 15 | 1 | 644 | 新潟県 | 柏崎市潮風公園 | 20 | 381 |
-| 16 | 1 | 857 | 神奈川県 | 寒川神社 | 20 | 337 |
-| 17 | 1 | 46 | 静岡県 | 伊豆アート体験さくら坂 | 55 | 447 |
-| 18 | 1 | 2710 | 石川県 | マリンパーク海水浴場 | 107 | 445 |
-| 19 | 1 | 727 | 千葉県 | 茂原公園 | 21 | 323 |
-| 20 | 1 | 1413 | 大阪府 | 金岡公園 | 62 | 435 |
-| 21 | 1 | 2831 | 大分県 | 菊畑公園 | 168 | 441 |
-| 22 | 1 | 3226 | 長崎県 | 大悲観公園 | 125 | 480 |
-| 23 | 1 | 103 | 長野県 | 菅平高原 スマイルパーク | 37 | 445 |
-| 24 | 1 | 345 | 東京都 | 東京海洋大学 マリンサイエンスミュージアム | 21 | 473 |
-| 25 | 1 | 1038 | 栃木県 | さくら市ミュージアム 荒井寛方記念館 | 21 | 437 |
-| 26 | 1 | 3366 | 富山県 | 桂湖オートキャンプ場 | 106 | 510 |
-| 27 | 1 | 3496 | 福井県 | 五幡海水浴場 | 84 | 458 |
-| 28 | 1 | 1910 | 福岡県 | みどりんぱぁーく | 56 | 410 |
-| 29 | 1 | 2952 | 福島県 | 舘山公園 | 60 | 382 |
-| 30 | 1 | 1561 | 兵庫県 | 但馬高原植物園 | 61 | 440 |
-| 31 | 1 | 1780 | 愛知県 | 蔵王山展望台 | 67 | 460 |
-| 32 | 1 | 3071 | 愛媛県 | 【西条市】観光農園 丹原もぎたて倶楽部 | 178 | 620 |
-| 33 | 1 | 1108 | 茨城県 | 大野潮騒はまなす公園 | 49 | 450 |
-| 34 | 1 | 2583 | 岡山県 | 新見市憩いとふれあいの公園 | 109 | 534 |
-| 35 | 1 | 3546 | 岐阜県 | 竜神の滝キャンプ場（旧夕森渓谷キャンプ場） | 151 | 654 |
-| 36 | 1 | 2191 | 宮城県 | ケロケロの杜 | 89 | 443 |
-| 37 | 1 | 1631 | 京都府 | キッズパーク木津川店 | 52 | 408 |
-| 38 | 1 | 2522 | 熊本県 | 吉原ごんべえ村 | 109 | 418 |
-| 39 | 1 | 1280 | 群馬県 | ふじの咲く丘 | 49 | 428 |
-| 40 | 1 | 1987 | 広島県 | 峰高公園 | 77 | 399 |
-| 41 | 1 | 2406 | 香川県 | 琴弾廻廊 | 100 | 443 |
-| 42 | 1 | 479 | 埼玉県 | 川越市立博物館 | 21 | 346 |
-| 43 | 1 | 3734 | 三重県 | 伊勢市やすらぎ公園プール | 111 | 516 |
-| 44 | 1 | 151 | 山梨県 | ストロベリーファム石原 | 44 | 430 |
-| 45 | 1 | 647 | 新潟県 | 湯之谷ファミリースキー場(プール季節) | 20 | 414 |
-| 46 | 1 | 858 | 神奈川県 | 鎌倉国宝館 | 21 | 333 |
-| 47 | 1 | 942 | 静岡県 | 屋内遊び場 mirocco(みろっこ) | 59 | 466 |
-| 48 | 1 | 2748 | 石川県 | 角偉三郎美術館 | 121 | 486 |
-| 49 | 1 | 730 | 千葉県 | 鴨川松島 | 22 | 325 |
-| 50 | 1 | 1415 | 大阪府 | 柏原市立玉手山公園 | 62 | 446 |
-| 51 | 2 | 2844 | 大分県 | 松本農園 | 168 | 447 |
-| 52 | 2 | 3252 | 長崎県 | 石原岳森林公園 | 130 | 509 |
-| 53 | 2 | 74 | 長野県 | 軽井沢キッズパーク KIDSPARK | 45 | 454 |
-| 54 | 2 | 352 | 東京都 | 野毛大塚古墳・野毛公園 | 21 | 374 |
-| 55 | 2 | 411 | 栃木県 | 日光二荒山神社 | 22 | 364 |
-| 56 | 2 | 3357 | 富山県 | 上経田中央公園 | 120 | 506 |
-| 57 | 2 | 3455 | 福井県 | 鞠山海水浴場 | 92 | 458 |
-| 58 | 2 | 1906 | 福岡県 | 高田濃施山公園 | 60 | 394 |
-| 59 | 2 | 2953 | 福島県 | 丸山公園 | 60 | 383 |
-| 60 | 2 | 1527 | 兵庫県 | 神戸市水の科学博物館 | 65 | 456 |
-| 61 | 2 | 1760 | 愛知県 | 小牧山城・小牧山歴史館 | 74 | 479 |
-| 62 | 2 | 3123 | 愛媛県 | 玉川ダム | 214 | 492 |
-| 63 | 2 | 1089 | 茨城県 | 境町ニコニコパーク | 51 | 440 |
-| 64 | 2 | 2642 | 岡山県 | そうじゃ水辺の楽校 | 109 | 426 |
-| 65 | 2 | 3616 | 岐阜県 | さくら街道 みぼろ湖畔キャンプサイト | 153 | 638 |
-| 66 | 2 | 2285 | 宮城県 | 夢いちごの郷 菅野農園 | 90 | 498 |
-| 67 | 2 | 1629 | 京都府 | サープラ京都あそびタウン | 54 | 430 |
-| 68 | 2 | 2470 | 熊本県 | 杉養蜂園 阿蘇みつばち牧場 | 110 | 461 |
-| 69 | 2 | 1279 | 群馬県 | 小野池あじさい公園 | 50 | 439 |
-| 70 | 2 | 1969 | 広島県 | 福山メモリアルパーク | 81 | 444 |
-| 71 | 2 | 2374 | 香川県 | 高松市鬼ヶ島おにの館 | 102 | 493 |
-| 72 | 2 | 496 | 埼玉県 | 飯能市立博物館 | 21 | 378 |
-| 73 | 2 | 3688 | 三重県 | 朝明茶屋キャンプ場 | 122 | 523 |
-| 74 | 2 | 146 | 山梨県 | GlassHouseねん | 47 | 415 |
-| 75 | 2 | 643 | 新潟県 | 佐渡 二ツ亀 | 21 | 355 |
-| 76 | 2 | 867 | 神奈川県 | 横浜中華街(街歩き) | 21 | 383 |
-| 77 | 2 | 28 | 静岡県 | 豊田ラブリバー公園 | 61 | 459 |
-| 78 | 2 | 2714 | 石川県 | 九十九湾 | 140 | 422 |
-| 79 | 2 | 1015 | 千葉県 | 八街落花生畑(秋限定収穫体験) | 23 | 389 |
-| 80 | 2 | 1438 | 大阪府 | 岸和田観光農園 | 62 | 424 |
-| 81 | 2 | 2847 | 大分県 | 千財農園 | 168 | 439 |
-| 82 | 2 | 3235 | 長崎県 | 崎山海浜公園 | 160 | 521 |
-| 83 | 2 | 92 | 長野県 | Scratch & noise glass works | 45 | 547 |
-| 84 | 2 | 364 | 東京都 | サンリオピューロランドアンサンブル(団体プラン) | 23 | 459 |
-| 85 | 2 | 455 | 栃木県 | 鹿沼運動公園 | 22 | 371 |
-| 86 | 2 | 3359 | 富山県 | カヌー体験（桂湖ビジターセンター） | 147 | 515 |
-| 87 | 2 | 3423 | 福井県 | 志積海水浴場 | 95 | 464 |
-| 88 | 2 | 1898 | 福岡県 | 諏訪公園 | 63 | 389 |
-| 89 | 2 | 2960 | 福島県 | 丈六公園 | 60 | 382 |
-| 90 | 2 | 1526 | 兵庫県 | 道の駅 神戸フルーツ・フラワーパーク大沢 | 67 | 532 |
-| 91 | 2 | 1768 | 愛知県 | 阿久比町ふれあいの森 | 74 | 480 |
-| 92 | 2 | 3121 | 愛媛県 | 夢永海水浴場 | 221 | 538 |
-| 93 | 2 | 1100 | 茨城県 | ポケットファームどきどき 茨城町店 | 53 | 491 |
-| 94 | 2 | 2660 | 岡山県 | カルスト山荘展望台 | 111 | 506 |
-| 95 | 2 | 3625 | 岐阜県 | 森の文化博物館 | 155 | 522 |
-| 96 | 2 | 2305 | 宮城県 | 旭山農業体験実習館（コロボックルハウス） | 91 | 492 |
-| 97 | 2 | 1606 | 京都府 | 道の駅 お茶の京都みなみやましろ村 | 55 | 447 |
-| 98 | 2 | 2518 | 熊本県 | 湯の児スペイン村 福田農場 | 111 | 517 |
-| 99 | 2 | 1258 | 群馬県 | ヤマキ みなかみ工場 | 51 | 432 |
-| 100 | 2 | 1921 | 広島県 | 広島城 | 85 | 418 |
-| 101 | 3 | 2404 | 香川県 | コスモランドみの | 102 | 419 |
-| 102 | 3 | 535 | 埼玉県 | 寄居町立鉢形城歴史館 | 21 | 363 |
-| 103 | 3 | 3744 | 三重県 | 四季の森ふれあい広場 | 130 | 542 |
-| 104 | 3 | 140 | 山梨県 | より道の湯 | 49 | 412 |
-| 105 | 3 | 575 | 新潟県 | 新潟市歴史博物館 みなとぴあ | 22 | 414 |
-| 106 | 3 | 795 | 神奈川県 | 川崎市岡本太郎美術館 | 22 | 363 |
-| 107 | 3 | 2066 | 静岡県 | 新居関所・史料館 | 63 | 439 |
-| 108 | 3 | 2697 | 石川県 | 能美市根上ふれあいプール | 146 | 555 |
-| 109 | 3 | 1014 | 千葉県 | 富里スイカロード | 32 | 371 |
-| 110 | 3 | 1409 | 大阪府 | 千島公園 | 64 | 417 |
-| 111 | 3 | 2884 | 大分県 | 川上渓谷 | 168 | 399 |
-| 112 | 3 | 3224 | 長崎県 | 生月大橋公園 | 172 | 541 |
-| 113 | 3 | 94 | 長野県 | Gaku Glass | 45 | 438 |
-| 114 | 3 | 328 | 東京都 | 高井戸公園(下高井戸おおぞら公園) | 24 | 422 |
-| 115 | 3 | 998 | 栃木県 | 那須町立芦野公園 | 22 | 378 |
-| 116 | 3 | 3374 | 富山県 | 大門川河川公園 | 158 | 538 |
-| 117 | 3 | 3476 | 福井県 | 梅浦海水浴場（越前町） | 108 | 528 |
-| 118 | 3 | 1884 | 福岡県 | 須恵町皿山公園 | 65 | 428 |
-| 119 | 3 | 2981 | 福島県 | あべ農園 | 60 | 381 |
-| 120 | 3 | 1566 | 兵庫県 | 淡路人形座 | 69 | 431 |
-| 121 | 3 | 1752 | 愛知県 | 白鳥庭園 | 75 | 427 |
-| 122 | 3 | 3128 | 愛媛県 | アカゴ淵 | 239 | 527 |
-| 123 | 3 | 1081 | 茨城県 | あそびパークPLUS ジョイフル本田ニューポートひたちなか店 | 56 | 575 |
-| 124 | 3 | 2624 | 岡山県 | 虎口池キャンプ場 | 114 | 430 |
-| 125 | 3 | 3605 | 岐阜県 | 塔の岩オートキャンプ場 | 161 | 582 |
-| 126 | 3 | 2217 | 宮城県 | MIGAKI FARM | 94 | 420 |
-| 127 | 3 | 1638 | 京都府 | 綾部ふれあい牧場 | 55 | 400 |
-| 128 | 3 | 2550 | 熊本県 | 和水江田川カヌー・キャンプ場 | 111 | 548 |
-| 129 | 3 | 1281 | 群馬県 | 吉岡町城山みはらし公園 | 51 | 446 |
-| 130 | 3 | 1941 | 広島県 | 海田総合公園 | 85 | 432 |
-| 131 | 3 | 2429 | 香川県 | 丸亀市手島自然教育センター | 102 | 537 |
-| 132 | 3 | 896 | 埼玉県 | 荒川公園(熊谷) | 21 | 357 |
-| 133 | 3 | 3696 | 三重県 | 霞ヶ浦プール | 141 | 515 |
-| 134 | 3 | 160 | 山梨県 | 河口湖美術館 | 49 | 407 |
-| 135 | 3 | 595 | 新潟県 | 美人林 | 22 | 340 |
-| 136 | 3 | 860 | 神奈川県 | 水郷田名 ふれあい広場 | 22 | 376 |
-| 137 | 3 | 2086 | 静岡県 | 裾野市運動公園 | 63 | 431 |
-| 138 | 3 | 2759 | 石川県 | のとじま臨海公園海づりセンター | 151 | 594 |
-| 139 | 3 | 765 | 千葉県 | いちご狩り狩場(山倉地区 | 33 | 386 |
-| 140 | 3 | 1412 | 大阪府 | 大蓮公園 | 65 | 432 |
-| 141 | 3 | 2887 | 大分県 | 久住高原 | 168 | 391 |
-| 142 | 3 | 3247 | 長崎県 | 河川公園 やすらぎの里 | 194 | 600 |
-| 143 | 3 | 2171 | 長野県 | 伊那市創造館 | 45 | 405 |
-| 144 | 3 | 359 | 東京都 | 明治神宮 | 24 | 321 |
-| 145 | 3 | 1040 | 栃木県 | 野木町煉瓦窯 | 22 | 370 |
-| 146 | 3 | 3364 | 富山県 | 組子細工体験（河島建具） | 165 | 502 |
-| 147 | 3 | 3399 | 福井県 | 矢代海水浴場 | 115 | 484 |
-| 148 | 3 | 1901 | 福岡県 | 福岡県営筑後小郡運動公園 | 66 | 459 |
-| 149 | 3 | 2932 | 福島県 | 泉崎資料館 | 62 | 383 |
-| 150 | 3 | 1565 | 兵庫県 | 淡路島モンキーセンター | 70 | 477 |
-| 151 | 4 | 1770 | 愛知県 | 夢と学びの科学体験館 | 75 | 487 |
-| 152 | 4 | 3146 | 愛媛県 | 栗の里公園・なかやまフラワーハウス | 249 | 712 |
-| 153 | 4 | 1147 | 茨城県 | ごかみらい公園 | 71 | 430 |
-| 154 | 4 | 2637 | 岡山県 | 戸田農園 | 118 | 469 |
-| 155 | 4 | 3600 | 岐阜県 | 陶芸体験ボイスオブセラミックス | 167 | 528 |
-| 156 | 4 | 2280 | 宮城県 | いちご畑ＭＩＵＲＡ | 95 | 476 |
-| 157 | 4 | 1598 | 京都府 | 文化パルク城陽 | 56 | 402 |
-| 158 | 4 | 2512 | 熊本県 | 江津湖 | 114 | 454 |
-| 159 | 4 | 1282 | 群馬県 | ふるさとの広場 ちびっこベース | 51 | 478 |
-| 160 | 4 | 1948 | 広島県 | グリーンヒル郷原 | 85 | 445 |
-| 161 | 4 | 2365 | 香川県 | 讃州井筒屋敷 | 103 | 453 |
-| 162 | 4 | 899 | 埼玉県 | 狭山市稲荷山公園 ふじ棚 | 21 | 373 |
-| 163 | 4 | 3740 | 三重県 | 大杉谷自然学校 | 150 | 536 |
-| 164 | 4 | 119 | 山梨県 | 兼川の森 | 52 | 378 |
-| 165 | 4 | 603 | 新潟県 | 笠島海水浴場 | 22 | 337 |
-| 166 | 4 | 907 | 神奈川県 | 県立座間谷戸山公園 | 22 | 361 |
-| 167 | 4 | 2054 | 静岡県 | 奇石博物館 | 64 | 414 |
-| 168 | 4 | 2677 | 石川県 | うのけ総合公園 | 162 | 509 |
-| 169 | 4 | 729 | 千葉県 | 館山ファミリーパーク | 42 | 420 |
-| 170 | 4 | 1426 | 大阪府 | 今城塚古代歴史館 | 66 | 455 |
-| 171 | 4 | 2825 | 大分県 | えぼし公園 | 169 | 460 |
-| 172 | 4 | 3182 | 長崎県 | 田平公園 | 196 | 540 |
-| 173 | 4 | 2186 | 長野県 | 大町エネルギー博物館 | 45 | 428 |
-| 174 | 4 | 978 | 東京都 | 旧古河庭園 | 25 | 336 |
-| 175 | 4 | 375 | 栃木県 | 那須ワールドモンキーパーク | 23 | 424 |
-| 176 | 4 | 3380 | 富山県 | ナビゲートシアター＆小物手作り体験（入善町） | 179 | 587 |
-| 177 | 4 | 3472 | 福井県 | 人魚の浜海水浴場 | 115 | 507 |
-| 178 | 4 | 1877 | 福岡県 | 文化記念公園 | 67 | 407 |
-| 179 | 4 | 2941 | 福島県 | さくら公園 | 62 | 394 |
-| 180 | 4 | 1543 | 兵庫県 | 丸山総合公園 | 72 | 467 |
-| 181 | 4 | 1786 | 愛知県 | 観光農園花ひろば | 75 | 452 |
-| 182 | 4 | 1124 | 茨城県 | 雪印メグミルク 阿見工場 | 77 | 436 |
-| 183 | 4 | 2216 | 宮城県 | 村田町野外活動センター | 98 | 514 |
-| 184 | 4 | 1594 | 京都府 | 宇治市源氏物語ミュージアム | 57 | 436 |
-| 185 | 4 | 1291 | 群馬県 | 大輪公園 | 51 | 399 |
-| 186 | 4 | 1922 | 広島県 | 縮景園 | 86 | 395 |
-| 187 | 4 | 2417 | 香川県 | 小豆島町内海B&G海洋センター | 108 | 557 |
-| 188 | 4 | 902 | 埼玉県 | 造幣局さいたま支局 さいたま貨幣プラザ | 21 | 410 |
-| 189 | 4 | 128 | 山梨県 | スキッズガーデン 甲府昭和店 | 52 | 482 |
-| 190 | 4 | 648 | 新潟県 | 佐渡博物館 | 22 | 362 |
-| 191 | 4 | 1026 | 神奈川県 | 湯河原 万葉公園 | 22 | 356 |
-| 192 | 4 | 2061 | 静岡県 | 小笠山総合運動公園エコパ | 64 | 466 |
-| 193 | 4 | 720 | 千葉県 | 印旛沼サンセットヒルズ | 46 | 425 |
-| 194 | 4 | 1440 | 大阪府 | 道の駅 能勢 くりの郷 | 67 | 472 |
-| 195 | 4 | 2147 | 長野県 | 黒姫童話館&童話の森ギャラリー | 46 | 457 |
-| 196 | 4 | 338 | 東京都 | 南長崎スポーツ公園 | 26 | 374 |
-| 197 | 4 | 464 | 栃木県 | 大田原温泉太陽の湯 | 23 | 383 |
-| 198 | 4 | 1887 | 福岡県 | 千鳥ヶ池公園 | 67 | 410 |
-| 199 | 4 | 2943 | 福島県 | さゆり公園 | 62 | 385 |
-| 200 | 4 | 1562 | 兵庫県 | 山陰海岸ジオパーク館 | 72 | 519 |
+- ID 1759 すいとぴあ江南: https://suitopia.jp/ (resolved)
+- ID 3143 【西条市】戸田果樹園: https://www.iyokannet.jp/spot/7530 (resolved)
+- ID 1082 取手ウェルネスプラザ キッズプレイルーム: https://www.toride-wellness-plaza.com/guide_detail53/id%3D271 (resolved)
+- ID 2632 遙照山目鑑展望台: https://www.okayama-kanko.jp/spot/detail_11593.html (resolved)
+- ID 3610 蘇原自然公園: https://www.kankou-gifu.jp/spot/detail_5684.html (resolved)
+- ID 2276 山元いちご農園: https://www.yamamoto-ichigo.com/strawberry_picking.html (resolved)
+- ID 1604 大正池グリーンパーク: https://taishoike.com/ (resolved)
+- ID 2528 みのだ農園: https://kumamoto.guide/spots/detail/12229 (resolved)
+- ID 1293 桜山公園: https://gunma-kanko.jp/spots/1342 (resolved)
+- ID 1971 鞆の浦: https://www.fukuyama-kanko.com/travel/tourist/detail.php?id=101 (resolved)
+- ID 2387 たからだの里「環の湯」: https://takaradanosato.co.jp/ (resolved)
+- ID 1022 三芳町総合運動公園: https://www.town.saitama-miyoshi.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3723 御薗Ｂ＆Ｇ海洋センター・プール: https://www.kankomie.or.jp/spot/3866 (resolved)
+- ID 163 Trick Art Museum 富士河口湖: - (quality issue: OFFICIAL_URL_MISSING)
+- ID 644 柏崎市潮風公園: https://www.city.kashiwazaki.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 857 寒川神社: https://samukawajinjya.jp/en/ (resolved)
+- ID 46 伊豆アート体験さくら坂: https://taiken-jp.net/sakurasaka/ (quality issue: HTTP_404)
+- ID 2710 マリンパーク海水浴場: https://www.hot-ishikawa.jp/spot/detail_6519.html (resolved)
+- ID 727 茂原公園: https://www.city.mobara.chiba.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1413 金岡公園: https://www.city.sakai.lg.jp/kurashi/koen/shokai/kanaoka.html (resolved)
+- ID 2831 菊畑公園: https://www.visit-oita.jp/spots/detail/4527 (resolved)
+- ID 3226 大悲観公園: https://www.nagasaki-tabinet.com/guide/651 (resolved)
+- ID 103 菅平高原 スマイルパーク: https://pinebeak.jp/kids_park/ (resolved)
+- ID 345 東京海洋大学 マリンサイエンスミュージアム: https://www.s.kaiyodai.ac.jp/msm/index.html (quality issue: FETCH_ERROR:TypeError)
+- ID 1038 さくら市ミュージアム 荒井寛方記念館: https://www.city.tochigi-sakura.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3366 桂湖オートキャンプ場: https://www.city.nanto.toyama.jp/soshiki/koryukanko/2/1282.html (resolved)
+- ID 3496 五幡海水浴場: https://www.fuku-e.com/spot/detail_1335.html (resolved)
+- ID 1910 みどりんぱぁーく: https://www.town.mizumaki.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2952 舘山公園: https://www.tif.ne.jp/jp/entry/article.html?spot=4919 (resolved)
+- ID 1561 但馬高原植物園: https://www.tajima-garden.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1780 蔵王山展望台: https://www.city.tahara.aichi.jp/shisetsu/kankou/1002455.html (resolved)
+- ID 3071 【西条市】観光農園 丹原もぎたて倶楽部: https://www.iyokannet.jp/spot/7166 (resolved)
+- ID 1108 大野潮騒はまなす公園: https://www.city.kashima.ibaraki.jp/soshiki/51/3176.html (resolved)
+- ID 2583 新見市憩いとふれあいの公園: https://www.okayama-kanko.jp/spot/detail_10960.html (resolved)
+- ID 3546 竜神の滝キャンプ場（旧夕森渓谷キャンプ場）: https://www.kankou-gifu.jp/spot/detail_6609.html (resolved)
+- ID 2191 ケロケロの杜: https://www.miyagi-kankou.or.jp/theme/detail.php?id=21373 (resolved)
+- ID 1631 キッズパーク木津川店: https://amuseum.jp/store/kp_kizugawa/ (resolved)
+- ID 2522 吉原ごんべえ村: https://kumamoto.guide/spots/detail/4741 (resolved)
+- ID 1280 ふじの咲く丘: https://gunma-kanko.jp/spots/44 (resolved)
+- ID 1987 峰高公園: https://www.city.hatsukaichi.hiroshima.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2406 琴弾廻廊: https://www.my-kagawa.jp/point/53 (resolved)
+- ID 479 川越市立博物館: https://www.city.kawagoe.saitama.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3734 伊勢市やすらぎ公園プール: https://www.kankomie.or.jp/spot/3831 (resolved)
+- ID 151 ストロベリーファム石原: https://www.strawberryfarm-ishihara.com/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 647 湯之谷ファミリースキー場(プール季節): https://www.city.uonuma.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 858 鎌倉国宝館: https://www.city.kamakura.kanagawa.jp/kokuhokan/ (quality issue: HTTP_404)
+- ID 942 屋内遊び場 mirocco(みろっこ): https://mirocco.jp/ (resolved)
+- ID 2748 角偉三郎美術館: https://www.hot-ishikawa.jp/spot/detail_4972.html (resolved)
+- ID 730 鴨川松島: https://www.city.kamogawa.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1415 柏原市立玉手山公園: https://www.city.kashiwara.lg.jp/docs/2014072300010/ (resolved)
+- ID 2844 松本農園: https://www.visit-oita.jp/spots/detail/8394 (resolved)
+- ID 3252 石原岳森林公園: https://www.nagasaki-tabinet.com/guide/60505 (resolved)
+- ID 74 軽井沢キッズパーク KIDSPARK: https://www.karuizawa-psp.jp/kidspark/ (resolved)
+- ID 352 野毛大塚古墳・野毛公園: https://www.city.setagaya.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 411 日光二荒山神社: https://www.futarasan.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 3357 上経田中央公園: https://www.info-toyama.com/attractions/102037 (resolved)
+- ID 3455 鞠山海水浴場: https://www.fuku-e.com/spot/detail_1388.html (resolved)
+- ID 1906 高田濃施山公園: https://www.city.miyama.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2953 丸山公園: https://www.tif.ne.jp/jp/entry/article.html?spot=4920 (resolved)
+- ID 1527 神戸市水の科学博物館: https://kobe-mizuhaku.net/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1760 小牧山城・小牧山歴史館: https://komakiyama.com/ (resolved)
+- ID 3123 玉川ダム: https://www.iyokannet.jp/spot/7486 (resolved)
+- ID 1089 境町ニコニコパーク: https://www.town.ibaraki-sakai.lg.jp/map.php?code=321 (resolved)
+- ID 2642 そうじゃ水辺の楽校: https://www.okayama-kanko.jp/spot/detail_10761.html (resolved)
+- ID 3616 さくら街道 みぼろ湖畔キャンプサイト: https://www.kankou-gifu.jp/spot/detail_6833.html (resolved)
+- ID 2285 夢いちごの郷 菅野農園: https://www.miyagi-kankou.or.jp/theme/detail.php?id=15662 (resolved)
+- ID 1629 サープラ京都あそびタウン: https://3rd-planet.jp/sp-kyoto/ (resolved)
+- ID 2470 杉養蜂園 阿蘇みつばち牧場: https://kumamoto.guide/spots/detail/11385 (resolved)
+- ID 1279 小野池あじさい公園: https://gunma-kanko.jp/spots/509 (resolved)
+- ID 1969 福山メモリアルパーク: https://www.city.fukuyama.hiroshima.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2374 高松市鬼ヶ島おにの館: https://www.my-kagawa.jp/point/250 (resolved)
+- ID 496 飯能市立博物館: http://ww1.hanno-city.info/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3688 朝明茶屋キャンプ場: https://www.kankomie.or.jp/spot/10350 (resolved)
+- ID 146 GlassHouseねん: https://www.gem-glass.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/ (resolved)
+- ID 643 佐渡 二ツ亀: https://www.visitsado.com/spot/detail0407/ (resolved)
+- ID 867 横浜中華街(街歩き): https://www.chinatown.or.jp/ (resolved)
+- ID 28 豊田ラブリバー公園: https://www.city.iwata.shizuoka.jp/shisetsu_guide/kouen/1006650.html (quality issue: HTTP_404)
+- ID 2714 九十九湾: https://www.hot-ishikawa.jp/spot/detail_5821.html (resolved)
+- ID 1015 八街落花生畑(秋限定収穫体験): https://www.city.yachimata.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1438 岸和田観光農園: https://kishiwada-f.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 2847 千財農園: https://www.visit-oita.jp/spots/detail/8616 (resolved)
+- ID 3235 崎山海浜公園: https://www.nagasaki-tabinet.com/guide/62136 (resolved)
+- ID 92 Scratch & noise glass works: https://www.town.fujimi.lg.jp/uploaded/attachment/32462.pdf (resolved)
+- ID 364 サンリオピューロランドアンサンブル(団体プラン): https://www.puroland.jp/event/ (quality issue: HTTP_404)
+- ID 455 鹿沼運動公園: https://www.city.kanuma.lg.jp/ (quality issue: HTTP_503)
+- ID 3359 カヌー体験（桂湖ビジターセンター）: https://www.info-toyama.com/attractions/103503 (resolved)
+- ID 3423 志積海水浴場: https://www.fuku-e.com/spot/detail_1353.html (resolved)
+- ID 1898 諏訪公園: https://www.city.omuta.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2960 丈六公園: https://www.tif.ne.jp/jp/entry/article.html?spot=7639 (resolved)
+- ID 1526 道の駅 神戸フルーツ・フラワーパーク大沢: https://fruit-flowerpark.jp/ (resolved)
+- ID 1768 阿久比町ふれあいの森: https://www.town.agui.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3121 夢永海水浴場: https://www.iyokannet.jp/spot/4514 (resolved)
+- ID 1100 ポケットファームどきどき 茨城町店: https://www.zennoh.or.jp/ib/dokidoki/ (resolved)
+- ID 2660 カルスト山荘展望台: https://www.okayama-kanko.jp/spot/detail_10928.html (resolved)
+- ID 3625 森の文化博物館: https://www.kankou-gifu.jp/spot/detail_4494.html (resolved)
+- ID 2305 旭山農業体験実習館（コロボックルハウス）: https://www.miyagi-kankou.or.jp/theme/detail.php?id=11579 (resolved)
+- ID 1606 道の駅 お茶の京都みなみやましろ村: https://michinoeki.kyoto.jp/ (resolved)
+- ID 2518 湯の児スペイン村 福田農場: https://kumamoto.guide/spots/detail/1720 (resolved)
+- ID 1258 ヤマキ みなかみ工場: https://gunma-kanko.jp/spots/214 (resolved)
+- ID 1921 広島城: https://hiroshimacastle.jp/ (resolved)
+- ID 2404 コスモランドみの: https://www.my-kagawa.jp/point/380 (resolved)
+- ID 535 寄居町立鉢形城歴史館: https://www.town.yorii.saitama.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3744 四季の森ふれあい広場: https://www.kankomie.or.jp/spot/3440 (resolved)
+- ID 140 より道の湯: https://yorimichinoyu.jp/ (resolved)
+- ID 575 新潟市歴史博物館 みなとぴあ: https://www.nchm.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 795 川崎市岡本太郎美術館: https://www.taromuseum.jp/ (resolved)
+- ID 2066 新居関所・史料館: https://www.city.kosai.shizuoka.jp/kanko_bunka_sports/kankospot/9675.html (resolved)
+- ID 2697 能美市根上ふれあいプール: https://www.hot-ishikawa.jp/spot/detail_6200.html (resolved)
+- ID 1014 富里スイカロード: https://www.city.tomisato.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1409 千島公園: https://www.city.osaka.lg.jp/taisho/page/0000000890.html (quality issue: HTTP_404)
+- ID 2884 川上渓谷: https://www.visit-oita.jp/spots/detail/8607 (resolved)
+- ID 3224 生月大橋公園: https://www.nagasaki-tabinet.com/guide/594 (resolved)
+- ID 94 Gaku Glass: https://www.hakuba-gaku.com/ (resolved)
+- ID 328 高井戸公園(下高井戸おおぞら公園): https://www.tokyo-park.or.jp/park/format/index108.html (quality issue: HTTP_404)
+- ID 998 那須町立芦野公園: https://www.town.nasu.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3374 大門川河川公園: https://www.info-toyama.com/attractions/99922 (resolved)
+- ID 3476 梅浦海水浴場（越前町）: https://www.fuku-e.com/spot/detail_1337.html (resolved)
+- ID 1884 須恵町皿山公園: https://www.town.sue.fukuoka.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2981 あべ農園: https://www.tif.ne.jp/jp/entry/article.html?spot=7570 (resolved)
+- ID 1566 淡路人形座: https://awajiningyoza.com/ (resolved)
+- ID 1752 白鳥庭園: https://www.shirotori-garden.jp/ (resolved)
+- ID 3128 アカゴ淵: https://www.iyokannet.jp/spot/3739 (resolved)
+- ID 1081 あそびパークPLUS ジョイフル本田ニューポートひたちなか店: https://bandainamco-am.co.jp/kids/asobiparkplus/loc/hitachinaka.html (resolved)
+- ID 2624 虎口池キャンプ場: https://www.okayama-kanko.jp/spot/detail_10195.html (resolved)
+- ID 3605 塔の岩オートキャンプ場: https://www.kankou-gifu.jp/spot/detail_6612.html (resolved)
+- ID 2217 MIGAKI FARM: https://www.miyagi-kankou.or.jp/theme/detail.php?id=15654 (resolved)
+- ID 1638 綾部ふれあい牧場: https://www.city.ayabe.lg.jp/0000000887.html (resolved)
+- ID 2550 和水江田川カヌー・キャンプ場: https://kumamoto.guide/spots/detail/12071 (resolved)
+- ID 1281 吉岡町城山みはらし公園: https://gunma-kanko.jp/spots/1332 (resolved)
+- ID 1941 海田総合公園: https://www.town.kaita.lg.jp/site/kaita-park/ (quality issue: HTTP_404)
+- ID 2429 丸亀市手島自然教育センター: https://www.my-kagawa.jp/point/379 (resolved)
+- ID 896 荒川公園(熊谷): https://www.city.kumagaya.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 3696 霞ヶ浦プール: https://www.kankomie.or.jp/spot/3829 (resolved)
+- ID 160 河口湖美術館: https://www.fkchannel.jp/facility-01 (resolved)
+- ID 595 美人林: https://www.tokamachishikanko.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 860 水郷田名 ふれあい広場: https://www.city.sagamihara.kanagawa.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 2086 裾野市運動公園: https://www.city.susono.shizuoka.jp/soshiki/4/5/5/2055.html (resolved)
+- ID 2759 のとじま臨海公園海づりセンター: https://www.hot-ishikawa.jp/spot/detail_6113.html (resolved)
+- ID 765 いちご狩り狩場(山倉地区: https://www.city.ichihara.chiba.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1412 大蓮公園: https://www.dairen-park.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 2887 久住高原: https://www.visit-oita.jp/spots/detail/6073 (resolved)
+- ID 3247 河川公園 やすらぎの里: https://www.nagasaki-tabinet.com/guide/458 (resolved)
+- ID 2171 伊那市創造館: https://www.inacity.jp/shisetsu/library_museum/inashisozokan/index.html (resolved)
+- ID 359 明治神宮: https://www.meijijingu.or.jp/ (resolved)
+- ID 1040 野木町煉瓦窯: https://www.kanko.town.nogi.lg.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 3364 組子細工体験（河島建具）: https://www.info-toyama.com/attractions/103492 (resolved)
+- ID 3399 矢代海水浴場: https://www.fuku-e.com/spot/detail_1392.html (resolved)
+- ID 1901 福岡県営筑後小郡運動公園: https://chikugo-ogori.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 2932 泉崎資料館: https://www.tif.ne.jp/jp/entry/article.html?spot=5427 (resolved)
+- ID 1565 淡路島モンキーセンター: https://monkey-center.jp/index.php (resolved)
+- ID 1770 夢と学びの科学体験館: https://www.city.kariya.lg.jp/yumemana/ (resolved)
+- ID 3146 栗の里公園・なかやまフラワーハウス: https://www.iyokannet.jp/spot/2341 (resolved)
+- ID 1147 ごかみらい公園: https://www.town.goka.lg.jp/kurashi-machi-shigoto/gokanabi/kousen-shisetu/page003767.html (resolved)
+- ID 2637 戸田農園: https://www.okayama-kanko.jp/spot/detail_13169.html (resolved)
+- ID 3600 陶芸体験ボイスオブセラミックス: https://www.kankou-gifu.jp/spot/detail_3579.html (resolved)
+- ID 2280 いちご畑ＭＩＵＲＡ: https://www.miyagi-kankou.or.jp/theme/detail.php?id=15658 (resolved)
+- ID 1598 文化パルク城陽: https://www.bunkaparcjoyo.net/ (quality issue: FETCH_ERROR:TypeError)
+- ID 2512 江津湖: https://kumamoto.guide/spots/detail/12349 (resolved)
+- ID 1282 ふるさとの広場 ちびっこベース: https://www.town.meiwa.gunma.jp/life/soshiki/toshikensetsu/sonota8toshikensetu/3/1/327.html (resolved)
+- ID 1948 グリーンヒル郷原: https://greenhill-gohara.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 2365 讃州井筒屋敷: https://www.my-kagawa.jp/point/21 (resolved)
+- ID 899 狭山市稲荷山公園 ふじ棚: https://www.seibu-green.co.jp/inariyama/ (resolved)
+- ID 3740 大杉谷自然学校: https://www.kankomie.or.jp/spot/19354 (resolved)
+- ID 119 兼川の森: https://kanegawanomori.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 603 笠島海水浴場: https://www.city.kashiwazaki.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 907 県立座間谷戸山公園: https://www.kanagawa-park.or.jp/zamayatoyama/ (resolved)
+- ID 2054 奇石博物館: http://www.kiseki-jp.com/ (resolved)
+- ID 2677 うのけ総合公園: https://www.hot-ishikawa.jp/spot/detail_12437.html (resolved)
+- ID 729 館山ファミリーパーク: https://www.familypark.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1426 今城塚古代歴史館: https://www.city.takatsuki.osaka.jp/site/history/ (resolved)
+- ID 2825 えぼし公園: https://www.visit-oita.jp/spots/detail/4546 (resolved)
+- ID 3182 田平公園: https://www.nagasaki-tabinet.com/guide/616 (resolved)
+- ID 2186 大町エネルギー博物館: https://q-epage.com/omachiemuse/ (resolved)
+- ID 978 旧古河庭園: https://www.tokyo-park.or.jp/park/yoyogi/ (resolved)
+- ID 375 那須ワールドモンキーパーク: https://www.nasumonkey.com/ (resolved)
+- ID 3380 ナビゲートシアター＆小物手作り体験（入善町）: https://www.info-toyama.com/attractions/102915 (resolved)
+- ID 3472 人魚の浜海水浴場: https://www.fuku-e.com/spot/detail_1381.html (resolved)
+- ID 1877 文化記念公園: https://www.city.kitakyushu.lg.jp/kokuraminami/file_0104.html (resolved)
+- ID 2941 さくら公園: https://www.tif.ne.jp/jp/entry/article.html?spot=7580 (resolved)
+- ID 1543 丸山総合公園: https://www.city.kasai.hyogo.jp/soshiki/57/1427.html (resolved)
+- ID 1786 観光農園花ひろば: https://hana-hiroba.net/ (resolved)
+- ID 1124 雪印メグミルク 阿見工場: https://www.meg-snow.com/fun/factory/ami/ (resolved)
+- ID 2216 村田町野外活動センター: https://www.miyagi-kankou.or.jp/theme/detail.php?id=11262 (resolved)
+- ID 1594 宇治市源氏物語ミュージアム: https://www.city.uji.kyoto.jp/site/genji/ (resolved)
+- ID 1291 大輪公園: https://www.town.meiwa.gunma.jp/life/soshiki/toshikensetsu/toshikaihatuhome/toshikaihatu3/335.html (resolved)
+- ID 1922 縮景園: https://shukkeien.jp/ (resolved)
+- ID 2417 小豆島町内海B&G海洋センター: https://www.my-kagawa.jp/point/376 (resolved)
+- ID 902 造幣局さいたま支局 さいたま貨幣プラザ: https://www.mint.go.jp/saitama/ (quality issue: HTTP_404)
+- ID 128 スキッズガーデン 甲府昭和店: https://www.fantasy.co.jp/skidsgarden/shoplist/shop5450/ (resolved)
+- ID 648 佐渡博物館: https://www.sadocity.niigata.jp/ (quality issue: FETCH_ERROR:TypeError)
+- ID 1026 湯河原 万葉公園: https://www.yugawara.or.jp/ (resolved)
+- ID 2061 小笠山総合運動公園エコパ: https://www.ecopa.jp/ (resolved)
+- ID 720 印旛沼サンセットヒルズ: https://www.city.inzai.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 1440 道の駅 能勢 くりの郷: https://www.michinoeki-nose.jp/ (resolved)
+- ID 2147 黒姫童話館&童話の森ギャラリー: https://douwakan.com/ (resolved)
+- ID 338 南長崎スポーツ公園: https://www.city.toshima.lg.jp/ (quality issue: OFFICIAL_IDENTITY_NOT_CONFIRMED_ON_PAGE)
+- ID 464 大田原温泉太陽の湯: https://otawara-onsen.com/ (quality issue: FETCH_ERROR:TypeError)
+- ID 1887 千鳥ヶ池公園: https://www.city.koga.fukuoka.jp/ (resolved)
+- ID 2943 さゆり公園: https://www.tif.ne.jp/jp/entry/article.html?spot=6609 (resolved)
+- ID 1562 山陰海岸ジオパーク館: https://sanin-geoparkkan.jp/ (resolved)

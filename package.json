@@ -17,6 +17,7 @@
     "facilities:recommended-tag:test": "node --test scripts/test-facility-recommended-tag-routing.mjs",
     "facilities:area-filter:test": "node --test scripts/test-unified-facility-area-filter.mjs",
     "facilities:q1:validate": "node scripts/validate-facility-quality-q1.mjs",
+    "facilities:c3:validate": "node scripts/validate-c3-rewrites.mjs",
     "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
     "geocode": "node --env-file=.env.local scripts/geocode.ts",
     "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",
