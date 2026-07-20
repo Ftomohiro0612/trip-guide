@@ -1,0 +1,239 @@
+{
+  "track": "Q1 known facility quality issues",
+  "base_commit": "36e5604565b03fc05acc980d0fea92e5340e77c1",
+  "checked_at": "2026-07-20",
+  "target_count": 11,
+  "target_ids": [63, 658, 791, 928, 934, 1529, 1600, 1605, 1757, 1762, 1903],
+  "entries": [
+    {
+      "id": 63,
+      "registered_name": "わくわくどうぶつ王国",
+      "prefecture": "長野県",
+      "registered_url": "https://familyland.ikenotaira-resort.co.jp/animal/",
+      "known_issue": "既存公式URLが実質not found",
+      "official_sources": ["https://www.shirakabaresort.jp/activity/zoo/"],
+      "current_state": "白樺リゾート公式の現行施設ページで営業と施設同一性を確認",
+      "classification": "ACTIVE_URL_UPDATE",
+      "update_summary": "公式URLと出典を現行ページへ更新",
+      "expected_updates": {
+        "url": "https://www.shirakabaresort.jp/activity/zoo/",
+        "source_urls": "https://www.shirakabaresort.jp/activity/zoo/",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "白樺リゾート公式の現行施設ページで、わくわくどうぶつ王国の営業・施設同一性・所在地を確認。旧URLは実質not foundのため現行URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 658,
+      "registered_name": "水原町立水原中央公民館 瓢湖白鳥資料室",
+      "prefecture": "新潟県",
+      "registered_url": "https://www.aganogawa.jp/",
+      "known_issue": "旧自治体名を含む施設名と現行公式情報の同一性が不明",
+      "official_sources": [
+        "https://www.city.agano.niigata.jp/material/files/group/5/R08_ippan.pdf",
+        "https://www.city.agano.niigata.jp/material/files/group/6/actionplan.pdf",
+        "https://www.city.agano.niigata.jp/material/files/group/2/2023-12-11_kankyokihonkeikaku.pdf"
+      ],
+      "current_state": "自治体資料では「白鳥の里」の施設管理予算が継続する一方、展示資料移動後の一般公開状況と登録レコードとの同一性を確定できない",
+      "classification": "IDENTITY_UNRESOLVED_HOLD",
+      "update_summary": "施設正本は変更せず、追加の自治体確認対象としてHOLD",
+      "expected_updates": {},
+      "post_public_state": "published_hold",
+      "hold_reason": "一般公開状況、現正式名称、旧レコードとの同一性を一次情報だけで確定できないため"
+    },
+    {
+      "id": 791,
+      "registered_name": "東芝未来科学館",
+      "prefecture": "神奈川県",
+      "registered_url": "https://toshiba-mirai-kagakukan.jp/",
+      "known_issue": "一般公開終了",
+      "official_sources": ["https://www.global.toshiba/jp/news/corporate/2024/05/news-20240523-01.html"],
+      "current_state": "東芝公式が一般のお客様向け公開を2024-06-29で終了",
+      "classification": "PUBLIC_ACCESS_ENDED",
+      "update_summary": "レコードを保持して公開除外し、公式発表URLを記録",
+      "expected_updates": {
+        "url": "https://www.global.toshiba/jp/news/corporate/2024/05/news-20240523-01.html",
+        "source_urls": "https://www.global.toshiba/jp/news/corporate/2024/05/news-20240523-01.html",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "exclude_candidate",
+        "source_notes": "東芝公式発表で一般のお客様向け公開が2024-06-29に終了したことを再確認。施設レコードとID・slugは維持し、公開一覧・地図・検索・sitemapから除外。"
+      },
+      "post_public_state": "excluded",
+      "hold_reason": null
+    },
+    {
+      "id": 928,
+      "registered_name": "旧斎藤家別邸",
+      "prefecture": "新潟県",
+      "registered_url": "https://saito-tei.jp/",
+      "known_issue": "登録URLが現行公式サイトと不一致、正式名称の漢字表記が旧登録と不一致",
+      "official_sources": [
+        "https://saitouke.jp/",
+        "https://www.city.niigata.lg.jp/chuo/torikumi/shitei/ichiran/c_chiiki/saitou-tei.html"
+      ],
+      "current_state": "一般公開を継続し、現行正式名称は旧齋藤家別邸",
+      "classification": "ACTIVE_NAME_AND_URL_UPDATE",
+      "update_summary": "正式名称と公式URL、出典を更新",
+      "expected_updates": {
+        "name": "旧齋藤家別邸",
+        "url": "https://saitouke.jp/",
+        "source_urls": "https://saitouke.jp/",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "新潟市公式ページと現行公式サイトで公開継続、正式名称「旧齋藤家別邸」、所在地を確認。旧ドメインから現行公式URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 934,
+      "registered_name": "日光トリックアートピア",
+      "prefecture": "栃木県",
+      "registered_url": "https://trickart-pia.com/nikko/",
+      "known_issue": "登録URLが404",
+      "official_sources": ["https://trickart-pia.com/"],
+      "current_state": "運営者公式サイトが営業情報を更新中で、正式表記は「とりっくあーとぴあ日光」",
+      "classification": "ACTIVE_NAME_AND_URL_UPDATE",
+      "update_summary": "正式名称と公式URL、出典を更新",
+      "expected_updates": {
+        "name": "とりっくあーとぴあ日光",
+        "url": "https://trickart-pia.com/",
+        "source_urls": "https://trickart-pia.com/",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "運営者公式サイトの2026年更新情報と施設案内で営業継続、正式表記、所在地を確認。404となる旧下層URLを現行トップへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 1529,
+      "registered_name": "西宮市貝類館",
+      "prefecture": "兵庫県",
+      "registered_url": "https://www.nishi.or.jp/bunka/shisetsuannai/kairuikan/",
+      "known_issue": "登録URLが404",
+      "official_sources": ["https://www.nishi.or.jp/bunka/bunka/kairuikan/index.html"],
+      "current_state": "西宮市公式に2026年7月の開館カレンダーがあり営業継続",
+      "classification": "ACTIVE_URL_UPDATE",
+      "update_summary": "公式URLと出典を現行市サイト階層へ更新",
+      "expected_updates": {
+        "url": "https://www.nishi.or.jp/bunka/bunka/kairuikan/index.html",
+        "source_urls": "https://www.nishi.or.jp/bunka/bunka/kairuikan/index.html",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "西宮市公式の現行トップと2026年7月開館カレンダーで営業継続、正式名称、所在地を確認。404となる旧市サイト階層を現行URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 1600,
+      "registered_name": "京田辺市野外活動センター 竜王こどもの王国",
+      "prefecture": "京都府",
+      "registered_url": "https://ryuoh-kodomo.com/",
+      "known_issue": "京田辺市公式で閉所を確認",
+      "official_sources": ["https://www.city.kyotanabe.lg.jp/0000014358.html"],
+      "current_state": "京田辺市の当該施設は2025-03-31に閉所。民間事業者の後継計画は別施設",
+      "classification": "PERMANENTLY_CLOSED_PUBLIC_EXCLUDE",
+      "update_summary": "レコードを保持して公開除外し、閉所告知URLを記録",
+      "expected_updates": {
+        "url": "https://www.city.kyotanabe.lg.jp/0000014358.html",
+        "source_urls": "https://www.city.kyotanabe.lg.jp/0000014358.html",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "exclude_candidate",
+        "source_notes": "京田辺市公式で京田辺市野外活動センター「竜王こどもの王国」が2025-03-31に閉所したことを確認。民間事業者による後継施設は別施設として扱い、このレコードは削除せず公開除外。"
+      },
+      "post_public_state": "excluded",
+      "hold_reason": null
+    },
+    {
+      "id": 1605,
+      "registered_name": "笠置キャンプ場",
+      "prefecture": "京都府",
+      "registered_url": "https://kasagi.kyoto/",
+      "known_issue": "登録URLと現行運営者公式サイトが不一致",
+      "official_sources": [
+        "https://kasagi-camp.jp/",
+        "https://www.town.kasagi.lg.jp/contents_detail.php?co=new&frmId=1841"
+      ],
+      "current_state": "運営組織変更後も営業継続",
+      "classification": "ACTIVE_URL_UPDATE",
+      "update_summary": "公式URLと出典を現行運営者ページへ更新",
+      "expected_updates": {
+        "url": "https://kasagi-camp.jp/",
+        "source_urls": "https://kasagi-camp.jp/",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "現行運営者公式サイトと笠置町公式で営業継続、運営組織変更、施設同一性を確認。旧運営情報のURLから現行公式URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 1757,
+      "registered_name": "グリーンピア春日井",
+      "prefecture": "愛知県",
+      "registered_url": "https://www.spofure-kasugai.or.jp/greenpia/",
+      "known_issue": "登録URLが404",
+      "official_sources": ["https://www.city.kasugai.lg.jp/shisei/shisetsu/sonota/syokubutsuen/index.html"],
+      "current_state": "春日井市公式の2026-07-11更新施設案内で営業継続",
+      "classification": "ACTIVE_URL_UPDATE",
+      "update_summary": "公式URLと出典を自治体現行ページへ更新",
+      "expected_updates": {
+        "url": "https://www.city.kasugai.lg.jp/shisei/shisetsu/sonota/syokubutsuen/index.html",
+        "source_urls": "https://www.city.kasugai.lg.jp/shisei/shisetsu/sonota/syokubutsuen/index.html",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "春日井市公式の2026-07-11更新施設案内で営業継続、施設名・所在地を確認。到達不能となった旧指定管理者ページから自治体の現行公式URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 1762,
+      "registered_name": "弥富野鳥園",
+      "prefecture": "愛知県",
+      "registered_url": "https://www.aichi-bird.jp/",
+      "known_issue": "登録URLと現行管理者公式サイトが不一致",
+      "official_sources": [
+        "https://www.aichi-park.or.jp/yachou/",
+        "https://www.pref.aichi.jp/soshiki/shizen/0000006216.html"
+      ],
+      "current_state": "愛知公園協会の現行公式サイトで営業継続、正式名称は愛知県弥富野鳥園",
+      "classification": "ACTIVE_NAME_AND_URL_UPDATE",
+      "update_summary": "正式名称と公式URL、出典を更新",
+      "expected_updates": {
+        "name": "愛知県弥富野鳥園",
+        "url": "https://www.aichi-park.or.jp/yachou/",
+        "source_urls": "https://www.aichi-park.or.jp/yachou/",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "愛知県の指定管理者である愛知公園協会の現行公式サイトで営業継続、正式名称「愛知県弥富野鳥園」、所在地を確認。旧管理者ドメインから現行URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    },
+    {
+      "id": 1903,
+      "registered_name": "大川テラッツァ",
+      "prefecture": "福岡県",
+      "registered_url": "https://okawa-terrzza.jp/",
+      "known_issue": "登録URLへ到達不能",
+      "official_sources": ["https://www.city.okawa.lg.jp/s034/030/kankou/060/20170612193350.html"],
+      "current_state": "大川市公式施設案内で営業継続と所在地を確認",
+      "classification": "ACTIVE_URL_UPDATE",
+      "update_summary": "公式URLと出典を自治体現行ページへ更新",
+      "expected_updates": {
+        "url": "https://www.city.okawa.lg.jp/s034/030/kankou/060/20170612193350.html",
+        "source_urls": "https://www.city.okawa.lg.jp/s034/030/kankou/060/20170612193350.html",
+        "source_checked_at": "2026-07-20",
+        "data_quality_status": "confirmed",
+        "source_notes": "大川市公式の施設案内で営業継続、施設名、所在地、運営窓口を確認。到達不能となった旧独自ドメインから自治体の現行公式URLへ更新。"
+      },
+      "post_public_state": "published",
+      "hold_reason": null
+    }
+  ]
+}

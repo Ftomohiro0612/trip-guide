@@ -354,12 +354,12 @@ test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () =
       mappableEventCount: 21,
       holdEventCount: 388,
       missingLocationCount: 70,
-      excludedFacilityCount: 6,
+      excludedFacilityCount: 8,
       eventToFacilityEventCount: 21,
       eventToFacilityRecommendationCount: 105,
-      facilityToEventFacilityCount: 486,
+      facilityToEventFacilityCount: 485,
       facilityToEventThreeCandidateCount: 186,
-      facilityToEventRecommendationCount: 959,
+      facilityToEventRecommendationCount: 958,
     },
   );
 });
