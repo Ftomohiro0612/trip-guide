@@ -7,7 +7,6 @@ const currentDocument = JSON.parse(fs.readFileSync("data/facilities_data.json", 
 const baseDocument = JSON.parse(execFileSync("git", ["show", `${baseHead}:data/facilities_data.json`], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }));
 const current = currentDocument.facilities ?? currentDocument;
 const base = baseDocument.facilities ?? baseDocument;
-const currentById = new Map(current.map((facility) => [Number(facility.id), facility]));
 const baseById = new Map(base.map((facility) => [Number(facility.id), facility]));
 const targetIds = new Set(manifest.entries.map((entry) => Number(entry.id)));
 const appliedThrough = Number(manifest.rewrite?.applied_through ?? 0);

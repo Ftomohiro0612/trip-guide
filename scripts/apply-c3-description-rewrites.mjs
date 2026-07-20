@@ -206,49 +206,13 @@ const usableActions = (facility) => [...(facility.things_to_do ?? []), ...(facil
   .filter((value, index, values) => values.findIndex((other) => compact(other) === compact(value)) === index)
   .slice(0, 3);
 
-const toTari = (value) => {
-  const normalized = normalize(value).replace(/[。！？]$/u, "");
-  const converted = normalized
-  .replace(/楽しむ$/u, "楽しんだり")
-  .replace(/観察する$/u, "観察したり")
-  .replace(/体験する$/u, "体験したり")
-  .replace(/見学する$/u, "見学したり")
-  .replace(/学ぶ$/u, "学んだり")
-  .replace(/遊ぶ$/u, "遊んだり")
-  .replace(/を見る$/u, "を見たり")
-  .replace(/眺める$/u, "眺めたり")
-  .replace(/歩く$/u, "歩いたり")
-  .replace(/巡る$/u, "巡ったり")
-  .replace(/見つける$/u, "見つけたり")
-  .replace(/深める$/u, "深めたり")
-  .replace(/選ぶ$/u, "選んだり")
-  .replace(/合わせる$/u, "合わせたり")
-  .replace(/に挑戦する$/u, "に挑戦したり")
-  .replace(/する$/u, "したり")
-  .replace(/ふれる$/u, "ふれたり")
-  .replace(/探す$/u, "探したり")
-  .replace(/読む$/u, "読んだり")
-  .replace(/上る$/u, "上ったり")
-  .replace(/登る$/u, "登ったり")
-  .replace(/作る$/u, "作ったり")
-  .replace(/泳ぐ$/u, "泳いだり")
-  .replace(/滑る$/u, "滑ったり")
-  .replace(/走る$/u, "走ったり")
-  .replace(/使う$/u, "使ったり")
-  .replace(/過ごす$/u, "過ごしたり")
-  .replace(/参加する$/u, "参加したり");
-  if (converted !== normalized) return converted;
-  if (/(遊具|広場|展示|展望|海水浴|プール|温泉|アスレチック)$/u.test(normalized)) return `${normalized}を利用したり`;
-  return `${normalized}に触れたり`;
-};
-
 const asKoto = (value) => {
   let text = normalize(value).replace(/[。！？]$/u, "");
   if (/大型遊具が楽しい$/u.test(text)) text = text.replace(/大型遊具が楽しい$/u, "大型遊具で遊ぶ");
   return /(?:る|む|す|ぶ|ぐ|く|う)$/u.test(text) ? `${text}こと` : `${text}を楽しむこと`;
 };
 
-const actionSentence = (facility, actions, facts) => {
+const actionSentence = (facility, actions) => {
   const name = cleanName(facility.name);
   const list = actions;
   if (list.length === 0) return `${name}では、${facility.category}として整えられた場所を親子で回り、現地の特徴を一つずつ見つけられます。`;
@@ -262,36 +226,6 @@ const actionSentence = (facility, actions, facts) => {
     `${name}では、まず${activities[0]}に取り組み、興味が続けば${activities[1]}へ広げる流れを組めます。`,
   ];
   return variants[facility.id % variants.length];
-};
-
-const officialExtraSentence = (facility, source, lead) => {
-  const blocked = /([|…]|続きを読む|お知らせ|ホームページ|観光サイト|公式サイト|アクセス|スポットから近い|行きたいボタン|Google Map|開庁時間|電話|駐車場|下車|徒歩|災害関連|新型コロナ|マイページ|予約サイト)/u;
-  const anchors = [facility.unique_selling_point, ...(facility.signature_experiences ?? []), ...(facility.things_to_do ?? [])]
-    .map(compact).filter((value) => value.length >= 5);
-  const candidates = (source?.snippets ?? []).flatMap((snippet) => sentenceList(snippet.text))
-    .map(ensureSentence)
-    .filter((text) => text.length >= 28 && text.length <= 170 && !blocked.test(text) && !volatilePattern.test(text))
-    .filter((text) => !lead.includes(removeEnding(text)))
-    .map((text) => {
-      const key = compact(text);
-      const overlap = Math.max(0, ...anchors.map((anchor) => {
-        const grams = new Set(Array.from({ length: Math.max(0, Math.min(anchor.length, key.length) - 4) }, (_, index) => anchor.slice(index, index + 5)));
-        return [...grams].filter((gram) => key.includes(gram)).length;
-      }));
-      return { text, score: overlap + (text.includes(cleanName(facility.name)) ? 8 : 0) };
-    })
-    .filter((candidate) => candidate.score >= 2)
-    .sort((left, right) => right.score - left.score || left.text.length - right.text.length);
-  const candidate = candidates[0];
-  if (!candidate) return "";
-  const body = removeEnding(candidate.text)
-    .replaceAll(facility.name, "").replaceAll(cleanName(facility.name), "")
-    .replace(/^[は、,:：・\s]+/u, "")
-    .replace(/楽しめます$/u, "楽しめるのが特徴です")
-    .replace(/あります$/u, "備わっています")
-    .replace(/です$/u, "となっています");
-  if (body.length < 24 || blocked.test(body)) return "";
-  return ensureSentence(facility.id % 3 === 0 ? `現地では、${body}` : facility.id % 3 === 1 ? body : `家族で回る際は、${body}`);
 };
 
 const decisionSentence = (facility, context, actions) => {
@@ -323,13 +257,13 @@ const supportingSentence = (facility, actions) => {
   return ensureSentence(variants[facility.id % variants.length]);
 };
 
-const buildDescription = (facility, entry, source, facts) => {
+const buildDescription = (facility, entry, facts) => {
   const acceptedSample = sampleDescriptionById.get(Number(entry.id));
   if (acceptedSample) return acceptedSample;
   const context = categoryContext(facility, facts);
   const lead = naturalLead(facility, entry, facts);
   const actions = usableActions(facility);
-  const action = actionSentence(facility, actions, facts);
+  const action = actionSentence(facility, actions);
   const extra = "";
   const decision = decisionSentence(facility, context, actions);
   const sentences = [lead, action, extra, decision].filter(Boolean).map(ensureSentence);
@@ -365,7 +299,7 @@ for (const entry of manifest.entries) {
   const source = researchById.get(Number(entry.id));
   const facts = factCandidates(facility, entry, source);
   const previous = entry.rejected_c3_description ?? entry.new_description;
-  const revised = buildDescription(facility, entry, source, facts);
+  const revised = buildDescription(facility, entry, facts);
   entry.rejected_c3_description = previous;
   entry.new_description = revised;
   entry.new_length = [...revised].length;
