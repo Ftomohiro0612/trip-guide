@@ -1,7 +1,7 @@
 # C3 facility description rewrite manifest
 
 - approved sample HEAD: `27a179528cce5edca6030408e2f590f310798054`
-- applied through: 50 / 200
+- applied through: 100 / 200
 - official source resolved: 147 / 200
 - separated quality issues: 53
 - before length: total 89745, average 448.73, min 321, max 712
