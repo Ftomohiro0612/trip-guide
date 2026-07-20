@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import test from "node:test";
 import {
   filterByPrefectureIds,
+  getPrefectureSelectorState,
   resolvePrefectureId,
 } from "../lib/facility-area-filter.ts";
 import {
@@ -23,6 +24,32 @@ test("single-prefecture resolution accepts canonical IDs and legacy names", () =
   assert.equal(resolvePrefectureId("shizuoka", data.metadata.prefectures), "shizuoka");
   assert.equal(resolvePrefectureId("静岡県", data.metadata.prefectures), "shizuoka");
   assert.equal(resolvePrefectureId("unknown", data.metadata.prefectures), null);
+});
+
+test("selector state distinguishes nationwide, single, and detailed areas", () => {
+  assert.deepEqual(getPrefectureSelectorState(null, []), {
+    isNationwide: true,
+    detailedCount: 0,
+    hasDetailedSelection: false,
+  });
+  assert.deepEqual(getPrefectureSelectorState("shizuoka", ["yamanashi"]), {
+    isNationwide: false,
+    detailedCount: 0,
+    hasDetailedSelection: false,
+  });
+  assert.deepEqual(
+    getPrefectureSelectorState(null, ["shizuoka", "yamanashi"]),
+    {
+      isNationwide: false,
+      detailedCount: 2,
+      hasDetailedSelection: true,
+    },
+  );
+  assert.equal(
+    getPrefectureSelectorState(null, ["shizuoka", "shizuoka"])
+      .detailedCount,
+    1,
+  );
 });
 
 test("single-prefecture filtering never leaks another prefecture", () => {

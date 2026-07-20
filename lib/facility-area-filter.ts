@@ -1,5 +1,20 @@
 import type { PrefectureId, PrefectureMeta } from "@/types/facility";
 
+export function getPrefectureSelectorState(
+  selectedId: PrefectureId | null,
+  detailedIds: readonly string[],
+) {
+  const uniqueDetailedIds = selectedId
+    ? []
+    : [...new Set(detailedIds.filter(Boolean))];
+
+  return {
+    isNationwide: selectedId === null && uniqueDetailedIds.length === 0,
+    detailedCount: uniqueDetailedIds.length,
+    hasDetailedSelection: uniqueDetailedIds.length > 0,
+  };
+}
+
 export function resolvePrefectureId(
   value: string,
   prefectures: readonly Pick<PrefectureMeta, "id" | "name">[],

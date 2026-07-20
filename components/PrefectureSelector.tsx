@@ -2,6 +2,7 @@
 
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
+import { getPrefectureSelectorState } from "@/lib/facility-area-filter";
 import type { PrefectureId } from "@/types/facility";
 
 type PrefectureOption = {
@@ -41,6 +42,22 @@ export default function PrefectureSelector({
   const selectedIsQuick = quickOptions.some(
     (prefecture) => prefecture.id === selectedId,
   );
+  const validPrefectureIds = new Set(
+    prefectures.map((prefecture) => prefecture.id),
+  );
+  const detailedIds = (searchParams.get("prefectures") ?? "")
+    .split(",")
+    .filter((id) => validPrefectureIds.has(id as PrefectureId));
+  const { isNationwide, detailedCount, hasDetailedSelection } =
+    getPrefectureSelectorState(selectedId, detailedIds);
+  const dialogButtonSelected = Boolean(
+    (selectedId && !selectedIsQuick) || hasDetailedSelection,
+  );
+  const dialogButtonLabel = hasDetailedSelection
+    ? `${detailedCount}エリア選択中`
+    : selected && !selectedIsQuick
+      ? selected.name
+      : "都道府県を選ぶ";
 
   useEffect(() => {
     try {
@@ -110,8 +127,8 @@ export default function PrefectureSelector({
         <button
           type="button"
           onClick={() => selectPrefecture(null)}
-          className={optionClass(selectedId === null)}
-          aria-pressed={selectedId === null}
+          className={optionClass(isNationwide)}
+          aria-pressed={isNationwide}
         >
           全国
         </button>
@@ -130,12 +147,12 @@ export default function PrefectureSelector({
         <button
           type="button"
           onClick={() => setOpen(true)}
-          className={`${optionClass(Boolean(selectedId && !selectedIsQuick))} inline-flex items-center gap-1.5`}
+          className={`${optionClass(dialogButtonSelected)} inline-flex items-center gap-1.5`}
           aria-haspopup="dialog"
           aria-expanded={open}
-          aria-pressed={Boolean(selectedId && !selectedIsQuick)}
+          aria-pressed={dialogButtonSelected}
         >
-          {selected && !selectedIsQuick ? selected.name : "都道府県を選ぶ"}
+          {dialogButtonLabel}
           <span aria-hidden>⌄</span>
         </button>
         {isPending && (
@@ -182,9 +199,9 @@ export default function PrefectureSelector({
               <button
                 type="button"
                 onClick={() => selectPrefecture(null)}
-                aria-pressed={selectedId === null}
+                aria-pressed={isNationwide}
                 className={`rounded-xl border px-3 py-3 text-left text-sm font-bold ${
-                  selectedId === null
+                  isNationwide
                     ? "border-sky-600 bg-sky-50 text-sky-700"
                     : "border-slate-200 text-slate-700 hover:border-sky-300"
                 }`}
