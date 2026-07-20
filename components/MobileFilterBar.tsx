@@ -53,18 +53,43 @@ export default function MobileFilterBar({
   function update(params: URLSearchParams) {
     startTransition(() => {
       const s = params.toString();
-      router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
+      router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });
     });
   }
 
   function toggleList(key: string, value: string) {
     const params = new URLSearchParams(searchParams);
+    if (key === "prefectures") params.delete("prefecture");
     const list = getList(key);
     const next = list.includes(value)
       ? list.filter((v) => v !== value)
       : [...list, value];
     if (next.length) params.set(key, next.join(","));
     else params.delete(key);
+    update(params);
+  }
+
+  function togglePrefecture(prefId: string) {
+    const params = new URLSearchParams(searchParams);
+    const singlePref = params.get("prefecture");
+    const existing = (params.get("prefectures") ?? "")
+      .split(",")
+      .filter(Boolean);
+    const singleMatch = prefectures.find(
+      (prefecture) =>
+        prefecture.id === singlePref || prefecture.name === singlePref,
+    );
+    const list =
+      singleMatch && !existing.includes(singleMatch.id)
+        ? [...existing, singleMatch.id]
+        : existing;
+    params.delete("prefecture");
+
+    const next = list.includes(prefId)
+      ? list.filter((value) => value !== prefId)
+      : [...list, prefId];
+    if (next.length) params.set("prefectures", next.join(","));
+    else params.delete("prefectures");
     update(params);
   }
 
@@ -137,12 +162,12 @@ export default function MobileFilterBar({
               {resultCount} 件の施設が該当
             </p>
 
-            <FilterGroup label="エリア">
+            <FilterGroup label="複数エリア">
               {prefectures.map((p) => (
                 <CheckboxItem
                   key={p.id}
                   checked={prefList.includes(p.id)}
-                  onChange={() => toggleList("prefectures", p.id)}
+                  onChange={() => togglePrefecture(p.id)}
                   label={`${p.name} (${p.count})`}
                 />
               ))}

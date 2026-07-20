@@ -52,7 +52,7 @@ export default async function Image({
     title: `${meta.name}の子供向け遊び場 ${list.length}選`,
     badges: [
       { label: `🎈 全 ${list.length} 施設` },
-      { label: `☂️ 雨の日OK ${rain} 件` },
+      { label: `☂️ 雨でも快適 ${rain} 件` },
       { label: `🆓 無料 ${free} 件`, bg: "#10b981" },
     ],
     gradient: PREF_GRADIENTS[meta.id],

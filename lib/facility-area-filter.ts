@@ -1,0 +1,22 @@
+import type { PrefectureId, PrefectureMeta } from "@/types/facility";
+
+export function resolvePrefectureId(
+  value: string,
+  prefectures: readonly Pick<PrefectureMeta, "id" | "name">[],
+): PrefectureId | null {
+  if (!value) return null;
+  return (
+    prefectures.find(
+      (prefecture) =>
+        prefecture.id === value || prefecture.name === value,
+    )?.id ?? null
+  );
+}
+
+export function filterByPrefectureIds<
+  T extends { prefecture_id: PrefectureId },
+>(facilities: readonly T[], prefectureIds: readonly string[]): T[] {
+  if (prefectureIds.length === 0) return [...facilities];
+  const selected = new Set(prefectureIds);
+  return facilities.filter((facility) => selected.has(facility.prefecture_id));
+}

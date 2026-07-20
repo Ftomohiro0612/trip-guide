@@ -23,7 +23,7 @@ export default function SortSelect() {
     else params.set("sort", e.target.value);
     startTransition(() => {
       const s = params.toString();
-      router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
+      router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });
     });
   }
 

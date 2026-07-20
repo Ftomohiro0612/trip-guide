@@ -1,6 +1,6 @@
 import { ImageResponse } from "next/og";
 import { visibleFacilities } from "@/lib/facilities";
-import { getTagMetaBySlug } from "@/lib/tags";
+import { getTagFacilities, getTagMetaBySlug } from "@/lib/tags";
 import {
   OG_CONTENT_TYPE,
   OG_SIZE,
@@ -40,7 +40,7 @@ export default async function Image({
     );
   }
 
-  const count = visibleFacilities.filter((f) => f.tags.includes(meta.tag)).length;
+  const count = getTagFacilities(meta, visibleFacilities).length;
 
   return renderOgImage({
     emoji: meta.emoji,

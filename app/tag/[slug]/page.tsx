@@ -2,14 +2,28 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
-import MapViewClient from "@/components/MapViewClient";
+import PrefectureSelector from "@/components/PrefectureSelector";
+import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import { visibleFacilities, prefectures } from "@/lib/facilities";
-import { TAG_META, getTagFacilities, getTagMetaBySlug } from "@/lib/tags";
+import {
+  TAG_META,
+  buildTagFacilityFilterHref,
+  getTagFacilities,
+  getTagMetaBySlug,
+} from "@/lib/tags";
+import { resolvePrefectureId } from "@/lib/facility-area-filter";
 import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
+import type { RawSearchParams } from "@/lib/filter";
 
 interface Props {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<RawSearchParams>;
+}
+
+function asSingleParam(value: string | string[] | undefined): string {
+  if (!value) return "";
+  return Array.isArray(value) ? value[0] ?? "" : value;
 }
 
 export function generateStaticParams() {
@@ -30,16 +44,38 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function TagPage({ params }: Props) {
+export default async function TagPage({ params, searchParams }: Props) {
   const { slug } = await params;
+  const sp = await searchParams;
   const meta = getTagMetaBySlug(slug);
   if (!meta) notFound();
 
   const list = getTagFacilities(meta, visibleFacilities);
+  const selectedPrefectureId = resolvePrefectureId(
+    asSingleParam(sp.prefecture),
+    prefectures,
+  );
+  const selectedPrefecture = prefectures.find(
+    (prefecture) => prefecture.id === selectedPrefectureId,
+  );
+  const filteredList = selectedPrefectureId
+    ? list.filter(
+        (facility) => facility.prefecture_id === selectedPrefectureId,
+      )
+    : list;
+  const prefectureOptions = prefectures.map((prefecture) => ({
+    ...prefecture,
+    count: list.filter(
+      (facility) => facility.prefecture_id === prefecture.id,
+    ).length,
+  }));
   const byPref = prefectures.map((p) => ({
     ...p,
-    items: list.filter((f) => f.prefecture_id === p.id),
+    items: filteredList.filter((f) => f.prefecture_id === p.id),
   }));
+  const pageTitle = selectedPrefecture
+    ? `${selectedPrefecture.name}の${meta.title}`
+    : meta.title;
 
   return (
     <div>
@@ -51,8 +87,8 @@ export default async function TagPage({ params }: Props) {
         ]}
       />
       <ItemListJsonLd
-        name={meta.title}
-        items={list.map((f) => ({
+        name={pageTitle}
+        items={filteredList.map((f) => ({
           name: f.name,
           href: `/facilities/${f.slug}`,
         }))}
@@ -76,7 +112,7 @@ export default async function TagPage({ params }: Props) {
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">タグ特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {meta.title} {list.length}選
+                {pageTitle}
               </h1>
               <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
                 {meta.lead}
@@ -87,26 +123,31 @@ export default async function TagPage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8">
-        {list.length > 0 && (
-          <section className="mb-8" aria-labelledby="tag-map-heading">
-            <h2
-              id="tag-map-heading"
-              className="text-xl font-bold text-slate-900 mb-3"
-            >
-              📍 地図で見る
-              <span className="text-sm font-normal text-slate-500 ml-2">
-                {list.length}件
-              </span>
-            </h2>
-            <MapViewClient
-              facilities={list}
-              height={420}
-              storageKey={`tag:${slug}`}
-            />
-          </section>
-        )}
-
+        <PrefectureSelector
+          prefectures={prefectureOptions}
+          selectedId={selectedPrefectureId}
+          disableEmpty
+        />
+        <p
+          id="facility-results"
+          className="mt-3 text-sm font-semibold text-slate-700"
+          aria-live="polite"
+        >
+          {selectedPrefecture ? `${selectedPrefecture.name} / ` : "全国 / "}
+          {filteredList.length}件の施設
+        </p>
         <p className="text-slate-700 leading-relaxed max-w-3xl">{meta.long}</p>
+
+        {filteredList.length === 0 && (
+          <div className="mt-8 rounded-2xl border border-slate-200 bg-white py-14 text-center">
+            <p className="font-bold text-slate-800">
+              この都府県には該当する施設がありません
+            </p>
+            <p className="mt-1 text-sm text-slate-500">
+              別の都府県または全国を選んでください。
+            </p>
+          </div>
+        )}
 
         {byPref.map((p) =>
           p.items.length === 0 ? null : (
@@ -123,7 +164,7 @@ export default async function TagPage({ params }: Props) {
                   </span>
                 </h2>
                 <Link
-                  href={`/facilities?prefectures=${p.id}&tags=${encodeURIComponent(meta.tag)}`}
+                  href={buildTagFacilityFilterHref(meta, p.id)}
                   className="text-sm text-brand hover:text-brand-dark"
                 >
                   絞り込みで見る →
@@ -136,6 +177,10 @@ export default async function TagPage({ params }: Props) {
               </div>
             </section>
           ),
+        )}
+
+        {filteredList.length > 0 && (
+          <ResponsiveResultsMap facilities={filteredList} />
         )}
 
         <section className="mt-12">

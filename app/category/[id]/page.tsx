@@ -117,7 +117,7 @@ export default async function CategoryPage({ params }: Props) {
 
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <Stat label="全施設" count={visibleCount} emoji="🎈" />
-          <Stat label="雨でも遊べる" count={rainCount} emoji="☂️" />
+          <Stat label="雨でも快適" count={rainCount} emoji="☂️" />
           <Stat label="無料" count={freeCount} emoji="🆓" />
           <Stat label="エリア数" count={byPref.filter((p) => p.items.length > 0).length} emoji="📍" />
         </div>

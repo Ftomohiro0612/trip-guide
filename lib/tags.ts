@@ -1,8 +1,8 @@
-import type { Facility, FacilityTag } from "@/types/facility";
+import type { Facility, FacilityTag, PrefectureId } from "@/types/facility";
 
-interface TagMeta {
+export interface TagMeta {
   slug: string;
-  tag: FacilityTag;
+  tag?: FacilityTag;
   match?: (f: Facility) => boolean;
   emoji: string;
   title: string;
@@ -13,20 +13,11 @@ interface TagMeta {
 export const TAG_META: TagMeta[] = [
   {
     slug: "rainy-day",
-    tag: "雨の日OK",
     match: (f) => f.rain_friendly === "◎",
     emoji: "☂️",
     title: "雨の日でも遊べるスポット",
     lead: "急な雨でもがっかりしない。屋根のある屋内施設や雨でも快適に過ごせる遊び場をピックアップ。",
     long: "予定の日にあいにくの雨…そんな時こそ屋内遊び場・水族館・科学館・博物館の出番。子供は退屈知らず、親もゆったり。雨でも快適(◎)な全施設を県別にチェックできます。",
-  },
-  {
-    slug: "indoor-rainy",
-    tag: "雨でも遊べる",
-    emoji: "🏠",
-    title: "雨でも遊べる施設",
-    lead: "屋内・半屋内など、天候を気にせず楽しめる施設を集めました。",
-    long: "梅雨の時期や夏の夕立、冬の寒い日など、屋外が厳しい日に頼れる施設の一覧。",
   },
   {
     slug: "free",
@@ -95,7 +86,9 @@ export const TAG_META: TagMeta[] = [
 ];
 
 const SLUG_INDEX = new Map(TAG_META.map((t) => [t.slug, t]));
-const TAG_INDEX = new Map(TAG_META.map((t) => [t.tag, t]));
+const TAG_INDEX = new Map(
+  TAG_META.flatMap((meta) => (meta.tag ? [[meta.tag, meta] as const] : [])),
+);
 
 export function getTagMetaBySlug(slug: string): TagMeta | undefined {
   return SLUG_INDEX.get(slug);
@@ -110,10 +103,22 @@ export function getTagFacilities(
   facilities: Facility[],
 ): Facility[] {
   if (meta.match) return facilities.filter(meta.match);
-  return facilities.filter((f) => f.tags.includes(meta.tag));
+  if (!meta.tag) return [];
+  const tag = meta.tag;
+  return facilities.filter((f) => f.tags.includes(tag));
 }
 
 export function tagHref(tag: FacilityTag): string | null {
   const m = TAG_INDEX.get(tag);
   return m ? `/tag/${m.slug}` : null;
+}
+
+export function buildTagFacilityFilterHref(
+  meta: TagMeta,
+  prefectureId: PrefectureId,
+): string {
+  const params = new URLSearchParams({ prefecture: prefectureId });
+  if (meta.slug === "rainy-day") params.set("rain", "◎");
+  else if (meta.tag) params.set("tags", meta.tag);
+  return `/facilities?${params.toString()}`;
 }

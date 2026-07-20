@@ -15,6 +15,7 @@
     "crosslinks:test": "node --test scripts/test-event-facility-crosslinks.mjs",
     "facilities:wave:validate": "node scripts/validate-facility-prefecture-wave.mjs",
     "facilities:recommended-tag:test": "node --test scripts/test-facility-recommended-tag-routing.mjs",
+    "facilities:area-filter:test": "node --test scripts/test-unified-facility-area-filter.mjs",
     "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
     "geocode": "node --env-file=.env.local scripts/geocode.ts",
     "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",

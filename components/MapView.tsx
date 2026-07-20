@@ -65,73 +65,8 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   mie: "#7c3aed",
 };
 
-const PREF_LABELS: Record<PrefectureId, string> = {
-  shizuoka: "🗻 静岡",
-  nagano: "🏔️ 長野",
-  yamanashi: "🍇 山梨",
-  tokyo: "🗼 東京",
-  tochigi: "🍓 栃木",
-  saitama: "🌻 埼玉",
-  niigata: "🌾 新潟",
-  chiba: "🥜 千葉",
-  kanagawa: "🌊 神奈川",
-  ibaraki: "🌊 茨城",
-  gunma: "♨️ 群馬",
-  osaka: "🏯 大阪",
-  hyogo: "🌉 兵庫",
-  kyoto: "⛩️ 京都",
-  aichi: "🏮 愛知",
-  fukuoka: "🍜 福岡",
-  hiroshima: "🦪 広島",
-  miyagi: "🌙 宮城",
-  kagawa: "🫒 香川",
-  kumamoto: "🏯 熊本",
-  okayama: "🍑 岡山",
-  ishikawa: "🪭 石川",
-  oita: "♨️ 大分",
-  fukushima: "🍑 福島",
-  ehime: "🍊 愛媛",
-  nagasaki: "⛵ 長崎",
-  toyama: "🏔️ 富山",
-  fukui: "🦖 福井",
-  gifu: "🏞️ 岐阜",
-  mie: "🥷 三重",
-};
-
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];
 const DEFAULT_ZOOM = 8;
-const DEFAULT_PREFS: Record<PrefectureId, boolean> = {
-  shizuoka: true,
-  nagano: true,
-  yamanashi: true,
-  tokyo: true,
-  tochigi: true,
-  saitama: true,
-  niigata: true,
-  chiba: true,
-  kanagawa: true,
-  ibaraki: true,
-  gunma: true,
-  osaka: true,
-  hyogo: true,
-  kyoto: true,
-  aichi: true,
-  fukuoka: true,
-  hiroshima: true,
-  miyagi: true,
-  kagawa: true,
-  kumamoto: true,
-  okayama: true,
-  ishikawa: true,
-  oita: true,
-  fukushima: true,
-  ehime: true,
-  nagasaki: true,
-  toyama: true,
-  fukui: true,
-  gifu: true,
-  mie: true,
-};
 
 const LOCATION_GUIDE_TEXT =
   "「📍 現在地」を押すと地図に現在地を表示します。現在地はサーバーに送信せず、このタブ内で一時的に利用します。";
@@ -147,9 +82,6 @@ type CurrentLocationState = {
 type PersistedMapViewState = {
   center: [number, number];
   zoom: number;
-  activePrefs: Record<PrefectureId, boolean>;
-  showRain: boolean;
-  showFree: boolean;
 };
 
 function persistenceKey(storageKey: string) {
@@ -187,23 +119,9 @@ function readPersistedState(storageKey?: string): PersistedMapViewState | null {
       return null;
     }
 
-    const savedPrefs =
-      typeof parsed.activePrefs === "object" && parsed.activePrefs !== null
-        ? (parsed.activePrefs as Partial<Record<PrefectureId, unknown>>)
-        : {};
-    const activePrefs = { ...DEFAULT_PREFS };
-    for (const id of Object.keys(DEFAULT_PREFS) as PrefectureId[]) {
-      if (typeof savedPrefs[id] === "boolean") {
-        activePrefs[id] = savedPrefs[id];
-      }
-    }
-
     return {
       center: parsed.center,
       zoom: parsed.zoom,
-      activePrefs,
-      showRain: parsed.showRain === true,
-      showFree: parsed.showFree === true,
     };
   } catch {
     return null;
@@ -262,11 +180,6 @@ export default function MapView({
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
   const [initialState] = useState(() => readPersistedState(storageKey));
 
-  const [activePrefs, setActivePrefs] = useState<Record<PrefectureId, boolean>>(
-    () => initialState?.activePrefs ?? { ...DEFAULT_PREFS },
-  );
-  const [showRain, setShowRain] = useState(() => initialState?.showRain ?? false);
-  const [showFree, setShowFree] = useState(() => initialState?.showFree ?? false);
   const [currentLocation, setCurrentLocation] =
     useState<CurrentLocationState | null>(() => readPersistedCurrentLocation());
   const [locationNotice, setLocationNotice] = useState<string | null>(null);
@@ -274,11 +187,7 @@ export default function MapView({
   const savedSnapshot = useRef<PersistedMapViewState>({
     center: initialState?.center ?? DEFAULT_CENTER,
     zoom: initialState?.zoom ?? DEFAULT_ZOOM,
-    activePrefs,
-    showRain,
-    showFree,
   });
-  const shouldPersist = Boolean(storageKey);
 
   const persistState = useCallback(
     (patch: Partial<PersistedMapViewState>) => {
@@ -298,11 +207,6 @@ export default function MapView({
     },
     [storageKey],
   );
-
-  useEffect(() => {
-    if (!shouldPersist) return;
-    persistState({ activePrefs, showRain, showFree });
-  }, [activePrefs, persistState, shouldPersist, showFree, showRain]);
 
   useEffect(() => {
     if (!locationNotice) return;
@@ -330,14 +234,7 @@ export default function MapView({
       );
   }, []);
 
-  const visible = useMemo(() => {
-    return placed.filter((f) => {
-      if (!activePrefs[f.prefecture_id]) return false;
-      if (showRain && f.rain_friendly === "×") return false;
-      if (showFree && !f.is_free) return false;
-      return true;
-    });
-  }, [placed, activePrefs, showRain, showFree]);
+  const visible = placed;
 
   // Spread overlapping markers in a small circle so each is clickable
   // (e.g. キポキポ + 恩賜林庭園 at identical coords would otherwise stack
@@ -406,53 +303,6 @@ export default function MapView({
           className="text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors bg-blue-600 text-white border-blue-600 hover:bg-blue-700 disabled:opacity-60 disabled:cursor-wait"
         >
           {locating ? "📍 取得中..." : "📍 現在地"}
-        </button>
-        {(Object.keys(PREF_LABELS) as PrefectureId[]).map((id) => (
-          <button
-            key={id}
-            type="button"
-            onClick={() =>
-              setActivePrefs((s) => ({ ...s, [id]: !s[id] }))
-            }
-            className={`text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-all ${
-              activePrefs[id]
-                ? "bg-white text-slate-900 border-white"
-                : "bg-white/60 text-slate-400 border-white/60 line-through"
-            }`}
-            style={
-              activePrefs[id]
-                ? { boxShadow: `0 0 0 2px ${PREF_COLORS[id]}` }
-                : undefined
-            }
-          >
-            <span
-              className="inline-block w-2 h-2 rounded-full mr-1.5 align-middle"
-              style={{ backgroundColor: PREF_COLORS[id] }}
-            />
-            {PREF_LABELS[id]}
-          </button>
-        ))}
-        <button
-          type="button"
-          onClick={() => setShowRain((v) => !v)}
-          className={`text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors ${
-            showRain
-              ? "bg-sky-500 text-white border-sky-500"
-              : "bg-white text-slate-700 border-slate-200 hover:border-sky-400"
-          }`}
-        >
-          ☂️ 雨でも遊べる
-        </button>
-        <button
-          type="button"
-          onClick={() => setShowFree((v) => !v)}
-          className={`text-xs font-bold px-2.5 py-1.5 rounded-full shadow-sm border transition-colors ${
-            showFree
-              ? "bg-emerald-500 text-white border-emerald-500"
-              : "bg-white text-slate-700 border-slate-200 hover:border-emerald-400"
-          }`}
-        >
-          🆓 無料のみ
         </button>
         <p className="w-full text-[11px] font-medium text-slate-500 bg-white/90 backdrop-blur rounded-full px-2.5 py-1 shadow-sm border border-white/80 sm:max-w-max">
           {LOCATION_GUIDE_TEXT}
@@ -530,9 +380,15 @@ function FitBoundsOnChange({
   useEffect(() => {
     if (fitMode === "never") return;
     if (fitMode === "initial-only" && didInitialFit.current) return;
-    if (points.length < 2) return;
+    if (points.length === 0) return;
 
     didInitialFit.current = true;
+    if (points.length === 1) {
+      map.flyTo([points[0].latitude, points[0].longitude], 11, {
+        duration: 0.6,
+      });
+      return;
+    }
     const bounds = L.latLngBounds(
       points.map((p) => [p.latitude, p.longitude] as [number, number]),
     );

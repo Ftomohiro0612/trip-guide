@@ -5,7 +5,7 @@ import { visibleFacilities } from "@/lib/facilities";
 export const metadata: Metadata = {
   title: "地図から探す",
   description:
-    "全国30都府県の子供向け遊び場を地図から探せます。雨の日OK、無料、県別の絞り込みにも対応。",
+    "全国30都府県の子供向け遊び場を地図から探せます。現在地と施設の位置関係を地図で確認できます。",
   alternates: { canonical: "/map" },
 };
 
@@ -17,7 +17,7 @@ export default function MapPage() {
           地図から探す
         </h1>
         <p className="text-sm text-slate-500 mt-2">
-          マーカーをクリックすると詳細ページへ移動できます。県や条件で表示施設を絞り込めます。
+          マーカーをクリックすると詳細ページへ移動できます。条件を指定して探す場合は施設一覧をご利用ください。
         </p>
       </div>
       <MapViewClient

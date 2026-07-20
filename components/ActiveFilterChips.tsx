@@ -33,7 +33,7 @@ export default function ActiveFilterChips({
   function update(params: URLSearchParams) {
     startTransition(() => {
       const s = params.toString();
-      router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
+      router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });
     });
   }
 
@@ -70,17 +70,20 @@ export default function ActiveFilterChips({
       onRemove: () => {
         const params = new URLSearchParams(searchParams);
         params.delete("recommended_tag");
-        params.delete("prefecture");
         update(params);
       },
     });
   }
 
   const prefecture = searchParams.get("prefecture");
-  if (prefecture && recommendedTag) {
+  if (prefecture) {
+    const meta = prefectures.find(
+      (candidate) =>
+        candidate.id === prefecture || candidate.name === prefecture,
+    );
     chips.push({
       key: "prefecture_tag",
-      label: `📍 ${prefecture}`,
+      label: `📍 ${meta?.name ?? prefecture}`,
       onRemove: () => {
         const params = new URLSearchParams(searchParams);
         params.delete("prefecture");

@@ -37,7 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const visibleCount = getFacilitiesByPrefecture(meta.id).length;
   return {
     title: `${meta.name}の子供向け遊び場 ${visibleCount}選`,
-    description: `${desc.lead} 雨の日OK・無料・年齢別など、家族で楽しめる${visibleCount}施設をまとめて掲載。`,
+    description: `${desc.lead} 雨の日でも遊べる施設・無料施設・年齢別など、家族で楽しめる${visibleCount}施設をまとめて掲載。`,
     alternates: { canonical: `/prefecture/${meta.id}` },
   };
 }
@@ -136,25 +136,25 @@ export default async function PrefecturePage({ params }: Props) {
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
           <StatCard
-            href={`/facilities?prefectures=${meta.id}`}
+            href={`/facilities?prefecture=${meta.id}`}
             label="全施設"
             count={visibleCount}
             emoji="🎈"
           />
           <StatCard
-            href={`/facilities?prefectures=${meta.id}&rain=◎`}
-            label="雨でも遊べる"
+            href={`/facilities?prefecture=${meta.id}&rain=◎`}
+            label="雨でも快適"
             count={rainCount}
             emoji="☂️"
           />
           <StatCard
-            href={`/facilities?prefectures=${meta.id}&fee=free`}
+            href={`/facilities?prefecture=${meta.id}&fee=free`}
             label="無料で遊べる"
             count={freeCount}
             emoji="🆓"
           />
           <StatCard
-            href={`/facilities?prefectures=${meta.id}&tags=0-3歳OK`}
+            href={`/facilities?prefecture=${meta.id}&tags=0-3歳OK`}
             label="0-3歳OK"
             count={babyCount}
             emoji="👶"
@@ -172,7 +172,7 @@ export default async function PrefecturePage({ params }: Props) {
                 href={
                   isPilotCross(meta.id, c.id)
                     ? `/prefecture/${meta.id}/category/${c.id}`
-                    : `/facilities?prefectures=${meta.id}&categories=${c.id}`
+                    : `/facilities?prefecture=${meta.id}&categories=${c.id}`
                 }
                 className="inline-flex items-center gap-1.5 bg-white border border-slate-200 hover:border-brand hover:text-brand rounded-full px-3 py-1.5 text-sm transition-colors"
               >

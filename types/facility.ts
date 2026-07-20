@@ -37,8 +37,6 @@ export type IndoorOutdoor = "屋内" | "屋外" | "両方";
 export type FeeType = "無料" | "有料";
 
 export type FacilityTag =
-  | "雨の日OK"
-  | "雨でも遊べる"
   | "無料"
   | "完全屋内"
   | "屋外"

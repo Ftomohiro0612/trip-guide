@@ -4,8 +4,9 @@ import FilterSidebar from "@/components/FilterSidebar";
 import MobileFilterBar from "@/components/MobileFilterBar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
-import MapViewClient from "@/components/MapViewClient";
 import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
+import PrefectureSelector from "@/components/PrefectureSelector";
+import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
 import {
   applyFilters,
@@ -15,11 +16,9 @@ import {
 } from "@/lib/filter";
 import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
 import {
-  buildRecommendedTagPrefectureHref,
-  buildRecommendedTagPrefectureOptions,
-  filterFacilitiesByPrefectureNames,
-  resolveRecommendedTagPrefecture,
-} from "@/lib/facility-recommended-filter";
+  filterByPrefectureIds,
+  resolvePrefectureId,
+} from "@/lib/facility-area-filter";
 import type { RecommendedForTag } from "@/types/facility";
 
 export const metadata: Metadata = {
@@ -39,87 +38,9 @@ interface Props {
   searchParams: Promise<RawSearchParams>;
 }
 
-const LEGACY_RECOMMENDED_TAG_PREFECTURE_ORDER = [
-  "東京都",
-  "神奈川県",
-  "千葉県",
-  "埼玉県",
-  "茨城県",
-  "栃木県",
-  "群馬県",
-  "静岡県",
-  "愛知県",
-  "山梨県",
-  "長野県",
-  "新潟県",
-  "大阪府",
-  "兵庫県",
-  "京都府",
-  "福岡県",
-  "広島県",
-];
-
-const PREFECTURES = buildRecommendedTagPrefectureOptions(
-  prefectures,
-  LEGACY_RECOMMENDED_TAG_PREFECTURE_ORDER,
-);
-
 function asSingleParam(value: string | string[] | undefined): string {
   if (!value) return "";
   return Array.isArray(value) ? value[0] ?? "" : value;
-}
-
-const MAP_SIGNATURE_KEYS = [
-  "categories",
-  "category",
-  "fee",
-  "indoor",
-  "prefecture",
-  "prefectures",
-  "q",
-  "rain",
-  "recommended_tag",
-  "tags",
-] as const;
-
-const MAP_SIGNATURE_KEY_ALIASES: Record<
-  (typeof MAP_SIGNATURE_KEYS)[number],
-  string
-> = {
-  categories: "cats",
-  category: "cat",
-  fee: "fee",
-  indoor: "in",
-  prefecture: "pref",
-  prefectures: "prefs",
-  q: "q",
-  rain: "rain",
-  recommended_tag: "rt",
-  tags: "tags",
-};
-
-function asSignatureValues(value: string | string[] | undefined): string[] {
-  if (!value) return [];
-  const values = Array.isArray(value) ? value : [value];
-  return values
-    .flatMap((item) => item.split(","))
-    .map((item) => item.trim())
-    .filter(Boolean)
-    .sort((a, b) => a.localeCompare(b, "ja"));
-}
-
-function buildFacilitiesMapStorageKey(sp: RawSearchParams): string {
-  const signature = MAP_SIGNATURE_KEYS.map((key) => {
-    const values = asSignatureValues(sp[key]);
-    if (values.length === 0) return null;
-    return `${MAP_SIGNATURE_KEY_ALIASES[key]}=${values
-      .map(encodeURIComponent)
-      .join(",")}`;
-  }).filter((entry): entry is string => Boolean(entry));
-
-  return signature.length > 0
-    ? `facilities:${signature.join("&")}`
-    : "facilities:all";
 }
 
 function isRecommendedForTag(value: string): value is RecommendedForTag {
@@ -131,41 +52,35 @@ function isRecommendedForTag(value: string): value is RecommendedForTag {
 
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
-  const mapStorageKey = buildFacilitiesMapStorageKey(sp);
   const filters = parseFilterParams(sp);
   const recommendedTagParam = asSingleParam(sp.recommended_tag);
   const recommendedTag = isRecommendedForTag(recommendedTagParam)
     ? recommendedTagParam
     : null;
-  const prefectureParam = asSingleParam(sp.prefecture);
-  const selectedPrefecture = resolveRecommendedTagPrefecture(
-    prefectureParam,
-    PREFECTURES,
+  const selectedPrefectureId = resolvePrefectureId(
+    asSingleParam(sp.prefecture),
+    prefectures,
   );
-  const sidebarPrefString = asSingleParam(sp.prefectures);
-  const sidebarPrefIds = sidebarPrefString
-    ? sidebarPrefString.split(",").filter(Boolean)
-    : [];
-  const sidebarPrefNames = sidebarPrefIds
-    .map((id) => prefectures.find((p) => p.id === id)?.name)
-    .filter((name): name is string => Boolean(name));
-  const allSelectedPrefNames =
-    selectedPrefecture !== "全国"
-      ? [selectedPrefecture, ...sidebarPrefNames]
-      : sidebarPrefNames;
-  const baseResults = applyFilters(visibleFacilities, filters);
+  const selectedPrefecture = prefectures.find(
+    (prefecture) => prefecture.id === selectedPrefectureId,
+  );
+  const filtersWithoutArea = { ...filters, prefectures: [] };
+  const baseResults = applyFilters(visibleFacilities, filtersWithoutArea);
   const tagFilteredResults = recommendedTag
     ? baseResults.filter((f) =>
         (f.recommended_for_tags ?? []).includes(recommendedTag),
       )
     : baseResults;
-  const results = filterFacilitiesByPrefectureNames(
+  const selectedPrefectureIds = selectedPrefectureId
+    ? [selectedPrefectureId]
+    : filters.prefectures;
+  const results = filterByPrefectureIds(
     tagFilteredResults,
-    allSelectedPrefNames,
+    selectedPrefectureIds,
   );
   const visiblePrefectures = prefectures.map((p) => ({
     ...p,
-    count: visibleFacilities.filter((f) => f.prefecture_id === p.id).length,
+    count: tagFilteredResults.filter((f) => f.prefecture_id === p.id).length,
   }));
   const visibleCategories = categories.map((c) => ({
     ...c,
@@ -174,16 +89,18 @@ export default async function FacilitiesPage({ searchParams }: Props) {
   const active =
     hasActiveFilters(filters) ||
     recommendedTag !== null ||
-    allSelectedPrefNames.length > 0;
+    selectedPrefectureId !== null;
   const headline = recommendedTag
-    ? allSelectedPrefNames.length === 1
-      ? `${allSelectedPrefNames[0]}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
-      : allSelectedPrefNames.length > 1
+    ? selectedPrefecture
+      ? `${selectedPrefecture.name}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
+      : filters.prefectures.length > 1
         ? `選択したエリアの${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
         : RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]
-    : null;
-  const highlightedPrefecture =
-    sidebarPrefIds.length === 0 ? selectedPrefecture : "";
+    : selectedPrefecture
+      ? `${selectedPrefecture.name}の施設一覧`
+      : filters.prefectures.length > 0
+        ? "選択したエリアの施設一覧"
+        : "施設一覧";
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8">
@@ -195,11 +112,15 @@ export default async function FacilitiesPage({ searchParams }: Props) {
         <span>施設一覧</span>
       </nav>
 
-      <div className="mb-6">
+      <div className="mb-6" id="facility-results">
         <h1 className="text-2xl sm:text-3xl font-bold text-slate-900">
-          {headline ?? "施設一覧"}
+          {headline}
         </h1>
-        <p className="text-sm text-slate-500 mt-1">
+        <PrefectureSelector
+          prefectures={visiblePrefectures}
+          selectedId={selectedPrefectureId}
+        />
+        <p className="mt-3 text-sm text-slate-500" aria-live="polite">
           {filters.q ? (
             <>
               「<span className="font-medium text-slate-700">{filters.q}</span>
@@ -209,45 +130,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             <>全 {visibleFacilities.length} 施設 / 表示中 {results.length} 件</>
           )}
         </p>
-        {recommendedTag && (
-          <div className="mt-4" aria-label="都道府県で絞り込み">
-            <div className="flex gap-2 overflow-x-auto pb-1">
-              {PREFECTURES.map((prefecture) => {
-                const selected = prefecture === highlightedPrefecture;
-                return (
-                  <Link
-                    key={prefecture}
-                    href={buildRecommendedTagPrefectureHref(
-                      recommendedTag,
-                      prefecture,
-                    )}
-                    className={`shrink-0 rounded-full px-3 py-1.5 text-sm font-medium transition-colors ${
-                      selected
-                        ? "bg-sky-600 text-white"
-                        : "bg-slate-100 text-slate-700 hover:bg-slate-200"
-                    }`}
-                  >
-                    {prefecture}
-                  </Link>
-                );
-              })}
-            </div>
-          </div>
-        )}
       </div>
-
-      {results.length > 0 && (
-        <section className="mb-8" aria-labelledby="facilities-map-heading">
-          <h2 id="facilities-map-heading" className="sr-only">
-            検索結果の地図
-          </h2>
-          <MapViewClient
-            facilities={results}
-            height={420}
-            storageKey={mapStorageKey}
-          />
-        </section>
-      )}
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <FilterSidebar
@@ -300,6 +183,8 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           )}
         </section>
       </div>
+
+      {results.length > 0 && <ResponsiveResultsMap facilities={results} />}
     </div>
   );
 }

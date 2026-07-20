@@ -47,7 +47,7 @@ export default async function Image({
     badges.push({ label: "🆓 無料で遊べる", bg: "#10b981" });
   }
   if (facility.rain_friendly === "◎") {
-    badges.push({ label: "☂️ 雨でも遊べる" });
+    badges.push({ label: "☂️ 雨でも快適" });
   }
   badges.push({ label: `👶 ${facility.target_age}` });
 

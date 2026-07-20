@@ -44,7 +44,7 @@ export default function Footer() {
           <ul className="space-y-1 text-slate-600">
             <li>
               <Link href="/tag/rainy-day" className="hover:text-brand">
-                ☂️ 雨の日OK
+                ☂️ 雨の日でも遊べる
               </Link>
             </li>
             <li>

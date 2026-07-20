@@ -312,7 +312,7 @@ export default function HomePage() {
     prefectures[0];
   const heroQuickLinks = [
     { label: "現在地から探す", icon: "📍", href: "/facilities" },
-    { label: "雨の日OK", icon: "☔", href: "/tag/rainy-day" },
+    { label: "雨の日でも遊べる", icon: "☔", href: "/tag/rainy-day" },
     { label: "無料", icon: "🆓", href: "/tag/free" },
     {
       label: primaryPrefecture.name,
@@ -327,7 +327,7 @@ export default function HomePage() {
   ];
   const themeLinks = [
     {
-      label: "雨の日OK",
+      label: "雨の日でも遊べる",
       icon: "☔",
       href: "/tag/rainy-day",
       count: visibleFacilities.filter((f) => f.rain_friendly === "◎").length,

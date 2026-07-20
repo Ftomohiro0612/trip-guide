@@ -359,7 +359,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                   return (
                     <Link
                       key={tag}
-                      href={`/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`}
+                      href={`/facilities?recommended_tag=${tag}&prefecture=${facility.prefecture_id}`}
                       className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium hover:bg-sky-100 transition-colors"
                     >
                       <span aria-hidden>{meta.icon}</span> {meta.label}
@@ -372,7 +372,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                   const meta = getRecommendedForTagMeta(tag);
                   if (!meta) return null;
                   const href = prefecture
-                    ? `/facilities?recommended_tag=${tag}&prefecture=${encodeURIComponent(prefecture)}`
+                    ? `/facilities?recommended_tag=${tag}&prefecture=${facility.prefecture_id}`
                     : `/facilities?recommended_tag=${tag}`;
                   return (
                     <Link

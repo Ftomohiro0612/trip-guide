@@ -63,7 +63,7 @@ export default function FilterSidebar({
   function update(params: URLSearchParams) {
     startTransition(() => {
       const s = params.toString();
-      router.replace(s ? `${pathname}?${s}` : pathname, { scroll: false });
+      router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });
     });
   }
 
@@ -82,7 +82,9 @@ export default function FilterSidebar({
     const params = new URLSearchParams(searchParams);
     const singlePref = params.get("prefecture");
     if (singlePref) {
-      const match = prefectures.find((p) => p.name === singlePref);
+      const match = prefectures.find(
+        (p) => p.id === singlePref || p.name === singlePref,
+      );
       const existing = (params.get("prefectures") ?? "")
         .split(",")
         .filter(Boolean);
@@ -110,7 +112,6 @@ export default function FilterSidebar({
     } else {
       params.set("recommended_tag", value);
     }
-    params.delete("prefecture");
     update(params);
   }
 
@@ -142,7 +143,9 @@ export default function FilterSidebar({
           .filter((p) => prefList.includes(p.id))
           .map((p) => p.name)
           .join("・")
-      : singlePref || "すべて";
+      : prefectures.find(
+            (p) => p.id === singlePref || p.name === singlePref,
+          )?.name ?? "すべて";
   const hasDetailTag = DETAIL_TAG_OPTIONS.some((t) => tagList.includes(t.value));
 
   return (
@@ -165,7 +168,7 @@ export default function FilterSidebar({
 
         <details className="border-b border-slate-200 py-3">
           <summary className="cursor-pointer text-sm font-semibold text-slate-800 flex items-center justify-between select-none list-none">
-            <span>エリア</span>
+            <span>複数エリア</span>
             <span className="text-xs text-slate-500 font-normal truncate max-w-[120px] ml-2">
               {selectedPrefectureLabel}
             </span>

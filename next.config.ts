@@ -12,6 +12,11 @@ const nextConfig: NextConfig = {
   async redirects() {
     return [
       {
+        source: "/tag/indoor-rainy",
+        destination: "/tag/rainy-day",
+        permanent: true,
+      },
+      {
         source: "/:path*",
         has: [{ type: "host", value: "www.trip-guide.net" }],
         destination: "https://trip-guide.net/:path*",
