@@ -167,6 +167,10 @@ export default async function TagPage({ params, searchParams }: Props) {
           </div>
         )}
 
+        {filteredList.length > 0 && (
+          <ResponsiveResultsMap facilities={facilityPage.items} />
+        )}
+
         {byPref.map((p) =>
           p.items.length === 0 ? null : (
             <section
@@ -208,10 +212,6 @@ export default async function TagPage({ params, searchParams }: Props) {
         )}
 
         <FacilityPaginationControls page={facilityPage} />
-
-        {filteredList.length > 0 && (
-          <ResponsiveResultsMap facilities={facilityPage.items} />
-        )}
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">他のテーマもチェック</h2>

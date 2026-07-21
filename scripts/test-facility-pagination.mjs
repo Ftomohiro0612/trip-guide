@@ -27,6 +27,18 @@ const categoryAccessorSource = await readFile(
   new URL("../lib/category-page-facilities.ts", import.meta.url),
   "utf8",
 );
+const nearbyListSource = await readFile(
+  new URL("../components/NearbyFilterableFacilityList.tsx", import.meta.url),
+  "utf8",
+);
+const responsiveMapSource = await readFile(
+  new URL("../components/ResponsiveResultsMap.tsx", import.meta.url),
+  "utf8",
+);
+const tagPageSource = await readFile(
+  new URL("../app/tag/[slug]/page.tsx", import.meta.url),
+  "utf8",
+);
 const facilities = data.facilities.filter(
   (facility) => facility.data_quality_status !== "exclude_candidate",
 );
@@ -238,6 +250,70 @@ test("category page reuses one grouping contract and keeps diversified craft nat
   assert.match(
     categoryAccessorSource,
     /mapFacilities: facilityPage\.items,[\s\S]*jsonLdFacilities: facilityPage\.items/,
+  );
+});
+
+test("facility and tag maps render the current page slice before cards and pagination", () => {
+  const nearbyMapIndex = nearbyListSource.indexOf(
+    "<ResponsiveResultsMap facilities={displayedFacilities}",
+  );
+  const nearbyCardsIndex = nearbyListSource.indexOf("data-facility-card-grid");
+  const nearbyPaginationIndex = nearbyListSource.indexOf(
+    "<FacilityPaginationControls page={effectivePage}",
+  );
+  assert.ok(nearbyMapIndex > -1);
+  assert.ok(nearbyMapIndex < nearbyCardsIndex);
+  assert.ok(nearbyMapIndex < nearbyPaginationIndex);
+  assert.equal(
+    nearbyListSource.match(
+      /<ResponsiveResultsMap facilities=\{displayedFacilities\}/gu,
+    )?.length,
+    1,
+  );
+
+  const tagMapIndex = tagPageSource.indexOf(
+    "<ResponsiveResultsMap facilities={facilityPage.items}",
+  );
+  const tagCardsIndex = tagPageSource.indexOf(
+    "{byPref.map((p) =>",
+  );
+  const tagPaginationIndex = tagPageSource.indexOf(
+    "<FacilityPaginationControls page={facilityPage}",
+  );
+  assert.ok(tagMapIndex > -1);
+  assert.ok(tagMapIndex < tagCardsIndex);
+  assert.ok(tagMapIndex < tagPaginationIndex);
+  assert.equal(
+    tagPageSource.match(
+      /<ResponsiveResultsMap facilities=\{facilityPage\.items\}/gu,
+    )?.length,
+    1,
+  );
+
+  assert.match(
+    responsiveMapSource,
+    /heading = "このページの施設を地図で見る"/u,
+  );
+  assert.match(responsiveMapSource, /useState\(false\)/u);
+  assert.match(responsiveMapSource, /\(isDesktop \|\| mobileOpen\)/u);
+});
+
+test("nearby map reuses the client-only page slice without sending coordinates", () => {
+  assert.match(
+    nearbyListSource,
+    /fetch\(nearbyDataHref,[\s\S]*signal: controller\.signal/u,
+  );
+  assert.doesNotMatch(
+    nearbyListSource,
+    /fetch\([^)]*(?:currentLocation|latitude|longitude|\blat\b|\blng\b)/u,
+  );
+  assert.match(
+    nearbyListSource,
+    /const displayedFacilities = showingNearby[\s\S]*nearbyPage\.items\.map\(\(item\) => item\.facility\)[\s\S]*: facilities/u,
+  );
+  assert.match(
+    nearbyListSource,
+    /<ResponsiveResultsMap facilities=\{displayedFacilities\}/u,
   );
 });
 

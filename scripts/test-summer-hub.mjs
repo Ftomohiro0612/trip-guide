@@ -80,6 +80,17 @@ const SUMMER_EVENT_TYPE_ORDER = [
   "night_outing",
 ];
 
+test("Summer hero cards use event-date wording without changing date selection", () => {
+  assert.match(summerPageSource, /開催日が近い順/u);
+  assert.match(
+    summerPageSource,
+    /formatHeroDate\(getNextEventDate\(event, today\)\)/u,
+  );
+  assert.match(summerPageSource, /`\$\{formatDate\(value\)\}開催`/u);
+  assert.doesNotMatch(summerPageSource, /次回開催日/u);
+  assert.doesNotMatch(summerPageSource, /次回\s+\{formatDate/u);
+});
+
 function fixture(
   id,
   eventType,

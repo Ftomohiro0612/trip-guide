@@ -405,6 +405,10 @@ export default function NearbyFilterableFacilityList({
         )}
       </section>
 
+      {!loadingCandidates && displayedFacilities.length > 0 && (
+        <ResponsiveResultsMap facilities={displayedFacilities} />
+      )}
+
       {loadingCandidates && showingNearby ? (
         <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
           <p className="font-medium text-slate-700">近い施設を探しています…</p>
@@ -444,10 +448,6 @@ export default function NearbyFilterableFacilityList({
 
       {!loadingCandidates && (
         <FacilityPaginationControls page={effectivePage} />
-      )}
-
-      {!loadingCandidates && displayedFacilities.length > 0 && (
-        <ResponsiveResultsMap facilities={displayedFacilities} />
       )}
     </section>
   );

@@ -134,7 +134,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
             {SUMMER_HERO_TITLE}
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-indigo-50 sm:text-base">
-            花火大会と地域の夏祭りを主役に、開催中・次回開催日の近い順で掲載しています。夜間開園は別の補助枠に分けています。
+            花火大会と地域の夏祭りを主役に、開催中・開催日が近い順で掲載しています。夜間開園は別の補助枠に分けています。
           </p>
           <Link
             href="/events"
@@ -275,7 +275,7 @@ function HeroGroup({
     <section aria-labelledby={`${events[0].event_type}-hero-heading`}>
       <div className="mb-5 flex items-end justify-between gap-3">
         <div>
-          <p className="text-xs font-bold text-indigo-600">次回開催日が近い順</p>
+          <p className="text-xs font-bold text-indigo-600">開催日が近い順</p>
           <h2
             id={`${events[0].event_type}-hero-heading`}
             className="mt-1 text-2xl font-bold text-slate-900 sm:text-3xl"
@@ -307,7 +307,7 @@ function HeroGroup({
                 {event.title}
               </h3>
               <p className="mt-2 text-sm font-bold text-indigo-700">
-                次回 {formatDate(getNextEventDate(event, today))}
+                {formatHeroDate(getNextEventDate(event, today))}
               </p>
               <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-600">
                 {view.venueName}
@@ -340,4 +340,8 @@ function formatDate(value: string | null): string {
   if (!value) return "公式確認中";
   const [, month, day] = value.split("-");
   return `${Number(month)}月${Number(day)}日`;
+}
+
+function formatHeroDate(value: string | null): string {
+  return value ? `${formatDate(value)}開催` : "開催日 公式確認中";
 }

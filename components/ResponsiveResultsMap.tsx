@@ -11,7 +11,7 @@ interface Props {
 
 export default function ResponsiveResultsMap({
   facilities,
-  heading = "地図で見る",
+  heading = "このページの施設を地図で見る",
 }: Props) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
