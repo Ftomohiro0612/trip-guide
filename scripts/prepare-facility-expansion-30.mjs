@@ -659,7 +659,9 @@ function recommendedTags(categoryId, row) {
     "fruit-picking": ["experience", "food", "nature"],
     "hot-spring-pool": ["water_play", "pool"],
     athletic: ["athletic", "running", "wide_space"],
-    "art-museum": ["exhibition", "craft"],
+    // A primary category is not evidence of what visitors can do. Craft is
+    // added only after facility-level evidence is verified separately.
+    "art-museum": ["exhibition"],
     ski: ["athletic", "slide", "nature"],
     experience: ["experience", "nature"],
     "nature-park": ["nature", "wide_space", "running"],
