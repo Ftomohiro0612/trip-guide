@@ -5,6 +5,9 @@ const root = process.cwd();
 const base = readJson("data/events_data.json");
 const summer = readJson("data/summer_events_2026.json");
 const summerLocations = readJson("data/summer_event_locations_2026.json");
+const summerLocationResearch = readJson(
+  "data/summer_event_location_research_2026.json",
+);
 const facilities = readJson("data/facilities_data.json");
 const summerPageSource = fs.readFileSync(
   path.join(root, "app/events/summer/page.tsx"),
@@ -333,6 +336,11 @@ const visibleMissingLocationEvents = visibleAdoptedEvents.filter(
 );
 
 validateSummerMapUiContract(summerPageSource, summerMapSource);
+validateSummerLocationResearch(
+  summerLocationResearch,
+  summerLocations.locations_by_event_id ?? {},
+  adoptedById,
+);
 
 const typeCounts = Object.fromEntries(
   [...eventTypes].map((type) => [
@@ -732,6 +740,114 @@ function validateSummerMapUiContract(pageSource, mapSource) {
   }
   if (!/SUMMER_EVENT_MAP_CATEGORY_STYLES\.map/u.test(mapSource)) {
     errors.push("summer map UI must render its legend from the category color contract");
+  }
+}
+
+function validateSummerLocationResearch(research, locationsByEventId, eventsById) {
+  if (research.metadata?.production_baseline !== "f529a19c93593e883c9f35a20544d7f86dc8f276") {
+    errors.push("summer location research must retain the accepted Production baseline");
+  }
+  if (research.metadata?.population_hold_count_at_start !== 454) {
+    errors.push("summer location research must retain the 454-event starting population");
+  }
+  if (
+    research.metadata?.no_guess_policy !== true ||
+    research.metadata?.unsafe_locations_remain_hold !== true
+  ) {
+    errors.push("summer location research must enforce no-guess and unsafe-stays-hold policies");
+  }
+
+  const checkpoints = research.checkpoints;
+  if (!Array.isArray(checkpoints) || checkpoints.length === 0) {
+    errors.push("summer location research must contain at least one checkpoint");
+    return;
+  }
+
+  let previousTarget = 0;
+  for (const checkpoint of checkpoints) {
+    if (
+      !Number.isInteger(checkpoint.target) ||
+      checkpoint.target <= previousTarget ||
+      ![100, 200, 300, 400, 454].includes(checkpoint.target)
+    ) {
+      errors.push(`invalid summer location research checkpoint target: ${checkpoint.target}`);
+    }
+    previousTarget = checkpoint.target;
+    validateDate(
+      checkpoint.checked_at,
+      `summer location checkpoint ${checkpoint.target}.checked_at`,
+    );
+    if (checkpoint.status !== "complete") {
+      errors.push(`summer location checkpoint ${checkpoint.target} must be complete once committed`);
+    }
+    if (checkpoint.pm_random_sample_size !== 10) {
+      errors.push(`summer location checkpoint ${checkpoint.target} must request a PM random sample of 10`);
+    }
+
+    const reviewed = checkpoint.reviewed_events;
+    if (!Array.isArray(reviewed)) {
+      errors.push(`summer location checkpoint ${checkpoint.target} reviewed_events must be an array`);
+      continue;
+    }
+    checkCount(
+      `summer location checkpoint ${checkpoint.target}.reviewed_count`,
+      checkpoint.reviewed_count,
+      reviewed.length,
+    );
+    checkCount(
+      `summer location checkpoint ${checkpoint.target}.target`,
+      checkpoint.target,
+      reviewed.length,
+    );
+    const reviewedIds = reviewed.map((item) => item.event_id);
+    if (new Set(reviewedIds).size !== reviewedIds.length) {
+      errors.push(`summer location checkpoint ${checkpoint.target} contains duplicate event IDs`);
+    }
+    checkCount(
+      `summer location checkpoint ${checkpoint.target}.mappable_count`,
+      checkpoint.mappable_count,
+      reviewed.filter((item) => item.outcome === "mappable").length,
+    );
+    checkCount(
+      `summer location checkpoint ${checkpoint.target}.hold_count`,
+      checkpoint.hold_count,
+      reviewed.filter((item) => item.outcome === "hold").length,
+    );
+
+    for (const item of reviewed) {
+      const location = locationsByEventId[item.event_id];
+      if (!eventsById.has(item.event_id)) {
+        error(item.event_id, "location research references an event outside the adopted population");
+        continue;
+      }
+      if (!location) {
+        error(item.event_id, "location research is missing its location overlay row");
+        continue;
+      }
+      const expectedOutcome =
+        location.coordinate_precision === "hold" ? "hold" : "mappable";
+      if (
+        item.outcome !== expectedOutcome ||
+        item.coordinate_precision !== location.coordinate_precision ||
+        item.latitude !== location.latitude ||
+        item.longitude !== location.longitude
+      ) {
+        error(item.event_id, "location research outcome does not match the current overlay row");
+      }
+      if (location.source_checked_at < checkpoint.checked_at) {
+        error(item.event_id, "location overlay predates its completed research checkpoint");
+      }
+      if (
+        !Array.isArray(item.official_source_urls) ||
+        item.official_source_urls.length === 0 ||
+        item.official_source_urls.some((url) => !urlPattern.test(url))
+      ) {
+        error(item.event_id, "location research must retain valid official source URLs");
+      }
+      if (item.outcome === "hold" && (item.latitude !== null || item.longitude !== null)) {
+        error(item.event_id, "researched hold must not contain coordinates");
+      }
+    }
   }
 }
 

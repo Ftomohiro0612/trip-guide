@@ -2,10 +2,10 @@
   "metadata": {
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map location overlay keyed by canonical event ID",
-    "source_checked_at": "2026-07-18",
+    "source_checked_at": "2026-07-21",
     "overlay_count": 500,
-    "mappable_count": 22,
-    "hold_count": 478,
+    "mappable_count": 48,
+    "hold_count": 452,
     "coordinate_precision_values": [
       "exact_venue",
       "area_representative",
@@ -3116,9 +3116,9 @@
       "longitude": null,
       "map_label": "安中市・磯部温泉 碓氷川河川敷（確認保留）",
       "location_source_urls": ["https://gunma-kanko.jp/features/189"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「安中市・磯部温泉 碓氷川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-gunma-007": {
@@ -3126,79 +3126,79 @@
       "longitude": null,
       "map_label": "下仁田町こんにゃく体験道場前広場（確認保留）",
       "location_source_urls": ["https://gunma-kanko.jp/features/189"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「下仁田町こんにゃく体験道場前広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-gunma-008": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "明和町ふるさとの広場（邑楽郡明和町南大島1073）（確認保留）",
+      "latitude": 36.210963,
+      "longitude": 139.537502,
+      "map_label": "明和町ふるさとの広場",
       "location_source_urls": ["https://www.town.meiwa.gunma.jp/life/sangyo_toshikaihatsu/10/5684.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "町公式ページ掲載Googleマップ: 36.210963,139.537502",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-gunma-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "東運動公園（みどり市東町座間399）（確認保留）",
+      "latitude": 36.53794610298617,
+      "longitude": 139.36950034602415,
+      "map_label": "東運動公園",
       "location_source_urls": ["https://www.city.midori.gunma.jp/sangyou/1001646/1001795/1009173/1009706.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "市公式ページ掲載座標: 36.53794610298617,139.36950034602415",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-hiroshima-006": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "住吉神社（竹原市本町1-3）と周辺（確認保留）",
+      "latitude": 34.3449088,
+      "longitude": 132.9112534,
+      "map_label": "住吉神社（公式地図の代表点）",
       "location_source_urls": ["https://dive-hiroshima.com/events/events-125624/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載Googleマップ: 34.3449088,132.9112534",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-hiroshima-007": {
       "latitude": null,
       "longitude": null,
       "map_label": "三次市十日市中央通り・三次市役所周辺（確認保留）",
       "location_source_urls": ["https://www.city.miyoshi.hiroshima.jp/soshiki/31/40142.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「三次市十日市中央通り・三次市役所周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-hiroshima-008": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "神楽門前湯治村 神楽ドーム（安芸高田市美土里町本郷4627）（確認保留）",
+      "latitude": 34.7216524,
+      "longitude": 132.6304112,
+      "map_label": "神楽門前湯治村 神楽ドーム",
       "location_source_urls": ["https://dive-hiroshima.com/events/events-126456/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載Googleマップ: 34.7216524,132.6304112",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-hiroshima-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "広島駅新幹線口周辺・二葉の里界隈（広島市東区）（確認保留）",
+      "latitude": 34.39832,
+      "longitude": 132.476436,
+      "map_label": "広島駅新幹線口周辺（公式地図の代表点）",
       "location_source_urls": ["https://dive-hiroshima.com/events/events-47789-26/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載Googleマップ: 34.39832,132.476436",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-iwate-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "宮古駅前広場・末広町〜中央通（宮古市中心市街地）（確認保留）",
       "location_source_urls": ["https://www.city.miyako.iwate.jp/gyosei/kanko_bunka_sports/kankojoho/2/5958.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「宮古駅前広場・末広町〜中央通（宮古市中心市街地）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-iwate-007": {
@@ -3206,39 +3206,39 @@
       "longitude": null,
       "map_label": "胆沢ダム東側特設会場（奥州市胆沢）（確認保留）",
       "location_source_urls": ["https://www.pref.iwate.jp/event/moyooshi/1068274.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「胆沢ダム東側特設会場（奥州市胆沢）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-iwate-008": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "胆沢文化創造センターと同センター前市道（奥州市胆沢）（確認保留）",
+      "latitude": 39.11928,
+      "longitude": 141.06919,
+      "map_label": "胆沢文化創造センター（公式地図の代表点）",
       "location_source_urls": ["https://www.city.oshu.iwate.jp/kanko/event/2/16163.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "市公式ページ掲載Googleマップ: 39.11928,141.06919",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-iwate-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "前沢いきいきスポーツランド（奥州市前沢字阿部舘27-1）（確認保留）",
+      "latitude": 39.0580071,
+      "longitude": 141.1231717,
+      "map_label": "前沢いきいきスポーツランド",
       "location_source_urls": ["https://www.city.oshu.iwate.jp/kanko/event/2/10716.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "市公式ページ掲載Googleマップ: 39.0580071,141.1231717",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-kagawa-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "市民センター仁尾周辺（三豊市仁尾町）（確認保留）",
       "location_source_urls": ["https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「市民センター仁尾周辺（三豊市仁尾町）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kagawa-007": {
@@ -3246,9 +3246,9 @@
       "longitude": null,
       "map_label": "香川用水記念公園（三豊市財田町財田中2355）（確認保留）",
       "location_source_urls": ["https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「香川用水記念公園（三豊市財田町財田中2355）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kagawa-008": {
@@ -3256,9 +3256,9 @@
       "longitude": null,
       "map_label": "津嶋神社（三豊市三野町大見7463）（確認保留）",
       "location_source_urls": ["https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「津嶋神社（三豊市三野町大見7463）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kagawa-009": {
@@ -3266,39 +3266,39 @@
       "longitude": null,
       "map_label": "詫間町市民運動場と周辺（三豊市詫間町）（確認保留）",
       "location_source_urls": ["https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「詫間町市民運動場と周辺（三豊市詫間町）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-nara-006": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "平維盛歴史の里（吉野郡野迫川村平51）（確認保留）",
+      "latitude": 34.113572,
+      "longitude": 135.644855,
+      "map_label": "平維盛歴史の里",
       "location_source_urls": ["https://yamatoji.nara-kankou.or.jp/02nature/07park/04south_area/tairanokoremorirekishinosato/event/76f9h4rjpl/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ構造化データ: 34.113572,135.644855",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-nara-007": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "不空院境内 羂索庵（奈良市高畑町1365）（確認保留）",
+      "latitude": 34.676556,
+      "longitude": 135.846693,
+      "map_label": "不空院",
       "location_source_urls": ["https://yamatoji.nara-kankou.or.jp/01shaji/02tera/01north_area/fukuin/event/ntfnd7iior/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ構造化データ: 34.676556,135.846693",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-nara-008": {
       "latitude": null,
       "longitude": null,
       "map_label": "安堵中央公園多目的広場（生駒郡安堵町）（確認保留）",
       "location_source_urls": ["https://yamatoji.nara-kankou.or.jp/04public/03hall/02west_area/r8ekuhvwus/event/reczjqius6/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「安堵中央公園多目的広場（生駒郡安堵町）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-nara-009": {
@@ -3306,99 +3306,99 @@
       "longitude": null,
       "map_label": "昴の郷多目的広場（吉野郡十津川村平谷909-4）（確認保留）",
       "location_source_urls": ["https://yamatoji.nara-kankou.or.jp/04public/03hall/04south_area/izv1n7lmwt/event/5wjorstk3n/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「昴の郷多目的広場（吉野郡十津川村平谷909-4）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-niigata-006": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "加茂川河川敷（加茂市）（確認保留）",
+      "latitude": 37.65917433677099,
+      "longitude": 139.05850879416505,
+      "map_label": "加茂川河川敷（公式地図の代表点）",
       "location_source_urls": ["https://niigata-kankou.or.jp/event/2435"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ埋め込み地図: 37.65917433677099,139.05850879416505",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-niigata-007": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "栃尾松葉公園（長岡市金町2丁目丙172-3）（確認保留）",
+      "latitude": 37.484381,
+      "longitude": 138.998648,
+      "map_label": "栃尾松葉公園",
       "location_source_urls": ["https://niigata-kankou.or.jp/event/1946"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ埋め込み地図: 37.484381,138.998648",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-niigata-008": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "関川河口河川敷（上越市）（確認保留）",
+      "latitude": 37.18007,
+      "longitude": 138.24249,
+      "map_label": "関川河口河川敷（公式地図の代表点）",
       "location_source_urls": ["https://niigata-kankou.or.jp/event/2327"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ埋め込み地図: 37.18007,138.24249",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-niigata-009": {
       "latitude": null,
       "longitude": null,
       "map_label": "見附市街地・見附運動公園（花火会場）（確認保留）",
       "location_source_urls": ["https://www.city.mitsuke.niigata.jp/soshiki/4/2288.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「見附市街地・見附運動公園（花火会場）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-okayama-006": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "小田川河川敷・小田商店街（小田郡矢掛町小田）（確認保留）",
+      "latitude": 34.604232,
+      "longitude": 133.542104,
+      "map_label": "小田川河川敷（公式地図の代表点）",
       "location_source_urls": ["https://www.okayama-kanko.jp/event/detail_12602.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載座標: 34.604232,133.542104",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-okayama-007": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "町田中央運動公園多目的広場（久米郡美咲町）（確認保留）",
+      "latitude": 34.9966194,
+      "longitude": 133.9527303,
+      "map_label": "美咲町中央運動公園 多目的広場",
       "location_source_urls": ["https://www.okayama-kanko.jp/event/detail_12619.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載座標: 34.9966194,133.9527303",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-okayama-008": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "日生港周辺（備前市日生町）（確認保留）",
+      "latitude": 34.7343476220587,
+      "longitude": 134.276490211486,
+      "map_label": "JR日生駅前港（公式地図の代表点）",
       "location_source_urls": ["https://www.okayama-kanko.jp/event/detail_12617.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載座標: 34.7343476220587,134.276490211486",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-okayama-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "吉備高原都市さんさん広場一帯（加賀郡吉備中央町）（確認保留）",
+      "latitude": 34.835848042171,
+      "longitude": 133.761870861053,
+      "map_label": "吉備高原都市さんさん広場（公式地図の代表点）",
       "location_source_urls": ["https://www.okayama-kanko.jp/event/detail_12641.html"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
-      "coordinate_precision": "hold"
+      "coordinate_reference": "公式観光ページ掲載座標: 34.835848042171,133.761870861053",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-shiga-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "近江鉄道八日市駅前（東近江市）（確認保留）",
       "location_source_urls": ["https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「近江鉄道八日市駅前（東近江市）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shiga-007": {
@@ -3406,9 +3406,9 @@
       "longitude": null,
       "map_label": "野洲川親水公園（湖南市夏見地先）（確認保留）",
       "location_source_urls": ["https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「野洲川親水公園（湖南市夏見地先）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shiga-008": {
@@ -3416,9 +3416,9 @@
       "longitude": null,
       "map_label": "多賀大社（犬上郡多賀町多賀604）（確認保留）",
       "location_source_urls": ["https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-18",
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「多賀大社（犬上郡多賀町多賀604）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shiga-009": {
@@ -4015,9 +4015,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "那珂川河川公園（大田原市黒羽向町）（確認保留）",
-      "location_source_urls": [
-        "https://www.tochigiji.or.jp/event/e15369/"
-      ],
+      "location_source_urls": ["https://www.tochigiji.or.jp/event/e15369/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4027,9 +4025,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "大通り（本町交差点～上河原交差点）・オリオンスクエアほか（宇都宮市）（確認保留）",
-      "location_source_urls": [
-        "https://www.tochigiji.or.jp/event/e43229"
-      ],
+      "location_source_urls": ["https://www.tochigiji.or.jp/event/e43229"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4039,9 +4035,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "鬼怒川河川敷緑地公園（真岡市砂ケ原1261・砂ヶ原橋下流左岸）（確認保留）",
-      "location_source_urls": [
-        "https://www.tochigiji.or.jp/event/e17354/"
-      ],
+      "location_source_urls": ["https://www.tochigiji.or.jp/event/e17354/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4051,9 +4045,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "大浜海岸周辺（海部郡美波町日和佐浦）（確認保留）",
-      "location_source_urls": [
-        "https://www.awanavi.jp/archives/event/1690"
-      ],
+      "location_source_urls": ["https://www.awanavi.jp/archives/event/1690"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4063,9 +4055,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "つるぎ町立貞光中学校グラウンド・貞光川河川敷（美馬郡つるぎ町貞光）（確認保留）",
-      "location_source_urls": [
-        "https://www.town.tokushima-tsurugi.lg.jp/docs/3451.html"
-      ],
+      "location_source_urls": ["https://www.town.tokushima-tsurugi.lg.jp/docs/3451.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4075,9 +4065,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "牟岐町役場前・西の浜・牟岐港周辺（海部郡牟岐町）（確認保留）",
-      "location_source_urls": [
-        "https://www.town.tokushima-mugi.lg.jp/doc/2026070900031/"
-      ],
+      "location_source_urls": ["https://www.town.tokushima-mugi.lg.jp/doc/2026070900031/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4087,9 +4075,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "海王丸パーク（射水市海王町8）（確認保留）",
-      "location_source_urls": [
-        "https://www.info-toyama.com/events/20031"
-      ],
+      "location_source_urls": ["https://www.info-toyama.com/events/20031"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4099,9 +4085,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "福光町中心地（南砺市福光）（確認保留）",
-      "location_source_urls": [
-        "https://www.info-toyama.com/events/40021"
-      ],
+      "location_source_urls": ["https://www.info-toyama.com/events/40021"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4111,9 +4095,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "ほたるいかミュージアム周辺（滑川市中川原410）（確認保留）",
-      "location_source_urls": [
-        "https://www.info-toyama.com/events/50025"
-      ],
+      "location_source_urls": ["https://www.info-toyama.com/events/50025"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4123,9 +4105,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "左沢地区最上川河畔（西村山郡大江町左沢）（確認保留）",
-      "location_source_urls": [
-        "https://yamagatakanko.com/festivals/detail_2990.html"
-      ],
+      "location_source_urls": ["https://yamagatakanko.com/festivals/detail_2990.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4135,9 +4115,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "西浜海水浴場（飽海郡遊佐町吹浦西浜）（確認保留）",
-      "location_source_urls": [
-        "https://yamagatakanko.com/topics/detail_78.html"
-      ],
+      "location_source_urls": ["https://yamagatakanko.com/topics/detail_78.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4147,9 +4125,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "最上川河川緑地公園（長井市舟場）（確認保留）",
-      "location_source_urls": [
-        "https://yamagatakanko.com/topics/detail_78.html"
-      ],
+      "location_source_urls": ["https://yamagatakanko.com/topics/detail_78.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4159,9 +4135,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "能代港下浜ふ頭特設会場（能代市浜通町53-9）（確認保留）",
-      "location_source_urls": [
-        "https://noshiro-hanabi.com/"
-      ],
+      "location_source_urls": ["https://noshiro-hanabi.com/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4171,9 +4145,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "横手市役所本庁舎前・蛇の崎橋上・お城山周辺ほか（横手市）（確認保留）",
-      "location_source_urls": [
-        "https://www.yokotekamakura.com/okuribon-2026/"
-      ],
+      "location_source_urls": ["https://www.yokotekamakura.com/okuribon-2026/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4183,9 +4155,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "青森港西防波堤・北防波堤沖（青森市・青い海公園周辺）（確認保留）",
-      "location_source_urls": [
-        "https://aomori-tourism.com/event/detail_8912.html"
-      ],
+      "location_source_urls": ["https://aomori-tourism.com/event/detail_8912.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4195,9 +4165,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "岩木川河川敷 北斗グラウンド（五所川原市）（確認保留）",
-      "location_source_urls": [
-        "https://aomori-tourism.com/event/detail_3340.html"
-      ],
+      "location_source_urls": ["https://aomori-tourism.com/event/detail_3340.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4207,9 +4175,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "間人漁港・丹後地域公民館周辺（京丹後市丹後町間人2690-1）（確認保留）",
-      "location_source_urls": [
-        "https://www.kyotango.gr.jp/events/event/53402/"
-      ],
+      "location_source_urls": ["https://www.kyotango.gr.jp/events/event/53402/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4219,9 +4185,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "久美浜公園周辺（京丹後市久美浜町）（確認保留）",
-      "location_source_urls": [
-        "https://www.kyotango.gr.jp/c/fireworks2026/"
-      ],
+      "location_source_urls": ["https://www.kyotango.gr.jp/c/fireworks2026/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4231,9 +4195,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "名張川新町河畔（名張市新町・黒田地区）（確認保留）",
-      "location_source_urls": [
-        "https://www.kankou-nabari.jp/hanabi/"
-      ],
+      "location_source_urls": ["https://www.kankou-nabari.jp/hanabi/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4243,9 +4205,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "尾鷲港一帯（尾鷲市）（確認保留）",
-      "location_source_urls": [
-        "https://www.kankomie.or.jp/event/43190"
-      ],
+      "location_source_urls": ["https://www.kankomie.or.jp/event/43190"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4255,9 +4215,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "ユーグレナ石垣港離島ターミナル・旧離島桟橋周辺・浜崎マリーナ海保桟橋（石垣市美崎町1）（確認保留）",
-      "location_source_urls": [
-        "https://www.okinawastory.jp/event/600022661"
-      ],
+      "location_source_urls": ["https://www.okinawastory.jp/event/600022661"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4267,9 +4225,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "金武地区公園（国頭郡金武町）（確認保留）",
-      "location_source_urls": [
-        "https://www.okinawastory.jp/event/600022602"
-      ],
+      "location_source_urls": ["https://www.okinawastory.jp/event/600022602"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4279,9 +4235,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "安倍川河川敷（静岡市葵区田町3・4丁目付近、弥勒橋～安西橋間）（確認保留）",
-      "location_source_urls": [
-        "https://www.visit-shizuoka.com/event/detail_626.html"
-      ],
+      "location_source_urls": ["https://www.visit-shizuoka.com/event/detail_626.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4291,9 +4245,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "網代湾（国道135号沿い・大縄公園前、熱海市網代）（確認保留）",
-      "location_source_urls": [
-        "https://www.ataminews.gr.jp/event/171/"
-      ],
+      "location_source_urls": ["https://www.ataminews.gr.jp/event/171/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4303,9 +4255,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "中州地区・須佐地区一帯（知多郡南知多町豊浜）（確認保留）",
-      "location_source_urls": [
-        "https://aichinow.pref.aichi.jp/events/detail/304/"
-      ],
+      "location_source_urls": ["https://aichinow.pref.aichi.jp/events/detail/304/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4315,9 +4265,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "上諏訪温泉前 諏訪湖上（諏訪市）（確認保留）",
-      "location_source_urls": [
-        "https://www.suwakanko.jp/story/hanabi-suwako/"
-      ],
+      "location_source_urls": ["https://www.suwakanko.jp/story/hanabi-suwako/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4327,9 +4275,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "グランフロント大阪・阪急・大阪ステーションシティ・ONthe UMEDA・ダイヤモンド／西梅田地区（大阪市北区梅田周辺）（確認保留）",
-      "location_source_urls": [
-        "https://www.city.osaka.lg.jp/keizaisenryaku/page/0000681200.html"
-      ],
+      "location_source_urls": ["https://www.city.osaka.lg.jp/keizaisenryaku/page/0000681200.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4339,9 +4285,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "富士川河川敷 南部橋上下流（南巨摩郡南部町）（確認保留）",
-      "location_source_urls": [
-        "https://www.yamanashi-kankou.jp/special/pr/nanbu-himatsuri.html"
-      ],
+      "location_source_urls": ["https://www.yamanashi-kankou.jp/special/pr/nanbu-himatsuri.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4351,9 +4295,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "函館港・緑の島打上（青函連絡船記念館摩周丸前広場ほか、函館市）（確認保留）",
-      "location_source_urls": [
-        "https://hakodate-kankou.com/event/2026/0629-22570/"
-      ],
+      "location_source_urls": ["https://hakodate-kankou.com/event/2026/0629-22570/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4363,9 +4305,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "揖保川河川敷 千鳥ヶ浜公園（たつの市龍野町富永）（確認保留）",
-      "location_source_urls": [
-        "https://www.city.tatsuno.lg.jp/soshiki/1023/gyomu/1/8602.html"
-      ],
+      "location_source_urls": ["https://www.city.tatsuno.lg.jp/soshiki/1023/gyomu/1/8602.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4375,9 +4315,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "小石原川甘木橋下流（朝倉市甘木）（確認保留）",
-      "location_source_urls": [
-        "https://www.city.asakura.lg.jp/site/kanko/13553.html"
-      ],
+      "location_source_urls": ["https://www.city.asakura.lg.jp/site/kanko/13553.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4387,9 +4325,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "小見川大橋下流 利根川河畔（香取市小見川）（確認保留）",
-      "location_source_urls": [
-        "https://maruchiba.jp/feature/detail_53.html"
-      ],
+      "location_source_urls": ["https://maruchiba.jp/feature/detail_53.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4399,9 +4335,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "強羅駅周辺（足柄下郡箱根町強羅）（確認保留）",
-      "location_source_urls": [
-        "https://hakone.or.jp/10197"
-      ],
+      "location_source_urls": ["https://hakone.or.jp/10197"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4411,9 +4345,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "行田市駅北側 忍川・翔栄橋付近（行田市）（確認保留）",
-      "location_source_urls": [
-        "https://chocotabi-saitama.jp/event/136984/"
-      ],
+      "location_source_urls": ["https://chocotabi-saitama.jp/event/136984/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4423,9 +4355,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "麻布十番商店街一帯（港区麻布十番）（確認保留）",
-      "location_source_urls": [
-        "https://www.azabujuban.or.jp/topics/topics_event/23867/"
-      ],
+      "location_source_urls": ["https://www.azabujuban.or.jp/topics/topics_event/23867/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で開催自治体と具体的な会場を確認済み。安全な座標根拠を採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-18",
@@ -4435,345 +4365,287 @@
       "latitude": null,
       "longitude": null,
       "map_label": "国営昭和記念公園 みんなの原っぱ（座標確認中）",
-      "location_source_urls": [
-        "https://hanabi.tokyo-tachikawa.org/news/news-611/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://hanabi.tokyo-tachikawa.org/news/news-611/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「国営昭和記念公園 みんなの原っぱ」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-004": {
       "latitude": null,
       "longitude": null,
       "map_label": "江戸川河川敷（都立篠崎公園先）（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.edogawa.tokyo.jp/e004/kuseijoho/kohokocho/press/2026/04/0408.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.edogawa.tokyo.jp/e004/kuseijoho/kohokocho/press/2026/04/0408.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「江戸川河川敷（都立篠崎公園先）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-005": {
       "latitude": null,
       "longitude": null,
       "map_label": "富士森公園（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003249.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003249.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「富士森公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "荒川河川敷（板橋区側）（座標確認中）",
-      "location_source_urls": [
-        "https://itabashihanabi.jp/overview/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://itabashihanabi.jp/overview/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「荒川河川敷（板橋区側）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-007": {
       "latitude": null,
       "longitude": null,
       "map_label": "神楽坂通り周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.kagurazaka.in/event/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E3%80%80%E7%AC%AC52%E5%9B%9E%E7%A5%9E%E6%A5%BD%E5%9D%82%E3%81%BE%E3%81%A4%E3%82%8A%E3%80%80%E5%9B%A3%E6%89%87%E3%83%BB%E6%8F%90%E7%81%AF%E5%8D%94%E8%B3%9B%E3%83%9A/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.kagurazaka.in/event/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E3%80%80%E7%AC%AC52%E5%9B%9E%E7%A5%9E%E6%A5%BD%E5%9D%82%E3%81%BE%E3%81%A4%E3%82%8A%E3%80%80%E5%9B%A3%E6%89%87%E3%83%BB%E6%8F%90%E7%81%AF%E5%8D%94%E8%B3%9B%E3%83%9A/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「神楽坂通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-008": {
       "latitude": null,
       "longitude": null,
       "map_label": "新宿駅東口・歌舞伎町周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.shinjuku-eisa.com/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.shinjuku-eisa.com/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「新宿駅東口・歌舞伎町周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-009": {
       "latitude": null,
       "longitude": null,
       "map_label": "甲州街道・西放射線ユーロード・えきまえテラス周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003251.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003251.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「甲州街道・西放射線ユーロード・えきまえテラス周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-010": {
       "latitude": null,
       "longitude": null,
       "map_label": "阿佐谷パールセンター商店街周辺（座標確認中）",
-      "location_source_urls": [
-        "http://www.asagaya.or.jp/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["http://www.asagaya.or.jp/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「阿佐谷パールセンター商店街周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-012": {
       "latitude": null,
       "longitude": null,
       "map_label": "JR高円寺駅・東京メトロ新高円寺駅周辺商店街と高南通り（座標確認中）",
-      "location_source_urls": [
-        "https://www.koenji-awaodori.com/about/about01.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.koenji-awaodori.com/about/about01.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「JR高円寺駅・東京メトロ新高円寺駅周辺商店街と高南通り」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "湯河原海水浴場沖合（座標確認中）",
-      "location_source_urls": [
-        "https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「湯河原海水浴場沖合」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-004": {
       "latitude": null,
       "longitude": null,
       "map_label": "うみかぜ公園・三笠公園ほか（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.yokosuka.kanagawa.jp/2150/nagekomi/hanabi2026.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.yokosuka.kanagawa.jp/2150/nagekomi/hanabi2026.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「うみかぜ公園・三笠公園ほか」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "湯河原小学校前〜桜木公園ほか町内（座標確認中）",
-      "location_source_urls": [
-        "https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「湯河原小学校前〜桜木公園ほか町内」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-007": {
       "latitude": null,
       "longitude": null,
       "map_label": "橋本駅北口周辺商店街（座標確認中）",
-      "location_source_urls": [
-        "https://midori.city.sagamihara.kanagawa.jp/2026/07/14/hashimoto-tanabata-matsuri-74th-20260807-20260809/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://midori.city.sagamihara.kanagawa.jp/2026/07/14/hashimoto-tanabata-matsuri-74th-20260807-20260809/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「橋本駅北口周辺商店街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-008": {
       "latitude": null,
       "longitude": null,
       "map_label": "臨港パーク・プラザ広場（座標確認中）",
-      "location_source_urls": [
-        "https://www.pacifico.co.jp/news/qnN9NuRj"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.pacifico.co.jp/news/qnN9NuRj"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「臨港パーク・プラザ広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "幕張海浜公園・幕張の浜（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.chiba.jp/keizainosei/keizai/kanko/2025_chiba_hanabi.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.chiba.jp/keizainosei/keizai/kanko/2025_chiba_hanabi.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「幕張海浜公園・幕張の浜」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-002": {
       "latitude": null,
       "longitude": null,
       "map_label": "江戸川河川敷（大洲三丁目地先）（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.ichikawa.lg.jp/page/3681.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.ichikawa.lg.jp/page/3681.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「江戸川河川敷（大洲三丁目地先）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-003": {
       "latitude": null,
       "longitude": null,
       "map_label": "古ケ崎河川敷スポーツ広場（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.matsudo.chiba.jp/miryoku/kankoumiryokubunka/matsuri/summer/matsudohanabi.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.matsudo.chiba.jp/miryoku/kankoumiryokubunka/matsuri/summer/matsudohanabi.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「古ケ崎河川敷スポーツ広場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-004": {
       "latitude": null,
       "longitude": null,
       "map_label": "手賀沼公園・柏会場周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.abiko.chiba.jp/event/event_moyooshi/hanabi2026.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.abiko.chiba.jp/event/event_moyooshi/hanabi2026.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「手賀沼公園・柏会場周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-005": {
       "latitude": null,
       "longitude": null,
       "map_label": "木更津港内港周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/14590.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/14590.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「木更津港内港周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "JR茂原駅周辺商店街（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.mobara.chiba.jp/cmsfiles/contents/0000009/9496/2026-06-01-04.pdf"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.mobara.chiba.jp/cmsfiles/contents/0000009/9496/2026-06-01-04.pdf"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「JR茂原駅周辺商店街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-007": {
       "latitude": null,
       "longitude": null,
       "map_label": "木更津駅西口・富士見通り（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/index.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/index.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「木更津駅西口・富士見通り」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-008": {
       "latitude": null,
       "longitude": null,
       "map_label": "千葉市中央公園と周辺市街地（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.chiba.jp/shimin/shimin/jichi/bikai_event.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.chiba.jp/shimin/shimin/jichi/bikai_event.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「千葉市中央公園と周辺市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-009": {
       "latitude": null,
       "longitude": null,
       "map_label": "我孫子駅南口駅前通り・けやきプラザ周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.abiko.chiba.jp/event/event_moyooshi/abikokappamatsuri.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.abiko.chiba.jp/event/event_moyooshi/abikokappamatsuri.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「我孫子駅南口駅前通り・けやきプラザ周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-010": {
       "latitude": null,
       "longitude": null,
       "map_label": "柏駅東西中心街（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.kashiwa.lg.jp/chiiki-community/kashiwamatsuri/kashiwamatsuri2026-3.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.kashiwa.lg.jp/chiiki-community/kashiwamatsuri/kashiwamatsuri2026-3.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「柏駅東西中心街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "越谷市中央市民会館東側 葛西用水中土手（座標確認中）",
-      "location_source_urls": [
-        "https://www.koshigaya-sightseeing.jp/news/%E8%B6%8A%E8%B0%B7%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.koshigaya-sightseeing.jp/news/%E8%B6%8A%E8%B0%B7%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「越谷市中央市民会館東側 葛西用水中土手」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-002": {
       "latitude": null,
       "longitude": null,
       "map_label": "大和田公園周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「大和田公園周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-004": {
       "latitude": null,
       "longitude": null,
       "map_label": "大間木公園周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「大間木公園周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-005": {
       "latitude": null,
       "longitude": null,
       "map_label": "岩槻文化公園（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「岩槻文化公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-006": {
       "latitude": null,
       "longitude": null,
       "map_label": "与野本町通り周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
-      ],
+      "location_source_urls": ["https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-19",
@@ -4783,9 +4655,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "秩父神社と秩父市街地（座標確認中）",
-      "location_source_urls": [
-        "https://navi.city.chichibu.lg.jp/p_festival/1273/"
-      ],
+      "location_source_urls": ["https://navi.city.chichibu.lg.jp/p_festival/1273/"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-20",
@@ -4795,69 +4665,57 @@
       "latitude": null,
       "longitude": null,
       "map_label": "熊谷市街地（国道17号・お祭り広場周辺）（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.kumagaya.lg.jp/shicho/kaiken/r8/R80630kishakaiken.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-19",
+      "location_source_urls": ["https://www.city.kumagaya.lg.jp/shicho/kaiken/r8/R80630kishakaiken.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「熊谷市街地（国道17号・お祭り広場周辺）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "川越市中心市街地（座標確認中）",
-      "location_source_urls": [
-        "https://www.kawagoe.or.jp/natsumatsuri/?vm=r"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
-      "coordinate_precision": "hold"
+      "latitude": 35.91472744626545,
+      "longitude": 139.4827148667785,
+      "map_label": "川越中心市街地（公式地図の代表点）",
+      "location_source_urls": ["https://www.kawagoe.or.jp/natsumatsuri/?vm=r"],
+      "coordinate_reference": "公式大会サイト埋め込み地図: 35.91472744626545,139.4827148667785",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-saitama-010": {
       "latitude": null,
       "longitude": null,
       "map_label": "朝霞会場・北朝霞会場（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.asaka.lg.jp/uploaded/attachment/110100.pdf"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.asaka.lg.jp/uploaded/attachment/110100.pdf"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「朝霞会場・北朝霞会場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-011": {
       "latitude": null,
       "longitude": null,
       "map_label": "狭山市駅西口〜七夕通り商店街周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.sayama.saitama.jp/kankou/kanko/tanabata/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-14",
+      "location_source_urls": ["https://www.city.sayama.saitama.jp/kankou/kanko/tanabata/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「狭山市駅西口〜七夕通り商店街周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-011": {
       "latitude": null,
       "longitude": null,
       "map_label": "川崎大師平間寺境内 静嘉堂石庭前広場（座標確認中）",
-      "location_source_urls": [
-        "https://www.fuurinichi.com/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-16",
+      "location_source_urls": ["https://www.fuurinichi.com/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「川崎大師平間寺境内 静嘉堂石庭前広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-012": {
       "latitude": null,
       "longitude": null,
       "map_label": "野島埼灯台前公園・白浜港（座標確認中）",
-      "location_source_urls": [
-        "https://www.cm-boso.com/amamatsuri2026.html"
-      ],
+      "location_source_urls": ["https://www.cm-boso.com/amamatsuri2026.html"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-19",
@@ -4867,9 +4725,7 @@
       "latitude": null,
       "longitude": null,
       "map_label": "上尾市内各地・中山道・上尾駅東西駅前広場（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.ageo.lg.jp/calendar/index.php?ym=2026/07"
-      ],
+      "location_source_urls": ["https://www.city.ageo.lg.jp/calendar/index.php?ym=2026/07"],
       "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
       "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
       "source_checked_at": "2026-07-19",
@@ -4879,432 +4735,360 @@
       "latitude": null,
       "longitude": null,
       "map_label": "藤沢駅北口・遊行寺境内（座標確認中）",
-      "location_source_urls": [
-        "https://www.fujisawa-cci.or.jp/special/19nobon/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.fujisawa-cci.or.jp/special/19nobon/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「藤沢駅北口・遊行寺境内」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-016": {
       "latitude": null,
       "longitude": null,
       "map_label": "富津海水浴場（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.futtsu.lg.jp/0000007541.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.futtsu.lg.jp/0000007541.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「富津海水浴場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-017": {
       "latitude": null,
       "longitude": null,
       "map_label": "前原・横渚海岸（鴨川漁港前原防波堤）（座標確認中）",
-      "location_source_urls": [
-        "https://kamotabi.jp/news/detail/341"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://kamotabi.jp/news/detail/341"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「前原・横渚海岸（鴨川漁港前原防波堤）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-009": {
       "latitude": null,
       "longitude": null,
       "map_label": "酒匂川スポーツ広場（小田原市寿町5-22・小田原大橋周辺）（座標確認中）",
-      "location_source_urls": [
-        "https://www.odawara-kankou.com/hanabi/sakawa-hanabi.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.odawara-kankou.com/hanabi/sakawa-hanabi.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「酒匂川スポーツ広場（小田原市寿町5-22・小田原大橋周辺）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-010": {
       "latitude": null,
       "longitude": null,
       "map_label": "サザンビーチちがさき（座標確認中）",
-      "location_source_urls": [
-        "https://www.chigasaki-kankou.org/event/hanabi/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.chigasaki-kankou.org/event/hanabi/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「サザンビーチちがさき」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-013": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "相模湖湖上（県立相模湖公園前）（座標確認中）",
-      "location_source_urls": [
-        "https://www.kanagawa-kankou.or.jp/event/7753"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.6127331,
+      "longitude": 139.1907016,
+      "map_label": "県立相模湖公園前（公式地図の代表点）",
+      "location_source_urls": ["https://www.kanagawa-kankou.or.jp/event/7753"],
+      "coordinate_reference": "公式観光ページ埋め込み地図: 35.6127331,139.1907016",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-saitama-016": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "そうか公園（座標確認中）",
-      "location_source_urls": [
-        "https://soka-hanabi.com/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.861771372529475,
+      "longitude": 139.82433267579583,
+      "map_label": "そうか公園",
+      "location_source_urls": ["https://soka-hanabi.com/"],
+      "coordinate_reference": "公式大会サイト埋め込み地図: 35.861771372529475,139.82433267579583",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-saitama-018": {
       "latitude": null,
       "longitude": null,
       "map_label": "ワモア川本南 荒川河川敷（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.fukaya.saitama.jp/soshiki/sangyoshinko/shokoshinkou/tanto/ibento/16474.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.fukaya.saitama.jp/soshiki/sangyoshinko/shokoshinkou/tanto/ibento/16474.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「ワモア川本南 荒川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-kanagawa-012": {
       "latitude": null,
       "longitude": null,
       "map_label": "三浦海岸（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.miura.kanagawa.jp/soshiki/kankoshokoka/kankoshokoka_kanko/chiikikankougyouji/8958.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.miura.kanagawa.jp/soshiki/kankoshokoka/kankoshokoka_kanko/chiikikankougyouji/8958.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「三浦海岸」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-013": {
       "latitude": null,
       "longitude": null,
       "map_label": "明治神宮外苑（神宮球場・秩父宮ラグビー場）（座標確認中）",
-      "location_source_urls": [
-        "https://www.jinguhanabi.com/about.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.jinguhanabi.com/about.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「明治神宮外苑（神宮球場・秩父宮ラグビー場）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-011": {
       "latitude": null,
       "longitude": null,
       "map_label": "館山湾（汐入川河口導流堤北側・館山湾水中花火）（座標確認中）",
-      "location_source_urls": [
-        "https://tateyamacity.or.jp/hanabi/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://tateyamacity.or.jp/hanabi/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「館山湾（汐入川河口導流堤北側・館山湾水中花火）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-012": {
       "latitude": null,
       "longitude": null,
       "map_label": "荒川河畔（荒川大橋下流側）（座標確認中）",
-      "location_source_urls": [
-        "https://www.oideyo-kumagaya.com/cate-info/21033/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.oideyo-kumagaya.com/cate-info/21033/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「荒川河畔（荒川大橋下流側）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-025": {
       "latitude": null,
       "longitude": null,
       "map_label": "千葉JPFドーム（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.chiba.jp/keizainosei/keizai/koeijigyo/pist6-summer2026-event.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.chiba.jp/keizainosei/keizai/koeijigyo/pist6-summer2026-event.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「千葉JPFドーム」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-022": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "中野セントラルパーク内 パークアベニュー（座標確認中）",
-      "location_source_urls": [
-        "https://nakabon.jp/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.70727747257897,
+      "longitude": 139.6594334765732,
+      "map_label": "中野セントラルパーク",
+      "location_source_urls": ["https://nakabon.jp/"],
+      "coordinate_reference": "公式大会サイト埋め込み地図: 35.70727747257897,139.6594334765732",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-saitama-021": {
       "latitude": null,
       "longitude": null,
       "map_label": "唐子地区体育館駐車場（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.higashimatsuyama.lg.jp/soshiki/22/26596.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.higashimatsuyama.lg.jp/soshiki/22/26596.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「唐子地区体育館駐車場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-tokyo-016": {
       "latitude": null,
       "longitude": null,
       "map_label": "築地本願寺境内（座標確認中）",
-      "location_source_urls": [
-        "https://tsukijihongwanji.jp/news/11529/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://tsukijihongwanji.jp/news/11529/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「築地本願寺境内」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-013": {
       "latitude": null,
       "longitude": null,
       "map_label": "玉淀河原（座標確認中）",
-      "location_source_urls": [
-        "https://www.town.yorii.saitama.jp/soshiki/13/yoriitamayodosuitengusai.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.town.yorii.saitama.jp/soshiki/13/yoriitamayodosuitengusai.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「玉淀河原」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-015": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "大宮駅東口周辺（座標確認中）",
-      "location_source_urls": [
-        "https://visitsaitamacity.jp/events/24"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.906459,
+      "longitude": 139.624287,
+      "map_label": "大宮駅東口（公式地図の代表点）",
+      "location_source_urls": ["https://visitsaitamacity.jp/events/24"],
+      "coordinate_reference": "公式観光ページ掲載座標: 35.906459,139.624287",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-tokyo-020": {
       "latitude": null,
       "longitude": null,
       "map_label": "JR恵比寿駅西口広場（座標確認中）",
-      "location_source_urls": [
-        "https://ebisubondance.jp/about/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://ebisubondance.jp/about/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「JR恵比寿駅西口広場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-chiba-022": {
       "latitude": null,
       "longitude": null,
       "map_label": "野田市本町通り周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.noda.chiba.jp/shisei/profile/bunkazai/matsuri/1000830.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.noda.chiba.jp/shisei/profile/bunkazai/matsuri/1000830.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「野田市本町通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-saitama-014": {
       "latitude": null,
       "longitude": null,
       "map_label": "長瀞岩畳周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.nagatoro.gr.jp/funadama2026/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.nagatoro.gr.jp/funadama2026/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「長瀞岩畳周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-yamanashi-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "山中湖畔 山中地区（座標確認中）",
-      "location_source_urls": [
-        "https://lake-yamanakako.com/event/10430"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://lake-yamanakako.com/event/10430"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「山中湖畔 山中地区」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-yamanashi-002": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "西湖 前浜沖（座標確認中）",
-      "location_source_urls": [
-        "https://fujisan.ne.jp/news/6015/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.50558782826563,
+      "longitude": 138.69656579093476,
+      "map_label": "西湖（公式地図の代表点）",
+      "location_source_urls": ["https://fujisan.ne.jp/news/6015/"],
+      "coordinate_reference": "公式観光ページ埋め込み地図: 35.50558782826563,138.69656579093476",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-yamanashi-003": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "本栖湖東岸（座標確認中）",
-      "location_source_urls": [
-        "https://fujisan.ne.jp/news/6018/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.46025930997008,
+      "longitude": 138.6012509662236,
+      "map_label": "本栖湖東岸（公式地図の代表点）",
+      "location_source_urls": ["https://fujisan.ne.jp/news/6018/"],
+      "coordinate_reference": "公式観光ページ埋め込み地図: 35.46025930997008,138.6012509662236",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-yamanashi-004": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "精進湖 他手合浜（座標確認中）",
-      "location_source_urls": [
-        "https://fujisan.ne.jp/news/6021/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.48621308972232,
+      "longitude": 138.60036745684732,
+      "map_label": "精進湖 他手合浜",
+      "location_source_urls": ["https://fujisan.ne.jp/news/6021/"],
+      "coordinate_reference": "公式観光ページ埋め込み地図: 35.48621308972232,138.60036745684732",
+      "location_basis": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "exact_venue"
     },
     "evt-summer-2026-yamanashi-006": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "三郡橋下流 笛吹川河畔（座標確認中）",
-      "location_source_urls": [
-        "https://www.town.ichikawamisato.yamanashi.jp/shinmei/meeting_summary/index.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.56178816383258,
+      "longitude": 138.48247963378682,
+      "map_label": "三郡橋下流 笛吹川河畔（公式地図の代表点）",
+      "location_source_urls": ["https://www.town.ichikawamisato.yamanashi.jp/shinmei/meeting_summary/index.html"],
+      "coordinate_reference": "公式大会ページ埋め込み地図: 35.56178816383258,138.48247963378682",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-yamanashi-007": {
       "latitude": null,
       "longitude": null,
       "map_label": "舞鶴城公園・こうふ亀屋座周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.kofu.yamanashi.jp/kanko/2026koedo/8thkoedo.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.kofu.yamanashi.jp/kanko/2026koedo/8thkoedo.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「舞鶴城公園・こうふ亀屋座周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-yamanashi-008": {
       "latitude": null,
       "longitude": null,
       "map_label": "笛吹市役所前 笛吹川河川敷（座標確認中）",
-      "location_source_urls": [
-        "https://www.fuefuki-kanko.jp/scontents/summerfes/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.fuefuki-kanko.jp/scontents/summerfes/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「笛吹市役所前 笛吹川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-yamanashi-009": {
-      "latitude": null,
-      "longitude": null,
-      "map_label": "北口本宮冨士浅間神社・諏訪神社・上吉田地区（座標確認中）",
-      "location_source_urls": [
-        "https://fujiyoshida.net/event/154"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
-      "coordinate_precision": "hold"
+      "latitude": 35.47079,
+      "longitude": 138.792407,
+      "map_label": "北口本宮冨士浅間神社（公式地図の代表点）",
+      "location_source_urls": ["https://fujiyoshida.net/event/154"],
+      "coordinate_reference": "公式観光ページ掲載座標: 35.47079,138.792407",
+      "location_basis": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。",
+      "source_checked_at": "2026-07-21",
+      "coordinate_precision": "area_representative"
     },
     "evt-summer-2026-yamanashi-010": {
       "latitude": null,
       "longitude": null,
       "map_label": "富士吉田市本町通り周辺（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.fujiyoshida.yamanashi.jp/page/10992.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.fujiyoshida.yamanashi.jp/page/10992.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「富士吉田市本町通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shizuoka-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "原野谷川親水公園（座標確認中）",
-      "location_source_urls": [
-        "https://www.fukuroi-hanabi.jp/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.fukuroi-hanabi.jp/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「原野谷川親水公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shizuoka-002": {
       "latitude": null,
       "longitude": null,
       "map_label": "狩野川河川敷・沼津市中心市街地（座標確認中）",
-      "location_source_urls": [
-        "https://numazukanko.jp/event/50051"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://numazukanko.jp/event/50051"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「狩野川河川敷・沼津市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-shizuoka-003": {
       "latitude": null,
       "longitude": null,
       "map_label": "清水港・清水区中心部（座標確認中）",
-      "location_source_urls": [
-        "https://www.minatokappore.jp/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.minatokappore.jp/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; venue confirmed but no authoritative reusable coordinate published",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「清水港・清水区中心部」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-nagano-001": {
       "latitude": null,
       "longitude": null,
       "map_label": "上田市中心市街地（座標確認中）",
-      "location_source_urls": [
-        "https://ueda-kanko.or.jp/special/wassyoi2026/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://ueda-kanko.or.jp/special/wassyoi2026/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「上田市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-nagano-002": {
       "latitude": null,
       "longitude": null,
       "map_label": "善光寺表参道・昭和通りほか（座標確認中）",
-      "location_source_urls": [
-        "https://www.city.nagano.nagano.jp/n150800/event/p000011.html"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://www.city.nagano.nagano.jp/n150800/event/p000011.html"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「善光寺表参道・昭和通りほか」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     },
     "evt-summer-2026-nagano-003": {
       "latitude": null,
       "longitude": null,
       "map_label": "松本市中心市街地（座標確認中）",
-      "location_source_urls": [
-        "https://matsubon.com/"
-      ],
-      "coordinate_reference": "hold: official venue confirmed; no safely reusable coordinate source adopted",
-      "location_basis": "公式一次情報で会場名を確認済み。安全な座標参照元をまだ採用できないため一点化せず、地図には表示しない。",
-      "source_checked_at": "2026-07-17",
+      "location_source_urls": ["https://matsubon.com/"],
+      "coordinate_reference": "hold: checkpoint 100 official source reviewed; broad or multi-site venue has no single authoritative point",
+      "location_basis": "checkpoint 100で公式情報を再確認。会場「松本市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
+      "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
     }
   }

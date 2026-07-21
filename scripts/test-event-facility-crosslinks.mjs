@@ -15,7 +15,7 @@ import {
 } from "../lib/event-facility-crosslinks.ts";
 
 const TODAY = "2026-07-19";
-const SNAPSHOT_TODAY = "2026-07-20";
+const SNAPSHOT_TODAY = "2026-07-21";
 const encodedDistance = (from, to) =>
   Math.hypot(to[0] - from[0], to[1] - from[1]);
 
@@ -290,7 +290,7 @@ test("analytics payloads expose only the approved non-personal contract", () => 
   ]);
 });
 
-test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () => {
+test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () => {
   const fixtures = loadCanonicalFixtures(SNAPSHOT_TODAY);
   const first = deriveSummerCrosslinks({
     ...fixtures,
@@ -310,9 +310,9 @@ test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () =
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 479);
-  assert.equal(first.diagnostics.mappableEventCount, 21);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 21);
+  assert.equal(fixtures.events.length, 475);
+  assert.equal(first.diagnostics.mappableEventCount, 47);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 44);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -350,16 +350,16 @@ test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 479,
-      mappableEventCount: 21,
-      holdEventCount: 458,
+      inputEventCount: 475,
+      mappableEventCount: 47,
+      holdEventCount: 428,
       missingLocationCount: 0,
       excludedFacilityCount: 8,
-      eventToFacilityEventCount: 21,
-      eventToFacilityRecommendationCount: 105,
-      facilityToEventFacilityCount: 485,
-      facilityToEventThreeCandidateCount: 186,
-      facilityToEventRecommendationCount: 958,
+      eventToFacilityEventCount: 44,
+      eventToFacilityRecommendationCount: 207,
+      facilityToEventFacilityCount: 657,
+      facilityToEventThreeCandidateCount: 279,
+      facilityToEventRecommendationCount: 1321,
     },
   );
 });

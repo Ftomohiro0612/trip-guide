@@ -62,8 +62,8 @@ const CURRENT_SUMMER_MILESTONE = Object.freeze({
   newEventCount: 484,
   candidateCount: 500,
   overlayCount: 500,
-  mappableCount: 22,
-  holdCount: 478,
+  mappableCount: 48,
+  holdCount: 452,
 });
 const PAGINATION_TEST_DATE = "2026-07-20";
 const SUMMER_EVENT_TYPE_ORDER = [
@@ -245,7 +245,7 @@ test("Summer map keeps every safely mappable location without a major-event filt
     summerLocationsSource.locations_by_event_id,
   ).filter(([, location]) => location.coordinate_precision !== "hold");
 
-  assert.equal(mappableEntries.length, 22);
+  assert.equal(mappableEntries.length, CURRENT_SUMMER_MILESTONE.mappableCount);
   assert.deepEqual(
     [
       ...new Set(
@@ -254,8 +254,14 @@ test("Summer map keeps every safely mappable location without a major-event filt
     ].sort(),
     [
       "chiba",
+      "gunma",
+      "hiroshima",
+      "iwate",
       "kanagawa",
       "nagano",
+      "nara",
+      "niigata",
+      "okayama",
       "saitama",
       "shizuoka",
       "tokyo",
@@ -443,7 +449,7 @@ test("Summer freshness uses monthly warnings and one pre-start review without da
   assert.equal(summerSource.metadata.freshness_days_hub, 30);
   assert.equal(summerSource.metadata.freshness_days_hero, 30);
 
-  for (const today of ["2026-07-20", "2026-07-21", "2026-07-23"]) {
+  for (const today of ["2026-07-21", "2026-07-22", "2026-07-23"]) {
     const result = runEventValidator(today);
     const reviewed = result.freshness.find(
       (row) => row.id === "evt-summer-2026-nagano-011",
@@ -2157,7 +2163,7 @@ test("regional normal L2 continuation expands the shared branch to 375 official 
   );
 });
 
-test("national density expansion reaches the 425-event checkpoint with 50 hold rows", () => {
+test("national density expansion retains all 50 sourced rows with valid location states", () => {
   const fourEventPrefectures = [
     "gunma",
     "hiroshima",
@@ -2202,12 +2208,20 @@ test("national density expansion reaches the 425-event checkpoint with 50 hold r
         event.source_urls.includes(event.official_url) &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        (() => {
+          const location = summerLocationsSource.locations_by_event_id[event.id];
+          if (!location) return false;
+          if (location.coordinate_precision === "hold") {
+            return location.latitude === null && location.longitude === null;
+          }
+          return (
+            ["exact_venue", "area_representative", "geocoded_venue"].includes(
+              location.coordinate_precision,
+            ) &&
+            Number.isFinite(location.latitude) &&
+            Number.isFinite(location.longitude)
+          );
+        })(),
     ),
     true,
   );
@@ -2512,8 +2526,8 @@ test("national density expansion reaches the 500-event milestone with 35 additio
     {
       candidateCount: 500,
       overlayCount: 500,
-      mappableCount: 22,
-      holdCount: 478,
+      mappableCount: 48,
+      holdCount: 452,
     },
   );
 });
