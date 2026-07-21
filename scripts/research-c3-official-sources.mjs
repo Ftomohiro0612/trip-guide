@@ -89,7 +89,7 @@ const rankSnippets = (facility, candidates) => {
 
 const fetchOne = async (entry) => {
   const facility = facilityById.get(Number(entry.id));
-  const requestedUrl = sampleUrlById.get(Number(entry.id)) ?? facility?.url ?? "";
+  const requestedUrl = entry.official_source?.url ?? sampleUrlById.get(Number(entry.id)) ?? facility?.url ?? "";
   const checkedAt = new Date().toISOString();
   if (!/^https?:\/\//u.test(requestedUrl)) {
     return { id: entry.id, name: entry.name, requested_url: requestedUrl, checked_at: checkedAt, resolved: false, issue: "OFFICIAL_URL_MISSING", snippets: [] };
@@ -144,7 +144,7 @@ await Promise.all(workers);
 
 const report = {
   generated_at: new Date().toISOString(),
-  source_head: process.env.C3_SOURCE_HEAD ?? "27a179528cce5edca6030408e2f590f310798054",
+  source_head: process.env.C3_SOURCE_HEAD ?? manifest.base_commit,
   target_count: manifest.entries.length,
   resolved_count: results.filter((result) => result.resolved).length,
   issue_count: results.filter((result) => !result.resolved).length,

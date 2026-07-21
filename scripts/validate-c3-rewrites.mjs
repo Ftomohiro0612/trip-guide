@@ -8,6 +8,8 @@ const research = JSON.parse(readFileSync(".codex/facility-content-c3-official-re
 const currentDocument = JSON.parse(readFileSync("data/facilities_data.json", "utf8"));
 const baseDocument = JSON.parse(execFileSync("git", ["show", `${expectedBase}:data/facilities_data.json`], { encoding: "utf8", maxBuffer: 64 * 1024 * 1024 }));
 const sampleMarkdown = readFileSync(".codex/facility-content-c3-rewrite-samples-2026-07-20.md", "utf8").replace(/\r\n/g, "\n");
+const manifestMarkdown = readFileSync(".codex/facility-content-c3-manifest-2026-07-20.md", "utf8").replace(/\r\n/g, "\n");
+const pmAudit = JSON.parse(readFileSync(".codex/facility-content-c3-pm-read-audit-2026-07-21.json", "utf8"));
 
 const current = currentDocument.facilities;
 const base = baseDocument.facilities;
@@ -15,6 +17,7 @@ const currentById = new Map(current.map((facility) => [Number(facility.id), faci
 const baseById = new Map(base.map((facility) => [Number(facility.id), facility]));
 const entryById = new Map(manifest.entries.map((entry) => [Number(entry.id), entry]));
 const targetIds = new Set(entryById.keys());
+const approvedIds = new Set([1415, 2186, 1565, 2276, 643, 2387, 1082, 857, 3366, 1780]);
 const researchById = new Map(research.results.map((entry) => [Number(entry.id), entry]));
 const errors = [];
 const sha256 = (value) => createHash("sha256").update(String(value), "utf8").digest("hex");
@@ -22,12 +25,43 @@ const length = (value) => [...String(value)].length;
 const sentences = (value) => String(value).split(/[。！？]/u).map((part) => part.trim()).filter(Boolean);
 const paragraphs = (value) => String(value).split(/\n\s*\n/u).map((part) => part.trim()).filter(Boolean);
 const normalizeStructure = (value) => String(value).normalize("NFKC").replace(/[\s\p{P}\p{S}\d]/gu, "").toLowerCase();
+const grams = (value, size = 8) => {
+  const result = new Set();
+  for (let index = 0; index <= value.length - size; index += 1) result.add(value.slice(index, index + size));
+  return result;
+};
 
 if (manifest.base_commit !== expectedBase) errors.push(`base commit ${manifest.base_commit} != ${expectedBase}`);
 if (manifest.entries.length !== 200) errors.push(`manifest count ${manifest.entries.length} != 200`);
+if (JSON.stringify(manifest.checkpoints) !== JSON.stringify([50, 100, 150, 200])) errors.push(`checkpoint contract must be exactly 50/100/150/200`);
 if (targetIds.size !== 200) errors.push(`unique target count ${targetIds.size} != 200`);
 if (research.target_count !== 200 || research.resolved_count !== 200 || research.issue_count !== 0) errors.push("research summary is not 200/200 resolved with zero issues");
+if (research.human_reviewed_count !== 200 || research.machine_resolved_count + research.manual_resolved_count !== 200) errors.push("research human/machine/manual summary is inconsistent");
 if (researchById.size !== 200 || [...researchById.keys()].some((id) => !targetIds.has(id))) errors.push("research target IDs do not exactly match the manifest");
+if (manifest.rewrite.replacement_count !== 16 || manifest.rewrite.replacements?.length !== 16) errors.push("replacement manifest must contain exactly 16 mappings");
+for (const replacement of manifest.rewrite.replacements ?? []) {
+  if (!Number.isInteger(replacement.removed_id) || !replacement.removed_name || !Number.isInteger(replacement.added_id) || !replacement.added_name || !replacement.prefecture || !replacement.reason || !/^https:\/\//u.test(replacement.official_url ?? "")) errors.push(`replacement mapping is incomplete: ${JSON.stringify(replacement)}`);
+}
+if (JSON.stringify(manifest.rewrite.pm_checkpoints_passed) !== JSON.stringify([50, 100, 150, 200])) errors.push("manifest PM checkpoint summary must be exactly 50/100/150/200");
+if (pmAudit.checkpoints?.length !== 4 || JSON.stringify(pmAudit.checkpoints.map((checkpoint) => checkpoint.checkpoint)) !== JSON.stringify([50, 100, 150, 200])) errors.push("PM audit checkpoint contract is invalid");
+for (const checkpoint of pmAudit.checkpoints ?? []) {
+  const start = checkpoint.checkpoint - 49;
+  const batch = manifest.entries.filter((entry) => entry.position >= start && entry.position <= checkpoint.checkpoint);
+  const expected = batch
+    .map((entry) => ({ id: entry.id, position: entry.position, hash: sha256(`${checkpoint.checkpoint}:${entry.id}:c3-pm`) }))
+    .sort((left, right) => left.hash.localeCompare(right.hash))
+    .slice(0, 10)
+    .sort((left, right) => left.position - right.position);
+  if (checkpoint.read_count !== 10 || checkpoint.status !== "PASS" || checkpoint.findings?.length !== 0 || !checkpoint.reviewed_at) errors.push(`PM checkpoint ${checkpoint.checkpoint}: review result is incomplete`);
+  if (JSON.stringify(checkpoint.sample_ids) !== JSON.stringify(expected.map((item) => item.id)) || JSON.stringify(checkpoint.sample_positions) !== JSON.stringify(expected.map((item) => item.position))) errors.push(`PM checkpoint ${checkpoint.checkpoint}: deterministic sample mismatch`);
+}
+const markdownSectionRows = (heading, nextHeading) => {
+  const start = manifestMarkdown.indexOf(`## ${heading}`);
+  const end = nextHeading ? manifestMarkdown.indexOf(`## ${nextHeading}`, start + 3) : manifestMarkdown.length;
+  return manifestMarkdown.slice(start, end).split("\n").filter((line) => /^\|\s*\d+/u.test(line));
+};
+if (!manifestMarkdown.includes(`- target count: ${manifest.entries.length}`) || !manifestMarkdown.includes(`- official sources resolved: ${research.resolved_count} / ${research.target_count}`) || !manifestMarkdown.includes(`- human reviewed: ${research.human_reviewed_count} / ${research.target_count}`) || !manifestMarkdown.includes(`- quality issues: ${manifest.rewrite.quality_issue_count}`) || !manifestMarkdown.includes(`- replacement count: ${manifest.rewrite.replacement_count}`) || !manifestMarkdown.includes(`- checkpoints: ${manifest.checkpoints.join(" / ")}`)) errors.push("Markdown manifest summary does not match canonical JSON");
+if (markdownSectionRows("PM checkpoint reading audit", "Replacements").length !== 4 || markdownSectionRows("Replacements", "Official source and human review").length !== 16 || markdownSectionRows("Official source and human review", "Description hashes").length !== 200 || markdownSectionRows("Description hashes").length !== 200) errors.push("Markdown manifest table counts do not match canonical JSON");
 if (JSON.stringify(currentDocument.metadata) !== JSON.stringify(baseDocument.metadata)) errors.push("data metadata changed outside scope");
 if (current.length !== base.length) errors.push(`facility count changed ${base.length} -> ${current.length}`);
 
@@ -46,6 +80,9 @@ const forbidden = [
   /楽しむことを楽しむこと/u,
   /特産品の特産品/u,
   /魅力が魅力/u,
+  /玉川湖l公園/u,
+  /(?:おすすめ|ランキング|口コミ|レビュー|星評価|ワーケーション|寿司)/u,
+  /(?:関連記事|このページを見ている人|情報を探すなら)/u,
 ];
 const corruption = [/[�]/u, /(?:Ã|Â|â€|ï¿½)/u, /&(?:nbsp|amp|quot|lt|gt);/iu, /[\u0000-\u0008\u000B\u000C\u000E-\u001F]/u];
 const bracketPairs = [["（", "）"], ["「", "」"], ["『", "』"], ["【", "】"]];
@@ -81,8 +118,17 @@ for (const entry of manifest.entries) {
   lengthValues.push(count);
   sentenceDistribution[sentenceCount] = (sentenceDistribution[sentenceCount] ?? 0) + 1;
   paragraphDistribution[paragraphCount] = (paragraphDistribution[paragraphCount] ?? 0) + 1;
-  if (count < 45 || count > 450) errors.push(`ID ${id}: description length ${count} outside 45-450`);
-  if (sentenceCount < 2 || sentenceCount > 8) errors.push(`ID ${id}: sentence count ${sentenceCount} outside 2-8`);
+  if (!approvedIds.has(id)) {
+    if (entry.content_tier === "small") {
+      if (count < 150 || count > 250) errors.push(`ID ${id}: small description length ${count} outside 150-250`);
+    } else if (entry.content_tier === "information-rich") {
+      if (count < 200 || count > 450) errors.push(`ID ${id}: information-rich description length ${count} outside 200-450`);
+      if ((entry.facility_specific_facts?.length ?? 0) < 2) errors.push(`ID ${id}: information-rich copy requires at least two adopted facts`);
+    } else if (count < 200 || count > 350) errors.push(`ID ${id}: standard description length ${count} outside 200-350`);
+    if (sentenceCount < 3 || sentenceCount > 6) errors.push(`ID ${id}: sentence count ${sentenceCount} outside 3-6`);
+    if (paragraphCount < 1 || paragraphCount > 3) errors.push(`ID ${id}: paragraph count ${paragraphCount} outside 1-3`);
+  }
+  if (entry.checkpoint !== Math.ceil(entry.position / 50) * 50) errors.push(`ID ${id}: checkpoint ${entry.checkpoint} does not match 50-item contract`);
   for (const pattern of forbidden) if (pattern.test(text)) errors.push(`ID ${id}: prohibited generated/corrupt phrase ${pattern}`);
   for (const pattern of corruption) if (pattern.test(text)) { corruptionCount += 1; errors.push(`ID ${id}: character corruption ${pattern}`); }
   for (const [open, close] of bracketPairs) {
@@ -94,7 +140,9 @@ for (const entry of manifest.entries) {
   const official = entry.official_source;
   if (official?.resolved === true && /^https:\/\//u.test(official.url ?? "") && !/trip-guide\.net/iu.test(official.url) && /^[a-f0-9]{64}$/u.test(official.evidence_sha256 ?? "")) sourceResolved += 1;
   else errors.push(`ID ${id}: official source is not hard-resolved`);
-  if (!source || source.resolved !== true || source.issue !== null || source.final_url !== official?.url || source.evidence_sha256 !== official?.evidence_sha256 || source.evidence_kind !== official?.evidence_kind) errors.push(`ID ${id}: research/manifest source evidence mismatch`);
+  if (official?.human_reviewed !== true || official?.identity_confirmed !== true || !official?.reviewed_at || !official?.reviewer_role || !official?.identity_evidence) errors.push(`ID ${id}: manual facility identity review is incomplete`);
+  if ((official?.adopted_facts_confirmed ?? 0) < 1 || (entry.facility_specific_facts?.length ?? 0) < 1) errors.push(`ID ${id}: no manually confirmed adopted fact`);
+  if (!source || source.resolved !== true || source.issue !== null || source.human_reviewed !== true || source.identity_confirmed !== true || source.adopted_facts_confirmed !== source.adopted_facts?.length || source.adopted_facts_confirmed < 1 || !source.identity_evidence || source.final_url !== official?.url || source.evidence_sha256 !== official?.evidence_sha256 || source.evidence_kind !== official?.evidence_kind) errors.push(`ID ${id}: research/manifest source evidence mismatch`);
 
   const normalizedDescription = text.normalize("NFKC").replace(/\s+/gu, " ").trim();
   (descriptionOwners.get(normalizedDescription) ?? descriptionOwners.set(normalizedDescription, []).get(normalizedDescription)).push(id);
@@ -102,6 +150,16 @@ for (const entry of manifest.entries) {
     if (length(sentence) < 12) continue;
     const normalizedSentence = sentence.normalize("NFKC").replace(/\s+/gu, " ").trim();
     (sentenceOwners.get(normalizedSentence) ?? sentenceOwners.set(normalizedSentence, []).get(normalizedSentence)).push(id);
+  }
+  const ownSentences = sentences(text).map((sentence) => normalizeStructure(sentence.replaceAll(entry.name, "施設"))).filter((sentence) => sentence.length >= 12);
+  if (new Set(ownSentences).size !== ownSentences.length) errors.push(`ID ${id}: repeated sentence inside one description`);
+  for (let left = 0; left < ownSentences.length; left += 1) {
+    for (let right = left + 1; right < ownSentences.length; right += 1) {
+      const a = grams(ownSentences[left], 6); const b = grams(ownSentences[right], 6);
+      let intersection = 0; for (const value of a) if (b.has(value)) intersection += 1;
+      const similarity = a.size || b.size ? intersection / (a.size + b.size - intersection) : 0;
+      if (similarity >= 0.58) errors.push(`ID ${id}: within-description paraphrase repetition ${similarity.toFixed(3)}`);
+    }
   }
   const intro = normalizedDescription.replaceAll(entry.name.normalize("NFKC"), "施設").slice(0, 32);
   const ending = sentences(text).at(-1).normalize("NFKC").replaceAll(entry.name.normalize("NFKC"), "施設");
@@ -125,11 +183,6 @@ if (repeatedIntros.length) errors.push(`repeated intros: ${JSON.stringify(repeat
 if (repeatedEndings.length) errors.push(`repeated endings: ${JSON.stringify(repeatedEndings.slice(0, 5))}`);
 if (repeatedShingles.length) errors.push(`repeated normalized 18-character structures: ${JSON.stringify(repeatedShingles.slice(0, 5))}`);
 
-const grams = (value, size = 8) => {
-  const result = new Set();
-  for (let index = 0; index <= value.length - size; index += 1) result.add(value.slice(index, index + size));
-  return result;
-};
 let maximumSimilarity = { score: 0, ids: [] };
 for (let left = 0; left < manifest.entries.length; left += 1) {
   for (let right = left + 1; right < manifest.entries.length; right += 1) {
@@ -175,6 +228,7 @@ const summary = {
   base_commit: manifest.base_commit,
   targets: manifest.entries.length,
   official_sources_resolved: `${sourceResolved}/200`,
+  human_reviewed_sources: `${research.human_reviewed_count}/200`,
   approved_samples_exact: `${approvedSampleExactMatches}/10`,
   description_hashes_match: `${descriptionHashMatches}/200`,
   character_corruption: corruptionCount,
