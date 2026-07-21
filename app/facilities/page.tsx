@@ -119,12 +119,18 @@ export default async function FacilitiesPage({ searchParams }: Props) {
         <PrefectureSelector
           prefectures={visiblePrefectures}
           selectedId={selectedPrefectureId}
+          disableEmpty={recommendedTag !== null}
         />
         <p className="mt-3 text-sm text-slate-500" aria-live="polite">
           {filters.q ? (
             <>
               「<span className="font-medium text-slate-700">{filters.q}</span>
               」の検索結果: {results.length} 件
+            </>
+          ) : recommendedTag ? (
+            <>
+              {selectedPrefecture ? `${selectedPrefecture.name} / ` : "全国 / "}
+              {results.length}件の施設
             </>
           ) : (
             <>全 {visibleFacilities.length} 施設 / 表示中 {results.length} 件</>

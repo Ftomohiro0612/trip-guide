@@ -151,7 +151,12 @@ export default async function TagPage({ params, searchParams }: Props) {
 
         {byPref.map((p) =>
           p.items.length === 0 ? null : (
-            <section key={p.id} className="mt-10" aria-labelledby={`pref-${p.id}`}>
+            <section
+              key={p.id}
+              className="mt-10"
+              aria-labelledby={`pref-${p.id}`}
+              data-prefecture-section={p.id}
+            >
               <div className="flex items-end justify-between mb-3">
                 <h2
                   id={`pref-${p.id}`}

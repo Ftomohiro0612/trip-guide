@@ -61,7 +61,72 @@ test("single-prefecture filtering never leaks another prefecture", () => {
       `${prefecture.name} leaked another prefecture`,
     );
   }
-  assert.equal(filterByPrefectureIds(visibleFacilities, []).length, 3734);
+  assert.equal(filterByPrefectureIds(visibleFacilities, []).length, 3732);
+});
+
+test("representative category and recommended-tag views stay in one prefecture", () => {
+  const categoryIds = ["theme-park", "park", "indoor-play"];
+  const recommendedTags = ["playground", "water_play"];
+
+  for (const prefectureId of ["chiba", "tokyo"]) {
+    for (const categoryId of categoryIds) {
+      const categoryFacilities = visibleFacilities.filter(
+        (facility) => facility.category_id === categoryId,
+      );
+      const results = filterByPrefectureIds(categoryFacilities, [prefectureId]);
+      assert(results.length > 0, `${prefectureId}/${categoryId} needs fixtures`);
+      assert(
+        results.every((facility) => facility.prefecture_id === prefectureId),
+        `${prefectureId}/${categoryId} leaked another prefecture`,
+      );
+    }
+
+    for (const recommendedTag of recommendedTags) {
+      const tagFacilities = visibleFacilities.filter((facility) =>
+        (facility.recommended_for_tags ?? []).includes(recommendedTag),
+      );
+      const results = filterByPrefectureIds(tagFacilities, [prefectureId]);
+      assert(
+        results.length > 0,
+        `${prefectureId}/${recommendedTag} needs fixtures`,
+      );
+      assert(
+        results.every((facility) => facility.prefecture_id === prefectureId),
+        `${prefectureId}/${recommendedTag} leaked another prefecture`,
+      );
+    }
+  }
+});
+
+test("category and theme routes share the canonical area selector", () => {
+  const categorySource = readFileSync(
+    new URL("app/category/[id]/page.tsx", root),
+    "utf8",
+  );
+  const facilitiesSource = readFileSync(
+    new URL("app/facilities/page.tsx", root),
+    "utf8",
+  );
+  const tagSource = readFileSync(
+    new URL("app/tag/[slug]/page.tsx", root),
+    "utf8",
+  );
+
+  for (const source of [categorySource, facilitiesSource, tagSource]) {
+    assert(source.includes('import PrefectureSelector from "@/components/PrefectureSelector"'));
+    assert(source.includes("selectedId={selectedPrefectureId}"));
+  }
+
+  assert(
+    categorySource.indexOf("<PrefectureSelector") <
+      categorySource.indexOf("<MapViewClient"),
+    "category selector must render before its map",
+  );
+  assert(categorySource.includes("facilities={filteredList}"));
+  assert(!categorySource.includes("storageKey={`category:"));
+  assert(categorySource.includes("data-prefecture-section={p.id}"));
+  assert(tagSource.includes("data-prefecture-section={p.id}"));
+  assert(facilitiesSource.includes("disableEmpty={recommendedTag !== null}"));
 });
 
 test("rainy-day is derived only from rain_friendly=◎", () => {
@@ -109,7 +174,7 @@ test("legacy rain tags are absent from data, types, and link generation", () => 
 
 test("facility identity and published boundary stay unchanged", () => {
   assert.equal(data.facilities.length, 3740);
-  assert.equal(visibleFacilities.length, 3734);
+  assert.equal(visibleFacilities.length, 3732);
   assert.equal(new Set(data.facilities.map(({ id }) => id)).size, 3740);
   assert.equal(new Set(data.facilities.map(({ slug }) => slug)).size, 3740);
 });
