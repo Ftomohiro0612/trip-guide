@@ -1,11 +1,21 @@
 "use client";
 
 import { useEffect, useMemo, useState } from "react";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
 import {
-  driveTimeEstimateLabel,
-  haversineDistanceKm,
-  nearbyDistanceCutoffKm,
+  FacilityPaginationControls,
+  FacilityPaginationSummary,
+  type FacilityPageSummary,
+} from "@/components/FacilityPagination";
+import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
+import {
+  buildFacilityPageHref,
+  paginateFacilities,
+  resetFacilityPage,
+} from "@/lib/facility-pagination";
+import { getNearbyFacilities } from "@/lib/facility-nearby";
+import {
   type Coordinate,
   type NearbyTravelMinutes,
 } from "@/lib/distance";
@@ -13,20 +23,11 @@ import type { Facility } from "@/types/facility";
 
 interface Props {
   facilities: Facility[];
+  page: FacilityPageSummary;
+  nearbyDataHref: string;
 }
 
 type LocationStatus = "idle" | "locating" | "ready" | "error";
-
-type PlacedFacility = Facility & {
-  latitude: number;
-  longitude: number;
-};
-
-type NearbyFacility = {
-  facility: PlacedFacility;
-  distanceKm: number;
-  proximityLabel: string;
-};
 
 const RANGE_OPTIONS: NearbyTravelMinutes[] = [30, 60, 90];
 const NEARBY_FILTER_STORAGE_KEY = "facilities:nearbyFilter";
@@ -39,15 +40,6 @@ type NearbyFilterSnapshot = {
   lat: number;
   lng: number;
 };
-
-function hasCoords(facility: Facility): facility is PlacedFacility {
-  return (
-    typeof facility.latitude === "number" &&
-    typeof facility.longitude === "number" &&
-    Number.isFinite(facility.latitude) &&
-    Number.isFinite(facility.longitude)
-  );
-}
 
 function locationErrorMessage(error: GeolocationPositionError) {
   if (error.code === 1) {
@@ -101,33 +93,24 @@ function readPersistedNearbyFilter(): NearbyFilterSnapshot | null {
       return null;
     }
 
-    return {
-      enabled: true,
-      minutes,
-      lat,
-      lng,
-    };
+    return { enabled: true, minutes, lat, lng };
   } catch {
     return null;
   }
 }
 
 function persistNearbyFilter(snapshot: NearbyFilterSnapshot) {
-  if (typeof window === "undefined") return;
-
   try {
     window.sessionStorage.setItem(
       NEARBY_FILTER_STORAGE_KEY,
       JSON.stringify(snapshot),
     );
   } catch {
-    // The nearby filter should still work for the current render.
+    // The nearby filter still works for the current render.
   }
 }
 
 function clearPersistedNearbyFilter() {
-  if (typeof window === "undefined") return;
-
   try {
     window.sessionStorage.removeItem(NEARBY_FILTER_STORAGE_KEY);
   } catch {
@@ -136,8 +119,6 @@ function clearPersistedNearbyFilter() {
 }
 
 function persistMapCurrentLocation(position: Coordinate) {
-  if (typeof window === "undefined") return;
-
   try {
     window.sessionStorage.setItem(
       CURRENT_LOCATION_STORAGE_KEY,
@@ -152,41 +133,32 @@ function persistMapCurrentLocation(position: Coordinate) {
   );
 }
 
-export default function NearbyFilterableFacilityList({ facilities }: Props) {
+export default function NearbyFilterableFacilityList({
+  facilities,
+  page,
+  nearbyDataHref,
+}: Props) {
+  const pathname = usePathname();
+  const router = useRouter();
+  const searchParams = useSearchParams();
   const [nearbyEnabled, setNearbyEnabled] = useState(false);
   const [rangeMinutes, setRangeMinutes] =
     useState<NearbyTravelMinutes>(60);
   const [currentLocation, setCurrentLocation] = useState<Coordinate | null>(
     null,
   );
+  const [nearbyCandidateResult, setNearbyCandidateResult] = useState<{
+    href: string;
+    facilities: Facility[];
+  } | null>(null);
   const [status, setStatus] = useState<LocationStatus>("idle");
   const [notice, setNotice] = useState<string | null>(null);
-
-  const nearbyFacilities = useMemo<NearbyFacility[]>(() => {
-    if (!nearbyEnabled || !currentLocation) return [];
-
-    const cutoffKm = nearbyDistanceCutoffKm(rangeMinutes);
-    return facilities
-      .filter(hasCoords)
-      .map((facility) => {
-        const distanceKm = haversineDistanceKm(currentLocation, [
-          facility.latitude,
-          facility.longitude,
-        ]);
-        return {
-          facility,
-          distanceKm,
-          proximityLabel: driveTimeEstimateLabel(distanceKm),
-        };
-      })
-      .filter((item) => item.distanceKm <= cutoffKm)
-      .sort(
-        (a, b) =>
-          a.distanceKm - b.distanceKm || a.facility.id - b.facility.id,
-      );
-  }, [currentLocation, facilities, nearbyEnabled, rangeMinutes]);
-
   const showingNearby = nearbyEnabled && currentLocation !== null;
+  const nearbyCandidates =
+    nearbyCandidateResult?.href === nearbyDataHref
+      ? nearbyCandidateResult.facilities
+      : null;
+  const loadingCandidates = showingNearby && nearbyCandidates === null;
 
   useEffect(() => {
     const snapshot = readPersistedNearbyFilter();
@@ -204,7 +176,6 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
 
   useEffect(() => {
     if (!showingNearby || !currentLocation) return;
-
     persistNearbyFilter({
       enabled: true,
       minutes: rangeMinutes,
@@ -213,8 +184,82 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
     });
   }, [currentLocation, rangeMinutes, showingNearby]);
 
+  useEffect(() => {
+    if (!showingNearby) return;
+
+    const controller = new AbortController();
+
+    async function loadCandidates() {
+      try {
+        const response = await fetch(nearbyDataHref, {
+          signal: controller.signal,
+        });
+        if (!response.ok) throw new Error("facility page data request failed");
+        const payload = (await response.json()) as { facilities?: unknown };
+        if (!Array.isArray(payload.facilities)) {
+          throw new Error("facility page data response was invalid");
+        }
+        setNearbyCandidateResult({
+          href: nearbyDataHref,
+          facilities: payload.facilities as Facility[],
+        });
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        console.error(error);
+        setNearbyEnabled(false);
+        setCurrentLocation(null);
+        clearPersistedNearbyFilter();
+        setStatus("error");
+        setNotice(
+          "近い順の候補を読み込めませんでした。通常の一覧を表示しています。",
+        );
+      }
+    }
+
+    void loadCandidates();
+    return () => controller.abort();
+  }, [nearbyDataHref, showingNearby]);
+
+  const nearbyFacilities = useMemo(() => {
+    if (!showingNearby || !currentLocation || !nearbyCandidates) return [];
+    return getNearbyFacilities(
+      nearbyCandidates,
+      currentLocation,
+      rangeMinutes,
+    );
+  }, [
+    currentLocation,
+    nearbyCandidates,
+    rangeMinutes,
+    showingNearby,
+  ]);
+
+  const nearbyPage = useMemo(
+    () => paginateFacilities(nearbyFacilities, searchParams.get("page")),
+    [nearbyFacilities, searchParams],
+  );
+  const effectivePage = showingNearby ? nearbyPage : page;
+  const displayedFacilities = showingNearby
+    ? nearbyPage.items.map((item) => item.facility)
+    : facilities;
+  const proximityLabels = new Map(
+    nearbyPage.items.map((item) => [
+      item.facility.id,
+      item.proximityLabel,
+    ]),
+  );
+
+  function navigateToFirstPage() {
+    const params = resetFacilityPage(new URLSearchParams(searchParams));
+    router.push(buildFacilityPageHref(pathname, params, 1), {
+      scroll: false,
+    });
+  }
+
   function updateRangeMinutes(minutes: NearbyTravelMinutes) {
+    if (minutes === rangeMinutes) return;
     setRangeMinutes(minutes);
+    if (showingNearby) navigateToFirstPage();
   }
 
   function requestCurrentLocation() {
@@ -248,6 +293,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
         persistMapCurrentLocation(nextLocation);
         setStatus("ready");
         setNotice(null);
+        navigateToFirstPage();
       },
       (error) => {
         setNearbyEnabled(false);
@@ -263,13 +309,26 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
   function clearNearbyFilter() {
     setNearbyEnabled(false);
     setCurrentLocation(null);
+    setNearbyCandidateResult(null);
     clearPersistedNearbyFilter();
     setStatus("idle");
     setNotice(null);
+    navigateToFirstPage();
   }
 
   return (
-    <>
+    <section aria-labelledby="facility-results-heading">
+      <div className="mb-4">
+        <h2
+          id="facility-results-heading"
+          tabIndex={-1}
+          className="mb-2 scroll-mt-24 text-xl font-bold text-slate-900 outline-none"
+        >
+          施設一覧
+        </h2>
+        <FacilityPaginationSummary page={effectivePage} />
+      </div>
+
       <section
         aria-label="現在地から近い施設の絞り込み"
         className="mb-4 rounded-xl border border-sky-100 bg-sky-50/70 px-3 py-3 sm:px-4"
@@ -307,11 +366,12 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
                     key={minutes}
                     type="button"
                     onClick={() => updateRangeMinutes(minutes)}
-                    className={`min-w-14 rounded-full px-2.5 py-1.5 text-xs font-bold transition-colors ${
-                      selected
+                    className={
+                      "min-w-14 rounded-full px-2.5 py-1.5 text-xs font-bold transition-colors " +
+                      (selected
                         ? "bg-blue-600 text-white"
-                        : "text-slate-600 hover:bg-slate-100"
-                    }`}
+                        : "text-slate-600 hover:bg-slate-100")
+                    }
                     aria-pressed={selected}
                   >
                     {minutes}分
@@ -326,7 +386,7 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
           <div className="mt-3 text-sm text-slate-700">
             <p className="font-bold text-slate-900">
               📍現在地から約{rangeMinutes}分以内（目安）:{" "}
-              {nearbyFacilities.length}件
+              {loadingCandidates ? "候補を確認中…" : nearbyFacilities.length + "件"}
             </p>
             <p className="mt-1 text-xs text-slate-500">
               車での所要時間は直線距離からの概算です。経路APIによる実際の移動時間ではありません。
@@ -345,34 +405,50 @@ export default function NearbyFilterableFacilityList({ facilities }: Props) {
         )}
       </section>
 
-      {showingNearby ? (
-        nearbyFacilities.length > 0 ? (
-          <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-            {nearbyFacilities.map(({ facility, proximityLabel }) => (
-              <FacilityCard
-                key={facility.id}
-                facility={facility}
-                proximityLabel={proximityLabel}
-              />
-            ))}
-          </div>
-        ) : (
-          <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
-            <p className="text-slate-700 font-medium">
-              この条件では{rangeMinutes}分以内に施設が見つかりません。
-            </p>
-            <p className="mt-1 text-sm text-slate-500">
-              時間を広げる、または絞り込みを外すと、近くの施設が見つかりやすくなります。
-            </p>
-          </div>
-        )
-      ) : (
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-3">
-          {facilities.map((facility) => (
-            <FacilityCard key={facility.id} facility={facility} />
+      {loadingCandidates && showingNearby ? (
+        <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
+          <p className="font-medium text-slate-700">近い施設を探しています…</p>
+        </div>
+      ) : displayedFacilities.length > 0 ? (
+        <div
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          data-facility-card-grid
+        >
+          {displayedFacilities.map((facility) => (
+            <FacilityCard
+              key={facility.id}
+              facility={facility}
+              proximityLabel={proximityLabels.get(facility.id)}
+            />
           ))}
         </div>
+      ) : (
+        <div className="rounded-2xl border border-slate-200 bg-white py-16 text-center">
+          <p className="text-4xl mb-2" aria-hidden>
+            😢
+          </p>
+          <p className="font-medium text-slate-700">
+            {showingNearby
+              ? "この条件では" +
+                rangeMinutes +
+                "分以内に施設が見つかりません。"
+              : "条件に合う施設が見つかりませんでした"}
+          </p>
+          <p className="mt-1 text-sm text-slate-500">
+            {showingNearby
+              ? "時間を広げる、または絞り込みを外すと、近くの施設が見つかりやすくなります。"
+              : "条件を絞り込みすぎていないか、ご確認ください。"}
+          </p>
+        </div>
       )}
-    </>
+
+      {!loadingCandidates && (
+        <FacilityPaginationControls page={effectivePage} />
+      )}
+
+      {!loadingCandidates && displayedFacilities.length > 0 && (
+        <ResponsiveResultsMap facilities={displayedFacilities} />
+      )}
+    </section>
   );
 }

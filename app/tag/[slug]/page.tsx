@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import FacilityCard from "@/components/FacilityCard";
+import {
+  FacilityPaginationControls,
+  FacilityPaginationSummary,
+} from "@/components/FacilityPagination";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import { visibleFacilities, prefectures } from "@/lib/facilities";
@@ -15,6 +19,11 @@ import { resolvePrefectureId } from "@/lib/facility-area-filter";
 import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { RawSearchParams } from "@/lib/filter";
+import {
+  groupFacilityPageByPrefecture,
+  orderFacilitiesByPrefecture,
+  paginateFacilities,
+} from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -63,16 +72,22 @@ export default async function TagPage({ params, searchParams }: Props) {
         (facility) => facility.prefecture_id === selectedPrefectureId,
       )
     : list;
+  const orderedList = orderFacilitiesByPrefecture(filteredList, prefectures);
+  const facilityPage = paginateFacilities(
+    orderedList,
+    asSingleParam(sp.page),
+  );
   const prefectureOptions = prefectures.map((prefecture) => ({
     ...prefecture,
     count: list.filter(
       (facility) => facility.prefecture_id === prefecture.id,
     ).length,
   }));
-  const byPref = prefectures.map((p) => ({
-    ...p,
-    items: filteredList.filter((f) => f.prefecture_id === p.id),
-  }));
+  const byPref = groupFacilityPageByPrefecture(
+    facilityPage.items,
+    prefectures,
+    orderedList[facilityPage.startIndex - 1]?.prefecture_id,
+  );
   const pageTitle = selectedPrefecture
     ? `${selectedPrefecture.name}の${meta.title}`
     : meta.title;
@@ -88,7 +103,7 @@ export default async function TagPage({ params, searchParams }: Props) {
       />
       <ItemListJsonLd
         name={pageTitle}
-        items={filteredList.map((f) => ({
+        items={facilityPage.items.map((f) => ({
           name: f.name,
           href: `/facilities/${f.slug}`,
         }))}
@@ -128,14 +143,17 @@ export default async function TagPage({ params, searchParams }: Props) {
           selectedId={selectedPrefectureId}
           disableEmpty
         />
-        <p
-          id="facility-results"
-          className="mt-3 text-sm font-semibold text-slate-700"
-          aria-live="polite"
-        >
-          {selectedPrefecture ? `${selectedPrefecture.name} / ` : "全国 / "}
-          {filteredList.length}件の施設
-        </p>
+        <div className="mt-5" id="facility-results">
+          <h2
+            id="facility-results-heading"
+            tabIndex={-1}
+            className="mb-2 scroll-mt-24 text-xl font-bold text-slate-900 outline-none"
+          >
+            {selectedPrefecture ? selectedPrefecture.name + "の" : ""}
+            施設一覧
+          </h2>
+          <FacilityPaginationSummary page={facilityPage} />
+        </div>
         <p className="text-slate-700 leading-relaxed max-w-3xl">{meta.long}</p>
 
         {filteredList.length === 0 && (
@@ -157,13 +175,18 @@ export default async function TagPage({ params, searchParams }: Props) {
               aria-labelledby={`pref-${p.id}`}
               data-prefecture-section={p.id}
             >
-              <div className="flex items-end justify-between mb-3">
+              <div className="mb-3 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                 <h2
                   id={`pref-${p.id}`}
-                  className="text-xl font-bold text-slate-900 flex items-center gap-2"
+                  className="flex flex-wrap items-center gap-2 text-xl font-bold text-slate-900"
                 >
                   <span aria-hidden>{prefectureEmoji[p.id]}</span>
                   {p.name}の{meta.title}
+                  {p.currentPageContinuesPrefecture && (
+                    <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-bold text-sky-700">
+                      {p.name}の続き
+                    </span>
+                  )}
                   <span className="text-sm font-normal text-slate-500">
                     {p.items.length}件
                   </span>
@@ -184,8 +207,10 @@ export default async function TagPage({ params, searchParams }: Props) {
           ),
         )}
 
+        <FacilityPaginationControls page={facilityPage} />
+
         {filteredList.length > 0 && (
-          <ResponsiveResultsMap facilities={filteredList} />
+          <ResponsiveResultsMap facilities={facilityPage.items} />
         )}
 
         <section className="mt-12">

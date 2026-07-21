@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
 import SortSelect from "@/components/SortSelect";
+import { resetFacilityPage } from "@/lib/facility-pagination";
 import type { CategoryMeta, PrefectureMeta } from "@/types/facility";
 
 interface Props {
@@ -51,6 +52,7 @@ export default function MobileFilterBar({
   }
 
   function update(params: URLSearchParams) {
+    resetFacilityPage(params);
     startTransition(() => {
       const s = params.toString();
       router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });

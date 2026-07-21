@@ -6,20 +6,11 @@ import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
 import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import PrefectureSelector from "@/components/PrefectureSelector";
-import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
-import {
-  applyFilters,
-  hasActiveFilters,
-  parseFilterParams,
-  type RawSearchParams,
-} from "@/lib/filter";
+import type { RawSearchParams } from "@/lib/filter";
 import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
-import {
-  filterByPrefectureIds,
-  resolvePrefectureId,
-} from "@/lib/facility-area-filter";
-import type { RecommendedForTag } from "@/types/facility";
+import { getFacilityListResults } from "@/lib/facility-list-results";
+import { paginateFacilities } from "@/lib/facility-pagination";
 
 export const metadata: Metadata = {
   title: "施設一覧",
@@ -43,41 +34,33 @@ function asSingleParam(value: string | string[] | undefined): string {
   return Array.isArray(value) ? value[0] ?? "" : value;
 }
 
-function isRecommendedForTag(value: string): value is RecommendedForTag {
-  return Object.prototype.hasOwnProperty.call(
-    RECOMMENDED_FOR_TAG_HEADLINE,
-    value,
-  );
+function buildNearbyDataHref(searchParams: RawSearchParams): string {
+  const params = new URLSearchParams();
+  for (const [key, rawValue] of Object.entries(searchParams)) {
+    if (rawValue === undefined || key === "page") continue;
+    const values = Array.isArray(rawValue) ? rawValue : [rawValue];
+    for (const value of values) params.append(key, value);
+  }
+  const query = params.toString();
+  return query
+    ? "/api/facilities/page-data?" + query
+    : "/api/facilities/page-data";
 }
 
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
-  const filters = parseFilterParams(sp);
-  const recommendedTagParam = asSingleParam(sp.recommended_tag);
-  const recommendedTag = isRecommendedForTag(recommendedTagParam)
-    ? recommendedTagParam
-    : null;
-  const selectedPrefectureId = resolvePrefectureId(
-    asSingleParam(sp.prefecture),
-    prefectures,
-  );
+  const {
+    filters,
+    recommendedTag,
+    selectedPrefectureId,
+    tagFilteredResults,
+    results,
+  } = getFacilityListResults(sp);
   const selectedPrefecture = prefectures.find(
     (prefecture) => prefecture.id === selectedPrefectureId,
   );
-  const filtersWithoutArea = { ...filters, prefectures: [] };
-  const baseResults = applyFilters(visibleFacilities, filtersWithoutArea);
-  const tagFilteredResults = recommendedTag
-    ? baseResults.filter((f) =>
-        (f.recommended_for_tags ?? []).includes(recommendedTag),
-      )
-    : baseResults;
-  const selectedPrefectureIds = selectedPrefectureId
-    ? [selectedPrefectureId]
-    : filters.prefectures;
-  const results = filterByPrefectureIds(
-    tagFilteredResults,
-    selectedPrefectureIds,
-  );
+  const page = paginateFacilities(results, asSingleParam(sp.page));
+  const nearbyDataHref = buildNearbyDataHref(sp);
   const visiblePrefectures = prefectures.map((p) => ({
     ...p,
     count: tagFilteredResults.filter((f) => f.prefecture_id === p.id).length,
@@ -86,10 +69,6 @@ export default async function FacilitiesPage({ searchParams }: Props) {
     ...c,
     count: visibleFacilities.filter((f) => f.category_id === c.id).length,
   }));
-  const active =
-    hasActiveFilters(filters) ||
-    recommendedTag !== null ||
-    selectedPrefectureId !== null;
   const headline = recommendedTag
     ? selectedPrefecture
       ? `${selectedPrefecture.name}の${RECOMMENDED_FOR_TAG_HEADLINE[recommendedTag]}`
@@ -155,42 +134,19 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             prefectures={visiblePrefectures}
             categories={visibleCategories}
           />
-          <div className="flex items-center justify-between mb-4">
-            <p className="text-sm font-semibold text-slate-800">
-              {results.length}
-              <span className="font-normal text-slate-500">
-                件の施設が見つかりました
-              </span>
-              {active && (
-                <span className="ml-2 text-xs text-sky-600 font-normal">
-                  絞り込み中
-                </span>
-              )}
-            </p>
+          <div className="mb-4 flex items-center justify-end">
             <div className="hidden lg:block">
               <SortSelect />
             </div>
           </div>
 
-          {results.length === 0 ? (
-            <div className="text-center py-16 bg-white border border-slate-200 rounded-2xl">
-              <p className="text-4xl mb-2" aria-hidden>
-                😢
-              </p>
-              <p className="text-slate-700 font-medium">
-                条件に合う施設が見つかりませんでした
-              </p>
-              <p className="text-sm text-slate-500 mt-1">
-                条件を絞り込みすぎていないか、ご確認ください。
-              </p>
-            </div>
-          ) : (
-            <NearbyFilterableFacilityList facilities={results} />
-          )}
+          <NearbyFilterableFacilityList
+            facilities={page.items}
+            page={page}
+            nearbyDataHref={nearbyDataHref}
+          />
         </section>
       </div>
-
-      {results.length > 0 && <ResponsiveResultsMap facilities={results} />}
     </div>
   );
 }

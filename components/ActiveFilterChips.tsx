@@ -3,6 +3,7 @@
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import { resetFacilityPage } from "@/lib/facility-pagination";
 import type { RecommendedForTag } from "@/types/facility";
 
 interface ChipsProps {
@@ -31,6 +32,7 @@ export default function ActiveFilterChips({
   const [, startTransition] = useTransition();
 
   function update(params: URLSearchParams) {
+    resetFacilityPage(params);
     startTransition(() => {
       const s = params.toString();
       router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });

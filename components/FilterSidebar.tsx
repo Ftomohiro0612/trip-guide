@@ -3,6 +3,7 @@
 import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import { resetFacilityPage } from "@/lib/facility-pagination";
 import type {
   CategoryMeta,
   PrefectureMeta,
@@ -61,6 +62,7 @@ export default function FilterSidebar({
   }
 
   function update(params: URLSearchParams) {
+    resetFacilityPage(params);
     startTransition(() => {
       const s = params.toString();
       router.push(s ? `${pathname}?${s}` : pathname, { scroll: false });

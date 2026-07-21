@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState, useTransition } from "react";
 import { getPrefectureSelectorState } from "@/lib/facility-area-filter";
+import { resetFacilityPage } from "@/lib/facility-pagination";
 import type { PrefectureId } from "@/types/facility";
 
 type PrefectureOption = {
@@ -105,6 +106,7 @@ export default function PrefectureSelector({
     params.delete("prefectures");
     if (nextId) params.set("prefecture", nextId);
     else params.delete("prefecture");
+    resetFacilityPage(params);
 
     setOpen(false);
     startTransition(() => {

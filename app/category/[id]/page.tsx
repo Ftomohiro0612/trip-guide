@@ -3,6 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
+import {
+  FacilityPaginationControls,
+  FacilityPaginationSummary,
+} from "@/components/FacilityPagination";
 import MapViewClient from "@/components/MapViewClient";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import {
@@ -20,6 +24,11 @@ import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { isPilotCross } from "@/lib/crossings";
 import type { RawSearchParams } from "@/lib/filter";
+import {
+  groupFacilityPageByPrefecture,
+  orderFacilitiesByPrefecture,
+  paginateFacilities,
+} from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -66,6 +75,11 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     list,
     selectedPrefectureId ? [selectedPrefectureId] : [],
   );
+  const orderedList = orderFacilitiesByPrefecture(filteredList, prefectures);
+  const facilityPage = paginateFacilities(
+    orderedList,
+    asSingleParam(sp.page),
+  );
   const prefectureOptions = prefectures.map((prefecture) => ({
     ...prefecture,
     count: list.filter(
@@ -78,22 +92,19 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     ? `${selectedPrefecture.name}の${meta.name}`
     : meta.name;
 
-  const visiblePrefectureSections = prefectures
-    .filter(
-      (prefecture) =>
-        !selectedPrefectureId || prefecture.id === selectedPrefectureId,
-    )
-    .map((prefecture) => ({
-      ...prefecture,
-      items: filteredList.filter(
-        (facility) => facility.prefecture_id === prefecture.id,
-      ),
-    }));
+  const visiblePrefectureSections = groupFacilityPageByPrefecture(
+    facilityPage.items,
+    prefectures,
+    orderedList[facilityPage.startIndex - 1]?.prefecture_id,
+  );
 
   const rainCount = filteredList.filter(
     (facility) => facility.rain_friendly === "◎",
   ).length;
   const freeCount = filteredList.filter((facility) => facility.is_free).length;
+  const resultPrefectureCount = new Set(
+    filteredList.map((facility) => facility.prefecture_id),
+  ).size;
 
   return (
     <div>
@@ -102,7 +113,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       />
       <ItemListJsonLd
         name={pageTitle}
-        items={filteredList.map((f) => ({
+        items={facilityPage.items.map((f) => ({
           name: f.name,
           href: `/facilities/${f.slug}`,
         }))}
@@ -143,14 +154,17 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           selectedId={selectedPrefectureId}
           disableEmpty
         />
-        <p
-          id="facility-results"
-          className="mt-3 text-sm font-semibold text-slate-700"
-          aria-live="polite"
-        >
-          {selectedPrefecture ? `${selectedPrefecture.name} / ` : "全国 / "}
-          {filteredList.length}件の施設
-        </p>
+        <div className="mt-5" id="facility-results">
+          <h2
+            id="facility-results-heading"
+            tabIndex={-1}
+            className="mb-2 scroll-mt-24 text-xl font-bold text-slate-900 outline-none"
+          >
+            {selectedPrefecture ? selectedPrefecture.name + "の" : ""}
+            施設一覧
+          </h2>
+          <FacilityPaginationSummary page={facilityPage} />
+        </div>
 
         {filteredList.length > 0 && (
           <section className="mb-8" aria-labelledby="category-map-heading">
@@ -160,10 +174,10 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             >
               📍 地図で見る
               <span className="text-sm font-normal text-slate-500 ml-2">
-                {filteredList.length}件
+                {facilityPage.items.length}件
               </span>
             </h2>
-            <MapViewClient facilities={filteredList} height={420} />
+            <MapViewClient facilities={facilityPage.items} height={420} />
           </section>
         )}
 
@@ -173,7 +187,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           <Stat label="無料" count={freeCount} emoji="🆓" />
           <Stat
             label="エリア数"
-            count={visiblePrefectureSections.filter((p) => p.items.length > 0).length}
+            count={resultPrefectureCount}
             emoji="📍"
           />
         </div>
@@ -200,10 +214,15 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               <div className="flex flex-col gap-2 mb-3 sm:flex-row sm:items-end sm:justify-between">
                 <h2
                   id={`pref-${p.id}`}
-                  className="text-xl font-bold text-slate-900 flex items-center gap-2"
+                  className="flex flex-wrap items-center gap-2 text-xl font-bold text-slate-900"
                 >
                   <span aria-hidden>{prefectureEmoji[p.id]}</span>
                   {p.name}の{meta.name}
+                  {p.currentPageContinuesPrefecture && (
+                    <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-bold text-sky-700">
+                      {p.name}の続き
+                    </span>
+                  )}
                   <span className="text-sm font-normal text-slate-500">
                     {p.items.length}件
                   </span>
@@ -233,6 +252,8 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             </section>
           ),
         )}
+
+        <FacilityPaginationControls page={facilityPage} />
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">他のカテゴリもチェック</h2>

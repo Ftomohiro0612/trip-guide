@@ -2,6 +2,7 @@
 
 import { useRouter, usePathname, useSearchParams } from "next/navigation";
 import { useTransition } from "react";
+import { resetFacilityPage } from "@/lib/facility-pagination";
 
 const OPTIONS: { value: string; label: string }[] = [
   { value: "recommend", label: "おすすめ順" },
@@ -19,6 +20,7 @@ export default function SortSelect() {
 
   function onChange(e: React.ChangeEvent<HTMLSelectElement>) {
     const params = new URLSearchParams(searchParams);
+    resetFacilityPage(params);
     if (e.target.value === "recommend") params.delete("sort");
     else params.set("sort", e.target.value);
     startTransition(() => {
