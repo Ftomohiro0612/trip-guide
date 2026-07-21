@@ -869,6 +869,7 @@ function validatePmLocationReview(checkpoint, reviewed) {
   const approvedPmSeeds = new Map([
     [100, "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|"],
     [200, "checkpoint200-pm-v1|c30465c8d595e3ad22b67a6ec4ae6bb3201ae015|"],
+    [300, "checkpoint300-pm-v1|053d74a5327199fc70511432d4a8c026d80d8247|"],
   ]);
   const expectedSeed = approvedPmSeeds.get(checkpoint.target);
   if (!expectedSeed) {
