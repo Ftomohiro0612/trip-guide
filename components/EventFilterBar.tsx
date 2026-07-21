@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
 import EventDateReservationFilters from "@/components/EventDateReservationFilters";
@@ -12,7 +12,6 @@ import {
   type EventDateRange,
   type EventQuickFilter,
   type EventReservationFilter,
-  type EventTypeFilterValue,
 } from "@/lib/event-filter";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import type { EventPrefecture, EventView } from "@/lib/events";
@@ -28,7 +27,6 @@ interface EventFilterBarProps {
   prefectureOptions?: PrefectureOption[];
   showPrefectureFilter?: boolean;
   showPrefectureOnCard?: boolean;
-  showEventTypeFilter?: boolean;
   referenceDate: string;
 }
 
@@ -37,30 +35,15 @@ const QUICK_FILTERS: { key: EventQuickFilter; label: string }[] = [
   { key: "free", label: "無料" },
 ];
 
-const EVENT_TYPE_FILTERS: {
-  key: EventTypeFilterValue;
-  label: string;
-  icon: string;
-}[] = [
-  { key: "fireworks", label: "花火大会", icon: "🎆" },
-  { key: "summer_festival", label: "夏祭り・盆踊り", icon: "🏮" },
-  { key: "summer_tradition", label: "縁日・灯籠・風鈴", icon: "🎐" },
-  { key: "night_outing", label: "夜のおでかけ", icon: "🌙" },
-];
-
 export default function EventFilterBar({
   views,
   prefectureOptions = [],
   showPrefectureFilter = true,
   showPrefectureOnCard = true,
-  showEventTypeFilter = false,
   referenceDate,
 }: EventFilterBarProps) {
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedEventTypes, setSelectedEventTypes] = useState<
-    EventTypeFilterValue[]
-  >([]);
   const [selectedPrefectures, setSelectedPrefectures] = useState<
     EventPrefecture[]
   >([]);
@@ -80,6 +63,27 @@ export default function EventFilterBar({
     RecommendedForTag[]
   >([]);
 
+  useEffect(() => {
+    if (window.location.pathname !== "/events") return;
+
+    function discardLegacyTypeQuery() {
+      const url = new URL(window.location.href);
+      if (!url.searchParams.has("type")) return;
+
+      url.searchParams.delete("type");
+      window.history.replaceState(
+        null,
+        "",
+        `${url.pathname}${url.search}${url.hash}`,
+      );
+    }
+
+    discardLegacyTypeQuery();
+    window.addEventListener("popstate", discardLegacyTypeQuery);
+    return () =>
+      window.removeEventListener("popstate", discardLegacyTypeQuery);
+  }, []);
+
   const availableRecommendedTags = useMemo(() => {
     const tags = new Set<RecommendedForTag>();
     for (const view of views) {
@@ -98,7 +102,7 @@ export default function EventFilterBar({
       filterEventViews(
         views,
         {
-          eventTypes: selectedEventTypes,
+          eventTypes: [],
           prefectures: selectedPrefectures,
           quickFilters: selectedQuickFilters,
           recommendedTags: selectedRecommendedTags,
@@ -110,7 +114,6 @@ export default function EventFilterBar({
         showPrefectureFilter,
       ),
     [
-      selectedEventTypes,
       selectedPrefectures,
       selectedQuickFilters,
       selectedRecommendedTags,
@@ -124,7 +127,6 @@ export default function EventFilterBar({
   );
 
   const hasActiveFilters =
-    selectedEventTypes.length > 0 ||
     selectedPrefectures.length > 0 ||
     selectedQuickFilters.length > 0 ||
     selectedRecommendedTags.length > 0 ||
@@ -188,7 +190,6 @@ export default function EventFilterBar({
             type="button"
             onClick={() => {
               setCurrentPage(1);
-              setSelectedEventTypes([]);
               setSelectedPrefectures([]);
               setSelectedQuickFilters([]);
               setSelectedRecommendedTags([]);
@@ -244,26 +245,6 @@ export default function EventFilterBar({
                   }}
                 >
                   {prefecture.name}
-                </FilterButton>
-              ))}
-            </FilterGroup>
-          ) : null}
-
-          {showEventTypeFilter ? (
-            <FilterGroup label="イベントの種類" dataAttribute="event-type">
-              {EVENT_TYPE_FILTERS.map((type) => (
-                <FilterButton
-                  key={type.key}
-                  active={selectedEventTypes.includes(type.key)}
-                  dataAttribute={`event-type-${type.key}`}
-                  onClick={() => {
-                    setCurrentPage(1);
-                    setSelectedEventTypes((current) =>
-                      toggleValue(current, type.key),
-                    );
-                  }}
-                >
-                  <span aria-hidden>{type.icon}</span> {type.label}
                 </FilterButton>
               ))}
             </FilterGroup>

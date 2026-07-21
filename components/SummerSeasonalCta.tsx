@@ -44,13 +44,20 @@ export default function SummerSeasonalCta({
                 className="text-3xl font-bold tracking-tight text-balance sm:text-4xl"
               >
                 {isEventsPage
-                  ? "🎆 2026年 夏祭り・花火大会"
+                  ? "🎆 花火大会・夏祭りを探す"
                   : `🎆 ${SUMMER_2026_HUB_CONFIG.ctaTitle}`}
               </h2>
               <p className="mt-3 max-w-2xl text-sm leading-relaxed text-indigo-50 sm:text-base">
-                {isEventsPage
-                  ? "全国47都道府県の公式確認済みの花火大会・夏祭りをまとめました。"
-                  : "今週末に行ける花火やお祭りを、全国47都道府県から探せます。"}
+                {isEventsPage ? (
+                  <Link
+                    href={SUMMER_2026_HUB_CONFIG.path}
+                    className="font-bold underline decoration-indigo-200 underline-offset-4 hover:text-amber-100"
+                  >
+                    全国の夏イベントは、夏祭り・花火特集で詳しく探せます →
+                  </Link>
+                ) : (
+                  "今週末に行ける花火やお祭りを、全国47都道府県から探せます。"
+                )}
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold sm:text-sm">
                 <ShortcutLink href="/events/summer?date=weekend#summer-filters">
