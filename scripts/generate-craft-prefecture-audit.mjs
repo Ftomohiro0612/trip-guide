@@ -15,9 +15,6 @@ const visible = facilitiesData.facilities.filter(
   (facility) => facility.data_quality_status !== "exclude_candidate",
 );
 const byId = new Map(visible.map((facility) => [facility.id, facility]));
-const evidenceById = new Map(
-  evidence.records.map((record) => [record.facility_id, record]),
-);
 const reclassifiedByPrefecture = new Map();
 for (const record of reclassifications.records) {
   const prefectureId = byId.get(record.facility_id)?.prefecture_id;

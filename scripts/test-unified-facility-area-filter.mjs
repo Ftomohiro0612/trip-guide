@@ -122,10 +122,10 @@ test("category and theme routes share the canonical area selector", () => {
       categorySource.indexOf("<MapViewClient"),
     "category selector must render before its map",
   );
-  assert(categorySource.includes("facilities={facilityPage.items}"));
-  assert(categorySource.includes("paginateFacilities("));
+  assert(categorySource.includes("facilities={result.mapFacilities}"));
+  assert(categorySource.includes("getFacilitiesForCategoryPage("));
   assert(!categorySource.includes("storageKey={`category:"));
-  assert(categorySource.includes("data-prefecture-section={p.id}"));
+  assert(categorySource.includes("data-prefecture-section={section.id}"));
   assert(tagSource.includes("data-prefecture-section={p.id}"));
   assert(facilitiesSource.includes("disableEmpty={recommendedTag !== null}"));
 });
