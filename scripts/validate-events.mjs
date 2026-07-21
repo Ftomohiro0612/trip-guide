@@ -814,6 +814,26 @@ function validateSummerLocationResearch(research, locationsByEventId, eventsById
       checkpoint.hold_count,
       reviewed.filter((item) => item.outcome === "hold").length,
     );
+    if (checkpoint.target >= 400) {
+      checkCount(
+        `summer location checkpoint ${checkpoint.target}.exact_venue_count`,
+        checkpoint.exact_venue_count,
+        reviewed.filter((item) => item.coordinate_precision === "exact_venue").length,
+      );
+      checkCount(
+        `summer location checkpoint ${checkpoint.target}.area_representative_count`,
+        checkpoint.area_representative_count,
+        reviewed.filter(
+          (item) => item.coordinate_precision === "area_representative",
+        ).length,
+      );
+      checkCount(
+        `summer location checkpoint ${checkpoint.target}.geocoded_venue_count`,
+        checkpoint.geocoded_venue_count,
+        reviewed.filter((item) => item.coordinate_precision === "geocoded_venue")
+          .length,
+      );
+    }
 
     for (const item of reviewed) {
       const location = locationsByEventId[item.event_id];
@@ -870,6 +890,7 @@ function validatePmLocationReview(checkpoint, reviewed) {
     [100, "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|"],
     [200, "checkpoint200-pm-v1|c30465c8d595e3ad22b67a6ec4ae6bb3201ae015|"],
     [300, "checkpoint300-pm-v1|053d74a5327199fc70511432d4a8c026d80d8247|"],
+    [400, "checkpoint400-pm-v1|c8f623a8f08a8711923232d85a87475cff9df860|"],
   ]);
   const expectedSeed = approvedPmSeeds.get(checkpoint.target);
   if (!expectedSeed) {
