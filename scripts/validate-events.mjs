@@ -130,6 +130,19 @@ for (const event of adoptedEvents) {
   }
 }
 
+const canonicalEvents = [
+  ...base.events.map((event) => ({
+    ...event,
+    ...classificationsById.get(event.id),
+  })),
+  ...summer.events,
+];
+for (const event of canonicalEvents) {
+  validateRequiredReservationGate(event, event.id);
+}
+const canonicalReservationCounts = countReservations(canonicalEvents);
+const summerReservationCounts = countReservations(adoptedEvents);
+
 for (const [id, requiredHost] of requiredPrimaryHosts) {
   const event = adoptedEvents.find((candidate) => candidate.id === id);
   if (!event) continue;
@@ -486,6 +499,8 @@ const summary = {
   null_facility_events: nullFacilityCount,
   occurrence_dates_events: occurrenceDatesCount,
   free_filter_events: freeCount,
+  canonical_reservation_counts: canonicalReservationCounts,
+  summer_reservation_counts: summerReservationCounts,
   no_reservation_filter_events: noReservationCount,
   hero_pool: summer.metadata.hero_event_ids.length,
   summer_map_overlay_events: locationEntries.length,
@@ -590,6 +605,24 @@ function validateFreeAndReservation(event, label) {
       "reservation=not_required requires a label that explicitly states no reservation or free participation",
     );
   }
+}
+
+function validateRequiredReservationGate(event, label) {
+  if (event.reservation !== "required") return;
+  if (String(event.reservation_label ?? "").trim() === "") {
+    error(label, "reservation=required requires a non-empty reservation_label");
+  }
+  if (!urlPattern.test(String(event.official_url ?? "").trim())) {
+    error(label, "reservation=required requires a valid official_url");
+  }
+}
+
+function countReservations(events) {
+  const counts = { required: 0, not_required: 0, unknown: 0 };
+  for (const event of events) {
+    if (event.reservation in counts) counts[event.reservation] += 1;
+  }
+  return counts;
 }
 
 function validateOccurrenceDates(values, startDate, endDate, label) {

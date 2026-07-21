@@ -36,58 +36,44 @@ export default function Header() {
             >
               <span aria-hidden>🆓 </span>無料で遊べる
             </Link>
-            <span
-              data-seasonal-slot="summer-2026"
-              data-seasonal-device="desktop"
-              className="grid"
-            >
-              <Link
-                href="/events"
-                data-seasonal-panel="summer-2026"
-                data-seasonal-fallback="summer-2026"
-                data-seasonal-layout="inline-flex"
-                className="items-center rounded-md px-2 py-1.5 transition-colors hover:bg-violet-50 hover:text-violet-600 sm:px-3"
-              >
-                <span aria-hidden>🎪 </span>イベント一覧
-              </Link>
-              <Link
-                href="/events/summer"
-                data-seasonal-panel="summer-2026"
-                data-seasonal-hub="summer-2026"
-                data-seasonal-layout="inline-flex"
-                className="items-center rounded-md bg-indigo-50 px-2 py-1.5 font-bold text-indigo-700 transition-colors hover:bg-indigo-100 sm:px-3"
-              >
-                🎆 夏祭り・花火
-              </Link>
-            </span>
-          </nav>
-          <span
-            data-seasonal-slot="summer-2026"
-            data-seasonal-device="mobile"
-            className="grid sm:hidden"
-          >
             <Link
               href="/events"
-              data-seasonal-panel="summer-2026"
-              data-seasonal-fallback="summer-2026"
-              data-seasonal-layout="inline-flex"
-              className="min-h-11 items-center justify-center whitespace-nowrap rounded-full bg-violet-50 px-2.5 py-1.5 text-[11px] font-bold text-violet-700"
+              className="inline-flex items-center rounded-md px-2 py-1.5 transition-colors hover:bg-violet-50 hover:text-violet-600 sm:px-3"
             >
-              🎪 イベント
+              <span aria-hidden>🎪 </span>イベント一覧
             </Link>
             <Link
               href="/events/summer"
-              data-seasonal-panel="summer-2026"
               data-seasonal-hub="summer-2026"
               data-seasonal-layout="inline-flex"
-              className="min-h-11 items-center justify-center whitespace-nowrap rounded-full bg-indigo-50 px-2.5 py-1.5 text-[11px] font-bold text-indigo-700"
+              className="items-center rounded-md bg-indigo-50 px-2 py-1.5 font-bold text-indigo-700 transition-colors hover:bg-indigo-100 sm:px-3"
             >
               🎆 夏祭り・花火
             </Link>
-          </span>
+          </nav>
           <HeaderAuthButton />
         </div>
       </div>
+      <nav
+        aria-label="イベント特集"
+        data-mobile-seasonal-navigation
+        className="flex gap-2 px-3 pb-2 sm:hidden"
+      >
+        <Link
+          href="/events/summer"
+          data-seasonal-hub="summer-2026"
+          data-seasonal-layout="inline-flex"
+          className="min-h-10 flex-1 items-center justify-center whitespace-nowrap rounded-lg bg-indigo-50 px-3 py-2 text-xs font-bold text-indigo-700"
+        >
+          🎆 夏祭り・花火
+        </Link>
+        <Link
+          href="/events"
+          className="inline-flex min-h-10 flex-1 items-center justify-center whitespace-nowrap rounded-lg bg-violet-50 px-3 py-2 text-xs font-bold text-violet-700"
+        >
+          🎪 すべてのイベント
+        </Link>
+      </nav>
     </header>
   );
 }

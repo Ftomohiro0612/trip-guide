@@ -3,10 +3,15 @@
 import { useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
+import EventDateReservationFilters from "@/components/EventDateReservationFilters";
 import {
   filterEventViews,
+  getDateOnlyInTimeZone,
   paginateEventViews,
+  type EventDatePreset,
+  type EventDateRange,
   type EventQuickFilter,
+  type EventReservationFilter,
   type EventTypeFilterValue,
 } from "@/lib/event-filter";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
@@ -24,14 +29,12 @@ interface EventFilterBarProps {
   showPrefectureFilter?: boolean;
   showPrefectureOnCard?: boolean;
   showEventTypeFilter?: boolean;
+  referenceDate: string;
 }
 
 const QUICK_FILTERS: { key: EventQuickFilter; label: string }[] = [
-  { key: "weekend", label: "今週末" },
-  { key: "month", label: "今月" },
   { key: "indoor", label: "屋内" },
   { key: "free", label: "無料" },
-  { key: "noReservation", label: "予約不要" },
 ];
 
 const EVENT_TYPE_FILTERS: {
@@ -51,6 +54,7 @@ export default function EventFilterBar({
   showPrefectureFilter = true,
   showPrefectureOnCard = true,
   showEventTypeFilter = false,
+  referenceDate,
 }: EventFilterBarProps) {
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
@@ -63,6 +67,15 @@ export default function EventFilterBar({
   const [selectedQuickFilters, setSelectedQuickFilters] = useState<
     EventQuickFilter[]
   >([]);
+  const [dateRange, setDateRange] = useState<EventDateRange>({
+    startDate: "",
+    endDate: "",
+  });
+  const [datePreset, setDatePreset] = useState<EventDatePreset | null>(null);
+  const [datePresetReferenceDate, setDatePresetReferenceDate] =
+    useState(referenceDate);
+  const [reservation, setReservation] =
+    useState<EventReservationFilter | null>(null);
   const [selectedRecommendedTags, setSelectedRecommendedTags] = useState<
     RecommendedForTag[]
   >([]);
@@ -89,6 +102,10 @@ export default function EventFilterBar({
           prefectures: selectedPrefectures,
           quickFilters: selectedQuickFilters,
           recommendedTags: selectedRecommendedTags,
+          dateRange,
+          datePreset,
+          referenceDate: datePresetReferenceDate,
+          reservation,
         },
         showPrefectureFilter,
       ),
@@ -97,6 +114,10 @@ export default function EventFilterBar({
       selectedPrefectures,
       selectedQuickFilters,
       selectedRecommendedTags,
+      datePreset,
+      dateRange,
+      datePresetReferenceDate,
+      reservation,
       showPrefectureFilter,
       views,
     ],
@@ -106,7 +127,9 @@ export default function EventFilterBar({
     selectedEventTypes.length > 0 ||
     selectedPrefectures.length > 0 ||
     selectedQuickFilters.length > 0 ||
-    selectedRecommendedTags.length > 0;
+    selectedRecommendedTags.length > 0 ||
+    Boolean(dateRange.startDate || dateRange.endDate || datePreset) ||
+    reservation !== null;
   const page = useMemo(
     () => paginateEventViews(filteredViews, currentPage),
     [currentPage, filteredViews],
@@ -122,7 +145,13 @@ export default function EventFilterBar({
       const heading = eventListHeadingRef.current;
       if (!heading) return;
       heading.focus({ preventScroll: true });
-      const top = window.scrollY + heading.getBoundingClientRect().top - 72;
+      const stickyHeaderHeight =
+        document.querySelector("header")?.getBoundingClientRect().height ?? 64;
+      const top =
+        window.scrollY +
+        heading.getBoundingClientRect().top -
+        stickyHeaderHeight -
+        16;
       const reduceMotion = window.matchMedia(
         "(prefers-reduced-motion: reduce)",
       ).matches;
@@ -163,6 +192,10 @@ export default function EventFilterBar({
               setSelectedPrefectures([]);
               setSelectedQuickFilters([]);
               setSelectedRecommendedTags([]);
+              setDateRange({ startDate: "", endDate: "" });
+              setDatePreset(null);
+              setDatePresetReferenceDate(referenceDate);
+              setReservation(null);
             }}
             disabled={!hasActiveFilters}
             data-filter-clear
@@ -173,6 +206,29 @@ export default function EventFilterBar({
         </div>
 
         <div className="mt-4 grid gap-4">
+          <EventDateReservationFilters
+            dateRange={dateRange}
+            datePreset={datePreset}
+            reservation={reservation}
+            onDateRangeChange={(range) => {
+              setCurrentPage(1);
+              setDateRange(range);
+            }}
+            onDatePresetChange={(preset) => {
+              setCurrentPage(1);
+              if (preset) {
+                setDatePresetReferenceDate(
+                  getDateOnlyInTimeZone(new Date(), "Asia/Tokyo"),
+                );
+              }
+              setDatePreset(preset);
+            }}
+            onReservationChange={(nextReservation) => {
+              setCurrentPage(1);
+              setReservation(nextReservation);
+            }}
+          />
+
           {showPrefectureFilter && prefectureOptions.length > 0 ? (
             <FilterGroup label="都道府県" dataAttribute="prefecture">
               {prefectureOptions.map((prefecture) => (
@@ -213,7 +269,7 @@ export default function EventFilterBar({
             </FilterGroup>
           ) : null}
 
-          <FilterGroup label="条件" dataAttribute="quick">
+          <FilterGroup label="その他の条件" dataAttribute="quick">
             {QUICK_FILTERS.map((filter) => (
               <FilterButton
                 key={filter.key}
@@ -258,7 +314,8 @@ export default function EventFilterBar({
 
       {filteredViews.length === 0 ? (
         <div className="rounded-lg border border-slate-200 bg-white p-6 text-center text-sm text-slate-600">
-          条件に合うイベントはありません
+          <p className="font-bold text-slate-800">条件に合うイベントはありません。</p>
+          <p className="mt-2">日付や予約状況などの条件を変更するか、全解除をお試しください。</p>
         </div>
       ) : (
         <div className="grid gap-4">

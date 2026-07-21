@@ -53,7 +53,7 @@ export default function SummerSeasonalCta({
                   : "今週末に行ける花火やお祭りを、全国47都道府県から探せます。"}
               </p>
               <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold sm:text-sm">
-                <ShortcutLink href="/events/summer?quick=weekend#summer-filters">
+                <ShortcutLink href="/events/summer?date=weekend#summer-filters">
                   今週末
                 </ShortcutLink>
                 <ShortcutLink href="/events/summer?type=fireworks#summer-filters">

@@ -16,9 +16,12 @@ export default function EventCard({
   anchorId,
 }: EventCardProps) {
   const { event, facilitySlug, venueName, prefectureLabel } = view;
-  const officialLinkLabel = isPdfOfficialUrl(event.official_url)
-    ? "公式PDFを見る"
-    : "公式で詳細を見る";
+  const officialLinkLabel =
+    event.reservation === "required"
+      ? "予約方法を公式で確認"
+      : isPdfOfficialUrl(event.official_url)
+        ? "公式PDFを見る"
+        : "公式で詳細を見る";
   const labels = [
     event.price_label && {
       key: "price",
@@ -45,7 +48,7 @@ export default function EventCard({
       tabIndex={anchorId ? -1 : undefined}
       className={`rounded-lg border border-slate-200 bg-white p-4 shadow-sm shadow-slate-100 sm:p-5 ${
         anchorId
-          ? "scroll-mt-24 transition-[border-color,background-color,box-shadow] duration-300 target:border-indigo-400 target:bg-indigo-50/40 target:ring-4 target:ring-indigo-100 motion-reduce:transition-none"
+          ? "scroll-mt-32 transition-[border-color,background-color,box-shadow] duration-300 target:border-indigo-400 target:bg-indigo-50/40 target:ring-4 target:ring-indigo-100 motion-reduce:transition-none sm:scroll-mt-24"
           : ""
       }`}
       data-event-card

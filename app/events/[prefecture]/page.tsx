@@ -101,6 +101,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
             views={eventViews}
             showPrefectureFilter={false}
             showPrefectureOnCard={false}
+            referenceDate={today}
           />
         )}
 

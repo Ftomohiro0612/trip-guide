@@ -9,10 +9,16 @@ import {
 } from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
+import EventDateReservationFilters from "@/components/EventDateReservationFilters";
 import EventNearbyFacilities from "@/components/EventNearbyFacilities";
 import {
   EVENT_PAGE_SIZE,
+  filterEventViews,
   paginateEventViews,
+  type EventDatePreset,
+  type EventDateRange,
+  type EventQuickFilter,
+  type EventReservationFilter,
 } from "@/lib/event-filter";
 import type {
   EventPrefecture,
@@ -28,8 +34,6 @@ import {
   getSummerEventTypePage,
 } from "@/lib/summer-event-pagination";
 
-type QuickFilter = "weekend" | "free" | "noReservation";
-
 interface SummerEventExplorerProps {
   views: EventView[];
   eventFacilityRecommendations: Record<
@@ -37,7 +41,10 @@ interface SummerEventExplorerProps {
     EventFacilityRecommendation[]
   >;
   initialType?: SummerEventType;
-  initialQuickFilter?: QuickFilter;
+  initialQuickFilter?: "free";
+  initialDatePreset?: EventDatePreset;
+  initialReservation?: EventReservationFilter;
+  referenceDate: string;
 }
 
 interface SummerAnchorTarget {
@@ -128,10 +135,8 @@ const EVENT_TYPES: {
   },
 ];
 
-const QUICK_FILTERS: { id: QuickFilter; label: string }[] = [
-  { id: "weekend", label: "今週末" },
+const QUICK_FILTERS: { id: EventQuickFilter; label: string }[] = [
   { id: "free", label: "無料" },
-  { id: "noReservation", label: "予約不要" },
 ];
 
 export default function SummerEventExplorer({
@@ -139,6 +144,9 @@ export default function SummerEventExplorer({
   eventFacilityRecommendations,
   initialType,
   initialQuickFilter,
+  initialDatePreset,
+  initialReservation,
+  referenceDate,
 }: SummerEventExplorerProps) {
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const filteredViewsRef = useRef<EventView[]>([]);
@@ -152,28 +160,40 @@ export default function SummerEventExplorer({
     EventPrefecture[]
   >([]);
   const [selectedQuickFilters, setSelectedQuickFilters] = useState<
-    QuickFilter[]
+    EventQuickFilter[]
   >(initialQuickFilter ? [initialQuickFilter] : []);
+  const [dateRange, setDateRange] = useState<EventDateRange>({
+    startDate: "",
+    endDate: "",
+  });
+  const [datePreset, setDatePreset] = useState<EventDatePreset | null>(
+    initialDatePreset ?? null,
+  );
+  const [reservation, setReservation] =
+    useState<EventReservationFilter | null>(initialReservation ?? null);
 
   const filteredViews = useMemo(
     () =>
-      views.filter((view) => {
-        const type = view.event.event_type;
-        if (!type) return false;
-        if (selectedTypes.length > 0 && !selectedTypes.includes(type)) {
-          return false;
-        }
-        if (
-          selectedPrefectures.length > 0 &&
-          !selectedPrefectures.includes(view.event.prefecture)
-        ) {
-          return false;
-        }
-        return selectedQuickFilters.every((filter) =>
-          matchesQuickFilter(view, filter),
-        );
-      }),
-    [selectedPrefectures, selectedQuickFilters, selectedTypes, views],
+      filterEventViews(views, {
+        eventTypes: selectedTypes,
+        prefectures: selectedPrefectures,
+        quickFilters: selectedQuickFilters,
+        recommendedTags: [],
+        dateRange,
+        datePreset,
+        referenceDate,
+        reservation,
+      }).filter((view) => Boolean(view.event.event_type)),
+    [
+      datePreset,
+      dateRange,
+      referenceDate,
+      reservation,
+      selectedPrefectures,
+      selectedQuickFilters,
+      selectedTypes,
+      views,
+    ],
   );
   const allOrderedViews = useMemo(
     () => orderViewsByEventType(views),
@@ -191,7 +211,9 @@ export default function SummerEventExplorer({
   const hasActiveFilters =
     selectedTypes.length > 0 ||
     selectedPrefectures.length > 0 ||
-    selectedQuickFilters.length > 0;
+    selectedQuickFilters.length > 0 ||
+    Boolean(dateRange.startDate || dateRange.endDate || datePreset) ||
+    reservation !== null;
 
   const revealHashTarget = useCallback((hash: string) => {
     const staticTargetId = getSummerStaticAnchorTargetId(hash);
@@ -212,6 +234,9 @@ export default function SummerEventExplorer({
       setSelectedTypes([]);
       setSelectedPrefectures([]);
       setSelectedQuickFilters([]);
+      setDateRange({ startDate: "", endDate: "" });
+      setDatePreset(null);
+      setReservation(null);
     }
 
     setCurrentPage(target.page);
@@ -265,20 +290,23 @@ export default function SummerEventExplorer({
     setSelectedTypes([]);
     setSelectedPrefectures([]);
     setSelectedQuickFilters([]);
+    setDateRange({ startDate: "", endDate: "" });
+    setDatePreset(null);
+    setReservation(null);
   }
 
   return (
     <section
       id="summer-filters"
       aria-labelledby="summer-filter-heading"
-      className="scroll-mt-24"
+      className="scroll-mt-32 sm:scroll-mt-24"
     >
       <div className="rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm sm:p-5">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <h2
             id="summer-filter-heading"
             tabIndex={-1}
-            className="scroll-mt-24 text-2xl font-bold text-slate-900"
+            className="scroll-mt-32 text-2xl font-bold text-slate-900 sm:scroll-mt-24"
           >
             条件から探す
           </h2>
@@ -294,22 +322,25 @@ export default function SummerEventExplorer({
         </div>
 
         <div className="mt-5 grid gap-4">
-          <FilterGroup label="種類">
-            {EVENT_TYPES.map((type) => (
-              <FilterButton
-                key={type.id}
-                active={selectedTypes.includes(type.id)}
-                onClick={() => {
-                  setCurrentPage(1);
-                  setSelectedTypes((current) => toggle(current, type.id));
-                }}
-                dataFilter={`type:${type.id}`}
-              >
-                {type.label}
-              </FilterButton>
-            ))}
-          </FilterGroup>
-          <FilterGroup label="都県">
+          <EventDateReservationFilters
+            variant="summer"
+            dateRange={dateRange}
+            datePreset={datePreset}
+            reservation={reservation}
+            onDateRangeChange={(range) => {
+              setCurrentPage(1);
+              setDateRange(range);
+            }}
+            onDatePresetChange={(preset) => {
+              setCurrentPage(1);
+              setDatePreset(preset);
+            }}
+            onReservationChange={(nextReservation) => {
+              setCurrentPage(1);
+              setReservation(nextReservation);
+            }}
+          />
+          <FilterGroup label="都道府県">
             {PREFECTURES.map((prefecture) => (
               <FilterButton
                 key={prefecture.id}
@@ -326,7 +357,22 @@ export default function SummerEventExplorer({
               </FilterButton>
             ))}
           </FilterGroup>
-          <FilterGroup label="条件">
+          <FilterGroup label="種類">
+            {EVENT_TYPES.map((type) => (
+              <FilterButton
+                key={type.id}
+                active={selectedTypes.includes(type.id)}
+                onClick={() => {
+                  setCurrentPage(1);
+                  setSelectedTypes((current) => toggle(current, type.id));
+                }}
+                dataFilter={`type:${type.id}`}
+              >
+                {type.label}
+              </FilterButton>
+            ))}
+          </FilterGroup>
+          <FilterGroup label="その他の条件">
             {QUICK_FILTERS.map((filter) => (
               <FilterButton
                 key={filter.id}
@@ -351,7 +397,7 @@ export default function SummerEventExplorer({
           id="summer-event-list-heading"
           ref={eventListHeadingRef}
           tabIndex={-1}
-          className="scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
+          className="scroll-mt-32 text-2xl font-bold text-slate-900 sm:scroll-mt-24 sm:text-3xl"
         >
           開催中・これからのイベント
         </h2>
@@ -369,7 +415,12 @@ export default function SummerEventExplorer({
 
       {page.totalItems === 0 ? (
         <div className="mt-6 rounded-2xl border border-slate-200 bg-white p-8 text-center text-sm text-slate-600">
-          条件に合う、開催中・これからのイベントはありません。
+          <p className="font-bold text-slate-800">
+            条件に合う、開催中・これからのイベントはありません。
+          </p>
+          <p className="mt-2">
+            日付や予約状況などの条件を変更するか、全解除をお試しください。
+          </p>
         </div>
       ) : (
         <div className="mt-10 grid gap-12">
@@ -390,7 +441,7 @@ export default function SummerEventExplorer({
                     <h2
                       id={`summer-${type.id}-heading`}
                       tabIndex={-1}
-                      className="scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
+                      className="scroll-mt-32 text-2xl font-bold text-slate-900 sm:scroll-mt-24 sm:text-3xl"
                     >
                       {type.heading}
                     </h2>
@@ -517,7 +568,13 @@ function orderViewsByEventType(views: readonly EventView[]): EventView[] {
 
 function focusAndScrollTo(target: HTMLElement) {
   target.focus({ preventScroll: true });
-  const top = window.scrollY + target.getBoundingClientRect().top - 80;
+  const stickyHeaderHeight =
+    document.querySelector("header")?.getBoundingClientRect().height ?? 64;
+  const top =
+    window.scrollY +
+    target.getBoundingClientRect().top -
+    stickyHeaderHeight -
+    16;
   const reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)",
   ).matches;
@@ -574,15 +631,4 @@ function toggle<T>(current: T[], value: T): T[] {
   return current.includes(value)
     ? current.filter((item) => item !== value)
     : [...current, value];
-}
-
-function matchesQuickFilter(view: EventView, filter: QuickFilter): boolean {
-  switch (filter) {
-    case "weekend":
-      return view.isThisWeekend;
-    case "free":
-      return view.event.is_free === true;
-    case "noReservation":
-      return view.event.reservation === "not_required";
-  }
 }

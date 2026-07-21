@@ -53,6 +53,10 @@ const summerExplorerSource = readFileSync(
   new URL("../components/SummerEventExplorer.tsx", import.meta.url),
   "utf8",
 );
+const sharedDateReservationFilterSource = readFileSync(
+  new URL("../components/EventDateReservationFilters.tsx", import.meta.url),
+  "utf8",
+);
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
   newEventCount: 484,
@@ -854,12 +858,21 @@ test("all Summer query entry anchors keep filters and clear the sticky header", 
   for (const eventType of SUMMER_EVENT_TYPE_ORDER) {
     assert.match(summerPageSource, new RegExp(`\\b${eventType}\\b`, "u"));
   }
-  for (const quickFilter of ["weekend", "free", "noReservation"]) {
+  assert.match(summerPageSource, /query\.quick === "free"/u);
+  assert.match(summerExplorerSource, /id: "free"/u);
+  assert.match(summerPageSource, /query\.quick === "weekend"/u);
+  assert.match(summerPageSource, /query\.quick === "noReservation"/u);
+  for (const datePreset of ["weekend", "month"]) {
     assert.match(
-      summerPageSource,
-      new RegExp(`query\\.quick === "${quickFilter}"`, "u"),
+      sharedDateReservationFilterSource,
+      new RegExp(`id: "${datePreset}"`, "u"),
     );
-    assert.match(summerExplorerSource, new RegExp(`id: "${quickFilter}"`, "u"));
+  }
+  for (const reservation of ["required", "not_required"]) {
+    assert.match(
+      sharedDateReservationFilterSource,
+      new RegExp(`id: "${reservation}"`, "u"),
+    );
   }
 
   assert.match(
@@ -868,11 +881,11 @@ test("all Summer query entry anchors keep filters and clear the sticky header", 
   );
   assert.match(
     summerExplorerSource,
-    /id="summer-filter-heading"\s+tabIndex=\{-1\}\s+className="scroll-mt-24/u,
+    /id="summer-filter-heading"\s+tabIndex=\{-1\}\s+className="scroll-mt-32[^"]*sm:scroll-mt-24/u,
   );
   assert.match(
     summerPageSource,
-    /id="summer-event-map-heading"\s+tabIndex=\{-1\}\s+className="mt-1 scroll-mt-24/u,
+    /id="summer-event-map-heading"\s+tabIndex=\{-1\}\s+className="mt-1 scroll-mt-32[^"]*sm:scroll-mt-24/u,
   );
   assert.match(
     summerExplorerSource,

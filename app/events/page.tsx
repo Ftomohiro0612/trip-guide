@@ -70,7 +70,7 @@ export default function EventsIndexPage() {
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
         <SummerSeasonalCta placement="events" />
 
-        <div className="grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="hidden grid-cols-2 gap-3 sm:grid-cols-2 lg:grid lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
             const meta = getPrefectureMeta(prefectureId);
             if (!meta) return null;
@@ -114,6 +114,7 @@ export default function EventsIndexPage() {
             views={eventViews}
             prefectureOptions={prefectureOptions}
             showEventTypeFilter
+            referenceDate={today}
           />
         </div>
       </div>

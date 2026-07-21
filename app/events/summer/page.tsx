@@ -24,7 +24,7 @@ import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 export const metadata: Metadata = {
   title: "夏祭り・花火大会2026｜全国47都道府県",
   description:
-    "全国47都道府県の2026年夏祭り・花火大会を公式一次情報から掲載。開催日順、都道府県、今週末、無料、予約不要で探せます。",
+    "全国47都道府県の2026年夏祭り・花火大会を公式一次情報から掲載。指定期間、予約状況、都道府県、種類、無料で探せます。",
   alternates: { canonical: "/events/summer" },
   openGraph: {
     title: "夏祭り・花火大会2026｜メモリップ",
@@ -35,7 +35,12 @@ export const metadata: Metadata = {
 };
 
 interface Props {
-  searchParams: Promise<{ type?: string; quick?: string }>;
+  searchParams: Promise<{
+    type?: string;
+    quick?: string;
+    date?: string;
+    reservation?: string;
+  }>;
 }
 
 const TYPE_LABELS: Record<SummerEventType, string> = {
@@ -59,12 +64,19 @@ export default async function SummerEventsPage({ searchParams }: Props) {
   const mapCoverage = getSummerEventMapCoverage(visibleEvents, mapPoints);
   const crosslinks = getSummerCrosslinkData(today);
   const initialType = isSummerEventType(query.type) ? query.type : undefined;
-  const initialQuickFilter =
-    query.quick === "weekend" ||
-    query.quick === "free" ||
-    query.quick === "noReservation"
-      ? query.quick
-      : undefined;
+  const initialQuickFilter = query.quick === "free" ? query.quick : undefined;
+  const initialDatePreset =
+    query.date === "weekend" || query.date === "month"
+      ? query.date
+      : query.quick === "weekend" || query.quick === "month"
+        ? query.quick
+        : undefined;
+  const initialReservation =
+    query.reservation === "required" || query.reservation === "not_required"
+      ? query.reservation
+      : query.quick === "noReservation"
+        ? "not_required"
+        : undefined;
   const mainCount = visibleEvents.filter(
     (event) =>
       event.event_type === "fireworks" ||
@@ -124,6 +136,12 @@ export default async function SummerEventsPage({ searchParams }: Props) {
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-indigo-50 sm:text-base">
             花火大会と地域の夏祭りを主役に、開催中・次回開催日の近い順で掲載しています。夜間開園は別の補助枠に分けています。
           </p>
+          <Link
+            href="/events"
+            className="mt-4 inline-flex text-sm font-bold text-amber-100 underline decoration-amber-200/60 underline-offset-4 hover:text-white"
+          >
+            展示・体験など、すべてのイベントを見る →
+          </Link>
           <div className="mt-6 flex flex-wrap gap-2 text-sm font-bold">
             <a
               href="#summer-fireworks-heading"
@@ -179,7 +197,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
         <section
           id="summer-event-map"
           aria-labelledby="summer-event-map-heading"
-          className="mt-12 scroll-mt-24"
+          className="mt-12 scroll-mt-32 sm:scroll-mt-24"
           data-summer-map-listed-count={mapCoverage.listedCount}
           data-summer-map-mapped-count={mapCoverage.mappedCount}
           data-summer-map-unmapped-count={mapCoverage.unmappedCount}
@@ -189,7 +207,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
               <h2
                 id="summer-event-map-heading"
                 tabIndex={-1}
-                className="mt-1 scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
+                className="mt-1 scroll-mt-32 text-2xl font-bold text-slate-900 sm:scroll-mt-24 sm:text-3xl"
               >
                 座標確認済みのイベントを地図で探す
               </h2>
@@ -221,6 +239,9 @@ export default async function SummerEventsPage({ searchParams }: Props) {
             eventFacilityRecommendations={crosslinks.eventToFacilities}
             initialType={initialType}
             initialQuickFilter={initialQuickFilter}
+            initialDatePreset={initialDatePreset}
+            initialReservation={initialReservation}
+            referenceDate={today}
           />
         </div>
 

@@ -461,6 +461,13 @@ export default function HomePage() {
                   一覧から探す
                 </Link>
                 <Link
+                  href="/events"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/20 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/30 sm:text-base"
+                >
+                  <span aria-hidden>🎪</span>
+                  イベントを探す
+                </Link>
+                <Link
                   href="/guide"
                   className="inline-flex items-center justify-center gap-2 rounded-full border border-white/55 bg-white/10 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:text-base"
                 >
