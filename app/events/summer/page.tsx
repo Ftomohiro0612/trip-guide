@@ -5,8 +5,8 @@ import SummerEventExplorer from "@/components/SummerEventExplorer";
 import SummerEventMapClient from "@/components/SummerEventMapClient";
 import { BreadcrumbJsonLd, JsonLd } from "@/components/JsonLd";
 import {
+  formatEventDateLabel,
   getBuildDateString,
-  getNextEventDate,
   getSummerHeroEvents,
   getVisibleSummerHubEvents,
   toEventView,
@@ -281,8 +281,8 @@ function HeroGroup({
               <h3 className="mt-3 text-lg font-bold leading-snug text-slate-900">
                 {event.title}
               </h3>
-              <p className="mt-2 text-sm font-bold text-indigo-700">
-                次回 {formatDate(getNextEventDate(event, today))}
+              <p className="mt-2 break-words text-sm font-bold leading-relaxed text-indigo-700">
+                開催日 {formatEventDateLabel(event)}
               </p>
               <p className="mt-2 line-clamp-2 text-xs leading-relaxed text-slate-600">
                 {view.venueName}
@@ -309,10 +309,4 @@ function isSummerEventType(value: string | undefined): value is SummerEventType 
     value === "summer_tradition" ||
     value === "night_outing"
   );
-}
-
-function formatDate(value: string | null): string {
-  if (!value) return "公式確認中";
-  const [, month, day] = value.split("-");
-  return `${Number(month)}月${Number(day)}日`;
 }

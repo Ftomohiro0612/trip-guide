@@ -52,6 +52,14 @@ const summerExplorerSource = readFileSync(
   new URL("../components/SummerEventExplorer.tsx", import.meta.url),
   "utf8",
 );
+const eventCardSource = readFileSync(
+  new URL("../components/EventCard.tsx", import.meta.url),
+  "utf8",
+);
+const eventsLibSource = readFileSync(
+  new URL("../lib/events.ts", import.meta.url),
+  "utf8",
+);
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
   newEventCount: 484,
@@ -67,6 +75,34 @@ const SUMMER_EVENT_TYPE_ORDER = [
   "summer_tradition",
   "night_outing",
 ];
+
+test("Summer hero cards reuse the complete date label shown by event details", () => {
+  assert.match(summerPageSource, /開催日 \{formatEventDateLabel\(event\)\}/u);
+  assert.match(eventCardSource, /\{formatEventDateLabel\(event\)\}/u);
+  assert.match(
+    eventsLibSource,
+    /export function formatEventDateLabel\([\s\S]*return event\.date_label;/u,
+  );
+  assert.doesNotMatch(summerPageSource, /次回 \{/u);
+  assert.doesNotMatch(summerPageSource, /getNextEventDate/u);
+  assert.doesNotMatch(summerPageSource, /function formatDate/u);
+
+  const scheduleCases = new Map([
+    ["evt-summer-2026-tokyo-004", "2026年8月1日"],
+    ["evt-summer-2026-tokyo-022", "2026年8月1日・2日"],
+    ["evt-summer-2026-tokyo-020", "2026年7月31日・8月1日"],
+    [
+      "evt-summer-2026-shizuoka-004",
+      "2026年7月20日・26日、8月5日・9日・18日・24日（雨天決行）",
+    ],
+  ]);
+
+  for (const [eventId, expectedLabel] of scheduleCases) {
+    const event = summerSource.events.find((item) => item.id === eventId);
+    assert.ok(event, eventId);
+    assert.equal(event.date_label, expectedLabel, eventId);
+  }
+});
 
 function fixture(
   id,

@@ -1,6 +1,10 @@
 import Link from "next/link";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import { isPdfOfficialUrl, type EventView } from "@/lib/events";
+import {
+  formatEventDateLabel,
+  isPdfOfficialUrl,
+  type EventView,
+} from "@/lib/events";
 
 interface EventCardProps {
   view: EventView;
@@ -77,7 +81,7 @@ export default function EventCard({
           </h2>
           <div className="mt-2 flex flex-wrap items-center gap-2">
             <p className="text-sm font-bold text-slate-700">
-              {event.date_label}
+              {formatEventDateLabel(event)}
               {event.time_label ? ` / ${event.time_label}` : ""}
             </p>
             {view.isThisWeekend ? (

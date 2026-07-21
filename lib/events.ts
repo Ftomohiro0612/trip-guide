@@ -368,6 +368,12 @@ export function isPdfOfficialUrl(url: string) {
   return path.toLowerCase().endsWith(".pdf");
 }
 
+export function formatEventDateLabel(
+  event: Pick<EventItem, "date_label">,
+): string {
+  return event.date_label;
+}
+
 export function isEventInFeatureHub(
   event: EventItem,
   hubId: FeatureHubId,
