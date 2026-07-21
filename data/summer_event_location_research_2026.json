@@ -1438,6 +1438,2747 @@
           "review_note": "checkpoint 100で公式情報を再確認。会場「多賀大社（犬上郡多賀町多賀604）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
         }
       ]
+    },
+    {
+      "target": 200,
+      "status": "complete",
+      "checked_at": "2026-07-21",
+      "selection_rule": "First 200 currently listed baseline hold events, prioritizing the baseline generic hold reason and then other holds; canonical Summer Hub order within each group.",
+      "prior_checkpoint_head": "c30465c8d595e3ad22b67a6ec4ae6bb3201ae015",
+      "reviewed_count": 200,
+      "mappable_count": 71,
+      "hold_count": 129,
+      "pm_random_sample_size": 10,
+      "pm_review_status": "pass",
+      "pm_sample_method": "SHA-256 ascending within fixed strata: exact_venue=3, area_representative=3, hold=4",
+      "pm_sample_seed": "checkpoint200-pm-v1|c30465c8d595e3ad22b67a6ec4ae6bb3201ae015|",
+      "pm_sample_ids": [
+        "evt-summer-2026-yamanashi-009",
+        "evt-summer-2026-kanagawa-006",
+        "evt-summer-2026-kagoshima-008",
+        "evt-summer-2026-kanagawa-012",
+        "evt-summer-2026-yamaguchi-006",
+        "evt-summer-2026-kanagawa-010",
+        "evt-summer-2026-ibaraki-001",
+        "evt-summer-2026-kanagawa-013",
+        "evt-summer-2026-gunma-009",
+        "evt-summer-2026-saga-009"
+      ],
+      "pm_reviewed_at": "2026-07-21",
+      "pm_reviewer_role": "PM",
+      "pm_findings": [
+        {
+          "event_id": "evt-summer-2026-yamanashi-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "富士吉田市公式観光ページで北口本宮冨士浅間神社・諏訪神社・上吉田地区約2kmの渡御を確認。公式地図座標35.47079,138.792407は代表点として扱い、祭礼全域の正確な一点とは断定していない。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-006",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "湯河原町公式2026年カレンダーと町公式サイトから案内された公式観光ページで8月2日・3日の開催、湯河原小学校〜桜木公園と幕山公園通りの別コースを確認。複数街路のため座標nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagoshima-008",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "鹿児島県公式観光ページで2026かいもん夏祭り、会場かいもん山麓ふれあい公園レクレーション広場、住所を確認。公式掲載地図31.1963394,130.534241が同一単一会場を示しexact_venueが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-012",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "三浦市公式ページで会場を三浦海岸、観覧域を広い砂浜、打上げを台船と確認。海岸全体を推測で一点化せず座標nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamaguchi-006",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "山口県公式観光ページで萩夏まつりと会場が菊ヶ浜周辺であることを確認。公式掲載地図34.41942305708407,131.39636158765072は代表点として扱い、菊ヶ浜・市街地全域の正確な一点とは断定していない。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-010",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "茅ヶ崎市観光協会公式ページでサザンビーチちがさき開催、観覧場所や交通規制が複数範囲に及ぶことを確認。イベント固有の安全な数値座標を採用せず座標nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-001",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "水戸黄門まつり公式ページで花火会場の千波湖、本祭の別日程・中心市街地、複数の観覧区域を確認。全プログラムを一点化せず座標nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-013",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "神奈川県公式観光ページで相模湖湖上（県立相模湖公園前）と住所を確認。公式掲載地図35.6127331,139.1907016は公園前の代表点として扱い、湖上打上げ地点そのものとは断定していない。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "みどり市公式ページで第47回草木湖まつり、東運動公園（東町座間399）を確認。公式地図36.53794610298617,139.36950034602415が同一単一会場を示しexact_venueが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-saga-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "佐賀県公式観光ページで脊振わんぱくまつり、開催地高取山公園、住所神埼市脊振町広滝1472を確認。公式掲載地図33.371387,130.335109が同一単一会場を示しexact_venueが妥当。"
+        }
+      ],
+      "reviewed_events": [
+        {
+          "event_id": "evt-summer-2026-tokyo-002",
+          "title": "立川まつり国営昭和記念公園花火大会",
+          "venue_name": "国営昭和記念公園 みんなの原っぱ",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://hanabi.tokyo-tachikawa.org/news/news-611/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「国営昭和記念公園 みんなの原っぱ」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-004",
+          "title": "第51回江戸川区花火大会",
+          "venue_name": "江戸川河川敷（都立篠崎公園先）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.edogawa.tokyo.jp/e004/kuseijoho/kohokocho/press/2026/04/0408.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「江戸川河川敷（都立篠崎公園先）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-005",
+          "title": "八王子花火大会",
+          "venue_name": "富士森公園",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003249.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「富士森公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-006",
+          "title": "第67回いたばし花火大会",
+          "venue_name": "荒川河川敷（板橋区側）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://itabashihanabi.jp/overview/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「荒川河川敷（板橋区側）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-007",
+          "title": "第52回神楽坂まつり",
+          "venue_name": "神楽坂通り周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kagurazaka.in/event/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E3%80%80%E7%AC%AC52%E5%9B%9E%E7%A5%9E%E6%A5%BD%E5%9D%82%E3%81%BE%E3%81%A4%E3%82%8A%E3%80%80%E5%9B%A3%E6%89%87%E3%83%BB%E6%8F%90%E7%81%AF%E5%8D%94%E8%B3%9B%E3%83%9A/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「神楽坂通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-008",
+          "title": "第23回新宿エイサーまつり",
+          "venue_name": "新宿駅東口・歌舞伎町周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.shinjuku-eisa.com/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「新宿駅東口・歌舞伎町周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-009",
+          "title": "八王子まつり",
+          "venue_name": "甲州街道・西放射線ユーロード・えきまえテラス周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.hachioji.tokyo.jp/kankobunka/001/001/p003251.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「甲州街道・西放射線ユーロード・えきまえテラス周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-010",
+          "title": "第70回阿佐谷七夕まつり",
+          "venue_name": "阿佐谷パールセンター商店街周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "http://www.asagaya.or.jp/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「阿佐谷パールセンター商店街周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-012",
+          "title": "第67回東京高円寺阿波おどり",
+          "venue_name": "JR高円寺駅・東京メトロ新高円寺駅周辺商店街と高南通り",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.koenji-awaodori.com/about/about01.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「JR高円寺駅・東京メトロ新高円寺駅周辺商店街と高南通り」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-001",
+          "title": "湯河原温泉海上花火大会",
+          "venue_name": "湯河原海水浴場沖合",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「湯河原海水浴場沖合」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-004",
+          "title": "よこすか開国花火大会2026",
+          "venue_name": "うみかぜ公園・三笠公園ほか",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.yokosuka.kanagawa.jp/2150/nagekomi/hanabi2026.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「うみかぜ公園・三笠公園ほか」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-006",
+          "title": "湯河原やっさまつり",
+          "venue_name": "湯河原小学校前〜桜木公園ほか町内",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.yugawara.kanagawa.jp/uploaded/attachment/16718.pdf"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「湯河原小学校前〜桜木公園ほか町内」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-007",
+          "title": "第74回橋本七夕まつり",
+          "venue_name": "橋本駅北口周辺商店街",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://midori.city.sagamihara.kanagawa.jp/2026/07/14/hashimoto-tanabata-matsuri-74th-20260807-20260809/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「橋本駅北口周辺商店街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-008",
+          "title": "第17回みなとみらい大盆踊り",
+          "venue_name": "臨港パーク・プラザ広場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.pacifico.co.jp/news/qnN9NuRj"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「臨港パーク・プラザ広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-001",
+          "title": "幕張ビーチ花火フェスタ2026",
+          "venue_name": "幕張海浜公園・幕張の浜",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.chiba.jp/keizainosei/keizai/kanko/2025_chiba_hanabi.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「幕張海浜公園・幕張の浜」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-002",
+          "title": "市川市民納涼花火大会",
+          "venue_name": "江戸川河川敷（大洲三丁目地先）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.ichikawa.lg.jp/page/3681.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「江戸川河川敷（大洲三丁目地先）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-003",
+          "title": "松戸花火大会2026",
+          "venue_name": "古ケ崎河川敷スポーツ広場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.matsudo.chiba.jp/miryoku/kankoumiryokubunka/matsuri/summer/matsudohanabi.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「古ケ崎河川敷スポーツ広場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-004",
+          "title": "手賀沼花火大会2026",
+          "venue_name": "手賀沼公園・柏会場周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.abiko.chiba.jp/event/event_moyooshi/hanabi2026.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「手賀沼公園・柏会場周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-005",
+          "title": "第79回木更津港まつり花火大会",
+          "venue_name": "木更津港内港周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/14590.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「木更津港内港周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-006",
+          "title": "第72回茂原七夕まつり",
+          "venue_name": "JR茂原駅周辺商店街",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mobara.chiba.jp/cmsfiles/contents/0000009/9496/2026-06-01-04.pdf"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「JR茂原駅周辺商店街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-007",
+          "title": "やっさいもっさい踊り大会",
+          "venue_name": "木更津駅西口・富士見通り",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kisarazu.lg.jp/event/omatsuri_moyoshi/kisarazuminatomatsuri/index.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「木更津駅西口・富士見通り」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-008",
+          "title": "第51回千葉の親子三代夏祭り",
+          "venue_name": "千葉市中央公園と周辺市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.chiba.jp/shimin/shimin/jichi/bikai_event.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「千葉市中央公園と周辺市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-009",
+          "title": "第19回あびこカッパまつり",
+          "venue_name": "我孫子駅南口駅前通り・けやきプラザ周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.abiko.chiba.jp/event/event_moyooshi/abikokappamatsuri.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「我孫子駅南口駅前通り・けやきプラザ周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-010",
+          "title": "2026柏まつり",
+          "venue_name": "柏駅東西中心街",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kashiwa.lg.jp/chiiki-community/kashiwamatsuri/kashiwamatsuri2026-3.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「柏駅東西中心街」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-001",
+          "title": "越谷花火大会",
+          "venue_name": "越谷市中央市民会館東側 葛西用水中土手",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.koshigaya-sightseeing.jp/news/%E8%B6%8A%E8%B0%B7%E8%8A%B1%E7%81%AB%E5%A4%A7%E4%BC%9A/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「越谷市中央市民会館東側 葛西用水中土手」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-002",
+          "title": "さいたま市花火大会 大和田公園会場",
+          "venue_name": "大和田公園周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「大和田公園周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-004",
+          "title": "さいたま市花火大会 東浦和大間木公園会場",
+          "venue_name": "大間木公園周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「大間木公園周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-005",
+          "title": "さいたま市花火大会 岩槻文化公園会場",
+          "venue_name": "岩槻文化公園",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131231.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「岩槻文化公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-008",
+          "title": "熊谷うちわ祭",
+          "venue_name": "熊谷市街地（国道17号・お祭り広場周辺）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kumagaya.lg.jp/shicho/kaiken/r8/R80630kishakaiken.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「熊谷市街地（国道17号・お祭り広場周辺）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-009",
+          "title": "第45回川越百万灯夏まつり",
+          "venue_name": "川越市中心市街地",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.91472744626545,
+          "longitude": 139.4827148667785,
+          "official_source_urls": [
+            "https://www.kawagoe.or.jp/natsumatsuri/?vm=r"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-010",
+          "title": "第43回朝霞市民まつり「彩夏祭」",
+          "venue_name": "朝霞会場・北朝霞会場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.asaka.lg.jp/uploaded/attachment/110100.pdf"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「朝霞会場・北朝霞会場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-011",
+          "title": "狭山市入間川七夕まつり",
+          "venue_name": "狭山市駅西口〜七夕通り商店街周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.sayama.saitama.jp/kankou/kanko/tanabata/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「狭山市駅西口〜七夕通り商店街周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-011",
+          "title": "第31回川崎大師風鈴市",
+          "venue_name": "川崎大師平間寺境内 静嘉堂石庭前広場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fuurinichi.com/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「川崎大師平間寺境内 静嘉堂石庭前広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-018",
+          "title": "第19回藤沢宿・遊行の盆",
+          "venue_name": "藤沢駅北口・遊行寺境内",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fujisawa-cci.or.jp/special/19nobon/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「藤沢駅北口・遊行寺境内」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-016",
+          "title": "第11回富津市民花火大会",
+          "venue_name": "富津海水浴場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.futtsu.lg.jp/0000007541.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「富津海水浴場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-017",
+          "title": "鴨川市民花火大会",
+          "venue_name": "前原・横渚海岸（鴨川漁港前原防波堤）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://kamotabi.jp/news/detail/341"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「前原・横渚海岸（鴨川漁港前原防波堤）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-009",
+          "title": "第37回小田原酒匂川花火大会",
+          "venue_name": "酒匂川スポーツ広場（小田原市寿町5-22・小田原大橋周辺）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.odawara-kankou.com/hanabi/sakawa-hanabi.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「酒匂川スポーツ広場（小田原市寿町5-22・小田原大橋周辺）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-010",
+          "title": "第52回サザンビーチちがさき花火大会",
+          "venue_name": "サザンビーチちがさき",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.chigasaki-kankou.org/event/hanabi/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「サザンビーチちがさき」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-013",
+          "title": "第74回さがみ湖湖上祭花火大会",
+          "venue_name": "相模湖湖上（県立相模湖公園前）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.6127331,
+          "longitude": 139.1907016,
+          "official_source_urls": [
+            "https://www.kanagawa-kankou.or.jp/event/7753"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-016",
+          "title": "第16回草加市民納涼大花火大会",
+          "venue_name": "そうか公園",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 35.861771372529475,
+          "longitude": 139.82433267579583,
+          "official_source_urls": [
+            "https://soka-hanabi.com/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-018",
+          "title": "第32回深谷花火大会",
+          "venue_name": "ワモア川本南 荒川河川敷",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.fukaya.saitama.jp/soshiki/sangyoshinko/shokoshinkou/tanto/ibento/16474.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「ワモア川本南 荒川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-012",
+          "title": "第46回三浦海岸納涼まつり花火大会",
+          "venue_name": "三浦海岸",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.miura.kanagawa.jp/soshiki/kankoshokoka/kankoshokoka_kanko/chiikikankougyouji/8958.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「三浦海岸」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-013",
+          "title": "2026 神宮外苑花火大会（第45回大会）",
+          "venue_name": "明治神宮外苑（神宮球場・秩父宮ラグビー場）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.jinguhanabi.com/about.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「明治神宮外苑（神宮球場・秩父宮ラグビー場）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-011",
+          "title": "第62回館山観光まつり館山湾花火大会",
+          "venue_name": "館山湾（汐入川河口導流堤北側・館山湾水中花火）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://tateyamacity.or.jp/hanabi/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「館山湾（汐入川河口導流堤北側・館山湾水中花火）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-012",
+          "title": "第74回熊谷花火大会",
+          "venue_name": "荒川河畔（荒川大橋下流側）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.oideyo-kumagaya.com/cate-info/21033/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「荒川河畔（荒川大橋下流側）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-025",
+          "title": "PIST6夏まつり2026",
+          "venue_name": "千葉JPFドーム",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.chiba.jp/keizainosei/keizai/koeijigyo/pist6-summer2026-event.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「千葉JPFドーム」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-022",
+          "title": "第14回中野駅前大盆踊り大会",
+          "venue_name": "中野セントラルパーク内 パークアベニュー",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 35.70727747257897,
+          "longitude": 139.6594334765732,
+          "official_source_urls": [
+            "https://nakabon.jp/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-021",
+          "title": "第58回唐子地区納涼盆踊り大会",
+          "venue_name": "唐子地区体育館駐車場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.higashimatsuyama.lg.jp/soshiki/22/26596.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「唐子地区体育館駐車場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-016",
+          "title": "第79回築地本願寺納涼盆踊り大会",
+          "venue_name": "築地本願寺境内",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://tsukijihongwanji.jp/news/11529/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「築地本願寺境内」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-013",
+          "title": "寄居玉淀水天宮祭",
+          "venue_name": "玉淀河原",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.yorii.saitama.jp/soshiki/13/yoriitamayodosuitengusai.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「玉淀河原」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-015",
+          "title": "大宮夏まつり 2026中山道まつり",
+          "venue_name": "大宮駅東口周辺",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.906459,
+          "longitude": 139.624287,
+          "official_source_urls": [
+            "https://visitsaitamacity.jp/events/24"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-020",
+          "title": "第71回恵比寿駅前盆踊り大会",
+          "venue_name": "JR恵比寿駅西口広場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://ebisubondance.jp/about/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「JR恵比寿駅西口広場」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-022",
+          "title": "第72回野田夏まつり躍り七夕",
+          "venue_name": "野田市本町通り周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.noda.chiba.jp/shisei/profile/bunkazai/matsuri/1000830.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「野田市本町通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-014",
+          "title": "長瀞船玉まつり",
+          "venue_name": "長瀞岩畳周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.nagatoro.gr.jp/funadama2026/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「長瀞岩畳周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-001",
+          "title": "山中湖報湖祭",
+          "venue_name": "山中湖畔 山中地区",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://lake-yamanakako.com/event/10430"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「山中湖畔 山中地区」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-002",
+          "title": "西湖 竜宮祭",
+          "venue_name": "西湖 前浜沖",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.50558782826563,
+          "longitude": 138.69656579093476,
+          "official_source_urls": [
+            "https://fujisan.ne.jp/news/6015/"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-003",
+          "title": "本栖湖 神湖祭",
+          "venue_name": "本栖湖東岸",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.46025930997008,
+          "longitude": 138.6012509662236,
+          "official_source_urls": [
+            "https://fujisan.ne.jp/news/6018/"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-004",
+          "title": "精進湖 涼湖祭",
+          "venue_name": "精進湖 他手合浜",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 35.48621308972232,
+          "longitude": 138.60036745684732,
+          "official_source_urls": [
+            "https://fujisan.ne.jp/news/6021/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-006",
+          "title": "第38回 神明の花火大会",
+          "venue_name": "三郡橋下流 笛吹川河畔",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.56178816383258,
+          "longitude": 138.48247963378682,
+          "official_source_urls": [
+            "https://www.town.ichikawamisato.yamanashi.jp/shinmei/meeting_summary/index.html"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-007",
+          "title": "第8回 小江戸甲府の夏祭り",
+          "venue_name": "舞鶴城公園・こうふ亀屋座周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kofu.yamanashi.jp/kanko/2026koedo/8thkoedo.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「舞鶴城公園・こうふ亀屋座周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-008",
+          "title": "第62回 石和温泉花火大会",
+          "venue_name": "笛吹市役所前 笛吹川河川敷",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fuefuki-kanko.jp/scontents/summerfes/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「笛吹市役所前 笛吹川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-009",
+          "title": "吉田の火祭り・すすき祭り",
+          "venue_name": "北口本宮冨士浅間神社・諏訪神社・上吉田地区",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.47079,
+          "longitude": 138.792407,
+          "official_source_urls": [
+            "https://fujiyoshida.net/event/154"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-010",
+          "title": "第76回富士吉田市制祭 市民夏まつり",
+          "venue_name": "富士吉田市本町通り周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.fujiyoshida.yamanashi.jp/page/10992.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「富士吉田市本町通り周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-001",
+          "title": "ふくろい遠州の花火2026",
+          "venue_name": "原野谷川親水公園",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fukuroi-hanabi.jp/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「原野谷川親水公園」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-002",
+          "title": "第79回沼津夏まつり・狩野川花火大会",
+          "venue_name": "狩野川河川敷・沼津市中心市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://numazukanko.jp/event/50051"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「狩野川河川敷・沼津市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-003",
+          "title": "第77回清水みなと祭り",
+          "venue_name": "清水港・清水区中心部",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.minatokappore.jp/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「清水港・清水区中心部」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-001",
+          "title": "上田市誕生20周年記念 第55回上田わっしょい",
+          "venue_name": "上田市中心市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://ueda-kanko.or.jp/special/wassyoi2026/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「上田市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-002",
+          "title": "第56回長野びんずる",
+          "venue_name": "善光寺表参道・昭和通りほか",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.nagano.nagano.jp/n150800/event/p000011.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「善光寺表参道・昭和通りほか」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-003",
+          "title": "第52回夏まつり 松本ぼんぼん",
+          "venue_name": "松本市中心市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://matsubon.com/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「松本市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-006",
+          "title": "第75回 磯部温泉祭り 大花火大会",
+          "venue_name": "安中市・磯部温泉 碓氷川河川敷",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://gunma-kanko.jp/features/189"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「安中市・磯部温泉 碓氷川河川敷」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-007",
+          "title": "下仁田こんにゃく夏祭り花火大会",
+          "venue_name": "下仁田町こんにゃく体験道場前広場",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://gunma-kanko.jp/features/189"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「下仁田町こんにゃく体験道場前広場」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-008",
+          "title": "令和8年度 明和まつり",
+          "venue_name": "明和町ふるさとの広場（邑楽郡明和町南大島1073）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.210963,
+          "longitude": 139.537502,
+          "official_source_urls": [
+            "https://www.town.meiwa.gunma.jp/life/sangyo_toshikaihatsu/10/5684.html"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-009",
+          "title": "第47回 草木湖まつり",
+          "venue_name": "東運動公園（みどり市東町座間399）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.53794610298617,
+          "longitude": 139.36950034602415,
+          "official_source_urls": [
+            "https://www.city.midori.gunma.jp/sangyou/1001646/1001795/1009173/1009706.html"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-hiroshima-006",
+          "title": "竹原住吉まつり",
+          "venue_name": "住吉神社（竹原市本町1-3）と周辺",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.3449088,
+          "longitude": 132.9112534,
+          "official_source_urls": [
+            "https://dive-hiroshima.com/events/events-125624/"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-hiroshima-007",
+          "title": "第48回 三次きんさい祭",
+          "venue_name": "三次市十日市中央通り・三次市役所周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.miyoshi.hiroshima.jp/soshiki/31/40142.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「三次市十日市中央通り・三次市役所周辺」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-hiroshima-008",
+          "title": "第15回 高校生の神楽甲子園ひろしま安芸高田",
+          "venue_name": "神楽門前湯治村 神楽ドーム（安芸高田市美土里町本郷4627）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 34.7216524,
+          "longitude": 132.6304112,
+          "official_source_urls": [
+            "https://dive-hiroshima.com/events/events-126456/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-hiroshima-009",
+          "title": "夏の夜、祈りと平和の夕べ",
+          "venue_name": "広島駅新幹線口周辺・二葉の里界隈（広島市東区）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.39832,
+          "longitude": 132.476436,
+          "official_source_urls": [
+            "https://dive-hiroshima.com/events/events-47789-26/"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-iwate-006",
+          "title": "第58回 宮古夏まつり",
+          "venue_name": "宮古駅前広場・末広町〜中央通（宮古市中心市街地）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.miyako.iwate.jp/gyosei/kanko_bunka_sports/kankojoho/2/5958.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「宮古駅前広場・末広町〜中央通（宮古市中心市街地）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-iwate-007",
+          "title": "第5回 奥州の花火大会",
+          "venue_name": "胆沢ダム東側特設会場（奥州市胆沢）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.pref.iwate.jp/event/moyooshi/1068274.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「胆沢ダム東側特設会場（奥州市胆沢）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-iwate-008",
+          "title": "いさわ水の郷夏祭り",
+          "venue_name": "胆沢文化創造センターと同センター前市道（奥州市胆沢）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 39.11928,
+          "longitude": 141.06919,
+          "official_source_urls": [
+            "https://www.city.oshu.iwate.jp/kanko/event/2/16163.html"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-iwate-009",
+          "title": "前沢夏まつり",
+          "venue_name": "前沢いきいきスポーツランド（奥州市前沢字阿部舘27-1）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 39.0580071,
+          "longitude": 141.1231717,
+          "official_source_urls": [
+            "https://www.city.oshu.iwate.jp/kanko/event/2/10716.html"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagawa-006",
+          "title": "第39回 仁尾竜まつり",
+          "venue_name": "市民センター仁尾周辺（三豊市仁尾町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「市民センター仁尾周辺（三豊市仁尾町）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagawa-007",
+          "title": "水辺の納涼祭",
+          "venue_name": "香川用水記念公園（三豊市財田町財田中2355）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「香川用水記念公園（三豊市財田町財田中2355）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagawa-008",
+          "title": "津嶋神社夏季大祭",
+          "venue_name": "津嶋神社（三豊市三野町大見7463）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「津嶋神社（三豊市三野町大見7463）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagawa-009",
+          "title": "第55回 三豊たくま港まつり",
+          "venue_name": "詫間町市民運動場と周辺（三豊市詫間町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mitoyo.lg.jp/kakuka/seisaku/sangyo/1_1/2438.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「詫間町市民運動場と周辺（三豊市詫間町）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nara-006",
+          "title": "第18回 平維盛の大祭",
+          "venue_name": "平維盛歴史の里（吉野郡野迫川村平51）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 34.113572,
+          "longitude": 135.644855,
+          "official_source_urls": [
+            "https://yamatoji.nara-kankou.or.jp/02nature/07park/04south_area/tairanokoremorirekishinosato/event/76f9h4rjpl/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nara-007",
+          "title": "地蔵盆夏祭",
+          "venue_name": "不空院境内 羂索庵（奈良市高畑町1365）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 34.676556,
+          "longitude": 135.846693,
+          "official_source_urls": [
+            "https://yamatoji.nara-kankou.or.jp/01shaji/02tera/01north_area/fukuin/event/ntfnd7iior/"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nara-008",
+          "title": "第15回 安堵町ふれあい盆踊り大会",
+          "venue_name": "安堵中央公園多目的広場（生駒郡安堵町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://yamatoji.nara-kankou.or.jp/04public/03hall/02west_area/r8ekuhvwus/event/reczjqius6/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「安堵中央公園多目的広場（生駒郡安堵町）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nara-009",
+          "title": "第25回 昴の郷ふれあい物語 十津川村の夏祭り",
+          "venue_name": "昴の郷多目的広場（吉野郡十津川村平谷909-4）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://yamatoji.nara-kankou.or.jp/04public/03hall/04south_area/izv1n7lmwt/event/5wjorstk3n/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「昴の郷多目的広場（吉野郡十津川村平谷909-4）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-niigata-006",
+          "title": "第40回 越後加茂川夏祭り 大花火大会",
+          "venue_name": "加茂川河川敷（加茂市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.65917433677099,
+          "longitude": 139.05850879416505,
+          "official_source_urls": [
+            "https://niigata-kankou.or.jp/event/2435"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-niigata-007",
+          "title": "とちお祭大花火大会",
+          "venue_name": "栃尾松葉公園（長岡市金町2丁目丙172-3）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 37.484381,
+          "longitude": 138.998648,
+          "official_source_urls": [
+            "https://niigata-kankou.or.jp/event/1946"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-niigata-008",
+          "title": "上越まつり大花火大会（直江津地区）",
+          "venue_name": "関川河口河川敷（上越市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.18007,
+          "longitude": 138.24249,
+          "official_source_urls": [
+            "https://niigata-kankou.or.jp/event/2327"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-niigata-009",
+          "title": "第58回 見附まつり",
+          "venue_name": "見附市街地・見附運動公園（花火会場）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.mitsuke.niigata.jp/soshiki/4/2288.html"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「見附市街地・見附運動公園（花火会場）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-okayama-006",
+          "title": "小田夏まつり",
+          "venue_name": "小田川河川敷・小田商店街（小田郡矢掛町小田）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.604232,
+          "longitude": 133.542104,
+          "official_source_urls": [
+            "https://www.okayama-kanko.jp/event/detail_12602.html"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-okayama-007",
+          "title": "久米郡ふるさと夏まつり",
+          "venue_name": "町田中央運動公園多目的広場（久米郡美咲町）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 34.9966194,
+          "longitude": 133.9527303,
+          "official_source_urls": [
+            "https://www.okayama-kanko.jp/event/detail_12619.html"
+          ],
+          "review_note": "checkpoint 100で公式情報の会場名・住所と公式掲載地図を照合し、同一の単一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-okayama-008",
+          "title": "第40回 ひなせみなとまつり 花火大会",
+          "venue_name": "日生港周辺（備前市日生町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.7343476220587,
+          "longitude": 134.276490211486,
+          "official_source_urls": [
+            "https://www.okayama-kanko.jp/event/detail_12617.html"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-okayama-009",
+          "title": "第35回 吉備高原「鬼伝祭」～ふるさとの夏祭り～",
+          "venue_name": "吉備高原都市さんさん広場一帯（加賀郡吉備中央町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.835848042171,
+          "longitude": 133.761870861053,
+          "official_source_urls": [
+            "https://www.okayama-kanko.jp/event/detail_12641.html"
+          ],
+          "review_note": "checkpoint 100で公式情報と公式掲載地図を照合。会場が広域または複数地点にまたがるため、公式ページが示す座標を代表点として採用し、会場全体を一点と断定しない。"
+        },
+        {
+          "event_id": "evt-summer-2026-shiga-006",
+          "title": "第54回 聖徳まつり",
+          "venue_name": "近江鉄道八日市駅前（東近江市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「近江鉄道八日市駅前（東近江市）」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shiga-007",
+          "title": "湖南市夏まつり2026",
+          "venue_name": "野洲川親水公園（湖南市夏見地先）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「野洲川親水公園（湖南市夏見地先）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shiga-008",
+          "title": "多賀大社 万灯祭",
+          "venue_name": "多賀大社（犬上郡多賀町多賀604）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"
+          ],
+          "review_note": "checkpoint 100で公式情報を再確認。会場「多賀大社（犬上郡多賀町多賀604）」は確認できたが、会場と一対一で対応する再利用可能な公式座標を確認できないためholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shiga-009",
+          "title": "ふるさと夏まつり 木之本地蔵大縁日・木之本大花火大会",
+          "venue_name": "北国街道・地蔵坂沿道（長浜市木之本町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.biwako-visitors.jp/staff/blog/detail/shiga-natsumatsuri2026/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「北国街道・地蔵坂沿道（長浜市木之本町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shimane-006",
+          "title": "第52回 温泉津温泉夏祭り",
+          "venue_name": "温泉津港周辺（大田市温泉津町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kankou-shimane.com/feature/74210"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「温泉津港周辺（大田市温泉津町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shimane-007",
+          "title": "出雲神話まつり 出雲盆踊り・花火大会",
+          "venue_name": "くにびき中央通り・大津神立河川敷公園（出雲市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kankou-shimane.com/feature/74210"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「くにびき中央通り・大津神立河川敷公園（出雲市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shimane-008",
+          "title": "つわの鯉・恋・来いまつり",
+          "venue_name": "道の駅なごみの里（鹿足郡津和野町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kankou-shimane.com/feature/74210"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「道の駅なごみの里（鹿足郡津和野町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-shimane-009",
+          "title": "神西湖 湖上花火大会",
+          "venue_name": "神西湖畔・温泉宿くにびき前駐車場付近（出雲市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kankou-shimane.com/feature/74210"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「神西湖畔・温泉宿くにびき前駐車場付近（出雲市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tottori-007",
+          "title": "第81回 みなと祭",
+          "venue_name": "境港市民交流センターみなとテラス・境中央公園・境水道",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.tottori-guide.jp/806/26876.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「境港市民交流センターみなとテラス・境中央公園・境水道」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tottori-008",
+          "title": "波止のまつり",
+          "venue_name": "神崎神社・赤碕港周辺（東伯郡琴浦町赤碕）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.tottori-guide.jp/806/26876.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「神崎神社・赤碕港周辺（東伯郡琴浦町赤碕）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tottori-009",
+          "title": "三朝温泉 夏花火大会",
+          "venue_name": "恋谷橋上流（三朝温泉街・東伯郡三朝町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://misasaonsen.jp/summerfes/",
+            "https://www.tottori-guide.jp/806/26876.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「恋谷橋上流（三朝温泉街・東伯郡三朝町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-wakayama-006",
+          "title": "太地町花火大会",
+          "venue_name": "太地漁港（東牟婁郡太地町太地）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 33.590180756168884,
+          "longitude": 135.94964701846888,
+          "official_source_urls": [
+            "https://www.wakayama-kanko.or.jp/events/detail_3718.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-wakayama-007",
+          "title": "スターライトイリュージョン2026",
+          "venue_name": "和歌山マリーナシティ西側防波堤（和歌山市毛見）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.1535492,
+          "longitude": 135.1767411,
+          "official_source_urls": [
+            "https://www.wakayama-kanko.or.jp/events/detail_3192.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-wakayama-008",
+          "title": "北山村 柱松・盆踊り",
+          "venue_name": "おくとろ公園（東牟婁郡北山村下尾井）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 33.9392218,
+          "longitude": 135.9463796,
+          "official_source_urls": [
+            "https://www.wakayama-kanko.or.jp/events/detail_3703.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-wakayama-009",
+          "title": "御坊市花火大会",
+          "venue_name": "日高川河川敷（御坊市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 33.88557383682298,
+          "longitude": 135.16430353461269,
+          "official_source_urls": [
+            "https://www.wakayama-kanko.or.jp/events/detail_3758.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamaguchi-006",
+          "title": "萩夏まつり",
+          "venue_name": "菊ヶ浜・萩市中心市街地",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.41942305708407,
+          "longitude": 131.39636158765072,
+          "official_source_urls": [
+            "https://yamaguchi-tourism.jp/event/detail_14001.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamaguchi-007",
+          "title": "2026サンフェスタしんなんよう",
+          "venue_name": "新南陽駅前・レゾナック永源山公園周辺（周南市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://yamaguchi-tourism.jp/event/detail_12839.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「新南陽駅前・レゾナック永源山公園周辺（周南市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamaguchi-008",
+          "title": "2026光花火大会「#虹はなび」",
+          "venue_name": "虹ケ浜海水浴場（光市虹ケ浜）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 33.966181983443626,
+          "longitude": 131.9113544273989,
+          "official_source_urls": [
+            "https://yamaguchi-tourism.jp/event/detail_11911.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamaguchi-009",
+          "title": "2026なご夏まつり花火大会",
+          "venue_name": "奈古漁港・奈古鹿島湾周辺（阿武郡阿武町奈古）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.49897364200919,
+          "longitude": 131.4669023319751,
+          "official_source_urls": [
+            "https://yamaguchi-tourism.jp/event/detail_17791.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ehime-007",
+          "title": "みなと祭（おどり大会・花火大会）",
+          "venue_name": "三島小学校グラウンド・駅前通り商店街・三島川之江港（四国中央市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.iyokannet.jp/event/5386"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「三島小学校グラウンド・駅前通り商店街・三島川之江港（四国中央市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukui-007",
+          "title": "第70回 勝山納涼花火大会＆かっちゃマルシェ",
+          "venue_name": "弁天緑地公園（勝山市）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.057859618987166,
+          "longitude": 136.4949345588684,
+          "official_source_urls": [
+            "https://www.fuku-e.com/event/detail_7540.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ehime-008",
+          "title": "瀬戸の夕凪まつり",
+          "venue_name": "伊方町三机荷上場（西宇和郡伊方町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.iyokannet.jp/event/7480"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「伊方町三机荷上場（西宇和郡伊方町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-ehime-009",
+          "title": "風早海まつり（納涼花火大会）",
+          "venue_name": "北条港外港荷揚場（松山市北条辻）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.iyokannet.jp/event/5693"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「北条港外港荷揚場（松山市北条辻）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukui-008",
+          "title": "森田まつり・森田花火",
+          "venue_name": "九頭竜川河川敷（森田小学校横・福井市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fuku-e.com/feature/detail_243.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「九頭竜川河川敷（森田小学校横・福井市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukui-009",
+          "title": "おおの城まつり大花火大会",
+          "venue_name": "真名川憩いの島（大野市中保）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fuku-e.com/feature/detail_243.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「真名川憩いの島（大野市中保）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukushima-007",
+          "title": "伊達のふる里夏まつり",
+          "venue_name": "阿武隈急行梁川駅前ほか（伊達市梁川町青葉町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.8459416,
+          "longitude": 140.60253266983642,
+          "official_source_urls": [
+            "https://www.tif.ne.jp/jp/entry/article.html?event=6528"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukushima-008",
+          "title": "第35回ふくやま夏祭り花火大会",
+          "venue_name": "富久山河川敷多目的広場（郡山市富久山町福原上台）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 37.42027273238388,
+          "longitude": 140.41221531216178,
+          "official_source_urls": [
+            "https://www.tif.ne.jp/jp/entry/article.html?event=6539"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukushima-009",
+          "title": "からりこフェスタ",
+          "venue_name": "中丁交差点〜鉄砲町交差点（伊達郡川俣町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.66505311899776,
+          "longitude": 140.60220251835608,
+          "official_source_urls": [
+            "https://www.tif.ne.jp/jp/entry/article.html?event=7072"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-gifu-007",
+          "title": "大垣花火大会",
+          "venue_name": "揖斐川河畔（大垣市東町地内）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.3691494,
+          "longitude": 136.6524305,
+          "official_source_urls": [
+            "https://www.kankou-gifu.jp/event/detail_4190.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-gifu-008",
+          "title": "2026境川ふれあい夏祭り花火大会",
+          "venue_name": "境川緑道公園（道の駅柳津周辺・岐阜市柳津町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.36742557253028,
+          "longitude": 136.7254114151001,
+          "official_source_urls": [
+            "https://www.kankou-gifu.jp/event/detail_6040.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-gifu-009",
+          "title": "中津川夏祭り「おいでん祭」",
+          "venue_name": "中津川河畔桃山・中津川市中心市街地",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.503863,
+          "longitude": 137.503166,
+          "official_source_urls": [
+            "https://www.kankou-gifu.jp/event/detail_3799.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-007",
+          "title": "第48回東海まつり花火大会",
+          "venue_name": "阿漕ヶ浦公園（那珂郡東海村村松742-5）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.48656800304205,
+          "longitude": 140.595388712678,
+          "official_source_urls": [
+            "https://www.ibarakiguide.jp/event.php?code=710&mode=detail"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-008",
+          "title": "2026いなしき夏まつり花火大会",
+          "venue_name": "江戸崎総合運動公園（稲敷市荒沼3-1）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 35.95527009433085,
+          "longitude": 140.32600250793166,
+          "official_source_urls": [
+            "https://www.ibarakiguide.jp/event.php?code=701&mode=detail"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-009",
+          "title": "下妻まつり2026",
+          "venue_name": "砂沼南岸・砂沼湖上（下妻市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.shimotsuma.lg.jp/kanko-business-sangyo/event/shimotsumafestival/shimotsumamatsuri2026/matsuri2026/page009231.html",
+            "https://www.city.shimotsuma.lg.jp/kanko-business-sangyo/event/shimotsumafestival/shimotsumamatsuri2026/matsuri2026/page009199.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「砂沼南岸・砂沼湖上（下妻市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-ishikawa-007",
+          "title": "天神講",
+          "venue_name": "菅生石部神社（加賀市大聖寺敷地ル乙81）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.31287644547335,
+          "longitude": 136.32086738657762,
+          "official_source_urls": [
+            "https://www.hot-ishikawa.jp/event/detail_12159.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ishikawa-008",
+          "title": "どいやさ祭",
+          "venue_name": "能登町姫地区・姫漁港（鳳珠郡能登町姫10）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.29688429999999,
+          "longitude": 137.2121989,
+          "official_source_urls": [
+            "https://www.hot-ishikawa.jp/notohaku/event/detail_21912.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ishikawa-009",
+          "title": "松波人形キリコ祭り",
+          "venue_name": "能登町松波地区市街地（鳳珠郡能登町字松波）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 37.356582,
+          "longitude": 137.24267,
+          "official_source_urls": [
+            "https://www.hot-ishikawa.jp/event/detail_17841.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagoshima-007",
+          "title": "美里あいら夏祭り花火大会",
+          "venue_name": "鵜戸神宮・姶良川河川敷（月見橋上流、鹿屋市吾平町上名）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 31.324813,
+          "longitude": 130.899788,
+          "official_source_urls": [
+            "https://www.kagoshima-kankou.com/event/20276"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagoshima-008",
+          "title": "2026かいもん夏祭り",
+          "venue_name": "かいもん山麓ふれあい公園レクレーション広場（指宿市開聞十町2626）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 31.1963394,
+          "longitude": 130.534241,
+          "official_source_urls": [
+            "https://www.kagoshima-kankou.com/event/20339"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kagoshima-009",
+          "title": "2026伊佐市夏祭り花火大会",
+          "venue_name": "伊佐市大口総合グラウンド付近（伊佐市里地内）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 32.058975,
+          "longitude": 130.60873,
+          "official_source_urls": [
+            "https://www.kagoshima-kankou.com/event/20270"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kochi-007",
+          "title": "第49回土佐山夏祭り",
+          "venue_name": "土佐山運動広場（高知市土佐山1137）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://kochi-tabi.jp/search_event.html?id=18637"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「土佐山運動広場（高知市土佐山1137）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kochi-008",
+          "title": "第20回いの町民祭仁淀川まつり",
+          "venue_name": "仁淀川堤防羽根公園・仁淀川河原（吾川郡いの町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.inofan.jp/information/event/n5147/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「仁淀川堤防羽根公園・仁淀川河原（吾川郡いの町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kochi-009",
+          "title": "第20回香南市みなこい港まつり",
+          "venue_name": "天然色劇場・吉川漁港周辺（香南市吉川町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.kochi-konan.lg.jp/soshikikarasagasu/shokokankoka/kankojoho/1/10389.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「天然色劇場・吉川漁港周辺（香南市吉川町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kumamoto-008",
+          "title": "第59回八代くま川祭り",
+          "venue_name": "お祭りでんでん館・堀端通り（八代市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.yatsushiro.lg.jp/kiji00326070/index.html",
+            "https://www.city.yatsushiro.lg.jp/kiji00326035/3_26035_152525_up_dat6svgk.pdf"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「お祭りでんでん館・堀端通り（八代市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kumamoto-009",
+          "title": "第48回菊陽町夏祭り",
+          "venue_name": "菊陽杉並木公園（菊池郡菊陽町原水）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.kikuyo.lg.jp/kiji0035494/index.html",
+            "https://www.town.kikuyo.lg.jp/kiji0035550/3_5550_up_jethl5w2.pdf"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「菊陽杉並木公園（菊池郡菊陽町原水）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-miyagi-007",
+          "title": "登米市佐沼夏祭り",
+          "venue_name": "中江公園・迫川河畔（登米市迫町佐沼）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.miyagi-kankou.or.jp/kakikomi/detail.php?id=21768"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「中江公園・迫川河畔（登米市迫町佐沼）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-miyagi-008",
+          "title": "南三陸町志津川湾夏まつり",
+          "venue_name": "志津川仮設魚市場特設会場（本吉郡南三陸町志津川字旭ケ浦8）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 38.6720753,
+          "longitude": 141.4569461,
+          "official_source_urls": [
+            "https://www.miyagi-kankou.or.jp/kakikomi/detail.php?id=16292"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-miyagi-009",
+          "title": "気仙沼市市制施行20周年記念 第74回気仙沼みなとまつり",
+          "venue_name": "気仙沼市港町臨港道路・内湾周辺",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 38.9046251,
+          "longitude": 141.5791481,
+          "official_source_urls": [
+            "https://www.miyagi-kankou.or.jp/kakikomi/detail.php?id=4098"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-miyazaki-008",
+          "title": "日向ひょっとこ夏祭り",
+          "venue_name": "JR日向市駅前周辺・あくがれ広場（日向市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 32.390036,
+          "longitude": 131.514776,
+          "official_source_urls": [
+            "https://www.kanko-miyazaki.jp/event/1184"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-miyazaki-009",
+          "title": "盆地まつり",
+          "venue_name": "国道10号中央通り・円頭庵通り・さくら通り（都城市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 31.72625991146461,
+          "longitude": 131.06133921729446,
+          "official_source_urls": [
+            "https://www.kanko-miyazaki.jp/event/1683"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagasaki-007",
+          "title": "かわたな夏まつり",
+          "venue_name": "川棚新漁港一帯（東彼杵郡川棚町）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 33.06298638611,
+          "longitude": 129.85873103142,
+          "official_source_urls": [
+            "https://www.nagasaki-tabinet.com/event/62661"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagasaki-008",
+          "title": "長与川まつり",
+          "venue_name": "長与総合公園運動広場（西彼杵郡長与町岡郷1474-3）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 32.85004491166,
+          "longitude": 129.86947605871,
+          "official_source_urls": [
+            "https://www.nagasaki-tabinet.com/event/50501"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagasaki-009",
+          "title": "はさみ夏まつり",
+          "venue_name": "はさみ温泉湯治楼周辺（東彼杵郡波佐見町長野郷558-3）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 33.1150446,
+          "longitude": 129.8687932,
+          "official_source_urls": [
+            "https://www.nagasaki-tabinet.com/event/60908"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-oita-007",
+          "title": "関の権現 早吸日女神社夏祭り",
+          "venue_name": "早吸日女神社・佐賀関港古宮赤灯台突堤ほか（大分市佐賀関3329）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.visit-oita.jp/events/detail/14043"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「早吸日女神社・佐賀関港古宮赤灯台突堤ほか（大分市佐賀関3329）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-oita-008",
+          "title": "第27回ななせの火群まつり ～エルミネスタ2026～",
+          "venue_name": "七瀬川自然公園（大分市大字市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.visit-oita.jp/events/detail/14035"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「七瀬川自然公園（大分市大字市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-oita-009",
+          "title": "第58回ゆふいん盆地まつり",
+          "venue_name": "由布院駅前通り・宮川河畔ほか（由布市湯布院町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.visit-oita.jp/events/detail/14061"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「由布院駅前通り・宮川河畔ほか（由布市湯布院町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saga-007",
+          "title": "多久山笠",
+          "venue_name": "JR多久駅周辺（多久市北多久町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「JR多久駅周辺（多久市北多久町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saga-008",
+          "title": "第53回塩田夏まつり花火大会",
+          "venue_name": "嬉野市社会文化会館リバティ周辺（嬉野市塩田町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.asobo-saga.jp/articles/detail/214d2c32-ad21-447c-873a-149323557caf"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「嬉野市社会文化会館リバティ周辺（嬉野市塩田町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saga-009",
+          "title": "脊振わんぱくまつり",
+          "venue_name": "高取山公園（神埼市脊振町広滝1472）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 33.371387,
+          "longitude": 130.335109,
+          "official_source_urls": [
+            "https://www.asobo-saga.jp/events/detail/8427a095-e61b-460e-b588-a12ddb6b189d"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-tochigi-007",
+          "title": "芭蕉の里くろばね夏まつり・市民花火大会",
+          "venue_name": "那珂川河川公園（大田原市黒羽向町）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.86224,
+          "longitude": 140.118141,
+          "official_source_urls": [
+            "https://www.tochigiji.or.jp/event/e15369/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-tochigi-008",
+          "title": "第51回ふるさと宮まつり",
+          "venue_name": "大通り（本町交差点～上河原交差点）・オリオンスクエアほか（宇都宮市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.tochigiji.or.jp/event/e43229"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「大通り（本町交差点～上河原交差点）・オリオンスクエアほか（宇都宮市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tochigi-009",
+          "title": "尊徳夏まつりザ・ファイナル2026",
+          "venue_name": "鬼怒川河川敷緑地公園（真岡市砂ケ原1261・砂ヶ原橋下流左岸）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.3828229,
+          "longitude": 139.9354758,
+          "official_source_urls": [
+            "https://www.tochigiji.or.jp/event/e17354/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokushima-008",
+          "title": "つるぎ町夏まつり花火大会",
+          "venue_name": "つるぎ町立貞光中学校グラウンド・貞光川河川敷（美馬郡つるぎ町貞光）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.tokushima-tsurugi.lg.jp/docs/3451.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「つるぎ町立貞光中学校グラウンド・貞光川河川敷（美馬郡つるぎ町貞光）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokushima-009",
+          "title": "2026牟岐の夏祭り（姫神祭）",
+          "venue_name": "牟岐町役場前・西の浜・牟岐港周辺（海部郡牟岐町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.tokushima-mugi.lg.jp/doc/2026070900031/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「牟岐町役場前・西の浜・牟岐港周辺（海部郡牟岐町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-toyama-007",
+          "title": "第60回富山新港花火大会",
+          "venue_name": "海王丸パーク（射水市海王町8）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 36.7810142,
+          "longitude": 137.1078171,
+          "official_source_urls": [
+            "https://www.info-toyama.com/events/20031"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-toyama-008",
+          "title": "福光ねつおくり七夕祭り",
+          "venue_name": "福光町中心地（南砺市福光）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 36.558532484108,
+          "longitude": 136.8766450882,
+          "official_source_urls": [
+            "https://www.info-toyama.com/events/40021"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamagata-007",
+          "title": "水郷大江夏まつり灯ろう流し花火大会",
+          "venue_name": "左沢地区最上川河畔（西村山郡大江町左沢）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 38.3821962462547,
+          "longitude": 140.212814211845,
+          "official_source_urls": [
+            "https://yamagatakanko.com/festivals/detail_2990.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamagata-008",
+          "title": "ゆざ町夕日まつり 遊佐町民花火大会",
+          "venue_name": "西浜海水浴場（飽海郡遊佐町吹浦西浜）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://yamagatakanko.com/topics/detail_78.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「西浜海水浴場（飽海郡遊佐町吹浦西浜）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamagata-009",
+          "title": "ながい水まつり・最上川花火大会",
+          "venue_name": "最上川河川緑地公園（長井市舟場）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://yamagatakanko.com/topics/detail_78.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「最上川河川緑地公園（長井市舟場）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-akita-010",
+          "title": "横手の送り盆まつり",
+          "venue_name": "横手市役所本庁舎前・蛇の崎橋上・お城山周辺ほか（横手市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.yokotekamakura.com/okuribon-2026/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「横手市役所本庁舎前・蛇の崎橋上・お城山周辺ほか（横手市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-aomori-009",
+          "title": "青森花火大会",
+          "venue_name": "青森港西防波堤・北防波堤沖（青森市・青い海公園周辺）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://aomori-tourism.com/event/detail_8912.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「青森港西防波堤・北防波堤沖（青森市・青い海公園周辺）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-aomori-010",
+          "title": "五所川原花火大会",
+          "venue_name": "岩木川河川敷 北斗グラウンド（五所川原市）",
+          "outcome": "mappable",
+          "coordinate_precision": "exact_venue",
+          "latitude": 40.80903450836096,
+          "longitude": 140.43844703121337,
+          "official_source_urls": [
+            "https://aomori-tourism.com/event/detail_3340.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・単一会場名と公式掲載地図を照合し、同一会場を示す座標として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kyoto-009",
+          "title": "間人（たいざ）みなと祭",
+          "venue_name": "間人漁港・丹後地域公民館周辺（京丹後市丹後町間人2690-1）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.73819052684382,
+          "longitude": 135.08780717525306,
+          "official_source_urls": [
+            "https://www.kyotango.gr.jp/events/event/53402/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-kyoto-010",
+          "title": "千日会観光祭",
+          "venue_name": "久美浜公園周辺（京丹後市久美浜町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.kyotango.gr.jp/c/fireworks2026/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「久美浜公園周辺（京丹後市久美浜町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-mie-009",
+          "title": "第84回名張川納涼花火大会",
+          "venue_name": "名張川新町河畔（名張市新町・黒田地区）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.618093199979945,
+          "longitude": 136.0837921202219,
+          "official_source_urls": [
+            "https://www.kankou-nabari.jp/hanabi/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-mie-010",
+          "title": "第73回おわせ港まつり",
+          "venue_name": "尾鷲港一帯（尾鷲市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.074516,
+          "longitude": 136.201412,
+          "official_source_urls": [
+            "https://www.kankomie.or.jp/event/43190"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-011",
+          "title": "網代温泉花火大会（2026）",
+          "venue_name": "網代湾（国道135号沿い・大縄公園前、熱海市網代）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.ataminews.gr.jp/event/171/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「網代湾（国道135号沿い・大縄公園前、熱海市網代）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-011",
+          "title": "諏訪湖サマーナイト花火2026",
+          "venue_name": "上諏訪温泉前 諏訪湖上（諏訪市）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.suwakanko.jp/story/hanabi-suwako/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「上諏訪温泉前 諏訪湖上（諏訪市）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-osaka-011",
+          "title": "第13回梅田ゆかた祭2026",
+          "venue_name": "グランフロント大阪・阪急・大阪ステーションシティ・ONthe UMEDA・ダイヤモンド／西梅田地区（大阪市北区梅田周辺）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.osaka.lg.jp/keizaisenryaku/page/0000681200.html",
+            "https://umeda-connect.jp/yukata/matsuri2026/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「グランフロント大阪・阪急・大阪ステーションシティ・ONthe UMEDA・ダイヤモンド／西梅田地区（大阪市北区梅田周辺）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-011",
+          "title": "南部の火祭り2026",
+          "venue_name": "富士川河川敷 南部橋上下流（南巨摩郡南部町）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.yamanashi-kankou.jp/special/pr/nanbu-himatsuri.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「富士川河川敷 南部橋上下流（南巨摩郡南部町）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-hyogo-012",
+          "title": "第74回龍野納涼花火大会",
+          "venue_name": "揖保川河川敷 千鳥ヶ浜公園（たつの市龍野町富永）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.tatsuno.lg.jp/soshiki/1023/gyomu/1/8602.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「揖保川河川敷 千鳥ヶ浜公園（たつの市龍野町富永）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-fukuoka-013",
+          "title": "甘木川花火大会 流灌頂法要会",
+          "venue_name": "小石原川甘木橋下流（朝倉市甘木）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.asakura.lg.jp/site/kanko/13553.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「小石原川甘木橋下流（朝倉市甘木）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-026",
+          "title": "第127回水郷おみがわ花火大会",
+          "venue_name": "小見川大橋下流 利根川河畔（香取市小見川）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://maruchiba.jp/feature/detail_53.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「小見川大橋下流 利根川河畔（香取市小見川）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-019",
+          "title": "箱根強羅温泉大文字焼（2026年）",
+          "venue_name": "強羅駅周辺（足柄下郡箱根町強羅）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://hakone.or.jp/10197"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「強羅駅周辺（足柄下郡箱根町強羅）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-022",
+          "title": "忍川とうろう流し",
+          "venue_name": "行田市駅北側 忍川・翔栄橋付近（行田市）",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 36.14432561974967,
+          "longitude": 139.45896247951606,
+          "official_source_urls": [
+            "https://chocotabi-saitama.jp/event/136984/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-025",
+          "title": "第60回麻布十番納涼まつり",
+          "venue_name": "麻布十番商店街一帯（港区麻布十番）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.azabujuban.or.jp/topics/topics_event/23867/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。会場「麻布十番商店街一帯（港区麻布十番）」は確認できたが、イベントと一対一で対応する単一の再利用可能な公式座標を安全に確定できないため、推測せずholdを維持。"
+        },
+        {
+          "event_id": "evt-summer-2026-tokyo-011",
+          "title": "深川八幡祭り（富岡八幡宮例祭）",
+          "venue_name": "富岡八幡宮と周辺氏子地域",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "http://www.tomiokahachimangu.or.jp/annai/maturi/maturih1.html",
+            "https://www.gotokyo.org/jp/spot/ev093/index.html",
+            "https://koto-kanko.jp/special/detail.php?spid=55"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。祭礼は富岡八幡宮だけでなく周辺氏子地域に広がるため、神社の一点を祭礼全体と誤認させないよう非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-002",
+          "title": "みなとみらいスマートフェスティバル2026",
+          "venue_name": "みなとみらい21地区 臨港パーク前面海上",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.mmsf.yokohama/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式情報では臨港パークほか複数会場を使用するため、一会場だけを大会全体の位置として示さず非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-003",
+          "title": "第73回戸田橋花火大会",
+          "venue_name": "国道17号戸田橋上流 荒川河川敷",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 35.800255,
+          "longitude": 139.674092,
+          "official_source_urls": [
+            "https://www.todabashi-hanabi.jp/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-005",
+          "title": "富士まつり2026",
+          "venue_name": "富士市中央公園・青葉通り",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.fuji.shizuoka.jp/1035170000/event/p007770.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で中央公園と青葉通りを確認済みだが、複数エリアを一点の会場として誤認させないため非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-006",
+          "title": "第72回島田夏まつり",
+          "venue_name": "島田市本通商店街・駅前中央通り",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.shimada.shizuoka.jp/kanko-docs/kankouevent-kawadomenatsumatsuri.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で本通一〜七丁目商店街と駅前中央通りを確認済みだが、広い街路型会場を一点で示さないため非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-007",
+          "title": "富士山御神火まつり",
+          "venue_name": "富士山本宮浅間大社・富士宮市中心市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.fujinomiya.lg.jp/1025200000/event/p000075.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で浅間大社と中心市街地を確認済みだが、神社の一点をみこし巡行を含む祭り全体の位置と誤認させないため非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-008",
+          "title": "第46回藤枝花火大会",
+          "venue_name": "蓮華寺池公園",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.fujieda.gr.jp/news/n24551/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で蓮華寺池公園を確認済みだが、池畔の観覧範囲と打上地点を一点で誤認させないよう、根拠座標を確定するまで非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-shizuoka-009",
+          "title": "第80回按針祭 海の花火大会",
+          "venue_name": "伊東海岸一帯",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 34.97193917020221,
+          "longitude": 139.10115402128756,
+          "official_source_urls": [
+            "https://itospa.com/event/detail_10020.html"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-005",
+          "title": "第102回野尻湖花火大会",
+          "venue_name": "野尻湖周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.town.shinano.lg.jp/docs/1194550.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で野尻湖周辺を確認済みだが、湖上打上げと広い観覧域を安全に代表する一点を確定できないため非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-006",
+          "title": "第95回千曲川納涼煙火大会",
+          "venue_name": "戸倉上山田温泉 千曲川河畔",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.chikuma-hanabi.jp/"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で千曲川河畔と温泉街側の観覧域を確認済みだが、会場全体を一点に固定せず非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-007",
+          "title": "飯縄火まつり",
+          "venue_name": "飯綱高原・大座法師池周辺",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 36.7061068147642,
+          "longitude": 138.14247734331968,
+          "official_source_urls": [
+            "https://www.nagano-cvb.or.jp/modules/event/page/204"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-008",
+          "title": "第57回岡谷太鼓まつり",
+          "venue_name": "イルフプラザ広場周辺",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 36.06071596139914,
+          "longitude": 138.02947551906828,
+          "official_source_urls": [
+            "https://okaya-taiko.jp/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-009",
+          "title": "第19回安曇野花火",
+          "venue_name": "明科犀川河川敷内 御宝田遊水池周辺",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.azumino.nagano.jp/soshiki/32/129490.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で犀川河川敷内の御宝田遊水池周辺を確認済みだが、広域河川敷を過度に正確な一点として示さず非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-010",
+          "title": "千曲川河畔納涼花火大会2026",
+          "venue_name": "千曲川中央橋上流河川敷",
+          "outcome": "mappable",
+          "coordinate_precision": "area_representative",
+          "latitude": 36.853497,
+          "longitude": 138.365823,
+          "official_source_urls": [
+            "https://www.naganohanabi.jp/"
+          ],
+          "review_note": "checkpoint 200で公式情報のイベント名・会場範囲と公式掲載地図を照合。広域または複数地点を正確な一点と断定せず、公式ページが示す地点を代表点として採用。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-001",
+          "title": "第66回水戸黄門まつり",
+          "venue_name": "千波湖・水戸市中心市街地",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://mitokoumon.com/koumon/hanabi.html",
+            "https://www.city.mito.lg.jp/page/124507.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で花火の千波湖と本祭の中心市街地を確認済みだが、複数会場を一点に固定せず非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-002",
+          "title": "第21回古河花火大会",
+          "venue_name": "古河ゴルフリンクス（渡良瀬川河川敷）",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.ibaraki-koga.lg.jp/soshiki/kanko/4_1/2026hanabi.html",
+            "https://www.kogakanko.jp/hanabi"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で渡良瀬川河川敷を確認済みだが、広域会場を過度に正確な一点として示さず非表示。"
+        },
+        {
+          "event_id": "evt-summer-2026-ibaraki-003",
+          "title": "第71回とりで利根川大花火",
+          "venue_name": "取手緑地運動公園",
+          "outcome": "hold",
+          "coordinate_precision": "hold",
+          "latitude": null,
+          "longitude": null,
+          "official_source_urls": [
+            "https://www.city.toride.ibaraki.jp/sanshin/bunkakatsudo/kanko/oshirase/71kaihanabitaikai.html"
+          ],
+          "review_note": "checkpoint 200で公式情報を再確認。公式一次情報で取手緑地運動公園の利根川河川敷を確認済みだが、観覧域全体を一点に固定せず非表示。"
+        }
+      ]
     }
   ]
 }

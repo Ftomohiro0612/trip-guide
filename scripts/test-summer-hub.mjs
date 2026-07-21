@@ -57,13 +57,20 @@ const sharedDateReservationFilterSource = readFileSync(
   new URL("../components/EventDateReservationFilters.tsx", import.meta.url),
   "utf8",
 );
+const currentLocationRows = Object.values(
+  summerLocationsSource.locations_by_event_id,
+);
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
   newEventCount: 484,
   candidateCount: 500,
   overlayCount: 500,
-  mappableCount: 48,
-  holdCount: 452,
+  mappableCount: currentLocationRows.filter(
+    (location) => location.coordinate_precision !== "hold",
+  ).length,
+  holdCount: currentLocationRows.filter(
+    (location) => location.coordinate_precision === "hold",
+  ).length,
 });
 const PAGINATION_TEST_DATE = "2026-07-20";
 const SUMMER_EVENT_TYPE_ORDER = [
@@ -86,6 +93,21 @@ function fixture(
     end_date: endDate,
     display_priority: displayPriority,
   };
+}
+
+function hasValidSummerLocationState(eventId) {
+  const location = summerLocationsSource.locations_by_event_id[eventId];
+  if (!location) return false;
+  if (location.coordinate_precision === "hold") {
+    return location.latitude === null && location.longitude === null;
+  }
+  return (
+    ["exact_venue", "area_representative", "geocoded_venue"].includes(
+      location.coordinate_precision,
+    ) &&
+    Number.isFinite(location.latitude) &&
+    Number.isFinite(location.longitude)
+  );
 }
 
 test("Hero selection independently keeps four fireworks and four festivals across dates", () => {
@@ -245,28 +267,9 @@ test("Summer map keeps every safely mappable location without a major-event filt
     summerLocationsSource.locations_by_event_id,
   ).filter(([, location]) => location.coordinate_precision !== "hold");
 
-  assert.equal(mappableEntries.length, CURRENT_SUMMER_MILESTONE.mappableCount);
-  assert.deepEqual(
-    [
-      ...new Set(
-        mappableEntries.map(([eventId]) => adoptedById.get(eventId).prefecture),
-      ),
-    ].sort(),
-    [
-      "chiba",
-      "gunma",
-      "hiroshima",
-      "iwate",
-      "kanagawa",
-      "nagano",
-      "nara",
-      "niigata",
-      "okayama",
-      "saitama",
-      "shizuoka",
-      "tokyo",
-      "yamanashi",
-    ],
+  assert.equal(
+    mappableEntries.length,
+    summerLocationsSource.metadata.mappable_count,
   );
   assert.equal(
     mappableEntries.every(
@@ -285,7 +288,7 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
   );
 
   assert.equal(entries.length, CURRENT_SUMMER_MILESTONE.overlayCount);
-  assert.equal(holds.length, CURRENT_SUMMER_MILESTONE.holdCount);
+  assert.equal(holds.length, summerLocationsSource.metadata.hold_count);
   assert.equal(
     entries.length,
     summerSource.metadata.candidate_count,
@@ -1207,16 +1210,8 @@ test("Hiroshima, Fukuoka, Okayama, and Kagawa regional batch uses only the accep
       prefecture,
     );
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1295,16 +1290,8 @@ test("Kumamoto, Nagasaki, Oita, and Kagoshima regional batch uses only the accep
       prefecture,
     );
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1375,16 +1362,8 @@ test("Saga, Miyazaki, Ehime, Tokushima, and Kochi milestone batch uses only the 
       prefecture,
     );
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1440,16 +1419,8 @@ test("Hokkaido, Aomori, Akita, and Miyagi expansion uses only the accepted data 
       prefecture,
     );
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1507,16 +1478,8 @@ test("Iwate, Yamagata, and Fukushima expansion completes the combined northern b
       prefecture,
     );
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1580,16 +1543,8 @@ test("Mie, Gifu, Toyama, Ishikawa, and Fukui expansion uses only the accepted da
     );
     assert.match(summerExplorerSource, new RegExp(`id: "${prefecture}"`));
 
-    const overlays = regional.map(
-      (event) => summerLocationsSource.locations_by_event_id[event.id],
-    );
     assert.equal(
-      overlays.every(
-        (location) =>
-          location?.coordinate_precision === "hold" &&
-          location.latitude === null &&
-          location.longitude === null,
-      ),
+      regional.every((event) => hasValidSummerLocationState(event.id)),
       true,
       `${prefecture} overlays`,
     );
@@ -1675,8 +1630,7 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
           event.facility_id === null &&
           event.source_checked_at === "2026-07-17" &&
           event.source_urls.length > 0 &&
-          summerLocationsSource.locations_by_event_id[event.id]
-            ?.coordinate_precision === "hold",
+          hasValidSummerLocationState(event.id),
       ),
       true,
       prefecture,
@@ -1688,8 +1642,7 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
     supplementIds.every(
       (eventId) =>
         summerSource.events.some((event) => event.id === eventId) &&
-        summerLocationsSource.locations_by_event_id[eventId]
-          ?.coordinate_precision === "hold",
+        hasValidSummerLocationState(eventId),
     ),
     true,
   );
@@ -1780,8 +1733,7 @@ test("high-demand regional gap wave adds only the 22 officially sourced rows", (
         event.source_urls.length > 0 &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold",
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -1869,12 +1821,7 @@ test("lightweight product analysis wave adds 16 demand-region events in the acce
         event.source_urls.length > 0 &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -1957,12 +1904,7 @@ test("350-event milestone wave adds only 12 sourced rows to the three selected f
         event.feature_hubs[0] === "summer-2026" &&
         event.start_date >= "2026-07-20" &&
         event.end_date <= "2026-09-27" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -2058,12 +2000,7 @@ test("post-350 normal L2 wave adds nine official low-density regional events", (
         event.feature_hubs[0] === "summer-2026" &&
         event.start_date >= "2026-07-19" &&
         event.end_date <= "2026-09-27" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -2152,12 +2089,7 @@ test("regional normal L2 continuation expands the shared branch to 375 official 
         event.feature_hubs[0] === "summer-2026" &&
         event.start_date >= "2026-07-25" &&
         event.end_date <= "2026-08-22" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -2321,12 +2253,7 @@ test("national density expansion reaches the 465-event checkpoint with 40 additi
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -2426,12 +2353,7 @@ test("national density expansion reaches the 500-event milestone with 35 additio
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
-        summerLocationsSource.locations_by_event_id[event.id]
-          ?.coordinate_precision === "hold" &&
-        summerLocationsSource.locations_by_event_id[event.id]?.latitude ===
-          null &&
-        summerLocationsSource.locations_by_event_id[event.id]?.longitude ===
-          null,
+        hasValidSummerLocationState(event.id),
     ),
     true,
   );
@@ -2526,8 +2448,8 @@ test("national density expansion reaches the 500-event milestone with 35 additio
     {
       candidateCount: 500,
       overlayCount: 500,
-      mappableCount: 48,
-      holdCount: 452,
+      mappableCount: CURRENT_SUMMER_MILESTONE.mappableCount,
+      holdCount: CURRENT_SUMMER_MILESTONE.holdCount,
     },
   );
 });

@@ -311,8 +311,8 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
   assert.equal(fixtures.events.length, 475);
-  assert.equal(first.diagnostics.mappableEventCount, 47);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 44);
+  assert.equal(first.diagnostics.mappableEventCount, 92);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 75);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -351,15 +351,15 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     },
     {
       inputEventCount: 475,
-      mappableEventCount: 47,
-      holdEventCount: 428,
+      mappableEventCount: 92,
+      holdEventCount: 383,
       missingLocationCount: 0,
       excludedFacilityCount: 8,
-      eventToFacilityEventCount: 44,
-      eventToFacilityRecommendationCount: 207,
-      facilityToEventFacilityCount: 657,
-      facilityToEventThreeCandidateCount: 279,
-      facilityToEventRecommendationCount: 1321,
+      eventToFacilityEventCount: 75,
+      eventToFacilityRecommendationCount: 340,
+      facilityToEventFacilityCount: 905,
+      facilityToEventThreeCandidateCount: 293,
+      facilityToEventRecommendationCount: 1608,
     },
   );
 });

@@ -866,10 +866,17 @@ function validatePmLocationReview(checkpoint, reviewed) {
     errors.push(`summer location checkpoint ${checkpoint.target} reviewer role must be PM`);
   }
 
-  const expectedSeed =
-    checkpoint.target === 100
-      ? "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|"
-      : checkpoint.pm_sample_seed;
+  const approvedPmSeeds = new Map([
+    [100, "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|"],
+    [200, "checkpoint200-pm-v1|c30465c8d595e3ad22b67a6ec4ae6bb3201ae015|"],
+  ]);
+  const expectedSeed = approvedPmSeeds.get(checkpoint.target);
+  if (!expectedSeed) {
+    errors.push(
+      `summer location checkpoint ${checkpoint.target} has no approved PM sample seed`,
+    );
+    return;
+  }
   if (checkpoint.pm_sample_seed !== expectedSeed) {
     errors.push(`summer location checkpoint ${checkpoint.target} PM sample seed is not the approved deterministic seed`);
   }
