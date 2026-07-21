@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createHash } from "node:crypto";
 
 const root = process.cwd();
 const base = readJson("data/events_data.json");
@@ -847,6 +848,86 @@ function validateSummerLocationResearch(research, locationsByEventId, eventsById
       if (item.outcome === "hold" && (item.latitude !== null || item.longitude !== null)) {
         error(item.event_id, "researched hold must not contain coordinates");
       }
+    }
+
+    validatePmLocationReview(checkpoint, reviewed);
+  }
+}
+
+function validatePmLocationReview(checkpoint, reviewed) {
+  if (checkpoint.pm_review_status !== "pass") {
+    errors.push(`summer location checkpoint ${checkpoint.target} PM review must pass`);
+  }
+  validateDate(
+    checkpoint.pm_reviewed_at,
+    `summer location checkpoint ${checkpoint.target}.pm_reviewed_at`,
+  );
+  if (checkpoint.pm_reviewer_role !== "PM") {
+    errors.push(`summer location checkpoint ${checkpoint.target} reviewer role must be PM`);
+  }
+
+  const expectedSeed =
+    checkpoint.target === 100
+      ? "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|"
+      : checkpoint.pm_sample_seed;
+  if (checkpoint.pm_sample_seed !== expectedSeed) {
+    errors.push(`summer location checkpoint ${checkpoint.target} PM sample seed is not the approved deterministic seed`);
+  }
+  const strata = [
+    ["exact_venue", 3],
+    ["area_representative", 3],
+    ["hold", 4],
+  ];
+  const expectedSample = strata
+    .flatMap(([precision, count]) =>
+      reviewed
+        .filter((item) =>
+          precision === "hold"
+            ? item.outcome === "hold"
+            : item.coordinate_precision === precision,
+        )
+        .map((item) => ({
+          eventId: item.event_id,
+          hash: createHash("sha256")
+            .update(`${expectedSeed}${item.event_id}`)
+            .digest("hex"),
+        }))
+        .sort((left, right) => left.hash.localeCompare(right.hash))
+        .slice(0, count),
+    )
+    .sort((left, right) => left.hash.localeCompare(right.hash))
+    .map((item) => item.eventId);
+  if (
+    !Array.isArray(checkpoint.pm_sample_ids) ||
+    checkpoint.pm_sample_ids.length !== 10 ||
+    JSON.stringify(checkpoint.pm_sample_ids) !== JSON.stringify(expectedSample)
+  ) {
+    errors.push(`summer location checkpoint ${checkpoint.target} PM sample must match deterministic SHA-256 extraction`);
+  }
+
+  const findings = checkpoint.pm_findings;
+  if (!Array.isArray(findings) || findings.length !== 10) {
+    errors.push(`summer location checkpoint ${checkpoint.target} must retain 10 PM findings`);
+    return;
+  }
+  const findingsById = new Map(findings.map((finding) => [finding.event_id, finding]));
+  for (const eventId of expectedSample) {
+    const finding = findingsById.get(eventId);
+    if (!finding || finding.status !== "pass") {
+      error(eventId, "PM finding must exist and pass");
+      continue;
+    }
+    for (const field of [
+      "official_identity_verified",
+      "coordinate_or_hold_state_verified",
+      "precision_classification_verified",
+      "representative_not_overstated",
+      "hold_has_null_coordinates",
+    ]) {
+      if (finding[field] !== true) error(eventId, `PM finding ${field} must be true`);
+    }
+    if (typeof finding.notes !== "string" || finding.notes.trim() === "") {
+      error(eventId, "PM finding must retain review notes");
     }
   }
 }

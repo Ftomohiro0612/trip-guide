@@ -17,6 +17,125 @@
       "mappable_count": 26,
       "hold_count": 74,
       "pm_random_sample_size": 10,
+      "pm_review_status": "pass",
+      "pm_sample_method": "SHA-256 ascending within fixed strata: exact_venue=3, area_representative=3, hold=4",
+      "pm_sample_seed": "checkpoint100-pm-v1|89bffb5bfb1954e4dafbc9b5aaff6b78b910ddf0|",
+      "pm_sample_ids": [
+        "evt-summer-2026-tokyo-022",
+        "evt-summer-2026-kanagawa-009",
+        "evt-summer-2026-shiga-008",
+        "evt-summer-2026-chiba-010",
+        "evt-summer-2026-nagano-001",
+        "evt-summer-2026-saitama-015",
+        "evt-summer-2026-yamanashi-004",
+        "evt-summer-2026-gunma-009",
+        "evt-summer-2026-okayama-009",
+        "evt-summer-2026-iwate-008"
+      ],
+      "pm_reviewed_at": "2026-07-21",
+      "pm_reviewer_role": "PM",
+      "pm_findings": [
+        {
+          "event_id": "evt-summer-2026-tokyo-022",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "公式大会ページで中野セントラルパーク開催を確認。公式埋め込みGoogle地図の35.70727747257897,139.6594334765732が同公園を示し、単一会場のexact_venueとして妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-kanagawa-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "小田原市観光協会ページで酒匂川スポーツ広場、小田原大橋周辺、観覧場・立入禁止区域を確認。広域会場を一点化せずlatitude/longitude=nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-shiga-008",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "滋賀県公式観光ブログで多賀大社万灯祭を確認。イベントと一対一の公式座標が掲載されておらず、latitude/longitude=nullのhold維持が妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-chiba-010",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "柏市公式ページで会場がJR・東武柏駅周辺であることを確認。広域駅周辺を一点化せずlatitude/longitude=nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-nagano-001",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "公式観光ページで大手町・原町・海野町・松尾町等の中心市街地ルートを確認。複数街路のためlatitude/longitude=nullのholdが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-saitama-015",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "公式観光ページで大宮駅東口周辺の複数催事を確認。掲載座標35.906459,139.624287は大宮駅東口の代表点で、map_labelとbasisが会場全体の正確な一点と断定していない。"
+        },
+        {
+          "event_id": "evt-summer-2026-yamanashi-004",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "富士河口湖町公式観光ページで会場を精進湖他手合浜と確認。公式埋め込み地図の35.48621308972232,138.60036745684732が同浜を示しexact_venueが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-gunma-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "みどり市公式ページで会場を東運動公園（東町座間399）と確認。公式掲載地図の36.53794610298617,139.36950034602415が同公園を示しexact_venueが妥当。"
+        },
+        {
+          "event_id": "evt-summer-2026-okayama-009",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "岡山県公式観光ページで会場をさんさん広場一帯と確認。公式掲載座標34.835848042171,133.761870861053を代表点とし、一帯全体の正確な一点と断定していない。"
+        },
+        {
+          "event_id": "evt-summer-2026-iwate-008",
+          "status": "pass",
+          "official_identity_verified": true,
+          "coordinate_or_hold_state_verified": true,
+          "precision_classification_verified": true,
+          "representative_not_overstated": true,
+          "hold_has_null_coordinates": true,
+          "notes": "奥州市公式ページで胆沢文化創造センター及び同センター前市道を確認。公式地図39.11928,141.06919をセンター代表点とし、市道を含む会場全体の正確な一点とは断定していない。"
+        }
+      ],
       "reviewed_events": [
         {
           "event_id": "evt-summer-2026-tokyo-002",
