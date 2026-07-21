@@ -891,6 +891,7 @@ function validatePmLocationReview(checkpoint, reviewed) {
     [200, "checkpoint200-pm-v1|c30465c8d595e3ad22b67a6ec4ae6bb3201ae015|"],
     [300, "checkpoint300-pm-v1|053d74a5327199fc70511432d4a8c026d80d8247|"],
     [400, "checkpoint400-pm-v1|c8f623a8f08a8711923232d85a87475cff9df860|"],
+    [454, "checkpoint454-pm-v1|a637ada6ea72126f1809d7630a28cbd6a57f51bd|"],
   ]);
   const expectedSeed = approvedPmSeeds.get(checkpoint.target);
   if (!expectedSeed) {
