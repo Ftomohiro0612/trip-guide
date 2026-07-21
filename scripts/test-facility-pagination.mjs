@@ -14,6 +14,19 @@ import {
 const data = JSON.parse(
   await readFile(new URL("../data/facilities_data.json", import.meta.url)),
 );
+const craftEvidence = JSON.parse(
+  await readFile(
+    new URL("../data/craft_category_evidence.json", import.meta.url),
+  ),
+);
+const categoryPageSource = await readFile(
+  new URL("../app/category/[id]/page.tsx", import.meta.url),
+  "utf8",
+);
+const categoryAccessorSource = await readFile(
+  new URL("../lib/category-page-facilities.ts", import.meta.url),
+  "utf8",
+);
 const facilities = data.facilities.filter(
   (facility) => facility.data_quality_status !== "exclude_candidate",
 );
@@ -38,6 +51,36 @@ function assertCompletePagination(items) {
   assert.equal(collected.length, items.length);
   assert.equal(new Set(collected).size, items.length);
   assert.deepEqual(collected, items.map((item) => item.id));
+}
+
+function assertGroupedPageContract(items, pageNumber) {
+  const page = paginateFacilities(items, pageNumber);
+  const sections = groupFacilityPageByPrefecture(
+    page.items,
+    prefectures,
+    items[page.startIndex - 1]?.prefecture_id,
+  );
+  const groupedIds = sections.flatMap((section) =>
+    section.items.map((item) => item.id),
+  );
+  const expectedContinuation =
+    page.startIndex > 0 &&
+    items[page.startIndex - 1]?.prefecture_id ===
+      page.items[0]?.prefecture_id;
+
+  assert.deepEqual(groupedIds, page.items.map((item) => item.id));
+  assert.equal(new Set(groupedIds).size, page.items.length);
+  assert.equal(
+    sections[0]?.currentPageContinuesPrefecture ?? false,
+    expectedContinuation,
+  );
+  assert.ok(
+    sections.slice(1).every(
+      (section) => !section.currentPageContinuesPrefecture,
+    ),
+  );
+
+  return { page, sections, expectedContinuation };
 }
 
 function distanceKm(origin, facility) {
@@ -125,6 +168,77 @@ test("representative category is paginated globally before prefecture grouping",
     assert.equal(sections[0].currentPageContinuesPrefecture, true);
   }
   assertCompletePagination(categoryFacilities);
+});
+
+test("category continuation labels preserve park, craft type, and prefecture contracts", () => {
+  const park = orderFacilitiesByPrefecture(
+    facilities.filter((facility) => facility.category_id === "park"),
+    prefectures,
+  );
+  const parkPage2 = assertGroupedPageContract(park, 2);
+  assert.equal(parkPage2.expectedContinuation, true);
+
+  const tokyoPark = park.filter(
+    (facility) => facility.prefecture_id === "tokyo",
+  );
+  assert.ok(tokyoPark.length > FACILITIES_PER_PAGE);
+  const tokyoParkPage2 = assertGroupedPageContract(tokyoPark, 2);
+  assert.equal(tokyoParkPage2.expectedContinuation, true);
+  assert.equal(tokyoParkPage2.sections.length, 1);
+
+  const craftFacilitiesForType = (craftType) => {
+    const ids = new Set(
+      craftEvidence.records
+        .filter(
+          (record) =>
+            record.status === "verified" &&
+            ["ongoing", "recurring"].includes(record.offering) &&
+            record.craft_types.includes(craftType),
+        )
+        .map((record) => record.facility_id),
+    );
+    return orderFacilitiesByPrefecture(
+      facilities.filter((facility) => ids.has(facility.id)),
+      prefectures,
+    );
+  };
+
+  const pottery = craftFacilitiesForType("陶芸");
+  const potteryPage2 = assertGroupedPageContract(pottery, 2);
+  assert.equal(potteryPage2.expectedContinuation, true);
+
+  const glass = craftFacilitiesForType("ガラス");
+  const glassPage2 = assertGroupedPageContract(glass, 2);
+  assert.equal(glassPage2.expectedContinuation, false);
+
+  for (const collection of [park, tokyoPark, pottery, glass]) {
+    assertCompletePagination(collection);
+  }
+});
+
+test("category page reuses one grouping contract and keeps diversified craft nationwide", () => {
+  assert.match(
+    categoryPageSource,
+    /showDiversifiedNationwideGrid[\s\S]*id: "nationwide"/,
+  );
+  assert.match(
+    categoryPageSource,
+    /id: "nationwide"[\s\S]*currentPageContinuesPrefecture: false/,
+  );
+  assert.match(
+    categoryPageSource,
+    /groupFacilityPageByPrefecture\([\s\S]*result\.orderedFacilities\[result\.page\.startIndex - 1\]/,
+  );
+  assert.match(categoryPageSource, /\{section\.name\}の続き/);
+  assert.equal(
+    (categoryPageSource.match(/groupFacilityPageByPrefecture\(/g) ?? [])
+      .length,
+    1,
+  );
+  assert.match(
+    categoryAccessorSource,
+    /mapFacilities: facilityPage\.items,[\s\S]*jsonLdFacilities: facilityPage\.items/,
+  );
 });
 
 test("prefecture and recommended_tag combinations paginate after filtering", () => {

@@ -23,6 +23,7 @@ import { prefectureEmoji } from "@/lib/icons";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { isPilotCross } from "@/lib/crossings";
 import type { RawSearchParams } from "@/lib/filter";
+import { groupFacilityPageByPrefecture } from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -108,14 +109,14 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           id: "nationwide",
           name: "全国",
           items: result.page.items,
+          currentPageContinuesPrefecture: false,
         },
       ]
-    : prefectures.flatMap((prefecture) => {
-        const items = result.page.items.filter(
-          (facility) => facility.prefecture_id === prefecture.id,
-        );
-        return items.length > 0 ? [{ ...prefecture, items }] : [];
-      });
+    : groupFacilityPageByPrefecture(
+        result.page.items,
+        prefectures,
+        result.orderedFacilities[result.page.startIndex - 1]?.prefecture_id,
+      );
   const rainCount = result.filteredFacilities.filter(
     (facility) => facility.rain_friendly === "◎",
   ).length;
@@ -286,6 +287,11 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                     : prefectureEmoji[section.id]}
                 </span>
                 {section.name}の{meta.name}
+                {section.currentPageContinuesPrefecture && (
+                  <span className="rounded-full bg-sky-50 px-2 py-0.5 text-xs font-bold text-sky-700">
+                    {section.name}の続き
+                  </span>
+                )}
                 <span className="text-sm font-normal text-slate-500">
                   {section.items.length}件
                 </span>
