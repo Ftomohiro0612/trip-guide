@@ -14,6 +14,7 @@ import {
   selectSummerHeroEventsByType,
 } from "../lib/summer-event-hub.ts";
 import { spreadNearbySummerEventMarkers } from "../lib/summer-event-map.ts";
+import { getSummerEventMapCoverage } from "../lib/summer-event-map-coverage.ts";
 import {
   getSummerEventIdFromHash,
   getSummerEventPageForHash,
@@ -56,9 +57,9 @@ const summerExplorerSource = readFileSync(
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
   newEventCount: 484,
   candidateCount: 500,
-  overlayCount: 427,
+  overlayCount: 500,
   mappableCount: 22,
-  holdCount: 405,
+  holdCount: 478,
 });
 const PAGINATION_TEST_DATE = "2026-07-20";
 const SUMMER_EVENT_TYPE_ORDER = [
@@ -227,7 +228,7 @@ test("Summer Hero title stays fixed when supported prefectures grow", () => {
   );
 });
 
-test("Summer map pilot builds 22 mappable points across all seven prefectures", () => {
+test("Summer map keeps every safely mappable location without a major-event filter", () => {
   const baseById = new Map(baseSource.events.map((event) => [event.id, event]));
   const adoptedById = new Map([
     ...summerSource.events,
@@ -276,6 +277,19 @@ test("Summer map overlay keeps coordinates separate and excludes hold rows", () 
   assert.equal(entries.length, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(holds.length, CURRENT_SUMMER_MILESTONE.holdCount);
   assert.equal(
+    entries.length,
+    summerSource.metadata.candidate_count,
+  );
+  assert.deepEqual(
+    new Set(entries.map(([eventId]) => eventId)),
+    new Set([
+      ...summerSource.events.map((event) => event.id),
+      ...summerSource.existing_event_classifications.map(
+        (classification) => classification.id,
+      ),
+    ]),
+  );
+  assert.equal(
     holds.every(
       ([, location]) =>
         location.latitude === null && location.longitude === null,
@@ -319,6 +333,33 @@ test("Nearby Summer map markers are spread without moving isolated markers", () 
       byId.get("isolated").displayLongitude,
     ],
     [isolated.latitude, isolated.longitude],
+  );
+});
+
+test("Summer map coverage derives listed, mapped, and unmapped counts together", () => {
+  const visibleEvents = ["listed-1", "listed-2", "listed-3"].map((id) => ({
+    id,
+  }));
+  const mapPoints = [
+    mapPointFixture("listed-1", 35.7, 139.7),
+    mapPointFixture("listed-2", 35.8, 139.8),
+  ];
+
+  assert.deepEqual(getSummerEventMapCoverage(visibleEvents, mapPoints), {
+    listedCount: 3,
+    mappedCount: 2,
+    unmappedCount: 1,
+  });
+  assert.throws(
+    () => getSummerEventMapCoverage(visibleEvents, [...mapPoints, mapPoints[0]]),
+    /unique event IDs/u,
+  );
+  assert.throws(
+    () =>
+      getSummerEventMapCoverage(visibleEvents, [
+        mapPointFixture("not-listed", 35.9, 139.9),
+      ]),
+    /is not listed/u,
   );
 });
 
@@ -2457,9 +2498,9 @@ test("national density expansion reaches the 500-event milestone with 35 additio
     },
     {
       candidateCount: 500,
-      overlayCount: 427,
+      overlayCount: 500,
       mappableCount: 22,
-      holdCount: 405,
+      holdCount: 478,
     },
   );
 });
@@ -2617,6 +2658,7 @@ function mapPointFixture(eventId, latitude, longitude) {
     title: eventId,
     prefecture: "tokyo",
     prefectureLabel: "東京都",
+    eventType: "fireworks",
     nextDate: "2026-07-25",
     latitude,
     longitude,

@@ -5,6 +5,15 @@ const root = process.cwd();
 const base = readJson("data/events_data.json");
 const summer = readJson("data/summer_events_2026.json");
 const summerLocations = readJson("data/summer_event_locations_2026.json");
+const facilities = readJson("data/facilities_data.json");
+const summerPageSource = fs.readFileSync(
+  path.join(root, "app/events/summer/page.tsx"),
+  "utf8",
+);
+const summerMapSource = fs.readFileSync(
+  path.join(root, "components/SummerEventMap.tsx"),
+  "utf8",
+);
 const datePattern = /^\d{4}-\d{2}-\d{2}$/u;
 const urlPattern = /^https?:\/\/\S+$/u;
 const today = readToday(process.argv);
@@ -145,8 +154,10 @@ const locationEntries = Object.entries(
   summerLocations.locations_by_event_id ?? {},
 );
 const adoptedById = new Map(adoptedEvents.map((event) => [event.id, event]));
+const facilityIds = new Set(facilities.facilities.map((facility) => facility.id));
 let mappableLocationCount = 0;
 let holdLocationCount = 0;
+const nonHoldCoordinateMissingEventIds = new Set();
 const mappedPrefectures = new Set();
 
 checkCount(
@@ -230,6 +241,7 @@ for (const [eventId, location] of locationEntries) {
     location.latitude < 20 ||
     location.latitude > 46
   ) {
+    nonHoldCoordinateMissingEventIds.add(eventId);
     error(eventId, `latitude is outside the supported Japan bounds: ${location.latitude}`);
   }
   if (
@@ -238,6 +250,7 @@ for (const [eventId, location] of locationEntries) {
     location.longitude < 122 ||
     location.longitude > 154
   ) {
+    nonHoldCoordinateMissingEventIds.add(eventId);
     error(eventId, `longitude is outside the supported Japan bounds: ${location.longitude}`);
   }
   if (
@@ -264,31 +277,49 @@ checkCount(
   summerLocations.metadata?.hold_count,
   holdLocationCount,
 );
-const pilotMinimum = summerLocations.metadata?.pilot_target_range?.minimum;
-const pilotMaximum = summerLocations.metadata?.pilot_target_range?.maximum;
-if (
-  !Number.isInteger(pilotMinimum) ||
-  !Number.isInteger(pilotMaximum) ||
-  mappableLocationCount < pilotMinimum ||
-  mappableLocationCount > pilotMaximum
-) {
+const missingLocationEventIds = adoptedEvents
+  .filter((event) => !summerLocations.locations_by_event_id?.[event.id])
+  .map((event) => event.id);
+const coordinateMissingLocationCount = locationEntries.filter(
+  ([, location]) =>
+    typeof location.latitude !== "number" ||
+    typeof location.longitude !== "number",
+).length;
+if (locationEntries.length !== adoptedEvents.length) {
   errors.push(
-    `summer map pilot has ${mappableLocationCount} mappable events; expected within declared range ${pilotMinimum}-${pilotMaximum}`,
+    `summer map location records=${locationEntries.length}; expected all ${adoptedEvents.length} adopted events`,
   );
 }
-for (const prefecture of [
-  "tokyo",
-  "kanagawa",
-  "chiba",
-  "saitama",
-  "yamanashi",
-  "shizuoka",
-  "nagano",
-]) {
-  if (!mappedPrefectures.has(prefecture)) {
-    errors.push(`summer map pilot is missing approved prefecture: ${prefecture}`);
-  }
+if (mappableLocationCount + holdLocationCount !== adoptedEvents.length) {
+  errors.push(
+    `summer map mappable+hold=${mappableLocationCount + holdLocationCount}; expected ${adoptedEvents.length}`,
+  );
 }
+if (missingLocationEventIds.length > 0) {
+  errors.push(
+    `summer map is missing ${missingLocationEventIds.length} event IDs: ${missingLocationEventIds.join(", ")}`,
+  );
+}
+if ("pilot_target_range" in (summerLocations.metadata ?? {})) {
+  errors.push("summer map metadata must not retain pilot_target_range");
+}
+
+const visibleAdoptedEvents = adoptedEvents.filter((event) =>
+  isVisibleSummerHubEvent(event, today, facilityIds),
+);
+const visibleMappedEvents = visibleAdoptedEvents.filter((event) =>
+  isMappableLocation(summerLocations.locations_by_event_id?.[event.id]),
+);
+const visibleHoldEvents = visibleAdoptedEvents.filter(
+  (event) =>
+    summerLocations.locations_by_event_id?.[event.id]?.coordinate_precision ===
+    "hold",
+);
+const visibleMissingLocationEvents = visibleAdoptedEvents.filter(
+  (event) => !summerLocations.locations_by_event_id?.[event.id],
+);
+
+validateSummerMapUiContract(summerPageSource, summerMapSource);
 
 const typeCounts = Object.fromEntries(
   [...eventTypes].map((type) => [
@@ -460,6 +491,15 @@ const summary = {
   summer_map_overlay_events: locationEntries.length,
   summer_map_mappable_events: mappableLocationCount,
   summer_map_hold_events: holdLocationCount,
+  summer_map_coordinate_missing_events: coordinateMissingLocationCount,
+  summer_map_non_hold_coordinate_missing_events:
+    nonHoldCoordinateMissingEventIds.size,
+  summer_map_missing_location_records: missingLocationEventIds.length,
+  summer_map_visible_events: visibleAdoptedEvents.length,
+  summer_map_visible_mappable_events: visibleMappedEvents.length,
+  summer_map_visible_hold_events: visibleHoldEvents.length,
+  summer_map_visible_missing_location_records:
+    visibleMissingLocationEvents.length,
   summer_map_prefectures: [...mappedPrefectures].sort(),
   max_end_date: maxEndDate,
   ends_at: summer.metadata.ends_at,
@@ -583,6 +623,83 @@ function mergedEvent(id) {
 
 function isMainType(value) {
   return value === "fireworks" || value === "summer_festival";
+}
+
+function isVisibleSummerHubEvent(event, referenceDate, validFacilityIds) {
+  const checkedAgeDays = daysBetween(event.source_checked_at, referenceDate);
+  const status = event.status ?? "scheduled";
+  const hasValidVenue =
+    event.facility_id === null && Boolean(event.venue_name?.trim());
+  const hasValidFacility =
+    event.facility_id !== null && validFacilityIds.has(event.facility_id);
+  const hasRemainingOccurrence =
+    !event.occurrence_dates ||
+    getNextOccurrenceDate(event, referenceDate) !== null;
+
+  return (
+    ["scheduled", "ongoing"].includes(status) &&
+    (event.end_date === null || event.end_date >= referenceDate) &&
+    checkedAgeDays !== null &&
+    checkedAgeDays >= 0 &&
+    checkedAgeDays <= summer.metadata.freshness_days_hub &&
+    urlPattern.test(event.official_url.trim()) &&
+    (hasValidFacility || hasValidVenue) &&
+    hasRemainingOccurrence
+  );
+}
+
+function isMappableLocation(location) {
+  return (
+    location?.coordinate_precision !== "hold" &&
+    typeof location?.latitude === "number" &&
+    Number.isFinite(location.latitude) &&
+    typeof location?.longitude === "number" &&
+    Number.isFinite(location.longitude)
+  );
+}
+
+function validateSummerMapUiContract(pageSource, mapSource) {
+  const requiredPagePatterns = [
+    [
+      /buildSummerEventMapPoints\(visibleEvents, today\)/u,
+      "map points must use the same visibleEvents date population as the list",
+    ],
+    [
+      /getSummerEventMapCoverage\(visibleEvents, mapPoints\)/u,
+      "map UI counts must come from the shared coverage calculation",
+    ],
+    [
+      /data-summer-map-listed-count=\{mapCoverage\.listedCount\}/u,
+      "map UI must expose the calculated listed count",
+    ],
+    [
+      /data-summer-map-mapped-count=\{mapCoverage\.mappedCount\}/u,
+      "map UI must expose the calculated mapped count",
+    ],
+    [
+      /data-summer-map-unmapped-count=\{mapCoverage\.unmappedCount\}/u,
+      "map UI must expose the calculated unmapped count",
+    ],
+    [
+      /<SummerEventExplorer\s+views=\{views\}/su,
+      "unmapped events must remain in the full SummerEventExplorer list",
+    ],
+  ];
+  for (const [pattern, message] of requiredPagePatterns) {
+    if (!pattern.test(pageSource)) errors.push(`summer map UI contract: ${message}`);
+  }
+  if (/主要イベント|map pilot|パイロット/u.test(pageSource)) {
+    errors.push("summer map UI must not describe coordinate coverage as major events or a pilot");
+  }
+  if (!/displayedPoints\.map\(\(point\)/u.test(mapSource)) {
+    errors.push("summer map UI must render one marker per displayed map point");
+  }
+  if (!/\{points\.length\}件を表示中/u.test(mapSource)) {
+    errors.push("summer map badge must use the same dynamic map-points count");
+  }
+  if (!/SUMMER_EVENT_MAP_CATEGORY_STYLES\.map/u.test(mapSource)) {
+    errors.push("summer map UI must render its legend from the category color contract");
+  }
 }
 
 function checkCount(label, expected, actual) {

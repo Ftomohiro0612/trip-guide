@@ -352,8 +352,8 @@ test("fixed 2026-07-20 canonical snapshot remains deterministic and clean", () =
     {
       inputEventCount: 479,
       mappableEventCount: 21,
-      holdEventCount: 388,
-      missingLocationCount: 70,
+      holdEventCount: 458,
+      missingLocationCount: 0,
       excludedFacilityCount: 8,
       eventToFacilityEventCount: 21,
       eventToFacilityRecommendationCount: 105,

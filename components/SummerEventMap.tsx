@@ -1,66 +1,26 @@
 "use client";
 
 import { useEffect, useMemo } from "react";
-import { CircleMarker, MapContainer, Popup, TileLayer, useMap } from "react-leaflet";
+import {
+  CircleMarker,
+  MapContainer,
+  Popup,
+  TileLayer,
+  useMap,
+} from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
 import { spreadNearbySummerEventMarkers } from "@/lib/summer-event-map";
 import type { SummerMapDisplayed } from "@/lib/summer-event-map";
+import {
+  SUMMER_EVENT_MAP_CATEGORY_BY_TYPE,
+  SUMMER_EVENT_MAP_CATEGORY_STYLES,
+} from "@/lib/summer-event-map-category";
 import type { SummerEventMapPoint } from "@/lib/summer-event-locations";
 
 interface Props {
   points: SummerEventMapPoint[];
 }
-
-const PREFECTURE_COLORS: Record<string, string> = {
-  tokyo: "#e11d48",
-  kanagawa: "#7c3aed",
-  chiba: "#0891b2",
-  saitama: "#65a30d",
-  yamanashi: "#9333ea",
-  shizuoka: "#0284c7",
-  nagano: "#059669",
-  ibaraki: "#0f766e",
-  tochigi: "#a16207",
-  gunma: "#be123c",
-  niigata: "#0369a1",
-  aichi: "#c2410c",
-  kyoto: "#7e22ce",
-  osaka: "#dc2626",
-  hyogo: "#4338ca",
-  hiroshima: "#0f766e",
-  fukuoka: "#a21caf",
-  okayama: "#ca8a04",
-  kagawa: "#0891b2",
-  kumamoto: "#dc2626",
-  nagasaki: "#2563eb",
-  oita: "#16a34a",
-  kagoshima: "#9333ea",
-  saga: "#0f766e",
-  miyazaki: "#c2410c",
-  ehime: "#2563eb",
-  tokushima: "#7e22ce",
-  kochi: "#15803d",
-  hokkaido: "#0369a1",
-  aomori: "#047857",
-  akita: "#b45309",
-  miyagi: "#7c3aed",
-  iwate: "#0f766e",
-  yamagata: "#be123c",
-  fukushima: "#a16207",
-  mie: "#0d9488",
-  gifu: "#a21caf",
-  toyama: "#0369a1",
-  ishikawa: "#be123c",
-  fukui: "#15803d",
-  shiga: "#0369a1",
-  nara: "#a21caf",
-  wakayama: "#c2410c",
-  tottori: "#0f766e",
-  shimane: "#7e22ce",
-  yamaguchi: "#be123c",
-  okinawa: "#0891b2",
-};
 
 const PRECISION_LABELS = {
   exact_venue: "確認済み会場点",
@@ -75,28 +35,46 @@ export default function SummerEventMap({ points }: Props) {
   );
 
   return (
-    <div
-      data-summer-event-map
-      className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-    >
-      <div className="relative h-[420px] sm:h-[500px]">
-        <MapContainer
-          center={[35.65, 139.25]}
-          zoom={7}
-          scrollWheelZoom={false}
-          style={{ height: "100%", width: "100%" }}
-        >
-          <TileLayer
-            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-          />
-          <FitSummerEventBounds points={displayedPoints} />
-          {displayedPoints.map((point) => (
-            <SummerEventMarker key={point.eventId} point={point} />
-          ))}
-        </MapContainer>
-        <div className="pointer-events-none absolute bottom-3 left-3 z-[650] rounded-full border border-white/80 bg-white/95 px-3 py-1.5 text-xs font-bold text-slate-700 shadow-sm backdrop-blur">
-          {points.length}件を表示中
+    <div className="space-y-3">
+      <div
+        aria-label="イベントカテゴリの凡例"
+        className="flex flex-wrap gap-x-4 gap-y-2 text-xs font-bold text-slate-700"
+        data-summer-map-category-legend
+      >
+        {SUMMER_EVENT_MAP_CATEGORY_STYLES.map((style) => (
+          <span key={style.eventType} className="inline-flex items-center gap-1.5">
+            <span
+              aria-hidden="true"
+              className="size-3 rounded-full border-2 border-white shadow-sm ring-1 ring-slate-300"
+              style={{ backgroundColor: style.color }}
+            />
+            {style.label}
+          </span>
+        ))}
+      </div>
+      <div
+        data-summer-event-map
+        className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+      >
+        <div className="relative h-[420px] sm:h-[500px]">
+          <MapContainer
+            center={[35.65, 139.25]}
+            zoom={7}
+            scrollWheelZoom={false}
+            style={{ height: "100%", width: "100%" }}
+          >
+            <TileLayer
+              attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+              url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+            />
+            <FitSummerEventBounds points={displayedPoints} />
+            {displayedPoints.map((point) => (
+              <SummerEventMarker key={point.eventId} point={point} />
+            ))}
+          </MapContainer>
+          <div className="pointer-events-none absolute bottom-3 left-3 z-[650] rounded-full border border-white/80 bg-white/95 px-3 py-1.5 text-xs font-bold text-slate-700 shadow-sm backdrop-blur">
+            {points.length}件を表示中
+          </div>
         </div>
       </div>
     </div>
@@ -132,7 +110,7 @@ function SummerEventMarker({
 }) {
   const isAreaRepresentative =
     point.coordinatePrecision === "area_representative";
-  const color = PREFECTURE_COLORS[point.prefecture] ?? "#4f46e5";
+  const color = SUMMER_EVENT_MAP_CATEGORY_BY_TYPE[point.eventType].color;
 
   return (
     <CircleMarker

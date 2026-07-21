@@ -18,6 +18,7 @@ import {
   getSummerEventAnchorId,
 } from "@/lib/summer-event-hub";
 import { buildSummerEventMapPoints } from "@/lib/summer-event-locations";
+import { getSummerEventMapCoverage } from "@/lib/summer-event-map-coverage";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 
 export const metadata: Metadata = {
@@ -55,6 +56,7 @@ export default async function SummerEventsPage({ searchParams }: Props) {
   const heroFireworks = getSummerHeroEvents("fireworks", today, 4);
   const heroFestivals = getSummerHeroEvents("summer_festival", today, 4);
   const mapPoints = buildSummerEventMapPoints(visibleEvents, today);
+  const mapCoverage = getSummerEventMapCoverage(visibleEvents, mapPoints);
   const crosslinks = getSummerCrosslinkData(today);
   const initialType = isSummerEventType(query.type) ? query.type : undefined;
   const initialQuickFilter =
@@ -178,21 +180,23 @@ export default async function SummerEventsPage({ searchParams }: Props) {
           id="summer-event-map"
           aria-labelledby="summer-event-map-heading"
           className="mt-12 scroll-mt-24"
+          data-summer-map-listed-count={mapCoverage.listedCount}
+          data-summer-map-mapped-count={mapCoverage.mappedCount}
+          data-summer-map-unmapped-count={mapCoverage.unmappedCount}
         >
           <div className="mb-5 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
             <div>
-              <p className="text-xs font-bold text-indigo-600">
-                主要イベント {mapPoints.length}件のパイロット
-              </p>
               <h2
                 id="summer-event-map-heading"
                 tabIndex={-1}
                 className="mt-1 scroll-mt-24 text-2xl font-bold text-slate-900 sm:text-3xl"
               >
-                地図で探す
+                座標確認済みのイベントを地図で探す
               </h2>
               <p className="mt-2 max-w-3xl text-sm leading-relaxed text-slate-600">
-                マーカーを選ぶとイベント名・開催日・都県を確認できます。地図からは、まずメモリップ内の詳しい紹介へ移動します。
+                掲載中{mapCoverage.listedCount}件のうち、座標確認済み
+                {mapCoverage.mappedCount}件を地図に表示しています。残り
+                {mapCoverage.unmappedCount}件は下の一覧から確認できます。
               </p>
             </div>
             <div className="flex flex-wrap gap-2 text-[11px] font-bold">

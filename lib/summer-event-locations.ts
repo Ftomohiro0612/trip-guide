@@ -3,6 +3,7 @@ import {
   getNextEventDate,
   type EventItem,
   type EventPrefecture,
+  type SummerEventType,
 } from "@/lib/events";
 import { getSummerEventAnchorId } from "@/lib/summer-event-hub";
 
@@ -31,10 +32,6 @@ interface SummerEventLocationOverlay {
     overlay_count: number;
     mappable_count: number;
     hold_count: number;
-    pilot_target_range: {
-      minimum: number;
-      maximum: number;
-    };
     coordinate_precision_values: SummerEventCoordinatePrecision[];
   };
   locations_by_event_id: Record<string, SummerEventLocationOverlayEntry>;
@@ -45,6 +42,7 @@ export interface SummerEventMapPoint {
   title: string;
   prefecture: EventPrefecture;
   prefectureLabel: string;
+  eventType: SummerEventType;
   nextDate: string | null;
   latitude: number;
   longitude: number;
@@ -118,6 +116,7 @@ export function buildSummerEventMapPoints(
       const event = visibleById.get(eventId);
       if (
         !event ||
+        !event.event_type ||
         location.coordinate_precision === "hold" ||
         typeof location.latitude !== "number" ||
         typeof location.longitude !== "number"
@@ -132,6 +131,7 @@ export function buildSummerEventMapPoints(
           prefecture: event.prefecture,
           prefectureLabel:
             PREFECTURE_LABELS[event.prefecture] ?? event.prefecture,
+          eventType: event.event_type,
           nextDate: getNextEventDate(event, today),
           latitude: location.latitude,
           longitude: location.longitude,
