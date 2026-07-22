@@ -13,10 +13,10 @@
 ## プロジェクト概要
 
 - **サイト名**: trip-guide.net
-- **目的**: 子供向け遊び場(主に静岡・山梨・長野の施設151件)の検索サイト
+- **目的**: 全国の子供向け遊び場と、家族向けイベントを探して記録できるサイト
 - **スタック**: Next.js (App Router) + TypeScript + Tailwind CSS
-- **ホスティング**: Vercel(予定)
-- **GitHub**: `Ftomohiro0612/trip-guide`(予定)
+- **ホスティング**: Vercel（Production稼働中）
+- **GitHub**: `Ftomohiro0612/trip-guide`
 
 ## ユーザーの技術レベル
 
@@ -29,10 +29,8 @@
 
 ## 進捗状況
 
-詳細は `HANDOFF.md` を参照。
-
-- Memorips Phase 2（訪問記録・履歴・行きたいリスト）完了
-- 次は Phase 3（施設ページ連携）
+現在地は `HANDOFF.md` を参照。通常イベントWaveの標準手順は
+`docs/event-wave-playbook.md` を正とします。
 
 ## AI役割分担
 
@@ -46,7 +44,8 @@
 
 - `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（セッション開始時に読む）
 - `HANDOFF.md` — 直近のチャット引継ぎメモ（最新の進捗はここ）
+- `docs/event-wave-playbook.md` — 通常イベントWaveの調査・L2・L3正本手順
 - `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
 - `product-direction.md` — プロダクト方針書・実装進捗
 - `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
-- `facilities_data.json` — 151施設の元データ
+- `data/facilities_data.json` — 施設正本データ
