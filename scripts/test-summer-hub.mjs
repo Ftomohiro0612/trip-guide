@@ -45,6 +45,12 @@ const summerLocationsSource = JSON.parse(
     "utf8",
   ),
 );
+const summerLocationResearchSource = JSON.parse(
+  readFileSync(
+    new URL("../data/summer_event_location_research_2026.json", import.meta.url),
+    "utf8",
+  ),
+);
 const summerPageSource = readFileSync(
   new URL("../app/events/summer/page.tsx", import.meta.url),
   "utf8",
@@ -62,9 +68,9 @@ const currentLocationRows = Object.values(
 );
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
-  newEventCount: 484,
-  candidateCount: 500,
-  overlayCount: 500,
+  newEventCount: 483,
+  candidateCount: 499,
+  overlayCount: 499,
   mappableCount: currentLocationRows.filter(
     (location) => location.coordinate_precision !== "hold",
   ).length,
@@ -497,7 +503,7 @@ test("generic event type filters match the current candidate counts", () => {
     filterFixture(event.id, event.event_type),
   );
   const expectedCounts = {
-    fireworks: 201,
+    fireworks: 200,
     summer_festival: 205,
     summer_tradition: 86,
     night_outing: 8,
@@ -717,7 +723,7 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
   const second = paginateEventViews(orderedViews, 2);
   const final = paginateEventViews(orderedViews, 24);
 
-  assert.equal(visibleViews.length, 479);
+  assert.equal(visibleViews.length, 478);
   assert.equal(EVENT_PAGE_SIZE, 20);
   assert.deepEqual(
     {
@@ -735,14 +741,14 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     {
       firstCount: 20,
       secondCount: 20,
-      finalCount: 19,
+      finalCount: 18,
       totalPages: 24,
       firstPrevious: false,
       firstNext: true,
       finalPrevious: true,
       finalNext: false,
-      firstRange: "1〜20件を表示 / 全479件",
-      finalRange: "461〜479件を表示 / 全479件",
+      firstRange: "1〜20件を表示 / 全478件",
+      finalRange: "461〜478件を表示 / 全478件",
     },
   );
   assert.equal(
@@ -760,7 +766,7 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     getTypesOnPage(final.items).map((eventType) =>
       final.items.filter((view) => view.event.event_type === eventType).length,
     ),
-    [11, 8],
+    [10, 8],
   );
 });
 
@@ -773,10 +779,10 @@ test("Summer Hub filters recalculate pages, clamp safely, and reset through ever
   );
   const clamped = paginateEventViews(fireworks, 999);
 
-  assert.equal(fireworks.length, 197);
+  assert.equal(fireworks.length, 196);
   assert.equal(clamped.currentPage, 10);
   assert.equal(clamped.totalPages, 10);
-  assert.equal(clamped.items.length, 17);
+  assert.equal(clamped.items.length, 16);
   assert.equal(clamped.hasNextPage, false);
   assert.equal(
     (summerExplorerSource.match(/setCurrentPage\(1\);/gu) ?? []).length >= 4,
@@ -913,6 +919,34 @@ test("all Summer query entry anchors keep filters and clear the sticky header", 
   );
 });
 
+test("cross-prefecture duplicate remains only as a canonicalization audit tombstone", () => {
+  const retiredEventId = "evt-summer-2026-gifu-005";
+  const canonicalEventId = "evt-summer-2026-aichi-010";
+  const canonicalEvent = summerSource.events.find(
+    (event) => event.id === canonicalEventId,
+  );
+  const researchRecord = summerLocationResearchSource.checkpoints
+    .find((checkpoint) => checkpoint.target === 454)
+    ?.reviewed_events.find((event) => event.event_id === retiredEventId);
+
+  assert.equal(
+    summerSource.events.some((event) => event.id === retiredEventId),
+    false,
+  );
+  assert.equal(retiredEventId in summerLocationsSource.locations_by_event_id, false);
+  assert.equal(
+    canonicalEvent.source_urls.includes(
+      "https://www.kankou-gifu.jp/event/detail_7420.html",
+    ),
+    true,
+  );
+  assert.equal(researchRecord.canonical_event_id, canonicalEventId);
+  assert.equal(
+    researchRecord.canonicalization_reason,
+    "cross_prefecture_duplicate",
+  );
+});
+
 test("Summer pagination only receives visible views and cannot revive excluded events", () => {
   const visibleViews = getFixedDateVisibleSummerViews(PAGINATION_TEST_DATE);
   const candidateEvents = getSummerCandidateEvents();
@@ -921,7 +955,7 @@ test("Summer pagination only receives visible views and cannot revive excluded e
     (event) => event.end_date && event.end_date < PAGINATION_TEST_DATE,
   );
 
-  assert.equal(candidateEvents.length, 500);
+  assert.equal(candidateEvents.length, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(ended.length, 21);
   assert.equal(ended.every((event) => !visibleIds.has(event.id)), true);
   assert.equal(
@@ -2017,10 +2051,10 @@ test("post-350 normal L2 wave adds nine official low-density regional events", (
   );
 });
 
-test("regional normal L2 continuation expands the shared branch to 375 official events", () => {
+test("regional normal L2 continuation retains 15 canonical events after cross-prefecture deduplication", () => {
   const expectedByPrefecture = {
     ehime: 2,
-    gifu: 2,
+    gifu: 1,
     ishikawa: 2,
     kochi: 2,
     miyazaki: 2,
@@ -2032,7 +2066,6 @@ test("regional normal L2 continuation expands the shared branch to 375 official 
   const expectedIds = [
     "evt-summer-2026-ehime-005",
     "evt-summer-2026-ehime-006",
-    "evt-summer-2026-gifu-005",
     "evt-summer-2026-gifu-006",
     "evt-summer-2026-ishikawa-005",
     "evt-summer-2026-ishikawa-006",
@@ -2082,7 +2115,7 @@ test("regional normal L2 continuation expands the shared branch to 375 official 
       ).length,
     },
     {
-      fireworks: 4,
+      fireworks: 3,
       summer_festival: 7,
       summer_tradition: 5,
       night_outing: 0,
@@ -2216,7 +2249,7 @@ test("national density expansion retains all 50 sourced rows with valid location
   );
 });
 
-test("national density expansion reaches the 465-event checkpoint with 40 additional hold rows", () => {
+test("national density expansion reconciles the 464-event canonical checkpoint with 40 additional hold rows", () => {
   const threeEventPrefectures = [
     "fukushima",
     "gifu",
@@ -2279,7 +2312,7 @@ test("national density expansion reaches the 465-event checkpoint with 40 additi
     Object.fromEntries(
       [...threeEventPrefectures, "ehime", "fukui"].map((prefecture) => [
         prefecture,
-        9,
+        prefecture === "gifu" ? 8 : 9,
       ]),
     ),
   );
@@ -2312,7 +2345,7 @@ test("national density expansion reaches the 465-event checkpoint with 40 additi
   );
 });
 
-test("national density expansion reaches the 500-event milestone with 35 additional hold rows", () => {
+test("national density expansion keeps its final 35 hold rows after canonical deduplication", () => {
   const expectedIds = [
     ...["tochigi", "tokushima", "toyama", "yamagata"].flatMap(
       (prefecture) =>
@@ -2457,8 +2490,8 @@ test("national density expansion reaches the 500-event milestone with 35 additio
       holdCount: summerLocationsSource.metadata.hold_count,
     },
     {
-      candidateCount: 500,
-      overlayCount: 500,
+      candidateCount: CURRENT_SUMMER_MILESTONE.candidateCount,
+      overlayCount: CURRENT_SUMMER_MILESTONE.overlayCount,
       mappableCount: CURRENT_SUMMER_MILESTONE.mappableCount,
       holdCount: CURRENT_SUMMER_MILESTONE.holdCount,
     },

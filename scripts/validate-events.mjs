@@ -838,7 +838,16 @@ function validateSummerLocationResearch(research, locationsByEventId, eventsById
     for (const item of reviewed) {
       const location = locationsByEventId[item.event_id];
       if (!eventsById.has(item.event_id)) {
-        error(item.event_id, "location research references an event outside the adopted population");
+        const canonicalEventId = item.canonical_event_id;
+        if (
+          item.canonicalization_reason !== "cross_prefecture_duplicate" ||
+          typeof canonicalEventId !== "string" ||
+          !eventsById.has(canonicalEventId) ||
+          location ||
+          !locationsByEventId[canonicalEventId]
+        ) {
+          error(item.event_id, "location research references an event outside the adopted population");
+        }
         continue;
       }
       if (!location) {
