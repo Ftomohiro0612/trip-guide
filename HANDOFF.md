@@ -3,13 +3,15 @@
 > 更新: 2026-07-22 JST
 > このファイルは再開時に最初に読む1ページです。詳細手順は `docs/event-wave-playbook.md`、過去の長い引継ぎはGit履歴を参照してください。
 
-## Production
+## Product state
 
-- Product main / Production SHA: `c319cb72c79cb8bd7f60730bb29e780cfdebbbd5`
-- Vercel deployment: `dpl_BGvU2NGbYjMpPJxudETtiJFs2zDA` (`READY`)
+- Current Product main: `git fetch origin && git rev-parse origin/main`で実測する
+- Last user-visible data baseline: `c319cb72c79cb8bd7f60730bb29e780cfdebbbd5`
+- Last verified data-bearing Production: `dpl_BGvU2NGbYjMpPJxudETtiJFs2zDA` (`READY`)
 - Public aliases: `https://trip-guide.net` / `https://www.trip-guide.net`
 - 公開QA: apex・www HTTP 200、PC/SP overflow 0、console error 0、Production error/5xx 0
 - 正本規模: 通常イベント824件、Summer採用500件、施設3,740件
+- docs／validator-only commit後も、GitHub mainとVercel Productionは別々に実測する
 
 ## 完了マイルストーン
 
@@ -21,22 +23,24 @@
 
 長野Wave 3は既存51件更新、新規24件、ended 27件。HOLD 2件は正本未投入。変更は`data/events_data.json`のみで、mainへfast-forward統合済みです。
 
-## Active Tracks
+## Current foundations
 
-次県へ進む前に、次の順で完了させます。
+- 通常イベント最小validator: ACTIVE（正当な例外24件、既存違反3件、新規未承認違反0件）
+- 通常イベントWave playbook: ACTIVE
+- HANDOFF snapshot運用: ACTIVE
 
-1. Track A — 通常イベント最小validator
-   - Branch: `codex/regular-events-min-validator-l2-20260722`
-   - Base: `c319cb72c79cb8bd7f60730bb29e780cfdebbbd5`
-   - L2 HEAD: `1eae93efc90b2af423863a37cd6d13b0a8795a9f`
-   - 状態: 実装・test・build・remote push済み、main未統合
-   - baseline: 正当な例外24件、既存違反3件、新規未承認違反0件
-2. Track B — HANDOFF現在地1ページ化＋イベントWave playbook正本化
-   - Branch: `codex/event-wave-handoff-playbook-l2-20260722`
-   - Track A HEADをbaseとするstacked branch
-   - 山梨・静岡・長野の3県レトロをplaybookへ収録
+## Next actions
 
-Track A/BともOwner確認前にmainへ統合しません。
+1. validator baseline既存違反3件のremediation
+2. 次県の通常イベントWave
+3. 3県ごとの次回レトロ条件を記録
+
+## Hot Memory
+
+- 2026-07-13のMemorips Hot Memoryは凍結された派生スナップショット
+- 現行Product状態の根拠には使用しない
+- 現在地はGit実測、HANDOFF、tracked playbookを優先する
+- Hot Memoryの再同期・拡張は現時点では行わない
 
 ## 通常イベントの正本ルール
 

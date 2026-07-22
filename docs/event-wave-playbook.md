@@ -139,6 +139,10 @@ npm run events:regular:test
 
 baselineから消えた違反もstaleとしてblockingにし、解消済みdebtが例外一覧へ残り続けることを防ぎます。
 
+通常Waveは原則`data/events_data.json`だけを変更します。ただし、登録済み`existing_violations`を解消する専用remediationでは、データ修正と対応baseline entryの削除を同一の原子的commitで行います。これは通常Waveへの無断baseline変更を許可するものではなく、PMが対象fingerprintと解消根拠を事前確認した場合だけ許可します。
+
+`approved_exceptions`の追加、`existing_violations`の追加は通常Wave作業者が自己判断で行わず、PMレビュー対象とします。
+
 ## 6. L2検証
 
 ```powershell
