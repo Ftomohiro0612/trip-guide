@@ -1,0 +1,119 @@
+{
+  "metadata": {
+    "baseline_sha": "c319cb72c79cb8bd7f60730bb29e780cfdebbbd5",
+    "created_at": "2026-07-22",
+    "policy": "Approved exceptions are intentional distinct events. Existing violations are legacy data debt and must not be copied to new rows."
+  },
+  "approved_exceptions": [
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-202607-01",
+      "reason": "申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-202608-02",
+      "reason": "申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-326-202607-01",
+      "reason": "複合イベント内の子供花火企画のみ受付終了で、全体の予約状態は企画別。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1073-202606-01:evt-1073-202606-02:2026-06-01",
+      "reason": "同じ公式日程一覧に掲載された、タイトルと内容が異なる展示・工作。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1083-202606-01:evt-1083-202606-02:2026-06-27",
+      "reason": "同一公式ページ・同日だが、植え付け体験と外来植物学習の別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1094-202607-02:evt-1094-202607-03:2026-07-18",
+      "reason": "同一公式特集内の、内容が異なる仕事体験と食育教室。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1101-202607-01:evt-1101-202607-02:2026-07-18",
+      "reason": "同一施設・同日だが、アイス作りと夏遊びフェスの別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1180-202607-1:evt-1180-202607-2:2026-07-11",
+      "reason": "同一公式ページ・同日開始だが、テーマが異なる2つの企画展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1450-202607-01:evt-1450-202607-02:2026-07-19",
+      "reason": "同一公式一覧に掲載された星空観察と工作の別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1461-202607-01:evt-1461-202607-02:2026-07-24",
+      "reason": "同一公式特集内の化石発掘と花火工房の別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1488-202607-01:evt-1488-202607-02:2026-07-25",
+      "reason": "同一施設・同日だが、時間と制作物が異なる工作企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1719-202607-01:evt-1719-202607-02:evt-1720-202607-01:2026-07-05",
+      "reason": "同じ公式カレンダーを使う、会場・タイトル・内容が異なる3企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1726-202607-01:evt-1726-202607-02:2026-07-04",
+      "reason": "同一公式一覧の七夕工作と水遊び開放で、内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1935-202607-01:evt-1935-202607-02:2026-07-19",
+      "reason": "同一施設・同日だが、工作塾と昆虫教室の別講座。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1968-202608-01:evt-1968-202608-02:2026-08-01",
+      "reason": "同一公式年間案内内の、時間と内容が異なる藍染・お化け屋敷。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1974-202608-03:evt-1974-202608-04:2026-08-16",
+      "reason": "同一公式一覧の昼の科学工作と夜の星空観察。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-20-202608-01:evt-20-202608-03:2026-08-29",
+      "reason": "同一施設・同日だが、時間と内容が異なる出前授業・夜間ツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-387-202607-01:evt-387-202607-02:2026-07-15",
+      "reason": "同一公式一覧の企画展とバックヤードツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-678-202607-01:evt-678-202607-02:2026-07-24",
+      "reason": "同一施設・同日だが、鑑賞企画と似顔絵企画で内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-680-202607-02:evt-680-202607-03:2026-07-18",
+      "reason": "同一公式一覧の技術展示と工作教室。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-88-202607-02:evt-88-202607-03:2026-07-18",
+      "reason": "信州新町化石博物館の工作と企画展。タイトル・時間・内容が異なる。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-miyazaki-001:evt-summer-2026-miyazaki-002:2026-07-18",
+      "reason": "県観光特集の共通URLを使う、会場が異なる2つの祭り。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-shimane-006:evt-summer-2026-shimane-007:2026-08-08",
+      "reason": "県観光特集の共通URLを使う、別市・別会場の祭り。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-shimane-008:evt-summer-2026-shimane-009:2026-08-29",
+      "reason": "県観光特集の共通URLを使う、別市町・別会場の祭り。"
+    }
+  ],
+  "existing_violations": [
+    {
+      "fingerprint": "base.official_url_missing_from_sources:evt-1405-202608-01",
+      "reason": "公式詳細URLがsource_urlsに未収載。次回の公式再確認時に解消する。"
+    },
+    {
+      "fingerprint": "base.official_url_missing_from_sources:evt-1549-202608-01",
+      "reason": "公式詳細URLがsource_urlsに未収載。次回の公式再確認時に解消する。"
+    },
+    {
+      "fingerprint": "summer.venue_title_date_duplicate:evt-summer-2026-aichi-010:evt-summer-2026-gifu-005:2026-08-01",
+      "reason": "県境の同一花火イベントが愛知・岐阜の2レコードに重複。Summer側の既存debtとして分離。"
+    }
+  ]
+}
