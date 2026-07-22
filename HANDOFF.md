@@ -5,12 +5,12 @@
 
 ## Product state
 
-- Current Product main: `git fetch origin && git rev-parse origin/main`で実測する
-- Last user-visible data baseline: `c319cb72c79cb8bd7f60730bb29e780cfdebbbd5`
-- Last verified data-bearing Production: `dpl_BGvU2NGbYjMpPJxudETtiJFs2zDA` (`READY`)
+- Current Product main at this snapshot: `c2bb5671bd6b603569f1065cb0e4cc51b565bef7`（再開時は`git fetch origin && git rev-parse origin/main`で再実測する）
+- Last user-visible data baseline: `c2bb5671bd6b603569f1065cb0e4cc51b565bef7`
+- Last verified data-bearing Production: `dpl_BxKdNYVewoGqkPshnBhgpVhmRquy` (`READY` / `PROMOTED`)
 - Public aliases: `https://trip-guide.net` / `https://www.trip-guide.net`
-- 公開QA: apex・www HTTP 200、PC/SP overflow 0、console error 0、Production error/5xx 0
-- 正本規模: 通常イベント824件、Summer採用500件、施設3,740件
+- 公開QA: apex・www HTTP 200、`/events/gunma`は掲載中41件・pagination 20+20+1件・JSON-LD 2 block、PC/SP overflow 0、console error 0、Production error/5xx 0
+- Production正本規模: 通常イベント841件、Summer採用499件、施設3,740件
 - docs／validator-only commit後も、GitHub mainとVercel Productionは別々に実測する
 
 ## 完了マイルストーン
@@ -20,20 +20,23 @@
 | 山梨県 通常イベント | 44 | 36 | 47 | Production CLOSED |
 | 静岡県 通常イベント Wave 2 | 49 | 38 | 48 | Production CLOSED |
 | 長野県 通常イベント Wave 3 | 75 | 48 | 59 | Production CLOSED |
+| 群馬県 通常イベント Wave 4 | 44 | 41 | 50 | Production CLOSED |
 
 長野Wave 3は既存51件更新、新規24件、ended 27件。HOLD 2件は正本未投入。変更は`data/events_data.json`のみで、mainへfast-forward統合済みです。
 
+群馬Wave 4は既存27件を再確認し、新規17件を追加、削除0件。HOLD 9件は正本未投入です。data-only Exact HEAD `c2bb5671bd6b603569f1065cb0e4cc51b565bef7`をmainへfast-forward統合し、Vercel Production `dpl_BxKdNYVewoGqkPshnBhgpVhmRquy`でGREEN / COMPLETE / CLOSEDです。Track A／Track B／既存違反3件のremediationもCLOSEDのまま再度開きません。
+
 ## Current foundations
 
-- 通常イベント最小validator: ACTIVE（正当な例外24件、既存違反3件、新規未承認違反0件）
+- 通常イベント最小validator: ACTIVE（正当な例外24件、既存違反0件、新規未承認違反0件）
 - 通常イベントWave playbook: ACTIVE
 - HANDOFF snapshot運用: ACTIVE
 
 ## Next actions
 
-1. validator baseline既存違反3件のremediation
-2. 次県の通常イベントWave
-3. 3県ごとの次回レトロ条件を記録
+1. 次のActive TrackはOwner指定待ち。次県の通常イベントWaveは未開始
+2. 次県Waveを開始する場合は、その時点の最新`origin/main`から専用data-only branchを作る
+3. Track A／Track B／remediation／群馬Wave 4はProduction CLOSEDのまま再度開かない
 
 ## Hot Memory
 
