@@ -5,12 +5,12 @@
 
 ## Product state
 
-- Current Product main: `git fetch origin && git rev-parse origin/main`で実測する
-- Last user-visible data baseline: `c319cb72c79cb8bd7f60730bb29e780cfdebbbd5`
-- Last verified data-bearing Production: `dpl_BGvU2NGbYjMpPJxudETtiJFs2zDA` (`READY`)
+- Current Product main at this snapshot: `487a6e3791a23ad9498d00cee392279e48ae3954`（再開時は`git fetch origin && git rev-parse origin/main`で再実測する）
+- Last user-visible data baseline: `487a6e3791a23ad9498d00cee392279e48ae3954`
+- Last verified data-bearing Production: `dpl_9KGiAWZSeVE4jyWv8bDvM4fVKLud` (`READY` / `PROMOTED`)
 - Public aliases: `https://trip-guide.net` / `https://www.trip-guide.net`
 - 公開QA: apex・www HTTP 200、PC/SP overflow 0、console error 0、Production error/5xx 0
-- 正本規模: 通常イベント824件、Summer採用500件、施設3,740件
+- Production正本規模: 通常イベント824件、Summer採用499件、施設3,740件
 - docs／validator-only commit後も、GitHub mainとVercel Productionは別々に実測する
 
 ## 完了マイルストーン
@@ -23,17 +23,19 @@
 
 長野Wave 3は既存51件更新、新規24件、ended 27件。HOLD 2件は正本未投入。変更は`data/events_data.json`のみで、mainへfast-forward統合済みです。
 
+既存違反3件の専用remediationは、通常イベント2件の`official_url` / `source_urls`契約修正とSummer重複1件のcanonical統合を同一の原子的commitで完了しました。baseline existing violationsは3件から0件になり、`487a6e3791a23ad9498d00cee392279e48ae3954`でProduction GREEN / COMPLETE / CLOSEDです。Track A／Track BもCLOSEDのまま再度開きません。
+
 ## Current foundations
 
-- 通常イベント最小validator: ACTIVE（正当な例外24件、既存違反3件、新規未承認違反0件）
+- 通常イベント最小validator: ACTIVE（正当な例外24件、既存違反0件、新規未承認違反0件）
 - 通常イベントWave playbook: ACTIVE
 - HANDOFF snapshot運用: ACTIVE
 
 ## Next actions
 
-1. validator baseline既存違反3件のremediation
-2. 次県の通常イベントWave
-3. 3県ごとの次回レトロ条件を記録
+1. 群馬県 通常イベントWave 4のL2を完了し、OwnerがExact HEADの受入とmain統合可否を判断する
+2. Owner GO後も、main統合とProduction deploymentを別状態として検証する
+3. 群馬Wave 4がProduction CLOSEDになった後、次県Waveへ進む
 
 ## Hot Memory
 
