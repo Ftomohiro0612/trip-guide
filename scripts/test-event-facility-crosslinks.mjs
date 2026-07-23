@@ -330,6 +330,31 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     true,
   );
   assert.equal(hasVenueSelfMix(first, fixtures), false);
+  assert.equal(
+    fixtures.events.find(({ id }) => id === "evt-1981-202607-01")
+      ?.facility_id,
+    1981,
+  );
+  assert.equal(
+    Array.isArray(first.eventToFacilities["evt-1981-202607-01"]),
+    true,
+  );
+  assert.equal(
+    first.eventToFacilities["evt-1981-202607-01"]?.some(
+      ({ facilityId }) => facilityId === 1981,
+    ) ?? false,
+    false,
+  );
+  assert.equal(
+    fixtures.facilities.some(({ id }) => id === 1981),
+    true,
+  );
+  assert.equal(
+    first.facilityToEvents[1981]?.some(
+      ({ eventId }) => eventId === "evt-1981-202607-01",
+    ) ?? false,
+    false,
+  );
   assert.deepEqual(second, first);
   assert.deepEqual(
     {
@@ -356,10 +381,10 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
       missingLocationCount: 0,
       excludedFacilityCount: 8,
       eventToFacilityEventCount: 101,
-      eventToFacilityRecommendationCount: 462,
-      facilityToEventFacilityCount: 1316,
+      eventToFacilityRecommendationCount: 463,
+      facilityToEventFacilityCount: 1315,
       facilityToEventThreeCandidateCount: 315,
-      facilityToEventRecommendationCount: 2148,
+      facilityToEventRecommendationCount: 2147,
     },
   );
 });

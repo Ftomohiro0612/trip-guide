@@ -68,7 +68,8 @@ const currentLocationRows = Object.values(
 );
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
-  newEventCount: 483,
+  newEventCount: 482,
+  existingEventCount: 17,
   candidateCount: 499,
   overlayCount: 499,
   mappableCount: currentLocationRows.filter(
@@ -1636,7 +1637,10 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(prefectures.size, 47);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
@@ -1734,7 +1738,10 @@ test("high-demand regional gap wave adds only the 22 officially sourced rows", (
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(summerLocationsSource.metadata.mappable_count, CURRENT_SUMMER_MILESTONE.mappableCount);
@@ -1822,7 +1829,10 @@ test("lightweight product analysis wave adds 16 demand-region events in the acce
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(summerLocationsSource.metadata.mappable_count, CURRENT_SUMMER_MILESTONE.mappableCount);
@@ -1902,7 +1912,10 @@ test("350-event milestone wave adds only 12 sourced rows to the three selected f
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(summerLocationsSource.metadata.mappable_count, CURRENT_SUMMER_MILESTONE.mappableCount);
@@ -1998,7 +2011,10 @@ test("post-350 normal L2 wave adds nine official low-density regional events", (
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(summerLocationsSource.metadata.mappable_count, CURRENT_SUMMER_MILESTONE.mappableCount);
@@ -2085,7 +2101,10 @@ test("regional normal L2 continuation retains 15 canonical events after cross-pr
   );
 
   assert.equal(summerSource.metadata.new_event_count, CURRENT_SUMMER_MILESTONE.newEventCount);
-  assert.equal(summerSource.metadata.existing_event_count, 16);
+  assert.equal(
+    summerSource.metadata.existing_event_count,
+    CURRENT_SUMMER_MILESTONE.existingEventCount,
+  );
   assert.equal(summerSource.metadata.candidate_count, CURRENT_SUMMER_MILESTONE.candidateCount);
   assert.equal(summerLocationsSource.metadata.overlay_count, CURRENT_SUMMER_MILESTONE.overlayCount);
   assert.equal(summerLocationsSource.metadata.mappable_count, CURRENT_SUMMER_MILESTONE.mappableCount);
@@ -2140,6 +2159,8 @@ test("regional normal L2 continuation retains 15 canonical events after cross-pr
 });
 
 test("national density expansion retains all 50 sourced rows with valid location states", () => {
+  const removedSummerEventId = "evt-summer-2026-hiroshima-008";
+  const canonicalEventId = "evt-1981-202607-01";
   const fourEventPrefectures = [
     "gunma",
     "hiroshima",
@@ -2164,16 +2185,27 @@ test("national density expansion retains all 50 sourced rows with valid location
     ),
     "evt-summer-2026-ehime-007",
     "evt-summer-2026-fukui-007",
-  ];
+  ].map((eventId) =>
+    eventId === removedSummerEventId ? canonicalEventId : eventId,
+  );
+  const candidateEvents = getSummerCandidateEvents();
   const additions = expectedIds.map((eventId) =>
-    summerSource.events.find((event) => event.id === eventId),
+    candidateEvents.find((event) => event.id === eventId),
+  );
+  const canonicalEvent = additions.find(
+    (event) => event?.id === canonicalEventId,
+  );
+  const newEventAdditions = additions.filter(
+    (event) => event?.id !== canonicalEventId,
   );
 
   assert.equal(expectedIds.length, 50);
   assert.equal(new Set(expectedIds).size, 50);
+  assert.equal(expectedIds.includes(removedSummerEventId), false);
+  assert.equal(expectedIds.includes(canonicalEventId), true);
   assert.equal(additions.every(Boolean), true);
   assert.equal(
-    additions.every(
+    newEventAdditions.every(
       (event) =>
         event.facility_id === null &&
         event.title.trim().length > 0 &&
@@ -2201,18 +2233,49 @@ test("national density expansion retains all 50 sourced rows with valid location
     ),
     true,
   );
+  assert.equal(canonicalEvent?.facility_id, 1981);
+  assert.equal(canonicalEvent?.title.trim().length > 0, true);
+  assert.equal(canonicalEvent?.official_url.startsWith("https://"), true);
+  assert.equal(
+    canonicalEvent?.source_urls.includes(canonicalEvent.official_url),
+    true,
+  );
+  assert.deepEqual(canonicalEvent?.feature_hubs, ["summer-2026"]);
+  assert.equal(
+    Object.hasOwn(
+      summerLocationsSource.locations_by_event_id,
+      canonicalEventId,
+    ),
+    true,
+  );
+  assert.equal(hasValidSummerLocationState(canonicalEventId), true);
+  assert.equal(
+    summerSource.events.some((event) => event.id === removedSummerEventId),
+    false,
+  );
+  assert.equal(
+    Object.hasOwn(
+      summerLocationsSource.locations_by_event_id,
+      removedSummerEventId,
+    ),
+    false,
+  );
+  assert.equal(
+    candidateEvents.some((event) => event.id === removedSummerEventId),
+    false,
+  );
   assert.deepEqual(
     Object.fromEntries(
       fourEventPrefectures.map((prefecture) => [
         prefecture,
-        summerSource.events.filter((event) => event.prefecture === prefecture)
+        candidateEvents.filter((event) => event.prefecture === prefecture)
           .length,
       ]),
     ),
     Object.fromEntries(fourEventPrefectures.map((prefecture) => [prefecture, 9])),
   );
   assert.equal(
-    summerSource.events.filter(
+    candidateEvents.filter(
       (event) =>
         event.prefecture === "ehime" &&
         /^evt-summer-2026-ehime-00[1-7]$/u.test(event.id),
@@ -2220,7 +2283,7 @@ test("national density expansion retains all 50 sourced rows with valid location
     7,
   );
   assert.equal(
-    summerSource.events.filter(
+    candidateEvents.filter(
       (event) =>
         event.prefecture === "fukui" &&
         /^evt-summer-2026-fukui-00[1-7]$/u.test(event.id),
@@ -2236,8 +2299,8 @@ test("national density expansion retains all 50 sourced rows with valid location
         "evt-summer-2026-wakayama-007",
       ].map((eventId) => [
         eventId,
-        summerSource.events.find((event) => event.id === eventId)
-          ?.occurrence_dates?.length,
+        candidateEvents.find((event) => event.id === eventId)?.occurrence_dates
+          ?.length,
       ]),
     ),
     {
