@@ -18,6 +18,12 @@
 - **ホスティング**: Vercel（Production稼働中）
 - **GitHub**: `Ftomohiro0612/trip-guide`
 
+## Read-first
+
+- セッション開始時は最初に `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` を読む。
+- 続いてrepo rootの自動読込規約を確認し、作業開始時に `git fetch` 後の `origin/main` と対象branchを実測する。
+- 初回参加、track切替、current-sessionの欠落・矛盾時のみ、`ai-session-memory/memorips/memorips-canonical-document-map.md`を参照する。
+
 ## ユーザーの技術レベル
 
 - Node.js / Git / Next.js は今回が初体験
@@ -29,12 +35,11 @@
 
 ## 進捗状況
 
-現在地は `HANDOFF.md` を参照。通常イベントWaveの標準手順は
-`docs/event-wave-playbook.md` を正とします。
+現在の件数、県数、Active Track、branch／HEADはCLAUDE.mdを正本としない。
+`ai-session-memory/memorips/current-session.md`と、`git fetch`後のGitHub実測を優先する。
+通常イベントWaveの標準手順は`docs/event-wave-playbook.md`を正とする。
 
 ## AI役割分担
-
-**セッション開始時に必ず読むこと**: `MEMORIPS_AI_ROLES.md`
 
 - Claude Code PM（このスレッド）: 進行管理・仕様書作成・Codexへの指示出し・GO/NO-GO判定
 - Codex: 実装・lint/build・vercel deploy
@@ -42,8 +47,8 @@
 
 ## 参考ファイル
 
-- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（セッション開始時に読む）
-- `HANDOFF.md` — 直近のチャット引継ぎメモ（最新の進捗はここ）
+- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフローの背景資料（read-firstには使用しない）
+- `HANDOFF.md` — 過去時点の引継ぎsnapshot（現在地には使用しない）
 - `docs/event-wave-playbook.md` — 通常イベントWaveの調査・L2・L3正本手順
 - `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
 - `product-direction.md` — プロダクト方針書・実装進捗
