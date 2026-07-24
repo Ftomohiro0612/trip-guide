@@ -33,11 +33,11 @@
       "gifu",
       "mie"
     ],
-    "total": 3738,
+    "total": 3745,
     "per_prefecture_count": {
       "tokyo": 191,
       "kanagawa": 141,
-      "yamanashi": 121,
+      "yamanashi": 128,
       "chiba": 127,
       "saitama": 127,
       "ibaraki": 100,
@@ -67,11 +67,11 @@
       "mie": 120
     },
     "tier_count": {
-      "monthly": 894,
+      "monthly": 897,
       "not_suitable": 249,
-      "weekly": 193,
-      "biweekly": 137,
-      "no_event_source": 281,
+      "weekly": 195,
+      "biweekly": 138,
+      "no_event_source": 282,
       "manual_hard": 61,
       "seasonal": 1192,
       "on_hold": 11
@@ -3939,12 +3939,12 @@
       "facility_id": 124,
       "name": "清里丘の公園",
       "prefecture": "yamanashi",
-      "event_source_type": "none",
-      "patrol_tier": "no_event_source",
-      "official_event_url": null,
-      "official_event_url_secondary": null,
-      "last_checked_at": "2026-06-19",
-      "note": "公式サイトを確認したが、園内施設紹介中心でイベント/ニュース取得元なし。"
+      "event_source_type": "official_news",
+      "patrol_tier": "monthly",
+      "official_event_url": "https://familypark.kiyosato-okanokouen.net/",
+      "official_event_url_secondary": "https://kiyosato-okanokouen.net/cn6/pg4910519.html",
+      "last_checked_at": "2026-07-24",
+      "note": "施設公式のファミリーパークブログをイベント・営業情報の一次導線として月次確認。総合HPのファミリーパーク案内を補助導線とし、通常営業はイベント化しない。SÖPÖの常設価値は施設マスターで更新。"
     },
     {
       "facility_id": 125,
@@ -41202,6 +41202,83 @@
       "official_event_url_secondary": null,
       "last_checked_at": "2026-07-19",
       "note": "全国30都府県拡張L2 Wave。公益社団法人三重県観光連盟公式「観光三重」の個別ページで施設名、正式所在地、施設内容、料金案内（掲載がある場合）、公式地図座標を確認。座標は同公式ページ掲載点を採用し、三重県bbox内および住所との県一致を検査。通常営業・常設展示はイベント化せず、公式の特別企画だけを採用。"
+    },
+    {
+      "facility_id": 3751,
+      "name": "fumotto（フモット）南アルプス",
+      "prefecture": "yamanashi",
+      "event_source_type": "official_event_page",
+      "patrol_tier": "weekly",
+      "official_event_url": "https://fumotto.jp/event/",
+      "official_event_url_secondary": "https://fumotto.jp/news/",
+      "last_checked_at": "2026-07-24",
+      "note": "施設公式イベントカレンダーを週次確認し、日付・内容・開催状態が明示された企画だけを採用。施設公式のお知らせを補助導線とし、店舗の通常営業や期間限定企画を常設施設価値へ混在させない。"
+    },
+    {
+      "facility_id": 3752,
+      "name": "つるビーパーク・いこっと",
+      "prefecture": "yamanashi",
+      "event_source_type": "none",
+      "patrol_tier": "no_event_source",
+      "official_event_url": null,
+      "official_event_url_secondary": null,
+      "last_checked_at": "2026-07-24",
+      "note": "都留市公式の施設紹介と開園広報を確認したが、施設単体で継続監視できるイベント・ニュース一覧はなし。通常の公園利用はイベント化しない。"
+    },
+    {
+      "facility_id": 3753,
+      "name": "みさか桃源郷公園",
+      "prefecture": "yamanashi",
+      "event_source_type": "none",
+      "patrol_tier": "no_event_source",
+      "official_event_url": null,
+      "official_event_url_secondary": null,
+      "last_checked_at": "2026-07-24",
+      "note": "笛吹市公式の施設紹介と公園広場案内を確認したが、施設単体で継続監視できるイベント・ニュース一覧はなし。通常の公園利用はイベント化しない。"
+    },
+    {
+      "facility_id": 3754,
+      "name": "ほくともりっこパーク",
+      "prefecture": "yamanashi",
+      "event_source_type": "official_operation_page",
+      "patrol_tier": "monthly",
+      "official_event_url": "https://www.city.hokuto.yamanashi.jp/docs/21749.html",
+      "official_event_url_secondary": null,
+      "last_checked_at": "2026-07-24",
+      "note": "北杜市公式の施設運用ページを月次確認し、休園・利用条件の変更と明示的な特別企画だけを採用。通常の公園利用はイベント化しない。"
+    },
+    {
+      "facility_id": 3755,
+      "name": "LScamp山中湖",
+      "prefecture": "yamanashi",
+      "event_source_type": "official_news",
+      "patrol_tier": "monthly",
+      "official_event_url": "https://www.ntt-landscape.co.jp/news/lscamp-yamanakako/",
+      "official_event_url_secondary": null,
+      "last_checked_at": "2026-07-24",
+      "note": "運営会社公式の施設案内を月次確認。現時点で施設単体の継続イベント一覧はなく、通常のキャンプ営業はイベント化しない。公式に日付と参加条件が明示された特別企画だけを採用する。"
+    },
+    {
+      "facility_id": 3756,
+      "name": "富士山ジビエセンター DEAR DEER",
+      "prefecture": "yamanashi",
+      "event_source_type": "official_news",
+      "patrol_tier": "biweekly",
+      "official_event_url": "https://mtfuji-deardeer.com/",
+      "official_event_url_secondary": "https://www.city.fujiyoshida.yamanashi.jp/page/14777.html",
+      "last_checked_at": "2026-07-24",
+      "note": "施設公式のNEWSを隔週確認し、日付・参加条件が明示された特別企画だけを採用。富士吉田市公式の子供団体向けプログラム案内を補助導線とし、通常営業・商品販売・団体予約枠はイベント化しない。"
+    },
+    {
+      "facility_id": 3757,
+      "name": "山梨県立やまなしパラスポーツセンター",
+      "prefecture": "yamanashi",
+      "event_source_type": "official_news",
+      "patrol_tier": "weekly",
+      "official_event_url": "https://ypsc.pref.yamanashi.jp/",
+      "official_event_url_secondary": "https://www.pref.yamanashi.jp/sports-sk/para-sports/center.html",
+      "last_checked_at": "2026-07-24",
+      "note": "施設公式の新着情報・教室・イベント案内を週次確認し、開催日、対象、申込条件が明示された企画だけを採用。山梨県公式施設案内を補助導線とし、予約施設の通常利用枠はイベント化しない。"
     }
   ]
 }
