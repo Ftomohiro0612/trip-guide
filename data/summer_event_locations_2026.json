@@ -3,8 +3,8 @@
     "schema_version": 1,
     "purpose": "Summer Hub 2026 map location overlay keyed by canonical event ID",
     "source_checked_at": "2026-07-21",
-    "overlay_count": 499,
-    "mappable_count": 129,
+    "overlay_count": 501,
+    "mappable_count": 131,
     "hold_count": 370,
     "coordinate_precision_values": [
       "exact_venue",
@@ -6014,6 +6014,33 @@
       "location_basis": "checkpoint 100で公式情報を再確認。会場「松本市中心市街地」は広域または複数地点にまたがり、安全な一点を公式地図から確定できないためholdを維持。",
       "source_checked_at": "2026-07-21",
       "coordinate_precision": "hold"
+    },
+    "evt-summer-2026-yamanashi-012": {
+      "latitude": 35.46489997265777,
+      "longitude": 138.8430980757781,
+      "map_label": "忍野中学校校庭",
+      "location_source_urls": [
+        "https://www.vill.oshino.lg.jp/site/kanko/7016.html",
+        "https://www.vill.oshino.lg.jp/uploaded/life/7016_12586_misc.pdf",
+        "https://www.vill.oshino.lg.jp/page/1139.html"
+      ],
+      "coordinate_reference": "忍野村公式「忍野中学校」ページ埋め込み地図: 35.46489997265777,138.8430980757781",
+      "location_basis": "忍野村公式program PDFでメイン会場を忍野中学校校庭と確認し、忍野村公式学校ページの所在地・埋め込み地図座標を照合。観光地「忍野八海」の代表点ではなく公式メイン会場を採用。",
+      "source_checked_at": "2026-07-24",
+      "coordinate_precision": "exact_venue"
+    },
+    "evt-summer-2026-yamanashi-013": {
+      "latitude": 35.61228303375741,
+      "longitude": 138.47944627638444,
+      "map_label": "fumotto（フモット）南アルプス",
+      "location_source_urls": [
+        "https://fumotto.jp/event/nightmarket_insummer2026_overview/",
+        "https://fumotto.jp/access/"
+      ],
+      "coordinate_reference": "data/facilities_data.json#facility-3751",
+      "location_basis": "施設公式でfumotto南アルプス施設全体を会場として確認し、既存facility_id=3751の検証済み施設正本座標を差分0で重ねた。",
+      "source_checked_at": "2026-07-24",
+      "coordinate_precision": "geocoded_venue"
     }
   }
 }
