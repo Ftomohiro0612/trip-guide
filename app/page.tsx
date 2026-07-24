@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import CategoryIcon from "@/components/CategoryIcon";
@@ -28,6 +29,10 @@ import type {
   FacilityTag,
   RecommendedForTag,
 } from "@/types/facility";
+
+export const metadata: Metadata = {
+  alternates: { canonical: "/" },
+};
 
 function HeroBackground() {
   return (

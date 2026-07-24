@@ -73,6 +73,11 @@ export default function Footer() {
           <h3 className="font-semibold mb-2">サービス</h3>
           <ul className="space-y-1 text-slate-600">
             <li>
+              <Link href="/about" className="hover:text-brand">
+                メモリップについて
+              </Link>
+            </li>
+            <li>
               <Link href="/terms" className="hover:text-brand">
                 利用規約
               </Link>
