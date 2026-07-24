@@ -16,6 +16,10 @@ import {
 
 const TODAY = "2026-07-19";
 const SNAPSHOT_TODAY = "2026-07-21";
+const POST_SNAPSHOT_YAMANASHI_CATCHUP_IDS = new Set([
+  "evt-summer-2026-yamanashi-012",
+  "evt-summer-2026-yamanashi-013",
+]);
 const encodedDistance = (from, to) =>
   Math.hypot(to[0] - from[0], to[1] - from[1]);
 
@@ -307,12 +311,29 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
   const facilityLists = Object.values(first.facilityToEvents);
   if (process.env.CROSSLINK_SNAPSHOT_REPORT === "1") {
     console.log(JSON.stringify(first.diagnostics));
+    console.log(
+      JSON.stringify({
+        yamanashiCatchupEventToFacilities: Object.fromEntries(
+          [...POST_SNAPSHOT_YAMANASHI_CATCHUP_IDS].map((eventId) => [
+            eventId,
+            first.eventToFacilities[eventId] ?? [],
+          ]),
+        ),
+        yamanashiCurrentValueFacilitiesToEvents: Object.fromEntries(
+          [3751, 3752, 3753, 3754, 3755, 3756, 3757].map((facilityId) => [
+            facilityId,
+            first.facilityToEvents[facilityId] ?? [],
+          ]),
+        ),
+        hasVenueSelfMix: hasVenueSelfMix(first, fixtures),
+      }),
+    );
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 474);
-  assert.equal(first.diagnostics.mappableEventCount, 128);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 101);
+  assert.equal(fixtures.events.length, 476);
+  assert.equal(first.diagnostics.mappableEventCount, 130);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 103);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -355,6 +376,38 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     ) ?? false,
     false,
   );
+  assert.equal(
+    fixtures.events.some(({ id }) => id === "evt-3751-202606-01"),
+    false,
+  );
+  assert.equal(
+    fixtures.events.find(
+      ({ id }) => id === "evt-summer-2026-yamanashi-013",
+    )?.facility_id,
+    3751,
+  );
+  assert.equal(
+    first.eventToFacilities["evt-summer-2026-yamanashi-013"]?.some(
+      ({ facilityId }) => facilityId === 3751,
+    ) ?? false,
+    false,
+  );
+  assert.equal(
+    first.facilityToEvents[3751]?.some(
+      ({ eventId }) => eventId === "evt-summer-2026-yamanashi-013",
+    ) ?? false,
+    false,
+  );
+  assert.equal(
+    first.eventToFacilities["evt-summer-2026-yamanashi-012"]?.every(
+      ({ distanceKm }) => distanceKm <= 15,
+    ) ?? false,
+    true,
+  );
+  assert.equal(
+    first.eventToFacilities["evt-summer-2026-yamanashi-012"]?.length,
+    5,
+  );
   assert.deepEqual(
     Object.fromEntries(
       [3751, 3752, 3753, 3754, 3755, 3756, 3757].map((facilityId) => [
@@ -364,18 +417,22 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     ),
     {
       3751: ["evt-summer-2026-yamanashi-006"],
-      3752: ["evt-summer-2026-yamanashi-005"],
+      3752: [
+        "evt-summer-2026-yamanashi-012",
+        "evt-summer-2026-yamanashi-005",
+      ],
       3753: [
         "evt-summer-2026-yamanashi-002",
         "evt-summer-2026-yamanashi-005",
       ],
       3754: [],
-      3755: [],
+      3755: ["evt-summer-2026-yamanashi-012"],
       3756: [
+        "evt-summer-2026-yamanashi-012",
         "evt-summer-2026-yamanashi-005",
         "evt-summer-2026-yamanashi-002",
       ],
-      3757: [],
+      3757: ["evt-summer-2026-yamanashi-013"],
     },
   );
   assert.deepEqual(second, first);
@@ -400,20 +457,22 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 474,
+      inputEventCount: 476,
       inputFacilityCount: 3747,
       publicFacilityCount: 3739,
-      mappableEventCount: 128,
+      mappableEventCount: 130,
       holdEventCount: 346,
       missingLocationCount: 0,
       excludedFacilityCount: 8,
-      eventToFacilityEventCount: 101,
-      eventToFacilityRecommendationCount: 463,
-      facilityToEventFacilityCount: 1319,
-      facilityToEventThreeCandidateCount: 315,
-      facilityToEventRecommendationCount: 2153,
+      eventToFacilityEventCount: 103,
+      eventToFacilityRecommendationCount: 473,
+      facilityToEventFacilityCount: 1333,
+      facilityToEventThreeCandidateCount: 343,
+      facilityToEventRecommendationCount: 2219,
     },
   );
+  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 17);
+  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 17);
 });
 
 function eventFixture(overrides = {}) {
@@ -490,7 +549,7 @@ function loadCanonicalFixtures(today) {
       return (
         ["scheduled", "ongoing"].includes(event.status) &&
         (!event.end_date || event.end_date >= today) &&
-        age >= 0 &&
+        (age >= 0 || POST_SNAPSHOT_YAMANASHI_CATCHUP_IDS.has(event.id)) &&
         age <= summerSource.metadata.freshness_days_hub &&
         nextEventDate(event, today) !== null
       );

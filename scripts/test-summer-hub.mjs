@@ -39,6 +39,12 @@ const summerSource = JSON.parse(
 const baseSource = JSON.parse(
   readFileSync(new URL("../data/events_data.json", import.meta.url), "utf8"),
 );
+const facilitiesSource = JSON.parse(
+  readFileSync(
+    new URL("../data/facilities_data.json", import.meta.url),
+    "utf8",
+  ),
+);
 const summerLocationsSource = JSON.parse(
   readFileSync(
     new URL("../data/summer_event_locations_2026.json", import.meta.url),
@@ -68,10 +74,10 @@ const currentLocationRows = Object.values(
 );
 
 const CURRENT_SUMMER_MILESTONE = Object.freeze({
-  newEventCount: 482,
+  newEventCount: 484,
   existingEventCount: 17,
-  candidateCount: 499,
-  overlayCount: 499,
+  candidateCount: 501,
+  overlayCount: 501,
   mappableCount: currentLocationRows.filter(
     (location) => location.coordinate_precision !== "hold",
   ).length,
@@ -470,7 +476,7 @@ test("Summer freshness uses monthly warnings and one pre-start review without da
   assert.equal(summerSource.metadata.freshness_days_hub, 30);
   assert.equal(summerSource.metadata.freshness_days_hero, 30);
 
-  for (const today of ["2026-07-21", "2026-07-22", "2026-07-23"]) {
+  for (const today of ["2026-07-24", "2026-07-25", "2026-07-26"]) {
     const result = runEventValidator(today);
     const reviewed = result.freshness.find(
       (row) => row.id === "evt-summer-2026-nagano-011",
@@ -506,8 +512,8 @@ test("generic event type filters match the current candidate counts", () => {
   const expectedCounts = {
     fireworks: 200,
     summer_festival: 205,
-    summer_tradition: 86,
-    night_outing: 8,
+    summer_tradition: 87,
+    night_outing: 9,
   };
 
   for (const [eventType, expected] of Object.entries(expectedCounts)) {
@@ -1026,6 +1032,97 @@ test("Yamanashi regional wave keeps the accepted schema and source boundaries", 
   assert.equal(cityFestival.reservation, "unknown");
   assert.match(cityFestival.source_notes, /限定企画だけの条件/u);
   assert.equal(summerSource.metadata.hero_event_ids.length, 12);
+});
+
+test("Yamanashi catch-up adds only the two current Summer canonicals", () => {
+  const yamanashi = summerSource.events.filter(
+    (event) => event.prefecture === "yamanashi",
+  );
+  const expectedIds = Array.from(
+    { length: 13 },
+    (_, index) =>
+      `evt-summer-2026-yamanashi-${String(index + 1).padStart(3, "0")}`,
+  );
+  const oshino = yamanashi.find(
+    (event) => event.id === "evt-summer-2026-yamanashi-012",
+  );
+  const nightMarket = yamanashi.find(
+    (event) => event.id === "evt-summer-2026-yamanashi-013",
+  );
+  const oshinoLocation =
+    summerLocationsSource.locations_by_event_id[oshino.id];
+  const nightMarketLocation =
+    summerLocationsSource.locations_by_event_id[nightMarket.id];
+  const fumotto = facilitiesSource.facilities.find(
+    (facility) => facility.id === 3751,
+  );
+
+  assert.deepEqual(
+    yamanashi.map((event) => event.id).sort(),
+    expectedIds,
+  );
+  assert.equal(new Set(yamanashi.map((event) => event.id)).size, 13);
+  assert.equal(
+    yamanashi.filter((event) => /西湖.*竜宮祭/u.test(event.title)).length,
+    1,
+  );
+  assert.equal(
+    yamanashi.filter((event) => /忍野八海(?:祭り|祭|まつり)/u.test(event.title))
+      .length,
+    1,
+  );
+  assert.equal(
+    yamanashi.filter((event) => /NIGHT\s*MARKET/iu.test(event.title)).length,
+    1,
+  );
+
+  assert.equal(oshino.facility_id, null);
+  assert.equal(
+    typeof oshino.venue_name === "string" && oshino.venue_name.trim() !== "",
+    true,
+  );
+  assert.equal(oshino.event_type, "summer_tradition");
+  assert.deepEqual(oshino.occurrence_dates, ["2026-08-08"]);
+  assert.equal(oshinoLocation.coordinate_precision, "exact_venue");
+
+  assert.equal(nightMarket.facility_id, 3751);
+  assert.equal(nightMarket.venue_name == null, true);
+  assert.equal(fumotto.id, 3751);
+  assert.equal(fumotto.prefecture_id, nightMarket.prefecture);
+  assert.equal(nightMarket.event_type, "night_outing");
+  assert.equal(nightMarket.occurrence_dates.length, 60);
+  assert.equal(nightMarket.is_free, true);
+  assert.equal(nightMarketLocation.coordinate_precision, "geocoded_venue");
+  assert.equal(nightMarketLocation.latitude, fumotto.latitude);
+  assert.equal(nightMarketLocation.longitude, fumotto.longitude);
+
+  assert.equal(summerSource.metadata.new_event_count, 484);
+  assert.equal(summerSource.metadata.existing_event_count, 17);
+  assert.equal(summerSource.metadata.candidate_count, 501);
+  assert.equal(summerSource.metadata.hero_event_ids.length, 12);
+  assert.equal(summerLocationsSource.metadata.overlay_count, 501);
+  assert.equal(summerLocationsSource.metadata.mappable_count, 131);
+  assert.equal(summerLocationsSource.metadata.hold_count, 370);
+
+  for (const event of summerSource.events) {
+    const isFacilityBacked = Number.isInteger(event.facility_id);
+    const isVenueBacked =
+      event.facility_id === null &&
+      typeof event.venue_name === "string" &&
+      event.venue_name.trim() !== "";
+    assert.equal(
+      Number(isFacilityBacked) + Number(isVenueBacked),
+      1,
+      `${event.id} must use exactly one Summer venue contract`,
+    );
+    if (isFacilityBacked) {
+      assert.equal(
+        event.venue_name == null,
+        true,
+        `${event.id} must not combine facility_id and venue_name`,
+      );
+    }
+  }
 });
 
 test("Shizuoka and Nagano regional waves use only the accepted data model", () => {
@@ -2508,7 +2605,7 @@ test("national density expansion keeps its final 35 hold rows after canonical de
       aichi: 11,
       nagano: 11,
       osaka: 11,
-      yamanashi: 11,
+      yamanashi: 13,
       hokkaido: 12,
       hyogo: 12,
       fukuoka: 13,
