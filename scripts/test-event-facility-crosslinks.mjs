@@ -355,10 +355,35 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     ) ?? false,
     false,
   );
+  assert.deepEqual(
+    Object.fromEntries(
+      [3751, 3752, 3753, 3754, 3755, 3756, 3757].map((facilityId) => [
+        facilityId,
+        (first.facilityToEvents[facilityId] ?? []).map(({ eventId }) => eventId),
+      ]),
+    ),
+    {
+      3751: ["evt-summer-2026-yamanashi-006"],
+      3752: ["evt-summer-2026-yamanashi-005"],
+      3753: [
+        "evt-summer-2026-yamanashi-002",
+        "evt-summer-2026-yamanashi-005",
+      ],
+      3754: [],
+      3755: [],
+      3756: [
+        "evt-summer-2026-yamanashi-005",
+        "evt-summer-2026-yamanashi-002",
+      ],
+      3757: [],
+    },
+  );
   assert.deepEqual(second, first);
   assert.deepEqual(
     {
       inputEventCount: first.diagnostics.inputEventCount,
+      inputFacilityCount: first.diagnostics.inputFacilityCount,
+      publicFacilityCount: first.diagnostics.publicFacilityCount,
       mappableEventCount: first.diagnostics.mappableEventCount,
       holdEventCount: first.diagnostics.holdEventCount,
       missingLocationCount: first.diagnostics.missingLocationCount,
@@ -376,15 +401,17 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     },
     {
       inputEventCount: 474,
+      inputFacilityCount: 3747,
+      publicFacilityCount: 3739,
       mappableEventCount: 128,
       holdEventCount: 346,
       missingLocationCount: 0,
       excludedFacilityCount: 8,
       eventToFacilityEventCount: 101,
       eventToFacilityRecommendationCount: 463,
-      facilityToEventFacilityCount: 1315,
+      facilityToEventFacilityCount: 1319,
       facilityToEventThreeCandidateCount: 315,
-      facilityToEventRecommendationCount: 2147,
+      facilityToEventRecommendationCount: 2153,
     },
   );
 });

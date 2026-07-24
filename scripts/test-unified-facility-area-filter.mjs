@@ -61,7 +61,7 @@ test("single-prefecture filtering never leaks another prefecture", () => {
       `${prefecture.name} leaked another prefecture`,
     );
   }
-  assert.equal(filterByPrefectureIds(visibleFacilities, []).length, 3732);
+  assert.equal(filterByPrefectureIds(visibleFacilities, []).length, 3739);
 });
 
 test("representative category and recommended-tag views stay in one prefecture", () => {
@@ -173,9 +173,9 @@ test("legacy rain tags are absent from data, types, and link generation", () => 
   assert.equal(getTagMetaBySlug("indoor-rainy"), undefined);
 });
 
-test("facility identity and published boundary stay unchanged", () => {
-  assert.equal(data.facilities.length, 3740);
-  assert.equal(visibleFacilities.length, 3732);
-  assert.equal(new Set(data.facilities.map(({ id }) => id)).size, 3740);
-  assert.equal(new Set(data.facilities.map(({ slug }) => slug)).size, 3740);
+test("facility identity and published boundary include the Yamanashi current-value batch", () => {
+  assert.equal(data.facilities.length, 3747);
+  assert.equal(visibleFacilities.length, 3739);
+  assert.equal(new Set(data.facilities.map(({ id }) => id)).size, 3747);
+  assert.equal(new Set(data.facilities.map(({ slug }) => slug)).size, 3747);
 });

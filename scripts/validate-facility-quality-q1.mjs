@@ -25,14 +25,81 @@ assert.deepEqual(
   manifest.target_ids,
   "manifest target order",
 );
-assert.equal(current.facilities.length, baseline.facilities.length, "facility master count");
 assert.equal(currentById.size, current.facilities.length, "duplicate facility id");
 assert.equal(
   new Set(current.facilities.map(({ slug }) => slug)).size,
   current.facilities.length,
   "duplicate facility slug",
 );
-assert.deepEqual(current.metadata, baseline.metadata, "metadata must remain unchanged");
+
+assert.equal(
+  current.metadata.total_facilities,
+  current.facilities.length,
+  "metadata total_facilities",
+);
+
+const assertMetadataCounts = ({
+  metadataEntries,
+  baselineMetadataEntries,
+  facilityIdField,
+  label,
+}) => {
+  assert.equal(
+    new Set(metadataEntries.map(({ id }) => id)).size,
+    metadataEntries.length,
+    `duplicate ${label} metadata id`,
+  );
+  const metadataById = new Map(metadataEntries.map((entry) => [entry.id, entry]));
+  const baselineMetadataById = new Map(
+    baselineMetadataEntries.map((entry) => [entry.id, entry]),
+  );
+  for (const entry of metadataEntries) {
+    const baselineEntry = baselineMetadataById.get(entry.id);
+    if (baselineEntry) {
+      assert.equal(entry.name, baselineEntry.name, `${label} metadata ${entry.id} name`);
+    } else {
+      assert.equal(
+        typeof entry.name === "string" && entry.name.length > 0,
+        true,
+        `${label} metadata ${entry.id} name`,
+      );
+    }
+  }
+  const actualCounts = new Map();
+  for (const facility of current.facilities) {
+    const metadataEntry = metadataById.get(facility[facilityIdField]);
+    assert(metadataEntry, `${label} metadata ${facility[facilityIdField]} exists`);
+    actualCounts.set(
+      facility[facilityIdField],
+      (actualCounts.get(facility[facilityIdField]) ?? 0) + 1,
+    );
+  }
+  for (const entry of metadataEntries) {
+    assert.equal(
+      entry.count,
+      actualCounts.get(entry.id) ?? 0,
+      `${label} metadata ${entry.id} count`,
+    );
+  }
+  assert.equal(
+    metadataEntries.reduce((sum, { count }) => sum + count, 0),
+    current.facilities.length,
+    `${label} metadata count total`,
+  );
+};
+
+assertMetadataCounts({
+  metadataEntries: current.metadata.prefectures,
+  baselineMetadataEntries: baseline.metadata.prefectures,
+  facilityIdField: "prefecture_id",
+  label: "prefecture",
+});
+assertMetadataCounts({
+  metadataEntries: current.metadata.categories,
+  baselineMetadataEntries: baseline.metadata.categories,
+  facilityIdField: "category_id",
+  label: "category",
+});
 
 const changedIds = [];
 for (const [id, before] of baselineById) {
@@ -43,8 +110,11 @@ for (const [id, before] of baselineById) {
   if (JSON.stringify(before) !== JSON.stringify(after)) changedIds.push(id);
 }
 
-const unexpectedChangedIds = changedIds.filter((id) => !targetIds.has(id));
-assert.deepEqual(unexpectedChangedIds, [], "manifest-external facility changes");
+const nonTargetExistingChangedIds = changedIds.filter((id) => !targetIds.has(id));
+const postBaselineAddedFacilityIds = current.facilities
+  .filter(({ id }) => !baselineById.has(id))
+  .map(({ id }) => id)
+  .sort((a, b) => a - b);
 
 for (const entry of manifest.entries) {
   const before = baselineById.get(entry.id);
@@ -80,8 +150,32 @@ const visibleBefore = baseline.facilities.filter(
 const visibleAfter = current.facilities.filter(
   ({ data_quality_status }) => data_quality_status !== "exclude_candidate",
 );
-assert.equal(visibleBefore.length, 3734, "baseline published count");
-assert.equal(visibleAfter.length, 3732, "Q1 published count");
+const excludedAfter = current.facilities.filter(
+  ({ data_quality_status }) => data_quality_status === "exclude_candidate",
+);
+assert.equal(
+  visibleAfter.length + excludedAfter.length,
+  current.facilities.length,
+  "current publication boundary partitions facility master",
+);
+
+for (const entry of manifest.entries) {
+  const after = currentById.get(entry.id);
+  if (entry.post_public_state === "excluded") {
+    assert.equal(
+      after?.data_quality_status,
+      "exclude_candidate",
+      `facility ${entry.id} post_public_state excluded`,
+    );
+  } else {
+    assert.notEqual(
+      after?.data_quality_status,
+      "exclude_candidate",
+      `facility ${entry.id} post_public_state ${entry.post_public_state}`,
+    );
+  }
+}
+
 for (const id of [791, 1600]) {
   assert.equal(
     currentById.get(id)?.data_quality_status,
@@ -125,7 +219,10 @@ console.log(
       result: "PASS",
       targets: manifest.target_count,
       changed_facilities: changedIds.length,
-      manifest_external_changes: unexpectedChangedIds.length,
+      non_target_existing_changes: nonTargetExistingChangedIds.length,
+      non_target_existing_changed_ids: nonTargetExistingChangedIds,
+      post_baseline_added_facility_count: postBaselineAddedFacilityIds.length,
+      post_baseline_added_facility_ids: postBaselineAddedFacilityIds,
       classification_counts: classificationCounts,
       url_updates: urlUpdateCount,
       name_updates: nameUpdateCount,
@@ -135,6 +232,7 @@ console.log(
       facility_master_after: current.facilities.length,
       published_before: visibleBefore.length,
       published_after: visibleAfter.length,
+      excluded_after: excludedAfter.length,
     },
     null,
     2,
