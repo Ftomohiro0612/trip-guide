@@ -1,4 +1,5 @@
 import facilitiesJson from "@/data/facilities_data.json";
+import { createRelatedFacilitySelector } from "@/lib/related-facilities.mjs";
 import type {
   CategoryMeta,
   Facility,
@@ -16,6 +17,7 @@ export const visibleFacilities: Facility[] = facilities.filter(
 export const metadata = data.metadata;
 export const prefectures: PrefectureMeta[] = data.metadata.prefectures;
 export const categories: CategoryMeta[] = data.metadata.categories;
+const selectRelatedFacilities = createRelatedFacilitySelector(visibleFacilities);
 
 export function isFacilityVisible(
   facility: Facility | undefined,
@@ -47,21 +49,7 @@ export function getFacilitiesByCategory(categoryId: string): Facility[] {
 }
 
 export function getRelatedFacilities(facility: Facility, limit = 3): Facility[] {
-  return visibleFacilities
-    .filter(
-      (f) =>
-        f.id !== facility.id &&
-        (f.category_id === facility.category_id ||
-          f.prefecture_id === facility.prefecture_id),
-    )
-    .sort((a, b) => {
-      const aSameCat = a.category_id === facility.category_id ? 1 : 0;
-      const bSameCat = b.category_id === facility.category_id ? 1 : 0;
-      const aSamePref = a.prefecture_id === facility.prefecture_id ? 1 : 0;
-      const bSamePref = b.prefecture_id === facility.prefecture_id ? 1 : 0;
-      return bSameCat * 2 + bSamePref - (aSameCat * 2 + aSamePref);
-    })
-    .slice(0, limit);
+  return selectRelatedFacilities(facility, limit) as Facility[];
 }
 
 export function getPrefectureMeta(id: PrefectureId): PrefectureMeta | undefined {
