@@ -31,6 +31,9 @@ const eventTypes = new Set([
   "night_outing",
 ]);
 const baseById = new Map(base.events.map((event) => [event.id, event]));
+const facilityById = new Map(
+  facilities.facilities.map((facility) => [facility.id, facility]),
+);
 const newById = new Map(summer.events.map((event) => [event.id, event]));
 const classificationsById = new Map(
   summer.existing_event_classifications.map((item) => [item.id, item]),
@@ -551,9 +554,30 @@ if (process.argv.includes("--json")) {
 if (errors.length > 0) process.exitCode = 1;
 
 function validateHubEvent(event, label) {
-  if (event.facility_id !== null) error(label, "new street event must use facility_id=null");
-  if (typeof event.venue_name !== "string" || event.venue_name.trim() === "") {
-    error(label, "facility_id=null requires a non-empty venue_name");
+  const hasVenueName =
+    typeof event.venue_name === "string" && event.venue_name.trim() !== "";
+
+  if (event.facility_id === null) {
+    if (!hasVenueName) {
+      error(label, "facility_id=null requires a non-empty venue_name");
+    }
+  } else {
+    if (!Number.isInteger(event.facility_id)) {
+      error(label, "facility_id must be an integer or null");
+    } else {
+      const facility = facilityById.get(event.facility_id);
+      if (!facility) {
+        error(label, `facility_id ${event.facility_id} does not exist`);
+      } else if (facility.prefecture_id !== event.prefecture) {
+        error(
+          label,
+          `facility prefecture ${facility.prefecture_id} does not match event prefecture ${event.prefecture}`,
+        );
+      }
+    }
+    if (event.venue_name !== undefined && event.venue_name !== null) {
+      error(label, "facility-backed event must not also specify venue_name");
+    }
   }
   if (!eventTypes.has(event.event_type)) error(label, `invalid event_type: ${event.event_type}`);
   validateFeatureHubs(event, label);
