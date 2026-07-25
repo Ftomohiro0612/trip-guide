@@ -7,15 +7,16 @@ import SummerSeasonalCta from "@/components/SummerSeasonalCta";
 import {
   eventPrefectures,
   getBuildDateString,
+  getEventPrefectureLabel,
   getVisibleEvents,
   toEventView,
 } from "@/lib/events";
-import type { PrefectureId } from "@/types/facility";
 import {
   getFacilitiesByPrefecture,
   getPrefectureMeta,
 } from "@/lib/facilities";
-import { prefectureIconImages } from "@/lib/icons";
+import { prefectureEmoji, prefectureIconImages } from "@/lib/icons";
+import type { PrefectureId } from "@/types/facility";
 
 export const metadata: Metadata = {
   title: "東京・神奈川・山梨・静岡・千葉・埼玉・茨城・群馬・大阪・兵庫・京都・愛知・福岡・広島・長野・栃木・新潟の子ども向けイベント",
@@ -34,14 +35,10 @@ export default function EventsIndexPage() {
       visibleEvents.filter((event) => event.prefecture === prefecture).length,
     ]),
   );
-  const prefectureOptions = eventPrefectures
-    .map((prefectureId) => {
-      const meta = getPrefectureMeta(prefectureId);
-      return meta ? { id: prefectureId, name: meta.name } : null;
-    })
-    .filter(
-      (item): item is { id: PrefectureId; name: string } => Boolean(item),
-    );
+  const prefectureOptions = eventPrefectures.map((prefectureId) => ({
+    id: prefectureId,
+    name: getEventPrefectureLabel(prefectureId),
+  }));
 
   return (
     <div>
@@ -72,10 +69,13 @@ export default function EventsIndexPage() {
 
         <div className="hidden grid-cols-2 gap-3 sm:grid-cols-2 lg:grid lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
-            const meta = getPrefectureMeta(prefectureId);
-            if (!meta) return null;
+            const meta = getPrefectureMeta(prefectureId as PrefectureId);
+            const prefectureName = getEventPrefectureLabel(prefectureId);
+            const iconImage = prefectureIconImages[prefectureId];
             const eventCount = eventCountByPrefecture.get(prefectureId) ?? 0;
-            const facilityCount = getFacilitiesByPrefecture(prefectureId).length;
+            const facilityCount = meta
+              ? getFacilitiesByPrefecture(meta.id).length
+              : 0;
 
             return (
               <Link
@@ -84,17 +84,26 @@ export default function EventsIndexPage() {
                 className="group rounded-lg border border-slate-200 bg-white p-4 transition-colors hover:border-brand hover:bg-sky-50/40"
               >
                 <div className="flex items-center gap-3">
-                  <Image
-                    src={prefectureIconImages[prefectureId]}
-                    alt=""
-                    width={56}
-                    height={56}
-                    className="h-12 w-12 shrink-0 object-contain"
-                    aria-hidden
-                  />
+                  {iconImage ? (
+                    <Image
+                      src={iconImage}
+                      alt=""
+                      width={56}
+                      height={56}
+                      className="h-12 w-12 shrink-0 object-contain"
+                      aria-hidden
+                    />
+                  ) : (
+                    <span
+                      aria-hidden
+                      className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-sky-50 text-2xl"
+                    >
+                      {prefectureEmoji[prefectureId] ?? "📍"}
+                    </span>
+                  )}
                   <div className="min-w-0">
                     <h2 className="font-bold text-slate-900 group-hover:text-brand">
-                      {meta.name}
+                      {prefectureName}
                     </h2>
                     <p className="mt-1 text-xs text-slate-500">
                       掲載中 {eventCount}件 / 登録施設 {facilityCount}件

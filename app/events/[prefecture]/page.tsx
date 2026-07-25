@@ -6,11 +6,11 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import {
   eventPrefectures,
   getBuildDateString,
+  getEventPrefectureLabel,
   getVisibleEventsByPrefecture,
   isEventPrefecture,
   toEventView,
 } from "@/lib/events";
-import { getPrefectureMeta } from "@/lib/facilities";
 
 interface Props {
   params: Promise<{ prefecture: string }>;
@@ -27,12 +27,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isEventPrefecture(prefecture)) {
     return { title: "見つかりませんでした" };
   }
-  const meta = getPrefectureMeta(prefecture);
+  const prefectureName = getEventPrefectureLabel(prefecture);
   const count = getVisibleEventsByPrefecture(prefecture).length;
 
   return {
-    title: `${meta?.name ?? "対象エリア"}の子ども向けイベント ${count}件`,
-    description: `${meta?.name ?? "対象エリア"}で子どもと行けるイベントを、公式情報で確認できたものだけ掲載しています。日程・料金は各公式サイトでご確認ください。`,
+    title: `${prefectureName}の子ども向けイベント ${count}件`,
+    description: `${prefectureName}で子どもと行けるイベントを、公式情報で確認できたものだけ掲載しています。日程・料金は各公式サイトでご確認ください。`,
     alternates: { canonical: `/events/${prefecture}` },
   };
 }
@@ -41,9 +41,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
   const { prefecture } = await params;
   if (!isEventPrefecture(prefecture)) notFound();
 
-  const meta = getPrefectureMeta(prefecture);
-  if (!meta) notFound();
-
+  const prefectureName = getEventPrefectureLabel(prefecture);
   const today = getBuildDateString();
   const visibleEvents = getVisibleEventsByPrefecture(prefecture, today);
   const eventViews = visibleEvents.map((event) => toEventView(event, today));
@@ -54,11 +52,11 @@ export default async function PrefectureEventsPage({ params }: Props) {
         items={[
           { name: "ホーム", href: "/" },
           { name: "イベント", href: "/events" },
-          { name: `${meta.name}のイベント` },
+          { name: `${prefectureName}のイベント` },
         ]}
       />
       <ItemListJsonLd
-        name={`${meta.name}の子ども向けイベント`}
+        name={`${prefectureName}の子ども向けイベント`}
         items={visibleEvents.map((event) => ({
           name: event.title,
           href: `/events/${prefecture}`,
@@ -76,11 +74,11 @@ export default async function PrefectureEventsPage({ params }: Props) {
               イベント
             </Link>
             <span className="mx-1.5">/</span>
-            <span>{meta.name}</span>
+            <span>{prefectureName}</span>
           </nav>
           <p className="text-sm font-bold text-brand">公式確認済みイベント</p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            {meta.name}の子ども向けイベント
+            {prefectureName}の子ども向けイベント
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
             公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。

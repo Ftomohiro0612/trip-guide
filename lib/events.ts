@@ -131,7 +131,7 @@ interface EventsData {
   metadata: {
     purpose: string;
     total_events: number;
-    prefectures: PrefectureId[];
+    prefectures: EventPrefecture[];
     freshness_days_page: number;
     freshness_days_top_x: number;
   };
@@ -343,23 +343,29 @@ export function toEventView(
   today = getBuildDateString(),
 ): EventView {
   const facility = getFacilityForEvent(event);
-  const prefecture = getPrefectureMeta(event.prefecture as PrefectureId);
 
   return {
     event,
     facilityName: facility?.name ?? null,
     facilitySlug: facility?.slug ?? null,
     venueName: facility?.name ?? event.venue_name?.trim() ?? null,
-    prefectureLabel:
-      prefecture?.name ??
-      EVENT_PREFECTURE_FALLBACK_LABELS[event.prefecture] ??
-      event.prefecture,
+    prefectureLabel: getEventPrefectureLabel(event.prefecture),
     isThisWeekend: isThisWeekend(event, today),
     isThisMonth: isThisMonth(event, today),
   };
 }
 
-export function isEventPrefecture(value: string): value is PrefectureId {
+export function getEventPrefectureLabel(
+  prefecture: EventPrefecture,
+): string {
+  return (
+    getPrefectureMeta(prefecture as PrefectureId)?.name ??
+    EVENT_PREFECTURE_FALLBACK_LABELS[prefecture] ??
+    prefecture
+  );
+}
+
+export function isEventPrefecture(value: string): value is EventPrefecture {
   return (eventPrefectures as string[]).includes(value);
 }
 
