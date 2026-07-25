@@ -18,6 +18,16 @@
 - **ホスティング**: Vercel（Production稼働中）
 - **GitHub**: `Ftomohiro0612/trip-guide`
 
+## 固定Session Memory（唯一のread-first）
+
+- セッション開始時は、最初に `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` の1ファイルだけを読む。
+- frontmatterの `scope` が `memorips` であることを確認する。
+- 初回報告は「現在の停止点」「次の1手」「Owner判断待ち」「未確認事項」だけとする。
+- 初回報告前は、Git、Issue、remote、production、過去ログ、他memory、通常の作業worktreeを確認せず、monitorも開始しない。
+- 固定ファイルが存在しない、またはscopeが一致しない場合は、他ファイルを探索・推測せず、その事実だけを報告して待機する。
+- テンプレート、旧current-state、Claude memory、`HANDOFF.md`、`MEMORIPS_AI_ROLES.md`、その他の引継ぎ文書へフォールバックしない。
+- セッション終了時は固定Session Memoryだけを最新化する。引継ぎ目的でproduct repoやai-memory-memoripsのbranch変更、stash、clean化、production再確認、hot memory整合、Obsidian更新を行わない。
+
 ## ユーザーの技術レベル
 
 - Node.js / Git / Next.js は今回が初体験
@@ -29,12 +39,11 @@
 
 ## 進捗状況
 
-現在地は `HANDOFF.md` を参照。通常イベントWaveの標準手順は
-`docs/event-wave-playbook.md` を正とします。
+最新の停止点と次の1手は、上記の固定Session Memoryだけを参照する。
+通常イベントWaveの標準手順は `docs/event-wave-playbook.md` を正とするが、
+セッション開始時の状態復元には使用しない。
 
 ## AI役割分担
-
-**セッション開始時に必ず読むこと**: `MEMORIPS_AI_ROLES.md`
 
 - Claude Code PM（このスレッド）: 進行管理・仕様書作成・Codexへの指示出し・GO/NO-GO判定
 - Codex: 実装・lint/build・vercel deploy
@@ -42,9 +51,9 @@
 
 ## 参考ファイル
 
-- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（セッション開始時に読む）
-- `HANDOFF.md` — 直近のチャット引継ぎメモ（最新の進捗はここ）
-- `docs/event-wave-playbook.md` — 通常イベントWaveの調査・L2・L3正本手順
+- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（read-firstには使用しない）
+- `HANDOFF.md` — 過去の引継ぎメモ（最新状態やread-firstの根拠には使用しない）
+- `docs/event-wave-playbook.md` — 通常イベントWaveの調査・L2・L3正本手順（read-firstには使用しない）
 - `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
 - `product-direction.md` — プロダクト方針書・実装進捗
 - `CLAUDE_CODE_QUICKSTART.md` — 初期セットアップ手順
