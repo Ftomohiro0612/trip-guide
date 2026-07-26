@@ -40,9 +40,9 @@ function StoryPhotos({
       className={`absolute inset-0 grid gap-0.5 bg-black ${
         story.photoUrls.length === 1
           ? "grid-cols-1"
-          : story.photoUrls.length === 2
-            ? "grid-cols-[2fr_1fr]"
-            : "grid-cols-[2fr_1fr] grid-rows-2"
+        : story.photoUrls.length === 2
+            ? "grid-rows-2"
+            : "grid-cols-2 grid-rows-[2fr_1fr]"
       }`}
     >
       {story.photoUrls.slice(0, 3).map((photoUrl, photoIndex) => (
@@ -54,7 +54,7 @@ function StoryPhotos({
           src={photoUrl}
           alt={`${story.facilityName}の家族の思い出 ${photoIndex + 1}`}
           className={`h-full w-full object-cover ${
-            story.photoUrls.length === 3 && photoIndex === 0 ? "row-span-2" : ""
+            story.photoUrls.length === 3 && photoIndex === 0 ? "col-span-2" : ""
           }`}
           loading={priority && photoIndex === 0 ? "eager" : "lazy"}
         />
@@ -63,11 +63,43 @@ function StoryPhotos({
   );
 }
 
+function reactionCopy(lines: string[]): string | null {
+  if (lines.length === 0) return null;
+  const parsed = lines.map((line) => {
+    const [name, reaction] = line.split("：");
+    return { name, reaction };
+  });
+  const names = parsed.map(({ name }) => name).join("も");
+  if (parsed.every(({ reaction }) => reaction === "大満足")) {
+    return `${names}も、ずっと笑顔だった一日。`;
+  }
+  if (parsed.every(({ reaction }) => reaction === "楽しんだ")) {
+    return `${names}も、夢中で遊んだ一日。`;
+  }
+  const phrases = parsed.map(({ name, reaction }, index) => {
+    const subject = `${name}${index === 0 ? "は" : "も"}`;
+    if (reaction === "大満足") return `${subject}ずっと笑顔`;
+    if (reaction === "楽しんだ") return `${subject}夢中で楽しんだ`;
+    if (reaction === "普通") return `${subject}のんびり過ごした`;
+    if (reaction === "合わなかった") return `${subject}には少し合わなかった`;
+    if (reaction === "参加できず") return `${subject}次のお楽しみ`;
+    return `${subject}${reaction}`;
+  });
+  return `${phrases.join("、")}。`;
+}
+
+function revisitCopy(value: string | null): string | null {
+  if (value === "また行きたい") return "また、みんなで来たい場所。";
+  if (value === "条件次第") return "次は季節や時間を変えて、もう一度。";
+  if (value === "一度で十分") return "一度きりでも、ちゃんと残したい一日。";
+  if (value === "もう行かない") return "ここで過ごしたことは、思い出として残る。";
+  return value;
+}
+
 export default function MemoryStories({
   stories,
   focusId,
   demo = false,
-  standalone = false,
 }: {
   stories: MemoryStory[];
   focusId?: string;
@@ -77,6 +109,14 @@ export default function MemoryStories({
   const scrollerRef = useRef<HTMLDivElement>(null);
   const storyRefs = useRef(new Map<string, HTMLElement>());
   const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
 
   useEffect(() => {
     if (!focusId) return;
@@ -105,23 +145,20 @@ export default function MemoryStories({
 
   return (
     <main
-      className={`fixed inset-x-0 top-[6.5rem] z-20 bg-slate-950 text-white sm:static ${
-        standalone ? "bottom-0" : "bottom-14"
-      }`}
+      className="fixed inset-0 z-[60] h-[100dvh] bg-slate-950 text-white"
     >
-      <div className="mx-auto flex h-full max-w-lg flex-col overflow-hidden bg-black shadow-2xl sm:h-[calc(100dvh-3.5rem)]">
-        <header className="relative z-20 flex h-14 shrink-0 items-center justify-between bg-black/95 px-4">
+      <div className="relative mx-auto flex h-full max-w-lg flex-col overflow-hidden bg-black shadow-2xl">
+        <header className="absolute inset-x-0 top-0 z-30 flex h-16 items-center justify-between bg-gradient-to-b from-black/70 to-transparent px-4 pb-2">
           <Link
             href="/mypage/visits"
-            className="rounded-full px-2 py-1 text-sm font-bold text-white/80 hover:text-white"
+            className="rounded-full bg-black/25 px-3 py-1.5 text-sm font-bold text-white/90 backdrop-blur-sm hover:text-white"
           >
-            ← 履歴
+            ← 思い出を閉じる
           </Link>
           <div className="text-center">
-            <p className="text-sm font-bold tracking-wide">家族の思い出</p>
             {demo && <p className="text-[10px] text-amber-200">体験確認用サンプル</p>}
           </div>
-          <span className="min-w-12 text-right text-xs tabular-nums text-white/60">
+          <span className="min-w-12 rounded-full bg-black/25 px-2 py-1 text-right text-xs tabular-nums text-white/80 backdrop-blur-sm">
             {activeIndex + 1} / {stories.length}
           </span>
         </header>
@@ -137,7 +174,7 @@ export default function MemoryStories({
             );
             setActiveIndex(nextIndex);
           }}
-          className="min-h-0 flex-1 snap-y snap-mandatory overflow-y-auto overscroll-y-contain scroll-smooth"
+          className="h-full snap-y snap-mandatory overflow-y-auto overscroll-y-contain scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           aria-label="家族の思い出ストーリー"
         >
           {stories.map((story, index) => (
@@ -154,18 +191,7 @@ export default function MemoryStories({
               <StoryPhotos story={story} priority={index === 0} />
               <div className="absolute inset-0 bg-gradient-to-b from-black/55 via-black/5 to-black/90" />
 
-              <div className="absolute left-0 right-0 top-0 flex gap-1 px-3 pt-3" aria-hidden="true">
-                {stories.map((item, itemIndex) => (
-                  <span
-                    key={item.id}
-                    className={`h-0.5 flex-1 rounded-full ${
-                      itemIndex <= activeIndex ? "bg-white" : "bg-white/30"
-                    }`}
-                  />
-                ))}
-              </div>
-
-              <div className="absolute left-4 top-8 flex items-center gap-2">
+              <div className="absolute left-4 top-20 flex items-center gap-2">
                 <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-bold tracking-wide backdrop-blur-sm">
                   {story.visitedOn}
                 </span>
@@ -176,43 +202,30 @@ export default function MemoryStories({
                 )}
               </div>
 
-              <div className="absolute inset-x-0 bottom-0 space-y-3 px-5 pb-8 pt-28">
+              <div className="absolute inset-x-0 bottom-0 max-h-[68%] space-y-3 overflow-y-auto overscroll-contain px-5 pb-[max(4rem,env(safe-area-inset-bottom))] pt-5">
                 <div>
                   <p className="text-xs font-bold tracking-[0.18em] text-white/70">
                     OUR FAMILY MEMORY
                   </p>
-                  <h2 className="mt-1 text-2xl font-black leading-tight drop-shadow-md">
+                  <h2 className="mt-1 text-[clamp(1.25rem,5.5vw,1.875rem)] font-black leading-tight [overflow-wrap:anywhere] drop-shadow-md">
                     {story.facilityName}
                   </h2>
                 </div>
 
                 {story.note && (
-                  <blockquote className="border-l-2 border-amber-300 pl-3 text-base font-medium leading-relaxed text-white drop-shadow">
+                  <blockquote className="border-l-2 border-amber-300 pl-3 text-[clamp(0.875rem,3.5vw,1rem)] font-medium leading-relaxed text-white [overflow-wrap:anywhere] drop-shadow">
                     「{story.note}」
                   </blockquote>
                 )}
 
-                {(story.childLines.length > 0 || story.revisit) && (
-                  <div className="flex flex-wrap gap-2">
-                    {story.childLines.map((line) => (
-                      <span
-                        key={line}
-                        className="rounded-full bg-white/18 px-3 py-1.5 text-xs font-bold backdrop-blur-md"
-                      >
-                        {line}
-                      </span>
-                    ))}
-                    {story.revisit && (
-                      <span className="rounded-full bg-emerald-400/90 px-3 py-1.5 text-xs font-black text-emerald-950">
-                        また行きたい：{story.revisit}
-                      </span>
-                    )}
-                  </div>
+                {reactionCopy(story.childLines) && (
+                  <p className="text-sm font-bold leading-relaxed text-white/90">
+                    {reactionCopy(story.childLines)}
+                  </p>
                 )}
-
-                {story.tags.length > 0 && (
-                  <p className="text-xs font-medium text-white/75">
-                    {story.tags.map((tag) => `#${tag}`).join("  ")}
+                {revisitCopy(story.revisit) && (
+                  <p className="text-sm font-black leading-relaxed text-amber-200">
+                    ♡ {revisitCopy(story.revisit)}
                   </p>
                 )}
 
@@ -224,8 +237,9 @@ export default function MemoryStories({
                     記録の詳細
                   </Link>
                   {index < stories.length - 1 ? (
-                    <span className="animate-pulse text-xs font-bold text-white/75">
-                      上に送って次の思い出へ ↑
+                    <span className="flex flex-col items-center text-xs font-bold text-white/80">
+                      <span className="animate-bounce text-lg leading-none" aria-hidden="true">⌃</span>
+                      上へスワイプ
                     </span>
                   ) : (
                     <div className="flex items-center gap-2">
@@ -246,6 +260,20 @@ export default function MemoryStories({
                 </div>
               </div>
             </article>
+          ))}
+        </div>
+
+        <div
+          className="pointer-events-none absolute right-3 top-1/2 z-20 flex -translate-y-1/2 flex-col gap-2"
+          aria-hidden="true"
+        >
+          {stories.map((story, index) => (
+            <span
+              key={story.id}
+              className={`w-1 rounded-full transition-all ${
+                index === activeIndex ? "h-8 bg-white" : "h-3 bg-white/35"
+              }`}
+            />
           ))}
         </div>
       </div>

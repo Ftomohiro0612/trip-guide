@@ -27,6 +27,14 @@ export default function VisitCompletePage() {
   const [failed, setFailed] = useState(false);
 
   useEffect(() => {
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
     const stored = readVisitCompletion();
     if (!stored) {
       queueMicrotask(() => setFailed(true));
@@ -63,7 +71,8 @@ export default function VisitCompletePage() {
   const memory = data.memoryPreview;
 
   return (
-    <main className="mx-auto flex max-w-lg flex-col items-center gap-5 px-4 py-6 text-center">
+    <main className="fixed inset-0 z-[60] overflow-y-auto bg-[#fffaf3] px-4 py-5 text-center">
+      <div className="mx-auto flex min-h-full max-w-lg flex-col items-center justify-center gap-5">
       <VisitCompletionViewEvent visitId={context.visitId} entryMethod={context.entryMethod} />
       <div>
         <p className="text-xs font-black tracking-[0.18em] text-amber-600">MEMORY COMPLETE</p>
@@ -78,8 +87,8 @@ export default function VisitCompletePage() {
               memory.photoUrls.length === 1
                 ? "grid-cols-1"
                 : memory.photoUrls.length === 2
-                  ? "grid-cols-[2fr_1fr]"
-                  : "grid-cols-[2fr_1fr] grid-rows-2"
+                  ? "grid-rows-2"
+                  : "grid-cols-2 grid-rows-[2fr_1fr]"
             }`}
           >
             {memory.photoUrls.slice(0, 3).map((photoUrl, photoIndex) => (
@@ -90,7 +99,7 @@ export default function VisitCompletePage() {
                 src={photoUrl}
                 alt={`${memory.facilityName}の思い出 ${photoIndex + 1}`}
                 className={`h-full w-full object-cover ${
-                  memory.photoUrls.length === 3 && photoIndex === 0 ? "row-span-2" : ""
+                  memory.photoUrls.length === 3 && photoIndex === 0 ? "col-span-2" : ""
                 }`}
               />
             ))}
@@ -106,22 +115,26 @@ export default function VisitCompletePage() {
         <div className="absolute left-4 top-4 rounded-full bg-black/35 px-3 py-1.5 text-xs font-bold backdrop-blur-sm">
           {memory.visitedOn}
         </div>
-        <div className="absolute inset-x-0 bottom-0 space-y-3 px-5 pb-6 pt-24">
+        <div className="absolute inset-x-0 bottom-0 max-h-[68%] space-y-3 overflow-y-auto px-5 pb-6 pt-5">
           <div>
             <p className="text-xs font-bold tracking-[0.16em] text-white/65">OUR FAMILY MEMORY</p>
-            <h2 className="mt-1 text-2xl font-black leading-tight drop-shadow">
+            <h2 className="mt-1 text-[clamp(1.25rem,5.5vw,1.875rem)] font-black leading-tight [overflow-wrap:anywhere] drop-shadow">
               {memory.facilityName}
             </h2>
           </div>
           {memory.note && (
-            <blockquote className="border-l-2 border-amber-300 pl-3 text-base font-medium leading-relaxed drop-shadow">
+            <blockquote className="border-l-2 border-amber-300 pl-3 text-sm font-medium leading-relaxed [overflow-wrap:anywhere] drop-shadow">
               「{memory.note}」
             </blockquote>
           )}
           {memory.revisit && (
-            <span className="inline-flex rounded-full bg-emerald-400/90 px-3 py-1.5 text-xs font-black text-emerald-950">
-              また行きたい：{memory.revisit}
-            </span>
+            <p className="text-sm font-black text-amber-200">
+              ♡ {memory.revisit === "また行きたい"
+                ? "また、みんなで来たい場所。"
+                : memory.revisit === "条件次第"
+                  ? "次は季節や時間を変えて、もう一度。"
+                  : "この日のことを、思い出として残しておこう。"}
+            </p>
           )}
         </div>
       </section>
@@ -170,6 +183,7 @@ export default function VisitCompletePage() {
           {data.primaryCopy?.hint && <p className="text-xs leading-relaxed">{data.primaryCopy.hint}</p>}
         </div>
       </details>
+      </div>
     </main>
   );
 }
