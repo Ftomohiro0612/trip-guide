@@ -8,7 +8,7 @@ type NavItem = { href: string; label: string; icon: string; exact?: boolean };
 const items: NavItem[] = [
   { href: "/mypage/visits/new", label: "記録する", icon: "✏️" },
   { href: "/mypage/wishlist", label: "行きたい", icon: "⭐" },
-  { href: "/mypage/visits", label: "履歴", icon: "📖" },
+  { href: "/mypage/memories", label: "思い出", icon: "📖" },
   { href: "/mypage", label: "マイページ", icon: "👤", exact: true },
 ];
 

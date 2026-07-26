@@ -60,44 +60,79 @@ export default function VisitCompletePage() {
 
   const visitsHref = data.children.length === 0 ? "/mypage/visits?no_child=1" : "/mypage/visits";
   const nextDraftId = data.remainingDraftIds[0];
+  const memory = data.memoryPreview;
 
   return (
-    <main className="mx-auto flex max-w-lg flex-col items-center gap-6 px-4 py-12 text-center">
+    <main className="mx-auto flex max-w-lg flex-col items-center gap-5 px-4 py-6 text-center">
       <VisitCompletionViewEvent visitId={context.visitId} entryMethod={context.entryMethod} />
-      <span className="text-5xl" aria-hidden="true">🎉</span>
       <div>
-        <h1 className="text-xl font-bold text-slate-900">記録しました！</h1>
-        <p className="mt-1 text-lg font-bold text-brand">これで家族{data.familyTotal}回目のおでかけです</p>
-        <p className="mt-1 text-sm text-slate-500">
-          {data.hasCoordinates ? "🗺️ 行った場所マップにピンが増えました" : "おでかけの記録が増えました"}
-        </p>
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">MEMORY COMPLETE</p>
+        <h1 className="mt-1 text-2xl font-black text-slate-950">思い出が1枚できました</h1>
+        <p className="mt-1 text-sm text-slate-500">入力した瞬間から、家族で見返せます。</p>
       </div>
 
-      {data.children.length === 0 ? (
-        <div className="w-full rounded-xl bg-amber-50 px-4 py-3 text-left text-sm leading-relaxed text-amber-900">
-          子どもを登録・紐付けすると、「好き」のヒントも少しずつ見えてきます。登録しなくても、おでかけ記録はそのまま使えます。
+      <section className="relative aspect-[9/14] max-h-[68dvh] w-full overflow-hidden rounded-[2rem] bg-slate-900 text-left text-white shadow-2xl">
+        {memory.photoUrls.length > 0 ? (
+          <div
+            className={`absolute inset-0 grid gap-0.5 bg-black ${
+              memory.photoUrls.length === 1
+                ? "grid-cols-1"
+                : memory.photoUrls.length === 2
+                  ? "grid-cols-[2fr_1fr]"
+                  : "grid-cols-[2fr_1fr] grid-rows-2"
+            }`}
+          >
+            {memory.photoUrls.slice(0, 3).map((photoUrl, photoIndex) => (
+              // Signed private photo URLs use the existing photo delivery path.
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={photoUrl}
+                src={photoUrl}
+                alt={`${memory.facilityName}の思い出 ${photoIndex + 1}`}
+                className={`h-full w-full object-cover ${
+                  memory.photoUrls.length === 3 && photoIndex === 0 ? "row-span-2" : ""
+                }`}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,#fed7aa_0%,transparent_32%),radial-gradient(circle_at_80%_30%,#bae6fd_0%,transparent_30%),linear-gradient(145deg,#0f172a_0%,#334155_48%,#14532d_100%)]">
+            <div className="flex h-full items-center justify-center pb-32 text-7xl" aria-hidden="true">
+              ✨
+            </div>
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/5 to-black/90" />
+        <div className="absolute left-4 top-4 rounded-full bg-black/35 px-3 py-1.5 text-xs font-bold backdrop-blur-sm">
+          {memory.visitedOn}
         </div>
-      ) : (
-        <div className="w-full rounded-xl bg-emerald-50 px-4 py-4">
-          {data.primaryCopy && <p className="font-bold text-emerald-950">{data.primaryCopy.progress}</p>}
-          {data.primaryCopy?.hint && <p className="mt-1 text-sm leading-relaxed text-emerald-800">{data.primaryCopy.hint}</p>}
-          {data.children.length > 1 && (
-            <>
-              <p className="mt-2 text-sm text-emerald-800">{data.children.length}人とも記録が増えました</p>
-              <p className="mt-1 text-xs text-emerald-700">
-                {data.children.map((child) => `${child.nickname} ${child.visitCount}件`).join("・")}
-              </p>
-            </>
+        <div className="absolute inset-x-0 bottom-0 space-y-3 px-5 pb-6 pt-24">
+          <div>
+            <p className="text-xs font-bold tracking-[0.16em] text-white/65">OUR FAMILY MEMORY</p>
+            <h2 className="mt-1 text-2xl font-black leading-tight drop-shadow">
+              {memory.facilityName}
+            </h2>
+          </div>
+          {memory.note && (
+            <blockquote className="border-l-2 border-amber-300 pl-3 text-base font-medium leading-relaxed drop-shadow">
+              「{memory.note}」
+            </blockquote>
           )}
-          {data.primaryCopy?.showLikesLink && (
-            <Link href={`/mypage#child-likes-${data.displayChildSlot ?? 1}`} className="mt-3 inline-flex rounded-lg px-2 py-1 text-sm font-bold text-brand underline underline-offset-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
-              「好き」のヒントを見る
-            </Link>
+          {memory.revisit && (
+            <span className="inline-flex rounded-full bg-emerald-400/90 px-3 py-1.5 text-xs font-black text-emerald-950">
+              また行きたい：{memory.revisit}
+            </span>
           )}
         </div>
-      )}
+      </section>
 
       <div className="w-full space-y-3">
+        <Link
+          href={`/mypage/memories?focus=${encodeURIComponent(context.visitId)}`}
+          className="block w-full rounded-xl bg-slate-950 py-3.5 text-sm font-black text-white transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2"
+        >
+          家族の思い出を縦送りで見る
+        </Link>
         {nextDraftId ? (
           <Link
             href="/mypage/visits/edit"
@@ -117,8 +152,8 @@ export default function VisitCompletePage() {
             もう1件記録する
           </TrackedAnotherVisitLink>
         )}
-        <Link href={visitsHref} className="block w-full rounded-xl bg-emerald-600 py-3 text-sm font-bold text-white transition-colors hover:bg-emerald-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-600 focus-visible:ring-offset-2">
-          {data.hasCoordinates ? "マップと履歴を見る" : "おでかけ履歴を見る"}
+        <Link href={visitsHref} className="block w-full py-2 text-sm font-bold text-slate-500 underline underline-offset-4">
+          地図・件数・記録データを見る
         </Link>
         {context.returnFacility && (
           <Link href={`/facilities/${context.returnFacility}`} className="block w-full rounded-xl border border-slate-200 bg-white py-3 text-sm font-bold text-slate-600 transition-colors hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
@@ -126,6 +161,15 @@ export default function VisitCompletePage() {
           </Link>
         )}
       </div>
+
+      <details className="w-full rounded-xl bg-slate-50 px-4 py-3 text-left text-sm text-slate-600">
+        <summary className="cursor-pointer font-bold">今回の記録データ</summary>
+        <div className="mt-3 space-y-2 border-t border-slate-200 pt-3">
+          <p>これで家族{data.familyTotal}回目のおでかけです。</p>
+          {data.primaryCopy && <p>{data.primaryCopy.progress}</p>}
+          {data.primaryCopy?.hint && <p className="text-xs leading-relaxed">{data.primaryCopy.hint}</p>}
+        </div>
+      </details>
     </main>
   );
 }

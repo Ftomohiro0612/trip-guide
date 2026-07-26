@@ -303,6 +303,27 @@ export default async function VisitsPage({
         </Link>
       </div>
 
+      {!filterLabel && visitRows.length > 0 && (
+        <Link
+          href="/mypage/memories"
+          className="group flex items-center justify-between overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-4 py-4 text-white shadow-lg"
+        >
+          <div>
+            <p className="text-xs font-bold tracking-[0.16em] text-white/60">
+              FAMILY MEMORIES
+            </p>
+            <p className="mt-1 font-black">写真で思い出を振り返る</p>
+            <p className="mt-0.5 text-xs text-white/70">1画面1思い出を、縦送りで</p>
+          </div>
+          <span
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15 text-xl transition-transform group-hover:translate-x-1"
+            aria-hidden="true"
+          >
+            ↑
+          </span>
+        </Link>
+      )}
+
       {filterLabel && (
         <Link
           href="/mypage/visits"

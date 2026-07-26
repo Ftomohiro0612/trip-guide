@@ -8,6 +8,7 @@ import {
   type CompletionVisit,
 } from "@/lib/visit-completion";
 import { createClient } from "@/lib/supabase/server";
+import { familyRevisitLabels, visitLabel } from "@/lib/visit-labels";
 
 type FacilitySource = {
   slug: string;
@@ -19,6 +20,10 @@ type FacilitySource = {
 type VisitRow = {
   id: string;
   facility_slug: string;
+  facility_name: string;
+  visited_on: string | null;
+  family_revisit: string | null;
+  parent_memo: string | null;
   visit_children: { child_id: string }[] | null;
 };
 
@@ -38,7 +43,9 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
   const [visitResult, childrenResult, siblingResult] = await Promise.all([
     supabase
       .from("visits")
-      .select("id, facility_slug, visit_children(child_id)")
+      .select(
+        "id, facility_slug, facility_name, visited_on, family_revisit, parent_memo, visit_children(child_id)",
+      )
       .eq("user_id", user.id)
       .eq("status", "published"),
     supabase
@@ -62,15 +69,15 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
     return { status: "error" as const };
   }
 
-  const visits: CompletionVisit[] = ((visitResult.data ?? []) as VisitRow[]).map(
-    (visit) => ({
+  const visitRows = (visitResult.data ?? []) as VisitRow[];
+  const visits: CompletionVisit[] = visitRows.map((visit) => ({
       id: visit.id,
       facilitySlug: visit.facility_slug,
       childIds: (visit.visit_children ?? []).map((link) => link.child_id),
-    }),
-  );
+    }));
   const currentVisit = visits.find((visit) => visit.id === visitId);
-  if (!currentVisit) return { status: "not_found" as const };
+  const currentVisitRow = visitRows.find((visit) => visit.id === visitId);
+  if (!currentVisit || !currentVisitRow) return { status: "not_found" as const };
 
   const children: CompletionChild[] = (childrenResult.data ?? []).map((child) => ({
     id: child.id,
@@ -90,6 +97,28 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
   const remainingDraftIds = safeBatchIds.filter((id) =>
     (siblingResult.data ?? []).some((visit) => visit.id === id),
   );
+  const { data: photoRows } = await supabase
+    .from("visit_photos")
+    .select("thumb_path")
+    .eq("visit_id", visitId)
+    .order("sort_order", { ascending: true })
+    .order("created_at", { ascending: true })
+    .limit(3);
+  const photoPaths = (photoRows ?? [])
+    .map((photo) => photo.thumb_path)
+    .filter((path): path is string => Boolean(path));
+  const { data: signedPhotos } =
+    photoPaths.length > 0
+      ? await supabase.storage
+          .from("visit-photos")
+          .createSignedUrls(photoPaths, 60 * 60)
+      : { data: [] };
+  const signedPhotoUrlByPath = new Map(
+    (signedPhotos ?? []).map((photo) => [photo.path, photo.signedUrl]),
+  );
+  const revisit = currentVisitRow.family_revisit
+    ? visitLabel(familyRevisitLabels, currentVisitRow.family_revisit)
+    : null;
 
   return {
     status: "ok" as const,
@@ -105,5 +134,14 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
     primaryCopy: displayChild ? childProgressCopy(displayChild) : null,
     hasCoordinates: Boolean(facility?.latitude && facility?.longitude),
     remainingDraftIds,
+    memoryPreview: {
+      facilityName: currentVisitRow.facility_name,
+      visitedOn: currentVisitRow.visited_on?.replaceAll("-", ".") ?? "日付未設定",
+      note: currentVisitRow.parent_memo?.trim() || null,
+      revisit: revisit === "未記録" ? null : revisit,
+      photoUrls: photoPaths
+        .map((path) => signedPhotoUrlByPath.get(path) ?? null)
+        .filter((url): url is string => Boolean(url)),
+    },
   };
 }
