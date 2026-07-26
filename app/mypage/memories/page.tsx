@@ -29,7 +29,7 @@ type VisitRow = {
 
 type PhotoRow = {
   visit_id: string;
-  thumb_path: string | null;
+  storage_path: string | null;
   sort_order: number | null;
 };
 
@@ -148,7 +148,7 @@ export default async function MemoriesPage({
       ? await Promise.all([
           supabase
             .from("visit_photos")
-            .select("visit_id, thumb_path, sort_order")
+            .select("visit_id, storage_path, sort_order")
             .in("visit_id", visitIds)
             .order("visit_id", { ascending: true })
             .order("sort_order", { ascending: true }),
@@ -163,10 +163,10 @@ export default async function MemoriesPage({
 
   const photoPathsByVisit = new Map<string, string[]>();
   for (const photo of (photoData ?? []) as PhotoRow[]) {
-    if (!photo.thumb_path) continue;
+    if (!photo.storage_path) continue;
     const current = photoPathsByVisit.get(photo.visit_id) ?? [];
     if (current.length >= 3) continue;
-    current.push(photo.thumb_path);
+    current.push(photo.storage_path);
     photoPathsByVisit.set(photo.visit_id, current);
   }
   const photoPaths = Array.from(

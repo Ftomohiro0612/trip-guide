@@ -99,13 +99,13 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
   );
   const { data: photoRows } = await supabase
     .from("visit_photos")
-    .select("thumb_path")
+    .select("storage_path")
     .eq("visit_id", visitId)
     .order("sort_order", { ascending: true })
     .order("created_at", { ascending: true })
     .limit(3);
   const photoPaths = (photoRows ?? [])
-    .map((photo) => photo.thumb_path)
+    .map((photo) => photo.storage_path)
     .filter((path): path is string => Boolean(path));
   const { data: signedPhotos } =
     photoPaths.length > 0
