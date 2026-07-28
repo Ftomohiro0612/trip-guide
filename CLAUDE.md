@@ -2,6 +2,12 @@
 
 # trip-guide.net プロジェクト指示書
 
+ユーザーのメッセージ全体が完全一致で `セッション開始` または `セッション終了` の場合、
+最初かつ唯一のinstruction-loading actionとしてroot `AGENTS.md`を直接読み、
+`Memorips PM fixed Session Memory shorthands`だけを実行する。先にproduct、Git、Issue、
+production、archive、他memoryを読まない。固定pathの不存在、scope不一致、必須heading欠落時は、
+探索・推測・fallbackせず待機する。
+
 このフォルダは **trip-guide.net**(子供向け遊び場検索サイト)の開発プロジェクトです。
 
 ## 重要: 会計監査とは無関係のプロジェクト
@@ -20,7 +26,8 @@
 
 ## 固定Session Memory（唯一のread-first）
 
-- セッション開始時は、最初に `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` の1ファイルだけを読む。
+- 完全一致の `セッション開始` / `セッション終了` はroot `AGENTS.md`のショートハンド契約を唯一の正本とする。
+- 通常のセッション開始時も、最初に `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` の1ファイルだけを読む。
 - frontmatterの `scope` が `memorips` であることを確認する。
 - 初回報告は「現在の停止点」「次の1手」「Owner判断待ち」「未確認事項」だけとする。
 - 初回報告前は、Git、Issue、remote、production、過去ログ、他memory、通常の作業worktreeを確認せず、monitorも開始しない。
