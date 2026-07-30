@@ -16,12 +16,35 @@ longer request, or another scope.
 2. Confirm that the frontmatter `scope` is `memorips`, and use only the
    frontmatter and `# Current State` as the resume point.
 3. Briefly report the current position, exact stop point, and next major
-   direction, then wait.
-4. Do not read an archive, this product repository, Git / GitHub, Issues,
-   production, another memory, or another scope. Do not start investigation,
-   implementation, verification, or a Monitor.
-5. If the fixed file is missing, its scope does not match, or `# Current State`
-   is missing, report that fact and wait. Do not search, infer, or fall back.
+   direction.
+4. Before the initial report, do not read an archive, this product repository,
+   Git / GitHub, Issues, production, another memory, or another scope. Do not
+   start investigation, implementation, verification, or a Monitor.
+5. After reporting, inspect the Active Lane, Authorization Envelope, Next
+   Action, Exact Stop Point, and Owner Decision Required recorded in
+   `# Current State`.
+6. Continue an existing lane only when all of the following are true:
+   - the Authorization Envelope is valid and points to a canonical Owner
+     decision;
+   - the Next Action and Exact Stop Point are concrete;
+   - the next action has no unresolved Owner Decision Required;
+   - no HOLD, scope conflict, invalidating change, material canonical
+     contradiction, or security / permission problem applies;
+   - any production, publication, or other L3 action is bound to a still-valid
+     exact-artifact Owner authorization.
+7. Session Memory is only a resume pointer. Before changing anything, follow
+   the normal project read-first, re-check the canonical Owner decision, active
+   Issue / PR, and the Git / GitHub, production, or other evidence needed for
+   the lane. If canonical evidence disagrees with Session Memory, stop without
+   making the disputed change.
+8. When the continuation conditions remain valid, proceed without a new user
+   instruction until the first formal `GREEN / blocking 0`, the recorded Exact
+   Stop Point, or a central exception-stop condition, then report the result.
+9. If there is no active lane, authority or next action is unclear, an Owner
+   decision is pending, a HOLD applies, an L3 action is not specifically
+   authorized, or required memory fields are missing, report and wait.
+10. If the fixed file is missing, its scope does not match, or `# Current State`
+    is missing, report that fact and wait. Do not search, infer, or fall back.
 
 ### `セッション終了`
 
