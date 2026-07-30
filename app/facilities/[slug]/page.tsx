@@ -11,6 +11,7 @@ import FacilityGallery from "@/components/FacilityGallery";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import ShareButtons from "@/components/ShareButtons";
+import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import {
   getFacilityBySlug,
   getRelatedFacilities,
@@ -531,14 +532,16 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
         facilityName={facility.name}
       />
       {facility.url && (
-        <a
+        <TrackedOutboundLink
           href={facility.url}
-          target="_blank"
-          rel="noopener noreferrer"
+          contentType="facility"
+          contentId={String(facility.id)}
+          intentType="facility_detail"
+          linkLocation="facility_sidebar"
           className="block w-full rounded-xl border border-slate-200 bg-white py-2.5 text-center text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-800"
         >
           公式サイトを見る ↗
-        </a>
+        </TrackedOutboundLink>
       )}
     </>
   );

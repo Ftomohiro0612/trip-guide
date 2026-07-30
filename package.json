@@ -8,6 +8,7 @@
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
+    "experiment:metrics": "node --env-file-if-exists=.env.local scripts/experiment-90d-metrics.mjs",
     "events:validate": "node scripts/validate-events.mjs",
     "events:regular:validate": "node scripts/validate-regular-events.mjs",
     "events:regular:test": "node --test scripts/test-regular-events-validator.mjs",
