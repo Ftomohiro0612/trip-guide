@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import SummerSeasonalCta from "@/components/SummerSeasonalCta";
@@ -66,8 +67,9 @@ export default function EventsIndexPage() {
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
         <SummerSeasonalCta placement="events" />
+        <AffiliateExperienceCta placement="events_index" />
 
-        <div className="hidden grid-cols-2 gap-3 sm:grid-cols-2 lg:grid lg:grid-cols-4">
+        <div className="mt-8 hidden grid-cols-2 gap-3 sm:grid-cols-2 lg:grid lg:grid-cols-4">
           {eventPrefectures.map((prefectureId) => {
             const meta = getPrefectureMeta(prefectureId as PrefectureId);
             const prefectureName = getEventPrefectureLabel(prefectureId);

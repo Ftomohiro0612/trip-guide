@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import {
@@ -102,6 +103,8 @@ export default async function PrefectureEventsPage({ params }: Props) {
             referenceDate={today}
           />
         )}
+
+        <AffiliateExperienceCta placement="events_prefecture" />
 
         <div className="mt-8">
           <Link

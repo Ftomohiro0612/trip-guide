@@ -12,7 +12,12 @@ type OutboundIntent =
   | "event_detail"
   | "event_pdf"
   | "reservation"
-  | "facility_detail";
+  | "facility_detail"
+  | "affiliate_experience";
+
+type AnalyticsEvent =
+  | "outbound_intent_click"
+  | "affiliate_outbound_click";
 
 export default function TrackedOutboundLink({
   href,
@@ -20,26 +25,41 @@ export default function TrackedOutboundLink({
   contentId,
   intentType,
   linkLocation,
+  analyticsEvent = "outbound_intent_click",
+  partner,
+  campaignId,
+  sponsored = false,
   children,
   className,
 }: {
   href: string;
-  contentType: "event" | "facility";
+  contentType: "event" | "facility" | "affiliate";
   contentId: string;
   intentType: OutboundIntent;
-  linkLocation: "event_card" | "facility_sidebar";
+  linkLocation:
+    | "event_card"
+    | "facility_sidebar"
+    | "events_index_affiliate"
+    | "events_prefecture_affiliate"
+    | "events_summer_affiliate";
+  analyticsEvent?: AnalyticsEvent;
+  partner?: string;
+  campaignId?: string;
+  sponsored?: boolean;
   children: ReactNode;
   className: string;
 }) {
   function trackOutboundIntent() {
     try {
       const destinationHost = new URL(href).hostname.replace(/^www\./, "");
-      window.gtag?.("event", "outbound_intent_click", {
+      window.gtag?.("event", analyticsEvent, {
         content_type: contentType,
         content_id: contentId,
         intent_type: intentType,
         link_location: linkLocation,
         destination_host: destinationHost,
+        ...(partner ? { partner } : {}),
+        ...(campaignId ? { campaign_id: campaignId } : {}),
       });
     } catch {
       // Analytics must never block the external destination.
@@ -50,7 +70,7 @@ export default function TrackedOutboundLink({
     <a
       href={href}
       target="_blank"
-      rel="noopener noreferrer"
+      rel={sponsored ? "sponsored noopener noreferrer" : "noopener noreferrer"}
       onClick={trackOutboundIntent}
       className={className}
     >

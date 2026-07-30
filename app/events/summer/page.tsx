@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { connection } from "next/server";
+import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
 import SummerEventExplorer from "@/components/SummerEventExplorer";
 import SummerEventMapClient from "@/components/SummerEventMapClient";
 import { BreadcrumbJsonLd, JsonLd } from "@/components/JsonLd";
@@ -244,6 +245,8 @@ export default async function SummerEventsPage({ searchParams }: Props) {
             referenceDate={today}
           />
         </div>
+
+        <AffiliateExperienceCta placement="events_summer" />
 
         <aside className="mt-12 rounded-2xl border border-slate-200 bg-white p-5 sm:p-6">
           <h2 className="text-lg font-bold text-slate-900">展示・ワークショップも探す</h2>
