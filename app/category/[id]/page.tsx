@@ -54,8 +54,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const desc = categoryDescriptions[meta.id] ?? "";
   const result = getFacilitiesForCategoryPage({ categoryId: meta.id });
   const visibleCount = result.page.totalItems;
-  const title = `${meta.name} ${visibleCount}選 (全国)`;
-  const description = `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
+  const title =
+    meta.id === "aquarium"
+      ? `屋内で楽しめる水族館 ${visibleCount}選（全国）`
+      : `${meta.name} ${visibleCount}選 (全国)`;
+  const description =
+    meta.id === "aquarium"
+      ? `雨の日の子どもの遊び場に、屋内展示を中心に楽しめる全国の水族館${visibleCount}施設を掲載。都府県や地図から探し、料金や雨の日の過ごしやすさを確認できます。`
+      : `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
   return {
     title,
     description,
@@ -92,13 +98,13 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     count: result.prefectureCounts.get(prefecture.id) ?? 0,
   }));
   const desc = categoryDescriptions[meta.id] ?? "";
-  const pageTitle = [
-    selectedPrefecture?.name,
-    selectedCraftType?.label,
-    meta.name,
-  ]
-    .filter(Boolean)
-    .join("の");
+  const isNationwideAquarium =
+    meta.id === "aquarium" && !selectedPrefecture;
+  const pageTitle = isNationwideAquarium
+    ? "屋内で楽しめる水族館を全国から探す"
+    : [selectedPrefecture?.name, selectedCraftType?.label, meta.name]
+        .filter(Boolean)
+        .join("の");
   const showDiversifiedNationwideGrid =
     meta.id === "craft" &&
     !result.selectedPrefectureId &&
@@ -175,6 +181,36 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           selectedId={selectedPrefectureId}
           disableEmpty
         />
+        {isNationwideAquarium && (
+          <section
+            className="mt-5 rounded-2xl border border-sky-200 bg-sky-50 p-4 sm:p-5"
+            aria-labelledby="indoor-aquarium-guide"
+          >
+            <h2
+              id="indoor-aquarium-guide"
+              className="text-lg font-bold text-slate-900"
+            >
+              雨の日も楽しみやすい水族館の選び方
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              水族館は屋内展示が中心ですが、イルカショーや館内の移動に屋外エリアを含む施設もあります。都府県で絞り、施設名を開いて料金や雨の日の過ごしやすさを確認すると、家族に合う候補を選びやすくなります。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
+              <a
+                href="#facility-results"
+                className="text-brand hover:text-brand-dark"
+              >
+                全国の水族館を見る ↓
+              </a>
+              <Link
+                href="/tag/rainy-day"
+                className="text-brand hover:text-brand-dark"
+              >
+                雨でも快適な施設だけを見る →
+              </Link>
+            </div>
+          </section>
+        )}
         {meta.id === "craft" && (
           <section
             className="mt-5"
