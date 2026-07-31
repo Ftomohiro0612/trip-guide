@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import ChildAvatarUploader from "./ChildAvatarUploader";
 import ChildrenForm from "./ChildrenForm";
 import DeleteButton from "./DeleteButton";
+import FirstMemoryActivationCard from "./FirstMemoryActivationCard";
 
 export const metadata: Metadata = { title: "子どもプロフィール" };
 
@@ -34,10 +35,16 @@ function genderLabel(gender: string | null): string {
 
 export default async function ChildrenPage() {
   const supabase = await createClient();
-  const { data: children } = await supabase
-    .from("children")
-    .select("id, nickname, birth_year, birth_month, gender, avatar_url")
-    .order("sort_order", { ascending: true });
+  const [{ data: children }, { count: publishedVisitCount }] = await Promise.all([
+    supabase
+      .from("children")
+      .select("id, nickname, birth_year, birth_month, gender, avatar_url")
+      .order("sort_order", { ascending: true }),
+    supabase
+      .from("visits")
+      .select("id", { count: "exact", head: true })
+      .eq("status", "published"),
+  ]);
   const childRows = (children ?? []) as Child[];
   const avatarPaths = childRows
     .map((child) => child.avatar_url)
@@ -124,15 +131,19 @@ export default async function ChildrenPage() {
         </p>
       )}
 
-      {/* マイページへ進む */}
+      {/* 最初の記録へ進む */}
       {childRows.length > 0 && (
         <div className="pt-2">
-          <Link
-            href="/mypage"
-            className="block w-full text-center py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors"
-          >
-            マイページへ進む →
-          </Link>
+          {(publishedVisitCount ?? 0) === 0 ? (
+            <FirstMemoryActivationCard />
+          ) : (
+            <Link
+              href="/mypage"
+              className="block w-full text-center py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors"
+            >
+              マイページへ進む →
+            </Link>
+          )}
         </div>
       )}
     </div>
