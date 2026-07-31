@@ -57,10 +57,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const title =
     meta.id === "aquarium"
       ? `屋内で楽しめる水族館 ${visibleCount}選（全国）`
+      : meta.id === "scenic"
+        ? `日本の絶景・自然散策スポット ${visibleCount}選｜滝・渓谷・海`
       : `${meta.name} ${visibleCount}選 (全国)`;
   const description =
     meta.id === "aquarium"
       ? `雨の日の子どもの遊び場に、屋内展示を中心に楽しめる全国の水族館${visibleCount}施設を掲載。都府県や地図から探し、料金や雨の日の過ごしやすさを確認できます。`
+      : meta.id === "scenic"
+        ? `子どもと楽しめる日本の絶景・自然散策スポット${visibleCount}施設を掲載。滝、渓谷、湖、海岸、高原などを都府県や地図から探し、家族に合う行き先を選べます。`
       : `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
   return {
     title,
@@ -100,11 +104,14 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const desc = categoryDescriptions[meta.id] ?? "";
   const isNationwideAquarium =
     meta.id === "aquarium" && !selectedPrefecture;
+  const isNationwideScenic = meta.id === "scenic" && !selectedPrefecture;
   const pageTitle = isNationwideAquarium
     ? "屋内で楽しめる水族館を全国から探す"
-    : [selectedPrefecture?.name, selectedCraftType?.label, meta.name]
-        .filter(Boolean)
-        .join("の");
+    : isNationwideScenic
+      ? "子どもと楽しむ日本の絶景・自然散策スポット"
+      : [selectedPrefecture?.name, selectedCraftType?.label, meta.name]
+          .filter(Boolean)
+          .join("の");
   const showDiversifiedNationwideGrid =
     meta.id === "craft" &&
     !result.selectedPrefectureId &&
@@ -207,6 +214,36 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                 className="text-brand hover:text-brand-dark"
               >
                 雨でも快適な施設だけを見る →
+              </Link>
+            </div>
+          </section>
+        )}
+        {isNationwideScenic && (
+          <section
+            className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 sm:p-5"
+            aria-labelledby="family-scenic-guide"
+          >
+            <h2
+              id="family-scenic-guide"
+              className="text-lg font-bold text-slate-900"
+            >
+              家族で楽しめる絶景・自然散策の選び方
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              滝・渓谷・湖・海岸・高原など、自然の景色を楽しめる場所を全国から掲載しています。遊歩道の距離や高低差、季節によって歩きやすさが変わるため、地図と施設詳細を確認して家族に合う行き先を選びましょう。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
+              <a
+                href="#facility-results"
+                className="text-brand hover:text-brand-dark"
+              >
+                絶景スポット一覧を見る ↓
+              </a>
+              <Link
+                href="/facilities?categories=scenic&tags=0-3歳OK"
+                className="text-brand hover:text-brand-dark"
+              >
+                0〜3歳向けの候補を見る →
               </Link>
             </div>
           </section>
