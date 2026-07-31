@@ -35,9 +35,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!meta) return { title: "見つかりませんでした" };
   const desc = prefectureDescriptions[meta.id];
   const visibleCount = getFacilitiesByPrefecture(meta.id).length;
+  const isNagano = meta.id === "nagano";
   return {
-    title: `${meta.name}の子供向け遊び場 ${visibleCount}選`,
-    description: `${desc.lead} 雨の日でも遊べる施設・無料施設・年齢別など、家族で楽しめる${visibleCount}施設をまとめて掲載。`,
+    title: isNagano
+      ? `長野県の子供の遊び場 ${visibleCount}選｜雨の日・無料・年齢別`
+      : `${meta.name}の子供向け遊び場 ${visibleCount}選`,
+    description: isNagano
+      ? `長野県の子供の遊び場を、軽井沢・松本・諏訪・八ヶ岳などから探せます。家族で楽しめる${visibleCount}施設を地図、雨の日、無料、0〜3歳の条件で比較できます。`
+      : `${desc.lead} 雨の日でも遊べる施設・無料施設・年齢別など、家族で楽しめる${visibleCount}施設をまとめて掲載。`,
     alternates: { canonical: `/prefecture/${meta.id}` },
   };
 }
@@ -51,6 +56,7 @@ export default async function PrefecturePage({ params }: Props) {
   const list = getFacilitiesByPrefecture(meta.id);
   const visibleCount = list.length;
   const gradient = prefectureGradients[meta.id];
+  const isNagano = meta.id === "nagano";
 
   const categoryCounts = categories
     .map((c) => ({
@@ -102,7 +108,9 @@ export default async function PrefecturePage({ params }: Props) {
             <div className="flex-1">
               <p className="text-xs font-medium opacity-95">エリア特集</p>
               <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {meta.name}の子供向け遊び場 {visibleCount}選
+                {isNagano
+                  ? `長野県の子供の遊び場 ${visibleCount}選`
+                  : `${meta.name}の子供向け遊び場 ${visibleCount}選`}
               </h1>
               <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
                 {desc.lead}
@@ -113,8 +121,48 @@ export default async function PrefecturePage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8">
+        {isNagano && (
+          <section
+            className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 sm:p-5"
+            aria-labelledby="nagano-playground-guide"
+          >
+            <h2
+              id="nagano-playground-guide"
+              className="text-lg font-bold text-slate-900"
+            >
+              長野県で子どもの遊び場を選ぶポイント
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              軽井沢・松本・諏訪・八ヶ岳などエリアが広く、同じ県内でも移動時間が長くなります。先に地図で行きたい地域を確認し、天気や子どもの年齢に合う条件で絞ると候補を選びやすくなります。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
+              <a
+                href="#nagano-facility-map"
+                className="text-brand hover:text-brand-dark"
+              >
+                地図から探す ↓
+              </a>
+              <Link
+                href="/facilities?prefecture=nagano&rain=◎"
+                className="text-brand hover:text-brand-dark"
+              >
+                雨でも快適な施設 →
+              </Link>
+              <Link
+                href="/facilities?prefecture=nagano&tags=0-3歳OK"
+                className="text-brand hover:text-brand-dark"
+              >
+                0〜3歳向け施設 →
+              </Link>
+            </div>
+          </section>
+        )}
         {list.length > 0 && (
-          <section className="mb-8" aria-labelledby="prefecture-map-heading">
+          <section
+            id={isNagano ? "nagano-facility-map" : undefined}
+            className="mb-8 scroll-mt-24"
+            aria-labelledby="prefecture-map-heading"
+          >
             <h2
               id="prefecture-map-heading"
               className="text-xl font-bold text-slate-900 mb-3"
