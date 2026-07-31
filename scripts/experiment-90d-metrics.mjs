@@ -78,14 +78,29 @@ const externalAccountIds = new Set(
     )
     .map((user) => user.id),
 );
-const postStartExternalVisits = publishedVisits.filter(
+const externalAccountsCreatedAfterGo = users.filter(
+  (user) =>
+    externalAccountIds.has(user.id) &&
+    new Date(user.created_at) >= experimentStart,
+);
+const postStartExternalPublishedVisits = publishedVisits.filter(
   (visit) =>
     externalAccountIds.has(visit.user_id) &&
     new Date(visit.created_at) >= experimentStart,
 );
+const postStartExternalDraftVisits = visits.filter(
+  (visit) =>
+    visit.status === "draft" &&
+    externalAccountIds.has(visit.user_id) &&
+    new Date(visit.created_at) >= experimentStart,
+);
+const postStartExternalVisits = [
+  ...postStartExternalPublishedVisits,
+  ...postStartExternalDraftVisits,
+];
 
 const visitsByExternalUser = new Map();
-for (const visit of postStartExternalVisits) {
+for (const visit of postStartExternalPublishedVisits) {
   const current = visitsByExternalUser.get(visit.user_id) ?? [];
   current.push(visit);
   visitsByExternalUser.set(visit.user_id, current);
@@ -111,7 +126,9 @@ const secondVisitAfterTwentyFourHours = externalUsersWithTwo.filter(
     24 * 60 * 60 * 1000,
 );
 
-const externalVisitIds = new Set(postStartExternalVisits.map((visit) => visit.id));
+const externalVisitIds = new Set(
+  postStartExternalPublishedVisits.map((visit) => visit.id),
+);
 const externalReactionRows = visitChildren.filter((row) =>
   externalVisitIds.has(row.visit_id),
 );
@@ -125,6 +142,22 @@ const externalValidReactionRows = externalReactionRows.filter(
 
 function countForExternal(rows) {
   return rows.filter((row) => externalAccountIds.has(row.user_id)).length;
+}
+
+function countForExternalAfterGo(rows) {
+  return rows.filter(
+    (row) =>
+      externalAccountIds.has(row.user_id) &&
+      new Date(row.created_at) >= experimentStart,
+  ).length;
+}
+
+function distinctExternalUsers(rows) {
+  return new Set(
+    rows
+      .filter((row) => externalAccountIds.has(row.user_id))
+      .map((row) => row.user_id),
+  ).size;
 }
 
 function percentage(numerator, denominator) {
@@ -146,10 +179,18 @@ const output = {
     owner_or_pre_go_published_visits: publishedVisits.filter((visit) =>
       baselineHouseholdIds.has(visit.user_id),
     ).length,
-    external_accounts_at_or_after_go: externalAccountIds.size,
+    external_accounts_in_scope: externalAccountIds.size,
+    external_accounts_created_at_or_after_go:
+      externalAccountsCreatedAfterGo.length,
   },
   activation: {
-    external_published_visits_after_go: postStartExternalVisits.length,
+    external_visits_any_status_after_go: postStartExternalVisits.length,
+    external_users_with_any_visit_after_go: new Set(
+      postStartExternalVisits.map((visit) => visit.user_id),
+    ).size,
+    external_draft_visits_after_go: postStartExternalDraftVisits.length,
+    external_published_visits_after_go:
+      postStartExternalPublishedVisits.length,
     external_users_with_1plus_visit: externalUsersWithOne.length,
     external_users_with_2plus_visits: externalUsersWithTwo.length,
     external_users_with_3plus_visits: externalUsersWithOne.filter(
@@ -164,8 +205,15 @@ const output = {
   },
   supporting_behavior: {
     external_child_profiles: countForExternal(children),
+    external_child_profiles_created_at_or_after_go:
+      countForExternalAfterGo(children),
+    external_users_with_child_profile: distinctExternalUsers(children),
     external_wishlist_items: countForExternal(wishlists),
+    external_wishlist_items_created_at_or_after_go:
+      countForExternalAfterGo(wishlists),
     external_photo_rows: countForExternal(photos),
+    external_photo_rows_created_at_or_after_go:
+      countForExternalAfterGo(photos),
     external_visit_child_rows_after_go: externalReactionRows.length,
     external_valid_reaction_rows_after_go: externalValidReactionRows.length,
     external_valid_reaction_rate_pct: percentage(
