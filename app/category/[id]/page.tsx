@@ -59,13 +59,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `屋内で楽しめる水族館 ${visibleCount}選（全国）`
       : meta.id === "scenic"
         ? `日本の絶景・自然散策スポット ${visibleCount}選｜滝・渓谷・海`
-      : `${meta.name} ${visibleCount}選 (全国)`;
+        : meta.id === "park"
+          ? `子どもと楽しめる大型公園 ${visibleCount}選｜全国の遊び場`
+          : `${meta.name} ${visibleCount}選 (全国)`;
   const description =
     meta.id === "aquarium"
       ? `雨の日の子どもの遊び場に、屋内展示を中心に楽しめる全国の水族館${visibleCount}施設を掲載。都府県や地図から探し、料金や雨の日の過ごしやすさを確認できます。`
       : meta.id === "scenic"
         ? `子どもと楽しめる日本の絶景・自然散策スポット${visibleCount}施設を掲載。滝、渓谷、湖、海岸、高原などを都府県や地図から探し、家族に合う行き先を選べます。`
-      : `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
+        : meta.id === "park"
+          ? `大型遊具や広場で子どもと遊べる、関東を含む全国の大型公園${visibleCount}施設を掲載。都府県や地図から探し、無料・雨の日などの条件も確認できます。`
+          : `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
   return {
     title,
     description,
@@ -105,13 +109,16 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const isNationwideAquarium =
     meta.id === "aquarium" && !selectedPrefecture;
   const isNationwideScenic = meta.id === "scenic" && !selectedPrefecture;
+  const isNationwidePark = meta.id === "park" && !selectedPrefecture;
   const pageTitle = isNationwideAquarium
     ? "屋内で楽しめる水族館を全国から探す"
     : isNationwideScenic
       ? "子どもと楽しむ日本の絶景・自然散策スポット"
-      : [selectedPrefecture?.name, selectedCraftType?.label, meta.name]
-          .filter(Boolean)
-          .join("の");
+      : isNationwidePark
+        ? "子どもと楽しめる大型公園を全国から探す"
+        : [selectedPrefecture?.name, selectedCraftType?.label, meta.name]
+            .filter(Boolean)
+            .join("の");
   const showDiversifiedNationwideGrid =
     meta.id === "craft" &&
     !result.selectedPrefectureId &&
@@ -244,6 +251,36 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                 className="text-brand hover:text-brand-dark"
               >
                 0〜3歳向けの候補を見る →
+              </Link>
+            </div>
+          </section>
+        )}
+        {isNationwidePark && (
+          <section
+            className="mt-5 rounded-2xl border border-lime-200 bg-lime-50 p-4 sm:p-5"
+            aria-labelledby="family-large-park-guide"
+          >
+            <h2
+              id="family-large-park-guide"
+              className="text-lg font-bold text-slate-900"
+            >
+              家族で楽しめる大型公園の選び方
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              大型遊具、芝生広場、水遊び場など、公園によって楽しみ方が異なります。関東を含む都府県で行ける範囲を絞り、地図と施設詳細から家族に合う公園を選びましょう。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
+              <a
+                href="#facility-results"
+                className="text-brand hover:text-brand-dark"
+              >
+                全国の大型公園を見る ↓
+              </a>
+              <Link
+                href="/facilities?categories=park&fee=free"
+                className="text-brand hover:text-brand-dark"
+              >
+                無料で遊べる公園を見る →
               </Link>
             </div>
           </section>
