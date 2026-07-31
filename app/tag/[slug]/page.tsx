@@ -44,9 +44,14 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const meta = getTagMetaBySlug(slug);
   if (!meta) return { title: "見つかりませんでした" };
   const list = getTagFacilities(meta, visibleFacilities);
+  const isYoungKids = meta.slug === "kids-0-3";
   return {
-    title: `${meta.title} ${list.length}選 (全国)`,
-    description: `${meta.lead} 全国30都府県で${meta.title}を${list.length}施設掲載。`,
+    title: isYoungKids
+      ? `0〜3歳の子供と楽しめる遊び場 ${list.length}選｜赤ちゃん・幼児`
+      : `${meta.title} ${list.length}選 (全国)`,
+    description: isYoungKids
+      ? `0歳・1歳・2歳・3歳の赤ちゃんや幼児と楽しめる全国の遊び場${list.length}施設を掲載。都府県や地図から探し、雨の日・無料など家族に合う条件で絞れます。`
+      : `${meta.lead} 全国30都府県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },
@@ -58,6 +63,7 @@ export default async function TagPage({ params, searchParams }: Props) {
   const sp = await searchParams;
   const meta = getTagMetaBySlug(slug);
   if (!meta) notFound();
+  const isYoungKids = meta.slug === "kids-0-3";
 
   const list = getTagFacilities(meta, visibleFacilities);
   const selectedPrefectureId = resolvePrefectureId(
@@ -90,7 +96,9 @@ export default async function TagPage({ params, searchParams }: Props) {
   );
   const pageTitle = selectedPrefecture
     ? `${selectedPrefecture.name}の${meta.title}`
-    : meta.title;
+    : isYoungKids
+      ? "0〜3歳の子供と楽しめる遊び場"
+      : meta.title;
 
   return (
     <div>
@@ -143,6 +151,42 @@ export default async function TagPage({ params, searchParams }: Props) {
           selectedId={selectedPrefectureId}
           disableEmpty
         />
+        {isYoungKids && !selectedPrefecture && (
+          <section
+            className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 sm:p-5"
+            aria-labelledby="young-kids-playground-guide"
+          >
+            <h2
+              id="young-kids-playground-guide"
+              className="text-lg font-bold text-slate-900"
+            >
+              赤ちゃん・幼児との遊び場選び
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-700">
+              同じ0〜3歳向けでも、屋内外、料金、移動のしやすさで過ごし方が変わります。都府県で行ける範囲を絞り、当日の天気や家族の予定に合う施設を選びましょう。
+            </p>
+            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
+              <a
+                href="#facility-results"
+                className="text-brand hover:text-brand-dark"
+              >
+                0〜3歳向け施設を見る ↓
+              </a>
+              <Link
+                href="/facilities?tags=0-3歳OK&rain=◎"
+                className="text-brand hover:text-brand-dark"
+              >
+                雨でも快適な施設 →
+              </Link>
+              <Link
+                href="/facilities?tags=0-3歳OK&fee=free"
+                className="text-brand hover:text-brand-dark"
+              >
+                無料で遊べる施設 →
+              </Link>
+            </div>
+          </section>
+        )}
         <div className="mt-5" id="facility-results">
           <h2
             id="facility-results-heading"
