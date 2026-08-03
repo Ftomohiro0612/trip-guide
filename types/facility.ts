@@ -38,7 +38,8 @@ export type PrefectureId =
   | "wakayama"
   | "yamaguchi"
   | "tottori"
-  | "kagoshima";
+  | "kagoshima"
+  | "kochi";
 
 export type RainFriendly = "◎" | "△" | "×";
 

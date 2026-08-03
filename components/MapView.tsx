@@ -73,6 +73,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   yamaguchi: "#e11d48",
   tottori: "#f97316",
   kagoshima: "#dc2626",
+  kochi: "#0284c7",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];

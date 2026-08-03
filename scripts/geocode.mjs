@@ -41,6 +41,7 @@ const PREFECTURE_CENTROIDS = {
   yamaguchi: { lat: 34.186, lng: 131.471 },
   tottori: { lat: 35.501, lng: 134.235 },
   kagoshima: { lat: 31.5602, lng: 130.5581 },
+  kochi: { lat: 33.5597, lng: 133.5311 },
 };
 
 const USER_AGENT =

@@ -92,6 +92,7 @@ const TARGET_PREFECTURES = new Set([
   "青森県",
   "鳥取県",
   "鹿児島県",
+  "高知県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -135,6 +136,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   青森県: "aomori",
   鳥取県: "tottori",
   鹿児島県: "kagoshima",
+  高知県: "kochi",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -186,6 +188,7 @@ const PREFECTURE_BBOXES = {
   青森県: [{ minLat: 40.2, maxLat: 41.6, minLng: 139.4, maxLng: 141.7 }],
   鳥取県: [{ minLat: 35.05, maxLat: 35.62, minLng: 133.13, maxLng: 134.52 }],
   鹿児島県: [{ minLat: 27.0, maxLat: 32.3, minLng: 128.3, maxLng: 131.5 }],
+  高知県: [{ minLat: 32.65, maxLat: 34.05, minLng: 132.35, maxLng: 134.45 }],
 };
 
 const JAPAN_BBOX = {

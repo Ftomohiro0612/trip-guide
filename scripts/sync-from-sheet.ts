@@ -58,6 +58,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   山口県: "yamaguchi",
   鳥取県: "tottori",
   鹿児島県: "kagoshima",
+  高知県: "kochi",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
