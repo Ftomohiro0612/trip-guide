@@ -1,8 +1,8 @@
 {
   "metadata": {
     "site_name": "trip-guide.net",
-    "site_description": "全国32都道府県の子供向け遊び場検索サイト",
-    "total_facilities": 3853,
+    "site_description": "全国33都道府県の子供向け遊び場検索サイト",
+    "total_facilities": 3903,
     "prefectures": [
       {
         "id": "shizuoka",
@@ -163,48 +163,53 @@
         "id": "hokkaido",
         "name": "北海道",
         "count": 46
+      },
+      {
+        "id": "okinawa",
+        "name": "沖縄県",
+        "count": 50
       }
     ],
     "categories": [
       {
         "id": "theme-park",
         "name": "遊園地・テーマパーク",
-        "count": 104
+        "count": 107
       },
       {
         "id": "zoo",
         "name": "動物園",
-        "count": 161
+        "count": 164
       },
       {
         "id": "aquarium",
         "name": "水族館",
-        "count": 68
+        "count": 73
       },
       {
         "id": "park",
         "name": "公園(大型遊具)",
-        "count": 643
+        "count": 646
       },
       {
         "id": "indoor-play",
         "name": "屋内遊び場",
-        "count": 185
+        "count": 186
       },
       {
         "id": "science-museum",
         "name": "科学館",
-        "count": 160
+        "count": 161
       },
       {
         "id": "museum",
         "name": "博物館",
-        "count": 533
+        "count": 546
       },
       {
         "id": "craft",
         "name": "クラフト体験",
-        "count": 126
+        "count": 130
       },
       {
         "id": "fruit-picking",
@@ -239,27 +244,27 @@
       {
         "id": "experience",
         "name": "体験",
-        "count": 471
+        "count": 475
       },
       {
         "id": "nature-park",
         "name": "公園・自然",
-        "count": 611
+        "count": 618
       },
       {
         "id": "viewpoint",
         "name": "展望台",
-        "count": 85
+        "count": 87
       },
       {
         "id": "scenic",
         "name": "自然・絶景",
-        "count": 247
+        "count": 250
       },
       {
         "id": "indoor-theme-park",
         "name": "屋内テーマパーク",
-        "count": 23
+        "count": 24
       },
       {
         "id": "game-center",
@@ -202653,6 +202658,2740 @@
       "source_checked_at": "2026-08-03",
       "data_quality_status": "confirmed",
       "source_notes": "施設公式の公開情報で、所在地と「大観覧車から空知を見渡す・年齢に合うアトラクションに乗る・家族でショーや季節企画を楽しむ」を2026-08-03に確認。座標は公式所在地を国土地理院住所検索または北海道観光機構掲載地図で照合。変動する料金・営業日は固定値として断定していない。"
+    },
+    {
+      "id": 6000,
+      "slug": "facility-6000",
+      "name": "国営沖縄記念公園（海洋博公園）・沖縄美ら海水族館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "沖縄県国頭郡本部町字石川424番地（海洋博公園内）",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "巨大水槽の生き物観察と海洋博公園の屋外散策を一度に組み合わせられます。水槽で沖縄の海の生き物を観察する、海洋博公園を親子で歩く、天候に合わせて屋内外の見学順を選ぶなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://churaumi.okinawa",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.69420242,
+      "longitude": 127.87802887,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "水槽で沖縄の海の生き物を観察する",
+        "海洋博公園を親子で歩く",
+        "天候に合わせて屋内外の見学順を選ぶ"
+      ],
+      "unique_selling_point": "巨大水槽の生き物観察と海洋博公園の屋外散策を一度に組み合わせられます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "水槽で沖縄の海の生き物を観察する",
+        "海洋博公園を親子で歩く",
+        "天候に合わせて屋内外の見学順を選ぶ"
+      ],
+      "source_urls": "https://churaumi.okinawa,https://www.okinawastory.jp/spot/1342",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1342）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6001,
+      "slug": "facility-6001",
+      "name": "熱帯ドリームセンター",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県国頭郡本部町字石川424番地（海洋博公園内）",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "温室や庭園で熱帯・亜熱帯の植物を間近に観察できます。温室で熱帯植物を観察する、庭園と展望スポットを歩く、植物の形や色を親子で比べるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://oki-park.jp/kaiyohaku/inst/38",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.68578911,
+      "longitude": 127.87600708,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "温室で熱帯植物を観察する",
+        "庭園と展望スポットを歩く",
+        "植物の形や色を親子で比べる"
+      ],
+      "unique_selling_point": "温室や庭園で熱帯・亜熱帯の植物を間近に観察できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "温室で熱帯植物を観察する",
+        "庭園と展望スポットを歩く",
+        "植物の形や色を親子で比べる"
+      ],
+      "source_urls": "http://oki-park.jp/kaiyohaku/inst/38,https://www.okinawastory.jp/spot/1394",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1394）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6002,
+      "slug": "facility-6002",
+      "name": "エメラルドビーチ",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "沖縄県国頭郡本部町石川424（海洋博公園内）",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "海洋博公園内の海辺で景色と砂浜を楽しめます。砂浜と海の景色を楽しむ、遊泳期間と区域を確認して海に親しむ、公園内の施設と組み合わせるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://oki-park.jp/kaiyohaku/inst/75",
+      "tags": [
+        "屋外",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.69925499,
+      "longitude": 127.87799835,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "砂浜と海の景色を楽しむ",
+        "遊泳期間と区域を確認して海に親しむ",
+        "公園内の施設と組み合わせる"
+      ],
+      "unique_selling_point": "海洋博公園内の海辺で景色と砂浜を楽しめます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "○",
+      "recommended_for_tags": [
+        "water_play",
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "砂浜と海の景色を楽しむ",
+        "遊泳期間と区域を確認して海に親しむ",
+        "公園内の施設と組み合わせる"
+      ],
+      "source_urls": "http://oki-park.jp/kaiyohaku/inst/75,https://www.okinawastory.jp/spot/1111",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1111）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6003,
+      "slug": "facility-6003",
+      "name": "海洋文化館・プラネタリウム",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県国頭郡本部町字石川424番地（海洋博公園内）",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "海洋民族の資料展示とプラネタリウムを屋内で見学できます。航海や海洋文化の展示を見る、プラネタリウムを鑑賞する、海と人の暮らしを親子で学ぶなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://oki-park.jp/kaiyohaku/inst/35",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 26.69022751,
+      "longitude": 127.87799835,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "航海や海洋文化の展示を見る",
+        "プラネタリウムを鑑賞する",
+        "海と人の暮らしを親子で学ぶ"
+      ],
+      "unique_selling_point": "海洋民族の資料展示とプラネタリウムを屋内で見学できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "航海や海洋文化の展示を見る",
+        "プラネタリウムを鑑賞する",
+        "海と人の暮らしを親子で学ぶ"
+      ],
+      "source_urls": "https://oki-park.jp/kaiyohaku/inst/35,https://www.okinawastory.jp/spot/20531204",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20531204）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6004,
+      "slug": "facility-6004",
+      "name": "おきなわ郷土村・おもろ植物園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県国頭郡本部町字石川424番地（海洋博公園内）",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "沖縄各地の伝統的な家屋と植物を歩いて見比べられます。伝統家屋を見学する、集落のつくりを歩いて確かめる、沖縄の植物を観察するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://oki-park.jp/kaiyohaku/inst/72/79",
+      "tags": [
+        "屋内外両方",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.6904068,
+      "longitude": 127.87722015,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "伝統家屋を見学する",
+        "集落のつくりを歩いて確かめる",
+        "沖縄の植物を観察する"
+      ],
+      "unique_selling_point": "沖縄各地の伝統的な家屋と植物を歩いて見比べられます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "伝統家屋を見学する",
+        "集落のつくりを歩いて確かめる",
+        "沖縄の植物を観察する"
+      ],
+      "source_urls": "https://oki-park.jp/kaiyohaku/inst/72/79,https://www.okinawastory.jp/spot/20531205",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20531205）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6005,
+      "slug": "facility-6005",
+      "name": "もとぶ元気村",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "沖縄県国頭郡本部町字浜元410",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "海や生き物に触れる予約制プログラムを家族で選べます。参加できるマリン体験を探す、イルカなどの生き物を観察する、年齢条件に合うプログラムを予約するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://owf.jp/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.6761986,
+      "longitude": 127.8866111,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "参加できるマリン体験を探す",
+        "イルカなどの生き物を観察する",
+        "年齢条件に合うプログラムを予約する"
+      ],
+      "unique_selling_point": "海や生き物に触れる予約制プログラムを家族で選べます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "nature"
+      ],
+      "things_to_do": [
+        "参加できるマリン体験を探す",
+        "イルカなどの生き物を観察する",
+        "年齢条件に合うプログラムを予約する"
+      ],
+      "source_urls": "https://owf.jp/,https://www.okinawastory.jp/spot/1076",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1076）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6006,
+      "slug": "facility-6006",
+      "name": "ナゴパイナップルパーク",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "沖縄県名護市為又1195",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "パイナップル畑や植物展示を園内乗り物と徒歩で巡れます。園内乗り物で植物を眺める、パイナップルについて学ぶ、屋内展示やショップを巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://www.nagopine.com/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.61627388,
+      "longitude": 127.96939087,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "園内乗り物で植物を眺める",
+        "パイナップルについて学ぶ",
+        "屋内展示やショップを巡る"
+      ],
+      "unique_selling_point": "パイナップル畑や植物展示を園内乗り物と徒歩で巡れます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "vehicle",
+        "experience"
+      ],
+      "things_to_do": [
+        "園内乗り物で植物を眺める",
+        "パイナップルについて学ぶ",
+        "屋内展示やショップを巡る"
+      ],
+      "source_urls": "https://www.nagopine.com/,https://www.okinawastory.jp/spot/1072",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1072）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6007,
+      "slug": "facility-6007",
+      "name": "ネオパークオキナワ",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "沖縄県名護市名護4607番地の41",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "広い園内で鳥や小動物を近い距離から観察できます。園内を歩いて鳥を観察する、動物との距離やルールを学ぶ、屋内展示と屋外エリアを巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "http://www.neopark.co.jp/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.61068535,
+      "longitude": 127.99146271,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "園内を歩いて鳥を観察する",
+        "動物との距離やルールを学ぶ",
+        "屋内展示と屋外エリアを巡る"
+      ],
+      "unique_selling_point": "広い園内で鳥や小動物を近い距離から観察できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "園内を歩いて鳥を観察する",
+        "動物との距離やルールを学ぶ",
+        "屋内展示と屋外エリアを巡る"
+      ],
+      "source_urls": "http://www.neopark.co.jp/,https://www.okinawastory.jp/spot/1346",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1346）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6008,
+      "slug": "facility-6008",
+      "name": "ブセナ海中公園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "沖縄県名護市字喜瀬1744-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "海中展望塔やグラス底ボートから沖縄の海を観察できます。海中展望塔から魚を見る、グラス底ボートの運航状況を確認する、海況に合わせて見学方法を選ぶなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "http://www.busena-marinepark.com",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.542202,
+      "longitude": 127.93222046,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "海中展望塔から魚を見る",
+        "グラス底ボートの運航状況を確認する",
+        "海況に合わせて見学方法を選ぶ"
+      ],
+      "unique_selling_point": "海中展望塔やグラス底ボートから沖縄の海を観察できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "海中展望塔から魚を見る",
+        "グラス底ボートの運航状況を確認する",
+        "海況に合わせて見学方法を選ぶ"
+      ],
+      "source_urls": "http://www.busena-marinepark.com,https://www.okinawastory.jp/spot/1357",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1357）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6009,
+      "slug": "facility-6009",
+      "name": "古宇利オーシャンタワー",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "沖縄県国頭郡今帰仁村古宇利538古宇利オーシャンタワー",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "古宇利島の海を望む展望施設と貝の展示を楽しめます。展望フロアから海を見る、貝の展示を親子で観察する、島の景色を写真に残すなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://www.kouri-oceantower.com/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.70015526,
+      "longitude": 128.02406311,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "展望フロアから海を見る",
+        "貝の展示を親子で観察する",
+        "島の景色を写真に残す"
+      ],
+      "unique_selling_point": "古宇利島の海を望む展望施設と貝の展示を楽しめます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "展望フロアから海を見る",
+        "貝の展示を親子で観察する",
+        "島の景色を写真に残す"
+      ],
+      "source_urls": "http://www.kouri-oceantower.com/,https://www.okinawastory.jp/spot/1265",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1265）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6010,
+      "slug": "facility-6010",
+      "name": "ASMUI Spiritual Hikes",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県国頭郡国頭村宜名真1241番地",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "やんばるの岩山と森に設けられたコースを家族で歩けます。体力に合う散策コースを選ぶ、岩や亜熱帯の植物を観察する、足元と天候を確認して歩くなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.asmui.jp/",
+      "tags": [
+        "屋外",
+        "小学生向け"
+      ],
+      "latitude": 26.86211395,
+      "longitude": 128.25512695,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "体力に合う散策コースを選ぶ",
+        "岩や亜熱帯の植物を観察する",
+        "足元と天候を確認して歩く"
+      ],
+      "unique_selling_point": "やんばるの岩山と森に設けられたコースを家族で歩けます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "体力に合う散策コースを選ぶ",
+        "岩や亜熱帯の植物を観察する",
+        "足元と天候を確認して歩く"
+      ],
+      "source_urls": "https://www.asmui.jp/,https://www.okinawastory.jp/spot/1363",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1363）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6011,
+      "slug": "facility-6011",
+      "name": "やんばる森のおもちゃ美術館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "屋内遊び場",
+      "category_id": "indoor-play",
+      "address": "沖縄県国頭郡国頭村字辺土名1094-1 国頭村森林公園内",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "国頭村森林公園で木のおもちゃに触れて遊べます。木のおもちゃで遊ぶ、木の手触りや香りに親しむ、乳幼児と雨天のおでかけ先にするなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "http://www.kunigami-forest-park.org/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.73332596,
+      "longitude": 128.19026184,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "木のおもちゃで遊ぶ",
+        "木の手触りや香りに親しむ",
+        "乳幼児と雨天のおでかけ先にする"
+      ],
+      "unique_selling_point": "国頭村森林公園で木のおもちゃに触れて遊べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "craft"
+      ],
+      "things_to_do": [
+        "木のおもちゃで遊ぶ",
+        "木の手触りや香りに親しむ",
+        "乳幼児と雨天のおでかけ先にする"
+      ],
+      "source_urls": "http://www.kunigami-forest-park.org/,https://www.okinawastory.jp/spot/600011795",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600011795）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6012,
+      "slug": "facility-6012",
+      "name": "比地大滝",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県国頭村字比地字比地781-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "やんばるの森の遊歩道を歩き、滝と自然を観察できます。遊歩道を滝まで歩く、森の生き物や植物を探す、天候と歩行時間を確認して計画するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.okinawastory.jp/spot/1336",
+      "tags": [
+        "屋外",
+        "小学生向け"
+      ],
+      "latitude": 26.71384621,
+      "longitude": 128.18406677,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "遊歩道を滝まで歩く",
+        "森の生き物や植物を探す",
+        "天候と歩行時間を確認して計画する"
+      ],
+      "unique_selling_point": "やんばるの森の遊歩道を歩き、滝と自然を観察できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "遊歩道を滝まで歩く",
+        "森の生き物や植物を探す",
+        "天候と歩行時間を確認して計画する"
+      ],
+      "source_urls": "https://www.okinawastory.jp/spot/1336",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1336）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6013,
+      "slug": "facility-6013",
+      "name": "ヤンバルクイナ生態展示学習施設 クイナの森",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "沖縄県国頭郡国頭村安田1477-35 安田くいなふれあい公園内",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "ヤンバルクイナの生態展示を通して固有の自然を学べます。ヤンバルクイナを観察する、やんばるの生態系を学ぶ、観察時のルールを親子で確かめるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "http://kuinapark.com",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.74116898,
+      "longitude": 128.29595947,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ヤンバルクイナを観察する",
+        "やんばるの生態系を学ぶ",
+        "観察時のルールを親子で確かめる"
+      ],
+      "unique_selling_point": "ヤンバルクイナの生態展示を通して固有の自然を学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "ヤンバルクイナを観察する",
+        "やんばるの生態系を学ぶ",
+        "観察時のルールを親子で確かめる"
+      ],
+      "source_urls": "http://kuinapark.com,https://www.okinawastory.jp/spot/600011812",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600011812）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6014,
+      "slug": "facility-6014",
+      "name": "東村村民の森つつじエコパーク",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県国頭郡東村平良766-1",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "広い自然公園で遊具、散策、キャンプなどを選べます。園内の遊具で遊ぶ、自然の中を散策する、利用したい体験や宿泊条件を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.tsutsuji-ecopark.com/",
+      "tags": [
+        "屋外",
+        "小学生向け"
+      ],
+      "latitude": 26.63822937,
+      "longitude": 128.15905762,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "園内の遊具で遊ぶ",
+        "自然の中を散策する",
+        "利用したい体験や宿泊条件を確認する"
+      ],
+      "unique_selling_point": "広い自然公園で遊具、散策、キャンプなどを選べます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "園内の遊具で遊ぶ",
+        "自然の中を散策する",
+        "利用したい体験や宿泊条件を確認する"
+      ],
+      "source_urls": "https://www.tsutsuji-ecopark.com/,https://www.okinawastory.jp/spot/600002728",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600002728）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6015,
+      "slug": "facility-6015",
+      "name": "JUNGLIA OKINAWA",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "沖縄県国頭郡今帰仁村呉我山553番地１",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "やんばるの自然を生かしたアトラクションや体験を家族で選べます。年齢と身長に合うアトラクションを選ぶ、屋外体験の運行状況を確認する、休憩を挟んで園内を巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://junglia.jp/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.6415215,
+      "longitude": 127.9704904,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "年齢と身長に合うアトラクションを選ぶ",
+        "屋外体験の運行状況を確認する",
+        "休憩を挟んで園内を巡る"
+      ],
+      "unique_selling_point": "やんばるの自然を生かしたアトラクションや体験を家族で選べます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "vehicle",
+        "experience"
+      ],
+      "things_to_do": [
+        "年齢と身長に合うアトラクションを選ぶ",
+        "屋外体験の運行状況を確認する",
+        "休憩を挟んで園内を巡る"
+      ],
+      "source_urls": "https://junglia.jp/,https://www.okinawastory.jp/spot/600022159",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600022159）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6016,
+      "slug": "facility-6016",
+      "name": "ビオスの丘",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県うるま市石川嘉手苅961-30",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "亜熱帯の森と湖を巡り、植物や動物に親しめます。湖や森の景色を楽しむ、園内の動植物を観察する、運航・体験時間を確認して巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.bios-hill.co.jp/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.42159271,
+      "longitude": 127.79682922,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "湖や森の景色を楽しむ",
+        "園内の動植物を観察する",
+        "運航・体験時間を確認して巡る"
+      ],
+      "unique_selling_point": "亜熱帯の森と湖を巡り、植物や動物に親しめます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "湖や森の景色を楽しむ",
+        "園内の動植物を観察する",
+        "運航・体験時間を確認して巡る"
+      ],
+      "source_urls": "https://www.bios-hill.co.jp/,https://www.okinawastory.jp/spot/1345",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1345）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6017,
+      "slug": "facility-6017",
+      "name": "琉球村",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "沖縄県国頭郡恩納村字山田1130",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "古民家や芸能、ものづくりを通して琉球文化に触れられます。古民家を見学する、伝統芸能の時間を確認する、年齢に合う文化体験を選ぶなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.ryukyumura.co.jp",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.42949677,
+      "longitude": 127.77526855,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "古民家を見学する",
+        "伝統芸能の時間を確認する",
+        "年齢に合う文化体験を選ぶ"
+      ],
+      "unique_selling_point": "古民家や芸能、ものづくりを通して琉球文化に触れられます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "nature"
+      ],
+      "things_to_do": [
+        "古民家を見学する",
+        "伝統芸能の時間を確認する",
+        "年齢に合う文化体験を選ぶ"
+      ],
+      "source_urls": "https://www.ryukyumura.co.jp,https://www.okinawastory.jp/spot/1070",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1070）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6018,
+      "slug": "facility-6018",
+      "name": "体験王国むら咲むら",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "沖縄県中頭郡読谷村高志保1020-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "沖縄文化や工芸の体験メニューから家族に合うものを選べます。工芸や文化の体験を選ぶ、作った作品を思い出に残す、対象年齢と予約条件を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.murasakimura.com",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.40625191,
+      "longitude": 127.71884155,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "工芸や文化の体験を選ぶ",
+        "作った作品を思い出に残す",
+        "対象年齢と予約条件を確認する"
+      ],
+      "unique_selling_point": "沖縄文化や工芸の体験メニューから家族に合うものを選べます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "nature"
+      ],
+      "things_to_do": [
+        "工芸や文化の体験を選ぶ",
+        "作った作品を思い出に残す",
+        "対象年齢と予約条件を確認する"
+      ],
+      "source_urls": "https://www.murasakimura.com,https://www.okinawastory.jp/spot/1075",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1075）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6019,
+      "slug": "facility-6019",
+      "name": "Gala青い海",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "クラフト体験",
+      "category_id": "craft",
+      "address": "沖縄県中頭郡読谷村高志保915",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "海辺の施設で塩づくりや工芸などの有料体験を選べます。塩づくりや工芸体験を調べる、海辺の景色を楽しむ、体験料金と予約条件を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://www.gala-aoiumi.com",
+      "tags": [
+        "屋内外両方",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.40860939,
+      "longitude": 127.71648407,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "塩づくりや工芸体験を調べる",
+        "海辺の景色を楽しむ",
+        "体験料金と予約条件を確認する"
+      ],
+      "unique_selling_point": "海辺の施設で塩づくりや工芸などの有料体験を選べます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "craft",
+        "experience"
+      ],
+      "things_to_do": [
+        "塩づくりや工芸体験を調べる",
+        "海辺の景色を楽しむ",
+        "体験料金と予約条件を確認する"
+      ],
+      "source_urls": "http://www.gala-aoiumi.com,https://www.okinawastory.jp/spot/1040",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1040）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6020,
+      "slug": "facility-6020",
+      "name": "世界遺産座喜味城跡ユンタンザミュージアム",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県読谷村座喜味708-6",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "座喜味城跡と地域史展示を続けて見学できます。城跡を歩いて石垣を見る、博物館で読谷の歴史を学ぶ、屋内外を天候に合わせて巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://www.yuntanza-museum.jp/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.40692902,
+      "longitude": 127.74237823,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "城跡を歩いて石垣を見る",
+        "博物館で読谷の歴史を学ぶ",
+        "屋内外を天候に合わせて巡る"
+      ],
+      "unique_selling_point": "座喜味城跡と地域史展示を続けて見学できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "城跡を歩いて石垣を見る",
+        "博物館で読谷の歴史を学ぶ",
+        "屋内外を天候に合わせて巡る"
+      ],
+      "source_urls": "http://www.yuntanza-museum.jp/,https://www.okinawastory.jp/spot/20150400",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20150400）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6021,
+      "slug": "facility-6021",
+      "name": "沖縄県総合運動公園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "沖縄県沖縄市比屋根672",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "大型遊具や広場など、年齢に合わせた屋外遊びを選べます。大型遊具で遊ぶ、広場を走って体を動かす、有料施設は利用条件を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://okinawa-kenso.com/",
+      "tags": [
+        "屋外",
+        "無料",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.3056901,
+      "longitude": 127.8150572,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具で遊ぶ",
+        "広場を走って体を動かす",
+        "有料施設は利用条件を確認する"
+      ],
+      "unique_selling_point": "大型遊具や広場など、年齢に合わせた屋外遊びを選べます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "running",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "大型遊具で遊ぶ",
+        "広場を走って体を動かす",
+        "有料施設は利用条件を確認する"
+      ],
+      "source_urls": "https://okinawa-kenso.com/,https://www.okinawastory.jp/spot/20535100",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20535100）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6022,
+      "slug": "facility-6022",
+      "name": "沖縄こどもの国",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "動物園",
+      "category_id": "zoo",
+      "address": "沖縄県沖縄市胡屋5-7-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "動物園と体験型のワンダーミュージアムを一緒に楽しめます。動物を観察する、ワンダーミュージアムで試して遊ぶ、園内プログラムの時間を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://www.okzm.jp/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.32738113,
+      "longitude": 127.80319214,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "動物を観察する",
+        "ワンダーミュージアムで試して遊ぶ",
+        "園内プログラムの時間を確認する"
+      ],
+      "unique_selling_point": "動物園と体験型のワンダーミュージアムを一緒に楽しめます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "animal_contact",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "動物を観察する",
+        "ワンダーミュージアムで試して遊ぶ",
+        "園内プログラムの時間を確認する"
+      ],
+      "source_urls": "https://www.okzm.jp/,https://www.okinawastory.jp/spot/600009200",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600009200）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6023,
+      "slug": "facility-6023",
+      "name": "東南植物楽園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県沖縄市知花2146",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "南国の植物や動物を観察しながら広い園内を巡れます。南国植物を観察する、園内の動物を見る、季節の展示や営業時間を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.southeast-botanical.jp/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.37540245,
+      "longitude": 127.80664062,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "南国植物を観察する",
+        "園内の動物を見る",
+        "季節の展示や営業時間を確認する"
+      ],
+      "unique_selling_point": "南国の植物や動物を観察しながら広い園内を巡れます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "南国植物を観察する",
+        "園内の動物を見る",
+        "季節の展示や営業時間を確認する"
+      ],
+      "source_urls": "https://www.southeast-botanical.jp/,https://www.okinawastory.jp/spot/1347",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1347）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6024,
+      "slug": "facility-6024",
+      "name": "沖縄市立郷土博物館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県沖縄市上地2-19-6 文化センター3階",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "地域の自然、歴史、民俗に関する資料から沖縄市を学べます。地域の資料を親子で見る、沖縄市の自然と歴史を展示で学ぶ、雨の日の地域学習先にするなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.city.okinawa.okinawa.jp/k063/sportsbunka/hakubutsukan/kyoudohakubutsukan/134/index.html",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.33163643,
+      "longitude": 127.79514313,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "写真資料を親子で見る",
+        "まちの変化を展示で学ぶ",
+        "雨の日の地域学習先にする"
+      ],
+      "unique_selling_point": "地域の自然、歴史、民俗に関する資料から沖縄市を学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "地域の資料を親子で見る",
+        "沖縄市の自然と歴史を展示で学ぶ",
+        "雨の日の地域学習先にする"
+      ],
+      "source_urls": "https://www.city.okinawa.okinawa.jp/k063/sportsbunka/hakubutsukan/kyoudohakubutsukan/134/index.html,https://www.okinawastory.jp/spot/20140300",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20140300）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6025,
+      "slug": "facility-6025",
+      "name": "海の文化資料館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県うるま市与那城屋平4番地 海の駅あやはし館 2階",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "船や漁具の展示から沖縄の海と暮らしの関係を学べます。船の展示を見る、海の仕事と道具を学ぶ、海中道路のおでかけと組み合わせるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://umibun.ti-da.net/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.33273888,
+      "longitude": 127.9285202,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "船の展示を見る",
+        "海の仕事と道具を学ぶ",
+        "海中道路のおでかけと組み合わせる"
+      ],
+      "unique_selling_point": "船や漁具の展示から沖縄の海と暮らしの関係を学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "船の展示を見る",
+        "海の仕事と道具を学ぶ",
+        "海中道路のおでかけと組み合わせる"
+      ],
+      "source_urls": "http://umibun.ti-da.net/,https://www.okinawastory.jp/spot/600006741",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600006741）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6026,
+      "slug": "facility-6026",
+      "name": "おきなわ工芸の杜",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "クラフト体験",
+      "category_id": "craft",
+      "address": "沖縄県豊見城市字豊見城1114番1（豊見城城址公園跡地）おきなわ工芸の杜",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "沖縄各地の工芸展示を見て、開催中の体験や実演を探せます。沖縄の工芸品を見比べる、実演や企画展示の日程を確認する、参加できる工芸体験を探すなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://okinawa-kougeinomori.jp",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.18816185,
+      "longitude": 127.68349457,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "沖縄の工芸品を見比べる",
+        "実演や企画展示の日程を確認する",
+        "参加できる工芸体験を探す"
+      ],
+      "unique_selling_point": "沖縄各地の工芸展示を見て、開催中の体験や実演を探せます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "craft",
+        "experience"
+      ],
+      "things_to_do": [
+        "沖縄の工芸品を見比べる",
+        "実演や企画展示の日程を確認する",
+        "参加できる工芸体験を探す"
+      ],
+      "source_urls": "https://okinawa-kougeinomori.jp,https://www.okinawastory.jp/spot/600012321",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600012321）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6027,
+      "slug": "facility-6027",
+      "name": "おきなわワールド",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "遊園地・テーマパーク",
+      "category_id": "theme-park",
+      "address": "沖縄県南城市玉城前川1336",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "鍾乳洞、伝統文化、芸能を一つの園内で体験できます。玉泉洞を歩いて観察する、琉球文化の展示を見る、公演や体験の時間を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://www.gyokusendo.co.jp/okinawaworld/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.14056778,
+      "longitude": 127.74854279,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "玉泉洞を歩いて観察する",
+        "琉球文化の展示を見る",
+        "公演や体験の時間を確認する"
+      ],
+      "unique_selling_point": "鍾乳洞、伝統文化、芸能を一つの園内で体験できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "vehicle",
+        "experience"
+      ],
+      "things_to_do": [
+        "玉泉洞を歩いて観察する",
+        "琉球文化の展示を見る",
+        "公演や体験の時間を確認する"
+      ],
+      "source_urls": "https://www.gyokusendo.co.jp/okinawaworld/,https://www.okinawastory.jp/spot/1069",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1069）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6028,
+      "slug": "facility-6028",
+      "name": "Little Universe OKINAWA",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "屋内テーマパーク",
+      "category_id": "indoor-theme-park",
+      "address": "沖縄県豊見城市豊崎3-35イーアス沖縄豊崎 アクアリウム棟3階",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "ミニチュア展示やデジタル演出を天候を気にせず楽しめます。精巧なミニチュアを観察する、デジタル演出を体験する、親子でお気に入りの場面を探すなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://www.little-universe.com",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.15773582,
+      "longitude": 127.65097809,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "精巧なミニチュアを観察する",
+        "デジタル演出を体験する",
+        "親子でお気に入りの場面を探す"
+      ],
+      "unique_selling_point": "ミニチュア展示やデジタル演出を天候を気にせず楽しめます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "exhibition"
+      ],
+      "things_to_do": [
+        "精巧なミニチュアを観察する",
+        "デジタル演出を体験する",
+        "親子でお気に入りの場面を探す"
+      ],
+      "source_urls": "https://www.little-universe.com,https://www.okinawastory.jp/spot/600016760",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600016760）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6029,
+      "slug": "facility-6029",
+      "name": "沖縄県立博物館・美術館（おきみゅー）",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県那覇市おもろまち 3-1-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "自然・歴史・文化と美術を同じ施設で学べます。常設展示で沖縄の自然と歴史を学ぶ、開催中の美術展を確認する、ふれあい体験室などの利用案内を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://okimu.jp",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 26.227314,
+      "longitude": 127.69384766,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "常設展示で沖縄の自然と歴史を学ぶ",
+        "開催中の美術展を確認する",
+        "ふれあい体験室などの利用案内を確認する"
+      ],
+      "unique_selling_point": "自然・歴史・文化と美術を同じ施設で学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "常設展示で沖縄の自然と歴史を学ぶ",
+        "開催中の美術展を確認する",
+        "ふれあい体験室などの利用案内を確認する"
+      ],
+      "source_urls": "http://okimu.jp,https://www.okinawastory.jp/spot/1352",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1352）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6030,
+      "slug": "facility-6030",
+      "name": "沖縄県平和祈念資料館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県糸満市摩文仁 614-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "資料と証言を通して沖縄戦と平和について家族で考えられます。年齢に合わせて展示を見る、沖縄戦の歴史を学ぶ、平和祈念公園を静かに歩くなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.peace-museum.okinawa.jp/index.html",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 26.0966301,
+      "longitude": 127.72566223,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "年齢に合わせて展示を見る",
+        "沖縄戦の歴史を学ぶ",
+        "平和祈念公園を静かに歩く"
+      ],
+      "unique_selling_point": "資料と証言を通して沖縄戦と平和について家族で考えられます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "年齢に合わせて展示を見る",
+        "沖縄戦の歴史を学ぶ",
+        "平和祈念公園を静かに歩く"
+      ],
+      "source_urls": "https://www.peace-museum.okinawa.jp/index.html,https://www.okinawastory.jp/spot/1390",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1390）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6031,
+      "slug": "facility-6031",
+      "name": "首里城公園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県那覇市首里赤平町首里金城町1-2",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "復興過程を含む首里城の歴史と琉球文化を現地で学べます。城郭と復興の様子を見る、琉球王国の歴史を学ぶ、有料区域と無料区域を確認して巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://oki-park.jp/shurijo/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 26.21697426,
+      "longitude": 127.71854401,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "城郭と復興の様子を見る",
+        "琉球王国の歴史を学ぶ",
+        "有料区域と無料区域を確認して巡る"
+      ],
+      "unique_selling_point": "復興過程を含む首里城の歴史と琉球文化を現地で学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "城郭と復興の様子を見る",
+        "琉球王国の歴史を学ぶ",
+        "有料区域と無料区域を確認して巡る"
+      ],
+      "source_urls": "https://oki-park.jp/shurijo/,https://www.okinawastory.jp/spot/1074",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1074）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6032,
+      "slug": "facility-6032",
+      "name": "琉球ガラス村",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "クラフト体験",
+      "category_id": "craft",
+      "address": "沖縄県糸満市福地169番地",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "ガラス工房の見学や有料の制作体験を家族で選べます。ガラス工房の様子を見る、対象年齢に合う制作体験を探す、ショップで作品を見比べるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.ryukyu-glass.co.jp/",
+      "tags": [
+        "屋内外両方",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.09760857,
+      "longitude": 127.6771698,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ガラス工房の様子を見る",
+        "対象年齢に合う制作体験を探す",
+        "ショップで作品を見比べる"
+      ],
+      "unique_selling_point": "ガラス工房の見学や有料の制作体験を家族で選べます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "craft",
+        "experience"
+      ],
+      "things_to_do": [
+        "ガラス工房の様子を見る",
+        "対象年齢に合う制作体験を探す",
+        "ショップで作品を見比べる"
+      ],
+      "source_urls": "https://www.ryukyu-glass.co.jp/,https://www.okinawastory.jp/spot/1331",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1331）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6033,
+      "slug": "facility-6033",
+      "name": "バンナ公園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "沖縄県石垣市登野城2241-1バンナ公園",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "石垣島の自然の中で大型遊具、散策、展望を楽しめます。大型遊具で遊ぶ、園路で生き物や植物を探す、展望台から島の景色を見るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://banna.jp/",
+      "tags": [
+        "屋外",
+        "無料",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 24.38440514,
+      "longitude": 124.17471313,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具で遊ぶ",
+        "園路で生き物や植物を探す",
+        "展望台から島の景色を見る"
+      ],
+      "unique_selling_point": "石垣島の自然の中で大型遊具、散策、展望を楽しめます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "playground",
+        "running",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "大型遊具で遊ぶ",
+        "園路で生き物や植物を探す",
+        "展望台から島の景色を見る"
+      ],
+      "source_urls": "https://banna.jp/,https://www.okinawastory.jp/spot/600022096",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600022096）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6034,
+      "slug": "facility-6034",
+      "name": "石垣島鍾乳洞",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "沖縄県石垣市石垣1666",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "鍾乳石が続く洞内を歩き、島の地形を観察できます。洞内を歩いて鍾乳石を見る、水や時間が作る地形を学ぶ、滑りにくい靴で見学するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.ishigaki-cave.com/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 24.36181259,
+      "longitude": 124.15431213,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "洞内を歩いて鍾乳石を見る",
+        "水や時間が作る地形を学ぶ",
+        "滑りにくい靴で見学する"
+      ],
+      "unique_selling_point": "鍾乳石が続く洞内を歩き、島の地形を観察できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "洞内を歩いて鍾乳石を見る",
+        "水や時間が作る地形を学ぶ",
+        "滑りにくい靴で見学する"
+      ],
+      "source_urls": "https://www.ishigaki-cave.com/,https://www.okinawastory.jp/spot/10684100",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/10684100）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6035,
+      "slug": "facility-6035",
+      "name": "石垣やいま村",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "沖縄県石垣市名蔵967-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "八重山の古民家、文化、生き物を一つの園内で体験できます。赤瓦の古民家を見学する、八重山文化に触れる、園内の生き物を観察するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://www.yaimamura.com/",
+      "tags": [
+        "屋内外両方",
+        "小学生向け"
+      ],
+      "latitude": 24.40489006,
+      "longitude": 124.14463806,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "赤瓦の古民家を見学する",
+        "八重山文化に触れる",
+        "園内の生き物を観察する"
+      ],
+      "unique_selling_point": "八重山の古民家、文化、生き物を一つの園内で体験できます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "experience",
+        "nature"
+      ],
+      "things_to_do": [
+        "赤瓦の古民家を見学する",
+        "八重山文化に触れる",
+        "園内の生き物を観察する"
+      ],
+      "source_urls": "http://www.yaimamura.com/,https://www.okinawastory.jp/spot/1079",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1079）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6036,
+      "slug": "facility-6036",
+      "name": "川平湾",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "自然・絶景",
+      "category_id": "scenic",
+      "address": "沖縄県石垣市川平",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "石垣島を代表する湾の景色を展望し、周辺を散策できます。展望場所から海の色を見る、海辺を散策する、遊泳禁止区域と船の運航状況を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.okinawastory.jp/spot/1377",
+      "tags": [
+        "屋外",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.45090294,
+      "longitude": 124.14115906,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "展望場所から海の色を見る",
+        "海辺を散策する",
+        "遊泳禁止区域と船の運航状況を確認する"
+      ],
+      "unique_selling_point": "石垣島を代表する湾の景色を展望し、周辺を散策できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "展望場所から海の色を見る",
+        "海辺を散策する",
+        "遊泳禁止区域と船の運航状況を確認する"
+      ],
+      "source_urls": "https://www.okinawastory.jp/spot/1377",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1377）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6037,
+      "slug": "facility-6037",
+      "name": "玉取崎展望台",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "展望台",
+      "category_id": "viewpoint",
+      "address": "沖縄県石垣市伊原間",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "石垣島北東部の海と半島を見渡せます。展望台から海を見る、遊歩道の植物を観察する、島内ドライブの休憩地にするなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.okinawastory.jp/spot/20400902",
+      "tags": [
+        "屋外",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.49068832,
+      "longitude": 124.27890778,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "展望台から海を見る",
+        "遊歩道の植物を観察する",
+        "島内ドライブの休憩地にする"
+      ],
+      "unique_selling_point": "石垣島北東部の海と半島を見渡せます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "nature",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "展望台から海を見る",
+        "遊歩道の植物を観察する",
+        "島内ドライブの休憩地にする"
+      ],
+      "source_urls": "https://www.okinawastory.jp/spot/20400902",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20400902）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6038,
+      "slug": "facility-6038",
+      "name": "国立天文台VERA石垣島観測局",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "科学館",
+      "category_id": "science-museum",
+      "address": "沖縄県石垣市新川1024-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "大型の電波望遠鏡を見学し、宇宙観測に触れられます。電波望遠鏡を間近で見る、宇宙を観測する仕組みを学ぶ、公開条件や見学可能範囲を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "http://www.miz.nao.ac.jp/ishigaki/",
+      "tags": [
+        "屋内外両方",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.37333107,
+      "longitude": 124.13922882,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "電波望遠鏡を間近で見る",
+        "宇宙を観測する仕組みを学ぶ",
+        "公開条件や見学可能範囲を確認する"
+      ],
+      "unique_selling_point": "大型の電波望遠鏡を見学し、宇宙観測に触れられます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "science",
+        "exhibition",
+        "space"
+      ],
+      "things_to_do": [
+        "電波望遠鏡を間近で見る",
+        "宇宙を観測する仕組みを学ぶ",
+        "公開条件や見学可能範囲を確認する"
+      ],
+      "source_urls": "http://www.miz.nao.ac.jp/ishigaki/,https://www.okinawastory.jp/spot/600011028",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600011028）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6039,
+      "slug": "facility-6039",
+      "name": "石垣市立八重山博物館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県石垣市字登野城4-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "八重山の歴史、民俗、自然に関する資料を見学できます。八重山の暮らしの道具を見る、島々の歴史と文化を学ぶ、市街地散策と組み合わせるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/kanko_bunka_sport/hakubutsukan/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 24.33807182,
+      "longitude": 124.1595459,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "八重山の暮らしの道具を見る",
+        "島々の歴史と文化を学ぶ",
+        "市街地散策と組み合わせる"
+      ],
+      "unique_selling_point": "八重山の歴史、民俗、自然に関する資料を見学できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "八重山の暮らしの道具を見る",
+        "島々の歴史と文化を学ぶ",
+        "市街地散策と組み合わせる"
+      ],
+      "source_urls": "https://www.city.ishigaki.okinawa.jp/kurashi_gyosei/kanko_bunka_sport/hakubutsukan/,https://www.okinawastory.jp/spot/20400400",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/20400400）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6040,
+      "slug": "facility-6040",
+      "name": "西表野生生物保護センター",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県八重山郡竹富町古見",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "イリオモテヤマネコをはじめ西表島の生態系を展示で学べます。島の野生生物を展示で学ぶ、自然観察のルールを確認する、フィールドへ出る前の学習にするなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://iwcc.jp",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.34168053,
+      "longitude": 123.89693451,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "島の野生生物を展示で学ぶ",
+        "自然観察のルールを確認する",
+        "フィールドへ出る前の学習にする"
+      ],
+      "unique_selling_point": "イリオモテヤマネコをはじめ西表島の生態系を展示で学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "島の野生生物を展示で学ぶ",
+        "自然観察のルールを確認する",
+        "フィールドへ出る前の学習にする"
+      ],
+      "source_urls": "https://iwcc.jp,https://www.okinawastory.jp/spot/10886200",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/10886200）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6041,
+      "slug": "facility-6041",
+      "name": "宮古島海中公園",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "沖縄県宮古島市平良狩俣2511-1",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "海中観察施設から自然の海で暮らす魚を観察できます。海中観察施設から魚を見る、海況による見え方の違いを知る、屋外の海景色も楽しむなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://miyakojima-kaichukoen.com/",
+      "tags": [
+        "屋内外両方",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 24.8787471,
+      "longitude": 125.2747182,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "海中観察施設から魚を見る",
+        "海況による見え方の違いを知る",
+        "屋外の海景色も楽しむ"
+      ],
+      "unique_selling_point": "海中観察施設から自然の海で暮らす魚を観察できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "海中観察施設から魚を見る",
+        "海況による見え方の違いを知る",
+        "屋外の海景色も楽しむ"
+      ],
+      "source_urls": "https://miyakojima-kaichukoen.com/,https://www.okinawastory.jp/spot/600010270",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600010270）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6042,
+      "slug": "facility-6042",
+      "name": "宮古島海宝館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県宮古島市城辺字保良591-1",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "世界各地の貝を集めた展示を親子で観察できます。色や形の異なる貝を見比べる、貝と海の環境を学ぶ、展示とショップを巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://kaihoukan.co.jp/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 24.73000717,
+      "longitude": 125.42942047,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "色や形の異なる貝を見比べる",
+        "貝と海の環境を学ぶ",
+        "展示とショップを巡る"
+      ],
+      "unique_selling_point": "世界各地の貝を集めた展示を親子で観察できます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "色や形の異なる貝を見比べる",
+        "貝と海の環境を学ぶ",
+        "展示とショップを巡る"
+      ],
+      "source_urls": "https://kaihoukan.co.jp/,https://www.okinawastory.jp/spot/1353",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1353）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6043,
+      "slug": "facility-6043",
+      "name": "雪塩ミュージアム",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県宮古島市平良狩俣191",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "宮古島の海水から塩ができる工程を展示で学べます。塩づくりの工程を見る、海水と島の環境について学ぶ、商品や利用案内を確認するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://museum.yukishio.com/",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.87766075,
+      "longitude": 125.27761078,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "塩づくりの工程を見る",
+        "海水と島の環境について学ぶ",
+        "商品や利用案内を確認する"
+      ],
+      "unique_selling_point": "宮古島の海水から塩ができる工程を展示で学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "塩づくりの工程を見る",
+        "海水と島の環境について学ぶ",
+        "商品や利用案内を確認する"
+      ],
+      "source_urls": "https://museum.yukishio.com/,https://www.okinawastory.jp/spot/1335",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1335）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6044,
+      "slug": "facility-6044",
+      "name": "イムギャーマリンガーデン",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園・自然",
+      "category_id": "nature-park",
+      "address": "沖縄県宮古島市城辺友利605-2",
+      "indoor_outdoor": "屋外",
+      "rain_friendly": "×",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "入り江と遊歩道がある海浜公園で宮古島の海に親しめます。遊歩道から入り江を見る、展望地点まで歩く、海況と遊泳条件を確認して海に親しむなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候、開場状況、歩行・遊泳などの利用条件を公式サイトで確認してから出かけてください。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.okinawastory.jp/spot/600011111",
+      "tags": [
+        "屋外",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 24.72478104,
+      "longitude": 125.358284,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "遊歩道から入り江を見る",
+        "展望地点まで歩く",
+        "海況と遊泳条件を確認して海に親しむ"
+      ],
+      "unique_selling_point": "入り江と遊歩道がある海浜公園で宮古島の海に親しめます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "○",
+      "recommended_for_tags": [
+        "water_play",
+        "nature",
+        "wide_space",
+        "running"
+      ],
+      "things_to_do": [
+        "遊歩道から入り江を見る",
+        "展望地点まで歩く",
+        "海況と遊泳条件を確認して海に親しむ"
+      ],
+      "source_urls": "https://www.okinawastory.jp/spot/600011111",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/600011111）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6045,
+      "slug": "facility-6045",
+      "name": "久米島ウミガメ館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "沖縄県島尻郡久米島町字奥武170",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "ウミガメの生態と海洋環境を展示や飼育個体から学べます。ウミガメを観察する、生態と保全について学ぶ、隣接する海辺の自然も観察するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://kumejimataro.okinawa/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.33638191,
+      "longitude": 126.82580566,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ウミガメを観察する",
+        "生態と保全について学ぶ",
+        "隣接する海辺の自然も観察する"
+      ],
+      "unique_selling_point": "ウミガメの生態と海洋環境を展示や飼育個体から学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "ウミガメを観察する",
+        "生態と保全について学ぶ",
+        "隣接する海辺の自然も観察する"
+      ],
+      "source_urls": "https://kumejimataro.okinawa/,https://www.okinawastory.jp/spot/1393",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1393）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6046,
+      "slug": "facility-6046",
+      "name": "久米島博物館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "博物館",
+      "category_id": "museum",
+      "address": "沖縄県久米島町嘉手苅542",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "久米島の自然、歴史、民俗を島の資料から学べます。島の自然史を学ぶ、暮らしや文化の資料を見る、離島滞在の地域学習先にするなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.town.kumejima.okinawa.jp/docs/hakubutsuinfo/",
+      "tags": [
+        "完全屋内",
+        "小学生向け"
+      ],
+      "latitude": 26.3416925,
+      "longitude": 126.7637206,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "島の自然史を学ぶ",
+        "暮らしや文化の資料を見る",
+        "離島滞在の地域学習先にする"
+      ],
+      "unique_selling_point": "久米島の自然、歴史、民俗を島の資料から学べます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "島の自然史を学ぶ",
+        "暮らしや文化の資料を見る",
+        "離島滞在の地域学習先にする"
+      ],
+      "source_urls": "https://www.town.kumejima.okinawa.jp/docs/hakubutsuinfo/,https://www.okinawastory.jp/spot/10868100",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/10868100）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6047,
+      "slug": "facility-6047",
+      "name": "森のガラス館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "クラフト体験",
+      "category_id": "craft",
+      "address": "沖縄県名護市為又478",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "琉球ガラスの制作風景を見学し、有料体験を選べます。ガラス制作の様子を見る、対象年齢に合う制作体験を調べる、作品の色や形を見比べるなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "幼児～小学生（展示・体験ごとの条件あり）",
+      "url": "https://www.morinogarasukan.co.jp",
+      "tags": [
+        "完全屋内",
+        "無料",
+        "小学生向け"
+      ],
+      "latitude": 26.60798645,
+      "longitude": 127.97055817,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "ガラス制作の様子を見る",
+        "対象年齢に合う制作体験を調べる",
+        "作品の色や形を見比べる"
+      ],
+      "unique_selling_point": "琉球ガラスの制作風景を見学し、有料体験を選べます",
+      "experience_tags": [
+        "見る",
+        "作る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "craft",
+        "experience"
+      ],
+      "things_to_do": [
+        "ガラス制作の様子を見る",
+        "対象年齢に合う制作体験を調べる",
+        "作品の色や形を見比べる"
+      ],
+      "source_urls": "https://www.morinogarasukan.co.jp,https://www.okinawastory.jp/spot/1044",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報（spot/1044）で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
+    },
+    {
+      "id": 6048,
+      "slug": "facility-6048",
+      "name": "DMMかりゆし水族館",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "水族館",
+      "category_id": "aquarium",
+      "address": "沖縄県豊見城市豊崎3-35 イーアス沖縄豊崎",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "最新料金は公式案内を確認",
+      "child_fee": "最新料金と年齢区分は公式案内を確認",
+      "description": "映像演出と生き物展示を組み合わせた屋内水族館を楽しめます。沖縄の生き物を観察する、映像と空間演出を体験する、雨天でも館内をゆっくり巡るなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n開館日、料金、展示・体験の実施状況を公式サイトで確認してから出かけると安心です。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://kariyushi-aquarium.com/",
+      "tags": [
+        "完全屋内",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.156325,
+      "longitude": 127.6507063,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "沖縄の生き物を観察する",
+        "映像と空間演出を体験する",
+        "雨天でも館内をゆっくり巡る"
+      ],
+      "unique_selling_point": "映像演出と生き物展示を組み合わせた屋内水族館を楽しめます",
+      "experience_tags": [
+        "見る",
+        "学ぶ"
+      ],
+      "summer_water_play": "×",
+      "recommended_for_tags": [
+        "animal",
+        "exhibition",
+        "experience"
+      ],
+      "things_to_do": [
+        "沖縄の生き物を観察する",
+        "映像と空間演出を体験する",
+        "雨天でも館内をゆっくり巡る"
+      ],
+      "source_urls": "https://kariyushi-aquarium.com/,https://kariyushi-aquarium.com/access/",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報および公的・施設公式案内で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は確認済み住所のNominatim検索結果で照合。"
+    },
+    {
+      "id": 6049,
+      "slug": "facility-6049",
+      "name": "道の駅ぎのざ",
+      "prefecture": "沖縄県",
+      "prefecture_id": "okinawa",
+      "category": "公園(大型遊具)",
+      "category_id": "park",
+      "address": "沖縄県国頭郡宜野座村字漢那1633番地",
+      "indoor_outdoor": "両方",
+      "rain_friendly": "△",
+      "is_free": true,
+      "fee_type": "入場無料・一部体験等は有料の場合あり",
+      "adult_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "child_fee": "入場無料（体験・利用条件は公式案内を確認）",
+      "description": "大型遊具と水遊び場、休憩・飲食を家族で利用できます。大型遊具で遊ぶ、開放時期を確認して水遊びをする、直売所や飲食施設で休憩するなど、親子の興味と滞在時間に合わせた過ごし方ができます。\n\n天候に合わせて屋内外の順番を決め、開館日、料金、体験・運行条件を公式サイトで確認してください。",
+      "target_age": "0歳～小学生（体験・遊具ごとの条件あり）",
+      "url": "https://ginozanavi.com/",
+      "tags": [
+        "屋内外両方",
+        "無料",
+        "0-3歳OK",
+        "小学生向け"
+      ],
+      "latitude": 26.4736279,
+      "longitude": 127.9514951,
+      "geocode_source": "official",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "signature_experiences": [
+        "大型遊具で遊ぶ",
+        "開放時期を確認して水遊びをする",
+        "直売所や飲食施設で休憩する"
+      ],
+      "unique_selling_point": "大型遊具と水遊び場、休憩・飲食を家族で利用できます",
+      "experience_tags": [
+        "見る",
+        "動く",
+        "学ぶ"
+      ],
+      "summer_water_play": "○",
+      "recommended_for_tags": [
+        "water_play",
+        "playground",
+        "running",
+        "wide_space"
+      ],
+      "things_to_do": [
+        "大型遊具で遊ぶ",
+        "開放時期を確認して水遊びをする",
+        "直売所や飲食施設で休憩する"
+      ],
+      "source_urls": "https://www.dc.ogb.go.jp/road/Michi-no-Eki/ginoza.htm,https://ginozanavi.com/",
+      "source_checked_at": "2026-08-03",
+      "data_quality_status": "confirmed",
+      "source_notes": "OCVB公式観光情報および公的・施設公式案内で施設名・所在地・親子で利用できる主な内容を確認。施設公式サイトで最新の開館・料金・利用条件を確認する構成とし、変動する料金や運行条件は断定していない。座標は同公式ページの地図掲載点で照合。"
     }
   ]
 }

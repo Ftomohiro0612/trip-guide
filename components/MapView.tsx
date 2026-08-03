@@ -65,6 +65,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   mie: "#7c3aed",
   nara: "#f97316",
   hokkaido: "#2563eb",
+  okinawa: "#06b6d4",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];

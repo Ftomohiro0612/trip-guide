@@ -52,6 +52,7 @@ export const metadata: Metadata = {
     "兵庫",
     "関西",
     "近畿",
+    "沖縄",
     "関東甲信越",
     "雨の日",
     "無料",
