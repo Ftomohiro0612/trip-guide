@@ -44,6 +44,7 @@ const PREFECTURE_CENTROIDS = {
   shimane: { lat: 35.076, lng: 132.560 },
   kagoshima: { lat: 31.5602, lng: 130.5581 },
   kochi: { lat: 33.5597, lng: 133.5311 },
+  miyazaki: { lat: 31.9111, lng: 131.4239 },
 };
 
 const USER_AGENT =
