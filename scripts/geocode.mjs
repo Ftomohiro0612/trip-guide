@@ -34,6 +34,8 @@ const PREFECTURE_CENTROIDS = {
   gifu: { lat: 35.3912, lng: 136.7223 },
   mie: { lat: 34.7303, lng: 136.5086 },
   nara: { lat: 34.6851, lng: 135.8048 },
+  okinawa: { lat: 26.2124, lng: 127.6809 },
+  shiga: { lat: 35.215, lng: 136.138 },
 };
 
 const USER_AGENT =
