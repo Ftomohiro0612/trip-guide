@@ -33,6 +33,7 @@ export type PrefectureId =
   | "hokkaido"
   | "aomori"
   | "iwate"
+  | "akita"
   | "yamagata"
   | "okinawa"
   | "shiga"

@@ -25,6 +25,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   北海道: "hokkaido",
   青森県: "aomori",
   岩手県: "iwate",
+  秋田県: "akita",
   山形県: "yamagata",
   静岡県: "shizuoka",
   長野県: "nagano",
