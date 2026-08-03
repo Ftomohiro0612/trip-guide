@@ -75,6 +75,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   shimane: "#a855f7",
   kagoshima: "#dc2626",
   kochi: "#0284c7",
+  miyazaki: "#16a34a",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];

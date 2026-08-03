@@ -93,6 +93,7 @@ const TARGET_PREFECTURES = new Set([
   "鳥取県",
   "鹿児島県",
   "高知県",
+  "宮崎県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -138,6 +139,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   島根県: "shimane",
   鹿児島県: "kagoshima",
   高知県: "kochi",
+  宮崎県: "miyazaki",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -190,6 +192,7 @@ const PREFECTURE_BBOXES = {
   鳥取県: [{ minLat: 35.05, maxLat: 35.62, minLng: 133.13, maxLng: 134.52 }],
   鹿児島県: [{ minLat: 27.0, maxLat: 32.3, minLng: 128.3, maxLng: 131.5 }],
   高知県: [{ minLat: 32.65, maxLat: 34.05, minLng: 132.35, maxLng: 134.45 }],
+  宮崎県: [{ minLat: 31.3, maxLat: 32.85, minLng: 130.65, maxLng: 132.0 }],
 };
 
 const JAPAN_BBOX = {

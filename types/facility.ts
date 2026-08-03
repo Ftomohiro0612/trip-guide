@@ -40,7 +40,8 @@ export type PrefectureId =
   | "tottori"
   | "shimane"
   | "kagoshima"
-  | "kochi";
+  | "kochi"
+  | "miyazaki";
 
 export type RainFriendly = "◎" | "△" | "×";
 
