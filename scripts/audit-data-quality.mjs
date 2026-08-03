@@ -85,6 +85,7 @@ const TARGET_PREFECTURES = new Set([
   "三重県",
   "奈良県",
   "沖縄県",
+  "滋賀県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -121,9 +122,10 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   三重県: "mie",
   奈良県: "nara",
   沖縄県: "okinawa",
+  滋賀県: "shiga",
 };
 
-const NAME_MEMO_TOKENS = ["→", "参考", "除外", "要確認", "TODO", "(削除"];
+const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
 
 const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊", "周辺"];
 const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|地内|[-‐‑‒–—―−ー－]/;
@@ -165,6 +167,7 @@ const PREFECTURE_BBOXES = {
   岐阜県: [{ minLat: 35.08, maxLat: 36.47, minLng: 136.27, maxLng: 137.66 }],
   三重県: [{ minLat: 33.66, maxLat: 35.26, minLng: 135.85, maxLng: 136.99 }],
   沖縄県: [{ minLat: 23.35, maxLat: 28.25, minLng: 122.5, maxLng: 131.5 }],
+  滋賀県: [{ minLat: 34.76, maxLat: 35.72, minLng: 135.76, maxLng: 136.46 }],
 };
 
 const JAPAN_BBOX = {

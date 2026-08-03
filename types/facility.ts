@@ -31,7 +31,8 @@ export type PrefectureId =
   | "mie"
   | "nara"
   | "hokkaido"
-  | "okinawa";
+  | "okinawa"
+  | "shiga";
 
 export type RainFriendly = "◎" | "△" | "×";
 

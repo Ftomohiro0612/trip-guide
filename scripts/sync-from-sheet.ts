@@ -51,6 +51,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   三重県: "mie",
   奈良県: "nara",
   沖縄県: "okinawa",
+  滋賀県: "shiga",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
