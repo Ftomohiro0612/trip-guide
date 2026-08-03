@@ -87,6 +87,7 @@ const TARGET_PREFECTURES = new Set([
   "奈良県",
   "沖縄県",
   "滋賀県",
+  "和歌山県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -125,6 +126,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   奈良県: "nara",
   沖縄県: "okinawa",
   滋賀県: "shiga",
+  和歌山県: "wakayama",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -171,6 +173,7 @@ const PREFECTURE_BBOXES = {
   三重県: [{ minLat: 33.66, maxLat: 35.26, minLng: 135.85, maxLng: 136.99 }],
   沖縄県: [{ minLat: 23.35, maxLat: 28.25, minLng: 122.5, maxLng: 131.5 }],
   滋賀県: [{ minLat: 34.76, maxLat: 35.72, minLng: 135.76, maxLng: 136.46 }],
+  和歌山県: [{ minLat: 33.43, maxLat: 34.39, minLng: 134.99, maxLng: 136.02 }],
 };
 
 const JAPAN_BBOX = {

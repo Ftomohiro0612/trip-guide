@@ -53,6 +53,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   奈良県: "nara",
   沖縄県: "okinawa",
   滋賀県: "shiga",
+  和歌山県: "wakayama",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([
