@@ -38,6 +38,7 @@ const PREFECTURE_CENTROIDS = {
   shiga: { lat: 35.215, lng: 136.138 },
   wakayama: { lat: 33.848, lng: 135.693 },
   yamaguchi: { lat: 34.186, lng: 131.471 },
+  kagoshima: { lat: 31.5602, lng: 130.5581 },
 };
 
 const USER_AGENT =
