@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : `${meta.title} ${list.length}選 (全国)`,
     description: isYoungKids
       ? `0歳・1歳・2歳・3歳の赤ちゃんや幼児と楽しめる全国の遊び場${list.length}施設を掲載。都府県や地図から探し、雨の日・無料など家族に合う条件で絞れます。`
-      : `${meta.lead} 全国30都府県で${meta.title}を${list.length}施設掲載。`,
+      : `${meta.lead} 全国${prefectures.length}都府県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },

@@ -48,6 +48,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   福井県: "fukui",
   岐阜県: "gifu",
   三重県: "mie",
+  奈良県: "nara",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([

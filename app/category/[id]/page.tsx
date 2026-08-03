@@ -69,7 +69,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         ? `子どもと楽しめる日本の絶景・自然散策スポット${visibleCount}施設を掲載。滝、渓谷、湖、海岸、高原などを都府県や地図から探し、家族に合う行き先を選べます。`
         : meta.id === "park"
           ? `大型遊具や広場で子どもと遊べる、関東を含む全国の大型公園${visibleCount}施設を掲載。都府県や地図から探し、無料・雨の日などの条件も確認できます。`
-          : `${desc} 全国30都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
+          : `${desc} 全国${prefectures.length}都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
   return {
     title,
     description,

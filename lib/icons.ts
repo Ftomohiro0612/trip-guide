@@ -79,6 +79,7 @@ export const prefectureGradients: Record<string, string> = {
   fukui: "from-emerald-600 via-teal-400 to-amber-400",
   gifu: "from-emerald-600 via-lime-400 to-sky-500",
   mie: "from-indigo-600 via-violet-400 to-amber-400",
+  nara: "from-orange-500 via-rose-400 to-pink-500",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -112,6 +113,7 @@ export const prefectureIconImages: Record<string, string> = {
   fukui: "/images/prefectures/fukui.webp",
   gifu: "/images/prefectures/gifu.webp",
   mie: "/images/prefectures/mie.webp",
+  nara: "/images/prefectures/nara.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -145,4 +147,5 @@ export const prefectureEmoji: Record<string, string> = {
   fukui: "🦖",
   gifu: "🏞️",
   mie: "🥷",
+  nara: "🦌",
 };

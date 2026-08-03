@@ -28,7 +28,8 @@ export type PrefectureId =
   | "toyama"
   | "fukui"
   | "gifu"
-  | "mie";
+  | "mie"
+  | "nara";
 
 export type RainFriendly = "◎" | "△" | "×";
 
