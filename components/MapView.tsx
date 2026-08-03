@@ -79,6 +79,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   kochi: "#0284c7",
   miyazaki: "#16a34a",
   saga: "#db2777",
+  tokushima: "#7c3aed",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];

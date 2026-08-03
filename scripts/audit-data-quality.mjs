@@ -146,6 +146,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   高知県: "kochi",
   宮崎県: "miyazaki",
   佐賀県: "saga",
+  徳島県: "tokushima",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -202,6 +203,7 @@ const PREFECTURE_BBOXES = {
   高知県: [{ minLat: 32.65, maxLat: 34.05, minLng: 132.35, maxLng: 134.45 }],
   宮崎県: [{ minLat: 31.3, maxLat: 32.85, minLng: 130.65, maxLng: 132.0 }],
   佐賀県: [{ minLat: 32.9, maxLat: 33.65, minLng: 129.75, maxLng: 130.65 }],
+  徳島県: [{ minLat: 33.45, maxLat: 34.3, minLng: 133.6, maxLng: 134.75 }],
 };
 
 const JAPAN_BBOX = {

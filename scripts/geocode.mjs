@@ -47,6 +47,7 @@ const PREFECTURE_CENTROIDS = {
   kochi: { lat: 33.5597, lng: 133.5311 },
   miyazaki: { lat: 31.9111, lng: 131.4239 },
   saga: { lat: 33.2494, lng: 130.2988 },
+  tokushima: { lat: 34.0658, lng: 134.5593 },
 };
 
 const USER_AGENT =

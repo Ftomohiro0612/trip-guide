@@ -95,6 +95,7 @@ export const prefectureGradients: Record<string, string> = {
   kochi: "from-sky-600 via-cyan-400 to-emerald-500",
   miyazaki: "from-emerald-600 via-lime-400 to-cyan-500",
   saga: "from-pink-600 via-rose-400 to-amber-400",
+  tokushima: "from-violet-600 via-fuchsia-400 to-cyan-500",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -189,4 +190,5 @@ export const prefectureEmoji: Record<string, string> = {
   kochi: "🐟",
   miyazaki: "🌴",
   saga: "🎈",
+  tokushima: "🌀",
 };
