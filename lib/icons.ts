@@ -81,6 +81,7 @@ export const prefectureGradients: Record<string, string> = {
   mie: "from-indigo-600 via-violet-400 to-amber-400",
   nara: "from-orange-500 via-rose-400 to-pink-500",
   hokkaido: "from-sky-600 via-cyan-400 to-indigo-500",
+  yamagata: "from-rose-600 via-pink-400 to-emerald-500",
 };
 
 export const prefectureIconImages: Record<string, string> = {
@@ -116,6 +117,7 @@ export const prefectureIconImages: Record<string, string> = {
   mie: "/images/prefectures/mie.webp",
   nara: "/images/prefectures/nara.webp",
   hokkaido: "/images/prefectures/hokkaido.svg",
+  yamagata: "/images/prefectures/yamagata.svg",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -151,4 +153,5 @@ export const prefectureEmoji: Record<string, string> = {
   mie: "🥷",
   nara: "🦌",
   hokkaido: "❄️",
+  yamagata: "🍒",
 };

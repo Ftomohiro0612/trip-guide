@@ -22,7 +22,16 @@ const TARGETS = {
   aomori: { name: "青森県", bbox: [40.2, 41.6, 139.4, 141.7] },
   iwate: { name: "岩手県", bbox: [38.7, 40.5, 140.6, 142.1] },
   akita: { name: "秋田県", bbox: [38.8, 40.6, 139.6, 141.1] },
-  yamagata: { name: "山形県", bbox: [37.7, 39.3, 139.5, 140.7] },
+  yamagata: {
+    name: "山形県",
+    bbox: [37.7, 39.3, 139.5, 140.7],
+    regions: {
+      "村山": ["山形市", "上山市", "東根市", "天童市", "寒河江市", "河北町", "村山市"],
+      "最上": ["新庄市", "最上郡"],
+      "庄内": ["鶴岡市", "酒田市"],
+      "置賜": ["長井市", "西置賜郡", "東置賜郡"],
+    },
+  },
 };
 
 const data = JSON.parse(await readFile(resolve(ROOT, "data/facilities_data.json"), "utf8"));

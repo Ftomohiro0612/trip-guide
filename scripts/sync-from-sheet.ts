@@ -23,6 +23,7 @@ const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?forma
 
 const PREFECTURE_MAP: Record<string, PrefectureId> = {
   北海道: "hokkaido",
+  山形県: "yamagata",
   静岡県: "shizuoka",
   長野県: "nagano",
   山梨県: "yamanashi",

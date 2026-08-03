@@ -30,7 +30,8 @@ export type PrefectureId =
   | "gifu"
   | "mie"
   | "nara"
-  | "hokkaido";
+  | "hokkaido"
+  | "yamagata";
 
 export type RainFriendly = "◎" | "△" | "×";
 
