@@ -31,6 +31,7 @@ export type PrefectureId =
   | "mie"
   | "nara"
   | "hokkaido"
+  | "aomori"
   | "yamagata"
   | "okinawa"
   | "shiga"

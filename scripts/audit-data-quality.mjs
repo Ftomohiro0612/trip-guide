@@ -89,6 +89,7 @@ const TARGET_PREFECTURES = new Set([
   "滋賀県",
   "和歌山県",
   "山口県",
+  "青森県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -129,6 +130,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   滋賀県: "shiga",
   和歌山県: "wakayama",
   山口県: "yamaguchi",
+  青森県: "aomori",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -177,6 +179,7 @@ const PREFECTURE_BBOXES = {
   滋賀県: [{ minLat: 34.76, maxLat: 35.72, minLng: 135.76, maxLng: 136.46 }],
   和歌山県: [{ minLat: 33.43, maxLat: 34.39, minLng: 134.99, maxLng: 136.02 }],
   山口県: [{ minLat: 33.7, maxLat: 34.85, minLng: 130.75, maxLng: 132.55 }],
+  青森県: [{ minLat: 40.2, maxLat: 41.6, minLng: 139.4, maxLng: 141.7 }],
 };
 
 const JAPAN_BBOX = {

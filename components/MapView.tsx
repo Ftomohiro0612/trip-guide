@@ -65,6 +65,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   mie: "#7c3aed",
   nara: "#f97316",
   hokkaido: "#2563eb",
+  aomori: "#16a34a",
   yamagata: "#db2777",
   okinawa: "#06b6d4",
   shiga: "#0d9488",
