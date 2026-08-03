@@ -55,6 +55,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   滋賀県: "shiga",
   和歌山県: "wakayama",
   山口県: "yamaguchi",
+  鳥取県: "tottori",
   鹿児島県: "kagoshima",
 };
 

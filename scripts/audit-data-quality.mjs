@@ -89,6 +89,7 @@ const TARGET_PREFECTURES = new Set([
   "滋賀県",
   "和歌山県",
   "山口県",
+  "鳥取県",
   "鹿児島県",
 ]);
 
@@ -130,6 +131,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   滋賀県: "shiga",
   和歌山県: "wakayama",
   山口県: "yamaguchi",
+  鳥取県: "tottori",
   鹿児島県: "kagoshima",
 };
 
@@ -179,6 +181,7 @@ const PREFECTURE_BBOXES = {
   滋賀県: [{ minLat: 34.76, maxLat: 35.72, minLng: 135.76, maxLng: 136.46 }],
   和歌山県: [{ minLat: 33.43, maxLat: 34.39, minLng: 134.99, maxLng: 136.02 }],
   山口県: [{ minLat: 33.7, maxLat: 34.85, minLng: 130.75, maxLng: 132.55 }],
+  鳥取県: [{ minLat: 35.05, maxLat: 35.62, minLng: 133.13, maxLng: 134.52 }],
   鹿児島県: [{ minLat: 27.0, maxLat: 32.3, minLng: 128.3, maxLng: 131.5 }],
 };
 

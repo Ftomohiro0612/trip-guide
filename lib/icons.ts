@@ -86,6 +86,7 @@ export const prefectureGradients: Record<string, string> = {
   shiga: "from-sky-600 via-cyan-400 to-emerald-400",
   wakayama: "from-orange-500 via-pink-500 to-lime-500",
   yamaguchi: "from-orange-500 via-rose-500 to-fuchsia-600",
+  tottori: "from-amber-500 via-orange-500 to-fuchsia-600",
   kagoshima: "from-red-600 via-orange-400 to-amber-300",
 };
 
@@ -127,6 +128,7 @@ export const prefectureIconImages: Record<string, string> = {
   shiga: "/images/prefectures/shiga.webp",
   wakayama: "/images/prefectures/wakayama.webp",
   yamaguchi: "/images/prefectures/yamaguchi.webp",
+  tottori: "/images/prefectures/tottori.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {
@@ -167,5 +169,6 @@ export const prefectureEmoji: Record<string, string> = {
   shiga: "🌊",
   wakayama: "🍊",
   yamaguchi: "🐡",
+  tottori: "🐪",
   kagoshima: "🌋",
 };

@@ -70,6 +70,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   shiga: "#0d9488",
   wakayama: "#db2777",
   yamaguchi: "#e11d48",
+  tottori: "#f97316",
   kagoshima: "#dc2626",
 };
 
