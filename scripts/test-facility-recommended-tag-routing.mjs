@@ -117,6 +117,6 @@ test("existing 17 prefectures keep the recommended-tag route behavior", () => {
 test("facility metadata description matches its prefecture count", () => {
   assert.equal(
     data.metadata.site_description,
-    `全国${data.metadata.prefectures.length}都府県の子供向け遊び場検索サイト`,
+    `全国${data.metadata.prefectures.length}都道府県の子供向け遊び場検索サイト`,
   );
 });

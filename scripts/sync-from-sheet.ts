@@ -22,6 +22,7 @@ const SHEET_ID = "1p4bqL1Oq89k5c-9Wa0REXd8BojzUBBXfF5-iSYEeeH4";
 const CSV_URL = `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv`;
 
 const PREFECTURE_MAP: Record<string, PrefectureId> = {
+  北海道: "hokkaido",
   静岡県: "shizuoka",
   長野県: "nagano",
   山梨県: "yamanashi",

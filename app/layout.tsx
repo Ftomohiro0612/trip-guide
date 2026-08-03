@@ -19,7 +19,7 @@ const notoSansJP = Noto_Sans_JP({
   display: "swap",
 });
 
-const siteDescription = `全国${prefectures.length}都府県・${visibleFacilities.length.toLocaleString("ja-JP")}施設から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの"好き"と成長が見えてきます。`;
+const siteDescription = `全国${prefectures.length}都道府県・${visibleFacilities.length.toLocaleString("ja-JP")}施設から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの"好き"と成長が見えてきます。`;
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://trip-guide.net"),

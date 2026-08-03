@@ -7,6 +7,7 @@ const DATA_PATH = resolve(__dirname, "..", "data", "facilities_data.json");
 
 // Approximate prefecture centroids (used as fallback if geocoding fails)
 const PREFECTURE_CENTROIDS = {
+  hokkaido: { lat: 43.0642, lng: 141.3469 },
   shizuoka: { lat: 34.9769, lng: 138.3831 },
   nagano: { lat: 36.2048, lng: 138.2529 },
   yamanashi: { lat: 35.6635, lng: 138.5683 },

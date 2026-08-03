@@ -50,8 +50,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       ? `0〜3歳の子供と楽しめる遊び場 ${list.length}選｜赤ちゃん・幼児`
       : `${meta.title} ${list.length}選 (全国)`,
     description: isYoungKids
-      ? `0歳・1歳・2歳・3歳の赤ちゃんや幼児と楽しめる全国の遊び場${list.length}施設を掲載。都府県や地図から探し、雨の日・無料など家族に合う条件で絞れます。`
-      : `${meta.lead} 全国${prefectures.length}都府県で${meta.title}を${list.length}施設掲載。`,
+      ? `0歳・1歳・2歳・3歳の赤ちゃんや幼児と楽しめる全国の遊び場${list.length}施設を掲載。都道府県や地図から探し、雨の日・無料など家族に合う条件で絞れます。`
+      : `${meta.lead} 全国${prefectures.length}都道府県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
     },
@@ -163,7 +163,7 @@ export default async function TagPage({ params, searchParams }: Props) {
               赤ちゃん・幼児との遊び場選び
             </h2>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              同じ0〜3歳向けでも、屋内外、料金、移動のしやすさで過ごし方が変わります。都府県で行ける範囲を絞り、当日の天気や家族の予定に合う施設を選びましょう。
+              同じ0〜3歳向けでも、屋内外、料金、移動のしやすさで過ごし方が変わります。都道府県で行ける範囲を絞り、当日の天気や家族の予定に合う施設を選びましょう。
             </p>
             <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
               <a
@@ -203,10 +203,10 @@ export default async function TagPage({ params, searchParams }: Props) {
         {filteredList.length === 0 && (
           <div className="mt-8 rounded-2xl border border-slate-200 bg-white py-14 text-center">
             <p className="font-bold text-slate-800">
-              この都府県には該当する施設がありません
+              この都道府県には該当する施設がありません
             </p>
             <p className="mt-1 text-sm text-slate-500">
-              別の都府県または全国を選んでください。
+              別の都道府県または全国を選んでください。
             </p>
           </div>
         )}

@@ -841,7 +841,7 @@ async function applySelected(prefectureIds, replaceExisting = false) {
   }
 
   data.metadata.total_facilities = data.facilities.length;
-  data.metadata.site_description = `全国${data.metadata.prefectures.length}都府県の子供向け遊び場検索サイト`;
+  data.metadata.site_description = `全国${data.metadata.prefectures.length}都道府県の子供向け遊び場検索サイト`;
   for (const category of data.metadata.categories) {
     category.count = data.facilities.filter((facility) => facility.category_id === category.id).length;
   }

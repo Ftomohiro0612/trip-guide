@@ -4,7 +4,7 @@ import { prefectures, visibleFacilities } from "@/lib/facilities";
 
 export const metadata: Metadata = {
   title: "地図から探す",
-  description: `全国${prefectures.length}都府県の子供向け遊び場を地図から探せます。現在地と施設の位置関係を地図で確認できます。`,
+  description: `全国${prefectures.length}都道府県の子供向け遊び場を地図から探せます。現在地と施設の位置関係を地図で確認できます。`,
   alternates: { canonical: "/map" },
 };
 

@@ -58,6 +58,7 @@ const PREFS = [
 ];
 
 const TARGET_PREFECTURES = new Set([
+  "北海道",
   "静岡県",
   "長野県",
   "山梨県",
@@ -86,6 +87,7 @@ const TARGET_PREFECTURES = new Set([
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
+  北海道: "hokkaido",
   静岡県: "shizuoka",
   長野県: "nagano",
   山梨県: "yamanashi",
@@ -125,6 +127,7 @@ const FAKE_ADDRESS_PATTERNS = ["各エリア", "都内", "アクセス", "近郊
 const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|地内|[-‐‑‒–—―−ー－]/;
 
 const PREFECTURE_BBOXES = {
+  北海道: [{ minLat: 41.2, maxLat: 45.7, minLng: 139.1, maxLng: 146.3 }],
   茨城県: [{ minLat: 35.7, maxLat: 36.95, minLng: 139.6, maxLng: 140.95 }],
   栃木県: [{ minLat: 36.1, maxLat: 37.2, minLng: 139.2, maxLng: 140.3 }],
   群馬県: [{ minLat: 35.9, maxLat: 37.1, minLng: 138.3, maxLng: 139.8 }],

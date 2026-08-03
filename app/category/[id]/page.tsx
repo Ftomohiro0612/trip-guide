@@ -64,12 +64,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
           : `${meta.name} ${visibleCount}選 (全国)`;
   const description =
     meta.id === "aquarium"
-      ? `雨の日の子どもの遊び場に、屋内展示を中心に楽しめる全国の水族館${visibleCount}施設を掲載。都府県や地図から探し、料金や雨の日の過ごしやすさを確認できます。`
+      ? `雨の日の子どもの遊び場に、屋内展示を中心に楽しめる全国の水族館${visibleCount}施設を掲載。都道府県や地図から探し、料金や雨の日の過ごしやすさを確認できます。`
       : meta.id === "scenic"
-        ? `子どもと楽しめる日本の絶景・自然散策スポット${visibleCount}施設を掲載。滝、渓谷、湖、海岸、高原などを都府県や地図から探し、家族に合う行き先を選べます。`
+        ? `子どもと楽しめる日本の絶景・自然散策スポット${visibleCount}施設を掲載。滝、渓谷、湖、海岸、高原などを都道府県や地図から探し、家族に合う行き先を選べます。`
         : meta.id === "park"
-          ? `大型遊具や広場で子どもと遊べる、関東を含む全国の大型公園${visibleCount}施設を掲載。都府県や地図から探し、無料・雨の日などの条件も確認できます。`
-          : `${desc} 全国${prefectures.length}都府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
+          ? `大型遊具や広場で子どもと遊べる、関東を含む全国の大型公園${visibleCount}施設を掲載。都道府県や地図から探し、無料・雨の日などの条件も確認できます。`
+          : `${desc} 全国${prefectures.length}都道府県の${meta.name}を${visibleCount}施設まとめて掲載。`;
   return {
     title,
     description,
@@ -207,7 +207,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               雨の日も楽しみやすい水族館の選び方
             </h2>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              水族館は屋内展示が中心ですが、イルカショーや館内の移動に屋外エリアを含む施設もあります。都府県で絞り、施設名を開いて料金や雨の日の過ごしやすさを確認すると、家族に合う候補を選びやすくなります。
+              水族館は屋内展示が中心ですが、イルカショーや館内の移動に屋外エリアを含む施設もあります。都道府県で絞り、施設名を開いて料金や雨の日の過ごしやすさを確認すると、家族に合う候補を選びやすくなります。
             </p>
             <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
               <a
@@ -267,7 +267,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               家族で楽しめる大型公園の選び方
             </h2>
             <p className="mt-2 text-sm leading-7 text-slate-700">
-              大型遊具、芝生広場、水遊び場など、公園によって楽しみ方が異なります。関東を含む都府県で行ける範囲を絞り、地図と施設詳細から家族に合う公園を選びましょう。
+              大型遊具、芝生広場、水遊び場など、公園によって楽しみ方が異なります。関東を含む都道府県で行ける範囲を絞り、地図と施設詳細から家族に合う公園を選びましょう。
             </p>
             <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
               <a
@@ -374,7 +374,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               条件に合う施設がありません
             </p>
             <p className="mt-1 text-sm text-slate-500">
-              別の都府県または種類を選んでください。
+              別の都道府県または種類を選んでください。
             </p>
           </div>
         )}

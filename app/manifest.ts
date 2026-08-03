@@ -5,7 +5,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "メモリップ",
     short_name: "メモリップ",
-    description: `全国${prefectures.length}都府県・${visibleFacilities.length.toLocaleString("ja-JP")}施設から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの"好き"と成長が見えてきます。`,
+    description: `全国${prefectures.length}都道府県・${visibleFacilities.length.toLocaleString("ja-JP")}施設から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの"好き"と成長が見えてきます。`,
     start_url: "/",
     display: "standalone",
     background_color: "#fafbfc",

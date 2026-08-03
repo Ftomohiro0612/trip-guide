@@ -29,7 +29,8 @@ export type PrefectureId =
   | "fukui"
   | "gifu"
   | "mie"
-  | "nara";
+  | "nara"
+  | "hokkaido";
 
 export type RainFriendly = "◎" | "△" | "×";
 

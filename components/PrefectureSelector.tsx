@@ -183,7 +183,7 @@ export default function PrefectureSelector({
                   都道府県を選ぶ
                 </h2>
                 <p className="mt-1 text-xs text-slate-500">
-                  地図と施設一覧を同じ都府県に切り替えます
+                  地図と施設一覧を同じ都道府県に切り替えます
                 </p>
               </div>
               <button
