@@ -40,6 +40,7 @@ const PREFECTURE_CENTROIDS = {
   wakayama: { lat: 33.848, lng: 135.693 },
   yamaguchi: { lat: 34.186, lng: 131.471 },
   tottori: { lat: 35.501, lng: 134.235 },
+  shimane: { lat: 35.076, lng: 132.560 },
   kagoshima: { lat: 31.5602, lng: 130.5581 },
   kochi: { lat: 33.5597, lng: 133.5311 },
 };

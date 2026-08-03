@@ -57,6 +57,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   和歌山県: "wakayama",
   山口県: "yamaguchi",
   鳥取県: "tottori",
+  島根県: "shimane",
   鹿児島県: "kagoshima",
   高知県: "kochi",
 };

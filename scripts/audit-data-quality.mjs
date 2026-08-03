@@ -135,6 +135,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   山口県: "yamaguchi",
   青森県: "aomori",
   鳥取県: "tottori",
+  島根県: "shimane",
   鹿児島県: "kagoshima",
   高知県: "kochi",
 };

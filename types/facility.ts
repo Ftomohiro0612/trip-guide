@@ -38,6 +38,7 @@ export type PrefectureId =
   | "wakayama"
   | "yamaguchi"
   | "tottori"
+  | "shimane"
   | "kagoshima"
   | "kochi";
 
