@@ -90,6 +90,8 @@ const TARGET_PREFECTURES = new Set([
   "和歌山県",
   "山口県",
   "青森県",
+  "鳥取県",
+  "鹿児島県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -131,6 +133,8 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   和歌山県: "wakayama",
   山口県: "yamaguchi",
   青森県: "aomori",
+  鳥取県: "tottori",
+  鹿児島県: "kagoshima",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -180,6 +184,8 @@ const PREFECTURE_BBOXES = {
   和歌山県: [{ minLat: 33.43, maxLat: 34.39, minLng: 134.99, maxLng: 136.02 }],
   山口県: [{ minLat: 33.7, maxLat: 34.85, minLng: 130.75, maxLng: 132.55 }],
   青森県: [{ minLat: 40.2, maxLat: 41.6, minLng: 139.4, maxLng: 141.7 }],
+  鳥取県: [{ minLat: 35.05, maxLat: 35.62, minLng: 133.13, maxLng: 134.52 }],
+  鹿児島県: [{ minLat: 27.0, maxLat: 32.3, minLng: 128.3, maxLng: 131.5 }],
 };
 
 const JAPAN_BBOX = {
