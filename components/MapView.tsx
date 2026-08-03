@@ -69,6 +69,7 @@ const PREF_COLORS: Record<PrefectureId, string> = {
   okinawa: "#06b6d4",
   shiga: "#0d9488",
   wakayama: "#db2777",
+  yamaguchi: "#e11d48",
 };
 
 const DEFAULT_CENTER: [number, number] = [35.8, 138.5];

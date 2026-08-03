@@ -34,7 +34,8 @@ export type PrefectureId =
   | "yamagata"
   | "okinawa"
   | "shiga"
-  | "wakayama";
+  | "wakayama"
+  | "yamaguchi";
 
 export type RainFriendly = "◎" | "△" | "×";
 

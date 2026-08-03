@@ -37,6 +37,7 @@ const PREFECTURE_CENTROIDS = {
   okinawa: { lat: 26.2124, lng: 127.6809 },
   shiga: { lat: 35.215, lng: 136.138 },
   wakayama: { lat: 33.848, lng: 135.693 },
+  yamaguchi: { lat: 34.186, lng: 131.471 },
 };
 
 const USER_AGENT =
