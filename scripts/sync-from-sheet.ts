@@ -63,6 +63,7 @@ const PREFECTURE_MAP: Record<string, PrefectureId> = {
   鹿児島県: "kagoshima",
   高知県: "kochi",
   宮崎県: "miyazaki",
+  佐賀県: "saga",
 };
 
 const DATA_QUALITY_STATUSES = new Set<DataQualityStatus>([

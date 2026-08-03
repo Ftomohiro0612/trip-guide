@@ -96,6 +96,7 @@ const TARGET_PREFECTURES = new Set([
   "鹿児島県",
   "高知県",
   "宮崎県",
+  "佐賀県",
 ]);
 
 const PREFECTURE_ID_BY_PREFECTURE = {
@@ -144,6 +145,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   鹿児島県: "kagoshima",
   高知県: "kochi",
   宮崎県: "miyazaki",
+  佐賀県: "saga",
 };
 
 const NAME_MEMO_TOKENS = ["→", "参考:", "参考：", "除外", "要確認", "TODO", "(削除"];
@@ -199,6 +201,7 @@ const PREFECTURE_BBOXES = {
   鹿児島県: [{ minLat: 27.0, maxLat: 32.3, minLng: 128.3, maxLng: 131.5 }],
   高知県: [{ minLat: 32.65, maxLat: 34.05, minLng: 132.35, maxLng: 134.45 }],
   宮崎県: [{ minLat: 31.3, maxLat: 32.85, minLng: 130.65, maxLng: 132.0 }],
+  佐賀県: [{ minLat: 32.9, maxLat: 33.65, minLng: 129.75, maxLng: 130.65 }],
 };
 
 const JAPAN_BBOX = {
