@@ -90,6 +90,7 @@ const TARGET_PREFECTURES = new Set([
   "和歌山県",
   "山口県",
   "青森県",
+  "岩手県",
   "鳥取県",
   "鹿児島県",
   "高知県",
@@ -134,6 +135,7 @@ const PREFECTURE_ID_BY_PREFECTURE = {
   和歌山県: "wakayama",
   山口県: "yamaguchi",
   青森県: "aomori",
+  岩手県: "iwate",
   鳥取県: "tottori",
   島根県: "shimane",
   鹿児島県: "kagoshima",
@@ -147,6 +149,7 @@ const ADDRESS_DETAIL_PATTERN = /[0-9０-９]|丁目|番地|番|号|地内|[-‐�
 
 const PREFECTURE_BBOXES = {
   北海道: [{ minLat: 41.2, maxLat: 45.7, minLng: 139.1, maxLng: 146.3 }],
+  岩手県: [{ minLat: 38.7, maxLat: 40.5, minLng: 140.6, maxLng: 142.1 }],
   山形県: [{ minLat: 37.7, maxLat: 39.3, minLng: 139.5, maxLng: 140.7 }],
   茨城県: [{ minLat: 35.7, maxLat: 36.95, minLng: 139.6, maxLng: 140.95 }],
   栃木県: [{ minLat: 36.1, maxLat: 37.2, minLng: 139.2, maxLng: 140.3 }],

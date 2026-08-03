@@ -9,6 +9,7 @@ const DATA_PATH = resolve(__dirname, "..", "data", "facilities_data.json");
 const PREFECTURE_CENTROIDS = {
   hokkaido: { lat: 43.0642, lng: 141.3469 },
   aomori: { lat: 40.8244, lng: 140.74 },
+  iwate: { lat: 39.7036, lng: 141.1527 },
   yamagata: { lat: 38.2404, lng: 140.3633 },
   shizuoka: { lat: 34.9769, lng: 138.3831 },
   nagano: { lat: 36.2048, lng: 138.2529 },

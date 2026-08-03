@@ -94,6 +94,7 @@ test("expanded prefectures retain recommended-tag filters across reload", async 
     ["福井県", "dinosaur"],
     ["岐阜県", "nature"],
     ["三重県", "experience"],
+    ["岩手県", "science"],
   ];
   for (const [prefecture, tag] of cases) {
     await t.test(`${prefecture} + ${tag}`, () => {

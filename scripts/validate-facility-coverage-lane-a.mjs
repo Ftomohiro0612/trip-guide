@@ -30,7 +30,18 @@ const TARGETS = {
       "下北": ["むつ市"],
     },
   },
-  iwate: { name: "岩手県", bbox: [38.7, 40.5, 140.6, 142.1] },
+  iwate: {
+    name: "岩手県",
+    bbox: [38.7, 40.5, 140.6, 142.1],
+    sourceDate: "2026-08-04",
+    regions: {
+      "盛岡・県央": ["盛岡市", "雫石町", "八幡平市"],
+      "花巻・北上・遠野": ["花巻市", "北上市", "遠野市"],
+      "平泉・県南": ["奥州市", "一関市", "平泉町"],
+      "三陸沿岸": ["宮古市", "山田町", "釜石市", "大船渡市", "陸前高田市", "岩泉町"],
+      "県北": ["久慈市", "一戸町"],
+    },
+  },
   akita: { name: "秋田県", bbox: [38.8, 40.6, 139.6, 141.1] },
   yamagata: {
     name: "山形県",
@@ -110,7 +121,7 @@ for (const [id, spec] of activeTargets) {
     assert(facility.latitude >= minLat && facility.latitude <= maxLat, `${facility.name}: latitude outside ${spec.name}`);
     assert(facility.longitude >= minLng && facility.longitude <= maxLng, `${facility.name}: longitude outside ${spec.name}`);
     assert.equal(facility.geocode_source, "manual", `${facility.name}: coordinate provenance mismatch`);
-    assert.equal(facility.source_checked_at, CHECK_DATE, `${facility.name}: source date mismatch`);
+    assert.equal(facility.source_checked_at, spec.sourceDate ?? CHECK_DATE, `${facility.name}: source date mismatch`);
     assert.equal(facility.data_quality_status, "confirmed", `${facility.name}: source is not confirmed`);
     assert(facility.source_notes.includes("公式"), `${facility.name}: official-source note missing`);
     const url = new URL(facility.url);
