@@ -35,6 +35,7 @@ const PREFECTURE_CENTROIDS = {
   nara: { lat: 34.6851, lng: 135.8048 },
   okinawa: { lat: 26.2124, lng: 127.6809 },
   shiga: { lat: 35.215, lng: 136.138 },
+  wakayama: { lat: 33.848, lng: 135.693 },
 };
 
 const USER_AGENT =
