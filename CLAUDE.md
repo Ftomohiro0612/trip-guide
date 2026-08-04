@@ -52,13 +52,21 @@ production、archive、他memoryを読まない。固定pathの不存在、scope
 
 ## AI役割分担
 
-- Claude Code PM（このスレッド）: 進行管理・仕様書作成・Codexへの指示出し・GO/NO-GO判定
-- Codex: 実装・lint/build・vercel deploy
-- GPT: 事業方針・優先順位の相談役
+**本節が役割の唯一の正本（2026-08-04 役割正本統一・Owner確定）。他ファイルに矛盾する記載があれば本節を優先する。**
+
+- Claude Code PM（このスレッド）: Mission・優先順位・Codexへの作業依頼・受入・Owner escalation・hot memory管理
+- Codex: 調査・正本確認・データ更新・実装・automated validation・必要な独立検証・本番観測
+- Fable 5: Ownerが具体的scopeを明示した場合だけの単発read-only上位レビュー
+- Owner: GO／NO-GO／HOLD・権限境界・事業判断
+- ChatGPT: Owner相談役のみ
+
+施設鮮度・イベント鮮度・意思決定情報充実・Production Health Sentinelは別PMではなく、Claude Code PMからCodexへ与える専門実行モード。
+
+Codexの自律運用は `ai-memory-memorips` の operating contract に従うが、Mission選択・優先順位付け・作業アサインはClaude Code PMの専管であり、Codexが単独でMissionの次アクションを選び続ける「並行PM」運用は行わない。
 
 ## 参考ファイル
 
-- `MEMORIPS_AI_ROLES.md` — AI役割分担・コミュニケーションフロー（read-firstには使用しない）
+- `MEMORIPS_AI_ROLES.md` — 旧AI役割分担ドキュメント。非正本（本節へ統一済み・内容は参照しないこと）
 - `HANDOFF.md` — 過去の引継ぎメモ（最新状態やread-firstの根拠には使用しない）
 - `docs/event-wave-playbook.md` — 通常イベントWaveの調査・L2・L3正本手順（read-firstには使用しない）
 - `SPEC.md` — プロジェクト初期仕様書（旧 HANDOFF.md）
