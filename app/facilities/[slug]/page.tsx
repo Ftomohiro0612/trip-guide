@@ -8,6 +8,7 @@ import FacilityCard from "@/components/FacilityCard";
 import FacilityEvents from "@/components/FacilityEvents";
 import FacilityNearbySummerEvents from "@/components/FacilityNearbySummerEvents";
 import FacilityGallery from "@/components/FacilityGallery";
+import FacilityAnnualPass from "@/components/FacilityAnnualPass";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import ShareButtons from "@/components/ShareButtons";
@@ -526,6 +527,7 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
   return (
     <>
       <FacilityMyRecord facilitySlug={facility.slug} />
+      <FacilityAnnualPass facilitySlug={facility.slug} facilityName={facility.name} />
       <FacilityActionButtons
         facilityId={facility.id}
         facilitySlug={facility.slug}

@@ -11,6 +11,11 @@ import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
 import {
+  PASS_BADGE_CLASS,
+  formatPassDateJa,
+  passStatus,
+} from "@/lib/annual-pass";
+import {
   buildChildLikeCategoryBreakdown,
   buildChildLikeRanking,
   compareChildLikeCategories,
@@ -410,6 +415,24 @@ const revisitLabels: Record<string, string> = {
   no: "🙅 もう行かない",
 };
 
+type AnnualPassRow = {
+  id: string;
+  facility_slug: string;
+  facility_name: string;
+  expires_on: string;
+};
+
+function isAnnualPassRow(row: unknown): row is AnnualPassRow {
+  if (typeof row !== "object" || row === null) return false;
+  const r = row as Record<string, unknown>;
+  return (
+    typeof r.id === "string" &&
+    typeof r.facility_slug === "string" &&
+    typeof r.facility_name === "string" &&
+    typeof r.expires_on === "string"
+  );
+}
+
 function familyMapBadgeText(visitedCount: number, wishlistCount: number): string {
   return [
     visitedCount > 0 ? `🐾 行った${visitedCount}か所` : null,
@@ -451,6 +474,15 @@ export default async function MypagePage() {
           .eq("user_id", user.id)
       : Promise.resolve({ data: [] }),
   ]);
+
+  const { data: annualPassRows } = user
+    ? await supabase
+        .from("annual_passes")
+        .select("id, facility_slug, facility_name, expires_on")
+        .eq("user_id", user.id)
+        .order("expires_on", { ascending: true })
+    : { data: [] };
+  const annualPasses = (annualPassRows ?? []).filter(isAnnualPassRow);
 
   const childRows = (children ?? []).filter(isRecord).filter((child): child is Child => {
     return (
@@ -671,6 +703,43 @@ export default async function MypagePage() {
           >
             📷 写真から過去の記録を追加 →
           </Link>
+        </div>
+      )}
+
+      {annualPasses.length > 0 && (
+        <div data-mypage-section="annual-passes" className="rounded-xl border border-amber-200 bg-amber-50/70 p-4 lg:col-span-2 lg:order-3">
+          <div className="flex items-center justify-between gap-2">
+            <p className="text-sm font-semibold text-amber-900">🎫 年パス</p>
+            <Link href="/mypage/passes" className="text-xs font-bold text-amber-700 hover:underline">
+              すべて見る →
+            </Link>
+          </div>
+          <ul className="mt-2 space-y-1.5">
+            {annualPasses.slice(0, 3).map((pass) => {
+              const status = passStatus(pass.expires_on);
+              return (
+                <li key={pass.id} className="flex items-center justify-between gap-2 text-sm">
+                  <Link
+                    href={`/facilities/${pass.facility_slug}`}
+                    className="min-w-0 truncate font-medium text-slate-800 hover:text-brand hover:underline"
+                  >
+                    {pass.facility_name}
+                  </Link>
+                  <span className="shrink-0 text-xs text-slate-500">
+                    {formatPassDateJa(pass.expires_on)}まで
+                  </span>
+                  <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-bold ${PASS_BADGE_CLASS[status.tone]}`}>
+                    {status.label}
+                  </span>
+                </li>
+              );
+            })}
+          </ul>
+          {annualPasses.some((pass) => passStatus(pass.expires_on).tone !== "ok") && (
+            <p className="mt-2 text-xs font-semibold text-amber-700">
+              期限が近い・切れた年パスがあります。行くなら今のうち！
+            </p>
+          )}
         </div>
       )}
 

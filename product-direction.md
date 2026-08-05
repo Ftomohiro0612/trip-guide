@@ -439,6 +439,12 @@ CREATE TABLE annual_passes (
 
 **実装タイミング**: Phase 4（Phase 3 残課題が完了してから検討）
 
+**実装状況（2026-08-05）**: v1実装済み（Migration 014 `annual_passes`）。
+施設ページの「年パスを持っている方はこちら」から登録（有効期限・対象者）。
+`/mypage/passes` に一覧（期限順・30日以内/期限切れを強調）、マイページに
+期限通知セクション。将来拡張（購入日・金額・Push/メール通知・家族共有）は未着手。
+**Supabase手動作業**: SQL Editor で `014_annual_passes.sql` の実行が必要。
+
 ---
 
 ### 写真登録機能
