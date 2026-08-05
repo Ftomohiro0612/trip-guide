@@ -4,6 +4,7 @@ import FilterSidebar from "@/components/FilterSidebar";
 import MobileFilterBar from "@/components/MobileFilterBar";
 import SortSelect from "@/components/SortSelect";
 import ActiveFilterChips from "@/components/ActiveFilterChips";
+import ChildAgeQuickFilter from "@/components/ChildAgeQuickFilter";
 import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
@@ -129,6 +130,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             categories={visibleCategories}
             resultCount={results.length}
           />
+          <ChildAgeQuickFilter />
           <ActiveFilterChips
             prefectures={visiblePrefectures}
             categories={visibleCategories}
