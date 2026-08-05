@@ -40,12 +40,52 @@ Apply this section only when the entire user message is exactly `セッション
 
 ### `セッション終了`
 
-1. Do not start a new investigation, implementation, or verification solely for closing.
-2. If no write base was recorded, read the fixed file once and record its `updated_at`, `session`, and SHA-256. Immediately before writing, reread the same fixed file and compare all three values.
-3. If any value differs, do not create an archive or modify the fixed file. Report the stale-write conflict and end.
-4. If there is no conflict, save the complete pre-close fixed file as a new non-overwriting file under the same scope's `archive/`, following the existing filename convention.
-5. Replace the fixed file with only the latest concrete position needed to resume: active Mission ID/state, current authorization envelope, exact Product/Memory heads when verified, current stop state/trigger, unresolved Owner decision, next action, and prohibited boundaries. Do not retain obsolete history or stale C3-era instructions as current state.
-6. Briefly report the archive path, replacement result, stale-write result, Mission state, and next trigger/action, then end without additional work.
+The close outcome must be reported using exactly one of these three
+machine-checkable labels, emitted only when its own conditions are verified —
+never assert `CLOSE_OK` as a default or from a partially-completed sequence.
+
+- `Close: CLOSE_OK` — every check below passed.
+- `Close: CLOSE_NO_CHANGE` — the resume point has no change and the update was
+  correctly skipped.
+- `Close: CLOSE_BLOCKED — <reason>` — any check failed (stale-write, missing
+  write base, archive failure, replace failure, read-back mismatch). Never
+  phrase a blocked close as a success.
+
+Steps:
+
+1. Do not perform additional investigation, implementation, or verification.
+2. If no write base was recorded earlier this session, read the fixed file
+   once now and record its `updated_at`, `session`, and SHA-256 as the write
+   base.
+3. Compare the new frontmatter + `# Current State` this session would write
+   against what the fixed file currently holds. If there is no difference,
+   skip archiving and replacing entirely — emit `Close: CLOSE_NO_CHANGE` and
+   end.
+4. If there is a change to persist but no write base exists (e.g. resumed
+   mid-session with step 2 never reached), do not archive or modify the fixed
+   file — emit `Close: CLOSE_BLOCKED — missing write base` and end.
+5. Immediately before writing, reread the same fixed file and compare
+   `updated_at`, `session`, and SHA-256 against the write base. If any value
+   differs, do not create an archive or modify the fixed file — emit
+   `Close: CLOSE_BLOCKED — stale-write: <field> changed>` and end.
+6. Save the complete pre-close fixed file as a new, non-overwriting file
+   under the same scope's `archive/`, following the existing filename
+   convention. If this write fails for any reason, do not modify the fixed
+   file — emit `Close: CLOSE_BLOCKED — archive failed: <reason>` and end.
+7. Replace the whole fixed file with only the latest position confirmed in
+   this session. Keep frontmatter and one `# Current State` containing only
+   what is needed to restore the current position, fixed decisions, HOLD,
+   out-of-scope boundaries, stop point, and next major direction. Do not
+   append or retain past history. If this write fails, emit
+   `Close: CLOSE_BLOCKED — replace failed: <reason>` and end — the archive
+   from step 6 is already saved and is not rolled back.
+8. Immediately after replacing, read the fixed file back and confirm it
+   matches exactly what was written. If it does not, emit
+   `Close: CLOSE_BLOCKED — read-back mismatch: <detail>` and end without a
+   second automatic write attempt.
+9. Only once steps 2/4, 5, 6, 7, and 8 have all completed as specified above,
+   emit `Close: CLOSE_OK` and briefly report the archive path, then end
+   without additional work.
 
 Do not create a dedicated workspace, agmsg destination, Monitor, binding, Owner Pack, ZIP, or additional infrastructure for these shorthands unless it can change an Owner decision and is separately justified.
 
