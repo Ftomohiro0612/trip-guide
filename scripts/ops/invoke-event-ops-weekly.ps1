@@ -153,11 +153,16 @@ function Write-StateObject {
   param([string]$Path, [object]$State)
   $State.updated_at = Get-UtcNow
   $json = $State | ConvertTo-Json -Depth 30
+  $expectedBytes = [Text.UTF8Encoding]::new($false).GetBytes($json + [Environment]::NewLine)
   $temporary = "$Path.tmp-$PID"
-  [IO.File]::WriteAllText($temporary, ($json + [Environment]::NewLine), [Text.UTF8Encoding]::new($false))
+  [IO.File]::WriteAllBytes($temporary, $expectedBytes)
   Move-Item -LiteralPath $temporary -Destination $Path -Force
-  $readBack = Get-StateObject -Path $Path
-  if ($readBack.updated_at -cne $State.updated_at) {
+  $null = Get-StateObject -Path $Path
+  $readBackBytes = [IO.File]::ReadAllBytes($Path)
+  if (
+    $readBackBytes.Length -ne $expectedBytes.Length -or
+    [Convert]::ToBase64String($readBackBytes) -cne [Convert]::ToBase64String($expectedBytes)
+  ) {
     throw "Durable state read-back verification failed."
   }
 }
