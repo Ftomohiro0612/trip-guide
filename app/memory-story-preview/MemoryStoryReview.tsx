@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import MemoryStories, {
   type MemoryStory,
 } from "@/app/mypage/memories/MemoryStories";
@@ -44,8 +45,10 @@ function PhotoComposition({
 
 export default function MemoryStoryReview({
   stories,
+  signupCtaHref,
 }: {
   stories: MemoryStory[];
+  signupCtaHref?: string;
 }) {
   const photoUrlsRef = useRef<string[]>([]);
   const [step, setStep] = useState<"record" | "complete" | "feed">("record");
@@ -80,11 +83,23 @@ export default function MemoryStoryReview({
 
   if (step === "feed") {
     return (
-      <MemoryStories
-        stories={[memory, ...stories.slice(1)]}
-        focusId={memory.id}
-        standalone
-      />
+      <>
+        <MemoryStories
+          stories={[memory, ...stories.slice(1)]}
+          focusId={memory.id}
+          standalone
+        />
+        {signupCtaHref && (
+          <div className="pointer-events-none fixed inset-x-0 bottom-4 z-[70] flex justify-center px-4">
+            <Link
+              href={signupCtaHref}
+              className="pointer-events-auto rounded-full bg-amber-400 px-6 py-3 text-sm font-black text-slate-950 shadow-2xl transition-transform active:scale-[0.98]"
+            >
+              無料登録して、本物の記録をはじめる →
+            </Link>
+          </div>
+        )}
+      </>
     );
   }
 
@@ -135,6 +150,14 @@ export default function MemoryStoryReview({
           >
             できた思い出を見る
           </button>
+          {signupCtaHref && (
+            <Link
+              href={signupCtaHref}
+              className="w-full rounded-full bg-amber-400 px-5 py-3.5 text-center text-sm font-black text-slate-950 shadow-lg transition-transform active:scale-[0.98]"
+            >
+              無料登録して、本物の記録をはじめる →
+            </Link>
+          )}
         </div>
       </main>
     );
@@ -157,6 +180,11 @@ export default function MemoryStoryReview({
           <p className="mt-2 text-sm text-slate-500">
             写真とひとことだけで、家族の1枚になります。
           </p>
+          {signupCtaHref && (
+            <p className="mt-2 inline-block rounded-full bg-amber-100 px-3 py-1 text-xs font-bold text-amber-700">
+              お試し体験です（登録不要・写真は保存されません）
+            </p>
+          )}
         </div>
 
         <div>

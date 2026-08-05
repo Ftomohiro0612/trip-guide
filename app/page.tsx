@@ -483,12 +483,20 @@ export default function HomePage() {
               <p className="mt-2 text-xs font-medium text-white/85">
                 登録なしで、無料で遊び場を探せます。
               </p>
-              <Link
-                href="/auth/register"
-                className="mt-3 text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50 lg:self-start"
-              >
-                家族の記録をはじめる（無料）→
-              </Link>
+              <div className="mt-3 flex flex-col items-center gap-2 lg:items-start">
+                <Link
+                  href="/auth/register"
+                  className="text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50"
+                >
+                  家族の記録をはじめる（無料）→
+                </Link>
+                <Link
+                  href="/try"
+                  className="text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50"
+                >
+                  登録なしで30秒お試し：思い出カードを作ってみる →
+                </Link>
+              </div>
             </div>
 
             <div className="flex justify-center lg:justify-end">

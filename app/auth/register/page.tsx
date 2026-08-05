@@ -86,10 +86,38 @@ export default function RegisterPage() {
   return (
     <div className="min-h-[80vh] flex items-center justify-center px-4 py-12">
       <div className="w-full max-w-sm">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6">
           <div className="text-4xl mb-3">✨</div>
           <h1 className="text-2xl font-bold text-slate-900">新規登録</h1>
           <p className="text-slate-500 text-sm mt-1">メモリップ — おでかけ記録サービス</p>
+        </div>
+
+        <div className="mb-6 rounded-xl border border-sky-100 bg-sky-50/60 p-4">
+          <p className="text-xs font-bold text-sky-700 mb-2.5">無料登録するとできること</p>
+          <ul className="space-y-2 text-sm text-slate-700">
+            <li className="flex items-start gap-2">
+              <span aria-hidden>📍</span>
+              <span>行った場所が地図にたまる「家族のおでかけマップ」</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span aria-hidden>📷</span>
+              <span>スマホの写真から、過去のおでかけもまとめて記録</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span aria-hidden>👧</span>
+              <span>記録に「当時◯歳」が自動でつく成長の振り返り</span>
+            </li>
+            <li className="flex items-start gap-2">
+              <span aria-hidden>⭐</span>
+              <span>行きたい施設を保存して、週末の計画に</span>
+            </li>
+          </ul>
+          <Link
+            href="/try"
+            className="mt-3 inline-block text-xs font-bold text-sky-600 hover:underline"
+          >
+            登録前に30秒お試し体験する →
+          </Link>
         </div>
 
         {error && (

@@ -657,6 +657,23 @@ export default async function MypagePage() {
         </Link>
       </section>
 
+      {familyStats.totalVisitCount > 0 && familyStats.totalVisitCount < 3 && (
+        <div data-mypage-section="backfill-nudge" className="rounded-xl bg-gradient-to-br from-amber-50 via-white to-sky-50 p-4 ring-1 ring-amber-100 lg:col-span-2 lg:order-3">
+          <p className="text-sm font-semibold text-slate-900">
+            過去のおでかけも、写真からまとめて入れられます
+          </p>
+          <p className="mt-1 text-xs leading-relaxed text-slate-600">
+            記録が増えるほど、おでかけマップと子どもの「好き」の記録が育ちます。去年の思い出も写真を選ぶだけで追加できます。
+          </p>
+          <Link
+            href="/mypage/visits/from-photo"
+            className="mt-3 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+          >
+            📷 写真から過去の記録を追加 →
+          </Link>
+        </div>
+      )}
+
       {!hasChildren && (
         <div data-mypage-section="child-profile-prompt" className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-4">
           <p className="text-sm font-semibold text-sky-900">子どもプロフィールを登録すると便利です</p>
