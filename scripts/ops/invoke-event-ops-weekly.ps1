@@ -60,8 +60,14 @@ function Invoke-Git {
     [Parameter(Mandatory = $true)][string[]]$GitArguments,
     [switch]$AllowFailure
   )
-  $output = @(& git -C $Repository @GitArguments 2>&1)
-  $exitCode = $LASTEXITCODE
+  $previousPreference = $ErrorActionPreference
+  try {
+    $ErrorActionPreference = "Continue"
+    $output = @(& git -C $Repository @GitArguments 2>&1)
+    $exitCode = $LASTEXITCODE
+  } finally {
+    $ErrorActionPreference = $previousPreference
+  }
   if ($exitCode -ne 0 -and -not $AllowFailure) {
     throw "git $($GitArguments -join ' ') failed in '$Repository' (exit $exitCode):`n$($output -join "`n")"
   }
