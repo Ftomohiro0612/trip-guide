@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useParams, useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import ChildAvatar from "@/components/ChildAvatar";
+import { childAgeAtVisit } from "@/lib/child-age";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import {
@@ -640,8 +641,6 @@ export default function EditVisitPage() {
       return;
     }
 
-    const visitedDate = visitedOn ? new Date(`${visitedOn}T00:00:00`) : null;
-    const visitedYear = visitedDate ? visitedDate.getFullYear() : null;
     const selectedChildIdSet = new Set(selectedChildIds);
     const nextExistingVisitChildren = { ...existingVisitChildren };
     const nextExistingChildTags = { ...existingChildTags };
@@ -702,8 +701,13 @@ export default function EditVisitPage() {
             behaviorOtherSelected,
           ),
         };
-        if (visitedYear !== null) {
-          updateVisitChildPayload.child_age_at_visit = visitedYear - child.birth_year;
+        const ageAtVisit = childAgeAtVisit(
+          visitedOn,
+          child.birth_year,
+          child.birth_month,
+        );
+        if (ageAtVisit !== null) {
+          updateVisitChildPayload.child_age_at_visit = ageAtVisit;
         }
         const { error: childUpdateError } = await supabase
           .from("visit_children")
@@ -725,8 +729,11 @@ export default function EditVisitPage() {
             visit_id: visitId,
             child_id: child.id,
             satisfaction,
-            child_age_at_visit:
-              visitedYear === null ? null : visitedYear - child.birth_year,
+            child_age_at_visit: childAgeAtVisit(
+              visitedOn,
+              child.birth_year,
+              child.birth_month,
+            ),
             interest_other_note: normalizeOtherNote(
               childOtherNotes[child.id]?.interest ?? "",
               Boolean(interestOtherSelected[child.id]),
@@ -1092,7 +1099,11 @@ export default function EditVisitPage() {
                                 updateOtherNote(child.id, kind, event.target.value)
                               }
                               maxLength={otherNoteMaxLength}
-                              placeholder="自由に書けます（任意）"
+                              placeholder={
+                                kind === "interest"
+                                  ? "例: 迷路にハマっていた、シャボン玉ばかりしていた"
+                                  : "例: 帰りたがらなかった、お友達に譲れた"
+                              }
                               className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
                             />
                           )}

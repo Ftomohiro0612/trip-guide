@@ -1,4 +1,5 @@
 import ChildAvatar from "@/components/ChildAvatar";
+import { childAgeAtVisitInMonths } from "@/lib/child-age";
 import { satisfactionLabels } from "@/lib/visit-labels";
 
 type ChildProfile = {
@@ -70,17 +71,17 @@ function ageAtVisit(
   child: ChildProfile,
   childAgeAtVisit: number | null,
 ): string {
-  if (visitedOn && child.birth_month >= 1 && child.birth_month <= 12) {
-    const [year, month] = visitedOn.split("-").map(Number);
-    if (year && month) {
-      let months = (year - child.birth_year) * 12 + (month - child.birth_month);
-      if (months < 0) months = 0;
-      const ageYears = Math.floor(months / 12);
-      const ageMonths = months % 12;
-      if (ageYears === 0) return `${ageMonths}か月`;
-      if (ageMonths === 0) return `${ageYears}歳`;
-      return `${ageYears}歳${ageMonths}か月`;
-    }
+  const months = childAgeAtVisitInMonths(
+    visitedOn,
+    child.birth_year,
+    child.birth_month,
+  );
+  if (months !== null) {
+    const ageYears = Math.floor(months / 12);
+    const ageMonths = months % 12;
+    if (ageYears === 0) return `${ageMonths}か月`;
+    if (ageMonths === 0) return `${ageYears}歳`;
+    return `${ageYears}歳${ageMonths}か月`;
   }
 
   if (typeof childAgeAtVisit === "number") {

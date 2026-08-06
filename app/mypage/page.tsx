@@ -25,6 +25,12 @@ import {
   type ChildLikeRankingEntry,
   type RankedChildLikeCategory,
 } from "@/lib/child-likes";
+import {
+  buildFrequentInterestTagsByChild,
+  filterChildLikeVisits,
+  type ChildInsightVisit,
+  type FrequentInterestTag,
+} from "@/lib/child-insights";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
 import {
@@ -60,11 +66,6 @@ type VisitStat = {
   parent_fatigue: string | null;
 };
 
-type ChildVisit = {
-  child_id: string;
-  visit_id: string;
-};
-
 type ChildCategorySummary = {
   child: Child;
   anchorId: string;
@@ -73,6 +74,7 @@ type ChildCategorySummary = {
   meaningful: boolean;
   categories: ChildLikeCategory[];
   ranking: ChildLikeRankingEntry[];
+  frequentInterests: FrequentInterestTag[];
 };
 
 type AchievementStats = {
@@ -126,11 +128,13 @@ function isVisitStat(value: unknown): value is VisitStat {
   );
 }
 
-function isChildVisit(value: unknown): value is ChildVisit {
+function isChildVisit(value: unknown): value is ChildInsightVisit {
   return (
     isRecord(value) &&
     typeof value.child_id === "string" &&
-    typeof value.visit_id === "string"
+    typeof value.visit_id === "string" &&
+    (typeof value.satisfaction === "string" || value.satisfaction === null) &&
+    (Array.isArray(value.visit_child_tags) || value.visit_child_tags === null)
   );
 }
 
@@ -177,14 +181,15 @@ function calcAge(birthYear: number, birthMonth: number): number {
 function buildChildCategorySummaries(
   children: Child[],
   visits: VisitStat[],
-  childVisits: ChildVisit[],
+  childVisits: ChildInsightVisit[],
 ): ChildCategorySummary[] {
+  const eligibleChildVisits = filterChildLikeVisits(childVisits);
   const childIds = new Set(children.map((child) => child.id));
   const visitSlugById = new Map(visits.map((visit) => [visit.id, visit.facility_slug]));
   const categoryCountsByChild = new Map<string, Map<string, number>>();
   const distinctVisitIdsByChild = new Map<string, Set<string>>();
 
-  for (const childVisit of childVisits) {
+  for (const childVisit of eligibleChildVisits) {
     if (!childIds.has(childVisit.child_id)) continue;
     const facilitySlug = visitSlugById.get(childVisit.visit_id);
     if (!facilitySlug) continue;
@@ -201,11 +206,12 @@ function buildChildCategorySummaries(
   }
 
   const statsByChild = new Map(
-    buildChildStats(children.map((child) => child.id), childVisits).map((stats) => [
-      stats.childId,
-      stats,
-    ]),
+    buildChildStats(children.map((child) => child.id), eligibleChildVisits).map(
+      (stats) => [stats.childId, stats],
+    ),
   );
+  const frequentInterestsByChild =
+    buildFrequentInterestTagsByChild(eligibleChildVisits);
 
   return children.map((child, index) => {
     const counts = categoryCountsByChild.get(child.id) ?? new Map<string, number>();
@@ -226,8 +232,38 @@ function buildChildCategorySummaries(
       meaningful: hasMeaningfulChildLikes(categories),
       categories: displayCategories,
       ranking: buildChildLikeRanking(categories),
+      frequentInterests: frequentInterestsByChild.get(child.id) ?? [],
     };
   });
+}
+
+function FrequentInterests({
+  childNickname,
+  interests,
+}: {
+  childNickname: string;
+  interests: FrequentInterestTag[];
+}) {
+  if (interests.length === 0) return null;
+
+  return (
+    <div
+      className="space-y-2 border-t border-slate-100 pt-3"
+      aria-label={`${childNickname}がよく楽しんだこと`}
+    >
+      <p className="text-xs font-bold text-slate-600">よく楽しんだこと</p>
+      <ul className="flex flex-wrap gap-2">
+        {interests.map((interest) => (
+          <li
+            key={interest.id}
+            className="rounded-full bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-800 ring-1 ring-sky-100"
+          >
+            {interest.label} <span className="font-bold">{interest.count}回</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 }
 
 function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
@@ -262,13 +298,17 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
 
   if (!summary.meaningful) {
     return (
-      <div className="space-y-1">
+      <div className="space-y-3">
         <p className="text-sm font-medium text-slate-700">
           {summary.child.nickname}の記録が{summary.visitCount}件たまりました
         </p>
         <p className="text-xs leading-relaxed text-slate-500">
           カテゴリの分かる施設から記録すると、「好き」が少しずつ見えてきます
         </p>
+        <FrequentInterests
+          childNickname={summary.child.nickname}
+          interests={summary.frequentInterests}
+        />
       </div>
     );
   }
@@ -305,6 +345,10 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
             />
           ))}
         </div>
+        <FrequentInterests
+          childNickname={summary.child.nickname}
+          interests={summary.frequentInterests}
+        />
         {summary.visitCount >= 4 && (
           <p className="text-sm font-medium text-brand">
             あと{10 - summary.visitCount}件で「好き」ランキング
@@ -363,6 +407,10 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
           </span>
         </div>
       )}
+      <FrequentInterests
+        childNickname={summary.child.nickname}
+        interests={summary.frequentInterests}
+      />
     </div>
   );
 }
@@ -533,7 +581,9 @@ export default async function MypagePage() {
     visitIds.length > 0
       ? await supabase
           .from("visit_children")
-          .select("child_id, visit_id")
+          .select(
+            "child_id, visit_id, satisfaction, visit_child_tags(tag_id, reaction_tags(id, label, tag_type, sort_order))",
+          )
           .in("visit_id", visitIds)
       : { data: [] };
   const childVisits = (childVisitStats ?? []).filter(isChildVisit);
@@ -827,7 +877,7 @@ export default async function MypagePage() {
             <div>
               <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
               <p className="mt-1 text-xs leading-relaxed text-slate-400">
-                お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。家族のあしあと帳とは数え方が違うため件数が一致しないことがあります。
+                お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。家族のあしあと帳とは数え方が違うため件数が一致しないことがあります。「合わなかった」と記録したおでかけは数えていません。
               </p>
             </div>
             <div className="space-y-5 rounded-xl border border-slate-200 bg-white p-4">
