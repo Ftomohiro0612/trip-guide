@@ -34,7 +34,16 @@ Codexブランチ→PR→merge フロー）は無変更で継続できる。Sche
 original_review_session: UNAVAILABLE_HTTP_403
 durable_implemented_outputs: f41d4d1, bd96d05, 93cf73c
 unrecorded_proposals: NOT_ACTIONABLE
+pr12_merge_commit: 61948157b58222158d65140ecf17f3d601cbe07f
+pr12_production_deploy_state: success
+pr12_production_deploy_confirmed_at: 2026-08-06T12:09:01Z
 ```
+
+PR #12のマージ後HEAD `6194815` に対するProductionデプロイが
+`success`（Vercel, GitHub Deployments API確認, 2026-08-06T12:09:01Z）に
+なったことを確認した時点で、独立受入Missionを正式にCLOSEDとする。
+マージ前HEAD `e8eec3a` のGREENはこのPRの最終Production closure証拠には
+ならないため、参照しない。
 
 - `original_review_session`: コミットに記録された `Claude-Session` URLはこの
   環境の認証コンテキストでは取得不能(WebFetch→HTTP 403)。Owner 2026-08-06
