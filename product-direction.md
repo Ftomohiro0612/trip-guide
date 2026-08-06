@@ -443,7 +443,14 @@ CREATE TABLE annual_passes (
 施設ページの「年パスを持っている方はこちら」から登録（有効期限・対象者）。
 `/mypage/passes` に一覧（期限順・30日以内/期限切れを強調）、マイページに
 期限通知セクション。将来拡張（購入日・金額・Push/メール通知・家族共有）は未着手。
-**Supabase手動作業**: SQL Editor で `014_annual_passes.sql` の実行が必要。
+
+**Supabase適用状況（2026-08-06 PM独立受入で訂正）**: `014_annual_passes.sql` は
+Production Supabase に適用済み。PostgREST OpenAPIスキーマで `annual_passes` の
+カラム構成がmigrationファイルと完全一致することを確認済み（schema_match=PASS）。
+実行者・実行日時はSupabase側の実行履歴へread-onlyでアクセスする手段がこの環境に
+なく特定不能（execution_actor=UNKNOWN）。再実行は不要（rerun_required=NO、
+CREATE TABLE のためスキーマが既に存在する状態での再実行はエラーになる）。
+旧記載「SQL Editor で実行が必要」は誤り（適用済みを未適用と誤認させるため削除）。
 
 ---
 
