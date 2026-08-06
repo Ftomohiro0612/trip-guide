@@ -26,6 +26,28 @@ protection を適用（`required_pull_request_reviews.required_approving_review_
 Codexブランチ→PR→merge フロー）は無変更で継続できる。Scheduled Task自体
 （cron設定・実行スクリプト）には一切変更を加えていない。
 
+### 独立受入 CLOSED（2026-08-06）
+
+上記3件のFable変更に対するPM独立受入Missionは完結した(blocking 0)。
+
+```
+original_review_session: UNAVAILABLE_HTTP_403
+durable_implemented_outputs: f41d4d1, bd96d05, 93cf73c
+unrecorded_proposals: NOT_ACTIONABLE
+```
+
+- `original_review_session`: コミットに記録された `Claude-Session` URLはこの
+  環境の認証コンテキストでは取得不能(WebFetch→HTTP 403)。Owner 2026-08-06
+  判断により、これはCLOSE阻害要因から除外する。永続的に確認可能なFable由来
+  成果物はコミット化された上記3件のみであり、対象scopeはこの3件で完結する。
+  コミット化されなかった(=このセッションでしか存在しない)提案は、Active
+  backlogや未処理義務として扱わない。
+- 検証済み: Migration 014 provenance(schema_match=PASS、
+  execution_actor=UNKNOWN、rerun_required=NO）／認証済みProduction E2E
+  22項目GREEN（合成テストアカウント2件、テストデータ完全削除確認済み）／
+  90日実験のFable変更セグメント化(母集団をexternalAccountIds ∩ 実験期間内
+  created_atへ限定、主比較は段階投入期間を除外)。
+
 ---
 
 ## 1. 現状の課題

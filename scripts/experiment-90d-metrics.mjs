@@ -189,13 +189,27 @@ function percentage(numerator, denominator) {
 // funneled through at signup time (account created_at), not by when each
 // individual visit happened afterward — the thing under test is the
 // onboarding funnel itself.
+//
+// 2026-08-06 Owner correction: the segment population must be restricted to
+// accounts created inside the experiment window itself. Without this, a
+// non-baseline account that simply predates the experiment (dormant, never
+// part of the pre-GO baseline household, never test-flagged) would fall
+// into before_fable_changes purely because its created_at is early — it was
+// never actually part of this experiment's before/after comparison.
+const experimentEnd = new Date(EXPERIMENT_ENDS_AT);
+const externalAccountsInExperimentWindow = users.filter(
+  (user) =>
+    externalAccountIds.has(user.id) &&
+    new Date(user.created_at) >= experimentStart &&
+    new Date(user.created_at) < experimentEnd,
+);
+
 const externalAccountIdsBySegment = {
   before_fable_changes: new Set(),
   fable_staged_rollout_excluded_from_primary_comparison: new Set(),
   after_fable_changes_fully_live: new Set(),
 };
-for (const user of users) {
-  if (!externalAccountIds.has(user.id)) continue;
+for (const user of externalAccountsInExperimentWindow) {
   externalAccountIdsBySegment[fableChangeSegmentFor(user.created_at)].add(
     user.id,
   );
@@ -273,10 +287,17 @@ const segmentMetrics = {
 
 const fableChangeSegments = {
   note:
-    "2026-08-06 Owner instruction: primary_comparison contrasts before_fable_changes vs after_fable_changes_fully_live only. fable_staged_rollout is reported for completeness but excluded from the primary comparison — it mixes pre/post UX for accounts created mid-deploy.",
+    "2026-08-06 Owner instruction: primary_comparison contrasts before_fable_changes vs after_fable_changes_fully_live only. fable_staged_rollout is reported for completeness but excluded from the primary comparison — it mixes pre/post UX for accounts created mid-deploy. Population is restricted to externalAccountIds created inside [EXPERIMENT_STARTED_AT, EXPERIMENT_ENDS_AT) — pre-existing dormant non-baseline accounts are excluded from all three segments' denominators.",
   boundaries: {
     staged_rollout_started_at: FABLE_CHANGES_STAGED_ROLLOUT_STARTED_AT,
     fully_live_at: FABLE_CHANGES_FULLY_LIVE_AT,
+  },
+  population: {
+    external_accounts_total: externalAccountIds.size,
+    external_accounts_in_experiment_window:
+      externalAccountsInExperimentWindow.length,
+    external_accounts_excluded_outside_window:
+      externalAccountIds.size - externalAccountsInExperimentWindow.length,
   },
   segments: segmentMetrics,
   primary_comparison: {
