@@ -4,6 +4,30 @@
 
 ---
 
+## 0. 運用例外記録（Process Exceptions）
+
+### 2026-08-05: PRなしmain直接push（3件）
+
+`f41d4d1`（登録/オンボーディング再設計）・`bd96d05`（年齢クイックフィルター）・
+`93cf73c`（年パス管理v1）の3件は、いずれも `Co-Authored-By: Claude Fable 5` の
+セッションから `origin/main` へPRを経由せず直接pushされた。この時点で
+`main` に他のブランチ保護設定はなく、直接pushが技術的に可能だった。
+
+**Owner 2026-08-06 判断**: この3件についてrollback・事後PR化は行わない
+（本番稼働継続を優先）。2026-08-06 PM独立受入Missionで事後検証を実施
+（read-only Production/Supabase確認 + 合成テストアカウント2件による認証済み
+E2E + 90日実験へのセグメント化対応）。
+
+**再発防止（control-plane、最小構成）**: 2026-08-06、`main` に GitHub branch
+protection を適用（`required_pull_request_reviews.required_approving_review_count: 0`,
+`enforce_admins: true`, `allow_force_pushes: false`）。PRを経由しない直接push
+を技術的に禁止する一方、承認必須化はしていないため、既存のPRベース運用
+（通常のfeature branch→PR→merge、MEM-EVT-OPS/MEM-FAC-OPS Scheduled Taskの
+Codexブランチ→PR→merge フロー）は無変更で継続できる。Scheduled Task自体
+（cron設定・実行スクリプト）には一切変更を加えていない。
+
+---
+
 ## 1. 現状の課題
 
 ### 現在のサイト構成
