@@ -4,6 +4,52 @@
 
 ---
 
+## 0. 運用例外記録（Process Exceptions）
+
+### 2026-08-05: PRなしmain直接push（3件）
+
+`f41d4d1`（登録/オンボーディング再設計）・`bd96d05`（年齢クイックフィルター）・
+`93cf73c`（年パス管理v1）の3件は、いずれも `Co-Authored-By: Claude Fable 5` の
+セッションから `origin/main` へPRを経由せず直接pushされた。この時点で
+`main` に他のブランチ保護設定はなく、直接pushが技術的に可能だった。
+
+**Owner 2026-08-06 判断**: この3件についてrollback・事後PR化は行わない
+（本番稼働継続を優先）。2026-08-06 PM独立受入Missionで事後検証を実施
+（read-only Production/Supabase確認 + 合成テストアカウント2件による認証済み
+E2E + 90日実験へのセグメント化対応）。
+
+**再発防止（control-plane、最小構成）**: 2026-08-06、`main` に GitHub branch
+protection を適用（`required_pull_request_reviews.required_approving_review_count: 0`,
+`enforce_admins: true`, `allow_force_pushes: false`）。PRを経由しない直接push
+を技術的に禁止する一方、承認必須化はしていないため、既存のPRベース運用
+（通常のfeature branch→PR→merge、MEM-EVT-OPS/MEM-FAC-OPS Scheduled Taskの
+Codexブランチ→PR→merge フロー）は無変更で継続できる。Scheduled Task自体
+（cron設定・実行スクリプト）には一切変更を加えていない。
+
+### 独立受入 CLOSED（2026-08-06）
+
+上記3件のFable変更に対するPM独立受入Missionは完結した(blocking 0)。
+
+```
+original_review_session: UNAVAILABLE_HTTP_403
+durable_implemented_outputs: f41d4d1, bd96d05, 93cf73c
+unrecorded_proposals: NOT_ACTIONABLE
+```
+
+- `original_review_session`: コミットに記録された `Claude-Session` URLはこの
+  環境の認証コンテキストでは取得不能(WebFetch→HTTP 403)。Owner 2026-08-06
+  判断により、これはCLOSE阻害要因から除外する。永続的に確認可能なFable由来
+  成果物はコミット化された上記3件のみであり、対象scopeはこの3件で完結する。
+  コミット化されなかった(=このセッションでしか存在しない)提案は、Active
+  backlogや未処理義務として扱わない。
+- 検証済み: Migration 014 provenance(schema_match=PASS、
+  execution_actor=UNKNOWN、rerun_required=NO）／認証済みProduction E2E
+  22項目GREEN（合成テストアカウント2件、テストデータ完全削除確認済み）／
+  90日実験のFable変更セグメント化(母集団をexternalAccountIds ∩ 実験期間内
+  created_atへ限定、主比較は段階投入期間を除外)。
+
+---
+
 ## 1. 現状の課題
 
 ### 現在のサイト構成
@@ -443,7 +489,14 @@ CREATE TABLE annual_passes (
 施設ページの「年パスを持っている方はこちら」から登録（有効期限・対象者）。
 `/mypage/passes` に一覧（期限順・30日以内/期限切れを強調）、マイページに
 期限通知セクション。将来拡張（購入日・金額・Push/メール通知・家族共有）は未着手。
-**Supabase手動作業**: SQL Editor で `014_annual_passes.sql` の実行が必要。
+
+**Supabase適用状況（2026-08-06 PM独立受入で訂正）**: `014_annual_passes.sql` は
+Production Supabase に適用済み。PostgREST OpenAPIスキーマで `annual_passes` の
+カラム構成がmigrationファイルと完全一致することを確認済み（schema_match=PASS）。
+実行者・実行日時はSupabase側の実行履歴へread-onlyでアクセスする手段がこの環境に
+なく特定不能（execution_actor=UNKNOWN）。再実行は不要（rerun_required=NO、
+CREATE TABLE のためスキーマが既に存在する状態での再実行はエラーになる）。
+旧記載「SQL Editor で実行が必要」は誤り（適用済みを未適用と誤認させるため削除）。
 
 ---
 
