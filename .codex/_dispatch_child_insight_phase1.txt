@@ -1,0 +1,19 @@
+[model: gpt-5.6-sol] [effort: high]
+
+# 発注: 子ども別インサイト Phase 1（child-insight-phase1）
+
+正本仕様書（必読。この worktree 内に commit 済み・相対パスで読めます）:
+.codex/child-insight-phase1-spec.md
+
+## 作業条件
+- origin/main `ea9aae0` 起点の git worktree を作成し、ブランチ `codex/child-insight-phase1-l2-20260807` で作業する。
+- スコープは仕様書 §2 の5点（A: 好き集計のnot_fit除外 / B: 訪問時年齢の月対応 / C: よく楽しんだこと併記 / D: Migration 015タグ8行追加 / E: その他プレースホルダー）。§3 の非スコープに触れない。
+- 実装方式（関数分割・クエリ構成・表示時再計算かfallbackか等)は貴殿の裁量。仕様書の受入条件 §6（AC-1〜7）を満たすこと。
+- Migration 015 はファイル作成のみ。DBへの適用は行わない（Owner手動適用ゲート）。コードはmigration未適用でも正常動作すること。
+- push しない。lint / build / fixture検証まで完了したら、仕様書 §7 の成果物（検証レポート・diff・スクショ）を添えて完了報告し停止。push可否はOwner Review Pack（ZIP）レビュー後にPM/Ownerが判定する。
+
+## 完了報告に含めること
+- AC-1〜AC-7 それぞれの充足根拠（fixture・スクショ・行参照）
+- not_fit除外の前後で「子どもたちの好き」件数がどう変わるかの実例
+- 兄弟差が表示に出る実例（同一visit・異タグ）
+- 触らなかった境界（非スコープ）の確認
