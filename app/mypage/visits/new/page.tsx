@@ -8,6 +8,7 @@ import ChildRegistrationNudge from "@/components/ChildRegistrationNudge";
 import { childAgeAtVisit } from "@/lib/child-age";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
+import { encodeInterestOtherNote } from "@/lib/visit-other-note";
 import {
   storeVisitCompletion,
   takeVisitPresetChildren,
@@ -486,7 +487,7 @@ export default function NewVisitPage() {
           child.birth_year,
           child.birth_month,
         ),
-        interest_other_note: normalizeOtherNote(
+        interest_other_note: encodeInterestOtherNote(
           childOtherNotes[child.id]?.interest ?? "",
           Boolean(interestOtherSelected[child.id]),
         ),

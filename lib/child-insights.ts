@@ -27,23 +27,69 @@ export type FrequentInterestTag = {
   sortOrder: number;
 };
 
-export function isChildLikeEligibleVisit(
-  visit: Pick<ChildInsightVisit, "satisfaction">,
-): boolean {
-  return visit.satisfaction !== "not_fit";
-}
-
-export function filterChildLikeVisits<T extends Pick<ChildInsightVisit, "satisfaction">>(
-  visits: readonly T[],
-): T[] {
-  return visits.filter(isChildLikeEligibleVisit);
-}
+export type VisitCategoryCount = {
+  category: string;
+  count: number;
+};
 
 function reactionTagOf(
   relation: ChildInsightTagLink["reaction_tags"],
 ): ChildInsightReactionTag | null {
   if (Array.isArray(relation)) return relation[0] ?? null;
   return relation;
+}
+
+function hasInterestTag(
+  visit: Pick<ChildInsightVisit, "visit_child_tags">,
+): boolean {
+  return (visit.visit_child_tags ?? []).some(
+    (link) => reactionTagOf(link.reaction_tags)?.tag_type === "interest",
+  );
+}
+
+export function isChildLikeEligibleVisit(
+  visit: Pick<ChildInsightVisit, "satisfaction" | "visit_child_tags">,
+): boolean {
+  return (
+    (visit.satisfaction === "loved" || visit.satisfaction === "enjoyed") &&
+    hasInterestTag(visit)
+  );
+}
+
+export function filterChildLikeVisits<
+  T extends Pick<ChildInsightVisit, "satisfaction" | "visit_child_tags">,
+>(
+  visits: readonly T[],
+): T[] {
+  return visits.filter(isChildLikeEligibleVisit);
+}
+
+export function buildVisitCategoryCountsByChild(
+  visits: readonly Pick<ChildInsightVisit, "child_id" | "visit_id">[],
+  categoryByVisitId: ReadonlyMap<string, string>,
+): Map<string, VisitCategoryCount[]> {
+  const countsByChild = new Map<string, Map<string, number>>();
+  const seenChildVisits = new Set<string>();
+
+  for (const visit of visits) {
+    const category = categoryByVisitId.get(visit.visit_id);
+    if (!category) continue;
+
+    const childVisitKey = `${visit.child_id}\u0000${visit.visit_id}`;
+    if (seenChildVisits.has(childVisitKey)) continue;
+    seenChildVisits.add(childVisitKey);
+
+    const childCounts = countsByChild.get(visit.child_id) ?? new Map();
+    childCounts.set(category, (childCounts.get(category) ?? 0) + 1);
+    countsByChild.set(visit.child_id, childCounts);
+  }
+
+  return new Map(
+    Array.from(countsByChild.entries()).map(([childId, counts]) => [
+      childId,
+      Array.from(counts, ([category, count]) => ({ category, count })),
+    ]),
+  );
 }
 
 export function buildFrequentInterestTagsByChild(

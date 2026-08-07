@@ -8,6 +8,10 @@ import { childAgeAtVisit } from "@/lib/child-age";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import {
+  encodeInterestOtherNote,
+  isInterestOtherSelected,
+} from "@/lib/visit-other-note";
+import {
   readVisitEdit,
   storeVisitCompletion,
 } from "@/lib/visit-flow-session";
@@ -432,7 +436,7 @@ export default function EditVisitPage() {
             behavior: behaviorNote,
           };
         }
-        if (interestNote) {
+        if (isInterestOtherSelected(row.interest_other_note)) {
           nextInterestOtherSelected[row.child_id] = true;
         }
         if (behaviorNote && behaviorOtherTagId) {
@@ -692,7 +696,7 @@ export default function EditVisitPage() {
           behavior_other_note: string | null;
         } = {
           satisfaction,
-          interest_other_note: normalizeOtherNote(
+          interest_other_note: encodeInterestOtherNote(
             childOtherNotes[child.id]?.interest ?? "",
             Boolean(interestOtherSelected[child.id]),
           ),
@@ -734,7 +738,7 @@ export default function EditVisitPage() {
               child.birth_year,
               child.birth_month,
             ),
-            interest_other_note: normalizeOtherNote(
+            interest_other_note: encodeInterestOtherNote(
               childOtherNotes[child.id]?.interest ?? "",
               Boolean(interestOtherSelected[child.id]),
             ),

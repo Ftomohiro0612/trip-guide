@@ -1,5 +1,6 @@
 import ChildAvatar from "@/components/ChildAvatar";
 import { childAgeAtVisitInMonths } from "@/lib/child-age";
+import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import { satisfactionLabels } from "@/lib/visit-labels";
 
 type ChildProfile = {
@@ -125,6 +126,9 @@ export function VisitChildCard({
     .filter((tag): tag is { id: string; label: string; icon: string } =>
       Boolean(tag.label),
     );
+  const interestOtherSelected = isInterestOtherSelected(
+    row.interest_other_note,
+  );
   const otherNotes = [row.interest_other_note, row.behavior_other_note]
     .map((note) => note?.trim())
     .filter((note): note is string => Boolean(note));
@@ -158,8 +162,14 @@ export function VisitChildCard({
         )}
       </div>
 
-      {tags.length > 0 && (
+      {(tags.length > 0 || interestOtherSelected) && (
         <div className="flex flex-wrap gap-1.5">
+          {interestOtherSelected && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-100">
+              <span aria-hidden>✍️</span>
+              その他
+            </span>
+          )}
           {tags.map((tag) => (
             <span
               key={tag.id}
