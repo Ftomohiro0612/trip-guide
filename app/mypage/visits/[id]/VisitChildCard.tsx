@@ -1,4 +1,6 @@
 import ChildAvatar from "@/components/ChildAvatar";
+import { childAgeAtVisitInMonths } from "@/lib/child-age";
+import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import { satisfactionLabels } from "@/lib/visit-labels";
 
 type ChildProfile = {
@@ -70,17 +72,17 @@ function ageAtVisit(
   child: ChildProfile,
   childAgeAtVisit: number | null,
 ): string {
-  if (visitedOn && child.birth_month >= 1 && child.birth_month <= 12) {
-    const [year, month] = visitedOn.split("-").map(Number);
-    if (year && month) {
-      let months = (year - child.birth_year) * 12 + (month - child.birth_month);
-      if (months < 0) months = 0;
-      const ageYears = Math.floor(months / 12);
-      const ageMonths = months % 12;
-      if (ageYears === 0) return `${ageMonths}か月`;
-      if (ageMonths === 0) return `${ageYears}歳`;
-      return `${ageYears}歳${ageMonths}か月`;
-    }
+  const months = childAgeAtVisitInMonths(
+    visitedOn,
+    child.birth_year,
+    child.birth_month,
+  );
+  if (months !== null) {
+    const ageYears = Math.floor(months / 12);
+    const ageMonths = months % 12;
+    if (ageYears === 0) return `${ageMonths}か月`;
+    if (ageMonths === 0) return `${ageYears}歳`;
+    return `${ageYears}歳${ageMonths}か月`;
   }
 
   if (typeof childAgeAtVisit === "number") {
@@ -124,6 +126,9 @@ export function VisitChildCard({
     .filter((tag): tag is { id: string; label: string; icon: string } =>
       Boolean(tag.label),
     );
+  const interestOtherSelected = isInterestOtherSelected(
+    row.interest_other_note,
+  );
   const otherNotes = [row.interest_other_note, row.behavior_other_note]
     .map((note) => note?.trim())
     .filter((note): note is string => Boolean(note));
@@ -157,8 +162,14 @@ export function VisitChildCard({
         )}
       </div>
 
-      {tags.length > 0 && (
+      {(tags.length > 0 || interestOtherSelected) && (
         <div className="flex flex-wrap gap-1.5">
+          {interestOtherSelected && (
+            <span className="inline-flex items-center gap-1 rounded-full bg-sky-50 px-2.5 py-1 text-xs font-medium text-sky-700 ring-1 ring-sky-100">
+              <span aria-hidden>✍️</span>
+              その他
+            </span>
+          )}
           {tags.map((tag) => (
             <span
               key={tag.id}

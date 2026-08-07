@@ -15,16 +15,15 @@ import {
   formatPassDateJa,
   passStatus,
 } from "@/lib/annual-pass";
+import { normalizeChildLikeCategory } from "@/lib/child-likes";
 import {
-  buildChildLikeCategoryBreakdown,
-  buildChildLikeRanking,
-  compareChildLikeCategories,
-  hasMeaningfulChildLikes,
-  normalizeChildLikeCategory,
-  type ChildLikeCategory,
-  type ChildLikeRankingEntry,
-  type RankedChildLikeCategory,
-} from "@/lib/child-likes";
+  buildFrequentInterestTagsByChild,
+  buildVisitCategoryCountsByChild,
+  filterChildLikeVisits,
+  type ChildInsightVisit,
+  type FrequentInterestTag,
+  type VisitCategoryCount,
+} from "@/lib/child-insights";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
 import {
@@ -60,19 +59,13 @@ type VisitStat = {
   parent_fatigue: string | null;
 };
 
-type ChildVisit = {
-  child_id: string;
-  visit_id: string;
-};
-
-type ChildCategorySummary = {
+type ChildInsightSummary = {
   child: Child;
   anchorId: string;
   visitCount: number;
   stage: ChildStats["stage"];
-  meaningful: boolean;
-  categories: ChildLikeCategory[];
-  ranking: ChildLikeRankingEntry[];
+  visitCategories: VisitCategoryCount[];
+  frequentInterests: FrequentInterestTag[];
 };
 
 type AchievementStats = {
@@ -126,11 +119,13 @@ function isVisitStat(value: unknown): value is VisitStat {
   );
 }
 
-function isChildVisit(value: unknown): value is ChildVisit {
+function isChildVisit(value: unknown): value is ChildInsightVisit {
   return (
     isRecord(value) &&
     typeof value.child_id === "string" &&
-    typeof value.visit_id === "string"
+    typeof value.visit_id === "string" &&
+    (typeof value.satisfaction === "string" || value.satisfaction === null) &&
+    (Array.isArray(value.visit_child_tags) || value.visit_child_tags === null)
   );
 }
 
@@ -174,45 +169,32 @@ function calcAge(birthYear: number, birthMonth: number): number {
   return age;
 }
 
-function buildChildCategorySummaries(
+function buildChildInsightSummaries(
   children: Child[],
   visits: VisitStat[],
-  childVisits: ChildVisit[],
-): ChildCategorySummary[] {
-  const childIds = new Set(children.map((child) => child.id));
-  const visitSlugById = new Map(visits.map((visit) => [visit.id, visit.facility_slug]));
-  const categoryCountsByChild = new Map<string, Map<string, number>>();
-  const distinctVisitIdsByChild = new Map<string, Set<string>>();
-
-  for (const childVisit of childVisits) {
-    if (!childIds.has(childVisit.child_id)) continue;
-    const facilitySlug = visitSlugById.get(childVisit.visit_id);
-    if (!facilitySlug) continue;
-    const childVisitIds =
-      distinctVisitIdsByChild.get(childVisit.child_id) ?? new Set<string>();
-    if (childVisitIds.has(childVisit.visit_id)) continue;
-    childVisitIds.add(childVisit.visit_id);
-    distinctVisitIdsByChild.set(childVisit.child_id, childVisitIds);
-
-    const category = normalizeChildLikeCategory(categoryForSlug(facilitySlug));
-    const counts = categoryCountsByChild.get(childVisit.child_id) ?? new Map<string, number>();
-    counts.set(category, (counts.get(category) ?? 0) + 1);
-    categoryCountsByChild.set(childVisit.child_id, counts);
-  }
-
-  const statsByChild = new Map(
-    buildChildStats(children.map((child) => child.id), childVisits).map((stats) => [
-      stats.childId,
-      stats,
+  childVisits: ChildInsightVisit[],
+): ChildInsightSummary[] {
+  const eligibleChildVisits = filterChildLikeVisits(childVisits);
+  const categoryByVisitId = new Map(
+    visits.map((visit) => [
+      visit.id,
+      normalizeChildLikeCategory(categoryForSlug(visit.facility_slug)),
     ]),
   );
+  const visitCategoriesByChild = buildVisitCategoryCountsByChild(
+    childVisits,
+    categoryByVisitId,
+  );
+
+  const statsByChild = new Map(
+    buildChildStats(children.map((child) => child.id), eligibleChildVisits).map(
+      (stats) => [stats.childId, stats],
+    ),
+  );
+  const frequentInterestsByChild =
+    buildFrequentInterestTagsByChild(eligibleChildVisits);
 
   return children.map((child, index) => {
-    const counts = categoryCountsByChild.get(child.id) ?? new Map<string, number>();
-    const categories = Array.from(counts.entries())
-      .map(([category, count]) => ({ category, count }))
-      .sort(compareChildLikeCategories);
-    const displayCategories = buildChildLikeCategoryBreakdown(categories);
     const stats = statsByChild.get(child.id) ?? {
       childId: child.id,
       visitCount: 0,
@@ -223,19 +205,49 @@ function buildChildCategorySummaries(
       anchorId: `child-likes-${index + 1}`,
       visitCount: stats.visitCount,
       stage: stats.stage,
-      meaningful: hasMeaningfulChildLikes(categories),
-      categories: displayCategories,
-      ranking: buildChildLikeRanking(categories),
+      visitCategories: (visitCategoriesByChild.get(child.id) ?? []).sort(
+        compareCategoryEntries,
+      ),
+      frequentInterests: frequentInterestsByChild.get(child.id) ?? [],
     };
   });
 }
 
-function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
+function FrequentInterests({
+  childNickname,
+  interests,
+}: {
+  childNickname: string;
+  interests: FrequentInterestTag[];
+}) {
+  if (interests.length === 0) return null;
+
+  return (
+    <div
+      className="space-y-2 border-t border-slate-100 pt-3"
+      aria-label={`${childNickname}がよく楽しんだこと`}
+    >
+      <p className="text-xs font-bold text-slate-600">よく楽しんだこと</p>
+      <ul className="flex flex-wrap gap-2">
+        {interests.map((interest) => (
+          <li
+            key={interest.id}
+            className="rounded-full bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-800 ring-1 ring-sky-100"
+          >
+            {interest.label} <span className="font-bold">{interest.count}回</span>
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
+function ChildPreferenceContent({ summary }: { summary: ChildInsightSummary }) {
   if (summary.stage === "none") {
     return (
       <div className="space-y-2">
         <p className="text-sm text-slate-400">
-          まだ{summary.child.nickname}の記録がありません
+          まだ{summary.child.nickname}の「好き」のヒントになる反応記録がありません
         </p>
         <Link
           href="/mypage/visits/new"
@@ -251,7 +263,7 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
     return (
       <div className="space-y-1">
         <p className="text-sm font-medium text-slate-700">
-          {summary.child.nickname}の記録が{summary.visitCount}件たまりました
+          {summary.child.nickname}の反応記録が{summary.visitCount}件たまりました
         </p>
         <p className="text-sm leading-relaxed text-emerald-700">
           あと{3 - summary.visitCount}件で{summary.child.nickname}の「好き」のヒントが見えはじめます
@@ -260,109 +272,72 @@ function ChildLikesContent({ summary }: { summary: ChildCategorySummary }) {
     );
   }
 
-  if (!summary.meaningful) {
-    return (
-      <div className="space-y-1">
-        <p className="text-sm font-medium text-slate-700">
-          {summary.child.nickname}の記録が{summary.visitCount}件たまりました
-        </p>
-        <p className="text-xs leading-relaxed text-slate-500">
-          カテゴリの分かる施設から記録すると、「好き」が少しずつ見えてきます
-        </p>
-      </div>
-    );
-  }
-
   if (summary.stage === "sprout") {
-    const topCount = summary.categories.find(
-      ({ category }) => category !== "その他",
-    )?.count;
-    const topCategories = summary.categories
-      .filter(
-        ({ category, count }) => category !== "その他" && count === topCount,
-      )
-      .map(({ category }) => category);
-    const tendency = topCategories.join("や");
-
     return (
       <div className="space-y-3">
         <div className="rounded-lg bg-emerald-50 px-3 py-2.5">
           <p className="text-xs font-bold tracking-wide text-emerald-700">🌱 好きの芽</p>
-          <p className="mt-1 text-sm font-bold text-emerald-950">
-            {summary.child.nickname}は{tendency}が好きかも
-          </p>
           <p className="mt-1 text-xs text-emerald-700">
-            {summary.visitCount}件の記録から見えてきたヒントです
+            {summary.visitCount}件の反応記録から見えてきたヒントです
           </p>
         </div>
-        <div className="space-y-2" aria-label={`${summary.child.nickname}のカテゴリ内訳`}>
-          {summary.categories.map(({ category, count }) => (
-            <CategoryBar
-              key={category}
-              category={category}
-              count={count}
-              max={summary.categories[0]?.count ?? 1}
-            />
-          ))}
-        </div>
-        {summary.visitCount >= 4 && (
-          <p className="text-sm font-medium text-brand">
-            あと{10 - summary.visitCount}件で「好き」ランキング
-          </p>
-        )}
+        <FrequentInterests
+          childNickname={summary.child.nickname}
+          interests={summary.frequentInterests}
+        />
       </div>
     );
   }
 
-  const rankedCategories = summary.ranking.filter(
-    (category): category is RankedChildLikeCategory => "rank" in category,
-  );
-  const otherCategory = summary.ranking.find(
-    ({ category }) => category === "その他",
-  );
-
   return (
     <div className="space-y-3">
       <div className="rounded-lg bg-amber-50 px-3 py-2.5">
-        <p className="text-xs font-bold tracking-wide text-amber-700">🏆 好きランキング</p>
+        <p className="text-xs font-bold tracking-wide text-amber-700">✨ 好きの傾向</p>
         <p className="mt-1 text-sm font-medium text-amber-950">
-          {summary.visitCount === 10
-            ? "10件たまりました。ランキングが出せます"
-            : `${summary.visitCount}件の記録から見えた回数です`}
+          {summary.visitCount}件の反応記録から見えてきたヒントです
         </p>
       </div>
-      <ol className="space-y-2" aria-label={`${summary.child.nickname}の好きランキング`}>
-        {rankedCategories.map(({ category, count, rank }) => (
-          <li
+      <FrequentInterests
+        childNickname={summary.child.nickname}
+        interests={summary.frequentInterests}
+      />
+    </div>
+  );
+}
+
+function VisitCategoryTendency({ summary }: { summary: ChildInsightSummary }) {
+  if (summary.visitCategories.length === 0) return null;
+
+  return (
+    <div
+      className="space-y-2 border-t border-slate-100 pt-3"
+      aria-label={`${summary.child.nickname}がよく行った場所の傾向`}
+    >
+      <div>
+        <p className="text-xs font-bold text-slate-600">よく行った場所の傾向</p>
+        <p className="mt-0.5 text-[11px] leading-relaxed text-slate-400">
+          一緒に行ったすべてのおでかけを、施設カテゴリ別に数えています
+        </p>
+      </div>
+      <div className="space-y-2">
+        {summary.visitCategories.map(({ category, count }) => (
+          <CategoryBar
             key={category}
-            className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
-          >
-            <span className="w-9 shrink-0 text-sm font-bold text-amber-700">
-              {rank}位
-            </span>
-            <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
-              {category}
-            </span>
-            <span className="shrink-0 text-sm font-bold tabular-nums text-brand">
-              {count}回
-            </span>
-          </li>
+            category={category}
+            count={count}
+            max={summary.visitCategories[0]?.count ?? 1}
+          />
         ))}
-      </ol>
-      {otherCategory && (
-        <div
-          className="flex items-center gap-3 rounded-lg border border-slate-100 bg-slate-50 px-3 py-2"
-          aria-label={`その他 ${otherCategory.count}回`}
-        >
-          <span className="w-9 shrink-0" aria-hidden="true" />
-          <span className="min-w-0 flex-1 truncate text-sm font-medium text-slate-800">
-            その他
-          </span>
-          <span className="shrink-0 text-sm font-bold tabular-nums text-brand">
-            {otherCategory.count}回
-          </span>
-        </div>
-      )}
+      </div>
+    </div>
+  );
+}
+
+function ChildInsightsContent({ summary }: { summary: ChildInsightSummary }) {
+  return (
+    <div className="space-y-3">
+      <ChildPreferenceContent summary={summary} />
+      <VisitCategoryTendency summary={summary} />
     </div>
   );
 }
@@ -533,7 +508,9 @@ export default async function MypagePage() {
     visitIds.length > 0
       ? await supabase
           .from("visit_children")
-          .select("child_id, visit_id")
+          .select(
+            "child_id, visit_id, satisfaction, visit_child_tags(tag_id, reaction_tags(id, label, tag_type, sort_order))",
+          )
           .in("visit_id", visitIds)
       : { data: [] };
   const childVisits = (childVisitStats ?? []).filter(isChildVisit);
@@ -660,7 +637,7 @@ export default async function MypagePage() {
     avatarUrl: child.avatar_url ? avatarUrlByPath.get(child.avatar_url) ?? null : null,
   }));
   const isEmptyWithChildren = familyStats.totalVisitCount === 0 && hasChildren;
-  const childCategorySummaries = buildChildCategorySummaries(
+  const childInsightSummaries = buildChildInsightSummaries(
     childRows,
     visits,
     childVisits,
@@ -827,11 +804,11 @@ export default async function MypagePage() {
             <div>
               <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
               <p className="mt-1 text-xs leading-relaxed text-slate-400">
-                お子さまごとに、一緒に行ったおでかけをカテゴリ別に集計しています。家族のあしあと帳とは数え方が違うため件数が一致しないことがあります。
+                「大満足」か「楽しんだ」で、興味タグも選んだおでかけを「好き」のヒントとして数えています。「普通」「合わなかった」や、興味タグのない記録は含みません。
               </p>
             </div>
             <div className="space-y-5 rounded-xl border border-slate-200 bg-white p-4">
-              {childCategorySummaries.map((summary, childIndex) => (
+              {childInsightSummaries.map((summary, childIndex) => (
                 <div
                   key={summary.child.id}
                   id={summary.anchorId}
@@ -860,7 +837,7 @@ export default async function MypagePage() {
                       記録を見る ›
                     </Link>
                   </div>
-                  <ChildLikesContent summary={summary} />
+                  <ChildInsightsContent summary={summary} />
                 </div>
               ))}
             </div>

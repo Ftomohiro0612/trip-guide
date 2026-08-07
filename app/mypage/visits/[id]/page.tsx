@@ -4,6 +4,7 @@ import { notFound, redirect } from "next/navigation";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
+import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import {
   crowdingLabels,
   expectationLabels,
@@ -94,7 +95,10 @@ function hasReactionTags(row: VisitChildCardData): boolean {
 }
 
 function hasOtherNotes(row: VisitChildCardData): boolean {
-  return Boolean(row.interest_other_note?.trim() || row.behavior_other_note?.trim());
+  return (
+    isInterestOtherSelected(row.interest_other_note) ||
+    Boolean(row.behavior_other_note?.trim())
+  );
 }
 
 function SummaryChip({

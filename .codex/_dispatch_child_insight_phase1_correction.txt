@@ -1,0 +1,35 @@
+[model: gpt-5.6-sol] [effort: high]
+
+# 発注: child-insight-phase1 Owner補正（PR #14 review後の意味差修正）
+
+これは既存PR #14（このworktree・ブランチ `codex/child-insight-phase1-l2-20260807`、現HEAD直前まででA〜E実装済み・push済み）に対する **最小補正** です。新規実装ではありません。
+
+正本仕様書（更新済み・必読。この worktree 内に commit 済み）:
+.codex/child-insight-phase1-spec.md
+
+このファイルの以下の節がOwnerレビューで補正されました。他の節（§4-B年齢、§4-D behaviorタグ8件、§4-E placeholder）は既にGREENで変更不要です。
+
+- §3 非スコープ（「その他」保持が新たにスコープ入り、旧「好きランキング」文言の扱いも変更）
+- §4-A（「好き」の根拠を「有効反応visit」= satisfaction∈{loved,enjoyed} かつ interestタグ1件以上、に再定義）
+- §4-A'（新設: 施設カテゴリ回数を「好き」から分離し、事実表示へ）
+- §4-C（interestタグ集計の母集団を「有効反応visit」に変更。表示規則自体は変更なし）
+- §4-F（新設: interestの「その他」を選択してメモ空欄でも選択事実が保存時に消えないようにする）
+- §5 適用順序（push→PR/Preview→Owner main統合GO→merge→merged SHA Production GREEN→別Owner GOでMigration 015適用、に修正。ZIP自動必須の撤回）
+- §6 AC-1/2/3を有効反応visit基準に修正、AC-7'（施設カテゴリ分離）・AC-8（その他保持）を新設
+
+## 作業条件
+
+- 既存worktree・既存ブランチ上で作業する（新規worktree作成不要）。既存コミット（年齢helper・behaviorタグ8件・placeholder・旧版のnot_fit除外実装）はベースとして使ってよいが、「好き」判定ロジック（`lib/child-insights.ts` の `filterChildLikeVisits` 等）と `app/mypage/page.tsx` の表示構成は §4-A/A'/C の新定義に合わせて修正が必要。
+- 実装方式（関数名・分割・母集団の絞り込み方・UIの配置）は貴殿の裁量。仕様書の受入条件 §6（AC-1〜AC-8）を満たすこと。
+- Migration 015・年齢helper・8タグ・placeholderは再設計不要（変更しない）。
+- Migration 015はファイル作成のみのまま。DB適用は行わない。
+- push しない。lint / build / fixture検証まで完了したら、AC-1〜AC-8それぞれの充足根拠（fixture・行参照）を添えて完了報告し停止する。push・main統合・Migration適用はOwner/PM判断（すでにHOLD指示あり）。
+- Owner Review Pack（ZIP）作成は不要（Owner明示）。
+
+## 完了報告に含めること
+
+- AC-1〜AC-8 それぞれの充足根拠（fixture・行参照）
+- 「有効反応visit」定義変更前後で、「子どもたちの好き」の段階・件数がどう変わるかの実例（neutral/interestタグなしを含むfixtureで）
+- 施設カテゴリ表示が「好き」の見出し・段階から分離されたことが分かる実例
+- interestの「その他」を選択・メモ空欄で保存→再表示して選択事実が残っていることを示す実例
+- 触らなかった境界（非スコープ、および年齢helper/8タグ/placeholderが無変更であること）の確認
