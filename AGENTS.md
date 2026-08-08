@@ -29,7 +29,7 @@ Apply this section only when the entire user message is exactly `セッション
 1. Read only the fixed `current-session.md` above. Record its `updated_at`, `session`, and SHA-256 at read time as the write base.
 2. Confirm that the frontmatter `scope` is `memorips`, and use only the frontmatter and `# Current State` as the initial resume pointer.
 3. Briefly report the recorded current position, exact stop point/state, and next major direction.
-4. Before the initial report, do not read an archive, this Product repository, Git/GitHub, Issues, Production, another memory, or another scope. Do not start investigation, implementation, verification, or a Monitor.
+4. Before the initial report, do not read an archive, this Product repository, Git/GitHub, Issues, Production, another memory, or another scope. Do not start investigation, implementation, verification, or a Monitor. This restriction does not reach the standing Session Monitor already started by the SessionStart hook before this shorthand ran (see "Session Monitor" below) — that Monitor is hook-managed lifecycle infrastructure, not something the PM starts under this contract.
 5. After the initial report, safely fetch the private Memory and Product repositories without overwriting, cleaning, stashing, resetting, deleting, or altering another worktree's local/untracked files.
 6. Read the private autonomous sources listed at the top of this file and reconcile the local fixed Session Memory against current GitHub/Product/Production facts. The fixed file is a fast pointer, not superior canon; mark stale statements as superseded rather than following an obsolete stop point.
 7. Continue only within a valid authorization envelope. Re-check the current Mission, Owner decisions, active Issues/PRs, exact Product baseline, relevant Production/aggregate evidence, and external-action ledger before changing anything.
@@ -86,8 +86,43 @@ Steps:
 9. Only once steps 2/4, 5, 6, 7, and 8 have all completed as specified above,
    emit `Close: CLOSE_OK` and briefly report the archive path, then end
    without additional work.
+10. Regardless of which Close label was emitted (including
+    `CLOSE_BLOCKED`), stop the standing Session Monitor (see "Session
+    Monitor" below) as lifecycle cleanup. This is not "additional work"
+    under step 1 — it is teardown of hook-managed infrastructure, not
+    investigation, implementation, or verification.
 
-Do not create a dedicated workspace, agmsg destination, Monitor, binding, Owner Pack, ZIP, or additional infrastructure for these shorthands unless it can change an Owner decision and is separately justified.
+### Session Monitor (agmsg inbox — SessionStart/SessionEnd lifecycle)
+
+This is a narrow, standing exception to the Monitor restrictions above. It
+governs exactly one Monitor: the read-only agmsg inbox stream that the
+SessionStart hook instructs the PM to invoke at the start of every session.
+It exists independently of whether the session's first message happens to be
+`セッション開始` — the hook fires on every session start.
+
+- **Entry point**: the SessionStart hook is the sole, canonical trigger.
+  Invoke the Monitor it specifies, as it specifies, once, at session start.
+  On a `/clear` or resume re-fire, follow the hook's own message — if it
+  says a prior watcher is being cleaned up and not to relaunch, do not
+  relaunch it.
+- **Singular instance**: never start a second Session Monitor manually or
+  speculatively "just in case," and never fold its invocation into a
+  shorthand step (e.g. it is not part of `セッション開始` step 3's report).
+- **Read-only**: this Monitor only streams incoming agmsg messages for the
+  PM to react to (normal agmsg replies via `send.sh` remain a separate,
+  ordinary PM action, not part of the Monitor itself). It must not be used
+  to justify additional Monitors, agmsg destinations, or autonomous worker
+  invocations — those remain prohibited exactly as before.
+- **Session end**: stop this Monitor when the session ends. Under the
+  `セッション終了` shorthand, this happens at step 10 above. If the session
+  ends without that shorthand, the Monitor lapses with the session.
+- **Does not expand scope**: this exception covers only this one
+  hook-managed Monitor. It does not permit starting Monitors for
+  investigation, verification, or any other purpose during the
+  `セッション開始`/`セッション終了` shorthand flows — the restrictions
+  above remain in force unchanged for everything else.
+
+Do not create a dedicated workspace, agmsg destination, Monitor, binding, Owner Pack, ZIP, or additional infrastructure for these shorthands unless it can change an Owner decision and is separately justified. The standing, hook-managed Session Monitor defined above is a narrow, pre-authorized exception to this clause — it does not need separate per-session justification, and it does not license any other Monitor or infrastructure under this clause.
 
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
