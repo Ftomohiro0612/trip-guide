@@ -92,6 +92,7 @@ export default function EventsIndexPage() {
                       alt=""
                       width={56}
                       height={56}
+                      unoptimized
                       className="h-12 w-12 shrink-0 object-contain"
                       aria-hidden
                     />
