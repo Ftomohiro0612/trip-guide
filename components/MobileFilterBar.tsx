@@ -4,10 +4,9 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
 import SortSelect from "@/components/SortSelect";
 import { resetFacilityPage } from "@/lib/facility-pagination";
-import type { CategoryMeta, PrefectureMeta } from "@/types/facility";
+import type { CategoryMeta } from "@/types/facility";
 
 interface Props {
-  prefectures: PrefectureMeta[];
   categories: CategoryMeta[];
   resultCount: number;
 }
@@ -36,7 +35,6 @@ const DETAIL_TAG_OPTIONS = [
 ];
 
 export default function MobileFilterBar({
-  prefectures,
   categories,
   resultCount,
 }: Props) {
@@ -61,37 +59,12 @@ export default function MobileFilterBar({
 
   function toggleList(key: string, value: string) {
     const params = new URLSearchParams(searchParams);
-    if (key === "prefectures") params.delete("prefecture");
     const list = getList(key);
     const next = list.includes(value)
       ? list.filter((v) => v !== value)
       : [...list, value];
     if (next.length) params.set(key, next.join(","));
     else params.delete(key);
-    update(params);
-  }
-
-  function togglePrefecture(prefId: string) {
-    const params = new URLSearchParams(searchParams);
-    const singlePref = params.get("prefecture");
-    const existing = (params.get("prefectures") ?? "")
-      .split(",")
-      .filter(Boolean);
-    const singleMatch = prefectures.find(
-      (prefecture) =>
-        prefecture.id === singlePref || prefecture.name === singlePref,
-    );
-    const list =
-      singleMatch && !existing.includes(singleMatch.id)
-        ? [...existing, singleMatch.id]
-        : existing;
-    params.delete("prefecture");
-
-    const next = list.includes(prefId)
-      ? list.filter((value) => value !== prefId)
-      : [...list, prefId];
-    if (next.length) params.set("prefectures", next.join(","));
-    else params.delete("prefectures");
     update(params);
   }
 
@@ -110,7 +83,6 @@ export default function MobileFilterBar({
   }
 
   const fee = searchParams.get("fee") ?? "";
-  const prefList = getList("prefectures");
   const catList = getList("categories");
   const indoorList = getList("indoor");
   const rainList = getList("rain");
@@ -163,17 +135,6 @@ export default function MobileFilterBar({
             <p className="mb-4 text-sm text-slate-500">
               {resultCount} 件の施設が該当
             </p>
-
-            <FilterGroup label="複数エリア">
-              {prefectures.map((p) => (
-                <CheckboxItem
-                  key={p.id}
-                  checked={prefList.includes(p.id)}
-                  onChange={() => togglePrefecture(p.id)}
-                  label={`${p.name} (${p.count})`}
-                />
-              ))}
-            </FilterGroup>
 
             <FilterGroup label="カテゴリ">
               {categories.map((c) => (

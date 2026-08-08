@@ -4,14 +4,9 @@ import { useRouter, useSearchParams, usePathname } from "next/navigation";
 import { useState, useTransition } from "react";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import { resetFacilityPage } from "@/lib/facility-pagination";
-import type {
-  CategoryMeta,
-  PrefectureMeta,
-  RecommendedForTag,
-} from "@/types/facility";
+import type { CategoryMeta, RecommendedForTag } from "@/types/facility";
 
 interface Props {
-  prefectures: PrefectureMeta[];
   categories: CategoryMeta[];
   resultCount: number;
 }
@@ -47,7 +42,6 @@ const RECOMMENDED_TAG_OPTIONS = Object.entries(RECOMMENDED_FOR_TAG_META).map(
 );
 
 export default function FilterSidebar({
-  prefectures,
   categories,
   resultCount,
 }: Props) {
@@ -80,33 +74,6 @@ export default function FilterSidebar({
     update(params);
   }
 
-  function togglePrefecture(prefId: string) {
-    const params = new URLSearchParams(searchParams);
-    const singlePref = params.get("prefecture");
-    if (singlePref) {
-      const match = prefectures.find(
-        (p) => p.id === singlePref || p.name === singlePref,
-      );
-      const existing = (params.get("prefectures") ?? "")
-        .split(",")
-        .filter(Boolean);
-      const merged =
-        match && !existing.includes(match.id)
-          ? [...existing, match.id]
-          : existing;
-      if (merged.length) params.set("prefectures", merged.join(","));
-      params.delete("prefecture");
-    }
-
-    const list = (params.get("prefectures") ?? "").split(",").filter(Boolean);
-    const next = list.includes(prefId)
-      ? list.filter((v) => v !== prefId)
-      : [...list, prefId];
-    if (next.length) params.set("prefectures", next.join(","));
-    else params.delete("prefectures");
-    update(params);
-  }
-
   function toggleRecommendedTag(value: RecommendedForTag) {
     const params = new URLSearchParams(searchParams);
     if (searchParams.get("recommended_tag") === value) {
@@ -132,22 +99,11 @@ export default function FilterSidebar({
   }
 
   const fee = searchParams.get("fee") ?? "";
-  const prefList = getList("prefectures");
   const catList = getList("categories");
   const indoorList = getList("indoor");
   const rainList = getList("rain");
   const tagList = getList("tags");
   const recommendedTag = searchParams.get("recommended_tag");
-  const singlePref = searchParams.get("prefecture");
-  const selectedPrefectureLabel =
-    prefList.length > 0
-      ? prefectures
-          .filter((p) => prefList.includes(p.id))
-          .map((p) => p.name)
-          .join("・")
-      : prefectures.find(
-            (p) => p.id === singlePref || p.name === singlePref,
-          )?.name ?? "すべて";
   const hasDetailTag = DETAIL_TAG_OPTIONS.some((t) => tagList.includes(t.value));
 
   return (
@@ -167,43 +123,6 @@ export default function FilterSidebar({
         <p className="text-sm text-slate-500 mb-4">
           {resultCount} 件の施設が該当
         </p>
-
-        <details className="border-b border-slate-200 py-3">
-          <summary className="cursor-pointer text-sm font-semibold text-slate-800 flex items-center justify-between select-none list-none">
-            <span>複数エリア</span>
-            <span className="text-xs text-slate-500 font-normal truncate max-w-[120px] ml-2">
-              {selectedPrefectureLabel}
-            </span>
-          </summary>
-          <div className="mt-2 space-y-1 max-h-48 overflow-y-auto pr-1">
-            {prefectures.map((p) => {
-              const checked = prefList.includes(p.id);
-              return (
-                <label
-                  key={p.id}
-                  className="flex items-center gap-2 cursor-pointer group"
-                >
-                  <input
-                    type="checkbox"
-                    checked={checked}
-                    onChange={() => togglePrefecture(p.id)}
-                    suppressHydrationWarning
-                    className="rounded border-slate-300 text-sky-600 focus:ring-sky-400"
-                  />
-                  <span
-                    className={`text-sm transition-colors ${
-                      checked
-                        ? "text-sky-700 font-medium"
-                        : "text-slate-600 group-hover:text-slate-900"
-                    }`}
-                  >
-                    {p.name}
-                  </span>
-                </label>
-              );
-            })}
-          </div>
-        </details>
 
         <details open className="border-b border-slate-200 py-3">
           <summary className="cursor-pointer text-sm font-semibold text-slate-800 flex items-center justify-between select-none">
