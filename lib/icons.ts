@@ -141,6 +141,11 @@ export const prefectureIconImages: Record<string, string> = {
   yamaguchi: "/images/prefectures/yamaguchi.webp",
   tottori: "/images/prefectures/tottori.webp",
   shimane: "/images/prefectures/shimane.webp",
+  kagoshima: "/images/prefectures/kagoshima.webp",
+  kochi: "/images/prefectures/kochi.webp",
+  miyazaki: "/images/prefectures/miyazaki.webp",
+  saga: "/images/prefectures/saga.webp",
+  tokushima: "/images/prefectures/tokushima.webp",
 };
 
 export const prefectureEmoji: Record<string, string> = {

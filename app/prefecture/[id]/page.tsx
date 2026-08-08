@@ -4,6 +4,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
+import {
+  FacilityPaginationControls,
+  FacilityPaginationSummary,
+} from "@/components/FacilityPagination";
 import MapViewClient from "@/components/MapViewClient";
 import {
   categories,
@@ -11,18 +15,67 @@ import {
   getPrefectureMeta,
   prefectures,
 } from "@/lib/facilities";
-import {
-  prefectureEmoji,
-  prefectureGradients,
-  prefectureIconImages,
-} from "@/lib/icons";
+import { prefectureGradients, prefectureIconImages } from "@/lib/icons";
 import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
+import { paginateFacilities } from "@/lib/facility-pagination";
+import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
 
 interface Props {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ page?: string | string[] }>;
+}
+
+function getFacilityCentroid(prefectureId: PrefectureId): Coordinate | null {
+  const facilities = getFacilitiesByPrefecture(prefectureId);
+  const coordinates = facilities.flatMap((facility) =>
+    typeof facility.latitude === "number" &&
+    typeof facility.longitude === "number"
+      ? ([[facility.latitude, facility.longitude]] as Coordinate[])
+      : [],
+  );
+  if (coordinates.length === 0) return null;
+
+  const totals = coordinates.reduce(
+    (sum, [latitude, longitude]) => ({
+      latitude: sum.latitude + latitude,
+      longitude: sum.longitude + longitude,
+    }),
+    { latitude: 0, longitude: 0 },
+  );
+
+  return [
+    totals.latitude / coordinates.length,
+    totals.longitude / coordinates.length,
+  ];
+}
+
+function getNearestPrefectures(prefectureId: PrefectureId) {
+  const currentCentroid = getFacilityCentroid(prefectureId);
+  if (!currentCentroid) return [];
+
+  return prefectures
+    .flatMap((prefecture) => {
+      if (prefecture.id === prefectureId) return [];
+      const facilities = getFacilitiesByPrefecture(prefecture.id);
+      const centroid = getFacilityCentroid(prefecture.id);
+      if (!centroid) return [];
+
+      return [
+        {
+          ...prefecture,
+          facilityCount: facilities.length,
+          distanceKm: haversineDistanceKm(currentCentroid, centroid),
+        },
+      ];
+    })
+    .sort(
+      (a, b) =>
+        a.distanceKm - b.distanceKm || a.id.localeCompare(b.id, "en"),
+    )
+    .slice(0, 5);
 }
 
 export function generateStaticParams() {
@@ -47,8 +100,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PrefecturePage({ params }: Props) {
-  const { id } = await params;
+export default async function PrefecturePage({ params, searchParams }: Props) {
+  const [{ id }, sp] = await Promise.all([params, searchParams]);
   const meta = getPrefectureMeta(id as PrefectureId);
   if (!meta) notFound();
 
@@ -57,6 +110,14 @@ export default async function PrefecturePage({ params }: Props) {
   const visibleCount = list.length;
   const gradient = prefectureGradients[meta.id];
   const isNagano = meta.id === "nagano";
+  const sortedList = list.slice().sort((a, b) => {
+    const score = (facility: (typeof list)[number]) =>
+      (facility.rain_friendly === "◎" ? 2 : 0) +
+      (facility.is_free ? 1 : 0);
+    return score(b) - score(a) || a.id - b.id;
+  });
+  const page = paginateFacilities(sortedList, sp.page);
+  const nearestPrefectures = getNearestPrefectures(meta.id);
 
   const categoryCounts = categories
     .map((c) => ({
@@ -237,52 +298,60 @@ export default async function PrefecturePage({ params }: Props) {
           </div>
         </section>
 
-        <section className="mt-10">
-          <h2 className="text-xl font-bold mb-1">{meta.name} 全{list.length}施設</h2>
+        <section
+          className="mt-10"
+          aria-labelledby="prefecture-facilities-heading"
+        >
+          <h2
+            id="prefecture-facilities-heading"
+            tabIndex={-1}
+            className="scroll-mt-24 text-xl font-bold mb-1"
+          >
+            {meta.name} 全{list.length}施設
+          </h2>
           <p className="text-sm text-slate-500 mb-4">
             おすすめ順（雨対応・無料施設を優先）
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {list
-              .slice()
-              .sort((a, b) => {
-                const score = (f: (typeof list)[number]) =>
-                  (f.rain_friendly === "◎" ? 2 : 0) + (f.is_free ? 1 : 0);
-                return score(b) - score(a) || a.id - b.id;
-              })
-              .map((f) => (
-                <FacilityCard key={f.id} facility={f} />
-              ))}
+          <FacilityPaginationSummary page={page} />
+          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {page.items.map((f) => (
+              <FacilityCard key={f.id} facility={f} />
+            ))}
           </div>
+          <FacilityPaginationControls
+            page={page}
+            focusTargetId="prefecture-facilities-heading"
+          />
         </section>
 
         <section className="mt-12">
-          <h2 className="text-xl font-bold mb-3">他のエリアもチェック</h2>
+          <h2 className="text-xl font-bold mb-3">近くのエリアもチェック</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {prefectures
-              .filter((p) => p.id !== meta.id)
-              .map((p) => (
-                <Link
-                  key={p.id}
-                  href={`/prefecture/${p.id}`}
-                  className="group flex items-center gap-3 bg-white border border-slate-200 hover:border-brand rounded-2xl p-4 transition-colors"
-                >
-                  <span className="text-3xl" aria-hidden>
-                    {prefectureEmoji[p.id]}
-                  </span>
-                  <div className="flex-1 min-w-0">
-                    <p className="font-bold text-slate-900 group-hover:text-brand">
-                      {p.name}
-                    </p>
-                    <p className="text-xs text-slate-500">
-                      {getFacilitiesByPrefecture(p.id).length} 施設
-                    </p>
-                  </div>
-                  <span className="text-slate-400 group-hover:text-brand">
-                    →
-                  </span>
-                </Link>
-              ))}
+            {nearestPrefectures.map((p) => (
+              <Link
+                key={p.id}
+                href={`/prefecture/${p.id}`}
+                className="group flex items-center gap-3 bg-white border border-slate-200 hover:border-brand rounded-2xl p-4 transition-colors"
+              >
+                <Image
+                  src={prefectureIconImages[p.id]}
+                  alt=""
+                  width={40}
+                  height={40}
+                  className="h-10 w-10 shrink-0 object-contain"
+                  aria-hidden
+                />
+                <div className="flex-1 min-w-0">
+                  <p className="font-bold text-slate-900 group-hover:text-brand">
+                    {p.name}
+                  </p>
+                  <p className="text-xs text-slate-500">
+                    {p.facilityCount} 施設
+                  </p>
+                </div>
+                <span className="text-slate-400 group-hover:text-brand">→</span>
+              </Link>
+            ))}
           </div>
         </section>
       </div>
