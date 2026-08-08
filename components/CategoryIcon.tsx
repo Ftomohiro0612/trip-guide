@@ -25,6 +25,7 @@ export default function CategoryIcon({
         alt={alt}
         width={width}
         height={height}
+        unoptimized
         className={["object-contain", className].filter(Boolean).join(" ")}
         aria-hidden
       />

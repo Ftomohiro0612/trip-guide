@@ -742,6 +742,7 @@ export default function HomePage() {
                       alt=""
                       width={64}
                       height={64}
+                      unoptimized
                       className="h-12 w-12 object-contain drop-shadow-sm transition-transform group-hover:scale-105 sm:h-14 sm:w-14"
                       aria-hidden
                     />

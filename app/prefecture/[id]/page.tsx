@@ -162,6 +162,7 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
               alt=""
               width={96}
               height={96}
+              unoptimized
               className="h-16 w-16 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24"
               aria-hidden
               priority
@@ -338,6 +339,7 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
                   alt=""
                   width={40}
                   height={40}
+                  unoptimized
                   className="h-10 w-10 shrink-0 object-contain"
                   aria-hidden
                 />
