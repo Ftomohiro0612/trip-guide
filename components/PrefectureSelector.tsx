@@ -16,6 +16,7 @@ interface Props {
   prefectures: PrefectureOption[];
   selectedId: PrefectureId | null;
   disableEmpty?: boolean;
+  multiSelect?: boolean;
 }
 
 const QUICK_PREFECTURE_IDS: PrefectureId[] = [
@@ -29,6 +30,7 @@ export default function PrefectureSelector({
   prefectures,
   selectedId,
   disableEmpty = false,
+  multiSelect = false,
 }: Props) {
   const pathname = usePathname();
   const router = useRouter();
@@ -49,16 +51,33 @@ export default function PrefectureSelector({
   const detailedIds = (searchParams.get("prefectures") ?? "")
     .split(",")
     .filter((id) => validPrefectureIds.has(id as PrefectureId));
-  const { isNationwide, detailedCount, hasDetailedSelection } =
+  const multiSelectedIds = [
+    ...new Set([
+      ...(selectedId ? [selectedId] : []),
+      ...detailedIds.map((id) => id as PrefectureId),
+    ]),
+  ];
+  const {
+    isNationwide: singleSelectIsNationwide,
+    detailedCount,
+    hasDetailedSelection,
+  } =
     getPrefectureSelectorState(selectedId, detailedIds);
-  const dialogButtonSelected = Boolean(
-    (selectedId && !selectedIsQuick) || hasDetailedSelection,
-  );
-  const dialogButtonLabel = hasDetailedSelection
-    ? `${detailedCount}エリア選択中`
-    : selected && !selectedIsQuick
-      ? selected.name
-      : "都道府県を選ぶ";
+  const isNationwide = multiSelect
+    ? multiSelectedIds.length === 0
+    : singleSelectIsNationwide;
+  const dialogButtonSelected = multiSelect
+    ? multiSelectedIds.length > 0
+    : Boolean((selectedId && !selectedIsQuick) || hasDetailedSelection);
+  const dialogButtonLabel = multiSelect
+    ? multiSelectedIds.length > 0
+      ? `${multiSelectedIds.length}エリア選択中`
+      : "都道府県を選ぶ"
+    : hasDetailedSelection
+      ? `${detailedCount}エリア選択中`
+      : selected && !selectedIsQuick
+        ? selected.name
+        : "都道府県を選ぶ";
 
   useEffect(() => {
     try {
@@ -115,6 +134,39 @@ export default function PrefectureSelector({
     });
   }
 
+  function updateMultiSelection(nextIds: PrefectureId[], closeDialog = false) {
+    const params = new URLSearchParams(searchParams);
+
+    params.delete("prefecture");
+    if (nextIds.length > 0) params.set("prefectures", nextIds.join(","));
+    else params.delete("prefectures");
+    resetFacilityPage(params);
+
+    if (closeDialog) setOpen(false);
+    startTransition(() => {
+      const query = params.toString();
+      router.push(query ? `${pathname}?${query}` : pathname);
+    });
+  }
+
+  function togglePrefecture(nextId: PrefectureId) {
+    const nextIds = multiSelectedIds.includes(nextId)
+      ? multiSelectedIds.filter((id) => id !== nextId)
+      : [...multiSelectedIds, nextId];
+    updateMultiSelection(nextIds);
+  }
+
+  function clearPrefectures(closeDialog = false) {
+    if (multiSelect) updateMultiSelection([], closeDialog);
+    else selectPrefecture(null);
+  }
+
+  function isSelected(prefectureId: PrefectureId) {
+    return multiSelect
+      ? multiSelectedIds.includes(prefectureId)
+      : selectedId === prefectureId;
+  }
+
   function optionClass(active: boolean) {
     return `shrink-0 rounded-full border px-3 py-2 text-sm font-bold transition-colors ${
       active
@@ -128,7 +180,7 @@ export default function PrefectureSelector({
       <div className="flex gap-2 overflow-x-auto pb-1">
         <button
           type="button"
-          onClick={() => selectPrefecture(null)}
+          onClick={() => clearPrefectures()}
           className={optionClass(isNationwide)}
           aria-pressed={isNationwide}
         >
@@ -138,10 +190,14 @@ export default function PrefectureSelector({
           <button
             key={prefecture.id}
             type="button"
-            onClick={() => selectPrefecture(prefecture.id)}
+            onClick={() =>
+              multiSelect
+                ? togglePrefecture(prefecture.id)
+                : selectPrefecture(prefecture.id)
+            }
             disabled={isDisabled(prefecture)}
-            className={`${optionClass(selectedId === prefecture.id)} disabled:cursor-not-allowed disabled:opacity-40`}
-            aria-pressed={selectedId === prefecture.id}
+            className={`${optionClass(isSelected(prefecture.id))} disabled:cursor-not-allowed disabled:opacity-40`}
+            aria-pressed={isSelected(prefecture.id)}
           >
             {prefecture.name.replace(/[都府県]$/, "")}
           </button>
@@ -183,7 +239,9 @@ export default function PrefectureSelector({
                   都道府県を選ぶ
                 </h2>
                 <p className="mt-1 text-xs text-slate-500">
-                  地図と施設一覧を同じ都道府県に切り替えます
+                  {multiSelect
+                    ? "複数の都道府県を同じ条件に追加できます"
+                    : "地図と施設一覧を同じ都道府県に切り替えます"}
                 </p>
               </div>
               <button
@@ -200,7 +258,7 @@ export default function PrefectureSelector({
             <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4">
               <button
                 type="button"
-                onClick={() => selectPrefecture(null)}
+                onClick={() => clearPrefectures(true)}
                 aria-pressed={isNationwide}
                 className={`rounded-xl border px-3 py-3 text-left text-sm font-bold ${
                   isNationwide
@@ -217,11 +275,15 @@ export default function PrefectureSelector({
                 <button
                   key={prefecture.id}
                   type="button"
-                  onClick={() => selectPrefecture(prefecture.id)}
+                  onClick={() =>
+                    multiSelect
+                      ? togglePrefecture(prefecture.id)
+                      : selectPrefecture(prefecture.id)
+                  }
                   disabled={isDisabled(prefecture)}
-                  aria-pressed={selectedId === prefecture.id}
+                  aria-pressed={isSelected(prefecture.id)}
                   className={`rounded-xl border px-3 py-3 text-left text-sm font-bold transition-colors disabled:cursor-not-allowed disabled:opacity-40 ${
-                    selectedId === prefecture.id
+                    isSelected(prefecture.id)
                       ? "border-sky-600 bg-sky-50 text-sky-700"
                       : "border-slate-200 text-slate-700 hover:border-sky-300"
                   }`}

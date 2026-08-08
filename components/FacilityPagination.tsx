@@ -28,11 +28,8 @@ export function FacilityPaginationSummary({
     >
       <p className="font-semibold text-slate-800">
         {page.totalItems === 0
-          ? "0件を表示"
-          : page.rangeStart + "〜" + page.rangeEnd + "件を表示"}{" "}
-        <span className="font-normal text-slate-500">
-          / 全{page.totalItems}件
-        </span>
+          ? "0施設"
+          : `${page.totalItems}施設中${page.rangeStart}〜${page.rangeEnd}施設を表示`}
       </p>
       <p className="font-bold text-slate-700" data-facility-page-status>
         {page.currentPage} / {page.totalPages}ページ

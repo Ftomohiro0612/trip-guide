@@ -99,6 +99,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
           prefectures={visiblePrefectures}
           selectedId={selectedPrefectureId}
           disableEmpty={recommendedTag !== null}
+          multiSelect
         />
         <p className="mt-3 text-sm text-slate-500" aria-live="polite">
           {filters.q ? (
@@ -119,14 +120,12 @@ export default async function FacilitiesPage({ searchParams }: Props) {
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
         <FilterSidebar
-          prefectures={visiblePrefectures}
           categories={visibleCategories}
           resultCount={results.length}
         />
 
         <section>
           <MobileFilterBar
-            prefectures={visiblePrefectures}
             categories={visibleCategories}
             resultCount={results.length}
           />

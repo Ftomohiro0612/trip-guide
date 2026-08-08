@@ -40,9 +40,12 @@ export function getFacilityListResults(searchParams: RawSearchParams) {
         (facility.recommended_for_tags ?? []).includes(recommendedTag),
       )
     : baseResults;
-  const selectedPrefectureIds = selectedPrefectureId
-    ? [selectedPrefectureId]
-    : filters.prefectures;
+  const selectedPrefectureIds = [
+    ...new Set([
+      ...filters.prefectures,
+      ...(selectedPrefectureId ? [selectedPrefectureId] : []),
+    ]),
+  ];
   const results = filterByPrefectureIds(
     tagFilteredResults,
     selectedPrefectureIds,
