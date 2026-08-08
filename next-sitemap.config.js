@@ -17,6 +17,11 @@ require.extensions[".ts"] = (module, filename) => {
 };
 
 const { getPilotCrossParams } = require("./lib/crossings.ts");
+const facilitiesData = require("./data/facilities_data.json");
+
+// 正本(data/facilities_data.json の metadata.categories)。
+// app/category/[id]/page.tsx の generateStaticParams と同じ一覧を参照する。
+const categoryIds = facilitiesData.metadata.categories.map((c) => c.id);
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -55,8 +60,13 @@ module.exports = {
       ),
     );
 
+    const categoryPaths = await Promise.all(
+      categoryIds.map((id) => config.transform(config, `/category/${id}`)),
+    );
+
     return [
       await config.transform(config, "/facilities"),
+      ...categoryPaths,
       await config.transform(config, "/events"),
       await config.transform(config, "/events/summer"),
       await config.transform(config, "/events/tokyo"),
