@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
@@ -33,6 +34,86 @@ import type {
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
+
+const PREFECTURE_REGIONS = [
+  {
+    name: "北海道・東北",
+    prefectureIds: [
+      "hokkaido",
+      "aomori",
+      "iwate",
+      "miyagi",
+      "akita",
+      "yamagata",
+      "fukushima",
+    ],
+  },
+  {
+    name: "関東",
+    prefectureIds: [
+      "ibaraki",
+      "tochigi",
+      "gunma",
+      "saitama",
+      "chiba",
+      "tokyo",
+      "kanagawa",
+    ],
+  },
+  {
+    name: "中部",
+    prefectureIds: [
+      "niigata",
+      "toyama",
+      "ishikawa",
+      "fukui",
+      "yamanashi",
+      "nagano",
+      "gifu",
+      "shizuoka",
+      "aichi",
+    ],
+  },
+  {
+    name: "近畿",
+    prefectureIds: [
+      "mie",
+      "shiga",
+      "kyoto",
+      "osaka",
+      "hyogo",
+      "nara",
+      "wakayama",
+    ],
+  },
+  {
+    name: "中国",
+    prefectureIds: [
+      "tottori",
+      "shimane",
+      "okayama",
+      "hiroshima",
+      "yamaguchi",
+    ],
+  },
+  {
+    name: "四国",
+    prefectureIds: ["tokushima", "kagawa", "ehime", "kochi"],
+  },
+  {
+    name: "九州・沖縄",
+    prefectureIds: [
+      "fukuoka",
+      "saga",
+      "nagasaki",
+      "kumamoto",
+      "oita",
+      "miyazaki",
+      "kagoshima",
+      "okinawa",
+    ],
+  },
+] as const;
 
 function HeroBackground() {
   return (
@@ -312,6 +393,16 @@ export default function HomePage() {
       : `${visibleFacilities.length}施設`;
   const totalFacilityCountLabel =
     visibleFacilities.length.toLocaleString("ja-JP");
+  const prefecturesById = new Map(
+    prefectures.map((prefecture) => [prefecture.id, prefecture]),
+  );
+  const prefectureRegions = PREFECTURE_REGIONS.map((region) => ({
+    name: region.name,
+    prefectures: region.prefectureIds.flatMap((prefectureId) => {
+      const prefecture = prefecturesById.get(prefectureId);
+      return prefecture ? [prefecture] : [];
+    }),
+  }));
   const primaryPrefecture =
     prefectures.find((prefecture) => prefecture.name === "東京都") ??
     prefectures[0];
@@ -634,28 +725,35 @@ export default function HomePage() {
             </p>
           </div>
           <div className="grid grid-cols-3 gap-x-3 gap-y-5 sm:grid-cols-9 sm:gap-x-4">
-            {prefectures.map((prefecture) => (
-              <Link
-                key={prefecture.id}
-                href={`/prefecture/${prefecture.id}`}
-                className="group flex min-w-0 flex-col items-center gap-2 rounded-lg px-1 py-2 text-center transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
-                aria-label={`${prefecture.name}の遊び場を探す`}
-              >
-                <Image
-                  src={prefectureIconImages[prefecture.id]}
-                  alt=""
-                  width={64}
-                  height={64}
-                  className="h-12 w-12 object-contain drop-shadow-sm transition-transform group-hover:scale-105 sm:h-14 sm:w-14"
-                  aria-hidden
-                />
-                <span className="text-sm font-bold leading-tight text-slate-800 group-hover:text-brand">
-                  {prefecture.name}
-                </span>
-                <span className="text-[11px] leading-none text-slate-400">
-                  {getFacilitiesByPrefecture(prefecture.id).length}施設
-                </span>
-              </Link>
+            {prefectureRegions.map((region) => (
+              <Fragment key={region.name}>
+                <h3 className="col-span-full mt-1 text-xs font-semibold text-slate-500 first:mt-0">
+                  {region.name}
+                </h3>
+                {region.prefectures.map((prefecture) => (
+                  <Link
+                    key={prefecture.id}
+                    href={`/prefecture/${prefecture.id}`}
+                    className="group flex min-w-0 flex-col items-center gap-2 rounded-lg px-1 py-2 text-center transition-transform hover:-translate-y-1 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-brand"
+                    aria-label={`${prefecture.name}の遊び場を探す`}
+                  >
+                    <Image
+                      src={prefectureIconImages[prefecture.id]}
+                      alt=""
+                      width={64}
+                      height={64}
+                      className="h-12 w-12 object-contain drop-shadow-sm transition-transform group-hover:scale-105 sm:h-14 sm:w-14"
+                      aria-hidden
+                    />
+                    <span className="text-sm font-bold leading-tight text-slate-800 group-hover:text-brand">
+                      {prefecture.name}
+                    </span>
+                    <span className="text-[11px] leading-none text-slate-400">
+                      {getFacilitiesByPrefecture(prefecture.id).length}施設
+                    </span>
+                  </Link>
+                ))}
+              </Fragment>
             ))}
           </div>
         </section>
