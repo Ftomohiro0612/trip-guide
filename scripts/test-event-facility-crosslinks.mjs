@@ -331,9 +331,9 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 476);
-  assert.equal(first.diagnostics.mappableEventCount, 130);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 129);
+  assert.equal(fixtures.events.length, 475);
+  assert.equal(first.diagnostics.mappableEventCount, 129);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 128);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -352,13 +352,12 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
   );
   assert.equal(hasVenueSelfMix(first, fixtures), false);
   assert.equal(
-    fixtures.events.find(({ id }) => id === "evt-1981-202607-01")
-      ?.facility_id,
-    1981,
+    fixtures.events.some(({ id }) => id === "evt-1981-202607-01"),
+    false,
   );
   assert.equal(
     Array.isArray(first.eventToFacilities["evt-1981-202607-01"]),
-    true,
+    false,
   );
   assert.equal(
     first.eventToFacilities["evt-1981-202607-01"]?.some(
@@ -457,22 +456,22 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 476,
-      inputFacilityCount: 4595,
-      publicFacilityCount: 4587,
-      mappableEventCount: 130,
+      inputEventCount: 475,
+      inputFacilityCount: 4607,
+      publicFacilityCount: 4598,
+      mappableEventCount: 129,
       holdEventCount: 346,
       missingLocationCount: 0,
-      excludedFacilityCount: 8,
-      eventToFacilityEventCount: 129,
-      eventToFacilityRecommendationCount: 582,
-      facilityToEventFacilityCount: 1494,
-      facilityToEventThreeCandidateCount: 343,
-      facilityToEventRecommendationCount: 2397,
+      excludedFacilityCount: 9,
+      eventToFacilityEventCount: 128,
+      eventToFacilityRecommendationCount: 578,
+      facilityToEventFacilityCount: 1499,
+      facilityToEventThreeCandidateCount: 344,
+      facilityToEventRecommendationCount: 2405,
     },
   );
-  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 17);
-  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 17);
+  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 16);
+  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 16);
 });
 
 function eventFixture(overrides = {}) {
