@@ -457,17 +457,17 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
     },
     {
       inputEventCount: 475,
-      inputFacilityCount: 4607,
-      publicFacilityCount: 4598,
+      inputFacilityCount: 4617,
+      publicFacilityCount: 4608,
       mappableEventCount: 129,
       holdEventCount: 346,
       missingLocationCount: 0,
       excludedFacilityCount: 9,
       eventToFacilityEventCount: 128,
       eventToFacilityRecommendationCount: 578,
-      facilityToEventFacilityCount: 1499,
+      facilityToEventFacilityCount: 1502,
       facilityToEventThreeCandidateCount: 344,
-      facilityToEventRecommendationCount: 2405,
+      facilityToEventRecommendationCount: 2409,
     },
   );
   assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 16);
