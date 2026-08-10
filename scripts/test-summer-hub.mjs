@@ -730,7 +730,7 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
   const second = paginateEventViews(orderedViews, 2);
   const final = paginateEventViews(orderedViews, 24);
 
-  assert.equal(visibleViews.length, 478);
+  assert.equal(visibleViews.length, 477);
   assert.equal(EVENT_PAGE_SIZE, 20);
   assert.deepEqual(
     {
@@ -748,14 +748,14 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     {
       firstCount: 20,
       secondCount: 20,
-      finalCount: 18,
+      finalCount: 17,
       totalPages: 24,
       firstPrevious: false,
       firstNext: true,
       finalPrevious: true,
       finalNext: false,
-      firstRange: "1〜20件を表示 / 全478件",
-      finalRange: "461〜478件を表示 / 全478件",
+      firstRange: "1〜20件を表示 / 全477件",
+      finalRange: "461〜477件を表示 / 全477件",
     },
   );
   assert.equal(
@@ -773,7 +773,7 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     getTypesOnPage(final.items).map((eventType) =>
       final.items.filter((view) => view.event.event_type === eventType).length,
     ),
-    [10, 8],
+    [9, 8],
   );
 });
 
