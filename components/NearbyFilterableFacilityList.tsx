@@ -22,6 +22,8 @@ interface Props {
   facilities: Facility[];
   page: FacilityPageSummary;
   nearbyDataHref: string;
+  heading?: string;
+  showMap?: boolean;
 }
 
 type LocationStatus = "idle" | "locating" | "ready" | "error";
@@ -124,6 +126,8 @@ export default function NearbyFilterableFacilityList({
   facilities,
   page,
   nearbyDataHref,
+  heading = "施設一覧",
+  showMap = true,
 }: Props) {
   const pathname = usePathname();
   const router = useRouter();
@@ -331,7 +335,7 @@ export default function NearbyFilterableFacilityList({
           tabIndex={-1}
           className="mb-2 scroll-mt-24 text-xl font-bold text-slate-900 outline-none"
         >
-          施設一覧
+          {heading}
         </h2>
         {!waitingForLocation && (
           <FacilityPaginationSummary page={effectivePage} />
@@ -392,7 +396,8 @@ export default function NearbyFilterableFacilityList({
         )}
       </section>
 
-      {!waitingForLocation &&
+      {showMap &&
+        !waitingForLocation &&
         !loadingCandidates &&
         displayedFacilities.length > 0 && (
           <ResponsiveResultsMap

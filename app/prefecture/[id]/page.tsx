@@ -3,11 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
-import FacilityCard from "@/components/FacilityCard";
-import {
-  FacilityPaginationControls,
-  FacilityPaginationSummary,
-} from "@/components/FacilityPagination";
+import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import MapViewClient from "@/components/MapViewClient";
 import {
   categories,
@@ -20,8 +16,8 @@ import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
-import { paginateFacilities } from "@/lib/facility-pagination";
 import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
+import { paginateFacilities } from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -299,31 +295,15 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
           </div>
         </section>
 
-        <section
-          className="mt-10"
-          aria-labelledby="prefecture-facilities-heading"
-        >
-          <h2
-            id="prefecture-facilities-heading"
-            tabIndex={-1}
-            className="scroll-mt-24 text-xl font-bold mb-1"
-          >
-            {meta.name} 全{list.length}施設
-          </h2>
-          <p className="text-sm text-slate-500 mb-4">
-            おすすめ順（雨対応・無料施設を優先）
-          </p>
-          <FacilityPaginationSummary page={page} />
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {page.items.map((f) => (
-              <FacilityCard key={f.id} facility={f} />
-            ))}
-          </div>
-          <FacilityPaginationControls
+        <div className="mt-10">
+          <NearbyFilterableFacilityList
+            facilities={page.items}
             page={page}
-            focusTargetId="prefecture-facilities-heading"
+            nearbyDataHref={`/api/facilities/page-data?prefecture=${encodeURIComponent(meta.id)}`}
+            heading={`${meta.name} 全${list.length}施設`}
+            showMap={false}
           />
-        </section>
+        </div>
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">近くのエリアもチェック</h2>
