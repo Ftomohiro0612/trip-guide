@@ -1,6 +1,6 @@
 import type { Facility } from "@/types/facility";
 
-export type SortKey = "recommend" | "prefecture" | "name";
+export type SortKey = "recommend" | "prefecture" | "name" | "nearby";
 
 export interface FilterParams {
   prefectures: string[];
@@ -30,7 +30,9 @@ function asString(v: string | string[] | undefined): string {
 export function parseFilterParams(sp: RawSearchParams): FilterParams {
   const sortValue = asString(sp.sort);
   const sort: SortKey =
-    sortValue === "prefecture" || sortValue === "name"
+    sortValue === "prefecture" ||
+    sortValue === "name" ||
+    sortValue === "nearby"
       ? sortValue
       : "recommend";
   const feeValue = asString(sp.fee);

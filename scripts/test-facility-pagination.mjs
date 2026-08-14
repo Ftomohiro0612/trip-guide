@@ -31,6 +31,22 @@ const nearbyListSource = await readFile(
   new URL("../components/NearbyFilterableFacilityList.tsx", import.meta.url),
   "utf8",
 );
+const nearbyOrderSource = await readFile(
+  new URL("../lib/facility-nearby.ts", import.meta.url),
+  "utf8",
+);
+const sortSelectSource = await readFile(
+  new URL("../components/SortSelect.tsx", import.meta.url),
+  "utf8",
+);
+const filterSource = await readFile(
+  new URL("../lib/filter.ts", import.meta.url),
+  "utf8",
+);
+const pageDataRouteSource = await readFile(
+  new URL("../app/api/facilities/page-data/route.ts", import.meta.url),
+  "utf8",
+);
 const responsiveMapSource = await readFile(
   new URL("../components/ResponsiveResultsMap.tsx", import.meta.url),
   "utf8",
@@ -337,9 +353,9 @@ test("prefecture and recommended_tag combinations paginate after filtering", () 
   assertCompletePagination(combined);
 });
 
-test("nearby ordering is paginated only after distance filtering and sorting", () => {
+test("nearby ordering sorts the complete matching collection before pagination", () => {
   const tokyoStation = [35.681236, 139.767125];
-  const nearby = facilities
+  const distanceOrdered = facilities
     .filter(
       (facility) =>
         Number.isFinite(facility.latitude) &&
@@ -349,17 +365,71 @@ test("nearby ordering is paginated only after distance filtering and sorting", (
       ...facility,
       distance: distanceKm(tokyoStation, facility),
     }))
-    .filter((facility) => facility.distance <= 80)
     .sort((a, b) => a.distance - b.distance || a.id - b.id);
 
-  assert.ok(nearby.length > 24);
-  assertCompletePagination(nearby);
-  const first = paginateFacilities(nearby, 1);
+  assert.equal(distanceOrdered.length, facilities.length);
+  assertCompletePagination(distanceOrdered);
+  const first = paginateFacilities(distanceOrdered, 1);
+  const second = paginateFacilities(distanceOrdered, 2);
   assert.ok(
     first.items.every(
       (item, index) =>
         index === 0 || first.items[index - 1].distance <= item.distance,
     ),
+  );
+  assert.ok(first.items.at(-1).distance <= second.items[0].distance);
+  assert.doesNotMatch(nearbyOrderSource, /nearbyDistanceCutoffKm|distanceKm\s*<=/u);
+  assert.match(
+    nearbyListSource,
+    /getNearbyFacilities\(nearbyCandidates, currentLocation\)[\s\S]*paginateFacilities\(nearbyFacilities,/u,
+  );
+  assert.match(pageDataRouteSource, /searchParams\.delete\("page"\)/u);
+  assert.match(pageDataRouteSource, /\{ facilities: results \}/u);
+});
+
+test("distance ordering preserves prefecture, category, and rainy-day matches", () => {
+  const tokyoStation = [35.681236, 139.767125];
+  const matchingCollections = [
+    facilities.filter((facility) => facility.prefecture_id === "chiba"),
+    facilities.filter((facility) => facility.prefecture_id === "saitama"),
+    facilities.filter((facility) => facility.category_id === "zoo"),
+    facilities.filter((facility) => facility.rain_friendly === "◎"),
+    facilities.filter(
+      (facility) =>
+        facility.prefecture_id === "chiba" && facility.category_id === "zoo",
+    ),
+    facilities.filter(
+      (facility) =>
+        facility.prefecture_id === "saitama" && facility.rain_friendly === "◎",
+    ),
+  ];
+
+  for (const matching of matchingCollections) {
+    assert.ok(matching.length > 0);
+    const ordered = matching
+      .map((facility) => ({
+        ...facility,
+        distance: distanceKm(tokyoStation, facility),
+      }))
+      .sort((a, b) => a.distance - b.distance || a.id - b.id);
+    assert.deepEqual(
+      new Set(ordered.map((facility) => facility.id)),
+      new Set(matching.map((facility) => facility.id)),
+    );
+    assertCompletePagination(ordered);
+  }
+});
+
+test("nearby sort is explicit and never falls back while labeled as nearby", () => {
+  assert.match(sortSelectSource, /value: "nearby", label: "近い順"/u);
+  assert.match(filterSource, /sortValue === "nearby"/u);
+  assert.match(nearbyListSource, /searchParams\.get\("sort"\) === "nearby"/u);
+  assert.match(nearbyListSource, /aria-pressed=\{showingNearby\}/u);
+  assert.match(nearbyListSource, /現在地から近い順/u);
+  assert.match(nearbyListSource, /近い順には現在地が必要/u);
+  assert.match(
+    nearbyListSource,
+    /params\.delete\("sort"\)[\s\S]*router\.replace/u,
   );
 });
 
