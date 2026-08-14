@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import MapViewClient from "@/components/MapViewClient";
-import PrefectureFacilityList from "@/components/PrefectureFacilityList";
 import {
   categories,
   getFacilitiesByPrefecture,
@@ -17,9 +17,11 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
 import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
+import { paginateFacilities } from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ id: string }>;
+  searchParams: Promise<{ page?: string | string[] }>;
 }
 
 function getFacilityCentroid(prefectureId: PrefectureId): Coordinate | null {
@@ -94,8 +96,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PrefecturePage({ params }: Props) {
-  const { id } = await params;
+export default async function PrefecturePage({ params, searchParams }: Props) {
+  const [{ id }, sp] = await Promise.all([params, searchParams]);
   const meta = getPrefectureMeta(id as PrefectureId);
   if (!meta) notFound();
 
@@ -104,6 +106,13 @@ export default async function PrefecturePage({ params }: Props) {
   const visibleCount = list.length;
   const gradient = prefectureGradients[meta.id];
   const isNagano = meta.id === "nagano";
+  const sortedList = list.slice().sort((a, b) => {
+    const score = (facility: (typeof list)[number]) =>
+      (facility.rain_friendly === "◎" ? 2 : 0) +
+      (facility.is_free ? 1 : 0);
+    return score(b) - score(a) || a.id - b.id;
+  });
+  const page = paginateFacilities(sortedList, sp.page);
   const nearestPrefectures = getNearestPrefectures(meta.id);
 
   const categoryCounts = categories
@@ -286,19 +295,15 @@ export default async function PrefecturePage({ params }: Props) {
           </div>
         </section>
 
-        <section
-          className="mt-10"
-          aria-labelledby="prefecture-facilities-heading"
-        >
-          <h2
-            id="prefecture-facilities-heading"
-            tabIndex={-1}
-            className="scroll-mt-24 text-xl font-bold mb-1"
-          >
-            {meta.name} 全{list.length}施設
-          </h2>
-          <PrefectureFacilityList facilities={list} />
-        </section>
+        <div className="mt-10">
+          <NearbyFilterableFacilityList
+            facilities={page.items}
+            page={page}
+            nearbyDataHref={`/api/facilities/page-data?prefecture=${encodeURIComponent(meta.id)}`}
+            heading={`${meta.name} 全${list.length}施設`}
+            showMap={false}
+          />
+        </div>
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">近くのエリアもチェック</h2>
