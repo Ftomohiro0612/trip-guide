@@ -7,11 +7,13 @@ import type { Facility } from "@/types/facility";
 interface Props {
   facilities: Facility[];
   heading?: string;
+  totalItems?: number;
 }
 
 export default function ResponsiveResultsMap({
   facilities,
   heading = "このページの施設を地図で見る",
+  totalItems,
 }: Props) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -30,7 +32,9 @@ export default function ResponsiveResultsMap({
         <h2 id="results-map-heading" className="text-xl font-bold text-slate-900">
           📍 {heading}
           <span className="ml-2 text-sm font-normal text-slate-500">
-            {facilities.length}件
+            {totalItems === undefined
+              ? `${facilities.length}件`
+              : `${totalItems}施設中 ${facilities.length}件`}
           </span>
         </h2>
         {!isDesktop && (

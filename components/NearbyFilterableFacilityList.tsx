@@ -395,7 +395,10 @@ export default function NearbyFilterableFacilityList({
       {!waitingForLocation &&
         !loadingCandidates &&
         displayedFacilities.length > 0 && (
-          <ResponsiveResultsMap facilities={displayedFacilities} />
+          <ResponsiveResultsMap
+            facilities={displayedFacilities}
+            totalItems={effectivePage.totalItems}
+          />
         )}
 
       {waitingForLocation ? (

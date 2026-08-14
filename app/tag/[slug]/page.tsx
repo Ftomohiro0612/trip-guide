@@ -212,7 +212,10 @@ export default async function TagPage({ params, searchParams }: Props) {
         )}
 
         {filteredList.length > 0 && (
-          <ResponsiveResultsMap facilities={facilityPage.items} />
+          <ResponsiveResultsMap
+            facilities={facilityPage.items}
+            totalItems={facilityPage.totalItems}
+          />
         )}
 
         {byPref.map((p) =>
@@ -236,7 +239,7 @@ export default async function TagPage({ params, searchParams }: Props) {
                     </span>
                   )}
                   <span className="text-sm font-normal text-slate-500">
-                    {p.items.length}件
+                    {facilityPage.totalItems}施設中 {p.items.length}件
                   </span>
                 </h2>
                 <Link

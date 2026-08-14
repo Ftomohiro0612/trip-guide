@@ -271,7 +271,7 @@ test("category page reuses one grouping contract and keeps diversified craft nat
 
 test("facility and tag maps render the current page slice before cards and pagination", () => {
   const nearbyMapIndex = nearbyListSource.indexOf(
-    "<ResponsiveResultsMap facilities={displayedFacilities}",
+    "facilities={displayedFacilities}",
   );
   const nearbyCardsIndex = nearbyListSource.indexOf("data-facility-card-grid");
   const nearbyPaginationIndex = nearbyListSource.indexOf(
@@ -282,13 +282,13 @@ test("facility and tag maps render the current page slice before cards and pagin
   assert.ok(nearbyMapIndex < nearbyPaginationIndex);
   assert.equal(
     nearbyListSource.match(
-      /<ResponsiveResultsMap facilities=\{displayedFacilities\}/gu,
+      /<ResponsiveResultsMap[\s\S]*?facilities=\{displayedFacilities\}[\s\S]*?totalItems=\{effectivePage\.totalItems\}/gu,
     )?.length,
     1,
   );
 
   const tagMapIndex = tagPageSource.indexOf(
-    "<ResponsiveResultsMap facilities={facilityPage.items}",
+    "facilities={facilityPage.items}",
   );
   const tagCardsIndex = tagPageSource.indexOf(
     "{byPref.map((p) =>",
@@ -301,7 +301,7 @@ test("facility and tag maps render the current page slice before cards and pagin
   assert.ok(tagMapIndex < tagPaginationIndex);
   assert.equal(
     tagPageSource.match(
-      /<ResponsiveResultsMap facilities=\{facilityPage\.items\}/gu,
+      /<ResponsiveResultsMap[\s\S]*?facilities=\{facilityPage\.items\}[\s\S]*?totalItems=\{facilityPage\.totalItems\}/gu,
     )?.length,
     1,
   );
@@ -309,6 +309,22 @@ test("facility and tag maps render the current page slice before cards and pagin
   assert.match(
     responsiveMapSource,
     /heading = "このページの施設を地図で見る"/u,
+  );
+  assert.match(
+    responsiveMapSource,
+    /`\$\{totalItems\}施設中 \$\{facilities\.length\}件`/u,
+  );
+  assert.match(
+    categoryPageSource,
+    /\{result\.page\.totalItems\}施設中 \{result\.mapFacilities\.length\}件/u,
+  );
+  assert.match(
+    categoryPageSource,
+    /\{result\.page\.totalItems\}施設中 \{section\.items\.length\}件/u,
+  );
+  assert.match(
+    tagPageSource,
+    /\{facilityPage\.totalItems\}施設中 \{p\.items\.length\}件/u,
   );
   assert.match(responsiveMapSource, /useState\(false\)/u);
   assert.match(responsiveMapSource, /\(isDesktop \|\| mobileOpen\)/u);
@@ -329,7 +345,7 @@ test("nearby map reuses the client-only page slice without sending coordinates",
   );
   assert.match(
     nearbyListSource,
-    /<ResponsiveResultsMap facilities=\{displayedFacilities\}/u,
+    /<ResponsiveResultsMap[\s\S]*facilities=\{displayedFacilities\}[\s\S]*totalItems=\{effectivePage\.totalItems\}/u,
   );
 });
 

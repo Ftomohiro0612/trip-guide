@@ -354,7 +354,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
             >
               📍 このページの施設を地図で見る
               <span className="ml-2 text-sm font-normal text-slate-500">
-                {result.mapFacilities.length}件
+                {result.page.totalItems}施設中 {result.mapFacilities.length}件
               </span>
             </h2>
             <MapViewClient facilities={result.mapFacilities} height={420} />
@@ -403,7 +403,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
                   </span>
                 )}
                 <span className="text-sm font-normal text-slate-500">
-                  {section.items.length}件
+                  {result.page.totalItems}施設中 {section.items.length}件
                 </span>
               </h2>
               {section.id !== "nationwide" && (
