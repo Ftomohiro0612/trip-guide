@@ -3,12 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
-import FacilityCard from "@/components/FacilityCard";
-import {
-  FacilityPaginationControls,
-  FacilityPaginationSummary,
-} from "@/components/FacilityPagination";
 import MapViewClient from "@/components/MapViewClient";
+import PrefectureFacilityList from "@/components/PrefectureFacilityList";
 import {
   categories,
   getFacilitiesByPrefecture,
@@ -20,12 +16,10 @@ import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
-import { paginateFacilities } from "@/lib/facility-pagination";
 import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
 
 interface Props {
   params: Promise<{ id: string }>;
-  searchParams: Promise<{ page?: string | string[] }>;
 }
 
 function getFacilityCentroid(prefectureId: PrefectureId): Coordinate | null {
@@ -100,8 +94,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PrefecturePage({ params, searchParams }: Props) {
-  const [{ id }, sp] = await Promise.all([params, searchParams]);
+export default async function PrefecturePage({ params }: Props) {
+  const { id } = await params;
   const meta = getPrefectureMeta(id as PrefectureId);
   if (!meta) notFound();
 
@@ -110,13 +104,6 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
   const visibleCount = list.length;
   const gradient = prefectureGradients[meta.id];
   const isNagano = meta.id === "nagano";
-  const sortedList = list.slice().sort((a, b) => {
-    const score = (facility: (typeof list)[number]) =>
-      (facility.rain_friendly === "◎" ? 2 : 0) +
-      (facility.is_free ? 1 : 0);
-    return score(b) - score(a) || a.id - b.id;
-  });
-  const page = paginateFacilities(sortedList, sp.page);
   const nearestPrefectures = getNearestPrefectures(meta.id);
 
   const categoryCounts = categories
@@ -310,19 +297,7 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
           >
             {meta.name} 全{list.length}施設
           </h2>
-          <p className="text-sm text-slate-500 mb-4">
-            おすすめ順（雨対応・無料施設を優先）
-          </p>
-          <FacilityPaginationSummary page={page} />
-          <div className="mt-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {page.items.map((f) => (
-              <FacilityCard key={f.id} facility={f} />
-            ))}
-          </div>
-          <FacilityPaginationControls
-            page={page}
-            focusTargetId="prefecture-facilities-heading"
-          />
+          <PrefectureFacilityList facilities={list} />
         </section>
 
         <section className="mt-12">
