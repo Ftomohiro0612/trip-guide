@@ -6,6 +6,7 @@ import { resetFacilityPage } from "@/lib/facility-pagination";
 
 const OPTIONS: { value: string; label: string }[] = [
   { value: "recommend", label: "おすすめ順" },
+  { value: "nearby", label: "近い順" },
   { value: "prefecture", label: "県別" },
   { value: "name", label: "名前順" },
 ];

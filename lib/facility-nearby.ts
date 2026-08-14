@@ -1,16 +1,14 @@
 import {
   driveTimeEstimateLabel,
   haversineDistanceKm,
-  nearbyDistanceCutoffKm,
   type Coordinate,
-  type NearbyTravelMinutes,
 } from "@/lib/distance";
 import type { Facility } from "@/types/facility";
 
 export type NearbyFacilityResult = {
-  facility: Facility & { latitude: number; longitude: number };
+  facility: Facility;
   distanceKm: number;
-  proximityLabel: string;
+  proximityLabel?: string;
 };
 
 function hasCoords(
@@ -27,12 +25,16 @@ function hasCoords(
 export function getNearbyFacilities(
   facilities: readonly Facility[],
   currentLocation: Coordinate,
-  rangeMinutes: NearbyTravelMinutes,
 ): NearbyFacilityResult[] {
-  const cutoffKm = nearbyDistanceCutoffKm(rangeMinutes);
   return facilities
-    .filter(hasCoords)
     .map((facility) => {
+      if (!hasCoords(facility)) {
+        return {
+          facility,
+          distanceKm: Number.POSITIVE_INFINITY,
+          proximityLabel: undefined,
+        };
+      }
       const distanceKm = haversineDistanceKm(currentLocation, [
         facility.latitude,
         facility.longitude,
@@ -43,7 +45,6 @@ export function getNearbyFacilities(
         proximityLabel: driveTimeEstimateLabel(distanceKm),
       };
     })
-    .filter((item) => item.distanceKm <= cutoffKm)
     .sort(
       (a, b) =>
         a.distanceKm - b.distanceKm || a.facility.id - b.facility.id,
