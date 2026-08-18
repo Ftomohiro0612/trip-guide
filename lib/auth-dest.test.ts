@@ -1,6 +1,12 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { FALLBACK_AUTH_DEST, isSafeRelativePath, sanitizeAuthRedirect } from "./auth-dest";
+import {
+  FALLBACK_AUTH_DEST,
+  buildLoginRedirect,
+  buildRegisterRedirect,
+  isSafeRelativePath,
+  sanitizeAuthRedirect,
+} from "./auth-dest";
 
 const safePaths = [
   "/mypage",
@@ -39,4 +45,15 @@ test("sanitizeAuthRedirect falls back for unsafe auth destinations", () => {
   for (const [name, path] of unsafePaths) {
     assert.equal(sanitizeAuthRedirect(path), FALLBACK_AUTH_DEST, name);
   }
+});
+
+test("auth redirect builders sanitize before encoding", () => {
+  assert.equal(
+    buildLoginRedirect("/mypage/visits/new?guestDraft=1"),
+    "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3FguestDraft%3D1",
+  );
+  assert.equal(
+    buildRegisterRedirect("https://evil.example"),
+    `/auth/register?redirectTo=${encodeURIComponent(FALLBACK_AUTH_DEST)}`,
+  );
 });

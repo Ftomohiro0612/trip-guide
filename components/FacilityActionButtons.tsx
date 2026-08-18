@@ -1,5 +1,6 @@
 "use client";
 
+import { useFacilityGuestRecord } from "@/components/FacilityGuestRecordProvider";
 import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
 
 export default function FacilityActionButtons({
@@ -11,12 +12,14 @@ export default function FacilityActionButtons({
   facilitySlug: string;
   facilityName: string;
 }) {
+  const { openGuestRecord } = useFacilityGuestRecord();
   const { handleRecord, handleWishlist, isWishlisted, loadState, toggling } =
     useFacilityIntentActions({
       facilityId,
       facilitySlug,
       facilityName,
       loadWishlistState: true,
+      onGuestRecord: openGuestRecord,
     });
 
   if (loadState === "loading") {
@@ -32,7 +35,7 @@ export default function FacilityActionButtons({
     <div className="space-y-3">
       <p className="text-xs text-slate-500 leading-relaxed">
         {loadState === "guest"
-          ? "記録・行きたいリストは無料登録で使えます。"
+          ? "記録は登録なしで体験できます。行きたいリストは無料登録で使えます。"
           : "行ったあとに、子どもごとの反応や再訪意向を記録しておけます。"}
       </p>
       <button

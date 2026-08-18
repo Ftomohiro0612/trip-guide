@@ -6,6 +6,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
 import FacilityEvents from "@/components/FacilityEvents";
+import FacilityGuestRecordProvider from "@/components/FacilityGuestRecordProvider";
 import FacilityNearbySummerEvents from "@/components/FacilityNearbySummerEvents";
 import FacilityGallery from "@/components/FacilityGallery";
 import FacilityAnnualPass from "@/components/FacilityAnnualPass";
@@ -19,6 +20,8 @@ import {
   isFacilityVisible,
   visibleFacilities,
 } from "@/lib/facilities";
+import { getGuestInterestTags } from "@/lib/guest-record";
+import { getGuestRecordRecommendationCandidates } from "@/lib/guest-record-recommendations";
 import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { getBuildDateString } from "@/lib/events";
@@ -82,6 +85,9 @@ export default async function FacilityDetailPage({ params }: Props) {
   if (!isFacilityVisible(facility)) notFound();
 
   const related = getRelatedFacilities(facility, 3);
+  const guestInterestTags = getGuestInterestTags(facility.recommended_for_tags);
+  const guestRecommendationCandidates =
+    getGuestRecordRecommendationCandidates(facility);
   const today = getBuildDateString();
   const nearbySummerEvents =
     getSummerCrosslinkData(today).facilityToEvents[String(facility.id)] ?? [];
@@ -159,7 +165,13 @@ export default async function FacilityDetailPage({ params }: Props) {
   };
 
   return (
-    <div>
+    <FacilityGuestRecordProvider
+      facilitySlug={facility.slug}
+      facilityName={facility.name}
+      interestTags={guestInterestTags}
+      recommendationCandidates={guestRecommendationCandidates}
+    >
+      <div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -519,7 +531,8 @@ export default async function FacilityDetailPage({ params }: Props) {
           </div>
         </section>
       )}
-    </div>
+      </div>
+    </FacilityGuestRecordProvider>
   );
 }
 
