@@ -64,11 +64,15 @@ export function useFacilityIntentActions({
     const dest = buildAuthDest("record", facilitySlug, facilityName);
     trackIntentClick(facilityId, "record");
     if (loadState === "guest") {
-      onGuestRecord?.();
+      if (onGuestRecord) {
+        onGuestRecord();
+      } else {
+        requireLogin(dest);
+      }
       return;
     }
     router.push(dest);
-  }, [facilityId, facilityName, facilitySlug, loadState, onGuestRecord, router]);
+  }, [facilityId, facilityName, facilitySlug, loadState, onGuestRecord, requireLogin, router]);
 
   const handleWishlist = useCallback(async () => {
     if (loadState === "loading" || toggling) return;
