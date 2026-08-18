@@ -10,6 +10,7 @@ type Options = {
   facilitySlug: string;
   facilityName: string;
   loadWishlistState?: boolean;
+  onGuestRecord?: () => void;
 };
 
 declare global {
@@ -43,6 +44,7 @@ export function useFacilityIntentActions({
   facilityId,
   facilitySlug,
   facilityName,
+  onGuestRecord,
 }: Options) {
   const router = useRouter();
   const [toggling, setToggling] = useState(false);
@@ -62,11 +64,11 @@ export function useFacilityIntentActions({
     const dest = buildAuthDest("record", facilitySlug, facilityName);
     trackIntentClick(facilityId, "record");
     if (loadState === "guest") {
-      requireLogin(dest);
+      onGuestRecord?.();
       return;
     }
     router.push(dest);
-  }, [facilityId, facilityName, facilitySlug, loadState, requireLogin, router]);
+  }, [facilityId, facilityName, facilitySlug, loadState, onGuestRecord, router]);
 
   const handleWishlist = useCallback(async () => {
     if (loadState === "loading" || toggling) return;

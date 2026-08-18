@@ -38,3 +38,7 @@ export function buildAuthDest(
 export function buildLoginRedirect(dest: string): string {
   return `/auth/login?redirectTo=${encodeURIComponent(sanitizeAuthRedirect(dest))}`;
 }
+
+export function buildRegisterRedirect(dest: string): string {
+  return `/auth/register?redirectTo=${encodeURIComponent(sanitizeAuthRedirect(dest))}`;
+}

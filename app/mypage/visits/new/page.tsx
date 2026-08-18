@@ -7,6 +7,12 @@ import ChildAvatar from "@/components/ChildAvatar";
 import ChildRegistrationNudge from "@/components/ChildRegistrationNudge";
 import { childAgeAtVisit } from "@/lib/child-age";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
+import {
+  clearGuestRecordDraft,
+  readGuestRecordDraft,
+  type GuestRecordDraft,
+} from "@/lib/guest-record";
+import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { createClient } from "@/lib/supabase/client";
 import { encodeInterestOtherNote } from "@/lib/visit-other-note";
 import {
@@ -186,6 +192,7 @@ export default function NewVisitPage() {
   const router = useRouter();
   const facilitySlugFromUrl = searchParams.get("facility") ?? "";
   const nameFromUrl = searchParams.get("name") ?? "";
+  const restoreGuestDraft = searchParams.get("guestDraft") === "1";
   const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
   const submissionLockedRef = useRef(false);
 
@@ -217,6 +224,8 @@ export default function NewVisitPage() {
     {},
   );
   const [parentMemo, setParentMemo] = useState("");
+  const [restoredGuestDraft, setRestoredGuestDraft] =
+    useState<GuestRecordDraft | null>(null);
   const [loading, setLoading] = useState(false);
   const [initializing, setInitializing] = useState(true);
   const [photoBusy, setPhotoBusy] = useState(false);
@@ -224,6 +233,30 @@ export default function NewVisitPage() {
   const [createdVisitId, setCreatedVisitId] = useState<string | null>(null);
   const [createdVisitContext, setCreatedVisitContext] =
     useState<VisitCompletionContext | null>(null);
+
+  useEffect(() => {
+    if (!restoreGuestDraft) return;
+    const restoreId = window.setTimeout(() => {
+      const guestDraft = readGuestRecordDraft();
+      if (
+        !guestDraft ||
+        guestDraft.facilitySlug !== facilitySlugFromUrl ||
+        guestDraft.facilityName !== nameFromUrl
+      ) {
+        return;
+      }
+
+      setRestoredGuestDraft(guestDraft);
+      setDateChoice("custom");
+      setCustomDate(guestDraft.visitedOn);
+      setFamilyRevisit(guestDraft.familyRevisit);
+      setParentFatigue(guestDraft.parentFatigue);
+      setDetailsOpen(true);
+      setParentMemo(guestDraft.note);
+    }, 0);
+
+    return () => window.clearTimeout(restoreId);
+  }, [facilitySlugFromUrl, nameFromUrl, restoreGuestDraft]);
 
   useEffect(() => {
     let active = true;
@@ -254,6 +287,13 @@ export default function NewVisitPage() {
         setError(childrenError.message);
       } else {
         const childRows = (data ?? []) as Child[];
+        const guestDraft = restoreGuestDraft ? readGuestRecordDraft() : null;
+        const matchingGuestDraft =
+          guestDraft &&
+          guestDraft.facilitySlug === facilitySlugFromUrl &&
+          guestDraft.facilityName === nameFromUrl
+            ? guestDraft
+            : null;
         const avatarPaths = childRows
           .map((child) => child.avatar_url)
           .filter((path): path is string => Boolean(path));
@@ -274,6 +314,24 @@ export default function NewVisitPage() {
               : null,
           })),
         );
+        if (matchingGuestDraft) {
+          if (childRows.length === 0) {
+            setParentMemo(
+              `${matchingGuestDraft.note}\n\nお試しで選んだ興味：${matchingGuestDraft.interestTagIds
+                  .map((tag) => getRecommendedForTagMeta(tag).label)
+                  .join("、")}`,
+            );
+          } else {
+            setChildTags(
+              Object.fromEntries(
+                childRows.map((child) => [
+                  child.id,
+                  matchingGuestDraft.interestTagIds,
+                ]),
+              ),
+            );
+          }
+        }
         const childIdSet = new Set(childRows.map((child) => child.id));
         const presetChildIds = takeVisitPresetChildren();
         setSelectedChildIds(
@@ -289,7 +347,7 @@ export default function NewVisitPage() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [facilitySlugFromUrl, nameFromUrl, restoreGuestDraft]);
 
   useEffect(() => {
     if (!loading) submissionLockedRef.current = false;
@@ -387,6 +445,7 @@ export default function NewVisitPage() {
       entryMethod: "standard",
       returnFacility: facilitySlugFromUrl || undefined,
     });
+    if (restoredGuestDraft) clearGuestRecordDraft();
     router.replace("/mypage/visits/complete");
   }
 
@@ -545,6 +604,35 @@ export default function NewVisitPage() {
         <h1 className="text-xl font-bold text-slate-900">おでかけを記録</h1>
         <p className="text-sm text-slate-500 mt-1">必須項目だけなら30秒で残せます。</p>
       </div>
+
+      {restoredGuestDraft && (
+        <section className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+          <p className="text-sm font-bold text-emerald-950">
+            思い出カードの内容を引き継ぎました
+          </p>
+          <dl className="mt-2 space-y-1 text-xs leading-relaxed text-emerald-900">
+            <div className="flex gap-2">
+              <dt className="shrink-0 font-bold">訪問日</dt>
+              <dd>{restoredGuestDraft.visitedOn}</dd>
+            </div>
+            <div className="flex gap-2">
+              <dt className="shrink-0 font-bold">ひとこと</dt>
+              <dd>{restoredGuestDraft.note}</dd>
+            </div>
+            <div className="flex gap-2">
+              <dt className="shrink-0 font-bold">興味タグ</dt>
+              <dd>
+                {restoredGuestDraft.interestTagIds
+                  .map((tag) => getRecommendedForTagMeta(tag).label)
+                  .join("、")}
+              </dd>
+            </div>
+          </dl>
+          <p className="mt-2 text-xs text-emerald-700">
+            写真は安全のため引き継いでいません。
+          </p>
+        </section>
+      )}
 
       <Link
         href="/mypage/visits/from-photo"
