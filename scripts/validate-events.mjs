@@ -10,6 +10,7 @@ const summerLocationResearch = readJson(
   "data/summer_event_location_research_2026.json",
 );
 const facilities = readJson("data/facilities_data.json");
+const eventSourceRegistry = readJson(".codex/events-source-registry.json");
 const summerPageSource = fs.readFileSync(
   path.join(root, "app/events/summer/page.tsx"),
   "utf8",
@@ -43,6 +44,11 @@ const requiredPrimaryHosts = new Map([
   ["evt-summer-2026-tokyo-011", "tomiokahachimangu.or.jp"],
   ["evt-summer-2026-kanagawa-008", "pacifico.co.jp"],
 ]);
+
+validateEventSourceRegistryPrefectures(
+  eventSourceRegistry.facilities,
+  facilities.facilities,
+);
 
 checkCount("metadata.new_event_count", summer.metadata.new_event_count, summer.events.length);
 checkCount(
@@ -1002,6 +1008,30 @@ function checkCount(label, expected, actual) {
 function checkUniqueIds(items, label) {
   const ids = items.map((item) => item.id);
   if (new Set(ids).size !== ids.length) errors.push(`${label} contains duplicate IDs`);
+}
+
+function validateEventSourceRegistryPrefectures(registryRows, facilityRows) {
+  const prefectureIdPattern = /^[a-z]+(?:-[a-z]+)*$/u;
+  const canonicalPrefectureIds = new Set(
+    facilityRows.map((facility) => facility.prefecture_id),
+  );
+
+  for (const prefectureId of canonicalPrefectureIds) {
+    if (!prefectureIdPattern.test(prefectureId ?? "")) {
+      errors.push(
+        `facilities_data.json contains a non-canonical prefecture_id: ${prefectureId}`,
+      );
+    }
+  }
+
+  for (const row of registryRows) {
+    if (!canonicalPrefectureIds.has(row.prefecture)) {
+      error(
+        `events-source-registry facility ${row.facility_id}`,
+        `prefecture must match a canonical facilities_data.json prefecture_id; received ${row.prefecture}`,
+      );
+    }
+  }
 }
 
 function validateDate(value, label) {
