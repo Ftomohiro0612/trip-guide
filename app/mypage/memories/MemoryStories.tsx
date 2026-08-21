@@ -23,6 +23,9 @@ function StoryPhotos({
   story: MemoryStory;
   priority: boolean;
 }) {
+  const photoUrls = story.photoUrls.slice(0, 3);
+  const [activePhotoIndex, setActivePhotoIndex] = useState(0);
+
   if (story.photoUrls.length === 0) {
     return (
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,#fed7aa_0%,transparent_32%),radial-gradient(circle_at_80%_30%,#bae6fd_0%,transparent_30%),linear-gradient(145deg,#0f172a_0%,#334155_48%,#14532d_100%)]">
@@ -35,30 +38,62 @@ function StoryPhotos({
     );
   }
 
-  return (
-    <div
-      className={`absolute inset-0 grid gap-0.5 bg-black ${
-        story.photoUrls.length === 1
-          ? "grid-cols-1"
-        : story.photoUrls.length === 2
-            ? "grid-rows-2"
-            : "grid-cols-2 grid-rows-[2fr_1fr]"
-      }`}
-    >
-      {story.photoUrls.slice(0, 3).map((photoUrl, photoIndex) => (
-        // Signed private photo URLs and review-only sample paths both work without
-        // introducing a new image host or changing the existing photo pipeline.
-        // eslint-disable-next-line @next/next/no-img-element
+  if (story.photoUrls.length === 1) {
+    return (
+      <div className="absolute inset-0 grid grid-cols-1 gap-0.5 bg-black">
+        {/* Signed private photo URLs and review-only sample paths both work without
+            introducing a new image host or changing the existing photo pipeline. */}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
-          key={`${story.id}-${photoIndex}`}
-          src={photoUrl}
-          alt={`${story.facilityName}の家族の思い出 ${photoIndex + 1}`}
-          className={`h-full w-full object-cover ${
-            story.photoUrls.length === 3 && photoIndex === 0 ? "col-span-2" : ""
-          }`}
-          loading={priority && photoIndex === 0 ? "eager" : "lazy"}
+          src={photoUrls[0]}
+          alt={`${story.facilityName}の家族の思い出 1`}
+          className="h-full w-full object-cover"
+          loading={priority ? "eager" : "lazy"}
         />
-      ))}
+      </div>
+    );
+  }
+
+  return (
+    <div className="absolute inset-0 bg-black">
+      {/* Signed private photo URLs and review-only sample paths both work without
+          introducing a new image host or changing the existing photo pipeline. */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src={photoUrls[activePhotoIndex]}
+        alt={`${story.facilityName}の家族の思い出 ${activePhotoIndex + 1}`}
+        className="h-full w-full object-cover"
+        loading={priority ? "eager" : "lazy"}
+      />
+
+      <div
+        className="absolute right-5 bottom-[calc(32%+0.75rem)] z-20 flex max-w-[calc(100%-2.5rem)] justify-end gap-2 touch-pan-y"
+        role="group"
+        aria-label={`${story.facilityName}の写真を選ぶ`}
+      >
+        {photoUrls.map((photoUrl, photoIndex) => (
+          <button
+            key={`${story.id}-${photoIndex}`}
+            type="button"
+            onClick={() => setActivePhotoIndex(photoIndex)}
+            className={`relative h-12 w-12 shrink-0 overflow-hidden rounded-lg bg-black/40 shadow-lg transition-transform focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white ${
+              photoIndex === activePhotoIndex
+                ? "scale-105 ring-2 ring-white"
+                : "ring-1 ring-white/70"
+            }`}
+            aria-label={`${photoIndex + 1}枚目の写真を表示`}
+            aria-pressed={photoIndex === activePhotoIndex}
+          >
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={photoUrl}
+              alt=""
+              className="h-full w-full object-cover"
+              loading="lazy"
+            />
+          </button>
+        ))}
+      </div>
     </div>
   );
 }

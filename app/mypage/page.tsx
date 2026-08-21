@@ -731,6 +731,29 @@ export default async function MypagePage() {
         </div>
       )}
 
+      {recentVisits.length > 0 && (
+        <Link
+          href="/mypage/memories"
+          data-mypage-section="memory-stories-banner"
+          className="group flex items-center justify-between overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-4 py-3 text-white shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 lg:col-span-2 lg:order-4"
+        >
+          <div className="min-w-0">
+            <p className="text-[10px] font-bold tracking-[0.16em] text-white/60">
+              FAMILY MEMORIES
+            </p>
+            <p className="truncate text-sm font-black sm:text-base">
+              写真で思い出を振り返る
+            </p>
+          </div>
+          <span
+            className="ml-3 shrink-0 rounded-full bg-white/10 px-2.5 py-1 text-base transition-transform group-hover:-translate-y-0.5"
+            aria-hidden="true"
+          >
+            ↑
+          </span>
+        </Link>
+      )}
+
       <div data-mypage-section="recent-memories" className="lg:col-start-1 lg:order-5">
         {!isEmptyWithChildren && recentVisits.length > 0 && (
           <section className="space-y-3">
