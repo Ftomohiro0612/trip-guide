@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
-import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import MapViewClient from "@/components/MapViewClient";
+import PrefectureDiscoveryFacilityList from "@/components/PrefectureDiscoveryFacilityList";
 import {
   categories,
   getFacilitiesByPrefecture,
@@ -17,7 +17,6 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
 import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
-import { paginateFacilities } from "@/lib/facility-pagination";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -96,8 +95,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   };
 }
 
-export default async function PrefecturePage({ params, searchParams }: Props) {
-  const [{ id }, sp] = await Promise.all([params, searchParams]);
+export default async function PrefecturePage({ params }: Props) {
+  const { id } = await params;
   const meta = getPrefectureMeta(id as PrefectureId);
   if (!meta) notFound();
 
@@ -112,7 +111,6 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
       (facility.is_free ? 1 : 0);
     return score(b) - score(a) || a.id - b.id;
   });
-  const page = paginateFacilities(sortedList, sp.page);
   const nearestPrefectures = getNearestPrefectures(meta.id);
 
   const categoryCounts = categories
@@ -296,12 +294,9 @@ export default async function PrefecturePage({ params, searchParams }: Props) {
         </section>
 
         <div className="mt-10">
-          <NearbyFilterableFacilityList
-            facilities={page.items}
-            page={page}
-            nearbyDataHref={`/api/facilities/page-data?prefecture=${encodeURIComponent(meta.id)}`}
-            heading={`${meta.name} 全${list.length}施設`}
-            showMap={false}
+          <PrefectureDiscoveryFacilityList
+            facilities={sortedList}
+            prefectureName={meta.name}
           />
         </div>
 
