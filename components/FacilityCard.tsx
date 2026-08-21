@@ -7,6 +7,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import type { Facility } from "@/types/facility";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
+import FacilityPhotoSearchLink from "@/components/FacilityPhotoSearchLink";
 
 interface Props {
   facility: Facility;
@@ -32,26 +33,38 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
   const actionsDisabled = loadState === "loading";
 
   return (
-    <Link
-      href={`/facilities/${facility.slug}`}
+    <article
       className="group flex flex-col bg-white rounded-2xl border border-slate-200 hover:border-brand hover:shadow-lg transition-all overflow-hidden"
     >
       <div className="relative aspect-[16/9] bg-gradient-to-br from-sky-100 via-cyan-50 to-emerald-50 overflow-hidden">
         {hasImage ? (
-          <Image
-            src={facility.image as string}
-            alt={facility.name}
-            fill
-            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-            className="object-cover group-hover:scale-105 transition-transform duration-500"
-          />
+          <Link
+            href={`/facilities/${facility.slug}`}
+            className="absolute inset-0"
+            aria-label={`${facility.name}の詳細を見る`}
+          >
+            <Image
+              src={facility.image as string}
+              alt={facility.name}
+              fill
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              className="object-cover group-hover:scale-105 transition-transform duration-500"
+            />
+          </Link>
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center">
+          <div className="absolute inset-0 flex flex-col items-center justify-center gap-2 px-4 pt-6 text-center">
             <CategoryIcon
               categoryId={facility.category_id}
               width={64}
               height={64}
-              className="h-16 w-16 drop-shadow-sm"
+              className="h-12 w-12 drop-shadow-sm sm:h-14 sm:w-14"
+            />
+            <p className="text-xs font-bold text-slate-600">写真は未掲載です</p>
+            <FacilityPhotoSearchLink
+              facilityName={facility.name}
+              address={facility.address}
+              compact
+              className="relative z-20 inline-flex min-h-10 items-center justify-center rounded-lg border border-sky-300 bg-white px-3 text-xs font-bold text-sky-700 shadow-sm transition-colors hover:bg-sky-50"
             />
           </div>
         )}
@@ -79,12 +92,14 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
           <span aria-hidden>·</span>
           <span>{facility.category}</span>
         </div>
-        <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-brand line-clamp-2">
-          {facility.name}
-        </h3>
-        <p className="text-sm text-slate-600 line-clamp-2 flex-1">
-          {facility.description}
-        </p>
+        <Link href={`/facilities/${facility.slug}`} className="flex-1">
+          <h3 className="font-bold text-base sm:text-lg text-slate-900 group-hover:text-brand line-clamp-2">
+            {facility.name}
+          </h3>
+          <p className="mt-2 text-sm text-slate-600 line-clamp-2">
+            {facility.description}
+          </p>
+        </Link>
         {proximityLabel && (
           <p className="text-xs font-bold text-slate-700 bg-blue-50 border border-blue-100 rounded-md px-2 py-1">
             🚗 {proximityLabel}
@@ -152,6 +167,6 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
           </button>
         </div>
       </div>
-    </Link>
+    </article>
   );
 }

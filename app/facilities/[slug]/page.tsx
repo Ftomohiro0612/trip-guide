@@ -12,6 +12,7 @@ import FacilityGallery from "@/components/FacilityGallery";
 import FacilityAnnualPass from "@/components/FacilityAnnualPass";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
+import FacilityPhotoSearchLink from "@/components/FacilityPhotoSearchLink";
 import ShareButtons from "@/components/ShareButtons";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import {
@@ -277,6 +278,19 @@ export default async function FacilityDetailPage({ params }: Props) {
                   👶 {facility.target_age}
                 </span>
               </div>
+              {!facility.image && (
+                <div className="mt-4 rounded-xl border border-white/40 bg-white/15 p-3 backdrop-blur-sm">
+                  <p className="text-xs font-bold text-white">
+                    Memorip掲載写真はありません
+                  </p>
+                  <FacilityPhotoSearchLink
+                    facilityName={facility.name}
+                    address={facility.address}
+                    compact
+                    className="mt-2 inline-flex min-h-11 items-center justify-center rounded-lg border border-white/70 bg-white px-4 text-sm font-bold text-sky-700 shadow-sm transition-colors hover:bg-sky-50"
+                  />
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -416,6 +430,7 @@ export default async function FacilityDetailPage({ params }: Props) {
             images={galleryImages}
             attributions={galleryAttributions}
             facilityName={facility.name}
+            address={facility.address}
           />
 
           <FacilityPublicRecordsEmptyCard
@@ -546,6 +561,14 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
         facilitySlug={facility.slug}
         facilityName={facility.name}
       />
+      {!facility.image && (
+        <FacilityPhotoSearchLink
+          facilityName={facility.name}
+          address={facility.address}
+          compact
+          className="flex min-h-11 w-full items-center justify-center rounded-xl border border-sky-300 bg-sky-50 px-3 text-center text-sm font-bold text-sky-700 transition-colors hover:bg-sky-100"
+        />
+      )}
       {facility.url && (
         <TrackedOutboundLink
           href={facility.url}
