@@ -166,6 +166,14 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
             {isWishlisted ? "♥ 行きたい済み" : "♡ 行きたい"}
           </button>
         </div>
+        {hasImage && (
+          <FacilityPhotoSearchLink
+            facilityName={facility.name}
+            address={facility.address}
+            purpose="more"
+            className="inline-flex min-h-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-3 text-center text-xs font-medium text-slate-600 transition-colors hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700"
+          />
+        )}
       </div>
     </article>
   );

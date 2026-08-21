@@ -278,6 +278,14 @@ export default async function FacilityDetailPage({ params }: Props) {
                   👶 {facility.target_age}
                 </span>
               </div>
+              {facility.image && (
+                <FacilityPhotoSearchLink
+                  facilityName={facility.name}
+                  address={facility.address}
+                  purpose="more"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-lg border border-white/50 bg-black/25 px-3 text-xs font-medium text-white backdrop-blur-sm transition-colors hover:bg-black/40"
+                />
+              )}
               {!facility.image && (
                 <div className="mt-4 rounded-xl border border-white/40 bg-white/15 p-3 backdrop-blur-sm">
                   <p className="text-xs font-bold text-white">
@@ -561,7 +569,14 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
         facilitySlug={facility.slug}
         facilityName={facility.name}
       />
-      {!facility.image && (
+      {facility.image ? (
+        <FacilityPhotoSearchLink
+          facilityName={facility.name}
+          address={facility.address}
+          purpose="more"
+          className="flex min-h-10 w-full items-center justify-center rounded-xl border border-slate-200 bg-slate-50 px-3 text-center text-xs font-medium text-slate-600 transition-colors hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700"
+        />
+      ) : (
         <FacilityPhotoSearchLink
           facilityName={facility.name}
           address={facility.address}

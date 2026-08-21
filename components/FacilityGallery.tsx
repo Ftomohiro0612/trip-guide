@@ -68,6 +68,12 @@ export default function FacilityGallery({
           }}
         />
       )}
+      <FacilityPhotoSearchLink
+        facilityName={facilityName}
+        address={address}
+        purpose="more"
+        className="mt-3 inline-flex min-h-10 items-center justify-center rounded-lg border border-slate-200 bg-slate-50 px-3 text-xs font-medium text-slate-600 transition-colors hover:border-sky-200 hover:bg-sky-50 hover:text-sky-700"
+      />
     </section>
   );
 }
