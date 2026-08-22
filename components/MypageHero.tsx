@@ -20,7 +20,7 @@ export default function MypageHero({
   const isFirstRecord = stats.totalVisitCount === 0 && kids.length > 0;
 
   return (
-    <section className="rounded-2xl bg-gradient-to-br from-sky-50 via-white to-amber-50 p-4 ring-1 ring-sky-100 sm:p-5">
+    <section className="overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand/10 via-white to-accent/10 p-5 shadow-sm ring-1 ring-brand/15 sm:p-6">
       <div className="flex items-start justify-between gap-3">
         <div className="flex min-w-0 items-center gap-2">
           <div className="flex min-w-0 flex-wrap gap-2">
@@ -28,7 +28,7 @@ export default function MypageHero({
               <Link
                 key={child.id}
                 href={`#${child.anchorId}`}
-                className="flex items-center gap-2 rounded-full border border-white bg-white/90 px-2.5 py-1 shadow-sm transition-colors hover:border-brand/40 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                className="flex min-h-11 items-center gap-2 rounded-full bg-white/90 px-2.5 py-1 shadow-sm ring-1 ring-brand/10 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
               >
                 <ChildAvatar
                   childId={child.id}
@@ -52,7 +52,7 @@ export default function MypageHero({
         </div>
         <Link
           href="/mypage/settings"
-          className="shrink-0 p-1 text-slate-400 transition-colors hover:text-slate-600"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-500 ring-1 ring-slate-200/80 transition-colors hover:bg-white hover:text-slate-700"
           aria-label="アカウント設定"
         >
           ⚙️
@@ -60,24 +60,26 @@ export default function MypageHero({
       </div>
 
       {isFirstRecord ? (
-        <div className="mt-4">
-          <h1 className="text-xl font-bold text-slate-900">最初の1件を記録しましょう</h1>
+        <div className="mt-6">
+          <p className="text-[10px] font-bold tracking-[0.18em] text-brand">OUR FAMILY</p>
+          <h1 className="mt-1 text-2xl font-black tracking-tight text-slate-950">最初の1件を記録しましょう</h1>
           <p className="mt-1 text-sm text-slate-500">
             記録すると、家族のおでかけがここにたまっていきます
           </p>
           <Link
             href="/mypage/visits/new"
-            className="mt-3 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+            className="mt-4 inline-flex min-h-11 items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark"
           >
             ✏️ おでかけを記録する
           </Link>
         </div>
       ) : (
-        <div className="mt-4">
-          <p className="text-xs font-medium tracking-wide text-slate-400">おでかけ記録</p>
-          <h1 className="mt-0.5 text-2xl font-bold text-slate-900 tabular-nums">
+        <div className="mt-6">
+          <p className="text-[10px] font-bold tracking-[0.18em] text-brand">OUR FAMILY</p>
+          <p className="mt-1 text-xs font-semibold text-slate-500">家族のおでかけ記録</p>
+          <h1 className="mt-1 text-3xl font-black tracking-tight text-slate-950 tabular-nums sm:text-4xl">
             {stats.totalVisitCount}回
-            <span className="mx-2 text-slate-300">·</span>
+            <span className="mx-2 text-accent">·</span>
             {stats.distinctFacilityCount}か所
           </h1>
           {stats.thisMonthRecordedCount > 0 ? (

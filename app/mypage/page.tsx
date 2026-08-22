@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
+import type { ReactNode } from "react";
 import CategoryBar from "@/components/CategoryBar";
 import ChildAvatar from "@/components/ChildAvatar";
 import MypageHero from "@/components/MypageHero";
@@ -235,7 +236,7 @@ function FrequentInterests({
         {interests.map((interest) => (
           <li
             key={interest.id}
-            className="rounded-full bg-sky-50 px-3 py-1.5 text-xs font-medium text-sky-800 ring-1 ring-sky-100"
+            className="rounded-full bg-brand/10 px-3 py-1.5 text-xs font-medium text-slate-700 ring-1 ring-brand/15"
           >
             {interest.label} <span className="font-bold">{interest.count}回</span>
           </li>
@@ -268,7 +269,7 @@ function ChildPreferenceContent({ summary }: { summary: ChildInsightSummary }) {
         <p className="text-sm font-medium text-slate-700">
           {summary.child.nickname}の反応記録が{summary.visitCount}件たまりました
         </p>
-        <p className="text-sm leading-relaxed text-emerald-700">
+        <p className="text-sm leading-relaxed text-slate-600">
           あと{3 - summary.visitCount}件で{summary.child.nickname}の「好き」のヒントが見えはじめます
         </p>
       </div>
@@ -278,9 +279,9 @@ function ChildPreferenceContent({ summary }: { summary: ChildInsightSummary }) {
   if (summary.stage === "sprout") {
     return (
       <div className="space-y-3">
-        <div className="rounded-lg bg-emerald-50 px-3 py-2.5">
-          <p className="text-xs font-bold tracking-wide text-emerald-700">🌱 好きの芽</p>
-          <p className="mt-1 text-xs text-emerald-700">
+        <div className="rounded-xl bg-success/10 px-3 py-2.5 ring-1 ring-success/15">
+          <p className="text-xs font-bold tracking-wide text-slate-700">🌱 好きの芽</p>
+          <p className="mt-1 text-xs text-slate-600">
             {summary.visitCount}件の反応記録から見えてきたヒントです
           </p>
         </div>
@@ -294,9 +295,9 @@ function ChildPreferenceContent({ summary }: { summary: ChildInsightSummary }) {
 
   return (
     <div className="space-y-3">
-      <div className="rounded-lg bg-amber-50 px-3 py-2.5">
-        <p className="text-xs font-bold tracking-wide text-amber-700">✨ 好きの傾向</p>
-        <p className="mt-1 text-sm font-medium text-amber-950">
+      <div className="rounded-xl bg-accent/10 px-3 py-2.5 ring-1 ring-accent/15">
+        <p className="text-xs font-bold tracking-wide text-slate-700">✨ 好きの傾向</p>
+        <p className="mt-1 text-sm font-medium text-slate-800">
           {summary.visitCount}件の反応記録から見えてきたヒントです
         </p>
       </div>
@@ -670,139 +671,113 @@ export default async function MypagePage() {
   );
 
   return (
-    <div className="mx-auto max-w-lg space-y-4 px-4 py-4 lg:grid lg:max-w-5xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-6 lg:space-y-0 lg:py-6">
+    <div className="mx-auto max-w-lg space-y-6 px-4 py-5 lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-8 lg:space-y-0 lg:py-8">
       <div data-mypage-section="hero" className="lg:col-span-2 lg:order-1">
         <MypageHero kids={heroChildren} stats={familyStats} />
       </div>
 
-      <div data-mypage-section="monthly-diff" className="lg:col-span-2 lg:order-2">
-        <MonthlyDiffCard stats={familyStats} />
+      <div
+        data-mypage-section="memory-photos"
+        className={
+          recentVisits.length > 0
+            ? "overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-slate-950 via-violet-950 to-rose-950 p-4 text-white shadow-xl ring-1 ring-white/10 sm:p-5 lg:col-span-2 lg:order-2"
+            : "hidden"
+        }
+      >
+        {recentVisits.length > 0 && (
+          <>
+            <Link
+              href="/mypage/memories"
+              data-mypage-section="memory-stories-banner"
+              className="group flex min-h-16 items-center justify-between rounded-2xl transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-white"
+            >
+              <div className="min-w-0">
+                <p className="text-[10px] font-bold tracking-[0.18em] text-white/60">
+                  FAMILY MEMORIES
+                </p>
+                <h2 className="mt-1 truncate text-xl font-black tracking-tight sm:text-2xl">
+                  写真で思い出を振り返る
+                </h2>
+              </div>
+              <span
+                className="ml-3 flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/10 text-lg transition-transform group-hover:-translate-y-1"
+                aria-hidden="true"
+              >
+                ↑
+              </span>
+            </Link>
+
+            {memoryPhotosWithUrls.length > 0 && (
+              <section className="mt-4 border-t border-white/10 pt-4">
+                <div className="flex items-center justify-between gap-3">
+                  <h2 className="text-sm font-bold text-white/80">思い出の写真</h2>
+                  <Link
+                    href="/mypage/visits"
+                    className="rounded text-xs font-bold text-white/70 hover:text-white hover:underline"
+                  >
+                    すべて見る →
+                  </Link>
+                </div>
+                <div className="-mx-4 mt-3 overflow-x-auto px-4 pb-1 sm:-mx-5 sm:px-5">
+                  <div className="flex w-max gap-3">
+                    {memoryPhotosWithUrls.map((photo) => (
+                      <Link
+                        key={`${photo.visitId}-${photo.thumbPath}`}
+                        href={`/mypage/visits/${photo.visitId}`}
+                        className="relative h-26 w-26 shrink-0 overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/15 transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-30 sm:w-30"
+                      >
+                        <Image
+                          src={photo.thumbUrl}
+                          alt={`${photo.facilityName}の写真`}
+                          fill
+                          sizes="(min-width: 640px) 120px, 104px"
+                          className="object-cover"
+                          unoptimized
+                        />
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </section>
+            )}
+          </>
+        )}
       </div>
 
-      <section data-mypage-section="quick-actions" className="lg:col-span-2 lg:order-3">
-        <h2 className="sr-only">クイックアクション</h2>
-        <div className="grid grid-cols-4 gap-2">
-          <ActionCard href="/mypage/visits/new" icon="✏️" label="記録する" primary />
-          <ActionCard href="/mypage/visits" icon="📖" label="振り返る" />
-          <ActionCard href="/mypage/wishlist" icon="⭐" label="行きたい" />
-          <ActionCard href="/mypage/visits/from-photo" icon="📷" label="写真から" />
-        </div>
-        <Link href="/facilities" className="mt-2 inline-flex text-xs text-slate-500 transition-colors hover:text-brand hover:underline">
-          🔍 遊び場を探す
-        </Link>
-      </section>
-
-      {familyStats.totalVisitCount > 0 && familyStats.totalVisitCount < 3 && (
-        <div data-mypage-section="backfill-nudge" className="rounded-xl bg-gradient-to-br from-amber-50 via-white to-sky-50 p-4 ring-1 ring-amber-100 lg:col-span-2 lg:order-3">
-          <p className="text-sm font-semibold text-slate-900">
-            過去のおでかけも、写真からまとめて入れられます
-          </p>
-          <p className="mt-1 text-xs leading-relaxed text-slate-600">
-            記録が増えるほど、おでかけマップと子どもの「好き」の記録が育ちます。去年の思い出も写真を選ぶだけで追加できます。
-          </p>
-          <Link
-            href="/mypage/visits/from-photo"
-            className="mt-3 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
-          >
-            📷 写真から過去の記録を追加 →
-          </Link>
-        </div>
-      )}
-
-      {annualPasses.length > 0 && (
-        <div data-mypage-section="annual-passes" className="rounded-xl border border-amber-200 bg-amber-50/70 p-4 lg:col-span-2 lg:order-3">
-          <div className="flex items-center justify-between gap-2">
-            <p className="text-sm font-semibold text-amber-900">🎫 年パス</p>
-            <Link href="/mypage/passes" className="text-xs font-bold text-amber-700 hover:underline">
-              すべて見る →
-            </Link>
-          </div>
-          <ul className="mt-2 space-y-1.5">
-            {annualPasses.slice(0, 3).map((pass) => {
-              const status = passStatus(pass.expires_on);
-              return (
-                <li key={pass.id} className="flex items-center justify-between gap-2 text-sm">
-                  <Link
-                    href={`/facilities/${pass.facility_slug}`}
-                    className="min-w-0 truncate font-medium text-slate-800 hover:text-brand hover:underline"
-                  >
-                    {pass.facility_name}
-                  </Link>
-                  <span className="shrink-0 text-xs text-slate-500">
-                    {formatPassDateJa(pass.expires_on)}まで
-                  </span>
-                  <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-bold ${PASS_BADGE_CLASS[status.tone]}`}>
-                    {status.label}
-                  </span>
-                </li>
-              );
-            })}
-          </ul>
-          {annualPasses.some((pass) => passStatus(pass.expires_on).tone !== "ok") && (
-            <p className="mt-2 text-xs font-semibold text-amber-700">
-              期限が近い・切れた年パスがあります。行くなら今のうち！
-            </p>
-          )}
-        </div>
-      )}
-
-      {!hasChildren && (
-        <div data-mypage-section="child-profile-prompt" className="rounded-xl border border-sky-200 bg-sky-50 p-4 lg:col-span-2 lg:order-4">
-          <p className="text-sm font-semibold text-sky-900">子どもプロフィールを登録すると便利です</p>
-          <p className="mt-1 text-xs leading-relaxed text-sky-700">ニックネームと生年月を登録することで、おでかけ記録に「当時の年齢」が自動でつきます。本名・学校名は不要です。登録しなくてもおでかけ記録は使えます。</p>
-          <div className="mt-3 flex items-center gap-3">
-            <Link href="/mypage/children" className="inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
-            <Link href="/mypage/visits/new" className="text-xs text-sky-600 hover:underline">あとで登録する</Link>
-          </div>
-        </div>
-      )}
-
-      {recentVisits.length > 0 && (
-        <Link
-          href="/mypage/memories"
-          data-mypage-section="memory-stories-banner"
-          className="group flex items-center justify-between overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-4 py-3 text-white shadow-lg transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-violet-500 lg:col-span-2 lg:order-4"
-        >
-          <div className="min-w-0">
-            <p className="text-[10px] font-bold tracking-[0.16em] text-white/60">
-              FAMILY MEMORIES
-            </p>
-            <p className="truncate text-sm font-black sm:text-base">
-              写真で思い出を振り返る
-            </p>
-          </div>
-          <span
-            className="ml-3 shrink-0 rounded-full bg-white/10 px-2.5 py-1 text-base transition-transform group-hover:-translate-y-0.5"
-            aria-hidden="true"
-          >
-            ↑
-          </span>
-        </Link>
-      )}
-
-      <div data-mypage-section="recent-memories" className="lg:col-start-1 lg:order-5">
+      <div
+        data-mypage-section="recent-memories"
+        className={!isEmptyWithChildren && recentVisits.length > 0 ? "lg:col-start-1 lg:order-3" : "hidden"}
+      >
         {!isEmptyWithChildren && recentVisits.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center justify-between">
-              <h2 className="font-bold text-slate-800">最近の思い出</h2>
-              <Link href="/mypage/visits" className="text-sm text-brand hover:underline">すべて見る →</Link>
-            </div>
-            <div className="space-y-2">
+          <section className="space-y-4">
+            <MypageSectionHeading
+              eyebrow="RECENT DAYS"
+              title="最近の思い出"
+              action={<Link href="/mypage/visits" className="text-sm font-bold text-brand hover:underline">すべて見る →</Link>}
+            />
+            <div className="space-y-2.5">
               {recentVisits.map((visit) => {
                 const thumbUrl = recentRecordThumbUrlByVisitId.get(visit.id) ?? null;
                 const revisitLabel = revisitLabels[visit.family_revisit] ?? "";
                 return (
-                  <Link key={visit.id} href={`/mypage/visits/${visit.id}`} className="flex items-center gap-3 rounded-xl border border-slate-200 bg-white px-3 py-2.5 transition-colors hover:border-brand/40 hover:bg-slate-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand">
-                    <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200">
-                      {thumbUrl ? <Image src={thumbUrl} alt={`${visit.facility_name}の写真`} fill sizes="56px" className="object-cover" unoptimized /> : <span className="flex h-full w-full items-center justify-center text-2xl" aria-hidden="true">🗺️</span>}
+                  <Link
+                    key={visit.id}
+                    href={`/mypage/visits/${visit.id}`}
+                    className="group flex min-h-20 items-center gap-3 rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-slate-200/80 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+                  >
+                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-brand/10 ring-1 ring-slate-200/70">
+                      {thumbUrl ? (
+                        <Image src={thumbUrl} alt={`${visit.facility_name}の写真`} fill sizes="64px" className="object-cover transition-transform duration-300 group-hover:scale-105" unoptimized />
+                      ) : (
+                        <span className="flex h-full w-full items-center justify-center text-2xl" aria-hidden="true">🗺️</span>
+                      )}
                     </div>
                     <div className="min-w-0 flex-1">
-                      <div className="flex items-start justify-between gap-2">
-                        <p className="truncate text-sm font-medium text-slate-800">{visit.facility_name}</p>
-                        {revisitLabel && <span className="shrink-0 text-right text-[11px] leading-tight text-slate-500">{revisitLabel}</span>}
-                      </div>
-                      <p className="mt-0.5 text-xs text-slate-400">{formatVisitedOn(visit.visited_on)}</p>
+                      <p className="truncate text-sm font-bold text-slate-900">{visit.facility_name}</p>
+                      <p className="mt-1 text-xs text-slate-500">{formatVisitedOn(visit.visited_on)}</p>
+                      {revisitLabel && <p className="mt-1 truncate text-[11px] font-medium text-brand">{revisitLabel}</p>}
                     </div>
+                    <span className="pr-1 text-slate-300 transition-transform group-hover:translate-x-0.5" aria-hidden="true">›</span>
                   </Link>
                 );
               })}
@@ -811,14 +786,44 @@ export default async function MypagePage() {
         )}
       </div>
 
-      <section data-mypage-section="family-map" className="space-y-3 lg:col-start-2 lg:order-6">
-        <h2 className="font-bold text-slate-800">家族のおでかけマップ{familyMapBadge && <span className="ml-2 text-sm font-normal text-slate-400">{familyMapBadge}</span>}</h2>
-        <VisitedPlacesMapClient places={familyMapPlaces} height={{ mobile: 200, desktop: 340 }} showDetailLink />
+      <section data-mypage-section="quick-actions" className="rounded-2xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-200/80 lg:col-span-2 lg:order-4">
+        <h2 className="sr-only">クイックアクション</h2>
+        <div className="grid grid-cols-4 gap-2">
+          <ActionCard href="/mypage/visits/new" icon="✏️" label="記録する" primary />
+          <ActionCard href="/mypage/visits" icon="📖" label="振り返る" />
+          <ActionCard href="/mypage/wishlist" icon="⭐" label="行きたい" />
+          <ActionCard href="/mypage/visits/from-photo" icon="📷" label="写真から" />
+        </div>
+        <Link href="/facilities" className="mt-2.5 inline-flex min-h-11 items-center rounded-lg px-2 text-xs font-medium text-slate-500 transition-colors hover:text-brand hover:underline">
+          🔍 遊び場を探す
+        </Link>
+      </section>
+
+      {familyStats.totalVisitCount > 0 && familyStats.totalVisitCount < 3 && (
+        <div data-mypage-section="backfill-nudge" className="rounded-2xl bg-gradient-to-br from-accent/10 via-white to-brand/10 p-4 shadow-sm ring-1 ring-accent/20 lg:col-span-2 lg:order-4">
+          <p className="text-sm font-bold text-slate-900">過去のおでかけも、写真からまとめて入れられます</p>
+          <p className="mt-1 text-xs leading-relaxed text-slate-600">記録が増えるほど、おでかけマップと子どもの「好き」の記録が育ちます。去年の思い出も写真を選ぶだけで追加できます。</p>
+          <Link href="/mypage/visits/from-photo" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-dark">
+            📷 写真から過去の記録を追加 →
+          </Link>
+        </div>
+      )}
+
+      <section
+        data-mypage-section="family-map"
+        className={`space-y-4 lg:order-3 ${recentVisits.length > 0 && !isEmptyWithChildren ? "lg:col-start-2" : "lg:col-span-2"}`}
+      >
+        <MypageSectionHeading
+          eyebrow="FAMILY MAP"
+          title="家族のおでかけマップ"
+          description={familyMapBadge || undefined}
+        />
+        <VisitedPlacesMapClient places={familyMapPlaces} height={{ mobile: 220, desktop: 340 }} showDetailLink />
         {recentFootprintFacilities.length > 0 && (
           <div className="flex flex-wrap items-center gap-2 text-xs text-slate-500">
             <span>最近増えた足あと:</span>
             {recentFootprintFacilities.map((facility) => (
-              <Link key={facility.slug} href={`/mypage/visits/facility/${facility.slug}`} className="inline-flex max-w-full items-center rounded-full border border-sky-100 bg-sky-50 px-2.5 py-1 font-medium text-sky-700 hover:bg-sky-100">
+              <Link key={facility.slug} href={`/mypage/visits/facility/${facility.slug}`} className="inline-flex min-h-9 max-w-full items-center rounded-full bg-brand/10 px-3 py-1 font-medium text-slate-700 ring-1 ring-brand/15 hover:bg-brand/15">
                 🆕 {facility.name} {formatMonthDay(facility.lastVisited)}
               </Link>
             ))}
@@ -826,63 +831,28 @@ export default async function MypagePage() {
         )}
       </section>
 
-      <div data-mypage-section="footprints" className="lg:col-start-1 lg:order-7">
-        {!isEmptyWithChildren && (
-          <section className="space-y-3">
-            <h2 className="font-bold text-slate-800">家族のあしあと帳</h2>
-            <div className="space-y-4 rounded-xl border border-slate-200 bg-white p-4">
-              {hasAchievementRecords ? (
-                <>
-                  <div className="space-y-2 text-sm leading-relaxed text-slate-700">
-                    {achievementStats.wishlistCount > 0 && <Link href="/mypage/wishlist" className="block rounded-lg px-1 py-0.5 hover:bg-slate-50 hover:text-brand">⭐ また行きたい場所が <span className="font-bold text-brand">{achievementStats.wishlistCount}件</span> あります</Link>}
-                    {achievementStats.revisitCount > 0 && <Link href="/mypage/visits?revisit=yes" className="block rounded-lg px-1 py-0.5 hover:bg-slate-50 hover:text-brand">✅ また行きたい と評価したおでかけが <span className="font-bold text-brand">{achievementStats.revisitCount}件</span></Link>}
-                    {classicSpot && <Link href={`/mypage/visits/facility/${classicSpot.slug}`} className="block rounded-lg px-1 py-0.5 hover:bg-slate-50 hover:text-brand">🏅 定番スポット: {classicSpot.name}<span className="font-bold text-brand">({classicSpot.visitCount}回)</span></Link>}
-                    {firstTimeSpot && <Link href={`/mypage/visits/facility/${firstTimeSpot.slug}`} className="block rounded-lg px-1 py-0.5 hover:bg-slate-50 hover:text-brand">🌱 最近の初めて: {firstTimeSpot.name}<span className="font-bold text-brand">({formatMonthDay(firstTimeSpot.lastVisited)})</span></Link>}
-                  </div>
-                  {hasMonthlyData && <div><p className="mb-2 text-xs text-slate-400">最近6ヶ月のおでかけ</p><MonthlyBarChart data={monthlyData} /></div>}
-                </>
-              ) : <p className="text-sm text-slate-400">記録すると、ここに家族のあしあとがたまっていきます</p>}
-            </div>
-          </section>
-        )}
-      </div>
-
-      <div data-mypage-section="children-likes" className="lg:col-start-2 lg:order-7">
+      <div data-mypage-section="children-likes" className="lg:col-start-1 lg:order-5">
         {hasChildren && (
-          <section className="space-y-3">
-            <div>
-              <h2 className="font-bold text-slate-800">子どもたちの「好き」</h2>
-              <p className="mt-1 text-xs leading-relaxed text-slate-400">
-                「大満足」か「楽しんだ」で、興味タグも選んだおでかけを「好き」のヒントとして数えています。「普通」「合わなかった」や、興味タグのない記録は含みません。
-              </p>
-            </div>
-            <div className="space-y-5 rounded-xl border border-slate-200 bg-white p-4">
+          <section className="space-y-4">
+            <MypageSectionHeading
+              eyebrow="THEIR FAVORITES"
+              title="子どもたちの「好き」"
+              description="「大満足」か「楽しんだ」で、興味タグも選んだおでかけを「好き」のヒントとして数えています。「普通」「合わなかった」や、興味タグのない記録は含みません。"
+            />
+            <div className="space-y-5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 sm:p-5">
               {childInsightSummaries.map((summary, childIndex) => (
-                <div
-                  key={summary.child.id}
-                  id={summary.anchorId}
-                  className="scroll-mt-20 border-b border-slate-100 pb-5 last:border-b-0 last:pb-0"
-                >
-                  <div className="mb-2 flex items-center justify-between">
-                    <div className="flex min-w-0 items-center gap-2">
+                <div key={summary.child.id} id={summary.anchorId} className="scroll-mt-20 border-b border-slate-100 pb-5 last:border-b-0 last:pb-0">
+                  <div className="mb-3 flex items-center justify-between gap-3">
+                    <div className="flex min-w-0 items-center gap-2.5">
                       <ChildAvatar
                         childId={summary.child.id}
                         nickname={summary.child.nickname}
-                        avatarUrl={
-                          summary.child.avatar_url
-                            ? avatarUrlByPath.get(summary.child.avatar_url) ?? null
-                            : null
-                        }
+                        avatarUrl={summary.child.avatar_url ? avatarUrlByPath.get(summary.child.avatar_url) ?? null : null}
                         size="sm"
                       />
-                      <p className="truncate text-sm font-bold text-slate-800">
-                        {summary.child.nickname}
-                      </p>
+                      <p className="truncate text-sm font-bold text-slate-900">{summary.child.nickname}</p>
                     </div>
-                    <Link
-                      href={`/mypage/visits?child=${childIndex + 1}`}
-                      className="rounded px-1 py-0.5 text-xs text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2"
-                    >
+                    <Link href={`/mypage/visits?child=${childIndex + 1}`} className="inline-flex min-h-9 shrink-0 items-center rounded-lg px-2 text-xs font-bold text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
                       記録を見る ›
                     </Link>
                   </div>
@@ -894,27 +864,100 @@ export default async function MypagePage() {
         )}
       </div>
 
-      <div data-mypage-section="events" className="lg:col-span-2 lg:order-8">
+      <div
+        data-mypage-section="footprints"
+        className={hasChildren ? "lg:col-start-2 lg:order-5" : "lg:col-span-2 lg:order-5"}
+      >
+        {!isEmptyWithChildren && (
+          <section className="space-y-4">
+            <MypageSectionHeading eyebrow="FAMILY FOOTPRINTS" title="家族のあしあと帳" />
+            <div className="space-y-5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 sm:p-5">
+              {hasAchievementRecords ? (
+                <>
+                  <div className="space-y-2 text-sm leading-relaxed text-slate-700">
+                    {achievementStats.wishlistCount > 0 && <Link href="/mypage/wishlist" className="block rounded-lg px-2 py-1.5 hover:bg-brand/5 hover:text-brand">⭐ また行きたい場所が <span className="font-bold text-brand">{achievementStats.wishlistCount}件</span> あります</Link>}
+                    {achievementStats.revisitCount > 0 && <Link href="/mypage/visits?revisit=yes" className="block rounded-lg px-2 py-1.5 hover:bg-brand/5 hover:text-brand">✅ また行きたい と評価したおでかけが <span className="font-bold text-brand">{achievementStats.revisitCount}件</span></Link>}
+                    {classicSpot && <Link href={`/mypage/visits/facility/${classicSpot.slug}`} className="block rounded-lg px-2 py-1.5 hover:bg-brand/5 hover:text-brand">🏅 定番スポット: {classicSpot.name}<span className="font-bold text-brand">({classicSpot.visitCount}回)</span></Link>}
+                    {firstTimeSpot && <Link href={`/mypage/visits/facility/${firstTimeSpot.slug}`} className="block rounded-lg px-2 py-1.5 hover:bg-brand/5 hover:text-brand">🌱 最近の初めて: {firstTimeSpot.name}<span className="font-bold text-brand">({formatMonthDay(firstTimeSpot.lastVisited)})</span></Link>}
+                  </div>
+                  {hasMonthlyData && <div className="border-t border-slate-100 pt-4"><p className="mb-3 text-xs font-bold tracking-wide text-slate-500">最近6ヶ月のおでかけ</p><MonthlyBarChart data={monthlyData} /></div>}
+                </>
+              ) : <p className="text-sm text-slate-500">記録すると、ここに家族のあしあとがたまっていきます</p>}
+            </div>
+          </section>
+        )}
+      </div>
+
+      <div data-mypage-section="monthly-diff" className="lg:col-span-2 lg:order-6">
+        <MonthlyDiffCard stats={familyStats} />
+      </div>
+
+      {annualPasses.length > 0 && (
+        <section data-mypage-section="annual-passes" className="rounded-2xl bg-accent/10 p-4 ring-1 ring-accent/20 lg:col-span-2 lg:order-6">
+          <div className="flex items-center justify-between gap-2">
+            <h2 className="text-sm font-bold text-slate-900">🎫 年パス</h2>
+            <Link href="/mypage/passes" className="inline-flex min-h-9 items-center rounded-lg px-2 text-xs font-bold text-slate-700 hover:text-brand hover:underline">すべて見る →</Link>
+          </div>
+          <ul className="mt-3 space-y-2">
+            {annualPasses.slice(0, 3).map((pass) => {
+              const status = passStatus(pass.expires_on);
+              return (
+                <li key={pass.id} className="flex flex-wrap items-center gap-x-3 gap-y-1 text-sm">
+                  <Link href={`/facilities/${pass.facility_slug}`} className="min-w-0 flex-1 truncate font-medium text-slate-800 hover:text-brand hover:underline">{pass.facility_name}</Link>
+                  <span className="shrink-0 text-xs text-slate-500">{formatPassDateJa(pass.expires_on)}まで</span>
+                  <span className={`shrink-0 rounded-full px-2 py-0.5 text-xs font-bold ${PASS_BADGE_CLASS[status.tone]}`}>{status.label}</span>
+                </li>
+              );
+            })}
+          </ul>
+          {annualPasses.some((pass) => passStatus(pass.expires_on).tone !== "ok") && <p className="mt-3 text-xs font-semibold text-slate-700">期限が近い・切れた年パスがあります。行くなら今のうち！</p>}
+        </section>
+      )}
+
+      {!hasChildren && (
+        <div data-mypage-section="child-profile-prompt" className="rounded-2xl bg-brand/10 p-4 ring-1 ring-brand/20 lg:col-span-2 lg:order-6">
+          <p className="text-sm font-bold text-slate-900">子どもプロフィールを登録すると便利です</p>
+          <p className="mt-1 text-xs leading-relaxed text-slate-600">ニックネームと生年月を登録することで、おでかけ記録に「当時の年齢」が自動でつきます。本名・学校名は不要です。登録しなくてもおでかけ記録は使えます。</p>
+          <div className="mt-3 flex flex-wrap items-center gap-3">
+            <Link href="/mypage/children" className="inline-flex min-h-11 items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
+            <Link href="/mypage/visits/new" className="inline-flex min-h-11 items-center text-xs font-medium text-slate-600 hover:text-brand hover:underline">あとで登録する</Link>
+          </div>
+        </div>
+      )}
+
+      <div data-mypage-section="events" className="lg:col-span-2 lg:order-7">
         {myPlacesEvents.length > 0 && (
-          <section className="space-y-3">
-            <div><h2 className="font-bold text-slate-800">行きたい・行った場所のイベント</h2><p className="mt-1 text-xs text-slate-400">行きたいリストと家族の足あとから見つけました</p></div>
+          <section className="space-y-4">
+            <MypageSectionHeading eyebrow="NEARBY MOMENTS" title="行きたい・行った場所のイベント" description="行きたいリストと家族の足あとから見つけました" />
             <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">{myPlacesEvents.map((item) => <MyPlacesEventCard key={item.event.id} item={item} />)}</div>
           </section>
         )}
       </div>
 
-      <div data-mypage-section="memory-photos" className="lg:col-span-2 lg:order-9">
-        {memoryPhotosWithUrls.length > 0 && (
-          <section className="space-y-3">
-            <div className="flex items-center justify-between gap-3"><h2 className="font-bold text-slate-800">📷 思い出の写真</h2><Link href="/mypage/visits" className="text-sm text-brand hover:underline">すべて見る →</Link></div>
-            <div className="-mx-4 overflow-x-auto px-4 pb-1"><div className="flex w-max gap-2.5">{memoryPhotosWithUrls.map((photo) => (
-              <Link key={`${photo.visitId}-${photo.thumbPath}`} href={`/mypage/visits/${photo.visitId}`} className="relative h-20 w-20 shrink-0 overflow-hidden rounded-lg bg-sky-50 ring-1 ring-slate-200 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:h-24 sm:w-24"><Image src={photo.thumbUrl} alt={`${photo.facilityName}の写真`} fill sizes="(min-width: 640px) 96px, 80px" className="object-cover" unoptimized /></Link>
-            ))}</div></div>
-          </section>
-        )}
-      </div>
+      <div data-mypage-section="account" className="pt-2 lg:col-span-2 lg:order-8"><LogoutButton /></div>
+    </div>
+  );
+}
 
-      <div data-mypage-section="account" className="pt-2 lg:col-span-2 lg:order-10"><LogoutButton /></div>
+function MypageSectionHeading({
+  eyebrow,
+  title,
+  description,
+  action,
+}: {
+  eyebrow: string;
+  title: string;
+  description?: string;
+  action?: ReactNode;
+}) {
+  return (
+    <div className="flex items-end justify-between gap-3">
+      <div className="min-w-0">
+        <p className="text-[10px] font-bold tracking-[0.18em] text-brand">{eyebrow}</p>
+        <h2 className="mt-1 text-lg font-black tracking-tight text-slate-950">{title}</h2>
+        {description && <p className="mt-1 text-xs leading-relaxed text-slate-500">{description}</p>}
+      </div>
+      {action && <div className="shrink-0">{action}</div>}
     </div>
   );
 }
@@ -933,10 +976,10 @@ function ActionCard({
   return (
     <Link
       href={href}
-      className={`flex min-w-0 flex-col items-center gap-1 rounded-xl px-1.5 py-2.5 text-center transition-colors sm:p-3 ${
+      className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-1.5 py-2 text-center transition-all hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:p-3 ${
         primary
-          ? "bg-brand text-white hover:bg-brand-dark"
-          : "bg-white border border-slate-200 hover:bg-slate-50"
+          ? "bg-brand text-white shadow-sm hover:bg-brand-dark"
+          : "bg-slate-50 text-slate-800 hover:bg-brand/5"
       }`}
     >
       <span className="text-xl sm:text-2xl">{icon}</span>
