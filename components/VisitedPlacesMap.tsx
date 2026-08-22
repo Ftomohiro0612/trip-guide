@@ -119,12 +119,14 @@ function PlacePopup({ place }: { place: FamilyMapPlace }) {
           {place.name}
         </p>
         <p className="text-xs text-slate-600">行きたいリストに追加済み</p>
-        <Link
-          href={`/facilities/${place.slug}`}
-          className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
-        >
-          施設ページを見る →
-        </Link>
+        {!place.isManual && (
+          <Link
+            href={`/facilities/${place.slug}`}
+            className="mt-1.5 inline-block text-xs font-bold text-brand hover:underline"
+          >
+            施設ページを見る →
+          </Link>
+        )}
       </div>
     );
   }
@@ -137,6 +139,9 @@ function PlacePopup({ place }: { place: FamilyMapPlace }) {
       <p className="text-sm font-bold leading-snug text-slate-900">
         {place.name}
       </p>
+      {place.isManual && (
+        <p className="text-xs font-medium text-emerald-700">自分だけの場所</p>
+      )}
       {place.kind === "both" && (
         <p className="text-xs font-medium text-violet-700">
           行ったことあり · 行きたいリストにも追加済み

@@ -15,6 +15,7 @@ import {
   readVisitEdit,
   storeVisitCompletion,
 } from "@/lib/visit-flow-session";
+import DeleteVisitButton from "../../DeleteVisitButton";
 import VisitPhotoUploader, {
   type VisitPhotoUploaderHandle,
 } from "../../VisitPhotoUploader";
@@ -1292,6 +1293,20 @@ export default function EditVisitPage() {
           </button>
         )}
       </form>
+
+      <section className="rounded-xl border border-red-200 bg-red-50/60 p-4">
+        <h2 className="text-sm font-bold text-red-800">記録の削除</h2>
+        <p className="mt-1 text-xs leading-relaxed text-red-700">
+          この記録と保存した写真を削除します。削除前に確認画面が表示されます。
+        </p>
+        <div className="mt-3">
+          <DeleteVisitButton
+            visitId={visitId}
+            facilityName={facilityName}
+            redirectTo="/mypage/visits"
+          />
+        </div>
+      </section>
     </div>
   );
 }
