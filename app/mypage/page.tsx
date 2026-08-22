@@ -8,6 +8,7 @@ import ChildAvatar from "@/components/ChildAvatar";
 import MypageHero from "@/components/MypageHero";
 import MonthlyBarChart, { type MonthData } from "@/components/MonthlyBarChart";
 import MonthlyDiffCard from "@/components/MonthlyDiffCard";
+import MypageRecommendationSection from "@/components/MypageRecommendationSection";
 import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
@@ -27,6 +28,7 @@ import {
 } from "@/lib/child-insights";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
+import { buildMypageRecommendations } from "@/lib/mypage-recommendations";
 import {
   buildChildStats,
   buildFamilyStats,
@@ -39,6 +41,8 @@ import {
   buildFamilyOutingMapData,
   buildVisitedPlacesMapData,
 } from "@/lib/visited-places";
+import { prefectures } from "@/lib/facilities";
+import type { PrefectureId } from "@/types/facility";
 import LogoutButton from "./LogoutButton";
 
 export const metadata: Metadata = { title: "マイページ" };
@@ -91,6 +95,10 @@ type MemoryPhoto = {
 
 type WishlistSlugRow = {
   facility_slug: string | null;
+};
+
+type RecommendationSettingsRow = {
+  prefecture_ids: unknown;
 };
 
 type FacilityCategorySource = { slug: string; category: string };
@@ -485,6 +493,29 @@ export default async function MypagePage() {
         .order("expires_on", { ascending: true })
     : { data: [] };
   const annualPasses = (annualPassRows ?? []).filter(isAnnualPassRow);
+  const recommendationSettingsResult = user
+    ? await supabase
+        .from("mypage_recommendation_settings")
+        .select("prefecture_ids")
+        .eq("user_id", user.id)
+        .maybeSingle()
+    : { data: null, error: null };
+  const recommendationSettingsAvailable =
+    Boolean(user) && recommendationSettingsResult.error === null;
+  const knownPrefectureIds = new Set<string>(
+    prefectures.map((prefecture) => prefecture.id),
+  );
+  const recommendationSettings = recommendationSettingsResult.data as
+    | RecommendationSettingsRow
+    | null;
+  const selectedPrefectureIds = Array.isArray(
+    recommendationSettings?.prefecture_ids,
+  )
+    ? recommendationSettings.prefecture_ids.filter(
+        (id): id is PrefectureId =>
+          typeof id === "string" && knownPrefectureIds.has(id),
+      )
+    : [];
 
   const childRows = (children ?? []).filter(isRecord).filter((child): child is Child => {
     return (
@@ -669,6 +700,21 @@ export default async function MypagePage() {
     visits,
     childVisits,
   );
+  const recommendations = buildMypageRecommendations({
+    children: childInsightSummaries.map((summary) => ({
+      id: summary.child.id,
+      nickname: summary.child.nickname,
+      birthYear: summary.child.birth_year,
+      birthMonth: summary.child.birth_month,
+      interests: summary.frequentInterests,
+    })),
+    selectedPrefectureIds,
+    visitedSlugs,
+  });
+  const selectedPrefectureNames = selectedPrefectureIds.flatMap((id) => {
+    const prefecture = prefectures.find((item) => item.id === id);
+    return prefecture ? [prefecture.name] : [];
+  });
 
   return (
     <div className="mx-auto max-w-lg space-y-6 px-4 py-5 lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-8 lg:space-y-0 lg:py-8">
@@ -785,6 +831,18 @@ export default async function MypagePage() {
           </section>
         )}
       </div>
+
+      {recommendationSettingsAvailable && (
+        <div
+          data-mypage-section="recommendations"
+          className="lg:col-span-2 lg:order-4"
+        >
+          <MypageRecommendationSection
+            prefectureNames={selectedPrefectureNames}
+            recommendations={recommendations}
+          />
+        </div>
+      )}
 
       <section data-mypage-section="quick-actions" className="rounded-2xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-200/80 lg:col-span-2 lg:order-4">
         <h2 className="sr-only">クイックアクション</h2>
