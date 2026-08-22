@@ -2,8 +2,10 @@ import sharp from "sharp";
 import { createClient } from "@/lib/supabase/server";
 
 const BUCKET = "child-avatars";
-const MAX_FILE_SIZE = 2 * 1024 * 1024;
+const MAX_FILE_SIZE = 20 * 1024 * 1024;
+const MAX_INPUT_PIXELS = 64_000_000;
 const ACCEPTED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
+const ACCEPTED_FORMATS = new Set(["jpeg", "png", "webp"]);
 
 async function getOwnedChild(
   childId: string,
@@ -46,7 +48,7 @@ export async function POST(
     return Response.json({ error: "画像ファイルを選択してください" }, { status: 400 });
   }
   if (file.size > MAX_FILE_SIZE) {
-    return Response.json({ error: "画像は2MB以下にしてください" }, { status: 400 });
+    return Response.json({ error: "画像は20MB以下にしてください" }, { status: 400 });
   }
   if (!ACCEPTED_TYPES.has(file.type)) {
     return Response.json(
@@ -55,12 +57,33 @@ export async function POST(
     );
   }
 
-  const input = Buffer.from(await file.arrayBuffer());
-  const output = await sharp(input)
-    .rotate()
-    .resize(512, 512, { fit: "cover" })
-    .jpeg({ quality: 86 })
-    .toBuffer();
+  let output: Buffer;
+  try {
+    const input = Buffer.from(await file.arrayBuffer());
+    const image = sharp(input, { limitInputPixels: MAX_INPUT_PIXELS });
+    const { format } = await image.metadata();
+
+    if (!format || !ACCEPTED_FORMATS.has(format)) {
+      return Response.json(
+        { error: "JPEG、PNG、WebP の画像を選択してください" },
+        { status: 400 },
+      );
+    }
+
+    output = await image
+      .rotate()
+      .resize(512, 512, { fit: "cover" })
+      .jpeg({ quality: 86 })
+      .toBuffer();
+  } catch {
+    return Response.json(
+      {
+        error:
+          "画像を読み込めませんでした。破損していない JPEG、PNG、WebP の画像を選択してください",
+      },
+      { status: 400 },
+    );
+  }
   const path = `${user.id}/${childId}/avatar.jpg`;
 
   const { error: uploadError } = await supabase.storage
