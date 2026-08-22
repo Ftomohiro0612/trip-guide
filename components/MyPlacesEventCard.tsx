@@ -10,7 +10,7 @@ export default function MyPlacesEventCard({
 
   return (
     <article
-      className="flex h-full flex-col rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 transition-all hover:-translate-y-0.5 hover:ring-brand/30"
+      className="flex h-full flex-col rounded-[1.75rem] bg-gradient-to-br from-white via-white to-accent/10 p-5 shadow-sm ring-1 ring-accent/20 transition-all hover:-translate-y-0.5 hover:ring-brand/30 sm:p-6"
       data-my-places-event-card
       data-origin={item.origin}
       data-event-id={item.event.id}
@@ -36,7 +36,7 @@ export default function MyPlacesEventCard({
       <div className="mt-3 flex flex-1 flex-col justify-end gap-2">
         <Link
           href={`/facilities/${item.facility.slug}`}
-          className="text-xs font-bold text-brand hover:text-brand-dark hover:underline"
+          className="inline-flex min-h-11 items-center rounded-lg text-xs font-bold text-brand hover:text-brand-dark hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           {item.facility.name}
         </Link>
@@ -44,7 +44,7 @@ export default function MyPlacesEventCard({
           href={item.event.official_url}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex w-fit items-center text-xs font-bold text-slate-700 hover:text-slate-900 hover:underline"
+          className="inline-flex min-h-11 w-fit items-center rounded-lg text-xs font-bold text-slate-700 hover:text-slate-900 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           詳しく見る →
         </a>

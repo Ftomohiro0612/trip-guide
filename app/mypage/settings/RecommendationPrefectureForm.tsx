@@ -69,13 +69,20 @@ export default function RecommendationPrefectureForm({
     <form
       id="recommendation-prefectures"
       onSubmit={handleSave}
-      className="scroll-mt-6 space-y-4 border-t border-slate-100 pt-6"
+      aria-labelledby="recommendation-prefectures-heading"
+      className="scroll-mt-24 space-y-5 rounded-[1.75rem] bg-gradient-to-br from-accent/10 via-white to-brand/10 p-5 shadow-sm ring-1 ring-accent/20 sm:p-6"
     >
       <div>
-        <h2 className="text-sm font-bold text-slate-800">
-          おすすめ情報が欲しい都道府県
+        <p className="text-[10px] font-bold tracking-[0.16em] text-brand">
+          NEXT OUTING
+        </p>
+        <h2
+          id="recommendation-prefectures-heading"
+          className="mt-1 text-xl font-black tracking-tight text-slate-950"
+        >
+          おすすめ地域
         </h2>
-        <p className="mt-1 text-xs leading-relaxed text-slate-500">
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
           次のおでかけ候補を探したい地域を複数選べます。子ども別ではなく、家族共通の設定です。
         </p>
       </div>
@@ -88,10 +95,10 @@ export default function RecommendationPrefectureForm({
             return (
               <label
                 key={option.id}
-                className={`flex cursor-pointer items-center gap-2 rounded-lg border px-3 py-2 text-sm transition-colors ${
+                className={`flex min-h-11 cursor-pointer items-center gap-2 rounded-xl px-3 py-2.5 text-sm shadow-sm ring-1 transition-all focus-within:outline focus-within:outline-2 focus-within:outline-offset-2 focus-within:outline-brand ${
                   checked
-                    ? "border-violet-300 bg-violet-50 font-bold text-violet-800"
-                    : "border-slate-200 bg-white text-slate-700 hover:bg-slate-50"
+                    ? "bg-brand/10 font-bold text-brand ring-brand/30"
+                    : "bg-white/90 text-slate-700 ring-slate-200/80 hover:bg-white hover:ring-brand/20"
                 }`}
               >
                 <input
@@ -100,7 +107,7 @@ export default function RecommendationPrefectureForm({
                   value={option.id}
                   checked={checked}
                   onChange={() => toggle(option.id)}
-                  className="h-4 w-4 accent-violet-600"
+                  className="h-5 w-5 accent-brand"
                 />
                 {option.name}
               </label>
@@ -119,7 +126,7 @@ export default function RecommendationPrefectureForm({
             setSaveError(null);
           }}
           disabled={selectedIds.size === 0 || saving}
-          className="text-xs font-bold text-slate-600 hover:underline disabled:opacity-40"
+          className="inline-flex min-h-11 items-center rounded-lg px-2 text-xs font-bold text-slate-600 hover:text-brand hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40"
         >
           選択をすべて外す
         </button>
@@ -139,7 +146,7 @@ export default function RecommendationPrefectureForm({
       <button
         type="submit"
         disabled={saving}
-        className="w-full rounded-xl bg-violet-600 py-3 font-bold text-white transition-colors hover:bg-violet-700 disabled:opacity-40"
+        className="min-h-12 w-full rounded-2xl bg-brand px-4 py-3 font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40 disabled:hover:translate-y-0"
       >
         {saving ? "保存中..." : "おすすめ地域を保存"}
       </button>

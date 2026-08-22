@@ -35,14 +35,14 @@ export default function MypageRecommendationSection({
 
   return (
     <section
-      className="space-y-4 rounded-[1.75rem] bg-gradient-to-br from-brand/10 via-white to-accent/10 p-4 shadow-sm ring-1 ring-brand/15 sm:p-5"
+      className="space-y-5 rounded-[1.75rem] bg-gradient-to-br from-brand/10 via-white to-accent/10 p-5 shadow-sm ring-1 ring-brand/15 sm:p-6"
     >
       <div className="flex items-start justify-between gap-3">
         <div>
           <p className="text-[10px] font-bold tracking-[0.16em] text-brand">
             NEXT OUTING
           </p>
-          <h2 className="mt-1 text-lg font-black text-slate-900">
+          <h2 className="mt-1 text-xl font-black tracking-tight text-slate-950">
             次のおでかけ、おすすめ
           </h2>
           {hasPrefectures && (
@@ -53,15 +53,15 @@ export default function MypageRecommendationSection({
         </div>
         <Link
           href="/mypage/settings#recommendation-prefectures"
-          className="shrink-0 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-brand shadow-sm ring-1 ring-brand/20 transition-colors hover:bg-brand/10"
+          className="inline-flex min-h-11 shrink-0 items-center rounded-full bg-white px-4 py-2 text-xs font-bold text-brand shadow-sm ring-1 ring-brand/20 transition-all hover:-translate-y-0.5 hover:bg-brand/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
         >
           地域設定
         </Link>
       </div>
 
       {!hasPrefectures ? (
-        <div className="rounded-2xl border border-dashed border-brand/25 bg-white/80 p-4">
-          <p className="text-sm font-bold text-slate-800">
+        <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-brand/15">
+          <p className="text-base font-black tracking-tight text-slate-900">
             おすすめが欲しい都道府県を選んでください
           </p>
           <p className="mt-1 text-xs leading-relaxed text-slate-500">
@@ -69,14 +69,14 @@ export default function MypageRecommendationSection({
           </p>
           <Link
             href="/mypage/settings#recommendation-prefectures"
-            className="mt-3 inline-flex rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-dark"
+            className="mt-4 inline-flex min-h-11 items-center rounded-2xl bg-brand px-4 py-2 text-sm font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             おすすめ地域を設定する →
           </Link>
         </div>
       ) : !recommendations.hasInterestProfile ? (
-        <div className="rounded-2xl border border-dashed border-brand/25 bg-white/80 p-4">
-          <p className="text-sm font-bold text-slate-800">
+        <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-brand/15">
+          <p className="text-base font-black tracking-tight text-slate-900">
             子どもの「好き」が見えてくると、ここに候補が並びます
           </p>
           <p className="mt-1 text-xs leading-relaxed text-slate-500">
@@ -84,14 +84,14 @@ export default function MypageRecommendationSection({
           </p>
           <Link
             href="/mypage/visits/new"
-            className="mt-3 inline-flex text-sm font-bold text-brand hover:underline"
+            className="mt-3 inline-flex min-h-11 items-center rounded-lg text-sm font-bold text-brand hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
           >
             おでかけを記録する →
           </Link>
         </div>
       ) : !hasRecommendations ? (
-        <div className="rounded-2xl border border-dashed border-brand/25 bg-white/80 p-4">
-          <p className="text-sm font-bold text-slate-800">
+        <div className="rounded-3xl bg-white/80 p-5 shadow-sm ring-1 ring-brand/15">
+          <p className="text-base font-black tracking-tight text-slate-900">
             今は条件に一致する候補がありません
           </p>
           <p className="mt-1 text-xs leading-relaxed text-slate-500">
@@ -102,7 +102,7 @@ export default function MypageRecommendationSection({
         <div className="space-y-5">
           <div className="space-y-3">
             <div>
-              <h3 className="text-sm font-black text-slate-800">近日イベント</h3>
+              <h3 className="text-base font-black tracking-tight text-slate-900">近日イベント</h3>
               <p className="mt-0.5 text-[11px] text-slate-500">
                 現在公開中で、日程と情報鮮度を確認できるイベントです
               </p>
@@ -112,7 +112,7 @@ export default function MypageRecommendationSection({
                 {recommendations.events.map((item) => (
                   <article
                     key={item.event.id}
-                    className="flex flex-col rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80"
+                    className="flex flex-col rounded-3xl bg-white/90 p-5 shadow-sm ring-1 ring-brand/10"
                   >
                     <div className="flex flex-wrap gap-1.5 text-[11px] font-bold">
                       <span className="rounded-full bg-brand/10 px-2 py-1 text-brand">
@@ -145,7 +145,7 @@ export default function MypageRecommendationSection({
                       {item.facilitySlug && (
                         <Link
                           href={`/facilities/${item.facilitySlug}`}
-                          className="text-xs font-bold text-brand hover:underline"
+                        className="inline-flex min-h-11 items-center rounded-lg text-xs font-bold text-brand hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
                         >
                           施設を見る
                         </Link>
@@ -154,7 +154,7 @@ export default function MypageRecommendationSection({
                         href={item.event.official_url}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-xs font-bold text-slate-700 hover:underline"
+                        className="inline-flex min-h-11 items-center rounded-lg text-xs font-bold text-slate-700 hover:underline focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
                       >
                         公式情報 →
                       </a>
@@ -163,7 +163,7 @@ export default function MypageRecommendationSection({
                 ))}
               </div>
             ) : (
-              <p className="rounded-lg bg-white/70 px-3 py-2 text-xs text-slate-500">
+              <p className="rounded-2xl bg-white/70 px-4 py-3 text-xs text-slate-500 ring-1 ring-brand/10">
                 条件に一致する近日イベントは現在ありません。
               </p>
             )}
@@ -171,7 +171,7 @@ export default function MypageRecommendationSection({
 
           <div className="space-y-3 border-t border-brand/15 pt-4">
             <div>
-              <h3 className="text-sm font-black text-slate-800">まだ行っていない施設</h3>
+              <h3 className="text-base font-black tracking-tight text-slate-900">まだ行っていない施設</h3>
               <p className="mt-0.5 text-[11px] text-slate-500">
                 家族のおでかけ記録にない施設から選びました
               </p>
@@ -182,7 +182,7 @@ export default function MypageRecommendationSection({
                   <Link
                     key={item.facility.id}
                     href={`/facilities/${item.facility.slug}`}
-                    className="group rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 transition-all hover:-translate-y-0.5 hover:ring-brand/30"
+                    className="group rounded-3xl bg-white/90 p-5 shadow-sm ring-1 ring-brand/10 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
                   >
                     <div className="flex flex-wrap gap-1.5 text-[11px] font-bold">
                       <span className="rounded-full bg-success/10 px-2 py-1 text-slate-700 ring-1 ring-success/20">
@@ -213,7 +213,7 @@ export default function MypageRecommendationSection({
                 ))}
               </div>
             ) : (
-              <p className="rounded-lg bg-white/70 px-3 py-2 text-xs text-slate-500">
+              <p className="rounded-2xl bg-white/70 px-4 py-3 text-xs text-slate-500 ring-1 ring-brand/10">
                 条件に一致する未訪問施設は現在ありません。
               </p>
             )}

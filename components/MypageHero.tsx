@@ -22,38 +22,28 @@ export default function MypageHero({
   return (
     <section className="overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-brand/10 via-white to-accent/10 p-5 shadow-sm ring-1 ring-brand/15 sm:p-6">
       <div className="flex items-start justify-between gap-3">
-        <div className="flex min-w-0 items-center gap-2">
-          <div className="flex min-w-0 flex-wrap gap-2">
-            {kids.map((child) => (
-              <Link
-                key={child.id}
-                href={`#${child.anchorId}`}
-                className="flex min-h-11 items-center gap-2 rounded-full bg-white/90 px-2.5 py-1 shadow-sm ring-1 ring-brand/10 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-              >
-                <ChildAvatar
-                  childId={child.id}
-                  nickname={child.nickname}
-                  avatarUrl={child.avatarUrl}
-                  size="sm"
-                />
-                <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
-                <span className="text-xs text-slate-400">{child.age}歳</span>
-              </Link>
-            ))}
-          </div>
-          {kids.length > 0 && (
+        <div className="flex min-w-0 flex-wrap gap-2">
+          {kids.map((child) => (
             <Link
-              href="/mypage/children"
-              className="shrink-0 text-xs font-medium text-brand hover:underline"
+              key={child.id}
+              href={`#${child.anchorId}`}
+              className="flex min-h-11 items-center gap-2 rounded-full bg-white/90 px-2.5 py-1 shadow-sm ring-1 ring-brand/10 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
             >
-              編集
+              <ChildAvatar
+                childId={child.id}
+                nickname={child.nickname}
+                avatarUrl={child.avatarUrl}
+                size="sm"
+              />
+              <span className="text-sm font-medium text-slate-800">{child.nickname}</span>
+              <span className="text-xs text-slate-400">{child.age}歳</span>
             </Link>
-          )}
+          ))}
         </div>
         <Link
           href="/mypage/settings"
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-500 ring-1 ring-slate-200/80 transition-colors hover:bg-white hover:text-slate-700"
-          aria-label="アカウント設定"
+          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-white/70 text-slate-500 ring-1 ring-slate-200/80 transition-colors hover:bg-white hover:text-slate-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
+          aria-label="設定"
         >
           ⚙️
         </Link>
