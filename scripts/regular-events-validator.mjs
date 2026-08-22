@@ -173,15 +173,29 @@ function validateSources(event, layer, findings) {
 
 function validateVenue(event, layer, facilityIds, findings) {
   const id = event.id ?? "<missing-id>";
-  const hasFacility = event.facility_id !== null && event.facility_id !== undefined;
   const hasVenue = typeof event.venue_name === "string" && event.venue_name.trim() !== "";
-  if (hasFacility && hasVenue) {
+
+  if (event.facility_id === null) {
+    if (!hasVenue) {
+      addFinding(findings, `${layer}.facility_or_venue_missing`, [id]);
+    }
+    return;
+  }
+
+  if (!Number.isSafeInteger(event.facility_id) || event.facility_id <= 0) {
+    addFinding(
+      findings,
+      `${layer}.facility_id_invalid`,
+      [id],
+      String(event.facility_id),
+    );
+    return;
+  }
+
+  if (hasVenue) {
     addFinding(findings, `${layer}.facility_and_venue_both_set`, [id]);
   }
-  if (!hasFacility && !hasVenue) {
-    addFinding(findings, `${layer}.facility_or_venue_missing`, [id]);
-  }
-  if (hasFacility && !facilityIds.has(String(event.facility_id))) {
+  if (!facilityIds.has(String(event.facility_id))) {
     addFinding(findings, `${layer}.facility_id_unknown`, [id], String(event.facility_id));
   }
 }
