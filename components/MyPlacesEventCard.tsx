@@ -10,7 +10,7 @@ export default function MyPlacesEventCard({
 
   return (
     <article
-      className="flex h-full flex-col rounded-xl border border-slate-200 bg-white p-4 transition-colors hover:border-brand/40 hover:bg-slate-50"
+      className="flex h-full flex-col rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 transition-all hover:-translate-y-0.5 hover:ring-brand/30"
       data-my-places-event-card
       data-origin={item.origin}
       data-event-id={item.event.id}
@@ -20,8 +20,8 @@ export default function MyPlacesEventCard({
         <span
           className={`rounded-full px-2.5 py-1 text-xs font-bold ${
             isWishlist
-              ? "bg-pink-50 text-pink-600"
-              : "bg-emerald-50 text-emerald-700"
+              ? "bg-accent/10 text-slate-700 ring-1 ring-accent/20"
+              : "bg-success/10 text-slate-700 ring-1 ring-success/20"
           }`}
         >
           {isWishlist ? "♥ 行きたい場所" : "👣 行った場所"}

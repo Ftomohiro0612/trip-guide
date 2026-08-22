@@ -106,6 +106,10 @@ export default function VisitPhotoGallery({
       >
         {photos.map((photo) => {
           const deleting = deletingId === photo.id;
+          const displayUrl =
+            variant === "large"
+              ? photo.fullUrl ?? photo.thumbUrl
+              : photo.thumbUrl;
           return (
             <div
               key={photo.id}
@@ -131,10 +135,10 @@ export default function VisitPhotoGallery({
                   className="block h-full w-full disabled:cursor-default"
                   aria-label="写真を拡大表示"
                 >
-                  {photo.thumbUrl ? (
+                  {displayUrl ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
-                      src={photo.thumbUrl}
+                      src={displayUrl}
                       alt="おでかけの写真"
                       className="h-full w-full object-cover"
                     />
