@@ -4,6 +4,7 @@ import Link from "next/link";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
+import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
 import { buildFamilyOutingMapData } from "@/lib/visited-places";
 import {
   familyRevisitLabels,
@@ -54,9 +55,12 @@ type VisitPhotoThumb = {
 
 type VisitMapRow = {
   facility_slug: string | null;
+  facility_name?: string | null;
   visited_on: string | null;
   family_revisit: string | null;
   parent_fatigue: string | null;
+  place_latitude?: number | null;
+  place_longitude?: number | null;
 };
 
 type WishlistSlugRow = {
@@ -64,6 +68,31 @@ type WishlistSlugRow = {
 };
 
 const VISIT_THUMBNAILS_PER_CARD = 2;
+
+type ServerSupabaseClient = Awaited<ReturnType<typeof createClient>>;
+
+async function loadPublishedMapVisits(
+  supabase: ServerSupabaseClient,
+  userId: string,
+) {
+  const withCoordinates = await supabase
+    .from("visits")
+    .select(
+      "facility_slug, facility_name, visited_on, family_revisit, parent_fatigue, place_latitude, place_longitude",
+    )
+    .eq("user_id", userId)
+    .eq("status", "published");
+
+  if (!isMissingVisitCoordinateColumnError(withCoordinates.error)) {
+    return withCoordinates;
+  }
+
+  return supabase
+    .from("visits")
+    .select("facility_slug, facility_name, visited_on, family_revisit, parent_fatigue")
+    .eq("user_id", userId)
+    .eq("status", "published");
+}
 
 function formatVisitedOn(visitedOn: string | null): string {
   if (!visitedOn) return "日付未設定";
@@ -180,13 +209,9 @@ export default async function VisitsPage({
     visitsQuery = visitsQuery.eq("family_revisit", "yes");
   }
 
-  const publishedMapVisitsQuery = user
-    ? supabase
-        .from("visits")
-        .select("facility_slug, visited_on, family_revisit, parent_fatigue")
-        .eq("user_id", user.id)
-        .eq("status", "published")
-    : null;
+  const publishedMapVisitsPromise = user
+    ? loadPublishedMapVisits(supabase, user.id)
+    : Promise.resolve({ data: [] });
 
   const wishlistSlugsQuery = user
     ? supabase.from("wishlists").select("facility_slug").eq("user_id", user.id)
@@ -195,9 +220,7 @@ export default async function VisitsPage({
   const [{ data: visits }, { data: publishedMapVisits }, { data: wishlistRows }] =
     await Promise.all([
       visitsQuery ? visitsQuery : Promise.resolve({ data: [] }),
-      publishedMapVisitsQuery
-        ? publishedMapVisitsQuery
-        : Promise.resolve({ data: [] }),
+      publishedMapVisitsPromise,
       wishlistSlugsQuery ? wishlistSlugsQuery : Promise.resolve({ data: [] }),
     ]);
 

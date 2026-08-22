@@ -33,6 +33,7 @@ import {
   type ChildStats,
 } from "@/lib/mypage-stats";
 import { createClient } from "@/lib/supabase/server";
+import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
 import {
   buildFamilyOutingMapData,
   buildVisitedPlacesMapData,
@@ -57,6 +58,8 @@ type VisitStat = {
   created_at: string;
   family_revisit: string;
   parent_fatigue: string | null;
+  place_latitude?: number | null;
+  place_longitude?: number | null;
 };
 
 type ChildInsightSummary = {
@@ -417,6 +420,37 @@ function familyMapBadgeText(visitedCount: number, wishlistCount: number): string
     .join(" · ");
 }
 
+type ServerSupabaseClient = Awaited<ReturnType<typeof createClient>>;
+
+async function loadPublishedVisitStats(
+  supabase: ServerSupabaseClient,
+  userId: string,
+) {
+  const withCoordinates = await supabase
+    .from("visits")
+    .select(
+      "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue, place_latitude, place_longitude",
+    )
+    .eq("user_id", userId)
+    .eq("status", "published")
+    .order("visited_on", { ascending: false, nullsFirst: false })
+    .order("created_at", { ascending: false });
+
+  if (!isMissingVisitCoordinateColumnError(withCoordinates.error)) {
+    return withCoordinates;
+  }
+
+  return supabase
+    .from("visits")
+    .select(
+      "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue",
+    )
+    .eq("user_id", userId)
+    .eq("status", "published")
+    .order("visited_on", { ascending: false, nullsFirst: false })
+    .order("created_at", { ascending: false });
+}
+
 export default async function MypagePage() {
   const supabase = await createClient();
   const {
@@ -432,15 +466,7 @@ export default async function MypagePage() {
       .order("created_at", { ascending: true })
       .order("id", { ascending: true }),
     user
-      ? supabase
-          .from("visits")
-          .select(
-            "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue",
-          )
-          .eq("user_id", user.id)
-          .eq("status", "published")
-          .order("visited_on", { ascending: false, nullsFirst: false })
-          .order("created_at", { ascending: false })
+      ? loadPublishedVisitStats(supabase, user.id)
       : Promise.resolve({ data: [] }),
     user
       ? supabase

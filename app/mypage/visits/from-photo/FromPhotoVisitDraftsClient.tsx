@@ -7,6 +7,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
 import { storeVisitEdit } from "@/lib/visit-flow-session";
+import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
 import {
   MAX_PHOTOS_PER_VISIT,
   readPhotoGps,
@@ -42,6 +43,7 @@ type DraftPhoto = {
   previewUrl: string;
   takenOn: string | null;
   hasGps: boolean;
+  gps: GpsCoordinates | null;
 };
 
 type VisitStatus = "draft" | "published";
@@ -174,6 +176,14 @@ function makeManualFacilitySlug(name: string): string {
   return `manual-${encoded.slice(0, 120) || Date.now().toString(36)}`;
 }
 
+function isManualFacilitySlug(slug: string): boolean {
+  return slug.startsWith("manual-");
+}
+
+function normalizeFacilityName(name: string): string {
+  return name.trim().toLocaleLowerCase("ja-JP");
+}
+
 function createDrafts(
   photosWithGps: (DraftPhoto & { gps: GpsCoordinates | null })[],
   facilities: CandidateFacility[],
@@ -194,6 +204,7 @@ function createDrafts(
       previewUrl: photo.previewUrl,
       takenOn: photo.takenOn,
       hasGps: photo.hasGps,
+      gps: photo.gps,
     };
     const existing = draftsByKey.get(key);
 
@@ -286,6 +297,39 @@ function normalizeFullMergeSelection(draft: VisitDraft): {
 function selectedPhotosForDraft(draft: VisitDraft): DraftPhoto[] {
   const selected = new Set(draft.selectedPhotoIds);
   return draft.photos.filter((photo) => selected.has(photo.localId));
+}
+
+async function saveManualPlaceCoordinatesForExistingVisit({
+  supabase,
+  visitId,
+  facilitySlug,
+  selectedPhotos,
+}: {
+  supabase: ReturnType<typeof createClient>;
+  visitId: string;
+  facilitySlug: string;
+  selectedPhotos: DraftPhoto[];
+}): Promise<void> {
+  if (!isManualFacilitySlug(facilitySlug)) return;
+
+  const coordinates = selectedPhotos.find((photo) => photo.gps)?.gps;
+  if (!coordinates) return;
+
+  const { error } = await supabase
+    .from("visits")
+    .update({
+      place_latitude: coordinates.latitude,
+      place_longitude: coordinates.longitude,
+    })
+    .eq("id", visitId);
+
+  if (isMissingVisitCoordinateColumnError(error)) {
+    console.warn(
+      "visit place coordinate columns are not applied; keeping the existing visit unchanged",
+    );
+    return;
+  }
+  if (error) throw new Error(error.message);
 }
 
 function isFullMergeDraft(draft: VisitDraft): boolean {
@@ -576,7 +620,12 @@ export default function FromPhotoVisitDraftsClient({
           }));
         } catch (caughtError) {
           if ((caughtError as Error).name !== "AbortError") {
-            setSearchResults((current) => ({ ...current, [draft.id]: [] }));
+            setSearchResults((current) => {
+              if (!current[draft.id]) return current;
+              const next = { ...current };
+              delete next[draft.id];
+              return next;
+            });
             setError(
               caughtError instanceof Error
                 ? caughtError.message
@@ -787,20 +836,30 @@ export default function FromPhotoVisitDraftsClient({
   }
 
   function setDraftSearchQuery(draftId: string, searchQuery: string) {
-    if (searchQuery.trim().length < 2) {
-      setSearchResults((current) => {
-        if (!current[draftId]) return current;
-        const next = { ...current };
-        delete next[draftId];
-        return next;
-      });
-    }
+    setSearchResults((current) => {
+      if (!current[draftId]) return current;
+      const next = { ...current };
+      delete next[draftId];
+      return next;
+    });
     setDrafts((current) =>
       withUpdatedDraft(current, draftId, (draft) => ({
         ...draft,
         searchQuery,
       })),
     );
+  }
+
+  function selectManualFacility(draftId: string, name: string) {
+    const facilityName = name.trim();
+    if (!facilityName) return;
+
+    selectFacility(draftId, {
+      slug: makeManualFacilitySlug(facilityName),
+      name: facilityName,
+      category: "その他",
+      prefecture: "自分だけの場所",
+    });
   }
 
   function togglePhoto(draftId: string, photoId: string) {
@@ -911,6 +970,14 @@ export default function FromPhotoVisitDraftsClient({
         throw new Error("入れ替える写真を選んでください。");
       }
 
+      await saveManualPlaceCoordinatesForExistingVisit({
+        supabase,
+        visitId: effectiveDraft.existingMatch.id,
+        facilitySlug:
+          effectiveDraft.facilitySlug || effectiveDraft.existingMatch.facilitySlug,
+        selectedPhotos,
+      });
+
       for (const photo of removedPhotos) {
         const pathsToRemove = Array.from(
           new Set([photo.storagePath, photo.thumbPath]),
@@ -953,6 +1020,14 @@ export default function FromPhotoVisitDraftsClient({
     }
 
     if (effectiveDraft.existingMatch && !effectiveDraft.createSeparate) {
+      const supabase = createClient();
+      await saveManualPlaceCoordinatesForExistingVisit({
+        supabase,
+        visitId: effectiveDraft.existingMatch.id,
+        facilitySlug:
+          effectiveDraft.facilitySlug || effectiveDraft.existingMatch.facilitySlug,
+        selectedPhotos,
+      });
       const startOrder = effectiveDraft.existingMatch.photoCount;
       for (const [index, photo] of selectedPhotos.entries()) {
         await uploadPhoto({
@@ -972,25 +1047,51 @@ export default function FromPhotoVisitDraftsClient({
     const visitedMonth = visitedDate.getMonth() + 1;
     const today = todayString();
     const facilityName = effectiveDraft.facilityName.trim();
+    const facilitySlug =
+      effectiveDraft.facilitySlug || makeManualFacilitySlug(facilityName);
+    const visitPayload = {
+      user_id: userId,
+      facility_slug: facilitySlug,
+      facility_name: facilityName,
+      status: "draft",
+      visited_on: effectiveDraft.visitedOn,
+      visited_year: visitedYear,
+      visited_month: visitedMonth,
+      date_precision: "exact",
+      is_past_entry: effectiveDraft.visitedOn < today,
+      family_revisit: "conditional",
+      parent_fatigue: "normal",
+    };
+    const placeCoordinates = isManualFacilitySlug(facilitySlug)
+      ? selectedPhotos.find((photo) => photo.gps)?.gps ?? null
+      : null;
+    let visitResult = placeCoordinates
+      ? await supabase
+          .from("visits")
+          .insert({
+            ...visitPayload,
+            place_latitude: placeCoordinates.latitude,
+            place_longitude: placeCoordinates.longitude,
+          })
+          .select("id")
+          .single()
+      : await supabase.from("visits").insert(visitPayload).select("id").single();
 
-    const { data: visit, error: visitError } = await supabase
-      .from("visits")
-      .insert({
-        user_id: userId,
-        facility_slug:
-          effectiveDraft.facilitySlug || makeManualFacilitySlug(facilityName),
-        facility_name: facilityName,
-        status: "draft",
-        visited_on: effectiveDraft.visitedOn,
-        visited_year: visitedYear,
-        visited_month: visitedMonth,
-        date_precision: "exact",
-        is_past_entry: effectiveDraft.visitedOn < today,
-        family_revisit: "conditional",
-        parent_fatigue: "normal",
-      })
-      .select("id")
-      .single();
+    if (
+      placeCoordinates &&
+      isMissingVisitCoordinateColumnError(visitResult.error)
+    ) {
+      console.warn(
+        "visit place coordinate columns are not applied; saving without coordinates",
+      );
+      visitResult = await supabase
+        .from("visits")
+        .insert(visitPayload)
+        .select("id")
+        .single();
+    }
+
+    const { data: visit, error: visitError } = visitResult;
 
     if (visitError || !visit) {
       throw new Error(visitError?.message ?? "記録の保存に失敗しました。");
@@ -1086,7 +1187,7 @@ export default function FromPhotoVisitDraftsClient({
             <p className="text-xs leading-relaxed text-slate-500">
               最大{MAX_BATCH_PHOTOS}枚。日付と場所の候補を自動入力します。
               選択時点ではアップロードしません。
-              位置情報は端末内で候補提案にのみ使い、保存しません。
+              未登録の場所を自分だけの場所として記録する場合は、地図表示に必要な座標だけを保存します。
             </p>
           </div>
           <button
@@ -1143,6 +1244,24 @@ export default function FromPhotoVisitDraftsClient({
               Boolean(draft.facilityName) && !selectedCandidate;
             const draftSearchResults = searchResults[draft.id] ?? [];
             const isSearchingFacility = Boolean(searchingDraftIds[draft.id]);
+            const searchQuery = draft.searchQuery.trim();
+            const hasCompletedFacilitySearch = Object.prototype.hasOwnProperty.call(
+              searchResults,
+              draft.id,
+            );
+            const hasExactFacilityName = draftSearchResults.some(
+              (result) =>
+                normalizeFacilityName(result.name) ===
+                normalizeFacilityName(searchQuery),
+            );
+            const canSelectManualFacility =
+              searchQuery.length >= 2 &&
+              hasCompletedFacilitySearch &&
+              !isSearchingFacility &&
+              !hasExactFacilityName;
+            const isSelectedManualFacility = isManualFacilitySlug(
+              draft.facilitySlug,
+            );
             return (
             <article
               key={draft.id}
@@ -1249,7 +1368,9 @@ export default function FromPhotoVisitDraftsClient({
                     <div className="rounded-lg border border-emerald-300 bg-emerald-50 px-3 py-2">
                       <div className="min-w-0">
                         <p className="text-[11px] font-bold text-emerald-700">
-                          選択中
+                          {isSelectedManualFacility
+                            ? "自分だけの場所として選択中"
+                            : "選択中"}
                         </p>
                         <div className="mt-0.5 flex items-center gap-2">
                           <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-emerald-600 text-xs font-bold text-white">
@@ -1353,6 +1474,27 @@ export default function FromPhotoVisitDraftsClient({
                           </span>
                         </button>
                       ))}
+                    </div>
+                  )}
+                  {canSelectManualFacility && (
+                    <div className="rounded-lg border border-dashed border-brand/40 bg-emerald-50/60 p-3">
+                      {draftSearchResults.length === 0 && (
+                        <p className="mb-2 text-xs leading-relaxed text-slate-600">
+                          登録施設に一致する場所が見つかりませんでした。
+                        </p>
+                      )}
+                      <button
+                        type="button"
+                        onClick={() =>
+                          selectManualFacility(draft.id, searchQuery)
+                        }
+                        className="w-full rounded-lg border border-brand bg-white px-3 py-2 text-left text-sm font-bold text-brand transition-colors hover:bg-emerald-50"
+                      >
+                        「{searchQuery}」をこの名前で記録する
+                      </button>
+                      <p className="mt-2 text-[11px] leading-relaxed text-slate-500">
+                        公開施設には追加されず、あなたのおでかけ記録だけに保存されます。
+                      </p>
                     </div>
                   )}
                 </section>
@@ -1533,7 +1675,7 @@ export default function FromPhotoVisitDraftsClient({
                 : `チェックした${selectedDrafts.length}件を一括作成`}
             </button>
             <p className="mt-2 text-center text-[11px] text-slate-400">
-              保存時に写真を再エンコードし、位置情報などのメタデータを削除します。
+              写真は再エンコードしてEXIF等を削除します。自分だけの場所には地図用の座標だけを保存します。
             </p>
           </div>
         </div>
