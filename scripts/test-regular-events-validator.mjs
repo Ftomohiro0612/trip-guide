@@ -4,12 +4,36 @@ import { validateRegularEventData } from "./regular-events-validator.mjs";
 
 const facility = { id: 1 };
 
-test("facility_id must exist or a formal venue_name must be supplied", () => {
+test("facility-backed event must reference an existing facility", () => {
   const event = makeEvent({ facility_id: 999 });
   const result = validate([event]);
   assert.deepEqual(
     result.unbaselined_violations.map((item) => item.rule),
     ["base.facility_id_unknown"],
+  );
+});
+
+test("regular event may use facility_id=null with a formal venue_name", () => {
+  const event = makeEvent({ facility_id: null, venue_name: "山梨市民会館 4階 401会議室" });
+  const result = validate([event]);
+  assert.equal(result.summary.errors, 0);
+});
+
+test("venue_name does not replace an explicit facility_id=null", () => {
+  const event = makeEvent({ facility_id: undefined, venue_name: "山梨市民会館" });
+  const result = validate([event]);
+  assert.deepEqual(
+    result.unbaselined_violations.map((item) => item.rule),
+    ["base.facility_id_invalid"],
+  );
+});
+
+test("facility-backed event must not also supply venue_name", () => {
+  const event = makeEvent({ venue_name: "別会場" });
+  const result = validate([event]);
+  assert.deepEqual(
+    result.unbaselined_violations.map((item) => item.rule),
+    ["base.facility_and_venue_both_set"],
   );
 });
 
