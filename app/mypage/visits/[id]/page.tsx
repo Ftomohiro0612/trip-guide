@@ -229,57 +229,7 @@ export default async function VisitDetailPage({
   const hasPrimarySummary = Boolean(revisitLabel || fatigueLabel);
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
-      <Link
-        href="/mypage/visits"
-        className="text-slate-400 hover:text-slate-600 transition-colors"
-      >
-        ← 履歴に戻る
-      </Link>
-
-      <header className="space-y-2">
-        <div className="flex items-start justify-between gap-3">
-          <div className="min-w-0">
-            <h1 className="text-xl font-bold text-slate-900 break-words">
-              <Link
-                href={`/mypage/visits/facility/${visitRow.facility_slug}`}
-                className="hover:text-brand transition-colors"
-              >
-                {visitRow.facility_name}
-              </Link>
-            </h1>
-            {isDraft && (
-              <div className="mt-2 flex flex-wrap items-center gap-2">
-                <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">
-                  下書き
-                </span>
-                <Link
-                  href={`/mypage/visits/${visitRow.id}/edit`}
-                  className="text-xs font-bold text-brand hover:underline"
-                >
-                  編集して公開
-                </Link>
-              </div>
-            )}
-            {hasFacilityPage ? (
-              <Link
-                href={`/facilities/${facility.slug}`}
-                className="mt-1 inline-block text-sm text-brand hover:underline"
-              >
-                施設ページを見る →
-              </Link>
-            ) : facility ? (
-              <p className="mt-1 text-sm text-slate-400">
-                施設ページは現在公開していません
-              </p>
-            ) : null}
-          </div>
-          <span className="shrink-0 text-xs text-slate-400">
-            {formatVisitedOn(visitRow.visited_on)}
-          </span>
-        </div>
-      </header>
-
+    <div className="mx-auto max-w-lg">
       {PHOTO_UPLOAD_ENABLED && photos.length > 0 && (
         <VisitPhotoGallery
           visitId={visitRow.id}
@@ -289,85 +239,147 @@ export default async function VisitDetailPage({
         />
       )}
 
-      {reflectiveChildRows.length > 0 && (
-        <section className="space-y-3">
-          <h2 className="font-bold text-slate-800">子どもの反応</h2>
-          <div className="space-y-3">
-            {reflectiveChildRows.map((row) => {
-              const child = getVisitChildProfile(row.children);
-              if (!child) return null;
-              const avatarUrl = child.avatar_url
-                ? avatarUrlByPath.get(child.avatar_url) ?? null
-                : null;
-              return (
-                <VisitChildCard
-                  key={row.id}
-                  row={row}
-                  visitedOn={visitRow.visited_on}
-                  avatarUrl={avatarUrl}
-                />
-              );
-            })}
-          </div>
-        </section>
-      )}
-
-      {(hasPrimarySummary || optionalSummaryItems.length > 0) && (
-        <section className="space-y-3">
-          <h2 className="font-bold text-slate-800">評価サマリ</h2>
-          {hasPrimarySummary && (
-            <div className="flex flex-wrap gap-2">
-              {revisitLabel && (
-                <SummaryChip label="また行きたい" value={revisitLabel} tone="green" />
-              )}
-              {fatigueLabel && (
-                <SummaryChip label="親の疲れ度" value={fatigueLabel} tone="violet" />
-              )}
-            </div>
-          )}
-          {optionalSummaryItems.length > 0 && (
-            <dl className="grid gap-2 sm:grid-cols-2">
-              {optionalSummaryItems.map((item) => (
-                <div
-                  key={item.label}
-                  className="rounded-lg border border-slate-200 bg-white px-3 py-2"
-                >
-                  <dt className="text-xs font-bold text-slate-400">{item.label}</dt>
-                  <dd className="mt-0.5 text-sm font-medium text-slate-800">
-                    {item.value}
-                  </dd>
-                </div>
-              ))}
-            </dl>
-          )}
-        </section>
-      )}
-
-      {visitRow.parent_memo?.trim() && (
-        <section className="space-y-2">
-          <h2 className="font-bold text-slate-800">メモ</h2>
-          <div className="bg-white border border-slate-200 rounded-xl px-4 py-3">
-            <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
-              {visitRow.parent_memo}
-            </p>
-          </div>
-        </section>
-      )}
-
-      <div className="space-y-3 pt-2">
+      <div className="space-y-5 px-4 py-6">
         <Link
-          href={`/mypage/visits/${visitRow.id}/edit`}
-          className="block w-full py-3 bg-brand text-white text-center text-sm font-bold rounded-xl hover:bg-brand-dark transition-colors"
+          href="/mypage/visits"
+          className="text-slate-400 hover:text-slate-600 transition-colors"
         >
-          編集する
+          ← 履歴に戻る
         </Link>
-        <div className="text-right">
-          <DeleteVisitButton
-            visitId={visitRow.id}
-            facilityName={visitRow.facility_name}
-            redirectTo="/mypage/visits"
-            variant="subtle"
-          />
+
+        <header className="space-y-2">
+          <div className="flex items-start justify-between gap-3">
+            <div className="min-w-0">
+              <h1 className="text-xl font-bold text-slate-900 break-words">
+                <Link
+                  href={`/mypage/visits/facility/${visitRow.facility_slug}`}
+                  className="hover:text-brand transition-colors"
+                >
+                  {visitRow.facility_name}
+                </Link>
+              </h1>
+              {isDraft && (
+                <div className="mt-2 flex flex-wrap items-center gap-2">
+                  <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">
+                    下書き
+                  </span>
+                  <Link
+                    href={`/mypage/visits/${visitRow.id}/edit`}
+                    className="text-xs font-bold text-brand hover:underline"
+                  >
+                    編集して公開
+                  </Link>
+                </div>
+              )}
+              {hasFacilityPage ? (
+                <Link
+                  href={`/facilities/${facility.slug}`}
+                  className="mt-1 inline-block text-sm text-brand hover:underline"
+                >
+                  施設ページを見る →
+                </Link>
+              ) : facility ? (
+                <p className="mt-1 text-sm text-slate-400">
+                  施設ページは現在公開していません
+                </p>
+              ) : null}
+            </div>
+            <span className="shrink-0 text-xs text-slate-400">
+              {formatVisitedOn(visitRow.visited_on)}
+            </span>
+          </div>
+        </header>
+
+        {reflectiveChildRows.length > 0 && (
+          <section className="space-y-3">
+            <h2 className="font-bold text-slate-800">子どもの反応</h2>
+            <div className="space-y-3">
+              {reflectiveChildRows.map((row) => {
+                const child = getVisitChildProfile(row.children);
+                if (!child) return null;
+                const avatarUrl = child.avatar_url
+                  ? avatarUrlByPath.get(child.avatar_url) ?? null
+                  : null;
+                return (
+                  <VisitChildCard
+                    key={row.id}
+                    row={row}
+                    visitedOn={visitRow.visited_on}
+                    avatarUrl={avatarUrl}
+                  />
+                );
+              })}
+            </div>
+          </section>
+        )}
+
+        {(hasPrimarySummary || optionalSummaryItems.length > 0) && (
+          <section className="space-y-3">
+            <h2 className="font-bold text-slate-800">評価サマリ</h2>
+            {hasPrimarySummary && (
+              <div className="flex flex-wrap gap-2">
+                {revisitLabel && (
+                  <SummaryChip
+                    label="また行きたい"
+                    value={revisitLabel}
+                    tone="green"
+                  />
+                )}
+                {fatigueLabel && (
+                  <SummaryChip
+                    label="親の疲れ度"
+                    value={fatigueLabel}
+                    tone="violet"
+                  />
+                )}
+              </div>
+            )}
+            {optionalSummaryItems.length > 0 && (
+              <dl className="grid gap-2 sm:grid-cols-2">
+                {optionalSummaryItems.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-lg border border-slate-200 bg-white px-3 py-2"
+                  >
+                    <dt className="text-xs font-bold text-slate-400">
+                      {item.label}
+                    </dt>
+                    <dd className="mt-0.5 text-sm font-medium text-slate-800">
+                      {item.value}
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+            )}
+          </section>
+        )}
+
+        {visitRow.parent_memo?.trim() && (
+          <section className="space-y-2">
+            <h2 className="font-bold text-slate-800">メモ</h2>
+            <div className="bg-white border border-slate-200 rounded-xl px-4 py-3">
+              <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
+                {visitRow.parent_memo}
+              </p>
+            </div>
+          </section>
+        )}
+
+        <div className="space-y-3 pt-2">
+          <Link
+            href={`/mypage/visits/${visitRow.id}/edit`}
+            className="block w-full py-3 bg-brand text-white text-center text-sm font-bold rounded-xl hover:bg-brand-dark transition-colors"
+          >
+            編集する
+          </Link>
+          <div className="text-right">
+            <DeleteVisitButton
+              visitId={visitRow.id}
+              facilityName={visitRow.facility_name}
+              redirectTo="/mypage/visits"
+              variant="subtle"
+            />
+          </div>
         </div>
       </div>
     </div>
