@@ -37,6 +37,11 @@ import {
 import { createClient } from "@/lib/supabase/server";
 import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
 import {
+  isMissingVisitEventSnapshotColumnError,
+  visitDisplayName,
+  type VisitEventSnapshot,
+} from "@/lib/visit-event";
+import {
   buildFamilyOutingMapData,
   buildVisitedPlacesMapData,
 } from "@/lib/visited-places";
@@ -54,7 +59,7 @@ type Child = {
   avatar_url: string | null;
 };
 
-type VisitStat = {
+type VisitStat = VisitEventSnapshot & {
   id: string;
   facility_slug: string;
   facility_name: string;
@@ -88,7 +93,10 @@ type VisitPhotoThumbRow = {
 
 type MemoryPhoto = {
   visitId: string;
-  facilityName: string;
+  displayName: string;
+  eventId: string | null;
+  eventDateLabel: string | null;
+  eventVenueName: string | null;
   thumbPath: string;
 };
 
@@ -422,25 +430,49 @@ async function loadPublishedVisitStats(
   supabase: ServerSupabaseClient,
   userId: string,
 ) {
-  const withCoordinates = await supabase
-    .from("visits")
-    .select(
-      "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue, place_latitude, place_longitude",
-    )
-    .eq("user_id", userId)
-    .eq("status", "published")
-    .order("visited_on", { ascending: false, nullsFirst: false })
-    .order("created_at", { ascending: false });
+  const baseColumns =
+    "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue";
+  let includeCoordinates = true;
+  let includeEventSnapshots = true;
 
-  if (!isMissingVisitCoordinateColumnError(withCoordinates.error)) {
-    return withCoordinates;
+  for (let attempt = 0; attempt < 3; attempt += 1) {
+    const columns = [
+      baseColumns,
+      includeCoordinates ? "place_latitude, place_longitude" : null,
+      includeEventSnapshots
+        ? "event_id, event_title_snapshot, event_date_label_snapshot, event_venue_name_snapshot, event_prefecture_label_snapshot"
+        : null,
+    ]
+      .filter((value): value is string => Boolean(value))
+      .join(", ");
+    const result = await supabase
+      .from("visits")
+      .select(columns)
+      .eq("user_id", userId)
+      .eq("status", "published")
+      .order("visited_on", { ascending: false, nullsFirst: false })
+      .order("created_at", { ascending: false });
+
+    if (
+      includeEventSnapshots &&
+      isMissingVisitEventSnapshotColumnError(result.error)
+    ) {
+      includeEventSnapshots = false;
+      continue;
+    }
+    if (
+      includeCoordinates &&
+      isMissingVisitCoordinateColumnError(result.error)
+    ) {
+      includeCoordinates = false;
+      continue;
+    }
+    return result;
   }
 
   return supabase
     .from("visits")
-    .select(
-      "id, facility_slug, facility_name, visited_on, created_at, family_revisit, parent_fatigue",
-    )
+    .select(baseColumns)
     .eq("user_id", userId)
     .eq("status", "published")
     .order("visited_on", { ascending: false, nullsFirst: false })
@@ -580,7 +612,10 @@ export default async function MypagePage() {
           return [
             {
               visitId: photo.visit_id,
-              facilityName: visit.facility_name,
+              displayName: visitDisplayName(visit),
+              eventId: visit.event_id ?? null,
+              eventDateLabel: visit.event_date_label_snapshot ?? null,
+              eventVenueName: visit.event_venue_name_snapshot ?? null,
               thumbPath: photo.thumb_path,
             },
           ];
@@ -732,16 +767,36 @@ export default async function MypagePage() {
                       <Link
                         key={`${photo.visitId}-${photo.thumbPath}`}
                         href={`/mypage/visits/${photo.visitId}`}
-                        className="relative h-26 w-26 shrink-0 overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/15 transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-30 sm:w-30"
+                        className="group relative h-40 w-44 shrink-0 overflow-hidden rounded-2xl bg-white/10 ring-1 ring-white/15 transition-transform hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white sm:h-44 sm:w-48"
                       >
                         <Image
                           src={photo.thumbUrl}
-                          alt={`${photo.facilityName}の写真`}
+                          alt={`${photo.displayName}の写真`}
                           fill
-                          sizes="(min-width: 640px) 120px, 104px"
+                          sizes="(min-width: 640px) 192px, 176px"
                           className="object-cover"
                           unoptimized
                         />
+                        <span className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/90 to-transparent px-3 pb-3 pt-10">
+                          {photo.eventId && (
+                            <span className="mb-1 inline-flex rounded-full bg-violet-500/90 px-2 py-0.5 text-[10px] font-bold text-white">
+                              イベント記録
+                            </span>
+                          )}
+                          <span className="block line-clamp-2 text-xs font-bold leading-snug text-white">
+                            {photo.displayName}
+                          </span>
+                          {photo.eventDateLabel && (
+                            <span className="mt-0.5 block truncate text-[10px] text-white/75">
+                              {photo.eventDateLabel}
+                            </span>
+                          )}
+                          {photo.eventVenueName && (
+                            <span className="block truncate text-[10px] text-white/65">
+                              {photo.eventVenueName}
+                            </span>
+                          )}
+                        </span>
                       </Link>
                     ))}
                   </div>

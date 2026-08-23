@@ -2,6 +2,7 @@ import Link from "next/link";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
 import { isPdfOfficialUrl, type EventView } from "@/lib/events";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
+import EventRecordButton from "@/components/EventRecordButton";
 
 interface EventCardProps {
   view: EventView;
@@ -103,22 +104,25 @@ export default function EventCard({
             </div>
           ) : null}
         </div>
-        <TrackedOutboundLink
-          href={event.official_url}
-          contentType="event"
-          contentId={event.id}
-          intentType={
-            event.reservation === "required"
-              ? "reservation"
-              : isPdfOfficialUrl(event.official_url)
-                ? "event_pdf"
-                : "event_detail"
-          }
-          linkLocation="event_card"
-          className="inline-flex shrink-0 items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-slate-800"
-        >
-          {officialLinkLabel}
-        </TrackedOutboundLink>
+        <div className="flex shrink-0 flex-col gap-2">
+          <EventRecordButton eventId={event.id} />
+          <TrackedOutboundLink
+            href={event.official_url}
+            contentType="event"
+            contentId={event.id}
+            intentType={
+              event.reservation === "required"
+                ? "reservation"
+                : isPdfOfficialUrl(event.official_url)
+                  ? "event_pdf"
+                  : "event_detail"
+            }
+            linkLocation="event_card"
+            className="inline-flex shrink-0 items-center justify-center rounded-md bg-slate-900 px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-slate-800"
+          >
+            {officialLinkLabel}
+          </TrackedOutboundLink>
+        </div>
       </div>
 
       <p className="mt-4 text-sm leading-relaxed text-slate-700">

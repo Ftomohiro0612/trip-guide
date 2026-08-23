@@ -14,6 +14,11 @@ import {
 } from "@/lib/guest-record";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { createClient } from "@/lib/supabase/client";
+import {
+  isMissingVisitEventSnapshotColumnError,
+  makeEventFacilitySlug,
+  type EventVisitPrefill,
+} from "@/lib/visit-event";
 import { encodeInterestOtherNote } from "@/lib/visit-other-note";
 import {
   storeVisitCompletion,
@@ -192,10 +197,14 @@ export default function NewVisitPage() {
   const router = useRouter();
   const facilitySlugFromUrl = searchParams.get("facility") ?? "";
   const nameFromUrl = searchParams.get("name") ?? "";
+  const eventIdFromUrl = searchParams.get("event")?.trim() ?? "";
   const restoreGuestDraft = searchParams.get("guestDraft") === "1";
   const photoUploaderRef = useRef<VisitPhotoUploaderHandle>(null);
   const submissionLockedRef = useRef(false);
 
+  const [eventForVisit, setEventForVisit] =
+    useState<EventVisitPrefill | null>(null);
+  const [eventLoading, setEventLoading] = useState(Boolean(eventIdFromUrl));
   const [facilityName, setFacilityName] = useState(nameFromUrl);
   const [facilitySlug, setFacilitySlug] = useState(facilitySlugFromUrl);
   const [suggestions, setSuggestions] = useState<FacilitySuggestion[]>([]);
@@ -233,6 +242,42 @@ export default function NewVisitPage() {
   const [createdVisitId, setCreatedVisitId] = useState<string | null>(null);
   const [createdVisitContext, setCreatedVisitContext] =
     useState<VisitCompletionContext | null>(null);
+
+  useEffect(() => {
+    if (!eventIdFromUrl) return;
+    let active = true;
+
+    async function loadEvent() {
+      setEventLoading(true);
+      try {
+        const response = await fetch(
+          `/api/events/${encodeURIComponent(eventIdFromUrl)}`,
+        );
+        if (!response.ok) throw new Error("event_not_found");
+        const event = (await response.json()) as EventVisitPrefill;
+        if (!active) return;
+        setEventForVisit(event);
+        setError(null);
+        setFacilityName(event.venueName);
+        setFacilitySlug(event.facilitySlug ?? "");
+        setDateChoice("custom");
+        setCustomDate(event.visitedOn);
+      } catch {
+        if (!active) return;
+        setEventForVisit(null);
+        setError(
+          "指定されたイベントが見つかりません。掲載ページからもう一度お試しください。",
+        );
+      } finally {
+        if (active) setEventLoading(false);
+      }
+    }
+
+    void loadEvent();
+    return () => {
+      active = false;
+    };
+  }, [eventIdFromUrl]);
 
   useEffect(() => {
     if (!restoreGuestDraft) return;
@@ -355,7 +400,14 @@ export default function NewVisitPage() {
 
   useEffect(() => {
     const query = facilityName.trim();
-    if (facilitySlugFromUrl || facilitySlug || query.length < 2) return;
+    if (
+      eventIdFromUrl ||
+      facilitySlugFromUrl ||
+      facilitySlug ||
+      query.length < 2
+    ) {
+      return;
+    }
 
     const controller = new AbortController();
     const timer = window.setTimeout(async () => {
@@ -380,7 +432,7 @@ export default function NewVisitPage() {
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [facilityName, facilitySlug, facilitySlugFromUrl]);
+  }, [eventIdFromUrl, facilityName, facilitySlug, facilitySlugFromUrl]);
 
   const visitedOn = useMemo(
     () => dateForChoice(dateChoice, customDate),
@@ -403,11 +455,13 @@ export default function NewVisitPage() {
 
   const canSubmit =
     facilityName.trim().length > 0 &&
+    (!eventIdFromUrl || Boolean(eventForVisit)) &&
     Boolean(visitedOn) &&
     Boolean(familyRevisit) &&
     Boolean(parentFatigue) &&
     allSelectedChildrenRated &&
     !loading &&
+    !eventLoading &&
     !initializing &&
     (!PHOTO_UPLOAD_ENABLED || !photoBusy);
 
@@ -499,18 +553,27 @@ export default function NewVisitPage() {
     const visitedYear = visitedDate.getFullYear();
     const visitedMonth = visitedDate.getMonth() + 1;
     const today = formatDate(new Date());
-    const savedFacilitySlug =
-      facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName);
+    const savedFacilitySlug = eventForVisit
+      ? eventForVisit.facilitySlug ?? makeEventFacilitySlug(eventForVisit.id)
+      : facilitySlugFromUrl || facilitySlug || makeFacilitySlug(facilityName);
+    const savedFacilityName = eventForVisit
+      ? eventForVisit.venueName
+      : facilityName.trim();
     const visitCompletionContext: VisitCompletionContext = {
       facilitySlug: savedFacilitySlug,
     };
 
+    const eventDateLabel = eventForVisit
+      ? `${eventForVisit.dateLabel}${
+          eventForVisit.timeLabel ? ` / ${eventForVisit.timeLabel}` : ""
+        }`
+      : null;
     const { data: visit, error: visitError } = await supabase
       .from("visits")
       .insert({
         user_id: user.id,
         facility_slug: savedFacilitySlug,
-        facility_name: facilityName.trim(),
+        facility_name: savedFacilityName,
         visited_on: visitedOn,
         visited_year: visitedYear,
         visited_month: visitedMonth,
@@ -526,12 +589,25 @@ export default function NewVisitPage() {
         food_rating: foodRating || null,
         expectation_vs_reality: expectation || null,
         parent_memo: parentMemo.trim() || null,
+        ...(eventForVisit
+          ? {
+              event_id: eventForVisit.id,
+              event_title_snapshot: eventForVisit.title,
+              event_date_label_snapshot: eventDateLabel,
+              event_venue_name_snapshot: eventForVisit.venueName,
+              event_prefecture_label_snapshot: eventForVisit.prefectureLabel,
+            }
+          : {}),
       })
       .select("id")
       .single();
 
     if (visitError || !visit) {
-      setError(visitError?.message ?? "保存に失敗しました");
+      setError(
+        eventForVisit && isMissingVisitEventSnapshotColumnError(visitError)
+          ? "イベント記録はデータベース更新後に利用できます。通常のおでかけ記録は引き続き利用できます。"
+          : visitError?.message ?? "保存に失敗しました",
+      );
       setLoading(false);
       return;
     }
@@ -601,9 +677,29 @@ export default function NewVisitPage() {
       </Link>
 
       <div>
-        <h1 className="text-xl font-bold text-slate-900">おでかけを記録</h1>
+        <h1 className="text-xl font-bold text-slate-900">
+          {eventForVisit ? "イベント体験を記録" : "おでかけを記録"}
+        </h1>
         <p className="text-sm text-slate-500 mt-1">必須項目だけなら30秒で残せます。</p>
       </div>
+
+      {eventForVisit && (
+        <section className="rounded-2xl border border-violet-200 bg-violet-50 p-4">
+          <span className="inline-flex rounded-full bg-violet-600 px-2.5 py-1 text-xs font-bold text-white">
+            イベント記録
+          </span>
+          <h2 className="mt-2 text-lg font-bold leading-snug text-violet-950">
+            {eventForVisit.title}
+          </h2>
+          <p className="mt-1 text-sm font-medium text-violet-800">
+            {eventForVisit.dateLabel}
+            {eventForVisit.timeLabel ? ` / ${eventForVisit.timeLabel}` : ""}
+          </p>
+          <p className="mt-1 text-xs text-violet-700">
+            {eventForVisit.prefectureLabel} · {eventForVisit.venueName}
+          </p>
+        </section>
+      )}
 
       {restoredGuestDraft && (
         <section className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
@@ -654,13 +750,18 @@ export default function NewVisitPage() {
 
       <form onSubmit={handleSubmit} className="space-y-5">
         <section className="space-y-2">
-          <label className="block text-sm font-bold text-slate-800">施設名</label>
-          {facilitySlugFromUrl && (
-            <p className="text-xs text-emerald-600 font-medium">施設ページから自動入力</p>
+          <label className="block text-sm font-bold text-slate-800">
+            {eventForVisit ? "会場・施設" : "施設名"}
+          </label>
+          {(eventForVisit || facilitySlugFromUrl) && (
+            <p className="text-xs text-emerald-600 font-medium">
+              {eventForVisit ? "イベント情報から自動入力" : "施設ページから自動入力"}
+            </p>
           )}
           <input
             type="text"
             value={facilityName}
+            readOnly={Boolean(eventIdFromUrl)}
             onChange={(event) => {
               setFacilityName(event.target.value);
               setFacilitySlug("");
@@ -673,7 +774,7 @@ export default function NewVisitPage() {
               }
             }}
             placeholder="施設名を入力、例: 富士山こどもの国"
-            className="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+            className="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent read-only:bg-slate-50 read-only:text-slate-600"
           />
           {!facilitySlugFromUrl && suggestionsOpen && suggestions.length > 0 && (
             <div className="bg-white border border-slate-200 rounded-lg py-2 shadow-sm">

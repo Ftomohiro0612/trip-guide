@@ -1,4 +1,4 @@
-export type AuthIntentType = "record" | "wishlist";
+export type AuthIntentType = "record" | "record_event" | "wishlist";
 
 export const FALLBACK_AUTH_DEST = "/mypage";
 const CONTROL_CHAR_PATTERN = /[\u0000-\u001F\u007F]/;
@@ -32,7 +32,15 @@ export function buildAuthDest(
     return `/mypage/visits/new?facility=${encodedSlug}&name=${encodedName}`;
   }
 
+  if (intentType === "record_event") {
+    return buildEventAuthDest(slug);
+  }
+
   return `/mypage/wishlist?add=${encodedSlug}&name=${encodedName}`;
+}
+
+export function buildEventAuthDest(eventId: string): string {
+  return `/mypage/visits/new?event=${encodeURIComponent(eventId)}`;
 }
 
 export function buildLoginRedirect(dest: string): string {
