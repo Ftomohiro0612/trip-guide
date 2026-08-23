@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import type { ReactNode } from "react";
 import CategoryBar from "@/components/CategoryBar";
 import ChildAvatar from "@/components/ChildAvatar";
 import MypageHero from "@/components/MypageHero";
 import MonthlyBarChart, { type MonthData } from "@/components/MonthlyBarChart";
 import MonthlyDiffCard from "@/components/MonthlyDiffCard";
+import MypageRecommendationSection from "@/components/MypageRecommendationSection";
 import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import facilitiesJson from "@/data/facilities_data.json";
@@ -27,6 +27,7 @@ import {
 } from "@/lib/child-insights";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
+import { buildMypageRecommendations } from "@/lib/mypage-recommendations";
 import {
   buildChildStats,
   buildFamilyStats,
@@ -39,6 +40,8 @@ import {
   buildFamilyOutingMapData,
   buildVisitedPlacesMapData,
 } from "@/lib/visited-places";
+import { prefectures } from "@/lib/facilities";
+import type { PrefectureId } from "@/types/facility";
 import LogoutButton from "./LogoutButton";
 
 export const metadata: Metadata = { title: "マイページ" };
@@ -91,6 +94,10 @@ type MemoryPhoto = {
 
 type WishlistSlugRow = {
   facility_slug: string | null;
+};
+
+type RecommendationSettingsRow = {
+  prefecture_ids: unknown;
 };
 
 type FacilityCategorySource = { slug: string; category: string };
@@ -373,11 +380,6 @@ function buildMonthlyData(visits: VisitStat[], now: Date): MonthData[] {
   });
 }
 
-function formatVisitedOn(visitedOn: string | null): string {
-  if (!visitedOn) return "日付未設定";
-  return visitedOn.replaceAll("-", "/");
-}
-
 function formatMonthDay(date: string | null): string {
   if (!date) return "";
   const [, month, day] = date.split("-");
@@ -386,13 +388,6 @@ function formatMonthDay(date: string | null): string {
   if (!Number.isFinite(monthNumber) || !Number.isFinite(dayNumber)) return "";
   return `${monthNumber}/${dayNumber}`;
 }
-
-const revisitLabels: Record<string, string> = {
-  yes: "✅ また行きたい",
-  conditional: "🔄 条件次第",
-  once_enough: "👍 一度で十分",
-  no: "🙅 もう行かない",
-};
 
 type AnnualPassRow = {
   id: string;
@@ -485,6 +480,29 @@ export default async function MypagePage() {
         .order("expires_on", { ascending: true })
     : { data: [] };
   const annualPasses = (annualPassRows ?? []).filter(isAnnualPassRow);
+  const recommendationSettingsResult = user
+    ? await supabase
+        .from("mypage_recommendation_settings")
+        .select("prefecture_ids")
+        .eq("user_id", user.id)
+        .maybeSingle()
+    : { data: null, error: null };
+  const recommendationSettingsAvailable =
+    Boolean(user) && recommendationSettingsResult.error === null;
+  const knownPrefectureIds = new Set<string>(
+    prefectures.map((prefecture) => prefecture.id),
+  );
+  const recommendationSettings = recommendationSettingsResult.data as
+    | RecommendationSettingsRow
+    | null;
+  const selectedPrefectureIds = Array.isArray(
+    recommendationSettings?.prefecture_ids,
+  )
+    ? recommendationSettings.prefecture_ids.filter(
+        (id): id is PrefectureId =>
+          typeof id === "string" && knownPrefectureIds.has(id),
+      )
+    : [];
 
   const childRows = (children ?? []).filter(isRecord).filter((child): child is Child => {
     return (
@@ -544,11 +562,6 @@ export default async function MypagePage() {
   const visitPhotoThumbRows = (visitPhotoRows ?? []).filter(isVisitPhotoThumbRow);
   const visitById = new Map(visits.map((visit) => [visit.id, visit]));
   const visitOrderById = new Map(candidateVisitIds.map((id, index) => [id, index]));
-  const firstThumbPathByVisit = new Map<string, string>();
-  for (const photo of visitPhotoThumbRows) {
-    if (!photo.thumb_path || firstThumbPathByVisit.has(photo.visit_id)) continue;
-    firstThumbPathByVisit.set(photo.visit_id, photo.thumb_path);
-  }
   const memoryPhotos: MemoryPhoto[] = PHOTO_UPLOAD_ENABLED
     ? visitPhotoThumbRows
         .filter((photo): photo is VisitPhotoThumbRow & { thumb_path: string } =>
@@ -573,22 +586,8 @@ export default async function MypagePage() {
           ];
         })
     : [];
-  const recentVisits = visits.slice(0, 5);
-  const recentRecordThumbs = PHOTO_UPLOAD_ENABLED
-    ? recentVisits
-        .map((visit) => ({
-          visitId: visit.id,
-          thumbPath: firstThumbPathByVisit.get(visit.id),
-        }))
-        .filter((thumb): thumb is { visitId: string; thumbPath: string } =>
-          Boolean(thumb.thumbPath),
-        )
-    : [];
   const photoPathsToSign = Array.from(
-    new Set([
-      ...recentRecordThumbs.map((record) => record.thumbPath),
-      ...memoryPhotos.map((photo) => photo.thumbPath),
-    ]),
+    new Set(memoryPhotos.map((photo) => photo.thumbPath)),
   );
   const { data: signedPhotoUrls } =
     photoPathsToSign.length > 0
@@ -598,12 +597,6 @@ export default async function MypagePage() {
       : { data: [] };
   const signedPhotoUrlByPath = new Map(
     (signedPhotoUrls ?? []).map((row) => [row.path, row.signedUrl]),
-  );
-  const recentRecordThumbUrlByVisitId = new Map(
-    recentRecordThumbs.map((record) => [
-      record.visitId,
-      signedPhotoUrlByPath.get(record.thumbPath) ?? null,
-    ]),
   );
   const memoryPhotosWithUrls = memoryPhotos
     .map((photo) => ({
@@ -669,6 +662,21 @@ export default async function MypagePage() {
     visits,
     childVisits,
   );
+  const recommendations = buildMypageRecommendations({
+    children: childInsightSummaries.map((summary) => ({
+      id: summary.child.id,
+      nickname: summary.child.nickname,
+      birthYear: summary.child.birth_year,
+      birthMonth: summary.child.birth_month,
+      interests: summary.frequentInterests,
+    })),
+    selectedPrefectureIds,
+    visitedSlugs,
+  });
+  const selectedPrefectureNames = selectedPrefectureIds.flatMap((id) => {
+    const prefecture = prefectures.find((item) => item.id === id);
+    return prefecture ? [prefecture.name] : [];
+  });
 
   return (
     <div className="mx-auto max-w-lg space-y-6 px-4 py-5 lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-8 lg:space-y-0 lg:py-8">
@@ -679,12 +687,12 @@ export default async function MypagePage() {
       <div
         data-mypage-section="memory-photos"
         className={
-          recentVisits.length > 0
+          visits.length > 0
             ? "overflow-hidden rounded-[1.75rem] bg-gradient-to-br from-slate-950 via-violet-950 to-rose-950 p-4 text-white shadow-xl ring-1 ring-white/10 sm:p-5 lg:col-span-2 lg:order-2"
             : "hidden"
         }
       >
-        {recentVisits.length > 0 && (
+        {visits.length > 0 && (
           <>
             <Link
               href="/mypage/memories"
@@ -744,49 +752,19 @@ export default async function MypagePage() {
         )}
       </div>
 
-      <div
-        data-mypage-section="recent-memories"
-        className={!isEmptyWithChildren && recentVisits.length > 0 ? "lg:col-start-1 lg:order-3" : "hidden"}
-      >
-        {!isEmptyWithChildren && recentVisits.length > 0 && (
-          <section className="space-y-4">
-            <MypageSectionHeading
-              eyebrow="RECENT DAYS"
-              title="最近の思い出"
-              action={<Link href="/mypage/visits" className="text-sm font-bold text-brand hover:underline">すべて見る →</Link>}
-            />
-            <div className="space-y-2.5">
-              {recentVisits.map((visit) => {
-                const thumbUrl = recentRecordThumbUrlByVisitId.get(visit.id) ?? null;
-                const revisitLabel = revisitLabels[visit.family_revisit] ?? "";
-                return (
-                  <Link
-                    key={visit.id}
-                    href={`/mypage/visits/${visit.id}`}
-                    className="group flex min-h-20 items-center gap-3 rounded-2xl bg-white p-2.5 shadow-sm ring-1 ring-slate-200/80 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand"
-                  >
-                    <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-xl bg-brand/10 ring-1 ring-slate-200/70">
-                      {thumbUrl ? (
-                        <Image src={thumbUrl} alt={`${visit.facility_name}の写真`} fill sizes="64px" className="object-cover transition-transform duration-300 group-hover:scale-105" unoptimized />
-                      ) : (
-                        <span className="flex h-full w-full items-center justify-center text-2xl" aria-hidden="true">🗺️</span>
-                      )}
-                    </div>
-                    <div className="min-w-0 flex-1">
-                      <p className="truncate text-sm font-bold text-slate-900">{visit.facility_name}</p>
-                      <p className="mt-1 text-xs text-slate-500">{formatVisitedOn(visit.visited_on)}</p>
-                      {revisitLabel && <p className="mt-1 truncate text-[11px] font-medium text-brand">{revisitLabel}</p>}
-                    </div>
-                    <span className="pr-1 text-slate-300 transition-transform group-hover:translate-x-0.5" aria-hidden="true">›</span>
-                  </Link>
-                );
-              })}
-            </div>
-          </section>
-        )}
-      </div>
+      {recommendationSettingsAvailable && (
+        <div
+          data-mypage-section="recommendations"
+          className="lg:col-span-2 lg:order-4"
+        >
+          <MypageRecommendationSection
+            prefectureNames={selectedPrefectureNames}
+            recommendations={recommendations}
+          />
+        </div>
+      )}
 
-      <section data-mypage-section="quick-actions" className="rounded-2xl bg-white/80 p-3 shadow-sm ring-1 ring-slate-200/80 lg:col-span-2 lg:order-4">
+      <section data-mypage-section="quick-actions" className="rounded-[1.75rem] bg-gradient-to-br from-white via-white to-brand/10 p-4 shadow-sm ring-1 ring-brand/15 sm:p-5 lg:col-span-2 lg:order-4">
         <h2 className="sr-only">クイックアクション</h2>
         <div className="grid grid-cols-4 gap-2">
           <ActionCard href="/mypage/visits/new" icon="✏️" label="記録する" primary />
@@ -800,8 +778,9 @@ export default async function MypagePage() {
       </section>
 
       {familyStats.totalVisitCount > 0 && familyStats.totalVisitCount < 3 && (
-        <div data-mypage-section="backfill-nudge" className="rounded-2xl bg-gradient-to-br from-accent/10 via-white to-brand/10 p-4 shadow-sm ring-1 ring-accent/20 lg:col-span-2 lg:order-4">
-          <p className="text-sm font-bold text-slate-900">過去のおでかけも、写真からまとめて入れられます</p>
+        <div data-mypage-section="backfill-nudge" className="rounded-[1.75rem] bg-gradient-to-br from-accent/15 via-white to-brand/10 p-5 shadow-sm ring-1 ring-accent/20 sm:p-6 lg:col-span-2 lg:order-4">
+          <p className="text-[10px] font-bold tracking-[0.16em] text-brand">ADD MEMORIES</p>
+          <p className="mt-1 text-lg font-black tracking-tight text-slate-950">過去のおでかけも、写真からまとめて入れられます</p>
           <p className="mt-1 text-xs leading-relaxed text-slate-600">記録が増えるほど、おでかけマップと子どもの「好き」の記録が育ちます。去年の思い出も写真を選ぶだけで追加できます。</p>
           <Link href="/mypage/visits/from-photo" className="mt-3 inline-flex min-h-11 items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white shadow-sm transition-colors hover:bg-brand-dark">
             📷 写真から過去の記録を追加 →
@@ -811,7 +790,7 @@ export default async function MypagePage() {
 
       <section
         data-mypage-section="family-map"
-        className={`space-y-4 lg:order-3 ${recentVisits.length > 0 && !isEmptyWithChildren ? "lg:col-start-2" : "lg:col-span-2"}`}
+        className="space-y-4 rounded-[1.75rem] bg-gradient-to-br from-white via-white to-success/10 p-4 shadow-sm ring-1 ring-success/20 sm:p-5 lg:col-span-2 lg:order-5"
       >
         <MypageSectionHeading
           eyebrow="FAMILY MAP"
@@ -839,7 +818,7 @@ export default async function MypagePage() {
               title="子どもたちの「好き」"
               description="「大満足」か「楽しんだ」で、興味タグも選んだおでかけを「好き」のヒントとして数えています。「普通」「合わなかった」や、興味タグのない記録は含みません。"
             />
-            <div className="space-y-5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 sm:p-5">
+            <div className="space-y-5 rounded-[1.75rem] bg-gradient-to-br from-white via-white to-brand/10 p-5 shadow-sm ring-1 ring-brand/15 sm:p-6">
               {childInsightSummaries.map((summary, childIndex) => (
                 <div key={summary.child.id} id={summary.anchorId} className="scroll-mt-20 border-b border-slate-100 pb-5 last:border-b-0 last:pb-0">
                   <div className="mb-3 flex items-center justify-between gap-3">
@@ -871,7 +850,7 @@ export default async function MypagePage() {
         {!isEmptyWithChildren && (
           <section className="space-y-4">
             <MypageSectionHeading eyebrow="FAMILY FOOTPRINTS" title="家族のあしあと帳" />
-            <div className="space-y-5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80 sm:p-5">
+            <div className="space-y-5 rounded-[1.75rem] bg-gradient-to-br from-white via-white to-accent/10 p-5 shadow-sm ring-1 ring-accent/20 sm:p-6">
               {hasAchievementRecords ? (
                 <>
                   <div className="space-y-2 text-sm leading-relaxed text-slate-700">
@@ -893,9 +872,12 @@ export default async function MypagePage() {
       </div>
 
       {annualPasses.length > 0 && (
-        <section data-mypage-section="annual-passes" className="rounded-2xl bg-accent/10 p-4 ring-1 ring-accent/20 lg:col-span-2 lg:order-6">
+        <section data-mypage-section="annual-passes" className="rounded-[1.75rem] bg-gradient-to-br from-accent/15 via-white to-brand/10 p-5 shadow-sm ring-1 ring-accent/20 sm:p-6 lg:col-span-2 lg:order-6">
           <div className="flex items-center justify-between gap-2">
-            <h2 className="text-sm font-bold text-slate-900">🎫 年パス</h2>
+            <div>
+              <p className="text-[10px] font-bold tracking-[0.16em] text-brand">FAMILY PASSES</p>
+              <h2 className="mt-1 text-lg font-black tracking-tight text-slate-950">🎫 年パス</h2>
+            </div>
             <Link href="/mypage/passes" className="inline-flex min-h-9 items-center rounded-lg px-2 text-xs font-bold text-slate-700 hover:text-brand hover:underline">すべて見る →</Link>
           </div>
           <ul className="mt-3 space-y-2">
@@ -915,8 +897,9 @@ export default async function MypagePage() {
       )}
 
       {!hasChildren && (
-        <div data-mypage-section="child-profile-prompt" className="rounded-2xl bg-brand/10 p-4 ring-1 ring-brand/20 lg:col-span-2 lg:order-6">
-          <p className="text-sm font-bold text-slate-900">子どもプロフィールを登録すると便利です</p>
+        <div data-mypage-section="child-profile-prompt" className="rounded-[1.75rem] bg-gradient-to-br from-brand/15 via-white to-accent/10 p-5 shadow-sm ring-1 ring-brand/20 sm:p-6 lg:col-span-2 lg:order-6">
+          <p className="text-[10px] font-bold tracking-[0.16em] text-brand">OUR FAMILY</p>
+          <p className="mt-1 text-lg font-black tracking-tight text-slate-950">子どもプロフィールを登録すると便利です</p>
           <p className="mt-1 text-xs leading-relaxed text-slate-600">ニックネームと生年月を登録することで、おでかけ記録に「当時の年齢」が自動でつきます。本名・学校名は不要です。登録しなくてもおでかけ記録は使えます。</p>
           <div className="mt-3 flex flex-wrap items-center gap-3">
             <Link href="/mypage/children" className="inline-flex min-h-11 items-center rounded-xl bg-brand px-4 py-2 text-sm font-bold text-white hover:bg-brand-dark">登録する →</Link>
@@ -934,7 +917,11 @@ export default async function MypagePage() {
         )}
       </div>
 
-      <div data-mypage-section="account" className="pt-2 lg:col-span-2 lg:order-8"><LogoutButton /></div>
+      <section data-mypage-section="account" className="rounded-[1.75rem] bg-gradient-to-br from-slate-100 via-white to-brand/5 p-5 shadow-sm ring-1 ring-slate-200/80 sm:p-6 lg:col-span-2 lg:order-8">
+        <p className="text-[10px] font-bold tracking-[0.16em] text-brand">ACCOUNT</p>
+        <h2 className="mt-1 text-lg font-black tracking-tight text-slate-950">アカウント</h2>
+        <div className="mt-4"><LogoutButton /></div>
+      </section>
     </div>
   );
 }
@@ -943,12 +930,10 @@ function MypageSectionHeading({
   eyebrow,
   title,
   description,
-  action,
 }: {
   eyebrow: string;
   title: string;
   description?: string;
-  action?: ReactNode;
 }) {
   return (
     <div className="flex items-end justify-between gap-3">
@@ -957,7 +942,6 @@ function MypageSectionHeading({
         <h2 className="mt-1 text-lg font-black tracking-tight text-slate-950">{title}</h2>
         {description && <p className="mt-1 text-xs leading-relaxed text-slate-500">{description}</p>}
       </div>
-      {action && <div className="shrink-0">{action}</div>}
     </div>
   );
 }
@@ -978,8 +962,8 @@ function ActionCard({
       href={href}
       className={`flex min-h-16 min-w-0 flex-col items-center justify-center gap-1 rounded-xl px-1.5 py-2 text-center transition-all hover:-translate-y-0.5 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand sm:p-3 ${
         primary
-          ? "bg-brand text-white shadow-sm hover:bg-brand-dark"
-          : "bg-slate-50 text-slate-800 hover:bg-brand/5"
+          ? "rounded-2xl bg-brand text-white shadow-sm hover:bg-brand-dark"
+          : "rounded-2xl bg-white/90 text-slate-800 shadow-sm ring-1 ring-brand/10 hover:bg-brand/5 hover:ring-brand/25"
       }`}
     >
       <span className="text-xl sm:text-2xl">{icon}</span>

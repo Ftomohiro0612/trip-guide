@@ -87,10 +87,10 @@ export default function AccountForm({
   return (
     <div className="space-y-8">
       {/* プロフィール編集フォーム */}
-      <form onSubmit={handleSave} className="space-y-6">
+      <form onSubmit={handleSave} className="space-y-5">
         <section className="space-y-1.5">
-          <p className="text-sm font-bold text-slate-700">メールアドレス</p>
-          <p className="text-sm text-slate-900 bg-slate-50 border border-slate-200 rounded-lg px-3 py-2.5">
+          <p className="text-sm font-bold text-slate-800">メールアドレス</p>
+          <p className="rounded-2xl bg-white/90 px-4 py-3 text-sm text-slate-900 shadow-sm ring-1 ring-slate-200/80">
             {email}
           </p>
           <p className="text-xs text-slate-400">
@@ -101,7 +101,7 @@ export default function AccountForm({
         <section className="space-y-2">
           <label
             htmlFor="display_name"
-            className="block text-sm font-bold text-slate-700"
+            className="block text-sm font-bold text-slate-800"
           >
             表示名（ニックネーム）
           </label>
@@ -115,7 +115,7 @@ export default function AccountForm({
             }}
             placeholder="例：ママ、パパ、田中家 など"
             maxLength={30}
-            className="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+            className="min-h-12 w-full rounded-2xl bg-white px-4 py-3 text-sm shadow-sm ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-brand"
           />
           <p className="text-xs text-slate-400">
             マイページで「こんにちは、◯◯さん」と表示されます
@@ -136,15 +136,15 @@ export default function AccountForm({
         <button
           type="submit"
           disabled={saving}
-          className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
+          className="min-h-12 w-full rounded-2xl bg-brand px-4 py-3 font-bold text-white shadow-sm transition-all hover:-translate-y-0.5 hover:bg-brand-dark focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40 disabled:hover:translate-y-0 disabled:hover:bg-brand"
         >
           {saving ? "保存中..." : "変更を保存"}
         </button>
       </form>
 
       {/* パスワード変更 */}
-      <div className="border-t border-slate-100 pt-6">
-        <p className="text-sm font-bold text-slate-700 mb-4">パスワード変更</p>
+      <div className="border-t border-slate-200/80 pt-6">
+        <h3 className="mb-4 text-base font-black tracking-tight text-slate-900">パスワード変更</h3>
         {isPasswordUser ? (
           <form onSubmit={handlePasswordChange} className="space-y-4">
             <section className="space-y-2">
@@ -165,7 +165,7 @@ export default function AccountForm({
                 }}
                 placeholder="8文字以上"
                 autoComplete="new-password"
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                className="min-h-12 w-full rounded-2xl bg-white px-4 py-3 text-sm shadow-sm ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-brand"
               />
             </section>
 
@@ -187,7 +187,7 @@ export default function AccountForm({
                 }}
                 placeholder="もう一度入力"
                 autoComplete="new-password"
-                className="w-full px-3 py-2.5 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
+                className="min-h-12 w-full rounded-2xl bg-white px-4 py-3 text-sm shadow-sm ring-1 ring-slate-300 focus:outline-none focus:ring-2 focus:ring-brand"
               />
             </section>
 
@@ -205,19 +205,19 @@ export default function AccountForm({
             <button
               type="submit"
               disabled={pwSaving || !newPassword}
-              className="w-full py-3 border border-slate-300 text-slate-700 font-bold rounded-xl hover:bg-slate-50 transition-colors disabled:opacity-40"
+              className="min-h-12 w-full rounded-2xl bg-white px-4 py-3 font-bold text-slate-700 shadow-sm ring-1 ring-slate-300 transition-all hover:-translate-y-0.5 hover:ring-brand/30 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand disabled:opacity-40 disabled:hover:translate-y-0"
             >
               {pwSaving ? "変更中..." : "パスワードを変更"}
             </button>
           </form>
         ) : (
-          <p className="text-sm text-slate-500 bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 leading-relaxed">
+          <p className="rounded-2xl bg-white/80 px-4 py-3 text-sm leading-relaxed text-slate-600 ring-1 ring-slate-200/80">
             Google でログインしているため、メモリップ側ではパスワードを設定できません。パスワードの管理は Google アカウントの設定から行ってください。
           </p>
         )}
       </div>
 
-      <div className="border-t border-slate-100 pt-4">
+      <div className="border-t border-slate-200/80 pt-5">
         <LogoutButton />
       </div>
     </div>
