@@ -320,14 +320,16 @@ export default async function VisitsPage({
   }
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
-      <Link href="/mypage" className="text-slate-400 hover:text-slate-600 transition-colors">
+    <main className="min-h-screen bg-[#fffaf3]">
+    <div className="mx-auto max-w-lg space-y-7 px-4 py-7 sm:py-10">
+      <Link href="/mypage" className="text-sm font-bold text-slate-400 transition-colors hover:text-slate-600">
         ← マイページ
       </Link>
 
       <div className="flex items-start justify-between gap-3">
         <div>
-          <h1 className="text-xl font-bold text-slate-900">おでかけ履歴</h1>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">FAMILY OUTING ALBUM</p>
+          <h1 className="mt-1 text-2xl font-black text-slate-950">おでかけ履歴</h1>
           <p className="text-sm text-slate-500 mt-1">
             {filterLabel
               ? `「${filterLabel}」でフィルター中`
@@ -336,7 +338,7 @@ export default async function VisitsPage({
         </div>
         <Link
           href="/mypage/visits/new"
-          className="shrink-0 px-3 py-2 bg-brand text-white text-sm font-bold rounded-lg hover:bg-brand-dark transition-colors"
+          className="shrink-0 rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2"
         >
           記録する
         </Link>
@@ -345,7 +347,7 @@ export default async function VisitsPage({
       {!filterLabel && visitRows.length > 0 && (
         <Link
           href="/mypage/memories"
-          className="group flex items-center justify-between overflow-hidden rounded-2xl bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-4 py-4 text-white shadow-lg"
+          className="group flex items-center justify-between overflow-hidden rounded-[2rem] bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-5 py-5 text-white shadow-lg"
         >
           <div>
             <p className="text-xs font-bold tracking-[0.16em] text-white/60">
@@ -366,20 +368,22 @@ export default async function VisitsPage({
       {filterLabel && (
         <Link
           href="/mypage/visits"
-          className="inline-flex items-center gap-1.5 text-xs text-slate-500 hover:text-slate-700 bg-slate-100 rounded-full px-3 py-1.5 transition-colors"
+          className="inline-flex items-center gap-1.5 rounded-full bg-white px-3 py-1.5 text-xs font-bold text-slate-500 shadow-sm ring-1 ring-amber-100 transition-colors hover:text-slate-700"
         >
           ✕ フィルターを解除
         </Link>
       )}
 
       {params.no_child === "1" && (
-        <div className="bg-sky-50 border border-sky-200 rounded-xl p-3 text-xs text-sky-700 leading-relaxed">
+        <div className="rounded-2xl bg-sky-50 p-4 text-xs leading-relaxed text-sky-700 ring-1 ring-sky-200">
           子どもプロフィールなしで保存しました。あとから登録すると、次回以降は子どもごとの満足度も残せます。
         </div>
       )}
 
-      <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">
+      <section className="space-y-4">
+        <div>
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">OUR OUTING MAP</p>
+        <h2 className="mt-1 text-xl font-black text-slate-950">
           家族のおでかけマップ
           {familyMapBadge && (
             <span className="ml-2 text-sm font-normal text-slate-400">
@@ -387,6 +391,7 @@ export default async function VisitsPage({
             </span>
           )}
         </h2>
+        </div>
         <VisitedPlacesMapClient
           places={familyMapPlaces}
           height={{ mobile: 240, desktop: 360 }}
@@ -394,7 +399,7 @@ export default async function VisitsPage({
       </section>
 
       {visitRows.length > 0 ? (
-        <div className="space-y-3">
+        <div className="space-y-6">
           {visitRows.map((visit) => {
             const visitChildren = childrenByVisit.get(visit.id) ?? [];
             const hasFacilityPage = isVisibleFacilitySlug(visit.facility_slug);
@@ -415,13 +420,15 @@ export default async function VisitsPage({
             return (
             <article
               key={visit.id}
-              className="bg-white border border-slate-200 rounded-xl p-3 shadow-sm"
+              className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-amber-100"
             >
-              <div className="flex gap-3">
-                {visitPhotos.length > 0 && (
-                  <Link
-                    href={`/mypage/visits/${visit.id}`}
-                    className={`grid h-24 w-24 shrink-0 overflow-hidden rounded-lg bg-slate-100 ring-1 ring-slate-200 transition-opacity hover:opacity-90 ${
+              <Link
+                href={`/mypage/visits/${visit.id}`}
+                className="group/photo relative block aspect-[4/3] overflow-hidden bg-slate-900"
+              >
+                {visitPhotos.length > 0 ? (
+                  <div
+                    className={`absolute inset-0 grid bg-black ${
                       visitPhotos.length === 1 ? "grid-cols-1" : "grid-cols-2 gap-0.5"
                     }`}
                   >
@@ -435,8 +442,8 @@ export default async function VisitsPage({
                             src={photo.thumbUrl}
                             alt={`${displayName}の写真`}
                             fill
-                            sizes="96px"
-                            className="object-cover"
+                            sizes="(max-width: 512px) 100vw, 512px"
+                            className="object-cover transition-transform duration-300 group-hover/photo:scale-[1.02]"
                             unoptimized
                           />
                         ) : (
@@ -446,39 +453,34 @@ export default async function VisitsPage({
                         )}
                       </div>
                     ))}
-                  </Link>
+                  </div>
+                ) : (
+                  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_15%,#fed7aa_0%,transparent_32%),radial-gradient(circle_at_80%_30%,#bae6fd_0%,transparent_30%),linear-gradient(145deg,#0f172a_0%,#334155_48%,#14532d_100%)]">
+                    <span className="flex h-full items-center justify-center pb-12 text-6xl" aria-hidden="true">✨</span>
+                  </div>
                 )}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/45 via-black/5 to-black/85" />
+                <div className="absolute left-4 top-4 flex flex-wrap gap-2">
+                  <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-bold text-white backdrop-blur-sm">
+                    {isEventRecord ? "記録日: " : ""}{formatVisitedOn(visit.visited_on)}
+                  </span>
+                  {isDraft && (
+                    <span className="rounded-full bg-amber-300 px-3 py-1.5 text-xs font-black text-amber-950 shadow">下書き</span>
+                  )}
+                  {isEventRecord && (
+                    <span className="rounded-full bg-violet-200 px-3 py-1.5 text-xs font-black text-violet-950 shadow">イベント記録</span>
+                  )}
+                </div>
+                <div className="absolute inset-x-0 bottom-0 px-5 pb-5">
+                  <p className="text-xs font-bold tracking-[0.16em] text-white/65">OUR FAMILY MEMORY</p>
+                  <h2 className="mt-1 text-[clamp(1.25rem,5.5vw,1.875rem)] font-black leading-tight text-white [overflow-wrap:anywhere] drop-shadow">
+                    {displayName}
+                  </h2>
+                </div>
+              </Link>
 
-                <div className="min-w-0 flex-1 space-y-2">
+                <div className="min-w-0 space-y-3 p-5">
                   <div className="space-y-1">
-                    <div className="flex flex-wrap items-center gap-1.5">
-                      {isDraft && (
-                        <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
-                          下書き
-                        </span>
-                      )}
-                      {isEventRecord && (
-                        <span className="inline-flex rounded-full bg-violet-100 px-2 py-0.5 text-[11px] font-bold text-violet-700">
-                          イベント記録
-                        </span>
-                      )}
-                      <span className="text-xs text-slate-400">
-                        {isEventRecord ? "記録日: " : ""}
-                        {formatVisitedOn(visit.visited_on)}
-                      </span>
-                    </div>
-                    <h2 className="font-bold leading-snug text-slate-900">
-                      <Link
-                        href={
-                          isEventRecord
-                            ? `/mypage/visits/${visit.id}`
-                            : `/mypage/visits/facility/${visit.facility_slug}`
-                        }
-                        className="hover:text-brand transition-colors"
-                      >
-                        {displayName}
-                      </Link>
-                    </h2>
                     {isEventRecord && (
                       <div className="space-y-0.5 text-xs text-slate-500">
                         {visit.event_date_label_snapshot && (
@@ -540,26 +542,34 @@ export default async function VisitsPage({
                   </div>
 
                   {memo && (
-                    <p className="truncate text-xs leading-relaxed text-slate-500">
-                      {memo}
-                    </p>
+                    <blockquote className="border-l-2 border-amber-300 pl-3 text-sm font-medium leading-relaxed text-slate-700">
+                      「{memo}」
+                    </blockquote>
                   )}
 
                   <div className="flex items-center justify-between gap-3 pt-1">
-                    {hasFacilityPage ? (
-                      <Link
-                        href={`/facilities/${visit.facility_slug}`}
-                        className="text-slate-400 text-xs hover:underline"
-                      >
-                        施設ページを見る
-                      </Link>
-                    ) : isStoredFacility ? (
-                      <span className="text-slate-400 text-xs">
-                        施設ページは現在公開していません
-                      </span>
-                    ) : (
-                      <span />
-                    )}
+                    <div className="flex min-w-0 flex-col gap-1">
+                      {!isEventRecord && (
+                        <Link
+                          href={`/mypage/visits/facility/${visit.facility_slug}`}
+                          className="text-xs font-bold text-amber-700 hover:underline"
+                        >
+                          この場所での思い出
+                        </Link>
+                      )}
+                      {hasFacilityPage ? (
+                        <Link
+                          href={`/facilities/${visit.facility_slug}`}
+                          className="text-xs text-slate-400 hover:underline"
+                        >
+                          施設ページを見る
+                        </Link>
+                      ) : isStoredFacility ? (
+                        <span className="text-xs text-slate-400">
+                          施設ページは現在公開していません
+                        </span>
+                      ) : null}
+                    </div>
                     <div className="flex shrink-0 items-center gap-2">
                       <Link
                         href={`/mypage/visits/${visit.id}/edit`}
@@ -569,14 +579,13 @@ export default async function VisitsPage({
                       </Link>
                       <Link
                         href={`/mypage/visits/${visit.id}`}
-                        className="rounded-lg bg-brand px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-brand-dark"
+                        className="rounded-xl bg-slate-950 px-3 py-2 text-xs font-black text-white transition-colors hover:bg-slate-800"
                       >
                         詳細を見る
                       </Link>
                     </div>
                   </div>
                 </div>
-              </div>
             </article>
             );
           })}
@@ -588,5 +597,6 @@ export default async function VisitsPage({
       )}
 
     </div>
+    </main>
   );
 }

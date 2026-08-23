@@ -17,12 +17,13 @@ export default function FacilityGallery({
   const photos = images.filter(Boolean).slice(0, 3);
   if (photos.length === 0) {
     return (
-      <section className="mt-8" aria-labelledby="facility-gallery-heading">
-        <h2 id="facility-gallery-heading" className="mb-3 text-xl font-bold">
+      <section className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8" aria-labelledby="facility-gallery-heading">
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">PHOTO GALLERY</p>
+        <h2 id="facility-gallery-heading" className="mt-1 mb-4 text-2xl font-black text-slate-950">
           写真ギャラリー
         </h2>
         <div className="rounded-2xl border border-dashed border-slate-300 bg-slate-50 p-5 text-center">
-          <p className="font-bold text-slate-700">Memorip掲載写真はありません</p>
+          <p className="font-black text-slate-700">Memorip掲載写真はありません</p>
           <p className="mt-1 text-xs leading-relaxed text-slate-500">
             外部サイトの検索結果で、最新の施設写真をご確認ください。
           </p>
@@ -42,13 +43,14 @@ export default function FacilityGallery({
   );
 
   return (
-    <section className="mt-8">
-      <h2 className="text-xl font-bold mb-3">写真ギャラリー</h2>
+    <section className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8">
+      <p className="text-xs font-black tracking-[0.18em] text-amber-600">PHOTO GALLERY</p>
+      <h2 className="mt-1 mb-4 text-2xl font-black text-slate-950">写真ギャラリー</h2>
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
         {photos.map((src, i) => (
           <div
             key={`${src}-${i}`}
-            className="relative aspect-[4/3] rounded-lg overflow-hidden bg-slate-100"
+            className="relative aspect-[4/3] overflow-hidden rounded-2xl bg-slate-100"
           >
             <Image
               src={src}
