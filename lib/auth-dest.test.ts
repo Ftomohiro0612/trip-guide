@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import test from "node:test";
 import {
   FALLBACK_AUTH_DEST,
+  buildEventAuthDest,
   buildLoginRedirect,
   buildRegisterRedirect,
   isSafeRelativePath,
@@ -55,5 +56,12 @@ test("auth redirect builders sanitize before encoding", () => {
   assert.equal(
     buildRegisterRedirect("https://evil.example"),
     `/auth/register?redirectTo=${encodeURIComponent(FALLBACK_AUTH_DEST)}`,
+  );
+});
+
+test("event record destinations carry only the encoded event id", () => {
+  assert.equal(
+    buildEventAuthDest("summer/event 1"),
+    "/mypage/visits/new?event=summer%2Fevent%201",
   );
 });

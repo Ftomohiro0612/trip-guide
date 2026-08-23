@@ -5,6 +5,12 @@ import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
 import { isVisibleFacilitySlug } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
+import {
+  isEventFacilitySlug,
+  isMissingVisitEventSnapshotColumnError,
+  visitDisplayName,
+  type VisitEventSnapshot,
+} from "@/lib/visit-event";
 import { buildFamilyOutingMapData } from "@/lib/visited-places";
 import {
   familyRevisitLabels,
@@ -15,7 +21,7 @@ import {
 
 export const metadata: Metadata = { title: "おでかけ履歴" };
 
-type Visit = {
+type Visit = VisitEventSnapshot & {
   id: string;
   facility_slug: string;
   facility_name: string;
@@ -188,26 +194,36 @@ export default async function VisitsPage({
     );
   }
 
-  let visitsQuery = user
-    ? supabase
-        .from("visits")
-        .select(
-          "id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, parent_memo, weather, crowding, stay_duration_min",
-        )
-        .eq("user_id", user.id)
-        .order("visited_on", { ascending: false, nullsFirst: false })
-        .order("created_at", { ascending: false })
-        .limit(100)
-    : null;
+  const visitSelect =
+    "id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, parent_memo, weather, crowding, stay_duration_min";
+  const eventVisitSelect = `${visitSelect}, event_id, event_title_snapshot, event_date_label_snapshot, event_venue_name_snapshot, event_prefecture_label_snapshot`;
 
-  if (visitsQuery && visitIds !== null) {
-    visitsQuery = visitIds.length > 0
-      ? visitsQuery.in("id", visitIds)
-      : visitsQuery.in("id", ["__no_match__"]);
+  function buildVisitsQuery(selectColumns: string) {
+    if (!user) return null;
+    let query = supabase
+      .from("visits")
+      .select(selectColumns)
+      .eq("user_id", user.id)
+      .order("visited_on", { ascending: false, nullsFirst: false })
+      .order("created_at", { ascending: false })
+      .limit(100);
+    if (visitIds !== null) {
+      query = visitIds.length > 0
+        ? query.in("id", visitIds)
+        : query.in("id", ["__no_match__"]);
+    }
+    if (filterRevisit) query = query.eq("family_revisit", "yes");
+    return query;
   }
-  if (visitsQuery && filterRevisit) {
-    visitsQuery = visitsQuery.eq("family_revisit", "yes");
-  }
+
+  const visitsPromise = (async () => {
+    const withEventSnapshots = buildVisitsQuery(eventVisitSelect);
+    if (!withEventSnapshots) return { data: [] };
+    const result = await withEventSnapshots;
+    if (!isMissingVisitEventSnapshotColumnError(result.error)) return result;
+    const fallback = buildVisitsQuery(visitSelect);
+    return fallback ? await fallback : { data: [] };
+  })();
 
   const publishedMapVisitsPromise = user
     ? loadPublishedMapVisits(supabase, user.id)
@@ -219,12 +235,12 @@ export default async function VisitsPage({
 
   const [{ data: visits }, { data: publishedMapVisits }, { data: wishlistRows }] =
     await Promise.all([
-      visitsQuery ? visitsQuery : Promise.resolve({ data: [] }),
+      visitsPromise,
       publishedMapVisitsPromise,
       wishlistSlugsQuery ? wishlistSlugsQuery : Promise.resolve({ data: [] }),
     ]);
 
-  const visitRows = (visits ?? []) as Visit[];
+  const visitRows = (visits ?? []) as unknown as Visit[];
   const wishlistSlugs = ((wishlistRows ?? []) as WishlistSlugRow[])
     .map((row) => row.facility_slug)
     .filter((slug): slug is string => Boolean(slug));
@@ -382,7 +398,11 @@ export default async function VisitsPage({
           {visitRows.map((visit) => {
             const visitChildren = childrenByVisit.get(visit.id) ?? [];
             const hasFacilityPage = isVisibleFacilitySlug(visit.facility_slug);
-            const isStoredFacility = !visit.facility_slug.startsWith("manual-");
+            const isStoredFacility =
+              !visit.facility_slug.startsWith("manual-") &&
+              !isEventFacilitySlug(visit.facility_slug);
+            const isEventRecord = Boolean(visit.event_id);
+            const displayName = visitDisplayName(visit);
             const revisitLabel = chipLabel(familyRevisitLabels, visit.family_revisit);
             const fatigueLabel = chipLabel(fatigueLabels, visit.parent_fatigue);
             const isDraft = visit.status === "draft";
@@ -413,7 +433,7 @@ export default async function VisitsPage({
                         {photo.thumbUrl ? (
                           <Image
                             src={photo.thumbUrl}
-                            alt={`${visit.facility_name}の写真`}
+                            alt={`${displayName}の写真`}
                             fill
                             sizes="96px"
                             className="object-cover"
@@ -437,18 +457,45 @@ export default async function VisitsPage({
                           下書き
                         </span>
                       )}
+                      {isEventRecord && (
+                        <span className="inline-flex rounded-full bg-violet-100 px-2 py-0.5 text-[11px] font-bold text-violet-700">
+                          イベント記録
+                        </span>
+                      )}
                       <span className="text-xs text-slate-400">
+                        {isEventRecord ? "記録日: " : ""}
                         {formatVisitedOn(visit.visited_on)}
                       </span>
                     </div>
                     <h2 className="font-bold leading-snug text-slate-900">
                       <Link
-                        href={`/mypage/visits/facility/${visit.facility_slug}`}
+                        href={
+                          isEventRecord
+                            ? `/mypage/visits/${visit.id}`
+                            : `/mypage/visits/facility/${visit.facility_slug}`
+                        }
                         className="hover:text-brand transition-colors"
                       >
-                        {visit.facility_name}
+                        {displayName}
                       </Link>
                     </h2>
+                    {isEventRecord && (
+                      <div className="space-y-0.5 text-xs text-slate-500">
+                        {visit.event_date_label_snapshot && (
+                          <p className="font-medium text-slate-600">
+                            {visit.event_date_label_snapshot}
+                          </p>
+                        )}
+                        {visit.event_venue_name_snapshot && (
+                          <p>
+                            会場: {visit.event_venue_name_snapshot}
+                            {visit.event_prefecture_label_snapshot
+                              ? `（${visit.event_prefecture_label_snapshot}）`
+                              : ""}
+                          </p>
+                        )}
+                      </div>
+                    )}
                   </div>
 
                   {childSatisfaction.length > 0 && (

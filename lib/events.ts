@@ -303,6 +303,10 @@ export function getVisibleEventsByFacility(
     .slice(0, limit);
 }
 
+export function getEventById(eventId: string): EventItem | undefined {
+  return events.find((event) => event.id === eventId);
+}
+
 export function getFacilityForEvent(event: EventItem): Facility | undefined {
   if (event.facility_id === null) return undefined;
   return facilityById.get(event.facility_id);

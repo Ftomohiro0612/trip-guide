@@ -6,6 +6,12 @@ import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import {
+  isEventFacilitySlug,
+  isMissingVisitEventSnapshotColumnError,
+  visitDisplayName,
+  type VisitEventSnapshot,
+} from "@/lib/visit-event";
+import {
   crowdingLabels,
   expectationLabels,
   familyRevisitLabels,
@@ -37,7 +43,7 @@ export const metadata: Metadata = {
   twitter: null,
 };
 
-type Visit = {
+type Visit = VisitEventSnapshot & {
   id: string;
   user_id: string;
   facility_slug: string;
@@ -136,13 +142,24 @@ export default async function VisitDetailPage({
     redirect(`/auth/login?redirectTo=${encodeURIComponent(`/mypage/visits/${id}`)}`);
   }
 
-  const { data: visit } = await supabase
+  const visitSelect =
+    "id, user_id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking";
+  const visitWithEvent = await supabase
     .from("visits")
     .select(
-      "id, user_id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking",
+      `${visitSelect}, event_id, event_title_snapshot, event_date_label_snapshot, event_venue_name_snapshot, event_prefecture_label_snapshot`,
     )
     .eq("id", id)
     .maybeSingle();
+  const visit = isMissingVisitEventSnapshotColumnError(visitWithEvent.error)
+    ? (
+        await supabase
+          .from("visits")
+          .select(visitSelect)
+          .eq("id", id)
+          .maybeSingle()
+      ).data
+    : visitWithEvent.data;
 
   if (!visit) notFound();
 
@@ -170,10 +187,14 @@ export default async function VisitDetailPage({
   const avatarUrlByPath = new Map(
     (signedAvatars ?? []).map((row) => [row.path, row.signedUrl]),
   );
-  const facility = visitRow.facility_slug.startsWith("manual-")
+  const facility =
+    visitRow.facility_slug.startsWith("manual-") ||
+    isEventFacilitySlug(visitRow.facility_slug)
     ? undefined
     : getFacilityBySlug(visitRow.facility_slug);
   const hasFacilityPage = isFacilityVisible(facility);
+  const isEventRecord = Boolean(visitRow.event_id);
+  const displayName = visitDisplayName(visitRow);
   let photos: VisitPhotoGalleryPhoto[] = [];
 
   if (PHOTO_UPLOAD_ENABLED) {
@@ -251,13 +272,37 @@ export default async function VisitDetailPage({
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
               <h1 className="text-xl font-bold text-slate-900 break-words">
-                <Link
-                  href={`/mypage/visits/facility/${visitRow.facility_slug}`}
-                  className="hover:text-brand transition-colors"
-                >
-                  {visitRow.facility_name}
-                </Link>
+                {isEventRecord ? (
+                  displayName
+                ) : (
+                  <Link
+                    href={`/mypage/visits/facility/${visitRow.facility_slug}`}
+                    className="hover:text-brand transition-colors"
+                  >
+                    {displayName}
+                  </Link>
+                )}
               </h1>
+              {isEventRecord && (
+                <div className="mt-2 space-y-1">
+                  <span className="inline-flex rounded-full bg-violet-100 px-2.5 py-1 text-xs font-bold text-violet-700">
+                    イベント記録
+                  </span>
+                  {visitRow.event_date_label_snapshot && (
+                    <p className="text-sm font-bold text-slate-700">
+                      {visitRow.event_date_label_snapshot}
+                    </p>
+                  )}
+                  {visitRow.event_venue_name_snapshot && (
+                    <p className="text-sm text-slate-600">
+                      会場: {visitRow.event_venue_name_snapshot}
+                      {visitRow.event_prefecture_label_snapshot
+                        ? `（${visitRow.event_prefecture_label_snapshot}）`
+                        : ""}
+                    </p>
+                  )}
+                </div>
+              )}
               {isDraft && (
                 <div className="mt-2 flex flex-wrap items-center gap-2">
                   <span className="inline-flex rounded-full bg-amber-100 px-2 py-0.5 text-xs font-bold text-amber-700">
@@ -285,6 +330,7 @@ export default async function VisitDetailPage({
               ) : null}
             </div>
             <span className="shrink-0 text-xs text-slate-400">
+              {isEventRecord ? "記録日: " : ""}
               {formatVisitedOn(visitRow.visited_on)}
             </span>
           </div>
@@ -375,7 +421,7 @@ export default async function VisitDetailPage({
           <div className="text-right">
             <DeleteVisitButton
               visitId={visitRow.id}
-              facilityName={visitRow.facility_name}
+              facilityName={displayName}
               redirectTo="/mypage/visits"
               variant="subtle"
             />
