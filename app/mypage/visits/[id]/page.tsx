@@ -309,17 +309,22 @@ export default async function VisitDetailPage({
   const hasPrimarySummary = Boolean(revisitLabel || fatigueLabel);
 
   return (
+    <main className="min-h-screen bg-[#fffaf3]">
     <div className="mx-auto max-w-lg">
       {PHOTO_UPLOAD_ENABLED && photos.length > 0 && (
+        <div className="px-4 pt-4">
+        <div className="overflow-hidden rounded-[2rem] shadow-2xl">
         <VisitPhotoGallery
           visitId={visitRow.id}
           initialPhotos={photos}
           deletable={false}
           variant="large"
         />
+        </div>
+        </div>
       )}
 
-      <div className="space-y-5 px-4 py-6">
+      <div className="space-y-6 px-4 py-7">
         <Link
           href="/mypage/visits"
           className="text-slate-400 hover:text-slate-600 transition-colors"
@@ -328,9 +333,10 @@ export default async function VisitDetailPage({
         </Link>
 
         <header className="space-y-2">
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">OUR FAMILY MEMORY</p>
           <div className="flex items-start justify-between gap-3">
             <div className="min-w-0">
-              <h1 className="text-xl font-bold text-slate-900 break-words">
+              <h1 className="break-words text-2xl font-black leading-tight text-slate-950">
                 {isEventRecord ? (
                   displayName
                 ) : (
@@ -398,15 +404,16 @@ export default async function VisitDetailPage({
         {hasSameFacilityHistory && (
           <Link
             href={`/mypage/visits/facility/${visitRow.facility_slug}`}
-            className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-brand shadow-sm transition-colors hover:border-brand/30 hover:bg-brand/5"
+            className="group flex items-center justify-between gap-3 rounded-[2rem] bg-gradient-to-r from-slate-950 via-violet-950 to-rose-950 px-5 py-5 text-sm font-black text-white shadow-lg transition-transform hover:-translate-y-0.5"
           >
             <span>
-              <span className="block">この場所での思い出をすべて見る</span>
-              <span className="mt-0.5 block text-xs font-normal text-slate-500">
+              <span className="block text-xs font-bold tracking-[0.16em] text-white/60">MEMORIES AT THIS PLACE</span>
+              <span className="mt-1 block">この場所での思い出をすべて見る</span>
+              <span className="mt-0.5 block text-xs font-normal text-white/70">
                 同じ場所の記録を時系列で振り返れます
               </span>
             </span>
-            <span aria-hidden className="shrink-0">
+            <span aria-hidden className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white/15 transition-transform group-hover:translate-x-1">
               →
             </span>
           </Link>
@@ -507,7 +514,7 @@ export default async function VisitDetailPage({
         <div className="space-y-3 pt-2">
           <Link
             href={`/mypage/visits/${visitRow.id}/edit`}
-            className="block w-full py-3 bg-brand text-white text-center text-sm font-bold rounded-xl hover:bg-brand-dark transition-colors"
+            className="block w-full rounded-xl bg-slate-950 py-3.5 text-center text-sm font-black text-white transition-colors hover:bg-slate-800"
           >
             編集する
           </Link>
@@ -522,5 +529,6 @@ export default async function VisitDetailPage({
         </div>
       </div>
     </div>
+    </main>
   );
 }

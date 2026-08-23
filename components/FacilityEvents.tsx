@@ -25,9 +25,13 @@ export default function FacilityEvents({
     : undefined;
 
   return (
-    <section className="mt-8" aria-labelledby="facility-events-heading">
-      <h2 id="facility-events-heading" className="text-xl font-bold mb-3">
-        🎪 この施設の今後のイベント
+    <section
+      className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8"
+      aria-labelledby="facility-events-heading"
+    >
+      <p className="text-xs font-black tracking-[0.18em] text-amber-600">UPCOMING EVENTS</p>
+      <h2 id="facility-events-heading" className="mt-1 mb-4 text-2xl font-black text-slate-950">
+        この施設の今後のイベント
       </h2>
       <div className="grid gap-3">
         {events.map((event) => (

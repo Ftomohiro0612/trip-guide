@@ -27,14 +27,15 @@ export default function FacilityPublicRecordsEmptyCard({
 
   return (
     <section
-      className="mt-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-5"
+      className="rounded-[2rem] bg-emerald-50 p-5 shadow-sm ring-1 ring-emerald-200 sm:p-8"
       aria-labelledby="public-records-heading"
     >
       <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="min-w-0">
+          <p className="text-xs font-black tracking-[0.18em] text-emerald-700">SAVE THE MEMORY</p>
           <h2
             id="public-records-heading"
-            className="text-base font-bold text-emerald-950"
+            className="mt-1 text-xl font-black text-emerald-950"
           >
             この場所での思い出を残してみませんか？
           </h2>
@@ -46,7 +47,7 @@ export default function FacilityPublicRecordsEmptyCard({
           type="button"
           onClick={handleVisit}
           disabled={loadState === "loading"}
-          className="w-full shrink-0 rounded-xl bg-emerald-600 px-5 py-3 text-sm font-bold text-white transition-colors hover:bg-emerald-700 disabled:cursor-wait disabled:opacity-60 sm:w-auto"
+          className="w-full shrink-0 rounded-xl bg-slate-950 px-5 py-3.5 text-sm font-black text-white transition-colors hover:bg-slate-800 disabled:cursor-wait disabled:opacity-60 sm:w-auto"
         >
           行ったよ！記録する
         </button>

@@ -30,17 +30,17 @@ export default function FacilityNearbySummerEvents({
   return (
     <section
       ref={sectionRef}
-      className="mt-8 rounded-2xl border border-indigo-100 bg-indigo-50/60 p-4 sm:p-5"
+      className="rounded-[2rem] bg-indigo-50/70 p-5 shadow-sm ring-1 ring-indigo-100 sm:p-8"
       aria-labelledby="facility-nearby-summer-events-heading"
       data-crosslink-section="facility_to_event"
       data-crosslink-item-count={recommendations.length}
     >
-      <p className="text-xs font-bold text-indigo-600">
+      <p className="text-xs font-black tracking-[0.18em] text-indigo-600">
         この施設とあわせて楽しめそう
       </p>
       <h2
         id="facility-nearby-summer-events-heading"
-        className="mt-1 text-xl font-bold text-slate-900"
+        className="mt-1 text-2xl font-black text-slate-950"
       >
         近くで開催予定の夏イベント
       </h2>
@@ -55,7 +55,7 @@ export default function FacilityNearbySummerEvents({
               href={`/events/summer#${getSummerEventAnchorId(recommendation.eventId)}`}
               onClick={() => trackClick(index + 1)}
               data-crosslink-position={index + 1}
-              className="group flex min-h-20 flex-col gap-2 rounded-lg border border-indigo-100 bg-white p-3 shadow-sm transition-colors hover:border-indigo-300 hover:bg-indigo-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:flex-row sm:items-center sm:justify-between"
+              className="group flex min-h-20 flex-col gap-2 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-indigo-100 transition-colors hover:bg-indigo-50 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 sm:flex-row sm:items-center sm:justify-between"
             >
               <span className="min-w-0">
                 <span className="flex flex-wrap items-center gap-2 text-[11px] font-bold">

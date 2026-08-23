@@ -53,7 +53,7 @@ export default function VisitedPlacesMapClient({
     <section className="space-y-2" data-testid="visited-places-map">
       {hasPlaces ? (
         <>
-          <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+          <div className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-amber-100">
             <div
               className="h-[var(--visited-map-height-mobile)] w-full sm:h-[var(--visited-map-height-desktop)]"
               style={heightStyle(height)}
@@ -64,7 +64,7 @@ export default function VisitedPlacesMapClient({
           <MapLegend places={places} />
         </>
       ) : (
-        <div className="overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm">
+        <div className="overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-amber-100">
           <div
             className="grid h-[var(--visited-map-height-mobile)] w-full place-items-center bg-gradient-to-br from-sky-50 to-emerald-50 px-4 py-6 text-center sm:h-[var(--visited-map-height-desktop)]"
             style={heightStyle(height)}
@@ -78,7 +78,7 @@ export default function VisitedPlacesMapClient({
               </p>
               <Link
                 href="/mypage/visits/new"
-                className="mt-3 inline-flex items-center justify-center rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+                className="mt-3 inline-flex items-center justify-center rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white transition-colors hover:bg-slate-800"
               >
                 最初のおでかけを記録する
               </Link>

@@ -149,6 +149,10 @@ export default async function FacilityDetailPage({ params }: Props) {
     "from-sky-400 to-emerald-400";
   const mapQuery = encodeURIComponent(`${facility.name} ${facility.address}`);
   const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const heroValue =
+    uniqueSellingPoint ||
+    facility.description.split(/[。\n]/)[0]?.trim() ||
+    facility.description;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -172,7 +176,7 @@ export default async function FacilityDetailPage({ params }: Props) {
       interestTags={guestInterestTags}
       recommendationCandidates={guestRecommendationCandidates}
     >
-      <div>
+      <div className="min-h-screen bg-[#fffaf3] pb-2">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
@@ -192,10 +196,11 @@ export default async function FacilityDetailPage({ params }: Props) {
         ]}
       />
 
-      <div
-        className={`relative text-white ${
+      <div className="mx-auto max-w-5xl px-4 pt-4 sm:pt-8">
+      <section
+        className={`relative overflow-hidden rounded-[2rem] text-white shadow-2xl ${
           facility.image
-            ? "bg-slate-900 min-h-[300px] sm:min-h-[460px]"
+            ? "min-h-[30rem] bg-slate-900 sm:min-h-[35rem]"
             : `bg-gradient-to-br ${gradient}`
         }`}
       >
@@ -209,25 +214,25 @@ export default async function FacilityDetailPage({ params }: Props) {
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/40 to-black/10" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-black/5 to-black/90" />
           </>
         ) : (
           <div className="absolute inset-0 bg-black/10" />
         )}
         {facility.image && facility.image_attribution && (
           <div
-            className="absolute top-2 right-2 z-10 text-[10px] text-white/85 bg-black/40 px-1.5 py-0.5 rounded backdrop-blur-sm"
+            className="absolute right-4 top-4 z-10 rounded-full bg-black/35 px-3 py-1.5 text-[10px] text-white/85 backdrop-blur-sm"
             dangerouslySetInnerHTML={{ __html: `画像: ${facility.image_attribution}` }}
           />
         )}
         <div
-          className={`relative mx-auto max-w-5xl px-4 ${
+          className={`relative flex px-5 sm:px-8 ${
             facility.image
-              ? "min-h-[300px] sm:min-h-[460px] pt-6 pb-8 sm:pb-10 flex flex-col justify-between"
-              : "py-10 sm:py-14"
+              ? "min-h-[30rem] flex-col justify-between pb-7 pt-5 sm:min-h-[35rem] sm:pb-10 sm:pt-7"
+              : "min-h-[30rem] flex-col justify-between py-7 sm:min-h-[35rem] sm:py-10"
           }`}
         >
-          <nav aria-label="パンくず" className="text-xs text-white/90 mb-4">
+          <nav aria-label="パンくず" className="mr-28 text-xs font-bold text-white/90">
             <Link href="/" className="hover:underline">
               ホーム
             </Link>
@@ -246,35 +251,43 @@ export default async function FacilityDetailPage({ params }: Props) {
               {facility.category}
             </Link>
           </nav>
-          <div className="flex items-start gap-4">
+          <div className="flex items-end gap-3 sm:gap-5">
             <CategoryIcon
               categoryId={facility.category_id}
               width={64}
               height={64}
-              className="h-14 w-14 shrink-0 drop-shadow-lg sm:h-16 sm:w-16"
+              className="mb-1 h-12 w-12 shrink-0 drop-shadow-lg sm:h-16 sm:w-16"
             />
             <div className="flex-1 min-w-0">
-              <p className="text-xs font-medium opacity-95 mb-1 drop-shadow">
+              <p className="text-xs font-bold tracking-[0.16em] text-white/65 drop-shadow">
+                FAMILY OUTING GUIDE
+              </p>
+              <p className="mt-2 text-xs font-bold text-white/85 drop-shadow">
                 {facility.prefecture} · {facility.category}
               </p>
-              <h1 className="text-2xl sm:text-4xl font-bold drop-shadow-lg tracking-tight">
+              <h1 className="mt-1 text-[clamp(1.75rem,7vw,3rem)] font-black leading-tight tracking-tight [overflow-wrap:anywhere] drop-shadow-lg">
                 {facility.name}
               </h1>
-              <p className="mt-2 text-sm sm:text-base opacity-95 drop-shadow">
+              {heroValue && (
+                <p className="mt-3 max-w-2xl border-l-2 border-amber-300 pl-3 text-sm font-medium leading-relaxed text-white/95 drop-shadow sm:text-base">
+                  {heroValue}
+                </p>
+              )}
+              <p className="mt-3 text-sm font-bold text-white/90 drop-shadow sm:text-base">
                 📍 {facility.address}
               </p>
-              <div className="flex flex-wrap gap-2 mt-4">
+              <div className="mt-4 flex flex-wrap gap-2">
                 {facility.is_free && (
-                  <span className="bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded-md shadow-sm">
+                  <span className="rounded-full bg-emerald-500 px-3 py-1.5 text-xs font-black text-white shadow-sm">
                     🆓 無料
                   </span>
                 )}
                 <span
-                  className={`text-xs font-bold px-2.5 py-1 rounded-md ${rain.color}`}
+                  className={`rounded-full px-3 py-1.5 text-xs font-black ${rain.color}`}
                 >
                   ☂️ {facility.rain_friendly} {rain.label}
                 </span>
-                <span className="bg-white/30 text-white text-xs font-bold px-2.5 py-1 rounded-md backdrop-blur-sm">
+                <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-black text-white backdrop-blur-sm">
                   👶 {facility.target_age}
                 </span>
               </div>
@@ -283,11 +296,11 @@ export default async function FacilityDetailPage({ params }: Props) {
                   facilityName={facility.name}
                   address={facility.address}
                   purpose="more"
-                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-lg border border-white/50 bg-black/25 px-3 text-xs font-medium text-white backdrop-blur-sm transition-colors hover:bg-black/40"
+                  className="mt-4 inline-flex min-h-10 items-center justify-center rounded-full border border-white/40 bg-black/25 px-4 text-xs font-bold text-white backdrop-blur-sm transition-colors hover:bg-black/40"
                 />
               )}
               {!facility.image && (
-                <div className="mt-4 rounded-xl border border-white/40 bg-white/15 p-3 backdrop-blur-sm">
+                <div className="mt-4 rounded-2xl border border-white/40 bg-white/15 p-4 backdrop-blur-sm">
                   <p className="text-xs font-bold text-white">
                     Memorip掲載写真はありません
                   </p>
@@ -295,28 +308,26 @@ export default async function FacilityDetailPage({ params }: Props) {
                     facilityName={facility.name}
                     address={facility.address}
                     compact
-                    className="mt-2 inline-flex min-h-11 items-center justify-center rounded-lg border border-white/70 bg-white px-4 text-sm font-bold text-sky-700 shadow-sm transition-colors hover:bg-sky-50"
+                    className="mt-2 inline-flex min-h-11 items-center justify-center rounded-xl border border-white/70 bg-white px-4 text-sm font-black text-sky-700 shadow-sm transition-colors hover:bg-sky-50"
                   />
                 </div>
               )}
             </div>
           </div>
         </div>
+      </section>
       </div>
 
-      <div className="mx-auto max-w-5xl px-4 py-8 grid gap-8 lg:grid-cols-[1fr_320px]">
-        <div className="space-y-4 lg:hidden">
+      <div className="mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:py-12 lg:grid-cols-[1fr_320px]">
+        <div className="space-y-5 lg:hidden">
           <FacilityCtaGroup facility={facility} />
           <QuickCheckCard facility={facility} rain={rain} />
         </div>
 
-        <article>
-          <h2 className="text-xl font-bold mb-3">この施設について</h2>
-          {uniqueSellingPoint && (
-            <blockquote className="mb-4 border-l-4 border-brand bg-sky-50 px-4 py-3 text-slate-700 font-medium leading-relaxed">
-              {uniqueSellingPoint}
-            </blockquote>
-          )}
+        <article className="min-w-0 space-y-8">
+          <section className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8">
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">ABOUT THIS PLACE</p>
+          <h2 className="mt-1 text-2xl font-black text-slate-950">この施設について</h2>
           <p className="text-slate-700 leading-relaxed whitespace-pre-line">
             {facility.description}
           </p>
@@ -324,7 +335,7 @@ export default async function FacilityDetailPage({ params }: Props) {
             <section className="mt-6" aria-labelledby="things-to-do-heading">
               <h3
                 id="things-to-do-heading"
-                className="text-sm font-bold text-slate-700 mb-3"
+                className="mb-3 text-base font-black text-slate-950"
               >
                 この施設で楽しめそうなこと
               </h3>
@@ -332,7 +343,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                 {thingsToDo.map((thing) => (
                   <li
                     key={thing}
-                    className="flex gap-2 rounded-lg border border-emerald-100 bg-emerald-50/60 px-3 py-2 text-sm leading-relaxed text-slate-700"
+                    className="flex gap-2 rounded-2xl bg-emerald-50/70 px-4 py-3 text-sm font-medium leading-relaxed text-slate-700 ring-1 ring-emerald-100"
                   >
                     <span
                       className="mt-0.5 font-bold text-emerald-600"
@@ -353,7 +364,7 @@ export default async function FacilityDetailPage({ params }: Props) {
           ) : (
             (signatureExperiences.length > 0 || experienceTags.length > 0) && (
             <div className="mt-6">
-              <h3 className="text-sm font-bold text-slate-700 mb-2">
+              <h3 className="mb-3 text-base font-black text-slate-950">
                 この施設で楽しめそうなこと
               </h3>
               {signatureExperiences.length > 0 && (
@@ -361,7 +372,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                   {signatureExperiences.map((exp) => (
                     <span
                       key={exp}
-                      className="text-sm px-3 py-1.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 font-medium"
+                    className="rounded-full bg-emerald-50 px-3 py-1.5 text-sm font-bold text-emerald-700 ring-1 ring-emerald-200"
                     >
                       {exp}
                     </span>
@@ -380,7 +391,7 @@ export default async function FacilityDetailPage({ params }: Props) {
             <section className="mt-6" aria-labelledby="recommended-for-heading">
               <h2
                 id="recommended-for-heading"
-                className="text-xl font-bold mb-3"
+                className="mb-3 text-xl font-black text-slate-950"
               >
                 {hasThingsToDo ? "どんな子に合いそう？" : "こんな遊びが好きな子に 🎯"}
               </h2>
@@ -396,7 +407,7 @@ export default async function FacilityDetailPage({ params }: Props) {
                     <Link
                       key={tag}
                       href={`/facilities?recommended_tag=${tag}&prefecture=${facility.prefecture_id}`}
-                      className="text-sm px-3 py-1.5 rounded-full bg-sky-50 text-sky-700 border border-sky-200 font-medium hover:bg-sky-100 transition-colors"
+                      className="rounded-full bg-sky-50 px-3 py-1.5 text-sm font-bold text-sky-700 ring-1 ring-sky-200 transition-colors hover:bg-sky-100"
                     >
                       <span aria-hidden>{meta.icon}</span> {meta.label}
                     </Link>
@@ -426,6 +437,7 @@ export default async function FacilityDetailPage({ params }: Props) {
               </div>
             </section>
           )}
+          </section>
 
           <FacilityEvents
             facilityId={facility.id}
@@ -446,8 +458,10 @@ export default async function FacilityDetailPage({ params }: Props) {
             facilityName={facility.name}
           />
 
-          <h2 className="text-xl font-bold mt-8 mb-3">基本情報</h2>
-          <dl className="bg-white border border-slate-200 rounded-2xl divide-y divide-slate-100 overflow-hidden">
+          <section>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">PLAN YOUR DAY</p>
+          <h2 className="mt-1 mb-4 text-2xl font-black text-slate-950">基本情報</h2>
+          <dl className="divide-y divide-slate-100 overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-amber-100">
             <Row label="カテゴリ">
               <Link
                 href={`/category/${facility.category_id}`}
@@ -508,11 +522,14 @@ export default async function FacilityDetailPage({ params }: Props) {
               </Row>
             )}
           </dl>
+          </section>
 
           <FacilityNotice className="mt-4 lg:hidden" />
 
-          <h2 className="text-xl font-bold mt-8 mb-3">アクセス</h2>
-          <div className="rounded-2xl overflow-hidden border border-slate-200 bg-slate-100">
+          <section>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">ACCESS</p>
+          <h2 className="mt-1 mb-4 text-2xl font-black text-slate-950">アクセス</h2>
+          <div className="overflow-hidden rounded-[2rem] bg-slate-100 shadow-sm ring-1 ring-amber-100">
             <iframe
               title={`${facility.name} の地図`}
               src={mapEmbedSrc}
@@ -526,8 +543,9 @@ export default async function FacilityDetailPage({ params }: Props) {
           <p className="text-xs text-slate-500 mt-2">
             ※ 地図は施設名と住所からのGoogleマップ検索です。正確な位置は公式サイトでご確認ください。
           </p>
+          </section>
 
-          <div className="mt-8 pt-6 border-t border-slate-200">
+          <div className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
             <ShareButtons
               url={`/facilities/${facility.slug}`}
               title={facility.name}
@@ -537,7 +555,7 @@ export default async function FacilityDetailPage({ params }: Props) {
           </div>
         </article>
 
-        <aside className="hidden space-y-4 lg:block">
+        <aside className="hidden space-y-5 lg:block">
           <FacilityCtaGroup facility={facility} />
           <QuickCheckCard facility={facility} rain={rain} />
           <FacilityNotice />
@@ -545,8 +563,9 @@ export default async function FacilityDetailPage({ params }: Props) {
       </div>
 
       {related.length > 0 && (
-        <section className="mx-auto max-w-5xl px-4 pb-12">
-          <h2 className="text-xl font-bold mb-4">同じカテゴリ・近隣の施設</h2>
+        <section className="mx-auto max-w-5xl px-4 pb-14">
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">MORE PLACES TO PLAY</p>
+          <h2 className="mt-1 mb-5 text-2xl font-black text-slate-950">同じカテゴリ・近隣の施設</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {related.map((f) => (
               <FacilityCard key={f.id} facility={f} />
@@ -561,7 +580,11 @@ export default async function FacilityDetailPage({ params }: Props) {
 
 function FacilityCtaGroup({ facility }: { facility: Facility }) {
   return (
-    <>
+    <section className="space-y-4 rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
+      <div>
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">SAVE THE MEMORY</p>
+        <h2 className="mt-1 text-xl font-black text-slate-950">この場所を家族の記録に</h2>
+      </div>
       <FacilityMyRecord facilitySlug={facility.slug} />
       <FacilityAnnualPass facilitySlug={facility.slug} facilityName={facility.name} />
       <FacilityActionButtons
@@ -585,18 +608,21 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
         />
       )}
       {facility.url && (
+        <div className="border-t border-slate-100 pt-4">
+        <p className="mb-2 text-xs font-black tracking-[0.18em] text-amber-600">OFFICIAL INFORMATION</p>
         <TrackedOutboundLink
           href={facility.url}
           contentType="facility"
           contentId={String(facility.id)}
           intentType="facility_detail"
           linkLocation="facility_sidebar"
-          className="block w-full rounded-xl border border-slate-200 bg-white py-2.5 text-center text-sm font-semibold text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-800"
+          className="block w-full rounded-xl border border-slate-200 bg-white py-3 text-center text-sm font-bold text-slate-600 transition-colors hover:bg-slate-50 hover:text-slate-800"
         >
           公式サイトを見る ↗
         </TrackedOutboundLink>
+        </div>
       )}
-    </>
+    </section>
   );
 }
 
@@ -608,9 +634,10 @@ function QuickCheckCard({
   rain: { label: string };
 }) {
   return (
-    <div className="bg-white border border-slate-200 rounded-2xl p-4">
-      <h3 className="font-bold mb-2">ひと目チェック</h3>
-      <ul className="text-sm space-y-1.5 text-slate-700">
+    <div className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
+      <p className="text-xs font-black tracking-[0.18em] text-amber-600">OUTING CHECK</p>
+      <h3 className="mt-1 mb-3 text-xl font-black text-slate-950">ひと目チェック</h3>
+      <ul className="space-y-2 text-sm font-medium text-slate-700">
         <li>📍 {facility.prefecture}</li>
         <li>🏷️ {facility.category}</li>
         <li>👶 {facility.target_age}</li>
@@ -628,7 +655,7 @@ function QuickCheckCard({
 function FacilityNotice({ className = "" }: { className?: string }) {
   return (
     <div
-      className={`${className ? `${className} ` : ""}bg-amber-50 border border-amber-200 rounded-2xl p-4 text-xs text-amber-800 leading-relaxed`}
+      className={`${className ? `${className} ` : ""}rounded-[2rem] bg-amber-50 p-5 text-xs leading-relaxed text-amber-800 ring-1 ring-amber-200`}
     >
       ⚠️ 料金・営業時間・対象年齢は変更されることがあります。
       お出かけ前に公式サイトで最新情報をご確認ください。
@@ -644,9 +671,9 @@ function Row({
   children: React.ReactNode;
 }) {
   return (
-    <div className="grid grid-cols-[110px_1fr] gap-3 px-4 py-3 text-sm">
-      <dt className="text-slate-500 font-medium">{label}</dt>
-      <dd className="text-slate-800">{children}</dd>
+    <div className="grid grid-cols-[110px_1fr] gap-3 px-5 py-4 text-sm">
+      <dt className="font-bold text-slate-500">{label}</dt>
+      <dd className="font-medium text-slate-800">{children}</dd>
     </div>
   );
 }

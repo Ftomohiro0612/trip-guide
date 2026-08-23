@@ -41,12 +41,12 @@ function ComparisonPair({
   current: string;
 }) {
   return (
-    <div className="rounded-lg border border-slate-200 bg-slate-50/60 px-3 py-3">
-      <dt className="text-xs font-bold text-slate-500">{label}</dt>
+    <div className="rounded-2xl bg-[#fffaf3] px-4 py-4 ring-1 ring-amber-100">
+      <dt className="text-xs font-black text-slate-500">{label}</dt>
       <dd className="mt-2 grid grid-cols-[1fr_auto_1fr] items-center gap-2 text-sm">
         <div className="min-w-0">
           <span className="block text-xs text-slate-400">前回</span>
-          <span className="mt-0.5 block break-words font-medium text-slate-700">
+          <span className="mt-0.5 block break-words font-bold text-slate-700">
             {previous}
           </span>
         </div>
@@ -55,7 +55,7 @@ function ComparisonPair({
         </span>
         <div className="min-w-0">
           <span className="block text-xs text-slate-400">今回</span>
-          <span className="mt-0.5 block break-words font-medium text-slate-900">
+          <span className="mt-0.5 block break-words font-black text-slate-950">
             {current}
           </span>
         </div>
@@ -132,8 +132,8 @@ function ChildComparison({
   if (!child) return null;
 
   return (
-    <article className="rounded-lg border border-slate-200 bg-white px-3 py-3">
-      <h3 className="font-bold text-slate-800">{child.nickname}</h3>
+    <article className="rounded-2xl bg-white px-4 py-4 shadow-sm ring-1 ring-amber-100">
+      <h3 className="font-black text-slate-950">{child.nickname}</h3>
       <div className="mt-3 grid grid-cols-2 gap-3">
         <div className="min-w-0 border-r border-slate-100 pr-3">
           <p className="mb-2 text-xs font-bold text-slate-400">前回</p>
@@ -179,12 +179,13 @@ export function VisitComparison({
   return (
     <section
       aria-labelledby="previous-visit-comparison"
-      className="space-y-4 rounded-xl border border-slate-200 bg-white px-4 py-4 shadow-sm"
+      className="space-y-5 rounded-[2rem] bg-white px-5 py-5 shadow-sm ring-1 ring-amber-100"
     >
       <div className="space-y-1">
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">THEN &amp; NOW</p>
         <h2
           id="previous-visit-comparison"
-          className="font-bold text-slate-800"
+          className="mt-1 text-xl font-black text-slate-950"
         >
           前回との比較
         </h2>
@@ -226,8 +227,8 @@ export function VisitComparison({
       </dl>
 
       {childIds.length > 0 && (
-        <div className="space-y-3 border-t border-slate-100 pt-4">
-          <h3 className="text-sm font-bold text-slate-700">子どもごとの記録</h3>
+        <div className="space-y-3 border-t border-amber-100 pt-5">
+          <h3 className="text-sm font-black text-slate-700">子どもごとの記録</h3>
           {childIds.map((childId) => (
             <ChildComparison
               key={childId}

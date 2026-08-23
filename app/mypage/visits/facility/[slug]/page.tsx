@@ -168,7 +168,7 @@ function GrowthSummary({
     .slice(-5);
 
   return (
-    <article className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm space-y-3">
+    <article className="space-y-3 rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
       <div className="flex items-center gap-3">
         <ChildAvatar
           childId={entries[0].row.child_id}
@@ -177,7 +177,7 @@ function GrowthSummary({
           size="md"
         />
         <div className="min-w-0">
-          <h3 className="font-bold text-slate-900 truncate">{firstChild.nickname}</h3>
+          <h3 className="truncate font-black text-slate-950">{firstChild.nickname}</h3>
           <p className="text-xs text-slate-400">
             この施設での記録 {entries.length}回
           </p>
@@ -286,7 +286,8 @@ export default async function FacilityVisitHistoryPage({
 
   if (visitRows.length === 0) {
     return (
-      <div className="mx-auto max-w-lg space-y-5 px-4 py-6">
+      <main className="min-h-screen bg-[#fffaf3]">
+      <div className="mx-auto max-w-lg space-y-5 px-4 py-7 sm:py-10">
         <Link
           href="/mypage/visits"
           className="text-slate-400 transition-colors hover:text-slate-600"
@@ -294,20 +295,22 @@ export default async function FacilityVisitHistoryPage({
           ← おでかけ履歴
         </Link>
         <header className="space-y-2">
-          <h1 className="text-xl font-bold text-slate-900">{facilityName}</h1>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">MEMORIES AT THIS PLACE</p>
+          <h1 className="mt-1 text-2xl font-black text-slate-950">{facilityName}</h1>
         </header>
-        <div className="rounded-xl border border-slate-200 bg-white px-4 py-8 text-center">
-          <p className="text-sm font-bold text-slate-700">
+        <div className="rounded-[2rem] bg-white px-5 py-10 text-center shadow-sm ring-1 ring-amber-100">
+          <p className="text-sm font-black text-slate-700">
             この施設のおでかけ記録はまだありません
           </p>
           <Link
             href="/mypage/visits"
-            className="mt-4 inline-flex rounded-lg bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+            className="mt-4 inline-flex rounded-xl bg-slate-950 px-4 py-3 text-sm font-black text-white transition-colors hover:bg-slate-800"
           >
             履歴へ戻る
           </Link>
         </div>
       </div>
+      </main>
     );
   }
 
@@ -423,7 +426,8 @@ export default async function FacilityVisitHistoryPage({
   );
 
   return (
-    <div className="mx-auto max-w-lg space-y-6 px-4 py-6">
+    <main className="min-h-screen bg-[#fffaf3]">
+    <div className="mx-auto max-w-lg space-y-8 px-4 py-7 sm:py-10">
       <Link
         href="/mypage/visits"
         className="text-slate-400 transition-colors hover:text-slate-600"
@@ -432,8 +436,9 @@ export default async function FacilityVisitHistoryPage({
       </Link>
 
       <header className="space-y-2">
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">MEMORIES AT THIS PLACE</p>
         <div className="flex items-start justify-between gap-3">
-          <h1 className="min-w-0 break-words text-xl font-bold text-slate-900">
+          <h1 className="min-w-0 break-words text-2xl font-black text-slate-950">
             {facilityName}
           </h1>
           {hasFacilityPage && (
@@ -447,24 +452,24 @@ export default async function FacilityVisitHistoryPage({
         </div>
       </header>
 
-      <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">この施設のおでかけ</h2>
-        <div className="grid grid-cols-3 gap-2">
-          <div className="rounded-xl border border-slate-200 bg-white px-3 py-3">
-            <p className="text-xs font-bold text-slate-400">訪問回数</p>
-            <p className="mt-1 text-sm font-bold leading-relaxed text-slate-900">
+      <section className="space-y-4">
+        <h2 className="text-xl font-black text-slate-950">この施設のおでかけ</h2>
+        <div className="grid grid-cols-3 divide-x divide-amber-100 overflow-hidden rounded-[2rem] bg-white shadow-sm ring-1 ring-amber-100">
+          <div className="px-3 py-4">
+            <p className="text-xs font-black text-amber-600">訪問回数</p>
+            <p className="mt-1 text-sm font-black leading-relaxed text-slate-950">
               {visitCountLabel}
             </p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white px-3 py-3">
-            <p className="text-xs font-bold text-slate-400">はじめて</p>
-            <p className="mt-1 text-sm font-bold text-slate-900">
+          <div className="px-3 py-4">
+            <p className="text-xs font-black text-amber-600">はじめて</p>
+            <p className="mt-1 text-sm font-black text-slate-950">
               {firstVisitedOn ? formatVisitedOn(firstVisitedOn) : "未設定"}
             </p>
           </div>
-          <div className="rounded-xl border border-slate-200 bg-white px-3 py-3">
-            <p className="text-xs font-bold text-slate-400">前回</p>
-            <p className="mt-1 text-sm font-bold text-slate-900">
+          <div className="px-3 py-4">
+            <p className="text-xs font-black text-amber-600">前回</p>
+            <p className="mt-1 text-sm font-black text-slate-950">
               {lastVisitedOn ? formatVisitedOn(lastVisitedOn) : "未設定"}
             </p>
           </div>
@@ -473,7 +478,7 @@ export default async function FacilityVisitHistoryPage({
 
       {growthGroups.length > 0 && (
         <section className="space-y-3">
-          <h2 className="font-bold text-slate-800">子どもごとの成長</h2>
+          <h2 className="text-xl font-black text-slate-950">子どもごとの成長</h2>
           <div className="space-y-3">
             {growthGroups.map((entries) => {
               const child = getVisitChildProfile(entries[0].row.children);
@@ -494,7 +499,10 @@ export default async function FacilityVisitHistoryPage({
       )}
 
       <section className="space-y-3">
-        <h2 className="font-bold text-slate-800">おでかけの記録</h2>
+        <div>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">OUR FAMILY MEMORIES</p>
+          <h2 className="mt-1 text-xl font-black text-slate-950">おでかけの記録</h2>
+        </div>
         <div className="space-y-4">
           {visitRows.map((visit) => {
             const rows = (childrenByVisit.get(visit.id) ?? []).filter(
@@ -508,7 +516,7 @@ export default async function FacilityVisitHistoryPage({
             return (
               <article
                 key={visit.id}
-                className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm space-y-4"
+                className="space-y-4 overflow-hidden rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100"
               >
                 <div className="flex items-start justify-between gap-3">
                   <div className="space-y-1">
@@ -524,14 +532,14 @@ export default async function FacilityVisitHistoryPage({
                     </div>
                     <Link
                       href={`/mypage/visits/${visit.id}`}
-                      className="block font-bold text-slate-900 transition-colors hover:text-brand"
+                      className="block text-xl font-black leading-tight text-slate-950 transition-colors hover:text-brand"
                     >
                       {visit.facility_name}
                     </Link>
                   </div>
                   <Link
                     href={`/mypage/visits/${visit.id}`}
-                    className="shrink-0 rounded-lg bg-brand px-3 py-1.5 text-xs font-bold text-white transition-colors hover:bg-brand-dark"
+                    className="shrink-0 rounded-xl bg-slate-950 px-3 py-2 text-xs font-black text-white transition-colors hover:bg-slate-800"
                   >
                     詳細を見る
                   </Link>
@@ -576,11 +584,9 @@ export default async function FacilityVisitHistoryPage({
                 )}
 
                 {memo && (
-                  <div className="rounded-lg bg-slate-50 px-3 py-2">
-                    <p className="whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
-                      {memo}
-                    </p>
-                  </div>
+                  <blockquote className="border-l-2 border-amber-300 pl-3 text-sm font-medium leading-relaxed text-slate-700">
+                    「{memo}」
+                  </blockquote>
                 )}
               </article>
             );
@@ -588,5 +594,6 @@ export default async function FacilityVisitHistoryPage({
         </div>
       </section>
     </div>
+    </main>
   );
 }
