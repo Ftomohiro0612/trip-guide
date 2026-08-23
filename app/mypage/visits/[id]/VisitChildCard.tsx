@@ -3,10 +3,10 @@ import { childAgeAtVisitInMonths } from "@/lib/child-age";
 import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import { satisfactionLabels } from "@/lib/visit-labels";
 
-type ChildProfile = {
+export type ChildProfile = {
   nickname: string;
   birth_year: number;
-  birth_month: number;
+  birth_month: number | null;
   avatar_url: string | null;
 };
 
@@ -21,9 +21,15 @@ export type VisitChildCardData = {
   visit_child_tags: VisitChildTagData[] | null;
 };
 
-type VisitChildTagData = {
+export type VisitChildTagData = {
   tag_id: string;
   reaction_tags: { label: string } | { label: string }[] | null;
+};
+
+export type VisitChildReactionTag = {
+  id: string;
+  label: string;
+  icon: string;
 };
 
 const satisfactionMeta: Record<string, { label: string; stars: string }> = {
@@ -99,6 +105,27 @@ function reactionTagLabel(tag: VisitChildTagData): string | null {
   return tag.reaction_tags?.label ?? null;
 }
 
+export function visitChildAgeLabel(
+  row: VisitChildCardData,
+  visitedOn: string | null,
+): string {
+  const child = getVisitChildProfile(row.children);
+  if (!child) return "未記録";
+  return ageAtVisit(visitedOn, child, row.child_age_at_visit);
+}
+
+export function getVisitChildReactionTags(
+  row: VisitChildCardData,
+): VisitChildReactionTag[] {
+  return (row.visit_child_tags ?? [])
+    .map((tag) => ({
+      id: tag.tag_id,
+      label: reactionTagLabel(tag),
+      icon: reactionTagIcons[tag.tag_id] ?? "🏷️",
+    }))
+    .filter((tag): tag is VisitChildReactionTag => Boolean(tag.label));
+}
+
 export function VisitChildCard({
   row,
   visitedOn,
@@ -117,15 +144,7 @@ export function VisitChildCard({
         stars: "★★★☆☆",
       }
     : null;
-  const tags = (row.visit_child_tags ?? [])
-    .map((tag) => ({
-      id: tag.tag_id,
-      label: reactionTagLabel(tag),
-      icon: reactionTagIcons[tag.tag_id] ?? "🏷️",
-    }))
-    .filter((tag): tag is { id: string; label: string; icon: string } =>
-      Boolean(tag.label),
-    );
+  const tags = getVisitChildReactionTags(row);
   const interestOtherSelected = isInterestOtherSelected(
     row.interest_other_note,
   );
@@ -146,7 +165,7 @@ export function VisitChildCard({
           <div className="min-w-0">
             <h3 className="font-bold text-slate-900 truncate">{child.nickname}</h3>
             <p className="text-xs text-slate-400">
-              訪問時 {ageAtVisit(visitedOn, child, row.child_age_at_visit)}
+              訪問時 {visitChildAgeLabel(row, visitedOn)}
             </p>
           </div>
         </div>

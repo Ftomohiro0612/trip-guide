@@ -6,6 +6,10 @@ import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
 import { isInterestOtherSelected } from "@/lib/visit-other-note";
 import {
+  findPreviousVisit,
+  formatVisitDuration,
+} from "@/lib/visit-comparison";
+import {
   isEventFacilitySlug,
   isMissingVisitEventSnapshotColumnError,
   visitDisplayName,
@@ -26,6 +30,10 @@ import DeleteVisitButton from "../DeleteVisitButton";
 import VisitPhotoGallery, {
   type VisitPhotoGalleryPhoto,
 } from "./VisitPhotoGallery";
+import {
+  VisitComparison,
+  type ComparisonVisit,
+} from "./VisitComparison";
 import {
   getVisitChildProfile,
   VisitChildCard,
@@ -50,6 +58,7 @@ type Visit = VisitEventSnapshot & {
   facility_name: string;
   status: "draft" | "published";
   visited_on: string | null;
+  created_at: string | null;
   family_revisit: string | null;
   parent_fatigue: string | null;
   expectation_vs_reality: string | null;
@@ -72,17 +81,6 @@ type VisitPhoto = {
 function formatVisitedOn(value: string | null): string {
   if (!value) return "日付未設定";
   return value.replaceAll("-", "/");
-}
-
-function formatDuration(minutes: number | null): string | null {
-  if (!minutes) return null;
-  const durationLabels: Record<number, string> = {
-    60: "〜1時間",
-    150: "2〜3時間",
-    270: "4〜5時間",
-    360: "6時間以上",
-  };
-  return durationLabels[minutes] ?? `${minutes}分`;
 }
 
 function chipLabel(labels: Record<string, string>, value: string | null): string | null {
@@ -143,7 +141,7 @@ export default async function VisitDetailPage({
   }
 
   const visitSelect =
-    "id, user_id, facility_slug, facility_name, status, visited_on, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking";
+    "id, user_id, facility_slug, facility_name, status, visited_on, created_at, family_revisit, parent_fatigue, expectation_vs_reality, parent_memo, weather, stay_duration_min, time_was_enough, food_rating, crowding, parking";
   const visitWithEvent = await supabase
     .from("visits")
     .select(
@@ -167,12 +165,51 @@ export default async function VisitDetailPage({
   if (visitRow.user_id !== user.id) notFound();
   const isDraft = visitRow.status === "draft";
 
-  const { data: visitChildren } = await supabase
-    .from("visit_children")
-    .select(
-      "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
-    )
-    .eq("visit_id", visitRow.id);
+  const comparisonVisitSelect =
+    "id, visited_on, created_at, family_revisit, parent_fatigue, stay_duration_min, crowding";
+  const [
+    { data: visitChildren },
+    { data: publishedOtherVisits },
+    { count: otherVisitCount },
+  ] = await Promise.all([
+    supabase
+      .from("visit_children")
+      .select(
+        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+      )
+      .eq("visit_id", visitRow.id),
+    supabase
+      .from("visits")
+      .select(comparisonVisitSelect)
+      .eq("user_id", user.id)
+      .eq("facility_slug", visitRow.facility_slug)
+      .eq("status", "published")
+      .neq("id", visitRow.id),
+    supabase
+      .from("visits")
+      .select("id", { count: "exact", head: true })
+      .eq("user_id", user.id)
+      .eq("facility_slug", visitRow.facility_slug)
+      .neq("id", visitRow.id),
+  ]);
+
+  const publishedOtherVisitRows = (publishedOtherVisits ?? []) as ComparisonVisit[];
+  const previousVisit = findPreviousVisit<ComparisonVisit>(
+    visitRow,
+    publishedOtherVisitRows,
+  );
+  const hasSameFacilityHistory =
+    (otherVisitCount ?? publishedOtherVisitRows.length) > 0;
+  let previousChildRows: VisitChildCardData[] = [];
+  if (previousVisit) {
+    const { data: previousVisitChildren } = await supabase
+      .from("visit_children")
+      .select(
+        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+      )
+      .eq("visit_id", previousVisit.id);
+    previousChildRows = (previousVisitChildren ?? []) as VisitChildCardData[];
+  }
 
   const childRows = (visitChildren ?? []) as VisitChildCardData[];
   const avatarPaths = childRows
@@ -236,7 +273,12 @@ export default async function VisitDetailPage({
     { label: "天気", value: chipLabel(weatherLabels, visitRow.weather) },
     { label: "混雑", value: chipLabel(crowdingLabels, visitRow.crowding) },
     { label: "アクセス・移動", value: chipLabel(parkingLabels, visitRow.parking) },
-    { label: "滞在時間", value: formatDuration(visitRow.stay_duration_min) },
+    {
+      label: "滞在時間",
+      value: visitRow.stay_duration_min
+        ? formatVisitDuration(visitRow.stay_duration_min)
+        : null,
+    },
     {
       label: "時間は足りたか",
       value: chipLabel(timeWasEnoughLabels, visitRow.time_was_enough),
@@ -335,6 +377,32 @@ export default async function VisitDetailPage({
             </span>
           </div>
         </header>
+
+        {hasSameFacilityHistory && (
+          <Link
+            href={`/mypage/visits/facility/${visitRow.facility_slug}`}
+            className="flex items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-bold text-brand shadow-sm transition-colors hover:border-brand/30 hover:bg-brand/5"
+          >
+            <span>
+              <span className="block">この場所での思い出をすべて見る</span>
+              <span className="mt-0.5 block text-xs font-normal text-slate-500">
+                同じ場所の記録を時系列で振り返れます
+              </span>
+            </span>
+            <span aria-hidden className="shrink-0">
+              →
+            </span>
+          </Link>
+        )}
+
+        {previousVisit && (
+          <VisitComparison
+            previousVisit={previousVisit}
+            currentVisit={visitRow}
+            previousChildren={previousChildRows}
+            currentChildren={childRows}
+          />
+        )}
 
         {reflectiveChildRows.length > 0 && (
           <section className="space-y-3">
