@@ -2,6 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
 import ChildAvatar from "@/components/ChildAvatar";
+import {
+  findGrowthRecordOnOrBefore,
+  growthRecordHeight,
+  type ChildGrowthRecord,
+} from "@/lib/child-growth";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
@@ -11,6 +16,7 @@ import VisitPhotoGallery, {
 } from "../../[id]/VisitPhotoGallery";
 import {
   getVisitChildProfile,
+  visitChildAgeLabel,
   VisitChildCard,
   type VisitChildCardData,
 } from "../../[id]/VisitChildCard";
@@ -69,7 +75,11 @@ function hasReactionTags(row: VisitChildCardData): boolean {
 }
 
 function hasOtherNotes(row: VisitChildCardData): boolean {
-  return Boolean(row.interest_other_note?.trim() || row.behavior_other_note?.trim());
+  return Boolean(
+    row.interest_other_note?.trim() ||
+      row.behavior_other_note?.trim() ||
+      row.child_diary?.trim(),
+  );
 }
 
 function reactionTagLabel(
@@ -115,9 +125,11 @@ function toCountSummaries(labels: string[], limit?: number): CountSummary[] {
 function GrowthSummary({
   entries,
   avatarUrl,
+  growthRecords,
 }: {
   entries: ChildGrowthEntry[];
   avatarUrl: string | null;
+  growthRecords: ChildGrowthRecord[];
 }) {
   const firstChild = getVisitChildProfile(entries[0]?.row.children ?? null);
   if (!firstChild) return null;
@@ -139,6 +151,21 @@ function GrowthSummary({
     ),
     3,
   );
+  const heightTimeline = entries
+    .map((entry) => {
+      const record = findGrowthRecordOnOrBefore(
+        growthRecords,
+        entry.row.child_id,
+        entry.visitedOn,
+      );
+      const heightCm = record ? growthRecordHeight(record) : null;
+      return heightCm === null ? null : { entry, heightCm };
+    })
+    .filter(
+      (item): item is { entry: ChildGrowthEntry; heightCm: number } =>
+        item !== null,
+    )
+    .slice(-5);
 
   return (
     <article className="space-y-3 rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
@@ -180,6 +207,34 @@ function GrowthSummary({
               {summary.label} {summary.count}回
             </span>
           ))}
+        </div>
+      )}
+
+      {heightTimeline.length > 0 && (
+        <div className="border-t border-emerald-100 pt-3">
+          <p className="text-xs font-bold text-emerald-700">訪問時の成長</p>
+          <ol className="mt-2 space-y-1.5">
+            {heightTimeline.map(({ entry, heightCm }, index) => (
+              <li
+                key={`${entry.row.id}-${index}`}
+                className="flex items-center justify-between gap-3 rounded-lg bg-emerald-50/70 px-2.5 py-2 text-xs"
+              >
+                <time
+                  dateTime={entry.visitedOn ?? undefined}
+                  className="shrink-0 text-slate-500"
+                >
+                  {formatVisitedOn(entry.visitedOn)}
+                </time>
+                <span className="text-right font-bold text-slate-700">
+                  {visitChildAgeLabel(entry.row, entry.visitedOn)}・約
+                  {heightCm.toFixed(1)}cm
+                </span>
+              </li>
+            ))}
+          </ol>
+          <p className="mt-1.5 text-[11px] text-slate-400">
+            各訪問日以前の、もっとも近い身長記録を表示しています
+          </p>
         </div>
       )}
     </article>
@@ -268,7 +323,7 @@ export default async function FacilityVisitHistoryPage({
           supabase
             .from("visit_children")
             .select(
-              "id, visit_id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+              "id, visit_id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, child_diary, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
             )
             .in("visit_id", visitIds),
           PHOTO_UPLOAD_ENABLED
@@ -286,6 +341,16 @@ export default async function FacilityVisitHistoryPage({
   const childRows = (visitChildren ?? []) as (VisitChildCardData & {
     visit_id: string;
   })[];
+  const childIds = Array.from(new Set(childRows.map((row) => row.child_id)));
+  const { data: growthRecords } =
+    childIds.length > 0
+      ? await supabase
+          .from("child_growth_records")
+          .select("id, child_id, recorded_on, height_cm, created_at")
+          .in("child_id", childIds)
+          .order("recorded_on", { ascending: true })
+      : { data: [] };
+  const growthRows = (growthRecords ?? []) as ChildGrowthRecord[];
   const childrenByVisit = new Map<string, VisitChildCardData[]>();
   const growthByChild = new Map<string, ChildGrowthEntry[]>();
   for (const childRow of childRows) {
@@ -425,6 +490,7 @@ export default async function FacilityVisitHistoryPage({
                   key={entries[0].row.child_id}
                   entries={entries}
                   avatarUrl={avatarUrl}
+                  growthRecords={growthRows}
                 />
               );
             })}
@@ -497,12 +563,20 @@ export default async function FacilityVisitHistoryPage({
                       const avatarUrl = child.avatar_url
                         ? avatarUrlByPath.get(child.avatar_url) ?? null
                         : null;
+                      const growthRecord = findGrowthRecordOnOrBefore(
+                        growthRows,
+                        row.child_id,
+                        visit.visited_on,
+                      );
                       return (
                         <VisitChildCard
                           key={row.id}
                           row={row}
                           visitedOn={visit.visited_on}
                           avatarUrl={avatarUrl}
+                          approximateHeightCm={
+                            growthRecord ? growthRecordHeight(growthRecord) : null
+                          }
                         />
                       );
                     })}

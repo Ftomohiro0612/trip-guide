@@ -17,6 +17,7 @@ export type VisitChildCardData = {
   satisfaction: string | null;
   interest_other_note: string | null;
   behavior_other_note: string | null;
+  child_diary: string | null;
   children: ChildProfile | ChildProfile[] | null;
   visit_child_tags: VisitChildTagData[] | null;
 };
@@ -130,10 +131,12 @@ export function VisitChildCard({
   row,
   visitedOn,
   avatarUrl,
+  approximateHeightCm = null,
 }: {
   row: VisitChildCardData;
   visitedOn: string | null;
   avatarUrl: string | null;
+  approximateHeightCm?: number | null;
 }) {
   const child = getVisitChildProfile(row.children);
   if (!child) return null;
@@ -166,6 +169,9 @@ export function VisitChildCard({
             <h3 className="font-bold text-slate-900 truncate">{child.nickname}</h3>
             <p className="text-xs text-slate-400">
               訪問時 {visitChildAgeLabel(row, visitedOn)}
+              {approximateHeightCm !== null
+                ? `・約${approximateHeightCm.toFixed(1)}cm`
+                : ""}
             </p>
           </div>
         </div>
@@ -199,6 +205,18 @@ export function VisitChildCard({
             </span>
           ))}
         </div>
+      )}
+
+      {row.child_diary?.trim() && (
+        <blockquote className="rounded-xl border border-violet-100 bg-violet-50/70 px-3 py-3">
+          <p className="text-xs font-bold text-violet-700">
+            <span aria-hidden>“ </span>
+            {child.nickname}の日記
+          </p>
+          <p className="mt-1.5 whitespace-pre-wrap text-sm leading-relaxed text-slate-700">
+            {row.child_diary.trim()}
+          </p>
+        </blockquote>
       )}
 
       {otherNotes.length > 0 && (
