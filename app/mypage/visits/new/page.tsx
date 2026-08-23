@@ -232,6 +232,7 @@ export default function NewVisitPage() {
   const [childOtherNotes, setChildOtherNotes] = useState<Record<string, OtherNotes>>(
     {},
   );
+  const [childDiaries, setChildDiaries] = useState<Record<string, string>>({});
   const [parentMemo, setParentMemo] = useState("");
   const [restoredGuestDraft, setRestoredGuestDraft] =
     useState<GuestRecordDraft | null>(null);
@@ -633,6 +634,7 @@ export default function NewVisitPage() {
             return tag ? isBehaviorOtherTag(tag) : false;
           }),
         ),
+        child_diary: childDiaries[child.id]?.trim() || null,
       }));
 
       const { data: visitChildRows, error: childError } = await supabase
@@ -1002,6 +1004,34 @@ export default function NewVisitPage() {
                     )}
                   </div>
                 )}
+                <div className="mt-4 space-y-1.5 border-t border-violet-100 pt-3">
+                  <label
+                    htmlFor={`child-diary-${child.id}`}
+                    className="block text-xs font-bold text-violet-700"
+                  >
+                    {child.nickname}の日記
+                  </label>
+                  <p className="text-xs leading-relaxed text-slate-500">
+                    {child.nickname}
+                    の言葉で、今日の思い出を書いてみましょう。まだ自分で書けない子は、代わりに言葉を書いてあげてください。
+                  </p>
+                  <textarea
+                    id={`child-diary-${child.id}`}
+                    value={childDiaries[child.id] ?? ""}
+                    onChange={(event) =>
+                      setChildDiaries((current) => ({
+                        ...current,
+                        [child.id]: event.target.value,
+                      }))
+                    }
+                    placeholder="例: おおきなぞうをみたよ。おはながながくてびっくりした！"
+                    rows={4}
+                    className="w-full rounded-lg border border-violet-200 bg-violet-50/40 px-3 py-2 text-sm leading-relaxed focus:border-transparent focus:outline-none focus:ring-2 focus:ring-violet-300"
+                  />
+                  <p className="text-[11px] text-slate-400">
+                    親自身の感想や次回メモは、下の「親メモ」に分けて残せます。
+                  </p>
+                </div>
               </div>
             ))}
           </section>

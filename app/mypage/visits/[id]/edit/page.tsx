@@ -89,6 +89,7 @@ type VisitChildRow = {
   satisfaction: string | null;
   interest_other_note: string | null;
   behavior_other_note: string | null;
+  child_diary: string | null;
 };
 
 type VisitChildTagRow = {
@@ -281,6 +282,7 @@ export default function EditVisitPage() {
   const [childOtherNotes, setChildOtherNotes] = useState<Record<string, OtherNotes>>(
     {},
   );
+  const [childDiaries, setChildDiaries] = useState<Record<string, string>>({});
   const [existingVisitChildren, setExistingVisitChildren] = useState<
     Record<string, ExistingVisitChild>
   >({});
@@ -313,7 +315,7 @@ export default function EditVisitPage() {
       const visitChildrenResult = await supabase
         .from("visit_children")
         .select(
-          "id, child_id, satisfaction, interest_other_note, behavior_other_note",
+          "id, child_id, satisfaction, interest_other_note, behavior_other_note, child_diary",
         )
         .eq("visit_id", visitId);
       const tagMasterResult = await supabase
@@ -409,6 +411,7 @@ export default function EditVisitPage() {
       const nextChildTags: Record<string, string[]> = {};
       const nextInterestOtherSelected: Record<string, boolean> = {};
       const nextChildOtherNotes: Record<string, OtherNotes> = {};
+      const nextChildDiaries: Record<string, string> = {};
       const behaviorOtherTagId = ((tagMasterResult.data ?? []) as ReactionTag[]).find(
         isBehaviorOtherTag,
       )?.id;
@@ -446,6 +449,9 @@ export default function EditVisitPage() {
             behaviorOtherTagId,
           ]);
         }
+        if (row.child_diary) {
+          nextChildDiaries[row.child_id] = row.child_diary;
+        }
       }
       setExistingVisitChildren(nextExistingVisitChildren);
       setExistingChildTags(nextExistingChildTags);
@@ -454,6 +460,7 @@ export default function EditVisitPage() {
       setChildTags(nextChildTags);
       setInterestOtherSelected(nextInterestOtherSelected);
       setChildOtherNotes(nextChildOtherNotes);
+      setChildDiaries(nextChildDiaries);
       if (photoResult) {
         if (photoResult.error) {
           setError("写真枚数の読み込みに失敗しました");
@@ -695,6 +702,7 @@ export default function EditVisitPage() {
           child_age_at_visit?: number;
           interest_other_note: string | null;
           behavior_other_note: string | null;
+          child_diary: string | null;
         } = {
           satisfaction,
           interest_other_note: encodeInterestOtherNote(
@@ -705,6 +713,7 @@ export default function EditVisitPage() {
             childOtherNotes[child.id]?.behavior ?? "",
             behaviorOtherSelected,
           ),
+          child_diary: childDiaries[child.id]?.trim() || null,
         };
         const ageAtVisit = childAgeAtVisit(
           visitedOn,
@@ -747,6 +756,7 @@ export default function EditVisitPage() {
               childOtherNotes[child.id]?.behavior ?? "",
               behaviorOtherSelected,
             ),
+            child_diary: childDiaries[child.id]?.trim() || null,
           })
           .select("id")
           .single();
@@ -1121,6 +1131,34 @@ export default function EditVisitPage() {
                     )}
                   </div>
                 )}
+                <div className="mt-4 space-y-1.5 border-t border-violet-100 pt-3">
+                  <label
+                    htmlFor={`child-diary-${child.id}`}
+                    className="block text-xs font-bold text-violet-700"
+                  >
+                    {child.nickname}の日記
+                  </label>
+                  <p className="text-xs leading-relaxed text-slate-500">
+                    {child.nickname}
+                    の言葉で、その日の思い出を書いてみましょう。まだ自分で書けない子は、代わりに言葉を書いてあげてください。
+                  </p>
+                  <textarea
+                    id={`child-diary-${child.id}`}
+                    value={childDiaries[child.id] ?? ""}
+                    onChange={(event) =>
+                      setChildDiaries((current) => ({
+                        ...current,
+                        [child.id]: event.target.value,
+                      }))
+                    }
+                    placeholder="例: おおきなぞうをみたよ。おはながながくてびっくりした！"
+                    rows={4}
+                    className="w-full rounded-lg border border-violet-200 bg-violet-50/40 px-3 py-2 text-sm leading-relaxed focus:border-transparent focus:outline-none focus:ring-2 focus:ring-violet-300"
+                  />
+                  <p className="text-[11px] text-slate-400">
+                    親自身の感想や次回メモは、下の「親メモ」に分けて残せます。
+                  </p>
+                </div>
               </div>
             ))}
           </section>
