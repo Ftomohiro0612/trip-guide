@@ -4,6 +4,7 @@ import Link from "next/link";
 import { redirect } from "next/navigation";
 import CategoryBar from "@/components/CategoryBar";
 import ChildAvatar from "@/components/ChildAvatar";
+import ChildRecommendationSection from "@/components/ChildRecommendationSection";
 import MypageHero from "@/components/MypageHero";
 import MonthlyBarChart, { type MonthData } from "@/components/MonthlyBarChart";
 import MonthlyDiffCard from "@/components/MonthlyDiffCard";
@@ -27,7 +28,10 @@ import {
 } from "@/lib/child-insights";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
-import { buildMypageRecommendations } from "@/lib/mypage-recommendations";
+import {
+  buildMypageRecommendations,
+  type MypageRecommendations,
+} from "@/lib/mypage-recommendations";
 import {
   buildChildStats,
   buildFamilyStats,
@@ -352,10 +356,22 @@ function VisitCategoryTendency({ summary }: { summary: ChildInsightSummary }) {
   );
 }
 
-function ChildInsightsContent({ summary }: { summary: ChildInsightSummary }) {
+function ChildInsightsContent({
+  summary,
+  recommendations,
+}: {
+  summary: ChildInsightSummary;
+  recommendations: MypageRecommendations | null;
+}) {
   return (
     <div className="space-y-3">
       <ChildPreferenceContent summary={summary} />
+      {recommendations && (
+        <ChildRecommendationSection
+          childNickname={summary.child.nickname}
+          recommendations={recommendations}
+        />
+      )}
       <VisitCategoryTendency summary={summary} />
     </div>
   );
@@ -708,6 +724,40 @@ export default async function MypagePage() {
     selectedPrefectureIds,
     visitedSlugs,
   });
+  const perChildRecommendations = new Map<
+    string,
+    MypageRecommendations | null
+  >(
+    childInsightSummaries.map((summary) => {
+      if (summary.frequentInterests.length === 0) {
+        return [summary.child.id, null];
+      }
+
+      const childRecommendations = buildMypageRecommendations({
+        children: [
+          {
+            id: summary.child.id,
+            nickname: summary.child.nickname,
+            birthYear: summary.child.birth_year,
+            birthMonth: summary.child.birth_month,
+            interests: summary.frequentInterests,
+          },
+        ],
+        selectedPrefectureIds,
+        visitedSlugs,
+        facilityLimit: 2,
+        eventLimit: 2,
+      });
+      const hasRecommendations =
+        childRecommendations.facilities.length > 0 ||
+        childRecommendations.events.length > 0;
+
+      return [
+        summary.child.id,
+        hasRecommendations ? childRecommendations : null,
+      ];
+    }),
+  );
   const selectedPrefectureNames = selectedPrefectureIds.flatMap((id) => {
     const prefecture = prefectures.find((item) => item.id === id);
     return prefecture ? [prefecture.name] : [];
@@ -890,7 +940,12 @@ export default async function MypagePage() {
                       記録を見る ›
                     </Link>
                   </div>
-                  <ChildInsightsContent summary={summary} />
+                  <ChildInsightsContent
+                    summary={summary}
+                    recommendations={
+                      perChildRecommendations.get(summary.child.id) ?? null
+                    }
+                  />
                 </div>
               ))}
             </div>
