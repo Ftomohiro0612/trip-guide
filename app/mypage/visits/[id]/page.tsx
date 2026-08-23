@@ -1,6 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound, redirect } from "next/navigation";
+import {
+  findGrowthRecordOnOrBefore,
+  growthRecordHeight,
+  type ChildGrowthRecord,
+} from "@/lib/child-growth";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { createClient } from "@/lib/supabase/server";
@@ -101,7 +106,8 @@ function hasReactionTags(row: VisitChildCardData): boolean {
 function hasOtherNotes(row: VisitChildCardData): boolean {
   return (
     isInterestOtherSelected(row.interest_other_note) ||
-    Boolean(row.behavior_other_note?.trim())
+    Boolean(row.behavior_other_note?.trim()) ||
+    Boolean(row.child_diary?.trim())
   );
 }
 
@@ -175,7 +181,7 @@ export default async function VisitDetailPage({
     supabase
       .from("visit_children")
       .select(
-        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, child_diary, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
       )
       .eq("visit_id", visitRow.id),
     supabase
@@ -205,13 +211,24 @@ export default async function VisitDetailPage({
     const { data: previousVisitChildren } = await supabase
       .from("visit_children")
       .select(
-        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
+        "id, child_id, child_age_at_visit, satisfaction, interest_other_note, behavior_other_note, child_diary, children(nickname, birth_year, birth_month, avatar_url), visit_child_tags(tag_id, reaction_tags(label))",
       )
       .eq("visit_id", previousVisit.id);
     previousChildRows = (previousVisitChildren ?? []) as VisitChildCardData[];
   }
 
   const childRows = (visitChildren ?? []) as VisitChildCardData[];
+  const childIds = Array.from(new Set(childRows.map((row) => row.child_id)));
+  const { data: growthRecords } =
+    visitRow.visited_on && childIds.length > 0
+      ? await supabase
+          .from("child_growth_records")
+          .select("id, child_id, recorded_on, height_cm, created_at")
+          .in("child_id", childIds)
+          .lte("recorded_on", visitRow.visited_on)
+          .order("recorded_on", { ascending: false })
+      : { data: [] };
+  const growthRows = (growthRecords ?? []) as ChildGrowthRecord[];
   const avatarPaths = childRows
     .map((row) => getVisitChildProfile(row.children)?.avatar_url)
     .filter((path): path is string => Boolean(path));
@@ -414,12 +431,20 @@ export default async function VisitDetailPage({
                 const avatarUrl = child.avatar_url
                   ? avatarUrlByPath.get(child.avatar_url) ?? null
                   : null;
+                const growthRecord = findGrowthRecordOnOrBefore(
+                  growthRows,
+                  row.child_id,
+                  visitRow.visited_on,
+                );
                 return (
                   <VisitChildCard
                     key={row.id}
                     row={row}
                     visitedOn={visitRow.visited_on}
                     avatarUrl={avatarUrl}
+                    approximateHeightCm={
+                      growthRecord ? growthRecordHeight(growthRecord) : null
+                    }
                   />
                 );
               })}

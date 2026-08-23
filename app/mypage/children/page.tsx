@@ -1,8 +1,10 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import ChildAvatar from "@/components/ChildAvatar";
+import type { ChildGrowthRecord } from "@/lib/child-growth";
 import { createClient } from "@/lib/supabase/server";
 import ChildAvatarUploader from "./ChildAvatarUploader";
+import ChildGrowthRecorder from "./ChildGrowthRecorder";
 import ChildrenForm from "./ChildrenForm";
 import DeleteButton from "./DeleteButton";
 import FirstMemoryActivationCard from "./FirstMemoryActivationCard";
@@ -46,6 +48,17 @@ export default async function ChildrenPage() {
       .eq("status", "published"),
   ]);
   const childRows = (children ?? []) as Child[];
+  const childIds = childRows.map((child) => child.id);
+  const { data: growthRecords } =
+    childIds.length > 0
+      ? await supabase
+          .from("child_growth_records")
+          .select("id, child_id, recorded_on, height_cm, created_at")
+          .in("child_id", childIds)
+          .order("recorded_on", { ascending: false })
+          .order("created_at", { ascending: false })
+      : { data: [] };
+  const growthRows = (growthRecords ?? []) as ChildGrowthRecord[];
   const avatarPaths = childRows
     .map((child) => child.avatar_url)
     .filter((path): path is string => Boolean(path));
@@ -112,6 +125,13 @@ export default async function ChildrenPage() {
                 childId={child.id}
                 nickname={child.nickname}
                 avatarUrl={avatarUrl}
+              />
+              <ChildGrowthRecorder
+                childId={child.id}
+                nickname={child.nickname}
+                initialRecords={growthRows
+                  .filter((record) => record.child_id === child.id)
+                  .slice(0, 10)}
               />
             </div>
             );
