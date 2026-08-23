@@ -673,178 +673,234 @@ export default function NewVisitPage() {
   }
 
   return (
-    <div className="max-w-lg mx-auto px-4 py-6 space-y-5">
-      <Link href="/mypage" className="text-slate-400 hover:text-slate-600 transition-colors">
-        ← マイページ
-      </Link>
+    <main className="min-h-screen bg-[#fffaf3]">
+      <div className="mx-auto max-w-lg space-y-5 px-4 py-6">
+        <Link
+          href="/mypage"
+          className="inline-flex text-sm font-bold text-slate-400 transition-colors hover:text-slate-600"
+        >
+          ← マイページ
+        </Link>
 
-      <div>
-        <h1 className="text-xl font-bold text-slate-900">
-          {eventForVisit ? "イベント体験を記録" : "おでかけを記録"}
-        </h1>
-        <p className="text-sm text-slate-500 mt-1">必須項目だけなら30秒で残せます。</p>
-      </div>
-
-      {eventForVisit && (
-        <section className="rounded-2xl border border-violet-200 bg-violet-50 p-4">
-          <span className="inline-flex rounded-full bg-violet-600 px-2.5 py-1 text-xs font-bold text-white">
-            イベント記録
-          </span>
-          <h2 className="mt-2 text-lg font-bold leading-snug text-violet-950">
-            {eventForVisit.title}
-          </h2>
-          <p className="mt-1 text-sm font-medium text-violet-800">
-            {eventForVisit.dateLabel}
-            {eventForVisit.timeLabel ? ` / ${eventForVisit.timeLabel}` : ""}
+        <header>
+          <p className="text-xs font-black tracking-[0.18em] text-amber-600">
+            {eventForVisit ? "EVENT MEMORY" : "NEW MEMORY"}
           </p>
-          <p className="mt-1 text-xs text-violet-700">
-            {eventForVisit.prefectureLabel} · {eventForVisit.venueName}
+          <h1 className="mt-1 text-2xl font-black text-slate-950">
+            {eventForVisit
+              ? "今日のイベント体験を残す"
+              : "今日のおでかけを残す"}
+          </h1>
+          <p className="mt-1 text-sm text-slate-500">
+            必須項目だけなら30秒で残せます。
           </p>
-        </section>
-      )}
+        </header>
 
-      {restoredGuestDraft && (
-        <section className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-          <p className="text-sm font-bold text-emerald-950">
-            思い出カードの内容を引き継ぎました
-          </p>
-          <dl className="mt-2 space-y-1 text-xs leading-relaxed text-emerald-900">
-            <div className="flex gap-2">
-              <dt className="shrink-0 font-bold">訪問日</dt>
-              <dd>{restoredGuestDraft.visitedOn}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="shrink-0 font-bold">ひとこと</dt>
-              <dd>{restoredGuestDraft.note}</dd>
-            </div>
-            <div className="flex gap-2">
-              <dt className="shrink-0 font-bold">興味タグ</dt>
-              <dd>
-                {restoredGuestDraft.interestTagIds
-                  .map((tag) => getRecommendedForTagMeta(tag).label)
-                  .join("、")}
-              </dd>
-            </div>
-          </dl>
-          <p className="mt-2 text-xs text-emerald-700">
-            写真は安全のため引き継いでいません。
-          </p>
-        </section>
-      )}
-
-      <Link
-        href="/mypage/visits/from-photo"
-        className="block rounded-xl border border-brand/20 bg-sky-50 px-4 py-3 text-center transition-colors hover:bg-sky-100"
-      >
-        <span className="block text-sm font-bold text-brand">
-          📷 写真からおでかけ記録を作る
-        </span>
-        <span className="mt-1 block text-xs font-medium leading-relaxed text-slate-500">
-          写真を選ぶだけで日付・場所が入ります
-        </span>
-      </Link>
-
-      {error && (
-        <div className="px-3 py-2 bg-red-50 border border-red-200 rounded-lg text-red-700 text-xs">
-          {error}
-        </div>
-      )}
-
-      <form onSubmit={handleSubmit} className="space-y-5">
-        <section className="space-y-2">
-          <label className="block text-sm font-bold text-slate-800">
-            {eventForVisit ? "会場・施設" : "施設名"}
-          </label>
-          {(eventForVisit || facilitySlugFromUrl) && (
-            <p className="text-xs text-emerald-600 font-medium">
-              {eventForVisit ? "イベント情報から自動入力" : "施設ページから自動入力"}
+        {restoredGuestDraft && (
+          <section className="rounded-2xl bg-emerald-50 p-4 shadow-sm ring-1 ring-emerald-100">
+            <p className="text-sm font-bold text-emerald-950">
+              思い出カードの内容を引き継ぎました
             </p>
-          )}
-          <input
-            type="text"
-            value={facilityName}
-            readOnly={Boolean(eventIdFromUrl)}
-            onChange={(event) => {
-              setFacilityName(event.target.value);
-              setFacilitySlug("");
-              setSuggestions([]);
-              setSuggestionsOpen(false);
-            }}
-            onFocus={() => {
-              if (!facilitySlugFromUrl && suggestions.length > 0) {
-                setSuggestionsOpen(true);
-              }
-            }}
-            placeholder="施設名を入力、例: 富士山こどもの国"
-            className="w-full px-3 py-3 border border-slate-300 rounded-xl text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent read-only:bg-slate-50 read-only:text-slate-600"
-          />
-          {!facilitySlugFromUrl && suggestionsOpen && suggestions.length > 0 && (
-            <div className="bg-white border border-slate-200 rounded-lg py-2 shadow-sm">
-              {suggestions.map((suggestion) => (
-                <button
-                  key={suggestion.slug}
-                  type="button"
-                  onClick={() => {
-                    setFacilityName(suggestion.name);
-                    setFacilitySlug(suggestion.slug);
-                    setSuggestionsOpen(false);
-                  }}
-                  className="w-full px-3 py-2 text-left hover:bg-slate-50 transition-colors"
-                >
-                  <span className="block text-sm font-medium text-slate-800">
-                    {suggestion.name}
-                  </span>
-                  <span className="block text-xs text-slate-400">
-                    {suggestion.prefecture} / {suggestion.category}
-                  </span>
-                </button>
-              ))}
-            </div>
-          )}
-        </section>
+            <dl className="mt-2 space-y-1 text-xs leading-relaxed text-emerald-900">
+              <div className="flex gap-2">
+                <dt className="shrink-0 font-bold">訪問日</dt>
+                <dd>{restoredGuestDraft.visitedOn}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="shrink-0 font-bold">ひとこと</dt>
+                <dd>{restoredGuestDraft.note}</dd>
+              </div>
+              <div className="flex gap-2">
+                <dt className="shrink-0 font-bold">興味タグ</dt>
+                <dd>
+                  {restoredGuestDraft.interestTagIds
+                    .map((tag) => getRecommendedForTagMeta(tag).label)
+                    .join("、")}
+                </dd>
+              </div>
+            </dl>
+            <p className="mt-2 text-xs text-emerald-700">
+              写真は安全のため引き継いでいません。
+            </p>
+          </section>
+        )}
 
-        <section className="space-y-2">
-          <p className="text-sm font-bold text-slate-800">訪問日</p>
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { value: "today", label: "今日" },
-              { value: "yesterday", label: "昨日" },
-              { value: "custom", label: "日付を選ぶ" },
-            ].map((option) => (
-              <button
-                key={option.value}
-                type="button"
-                onClick={() => setDateChoice(option.value as DateChoice)}
-                className={`py-2 rounded-lg border text-sm font-medium transition-colors ${
-                  dateChoice === option.value
-                    ? "bg-brand border-brand text-white"
-                    : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
-                }`}
-              >
-                {option.label}
-              </button>
-            ))}
+        {error && (
+          <div className="rounded-xl bg-red-50 px-4 py-3 text-xs text-red-700 ring-1 ring-red-200">
+            {error}
           </div>
-          {dateChoice === "custom" && (
-            <input
-              type="date"
-              value={customDate}
-              onChange={(event) => setCustomDate(event.target.value)}
-              className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-            />
+        )}
+
+        <form onSubmit={handleSubmit} className="space-y-5">
+          <section className="space-y-5 rounded-[2rem] bg-white p-4 shadow-lg shadow-amber-950/5 ring-1 ring-amber-100/70 sm:p-5">
+            <div>
+              <p className="text-xs font-black tracking-[0.16em] text-amber-600">
+                01 · おでかけ先
+              </p>
+              <h2 className="mt-1 text-lg font-black text-slate-950">
+                今日の景色と場所
+              </h2>
+            </div>
+
+            {PHOTO_UPLOAD_ENABLED && (
+              <div className="rounded-2xl bg-[radial-gradient(circle_at_20%_15%,#fed7aa_0%,transparent_34%),radial-gradient(circle_at_80%_30%,#bae6fd_0%,transparent_32%),linear-gradient(145deg,#f8fafc_0%,#f1f5f9_48%,#ecfdf5_100%)] p-4 ring-1 ring-white/80">
+                <VisitPhotoUploader
+                  ref={photoUploaderRef}
+                  initialExistingCount={0}
+                  disabled={loading}
+                  onBusyChange={setPhotoBusy}
+                />
+              </div>
+            )}
+
+            {eventForVisit && (
+              <div className="rounded-2xl bg-violet-50 p-4 ring-1 ring-violet-100">
+                <span className="inline-flex rounded-full bg-violet-600 px-2.5 py-1 text-xs font-bold text-white">
+                  イベント記録
+                </span>
+                <h2 className="mt-2 text-lg font-black leading-snug text-violet-950">
+                  {eventForVisit.title}
+                </h2>
+                <p className="mt-1 text-sm font-medium text-violet-800">
+                  {eventForVisit.dateLabel}
+                  {eventForVisit.timeLabel ? ` / ${eventForVisit.timeLabel}` : ""}
+                </p>
+                <p className="mt-1 text-xs text-violet-700">
+                  {eventForVisit.prefectureLabel} · {eventForVisit.venueName}
+                </p>
+              </div>
+            )}
+
+            <div className="space-y-2">
+              <label className="block text-sm font-bold text-slate-800">
+                {eventForVisit ? "会場・施設" : "施設名"}
+              </label>
+              {(eventForVisit || facilitySlugFromUrl) && (
+                <p className="text-xs font-medium text-emerald-600">
+                  {eventForVisit
+                    ? "イベント情報から自動入力"
+                    : "施設ページから自動入力"}
+                </p>
+              )}
+              <input
+                type="text"
+                value={facilityName}
+                readOnly={Boolean(eventIdFromUrl)}
+                onChange={(event) => {
+                  setFacilityName(event.target.value);
+                  setFacilitySlug("");
+                  setSuggestions([]);
+                  setSuggestionsOpen(false);
+                }}
+                onFocus={() => {
+                  if (!facilitySlugFromUrl && suggestions.length > 0) {
+                    setSuggestionsOpen(true);
+                  }
+                }}
+                placeholder="施設名を入力、例: 富士山こどもの国"
+                className="w-full rounded-xl bg-slate-50 px-3 py-3 text-sm ring-1 ring-slate-200 transition-shadow focus:outline-none focus:ring-2 focus:ring-brand read-only:text-slate-600"
+              />
+              {!facilitySlugFromUrl &&
+                suggestionsOpen &&
+                suggestions.length > 0 && (
+                  <div className="rounded-xl bg-white py-2 shadow-lg ring-1 ring-slate-200">
+                    {suggestions.map((suggestion) => (
+                      <button
+                        key={suggestion.slug}
+                        type="button"
+                        onClick={() => {
+                          setFacilityName(suggestion.name);
+                          setFacilitySlug(suggestion.slug);
+                          setSuggestionsOpen(false);
+                        }}
+                        className="w-full px-3 py-2 text-left transition-colors hover:bg-slate-50"
+                      >
+                        <span className="block text-sm font-medium text-slate-800">
+                          {suggestion.name}
+                        </span>
+                        <span className="block text-xs text-slate-400">
+                          {suggestion.prefecture} / {suggestion.category}
+                        </span>
+                      </button>
+                    ))}
+                  </div>
+                )}
+            </div>
+
+            <div className="space-y-2">
+              <p className="text-sm font-bold text-slate-800">訪問日</p>
+              <div className="grid grid-cols-3 gap-2">
+                {[
+                  { value: "today", label: "今日" },
+                  { value: "yesterday", label: "昨日" },
+                  { value: "custom", label: "日付を選ぶ" },
+                ].map((option) => (
+                  <button
+                    key={option.value}
+                    type="button"
+                    onClick={() => setDateChoice(option.value as DateChoice)}
+                    className={`rounded-xl px-1 py-2 text-sm font-medium ring-1 transition-colors ${
+                      dateChoice === option.value
+                        ? "bg-brand text-white ring-brand"
+                        : "bg-slate-50 text-slate-600 ring-slate-200 hover:bg-slate-100"
+                    }`}
+                  >
+                    {option.label}
+                  </button>
+                ))}
+              </div>
+              {dateChoice === "custom" && (
+                <input
+                  type="date"
+                  value={customDate}
+                  onChange={(event) => setCustomDate(event.target.value)}
+                  className="w-full rounded-xl bg-slate-50 px-3 py-2 text-sm ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand"
+                />
+              )}
+            </div>
+
+            <Link
+              href="/mypage/visits/from-photo"
+              className="block rounded-2xl bg-sky-50 px-4 py-3 text-center ring-1 ring-sky-100 transition-colors hover:bg-sky-100"
+            >
+              <span className="block text-sm font-bold text-brand">
+                📷 写真からおでかけ記録を作る
+              </span>
+              <span className="mt-1 block text-xs font-medium leading-relaxed text-slate-500">
+                写真を選ぶだけで日付・場所が入ります
+              </span>
+            </Link>
+          </section>
+
+          {children.length === 0 && (
+            <section className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-amber-100/70">
+              <div>
+                <p className="text-xs font-black tracking-[0.16em] text-amber-600">
+                  02 · 一緒に行った子ども
+                </p>
+                <p className="mt-1 text-sm text-slate-500">
+                  子どもを登録すると、反応も一緒に残せます。
+                </p>
+              </div>
+              <ChildRegistrationNudge />
+            </section>
           )}
-        </section>
 
-        {children.length === 0 && <ChildRegistrationNudge />}
-
-        {children.length > 0 && (
-          <section className="space-y-2">
-            <p className="text-sm font-bold text-slate-800">今回行った子ども</p>
+          {children.length > 0 && (
+          <section className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-amber-100/70">
+            <div>
+              <p className="text-xs font-black tracking-[0.16em] text-amber-600">
+                02 · 一緒に行った子ども
+              </p>
+              <h2 className="mt-1 text-lg font-black text-slate-950">
+                今回行った子ども
+              </h2>
+            </div>
             <div className="space-y-2">
               {children.map((child) => (
                 <label
                   key={child.id}
-                  className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-3 py-2 text-sm"
+                  className="flex items-center gap-3 rounded-xl bg-slate-50 px-3 py-2.5 text-sm ring-1 ring-slate-200"
                 >
                   <input
                     type="checkbox"
@@ -865,11 +921,18 @@ export default function NewVisitPage() {
           </section>
         )}
 
-        {selectedChildren.length > 0 && (
-          <section className="space-y-3">
-            <p className="text-sm font-bold text-slate-800">子どもごとの満足度</p>
+          {selectedChildren.length > 0 && (
+          <section className="space-y-4 rounded-2xl bg-[#fffcf7] p-4 shadow-sm ring-1 ring-amber-100">
+            <div>
+              <p className="text-xs font-black tracking-[0.16em] text-amber-600">
+                03 · その子の反応
+              </p>
+              <h2 className="mt-1 text-lg font-black text-slate-950">
+                子どもごとの満足度
+              </h2>
+            </div>
             {selectedChildren.map((child) => (
-              <div key={child.id} className="bg-white border border-slate-200 rounded-xl p-3 space-y-2">
+              <div key={child.id} className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-100">
                 <div className="flex items-center gap-2">
                   <ChildAvatar
                     childId={child.id}
@@ -1004,7 +1067,7 @@ export default function NewVisitPage() {
                     )}
                   </div>
                 )}
-                <div className="mt-4 space-y-1.5 border-t border-violet-100 pt-3">
+                <div className="mt-4 space-y-1.5 rounded-xl bg-violet-50/70 p-3 ring-1 ring-violet-100">
                   <label
                     htmlFor={`child-diary-${child.id}`}
                     className="block text-xs font-bold text-violet-700"
@@ -1026,7 +1089,7 @@ export default function NewVisitPage() {
                     }
                     placeholder="例: おおきなぞうをみたよ。おはながながくてびっくりした！"
                     rows={4}
-                    className="w-full rounded-lg border border-violet-200 bg-violet-50/40 px-3 py-2 text-sm leading-relaxed focus:border-transparent focus:outline-none focus:ring-2 focus:ring-violet-300"
+                    className="w-full rounded-xl bg-white/80 px-3 py-2 text-sm leading-relaxed ring-1 ring-violet-200 focus:outline-none focus:ring-2 focus:ring-violet-300"
                   />
                   <p className="text-[11px] text-slate-400">
                     親自身の感想や次回メモは、下の「親メモ」に分けて残せます。
@@ -1037,30 +1100,43 @@ export default function NewVisitPage() {
           </section>
         )}
 
-        <OptionButtons
-          title="また行きたいか"
-          options={familyRevisitOptions}
-          value={familyRevisit}
-          onChange={setFamilyRevisit}
-        />
+          <section className="space-y-5 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-amber-100/70">
+            <div>
+              <p className="text-xs font-black tracking-[0.16em] text-amber-600">
+                04 · 家族の振り返り
+              </p>
+            </div>
+            <OptionButtons
+              title="また行きたいか"
+              options={familyRevisitOptions}
+              value={familyRevisit}
+              onChange={setFamilyRevisit}
+            />
 
-        <OptionButtons
-          title="親の疲れ度"
-          options={fatigueOptions}
-          value={parentFatigue}
-          onChange={setParentFatigue}
-        />
+            <OptionButtons
+              title="親の疲れ度"
+              options={fatigueOptions}
+              value={parentFatigue}
+              onChange={setParentFatigue}
+            />
+          </section>
 
-        <section className="border border-slate-200 rounded-xl bg-white">
+        <section className="overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-amber-100/70">
           <button
             type="button"
             onClick={() => setDetailsOpen((open) => !open)}
-            className="w-full px-4 py-3 text-left text-sm font-bold text-slate-800"
+            className="flex w-full items-center justify-between px-4 py-4 text-left text-sm font-black text-slate-800 transition-colors hover:bg-amber-50/60"
           >
-            もっと詳しく記録する {detailsOpen ? "▲" : "▼"}
+            <span>
+              <span className="mr-2 text-xs tracking-[0.16em] text-amber-600">
+                05
+              </span>
+              もっと詳しく記録する
+            </span>
+            <span aria-hidden="true">{detailsOpen ? "▲" : "▼"}</span>
           </button>
 
-          <div className={`px-4 pb-4 space-y-4 ${detailsOpen ? "" : "hidden"}`}>
+          <div className={`space-y-4 px-4 pb-4 ${detailsOpen ? "" : "hidden"}`}>
             <div className="space-y-3">
               <OptionButtons
                 title="滞在時間"
@@ -1126,43 +1202,46 @@ export default function NewVisitPage() {
               />
             </div>
 
-            <div className="space-y-2">
-              <label className="block text-xs font-bold text-slate-600">親メモ</label>
-              <textarea
-                value={parentMemo}
-                onChange={(event) => setParentMemo(event.target.value)}
-                placeholder="気づいたこと、次回メモなど"
-                rows={4}
-                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-sm bg-white focus:outline-none focus:ring-2 focus:ring-brand focus:border-transparent"
-              />
-            </div>
-
-            {PHOTO_UPLOAD_ENABLED && (
-              <VisitPhotoUploader
-                ref={photoUploaderRef}
-                initialExistingCount={0}
-                disabled={loading}
-                onBusyChange={setPhotoBusy}
-              />
-            )}
           </div>
+        </section>
+
+        <section className="space-y-3 rounded-2xl bg-white p-4 shadow-sm ring-1 ring-slate-200/80">
+          <div>
+            <p className="text-xs font-black tracking-[0.16em] text-slate-500">
+              06 · 親メモ
+            </p>
+            <h2 className="mt-1 text-lg font-black text-slate-950">
+              次の自分へ残しておくこと
+            </h2>
+            <p className="mt-1 text-xs leading-relaxed text-slate-500">
+              親自身の感想や、次回に役立つことを書けます。
+            </p>
+          </div>
+          <textarea
+            value={parentMemo}
+            onChange={(event) => setParentMemo(event.target.value)}
+            placeholder="気づいたこと、次回メモなど"
+            rows={4}
+            className="w-full rounded-xl bg-slate-50 px-3 py-3 text-sm ring-1 ring-slate-200 focus:outline-none focus:ring-2 focus:ring-brand"
+          />
         </section>
 
         <button
           type="submit"
           disabled={!canSubmit}
-          className="w-full py-3 bg-brand text-white font-bold rounded-xl hover:bg-brand-dark transition-colors disabled:opacity-40 disabled:hover:bg-brand"
+          className="w-full rounded-xl bg-slate-950 py-3.5 text-sm font-black text-white transition-colors hover:bg-slate-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-slate-950 focus-visible:ring-offset-2 disabled:opacity-40 disabled:hover:bg-slate-950"
         >
           {loading
             ? PHOTO_UPLOAD_ENABLED && createdVisitId
-              ? "写真を保存中..."
-              : "保存中..."
+              ? "写真を残しています..."
+              : "思い出を残しています..."
             : PHOTO_UPLOAD_ENABLED && createdVisitId
-              ? "写真を再試行"
-              : "保存する"}
+              ? "写真の保存を再試行"
+              : "思い出を残す"}
         </button>
       </form>
-    </div>
+      </div>
+    </main>
   );
 }
 
@@ -1194,10 +1273,10 @@ function OptionButtons<T extends string>({
             onClick={() =>
               onChange(allowClear && value === option.value ? "" : option.value)
             }
-            className={`py-2 px-2 rounded-lg border font-medium transition-colors ${
+            className={`rounded-xl px-2 py-2 font-medium ring-1 transition-colors ${
               value === option.value
-                ? "bg-brand border-brand text-white"
-                : "bg-white border-slate-300 text-slate-600 hover:bg-slate-50"
+                ? "bg-brand text-white ring-brand"
+                : "bg-slate-50 text-slate-600 ring-slate-200 hover:bg-slate-100"
             } ${small ? "text-xs" : "text-sm"}`}
           >
             {option.label}
