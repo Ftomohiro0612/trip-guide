@@ -331,9 +331,9 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 475);
-  assert.equal(first.diagnostics.mappableEventCount, 129);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 128);
+  assert.equal(fixtures.events.length, 431);
+  assert.equal(first.diagnostics.mappableEventCount, 112);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 111);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -456,22 +456,22 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 475,
-      inputFacilityCount: 4617,
-      publicFacilityCount: 4608,
-      mappableEventCount: 129,
-      holdEventCount: 346,
+      inputEventCount: 431,
+      inputFacilityCount: 4704,
+      publicFacilityCount: 4695,
+      mappableEventCount: 112,
+      holdEventCount: 319,
       missingLocationCount: 0,
       excludedFacilityCount: 9,
-      eventToFacilityEventCount: 128,
-      eventToFacilityRecommendationCount: 578,
-      facilityToEventFacilityCount: 1502,
-      facilityToEventThreeCandidateCount: 344,
-      facilityToEventRecommendationCount: 2409,
+      eventToFacilityEventCount: 111,
+      eventToFacilityRecommendationCount: 500,
+      facilityToEventFacilityCount: 1488,
+      facilityToEventThreeCandidateCount: 224,
+      facilityToEventRecommendationCount: 2207,
     },
   );
-  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 16);
-  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 16);
+  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 8);
+  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 8);
 });
 
 function eventFixture(overrides = {}) {

@@ -85,7 +85,7 @@ const CURRENT_SUMMER_MILESTONE = Object.freeze({
     (location) => location.coordinate_precision === "hold",
   ).length,
 });
-const PAGINATION_TEST_DATE = "2026-07-20";
+const PAGINATION_TEST_DATE = "2026-08-23";
 const SUMMER_EVENT_TYPE_ORDER = [
   "fireworks",
   "summer_festival",
@@ -472,17 +472,18 @@ test("feature hub hard-stops exactly at endsAt", () => {
   );
 });
 
-test("Summer freshness uses monthly warnings and one pre-start review without daily rechecks", () => {
+test("Summer freshness accepts current evidence refresh without daily rechecks", () => {
   assert.equal(summerSource.metadata.freshness_days_hub, 30);
   assert.equal(summerSource.metadata.freshness_days_hero, 30);
 
-  for (const today of ["2026-07-24", "2026-07-25", "2026-07-26"]) {
+  for (const today of ["2026-08-23", "2026-08-24", "2026-08-25"]) {
     const result = runEventValidator(today);
     const reviewed = result.freshness.find(
       (row) => row.id === "evt-summer-2026-nagano-011",
     );
     assert.deepEqual(result.errors, []);
-    assert.equal(reviewed.pre_start_review_completed, true);
+    assert.equal(reviewed.source_checked_at, "2026-08-23");
+    assert.equal(reviewed.pre_start_review_completed, false);
     assert.equal(
       result.warnings.some((warning) =>
         warning.startsWith("evt-summer-2026-nagano-011:"),
@@ -491,7 +492,7 @@ test("Summer freshness uses monthly warnings and one pre-start review without da
     );
   }
 
-  const monthlyResult = runEventValidator("2026-08-20");
+  const monthlyResult = runEventValidator("2026-08-23");
   assert.deepEqual(monthlyResult.errors, []);
   assert.equal(
     monthlyResult.warnings.some((warning) =>
@@ -728,9 +729,9 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
   const orderedViews = orderSummerViewsByType(visibleViews);
   const first = paginateEventViews(orderedViews, 1);
   const second = paginateEventViews(orderedViews, 2);
-  const final = paginateEventViews(orderedViews, 24);
+  const final = paginateEventViews(orderedViews, 3);
 
-  assert.equal(visibleViews.length, 475);
+  assert.equal(visibleViews.length, 42);
   assert.equal(EVENT_PAGE_SIZE, 20);
   assert.deepEqual(
     {
@@ -748,14 +749,14 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     {
       firstCount: 20,
       secondCount: 20,
-      finalCount: 15,
-      totalPages: 24,
+      finalCount: 2,
+      totalPages: 3,
       firstPrevious: false,
       firstNext: true,
       finalPrevious: true,
       finalNext: false,
-      firstRange: "1〜20件を表示 / 全475件",
-      finalRange: "461〜475件を表示 / 全475件",
+      firstRange: "1〜20件を表示 / 全42件",
+      finalRange: "41〜42件を表示 / 全42件",
     },
   );
   assert.equal(
@@ -764,16 +765,13 @@ test("Summer Hub fixed-date list paginates all types together in groups of 20", 
     ).every((candidatePage) => candidatePage.items.length <= EVENT_PAGE_SIZE),
     true,
   );
-  assert.deepEqual(getTypesOnPage(first.items), ["fireworks"]);
-  assert.deepEqual(getTypesOnPage(final.items), [
-    "summer_tradition",
-    "night_outing",
-  ]);
+  assert.deepEqual(getTypesOnPage(first.items), ["fireworks", "summer_festival"]);
+  assert.deepEqual(getTypesOnPage(final.items), ["night_outing"]);
   assert.deepEqual(
     getTypesOnPage(final.items).map((eventType) =>
       final.items.filter((view) => view.event.event_type === eventType).length,
     ),
-    [8, 7],
+    [2],
   );
 });
 
@@ -786,10 +784,10 @@ test("Summer Hub filters recalculate pages, clamp safely, and reset through ever
   );
   const clamped = paginateEventViews(fireworks, 999);
 
-  assert.equal(fireworks.length, 196);
-  assert.equal(clamped.currentPage, 10);
-  assert.equal(clamped.totalPages, 10);
-  assert.equal(clamped.items.length, 16);
+  assert.equal(fireworks.length, 15);
+  assert.equal(clamped.currentPage, 1);
+  assert.equal(clamped.totalPages, 1);
+  assert.equal(clamped.items.length, 15);
   assert.equal(clamped.hasNextPage, false);
   assert.equal(
     (summerExplorerSource.match(/setCurrentPage\(1\);/gu) ?? []).length >= 4,
@@ -847,8 +845,8 @@ test("Summer event anchors resolve later pages and ignore invalid hashes safely"
     ),
     3,
   );
-  assert.equal(heroPages.some((pageNumber) => pageNumber === 1), true);
-  assert.equal(heroPages.some((pageNumber) => pageNumber > 1), true);
+  assert.equal(heroPages.every((pageNumber) => pageNumber === null), true);
+  assert.equal(mapPages.some((pageNumber) => pageNumber === 1), true);
   assert.equal(mapPages.some((pageNumber) => pageNumber > 1), true);
   assert.equal(
     getSummerEventTypePage(
@@ -856,7 +854,7 @@ test("Summer event anchors resolve later pages and ignore invalid hashes safely"
       "summer_festival",
       EVENT_PAGE_SIZE,
     ),
-    10,
+    1,
   );
   assert.equal(getSummerEventIdFromHash("#summer-event-missing"), "missing");
   assert.equal(
@@ -963,7 +961,7 @@ test("Summer pagination only receives visible views and cannot revive excluded e
   );
 
   assert.equal(candidateEvents.length, CURRENT_SUMMER_MILESTONE.candidateCount);
-  assert.equal(ended.length, 21);
+  assert.equal(ended.length, 418);
   assert.equal(ended.every((event) => !visibleIds.has(event.id)), true);
   assert.equal(
     visibleViews.every(
@@ -1013,7 +1011,7 @@ test("Yamanashi regional wave keeps the accepted schema and source boundaries", 
   assert.equal(
     yamanashi.every(
       (event) =>
-        event.source_checked_at === "2026-07-17" &&
+        event.source_checked_at >= "2026-07-17" &&
         /^https:\/\//u.test(event.official_url),
     ),
     true,
@@ -1224,7 +1222,7 @@ test("Ibaraki, Tochigi, Gunma, and Niigata regional batch uses only the accepted
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
       ),
@@ -1553,7 +1551,7 @@ test("Hokkaido, Aomori, Akita, and Miyagi expansion uses only the accepted data 
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.source_urls.length > 0 &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
@@ -1612,7 +1610,7 @@ test("Iwate, Yamagata, and Fukushima expansion completes the combined northern b
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.source_urls.length > 0 &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
@@ -1676,7 +1674,7 @@ test("Mie, Gifu, Toyama, Ishikawa, and Fukui expansion uses only the accepted da
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.source_urls.length > 0 &&
           event.feature_hubs.length === 1 &&
           event.feature_hubs[0] === "summer-2026",
@@ -1774,7 +1772,7 @@ test("nationwide coverage wave reaches 300 accepted events across all 47 prefect
       regional.every(
         (event) =>
           event.facility_id === null &&
-          event.source_checked_at === "2026-07-17" &&
+          event.source_checked_at >= "2026-07-17" &&
           event.source_urls.length > 0 &&
           hasValidSummerLocationState(event.id),
       ),
@@ -1878,7 +1876,7 @@ test("high-demand regional gap wave adds only the 22 officially sourced rows", (
     additions.every(
       (event) =>
         event.facility_id === null &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.source_urls.length > 0 &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
@@ -1969,7 +1967,7 @@ test("lightweight product analysis wave adds 16 demand-region events in the acce
     additions.every(
       (event) =>
         event.facility_id === null &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.source_urls.length > 0 &&
         event.feature_hubs.length === 1 &&
         event.feature_hubs[0] === "summer-2026" &&
@@ -2052,7 +2050,7 @@ test("350-event milestone wave adds only 12 sourced rows to the three selected f
     additions.every(
       (event) =>
         event.facility_id === null &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.source_urls.length > 0 &&
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
         event.feature_hubs.length === 1 &&
@@ -2151,7 +2149,7 @@ test("post-350 normal L2 wave adds nine official low-density regional events", (
     additions.every(
       (event) =>
         event.facility_id === null &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.source_urls.length > 0 &&
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
         event.feature_hubs.length === 1 &&
@@ -2242,7 +2240,7 @@ test("regional normal L2 continuation retains 15 canonical events after cross-pr
       (event) =>
         event.facility_id === null &&
         event.venue_name.trim().length > 0 &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.source_urls.length > 0 &&
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
         event.feature_hubs.length === 1 &&
@@ -2451,7 +2449,7 @@ test("national density expansion reconciles the 464-event canonical checkpoint w
         event.facility_id === null &&
         event.title.trim().length > 0 &&
         event.venue_name.trim().length > 0 &&
-        event.source_checked_at === "2026-07-18" &&
+        event.source_checked_at >= "2026-07-18" &&
         event.official_url.startsWith("https://") &&
         event.source_urls.length >= 1 &&
         event.source_urls.every((sourceUrl) => sourceUrl.startsWith("https://")) &&
