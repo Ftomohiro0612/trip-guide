@@ -1,0 +1,887 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W35-GROUP-A",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-08-24T05:46:00+09:00",
+  "horizon_end_date": "2026-10-31",
+  "per_region": {
+    "tokyo": {
+      "sources_checked": [
+        {
+          "url": "https://www.my.metro.tokyo.lg.jp/event/?period=1-month",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.shinjuku.lg.jp/event/calendar/calendar.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.gotokyo.org/jp/event-calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.gotokyo.org/jp/event-calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.gotokyo.org/jp/event-calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "osaka": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.osaka.lg.jp/cgi-bin/event_cal_multi/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.osaka.lg.jp/main/event2/calendar_list.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://osaka-info.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://osaka-info.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://osaka-info.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.minpaku.ac.jp/ai1ec_event/69812",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.minpaku.ac.jp/ai1ec_event/69685",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.osakagas.co.jp/showroom/hug/news/__icsFiles/afieldfile/2026/08/23/0829tirashi.pdf",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "hiroshima": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.hiroshima.lg.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.hiroshima.lg.jp/event_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://dive-hiroshima.com/events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://dive-hiroshima.com/events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://dive-hiroshima.com/events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "kyoto": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.kyoto.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.kyoto.lg.jp/main/event1/calendar_list.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://ja.kyoto.travel/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://ja.kyoto.travel/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://ja.kyoto.travel/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "yamanashi": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamanashi.jp/cgi-bin/event_cal_multi/calendar.cgi?type=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.kofu.yamanashi.jp/event/calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/search/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/search/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/search/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://oomurasaki.net/eventdetail?id=105&date=2026-07-02",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "nagano": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.nagano.lg.jp/koho/event_info.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/cgi-bin/event_cal_multi/calendar.cgi?type=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.go-nagano.net/event/?hsLang=ja-jp",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.go-nagano.net/event/?hsLang=ja-jp",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.go-nagano.net/event/?hsLang=ja-jp",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "shizuoka": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.shizuoka.jp/event_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.shizuoka.lg.jp/cgi-bin/event_cal_multi/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://shizuoka.hellonavi.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://shizuoka.hellonavi.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://shizuoka.hellonavi.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "kanagawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.kanagawa.jp/evt/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.yokohama.lg.jp/kanko-bunka/kanko-event/eventannai/calendar/list_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.kanagawa-kankou.or.jp/event/list",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.kanagawa-kankou.or.jp/event/list",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.kanagawa-kankou.or.jp/event/list",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "chiba": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.chiba.lg.jp/event_cal.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.chiba.jp/cgi-bin/event_cal/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://maruchiba.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://maruchiba.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://maruchiba.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "gunma": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.gunma.jp/adv/ba.php?id=16",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.maebashi.gunma.jp/event.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.city.midori.gunma.jp/conodont",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "fukuoka": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.fukuoka.lg.jp/contents/event.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.fukuoka.lg.jp/events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.ktqmm.jp/kikaku_info/144177",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "kagawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.kagawa.lg.jp/cgi-bin/event_cal_multi/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.takamatsu.kagawa.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.my-kagawa.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.my-kagawa.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.my-kagawa.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "ishikawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.ishikawa.lg.jp/cgi-bin/event_cal_multi/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www4.city.kanazawa.lg.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.hot-ishikawa.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.hot-ishikawa.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.hot-ishikawa.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "ehime": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.ehime.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.matsuyama.ehime.jp/kanko/event/calendar/list_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.iyokannet.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.iyokannet.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.iyokannet.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "fukui": {
+      "sources_checked": [
+        {
+          "url": "https://www2.pref.fukui.lg.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.fukui.lg.jp/kankou/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.fuku-e.com/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.fuku-e.com/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.fuku-e.com/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "ibaraki": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.ibaraki.jp/cgi-bin/event_cal/calendar.cgi",
+          "status": 404,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.mito.lg.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.ibarakiguide.jp/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.ibarakiguide.jp/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.ibarakiguide.jp/event.php",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.i-step.org/tour/news/news_i1075_u1.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "prefecture_official",
+          "reason": "The Ibaraki prefectural site did not publish a functioning comprehensive prefecture event-calendar surface at the checked URL; the fetch returned 404, so the successful Mito municipal and official tourism-board calendars were used for the regional floor."
+        }
+      ]
+    },
+    "nara": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.nara.jp/cgi-bin/event_cal_multi/calendar.cgi",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.nara.lg.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://yamatoji.nara-kankou.or.jp/003events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://yamatoji.nara-kankou.or.jp/003events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://yamatoji.nara-kankou.or.jp/003events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 2,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 2,
+      "stale_false": 0
+    },
+    "yamaguchi": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamaguchi.lg.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.yamaguchi.lg.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://yamaguchi-tourism.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://yamaguchi-tourism.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://yamaguchi-tourism.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://hagimuseum.jp/event/2026summer/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "okinawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.okinawa.lg.jp/event_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.naha.okinawa.jp/event_calendar.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.okinawastory.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.okinawastory.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.okinawastory.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.jamstec.go.jp/godac/j/godac/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "miyazaki": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.miyazaki.lg.jp/cgi-bin/event_cal/calendar.cgi?type=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.miyazaki.miyazaki.jp/culture/events/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.kanko-miyazaki.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.kanko-miyazaki.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.kanko-miyazaki.jp/event",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "hokkaido": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.hokkaido.lg.jp/category/d005/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "prefecture_official"
+        },
+        {
+          "url": "https://www.city.sapporo.jp/cgi-bin/event_cal/cal_month.cgi?event_category=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.visit-hokkaido.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "tourism_board"
+        },
+        {
+          "url": "https://www.visit-hokkaido.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "seasonal_new_arrival"
+        },
+        {
+          "url": "https://www.visit-hokkaido.jp/event/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:43:00+09:00",
+          "source_type": "festival_fireworks"
+        }
+      ],
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    }
+  }
+}

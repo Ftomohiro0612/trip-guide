@@ -1,0 +1,995 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W35-GROUP-A",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-08-24T05:46:00+09:00",
+  "horizon_end_date": "2026-10-31",
+  "per_region": {
+    "tokyo": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0313/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0313/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0313/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0313/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=13&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=13&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 2,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 2,
+      "stale_false": 0
+    },
+    "osaka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0727/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0727/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0727/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0727/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=27&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=27&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "hiroshima": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0834/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0834/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0834/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0834/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=34&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=34&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "kyoto": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0726/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0726/2.html",
+          "status": 404,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0726/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0726/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=26&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=26&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "yamanashi": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0419/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0419/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0419/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0419/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=19&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=19&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 1,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "nagano": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0420/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0420/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0420/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0420/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=20&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=20&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "shizuoka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0622/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0622/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0622/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0622/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=22&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=22&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "kanagawa": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0314/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0314/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0314/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0314/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=14&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=14&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "chiba": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0312/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0312/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0312/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0312/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=12&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=12&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "gunma": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0310/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0310/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0310/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0310/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=10&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=10&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 1,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "fukuoka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1040/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1040/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1040/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1040/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=40&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=40&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 1,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "kagawa": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0937/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0937/2.html",
+          "status": 404,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0937/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0937/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=37&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=37&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "ishikawa": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0517/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0517/2.html",
+          "status": 404,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0517/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0517/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=17&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=17&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 1
+    },
+    "ehime": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0938/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0938/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0938/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0938/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=38&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=38&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 1,
+      "stale_false": 0
+    },
+    "fukui": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0518/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0518/2.html",
+          "status": 404,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0518/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0518/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=18&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=18&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "ibaraki": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0308/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0308/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0308/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0308/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=8&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=8&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "nara": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0729/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0729/2.html",
+          "status": 404,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0729/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0729/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=29&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=29&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "yamaguchi": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0835/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0835/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0835/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0835/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=35&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=35&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 1,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "okinawa": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1047/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1047/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1047/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1047/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=47&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=47&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 1,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "miyazaki": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1045/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar1045/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1045/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar1045/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=45&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=45&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 0,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 0
+    },
+    "hokkaido": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0101/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://hanabi.walkerplus.com/list/ar0101/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0101/",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/ar0101/2.html",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=1&page=1",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=1&page=2",
+          "status": 200,
+          "checked_at": "2026-08-24T05:45:30+09:00",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 6,
+      "paging_stop_reason": "horizon_reached",
+      "candidates_found": 1,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 1
+    }
+  }
+}
