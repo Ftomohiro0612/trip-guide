@@ -222,11 +222,6 @@ export default function VisitPhotoGallery({
                       </button>
                     )}
                   </div>
-                  {photo.takenOn && (
-                    <p className="truncate px-2 py-1.5 text-[11px] text-slate-500">
-                      撮影日 {photo.takenOn}
-                    </p>
-                  )}
                 </div>
               );
             })}

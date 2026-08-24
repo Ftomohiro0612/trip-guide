@@ -990,11 +990,6 @@ const VisitPhotoUploader = forwardRef<
                   ×
                 </button>
               </div>
-              <div className="min-h-8 px-2 py-1.5">
-                <p className="truncate text-[11px] text-slate-500">
-                  {photo.takenOn ? `撮影日 ${photo.takenOn}` : "撮影日なし"}
-                </p>
-              </div>
             </div>
           ))}
         </div>
