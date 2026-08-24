@@ -119,7 +119,15 @@ export default async function ChildrenPage() {
                     </p>
                   </div>
                 </div>
-                <DeleteButton childId={child.id} nickname={child.nickname} />
+                <div className="flex shrink-0 items-center gap-1">
+                  <Link
+                    href={`/mypage/children/${child.id}`}
+                    className="inline-flex min-h-9 items-center rounded-lg bg-amber-50 px-2.5 text-xs font-bold text-amber-700 ring-1 ring-amber-100 transition-colors hover:bg-amber-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
+                  >
+                    ページを見る
+                  </Link>
+                  <DeleteButton childId={child.id} nickname={child.nickname} />
+                </div>
               </div>
               <ChildAvatarUploader
                 childId={child.id}

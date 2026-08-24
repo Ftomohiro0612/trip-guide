@@ -1,11 +1,12 @@
 import Image from "next/image";
 
-type Size = "sm" | "md" | "lg";
+type Size = "sm" | "md" | "lg" | "xl";
 
 const sizeClasses: Record<Size, string> = {
   sm: "h-7 w-7 text-xs",
   md: "h-10 w-10 text-sm",
   lg: "h-16 w-16 text-xl",
+  xl: "h-28 w-28 text-4xl sm:h-32 sm:w-32",
 };
 
 const colors = [
@@ -48,7 +49,15 @@ export default function ChildAvatar({
           src={avatarUrl}
           alt={`${nickname}の写真`}
           fill
-          sizes={size === "lg" ? "64px" : size === "md" ? "40px" : "28px"}
+          sizes={
+            size === "xl"
+              ? "(min-width: 640px) 128px, 112px"
+              : size === "lg"
+                ? "64px"
+                : size === "md"
+                  ? "40px"
+                  : "28px"
+          }
           className="object-cover"
           unoptimized
         />
