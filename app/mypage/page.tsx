@@ -11,21 +11,21 @@ import MonthlyDiffCard from "@/components/MonthlyDiffCard";
 import MypageRecommendationSection from "@/components/MypageRecommendationSection";
 import MyPlacesEventCard from "@/components/MyPlacesEventCard";
 import VisitedPlacesMapClient from "@/components/VisitedPlacesMapClient";
-import facilitiesJson from "@/data/facilities_data.json";
 import {
   PASS_BADGE_CLASS,
   formatPassDateJa,
   passStatus,
 } from "@/lib/annual-pass";
-import { normalizeChildLikeCategory } from "@/lib/child-likes";
 import {
-  buildFrequentInterestTagsByChild,
-  buildVisitCategoryCountsByChild,
-  filterChildLikeVisits,
   type ChildInsightVisit,
   type FrequentInterestTag,
-  type VisitCategoryCount,
 } from "@/lib/child-insights";
+import {
+  buildChildInsightSummaries,
+  childInsightCategoryForSlug,
+  compareChildInsightCategoryEntries,
+  type ChildInsightSummary,
+} from "@/lib/child-insight-summaries";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { getMyPlacesEvents } from "@/lib/my-places-events";
 import {
@@ -33,10 +33,8 @@ import {
   type MypageRecommendations,
 } from "@/lib/mypage-recommendations";
 import {
-  buildChildStats,
   buildFamilyStats,
   recentMonthKeysJst,
-  type ChildStats,
 } from "@/lib/mypage-stats";
 import { createClient } from "@/lib/supabase/server";
 import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
@@ -75,15 +73,6 @@ type VisitStat = VisitEventSnapshot & {
   place_longitude?: number | null;
 };
 
-type ChildInsightSummary = {
-  child: Child;
-  anchorId: string;
-  visitCount: number;
-  stage: ChildStats["stage"];
-  visitCategories: VisitCategoryCount[];
-  frequentInterests: FrequentInterestTag[];
-};
-
 type AchievementStats = {
   wishlistCount: number;
   revisitCount: number;
@@ -112,23 +101,8 @@ type RecommendationSettingsRow = {
   prefecture_ids: unknown;
 };
 
-type FacilityCategorySource = { slug: string; category: string };
-
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
-}
-
-function isFacilityCategorySource(value: unknown): value is FacilityCategorySource {
-  return (
-    isRecord(value) &&
-    typeof value.slug === "string" &&
-    typeof value.category === "string"
-  );
-}
-
-function getFacilityCategorySources(value: unknown): FacilityCategorySource[] {
-  if (!isRecord(value) || !Array.isArray(value.facilities)) return [];
-  return value.facilities.filter(isFacilityCategorySource);
 }
 
 function isVisitStat(value: unknown): value is VisitStat {
@@ -161,25 +135,6 @@ function isVisitPhotoThumbRow(value: unknown): value is VisitPhotoThumbRow {
   );
 }
 
-const slugToCategory = new Map(
-  getFacilityCategorySources(facilitiesJson).map((f) => [f.slug, f.category]),
-);
-
-function categoryForSlug(slug: string): string {
-  if (slug.startsWith("manual-")) return "その他";
-  return slugToCategory.get(slug) ?? "その他";
-}
-
-function compareCategoryEntries(
-  a: { category: string; count: number },
-  b: { category: string; count: number },
-): number {
-  const aOther = a.category === "その他";
-  const bOther = b.category === "その他";
-  if (aOther !== bOther) return aOther ? 1 : -1;
-  return b.count - a.count || a.category.localeCompare(b.category, "ja");
-}
-
 function calcAge(birthYear: number, birthMonth: number): number {
   const today = new Date();
   let age = today.getFullYear() - birthYear;
@@ -190,50 +145,6 @@ function calcAge(birthYear: number, birthMonth: number): number {
     age -= 1;
   }
   return age;
-}
-
-function buildChildInsightSummaries(
-  children: Child[],
-  visits: VisitStat[],
-  childVisits: ChildInsightVisit[],
-): ChildInsightSummary[] {
-  const eligibleChildVisits = filterChildLikeVisits(childVisits);
-  const categoryByVisitId = new Map(
-    visits.map((visit) => [
-      visit.id,
-      normalizeChildLikeCategory(categoryForSlug(visit.facility_slug)),
-    ]),
-  );
-  const visitCategoriesByChild = buildVisitCategoryCountsByChild(
-    childVisits,
-    categoryByVisitId,
-  );
-
-  const statsByChild = new Map(
-    buildChildStats(children.map((child) => child.id), eligibleChildVisits).map(
-      (stats) => [stats.childId, stats],
-    ),
-  );
-  const frequentInterestsByChild =
-    buildFrequentInterestTagsByChild(eligibleChildVisits);
-
-  return children.map((child, index) => {
-    const stats = statsByChild.get(child.id) ?? {
-      childId: child.id,
-      visitCount: 0,
-      stage: "none" as const,
-    };
-    return {
-      child,
-      anchorId: `child-likes-${index + 1}`,
-      visitCount: stats.visitCount,
-      stage: stats.stage,
-      visitCategories: (visitCategoriesByChild.get(child.id) ?? []).sort(
-        compareCategoryEntries,
-      ),
-      frequentInterests: frequentInterestsByChild.get(child.id) ?? [],
-    };
-  });
 }
 
 function FrequentInterests({
@@ -383,7 +294,7 @@ function buildMonthlyData(visits: VisitStat[], now: Date): MonthData[] {
   for (const visit of visits) {
     if (!visit.visited_on) continue;
     const month = visit.visited_on.slice(0, 7);
-    const category = categoryForSlug(visit.facility_slug);
+    const category = childInsightCategoryForSlug(visit.facility_slug);
     const categoryCounts = visitsByMonth.get(month) ?? new Map<string, number>();
     categoryCounts.set(category, (categoryCounts.get(category) ?? 0) + 1);
     visitsByMonth.set(month, categoryCounts);
@@ -394,7 +305,7 @@ function buildMonthlyData(visits: VisitStat[], now: Date): MonthData[] {
       (visitsByMonth.get(month) ?? new Map<string, number>()).entries(),
     )
       .map(([category, count]) => ({ category, count }))
-      .sort(compareCategoryEntries);
+      .sort(compareChildInsightCategoryEntries);
     return {
       month,
       label: `${Number(month.slice(5, 7))}月`,
@@ -936,9 +847,17 @@ export default async function MypagePage() {
                       />
                       <p className="truncate text-sm font-bold text-slate-900">{summary.child.nickname}</p>
                     </div>
-                    <Link href={`/mypage/visits?child=${childIndex + 1}`} className="inline-flex min-h-9 shrink-0 items-center rounded-lg px-2 text-xs font-bold text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
-                      記録を見る ›
-                    </Link>
+                    <div className="flex shrink-0 flex-col items-end sm:flex-row sm:items-center">
+                      <Link
+                        href={`/mypage/children/${summary.child.id}`}
+                        className="inline-flex min-h-9 items-center rounded-lg px-2 text-xs font-bold text-amber-700 hover:bg-amber-50 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-amber-500 focus-visible:ring-offset-2"
+                      >
+                        {summary.child.nickname}のページ ›
+                      </Link>
+                      <Link href={`/mypage/visits?child=${childIndex + 1}`} className="inline-flex min-h-9 items-center rounded-lg px-2 text-xs font-bold text-brand hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand focus-visible:ring-offset-2">
+                        記録を見る ›
+                      </Link>
+                    </div>
                   </div>
                   <ChildInsightsContent
                     summary={summary}
