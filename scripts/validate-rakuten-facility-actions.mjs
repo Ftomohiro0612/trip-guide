@@ -31,7 +31,7 @@ assert.equal(
 );
 assert.equal(
   registry.coverage?.facility_canon_sha256,
-  createHash("sha256").update(facilityDataRaw).digest("hex"),
+  createHash("sha256").update(JSON.stringify(facilityData)).digest("hex"),
   "facility canon changed after the Rakuten coverage audit",
 );
 assert.match(
