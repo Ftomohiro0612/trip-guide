@@ -1,13 +1,15 @@
 import assert from "node:assert/strict";
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
 const registry = JSON.parse(
   await readFile(new URL("data/rakuten_facility_actions.json", root), "utf8"),
 );
-const facilityData = JSON.parse(
-  await readFile(new URL("data/facilities_data.json", root), "utf8"),
+const facilityDataRaw = await readFile(
+  new URL("data/facilities_data.json", root),
 );
+const facilityData = JSON.parse(facilityDataRaw);
 
 const facilitiesBySlug = new Map(
   facilityData.facilities.map((facility) => [facility.slug, facility]),
@@ -22,6 +24,27 @@ const allowedActionTypes = new Set([
 
 assert.equal(registry.schema_version, 1, "unsupported registry schema");
 assert.ok(Array.isArray(registry.offers), "offers must be an array");
+assert.equal(
+  registry.coverage?.facility_canon_count,
+  facilityData.facilities.length,
+  "coverage does not include the current facility canon",
+);
+assert.equal(
+  registry.coverage?.facility_canon_sha256,
+  createHash("sha256").update(facilityDataRaw).digest("hex"),
+  "facility canon changed after the Rakuten coverage audit",
+);
+assert.match(
+  registry.coverage?.audited_at,
+  /^\d{4}-\d{2}-\d{2}$/,
+  "invalid coverage audit date",
+);
+assert.ok(
+  registry.coverage?.rakuten_japan_product_count > 0 &&
+    registry.coverage?.candidate_facility_count > 0 &&
+    registry.coverage?.reviewed_unique_product_count > 0,
+  "coverage evidence is incomplete",
+);
 
 for (const offer of registry.offers) {
   assert.ok(
@@ -48,8 +71,13 @@ for (const offer of registry.offers) {
   );
   assert.match(
     offer.label,
-    /^楽天で.+(見る|予約する|購入する)$/,
+    /^楽天(?:で|ポイント|限定).+(見る|探す|予約する|購入する)$/,
     `reader-facing label is unclear: ${offer.facility_slug}`,
+  );
+  assert.doesNotMatch(
+    offer.label,
+    /最安|公式より(?:安|お得)/,
+    `unsubstantiated price comparison: ${offer.facility_slug}`,
   );
   assert.match(
     offer.verified_at,
