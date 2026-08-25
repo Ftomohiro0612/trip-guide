@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run events:validate && npm run events:regular:validate && next build",
+    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
@@ -28,6 +28,7 @@
     "facilities:pagination:test": "node --test scripts/test-facility-pagination.mjs",
     "facilities:q1:validate": "node scripts/validate-facility-quality-q1.mjs",
     "facilities:c3:validate": "node scripts/validate-c3-rewrites.mjs",
+    "facilities:rakuten:validate": "node scripts/validate-rakuten-facility-actions.mjs",
     "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
     "geocode": "node --env-file=.env.local scripts/geocode.ts",
     "fetch-images:check": "node --env-file=.env.local scripts/fetch-images.ts --dry-run",

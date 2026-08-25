@@ -13,6 +13,7 @@ import FacilityAnnualPass from "@/components/FacilityAnnualPass";
 import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import FacilityPhotoSearchLink from "@/components/FacilityPhotoSearchLink";
+import FacilityRakutenAction from "@/components/FacilityRakutenAction";
 import ShareButtons from "@/components/ShareButtons";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import {
@@ -28,6 +29,7 @@ import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { getBuildDateString } from "@/lib/events";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
+import { getRakutenFacilityAction } from "@/lib/rakuten-facility-actions";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import type { Facility, RecommendedForTag } from "@/types/facility";
 
@@ -320,7 +322,7 @@ export default async function FacilityDetailPage({ params }: Props) {
 
       <div className="mx-auto grid max-w-5xl gap-8 px-4 py-8 sm:py-12 lg:grid-cols-[1fr_320px]">
         <div className="space-y-5 lg:hidden">
-          <FacilityCtaGroup facility={facility} />
+          <FacilityCtaGroup facility={facility} today={today} />
           <QuickCheckCard facility={facility} rain={rain} />
         </div>
 
@@ -556,7 +558,7 @@ export default async function FacilityDetailPage({ params }: Props) {
         </article>
 
         <aside className="hidden space-y-5 lg:block">
-          <FacilityCtaGroup facility={facility} />
+          <FacilityCtaGroup facility={facility} today={today} />
           <QuickCheckCard facility={facility} rain={rain} />
           <FacilityNotice />
         </aside>
@@ -578,7 +580,15 @@ export default async function FacilityDetailPage({ params }: Props) {
   );
 }
 
-function FacilityCtaGroup({ facility }: { facility: Facility }) {
+function FacilityCtaGroup({
+  facility,
+  today,
+}: {
+  facility: Facility;
+  today: string;
+}) {
+  const rakutenAction = getRakutenFacilityAction(facility, today);
+
   return (
     <section className="space-y-4 rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
       <div>
@@ -592,6 +602,7 @@ function FacilityCtaGroup({ facility }: { facility: Facility }) {
         facilitySlug={facility.slug}
         facilityName={facility.name}
       />
+      {rakutenAction && <FacilityRakutenAction action={rakutenAction} />}
       {facility.image ? (
         <FacilityPhotoSearchLink
           facilityName={facility.name}
