@@ -1,13 +1,15 @@
 {
   "schema_version": 1,
   "coverage": {
-    "audited_at": "2026-08-25",
-    "facility_canon_count": 4704,
-    "facility_canon_sha256": "7e73da15db863065b126b9c812e3fb00d8217ee24667db31971bafc005443b0f",
+    "audited_at": "2026-08-26",
+    "facility_canon_count": 4740,
+    "facility_canon_sha256": "24695a397f2acab7d1d45753a1834d1de29885cf2a4b2a6391e6ff6d81ea2eb9",
     "rakuten_japan_product_count": 17262,
     "candidate_facility_count": 227,
     "candidate_product_pair_count": 450,
-    "reviewed_unique_product_count": 431
+    "reviewed_unique_product_count": 431,
+    "reverse_discovery_identity_count": 846,
+    "reverse_discovery_add_count": 36
   },
   "offers": [
     {
@@ -1777,6 +1779,510 @@
         "rakuten_title": "大分 ハーモニーランド 【デイパスポートチケット】予約",
         "same_facility_basis": "施設名と施設所在地が一致",
         "availability_basis": "公開中の商品詳細で利用プラン、販売価格、予約導線を確認"
+      }
+    },
+    {
+      "facility_id": 6979,
+      "facility_slug": "facility-6979",
+      "facility_name": "VS PARK ららぽーと愛知東郷店",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61975",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★愛知 夜遊びパック_VS PARK（ららぽーと愛知東郷店） Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6980,
+      "facility_slug": "facility-6980",
+      "facility_name": "うんこミュージアム NAGOYA",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/58119",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "うんこミュージアムNAGOYA 入場Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6981,
+      "facility_slug": "facility-6981",
+      "facility_name": "タカラトミープラネット ららぽーと安城",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61792",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "愛知 タカラトミープラネットららぽーと安城 入場チケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6982,
+      "facility_slug": "facility-6982",
+      "facility_name": "うんこミュージアム OKINAWA",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/60201",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "【沖縄】うんこミュージアムOKINAWA 入場Eチケット 予約＜イオンモール沖縄ライカム内＞",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6983,
+      "facility_slug": "facility-6983",
+      "facility_name": "CAVE OKINAWA",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/25696",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "沖縄県 うるま市 CAVE OKINAWA ケイブ オキナワ 入場チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6984,
+      "facility_slug": "facility-6984",
+      "facility_name": "沖縄金魚ミュージアム",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/56927",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "沖縄金魚ミュージアム 入場Eチケット 予約 ＜幼児無料＞",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6985,
+      "facility_slug": "facility-6985",
+      "facility_name": "釣って見つけるぼうけんの国 沖縄",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/47316",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "釣って見つけるぼうけんの国 沖縄 入場チケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6986,
+      "facility_slug": "facility-6986",
+      "facility_name": "飛騨高山レトロミュージアム",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/43256",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "【100円引き】岐阜 飛騨高山レトロミュージアム入館Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6987,
+      "facility_slug": "facility-6987",
+      "facility_name": "高山昭和館",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/40190",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "岐阜 高山昭和館 入場Eチケット（現地販売価格より100円引き）",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6988,
+      "facility_slug": "facility-6988",
+      "facility_name": "飛騨高山まつりの森",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/25808",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "飛騨高山 まつりの森 ミュージアム・世界の昆虫館 Eチケット（現地販売価格より 50円～100円引き）",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6989,
+      "facility_slug": "facility-6989",
+      "facility_name": "新穂高ロープウェイ",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/34937",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "岐阜 新穂高ロープウェイ 往復Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6990,
+      "facility_slug": "facility-6990",
+      "facility_name": "VS PARK イオンモール新利府 南館店",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61979",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★宮城 夜遊びパック_VS PARK（イオンモール新利府 南館店） Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6991,
+      "facility_slug": "facility-6991",
+      "facility_name": "ピュアハートキッズランド イオンモール名取",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62424",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ イオンモール名取店 遊び放題チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6992,
+      "facility_slug": "facility-6992",
+      "facility_name": "仙台うみの杜水族館",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/22076",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "仙台うみの杜水族館 入場Eチケット 予約＜楽天トラベル観光体験特典／ドリンク1杯付き！＞",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6993,
+      "facility_slug": "facility-6993",
+      "facility_name": "VS PARK イオンレイクタウンmori店",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61982",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★埼玉 夜遊びチケット_VS PARK（イオンレイクタウンmori店） Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6994,
+      "facility_slug": "facility-6994",
+      "facility_name": "トランポランド SAITAMA",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/25609",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "埼玉 新座市 トランポリン・パーク 　トランポランド （trAmpoland SAITAMA）Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6995,
+      "facility_slug": "facility-6995",
+      "facility_name": "トンデミ幕張",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62030",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★千葉トンデミ幕張 120分利用Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6996,
+      "facility_slug": "facility-6996",
+      "facility_name": "トンデミ平和島",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62013",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★東京 トンデミ平和島 グループEチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6997,
+      "facility_slug": "facility-6997",
+      "facility_name": "リトルプラネット ららぽーとTOKYO-BAY",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61791",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "千葉 リトルプラネット ららぽーとTOKYO-BAY 入場Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6998,
+      "facility_slug": "facility-6998",
+      "facility_name": "ピュアハートキッズランド ポンテポルタ千住",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62426",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ ポンテポルタ千住店 遊び放題チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 6999,
+      "facility_slug": "facility-6999",
+      "facility_name": "スパリゾートハワイアンズ",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/24490",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "スパリゾートハワイアンズ　Eチケット 前売り券 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7000,
+      "facility_slug": "facility-7000",
+      "facility_name": "北の大地の水族館（山の水族館）",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61941",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "北海道 北の大地の水族館 -山の水族館- 入館Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7001,
+      "facility_slug": "facility-7001",
+      "facility_name": "昭和新山熊牧場",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/43832",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "北海道 昭和新山クマ牧場 入場チケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7002,
+      "facility_slug": "facility-7002",
+      "facility_name": "小樽天狗山ロープウエイ",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/46467",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "北海道 小樽 天狗山ロープウエイ 乗車Eチケット 予約（即日発券）",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7003,
+      "facility_slug": "facility-7003",
+      "facility_name": "VS PARK 横浜ワールドポーターズ店",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/61990",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★神奈川 夜遊びチケット_VS PARK（VS PARK 横浜ワールドポーターズ店） Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7004,
+      "facility_slug": "facility-7004",
+      "facility_name": "VS PARK WITH G ららぽーと福岡店",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62002",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★福岡夜遊びパック_VS PARK（VS PARK WITH G ららぽーと福岡店） Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7005,
+      "facility_slug": "facility-7005",
+      "facility_name": "トンデミ横須賀",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62054",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "★神奈川トンデミ横須賀 120分利用Eチケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7006,
+      "facility_slug": "facility-7006",
+      "facility_name": "うんこミュージアム TOKYO",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62654",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "うんこミュージアムTOKYO　WEB入場チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7007,
+      "facility_slug": "facility-7007",
+      "facility_name": "ニデック京都タワー展望室",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/22192",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "京都タワー 展望室 入場券",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7008,
+      "facility_slug": "facility-7008",
+      "facility_name": "箱根園水族館",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/28701",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "【最大200円OFF】神奈川 箱根園水族館 Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7009,
+      "facility_slug": "facility-7009",
+      "facility_name": "グラバー園",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/46929",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "長崎 グラバー園 Eチケット予約＜幕末から明治の歴史を感じる洋風建築＞",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7010,
+      "facility_slug": "facility-7010",
+      "facility_name": "九十九島動植物園 森きらら",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/25381",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "長崎 九十九島動植物園森きらら 入園Eチケット 予約",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7011,
+      "facility_slug": "facility-7011",
+      "facility_name": "ピュアハートキッズランド ポートウォークみなと",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62441",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ ポートウォークみなと店 遊び放題チケット＜子供遊び場・親子で1日遊べる室内遊園地＞",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7012,
+      "facility_slug": "facility-7012",
+      "facility_name": "ピュアハートキッズランド イオンモール大垣",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62443",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ イオンモール大垣店 遊び放題チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7013,
+      "facility_slug": "facility-7013",
+      "facility_name": "ピュアハートキッズランド 入間サイオス",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62432",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ 入間サイオス店 遊び放題チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
+      }
+    },
+    {
+      "facility_id": 7014,
+      "facility_slug": "facility-7014",
+      "facility_name": "ピュアハートキッズランド 神戸ハーバーランドumie",
+      "action_type": "ticket",
+      "label": "楽天でチケットを探す",
+      "url": "https://experiences.travel.rakuten.co.jp/experiences/62454",
+      "verified_at": "2026-08-26",
+      "verification": {
+        "rakuten_title": "ピュアキッズ 神戸ハーバーランドumie店 遊び放題チケット",
+        "same_facility_basis": "楽天商品詳細の利用施設identityと公式一次情報の施設名・所在地が一致",
+        "availability_basis": "公開中の商品詳細で販売導線を確認"
       }
     }
   ]
