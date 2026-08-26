@@ -4,6 +4,7 @@ import Script from "next/script";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
+import ValueCommerceLinkSwitch from "@/components/ValueCommerceLinkSwitch";
 import { WishlistProvider } from "@/components/WishlistProvider";
 import {
   getFeatureHubVisibilityScript,
@@ -112,6 +113,7 @@ export default function RootLayout({
           <Footer />
         </WishlistProvider>
         <Analytics />
+        <ValueCommerceLinkSwitch />
         <Script
           id="summer-2026-runtime-visibility"
           strategy="beforeInteractive"

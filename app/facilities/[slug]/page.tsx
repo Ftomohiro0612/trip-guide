@@ -14,6 +14,7 @@ import FacilityMyRecord from "@/components/FacilityMyRecord";
 import FacilityPublicRecordsEmptyCard from "@/components/FacilityPublicRecordsEmptyCard";
 import FacilityPhotoSearchLink from "@/components/FacilityPhotoSearchLink";
 import FacilityRakutenAction from "@/components/FacilityRakutenAction";
+import FacilityAsoviewAction from "@/components/FacilityAsoviewAction";
 import ShareButtons from "@/components/ShareButtons";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import {
@@ -30,6 +31,7 @@ import { getBuildDateString } from "@/lib/events";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
 import { getRakutenFacilityAction } from "@/lib/rakuten-facility-actions";
+import { getAsoviewFacilityAction } from "@/lib/asoview-facility-actions";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import type { Facility, RecommendedForTag } from "@/types/facility";
 
@@ -588,6 +590,7 @@ function FacilityCtaGroup({
   today: string;
 }) {
   const rakutenAction = getRakutenFacilityAction(facility, today);
+  const asoviewAction = getAsoviewFacilityAction(facility, today);
 
   return (
     <section className="space-y-4 rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100">
@@ -603,6 +606,7 @@ function FacilityCtaGroup({
         facilityName={facility.name}
       />
       {rakutenAction && <FacilityRakutenAction action={rakutenAction} />}
+      {asoviewAction && <FacilityAsoviewAction action={asoviewAction} />}
       {facility.image ? (
         <FacilityPhotoSearchLink
           facilityName={facility.name}
