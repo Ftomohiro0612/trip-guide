@@ -41,7 +41,8 @@ export default function TrackedOutboundLink({
     | "facility_sidebar"
     | "events_index_affiliate"
     | "events_prefecture_affiliate"
-    | "events_summer_affiliate";
+    | "events_summer_affiliate"
+    | "facility_asoview_affiliate";
   analyticsEvent?: AnalyticsEvent;
   partner?: string;
   campaignId?: string;

@@ -160,6 +160,9 @@ export default function PrivacyPage() {
           <li>ホスティング: Vercel</li>
           <li>アクセス解析: Google Analytics</li>
           <li>認証: Google（Google ログイン利用時）</li>
+          <li>
+            アフィリエイト計測: バリューコマース LinkSwitch（アソビュー！への紹介リンク）
+          </li>
         </ul>
       </section>
 
@@ -169,6 +172,10 @@ export default function PrivacyPage() {
           <li>
             本サービスは、ログイン状態の維持・利用状況の分析（Google
             Analytics）のために Cookie 等を利用します。
+          </li>
+          <li>
+            アソビュー！へのPRリンクでは、紹介元の判定・成果計測のため、バリューコマースが Cookie
+            等を利用する場合があります。
           </li>
           <li>
             Cookie
