@@ -490,8 +490,8 @@ trip-guide.net で運営する子供向け遊び場検索サイトを作りた�
 ## 連絡先・運営
 
 - ドメイン: trip-guide.net
-- 運営: FIC（FIC投資研究所）
-- 既存サイト: fic-investment.biz
+- 運営: 合同会社F&IC
+- 問い合わせ先: mail@memorips.com
 
 ---
 

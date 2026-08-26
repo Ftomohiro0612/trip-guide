@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SERVICE } from "@/lib/config";
 import {
   getFacilitiesByPrefecture,
   prefectures,
@@ -75,7 +76,7 @@ export default function AboutPage() {
           運営
         </h2>
         <p className="text-slate-700 leading-relaxed">
-          FIC（FIC投資研究所）が運営しています。
+          {SERVICE.operatorName}が運営しています。
           施設情報の追加・修正、感想などのフィードバックを歓迎しています。
         </p>
 

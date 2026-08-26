@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import LegalDocument from "@/components/LegalDocument";
+import { SERVICE } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "プライバシーポリシー",
@@ -39,12 +40,8 @@ export default function PrivacyPage() {
         <h2 id="operator" className={h2Class}>1. 事業者情報</h2>
         <ul className={listClass}>
           <li>サービス名: メモリップ（trip-guide.net 上で提供）</li>
-          <li>運営者: 合同会社アルゴリズム</li>
-          <li>
-            所在地: 〒220-0072 神奈川県横浜市西区浅間町1丁目4番3号
-            ウィザードビル402
-          </li>
-          <li>問い合わせ先: mail@memorips.com</li>
+          <li>運営者: {SERVICE.operatorName}</li>
+          <li>問い合わせ先: {SERVICE.supportEmail}</li>
         </ul>
       </section>
 
