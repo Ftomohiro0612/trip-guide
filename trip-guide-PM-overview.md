@@ -15,7 +15,7 @@
 | GitHub | https://github.com/Ftomohiro0612/trip-guide（アカウント: Ftomohiro0612） |
 | ローカルパス | `C:\Users\tomo-\projects\trip-guide` |
 | DNS管理 | Xserver（Aレコードのみ Vercel に向け変更。MX/NS/SPF/DKIM は Xserver 維持） |
-| 運営 | FIC（FIC投資研究所 / info@fic-investment.biz） |
+| 運営 | 合同会社F&IC（mail@memorips.com） |
 
 ---
 

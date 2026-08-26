@@ -28,7 +28,7 @@ const PREFECTURE_FILTER = process.argv
   ?.split("=", 2)[1];
 const RATE_LIMIT_MS = 150;
 
-const UA = "trip-guide.net image fetcher (info@fic-investment.biz)";
+const UA = "trip-guide.net image fetcher (mail@memorips.com)";
 
 interface WikiQueryPage {
   pageid: number;

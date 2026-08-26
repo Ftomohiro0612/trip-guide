@@ -228,7 +228,7 @@ export const siteConfig = {
   name: process.env.NEXT_PUBLIC_SITE_NAME ?? 'Trip Guide',
   tagline: process.env.NEXT_PUBLIC_SITE_TAGLINE ?? '子どもの"好き"が見える、おでかけ記録サービス',
   url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://trip-guide.net',
-  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? 'info@fic-investment.biz',
+  supportEmail: process.env.NEXT_PUBLIC_SUPPORT_EMAIL ?? 'mail@memorips.com',
   ogImage: '/og-default.png',
   twitterHandle: '',
 }

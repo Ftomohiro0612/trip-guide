@@ -7,7 +7,8 @@ export const SERVICE = {
   baseUrl: process.env.NEXT_PUBLIC_SITE_URL ?? "https://trip-guide.net",
   mypageBase: "/mypage",
   authBase: "/auth",
-  supportEmail: "info@fic-investment.biz",
+  operatorName: "合同会社F&IC",
+  supportEmail: "mail@memorips.com",
 } as const;
 
 // 写真 Phase C 完了までは本番ユーザーにアップロードUIを出さない。

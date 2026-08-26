@@ -51,7 +51,7 @@ const PREFECTURE_CENTROIDS = {
 };
 
 const USER_AGENT =
-  "trip-guide.net geocoder (contact: info@fic-investment.biz)";
+  "trip-guide.net geocoder (contact: mail@memorips.com)";
 const SLEEP_MS = 1100; // Respect Nominatim 1 req/sec policy
 
 function sleep(ms) {
