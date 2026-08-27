@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build",
+    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
@@ -29,6 +29,7 @@
     "facilities:q1:validate": "node scripts/validate-facility-quality-q1.mjs",
     "facilities:c3:validate": "node scripts/validate-c3-rewrites.mjs",
     "facilities:rakuten:validate": "node scripts/validate-rakuten-facility-actions.mjs",
+    "facilities:rakuten:child-use-policy:validate": "node scripts/validate-rakuten-child-use-policy.mjs",
     "facilities:asoview:validate": "node scripts/validate-asoview-facility-actions.mjs",
     "facilities:asoview:second-pass:validate": "node scripts/validate-asoview-second-pass-reverse-discovery.mjs",
     "facilities:child-use-policy:validate": "node scripts/validate-asoview-child-use-policy.mjs",

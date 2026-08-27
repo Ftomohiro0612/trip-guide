@@ -1,5 +1,5 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "audited_at": "2026-08-26",
   "source": {
     "endpoint": "https://experiences.travel.rakuten.co.jp/api/experiences/search",
@@ -20,21 +20,41 @@
     "extracted_identity_count": 846,
     "detail_fetch_error_identity_count": 212,
     "final_status_counts": {
-      "ADD": 122,
+      "ADD": 128,
       "DUPLICATE": 80,
-      "NOT_ELIGIBLE": 434,
+      "NOT_ELIGIBLE": 439,
       "RAKUTEN_DETAIL_UNAVAILABLE": 196,
-      "OFFICIAL_EVIDENCE_INSUFFICIENT": 14
+      "OFFICIAL_EVIDENCE_INSUFFICIENT": 3
     },
     "evidence_insufficient_followup": {
       "rakuten_detail_unavailable": 196,
       "identity_visible_re_reviewed": 454,
-      "identity_visible_add": 86,
+      "identity_visible_add": 92,
       "identity_visible_duplicate": 7,
-      "identity_visible_not_eligible": 347,
-      "identity_visible_official_evidence_insufficient": 14,
-      "facilities_added": 87
-    }
+      "identity_visible_not_eligible": 352,
+      "identity_visible_official_evidence_insufficient": 3,
+      "facilities_added": 93
+    },
+    "child_use_policy_rejudgment_target_count": 14,
+    "child_use_policy_rejudgment_status_counts": {
+      "ADD": 6,
+      "NOT_ELIGIBLE": 5,
+      "OFFICIAL_EVIDENCE_INSUFFICIENT": 3
+    },
+    "child_use_policy_previous_insufficiency_counts": {
+      "CHILD_USE_ONLY": 2,
+      "CURRENT_OPERATION_INSUFFICIENT": 1,
+      "IDENTITY_INSUFFICIENT": 4,
+      "MULTIPLE_EVIDENCE_INSUFFICIENT": 7
+    },
+    "child_use_policy_final_insufficiency_counts": {
+      "IDENTITY_INSUFFICIENT": 3
+    },
+    "child_use_policy_unknown_count": 4,
+    "child_use_policy_facilities_added": 6,
+    "canon_before_child_use_policy_rejudgment": 5229,
+    "final_facility_canon_count": 5235,
+    "final_facility_canon_sha256": "a070692cf2f8e81c3a63ee2e5550c49f7957501e69e68689ed7a16b17229e5da"
   },
   "identities": [
     {
@@ -829,10 +849,30 @@
         "UNDER WATER SPACE アクアリウム宇宙旅行 入場チケット"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "運営会社名までは確認できるが、商品が指す常設施設の所在地と継続営業を公式一次情報で確定できない",
+      "status": "NOT_ELIGIBLE",
+      "reason": "公式情報でUNDER WATER SPACE NAGOYAは2024年4月19日から9月23日までの期間限定施設と確認でき、現行の常設施設ではない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "address",
+          "current_operation"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://under-water-space.com/price/",
+          "notes": "公式料金表に小学生料金、小学生未満無料の記載あり。"
+        },
+        "final_status": "NOT_ELIGIBLE"
+      },
+      "not_eligible_basis": {
+        "category": "facility_ops_ineligible",
+        "detail": "公式情報でUNDER WATER SPACE NAGOYAは2024年4月19日から9月23日までの期間限定施設と確認でき、現行の常設施設ではない。"
+      }
     },
     {
       "candidate_id": "rakuten-9ed61a1ea597",
@@ -4822,10 +4862,29 @@
         "【沖縄・北部】子供から大人まで楽しめる！ミツバチ体験"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "体験事業の実施場所と独立した常設施設identityの対応を公式一次情報で確定できない",
+      "status": "NOT_ELIGIBLE",
+      "reason": "公式運営ページはゲストハウス・観光案内・ツアーを案内し、公式予約ストアは閉鎖中。独立した常設のおでかけ施設ではない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "unknown",
+          "source_url": null,
+          "notes": "公式一次情報で子ども料金・年齢・同伴条件を確認できずunknown。"
+        },
+        "final_status": "NOT_ELIGIBLE"
+      },
+      "not_eligible_basis": {
+        "category": "facility_ops_ineligible",
+        "detail": "公式運営ページはゲストハウス・観光案内・ツアーを案内し、公式予約ストアは閉鎖中。独立した常設のおでかけ施設ではない。"
+      }
     },
     {
       "candidate_id": "rakuten-abf054dbca47",
@@ -6748,10 +6807,30 @@
         "【沖縄・うるま市】海上アスレチック"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "海上アスレチック商品の営業期間と独立常設施設としてのidentityを公式一次情報で確定できない",
+      "status": "NOT_ELIGIBLE",
+      "reason": "公式サイトはマリンスポーツ事業者とレンタル・各種コースを案内するもので、楽天商品の海上アスレチックを常設の独立施設として確定できない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity",
+          "current_operation"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "unknown",
+          "source_url": null,
+          "notes": "公式一次情報で現行の子ども利用条件を確認できずunknown。"
+        },
+        "final_status": "NOT_ELIGIBLE"
+      },
+      "not_eligible_basis": {
+        "category": "facility_ops_ineligible",
+        "detail": "公式サイトはマリンスポーツ事業者とレンタル・各種コースを案内するもので、楽天商品の海上アスレチックを常設の独立施設として確定できない。"
+      }
     },
     {
       "candidate_id": "rakuten-ca62c20dfe70",
@@ -7019,8 +7098,8 @@
         "【沖縄・宜野座】やんばる自然洞窟、鍾乳洞をちょっとだけ体験したい方に！5才から参加ＯＫ！"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "交流センターの存在は確認できるが、商品は予約制洞窟体験であり通常来場型施設としての子ども利用条件が不足",
+      "status": "ADD",
+      "reason": "公式施設ページでexact identity、所在地、現行営業と常設体験交流施設であることを確認。",
       "canon_matches": [],
       "fuzzy_canon_matches": [
         {
@@ -7044,7 +7123,27 @@
           "prefecture": "大阪府",
           "score": 0.5
         }
-      ]
+      ],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "CHILD_USE_ONLY",
+        "previous_missing_conditions": [
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://matudacave.live-web.jp/",
+          "notes": "公式予約ページに5歳以上・10歳以上のコース別年齢条件と子ども料金を掲載。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7504,
+        "slug": "facility-7504",
+        "name": "松田地区体験交流センター"
+      }
     },
     {
       "candidate_id": "rakuten-6206429d19f0",
@@ -7141,8 +7240,8 @@
         "【沖縄県・石垣島】石垣島屈指の絶景ビーチ★スリル満点の遠心力 ビスケットを体験！6歳～OK！"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "ビーチの存在は確認できるが、楽天商品はマリンアクティビティで、独立施設としての営業・子ども利用条件が不足",
+      "status": "ADD",
+      "reason": "公的観光公式ページで施設名、所在地、2026年更新の営業期間・設備を確認。",
       "canon_matches": [],
       "fuzzy_canon_matches": [
         {
@@ -7152,7 +7251,28 @@
           "prefecture": "福井県",
           "score": 0.737
         }
-      ]
+      ],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "current_operation",
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://www.okinawastory.jp/spot/1124",
+          "notes": "小人6歳～小学生の入場料金とマリン体験6歳以上を掲載。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7505,
+        "slug": "facility-7505",
+        "name": "石垣島サンセットビーチ"
+      }
     },
     {
       "candidate_id": "rakuten-d3a830adb761",
@@ -7568,9 +7688,26 @@
       ],
       "detail_fetch_errors": [],
       "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "宿泊施設の日帰り温泉商品で、FacilityOps上の独立した家族向け施設identityとしての一次情報が不足",
+      "reason": "公式には旅館の大浴場を日帰り提供していることを確認できるが、独立した常設施設単位のidentityを確定できない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity"
+        ],
+        "required_missing_conditions": [
+          "identity"
+        ],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://reserve.489ban.net/client/airinkan/0/detail/440598",
+          "notes": "公式予約ページに2歳以下無料の記載あり。"
+        },
+        "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT"
+      }
     },
     {
       "candidate_id": "rakuten-e93d084c71d7",
@@ -10132,10 +10269,30 @@
         "【熊本・宇土】屋内サバイバルゲーム施設・子供も遊べる！手ぶら参加ＯＫ！"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "店舗identityと所在地は見えるが、現行の公式サイトで営業実態と子ども利用条件を確認できない",
+      "status": "NOT_ELIGIBLE",
+      "reason": "公的法人情報で運営法人が2025年9月12日に閉鎖済みと確認でき、現在営業する施設ではない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "current_operation",
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "unknown",
+          "source_url": null,
+          "notes": "現行公式一次情報で子ども利用条件を確認できずunknown。"
+        },
+        "final_status": "NOT_ELIGIBLE"
+      },
+      "not_eligible_basis": {
+        "category": "facility_ops_ineligible",
+        "detail": "公的法人情報で運営法人が2025年9月12日に閉鎖済みと確認でき、現在営業する施設ではない。"
+      }
     },
     {
       "candidate_id": "rakuten-3865a48f13ea",
@@ -12107,10 +12264,29 @@
         "【三重・津】御殿場ウォーター 亀ハウス！三重県初上陸！巨大海上アスレチック！50分間プレイチケット＆BBQ付き♪"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "海上アスレチックは季節商品で、恒常的な独立施設としての公式営業根拠が不足",
+      "status": "NOT_ELIGIBLE",
+      "reason": "公式サイトが2026年7月5日〜9月22日の開催期間を明示する季節限定の海上アスレチックで、常設施設canonの対象外。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "CURRENT_OPERATION_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "current_operation"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "restricted",
+          "source_url": "https://gotenbawater-kamehouse.com/",
+          "notes": "3歳以上のキッズエリア、小学生以下の保護者同伴条件を掲載。"
+        },
+        "final_status": "NOT_ELIGIBLE"
+      },
+      "not_eligible_basis": {
+        "category": "facility_ops_ineligible",
+        "detail": "公式サイトが2026年7月5日〜9月22日の開催期間を明示する季節限定の海上アスレチックで、常設施設canonの対象外。"
+      }
     },
     {
       "candidate_id": "rakuten-57ef19cf78fe",
@@ -13747,9 +13923,26 @@
       ],
       "detail_fetch_errors": [],
       "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "リゾートidentityは見えるが、楽天商品は館内ゲームであり追加対象となる独立施設単位を公式一次情報から確定できない",
+      "reason": "リゾート本体のidentity・住所・現行営業は確認できるが、楽天商品の館内ゲームをcanon化する独立施設単位が公式情報から確定しない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity"
+        ],
+        "required_missing_conditions": [
+          "identity"
+        ],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://www.lottehotel.com/content/dam/request/arai-resort/adventures/20211006-JP-Adventure-Agreement-LTAR.pdf",
+          "notes": "公式規約に保護者が子どもを見守る条件を掲載。"
+        },
+        "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT"
+      }
     },
     {
       "candidate_id": "rakuten-b4d4524602e0",
@@ -15374,9 +15567,26 @@
       ],
       "detail_fetch_errors": [],
       "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "ホテル付帯スパ商品で、独立した家族向けおでかけ施設としての公式identity確認が不足",
+      "reason": "ホテルと館内天然温泉の現行営業は確認できるが、楽天商品が指すcanon施設単位をホテル本体と汎用名称の大浴場のどちらに解決するか確定できない。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity"
+        ],
+        "required_missing_conditions": [
+          "identity"
+        ],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://odawara.hiltonjapan.co.jp/spa/natural-spa",
+          "notes": "4歳～小学生料金、3歳以下無料を掲載。"
+        },
+        "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT"
+      }
     },
     {
       "candidate_id": "rakuten-402903ec76a3",
@@ -22294,10 +22504,32 @@
         "上島美術館: 入場券（即日発券）"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "名称は抽出できるが、公式一次情報で所在地・現行営業・子ども利用条件を揃えて確認できない",
+      "status": "ADD",
+      "reason": "施設公式サイトでexact identity、所在地、2026年の展示・営業を確認。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "address",
+          "current_operation",
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "confirmed",
+          "source_url": "https://ueshima-museum.com/",
+          "notes": "公式料金に小学生以下無料・中高生料金を掲載。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7506,
+        "slug": "facility-7506",
+        "name": "UESHIMA MUSEUM"
+      }
     },
     {
       "candidate_id": "rakuten-f3c65601575e",
@@ -22458,10 +22690,30 @@
         "東京 春花園BONSAI美術館 入館Eチケット＜当日購入可能＞"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "現行営業は確認できるが、子どもを主対象に含む通常利用条件を公式一次情報で確定できない",
+      "status": "ADD",
+      "reason": "施設公式サイトでexact identity、所在地、開館時間と常設美術館であることを確認。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "CHILD_USE_ONLY",
+        "previous_missing_conditions": [
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "unknown",
+          "source_url": null,
+          "notes": "公式一次情報で子ども料金・年齢・同伴条件を確認できずunknown。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7507,
+        "slug": "facility-7507",
+        "name": "春花園BONSAI美術館"
+      }
     },
     {
       "candidate_id": "rakuten-73bf4cb09086",
@@ -23638,10 +23890,31 @@
         "奈良ロイヤルホテル天然温泉入浴Eチケット ＜食事つきプランあり＞"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "ホテル付帯温泉商品で、独立した家族向け施設identityと子ども利用条件の公式確認が不足",
+      "status": "ADD",
+      "reason": "公式サイトでラ・ロイヤル・スパの独立名称、所在地、日帰り営業と常設温浴施設であることを確認。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity",
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "restricted",
+          "source_url": "https://nara-royal.co.jp/news/20240219/7201/",
+          "notes": "公式案内に子ども料金と12歳未満の保護者同伴条件を掲載。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7508,
+        "slug": "facility-7508",
+        "name": "ラ・ロイヤル・スパ"
+      }
     },
     {
       "candidate_id": "rakuten-c3920691fab0",
@@ -25641,10 +25914,31 @@
         "【現地販売価格から5%OFF】北海道 札幌駅直結の天然温泉「プラウブラン」Eチケット 予約＜眺望抜群！館内着・タオル付"
       ],
       "detail_fetch_errors": [],
-      "status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
-      "reason": "ホテル付帯スパで年齢制限を含む子ども利用条件と独立施設としての適格性を公式一次情報で確定できない",
+      "status": "ADD",
+      "reason": "公式サイトでスカイリゾートスパ「プラウブラン」のexact identity、所在地、現行営業を確認。18歳以上限定はnot_allowed metadataとして保持する。",
       "canon_matches": [],
-      "fuzzy_canon_matches": []
+      "fuzzy_canon_matches": [],
+      "child_use_policy_rejudgment": {
+        "audit_ref": "docs/audits/rakuten-child-use-policy-rejudgment-2026-08-27.json",
+        "checked_at": "2026-08-27",
+        "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+        "previous_missing_conditions": [
+          "identity",
+          "child_use"
+        ],
+        "required_missing_conditions": [],
+        "child_use_metadata": {
+          "status": "not_allowed",
+          "source_url": "https://www.jrhotels.co.jp/tower/spa/",
+          "notes": "公式利用案内で18歳以上限定と明示。子ども向け推薦から除外する。"
+        },
+        "final_status": "ADD"
+      },
+      "added_facility": {
+        "id": 7509,
+        "slug": "facility-7509",
+        "name": "スカイリゾートスパ「プラウブラン」"
+      }
     },
     {
       "candidate_id": "rakuten-8d5d27437d24",
@@ -26604,5 +26898,5 @@
       "fuzzy_canon_matches": []
     }
   ],
-  "followup_reviewed_at": "2026-08-26"
+  "followup_reviewed_at": "2026-08-27"
 }

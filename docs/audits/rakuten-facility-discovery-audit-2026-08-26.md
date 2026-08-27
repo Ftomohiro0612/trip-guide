@@ -1,6 +1,6 @@
 # 楽天トラベル観光体験 施設逆引き discovery 追補監査（2026-08-26）
 
-> 履歴注記（2026-08-27）: child-use evidenceはOwner改定によりcanon採用必須条件ではなく任意metadataとなった。今後のRakuten reverse discoveryはFacilityOps正本のidentity・所在地・現行営業・常設施設適格性を必須条件とする。
+> 履歴注記（2026-08-27）: child-use evidenceはOwner改定によりcanon採用必須条件ではなく任意metadataとなった。今後のRakuten reverse discoveryはFacilityOps正本のidentity・所在地・現行営業・常設施設適格性を必須条件とする。旧基準の残存14件は[child-use policy再判定監査](./rakuten-child-use-policy-rejudgment-2026-08-27.md)で全件解決した。
 
 ## 結論
 
