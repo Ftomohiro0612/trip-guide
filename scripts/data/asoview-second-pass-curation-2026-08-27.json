@@ -1,0 +1,533 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-27",
+  "overrides": [
+    {
+      "asoview_identity": "GALAサマーパーク",
+      "final_status": "DUPLICATE",
+      "reason": "same physical facility and address as existing GALA湯沢スキー場 canon",
+      "duplicate_match": { "facility_id": 614, "facility_name": "GALA湯沢スキー場" },
+      "audit_basis": "official GALA page resolves the summer operation to the existing ski-area facility and identical address"
+    },
+    {
+      "asoview_identity": "アートアクアリウム美術館",
+      "final_status": "DUPLICATE",
+      "reason": "existing canon already contains the same GINZA museum",
+      "duplicate_match": { "facility_id": 7105, "facility_name": "アートアクアリウム美術館 GINZA" },
+      "audit_basis": "official name, Ginza Mitsukoshi address, and museum identity match the existing canon"
+    },
+    {
+      "asoview_identity": "ハブ博物公園",
+      "final_status": "DUPLICATE",
+      "reason": "official evidence resolves the attraction to the already-canonical Okinawa World facility and admission",
+      "duplicate_match": { "facility_id": 6027, "facility_name": "おきなわワールド" },
+      "audit_basis": "all official identity, operation, address, and child-ticket evidence is the parent Okinawa World facility"
+    },
+    {
+      "asoview_identity": "江戸ワンダーランド 日光江戸村",
+      "final_status": "DUPLICATE",
+      "reason": "same facility as existing 日光江戸村(EDO WONDERLAND) canon",
+      "duplicate_match": { "facility_id": 390, "facility_name": "日光江戸村(EDO WONDERLAND)" },
+      "audit_basis": "official name variants and exact address match"
+    },
+    {
+      "asoview_identity": "上越国際プレイランド",
+      "final_status": "DUPLICATE",
+      "reason": "summer operation of the existing same-address Joetsu Kokusai resort canon",
+      "duplicate_match": { "facility_id": 615, "facility_name": "上越国際スキー場" },
+      "audit_basis": "official resort page and exact address resolve to the existing canon facility"
+    },
+    {
+      "asoview_identity": "那須高原りんどう湖ファミリー牧場",
+      "final_status": "DUPLICATE",
+      "reason": "current official name for the existing same-address りんどう湖 canon",
+      "duplicate_match": { "facility_id": 368, "facility_name": "那須りんどう湖レイクビュー" },
+      "audit_basis": "exact address and facility continuity establish a rename, not a new facility"
+    },
+    {
+      "asoview_identity": "野沢温泉スポーツ公園",
+      "final_status": "DUPLICATE",
+      "reason": "same facility as existing 野沢温泉スポーツパーク canon",
+      "duplicate_match": { "facility_id": 59, "facility_name": "野沢温泉スポーツパーク" },
+      "audit_basis": "name variant and exact address match"
+    },
+
+    {
+      "asoview_identity": "HAPPYISLAND（ハッピーアイランド）",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "tour and parasailing operator rather than a permanent independently visitable family facility",
+      "not_eligible_basis": { "category": "TOUR_OR_RENTAL_ONLY", "url": "https://parasailing.okinawa/" },
+      "audit_basis": "official source describes departure-based whale-watching and parasailing services"
+    },
+    {
+      "asoview_identity": "Mine秋吉台ジオパーク",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "regional geopark identity rather than one exact permanent facility",
+      "not_eligible_basis": { "category": "OPERATOR_OR_NETWORK_IDENTITY", "url": "https://karusuto.com/" },
+      "audit_basis": "official evidence resolves to a regional network and to 秋芳洞, already a separate canon identity"
+    },
+    {
+      "asoview_identity": "NPO萩まちじゅう博物館",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "NPO operating body rather than an exact visitor facility",
+      "not_eligible_basis": { "category": "OPERATOR_IDENTITY_NOT_FACILITY", "url": "https://www.npomachihaku.com/" },
+      "audit_basis": "official address is the NPO office inside 萩博物館 and the identity is an operating organization"
+    },
+    {
+      "asoview_identity": "エアパークCOOパラグライダースクール",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "paragliding school and guided flight operator rather than a general permanent family facility",
+      "not_eligible_basis": { "category": "LESSON_OR_GUIDE_OPERATION", "url": "https://www.airparkcoo.jp/" },
+      "audit_basis": "official products are school, license, and guided flight courses"
+    },
+    {
+      "asoview_identity": "こうべアグリパークネモフィラの丘",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "2026 seasonal flower event identity rather than a permanent facility canon",
+      "not_eligible_basis": { "category": "TEMPORARY_EVENT", "url": "https://kobeagripark.jp/" },
+      "audit_basis": "official evidence is the time-bounded ネモフィラの丘2026 event"
+    },
+    {
+      "asoview_identity": "ゴーゴーアドベンチャー",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "rafting tour operator and meeting base rather than a permanent visitor facility",
+      "not_eligible_basis": { "category": "TOUR_OR_RENTAL_ONLY", "url": "https://www.gogo-adventure.com/" },
+      "audit_basis": "official source sells guided river courses"
+    },
+    {
+      "asoview_identity": "こどもの家アトリエtempo",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "lesson and class operation rather than an independently visitable permanent facility",
+      "not_eligible_basis": { "category": "LESSON_OR_GUIDE_OPERATION", "url": "https://tanegashima-tempo.com/" },
+      "audit_basis": "official source presents scheduled classes and instruction"
+    },
+    {
+      "asoview_identity": "フロリックシー アドベンチャーパーク淡路島",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "seasonal temporary sea installation rather than a year-round permanent facility canon",
+      "not_eligible_basis": { "category": "TEMPORARY_EVENT", "url": "https://frolicsea-ap.com/" },
+      "audit_basis": "official operation is a limited summer installation at a public beach"
+    },
+    {
+      "asoview_identity": "沖縄アイランドクルー",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "boat-tour operator rather than an exact permanent visitor facility",
+      "not_eligible_basis": { "category": "TOUR_OR_RENTAL_ONLY", "url": "https://oi-crew.com/" },
+      "audit_basis": "official source describes departure-based island and marine tours"
+    },
+    {
+      "asoview_identity": "海中展望船あまんぼう",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "operated vessel and tour departure product rather than a permanent facility",
+      "not_eligible_basis": { "category": "TOUR_OR_RENTAL_ONLY", "url": "https://experience.e-oki.net/" },
+      "audit_basis": "official source is a scheduled boat experience and departure counter"
+    },
+    {
+      "asoview_identity": "サンエルキッズラボ",
+      "final_status": "NOT_ELIGIBLE",
+      "reason": "programming school and lesson operation rather than an independently visitable family facility",
+      "not_eligible_basis": { "category": "LESSON_OR_GUIDE_OPERATION", "url": "https://sunl-kids-labo.jp/" },
+      "audit_basis": "official source is course enrollment and class information"
+    },
+
+    {
+      "asoview_identity": "ハピピランド　ヒロロ弘前",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official identity, address, and current listing were found, but explicit child-use terms were only found for another branch",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "evidence_overrides": {
+        "address": { "url": "https://www.hapipiland.com/kidspark/", "title": "キッズパーク | ハピピランド", "value": "〒036-8003 青森県弘前市駅前町9-20 ヒロロ4階", "excerpt": "Hapipi Landヒロロ弘前店 〒036-8003 青森県弘前市駅前町9-20ヒロロ(HIRORO)4階" }
+      },
+      "audit_basis": "branch address is official; child rate evidence belonged to 港北店 and cannot be transferred"
+    },
+    {
+      "asoview_identity": "ハピピランド福島",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official current branch listing and address exist, but explicit child-use conditions were not established for this branch",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "evidence_overrides": {
+        "address": { "url": "https://www.hapipiland.com/kidspark/", "title": "キッズパーク | ハピピランド", "value": "〒960-0102 福島県福島市鎌田舟戸前14-1 ドン・キホーテ福島店内", "excerpt": "Hapipi Landドン・キホーテ福島店 〒960-0102 福島県福島市鎌田舟戸前14-1ドン・キホーテ福島店内" }
+      },
+      "audit_basis": "child rate evidence belonged to another store and exact-store transfer is prohibited"
+    },
+    {
+      "asoview_identity": "ファンタジーキッズリゾート筑紫野",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "historic opening record exists, but exact current store, address, and child-use evidence are not present in the current official store list",
+      "missing_conditions": ["address", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "current official ticket store selector omits 筑紫野 and evidence cannot be borrowed from 福岡店"
+    },
+    {
+      "asoview_identity": "フィッシングパークTOI",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official identity, facility address, and current operation exist, but child-use evidence belonged to 土肥金山",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "evidence_overrides": {
+        "address": { "url": "https://toi-annai.com/attraction/attraction_facility/fishingparktoi/", "title": "フィッシングパークTOI", "value": "静岡県伊豆市八木沢47", "excerpt": "施設名 フィッシングパークTOI 住所 静岡県伊豆市八木沢47" }
+      },
+      "audit_basis": "official tourism operator page is facility-specific, but its child evidence does not state a child rate or age condition"
+    },
+    {
+      "asoview_identity": "ムラサキパーク東京",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official facility identity, address, and management period exist, but child evidence was a separate prefectural school program",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "audit_basis": "general operator school history is not exact-facility child-use evidence"
+    },
+    {
+      "asoview_identity": "ムラサキパーク立川立飛",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official facility identity, address, and management period exist, but exact-facility child-use terms were not found",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "evidence_overrides": {
+        "address": { "url": "https://www.murasaki.co.jp/field-service/field-management/", "title": "フィールドマネージメントについて", "value": "東京都立川市泉町935", "excerpt": "ムラサキパーク立川立飛 住所 東京都立川市泉町935 事業期間 2023年～" }
+      },
+      "audit_basis": "child evidence was a different regional school program"
+    },
+    {
+      "asoview_identity": "空と小さな屋根の農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "tourism-association page did not establish exact facility address, current operation, or child-use terms",
+      "missing_conditions": ["address", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "selected address and rates belonged to unrelated events on the tourism portal"
+    },
+    {
+      "asoview_identity": "秦野いとう農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official office address is explicitly not the experience field address",
+      "missing_conditions": ["address"],
+      "insufficiency_code": "ADDRESS_INSUFFICIENT",
+      "audit_basis": "official access page labels the captured address as the office and says it is not the field"
+    },
+    {
+      "asoview_identity": "川と森のバーベキューランド",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official page resolved to KitchenSnug restaurant and dog-run terms, not the exact BBQ facility and child use",
+      "missing_conditions": ["identity", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "restaurant and dog-run conditions cannot establish the Asoview facility identity"
+    },
+    {
+      "asoview_identity": "佐藤農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official evidence established a produce business and online shop, not current public farm experience or child participation",
+      "missing_conditions": ["current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "marketing about children eating vegetables is not a child-use condition for a visitor facility"
+    },
+    {
+      "asoview_identity": "屋久島シドッティ記念館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official site confirms the museum and operation but states only an 18-and-over admission category, without establishing minor use",
+      "missing_conditions": ["child_use"],
+      "insufficiency_code": "CHILD_USE_INSUFFICIENT",
+      "audit_basis": "an adult-only price is not affirmative evidence that children may use the museum"
+    },
+    {
+      "asoview_identity": "だるまランド",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "official page did not establish current opening, exact address, or child-use conditions",
+      "missing_conditions": ["address", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "generic discussion of industry decline was not a permanent-closure statement about this facility"
+    },
+    {
+      "asoview_identity": "いぬカフェRio パークプレイス大分店",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "second pass did not establish official exact-store identity, address, current operation, and child-use terms",
+      "missing_conditions": ["identity", "address", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "animal-cafe identity was not treated as food-only, but the four official conditions still were not found"
+    },
+    {
+      "asoview_identity": "とよさんファームいちご園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "rates were found only on a third-party local portal and no official facility address was established",
+      "missing_conditions": ["identity", "address", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "third-party portal content is not official primary evidence"
+    },
+
+    {
+      "asoview_identity": "ハピピランド ラグーナ蒲郡",
+      "final_status": "ADD",
+      "reason": "official exact-store pages establish identity, address, current operation, and child rates",
+      "evidence_overrides": {
+        "address": { "url": "https://www.hapipiland.com/kidspark/archives/shoplist/laguna", "title": "ハピピランド ラグーナ蒲郡店", "value": "〒443-0014 愛知県蒲郡市海陽町2丁目2番地 フェスティバルマーケット2階", "excerpt": "ハピピランド ラグーナ蒲郡店 〒443-0014 蒲郡市海陽町2丁目2番地 フェスティバルマーケット2階" }
+      },
+      "audit_basis": "correct exact-store address replaces another branch address selected from the chain list"
+    },
+    {
+      "asoview_identity": "びわこスカイアドベンチャー",
+      "final_status": "ADD",
+      "reason": "official exact-facility pages establish all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://biwakosky.com/access/", "title": "びわこスカイアドベンチャー 公式サイト｜アクセス", "value": "〒524-0101 滋賀県守山市今浜町2620-5", "excerpt": "びわこスカイアドベンチャー 〒524-0101 滋賀県守山市今浜町2620-5" }
+      },
+      "audit_basis": "facility access address replaces operator-office address"
+    },
+    {
+      "asoview_identity": "ファンタジーキッズリゾート船橋",
+      "final_status": "ADD",
+      "reason": "official exact-store page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://fantasyresort.jp/funabashi/", "title": "船橋店トップ - ファンタジーキッズリゾート", "value": "〒273-0012 千葉県船橋市浜町2-2-7 ららぽーとTOKYO-BAY North Gate4階", "excerpt": "ファンタジーキッズリゾート船橋 〒273-0012 千葉県船橋市浜町2-2-7 ららぽーとTOKYO-BAY North Gate4階" }
+      },
+      "audit_basis": "exact-store address replaces corporate headquarters address"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・とちぎ",
+      "final_status": "ADD",
+      "reason": "official exact-park page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://foret-aventure.jp/park/fa-tochigi/", "title": "フォレストアドベンチャー・とちぎ", "value": "〒329-4405 栃木県栃木市大平町西山田857", "excerpt": "フォレストアドベンチャー・とちぎ 〒329-4405 栃木県栃木市大平町西山田857" }
+      },
+      "audit_basis": "first facility address on exact park page replaces a related-park address"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・栗東",
+      "final_status": "ADD",
+      "reason": "official exact-park page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://foret-aventure.jp/park/fa-ritto/", "title": "フォレストアドベンチャー・栗東", "value": "〒520-3002 滋賀県栗東市観音寺459", "excerpt": "フォレストアドベンチャー・栗東 〒520-3002 滋賀県栗東市観音寺459" }
+      },
+      "audit_basis": "exact facility address replaces related 米原 park address"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー奥日田",
+      "final_status": "ADD",
+      "reason": "official exact-park page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://foret-aventure.jp/park/fa-okuhita/", "title": "フォレストアドベンチャー・奥日田", "value": "〒877-0302 大分県日田市中津江村合瀬3750", "excerpt": "フォレストアドベンチャー・奥日田 〒877-0302 大分県日田市中津江村合瀬3750" }
+      },
+      "audit_basis": "exact facility address replaces related Fukuoka park address"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・吉野ヶ里",
+      "final_status": "ADD",
+      "reason": "permanent official adventure park with exact child conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://foret-aventure.jp/park/fa-yoshinogari/", "title": "フォレストアドベンチャー・吉野ヶ里", "value": "〒842-0104 佐賀県神埼郡吉野ヶ里町三津2753 アドベンチャーバレーSAGA内", "excerpt": "フォレストアドベンチャー・吉野ヶ里 〒842-0104 佐賀県神埼郡吉野ヶ里町三津2753" }
+      },
+      "audit_basis": "school news does not turn the permanent park into a lesson-only operation"
+    },
+    {
+      "asoview_identity": "空飛ぶいちご東京",
+      "final_status": "ADD",
+      "reason": "official exact-facility page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://fuchu-ichigogari.com/ja/flying-strawberry/family/", "title": "お子様連れでも安心！ワクワクいちご狩り｜空飛ぶいちご東京", "value": "〒183-0033 東京都府中市分梅町3-43", "excerpt": "空飛ぶいちご東京 〒183-0033 東京都府中市分梅町3-43" }
+      },
+      "audit_basis": "exact sub-facility address replaces the operator's other farm address"
+    },
+    {
+      "asoview_identity": "世界凧博物館東近江大凧会館",
+      "final_status": "ADD",
+      "reason": "official exact museum pages establish all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://higashiomi-j.com/oodakokaikan/", "title": "世界凧博物館東近江大凧会館", "value": "〒527-0025 滋賀県東近江市八日市東本町3番5号", "excerpt": "世界凧博物館 東近江大凧会館 〒527-0025 滋賀県東近江市八日市東本町3番5号" },
+        "child_use": { "url": "https://higashiomi-j.com/oodakokaikan/facility/", "title": "施設概要 | 東近江市地域振興事業団", "excerpt": "入館料 一般300円 小・中学生150円" }
+      },
+      "audit_basis": "facility address and child admission replace unrelated operator-event evidence"
+    },
+    {
+      "asoview_identity": "晴れパークたてやま",
+      "final_status": "ADD",
+      "reason": "official exact-facility page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://hare-park.com/", "title": "晴れパークたてやま", "value": "〒294-0055 千葉県館山市那古559", "excerpt": "晴れパークたてやま 所在地 〒294-0055 千葉県館山市那古559" }
+      },
+      "audit_basis": "facility address replaces an unrelated BBQ venue mentioned in an official-site article"
+    },
+    {
+      "asoview_identity": "千歳オフロードパーク",
+      "final_status": "ADD",
+      "reason": "official exact-facility page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://www.eaglejp.co.jp/cts-offroad-park/", "title": "千歳オフロードパーク", "value": "北海道千歳市美々1292-18", "excerpt": "千歳オフロードパーク 北海道千歳市美々1292-18" }
+      },
+      "audit_basis": "facility address replaces a temporary event venue address"
+    },
+    {
+      "asoview_identity": "箱根美術館",
+      "final_status": "ADD",
+      "reason": "official exact museum page establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://moaart.or.jp/hakone/access/", "title": "箱根美術館 アクセス・ご利用案内", "value": "〒250-0408 神奈川県足柄下郡箱根町強羅1300", "excerpt": "箱根美術館 〒250-0408 神奈川県足柄下郡箱根町強羅1300" }
+      },
+      "audit_basis": "Hakone museum address replaces related MOA Atami museum address"
+    },
+    {
+      "asoview_identity": "松阪農業公園ベルファーム",
+      "final_status": "ADD",
+      "reason": "official facility pages establish all four conditions",
+      "evidence_overrides": {
+        "child_use": { "url": "https://www.bellfarm.jp/faq/", "title": "よくあるご質問 | 松阪農業公園ベルファーム", "excerpt": "体験は内容により子どものみで体験できるものと保護者同伴条件があります" }
+      },
+      "audit_basis": "facility FAQ replaces public-bus child fare mistakenly selected as child-use evidence"
+    },
+    {
+      "asoview_identity": "柳が崎湖畔公園びわ湖大津館",
+      "final_status": "ADD",
+      "reason": "official facility and use-guidance pages establish all four conditions",
+      "evidence_overrides": {
+        "child_use": { "url": "https://biwako-otsukan.jp/images/renntasaikuru.pdf", "title": "レンタサイクル利用案内", "source_type": "official_pdf", "excerpt": "お子様は保護者同伴でご利用ください" }
+      },
+      "audit_basis": "exact facility use condition replaces a garden-discount excerpt"
+    },
+    {
+      "asoview_identity": "忍者体験カフェ京都　祇園",
+      "final_status": "ADD",
+      "reason": "official exact-store page and chain FAQ establish all four conditions",
+      "evidence_overrides": {
+        "child_use": { "url": "https://ninja-cafe.com/faq/", "title": "よくあるご質問 - 忍者体験カフェ", "excerpt": "子ども料金（18歳未満）と大人料金を設定し、お子さまから体験できます" }
+      },
+      "audit_basis": "official FAQ explicitly applies to all four named stores"
+    },
+    {
+      "asoview_identity": "忍者体験カフェ大阪　道頓堀",
+      "final_status": "ADD",
+      "reason": "official exact-store page and chain FAQ establish all four conditions",
+      "evidence_overrides": {
+        "child_use": { "url": "https://ninja-cafe.com/faq/", "title": "よくあるご質問 - 忍者体験カフェ", "excerpt": "子ども料金（18歳未満）と大人料金を設定し、お子さまから体験できます" }
+      },
+      "audit_basis": "official FAQ explicitly applies to all four named stores"
+    },
+    {
+      "asoview_identity": "スノーリゾート　ロマンスの神様",
+      "final_status": "ADD",
+      "reason": "permanent seasonal ski facility with official current operation and child lift rates",
+      "audit_basis": "presence of ski school information does not make the independently visitable resort lesson-only"
+    },
+    {
+      "asoview_identity": "なにわ健康ランド　湯～トピア",
+      "final_status": "ADD",
+      "reason": "official current site establishes identity, address, current operation, and child use",
+      "audit_basis": "a closure phrase for a limited service was not closure of the facility"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・よこはま",
+      "final_status": "ADD",
+      "reason": "permanent official adventure park with exact address, current operation, and child conditions",
+      "audit_basis": "optional lessons do not make the permanent park lesson-only"
+    },
+    {
+      "asoview_identity": "ブランシュたかやまスキーリゾート",
+      "final_status": "ADD",
+      "reason": "permanent seasonal ski resort with official child lift and facility-use conditions",
+      "evidence_overrides": {
+        "child_use": { "url": "https://blanche-ski.com/winter/fee/", "title": "リフト料金 | ブランシュたかやまスキーリゾート", "excerpt": "リフト1日券は幼児無料、小学生3,000円。未就学児もリフト券を発行して利用できます" }
+      },
+      "audit_basis": "official lift-fee page establishes ordinary child use; presence of a ski school does not make the independently visitable resort lesson-only"
+    },
+    {
+      "asoview_identity": "農園リゾートTHE FARM",
+      "final_status": "DUPLICATE",
+      "reason": "the official identity and exact address resolve to an existing canon entry",
+      "duplicate_match": { "facility_id": 981, "facility_slug": "facility-981", "facility_name": "ザ・ファーム(THE FARM)", "facility_address": "香取市西田部1309-29" },
+      "audit_basis": "name variation only; official URL and location are identical to canon"
+    },
+    {
+      "asoview_identity": "忍者カフェ原宿",
+      "final_status": "ADD",
+      "reason": "official exact-store and FAQ pages establish all four conditions for the permanent experience cafe",
+      "evidence_overrides": {
+        "identity": { "url": "https://ninja-cafe.com/harajuku/", "title": "忍者体験カフェ - 東京 原宿店", "excerpt": "東京 原宿店 忍者体験カフェ東京 原宿" },
+        "address": { "url": "https://ninja-cafe.com/harajuku/", "title": "忍者体験カフェ - 東京 原宿店", "value": "東京都渋谷区神宮前1-16-11 五三九ビルB1", "excerpt": "忍者体験カフェ東京 原宿 東京都渋谷区神宮前1-16-11 五三九ビルB1" },
+        "current_operation": { "url": "https://ninja-cafe.com/harajuku/", "title": "忍者体験カフェ - 東京 原宿店", "excerpt": "東京 原宿店 ご予約 営業時間 毎日10:00〜21:00" },
+        "child_use": { "url": "https://ninja-cafe.com/faq/", "title": "よくあるご質問 - 忍者体験カフェ", "excerpt": "子ども料金（18歳未満）と大人料金を設定し、お子さまから体験できます" }
+      },
+      "audit_basis": "not food-only: official product is a paid ninja training experience with explicit child pricing"
+    },
+    {
+      "asoview_identity": "忍者カフェ浅草",
+      "final_status": "ADD",
+      "reason": "official exact-store and FAQ pages establish all four conditions for the permanent experience cafe",
+      "evidence_overrides": {
+        "identity": { "url": "https://ninja-cafe.com/asakusa/", "title": "忍者体験カフェ - 東京 浅草店", "excerpt": "東京 浅草店 忍者体験カフェ東京 浅草" },
+        "address": { "url": "https://ninja-cafe.com/asakusa/", "title": "忍者体験カフェ - 東京 浅草店", "value": "東京都台東区西浅草3-27-14 トーア浅草マンション1F", "excerpt": "忍者体験カフェ東京 浅草 東京都台東区西浅草3-27-14 トーア浅草マンション1F" },
+        "current_operation": { "url": "https://ninja-cafe.com/asakusa/", "title": "忍者体験カフェ - 東京 浅草店", "excerpt": "東京 浅草店 ご予約 営業時間 毎日10:00〜21:00" },
+        "child_use": { "url": "https://ninja-cafe.com/faq/", "title": "よくあるご質問 - 忍者体験カフェ", "excerpt": "子ども料金（18歳未満）と大人料金を設定し、お子さまから体験できます" }
+      },
+      "audit_basis": "not food-only: official product is a paid ninja training experience with explicit child pricing"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・蓼科",
+      "final_status": "DUPLICATE",
+      "reason": "the official identity and exact park URL resolve to an existing canon entry under a katakana name variant",
+      "duplicate_match": { "facility_id": 57, "facility_slug": "facility-57", "facility_name": "フォレストアドベンチャー・タテシナ", "facility_address": "長野県茅野市北山鹿山4026-2" },
+      "audit_basis": "蓼科 and タテシナ are the same exact park at the same official URL"
+    },
+    {
+      "asoview_identity": "フォレストアドベンチャー・美里",
+      "final_status": "ADD",
+      "reason": "the exact official park page establishes all four conditions",
+      "evidence_overrides": {
+        "identity": { "url": "https://foret-aventure.jp/park/fa-misato/", "title": "フォレストアドベンチャー・美里", "excerpt": "熊本県美里町の自然共生型アウトドアパーク フォレストアドベンチャー・美里" },
+        "current_operation": { "url": "https://foret-aventure.jp/park/fa-misato/", "title": "フォレストアドベンチャー・美里", "excerpt": "2025年新登場のキャノピーコースを含む各コースを案内し、予約を受け付けています" },
+        "child_use": { "url": "https://foret-aventure.jp/park/fa-misato/", "title": "フォレストアドベンチャー・美里", "excerpt": "キャノピーコースは身長110cm以上。小学2年生までは18歳以上の保護者同伴、小学3年生以上は地上からの見守りが必要です" }
+      },
+      "audit_basis": "replaces two unrelated reservation facility IDs with the exact FA美里 official page"
+    },
+    {
+      "asoview_identity": "ふなばし三番瀬海浜公園 BBQ広場",
+      "final_status": "ADD",
+      "reason": "the current exact-facility official usage guide establishes child pricing and accompaniment",
+      "evidence_overrides": {
+        "child_use": { "url": "https://funabashi-bbq.com/usage/", "title": "ご利用ガイド | ふなばし三番瀬海浜公園 バーベキュー場", "excerpt": "利用料金は4才以上1人300円。中学生以下は大人の指導者の同伴が必要です" }
+      },
+      "audit_basis": "replaces a park-event excerpt with the permanent BBQ facility's current official usage conditions"
+    },
+    {
+      "asoview_identity": "志田焼の里博物館",
+      "final_status": "ADD",
+      "reason": "the official admission page establishes ordinary child admission",
+      "evidence_overrides": {
+        "child_use": { "url": "https://shidayakinosato.com/menu/c628505", "title": "入館料 | 志田焼の里博物館", "excerpt": "個人入館料は一般・高校生300円、小・中学生150円です" }
+      },
+      "audit_basis": "replaces a single workshop-event age excerpt with the museum's ordinary admission terms"
+    },
+    {
+      "asoview_identity": "佐伯国際アーチェリーランド",
+      "final_status": "ADD",
+      "reason": "the official facility-use page establishes child pricing for ordinary archery use",
+      "evidence_overrides": {
+        "child_use": { "url": "https://www.archeryland.com/outline.php", "title": "佐伯国際アーチェリーランド ご利用について", "excerpt": "アーチェリー体験は高校生以下1,800円、3時間体験は高校生以下3,000円。学校・子供会の団体利用も案内しています" }
+      },
+      "audit_basis": "replaces a competition-only excerpt with permanent facility-use pricing"
+    },
+    {
+      "asoview_identity": "つくばラジコンパーク",
+      "final_status": "ADD",
+      "reason": "official exact facility evidence establishes all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://www.tsukuba-rc.com/access-park", "title": "アクセス | つくばラジコンパーク", "value": "〒305-0861 茨城県つくば市谷田部4385-2", "excerpt": "つくばラジコンパーク 〒305-0861 茨城県つくば市谷田部4385-2" }
+      },
+      "audit_basis": "normalizes the exact address without copying surrounding navigation prose"
+    },
+    {
+      "asoview_identity": "なかはた農園",
+      "final_status": "ADD",
+      "reason": "official farm pages establish all four conditions",
+      "evidence_overrides": {
+        "address": { "url": "https://nakahata-nouen.com/%e8%be%b2%e5%9c%92%e3%81%8b%e3%82%89%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b/2678/", "title": "アクセス | なかはた農園", "value": "熊本県上益城郡山都町白小野168", "excerpt": "カーナビには熊本県上益城郡山都町白小野168と入力してください" }
+      },
+      "audit_basis": "normalizes the exact address without copying surrounding driving directions"
+    },
+    {
+      "asoview_identity": "アグリーンパーク 宇都宮ぶどうの杜",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "reason": "the discovered official pages describe Utsunomiya Zoo, not the exact Asoview-listed identity",
+      "missing_conditions": ["identity", "current_operation", "child_use"],
+      "insufficiency_code": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "audit_basis": "the zoo address cannot be reused to establish a separately named facility; exact identity and exact-facility operating and child-use evidence remain unavailable"
+    }
+  ]
+}

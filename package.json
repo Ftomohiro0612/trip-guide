@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && npm run facilities:asoview:validate && npm run affiliate:linkswitch:validate && next build",
+    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run affiliate:linkswitch:validate && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
@@ -30,6 +30,7 @@
     "facilities:c3:validate": "node scripts/validate-c3-rewrites.mjs",
     "facilities:rakuten:validate": "node scripts/validate-rakuten-facility-actions.mjs",
     "facilities:asoview:validate": "node scripts/validate-asoview-facility-actions.mjs",
+    "facilities:asoview:second-pass:validate": "node scripts/validate-asoview-second-pass-reverse-discovery.mjs",
     "affiliate:linkswitch:validate": "node scripts/validate-valuecommerce-linkswitch.mjs",
     "geocode:check": "node --env-file=.env.local scripts/geocode.ts --dry-run",
     "geocode": "node --env-file=.env.local scripts/geocode.ts",
