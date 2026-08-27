@@ -1,0 +1,823 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-27",
+  "policy": {
+    "required_for_canon": [
+      "identity",
+      "address",
+      "current_operation",
+      "facility_ops_eligibility"
+    ],
+    "child_use": "optional_metadata_official_or_unknown_no_inference",
+    "statuses": [
+      "confirmed",
+      "unknown",
+      "restricted",
+      "not_allowed"
+    ],
+    "fail_closed": [
+      "identity",
+      "address",
+      "current_operation",
+      "facility_ops_eligibility"
+    ]
+  },
+  "scope": {
+    "source_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+    "target_count": 14,
+    "excluded_statuses": [
+      "RAKUTEN_DETAIL_UNAVAILABLE",
+      "DUPLICATE",
+      "NOT_ELIGIBLE",
+      "ADD"
+    ]
+  },
+  "coverage": {
+    "target_count": 14,
+    "completed_count": 14,
+    "previous_insufficiency_counts": {
+      "CHILD_USE_ONLY": 2,
+      "CURRENT_OPERATION_INSUFFICIENT": 1,
+      "IDENTITY_INSUFFICIENT": 4,
+      "MULTIPLE_EVIDENCE_INSUFFICIENT": 7
+    },
+    "final_status_counts": {
+      "ADD": 6,
+      "NOT_ELIGIBLE": 5,
+      "OFFICIAL_EVIDENCE_INSUFFICIENT": 3
+    },
+    "final_insufficiency_counts": {
+      "IDENTITY_INSUFFICIENT": 3
+    },
+    "child_use_metadata_counts": {
+      "confirmed": 7,
+      "not_allowed": 1,
+      "restricted": 2,
+      "unknown": 4
+    },
+    "added_child_use_unknown_count": 1,
+    "canon_before": 5229,
+    "canon_after": 5235
+  },
+  "reviews": [
+    {
+      "candidate_id": "rakuten-61b6110f3de9",
+      "extracted_identity": "株式会社　UWS ENTERTAINMENT",
+      "product_ids": [
+        41037
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/41037"
+      ],
+      "product_titles": [
+        "UNDER WATER SPACE アクアリウム宇宙旅行 入場チケット"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "運営会社名までは確認できるが、商品が指す常設施設の所在地と継続営業を公式一次情報で確定できない",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "address",
+        "current_operation"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://uws.jp/works/",
+          "title": "UWS ENTERTAINMENT Works",
+          "excerpt": "UNDER WATER SPACE NAGOYAを運営実績として掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://under-water-space.com/447/",
+          "title": "横浜店営業終了について",
+          "excerpt": "愛知県で2024年4月19日〜9月23日にイベント開催。"
+        },
+        "current_operation": {
+          "satisfied": false,
+          "url": "https://under-water-space.com/447/",
+          "title": "横浜店営業終了について",
+          "excerpt": "NAGOYAは期間限定開催で終了済み。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://under-water-space.com/price/",
+        "notes": "公式料金表に小学生料金、小学生未満無料の記載あり。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": false,
+        "basis": "終了済みの期間限定水族館であり、常設施設canonの対象外。"
+      },
+      "final_status": "NOT_ELIGIBLE",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式情報でUNDER WATER SPACE NAGOYAは2024年4月19日から9月23日までの期間限定施設と確認でき、現行の常設施設ではない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-acb02a9513ee",
+      "extracted_identity": "アスムイの郷 楽園",
+      "product_ids": [
+        52219
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/52219"
+      ],
+      "product_titles": [
+        "【沖縄・北部】子供から大人まで楽しめる！ミツバチ体験"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "体験事業の実施場所と独立した常設施設identityの対応を公式一次情報で確定できない",
+      "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://www.e-yuishop.jp/guesthouse.html",
+          "title": "アスムイの郷 楽園",
+          "excerpt": "ゲストハウス、観光案内、自然体験・ツアーを案内。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://www.env.go.jp/park/content/000391168.pdf",
+          "title": "やんばる国立公園 辺戸ストーリーブック",
+          "excerpt": "アスムイの郷 楽園、国頭村字辺戸41を掲載。"
+        },
+        "current_operation": {
+          "satisfied": false,
+          "url": "https://asumuiguesthouse.rezio.shop/ja-JP",
+          "title": "アスムイの郷 楽園 予約ストア",
+          "excerpt": "ストアは閉鎖中。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "unknown",
+        "source_url": null,
+        "notes": "公式一次情報で子ども料金・年齢・同伴条件を確認できずunknown。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": false,
+        "basis": "宿泊・観光案内・ツアー提供主体であり、独立した常設施設identityを確定できない。"
+      },
+      "final_status": "NOT_ELIGIBLE",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式運営ページはゲストハウス・観光案内・ツアーを案内し、公式予約ストアは閉鎖中。独立した常設のおでかけ施設ではない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-a816c0c30214",
+      "extracted_identity": "株式会社ブルーラグーンオキナワ",
+      "product_ids": [
+        44582
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/44582"
+      ],
+      "product_titles": [
+        "【沖縄・うるま市】海上アスレチック"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "海上アスレチック商品の営業期間と独立常設施設としてのidentityを公式一次情報で確定できない",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity",
+        "current_operation"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://blo-lagoon.hippy.jp/",
+          "title": "ブルーラグーンオキナワ",
+          "excerpt": "ジェットスキーレンタル、ダイビング等のマリンスポーツ事業を案内。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://blo-lagoon.hippy.jp/",
+          "title": "ブルーラグーンオキナワ",
+          "excerpt": "沖縄県うるま市与那城屋慶名の事業者所在地を掲載。"
+        },
+        "current_operation": {
+          "satisfied": false,
+          "url": "https://blo-lagoon.hippy.jp/",
+          "title": "ブルーラグーンオキナワ",
+          "excerpt": "宇堅ビーチ海上アスレチックの2026年常設営業根拠は確認できない。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "unknown",
+        "source_url": null,
+        "notes": "公式一次情報で現行の子ども利用条件を確認できずunknown。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": false,
+        "basis": "マリン事業者・レンタルサービスであり、固定された常設施設ではない。"
+      },
+      "final_status": "NOT_ELIGIBLE",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式サイトはマリンスポーツ事業者とレンタル・各種コースを案内するもので、楽天商品の海上アスレチックを常設の独立施設として確定できない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-79e692013e26",
+      "extracted_identity": "松田地区体験交流センター",
+      "product_ids": [
+        52241
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/52241"
+      ],
+      "product_titles": [
+        "【沖縄・宜野座】やんばる自然洞窟、鍾乳洞をちょっとだけ体験したい方に！5才から参加ＯＫ！"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "交流センターの存在は確認できるが、商品は予約制洞窟体験であり通常来場型施設としての子ども利用条件が不足",
+      "previous_insufficiency_category": "CHILD_USE_ONLY",
+      "previous_missing_conditions": [
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://matsuda-kucha.jimdofree.com/%E6%96%BD%E8%A8%AD%E7%B4%B9%E4%BB%8B/",
+          "title": "松田地区体験交流センター 施設紹介",
+          "excerpt": "受付施設として駐車場、トイレ、更衣室、レンタル装備を案内。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://matsuda-kucha.jimdofree.com/%E6%96%BD%E8%A8%AD%E7%B4%B9%E4%BB%8B/",
+          "title": "松田地区体験交流センター 施設紹介",
+          "excerpt": "〒904-1301 沖縄県国頭郡宜野座村字松田78。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://matudacave.live-web.jp/",
+          "title": "松田地区体験交流センター 公式予約ページ",
+          "excerpt": "営業時間、予約制の現行コース、料金を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://matudacave.live-web.jp/",
+        "notes": "公式予約ページに5歳以上・10歳以上のコース別年齢条件と子ども料金を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "常設の受付・交流設備を備え、年間を通じて洞窟体験を提供する固定施設。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式施設ページでexact identity、所在地、現行営業と常設体験交流施設であることを確認。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-737fd709381f",
+      "extracted_identity": "石垣島サンセットビーチ",
+      "product_ids": [
+        35807
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/35807"
+      ],
+      "product_titles": [
+        "【沖縄県・石垣島】石垣島屈指の絶景ビーチ★スリル満点の遠心力 ビスケットを体験！6歳～OK！"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "ビーチの存在は確認できるが、楽天商品はマリンアクティビティで、独立施設としての営業・子ども利用条件が不足",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "current_operation",
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://www.okinawastory.jp/spot/1124",
+          "title": "石垣島サンセットビーチ",
+          "excerpt": "沖縄観光公式サイトがビーチ施設と各種アクティビティを掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://www.okinawastory.jp/spot/1124",
+          "title": "石垣島サンセットビーチ",
+          "excerpt": "〒907-0331 沖縄県石垣市平久保234-323。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://www.okinawastory.jp/spot/1124",
+          "title": "石垣島サンセットビーチ",
+          "excerpt": "最終更新2026年5月11日、遊泳可能期間と営業時間を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://www.okinawastory.jp/spot/1124",
+        "notes": "小人6歳～小学生の入場料金とマリン体験6歳以上を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "監視員・シャワー等を備え、毎年営業期間を設ける固定ビーチ施設。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公的観光公式ページで施設名、所在地、2026年更新の営業期間・設備を確認。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-10a5e2259cec",
+      "extracted_identity": "結びの宿 愛隣館",
+      "product_ids": [
+        60790
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/60790"
+      ],
+      "product_titles": [
+        "岩手 結びの宿「愛隣館」 日帰り温泉入浴Eチケット 予約"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "宿泊施設の日帰り温泉商品で、FacilityOps上の独立した家族向け施設identityとしての一次情報が不足",
+      "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": false,
+          "url": "https://www.airinkan.com/blog/?pcview=true",
+          "title": "結びの宿 愛隣館ブログ",
+          "excerpt": "旅館館内の日帰り入浴として案内。独立施設名は確認できない。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://reserve.489ban.net/client/airinkan/0/plan/daytrip?sortType=asc",
+          "title": "結びの宿 愛隣館 日帰りプラン",
+          "excerpt": "岩手県花巻市鉛字西鉛23番地。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://www.airinkan.com/blog/?pcview=true",
+          "title": "結びの宿 愛隣館ブログ",
+          "excerpt": "2026年8月の日帰り入浴受付時間を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://reserve.489ban.net/client/airinkan/0/detail/440598",
+        "notes": "公式予約ページに2歳以下無料の記載あり。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": null,
+        "basis": "独立施設単位が未確定。"
+      },
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "final_missing_conditions": [
+        "identity"
+      ],
+      "final_insufficiency_code": "IDENTITY_INSUFFICIENT",
+      "reason": "公式には旅館の大浴場を日帰り提供していることを確認できるが、独立した常設施設単位のidentityを確定できない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-0455f9aad4a3",
+      "extracted_identity": "ＳＧ宇土店",
+      "product_ids": [
+        32348
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/32348"
+      ],
+      "product_titles": [
+        "【熊本・宇土】屋内サバイバルゲーム施設・子供も遊べる！手ぶら参加ＯＫ！"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "店舗identityと所在地は見えるが、現行の公式サイトで営業実態と子ども利用条件を確認できない",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "current_operation",
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4330003007443",
+          "title": "合同会社SG（閉鎖）",
+          "excerpt": "公的法人情報に合同会社SGを掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4330003007443",
+          "title": "合同会社SG（閉鎖）",
+          "excerpt": "熊本県宇土市善道寺町78-1。"
+        },
+        "current_operation": {
+          "satisfied": false,
+          "url": "https://info.gbiz.go.jp/hojin/ichiran?hojinBango=4330003007443",
+          "title": "合同会社SG（閉鎖）",
+          "excerpt": "登記記録の閉鎖等年月日2025年9月12日、事業所被保険者0人。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "unknown",
+        "source_url": null,
+        "notes": "現行公式一次情報で子ども利用条件を確認できずunknown。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": false,
+        "basis": "運営法人閉鎖済みで現行施設ではない。"
+      },
+      "final_status": "NOT_ELIGIBLE",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公的法人情報で運営法人が2025年9月12日に閉鎖済みと確認でき、現在営業する施設ではない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-978453960568",
+      "extracted_identity": "株式FAMIE",
+      "product_ids": [
+        44901,
+        44902
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/44901",
+        "https://experiences.travel.rakuten.co.jp/experiences/44902"
+      ],
+      "product_titles": [
+        "【三重・津】御殿場ウォーター 亀ハウス！三重県初上陸！巨大海上アスレチック！50分間プレイチケット♪",
+        "【三重・津】御殿場ウォーター 亀ハウス！三重県初上陸！巨大海上アスレチック！50分間プレイチケット＆BBQ付き♪"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "海上アスレチックは季節商品で、恒常的な独立施設としての公式営業根拠が不足",
+      "previous_insufficiency_category": "CURRENT_OPERATION_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "current_operation"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://gotenbawater-kamehouse.com/",
+          "title": "御殿場ウォーター 亀ハウス",
+          "excerpt": "海上アスレチック施設名を掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://gotenbawater-kamehouse.com/",
+          "title": "御殿場ウォーター 亀ハウス",
+          "excerpt": "三重県津市藤方1759。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://gotenbawater-kamehouse.com/",
+          "title": "御殿場ウォーター 亀ハウス",
+          "excerpt": "2026年7月5日〜9月22日までの開催。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "restricted",
+        "source_url": "https://gotenbawater-kamehouse.com/",
+        "notes": "3歳以上のキッズエリア、小学生以下の保護者同伴条件を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": false,
+        "basis": "開催期間を限定した海上遊具で、常設施設ではない。"
+      },
+      "final_status": "NOT_ELIGIBLE",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式サイトが2026年7月5日〜9月22日の開催期間を明示する季節限定の海上アスレチックで、常設施設canonの対象外。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-c2b0f389d07d",
+      "extracted_identity": "ロッテアライリゾート",
+      "product_ids": [
+        41415
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/41415"
+      ],
+      "product_titles": [
+        "新潟 妙高市 わくわくコアラ探し3 Eチケット 予約＜ロッテアライリゾート＞"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "リゾートidentityは見えるが、楽天商品は館内ゲームであり追加対象となる独立施設単位を公式一次情報から確定できない",
+      "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": false,
+          "url": "https://www.lottehotel.com/arai-resort/ja.htm",
+          "title": "ロッテアライリゾート",
+          "excerpt": "リゾート本体は確認できるが、わくわくコアラ探しの独立施設identityは確認できない。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://www.lottehotel.com/content/dam/request/arai-resort/adventures/20211006-JP-Adventure-Agreement-LTAR.pdf",
+          "title": "マウンテンアドベンチャー利用規約",
+          "excerpt": "新潟県妙高市両善寺1966。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://www.lottehotel.com/arai-resort/ja.htm",
+          "title": "ロッテアライリゾート",
+          "excerpt": "2026年の宿泊・アクティビティ商品を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://www.lottehotel.com/content/dam/request/arai-resort/adventures/20211006-JP-Adventure-Agreement-LTAR.pdf",
+        "notes": "公式規約に保護者が子どもを見守る条件を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": null,
+        "basis": "楽天商品に対応する独立施設単位が未確定。"
+      },
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "final_missing_conditions": [
+        "identity"
+      ],
+      "final_insufficiency_code": "IDENTITY_INSUFFICIENT",
+      "reason": "リゾート本体のidentity・住所・現行営業は確認できるが、楽天商品の館内ゲームをcanon化する独立施設単位が公式情報から確定しない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-c674c4f8bf6f",
+      "extracted_identity": "神奈川 ヒルトン小田原リゾート&スパ 入浴Eチケット",
+      "product_ids": [
+        42861
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/42861"
+      ],
+      "product_titles": [
+        "神奈川 ヒルトン小田原リゾート&スパ 入浴Eチケット"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "ホテル付帯スパ商品で、独立した家族向けおでかけ施設としての公式identity確認が不足",
+      "previous_insufficiency_category": "IDENTITY_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": false,
+          "url": "https://odawara.hiltonjapan.co.jp/spa/natural-spa",
+          "title": "ヒルトン小田原リゾート＆スパ 天然温泉大浴場",
+          "excerpt": "バーデ棟3階のホテル付帯大浴場として案内。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://odawara.hiltonjapan.co.jp/access/",
+          "title": "ヒルトン小田原リゾート＆スパ アクセス",
+          "excerpt": "神奈川県小田原市根府川583-1。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://odawara.hiltonjapan.co.jp/spa/natural-spa",
+          "title": "天然温泉大浴場",
+          "excerpt": "外来営業時間と2026年料金を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://odawara.hiltonjapan.co.jp/spa/natural-spa",
+        "notes": "4歳～小学生料金、3歳以下無料を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": null,
+        "basis": "独立施設単位が未確定。"
+      },
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "final_missing_conditions": [
+        "identity"
+      ],
+      "final_insufficiency_code": "IDENTITY_INSUFFICIENT",
+      "reason": "ホテルと館内天然温泉の現行営業は確認できるが、楽天商品が指すcanon施設単位をホテル本体と汎用名称の大浴場のどちらに解決するか確定できない。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-7796d745345b",
+      "extracted_identity": "上島美術館: 入場券（即日発券）",
+      "product_ids": [
+        58750
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/58750"
+      ],
+      "product_titles": [
+        "上島美術館: 入場券（即日発券）"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "名称は抽出できるが、公式一次情報で所在地・現行営業・子ども利用条件を揃えて確認できない",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "address",
+        "current_operation",
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://ueshima-museum.com/",
+          "title": "UESHIMA MUSEUM",
+          "excerpt": "UESHIMA MUSEUMの施設概要を掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://ueshima-museum.com/",
+          "title": "UESHIMA MUSEUM",
+          "excerpt": "東京都渋谷区渋谷1-21-18 渋谷教育学園 植島タワー。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://ueshima-museum.com/",
+          "title": "UESHIMA MUSEUM",
+          "excerpt": "2026年展示、開館時間、展示替え休館と再開予定を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "confirmed",
+        "source_url": "https://ueshima-museum.com/",
+        "notes": "公式料金に小学生以下無料・中高生料金を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "日時指定入館で継続営業する常設の現代美術館。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "施設公式サイトでexact identity、所在地、2026年の展示・営業を確認。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-b8bd46b9e175",
+      "extracted_identity": "東京 春花園BONSAI美術館 入館Eチケット＜当日購入可能＞",
+      "product_ids": [
+        25686
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/25686"
+      ],
+      "product_titles": [
+        "東京 春花園BONSAI美術館 入館Eチケット＜当日購入可能＞"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "現行営業は確認できるが、子どもを主対象に含む通常利用条件を公式一次情報で確定できない",
+      "previous_insufficiency_category": "CHILD_USE_ONLY",
+      "previous_missing_conditions": [
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://kunio-kobayashi.com/museum.html",
+          "title": "春花園BONSAI美術館",
+          "excerpt": "2002年開館の盆栽美術館として施設名を掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://kunio-kobayashi.com/museum.html",
+          "title": "春花園BONSAI美術館",
+          "excerpt": "東京都江戸川区新堀1-29-16。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://kunio-kobayashi.com/museum.html",
+          "title": "春花園BONSAI美術館",
+          "excerpt": "開館時間10:00～17:00、月曜休館を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "unknown",
+        "source_url": null,
+        "notes": "公式一次情報で子ども料金・年齢・同伴条件を確認できずunknown。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "通年の開館案内と入館料を掲示する常設盆栽美術館。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "施設公式サイトでexact identity、所在地、開館時間と常設美術館であることを確認。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-adf8186b7a22",
+      "extracted_identity": "株式会社奈良ロイヤルホテル",
+      "product_ids": [
+        41883
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/41883"
+      ],
+      "product_titles": [
+        "奈良ロイヤルホテル天然温泉入浴Eチケット ＜食事つきプランあり＞"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "ホテル付帯温泉商品で、独立した家族向け施設identityと子ども利用条件の公式確認が不足",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity",
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://nara-royal.co.jp/onsen/",
+          "title": "ラ・ロイヤル・スパ",
+          "excerpt": "ホテル地下1階のラ・ロイヤル・スパを日帰り利用可能なスパ施設として掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://nara-royal.co.jp/access/",
+          "title": "奈良ロイヤルホテル アクセス",
+          "excerpt": "奈良県奈良市法華寺町254-1。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://nara-royal.co.jp/onsen/",
+          "title": "ラ・ロイヤル・スパ",
+          "excerpt": "2026年の温泉営業案内・イベント情報を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "restricted",
+        "source_url": "https://nara-royal.co.jp/news/20240219/7201/",
+        "notes": "公式案内に子ども料金と12歳未満の保護者同伴条件を掲載。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "独立名称を持ち、宿泊者以外の日帰り利用を継続提供する常設温浴施設。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式サイトでラ・ロイヤル・スパの独立名称、所在地、日帰り営業と常設温浴施設であることを確認。",
+      "review_complete": true
+    },
+    {
+      "candidate_id": "rakuten-085d6da1c638",
+      "extracted_identity": "スカイリゾートスパ「プラウブラン」",
+      "product_ids": [
+        47788
+      ],
+      "product_urls": [
+        "https://experiences.travel.rakuten.co.jp/experiences/47788"
+      ],
+      "product_titles": [
+        "【現地販売価格から5%OFF】北海道 札幌駅直結の天然温泉「プラウブラン」Eチケット 予約＜眺望抜群！館内着・タオル付"
+      ],
+      "previous_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "previous_reason": "ホテル付帯スパで年齢制限を含む子ども利用条件と独立施設としての適格性を公式一次情報で確定できない",
+      "previous_insufficiency_category": "MULTIPLE_EVIDENCE_INSUFFICIENT",
+      "previous_missing_conditions": [
+        "identity",
+        "child_use"
+      ],
+      "evidence": {
+        "identity": {
+          "satisfied": true,
+          "url": "https://www.jrhotels.co.jp/tower/spa/",
+          "title": "スカイリゾートスパ プラウブラン",
+          "excerpt": "JRタワーホテル日航札幌22階の温浴施設として独立名称を掲載。"
+        },
+        "address": {
+          "satisfied": true,
+          "url": "https://www.jrhotels.co.jp/tower/access/",
+          "title": "JRタワーホテル日航札幌 アクセス",
+          "excerpt": "北海道札幌市中央区北5条西2丁目5番地。"
+        },
+        "current_operation": {
+          "satisfied": true,
+          "url": "https://www.jrhotels.co.jp/tower/spa/",
+          "title": "スカイリゾートスパ プラウブラン",
+          "excerpt": "営業時間、料金、現行利用案内を掲載。"
+        }
+      },
+      "child_use_metadata": {
+        "status": "not_allowed",
+        "source_url": "https://www.jrhotels.co.jp/tower/spa/",
+        "notes": "公式利用案内で18歳以上限定と明示。子ども向け推薦から除外する。"
+      },
+      "facility_ops_eligibility": {
+        "satisfied": true,
+        "basis": "独立名称と外来料金を持ち、継続営業する常設温浴施設。"
+      },
+      "final_status": "ADD",
+      "final_missing_conditions": [],
+      "final_insufficiency_code": null,
+      "reason": "公式サイトでスカイリゾートスパ「プラウブラン」のexact identity、所在地、現行営業を確認。18歳以上限定はnot_allowed metadataとして保持する。",
+      "review_complete": true
+    }
+  ]
+}
