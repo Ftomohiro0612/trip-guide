@@ -38,8 +38,24 @@
 **confirmed の条件（すべて満たすこと）**
 1. source_urls の先頭が**公式サイト・自治体・運営会社など一次情報**であること
 2. source_checked_at があること
-3. 住所・営業状況・施設種別に重大な矛盾がないこと
-4. **AI推定のみ・まとめサイトのみでは confirmed にしない**
+3. exact facility identity・住所・現行営業を公式一次情報で確認できること
+4. FacilityOps上、常設のおでかけ施設として適格であること
+5. 子ども利用metadataは公式根拠があれば記録し、なければ `unknown` であること（canon採用ゲートにはしない）
+6. **AI推定のみ・まとめサイトのみでは confirmed にしない**
+
+### child-use metadata（2026-08-27 Owner改定）
+
+```json
+{
+  "child_use_status": "unknown",
+  "child_use_notes": "公式一次情報に子ども料金・年齢・同伴条件の明示なし"
+}
+```
+
+- `child_use_status`: `confirmed` / `unknown` / `restricted` / `not_allowed`
+- `unknown` はcanon非掲載理由にしない
+- `restricted` / `not_allowed` は子ども向け推薦候補から除外する
+- 年齢制限や利用不可を類似施設・一般常識から推測しない
 
 **source_checked_at の更新ルール**
 - 住所・料金・営業時間・営業状況など**重要項目を公式確認した日**を入れる

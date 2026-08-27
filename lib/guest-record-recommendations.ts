@@ -1,4 +1,5 @@
 import { visibleFacilities } from "@/lib/facilities";
+import { isChildRecommendationEligible } from "@/lib/facility-child-use";
 import {
   getGuestInterestTags,
   type GuestInterestTag,
@@ -19,6 +20,7 @@ function appendToGroup(map: Map<string, Facility[]>, key: string, facility: Faci
 }
 
 for (const facility of visibleFacilities) {
+  if (!isChildRecommendationEligible(facility)) continue;
   const guestTags = getGuestInterestTags(facility.recommended_for_tags);
   guestTagsByFacilityId.set(facility.id, guestTags);
 
@@ -83,6 +85,7 @@ export function getGuestRecordRecommendationCandidates(
   source: Facility,
   perTagLimit = 3,
 ): GuestRecordRecommendation[] {
+  if (!isChildRecommendationEligible(source)) return [];
   const sourceTags = guestTagsByFacilityId.get(source.id) ?? [];
   const candidateRank = new Map<number, number>();
   const candidates = new Map<number, Facility>();

@@ -1,5 +1,7 @@
 # アソビュー！施設逆引き discovery 監査（2026-08-27 second-pass）
 
+> 履歴注記（2026-08-27）: 本監査時点の4条件判定は、同日Owner改定によりchild-useを任意metadataへ変更した。残存538件の再判定結果は `asoview-child-use-policy-rejudgment-2026-08-27.md` を正とする。
+
 ## 結論
 
 初回監査で `OFFICIAL_EVIDENCE_INSUFFICIENT` だった741施設候補を全件second-passした。アソビュー掲載は候補発見にだけ使用し、FacilityOpsの4条件（施設identity、所在地、現行営業、子ども利用条件）は変更していない。同一公式ドメインの施設ページ、店舗一覧、料金、FAQ、予約、利用案内、公式PDF、自治体ページまで再探索し、4条件が公式一次情報で揃った157施設だけをcanonへ追加した。
