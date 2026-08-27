@@ -1,5 +1,7 @@
 # 楽天トラベル観光体験 施設逆引き discovery 追補監査（2026-08-26）
 
+> 履歴注記（2026-08-27）: child-use evidenceはOwner改定によりcanon採用必須条件ではなく任意metadataとなった。今後のRakuten reverse discoveryはFacilityOps正本のidentity・所在地・現行営業・常設施設適格性を必須条件とする。
+
 ## 結論
 
 PR #72 で広く `EVIDENCE_INSUFFICIENT` としていた650 identityを再監査し、楽天詳細取得不能196件と、施設identityが見えていた454件を分離した。後者454件は商品詳細と公式一次情報を全件再レビューし、常設・独立・家族向けで、公式サイト、所在地、現行営業、子ども利用条件を確認できた 87施設（86 identity）を追加した。既存FacilityOps掲載基準は変更していない。

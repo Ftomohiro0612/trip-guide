@@ -8,6 +8,7 @@ import {
   type EventItem,
 } from "@/lib/events";
 import { visibleFacilities } from "@/lib/facilities";
+import { isChildRecommendationEligible } from "@/lib/facility-child-use";
 import {
   currentChildAge,
   getAgeCompatibility,
@@ -175,7 +176,8 @@ export function buildMypageRecommendations({
   const facilityCandidates = facilitySource.flatMap((facility) => {
     if (
       !selectedPrefectures.has(facility.prefecture_id) ||
-      visited.has(facility.slug)
+      visited.has(facility.slug) ||
+      !isChildRecommendationEligible(facility)
     ) {
       return [];
     }

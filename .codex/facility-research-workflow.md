@@ -11,8 +11,9 @@
 ```
 1. 候補収集     RESEARCH_METHODOLOGY.md の10ステップ（WebSearch+まとめサイト突合+公的サイト）
 2. 一次確認     施設ごとに公式サイト（なければ自治体/観光協会ページ）を開き、
-                住所・営業状況（閉店していないか）・基本情報を確認
+                exact identity・住所・営業状況（閉店していないか）・常設施設適格性を確認
                 → 公式情報が見つからない施設は needs_web_check で保留（追加しない or 保留リストへ）
+                → 子ども料金・年齢・同伴条件だけが見つからない場合は保留せず metadata を unknown にする
 3. 県内判定     住所の都道府県が対象9県か確認。県外なら**その場でリストから除外**
                 （「→該当県外」等のメモを残したままCSV/JSONに入れない。id734/929事件の再発防止）
 4. データ整形   22列フォーマット + 新メタ3列:
@@ -22,6 +23,8 @@
 5. 座標取得     住所確定後に Nominatim（1req/s 厳守）で取得 → 県 bbox 内か検証
                 bbox 外なら needs_web_check にして座標を確定しない。geocode_source を記録
 6. タグ付与     recommended_for_tags_rules.md 準拠。description/公式説明に根拠語彙がある場合のみ
+                公式に成人限定・子ども利用不可・年齢制限がある場合は child_use_status / notes を記録し、
+                restricted / not_allowed を子ども向け推薦候補から除外
 7. 反映         append-to-sheet → sync-sheet → push-to-sheet（id書き戻し必須）
 8. 監査         node scripts/audit-data-quality.mjs → 新規分にhigh/mediumが出ていないか確認
 9. 表示確認     ローカル build + 該当施設ページの表示確認（rain_friendly 等の値制約も）

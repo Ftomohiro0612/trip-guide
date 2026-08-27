@@ -3,10 +3,11 @@ import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
-const [audit, additions, ledger, facilityData, rakutenActions, asoviewActions] =
+const [audit, additions, policyAudit, ledger, facilityData, rakutenActions, asoviewActions] =
   await Promise.all([
     readJson("docs/audits/asoview-reverse-discovery-second-pass-final-2026-08-27.json"),
     readJson("scripts/data/asoview-second-pass-additions-2026-08-27.json"),
+    readJson("docs/audits/asoview-child-use-policy-rejudgment-2026-08-27.json"),
     readJson("docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json"),
     readJson("data/facilities_data.json"),
     readJson("data/rakuten_facility_actions.json"),
@@ -118,9 +119,12 @@ assert.deepEqual(
 );
 assert.equal(ledger.coverage.canon_before_second_pass, 5051);
 assert.equal(ledger.coverage.second_pass_facilities_added, additions.count);
-assert.equal(ledger.coverage.final_facility_canon_count, 5051 + additions.count);
+assert.equal(
+  ledger.coverage.final_facility_canon_count,
+  5051 + additions.count + policyAudit.coverage.final_status_counts.ADD,
+);
 assert.equal(facilityData.metadata.total_facilities, facilityData.facilities.length);
-assert.equal(facilityData.facilities.length, 5208);
+assert.equal(facilityData.facilities.length, policyAudit.coverage.canon_after);
 assert.equal(
   sum(facilityData.metadata.prefectures.map((entry) => entry.count)),
   facilityData.facilities.length,
@@ -134,9 +138,9 @@ const canonHash = createHash("sha256")
   .update(JSON.stringify(facilityData))
   .digest("hex");
 assert.equal(ledger.coverage.final_facility_canon_sha256, canonHash);
-assert.equal(rakutenActions.coverage.facility_canon_count, 5208);
+assert.equal(rakutenActions.coverage.facility_canon_count, policyAudit.coverage.canon_after);
 assert.equal(rakutenActions.coverage.facility_canon_sha256, canonHash);
-assert.equal(asoviewActions.coverage.facility_canon_count, 5208);
+assert.equal(asoviewActions.coverage.facility_canon_count, policyAudit.coverage.canon_after);
 assert.equal(asoviewActions.coverage.facility_canon_sha256, canonHash);
 assert.equal(asoviewActions.coverage.reverse_discovery_second_pass_count, 741);
 assert.equal(asoviewActions.coverage.reverse_discovery_second_pass_add_count, additions.count);

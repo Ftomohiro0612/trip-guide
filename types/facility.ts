@@ -92,6 +92,12 @@ export type DataQualityStatus =
   | "needs_human_review"
   | "exclude_candidate";
 
+export type ChildUseStatus =
+  | "confirmed"
+  | "unknown"
+  | "restricted"
+  | "not_allowed";
+
 export interface Facility {
   id: number;
   slug: string;
@@ -107,6 +113,8 @@ export interface Facility {
   fee_type: FeeType;
   adult_fee: string;
   child_fee: string;
+  child_use_status?: ChildUseStatus;
+  child_use_notes?: string;
   description: string;
   target_age: string;
   url: string | null;
