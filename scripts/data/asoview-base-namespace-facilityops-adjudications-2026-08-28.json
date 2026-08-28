@@ -1,0 +1,300 @@
+{
+  "schema_version": 1,
+  "checked_at": "2026-08-28",
+  "items": [
+    {
+      "asoview_identity": "あしがくぼ果樹公園村",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "MULTI_SITE_AREA_IDENTITY",
+      "reason": "The official destination source identifies an area made up of 11 separately located farms and gives a tourism information desk as the contact address, not one independently addressable permanent facility.",
+      "source_url": "https://chocotabi-saitama.jp/spot/19134/",
+      "evidence_excerpt": "芦ヶ久保地区の日向山南斜面に点在する11軒の農園が集まった果樹公園村。営業時間は各農園により異なり、連絡先は案内所。"
+    },
+    {
+      "asoview_identity": "あすかいちご狩りパーク",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "MULTI_SITE_BOOKING_NETWORK",
+      "reason": "The official source identifies a booking network of 17 farms, assigns the actual farm after reservation, and states that no strawberry picking occurs at the secretariat address; it is not one independently addressable permanent facility.",
+      "source_url": "https://www.asukadeasobo.jp/experience/asukaichigo/",
+      "evidence_excerpt": "農園は明日香村内に17か所あり予約時に担当農園を案内。事務局ではいちご狩りはできない。"
+    },
+    {
+      "asoview_identity": "あそうベイパーク",
+      "final_status": "DUPLICATE",
+      "facility_id": 3185,
+      "reason": "The recovered identity is the same 56.1-hectare Asou Bay Park already represented by canon facility 3185; the existing label overemphasizes one on-site use and will be normalized without creating a second facility identity.",
+      "source_url": "https://asoubaypark.net/ja/",
+      "evidence_excerpt": "対馬市美津島町大山584番地1の総合公園。芝生、遊具、乗馬などを案内し、現行営業時間を掲載。"
+    },
+    {
+      "asoview_identity": "ぎょぎょランド",
+      "final_status": "DUPLICATE",
+      "facility_id": 1734,
+      "reason": "The recovered identity is the freshwater-aquarium component of the same Akatsukayama Park facility already represented by canon facility 1734, not an independent second destination identity.",
+      "source_url": "https://www.akatsukayama.jp/shisetsu.html",
+      "evidence_excerpt": "豊川市赤塚山公園の公式施設案内は、ぎょぎょランドを園内の淡水魚水族館として掲載し、所在地を豊川市市田町東堤上1番地30と示す。"
+    },
+    {
+      "asoview_identity": "石井農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "OPERATOR_IDENTITY_NOT_FACILITY",
+      "reason": "The selected official source is a landscaping company office and service area, not an independently visitable family facility matching the recovered provider identity.",
+      "source_url": "https://ishiinouen.jp/about/",
+      "evidence_excerpt": "The official page identifies 株式会社石井農園 as a landscaping contractor and lists its company office and service area."
+    },
+    {
+      "asoview_identity": "松村農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "OPERATOR_IDENTITY_NOT_FACILITY",
+      "reason": "The selected official source identifies a landscaping company head office and branch, not an independently visitable family facility.",
+      "source_url": "https://www.matsumura-noen.co.jp/official/Home/Access",
+      "evidence_excerpt": "The official access page lists 株式会社松村農園's 高知本社 and 徳島営業所."
+    },
+    {
+      "asoview_identity": "ランドアース",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "OPERATOR_IDENTITY_NOT_FACILITY",
+      "reason": "The evidence resolves to an operator office rather than one independently addressable permanent visitor facility.",
+      "source_url": "https://www.land-earth.co.jp/company.html",
+      "evidence_excerpt": "The official company page supplies a corporate office address, not a visitor facility identity and site."
+    },
+    {
+      "asoview_identity": "早川農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "RETAIL_FARM_NOT_VISITOR_FACILITY",
+      "reason": "The official municipal source describes a garden-gate direct-sales farmer, not a permanent visitor experience facility; the selected address was also the municipal office footer.",
+      "source_url": "https://www.city.kasukabe.lg.jp/sumiyosa_miryoku/kanko/kasukabedekau_taberu/4/9022.html",
+      "evidence_excerpt": "The page classifies the operation as 庭先直売農家 and separately lists the municipal agriculture office in its footer."
+    },
+    {
+      "asoview_identity": "島根県立石見海浜公園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "NON_INDEPENDENT_RECOVERED_ALIAS",
+      "reason": "This recovered provider identity is an alias of the independently reviewed 石見海浜公園 at the same official facility address, not a second facility.",
+      "source_url": "https://kkisp.jp/",
+      "evidence_excerpt": "Both recovered labels resolve to the same prefectural Iwami Seaside Park and address."
+    },
+    {
+      "asoview_identity": "阿賀野川河川公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current evidence describes the Niigata City park while the selected address describes a different same-named park in Agano City; the sources cannot be combined into one facility record."
+    },
+    {
+      "asoview_identity": "ハッピー農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The selected identity source is a Mie strawberry farm, while the address/current source is a Fukushima ecommerce company; same-name evidence was mixed across prefectures."
+    },
+    {
+      "asoview_identity": "海浜公園テニスコート",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity source is Toyosaki Seaside Park in Okinawa, while the selected address is Itoigahama Seaside Park in Oita."
+    },
+    {
+      "asoview_identity": "甘木公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current evidence describes Asakura City's Amagi Park, while the selected address describes a different same-named park in Omuta City."
+    },
+    {
+      "asoview_identity": "亀城公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current evidence describes Tsuchiura City's Kijo Park, while the selected address describes Kariya City's different same-named park."
+    },
+    {
+      "asoview_identity": "沼田公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current evidence describes a Shizuoka City park, while the selected address describes Numata City's different same-named park in Gunma."
+    },
+    {
+      "asoview_identity": "清水公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_current_operation"],
+      "reason": "The selected identity/current source is Hachioji City's park, while the selected address is the distinct private Shimizu Park in Noda City."
+    },
+    {
+      "asoview_identity": "池田牧場",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source describes a Shiga facility, while the selected address belongs to a different same-named farm in Hiroshima."
+    },
+    {
+      "asoview_identity": "中央運動公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity source is Koshi City's Central Sports Park in Kumamoto, while the address/current source is Arita Town's different park in Saga."
+    },
+    {
+      "asoview_identity": "中之島公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source is Wakayama City's park, while the selected address is Osaka City's different Nakanoshima Park."
+    },
+    {
+      "asoview_identity": "潮風公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source is Katsuura City's park in Chiba, while the address evidence describes Tokyo Metropolitan Shiokaze Park."
+    },
+    {
+      "asoview_identity": "福田果樹園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source is a Miyagi farm, while the address belongs to a different same-named farm in Kumamoto."
+    },
+    {
+      "asoview_identity": "牧場の家",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source is Nishi-Izu's Makiba no Ie in Shizuoka, while the selected address is a different Yufuin inn in Oita."
+    },
+    {
+      "asoview_identity": "滝の宮公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The identity/current source is Ashikaga City's park in Tochigi, while the selected address is Niihama City's different park in Ehime."
+    },
+    {
+      "asoview_identity": "講談社野間記念館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Bunkyo Civic Center contact footer, not the museum location."
+    },
+    {
+      "asoview_identity": "野球殿堂博物館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Bunkyo Civic Center contact footer, not the museum location."
+    },
+    {
+      "asoview_identity": "鏡野公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address", "current_operation"],
+      "reason": "The selected address is the Kochi Prefectural Government contact office and the selected operation page is unrelated boilerplate, not facility evidence."
+    },
+    {
+      "asoview_identity": "栗東歴史民俗博物館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Ritto City Hall footer, not the museum location."
+    },
+    {
+      "asoview_identity": "県営大仏山公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address", "current_operation"],
+      "reason": "The selected address is Ise City Hall and the selected operation page is unrelated to the park."
+    },
+    {
+      "asoview_identity": "県西総合公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is an Ibaraki prefectural office footer; the page itself names the park office in Chikusei at a different location."
+    },
+    {
+      "asoview_identity": "深層水ミュージアム",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Yaizu City department contact in City Hall, not the museum location."
+    },
+    {
+      "asoview_identity": "大内峠一字観公園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Yosano Town government contact office, not the park location."
+    },
+    {
+      "asoview_identity": "練馬区立美術館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Nerima Ward Office footer, not the museum location."
+    },
+    {
+      "asoview_identity": "粕川温泉元気ランド",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is the Maebashi City tourism department contact, not the hot-spring facility."
+    },
+    {
+      "asoview_identity": "日産ウォーターパーク",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["current_operation"],
+      "reason": "The selected current-operation evidence is an unrelated city-hall relocation page, so present operation was not established by the reviewed evidence."
+    },
+    {
+      "asoview_identity": "樂美術館",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The extracted address is a bus-route instruction rather than a facility street address."
+    },
+    {
+      "asoview_identity": "中込農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["facility_address"],
+      "reason": "The selected address is explicitly described as the owner's home while reception and the active picking site are elsewhere; one independently addressable visitor facility was not established."
+    },
+    {
+      "asoview_identity": "みつぎグリーンランド",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["current_operation"],
+      "reason": "The current official municipal page states that the facility has been closed indefinitely since the July 2018 heavy-rain disaster, so current operation is not established."
+    },
+    {
+      "asoview_identity": "さくら農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "RETAIL_PRODUCER_NOT_VISITOR_FACILITY",
+      "reason": "The official municipal source lists a flower producer/direct-sales outlet and shipping service, not a visitor experience facility.",
+      "source_url": "https://www.city.sakura.lg.jp/soshiki/noseika/gyomu_syokai/164/3375.html",
+      "evidence_excerpt": "The page classifies the site under 地産地消・直売所 and lists lilies, bouquets, and shipping as its offering."
+    },
+    {
+      "asoview_identity": "横山農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "MULTI_SITE_RETAIL_PRODUCER_IDENTITY",
+      "reason": "The official source identifies a producer/direct-sales business with multiple retail locations and a restaurant, not one independently addressable visitor experience facility.",
+      "source_url": "https://www.yokoyama-nouen.com/access/",
+      "evidence_excerpt": "The official access page separately lists the 本店, 長久手店, and restaurant and describes tomato/melon production and direct sales."
+    },
+    {
+      "asoview_identity": "古川農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "ONLINE_RETAIL_PRODUCER_NOT_VISITOR_FACILITY",
+      "reason": "The reviewed official source establishes an online producer/shop and inquiry contact, but no independently visitable experience facility.",
+      "source_url": "https://furukawa-farm.com/index.php/inquiry/",
+      "evidence_excerpt": "The official pages provide product shopping, payment, returns, and farm inquiries without a visitor experience site."
+    },
+    {
+      "asoview_identity": "佐野農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "HORTICULTURAL_RETAILER_NOT_VISITOR_FACILITY",
+      "reason": "The official source describes cultivation, display, and sale of orchids and alpine plants, not a family visitor experience facility.",
+      "source_url": "https://sanonouen.com/map/",
+      "evidence_excerpt": "The official site identifies a horticultural grower/retailer and seasonal display period for its plant products."
+    },
+    {
+      "asoview_identity": "松井農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "ONLINE_RETAIL_PRODUCER_NOT_VISITOR_FACILITY",
+      "reason": "The official source describes Kyoto vegetable production, wholesale, and online sales, not a visitor experience facility.",
+      "source_url": "https://www.shinsho-farm.com/",
+      "evidence_excerpt": "The official site states that produce is supplied to businesses and shipped to individual online customers."
+    },
+    {
+      "asoview_identity": "西村農園",
+      "final_status": "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      "missing_conditions": ["coherent_identity_address"],
+      "reason": "The selected identity source is a rice producer in Fukushima, while the selected address belongs to a different same-named farm in Mie."
+    },
+    {
+      "asoview_identity": "谷井農園",
+      "final_status": "NOT_ELIGIBLE",
+      "category": "PRODUCTION_AND_ONLINE_RETAIL_NOT_VISITOR_FACILITY",
+      "reason": "The official source establishes a citrus farm, juice factory, and online retail operation, but not an independently visitable experience facility.",
+      "source_url": "https://taniifarm.co.jp/aboutus/",
+      "evidence_excerpt": "The official company page describes citrus cultivation, juice/jam production, and sales without a visitor program or facility use."
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import { createWriteStream } from "node:fs";
 import { mkdir, readFile, writeFile } from "node:fs/promises";
-import { dirname, resolve } from "node:path";
+import { dirname, relative, resolve } from "node:path";
 import { gunzipSync } from "node:zlib";
 
 const ROOT = resolve(import.meta.dirname, "..");
@@ -13,12 +13,23 @@ const MANIFEST = resolve(
   ROOT,
   ".codex/research/asoview-public-page-catalog-manifest-2026-08-26.json",
 );
+const BASE_NAMESPACE_CATALOG = resolve(
+  ROOT,
+  process.env.ASOVIEW_BASE_NAMESPACE_CATALOG ??
+    ".codex/research/asoview-base-namespace-2026-08-28.jsonl",
+);
+const BASE_NAMESPACE_MANIFEST = resolve(
+  ROOT,
+  process.env.ASOVIEW_BASE_NAMESPACE_MANIFEST ??
+    ".codex/research/asoview-base-namespace-manifest-2026-08-28.json",
+);
+const ALLOW_SITEMAP_ONLY = process.env.ASOVIEW_ALLOW_SITEMAP_ONLY === "1";
 const CONCURRENCY = Number(process.env.ASOVIEW_FETCH_CONCURRENCY ?? 16);
 const REQUEST_SPACING_MS = Number(
   process.env.ASOVIEW_FETCH_SPACING_MS ?? 120,
 );
 const USER_AGENT =
-  "MemoripPublicCatalogAudit/1.0 (+https://trip-guide.net; public-sitemap-only)";
+  "MemoripPublicCatalogAudit/1.1 (+https://trip-guide.net; public-pages-only)";
 
 const SITEMAPS = [
   { kind: "ticket", url: "https://www.asoview.com/sitemap_2_ticket.xml.gz" },
@@ -46,7 +57,8 @@ try {
 
 const targets = [];
 const sitemapCounts = {};
-const sitemapUrls = [];
+const catalogUrls = [];
+const targetUrlSet = new Set();
 for (const sitemap of SITEMAPS) {
   const response = await fetch(sitemap.url, {
     headers: { "User-Agent": USER_AGENT },
@@ -61,21 +73,85 @@ for (const sitemap of SITEMAPS) {
   for (const match of xml.matchAll(/<loc>(https:\/\/www\.asoview\.com\/[^<]+)<\/loc>/g)) {
     const url = decodeXml(match[1]);
     sitemapCount += 1;
-    sitemapUrls.push(url);
+    catalogUrls.push(url);
+    targetUrlSet.add(url);
     if (!completed.has(url)) targets.push({ kind: sitemap.kind, url });
   }
   sitemapCounts[sitemap.kind] = sitemapCount;
 }
 
+let namespaceSupplement = null;
+try {
+  const [namespaceRaw, namespaceManifest] = await Promise.all([
+    readFile(BASE_NAMESPACE_CATALOG, "utf8"),
+    readFile(BASE_NAMESPACE_MANIFEST, "utf8").then(JSON.parse),
+  ]);
+  const latestTerminalById = new Map();
+  for (const line of namespaceRaw.split("\n")) {
+    if (!line) continue;
+    try {
+      const record = JSON.parse(line);
+      if (record.terminal && !record.in_base_sitemap) {
+        latestTerminalById.set(record.id, record);
+      }
+    } catch {
+      // A partially-written final line is ignored and must be completed first.
+    }
+  }
+  if (
+    latestTerminalById.size !==
+    namespaceManifest.off_sitemap_scan_target_id_count
+  ) {
+    throw new Error(
+      `base namespace supplement incomplete: expected=${namespaceManifest.off_sitemap_scan_target_id_count} terminal=${latestTerminalById.size}`,
+    );
+  }
+  const supplementalPages = [...latestTerminalById.values()].filter(
+    (record) => record.public_page,
+  );
+  for (const record of supplementalPages) {
+    const url = record.url;
+    if (targetUrlSet.has(url)) continue;
+    targetUrlSet.add(url);
+    catalogUrls.push(url);
+    if (!completed.has(url)) targets.push({ kind: "base", url });
+  }
+  namespaceSupplement = {
+    catalog: relative(ROOT, BASE_NAMESPACE_CATALOG).replaceAll("\\", "/"),
+    manifest: relative(ROOT, BASE_NAMESPACE_MANIFEST).replaceAll("\\", "/"),
+    namespace_min_id: namespaceManifest.namespace_min_id,
+    namespace_max_id: namespaceManifest.namespace_max_id,
+    off_sitemap_scan_target_id_count:
+      namespaceManifest.off_sitemap_scan_target_id_count,
+    public_off_sitemap_page_count: supplementalPages.length,
+  };
+} catch (error) {
+  if (!ALLOW_SITEMAP_ONLY) {
+    throw new Error(
+      `refusing sitemap-only Asoview intake; complete the base namespace scan or set ASOVIEW_ALLOW_SITEMAP_ONLY=1 for an explicit diagnostic override: ${error instanceof Error ? error.message : String(error)}`,
+    );
+  }
+}
+
+const expectedCatalogCounts = {
+  ...sitemapCounts,
+  base:
+    sitemapCounts.base +
+    Number(namespaceSupplement?.public_off_sitemap_page_count ?? 0),
+};
+
 const manifestPayload = {
   schema_version: 1,
   generated_at: new Date().toISOString(),
   sitemaps: SITEMAPS,
-  expected_catalog_counts: sitemapCounts,
-  expected_public_page_count: sitemapUrls.length,
-  sitemap_urls: sitemapUrls,
+  sitemap_page_counts: sitemapCounts,
+  base_namespace_supplement: namespaceSupplement,
+  sitemap_only_diagnostic_override: !namespaceSupplement,
+  expected_catalog_counts: expectedCatalogCounts,
+  expected_public_page_count: catalogUrls.length,
+  sitemap_urls: catalogUrls,
   sitemap_urls_sha256: createHash("sha256")
-    .update(JSON.stringify(sitemapUrls))
+    .update(JSON.stringify(catalogUrls))
     .digest("hex"),
 };
 await writeFile(
@@ -145,6 +221,17 @@ async function fetchHeadRecord(target) {
       });
       const html = await readThroughHead(response);
       clearTimeout(timeout);
+      if (
+        [403, 408, 425, 429].includes(response.status) ||
+        response.status >= 500
+      ) {
+        lastError = `retryable HTTP status ${response.status}`;
+        if (attempt < 3) {
+          await delay(30_000 * attempt);
+          continue;
+        }
+        break;
+      }
       return {
         kind: target.kind,
         url: target.url,
@@ -155,6 +242,7 @@ async function fetchHeadRecord(target) {
           !response.ok &&
           response.status >= 400 &&
           response.status < 500 &&
+          response.status !== 403 &&
           response.status !== 408 &&
           response.status !== 425 &&
           response.status !== 429,
