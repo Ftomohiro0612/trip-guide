@@ -1,26 +1,48 @@
 import { spawn } from "node:child_process";
 import { createHash } from "node:crypto";
-import { mkdir, readFile, rm, writeFile } from "node:fs/promises";
+import { mkdir, readFile, rename, rm, writeFile } from "node:fs/promises";
 import { basename, resolve } from "node:path";
 
 const ROOT = resolve(import.meta.dirname, "..");
+const NAMESPACE_MODE = process.env.ASOVIEW_SECOND_PASS_MODE === "namespace";
+const ALLOW_INCOMPLETE_NAMESPACE =
+  process.env.ASOVIEW_SECOND_PASS_ALLOW_INCOMPLETE === "1";
 const INPUT_PATH = resolve(
   ROOT,
-  "docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json",
+  NAMESPACE_MODE
+    ? "docs/audits/asoview-base-namespace-coverage-2026-08-28.json"
+    : "docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json",
 );
 const FACILITIES_PATH = resolve(ROOT, "data/facilities_data.json");
 const SEARCH_SEEDS_PATH = resolve(
   ROOT,
-  "scripts/data/asoview-independent-search-seeds-2026-08-26.json",
+  NAMESPACE_MODE
+    ? "scripts/data/asoview-base-namespace-search-seeds-2026-08-28.json"
+    : "scripts/data/asoview-independent-search-seeds-2026-08-26.json",
 );
-const CACHE_DIR = resolve(ROOT, ".codex/research/asoview-second-pass-2026-08-27");
+const WEB_SEARCH_SEEDS_PATH = resolve(
+  ROOT,
+  "scripts/data/asoview-base-namespace-web-search-seeds-2026-08-28.json",
+);
+const ADJUDICATIONS_PATH = resolve(
+  ROOT,
+  "scripts/data/asoview-base-namespace-facilityops-adjudications-2026-08-28.json",
+);
+const CACHE_DIR = resolve(
+  ROOT,
+  NAMESPACE_MODE
+    ? ".codex/research/asoview-base-namespace-facilityops-2026-08-28"
+    : ".codex/research/asoview-second-pass-2026-08-27",
+);
 const CACHE_PATH = resolve(CACHE_DIR, "cache.json");
 const OUTPUT_PATH = resolve(
   ROOT,
-  "docs/audits/asoview-reverse-discovery-second-pass-2026-08-27.json",
+  NAMESPACE_MODE
+    ? "docs/audits/asoview-base-namespace-facilityops-2026-08-28.json"
+    : "docs/audits/asoview-reverse-discovery-second-pass-2026-08-27.json",
 );
-const CHECKED_AT = "2026-08-27";
-const REVIEW_VERSION = 7;
+const CHECKED_AT = NAMESPACE_MODE ? "2026-08-28" : "2026-08-27";
+const REVIEW_VERSION = NAMESPACE_MODE ? 47 : 7;
 const CONCURRENCY = Math.max(
   1,
   Number(process.env.ASOVIEW_SECOND_PASS_CONCURRENCY ?? 5),
@@ -56,24 +78,54 @@ const INTERNAL_PRIORITY_PATTERN =
 const OFFICIAL_BOOKING_HOST_PATTERN =
   /(?:reserva\.be|select-type\.com|airreserve\.net|stores\.jp|square\.site|peatix\.com|passmarket\.yahoo\.co\.jp|e-tix\.jp|webket\.jp|ticketbook\.jp)$/iu;
 const BLOCKED_HOST_PATTERN =
-  /(?:asoview\.com|iko-yo\.net|jalan\.|tripadvisor\.|wikipedia\.org|google\.|yahoo\.|yimg\.|bing\.com|mapion\.co\.jp|navitime\.co\.jp|rurubu\.jp|activityjapan\.com|kkday\.com|klook\.com|trip\.com|veltra\.com|nta\.co\.jp|jtb\.co\.jp|tour\.ne\.jp|tenki\.jp|mapple\.net|tabiwaza\.jp|fitmap\.jp|ekiten\.jp|rockgym\.jp|climbing-net\.com|climbers-web\.jp|enjoytokyo\.jp|instagram\.com|facebook\.com|(?:^|\.)x\.com|line\.me|ameblo\.jp|ameba\.jp|hatenablog\.com|note\.com|4travel\.jp|skyticket\.jp|japan-guide\.com|matcha-jp\.com|walkerplus\.com|tabelog\.com|hotpepper\.jp|prtimes\.jp|atpress\.ne\.jp|value-press\.com|impress\.co\.jp|itmedia\.co\.jp|news-fukabori\.com|pretty-online\.jp|kurashi-no\.jp|x-play\.jp|production\.x-play\.jp|training\.greenfield\.style|kids-school\.|kodomo-booster\.com|asreet\.com|nap-camp\.com|waribikinavi\.jp|museum\.or\.jp|travel\.watch\.|honda\.co\.jp|montbell\.jp|weathernews\.jp|jalan\.net|goo\.ne\.jp|4gamer\.net|reuters\.|oricon\.|knt\.co\.jp|yado\.knt\.co\.jp|h-takarajima\.com|keizai\.biz|bavi\.jp|playablejapan\.com|producer\.or\.jp|yaeyama\.or\.jp|ibarakiguide\.jp|hot-ishikawa\.jp|miyaginavi\.jp|maruchiba|crossroadfukuoka|tochigiji\.or\.jp|aichinow|japan47go)/iu;
+  /(?:asoview\.com|iko-yo\.net|jalan\.|tripadvisor\.|wikipedia\.org|google\.|yahoo\.|yimg\.|bing\.com|mapion\.co\.jp|navitime\.co\.jp|rurubu\.jp|activityjapan\.com|kkday\.com|klook\.com|trip\.com|veltra\.com|nta\.co\.jp|jtb\.co\.jp|tour\.ne\.jp|tenki\.jp|mapple\.net|tabiwaza\.jp|fitmap\.jp|ekiten\.jp|rockgym\.jp|climbing-net\.com|climbers-web\.jp|enjoytokyo\.jp|strawberry-picking\.net|instagram\.com|facebook\.com|(?:^|\.)x\.com|line\.me|ameblo\.jp|ameba\.jp|hatenablog\.com|note\.com|4travel\.jp|skyticket\.jp|japan-guide\.com|matcha-jp\.com|walkerplus\.com|tabelog\.com|hotpepper\.jp|prtimes\.jp|atpress\.ne\.jp|value-press\.com|impress\.co\.jp|itmedia\.co\.jp|news-fukabori\.com|pretty-online\.jp|kurashi-no\.jp|x-play\.jp|production\.x-play\.jp|training\.greenfield\.style|kids-school\.|kodomo-booster\.com|asreet\.com|nap-camp\.com|camp-guide\.net|waribikinavi\.jp|museum\.or\.jp|travel\.watch\.|honda\.co\.jp|montbell\.jp|weathernews\.jp|jalan\.net|goo\.ne\.jp|4gamer\.net|reuters\.|oricon\.|knt\.co\.jp|yado\.knt\.co\.jp|h-takarajima\.com|keizai\.biz|bavi\.jp|playablejapan\.com|producer\.or\.jp|yaeyama\.or\.jp|ibarakiguide\.jp|hot-ishikawa\.jp|miyaginavi\.jp|maruchiba|crossroadfukuoka|tochigiji\.or\.jp|aichinow|japan47go)/iu;
 const TOURISM_PORTAL_PATTERN =
-  /(?:kankou|tourism|visit-|travel|tabi|kanko|story|maruchiba|crossroadfukuoka|tochigiji|aichinow|japan47go|hyogo-tourism|feel-kobe)/iu;
+  /(?:kankou|tourism|visit-|travel|tabi|kanko|story|gotokyo|at-nagasaki|my-kagawa|maruchiba|crossroadfukuoka|tochigiji|aichinow|japan47go|hyogo-tourism|feel-kobe)/iu;
 
 await mkdir(CACHE_DIR, { recursive: true });
-const [ledger, facilityData, searchSeeds] = await Promise.all([
+const [ledger, facilityData, searchSeeds, webSearchSeeds, adjudications] =
+  await Promise.all([
   readFile(INPUT_PATH, "utf8").then(JSON.parse),
   readFile(FACILITIES_PATH, "utf8").then(JSON.parse),
   readFile(SEARCH_SEEDS_PATH, "utf8").then(JSON.parse),
+  NAMESPACE_MODE
+    ? readFile(WEB_SEARCH_SEEDS_PATH, "utf8").then(JSON.parse)
+    : Promise.resolve({ items: [] }),
+  NAMESPACE_MODE
+    ? readFile(ADJUDICATIONS_PATH, "utf8").then(JSON.parse)
+    : Promise.resolve({ items: [] }),
 ]);
-const targets = ledger.identities.filter(
-  (identity) => identity.status === "OFFICIAL_EVIDENCE_INSUFFICIENT",
-);
-if (targets.length !== 741) {
+const targets = NAMESPACE_MODE
+  ? ledger.facilityops_review_candidates
+  : ledger.identities.filter(
+      (identity) => identity.status === "OFFICIAL_EVIDENCE_INSUFFICIENT",
+    );
+if (!NAMESPACE_MODE && targets.length !== 741) {
   throw new Error(`expected 741 second-pass targets, found ${targets.length}`);
 }
-const seedByIdentity = new Map(
-  searchSeeds.items.map((item) => [item.asoview_identity, item]),
+if (
+  NAMESPACE_MODE &&
+  !ledger.coverage.scan_complete &&
+  !ALLOW_INCOMPLETE_NAMESPACE
+) {
+  throw new Error("refusing FacilityOps review from an incomplete base namespace scan");
+}
+const seedByIdentity = new Map();
+for (const item of [...webSearchSeeds.items, ...searchSeeds.items]) {
+  const prior = seedByIdentity.get(item.asoview_identity);
+  seedByIdentity.set(item.asoview_identity, {
+    asoview_identity: item.asoview_identity,
+    preferred_host: item.preferred_host ?? prior?.preferred_host,
+    expected_prefecture:
+      item.expected_prefecture ?? prior?.expected_prefecture,
+    // Search results are relevance ordered. Four independently discovered
+    // candidates are sufficient for primary-source selection and avoid
+    // crawling long tails of aggregators that merely repeat the name.
+    urls: unique([...(item.urls ?? []), ...(prior?.urls ?? [])]).slice(0, 4),
+  });
+}
+const adjudicationByIdentity = new Map(
+  adjudications.items.map((item) => [item.asoview_identity, item]),
 );
 const cache = await readJson(CACHE_PATH, {
   schema_version: 1,
@@ -81,6 +133,9 @@ const cache = await readJson(CACHE_PATH, {
   searches: {},
   pages: {},
 });
+let yahooUnavailable = false;
+let outputSavePromise = Promise.resolve();
+let cacheSavePromise = Promise.resolve();
 const priorOutput = await readJson(OUTPUT_PATH, null);
 const reviewByIdentity = new Map(
   (priorOutput?.review_version === REVIEW_VERSION ? priorOutput.reviews : [])
@@ -93,6 +148,9 @@ const reviews = targets.map((target) =>
 );
 await saveOutput();
 if (process.argv.includes("--classify-only")) {
+  applyFinalAdjudications();
+  reconcileRecoveredAliases();
+  await saveOutput();
   console.log(JSON.stringify(summarize(), null, 2));
   process.exit(0);
 }
@@ -103,9 +161,76 @@ let completedThisRun = 0;
 await Promise.all(
   Array.from({ length: Math.min(CONCURRENCY, pending.length || 1) }, worker),
 );
+applyFinalAdjudications();
+reconcileRecoveredAliases();
 await saveCache();
 await saveOutput();
 console.log(JSON.stringify(summarize(), null, 2));
+
+function reconcileRecoveredAliases() {
+  const groups = Map.groupBy(
+    reviews.filter((review) => review.final_status === "ADD"),
+    (review) => normalizeAddress(review.evidence?.address?.value),
+  );
+  for (const group of groups.values()) {
+    if (group.length < 2) continue;
+    const ranked = [...group].sort((left, right) => {
+      const leftExact =
+        normalize(left.asoview_identity) ===
+        normalize(left.evidence?.identity?.official_name);
+      const rightExact =
+        normalize(right.asoview_identity) ===
+        normalize(right.evidence?.identity?.official_name);
+      return Number(rightExact) - Number(leftExact) ||
+        right.asoview_identity.length - left.asoview_identity.length ||
+        left.asoview_identity.localeCompare(right.asoview_identity, "ja");
+    });
+    const accepted = [];
+    for (const alias of ranked) {
+      const sameIdentity = accepted.find(
+        (item) =>
+          bigramDice(
+            normalize(item.evidence?.identity?.official_name),
+            normalize(alias.evidence?.identity?.official_name),
+          ) >= 0.62,
+      );
+      if (!sameIdentity) {
+        accepted.push(alias);
+        continue;
+      }
+      alias.final_status = "NOT_ELIGIBLE";
+      alias.reason =
+        "the recovered Asoview identity is an alias of another recovered provider page, not an independent facility identity";
+      alias.not_eligible_basis = {
+        category: "non_independent_recovered_alias",
+        accepted_asoview_identity: sameIdentity.asoview_identity,
+        official_name: sameIdentity.evidence?.identity?.official_name,
+        official_address: sameIdentity.evidence?.address?.value,
+      };
+      delete alias.facility;
+    }
+  }
+}
+
+function applyFinalAdjudications() {
+  for (const review of reviews) {
+    const target = targets.find(
+      (candidate) => candidate.asoview_identity === review.asoview_identity,
+    );
+    const adjudicated = applyCuratedAdjudication(target, review.evidence);
+    if (!adjudicated) continue;
+    delete review.facility;
+    delete review.duplicate;
+    delete review.not_eligible_basis;
+    delete review.processing_error;
+    delete review.final_missing_conditions;
+    Object.assign(review, {
+      review_complete: true,
+      ...adjudicated,
+      checked_at: CHECKED_AT,
+    });
+  }
+}
 
 async function worker() {
   while (true) {
@@ -134,12 +259,12 @@ async function worker() {
       });
     }
     completedThisRun += 1;
-    if (completedThisRun % 5 === 0 || completedThisRun === pending.length) {
+    if (completedThisRun % 50 === 0 || completedThisRun === pending.length) {
       await saveCache();
       await saveOutput();
       const summary = summarize();
       console.log(
-        `reviewed=${completedThisRun}/${pending.length} total=${summary.completed_count}/741 add=${summary.final_status_counts.ADD ?? 0} duplicate=${summary.final_status_counts.DUPLICATE ?? 0} not_eligible=${summary.final_status_counts.NOT_ELIGIBLE ?? 0} insufficient=${summary.final_status_counts.OFFICIAL_EVIDENCE_INSUFFICIENT ?? 0}`,
+        `reviewed=${completedThisRun}/${pending.length} total=${summary.completed_count}/${targets.length} add=${summary.final_status_counts.ADD ?? 0} duplicate=${summary.final_status_counts.DUPLICATE ?? 0} not_eligible=${summary.final_status_counts.NOT_ELIGIBLE ?? 0} insufficient=${summary.final_status_counts.OFFICIAL_EVIDENCE_INSUFFICIENT ?? 0}`,
       );
     }
   }
@@ -185,9 +310,9 @@ async function reviewTarget(target) {
   let searchUrls = [];
 
   if (officialHosts.length === 0) {
-    const query = `"${target.asoview_identity}" 公式 住所 営業時間`;
+    const query = `"${coreIdentity(target.asoview_identity)}" 公式 住所 営業時間`;
     searchQueries.push(query);
-    searchUrls.push(...(await yahooSearch(query)));
+    searchUrls.push(...(await publicSearch(query)));
     const searchedPages = await fetchCandidateSeeds(target, searchUrls.slice(0, 10));
     seedPages.push(...searchedPages);
     officialHosts = chooseOfficialHosts(target, seedPages);
@@ -197,14 +322,15 @@ async function reviewTarget(target) {
   let evidence = aggregateEvidence(target, pages, officialHosts);
 
   if (
+    !NAMESPACE_MODE &&
     evidence.identity.satisfied &&
     evidence.address.satisfied &&
     evidence.current_operation.satisfied &&
     !evidence.child_use.satisfied
   ) {
-    const query = `"${target.asoview_identity}" 小学生 幼児 料金 FAQ 予約`;
+    const query = `"${coreIdentity(target.asoview_identity)}" 小学生 幼児 料金 FAQ 予約`;
     searchQueries.push(query);
-    const urls = await yahooSearch(query);
+    const urls = await publicSearch(query);
     searchUrls.push(...urls);
     const childPages = await fetchCandidateSeeds(target, urls.slice(0, 10));
     const additionalHosts = chooseOfficialHosts(target, [
@@ -224,6 +350,20 @@ async function reviewTarget(target) {
     evidence = aggregateEvidence(target, pages, officialHosts);
   }
 
+  const adjudicated = applyCuratedAdjudication(target, evidence);
+  if (adjudicated) {
+    return {
+      review_complete: true,
+      ...adjudicated,
+      evidence,
+      official_hosts: officialHosts,
+      search_queries: searchQueries,
+      inspected_page_count: pages.length,
+      inspected_pages: summarizePages(pages),
+      checked_at: CHECKED_AT,
+    };
+  }
+
   const notEligible = classifyNotEligible(target, evidence, pages);
   if (notEligible) {
     return {
@@ -240,7 +380,11 @@ async function reviewTarget(target) {
     };
   }
 
-  const missing = Object.entries(evidence)
+  const requiredConditions = NAMESPACE_MODE
+    ? ["identity", "address", "current_operation"]
+    : ["identity", "address", "current_operation", "child_use"];
+  const missing = requiredConditions
+    .map((condition) => [condition, evidence[condition]])
     .filter(([, item]) => !item.satisfied)
     .map(([condition]) => condition);
   if (missing.length > 0) {
@@ -289,14 +433,15 @@ async function reviewTarget(target) {
   return {
     review_complete: true,
     final_status: "ADD",
-    reason:
-      "second-pass official primary sources establish identity, address, current operation, and explicit child-use conditions",
+    reason: NAMESPACE_MODE
+      ? "official primary sources establish identity, address, current operation, and permanent FacilityOps eligibility; child-use remains optional metadata"
+      : "second-pass official primary sources establish identity, address, current operation, and explicit child-use conditions",
     evidence,
     official_hosts: officialHosts,
     search_queries: searchQueries,
     inspected_page_count: pages.length,
     inspected_pages: summarizePages(pages),
-    facility: buildAddition(target, evidence, coordinates),
+    facility: buildAddition(target, evidence, coordinates, pages),
     checked_at: CHECKED_AT,
   };
 }
@@ -332,8 +477,10 @@ function isPlausiblePrimaryEvidenceRow(row) {
 
 async function fetchCandidateSeeds(target, urls) {
   const pages = [];
-  for (const url of unique(urls).slice(0, 14)) {
-    if (!isHttpUrl(url)) continue;
+  const candidates = unique(urls)
+    .filter((url) => isHttpUrl(url) && !BLOCKED_HOST_PATTERN.test(hostname(url)))
+    .slice(0, 14);
+  for (const url of candidates) {
     let parsed;
     try {
       parsed = new URL(url);
@@ -382,11 +529,28 @@ async function fetchCandidateSeeds(target, urls) {
 
 function chooseOfficialHosts(target, pages) {
   const grouped = Map.groupBy(pages, (page) => hostname(page.final_url ?? page.url));
+  const preferredSeedHost = seedByIdentity.get(target.asoview_identity)?.preferred_host;
+  if (
+    preferredSeedHost &&
+    grouped.get(preferredSeedHost)?.some((page) => !page.error)
+  ) {
+    return [preferredSeedHost];
+  }
+  const adjudicatedSourceHost = hostname(
+    adjudicationByIdentity.get(target.asoview_identity)?.source_url ?? "",
+  );
+  if (
+    adjudicatedSourceHost &&
+    grouped.get(adjudicatedSourceHost)?.some((page) => !page.error)
+  ) {
+    return [adjudicatedSourceHost];
+  }
   const ranked = [];
   for (const [host, hostPages] of grouped) {
     if (!host || BLOCKED_HOST_PATTERN.test(host)) continue;
     const publicOperator =
       isGovernmentHost(host) && isPublicOperatorCandidate(target.asoview_identity);
+    const governmentHost = isGovernmentHost(host);
     const tourismPortal = TOURISM_PORTAL_PATTERN.test(host);
     const maxIdentity = Math.max(
       ...hostPages.map((page) => identityScore(target.asoview_identity, page)),
@@ -395,7 +559,12 @@ function chooseOfficialHosts(target, pages) {
       0,
       ...hostPages
         .filter((page) => page.root_probe)
-        .map((page) => identityScore(target.asoview_identity, page)),
+        .map((page) =>
+          identityScore(target.asoview_identity, {
+            ...page,
+            text: page.title ?? "",
+          }),
+        ),
     );
     const discoveredByOfficialLabel = hostPages.some(
       (page) => page.discovered_by_official_link_label,
@@ -409,26 +578,29 @@ function chooseOfficialHosts(target, pages) {
     );
     if (
       (publicOperator && maxIdentity >= 0.45) ||
+      (governmentHost && maxIdentity >= 0.72 && officialSignals) ||
       (!tourismPortal &&
         maxIdentity >= 0.72 &&
         officialSignals &&
-        (rootIdentity >= 0.55 || discoveredByOfficialLabel || domainMatched))
+        (rootIdentity >= 0.72 || discoveredByOfficialLabel || domainMatched))
     ) {
       ranked.push({
         host,
         score:
           maxIdentity +
-          (rootIdentity >= 0.55 ? 0.35 : 0) +
+          (rootIdentity >= 0.72 ? 0.35 : 0) +
           (discoveredByOfficialLabel ? 0.3 : 0) +
           (domainMatched ? 0.2 : 0) -
           (publicOperator ? 0.1 : 0),
       });
     }
   }
-  return ranked
-    .sort((left, right) => right.score - left.score)
-    .slice(0, 1)
-    .map((item) => item.host);
+  const sorted = ranked.sort((left, right) => right.score - left.score);
+  // A facility/operator site and an administering municipality can each hold
+  // different parts of the primary record (for example, current operation on
+  // the facility site and the street address on a city page). Keep the two
+  // strongest qualifying primary hosts so one source cannot hide the other.
+  return sorted.slice(0, 2).map((item) => item.host);
 }
 
 async function crawlOfficialHosts(target, officialHosts, seedPages, childOnly = false) {
@@ -513,8 +685,17 @@ function aggregateEvidence(target, pages, officialHosts) {
   const identityPage = officialPages
     .map((page) => ({ page, score: identityScore(target.asoview_identity, page) }))
     .sort((left, right) => right.score - left.score)[0];
+  const expectedPrefecture =
+    seedByIdentity.get(target.asoview_identity)?.expected_prefecture ??
+    target.asoview_detail?.prefecture ??
+    prefectureFromAsoviewPages(target.asoview_pages) ??
+    "";
   const addressCandidates = officialPages.flatMap((page) => {
-    const addresses = extractAddresses(page, target.asoview_identity);
+    const addresses = extractAddresses(
+      page,
+      target.asoview_identity,
+      expectedPrefecture,
+    );
     return addresses.map((address) => ({
       page,
       address,
@@ -522,17 +703,20 @@ function aggregateEvidence(target, pages, officialHosts) {
       facility_proximity: addressFacilityProximity(target, page, address),
     }));
   });
-  const expectedPrefecture = target.asoview_detail?.prefecture ?? "";
   const addressCandidate = addressCandidates
     .filter(
       (item) =>
         extractPrefecture(item.address.value) &&
-        item.address.score >= 50 &&
+        (item.address.score >= 50 || item.facility_proximity >= 2) &&
+        !/(?:\/|^)(?:company|corporate|privacy)(?:[./_-]|$)/iu.test(
+          new URL(item.page.final_url ?? item.page.url).pathname,
+        ) &&
+        !/(?:付近|周辺|一帯|エリア)$/u.test(item.address.value) &&
         (!expectedPrefecture ||
           extractPrefecture(item.address.value) === expectedPrefecture) &&
         (!isGovernmentHost(hostname(item.page.final_url ?? item.page.url)) ||
           publicAddressIsFacilitySpecific(target, item)) &&
-        (item.page_address_count <= 1 || item.facility_proximity > 0),
+        item.facility_proximity > 0,
     )
     .sort(
       (left, right) =>
@@ -622,7 +806,7 @@ function classifyNotEligible(target, evidence, pages) {
   }
   if (
     /^(?:株式会社|有限会社|[（(]株[）)]|[（(]有[）)]|NPO|特定非営利活動法人)/iu.test(identity) &&
-    !/ミュージアム|博物館|美術館|科学館|水族館|動物園|公園|パーク|農園|果樹園|遊園地|ジム|スタジオ|ランド|スキー場|温泉|体験館/iu.test(identity)
+    !/ミュージアム|博物館|美術館|科学館|水族館|動物園|公園|パーク|農園|果樹園|いちご園|遊園地|ジム|スタジオ|ランド|スキー場|温泉|体験館/iu.test(identity)
   ) {
     return {
       category: "OPERATOR_IDENTITY_NOT_FACILITY",
@@ -783,35 +967,151 @@ function findDuplicate(target, address, officialName) {
   });
 }
 
-async function yahooSearch(query) {
-  if (cache.searches[query]) return cache.searches[query];
-  const url = `https://search.yahoo.co.jp/search?p=${encodeURIComponent(query)}`;
-  let urls = [];
-  try {
-    const response = await fetchWithTimeout(url, {
-      headers: { "User-Agent": USER_AGENT, Accept: "text/html" },
-    });
-    if (response.ok) {
+async function publicSearch(query) {
+  const cacheKey = `public-search-v11:${query}`;
+  let urls = unique(cache.searches[cacheKey] ?? []).slice(0, 24);
+  if (cache.searches[cacheKey]) return urls;
+  const searchUrls = [
+    `https://search.brave.com/search?q=${encodeURIComponent(query)}&source=web`,
+    `https://search.yahoo.co.jp/search?p=${encodeURIComponent(query)}`,
+    `https://www.bing.com/search?q=${encodeURIComponent(query)}`,
+  ];
+  for (const searchUrl of searchUrls) {
+    if (yahooUnavailable && /search\.yahoo\.co\.jp/iu.test(searchUrl)) continue;
+    try {
+      const response = await fetchWithTimeout(searchUrl, {
+        headers: {
+          "User-Agent": "Mozilla/5.0",
+          Accept: "text/html",
+          Connection: "close",
+        },
+      });
+      if (response.status === 429 && /search\.yahoo\.co\.jp/iu.test(searchUrl)) {
+        yahooUnavailable = true;
+      }
+      if (!response.ok) continue;
       const html = await response.text();
-      urls = unique(
-        [...html.matchAll(/href="(https?:\/\/[^"#]+)"/giu)]
-          .map((match) => decodeHtml(match[1]))
+      urls = unique([
+        ...urls,
+        ...extractSearchResultUrls(html, searchUrl)
+          .map(unwrapSearchResultUrl)
           .filter((candidate) => {
             try {
               const host = new URL(candidate).hostname;
-              return !/(?:yahoo\.|yimg\.|lycorp\.)/iu.test(host);
+              return !/(?:brave\.|bing\.|microsoft\.|duckduckgo\.|yahoo\.|yimg\.|lycorp\.)/iu.test(
+                host,
+              );
             } catch {
               return false;
             }
           }),
-      ).slice(0, 12);
+      ]).slice(0, 24);
+      if (urls.length >= 10) break;
+    } catch {
+      // Try the next public search endpoint; an empty result is not cached.
     }
-  } catch {
-    urls = [];
   }
-  cache.searches[query] = urls;
-  await delay(350);
+  if (urls.length > 0) cache.searches[cacheKey] = urls;
+  await delay(1_500);
   return urls;
+}
+
+function applyCuratedAdjudication(target, evidence) {
+  const adjudication = adjudicationByIdentity.get(target.asoview_identity);
+  if (!adjudication) return null;
+  if (!evidence.identity.satisfied) return null;
+  if (adjudication.final_status === "NOT_ELIGIBLE") {
+    return {
+      final_status: "NOT_ELIGIBLE",
+      reason: adjudication.reason,
+      not_eligible_basis: {
+        category: adjudication.category,
+        reason: adjudication.reason,
+        url: adjudication.source_url,
+        excerpt: adjudication.evidence_excerpt,
+        adjudicated: true,
+      },
+    };
+  }
+  if (adjudication.final_status === "DUPLICATE") {
+    if (!evidence.address.satisfied || !evidence.current_operation.satisfied) {
+      return null;
+    }
+    const duplicate = facilityData.facilities.find(
+      (facility) => facility.id === adjudication.facility_id,
+    );
+    if (!duplicate) {
+      throw new Error(
+        `curated duplicate target missing: ${target.asoview_identity} -> ${adjudication.facility_id}`,
+      );
+    }
+    return {
+      final_status: "DUPLICATE",
+      reason: adjudication.reason,
+      duplicate: {
+        facility_id: duplicate.id,
+        facility_slug: duplicate.slug,
+        facility_name: duplicate.name,
+        facility_address: duplicate.address,
+      },
+      adjudicated: true,
+    };
+  }
+  if (adjudication.final_status === "OFFICIAL_EVIDENCE_INSUFFICIENT") {
+    return {
+      final_status: "OFFICIAL_EVIDENCE_INSUFFICIENT",
+      final_missing_conditions:
+        adjudication.missing_conditions ?? ["coherent_official_evidence"],
+      final_insufficiency_code: "CURATED_EVIDENCE_COHERENCE_FAILURE",
+      reason: adjudication.reason,
+      adjudicated: true,
+    };
+  }
+  throw new Error(
+    `unsupported curated disposition: ${target.asoview_identity} ${adjudication.final_status}`,
+  );
+}
+
+function extractSearchResultUrls(html, searchUrl) {
+  if (/search\.(?:brave\.com|yahoo\.co\.jp)/iu.test(searchUrl)) {
+    return extractLinks(html, searchUrl).map((link) => link.url);
+  }
+  if (/bing\.com/iu.test(searchUrl)) {
+    return [
+      ...html.matchAll(
+        /<li\b[^>]*class=["'][^"']*\bb_algo\b[^"']*["'][\s\S]*?<h2[^>]*>\s*<a[^>]+href=["']([^"']+)["']/giu,
+      ),
+    ].map((match) => decodeHtml(match[1]));
+  }
+  return [
+    ...html.matchAll(
+      /<a\b[^>]*class=["'][^"']*\bresult__a\b[^"']*["'][^>]+href=["']([^"']+)["']/giu,
+    ),
+  ].map((match) => {
+    try {
+      return new URL(decodeHtml(match[1]), searchUrl).href;
+    } catch {
+      return "";
+    }
+  });
+}
+
+function unwrapSearchResultUrl(value) {
+  try {
+    const url = new URL(value);
+    if (/bing\.com$/iu.test(url.hostname) && url.pathname.startsWith("/ck/a")) {
+      const encoded = url.searchParams.get("u") ?? "";
+      if (encoded.startsWith("a1")) {
+        return Buffer.from(encoded.slice(2), "base64url").toString("utf8");
+      }
+    }
+    if (/duckduckgo\.com$/iu.test(url.hostname)) {
+      return url.searchParams.get("uddg") ?? value;
+    }
+    return value;
+  } catch {
+    return value;
+  }
 }
 
 async function fetchPage(url) {
@@ -827,9 +1127,18 @@ async function fetchPage(url) {
       },
     });
     const contentType = response.headers.get("content-type") ?? "";
+    const contentLength = Number(response.headers.get("content-length") ?? 0);
     const finalUrl = response.url || url;
     if (!response.ok) {
       page = { url, final_url: finalUrl, status: response.status, error: `HTTP ${response.status}` };
+    } else if (contentLength > 8_000_000) {
+      await response.body?.cancel();
+      page = {
+        url,
+        final_url: finalUrl,
+        status: response.status,
+        error: `response too large for FacilityOps evidence: ${contentLength} bytes`,
+      };
     } else if (/application\/pdf/iu.test(contentType) || /\.pdf(?:$|\?)/iu.test(finalUrl)) {
       const bytes = Buffer.from(await response.arrayBuffer());
       const text = await extractPdfText(bytes, finalUrl);
@@ -955,7 +1264,7 @@ function walkJson(value, visitor) {
   }
 }
 
-function extractAddresses(page, identity) {
+function extractAddresses(page, identity, expectedPrefecture = "") {
   const candidates = [];
   if (!isGovernmentHost(hostname(page.final_url ?? page.url))) {
     for (const value of page.json_ld_addresses ?? []) {
@@ -963,14 +1272,51 @@ function extractAddresses(page, identity) {
     }
   }
   const text = page.text ?? "";
+  if (isGovernmentHost(hostname(page.final_url ?? page.url))) {
+    const pagePrefecture = extractPrefecture(text) || expectedPrefecture;
+    if (pagePrefecture) {
+      for (const match of text.matchAll(
+        /(?:所在地|住所)\s*[:：]?\s*([^\n。|｜]{2,80}?(?:\d|[０-９])+(?:丁目|番地?|号|[-−ー](?:\d|[０-９]))[^\n。|｜]{0,40})/gu,
+      )) {
+        const rawValue = cleanAddress(match[1]);
+        const value = cleanAddress(
+          extractPrefecture(rawValue)
+            ? rawValue
+            : `${pagePrefecture}${rawValue}`,
+        );
+        if (!isPlausibleAddress(value)) continue;
+        candidates.push({
+          value,
+          excerpt: text.slice(
+            Math.max(0, match.index - 300),
+            match.index + match[0].length + 120,
+          ),
+          score: 125,
+          contact_context: /(?:市役所|区役所|町役場|村役場|法人番号|開庁時間|庁舎案内|このページに関するお問い合わせ先)/u.test(
+            text.slice(Math.max(0, match.index - 140), match.index + 30),
+          ),
+        });
+      }
+    }
+  }
   const regexes = [
     new RegExp(`〒\\s*\\d{3}-?\\d{4}\\s*${PREFECTURE_PATTERN}[^\\n。|｜]{3,120}`, "gu"),
     new RegExp(`${PREFECTURE_PATTERN}[^\\n。|｜]{3,100}`, "gu"),
   ];
+  if (expectedPrefecture) {
+    regexes.push(
+      /(?:〒\s*\d{3}-?\d{4}\s*)?(?:[^\n。|｜]{0,20}[市区町村郡])[^\n。|｜]{2,100}?(?:\d|[０-９])+(?:丁目|番地?|号|[-−ー](?:\d|[０-９]))[^\n。|｜]{0,30}/gu,
+    );
+  }
   const identityPosition = normalize(text).indexOf(normalize(coreIdentity(identity)));
   for (const regex of regexes) {
     for (const match of text.matchAll(regex)) {
-      const value = cleanAddress(match[0]);
+      const rawValue = cleanAddress(match[0]);
+      const value = cleanAddress(
+        extractPrefecture(rawValue)
+          ? rawValue
+          : `${expectedPrefecture}${rawValue}`,
+      );
       if (!isPlausibleAddress(value)) continue;
       const distance = identityPosition >= 0 ? Math.abs(match.index - identityPosition) : 20_000;
       const nearby = text.slice(Math.max(0, match.index - 80), match.index + match[0].length + 40);
@@ -984,6 +1330,9 @@ function extractAddresses(page, identity) {
         value,
         excerpt: snippet(text, new RegExp(escapeRegex(value.slice(0, 12)), "u")),
         score: Math.max(1, 70 - Math.floor(distance / 180)) + labelBonus + postalBonus + pathBonus,
+        contact_context: /(?:市役所|区役所|町役場|村役場|法人番号|開庁時間|庁舎案内|このページに関するお問い合わせ先)/u.test(
+          nearby,
+        ),
       });
     }
   }
@@ -992,8 +1341,19 @@ function extractAddresses(page, identity) {
 
 function cleanAddress(value) {
   return compact(value)
+    .replace(/&(?:emsp|nbsp);/giu, " ")
+    .replace(/^\/+\s*/u, "")
+    .replace(/^(?:〒\s*){2,}/u, "〒")
+    .replace(/^郵便番号\s*(\d{3}-?\d{4})\s*/u, "〒$1 ")
+    .replace(/^[<〈(（]?\s*(?:所在地|住所)\s*[>〉)）]?\s*[:：]?\s*/u, "")
+    .replace(
+      new RegExp(`^(${PREFECTURE_PATTERN})〒\\s*(\\d{3}-?\\d{4})\\s*`, "u"),
+      "〒$2 $1",
+    )
     .replace(/(?:電話|TEL|Tel|営業時間|開館時間|開園時間|アクセス|Google|MAP|地図|駐車場).*$/u, "")
     .replace(/(?:お問い合わせ|Copyright|©|メニュー).*$/iu, "")
+    .replace(/(?:別ウィンドウで開く|新しいウィンドウで開きます).*$/u, "")
+    .replace(/[【\[(（]\s*$/u, "")
     .replace(/\s{2,}/gu, " ")
     .trim();
 }
@@ -1006,13 +1366,21 @@ function isPlausibleAddress(value) {
   return (
     Boolean(extractPrefecture(value)) &&
     new RegExp(`${PREFECTURE_PATTERN}[^\\n。|｜]{0,30}[市区町村郡]`, "u").test(value) &&
-    /(?:\d|[０-９])+(?:丁目|番地?|号|[-−ー](?:\d|[０-９]))/u.test(withoutPostalCode) &&
+    /(?:\d|[０-９])+(?:丁目|番地?|号|[-−ー](?:\d|[０-９])|$)/u.test(withoutPostalCode) &&
     value.length <= 150
   );
 }
 
 function extractPrefecture(value) {
   return String(value ?? "").match(new RegExp(PREFECTURE_PATTERN, "u"))?.[0] ?? "";
+}
+
+function prefectureFromAsoviewPages(pages) {
+  for (const page of pages ?? []) {
+    const code = Number(String(page.url ?? "").match(/\/spot\/(\d{2})\d{3}/u)?.[1]);
+    if (code >= 1 && code <= PREFECTURES.length) return PREFECTURES[code - 1];
+  }
+  return "";
 }
 
 function identityScore(identity, page) {
@@ -1041,7 +1409,10 @@ function extractOfficialName(identity, page) {
 
 function coreIdentity(value) {
   return String(value ?? "")
-    .replace(/^(?:株式会社|有限会社|一般社団法人|公益財団法人|公益社団法人|合同会社|[（(]株[）)])\s*/u, "")
+    .replace(
+      /^(?:株式会社|有限会社|一般社団法人|公益財団法人|公益社団法人|合同会社|[（(](?:株|有|公財|公社)[）)])\s*/u,
+      "",
+    )
     .replace(/[（(][^）)]*(?:読み|よみ|英語|カナ)[^）)]*[）)]/gu, "")
     .replace(/（([^）]{2,40})）/gu, " $1 ")
     .replace(/\s+/gu, " ")
@@ -1057,7 +1428,7 @@ function sourceType(page) {
 }
 
 function isGovernmentHost(host) {
-  return /(?:\.go\.jp|\.lg\.jp|^city\.|^pref\.|^www\.city\.|^www\.pref\.)/iu.test(host);
+  return /(?:\.go\.jp|\.lg\.jp|^(?:www\.)?(?:city|pref|town|village)\.)/iu.test(host);
 }
 
 function isPublicOperatorCandidate(identity) {
@@ -1072,7 +1443,12 @@ function publicAddressIsFacilitySpecific(target, item) {
   return (
     identity.length >= 4 &&
     context.includes(identity) &&
-    /施設所在地|所在地|会場|アクセス|住所|〒/iu.test(item.address.excerpt ?? "")
+    item.address.contact_context !== true &&
+    (
+      /施設所在地|所在地|会場|アクセス|住所|〒/iu.test(
+        item.address.excerpt ?? "",
+      ) || item.facility_proximity >= 3
+    )
   );
 }
 
@@ -1080,7 +1456,13 @@ function addressFacilityProximity(target, page, address) {
   const identity = normalize(coreIdentity(target.asoview_identity));
   if (identity.length < 4) return 0;
   const excerpt = normalize(address.excerpt ?? "");
-  if (excerpt.includes(identity)) return 3;
+  const identityIndex = excerpt.indexOf(identity);
+  const addressIndex = excerpt.indexOf(normalizeAddress(address.value));
+  if (identityIndex >= 0 && addressIndex >= 0) {
+    const distance = Math.abs(identityIndex - addressIndex);
+    return 4 - Math.min(distance, 120) / 120;
+  }
+  if (identityIndex >= 0) return 3;
   const title = normalize(page.title ?? "");
   const titleScore = bigramDice(identity, title);
   if (title.includes(identity)) return 2;
@@ -1150,6 +1532,7 @@ function insufficiencyCode(missing) {
 }
 
 async function geocode(address, target) {
+  address = cleanAddress(address);
   const response = await fetchWithTimeout(
     `https://msearch.gsi.go.jp/address-search/AddressSearch?q=${encodeURIComponent(address.replace(/^〒\s*\d{3}-?\d{4}\s*/u, ""))}`,
     { headers: { "User-Agent": USER_AGENT } },
@@ -1178,7 +1561,7 @@ async function geocode(address, target) {
   throw new Error(`geocode unavailable for official address: ${address}`);
 }
 
-function buildAddition(target, evidence, coordinates) {
+function buildAddition(target, evidence, coordinates, pages) {
   return {
     asoview_identity: target.asoview_identity,
     name: canonicalName(evidence.identity.official_name || target.asoview_identity),
@@ -1189,6 +1572,7 @@ function buildAddition(target, evidence, coordinates) {
     longitude: coordinates.longitude,
     geocode_source: coordinates.source,
     family_relevance: target.family_relevance,
+    content_signals: extractContentSignals(pages),
     source_evidence: {
       identity: evidence.identity,
       address: evidence.address,
@@ -1199,10 +1583,50 @@ function buildAddition(target, evidence, coordinates) {
   };
 }
 
+function extractContentSignals(pages) {
+  const text = pages.map((page) => page.text ?? "").join(" ");
+  const definitions = [
+    ["大型遊具", /大型遊具|複合遊具/u],
+    ["遊具", /遊具/u],
+    ["芝生広場", /芝生(?:広場|エリア)|大芝生/u],
+    ["アスレチック", /アスレチック|フィールドアスレチック/u],
+    ["トランポリン", /トランポリン/u],
+    ["クライミング", /クライミング|ボルダリング/u],
+    ["水遊び", /水遊び|じゃぶじゃぶ池|親水広場/u],
+    ["プール", /プール|流水|ウォータースライダー/u],
+    ["動物とのふれあい", /動物[^。\n]{0,50}ふれあ|ふれあい[^。\n]{0,50}動物|乗馬|ポニー/u],
+    ["生きもの観察", /生きもの|生き物|昆虫|野鳥|魚類|水生生物/u],
+    ["常設展示", /常設展|常設展示/u],
+    ["企画展示", /企画展|特別展|企画展示/u],
+    ["収蔵作品", /収蔵|コレクション|所蔵作品/u],
+    ["体験展示", /体験展示|ハンズオン|触れる展示/u],
+    ["ワークショップ", /ワークショップ|制作体験|工作体験|ものづくり体験/u],
+    ["プラネタリウム", /プラネタリウム/u],
+    ["展望", /展望台|展望室|眺望|パノラマ/u],
+    ["キャンプ", /キャンプサイト|オートキャンプ|テントサイト/u],
+    ["バーベキュー", /バーベキュー|BBQ/iu],
+    ["いちご狩り", /いちご狩り|イチゴ狩り|苺狩り/u],
+    ["果物狩り", /果物狩り|ぶどう狩り|りんご狩り|梨狩り|みかん狩り|ブルーベリー狩り/u],
+    ["食べ放題", /食べ放題/u],
+    ["温泉", /温泉|露天風呂|源泉/u],
+    ["雪遊び", /雪遊び|そり遊び|キッズゲレンデ/u],
+    ["スキー・スノーボード", /スキー|スノーボード|ゲレンデ/u],
+    ["乗りもの", /アトラクション|観覧車|メリーゴーランド|ゴーカート/u],
+    ["散策", /散策路|遊歩道|ハイキング|トレッキング/u],
+  ];
+  const signals = definitions
+    .filter(([, pattern]) => pattern.test(text))
+    .map(([label]) => label);
+  if (signals.includes("大型遊具")) {
+    return signals.filter((signal) => signal !== "遊具").slice(0, 8);
+  }
+  return signals.slice(0, 8);
+}
+
 function canonicalName(value) {
   return compact(value)
     .replace(/^(?:株式会社|有限会社|[（(]株[）)])\s*/u, "")
-    .replace(/\s*[|｜].*$/u, "")
+    .replace(/\s*(?:[|｜]|\s[-–—―]\s).*$/u, "")
     .trim();
 }
 
@@ -1228,9 +1652,14 @@ async function saveOutput() {
     review_version: REVIEW_VERSION,
     checked_at: CHECKED_AT,
     generated_at: new Date().toISOString(),
-    source_ledger: "docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json",
+    source_ledger: NAMESPACE_MODE
+      ? "docs/audits/asoview-base-namespace-coverage-2026-08-28.json"
+      : "docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json",
     policy: {
-      canon_conditions: ["identity", "address", "current_operation", "child_use"],
+      canon_conditions: NAMESPACE_MODE
+        ? ["identity", "address", "current_operation"]
+        : ["identity", "address", "current_operation", "child_use"],
+      child_use_metadata_optional: NAMESPACE_MODE,
       asoview_is_discovery_only: true,
       primary_sources_only: true,
       fail_closed: true,
@@ -1238,12 +1667,24 @@ async function saveOutput() {
     coverage: summarize(),
     reviews,
   };
-  await writeFile(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`, "utf8");
+  outputSavePromise = outputSavePromise.then(() =>
+    writeJsonAtomically(OUTPUT_PATH, `${JSON.stringify(output, null, 2)}\n`),
+  );
+  await outputSavePromise;
 }
 
 async function saveCache() {
   cache.generated_at = new Date().toISOString();
-  await writeFile(CACHE_PATH, `${JSON.stringify(cache)}\n`, "utf8");
+  cacheSavePromise = cacheSavePromise.then(() =>
+    writeJsonAtomically(CACHE_PATH, `${JSON.stringify(cache)}\n`),
+  );
+  await cacheSavePromise;
+}
+
+async function writeJsonAtomically(path, content) {
+  const temporaryPath = `${path}.tmp-${process.pid}`;
+  await writeFile(temporaryPath, content, "utf8");
+  await rename(temporaryPath, path);
 }
 
 async function readJson(path, fallback) {
