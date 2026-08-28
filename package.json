@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build",
+    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:content:audit && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build",
     "postbuild": "next-sitemap",
     "start": "next start",
     "lint": "eslint",
@@ -26,6 +26,7 @@
     "facilities:craft:audit": "node scripts/generate-craft-prefecture-audit.mjs",
     "facilities:craft:validate": "node scripts/validate-craft-category.mjs",
     "facilities:pagination:test": "node --test scripts/test-facility-pagination.mjs",
+    "facilities:content:audit": "node scripts/audit-facility-content-contract.mjs",
     "facilities:q1:validate": "node scripts/validate-facility-quality-q1.mjs",
     "facilities:c3:validate": "node scripts/validate-c3-rewrites.mjs",
     "facilities:rakuten:validate": "node scripts/validate-rakuten-facility-actions.mjs",

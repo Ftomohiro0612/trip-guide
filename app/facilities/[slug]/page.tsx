@@ -51,7 +51,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!isFacilityVisible(facility)) {
     return { title: "見つかりませんでした" };
   }
-  const desc = facility.description.slice(0, 110);
+  const desc = (facility.description || facility.unique_selling_point || "").slice(
+    0,
+    110,
+  );
   return {
     title: `${facility.name} (${facility.prefecture})`,
     description: `${desc} / 対象年齢: ${facility.target_age} / 雨対応: ${facility.rain_friendly}`,
@@ -97,7 +100,7 @@ export default async function FacilityDetailPage({ params }: Props) {
   const nearbySummerEvents =
     getSummerCrosslinkData(today).facilityToEvents[String(facility.id)] ?? [];
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
-  const rawUniqueSellingPoint =
+  const heroSummary =
     typeof facility.unique_selling_point === "string"
       ? facility.unique_selling_point.trim()
       : "";
@@ -120,10 +123,6 @@ export default async function FacilityDetailPage({ params }: Props) {
         .filter((thing) => thing.length > 0)
     : [];
   const hasThingsToDo = thingsToDo.length > 0;
-  const uniqueSellingPoint =
-    hasThingsToDo && hasUnsupportedRatingExpression(rawUniqueSellingPoint)
-      ? ""
-      : rawUniqueSellingPoint;
   const recommendedLead = buildRecommendedLead(
     facility.target_age,
     recommendedForTags,
@@ -153,16 +152,11 @@ export default async function FacilityDetailPage({ params }: Props) {
     "from-sky-400 to-emerald-400";
   const mapQuery = encodeURIComponent(`${facility.name} ${facility.address}`);
   const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
-  const heroValue =
-    uniqueSellingPoint ||
-    facility.description.split(/[。\n]/)[0]?.trim() ||
-    facility.description;
-
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "TouristAttraction",
     name: facility.name,
-    description: facility.description,
+    description: facility.description || heroSummary,
     address: {
       "@type": "PostalAddress",
       addressRegion: facility.prefecture,
@@ -272,9 +266,9 @@ export default async function FacilityDetailPage({ params }: Props) {
               <h1 className="mt-1 text-[clamp(1.75rem,7vw,3rem)] font-black leading-tight tracking-tight [overflow-wrap:anywhere] drop-shadow-lg">
                 {facility.name}
               </h1>
-              {heroValue && (
+              {heroSummary && (
                 <p className="mt-3 max-w-2xl border-l-2 border-amber-300 pl-3 text-sm font-medium leading-relaxed text-white/95 drop-shadow sm:text-base">
-                  {heroValue}
+                  {heroSummary}
                 </p>
               )}
               <p className="mt-3 text-sm font-bold text-white/90 drop-shadow sm:text-base">
@@ -332,9 +326,11 @@ export default async function FacilityDetailPage({ params }: Props) {
           <section className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8">
           <p className="text-xs font-black tracking-[0.18em] text-amber-600">ABOUT THIS PLACE</p>
           <h2 className="mt-1 text-2xl font-black text-slate-950">この施設について</h2>
-          <p className="text-slate-700 leading-relaxed whitespace-pre-line">
-            {facility.description}
-          </p>
+          {facility.description && (
+            <p className="text-slate-700 leading-relaxed whitespace-pre-line">
+              {facility.description}
+            </p>
+          )}
           {hasThingsToDo ? (
             <section className="mt-6" aria-labelledby="things-to-do-heading">
               <h3
@@ -709,8 +705,4 @@ function buildRecommendedLead(
 
   const age = targetAge ? `${targetAge}、` : "";
   return `${age}特に${labels.join("・")}が好きな子に合いそうです。`;
-}
-
-function hasUnsupportedRatingExpression(text: string) {
-  return /星\s*\d|星評価|口コミ高評価|最高評価/.test(text);
 }
