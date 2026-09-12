@@ -25,6 +25,7 @@ import {
 } from "@/lib/facilities";
 import { prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import { toMapFacilities } from "@/lib/map-facilities";
 import type {
   Facility,
   FacilityTag,
@@ -34,6 +35,8 @@ import type {
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
+
+const mapFacilities = toMapFacilities(visibleFacilities);
 
 const PREFECTURE_REGIONS = [
   {
@@ -624,7 +627,7 @@ export default function HomePage() {
             </Link>
           </div>
           <MapViewClient
-            facilities={visibleFacilities}
+            facilities={mapFacilities}
             height={520}
             storageKey="home"
           />

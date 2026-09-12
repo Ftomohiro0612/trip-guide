@@ -22,6 +22,68 @@ const notoSansJP = Noto_Sans_JP({
 
 const siteDescription = `全国${prefectures.length}都道府県・${visibleFacilities.length.toLocaleString("ja-JP")}施設から子どもの遊び場を探して、行った思い出と子どもの反応を記録。記録がたまるほど、子どもの"好き"と成長が見えてきます。`;
 
+const cloudflareStaticNavigationScript = `(() => {
+  const nativeFetch = window.fetch.bind(window);
+  const isDirectStaticRoute = (pathname) =>
+    pathname === "/" ||
+    pathname === "/about" ||
+    pathname === "/guide" ||
+    pathname === "/map" ||
+    pathname === "/privacy" ||
+    pathname === "/terms" ||
+    pathname === "/try" ||
+    /^\\/facilities\\/facility-\\d+\\/?$/.test(pathname) ||
+    /^\\/events(?:\\/[a-z-]+)?\\/?$/.test(pathname) ||
+    /^\\/prefecture\\/[a-z-]+(?:\\/category\\/[a-z-]+)?\\/?$/.test(pathname) ||
+    /^\\/legal\\/(?:privacy|terms)\\/?$/.test(pathname);
+
+  window.fetch = (input, init) => {
+    const rawUrl = typeof input === "string" || input instanceof URL ? input : input.url;
+    const url = new URL(rawUrl, window.location.href);
+    if (
+      url.origin === window.location.origin &&
+      url.searchParams.has("_rsc") &&
+      isDirectStaticRoute(url.pathname)
+    ) {
+      return Promise.reject(new DOMException("Static route prefetch skipped", "AbortError"));
+    }
+    return nativeFetch(input, init);
+  };
+
+  document.addEventListener(
+    "click",
+    (event) => {
+      if (
+        event.defaultPrevented ||
+        event.button !== 0 ||
+        event.metaKey ||
+        event.ctrlKey ||
+        event.shiftKey ||
+        event.altKey
+      ) return;
+
+      const target = event.target;
+      const anchor = target instanceof Element ? target.closest("a[href]") : null;
+      if (!anchor || anchor.hasAttribute("download")) return;
+      if (anchor.target && anchor.target !== "_self") return;
+
+      const url = new URL(anchor.href, window.location.href);
+      if (url.origin !== window.location.origin) return;
+      if (!isDirectStaticRoute(url.pathname)) return;
+      if (
+        url.pathname === window.location.pathname &&
+        url.search === window.location.search &&
+        url.hash
+      ) return;
+
+      event.preventDefault();
+      event.stopImmediatePropagation();
+      window.location.assign(url.href);
+    },
+    true,
+  );
+})();`;
+
 export const metadata: Metadata = {
   metadataBase: new URL("https://trip-guide.net"),
   title: {
@@ -114,6 +176,15 @@ export default function RootLayout({
         </WishlistProvider>
         <Analytics />
         <ValueCommerceLinkSwitch />
+        {process.env.NEXT_PUBLIC_CLOUDFLARE_STATIC_NAVIGATION === "true" && (
+          <Script
+            id="cloudflare-static-navigation"
+            strategy="beforeInteractive"
+            dangerouslySetInnerHTML={{
+              __html: cloudflareStaticNavigationScript,
+            }}
+          />
+        )}
         <Script
           id="summer-2026-runtime-visibility"
           strategy="beforeInteractive"

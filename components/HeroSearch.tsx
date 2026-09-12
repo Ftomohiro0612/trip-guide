@@ -104,7 +104,14 @@ export default function HeroSearch() {
   function navigateToFacility(suggestion: FacilitySuggestion) {
     setSuggestionsOpen(false);
     setActiveIndex(-1);
-    router.push(`/facilities/${encodeURIComponent(suggestion.slug)}`);
+    const destination = `/facilities/${encodeURIComponent(suggestion.slug)}`;
+    if (process.env.NEXT_PUBLIC_CLOUDFLARE_STATIC_NAVIGATION === "true") {
+      // Cloudflare serves this SSG document directly, without an RSC payload.
+      // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+      window.location.assign(destination);
+      return;
+    }
+    router.push(destination);
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {

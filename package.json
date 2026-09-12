@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "postinstall": "node scripts/prepare-runtime-canon.mjs",
     "dev": "next dev",
-    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:content:audit && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:asoview:base-namespace:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build",
-    "postbuild": "next-sitemap",
+    "build": "npm run events:validate && npm run events:regular:validate && npm run facilities:content:audit && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:asoview:base-namespace:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build --webpack",
+    "postbuild": "next-sitemap && node scripts/prepare-cloudflare-runtime-canon.mjs",
     "start": "next start",
     "lint": "eslint",
     "experiment:metrics": "node --env-file-if-exists=.env.local scripts/experiment-90d-metrics.mjs",
@@ -52,7 +53,11 @@
     "export-csv": "node scripts/export-to-csv.ts",
     "sync-sheet": "node scripts/sync-from-sheet.ts",
     "append-to-sheet": "node scripts/append-to-sheet.ts",
-    "push-to-sheet": "node scripts/push-to-sheet.ts"
+    "push-to-sheet": "node scripts/push-to-sheet.ts",
+    "cf:build": "node scripts/build-cloudflare.mjs",
+    "cf:preview": "opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare deploy",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts"
   },
   "dependencies": {
     "@supabase/ssr": "^0.10.3",
@@ -60,22 +65,24 @@
     "@types/leaflet": "^1.9.21",
     "googleapis": "^171.4.0",
     "leaflet": "^1.9.4",
-    "next": "16.2.4",
+    "next": "16.3.3",
     "next-sitemap": "^4.2.3",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "react-leaflet": "^5.0.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "1.20.4",
     "@tailwindcss/postcss": "^4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "csv-parse": "^6.2.1",
     "eslint": "^9",
-    "eslint-config-next": "16.2.4",
+    "eslint-config-next": "16.3.3",
     "sharp": "^0.34.5",
     "tailwindcss": "^4",
-    "typescript": "^5"
+    "typescript": "^5",
+    "wrangler": "^4.131.1"
   }
 }

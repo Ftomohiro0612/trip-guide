@@ -1,4 +1,4 @@
-import summerEventsJson from "@/data/summer_events_2026.json";
+import { summerEventsData as summerEventsJson } from "@memorip/runtime-canon";
 import type { FeatureHubId } from "@/lib/events";
 export {
   getFeatureHubVisibilityScript,
@@ -14,11 +14,15 @@ export interface FeatureHubConfig {
   ctaTitle: string;
 }
 
+const summerEvents = summerEventsJson as {
+  metadata: { starts_at: string; ends_at: string };
+};
+
 export const SUMMER_2026_HUB_CONFIG: FeatureHubConfig = {
   id: "summer-2026",
   path: "/events/summer",
-  startsAt: summerEventsJson.metadata.starts_at,
-  endsAt: summerEventsJson.metadata.ends_at,
+  startsAt: summerEvents.metadata.starts_at,
+  endsAt: summerEvents.metadata.ends_at,
   navLabel: "🎆 夏祭り・花火",
   ctaTitle: "夏祭り・花火大会2026",
 };

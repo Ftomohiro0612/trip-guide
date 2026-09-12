@@ -1,4 +1,4 @@
-import asoviewFacilityActionsJson from "@/data/asoview_facility_actions.json";
+import { asoviewFacilityActionsData as asoviewFacilityActionsJson } from "@memorip/runtime-canon";
 import type { Facility } from "@/types/facility";
 
 export type AsoviewFacilityActionType =
