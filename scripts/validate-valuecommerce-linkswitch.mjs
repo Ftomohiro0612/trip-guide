@@ -2,6 +2,7 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 
 const root = new URL("../", import.meta.url);
+const MEMORIP_VALUECOMMERCE_PID = "892685812";
 const [layout, component, registry] = await Promise.all([
   readFile(new URL("app/layout.tsx", root), "utf8"),
   readFile(new URL("components/ValueCommerceLinkSwitch.tsx", root), "utf8"),
@@ -46,10 +47,10 @@ for (const offer of registry.offers) {
 
 const configuredPid = process.env.NEXT_PUBLIC_VALUECOMMERCE_PID?.trim();
 if (configuredPid) {
-  assert.match(
+  assert.equal(
     configuredPid,
-    /^\d{9}$/,
-    "NEXT_PUBLIC_VALUECOMMERCE_PID must be the issued nine-digit public PID",
+    MEMORIP_VALUECOMMERCE_PID,
+    "NEXT_PUBLIC_VALUECOMMERCE_PID must match the PID issued for Memorip site ID 3779635",
   );
 }
 

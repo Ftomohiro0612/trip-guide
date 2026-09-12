@@ -2,7 +2,7 @@
 
 > 実施日: 2026-09-12〜13 (JST)
 > branch: `codex/cloudflare-workers-migration-20260828`
-> status: **Phase 1〜3完了、Phase 4はValueCommerce管理画面確認のみ残存**
+> status: **Phase 1〜4完了、production GREEN**
 > production DNS: **Cloudflareへ切替済み（両zone Active）**
 
 ## 結論
@@ -36,7 +36,7 @@ Cloudflare Dashboardで`Workers Paid / Active`を実確認し、本体Workerに`
 - Temporary URL: <https://memorip.fic-investment2020.workers.dev>
 - Production URL: <https://memorips.com>
 - Redirected legacy URL: <https://trip-guide.net>
-- Latest verified version: `8761f55a-58b3-4eca-a496-e85e62a2fcb9`
+- Latest verified version: `f57a38f6-183d-4596-9edc-976589c19bbf`
 - Wrangler OAuth credential: repo外の暗号化file + Windows Credential Managerに保存。
   token/service keyはcommitしていない。
 
@@ -171,15 +171,15 @@ previewで0 exceededCpuだったことは、flexibilityが働いた証拠であ�
 - API search/event 200
 - Rakuten CTA、Asoview CTA、PR label
 - GA `G-1V6K1ZJH6S`
-- ValueCommerce loader/PID `892685809`と`dalc.valuecommerce.com` request
+- ValueCommerce loader/PID `892685812`と`dalc.valuecommerce.com` request
 - robots/sitemap 200
 - unknown URL 404
 - legacy tag redirect 308、trailing slash 308
 
 ValueCommerce LinkSwitchの実clickはworkers.dev originではdirect Asoview URLのままだった。
 loaderとPID、実network request、GA affiliate clickは正常であり、registered production domain
-ではないtemporary originがValueCommerce側の変換対象外である可能性が高い。これは推論であり、
-`trip-guide.net`切替後の実変換をPhase 3 final gateに残す。
+ではないtemporary originがValueCommerce側の変換対象外である可能性が高いと判断し、
+本番domainでの実変換を最終gateにした。結果は後述のとおりGREEN。
 
 ## Environment variables / secrets
 
@@ -187,10 +187,10 @@ loaderとPID、実network request、GA affiliate clickは正常であり、regis
 |---|---|---|
 | `NEXT_PUBLIC_SUPABASE_URL` | 公開client config | 既存Supabase project URL |
 | `NEXT_PUBLIC_SUPABASE_ANON_KEY` | 公開client config | RLS前提のanon key |
-| `NEXT_PUBLIC_SITE_URL` | 公開client config | canonical/base URL (`https://trip-guide.net`) |
-| `SITE_URL` | build config | sitemap/base URL |
+| `NEXT_PUBLIC_SITE_URL` | 公開client config | canonical/base URL (`https://memorips.com`) |
+| `SITE_URL` | build config | sitemap/base URL (`https://memorips.com`) |
 | `NEXT_PUBLIC_GA_ID` | 公開client config | GA (`G-1V6K1ZJH6S`) |
-| `NEXT_PUBLIC_VALUECOMMERCE_PID` | 公開client config | LinkSwitch PID (`892685809`) |
+| `NEXT_PUBLIC_VALUECOMMERCE_PID` | 公開client config | LinkSwitch PID (`892685812`) |
 | `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` | 公開client config / optional | Search Console verification |
 | `SUPABASE_SERVICE_ROLE_KEY` | **secret / build・runtime不要** | deployしない、repoへcommitしない |
 | `ASSETS` | runtime binding | Static Assets |
@@ -237,7 +237,7 @@ Cloudflareのzone初期設定が既存`robots.txt`へContent Signals Policyを�
 - facility画像: `image/jpeg`でStatic Assetsから200。HTMLは`text/html`。
   HTML内`/_next/image`参照なし。
 - canonical/metadata/structured data、GA `G-1V6K1ZJH6S`、ValueCommerce PID
-  `892685809`、Asoview/Rakuten CTA、PR表示: HTML/ブラウザ上で維持
+  `892685812`、Asoview/Rakuten CTA、PR表示: HTML/ブラウザ上で維持
 - `robots.txt`、sitemap index: 200、全URLは`memorips.com`
 - unknown URL: 404、legacy tag/trailing slash: 308
 - internal `/_memorip-pages/*`: 404
@@ -253,15 +253,21 @@ auth userとcascade dataを削除した。
 - invalid JPEG: 400
 - sign-out後`/mypage`: loginへ307
 
-Active deployment `8761f55a`は検証後36 invocations、error rate 0%。Dashboardの
+移行時deployment `8761f55a`は検証後36 invocations、error rate 0%。Dashboardの
 last-24h集計はExceeded CPU 0、Exceeded Memory 0、CPU P99 776ms、memory P99
-111.31MBで、設定した3,000ms CPU / Workers 128MB memory内に収まった。
+111.31MBで、設定した3,000ms CPU / Workers 128MB memory内に収まった。PID修正版
+`f57a38f6`でもTOP、施設一覧・詳細、イベント、検索API、robots、sitemap、404、
+legacy domainのpath/query保持301を再確認した。
 
-ValueCommerceについては本番ブラウザでloader 3件、PID、PRを確認したが、
-公式確認方法の`dalr.valuecommerce.com`へ変換済みのlinkは0件だった。
-`app3?p=892685809`応答も0 byteであり、hosting/runtimeではなくLinkSwitch広告space、
-提携、または登録site URL側の設定を管理画面で確認する必要がある。管理画面は
-自動logout状態のため、これだけがPhase 4の残gate。
+ValueCommerce管理画面へログインし、現在のサイトが「メモリップ（ID:3779635）」で、
+発行済みLinkSwitch PIDが`892685812`であることを確認した。移行時のproduction buildには
+誤って`892685809`が設定されていたため修正し、正しいPIDで再build・再deployした。
+
+更新後の本番ブラウザでは`dalc.valuecommerce.com/app3?p=892685812`の読み込みに加え、
+アソビューCTAが`dalr.valuecommerce.com/dck/...`へ実変換された。変換URL内の
+`pid=892685812`、`sid=3779635`、`vcurl`の元Asoview URL保持を確認した。
+validation gateもサイトID 3779635の発行PIDとの完全一致を要求するよう強化し、
+9桁なら別PIDでも通る状態を解消した。これによりPhase 4の最終gateはGREEN。
 
 ### Rollback
 
@@ -270,12 +276,12 @@ Vercel project/deploymentとimport済みA recordsは削除しない。問題時�
 zone全体を戻す必要がある場合のみ、Xserverで元の`ns1〜5.xserver.jp`へ戻す。
 rollback後もSupabase dataは共通backendなのでデータ再作成/逆移行は不要。
 
-## Owner decision / remaining production step
+## Owner decision / completion
 
 - 2026-09-12: Workers Paid採用GO。0円向けclient-side再設計はNO-GO。
 - 2026-09-13: DNS cutover、Supabase auth URL、production E2E完了。Vercelは削除せず
   paused状態を保持。
-- 残作業はValueCommerce管理画面で`memorips.com`とPID `892685809`のLinkSwitch
-  設定を確認し、実linkが`dalr.valuecommerce.com`へ変換されることの再検証のみ。
-- PRはmergeしない。残gate解消後にfinal report commitをpushし、clean確認後、
-  このworktreeをtrack終了cleanupする。
+- 2026-09-13: ValueCommerce発行PIDの照合、正しいPIDでの再deploy、
+  `dalr.valuecommerce.com`実変換を確認。Phase 1〜4はblocking 0で完了。
+- PRはmergeしない。final report commitをpushし、clean確認後、このworktreeを
+  track終了cleanupする。
