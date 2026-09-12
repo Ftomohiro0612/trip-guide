@@ -30,7 +30,10 @@ async function stageHtmlTree(sourceDir, destinationDir, prefixSegments = []) {
     } else if (entry.isFile() && entry.name.endsWith(".html")) {
       const destinationPath = resolve(
         destinationDir,
-        [...prefixSegments, entry.name.slice(0, -".html".length)].join("__"),
+        `${[
+          ...prefixSegments,
+          entry.name.slice(0, -".html".length),
+        ].join("__")}.html`,
       );
       await stageHtmlFile(sourcePath, destinationPath);
     }
@@ -73,7 +76,7 @@ async function stageDirectStaticPages() {
   for (const page of rootPages) {
     await stageHtmlFile(
       resolve(appOutput, `${page}.html`),
-      resolve(pageOutput, `_root__${page}`),
+      resolve(pageOutput, `_root__${page}.html`),
     );
   }
 
@@ -98,18 +101,18 @@ async function stageDirectStaticPages() {
     .filter((entry) => entry.isFile() && entry.name.endsWith(".html"))
     .map((entry) => entry.name.slice(0, -".html".length));
   const staticProxyRules = [
-    "/ /_memorip-pages/_root__index 200",
+    "/ /_memorip-pages/_root__index.html 200",
     ...rootPages
       .filter((page) => page !== "index")
-      .map((page) => `/${page} /_memorip-pages/_root__${page} 200`),
-    "/facilities/:slug /_memorip-pages/facilities__:slug 200",
+      .map((page) => `/${page} /_memorip-pages/_root__${page}.html 200`),
+    "/facilities/:slug /_memorip-pages/facilities__:slug.html 200",
     ...eventPages.map(
-      (page) => `/events/${page} /_memorip-pages/events__${page} 200`,
+      (page) => `/events/${page} /_memorip-pages/events__${page}.html 200`,
     ),
-    "/prefecture/:id/category/:category /_memorip-pages/prefecture__:id__category__:category 200",
-    "/prefecture/:id /_memorip-pages/prefecture__:id 200",
-    "/legal/privacy /_memorip-pages/legal__privacy 200",
-    "/legal/terms /_memorip-pages/legal__terms 200",
+    "/prefecture/:id/category/:category /_memorip-pages/prefecture__:id__category__:category.html 200",
+    "/prefecture/:id /_memorip-pages/prefecture__:id.html 200",
+    "/legal/privacy /_memorip-pages/legal__privacy.html 200",
+    "/legal/terms /_memorip-pages/legal__terms.html 200",
   ];
   await writeFile(
     resolve(assetOutput, "_redirects"),

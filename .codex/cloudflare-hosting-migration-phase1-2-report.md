@@ -1,9 +1,9 @@
 # Memorip Cloudflare hosting migration — Phase 1〜2 report
 
-> 実施日: 2026-09-12 (JST)
+> 実施日: 2026-09-12〜13 (JST)
 > branch: `codex/cloudflare-workers-migration-20260828`
-> status: **Phase 1・2完了、Workers Paid採用によりCPU blocker解消、Phase 3・4進行中**
-> production DNS: **未切替（Xserver権威DNS / Vercel paused originのまま）**
+> status: **Phase 1〜3完了、Phase 4はValueCommerce管理画面確認のみ残存**
+> production DNS: **Cloudflareへ切替済み（両zone Active）**
 
 ## 結論
 
@@ -34,7 +34,9 @@ Cloudflare Dashboardで`Workers Paid / Active`を実確認し、本体Workerに`
 - Zone plan: Free（DNS/CDN。追加の有料zone機能なし）
 - Worker: `memorip`
 - Temporary URL: <https://memorip.fic-investment2020.workers.dev>
-- Latest verified version: `51a085c8-ce62-4e70-9831-f78816bb4d02`
+- Production URL: <https://memorips.com>
+- Redirected legacy URL: <https://trip-guide.net>
+- Latest verified version: `8761f55a-58b3-4eca-a496-e85e62a2fcb9`
 - Wrangler OAuth credential: repo外の暗号化file + Windows Credential Managerに保存。
   token/service keyはcommitしていない。
 
@@ -59,7 +61,8 @@ OpenNextを選択した。
 ### 公開ページ / URL / SEO
 
 - Next production buildで生成した5,962 route中、実HTML 5,907件をversioned Static
-  Assets用にstage。
+  Assets用に`.html` assetとしてstage。公開URLはextensionlessのまま内部rewriteし、
+  `Content-Type: text/html`を維持。
 - TOP、施設詳細、イベント、都道府県、legal、画像、JS/CSS、robots、sitemapを
   Worker実行なしで直接配信。検索条件をserverで解決する施設一覧/tag/categoryは
   商品挙動維持のためOpenNext Workerで配信。
@@ -130,8 +133,8 @@ Cloudflare公式の現行Free上限とactual output:
 | Memory | 128MB/isolate | dashboard P50 101.33MB、P90 110.67MB、P99 122.37MB | AMBER（上限内だが余白小） |
 | Static assets | 20,000/version | Wrangler enumerated 8,244 | GREEN（41.22%、11,756余裕） |
 | Asset file size | 25MiB/file | max 3,740,136 bytes | GREEN |
-| Worker bundle | 64MiB | 21,270.73KiB raw / 2,922.19KiB gzip | GREEN |
-| Startup | 1s | 26ms | GREEN |
+| Worker bundle | 64MiB | 21,270.24KiB raw / 2,922.17KiB gzip | GREEN |
+| Startup | 1s | 27ms | GREEN |
 | Environment variables | 64、各5KB | public build config 7種 + bindings 2種 | GREEN |
 
 Static assetの物理file数は8,161、Wranglerがversion upload時に数えた実数は8,244。
@@ -195,48 +198,70 @@ loaderとPID、実network request、GA affiliate clickは正常であり、regis
 
 `scripts/build-cloudflare.mjs`はprivate key名のbundle漏洩を検査し、検出時はoutputを削除してfailする。
 
-## Phase 3・4 DNS preparation（進行中）
+## Phase 3 DNS cutover（完了）
 
-Cloudflare Free zone `trip-guide.net`は追加済みでpending activation。自動scan結果:
-
-- `A * -> 162.43.94.169`（proxied）
-- `A @ -> 216.198.79.1`（proxied）
-- `A www -> 216.198.79.1`（proxied）
-- `TXT default._domainkey ->` 既存DKIM値
-- `TXT @ -> v=spf1 +a:sv16028.xserver.jp +a:trip-guide.net +mx include:spf.sender.xserver.jp ~all`
-- MX recordは検出されず、Cloudflare warningあり。現行権威DNSにもMXなし。
-
-Cloudflare assigned nameservers（推測値ではなくdashboard表示値）:
+2026-09-13 JSTにXServerで`memorips.com`と`trip-guide.net`の権威NSを
+以下へ変更した。
 
 - `archer.ns.cloudflare.com`
 - `barbara.ns.cloudflare.com`
 
-現在の権威NSは`ns1.xserver.jp`〜`ns5.xserver.jp`、apex/wwwは
-`216.198.79.1`で、実siteは402 paused response。nameserverはまだ変更していない。
+Cloudflare Dashboardで両zoneの`Your domain is now protected by Cloudflare`と
+`DNS Setup: Full`を確認した。1.1.1.1、8.8.8.8、9.9.9.9の全resolverで、apex/wwwが
+Cloudflare Anycast A recordを返す。既存MX/SPF/DKIMはzone importのまま保持した。
 
-Worker routesは以下を先に登録済み。zone activation後に既存A recordを残したまま
-Workerがoverlayするため、DNS recordを書き換えずにcutoverできる。
+Worker routes:
 
-- `trip-guide.net/*`
-- `www.trip-guide.net/*`
+- `memorips.com/*` -> `memorip`
+- `www.memorips.com/*` -> `memorip-domain-redirect`
+- `trip-guide.net/*` -> `memorip-domain-redirect`
+- `www.trip-guide.net/*` -> `memorip-domain-redirect`
 
-### OwnerがPhase 3で行う最小操作
+旧domainと両`www`はpath/queryを保持して`https://memorips.com`へ301する。
+Supabase AuthはSite URLを`https://memorips.com`へ変更し、callback allow-listへ
+`memorips.com`、`www.memorips.com`、temporary workers.devを追加した。既存
+`trip-guide.net/auth/callback`とlocalhost entryはrollback用に残した。
 
-1. CPU gateの方針を決定（Workers Paid、または0円向けmaterial rewrite）。
-2. GREEN後、Xserverのdomain nameserverを上記Cloudflare 2本へ変更。
-3. 変更完了をCodexへ通知。`I updated my nameservers`はCodex側で確認後に進める。
+Cloudflareのzone初期設定が既存`robots.txt`へContent Signals Policyを追記していたため、
+`memorips.com`のmanaged robots設定を無効化した。現在はbuild生成の116-byte
+`robots.txt`が改変なしで配信される。
 
-### Cutover verification
+## Phase 4 production verification
 
-- authoritative NSがCloudflare 2本へ変化
-- apex/wwwでCloudflare Worker versionが応答
-- TOP、施設、画像あり/なし、イベント、検索/filter、login/logout、auth callback
-- authenticated read/write、children/avatar、visits、wishlist
-- API routes、Supabase remote image
-- Rakuten/Asoview/ValueCommerce実click、PR表示、GA
-- robots/sitemap/canonical/structured data/metadata
-- 404、308、www 301
-- Workers errors、CPU、memory、daily requests
+`memorips.com`で以下を実測した。
+
+- TOP、施設一覧、prefecture/query filter、画像あり`facility-001`、画像なし
+  `facility-005`、Rakuten CTAあり`facility-012`: 200
+- event一覧、summer event、login page: 200
+- API search/page-data/event: 200、期待ID/slugを返却
+- facility画像: `image/jpeg`でStatic Assetsから200。HTMLは`text/html`。
+  HTML内`/_next/image`参照なし。
+- canonical/metadata/structured data、GA `G-1V6K1ZJH6S`、ValueCommerce PID
+  `892685809`、Asoview/Rakuten CTA、PR表示: HTML/ブラウザ上で維持
+- `robots.txt`、sitemap index: 200、全URLは`memorips.com`
+- unknown URL: 404、legacy tag/trailing slash: 308
+- internal `/_memorip-pages/*`: 404
+- `www.memorips.com`、`trip-guide.net`、`www.trip-guide.net`: path/query保持301
+
+ephemeral production userで、既存Supabase projectを相手に次を実測し、完了後に
+auth userとcascade dataを削除した。
+
+- password sign-in / sign-out
+- children、wishlist、visits、visit_childrenのRLS read/write
+- `/mypage`、children、wishlist、visitsのauthenticated SSR: 全て200、作成data表示
+- avatar: Cloudflare Imagesでupload 200、Supabase signed URL取得200、delete 200
+- invalid JPEG: 400
+- sign-out後`/mypage`: loginへ307
+
+Active deployment `8761f55a`は検証後36 invocations、error rate 0%。Dashboardの
+last-24h集計はExceeded CPU 0、Exceeded Memory 0、CPU P99 776ms、memory P99
+111.31MBで、設定した3,000ms CPU / Workers 128MB memory内に収まった。
+
+ValueCommerceについては本番ブラウザでloader 3件、PID、PRを確認したが、
+公式確認方法の`dalr.valuecommerce.com`へ変換済みのlinkは0件だった。
+`app3?p=892685809`応答も0 byteであり、hosting/runtimeではなくLinkSwitch広告space、
+提携、または登録site URL側の設定を管理画面で確認する必要がある。管理画面は
+自動logout状態のため、これだけがPhase 4の残gate。
 
 ### Rollback
 
@@ -248,9 +273,9 @@ rollback後もSupabase dataは共通backendなのでデータ再作成/逆移行
 ## Owner decision / remaining production step
 
 - 2026-09-12: Workers Paid採用GO。0円向けclient-side再設計はNO-GO。
-- `memorips.com`をcanonical productionにし、`trip-guide.net`と両`www`はpath/queryを
-  保持して301する極小Workerへ分離。静的asset requestを本体Worker課金へ巻き込まない。
-- `memorips.com` zoneは既存A/MX/SPF/DKIMをimport済み。両zoneのassigned nameserverは
-  `archer.ns.cloudflare.com` / `barbara.ns.cloudflare.com`。
-- production-equivalent build、8,244 assets、preview smokeは新canonicalで再検証済み。
-- 残作業はXServer nameserver切替、Supabase auth URL確認、production E2E、PR merge。
+- 2026-09-13: DNS cutover、Supabase auth URL、production E2E完了。Vercelは削除せず
+  paused状態を保持。
+- 残作業はValueCommerce管理画面で`memorips.com`とPID `892685809`のLinkSwitch
+  設定を確認し、実linkが`dalr.valuecommerce.com`へ変換されることの再検証のみ。
+- PRはmergeしない。残gate解消後にfinal report commitをpushし、clean確認後、
+  このworktreeをtrack終了cleanupする。
