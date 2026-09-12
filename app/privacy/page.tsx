@@ -39,7 +39,7 @@ export default function PrivacyPage() {
       <section>
         <h2 id="operator" className={h2Class}>1. 事業者情報</h2>
         <ul className={listClass}>
-          <li>サービス名: メモリップ（trip-guide.net 上で提供）</li>
+          <li>サービス名: メモリップ（memorips.com 上で提供）</li>
           <li>運営者: {SERVICE.operatorName}</li>
           <li>問い合わせ先: {SERVICE.supportEmail}</li>
         </ul>

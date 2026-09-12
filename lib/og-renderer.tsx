@@ -22,7 +22,7 @@ export async function renderOgImage(input: OgRenderInput) {
   const fontText =
     `${title}${eyebrow}${subtitle ?? ""}` +
     (badges ?? []).map((b) => b.label).join("") +
-    "trip-guide.net子供向け遊び場検索";
+    "memorips.com子供向け遊び場検索";
 
   const fontData = await getJpFontSubset(fontText);
 
@@ -53,7 +53,7 @@ export async function renderOgImage(input: OgRenderInput) {
         >
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
             <span style={{ fontSize: 36 }}>🎈</span>
-            <span style={{ fontWeight: 700 }}>trip-guide.net</span>
+            <span style={{ fontWeight: 700 }}>memorips.com</span>
           </div>
           <div style={{ fontSize: 22, opacity: 0.85 }}>子供向け遊び場検索</div>
         </div>

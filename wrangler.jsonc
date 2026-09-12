@@ -6,14 +6,13 @@
   "preview_urls": true,
   "compatibility_date": "2026-09-12",
   "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "limits": {
+    "cpu_ms": 3000
+  },
   "routes": [
     {
-      "pattern": "trip-guide.net/*",
-      "zone_name": "trip-guide.net"
-    },
-    {
-      "pattern": "www.trip-guide.net/*",
-      "zone_name": "trip-guide.net"
+      "pattern": "memorips.com/*",
+      "zone_name": "memorips.com"
     }
   ],
   "assets": {

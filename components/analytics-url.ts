@@ -1,7 +1,7 @@
 const UUID_PATTERN =
   /[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}/gi;
 
-const DEFAULT_ANALYTICS_BASE = "https://trip-guide.net";
+const DEFAULT_ANALYTICS_BASE = "https://memorips.com";
 
 export function maskAnalyticsText(value: string): string {
   return value.replace(UUID_PATTERN, ":id");

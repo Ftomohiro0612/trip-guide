@@ -6,6 +6,7 @@ import Footer from "@/components/Footer";
 import Analytics from "@/components/Analytics";
 import ValueCommerceLinkSwitch from "@/components/ValueCommerceLinkSwitch";
 import { WishlistProvider } from "@/components/WishlistProvider";
+import { SERVICE } from "@/lib/config";
 import {
   getFeatureHubVisibilityScript,
   SUMMER_2026_HUB_CONFIG,
@@ -85,7 +86,7 @@ const cloudflareStaticNavigationScript = `(() => {
 })();`;
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://trip-guide.net"),
+  metadataBase: new URL(SERVICE.baseUrl),
   title: {
     default: "メモリップ | 子どもの\"好き\"が見える、おでかけ記録サービス",
     template: "%s | メモリップ",

@@ -2,7 +2,7 @@
 
 > 実施日: 2026-09-12 (JST)
 > branch: `codex/cloudflare-workers-migration-20260828`
-> status: **Phase 1・2実装/previewは完了、Free CPU gateはRED**
+> status: **Phase 1・2完了、Workers Paid採用によりCPU blocker解消、Phase 3・4進行中**
 > production DNS: **未切替（Xserver権威DNS / Vercel paused originのまま）**
 
 ## 結論
@@ -12,23 +12,26 @@ vinextではなく、既存の`next build`を使う`@opennextjs/cloudflare` 1.20
 採用した。公開SSGページと施設画像をWorkers Static Assetsへ移し、ISR、
 Vercel Image Optimization、公開assetのVercel origin transferへの依存を除去した。
 
-Cloudflare Freeアカウントへのtemporary deploymentと本番相当E2Eは完了した。
+Cloudflare temporary deploymentと本番相当E2Eは完了した。
 ただし実Worker Traceで、認証済みSSRがFreeの10ms CPU/requestを継続的に超えた。
 同じ`/mypage/wishlist`を連続実行して`637ms / 68ms / 56ms`、
 `/auth/callback`で`231ms`を記録した。Cloudflareの一時的超過許容により応答は
 成功したが、公式仕様は「継続的に上限へ到達すると実行をterminate」としているため、
 **月額固定費0円で安全に収まるという受け入れ条件は満たさない**。
 
-したがってPhase 3のnameserver切替は実施していない。商品挙動を変えず進める最小案は
-Workers Paid、0円を厳守する案は認証済み画面/APIを軽量Worker + client-side data flowへ
-作り替えるmaterial architecture changeになる。どちらもOwner停止条件に該当する。
+2026-09-12のOwner判断により、商品中核の大規模再設計は行わずWorkers Paidを採用した。
+Cloudflare Dashboardで`Workers Paid / Active`を実確認し、本体Workerに`cpu_ms: 3000`、
+301専用Workerに`cpu_ms: 50`の上限を設定した。これにより実測最大637msへ十分な余裕を
+持たせつつ、runaway CPUをrequest単位で制限する。認証・SSR・検索・Supabase data modelは
+変更していない。
 
 ## Cloudflare account / deployment
 
 - Account email: `fic.investment2020@gmail.com`
 - Account name: `Fic.investment2020@gmail.com's Account`
 - Account ID: `c3695ab3744fbad04ca5f0bd8c31e5a0`
-- Plan: Free
+- Compute plan: Workers Paid（Active、次回更新 2026-10-12）
+- Zone plan: Free（DNS/CDN。追加の有料zone機能なし）
 - Worker: `memorip`
 - Temporary URL: <https://memorip.fic-investment2020.workers.dev>
 - Latest verified version: `51a085c8-ce62-4e70-9831-f78816bb4d02`
@@ -192,7 +195,7 @@ loaderとPID、実network request、GA affiliate clickは正常であり、regis
 
 `scripts/build-cloudflare.mjs`はprivate key名のbundle漏洩を検査し、検出時はoutputを削除してfailする。
 
-## Phase 3 DNS preparation（未実施）
+## Phase 3・4 DNS preparation（進行中）
 
 Cloudflare Free zone `trip-guide.net`は追加済みでpending activation。自動scan結果:
 
@@ -242,14 +245,12 @@ Vercel project/deploymentとimport済みA recordsは削除しない。問題時�
 zone全体を戻す必要がある場合のみ、Xserverで元の`ns1〜5.xserver.jp`へ戻す。
 rollback後もSupabase dataは共通backendなのでデータ再作成/逆移行は不要。
 
-## Remaining blocker / Owner decision
+## Owner decision / remaining production step
 
-次のどちらかが必要。
-
-1. **商品挙動維持を優先**: Workers Paidへ変更し、OpenNext SSRのCPU上限を引き上げる。
-   月額固定費0円要件から外れる。
-2. **月額0円を優先**: 認証済みSSR、auth callback、filter/search APIを軽量Workerと
-   client-side Supabase data flowへ再設計する。既存機能は維持可能性があるが、認証/描画方式の
-   material changeであり、別spec・回帰E2E・セキュリティreviewが必要。
-
-この判断が終わるまで、Phase 3 nameserver切替はNO-GOとする。
+- 2026-09-12: Workers Paid採用GO。0円向けclient-side再設計はNO-GO。
+- `memorips.com`をcanonical productionにし、`trip-guide.net`と両`www`はpath/queryを
+  保持して301する極小Workerへ分離。静的asset requestを本体Worker課金へ巻き込まない。
+- `memorips.com` zoneは既存A/MX/SPF/DKIMをimport済み。両zoneのassigned nameserverは
+  `archer.ns.cloudflare.com` / `barbara.ns.cloudflare.com`。
+- production-equivalent build、8,244 assets、preview smokeは新canonicalで再検証済み。
+- 残作業はXServer nameserver切替、Supabase auth URL確認、production E2E、PR merge。

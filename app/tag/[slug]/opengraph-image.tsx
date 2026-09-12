@@ -7,7 +7,7 @@ import {
   renderOgImage,
 } from "@/lib/og-renderer";
 
-export const alt = "trip-guide.net";
+export const alt = "memorips.com";
 export const size = OG_SIZE;
 export const contentType = OG_CONTENT_TYPE;
 
@@ -33,7 +33,7 @@ export default async function Image({
             fontSize: 64,
           }}
         >
-          trip-guide.net
+          memorips.com
         </div>
       ),
       size,

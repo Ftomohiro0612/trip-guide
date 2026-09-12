@@ -26,10 +26,14 @@ function getConfiguredRedirect(url) {
   if (url.pathname === "/tag/indoor-rainy") {
     return Response.redirect(new URL("/tag/rainy-day", url), 308);
   }
-  if (url.hostname === "www.trip-guide.net") {
+  if (
+    url.hostname === "trip-guide.net" ||
+    url.hostname === "www.trip-guide.net" ||
+    url.hostname === "www.memorips.com"
+  ) {
     const destination = new URL(url);
     destination.protocol = "https:";
-    destination.hostname = "trip-guide.net";
+    destination.hostname = "memorips.com";
     return Response.redirect(destination, 301);
   }
 }

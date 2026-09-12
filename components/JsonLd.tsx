@@ -10,7 +10,7 @@ interface BreadcrumbProps {
 
 export function BreadcrumbJsonLd({
   items,
-  baseUrl = "https://trip-guide.net",
+  baseUrl = "https://memorips.com",
 }: BreadcrumbProps) {
   const data = {
     "@context": "https://schema.org",
@@ -57,7 +57,7 @@ interface ItemListProps {
 export function ItemListJsonLd({
   name,
   items,
-  baseUrl = "https://trip-guide.net",
+  baseUrl = "https://memorips.com",
 }: ItemListProps) {
   const data = {
     "@context": "https://schema.org",

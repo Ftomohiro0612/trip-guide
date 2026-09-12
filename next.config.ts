@@ -27,7 +27,19 @@ const nextConfig: NextConfig = {
       {
         source: "/:path*",
         has: [{ type: "host", value: "www.trip-guide.net" }],
-        destination: "https://trip-guide.net/:path*",
+        destination: "https://memorips.com/:path*",
+        statusCode: 301,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "trip-guide.net" }],
+        destination: "https://memorips.com/:path*",
+        statusCode: 301,
+      },
+      {
+        source: "/:path*",
+        has: [{ type: "host", value: "www.memorips.com" }],
+        destination: "https://memorips.com/:path*",
         statusCode: 301,
       },
     ];
