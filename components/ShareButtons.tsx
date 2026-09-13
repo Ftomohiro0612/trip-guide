@@ -91,7 +91,7 @@ export default function ShareButtons({
 }: Props) {
   const [copied, setCopied] = useState(false);
   const [canNativeShare, setCanNativeShare] = useState(false);
-  const fullUrl = url.startsWith("http") ? url : `https://trip-guide.net${url}`;
+  const fullUrl = url.startsWith("http") ? url : `https://memorips.com${url}`;
   const lineShareText = buildShareText(
     title,
     prefecture,

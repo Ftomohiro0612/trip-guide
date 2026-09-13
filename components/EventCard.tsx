@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import { isPdfOfficialUrl, type EventView } from "@/lib/events";
+import type { EventView } from "@/lib/events";
+import { isPdfOfficialUrl } from "@/lib/event-urls";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import EventRecordButton from "@/components/EventRecordButton";
 

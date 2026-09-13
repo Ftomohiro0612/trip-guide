@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import MapViewClient from "@/components/MapViewClient";
 import { prefectures, visibleFacilities } from "@/lib/facilities";
+import { toMapFacilities } from "@/lib/map-facilities";
+
+const mapFacilities = toMapFacilities(visibleFacilities);
 
 export const metadata: Metadata = {
   title: "地図から探す",
@@ -20,7 +23,7 @@ export default function MapPage() {
         </p>
       </div>
       <MapViewClient
-        facilities={visibleFacilities}
+        facilities={mapFacilities}
         height={680}
         storageKey="map"
       />

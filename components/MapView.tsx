@@ -18,11 +18,28 @@ import type { Facility, PrefectureId } from "@/types/facility";
 import { driveTimeEstimateLabel, haversineDistanceKm } from "@/lib/distance";
 
 interface Props {
-  facilities: Facility[];
+  facilities: MapFacility[];
   height?: number;
   userStatus?: UserStatusMap;
   storageKey?: string;
 }
+
+export type MapFacility = Pick<
+  Facility,
+  | "id"
+  | "slug"
+  | "name"
+  | "prefecture"
+  | "prefecture_id"
+  | "category"
+  | "category_id"
+  | "latitude"
+  | "longitude"
+  | "is_free"
+  | "rain_friendly"
+  | "target_age"
+  | "things_to_do"
+>;
 
 export type UserFacilityStatus = {
   visitCount: number;
@@ -174,12 +191,12 @@ function persistCurrentLocation(position: [number, number]) {
   }
 }
 
-interface PlacedFacility extends Facility {
+interface PlacedFacility extends MapFacility {
   latitude: number;
   longitude: number;
 }
 
-function hasCoords(f: Facility): f is PlacedFacility {
+function hasCoords(f: MapFacility): f is PlacedFacility {
   return (
     typeof f.latitude === "number" &&
     typeof f.longitude === "number" &&

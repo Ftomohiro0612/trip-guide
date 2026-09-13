@@ -25,7 +25,7 @@ const categoryIds = facilitiesData.metadata.categories.map((c) => c.id);
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
-  siteUrl: process.env.SITE_URL || "https://trip-guide.net",
+  siteUrl: process.env.SITE_URL || "https://memorips.com",
   generateRobotsTxt: true,
   sitemapSize: 5000,
   changefreq: "weekly",

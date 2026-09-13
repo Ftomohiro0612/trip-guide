@@ -1,4 +1,4 @@
-import facilitiesJson from "../data/facilities_data.json";
+import { facilitiesData as facilitiesJson } from "@memorip/runtime-canon";
 import type { FacilitiesData, PrefectureId } from "@/types/facility";
 
 const data = facilitiesJson as unknown as FacilitiesData;

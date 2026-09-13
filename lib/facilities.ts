@@ -1,4 +1,4 @@
-import facilitiesJson from "@/data/facilities_data.json";
+import { facilitiesData as facilitiesJson } from "@memorip/runtime-canon";
 import { createRelatedFacilitySelector } from "@/lib/related-facilities.mjs";
 import type {
   CategoryMeta,

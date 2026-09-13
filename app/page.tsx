@@ -15,7 +15,7 @@ import {
   StepRecordIcon,
   StepSearchIcon,
 } from "@/components/MemoripFlowFigures";
-import { FEATURED_FACILITY_IDS } from "@/lib/config";
+import { FEATURED_FACILITY_IDS, SERVICE } from "@/lib/config";
 import {
   categories,
   getFacilitiesByCategory,
@@ -25,6 +25,7 @@ import {
 } from "@/lib/facilities";
 import { prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
+import { toMapFacilities } from "@/lib/map-facilities";
 import type {
   Facility,
   FacilityTag,
@@ -34,6 +35,8 @@ import type {
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
+
+const mapFacilities = toMapFacilities(visibleFacilities);
 
 const PREFECTURE_REGIONS = [
   {
@@ -492,13 +495,13 @@ export default function HomePage() {
     "@type": "WebSite",
     name: "メモリップ",
     alternateName: "Memorips",
-    url: "https://trip-guide.net",
+    url: SERVICE.baseUrl,
     inLanguage: "ja",
     potentialAction: {
       "@type": "SearchAction",
       target: {
         "@type": "EntryPoint",
-        urlTemplate: "https://trip-guide.net/facilities?q={search_term_string}",
+        urlTemplate: `${SERVICE.baseUrl}/facilities?q={search_term_string}`,
       },
       "query-input": "required name=search_term_string",
     },
@@ -624,7 +627,7 @@ export default function HomePage() {
             </Link>
           </div>
           <MapViewClient
-            facilities={visibleFacilities}
+            facilities={mapFacilities}
             height={520}
             storageKey="home"
           />

@@ -1,4 +1,4 @@
-import rakutenFacilityActionsJson from "@/data/rakuten_facility_actions.json";
+import { rakutenFacilityActionsData as rakutenFacilityActionsJson } from "@memorip/runtime-canon";
 import type { Facility } from "@/types/facility";
 
 export type RakutenFacilityActionType =

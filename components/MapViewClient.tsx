@@ -2,9 +2,8 @@
 
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
-import type { Facility } from "@/types/facility";
 import { createClient } from "@/lib/supabase/client";
-import type { UserStatusMap } from "./MapView";
+import type { MapFacility, UserStatusMap } from "./MapView";
 
 const MapView = dynamic(() => import("./MapView"), {
   ssr: false,
@@ -21,7 +20,7 @@ const MapView = dynamic(() => import("./MapView"), {
 });
 
 interface Props {
-  facilities: Facility[];
+  facilities: MapFacility[];
   height?: number;
   storageKey?: string;
 }

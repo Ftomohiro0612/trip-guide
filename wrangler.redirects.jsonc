@@ -1,0 +1,25 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "memorip-domain-redirect",
+  "main": "cloudflare/domain-redirect-worker.js",
+  "workers_dev": false,
+  "preview_urls": false,
+  "compatibility_date": "2026-09-12",
+  "limits": {
+    "cpu_ms": 50
+  },
+  "routes": [
+    {
+      "pattern": "trip-guide.net/*",
+      "zone_name": "trip-guide.net"
+    },
+    {
+      "pattern": "www.trip-guide.net/*",
+      "zone_name": "trip-guide.net"
+    },
+    {
+      "pattern": "www.memorips.com/*",
+      "zone_name": "memorips.com"
+    }
+  ]
+}

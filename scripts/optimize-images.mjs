@@ -12,8 +12,11 @@ const MAX_WIDTH = 1200;
 const QUALITY = 80;
 
 async function main() {
+  // Rights-safe WebP assets and the four canonical PNG URLs are already
+  // delivery-ready. Only optimize the legacy JPEG set in place so facility
+  // canon hashes and public asset URLs never change.
   const files = (await readdir(IMAGES_DIR)).filter((f) =>
-    /\.(jpe?g|png|webp|gif)$/i.test(f),
+    /\.jpe?g$/i.test(f),
   );
   console.log(`Optimizing ${files.length} images…`);
 

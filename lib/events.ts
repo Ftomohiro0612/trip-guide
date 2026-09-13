@@ -1,5 +1,7 @@
-import eventsJson from "@/data/events_data.json";
-import summerEventsJson from "@/data/summer_events_2026.json";
+import {
+  eventsData as eventsJson,
+  summerEventsData as summerEventsJson,
+} from "@memorip/runtime-canon";
 import { facilities, getPrefectureMeta } from "@/lib/facilities";
 import {
   selectSummerHeroEventsByType,
@@ -10,6 +12,7 @@ import type {
   PrefectureId,
   RecommendedForTag,
 } from "@/types/facility";
+export { isPdfOfficialUrl } from "@/lib/event-urls";
 
 export type EventStatus =
   | "scheduled"
@@ -371,11 +374,6 @@ export function getEventPrefectureLabel(
 
 export function isEventPrefecture(value: string): value is EventPrefecture {
   return (eventPrefectures as string[]).includes(value);
-}
-
-export function isPdfOfficialUrl(url: string) {
-  const path = url.split(/[?#]/, 1)[0];
-  return path.toLowerCase().endsWith(".pdf");
 }
 
 export function isEventInFeatureHub(

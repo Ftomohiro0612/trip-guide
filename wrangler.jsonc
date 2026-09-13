@@ -1,0 +1,27 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "memorip",
+  "main": ".open-next/worker.js",
+  "workers_dev": true,
+  "preview_urls": true,
+  "compatibility_date": "2026-09-12",
+  "compatibility_flags": ["nodejs_compat", "global_fetch_strictly_public"],
+  "limits": {
+    "cpu_ms": 3000
+  },
+  "routes": [
+    {
+      "pattern": "memorips.com/*",
+      "zone_name": "memorips.com"
+    }
+  ],
+  "assets": {
+    "directory": ".open-next/assets",
+    "binding": "ASSETS",
+    "html_handling": "none",
+    "run_worker_first": ["/_memorip-runtime/*", "/_memorip-pages/*"]
+  },
+  "images": {
+    "binding": "IMAGES"
+  }
+}

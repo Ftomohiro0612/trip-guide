@@ -1,4 +1,4 @@
-import sharp from "sharp";
+import { getCloudflareContext } from "@opennextjs/cloudflare";
 import { createClient } from "@/lib/supabase/server";
 
 const BUCKET = "child-avatars";
@@ -6,6 +6,54 @@ const MAX_FILE_SIZE = 20 * 1024 * 1024;
 const MAX_INPUT_PIXELS = 64_000_000;
 const ACCEPTED_TYPES = new Set(["image/jpeg", "image/png", "image/webp"]);
 const ACCEPTED_FORMATS = new Set(["jpeg", "png", "webp"]);
+
+function normalizeImageFormat(format: string) {
+  const normalized = format.toLowerCase().replace(/^image\//, "");
+  return normalized === "jpg" ? "jpeg" : normalized;
+}
+
+function isImageServiceUnavailable(error: unknown) {
+  if (error instanceof Error && error.message.includes("binding is unavailable")) {
+    return true;
+  }
+  if (typeof error === "object" && error !== null && "code" in error) {
+    return Number(error.code) === 9422;
+  }
+  return false;
+}
+
+async function transformAvatar(file: File) {
+  const { env } = await getCloudflareContext({ async: true });
+  const images = env.IMAGES;
+
+  if (!images) {
+    throw new Error("Cloudflare Images binding is unavailable");
+  }
+
+  const info = await images.info(file.stream());
+  if (
+    !("width" in info) ||
+    !ACCEPTED_FORMATS.has(normalizeImageFormat(info.format))
+  ) {
+    throw new Error("Unsupported image format");
+  }
+  if (info.width * info.height > MAX_INPUT_PIXELS) {
+    throw new Error("Image dimensions exceed the safety limit");
+  }
+
+  const transformed = (
+    await images
+      .input(file.stream())
+      .transform({ width: 512, height: 512, fit: "cover" })
+      .output({ format: "image/jpeg", quality: 86 })
+  ).response();
+
+  if (!transformed.ok) {
+    throw new Error(`Cloudflare Images returned ${transformed.status}`);
+  }
+
+  return transformed.arrayBuffer();
+}
 
 async function getOwnedChild(
   childId: string,
@@ -57,25 +105,16 @@ export async function POST(
     );
   }
 
-  let output: Buffer;
+  let output: ArrayBuffer;
   try {
-    const input = Buffer.from(await file.arrayBuffer());
-    const image = sharp(input, { limitInputPixels: MAX_INPUT_PIXELS });
-    const { format } = await image.metadata();
-
-    if (!format || !ACCEPTED_FORMATS.has(format)) {
+    output = await transformAvatar(file);
+  } catch (error) {
+    if (isImageServiceUnavailable(error)) {
       return Response.json(
-        { error: "JPEG、PNG、WebP の画像を選択してください" },
-        { status: 400 },
+        { error: "画像処理サービスを一時的に利用できません" },
+        { status: 503 },
       );
     }
-
-    output = await image
-      .rotate()
-      .resize(512, 512, { fit: "cover" })
-      .jpeg({ quality: 86 })
-      .toBuffer();
-  } catch {
     return Response.json(
       {
         error:
