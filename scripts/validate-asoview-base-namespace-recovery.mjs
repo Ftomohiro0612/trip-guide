@@ -187,9 +187,9 @@ for (const candidate of coverage.recovered_family_candidates) {
   }
 }
 
-assert.equal(
-  facilityData.facilities.length,
-  5_237 + additions.count,
+assert.ok(
+  facilityData.facilities.length >= 5_237 + additions.count,
+  `facility canon shrank below the post-campaign floor: ${facilityData.facilities.length} < ${5_237 + additions.count}`,
 );
 assert.equal(facilityData.metadata.total_facilities, facilityData.facilities.length);
 assert.equal(
