@@ -67,12 +67,12 @@ export function useFacilityIntentActions({
       if (onGuestRecord) {
         onGuestRecord();
       } else {
-        requireLogin(dest);
+        router.push(`/facilities/${encodeURIComponent(facilitySlug)}?record=1`);
       }
       return;
     }
     router.push(dest);
-  }, [facilityId, facilityName, facilitySlug, loadState, onGuestRecord, requireLogin, router]);
+  }, [facilityId, facilityName, facilitySlug, loadState, onGuestRecord, router]);
 
   const handleWishlist = useCallback(async () => {
     if (loadState === "loading" || toggling) return;

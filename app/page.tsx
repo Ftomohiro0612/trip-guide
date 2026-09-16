@@ -268,11 +268,14 @@ function HeroBackground() {
 
 function HeroMemoryCardCluster() {
   return (
-    // W5: 薄いスマホ画面風コンテナ。検索導線が主役のまま、PC幅は抑える。
     <div
       className="relative mx-auto w-full max-w-[19.5rem] rounded-[2rem] border border-white/65 bg-white/28 p-2.5 text-slate-900 shadow-lg shadow-sky-900/10 backdrop-blur-md lg:mx-0 lg:max-w-[18.5rem] xl:max-w-[19rem]"
       aria-label="メモリップに家族の記録がたまっていくスマホ画面風コンテナ"
     >
+      <p className="px-2 pb-2 text-center text-sm font-bold text-slate-900">
+        記録がたまると見える、子どもの「好き」
+        <span className="mt-1 block text-xs font-medium">画面イメージ・件数や内容はサンプルです</span>
+      </p>
       <div className="overflow-hidden rounded-[1.55rem] border border-slate-900/10 bg-sky-50/95 shadow-sm shadow-slate-900/5">
         <div className="border-b border-slate-200/80 bg-white/92 px-4 pb-3 pt-3.5">
           <div className="flex items-center justify-between gap-3">
@@ -534,6 +537,14 @@ export default function HomePage() {
                 雨の日、無料、水遊び、遊具、近くの施設。行った場所を記録すると、子どもの“好き”も少しずつ見えてきます。
               </p>
 
+              <Link
+                href="/try"
+                className="mt-6 inline-flex min-h-14 items-center justify-center rounded-full bg-slate-950 px-6 py-4 text-base font-black text-white shadow-xl transition-colors hover:bg-slate-800"
+              >
+                登録なしで、思い出を1件つくる →
+              </Link>
+              <p className="mt-2 text-xs font-medium text-white">写真は任意。子どもの反応から、次のおでかけへ。</p>
+
               <div className="mx-auto mt-7 w-full max-w-2xl lg:mx-0">
                 <HeroSearch />
               </div>
@@ -551,24 +562,24 @@ export default function HomePage() {
                 ))}
               </div>
 
-              <div className="mt-6 flex flex-col justify-center gap-3 sm:flex-row lg:justify-start">
+              <div className="mt-6 grid grid-cols-2 gap-3 sm:flex sm:flex-wrap lg:justify-start">
                 <Link
                   href="/facilities"
-                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-bold text-slate-900 shadow-xl transition-all hover:-translate-y-0.5 hover:bg-sky-50 hover:shadow-2xl sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 rounded-full bg-white px-3 py-3 text-sm font-bold text-slate-900 shadow-xl transition-all hover:-translate-y-0.5 hover:bg-sky-50 hover:shadow-2xl sm:text-base"
                 >
                   <span aria-hidden>📋</span>
                   一覧から探す
                 </Link>
                 <Link
                   href="/events"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/20 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/30 sm:text-base"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/70 bg-white/20 px-3 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/30 sm:text-base"
                 >
                   <span aria-hidden>🎪</span>
                   イベントを探す
                 </Link>
                 <Link
                   href="/guide"
-                  className="inline-flex items-center justify-center gap-2 rounded-full border border-white/55 bg-white/10 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:text-base"
+                  className="col-span-2 inline-flex items-center justify-center gap-2 rounded-full border border-white/55 bg-white/10 px-6 py-3 text-sm font-bold text-white shadow-sm backdrop-blur-sm transition-all hover:-translate-y-0.5 hover:bg-white/20 sm:text-base"
                 >
                   <span aria-hidden>✨</span>
                   メモリップでできること
@@ -588,7 +599,7 @@ export default function HomePage() {
                   href="/try"
                   className="text-xs font-bold text-white/90 underline decoration-white/60 underline-offset-4 transition-colors hover:text-sky-50"
                 >
-                  登録なしで30秒お試し：思い出カードを作ってみる →
+                  お試しで子どもの反応を残してみる →
                 </Link>
               </div>
             </div>
@@ -793,7 +804,7 @@ export default function HomePage() {
         </section>
 
         <section
-          className="order-7 my-14 rounded-3xl border border-emerald-100 bg-gradient-to-b from-white to-emerald-50/50 p-6 shadow-sm shadow-emerald-100/50 sm:p-8 lg:order-7"
+          className="order-first my-8 rounded-3xl border border-emerald-100 bg-gradient-to-b from-white to-emerald-50/50 p-6 shadow-sm shadow-emerald-100/50 sm:p-8"
           aria-labelledby="record-value-heading"
         >
           <div className="mx-auto max-w-3xl text-center">
@@ -897,6 +908,12 @@ export default function HomePage() {
             </div>
           </div>
           <div className="mt-7 flex flex-col justify-center gap-3 sm:flex-row">
+            <Link
+              href="/try"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-700 px-6 py-4 text-base font-black text-white transition-colors hover:bg-emerald-800"
+            >
+              登録なしで、記録をはじめる →
+            </Link>
             <Link
               href="/facilities"
               className="inline-flex items-center justify-center rounded-full bg-slate-900 px-6 py-3 text-sm font-bold text-white transition-colors hover:bg-slate-800 sm:text-base"

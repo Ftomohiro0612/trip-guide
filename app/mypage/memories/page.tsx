@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { createClient } from "@/lib/supabase/server";
+import { dateValueJst } from "@/lib/date-jst";
 import {
   familyRevisitLabels,
   satisfactionLabels,
@@ -63,7 +64,7 @@ function tagLabel(value: ChildTagRow["reaction_tags"]): string | null {
 function memoryLabel(value: string | null): string | null {
   if (!value) return null;
   const visited = new Date(`${value}T00:00:00+09:00`);
-  const today = new Date("2026-07-26T00:00:00+09:00");
+  const today = new Date(`${dateValueJst()}T00:00:00+09:00`);
   const days = Math.floor((today.getTime() - visited.getTime()) / 86_400_000);
   return days >= 30 ? `あれから${days}日` : null;
 }

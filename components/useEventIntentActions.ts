@@ -42,5 +42,6 @@ export function useEventIntentActions(eventId: string) {
   return {
     handleRecordEvent,
     loading: loadState === "loading",
+    isGuest: loadState === "guest",
   };
 }

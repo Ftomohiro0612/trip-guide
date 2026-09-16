@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { dateValueJst } from "@/lib/date-jst";
 import MemoryStories, {
   type MemoryStory,
 } from "@/app/mypage/memories/MemoryStories";
@@ -53,7 +54,7 @@ export default function MemoryStoryReview({
   const photoUrlsRef = useRef<string[]>([]);
   const [step, setStep] = useState<"record" | "complete" | "feed">("record");
   const [photoUrls, setPhotoUrls] = useState<string[]>([]);
-  const [visitedOn, setVisitedOn] = useState("2026-07-26");
+  const [visitedOn, setVisitedOn] = useState(() => dateValueJst());
   const [facilityName, setFacilityName] = useState("");
   const [note, setNote] = useState("");
   const [revisit, setRevisit] = useState(true);

@@ -1,8 +1,11 @@
 "use client";
 
 import Link from "next/link";
+import GuestRecordAutoOpen from "@/components/GuestRecordAutoOpen";
+import { dateValueJst } from "@/lib/date-jst";
 import {
   createContext,
+  Suspense,
   useCallback,
   useContext,
   useEffect,
@@ -25,11 +28,6 @@ type GuestRecordContextValue = {
 };
 
 const GuestRecordContext = createContext<GuestRecordContextValue | null>(null);
-
-function localDateValue(date: Date): string {
-  const local = new Date(date.getTime() - date.getTimezoneOffset() * 60_000);
-  return local.toISOString().slice(0, 10);
-}
 
 function displayDate(value: string): string {
   const [year, month, day] = value.split("-");
@@ -86,8 +84,12 @@ export default function FacilityGuestRecordProvider({
   return (
     <GuestRecordContext.Provider value={value}>
       {children}
+      <Suspense fallback={null}>
+        <GuestRecordAutoOpen openGuestRecord={openGuestRecord} />
+      </Suspense>
       {open && (
         <GuestRecordExperience
+          key={facilitySlug}
           facilitySlug={facilitySlug}
           facilityName={facilityName}
           interestTags={interestTags}
@@ -99,23 +101,25 @@ export default function FacilityGuestRecordProvider({
   );
 }
 
-function GuestRecordExperience({
+export function GuestRecordExperience({
   facilitySlug,
   facilityName,
   interestTags,
   recommendationCandidates,
   onClose,
+  closeLabel = "施設ページへ戻る",
 }: {
   facilitySlug: string;
   facilityName: string;
   interestTags: GuestInterestTag[];
   recommendationCandidates: GuestRecordRecommendation[];
   onClose: () => void;
+  closeLabel?: string;
 }) {
   const photoUrlsRef = useRef<string[]>([]);
   const [step, setStep] = useState<"record" | "complete">("record");
   const [photoUrls, setPhotoUrls] = useState<string[]>([]);
-  const [visitedOn, setVisitedOn] = useState(() => localDateValue(new Date()));
+  const [visitedOn, setVisitedOn] = useState(() => dateValueJst());
   const [note, setNote] = useState("");
   const [selectedTags, setSelectedTags] = useState<GuestInterestTag[]>([]);
   const [familyRevisit, setFamilyRevisit] =
@@ -161,7 +165,9 @@ function GuestRecordExperience({
 
   if (step === "complete") {
     return (
-      <main
+      <div
+        role="dialog"
+        aria-modal="true"
         className="fixed inset-0 z-[80] overflow-y-auto bg-[#fffaf3] px-4 py-5 text-slate-950"
         aria-labelledby="guest-memory-complete-heading"
       >
@@ -306,15 +312,17 @@ function GuestRecordExperience({
             onClick={onClose}
             className="pb-3 text-sm font-bold text-slate-500 underline underline-offset-4"
           >
-            施設ページへ戻る
+            {closeLabel}
           </button>
         </div>
-      </main>
+      </div>
     );
   }
 
   return (
-    <main
+    <div
+      role="dialog"
+      aria-modal="true"
       className="fixed inset-0 z-[80] overflow-y-auto bg-[#fffaf3] px-4 py-6 text-slate-950"
       aria-labelledby="guest-memory-heading"
     >
@@ -419,7 +427,7 @@ function GuestRecordExperience({
         </div>
 
         <label className="space-y-1 text-xs font-bold text-slate-500">
-          今日のひとこと
+          今日のひとこと（必須）
           <textarea
             value={note}
             onChange={(event) => setNote(event.target.value)}
@@ -480,6 +488,11 @@ function GuestRecordExperience({
           onChange={setParentFatigue}
         />
 
+        <p className="text-xs leading-relaxed text-slate-500" aria-live="polite">
+          {canComplete
+            ? "写真なしでも完成できます。"
+            : "訪問日・今日のひとこと・反応タグ1つ以上を入力すると完成できます。"}
+        </p>
         <button
           type="submit"
           disabled={!canComplete}
@@ -488,7 +501,7 @@ function GuestRecordExperience({
           この日の思い出をつくる
         </button>
       </form>
-    </main>
+    </div>
   );
 }
 

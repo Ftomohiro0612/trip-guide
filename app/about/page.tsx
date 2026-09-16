@@ -9,7 +9,7 @@ import {
 
 export const metadata: Metadata = {
   title: "サイトについて",
-  description: `メモリップは、全国${prefectures.length}都道府県の親子で行ける子供向け遊び場を順次追加・更新中の検索サイトです。「今日どこ行く？」をすばやく解決します。`,
+  description: `メモリップは、全国${prefectures.length}都道府県の遊び場探しを入口に、思い出と子どもの反応を記録するサービスです。記録から子どもの「好き」を見つけ、次のおでかけにつなげます。`,
   alternates: { canonical: "/about" },
 };
 
@@ -25,7 +25,7 @@ export default function AboutPage() {
             メモリップについて
           </h1>
           <p className="mt-3 opacity-95">
-            子育て世代のための、子供向け遊び場検索サイト
+            遊び場を探して、思い出を記録。子どもの「好き」から、次のおでかけへ。
           </p>
         </div>
       </section>
@@ -40,6 +40,12 @@ export default function AboutPage() {
           現在は全国{prefectures.length}都道府県の {visibleFacilities.length}{" "}
           施設を掲載しています。
         </p>
+        <p className="mt-3 text-slate-700 leading-relaxed">
+          メモリップは、遊び場探しを入口にした家族のおでかけ記録サービスです。
+          行った場所と思い出、子どもの反応を残すと、この子の「好き」が見えてきます。
+          記録を振り返り、その好みに合う次のおでかけへつなげていきます。
+          写真のない日も、ひとことと反応から記録を始められます。
+        </p>
 
         <h2 className="text-xl font-bold text-slate-900 mt-8">
           こんな時に役立ちます
@@ -50,6 +56,8 @@ export default function AboutPage() {
           <li>0-3歳のベビー連れ／小学生など年齢に合った施設を探したい</li>
           <li>無料で遊べる公園・施設をまとめてチェックしたい</li>
           <li>家族旅行の行き先候補をエリア別にざっくり知りたい</li>
+          <li>おでかけの思い出や子どもの反応を残して、あとから見返したい</li>
+          <li>記録から子どもの「好き」を知り、次の行き先を見つけたい</li>
         </ul>
 
         <h2 className="text-xl font-bold text-slate-900 mt-8">
@@ -82,6 +90,9 @@ export default function AboutPage() {
 
         <div className="mt-10 p-5 bg-sky-50 border border-sky-200 rounded-2xl">
           <h3 className="font-bold text-slate-900 mb-2">まずはここから</h3>
+          <Link href="/try" className="mb-3 block rounded-full bg-slate-950 px-4 py-4 text-center font-bold text-white hover:bg-slate-800">
+            登録なしで、思い出を1件つくる →
+          </Link>
           <div className="grid gap-2 sm:grid-cols-2">
             <Link
               href="/"

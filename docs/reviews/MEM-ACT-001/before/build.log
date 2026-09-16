@@ -1,0 +1,547 @@
+
+> trip-guide@0.1.0 build
+> npm run events:validate && npm run events:regular:validate && npm run facilities:content:audit && npm run facilities:rakuten:validate && npm run facilities:rakuten:child-use-policy:validate && npm run facilities:asoview:validate && npm run facilities:asoview:second-pass:validate && npm run facilities:asoview:base-namespace:validate && npm run facilities:child-use-policy:validate && npm run affiliate:linkswitch:validate && next build --webpack
+
+
+> trip-guide@0.1.0 events:validate
+> node scripts/validate-events.mjs
+
+Summer Events validation
+{
+  "today": "2026-09-16",
+  "base_events": 3563,
+  "new_events": 484,
+  "existing_classifications": 17,
+  "adopted_candidates": 501,
+  "type_counts": {
+    "fireworks": 200,
+    "summer_festival": 205,
+    "summer_tradition": 87,
+    "night_outing": 9
+  },
+  "prefecture_type_counts": {
+    "tokyo": {
+      "fireworks": 9,
+      "summer_festival": 12,
+      "summer_tradition": 1,
+      "night_outing": 1,
+      "total": 23
+    },
+    "kanagawa": {
+      "fireworks": 10,
+      "summer_festival": 6,
+      "summer_tradition": 3,
+      "night_outing": 3,
+      "total": 22
+    },
+    "chiba": {
+      "fireworks": 10,
+      "summer_festival": 8,
+      "summer_tradition": 0,
+      "night_outing": 1,
+      "total": 19
+    },
+    "saitama": {
+      "fireworks": 9,
+      "summer_festival": 10,
+      "summer_tradition": 3,
+      "night_outing": 1,
+      "total": 23
+    }
+  },
+  "main_ratio_percent": 80.8,
+  "night_ratio_percent": 1.8,
+  "null_facility_events": 483,
+  "occurrence_dates_events": 41,
+  "free_filter_events": 84,
+  "canonical_reservation_counts": {
+    "required": 1087,
+    "not_required": 2046,
+    "unknown": 844
+  },
+  "summer_reservation_counts": {
+    "required": 15,
+    "not_required": 79,
+    "unknown": 407
+  },
+  "no_reservation_filter_events": 79,
+  "hero_pool": 12,
+  "summer_map_overlay_events": 501,
+  "summer_map_mappable_events": 131,
+  "summer_map_hold_events": 370,
+  "summer_map_coordinate_missing_events": 370,
+  "summer_map_non_hold_coordinate_missing_events": 0,
+  "summer_map_missing_location_records": 0,
+  "summer_map_visible_events": 9,
+  "summer_map_visible_mappable_events": 2,
+  "summer_map_visible_hold_events": 7,
+  "summer_map_visible_missing_location_records": 0,
+  "summer_map_prefectures": [
+    "aichi",
+    "aomori",
+    "chiba",
+    "ehime",
+    "fukui",
+    "fukuoka",
+    "fukushima",
+    "gifu",
+    "gunma",
+    "hiroshima",
+    "hokkaido",
+    "ibaraki",
+    "ishikawa",
+    "iwate",
+    "kagoshima",
+    "kanagawa",
+    "kyoto",
+    "mie",
+    "miyagi",
+    "miyazaki",
+    "nagano",
+    "nagasaki",
+    "nara",
+    "niigata",
+    "oita",
+    "okayama",
+    "okinawa",
+    "osaka",
+    "saga",
+    "saitama",
+    "shiga",
+    "shizuoka",
+    "tochigi",
+    "tokushima",
+    "tokyo",
+    "toyama",
+    "wakayama",
+    "yamagata",
+    "yamaguchi",
+    "yamanashi"
+  ],
+  "max_end_date": "2026-09-27",
+  "ends_at": "2026-09-28T00:00:00+09:00",
+  "next_source_review_due": "2026-08-13",
+  "freeze_check": false,
+  "warnings": 19,
+  "errors": 0
+}
+Warnings:
+- evt-summer-2026-kanagawa-004: source confirmation is 64 days old; monthly review target is 30 days
+- evt-summer-2026-chiba-010: source confirmation is 64 days old; monthly review target is 30 days
+- evt-summer-2026-chiba-010: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-osaka-005: source confirmation is 61 days old; monthly review target is 30 days
+- evt-summer-2026-osaka-005: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-hyogo-005: source confirmation is 61 days old; monthly review target is 30 days
+- evt-summer-2026-hyogo-005: pre-start source review is due around 2026-09-15; confirm once before the first occurrence 2026-09-20
+- evt-summer-2026-hiroshima-005: source confirmation is 61 days old; monthly review target is 30 days
+- evt-summer-2026-okinawa-005: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-osaka-008: source confirmation is 60 days old; monthly review target is 30 days
+- evt-summer-2026-osaka-008: pre-start source review is due around 2026-09-15; confirm once before the first occurrence 2026-09-20
+- evt-summer-2026-fukuoka-009: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-toyama-006: source confirmation is 60 days old; monthly review target is 30 days
+- evt-summer-2026-iwate-005: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-fukushima-005: pre-start source review is due around 2026-09-14; confirm once before the first occurrence 2026-09-19
+- evt-summer-2026-wakayama-007: source confirmation is 60 days old; monthly review target is 30 days
+- evt-774-202607-01: source confirmation is 59 days old; monthly review target is 30 days
+- evt-816-202608-01: source confirmation is 64 days old; monthly review target is 30 days
+- evt-494-202607-01: source confirmation is 59 days old; monthly review target is 30 days
+
+> trip-guide@0.1.0 events:regular:validate
+> node scripts/validate-regular-events.mjs
+
+Regular Events validation
+{
+  "base_events": 3563,
+  "summer_events": 484,
+  "summer_classifications": 17,
+  "facilities": 5962,
+  "findings": 178,
+  "approved_exceptions": 178,
+  "existing_violations": 0,
+  "unbaselined_violations": 0,
+  "stale_approved_exceptions": 0,
+  "stale_existing_violations": 0,
+  "errors": 0
+}
+Approved exceptions:
+- base.closed_label_requires_reservation:evt-2040-202607-01 — 申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。
+- base.closed_label_requires_reservation:evt-326-202607-01 — 複合イベント内の子供花火企画のみ受付終了で、全体の予約状態は企画別。
+- base.closed_label_requires_reservation:evt-2040-202608-02 — 申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。
+- base.closed_label_requires_reservation:evt-1833-202607-89ab7c — 予約不可の時間制プールで「満員時は次の空き時間を案内」という混雑時案内であり、イベント自体の受付終了ではない。
+- base.closed_label_requires_reservation:evt-245-tea-room-2026 — WEB予約は満席だが、各回4名の当日先着枠があり予約不要で参加可能。
+- base.closed_label_requires_reservation:evt-2040-w38-create-9 — 直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。
+- base.closed_label_requires_reservation:evt-2040-w38-create-10 — 直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。
+- base.closed_label_requires_reservation:evt-2040-w38-create-11 — 直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。
+- base.closed_label_requires_reservation:evt-210-w38-fragment — 当日先着・材料終了時点で受付終了という在庫ベースの締切であり、事前予約制ではない。
+- base.closed_label_requires_reservation:evt-210-w38-castanet — 当日先着・材料終了時点で受付終了という在庫ベースの締切であり、事前予約制ではない。
+- base.closed_label_requires_reservation:evt-781-w38-moon-live — 10月回は事前申込受付中。9月回は事前受付終了だが当日券があり予約不要で参加可能。
+- base.closed_label_requires_reservation:evt-833-w38-shinchan-photo — 各回先着50組の定員制であり、事前予約制ではない。
+- base.closed_label_requires_reservation:evt-None-w38-nagaoka-walk — 事前受付は終了しているが、公式要項で当日受付が明記されている。
+- base.closed_label_requires_reservation:evt-1705-w38-family-analogue — 当日会場で随時受付し、満席時は空席待ちとなるだけで受付終了ではない。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-moon — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-andromeda — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-observatory — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-christmas-sky — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-orion — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.closed_label_requires_reservation:evt-1671-w38-planet-mars — 当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。
+- base.official_url_date_collision:evt-1073-202606-01:evt-1073-202606-02:2026-06-01 — 同じ公式日程一覧に掲載された、タイトルと内容が異なる展示・工作。
+- base.official_url_date_collision:evt-1083-202606-01:evt-1083-202606-02:2026-06-27 — 同一公式ページ・同日だが、植え付け体験と外来植物学習の別企画。
+- base.official_url_date_collision:evt-1101-202607-01:evt-1101-202607-02:2026-07-18 — 同一施設・同日だが、アイス作りと夏遊びフェスの別企画。
+- base.official_url_date_collision:evt-1180-202607-1:evt-1180-202607-2:2026-07-11 — 同一公式ページ・同日開始だが、テーマが異なる2つの企画展。
+- base.official_url_date_collision:evt-1461-202607-01:evt-1461-202607-02:2026-07-24 — 同一公式特集内の化石発掘と花火工房の別体験。
+- base.official_url_date_collision:evt-1450-202607-01:evt-1450-202607-02:2026-07-19 — 同一公式一覧に掲載された星空観察と工作の別企画。
+- base.official_url_date_collision:evt-1488-202607-01:evt-1488-202607-02:2026-07-25 — 同一施設・同日だが、時間と制作物が異なる工作企画。
+- base.official_url_date_collision:evt-1719-202607-01:evt-1719-202607-02:evt-1720-202607-01:2026-07-05 — 同じ公式カレンダーを使う、会場・タイトル・内容が異なる3企画。
+- base.official_url_date_collision:evt-1726-202607-01:evt-1726-202607-02:2026-07-04 — 同一公式一覧の七夕工作と水遊び開放で、内容が異なる。
+- base.official_url_date_collision:evt-1935-202607-01:evt-1935-202607-02:2026-07-19 — 同一施設・同日だが、工作塾と昆虫教室の別講座。
+- base.official_url_date_collision:evt-1968-202608-01:evt-1968-202608-02:2026-08-01 — 同一公式年間案内内の、時間と内容が異なる藍染・お化け屋敷。
+- base.official_url_date_collision:evt-1974-202608-03:evt-1974-202608-04:2026-08-16 — 同一公式一覧の昼の科学工作と夜の星空観察。
+- base.official_url_date_collision:evt-20-202608-01:evt-20-202608-03:2026-08-29 — 同一施設・同日だが、時間と内容が異なる出前授業・夜間ツアー。
+- base.official_url_date_collision:evt-88-202607-02:evt-88-202607-03:2026-07-18 — 信州新町化石博物館の工作と企画展。タイトル・時間・内容が異なる。
+- base.official_url_date_collision:evt-387-202607-01:evt-387-202607-02:2026-07-15 — 同一公式一覧の企画展とバックヤードツアー。
+- base.official_url_date_collision:evt-678-202607-01:evt-678-202607-02:2026-07-24 — 同一施設・同日だが、鑑賞企画と似顔絵企画で内容が異なる。
+- base.official_url_date_collision:evt-1094-202607-02:evt-1094-202607-03:2026-07-18 — 同一公式特集内の、内容が異なる仕事体験と食育教室。
+- base.official_url_date_collision:evt-1333-italy-space-2026:evt-osaka-kapla-exhibition-20260919:2026-09-19 — 同一公式ページ(大阪市立科学館)に掲載された、内容が異なる複数企画: 企画展「イタリア宇宙開発展」／企画展「カプラ展」。
+- base.official_url_date_collision:evt-6897-202607-01:evt-6897-202607-02:evt-6897-202607-03:2026-07-18 — 同一公式夏休み特集・同一会期だが、イルカタッチ、子どもトレーナー教室、ナイトドルフィンスイムの別体験。
+- base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）。
+- base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）。
+- base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:evt-tottori-science-sensor-202609:2026-11-21 — 同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）／プログラミングでつくる 気象センサー（後期）。
+- base.official_url_date_collision:evt-tottori-science-first-program-202609:evt-tottori-science-robot-202609:2026-11-28 — 同一公式ページに掲載された、内容が異なる複数企画: はじめてのプログラミング（3・4年生）／プログラミングでつくる コミュニケーションロボット（後期）。
+- base.official_url_date_collision:evt-litpla-lalaport-tachikawa-halloween2026:evt-litpla-lalaport-tokyo-bay-halloween2026:evt-litpla-lect-hiroshima-halloween2026:evt-litpla-litpla-aeonmall-kagoshima-halloween2026:evt-litpla-litpla-divercity-tokyo-halloween2026:evt-litpla-litpla-izumi-halloween2026:evt-litpla-litpla-matsudo-halloween2026:evt-litpla-litpla-mozo-halloween2026:evt-litpla-litpla-numazu-halloween2026:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-kitasuna-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-soga-halloween2026:evt-litpla-toylo-yamatotsuruma-halloween2026:evt-litpla-toylo-yokohama-halloween2026:evt-litpla-youmetown-hikarinomori-halloween2026:2026-09-17 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（リトルプラネット ららぽーと立川立飛）／ハロウィン2026（リトルプラネット ららぽーとTOKYO-BAY）／ハロウィン2026（リトルプラネット LECT広島） など全16件。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-18 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-21 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-22 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-23 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-24 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-25 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:2026-09-28 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:2026-09-29 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-03 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-04 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-05 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-06 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-07 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-08 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-09 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-10 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-11 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-12 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-13 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-14 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-15 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-16 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-19 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-20 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-21 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-22 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-23 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-24 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-25 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-26 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-27 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-28 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-29 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-30 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-31 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-11-01 — 同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-21 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-22 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-23 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。
+- base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-10 — 同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。
+- base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。
+- base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。
+- base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-24 — 同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。
+- base.official_url_date_collision:evt-976-rose-bubbles-2026:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-31 — 同一公式ページに掲載された、内容が異なる複数企画: ばら園シャボン玉の魔法／秋バラの早朝開園／ばら園ガイドツアー。
+- base.official_url_date_collision:evt-976-rose-bubbles-2026:evt-976-rose-early-2026:2026-11-01 — 同一公式ページに掲載された、内容が異なる複数企画: ばら園シャボン玉の魔法／秋バラの早朝開園。
+- base.official_url_date_collision:evt-976-photo50-2026:evt-976-prints58-2026:2026-09-15 — 同一公式ページに掲載された、内容が異なる複数企画: 花・鳥・風景写真展 ―亀っ子倶楽部第50回展―／第58回植物版画展。
+- base.official_url_date_collision:evt-976-bonsai-autumn-2026:evt-976-wildplants-autumn-2026:2026-10-14 — 同一公式ページに掲載された、内容が異なる複数企画: 秋の盆栽展／秋の山草展。
+- base.official_url_date_collision:evt-976-rose-bonsai-2026:evt-976-rose-exhibit-2026:2026-10-20 — 同一公式ページに掲載された、内容が異なる複数企画: 秋のミニバラ盆栽展／秋のバラ展。
+- base.official_url_date_collision:evt-976-green-art-2026:evt-976-iwahiba50-2026:2026-10-27 — 同一公式ページに掲載された、内容が異なる複数企画: 緑と花を描く展／第50回 彩のいわひば展。
+- base.official_url_date_collision:evt-976-kanran-2026:evt-976-naturephotos-autumn-2026:2026-11-10 — 同一公式ページに掲載された、内容が異なる複数企画: 日本寒蘭展／四季の自然写真展（秋）。
+- base.official_url_date_collision:evt-6945-pumpkins-2026:evt-6946-pumpkins-2026:2026-09-25 — 同一公式ページに掲載された、内容が異なる複数企画: お化けかぼちゃ展示（宇喜田公園）／お化けかぼちゃ展示（大島小松川公園）。
+- base.official_url_date_collision:evt-287-halloween-craft-2026:evt-287-paper-kendama-2026:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: 里山のキッズ工作 ハロウィン飾り／9月の工作 紙コップけん玉。
+- base.official_url_date_collision:evt-287-felt-clock-2026:evt-287-paper-kendama-2026:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: 親子を紡ぐ工作 フェルトの大きな時計／9月の工作 紙コップけん玉。
+- base.official_url_date_collision:evt-287-animal-mask-2026:evt-287-ghost-rattle-2026:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: 10月の工作 動物お面／おばけのラトルを作ろう！。
+- base.official_url_date_collision:evt-1568-w38-2026-09:evt-1568-w38-2026-10:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: クハ489形1号車 車両解説セミナー／クハネ581形35号車 特別公開。
+- base.official_url_date_collision:evt-1568-w38-2026-09:evt-1568-w38-2026-10:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: クハ489形1号車 車両解説セミナー／クハネ581形35号車 特別公開。
+- base.official_url_date_collision:evt-1568-w38-2026-10:evt-1568-w38-2026-11:2026-10-12 — 同一公式ページに掲載された、内容が異なる複数企画: クハネ581形35号車 特別公開／プチ解説 まめちしき10！マルス。
+- base.official_url_date_collision:evt-1568-w38-2026-10:evt-1568-w38-2026-11:2026-10-31 — 同一公式ページに掲載された、内容が異なる複数企画: クハネ581形35号車 特別公開／プチ解説 まめちしき10！マルス。
+- base.official_url_date_collision:evt-1568-w38-2026-12:evt-1568-w38-2026-14:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: 500系開発の記録 鉄道映像上映会／クハ489形1号車 特別公開。
+- base.official_url_date_collision:evt-1568-w38-2026-12:evt-1568-w38-2026-14:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: 500系開発の記録 鉄道映像上映会／クハ489形1号車 特別公開。
+- base.official_url_date_collision:evt-1568-w38-2026-13:evt-1568-w38-2026-14:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: プチ解説 オハフ50形68号車／クハ489形1号車 特別公開。
+- base.official_url_date_collision:evt-115-w38-2026-02:evt-115-w38-2026-03:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: 森の中の水族館 川魚を食べてみよう／西湖で魚釣り体験 9月。
+- base.official_url_date_collision:evt-2072-w38-bon:evt-2072-w38-lottery:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: 第4回BONダンスプロジェクト 盆踊り大会／25周年感謝のスピードくじ抽選会。
+- base.official_url_date_collision:evt-10-w38-daily-elephant:evt-10-w38-daily-penguin:evt-10-w38-daily-redpanda:evt-10-w38-daily-rhino:evt-10-w38-pony-ride:evt-10-w38-small-animal-contact:2023-05-09 — 同一公式ページに掲載された、内容が異なる複数企画: ゾウのトレーニング／ペンギンのガイド／レッサーパンダのお食事タイム など全6件。
+- base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-hawk-flight:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／柊くんのホークフライト。
+- base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-ibis-flamingo-lunch:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／トキとフラミンゴのランチタイム。
+- base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-ibis-flamingo-lunch:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／トキとフラミンゴのランチタイム。
+- base.official_url_date_collision:evt-13-w38-redpanda-highfive:evt-13-w38-redpanda-quiz:2026-09-14 — 同一公式ページに掲載された、内容が異なる複数企画: レッサーパンダとガラス越しハイタッチ会／国際レッドパンダデー クイズパネル展示。
+- base.official_url_date_collision:evt-18-w38-clean:evt-18-w38-fishing-09:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 掃除体験／釣りを学ぼう！ 9月。
+- base.official_url_date_collision:evt-18-w38-bone:evt-18-w38-fishing-10:2026-10-03 — 同一公式ページに掲載された、内容が異なる複数企画: 獣医のお仕事を学ぼう！ 骨の観察／釣りを学ぼう！ 10月。
+- base.official_url_date_collision:evt-18-w38-bone:evt-18-w38-fishing-10:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: 獣医のお仕事を学ぼう！ 骨の観察／釣りを学ぼう！ 10月。
+- base.official_url_date_collision:evt-18-w38-feed-prep:evt-18-w38-fishing-10:2026-10-04 — 同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 調餌／釣りを学ぼう！ 10月。
+- base.official_url_date_collision:evt-18-w38-feed-prep:evt-18-w38-fishing-10:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 調餌／釣りを学ぼう！ 10月。
+- base.official_url_date_collision:evt-22-w38-art:evt-22-w38-disc:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: あしざわまさひと アートなワークショップ／ディスクゴルフ マンスリー講習会。
+- base.official_url_date_collision:evt-22-w38-art:evt-22-w38-disc:evt-22-w38-science:2026-11-15 — 同一公式ページに掲載された、内容が異なる複数企画: あしざわまさひと アートなワークショップ／ディスクゴルフ マンスリー講習会／科学工作教室。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-14 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-15 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-16 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-17 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-18 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-20 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-21 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-22 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-23 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-25 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-27 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-28 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-29 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-30 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-01 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-02 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-03 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-04 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-05 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-06 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-07 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-08 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-09 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-10 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-11 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-12 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-13 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-14 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-15 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-16 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-17 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-18 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-19 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-20 — 同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。
+- base.official_url_date_collision:evt-945-w38-doraemon:evt-945-w38-star-castle:2026-07-04 — 同一公式ページに掲載された、内容が異なる複数企画: プラネタリウム ドラえもん 時間のひみつ／プラネタリウム 星の城 夏の夜空と流れ星。
+- base.official_url_date_collision:evt-793-w38-comet:evt-793-w38-pluto:2026-09-05 — 同一公式ページに掲載された、内容が異なる複数企画: 子ども向けプラネタリウム「ほうき星とたいようけいたんけん」／一般向けプラネタリウム「忘れないでね、冥王星」。
+- base.official_url_date_collision:evt-848-w38-full-dress:evt-848-w38-sail-unfurl:2026-11-03 — 同一公式ページに掲載された、内容が異なる複数企画: 帆船日本丸 満船飾／帆船日本丸 総帆展帆（秋）。
+- base.official_url_date_collision:evt-851-w38-leo:evt-851-w38-madoka:2026-09-19 — 同一公式ページに掲載された、内容が異なる複数企画: 幼児向けプラネタリウム「宇宙船レオの大冒険」／VTuber星見まどかと旅する 水金地火木土天海。
+- base.official_url_date_collision:evt-851-w38-leo:evt-851-w38-madoka:2026-09-26 — 同一公式ページに掲載された、内容が異なる複数企画: 幼児向けプラネタリウム「宇宙船レオの大冒険」／VTuber星見まどかと旅する 水金地火木土天海。
+- base.title_url_date_duplicate:evt-735-w38-world-cleanup:evt-None-w38-kemigawa-world-cleanup:2026-09-19 — 千葉市内の複数会場(千葉ポートパーク／検見川浜)で同時開催される清掃キャンペーンの別会場回。
+- base.official_url_date_collision:evt-1705-w38-mojimushi:evt-1705-w38-word-hunting:2026-09-02 — 同一公式ページに掲載された、内容が異なる複数企画: もじむし／ハンティングワードトリプル。
+- base.official_url_date_collision:evt-1695-w38-sumikko-greetings:evt-1695-w38-sumikko-stages:2027-02-28 — 同一公式ページに掲載された、内容が異なる複数企画: すみっコたちがやってくる！グリーティング／すみっコぐらしとあそぼう！ステージ。
+- base.official_url_date_collision:evt-1670-w38-badges:evt-1670-w38-staff-tours:2026-11-21 — 同一公式ページに掲載された、内容が異なる複数企画: オリジナル缶バッジをつくろう！／スタッフガイドツアー（企画展・館内入門）。
+- base.venue_title_date_duplicate:evt-944-w38-program-265833:evt-944-w38-program-265834:2026-11-28 — 同一プログラム名だが対象年齢(1歳児／2～3歳児)と時間帯が異なる別回。
+- summer.official_url_date_collision:evt-summer-2026-miyazaki-001:evt-summer-2026-miyazaki-002:2026-07-18 — 県観光特集の共通URLを使う、会場が異なる2つの祭り。
+- summer.official_url_date_collision:evt-summer-2026-shimane-006:evt-summer-2026-shimane-007:2026-08-08 — 県観光特集の共通URLを使う、別市・別会場の祭り。
+- summer.official_url_date_collision:evt-summer-2026-shimane-008:evt-summer-2026-shimane-009:2026-08-29 — 県観光特集の共通URLを使う、別市町・別会場の祭り。
+
+> trip-guide@0.1.0 facilities:content:audit
+> node scripts/audit-facility-content-contract.mjs
+
+{
+  "facility_count": 5962,
+  "facilities_with_issues": 0,
+  "issue_count": 0,
+  "counts_by_code": {},
+  "output": null
+}
+
+> trip-guide@0.1.0 facilities:rakuten:validate
+> node scripts/validate-rakuten-facility-actions.mjs
+
+Validated 255 exact-match Rakuten actions.
+
+> trip-guide@0.1.0 facilities:rakuten:child-use-policy:validate
+> node scripts/validate-rakuten-child-use-policy.mjs
+
+Validated all 14 Rakuten child-use policy rejudgments, 6 canon additions, and recommendation guards.
+
+> trip-guide@0.1.0 facilities:asoview:validate
+> node scripts/validate-asoview-facility-actions.mjs
+
+Validated 658 exact-match Asoview actions.
+
+> trip-guide@0.1.0 facilities:asoview:second-pass:validate
+> node scripts/validate-asoview-second-pass-reverse-discovery.mjs
+
+Validated all 741 Asoview reverse-discovery second-pass reviews and 157 canon additions.
+
+> trip-guide@0.1.0 facilities:asoview:base-namespace:validate
+> node scripts/validate-asoview-base-namespace-recovery.mjs
+
+Validated exhaustive Asoview base namespace recovery, 1868 FacilityOps reviews, and 563 canon additions.
+
+> trip-guide@0.1.0 facilities:child-use-policy:validate
+> node scripts/validate-asoview-child-use-policy.mjs
+
+Validated 538 child-use policy rejudgments, 21 canon additions, and recommendation guards.
+
+> trip-guide@0.1.0 affiliate:linkswitch:validate
+> node scripts/validate-valuecommerce-linkswitch.mjs
+
+Validated one fail-closed LinkSwitch mount and 658 normal Asoview URLs.
+▲ Next.js 16.3.3 (webpack)
+- Environments: .env.local
+✓ Running next.config.ts took 50ms
+
+⚠ The "middleware" file convention is deprecated. Please use "proxy" instead.
+
+  To migrate automatically, run:
+  npx @next/codemod@canary middleware-to-proxy .
+
+  Learn more: https://nextjs.org/docs/messages/middleware-to-proxy
+  Creating an optimized production build ...
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (102kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+<w> [webpack.cache.PackFileCacheStrategy] Serializing big strings (243kiB) impacts deserialization performance (consider using Buffer instead and decode when needed)
+⚠ Compiled with warnings in 4.0s
+
+./node_modules/next/dist/esm/server/app-render/dynamic-rendering.js
+A Node.js API is used (process.cwd at line: 1044) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/next/dist/esm/server/app-render/dynamic-rendering.js
+./node_modules/next/dist/esm/server/request/connection.js
+./node_modules/next/dist/esm/server/web/exports/index.js
+./node_modules/next/dist/esm/api/server.js
+
+./node_modules/next/dist/esm/server/app-render/dynamic-rendering.js
+A Node.js API is used (process.cwd at line: 1044) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/next/dist/esm/server/app-render/dynamic-rendering.js
+./node_modules/next/dist/esm/server/request/connection.js
+./node_modules/next/dist/esm/server/web/exports/index.js
+./node_modules/next/dist/esm/api/server.js
+
+./node_modules/@supabase/supabase-js/dist/index.mjs
+A Node.js API is used (process.version at line: 27) which is not supported in the Edge Runtime.
+Learn more: https://nextjs.org/docs/api-reference/edge-runtime
+
+Import trace for requested module:
+./node_modules/@supabase/supabase-js/dist/index.mjs
+./node_modules/@supabase/ssr/dist/module/createServerClient.js
+./node_modules/@supabase/ssr/dist/module/index.js
+
+✓ Compiled successfully in 48s
+  Running TypeScript ...
+  Finished TypeScript in 36.4s ...
+  Collecting page data using 7 workers ...
+  Generating static pages using 7 workers (0/6124) ...
+  Generating static pages using 7 workers (1531/6124)
+  Generating static pages using 7 workers (3062/6124)
+  Generating static pages using 7 workers (4593/6124)
+✓ Generating static pages using 7 workers (6124/6124) in 2.3min
+  Finalizing page optimization ...
+  Collecting build traces ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ○ /about
+├ ƒ /api/children/[id]/avatar
+├ ƒ /api/events/[id]
+├ ƒ /api/facilities/page-data
+├ ƒ /api/facilities/search
+├ ƒ /auth/callback
+├ ○ /auth/login
+├ ○ /auth/register
+├ ○ /auth/reset
+├ ƒ /category/[id]
+├ ƒ /category/[id]/opengraph-image
+├ ○ /events
+├   /events/[prefecture]
+│ ├ ● /events/tokyo
+│ ├ ● /events/kanagawa
+│ ├ ● /events/yamanashi
+│ └ ● [+44 more paths]
+├ ƒ /events/summer
+├ ƒ /facilities
+├   /facilities/[slug]
+│ ├ ● /facilities/facility-001
+│ ├ ● /facilities/facility-002
+│ ├ ● /facilities/facility-003
+│ └ ● [+5950 more paths]
+├ ƒ /facilities/[slug]/opengraph-image
+├ ○ /guide
+├ ○ /legal/privacy
+├ ○ /legal/terms
+├ ○ /manifest.webmanifest
+├ ○ /map
+├ ○ /memory-story-preview
+├ ƒ /mypage
+├ ƒ /mypage/children
+├ ƒ /mypage/children/[id]
+├ ƒ /mypage/memories
+├ ƒ /mypage/onboarding
+├ ƒ /mypage/passes
+├ ƒ /mypage/settings
+├ ƒ /mypage/visits
+├ ƒ /mypage/visits/[id]
+├ ƒ /mypage/visits/[id]/edit
+├ ○ /mypage/visits/complete
+├ ○ /mypage/visits/edit
+├ ƒ /mypage/visits/facility/[slug]
+├ ○ /mypage/visits/from-photo
+├ ○ /mypage/visits/from-photo/complete
+├ ○ /mypage/visits/new
+├ ƒ /mypage/wishlist
+├ ○ /opengraph-image.png
+├   /prefecture/[id]
+│ ├ ● /prefecture/shizuoka
+│ ├ ● /prefecture/nagano
+│ ├ ● /prefecture/yamanashi
+│ └ ● [+44 more paths]
+├   /prefecture/[id]/category/[categoryId]
+│ ├ ● /prefecture/tokyo/category/park
+│ ├ ● /prefecture/tokyo/category/museum
+│ ├ ● /prefecture/tokyo/category/indoor-play
+│ └ ● [+9 more paths]
+├ ƒ /prefecture/[id]/opengraph-image
+├ ○ /privacy
+├ ƒ /tag/[slug]
+├ ƒ /tag/[slug]/opengraph-image
+├ ○ /terms
+└ ○ /try
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+●  (SSG)      prerendered as static HTML (uses generateStaticParams)
+ƒ  (Dynamic)  server-rendered on demand
+
+
+> trip-guide@0.1.0 postbuild
+> next-sitemap && node scripts/prepare-cloudflare-runtime-canon.mjs
+
+✨ [next-sitemap] Loading next-sitemap config: file:///C:/Users/tomo-/Documents/Memorip-activation-repair-20260916/next-sitemap.config.js
+✅ [next-sitemap] Generation completed
+┌───────────────┬────────┐
+│ (index)       │ Values │
+├───────────────┼────────┤
+│ indexSitemaps │ 1      │
+│ sitemaps      │ 2      │
+└───────────────┴────────┘
+-----------------------------------------------------
+ SITEMAP INDICES
+-----------------------------------------------------
+
+   ○ https://memorips.com/sitemap.xml
+
+
+-----------------------------------------------------
+ SITEMAPS
+-----------------------------------------------------
+
+   ○ https://memorips.com/sitemap-0.xml
+   ○ https://memorips.com/sitemap-1.xml

@@ -1,0 +1,12 @@
+{
+  "method": "Node 24: assert.equal(dateValueJst(new Date(input)), expected), repeated with process TZ",
+  "timezones": ["UTC", "America/Los_Angeles", "Asia/Tokyo"],
+  "cases": [
+    {"input": "2026-09-15T14:59:59Z", "expected": "2026-09-15"},
+    {"input": "2026-09-15T15:00:00Z", "expected": "2026-09-16"},
+    {"input": "2026-12-31T15:00:00Z", "expected": "2027-01-01"}
+  ],
+  "passed": 9,
+  "failed": 0,
+  "fixed_date_matches_in_app": 0
+}
