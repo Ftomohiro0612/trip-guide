@@ -1,0 +1,785 @@
+{
+  "environment": {
+    "viewport": "390x844",
+    "timezone": "Asia/Tokyo",
+    "auth": "Local synthetic Supabase fixture; no Production account or writes"
+  },
+  "consumers": [
+    {
+      "consumer": "app/page.tsx",
+      "route": "/",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-801&name=%E9%95%B7%E4%BA%95%E6%B5%B7%E3%81%AE%E6%89%8B%E5%85%AC%E5%9C%92%20%E3%82%BD%E3%83%AC%E3%82%A4%E3%83%A6%E3%81%AE%E4%B8%98",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "app/category/[id]/page.tsx",
+      "route": "/category/park",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-022&name=%E5%AF%8C%E5%A3%AB%E5%B1%B1%E3%81%93%E3%81%A9%E3%82%82%E3%81%AE%E5%9B%BD",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "app/tag/[slug]/page.tsx",
+      "route": "/tag/free",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-023&name=%E5%86%92%E9%99%BA%E3%81%AE%E4%B8%98(%E6%99%82%E4%B9%8B%E6%A0%96)",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "app/prefecture/[id]/category/[categoryId]/page.tsx",
+      "route": "/prefecture/tokyo/category/park",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-358&name=%E5%85%89%E3%81%8C%E4%B8%98%20IMA(%E5%B1%8B%E5%86%85%E9%81%8A%E3%81%B3%E5%A0%B4)",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "app/facilities/[slug]/page.tsx (related card)",
+      "route": "/facilities/facility-801",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-837&name=%E7%9C%8C%E7%AB%8B%E7%A7%A6%E9%87%8E%E6%88%B8%E5%B7%9D%E5%85%AC%E5%9C%92",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "components/NearbyFilterableFacilityList.tsx",
+      "route": "/facilities",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-024&name=%E5%B3%B6%E7%94%B0%E5%B8%82%E3%82%86%E3%82%81%E3%83%BB%E3%81%BF%E3%82%89%E3%81%84%E3%83%91%E3%83%BC%E3%82%AF",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "components/PrefectureDiscoveryFacilityList.tsx",
+      "route": "/prefecture/tokyo",
+      "guest": "record modal → complete",
+      "recommendations": 3,
+      "guestWishlist": "/auth/login",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-222&name=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%B0%B4%E3%81%AE%E7%A7%91%E5%AD%A6%E9%A4%A8",
+      "authenticatedWishlist": "add → selected → remove → unselected"
+    },
+    {
+      "consumer": "components/FacilityActionButtons.tsx",
+      "guest": "in-place modal → complete, 3 recommendations",
+      "authenticatedDestination": "/mypage/visits/new?facility=facility-801&name=%E9%95%B7%E4%BA%95%E6%B5%B7%E3%81%AE%E6%89%8B%E5%85%AC%E5%9C%92%20%E3%82%BD%E3%83%AC%E3%82%A4%E3%83%A6%E3%81%AE%E4%B8%98",
+      "wishlist": "guest → login; authenticated → add/remove"
+    },
+    {
+      "consumer": "components/EventRecordButton.tsx",
+      "state": "guest",
+      "label": "このイベントを記録（無料登録・ログインが必要）",
+      "destination": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Fevent%3Devt-976-mystery2025-2026"
+    },
+    {
+      "consumer": "components/EventRecordButton.tsx",
+      "state": "authenticated",
+      "label": "このイベントを記録",
+      "destination": "/mypage/visits/new?event=evt-976-mystery2025-2026"
+    },
+    {
+      "consumer": "app/mypage/visits/from-photo/FromPhotoVisitDraftsClient.tsx",
+      "note": "No FacilityCard import/render: independent selection UI",
+      "guest": "middleware → /auth/login",
+      "authenticated": "photo chooser → synthetic image → search ソレイユ → selected facility (no upload/save)"
+    }
+  ],
+  "flows": [
+    {
+      "label": "home-record",
+      "url": "/facilities/facility-801?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-801",
+        "facilityName": "長井海の手公園 ソレイユの丘",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-802",
+          "text": "海の公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-837",
+          "text": "県立秦野戸川公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-1",
+      "url": "/facilities/facility-022?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🛝 遊具",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-022",
+        "facilityName": "富士山こどもの国",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "playground"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-023",
+          "text": "冒険の丘(時之栖)\n静岡県・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-024",
+          "text": "島田市ゆめ・みらいパーク\n静岡県・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-025",
+          "text": "22世紀の丘公園\n静岡県・公園(大型遊具) / 遊具につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-022%26name%3D%25E5%25AF%258C%25E5%25A3%25AB%25E5%25B1%25B1%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%25E3%2581%25AE%25E5%259B%25BD%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-022%26name%3D%25E5%25AF%258C%25E5%25A3%25AB%25E5%25B1%25B1%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%25E3%2581%25AE%25E5%259B%25BD%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-2",
+      "url": "/facilities/facility-023?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-023",
+        "facilityName": "冒険の丘(時之栖)",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-024",
+          "text": "島田市ゆめ・みらいパーク\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-025",
+          "text": "22世紀の丘公園\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-212",
+          "text": "はままつフラワーパーク\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-023%26name%3D%25E5%2586%2592%25E9%2599%25BA%25E3%2581%25AE%25E4%25B8%2598(%25E6%2599%2582%25E4%25B9%258B%25E6%25A0%2596)%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-023%26name%3D%25E5%2586%2592%25E9%2599%25BA%25E3%2581%25AE%25E4%25B8%2598(%25E6%2599%2582%25E4%25B9%258B%25E6%25A0%2596)%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-3",
+      "url": "/facilities/facility-358?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🛝 遊具",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-358",
+        "facilityName": "光が丘 IMA(屋内遊び場)",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "playground"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-231",
+          "text": "葛西臨海公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-232",
+          "text": "なぎさ公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-237",
+          "text": "井の頭恩賜公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-358%26name%3D%25E5%2585%2589%25E3%2581%258C%25E4%25B8%2598%2520IMA(%25E5%25B1%258B%25E5%2586%2585%25E9%2581%258A%25E3%2581%25B3%25E5%25A0%25B4)%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-358%26name%3D%25E5%2585%2589%25E3%2581%258C%25E4%25B8%2598%2520IMA(%25E5%25B1%258B%25E5%2586%2585%25E9%2581%258A%25E3%2581%25B3%25E5%25A0%25B4)%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-4",
+      "url": "/facilities/facility-837?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-837",
+        "facilityName": "県立秦野戸川公園",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-801",
+          "text": "長井海の手公園 ソレイユの丘\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-802",
+          "text": "海の公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-837%26name%3D%25E7%259C%258C%25E7%25AB%258B%25E7%25A7%25A6%25E9%2587%258E%25E6%2588%25B8%25E5%25B7%259D%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-837%26name%3D%25E7%259C%258C%25E7%25AB%258B%25E7%25A7%25A6%25E9%2587%258E%25E6%2588%25B8%25E5%25B7%259D%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-5",
+      "url": "/facilities/facility-024?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-024",
+        "facilityName": "島田市ゆめ・みらいパーク",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-023",
+          "text": "冒険の丘(時之栖)\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-025",
+          "text": "22世紀の丘公園\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-212",
+          "text": "はままつフラワーパーク\n静岡県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-024%26name%3D%25E5%25B3%25B6%25E7%2594%25B0%25E5%25B8%2582%25E3%2582%2586%25E3%2582%2581%25E3%2583%25BB%25E3%2581%25BF%25E3%2582%2589%25E3%2581%2584%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25AF%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-024%26name%3D%25E5%25B3%25B6%25E7%2594%25B0%25E5%25B8%2582%25E3%2582%2586%25E3%2582%2581%25E3%2583%25BB%25E3%2581%25BF%25E3%2582%2589%25E3%2581%2584%25E3%2583%2591%25E3%2583%25BC%25E3%2582%25AF%26guestDraft%3D1"
+    },
+    {
+      "label": "consumer-6",
+      "url": "/facilities/facility-222?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🔭 展示・見学",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-222",
+        "facilityName": "東京都水の科学館",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "exhibition"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-221",
+          "text": "日本科学未来館\n東京都・科学館 / 展示・見学につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-247",
+          "text": "多摩六都科学館\n東京都・科学館 / 展示・見学につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-248",
+          "text": "IMAGINUS(イマジナス)\n東京都・科学館 / 展示・見学につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-222%26name%3D%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%25E6%25B0%25B4%25E3%2581%25AE%25E7%25A7%2591%25E5%25AD%25A6%25E9%25A4%25A8%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-222%26name%3D%25E6%259D%25B1%25E4%25BA%25AC%25E9%2583%25BD%25E6%25B0%25B4%25E3%2581%25AE%25E7%25A7%2591%25E5%25AD%25A6%25E9%25A4%25A8%26guestDraft%3D1"
+    },
+    {
+      "label": "facility-detail",
+      "url": "/facilities/facility-801",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-801",
+        "facilityName": "長井海の手公園 ソレイユの丘",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-802",
+          "text": "海の公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-837",
+          "text": "県立秦野戸川公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1"
+    },
+    {
+      "label": "home-handoff",
+      "url": "/facilities/facility-801?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-801",
+        "facilityName": "長井海の手公園 ソレイユの丘",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-802",
+          "text": "海の公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-837",
+          "text": "県立秦野戸川公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "restoredBanner": "思い出カードの内容を引き継ぎました\n\n訪問日\n2026-09-16\nひとこと\n何度も遊んで、帰る前にもう1回！\n興味タグ\n水遊び\n\n写真は安全のため引き継いでいません。"
+    },
+    {
+      "label": "try-handoff",
+      "url": "/try",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-801",
+        "facilityName": "長井海の手公園 ソレイユの丘",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-802",
+          "text": "海の公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-837",
+          "text": "県立秦野戸川公園\n神奈川県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-801%26name%3D%25E9%2595%25B7%25E4%25BA%2595%25E6%25B5%25B7%25E3%2581%25AE%25E6%2589%258B%25E5%2585%25AC%25E5%259C%2592%2520%25E3%2582%25BD%25E3%2583%25AC%25E3%2582%25A4%25E3%2583%25A6%25E3%2581%25AE%25E4%25B8%2598%26guestDraft%3D1",
+      "restoredBanner": "思い出カードの内容を引き継ぎました\n\n訪問日\n2026-09-16\nひとこと\n何度も遊んで、帰る前にもう1回！\n興味タグ\n水遊び\n\n写真は安全のため引き継いでいません。"
+    },
+    {
+      "label": "home-card-2",
+      "url": "/facilities/facility-675?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-675",
+        "facilityName": "ふなばしアンデルセン公園",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-725",
+          "text": "富士見ふれあい公園(船橋)\n千葉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-726",
+          "text": "八千代総合運動公園\n千葉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-736",
+          "text": "蘇我スポーツ公園\n千葉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-675%26name%3D%25E3%2581%25B5%25E3%2581%25AA%25E3%2581%25B0%25E3%2581%2597%25E3%2582%25A2%25E3%2583%25B3%25E3%2583%2587%25E3%2583%25AB%25E3%2582%25BB%25E3%2583%25B3%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-675%26name%3D%25E3%2581%25B5%25E3%2581%25AA%25E3%2581%25B0%25E3%2581%2597%25E3%2582%25A2%25E3%2583%25B3%25E3%2583%2587%25E3%2583%25AB%25E3%2582%25BB%25E3%2583%25B3%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1"
+    },
+    {
+      "label": "home-card-3",
+      "url": "/facilities/facility-245?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🛝 遊具",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-245",
+        "facilityName": "国営昭和記念公園",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "playground"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-231",
+          "text": "葛西臨海公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-232",
+          "text": "なぎさ公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-237",
+          "text": "井の頭恩賜公園\n東京都・公園(大型遊具) / 遊具につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-245%26name%3D%25E5%259B%25BD%25E5%2596%25B6%25E6%2598%25AD%25E5%2592%258C%25E8%25A8%2598%25E5%25BF%25B5%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-245%26name%3D%25E5%259B%25BD%25E5%2596%25B6%25E6%2598%25AD%25E5%2592%258C%25E8%25A8%2598%25E5%25BF%25B5%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1"
+    },
+    {
+      "label": "home-card-4",
+      "url": "/facilities/facility-782?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🛝 遊具",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-782",
+        "facilityName": "こどもの国(横浜)",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "playground"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-784",
+          "text": "山下公園\n神奈川県・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-792",
+          "text": "生田緑地\n神奈川県・公園(大型遊具) / 遊具につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-797",
+          "text": "等々力緑地\n神奈川県・公園(大型遊具) / 遊具につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-782%26name%3D%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%25E3%2581%25AE%25E5%259B%25BD(%25E6%25A8%25AA%25E6%25B5%259C)%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-782%26name%3D%25E3%2581%2593%25E3%2581%25A9%25E3%2582%2582%25E3%2581%25AE%25E5%259B%25BD(%25E6%25A8%25AA%25E6%25B5%259C)%26guestDraft%3D1"
+    },
+    {
+      "label": "home-card-5",
+      "url": "/facilities/facility-518?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "💧 水遊び",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-518",
+        "facilityName": "国営武蔵丘陵森林公園",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "water_play"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-515",
+          "text": "川口グリーンセンター\n埼玉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-539",
+          "text": "朝霞市青葉台公園\n埼玉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-544",
+          "text": "ときがわ町雀川砂防ダム公園\n埼玉県・公園(大型遊具) / 水遊びにつながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-518%26name%3D%25E5%259B%25BD%25E5%2596%25B6%25E6%25AD%25A6%25E8%2594%25B5%25E4%25B8%2598%25E9%2599%25B5%25E6%25A3%25AE%25E6%259E%2597%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-518%26name%3D%25E5%259B%25BD%25E5%2596%25B6%25E6%25AD%25A6%25E8%2594%25B5%25E4%25B8%2598%25E9%2599%25B5%25E6%25A3%25AE%25E6%259E%2597%25E5%2585%25AC%25E5%259C%2592%26guestDraft%3D1"
+    },
+    {
+      "label": "home-card-6",
+      "url": "/facilities/facility-136?record=1",
+      "date": "2026-09-16",
+      "photo": {
+        "required": false,
+        "valid": true,
+        "message": "",
+        "files": 0
+      },
+      "disabledStages": [
+        true,
+        true,
+        false
+      ],
+      "tagLabel": "🔭 展示・見学",
+      "draft": {
+        "version": 1,
+        "facilitySlug": "facility-136",
+        "facilityName": "山梨県立科学館",
+        "visitedOn": "2026-09-16",
+        "note": "何度も遊んで、帰る前にもう1回！",
+        "interestTagIds": [
+          "exhibition"
+        ],
+        "familyRevisit": "yes",
+        "parentFatigue": "normal"
+      },
+      "recommendations": [
+        {
+          "href": "/facilities/facility-2108",
+          "text": "山梨県立八ヶ岳自然ふれあいセンター\n山梨県・科学館 / 展示・見学につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-2129",
+          "text": "富士山レーダードーム館\n山梨県・科学館 / 展示・見学につながる施設\n→"
+        },
+        {
+          "href": "/facilities/facility-2130",
+          "text": "山梨県立リニア見学センター\n山梨県・科学館 / 展示・見学につながる施設\n→"
+        }
+      ],
+      "registerHref": "/auth/register?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-136%26name%3D%25E5%25B1%25B1%25E6%25A2%25A8%25E7%259C%258C%25E7%25AB%258B%25E7%25A7%2591%25E5%25AD%25A6%25E9%25A4%25A8%26guestDraft%3D1",
+      "loginHref": "/auth/login?redirectTo=%2Fmypage%2Fvisits%2Fnew%3Ffacility%3Dfacility-136%26name%3D%25E5%25B1%25B1%25E6%25A2%25A8%25E7%259C%258C%25E7%25AB%258B%25E7%25A7%2591%25E5%25AD%25A6%25E9%25A4%25A8%26guestDraft%3D1"
+    }
+  ],
+  "errors": [],
+  "primaryCta": {
+    "top": 388,
+    "width": 358,
+    "height": 56,
+    "font": "16px",
+    "weight": "900"
+  },
+  "cycleCta": "clicked → /try",
+  "about": "positioning and all required original facts visible"
+}
