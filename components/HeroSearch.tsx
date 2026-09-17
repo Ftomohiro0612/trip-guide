@@ -7,7 +7,10 @@ import {
   useId,
   useRef,
   useState,
+  useSyncExternalStore,
 } from "react";
+import { buildQueryString, type FilterParams } from "@/lib/filter";
+import { parseNaturalLanguageQuery } from "@/lib/natural-language-query";
 
 type FacilitySuggestion = {
   slug: string;
@@ -15,6 +18,67 @@ type FacilitySuggestion = {
   category: string;
   prefecture: string;
 };
+
+// ブラウザ標準の Web Speech API。型定義は next/dom に無いため最小限を自前で持つ。
+// 外部AI API・LLM・vector DBへは一切送信しない(ブラウザ内蔵の音声認識のみ使用)。
+interface MinimalSpeechRecognition extends EventTarget {
+  lang: string;
+  interimResults: boolean;
+  maxAlternatives: number;
+  start: () => void;
+  stop: () => void;
+  onresult: ((event: { results: ArrayLike<ArrayLike<{ transcript: string }>> }) => void) | null;
+  onerror: (() => void) | null;
+  onend: (() => void) | null;
+}
+
+type SpeechRecognitionConstructor = new () => MinimalSpeechRecognition;
+
+function getSpeechRecognitionConstructor(): SpeechRecognitionConstructor | null {
+  if (typeof window === "undefined") return null;
+  const w = window as unknown as {
+    SpeechRecognition?: SpeechRecognitionConstructor;
+    webkitSpeechRecognition?: SpeechRecognitionConstructor;
+  };
+  return w.SpeechRecognition ?? w.webkitSpeechRecognition ?? null;
+}
+
+// ブラウザのSpeechRecognition対応状況はマウント後に変わらないため、購読は不要な
+// 無変化ストアとして useSyncExternalStore に載せる。サーバー(window無し)では常に
+// false を返し、クライアントでの実値とのハイドレーション不一致を避ける。
+function subscribeNoop() {
+  return () => {};
+}
+function getSpeechSupportedSnapshot() {
+  return getSpeechRecognitionConstructor() !== null;
+}
+function getSpeechSupportedServerSnapshot() {
+  return false;
+}
+
+function navigateToFacilitiesSearch(
+  router: ReturnType<typeof useRouter>,
+  query: string,
+) {
+  const parsed = parseNaturalLanguageQuery(query);
+  const filters: FilterParams = {
+    prefectures: parsed.prefectures,
+    categories: parsed.categories,
+    indoor: parsed.indoor,
+    rain: parsed.rain,
+    fee: parsed.fee,
+    tags: parsed.tags,
+    q: parsed.q,
+    sort: "recommend",
+  };
+  const destination = `/facilities${buildQueryString(filters)}`;
+  if (process.env.NEXT_PUBLIC_CLOUDFLARE_STATIC_NAVIGATION === "true") {
+    // eslint-disable-next-line @next/next/no-location-assign-relative-destination
+    window.location.assign(destination);
+    return;
+  }
+  router.push(destination);
+}
 
 export default function HeroSearch() {
   const router = useRouter();
@@ -26,6 +90,19 @@ export default function HeroSearch() {
   const [suggestionsOpen, setSuggestionsOpen] = useState(false);
   const [activeIndex, setActiveIndex] = useState(-1);
   const [dropdownMaxHeight, setDropdownMaxHeight] = useState<number | null>(null);
+  const [listening, setListening] = useState(false);
+  const speechSupported = useSyncExternalStore(
+    subscribeNoop,
+    getSpeechSupportedSnapshot,
+    getSpeechSupportedServerSnapshot,
+  );
+  const recognitionRef = useRef<MinimalSpeechRecognition | null>(null);
+
+  useEffect(() => {
+    return () => {
+      recognitionRef.current?.stop();
+    };
+  }, []);
 
   useEffect(() => {
     const trimmed = query.trim();
@@ -114,6 +191,35 @@ export default function HeroSearch() {
     router.push(destination);
   }
 
+  function handleMicClick() {
+    const Recognition = getSpeechRecognitionConstructor();
+    if (!Recognition) return;
+
+    if (listening) {
+      recognitionRef.current?.stop();
+      setListening(false);
+      return;
+    }
+
+    const recognition = new Recognition();
+    recognition.lang = "ja-JP";
+    recognition.interimResults = false;
+    recognition.maxAlternatives = 1;
+    recognition.onresult = (event) => {
+      const transcript = event.results[0]?.[0]?.transcript;
+      if (transcript) {
+        shouldOpenSuggestionsRef.current = false;
+        setSuggestionsOpen(false);
+        setQuery((current) => (current ? `${current}${transcript}` : transcript));
+      }
+    };
+    recognition.onerror = () => setListening(false);
+    recognition.onend = () => setListening(false);
+    recognitionRef.current = recognition;
+    setListening(true);
+    recognition.start();
+  }
+
   function handleKeyDown(event: KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Escape") {
       shouldOpenSuggestionsRef.current = false;
@@ -151,13 +257,23 @@ export default function HeroSearch() {
     }
   }
 
+  function handleSubmit(event: React.FormEvent) {
+    event.preventDefault();
+    const trimmed = query.trim();
+    if (!trimmed) return;
+    setSuggestionsOpen(false);
+    navigateToFacilitiesSearch(router, trimmed);
+  }
+
   return (
     <form
       ref={formRef}
       action="/facilities"
+      onSubmit={handleSubmit}
       className="relative mx-auto w-full max-w-xl lg:mx-0"
+      aria-label="施設名・エリア・条件や文章、音声で施設を探す"
     >
-      <div className="flex w-full overflow-hidden rounded-full bg-white p-1.5 shadow-lg">
+      <div className="flex w-full items-center overflow-hidden rounded-full bg-white p-1.5 shadow-lg">
         <input
           type="search"
           name="q"
@@ -184,12 +300,27 @@ export default function HeroSearch() {
           aria-activedescendant={
             activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined
           }
-          placeholder="施設名・エリア名で検索"
+          placeholder="施設名・エリアや、雨の日に無料で3歳と遊べる場所、のような文章でも"
           className="min-w-0 flex-1 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
         />
+        {speechSupported && (
+          <button
+            type="button"
+            onClick={handleMicClick}
+            aria-pressed={listening}
+            aria-label={listening ? "音声入力を停止" : "音声入力を開始"}
+            className={`ml-1 shrink-0 rounded-full p-2.5 text-base transition-colors ${
+              listening
+                ? "bg-rose-500 text-white"
+                : "bg-slate-100 text-slate-600 hover:bg-slate-200"
+            }`}
+          >
+            <span aria-hidden>{listening ? "⏺️" : "🎤"}</span>
+          </button>
+        )}
         <button
           type="submit"
-          className="shrink-0 rounded-full bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
+          className="ml-1 shrink-0 rounded-full bg-brand px-4 py-2 text-sm font-bold text-white transition-colors hover:bg-brand-dark"
         >
           🔍 検索
         </button>

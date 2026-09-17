@@ -6,7 +6,6 @@ import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import { JsonLd } from "@/components/JsonLd";
-import NaturalLanguageSearch from "@/components/NaturalLanguageSearch";
 import MapViewClient from "@/components/MapViewClient";
 import SummerSeasonalCta from "@/components/SummerSeasonalCta";
 import {
@@ -522,41 +521,24 @@ export default function HomePage() {
         <div className="relative mx-auto max-w-6xl px-4 py-10 text-white sm:py-12 lg:py-14">
           <div className="grid grid-cols-1 items-center gap-9 lg:grid-cols-[1.1fr_0.9fr] lg:gap-12">
             <div className="flex flex-col text-center lg:text-left">
-              <div className="flex flex-wrap items-center justify-center gap-2 self-center lg:justify-start lg:self-start">
-                <p className="mb-4 inline-flex items-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm">
-                  <span aria-hidden>📍</span>
-                  <span className="ml-1">
-                    {`無料で遊び場検索｜全国${prefectures.length}都道府県・${facilityCountLabel}掲載中`}
-                  </span>
-                </p>
-                <p className="mb-4 inline-flex items-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm">
-                  <span aria-hidden>🔁</span>
-                  <span className="ml-1">
-                    検索はきっかけ｜行くと、記録で「好き」が見えてくる
-                  </span>
-                </p>
-              </div>
+              <p className="mb-4 inline-flex items-center self-center rounded-full border border-white/35 bg-white/20 px-3 py-1.5 text-xs font-bold shadow-sm backdrop-blur-sm sm:text-sm lg:self-start">
+                <span aria-hidden>📍</span>
+                <span className="ml-1">
+                  {`無料で遊び場検索｜全国${prefectures.length}都道府県・${facilityCountLabel}掲載中`}
+                </span>
+              </p>
               <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
-                <span className="inline-block">近くの遊び場を探して、</span>
+                <span className="inline-block">遊び場を探す。思い出を残す。</span>
                 <br className="hidden sm:block" />
-                <span className="inline-block">子どもの「好き」を見つけていく。</span>
+                <span className="inline-block">子どもの「好き」が見えてくる。</span>
               </h1>
               <p className="sr-only">子どもと行ける場所を探せるメモリップ</p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
-                雨の日、無料、水遊び、遊具、近くの施設。行った場所を記録すると、子どもの“好き”も少しずつ見えてきます。
+                雨の日、無料、水遊び、遊具、近くの施設など、条件で絞り込めます。
               </p>
 
-              <Link
-                href="/try"
-                className="mt-6 inline-flex min-h-14 items-center justify-center rounded-full bg-slate-950 px-6 py-4 text-base font-black text-white shadow-xl transition-colors hover:bg-slate-800"
-              >
-                登録なしで、思い出を1件つくる →
-              </Link>
-              <p className="mt-2 text-xs font-medium text-white">写真は任意。子どもの反応から、次のおでかけへ。</p>
-
-              <div className="mx-auto mt-7 flex w-full max-w-2xl flex-col items-center lg:mx-0 lg:items-start">
+              <div className="mx-auto mt-7 w-full max-w-2xl lg:mx-0">
                 <HeroSearch />
-                <NaturalLanguageSearch />
               </div>
 
               <div className="mx-auto mt-4 flex max-w-3xl flex-wrap justify-center gap-2 lg:mx-0 lg:justify-start">
