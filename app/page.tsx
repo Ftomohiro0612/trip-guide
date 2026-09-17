@@ -528,22 +528,14 @@ export default function HomePage() {
                 </span>
               </p>
               <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
-                <span className="inline-block">子どもと行ける場所を、</span>
+                <span className="inline-block">遊び場を探す。思い出を残す。</span>
                 <br className="hidden sm:block" />
-                <span className="inline-block">近くから探す。</span>
+                <span className="inline-block">子どもの「好き」が見えてくる。</span>
               </h1>
               <p className="sr-only">子どもと行ける場所を探せるメモリップ</p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
-                雨の日、無料、水遊び、遊具、近くの施設。行った場所を記録すると、子どもの“好き”も少しずつ見えてきます。
+                雨の日、無料、水遊び、遊具、近くの施設など、条件で絞り込めます。
               </p>
-
-              <Link
-                href="/try"
-                className="mt-6 inline-flex min-h-14 items-center justify-center rounded-full bg-slate-950 px-6 py-4 text-base font-black text-white shadow-xl transition-colors hover:bg-slate-800"
-              >
-                登録なしで、思い出を1件つくる →
-              </Link>
-              <p className="mt-2 text-xs font-medium text-white">写真は任意。子どもの反応から、次のおでかけへ。</p>
 
               <div className="mx-auto mt-7 w-full max-w-2xl lg:mx-0">
                 <HeroSearch />
