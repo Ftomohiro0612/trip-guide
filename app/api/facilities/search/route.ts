@@ -1,10 +1,12 @@
 import { facilitiesData as facilitiesJson } from "@memorip/runtime-canon";
+import { normalizeForSearchMatch } from "@/lib/facility-name-match";
 
 type FacilitySearchSource = {
   slug: string;
   name: string;
   category: string;
   prefecture: string;
+  search_aliases?: string[];
   latitude?: unknown;
   longitude?: unknown;
 };
@@ -57,10 +59,12 @@ export async function GET(request: Request) {
     return Response.json({ results: [] });
   }
 
-  const normalizedQuery = q.toLocaleLowerCase();
+  const normalizedQuery = normalizeForSearchMatch(q);
   const results = facilities
     .filter((facility) =>
-      facility.name.toLocaleLowerCase().includes(normalizedQuery),
+      [facility.name, ...(facility.search_aliases ?? [])].some((variant) =>
+        normalizeForSearchMatch(variant).includes(normalizedQuery),
+      ),
     )
     .slice(0, 15)
     .map(({ slug, name, category, prefecture }) => ({

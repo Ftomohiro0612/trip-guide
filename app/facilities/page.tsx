@@ -12,6 +12,7 @@ import type { RawSearchParams } from "@/lib/filter";
 import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
 import { getFacilityListResults } from "@/lib/facility-list-results";
 import { paginateFacilities } from "@/lib/facility-pagination";
+import { findFacilityNameSuggestions } from "@/lib/facility-name-match";
 
 export const metadata: Metadata = {
   title: "施設一覧",
@@ -60,6 +61,10 @@ export default async function FacilitiesPage({ searchParams }: Props) {
     (prefecture) => prefecture.id === selectedPrefectureId,
   );
   const page = paginateFacilities(results, asSingleParam(sp.page));
+  const nameSuggestions =
+    filters.q && results.length === 0
+      ? findFacilityNameSuggestions(filters.q, visibleFacilities)
+      : [];
   const nearbyDataHref = buildNearbyDataHref(sp);
   const visiblePrefectures = prefectures.map((p) => ({
     ...p,
@@ -116,6 +121,22 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             <>全 {visibleFacilities.length} 施設 / 表示中 {results.length} 件</>
           )}
         </p>
+        {nameSuggestions.length > 0 && (
+          <p className="mt-2 text-sm text-slate-600">
+            もしかして:{" "}
+            {nameSuggestions.map((facility, index) => (
+              <span key={facility.slug}>
+                {index > 0 && "、"}
+                <Link
+                  href={`/facilities/${facility.slug}`}
+                  className="font-medium text-brand underline underline-offset-2 hover:text-brand/80"
+                >
+                  {facility.name}
+                </Link>
+              </span>
+            ))}
+          </p>
+        )}
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[260px_1fr]">
