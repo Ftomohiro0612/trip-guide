@@ -300,8 +300,8 @@ export default function HeroSearch() {
           aria-activedescendant={
             activeIndex >= 0 ? `${listboxId}-${activeIndex}` : undefined
           }
-          placeholder="施設名・エリアや、雨の日に無料で3歳と遊べる場所、のような文章でも"
-          className="min-w-0 flex-1 px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
+          placeholder="施設名・エリア、文章も"
+          className="min-w-0 flex-1 truncate px-3 py-2 text-sm text-slate-900 outline-none placeholder:text-slate-400"
         />
         {speechSupported && (
           <button
