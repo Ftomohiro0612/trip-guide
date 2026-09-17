@@ -1,4 +1,5 @@
 import type { Facility } from "@/types/facility";
+import { normalizeForSearchMatch } from "@/lib/facility-name-match";
 
 export type SortKey = "recommend" | "prefecture" | "name" | "nearby";
 
@@ -52,7 +53,7 @@ export function applyFilters(
   facilities: Facility[],
   filters: FilterParams,
 ): Facility[] {
-  const q = filters.q.toLowerCase();
+  const q = normalizeForSearchMatch(filters.q);
   const filtered = facilities.filter((f) => {
     if (
       filters.prefectures.length &&
@@ -79,17 +80,18 @@ export function applyFilters(
       if (!hasAll) return false;
     }
     if (q) {
-      const haystack = [
-        f.name,
-        f.address,
-        f.description,
-        f.category,
-        f.prefecture,
-        f.target_age,
-        ...f.tags,
-      ]
-        .join(" ")
-        .toLowerCase();
+      const haystack = normalizeForSearchMatch(
+        [
+          f.name,
+          ...(f.search_aliases ?? []),
+          f.address,
+          f.description,
+          f.category,
+          f.prefecture,
+          f.target_age,
+          ...f.tags,
+        ].join(" "),
+      );
       if (!haystack.includes(q)) return false;
     }
     return true;

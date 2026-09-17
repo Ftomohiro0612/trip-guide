@@ -138,6 +138,12 @@ export interface Facility {
   source_checked_at?: string;
   data_quality_status?: DataQualityStatus;
   source_notes?: string;
+  /**
+   * ひらがな/カタカナ/漢字化した読みなど、正式名称とは表記が異なるが
+   * 同じ施設を指すことが確認済みの別称。むやみに増やさず、実際に
+   * 検索で到達できなかった報告があるものだけを追加する。
+   */
+  search_aliases?: string[];
 }
 
 export interface PrefectureMeta {
