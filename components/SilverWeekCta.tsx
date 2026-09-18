@@ -24,7 +24,7 @@ export default function SilverWeekCta() {
               🍂 シルバーウィークのおでかけ
             </h2>
             <p className="mt-3 max-w-2xl text-sm leading-relaxed text-amber-50 sm:text-base">
-              雨の日のおでかけも、「雨の日に近くで遊べる場所」のように検索できます。
+              地域を選んで、この連休に行く理由がある候補をテーマ別に見つけられます。
             </p>
             <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold sm:text-sm">
               <ShortcutLink href="/tag/rainy-day">雨でも遊べる</ShortcutLink>
@@ -34,10 +34,10 @@ export default function SilverWeekCta() {
             </div>
           </div>
           <Link
-            href="/facilities"
+            href="/events/silver-week"
             className="inline-flex w-full items-center justify-center rounded-full bg-white px-6 py-3.5 text-base font-bold text-amber-950 shadow-lg transition-transform hover:-translate-y-0.5 hover:bg-amber-50 sm:w-auto"
           >
-            近くのおでかけ先を探す →
+            地域別の特集を見る →
           </Link>
         </div>
       </div>
