@@ -300,16 +300,29 @@ function HeroMemoryCardCluster() {
         <div className="p-3">
           <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
             <p className="text-xs font-bold text-sky-500">今日の思い出</p>
-            <p className="mt-1 text-sm font-bold leading-snug">
-              📍 こども自然公園
-            </p>
-            <div className="mt-2 flex flex-wrap gap-1.5 text-[11px] font-bold">
-              <span className="rounded-full bg-sky-50 px-2 py-1 text-sky-700">
-                水遊びに夢中
-              </span>
-              <span className="rounded-full bg-emerald-50 px-2 py-1 text-emerald-700">
-                また行きたい
-              </span>
+            <div className="mt-2 flex items-start gap-3">
+              <Image
+                src="/guide/photo-now-record.png"
+                alt=""
+                width={56}
+                height={56}
+                className="h-14 w-14 flex-none rounded-xl object-cover"
+                sizes="56px"
+                aria-hidden
+              />
+              <div className="min-w-0">
+                <p className="text-sm font-bold leading-snug">
+                  📍 こども自然公園
+                </p>
+                <div className="mt-2 flex flex-wrap gap-1.5 text-[11px] font-bold">
+                  <span className="rounded-full bg-sky-50 px-2 py-1 text-sky-700">
+                    水遊びに夢中
+                  </span>
+                  <span className="rounded-full bg-emerald-50 px-2 py-1 text-emerald-700">
+                    また行きたい
+                  </span>
+                </div>
+              </div>
             </div>
           </div>
 
