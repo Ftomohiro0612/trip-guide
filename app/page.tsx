@@ -273,7 +273,8 @@ function HeroMemoryCardCluster() {
       aria-label="思い出の記録から子どもの好きが見え、次のおでかけにつながるスマホ画面風コンテナ"
     >
       <p className="px-2 pb-2 text-center text-sm font-bold text-slate-900">
-        「好き」が見えると、次のおでかけが見つかる。
+        <span className="inline-block whitespace-nowrap">「好き」が見えると、</span>
+        <span className="inline-block whitespace-nowrap">次のおでかけが見つかる。</span>
         <span className="mt-1 block text-xs font-medium">画面イメージ・件数や内容はサンプルです</span>
       </p>
       <div className="overflow-hidden rounded-[1.55rem] border border-slate-900/10 bg-sky-50/95 shadow-sm shadow-slate-900/5">
@@ -526,7 +527,7 @@ export default function HomePage() {
               <h1 className="mx-auto max-w-4xl text-3xl font-bold leading-tight tracking-tight drop-shadow-sm text-balance sm:text-5xl lg:mx-0 lg:text-[3rem]">
                 <span className="inline-block">遊び場を探す。思い出を残す。</span>
                 <br className="hidden sm:block" />
-                <span className="inline-block">子どもの「好き」が見えてくる。</span>
+                <span className="inline-block lg:whitespace-nowrap">子どもの「好き」が見えてくる。</span>
               </h1>
               <p className="sr-only">子どもと行ける場所を探せるメモリップ</p>
               <p className="mx-auto mt-5 max-w-2xl text-base leading-relaxed text-white/95 drop-shadow-sm sm:text-lg lg:mx-0">
