@@ -270,10 +270,10 @@ function HeroMemoryCardCluster() {
   return (
     <div
       className="relative mx-auto w-full max-w-[19.5rem] rounded-[2rem] border border-white/65 bg-white/28 p-2.5 text-slate-900 shadow-lg shadow-sky-900/10 backdrop-blur-md lg:mx-0 lg:max-w-[18.5rem] xl:max-w-[19rem]"
-      aria-label="メモリップに家族の記録がたまっていくスマホ画面風コンテナ"
+      aria-label="思い出の記録から子どもの好きが見え、次のおでかけにつながるスマホ画面風コンテナ"
     >
       <p className="px-2 pb-2 text-center text-sm font-bold text-slate-900">
-        記録がたまると見える、子どもの「好き」
+        「好き」が見えると、次のおでかけが見つかる。
         <span className="mt-1 block text-xs font-medium">画面イメージ・件数や内容はサンプルです</span>
       </p>
       <div className="overflow-hidden rounded-[1.55rem] border border-slate-900/10 bg-sky-50/95 shadow-sm shadow-slate-900/5">
@@ -297,39 +297,42 @@ function HeroMemoryCardCluster() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-2.5 p-3">
-          <div className="col-span-2 rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
-            <div className="flex items-start justify-between gap-3">
-              <div>
-                <p className="text-xs font-bold text-sky-500">最近の記録</p>
-                <p className="mt-1 text-sm font-bold leading-snug">
-                  📍 こども自然公園
-                </p>
-                <p className="mt-1 text-xs text-slate-500">
-                  水遊びに夢中 · また行きたい
-                </p>
-              </div>
-              <span className="rounded-full bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-600">
-                24件
+        <div className="p-3">
+          <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
+            <p className="text-xs font-bold text-sky-500">今日の思い出</p>
+            <p className="mt-1 text-sm font-bold leading-snug">
+              📍 こども自然公園
+            </p>
+            <div className="mt-2 flex flex-wrap gap-1.5 text-[11px] font-bold">
+              <span className="rounded-full bg-sky-50 px-2 py-1 text-sky-700">
+                水遊びに夢中
+              </span>
+              <span className="rounded-full bg-emerald-50 px-2 py-1 text-emerald-700">
+                また行きたい
               </span>
             </div>
           </div>
 
+          <div className="flex h-5 items-center pl-5" aria-hidden>
+            <span className="h-full w-px bg-emerald-300" />
+            <span className="-ml-1 mt-3 text-[10px] font-bold text-emerald-500">▼</span>
+          </div>
+
           <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
-            <p className="text-xs font-bold text-emerald-600">好きTOP3</p>
-            <div className="mt-3 space-y-2">
+            <p className="text-xs font-bold text-emerald-600">好きが見えてきた</p>
+            <div className="mt-2.5 space-y-2">
               {[
-                ["水遊び", "w-full"],
-                ["大型遊具", "w-3/4"],
-                ["動物", "w-1/2"],
-              ].map(([label, width]) => (
+                ["💧 水遊び", "8回", "w-full"],
+                ["🛝 大型遊具", "5回", "w-5/8"],
+              ].map(([label, count, width]) => (
                 <div key={label}>
-                  <div className="mb-1 text-[11px] font-bold text-slate-700">
-                    {label}
+                  <div className="mb-1 flex items-center justify-between text-[11px] font-bold text-slate-700">
+                    <span>{label}</span>
+                    <span>{count}</span>
                   </div>
-                  <div className="h-2 rounded-full bg-emerald-50">
+                  <div className="h-1.5 rounded-full bg-emerald-50">
                     <div
-                      className={`h-2 rounded-full bg-emerald-400 ${width}`}
+                      className={`h-1.5 rounded-full bg-emerald-400 ${width}`}
                     />
                   </div>
                 </div>
@@ -337,40 +340,23 @@ function HeroMemoryCardCluster() {
             </div>
           </div>
 
-          <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-sm shadow-sky-900/5">
-            <Image
-              src="/guide/photo-now-lookback.png"
-              alt=""
-              width={1448}
-              height={1086}
-              className="aspect-[4/3] w-full rounded-xl object-cover"
-              sizes="152px"
-              aria-hidden
-            />
-            <p className="mt-2 px-1 text-xs font-bold text-slate-700">
-              写真も一緒に
-            </p>
+          <div className="flex h-5 items-center pl-5" aria-hidden>
+            <span className="h-full w-px bg-amber-300" />
+            <span className="-ml-1 mt-3 text-[10px] font-bold text-amber-500">▼</span>
           </div>
 
-          <div className="col-span-2 grid grid-cols-[0.82fr_1.18fr] gap-2.5">
-            <div className="overflow-hidden rounded-2xl border border-slate-100 bg-white p-2 shadow-sm shadow-sky-900/5">
-              <Image
-                src="/guide/photo-now-record.png"
-                alt=""
-                width={1448}
-                height={1086}
-                className="aspect-square w-full rounded-xl object-cover"
-                sizes="110px"
-                aria-hidden
-              />
-            </div>
-            <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
-              <p className="text-xs font-bold text-cyan-600">行った場所</p>
-              <div className="mt-3 space-y-2 text-xs font-bold text-slate-700">
-                <p>6月 じゃぶじゃぶ池</p>
-                <p>5月 科学館</p>
-                <p>4月 大きな公園</p>
-              </div>
+          <div className="rounded-2xl border border-slate-100 bg-white p-3 shadow-sm shadow-sky-900/5">
+            <p className="text-xs font-bold text-amber-600">次のおでかけにおすすめ</p>
+            <p className="mt-1 text-[11px] font-medium text-slate-500">
+              水遊びが好きな〇〇ちゃんに
+            </p>
+            <div className="mt-2 grid gap-1.5 text-xs font-bold text-slate-700">
+              <p className="rounded-xl bg-amber-50 px-2.5 py-2">
+                じゃぶじゃぶ池のある公園 <span aria-hidden>→</span>
+              </p>
+              <p className="rounded-xl bg-sky-50 px-2.5 py-2">
+                大型遊具のある公園 <span aria-hidden>→</span>
+              </p>
             </div>
           </div>
         </div>
@@ -409,20 +395,17 @@ export default function HomePage() {
       return prefecture ? [prefecture] : [];
     }),
   }));
-  const primaryPrefecture =
-    prefectures.find((prefecture) => prefecture.name === "東京都") ??
-    prefectures[0];
   const heroQuickLinks = [
-    { label: "現在地から探す", icon: "📍", href: "/facilities" },
-    { label: "雨の日でも遊べる", icon: "☔", href: "/tag/rainy-day" },
+    { label: "近くで探す", icon: "📍", href: "/facilities" },
+    { label: "雨の日でも", icon: "☔", href: "/tag/rainy-day" },
     { label: "無料", icon: "🆓", href: "/tag/free" },
     {
-      label: primaryPrefecture.name,
-      icon: "🗾",
-      href: `/prefecture/${primaryPrefecture.id}`,
+      label: "子どもの「好き」から探す",
+      icon: "💚",
+      href: "/guide",
     },
     {
-      label: "水遊び",
+      label: "水遊びが好き",
       icon: RECOMMENDED_FOR_TAG_META.water_play.icon,
       href: "/facilities?recommended_tag=water_play",
     },
