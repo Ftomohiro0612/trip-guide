@@ -1,7 +1,7 @@
 import "server-only";
 
 import { eventsData as eventsJson } from "@memorip/runtime-canon";
-import type { EventItem } from "@/lib/events";
+import { getVisibleEvents, type EventItem } from "@/lib/events";
 import { visibleFacilities } from "@/lib/facilities";
 import {
   REGIONS,
@@ -17,6 +17,9 @@ export const SILVER_WEEK_END = "2026-09-23";
 const FACILITY_PICK_LIMIT = 4;
 const EVENT_PICK_LIMIT = 4;
 const sourceEvents = (eventsJson as { events: EventItem[] }).events;
+const visibleEventIds = new Set(
+  getVisibleEvents(SILVER_WEEK_START).map((event) => event.id),
+);
 const FULL_DAY_CATEGORIES = new Map<string, number>([
   ["遊園地・テーマパーク", 120],
   ["動物園", 105],
@@ -169,12 +172,12 @@ function groupEventsByRegion(): Map<RegionId, EventItem[]> {
 
 function isSilverWeekEvent(event: EventItem): boolean {
   return (
+    visibleEventIds.has(event.id) &&
     event.start_date !== null &&
     event.end_date !== null &&
     event.start_date <= SILVER_WEEK_END &&
     event.end_date >= SILVER_WEEK_START &&
-    (event.status === "scheduled" || event.status === "ongoing") &&
-    /^https?:\/\/\S+$/u.test(event.official_url.trim())
+    (event.status === "scheduled" || event.status === "ongoing")
   );
 }
 
