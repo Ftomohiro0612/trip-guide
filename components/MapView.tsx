@@ -13,7 +13,9 @@ import L from "leaflet";
 import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
+import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
+import styles from "./MapView.module.css";
 import type { Facility, PrefectureId } from "@/types/facility";
 import { driveTimeEstimateLabel, haversineDistanceKm } from "@/lib/distance";
 
@@ -29,6 +31,7 @@ export type MapFacility = Pick<
   | "id"
   | "slug"
   | "name"
+  | "image"
   | "prefecture"
   | "prefecture_id"
   | "category"
@@ -208,7 +211,6 @@ function hasCoords(f: MapFacility): f is PlacedFacility {
 export default function MapView({
   facilities,
   height = 520,
-  userStatus,
   storageKey,
 }: Props) {
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
@@ -343,7 +345,7 @@ export default function MapView({
         </p>
       </div>
 
-      <div className="relative overflow-hidden">
+      <div className={`relative overflow-hidden ${styles.mapViewport}`}>
         {locationNotice && (
           <div className="absolute z-[1000] bottom-14 left-3 right-3 sm:left-auto sm:max-w-xs bg-white/95 backdrop-blur px-3 py-2 rounded-xl shadow-sm border border-slate-200 text-xs font-medium text-slate-700">
             {locationNotice}
@@ -391,7 +393,6 @@ export default function MapView({
               key={f.id}
               facility={f}
               color={PREF_COLORS[f.prefecture_id]}
-              status={userStatus?.get(f.slug)}
               currentLocation={currentLocation?.position ?? null}
             />
           ))}
@@ -511,12 +512,10 @@ function CurrentLocationMarker({
 function FacilityMarker({
   facility,
   color,
-  status,
   currentLocation,
 }: {
   facility: PlacedFacility;
   color: string;
-  status?: UserFacilityStatus;
   currentLocation: [number, number] | null;
 }) {
   const highlighted =
@@ -534,6 +533,7 @@ function FacilityMarker({
         .filter((item) => item.trim().length > 0)
         .slice(0, 3)
     : [];
+  const hasImage = !!facility.image;
 
   return (
     <CircleMarker
@@ -546,12 +546,15 @@ function FacilityMarker({
         fillOpacity: 0.9,
       }}
     >
-      <Popup>
-        <div className="min-w-[200px] max-w-[240px]">
-          <p className="text-xs text-slate-500 mb-1">
-            {facility.prefecture} · {facility.category}
-          </p>
-          <p className="font-bold text-slate-900 text-sm leading-tight mb-2">
+      <Popup
+        className={styles.popup}
+        minWidth={0}
+        maxWidth={240}
+        autoPanPadding={[8, 8]}
+        keepInView
+      >
+        <div className={styles.summary}>
+          <p className="font-bold text-slate-900 text-sm leading-tight">
             <CategoryIcon
               categoryId={facility.category_id}
               width={16}
@@ -560,56 +563,41 @@ function FacilityMarker({
             />
             {facility.name}
           </p>
-          <div className="flex flex-wrap gap-1 mb-2">
-            {facility.is_free && (
-              <span className="text-[10px] font-bold bg-emerald-100 text-emerald-700 px-1.5 py-0.5 rounded">
-                🆓 無料
-              </span>
-            )}
-            <span className="text-[10px] font-bold bg-sky-100 text-sky-700 px-1.5 py-0.5 rounded">
-              ☂️ {facility.rain_friendly}
-            </span>
-            <span className="text-[10px] font-bold bg-slate-100 text-slate-700 px-1.5 py-0.5 rounded">
-              👶 {facility.target_age}
-            </span>
-          </div>
-          {(status?.visitCount ?? 0) > 0 && (
-            <div className="text-[10px] bg-green-50 text-green-700 px-1.5 py-0.5 rounded font-medium mb-1">
-              ✅ 行ったことあり {status?.visitCount}回
-              {status?.lastVisited ? ` (${status.lastVisited})` : ""}
-            </div>
-          )}
-          {status?.wishlisted && (
-            <div className="text-[10px] bg-pink-50 text-pink-600 px-1.5 py-0.5 rounded font-medium mb-1">
-              ⭐ 行きたい登録済み
+          {hasImage && (
+            <div className="relative h-[54px] w-24 max-w-full overflow-hidden rounded">
+              <Image
+                src={facility.image as string}
+                alt={facility.name}
+                fill
+                sizes="96px"
+                className="object-cover"
+              />
             </div>
           )}
           {driveEstimate && (
-            <p className="text-[11px] font-bold text-slate-700 bg-blue-50 px-2 py-1 rounded mb-2 truncate">
+            <p className="text-[11px] leading-snug font-bold text-slate-700 bg-blue-50 px-2 py-1 rounded">
               🚗 現在地から {driveEstimate}
             </p>
           )}
+          <p className="text-[11px] leading-snug text-slate-700">
+            対象年齢: {facility.target_age}
+          </p>
           {thingsToDo.length > 0 && (
-            <div className="mb-2">
-              <p className="text-[10px] font-bold text-slate-500 mb-1">
-                この施設でできそうなこと
-              </p>
-              <ul className="space-y-0.5">
-                {thingsToDo.map((item) => (
-                  <li
-                    key={item}
-                    className="text-[11px] leading-snug text-slate-700 truncate"
-                    title={item}
-                  >
-                    ・{item}
-                  </li>
-                ))}
-              </ul>
-            </div>
+            <ul className="space-y-0.5" aria-label="この施設でできそうなこと">
+              {thingsToDo.map((item) => (
+                <li
+                  key={item}
+                  className="text-[11px] leading-snug text-slate-700"
+                  title={item}
+                >
+                  ・{item}
+                </li>
+              ))}
+            </ul>
           )}
           <Link
             href={`/facilities/${facility.slug}`}
-            className="inline-block w-full text-center bg-brand hover:bg-brand-dark text-white text-xs font-bold px-2 py-1.5 rounded transition-colors"
+            className={`${styles.details} inline-block w-full text-center bg-brand hover:bg-brand-dark text-white text-xs font-bold px-2 py-1.5 rounded transition-colors`}
           >
             詳細を見る →
           </Link>

@@ -8,6 +8,7 @@ export function toMapFacilities(
     id: facility.id,
     slug: facility.slug,
     name: facility.name,
+    image: facility.image,
     prefecture: facility.prefecture,
     prefecture_id: facility.prefecture_id,
     category: facility.category,

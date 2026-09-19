@@ -1,0 +1,28 @@
+.mapViewport {
+  container-type: inline-size;
+}
+
+.popup :global(.leaflet-popup-content) {
+  /* Reserve the popup chrome (38px) and auto-pan gutters (16px).
+     Bound Leaflet's inline width by the actual map, not the page width. */
+  width: 240px;
+  max-width: min(240px, calc(100cqw - 56px));
+  margin: 10px 24px 10px 12px;
+}
+
+.summary {
+  display: grid;
+  gap: 4px;
+  min-width: 0;
+  overflow-wrap: anywhere;
+  white-space: normal;
+}
+
+/* Leaflet's unlayered paragraph rule overrides Tailwind's margin utilities. */
+.popup .summary p {
+  margin: 0;
+}
+
+.popup .details {
+  color: white;
+}
