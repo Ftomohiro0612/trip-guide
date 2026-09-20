@@ -23,6 +23,7 @@ interface Props {
   facilities: MapFacility[];
   height?: number;
   storageKey?: string;
+  enableAreaSearch?: boolean;
 }
 
 export default function MapViewClient(props: Props) {

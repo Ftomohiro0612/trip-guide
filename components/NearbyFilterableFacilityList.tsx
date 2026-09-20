@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
+import { parseBBoxParam } from "@/lib/geo-bounds";
 import FacilityCard from "@/components/FacilityCard";
 import {
   FacilityPaginationControls,
@@ -44,6 +45,7 @@ export default function NearbyFilterableFacilityList({
   const pathname = usePathname();
   const router = useRouter();
   const searchParams = useSearchParams();
+  const hasArea = parseBBoxParam(searchParams.get("bbox")) !== null;
   const nearbyRequested = searchParams.get("sort") === "nearby";
   const [currentLocation, setCurrentLocation] = useState<Coordinate | null>(
     null,
@@ -308,13 +310,29 @@ export default function NearbyFilterableFacilityList({
         )}
       </section>
 
+      {hasArea && (
+        <button
+          type="button"
+          onClick={() => {
+            const params = new URLSearchParams(searchParams);
+            params.delete("bbox");
+            params.set("page", "1");
+            router.push(pathname + "?" + params.toString(), { scroll: false });
+          }}
+          className="rounded-full border border-slate-200 bg-white px-3 py-2 text-sm font-bold text-slate-700 transition-colors hover:border-slate-300 hover:bg-slate-50"
+        >
+          エリア指定を解除
+        </button>
+      )}
+
       {showMap &&
-        !waitingForLocation &&
-        !loadingCandidates &&
-        displayedFacilities.length > 0 && (
+        (hasArea || (
+          !waitingForLocation && !loadingCandidates && displayedFacilities.length > 0
+        )) && (
           <ResponsiveResultsMap
             facilities={displayedFacilities}
             totalItems={effectivePage.totalItems}
+            enableAreaSearch={pathname === "/facilities"}
           />
         )}
 
@@ -350,10 +368,14 @@ export default function NearbyFilterableFacilityList({
             😢
           </p>
           <p className="font-medium text-slate-700">
-            条件に合う施設が見つかりませんでした
+            {hasArea
+              ? "このエリアには条件に合う施設がありません。"
+              : "条件に合う施設が見つかりませんでした"}
           </p>
           <p className="mt-1 text-sm text-slate-500">
-            条件を絞り込みすぎていないか、ご確認ください。
+            {hasArea
+              ? "地図を動かして再検索するか、エリア指定を解除してください。"
+              : "条件を絞り込みすぎていないか、ご確認ください。"}
           </p>
         </div>
       )}

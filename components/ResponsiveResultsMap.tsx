@@ -8,12 +8,14 @@ interface Props {
   facilities: Facility[];
   heading?: string;
   totalItems?: number;
+  enableAreaSearch?: boolean;
 }
 
 export default function ResponsiveResultsMap({
   facilities,
   heading = "このページの施設を地図で見る",
   totalItems,
+  enableAreaSearch = false,
 }: Props) {
   const [isDesktop, setIsDesktop] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -52,7 +54,11 @@ export default function ResponsiveResultsMap({
 
       {(isDesktop || mobileOpen) && (
         <div id="results-map-panel" className="mt-3">
-          <MapViewClient facilities={facilities} height={420} />
+          <MapViewClient
+            facilities={facilities}
+            height={420}
+            enableAreaSearch={enableAreaSearch}
+          />
         </div>
       )}
     </section>

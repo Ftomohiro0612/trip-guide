@@ -1,5 +1,11 @@
 import type { Facility } from "@/types/facility";
 import { normalizeForSearchMatch } from "@/lib/facility-name-match";
+import {
+  formatBBoxParam,
+  isWithinBBox,
+  parseBBoxParam,
+  type AreaBBox,
+} from "@/lib/geo-bounds";
 
 export type SortKey = "recommend" | "prefecture" | "name" | "nearby";
 
@@ -12,6 +18,7 @@ export interface FilterParams {
   tags: string[];
   q: string;
   sort: SortKey;
+  bbox: AreaBBox | null;
 }
 
 export type RawSearchParams = Record<string, string | string[] | undefined>;
@@ -46,6 +53,7 @@ export function parseFilterParams(sp: RawSearchParams): FilterParams {
     tags: asArray(sp.tags),
     q: asString(sp.q).trim(),
     sort,
+    bbox: parseBBoxParam(sp.bbox),
   };
 }
 
@@ -55,6 +63,15 @@ export function applyFilters(
 ): Facility[] {
   const q = normalizeForSearchMatch(filters.q);
   const filtered = facilities.filter((f) => {
+    if (
+      filters.bbox && (
+        typeof f.latitude !== "number" ||
+        typeof f.longitude !== "number" ||
+        !Number.isFinite(f.latitude) ||
+        !Number.isFinite(f.longitude) ||
+        !isWithinBBox(f.latitude, f.longitude, filters.bbox)
+      )
+    ) return false;
     if (
       filters.prefectures.length &&
       !filters.prefectures.includes(f.prefecture_id)
@@ -129,7 +146,8 @@ export function hasActiveFilters(f: FilterParams): boolean {
     f.rain.length > 0 ||
     f.fee !== "" ||
     f.tags.length > 0 ||
-    f.q !== ""
+    f.q !== "" ||
+    f.bbox !== null
   );
 }
 
@@ -142,6 +160,7 @@ export function buildQueryString(f: FilterParams): string {
   if (f.fee) params.set("fee", f.fee);
   if (f.tags.length) params.set("tags", f.tags.join(","));
   if (f.q) params.set("q", f.q);
+  if (f.bbox) params.set("bbox", formatBBoxParam(f.bbox));
   if (f.sort !== "recommend") params.set("sort", f.sort);
   const s = params.toString();
   return s ? `?${s}` : "";

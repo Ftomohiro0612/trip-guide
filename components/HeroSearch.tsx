@@ -70,6 +70,7 @@ function navigateToFacilitiesSearch(
     tags: parsed.tags,
     q: parsed.q,
     sort: "recommend",
+    bbox: null,
   };
   const destination = `/facilities${buildQueryString(filters)}`;
   if (process.env.NEXT_PUBLIC_CLOUDFLARE_STATIC_NAVIGATION === "true") {

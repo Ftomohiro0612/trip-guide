@@ -13,17 +13,20 @@ import L from "leaflet";
 import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
 import styles from "./MapView.module.css";
 import type { Facility, PrefectureId } from "@/types/facility";
 import { driveTimeEstimateLabel, haversineDistanceKm } from "@/lib/distance";
+import { formatBBoxParam, parseBBoxParam } from "@/lib/geo-bounds";
 
 interface Props {
   facilities: MapFacility[];
   height?: number;
   userStatus?: UserStatusMap;
   storageKey?: string;
+  enableAreaSearch?: boolean;
 }
 
 export type MapFacility = Pick<
@@ -212,8 +215,12 @@ export default function MapView({
   facilities,
   height = 520,
   storageKey,
+  enableAreaSearch = false,
 }: Props) {
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
+  const searchParams = useSearchParams();
+  const area = enableAreaSearch ? parseBBoxParam(searchParams.get("bbox")) : null;
+  const [initialArea] = useState(() => area);
   const [initialState] = useState(() => readPersistedState(storageKey));
 
   const [currentLocation, setCurrentLocation] =
@@ -357,7 +364,12 @@ export default function MapView({
         </div>
 
         <MapContainer
-          center={initialState?.center ?? DEFAULT_CENTER}
+          bounds={initialArea ? [
+            [initialArea.south, initialArea.west],
+            [initialArea.north, initialArea.east],
+          ] : undefined}
+          boundsOptions={{ maxZoom: 16 }}
+          center={initialArea ? undefined : initialState?.center ?? DEFAULT_CENTER}
           zoom={initialState?.zoom ?? DEFAULT_ZOOM}
           scrollWheelZoom
           style={{ height, width: "100%" }}
@@ -367,11 +379,14 @@ export default function MapView({
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
           <FitBoundsOnChange
-            points={visible}
+            points={placed}
             fitMode={
-              storageKey ? (initialState ? "never" : "initial-only") : "always"
+              area ? "never" : storageKey
+                ? (initialState ? "never" : "initial-only")
+                : "always"
             }
           />
+          {enableAreaSearch && <AreaSearchControl facilities={facilities} />}
           {storageKey && (
             <PersistMapPosition
               onChange={persistState}
@@ -402,6 +417,111 @@ export default function MapView({
   );
 }
 
+// Listen independently of viewport persistence, including on /facilities.
+function AreaSearchControl({
+  facilities,
+}: {
+  facilities: MapFacility[];
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const searchParams = useSearchParams();
+  const [searchState, setSearchState] = useState({ facilities, visible: false });
+  const setShowSearch = useCallback((visible: boolean) => {
+    setSearchState({ facilities, visible });
+  }, [facilities]);
+  const userMovement = useRef(false);
+  const baseline = useRef<L.LatLngBounds | null>(null);
+
+  const updateSearch = useCallback((event: LeafletEvent) => {
+    const map = event.target as L.Map;
+    const bounds = map.getBounds();
+    if (userMovement.current) {
+      const previous = baseline.current;
+      setShowSearch(previous !== null && !bounds.equals(previous, 0.000001));
+    } else {
+      baseline.current = bounds;
+    }
+    if (event.type === "moveend") userMovement.current = false;
+  }, [setShowSearch]);
+
+  const map = useMapEvents({
+    dragstart: () => { userMovement.current = true; },
+    moveend: updateSearch,
+    zoomend: updateSearch,
+  });
+
+  useEffect(() => {
+    baseline.current = map.getBounds();
+    userMovement.current = false;
+    const container = map.getContainer();
+    const markUserMovement = () => { userMovement.current = true; };
+    const markPinch = (event: TouchEvent) => {
+      if (event.touches.length === 2) markUserMovement();
+    };
+    const markZoomControl = (event: MouseEvent) => {
+      if ((event.target as Element).closest(".leaflet-control-zoom")) {
+        markUserMovement();
+      }
+    };
+    const markKeyboard = (event: KeyboardEvent) => {
+      if (["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "+", "-", "="].includes(event.key)) {
+        markUserMovement();
+      }
+    };
+    const resetMovement = () => {
+      userMovement.current = false;
+      baseline.current = map.getBounds();
+      setShowSearch(false);
+    };
+
+    // Capture input before Leaflet starts a zoom. Programmatic moves explicitly
+    // reset this flag, so auto-fit, geolocation and popup auto-pan cannot arm it.
+    container.addEventListener("wheel", markUserMovement, { capture: true, passive: true });
+    container.addEventListener("touchmove", markPinch, { capture: true, passive: true });
+    container.addEventListener("dblclick", markUserMovement, true);
+    container.addEventListener("click", markZoomControl, true);
+    container.addEventListener("keydown", markKeyboard, true);
+    map.on("areasearch:programmaticMove", resetMovement);
+    map.on("autopanstart", resetMovement);
+    return () => {
+      container.removeEventListener("wheel", markUserMovement, true);
+      container.removeEventListener("touchmove", markPinch, true);
+      container.removeEventListener("dblclick", markUserMovement, true);
+      container.removeEventListener("click", markZoomControl, true);
+      container.removeEventListener("keydown", markKeyboard, true);
+      map.off("areasearch:programmaticMove", resetMovement);
+      map.off("autopanstart", resetMovement);
+    };
+  }, [map, setShowSearch]);
+
+  if (searchState.facilities !== facilities || !searchState.visible) return null;
+  return (
+    <button
+      type="button"
+      className="absolute z-[700] top-3 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-bold text-slate-700 shadow-sm hover:bg-slate-50"
+      onClick={(event) => {
+        event.stopPropagation();
+        const bounds = map.getBounds();
+        const params = new URLSearchParams(searchParams);
+        params.set("bbox", formatBBoxParam({
+          north: bounds.getNorth(),
+          south: bounds.getSouth(),
+          east: bounds.getEast(),
+          west: bounds.getWest(),
+        }));
+        params.set("page", "1");
+        baseline.current = bounds;
+        userMovement.current = false;
+        setShowSearch(false);
+        router.push(pathname + "?" + params.toString(), { scroll: false });
+      }}
+    >
+      このエリアを検索
+    </button>
+  );
+}
+
 function FitBoundsOnChange({
   points,
   fitMode,
@@ -418,6 +538,7 @@ function FitBoundsOnChange({
     if (points.length === 0) return;
 
     didInitialFit.current = true;
+    map.fire("areasearch:programmaticMove");
     if (points.length === 1) {
       map.flyTo([points[0].latitude, points[0].longitude], 11, {
         duration: 0.6,
@@ -478,6 +599,7 @@ function CurrentLocationMarker({
 
   useEffect(() => {
     if (source !== "locate") return;
+    map.fire("areasearch:programmaticMove");
     map.setView(position, 13);
   }, [map, position, source]);
 
