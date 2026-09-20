@@ -22,23 +22,58 @@ export default function SeasonalOutingCta({
   placement?: "home" | "events";
 }) {
   const today = getBuildDateString();
+  const eventPrefectures = new Set<string>();
   const selectedEvents = getVisibleEvents(today)
+    .flatMap((event) => {
+      const nextDate = getNextEventDate(event, today);
+      if (nextDate === null) return [];
+      const occurrenceCount = event.occurrence_dates?.length ?? 0;
+      // Date-only strings parse as UTC; count both endpoints of the period.
+      const startDate = event.start_date ?? nextDate;
+      const duration =
+        occurrenceCount ||
+        (Date.parse(event.end_date ?? startDate) - Date.parse(startDate)) /
+          86_400_000 +
+          1;
+      if (occurrenceCount === 0 && duration > 92) return [];
+      return [{ event, nextDate, duration }];
+    })
     .sort((a, b) => {
       const weekendOrder =
-        Number(isThisWeekend(b, today)) - Number(isThisWeekend(a, today));
-      // Undated events follow dated events within each weekend group.
-      const nextA = getNextEventDate(a, today) ?? "9999-12-31";
-      const nextB = getNextEventDate(b, today) ?? "9999-12-31";
+        Number(isThisWeekend(b.event, today)) -
+        Number(isThisWeekend(a.event, today));
       return (
-        weekendOrder || nextA.localeCompare(nextB) || a.id.localeCompare(b.id)
+        weekendOrder ||
+        a.nextDate.localeCompare(b.nextDate) ||
+        a.duration - b.duration ||
+        a.event.id.localeCompare(b.event.id)
       );
     })
-    .slice(0, 3);
+    .filter(({ event }) => {
+      if (eventPrefectures.has(event.prefecture)) return false;
+      eventPrefectures.add(event.prefecture);
+      return true;
+    })
+    .slice(0, 3)
+    .map(({ event }) => event);
+  const facilityPrefectures = new Set<string>();
+  const facilityCategories = new Set<string>();
   const selectedFacilities = getTagFacilities(
     getTagMetaBySlug("seasonal")!,
     visibleFacilities,
   )
     .sort((a, b) => a.id - b.id)
+    .filter((facility) => {
+      if (
+        facilityPrefectures.has(facility.prefecture_id) ||
+        facilityCategories.has(facility.category_id)
+      ) {
+        return false;
+      }
+      facilityPrefectures.add(facility.prefecture_id);
+      facilityCategories.add(facility.category_id);
+      return true;
+    })
     .slice(0, 3);
 
   if (selectedEvents.length === 0 && selectedFacilities.length === 0) {
