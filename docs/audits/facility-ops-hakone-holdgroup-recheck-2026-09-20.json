@@ -1,0 +1,1533 @@
+{
+  "mission": "facility-ops-hakone-holdgroup-recheck",
+  "checked_at": "2026-09-20",
+  "baseline_commit": "7a2871ee",
+  "baseline_commit_full": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+  "parent_mission_audit": "docs/audits/facility-ops-onsen-dayuse-2026-09-19.json",
+  "parent_audit_sha256": "f13af3ace95c8c0b660466de948f8ac1599f8d30e50ddb477cb1bd3bfbd8358b",
+  "scope": "2026-09-19 Missionで観光協会一覧発見のまま個別公式サイト確認を経ずにHOLDされた神奈川県13件の再検証のみ。他候補・他都道府県・他カテゴリは対象外。",
+  "methodology": {
+    "purpose": "既存Owner基準の未実施確認を補完する単発修正。eligibility・taxonomy・定期巡回rotationは変更しない。",
+    "official_verification": "施設公式ドメインの個別ページを確認。検索抽出に本文が出ないページはHTTP HTML本文・フレーム本文・公式埋込み地図の住所属性を直接読んだ。宿泊条件と日帰り条件、旧料金と施行済み改定を区別。",
+    "coordinates": "公式住所と名称を先に確認し、Nominatimの同名・同地域・施設種別の本体を照合。駐車場・バス停・別地域・住所代表点は採用しない。自動補完住所の町字は公式表記を上書きしない。",
+    "duplicate_check": "既存Canon5996行の名称と公式URL、神奈川県行の住所をNFKC・空白/記号・www/末尾スラッシュ正規化で比較。URLパスを保持。同住所・同ドメインでも別施設は区別し、公式施設階層による施設内設備の別名も確認。",
+    "unknown_fields": "公式に年齢区分がない子ども料金は区分未記載として記録し、宿泊料金や第三者情報から補わない。公式未発見は閉業や対象外の断定ではない。",
+    "bbox": {
+      "prefecture": "神奈川県",
+      "order": "south,north,west,east",
+      "values": [
+        34.9571655,
+        35.672897,
+        138.915767,
+        139.8577511
+      ],
+      "source": "https://nominatim.openstreetmap.org/search?q=%E7%A5%9E%E5%A5%88%E5%B7%9D%E7%9C%8C&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+      "osm_relation_id": 2689487
+    },
+    "nominatim_access": "単一スレッド・リクエスト間隔1.2秒以上・識別User-Agentを使用。照会結果をローカルキャッシュ。結果の確認対象は指定13件のみ。"
+  },
+  "aggregate": {
+    "candidates_found": 13,
+    "added": 9,
+    "duplicate": 1,
+    "hold": 3
+  },
+  "baseline_total": 5996,
+  "result_total": 6005,
+  "candidates": [
+    {
+      "name": "天然温泉ご入浴・休憩処 和泉",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/989?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式の日帰り営業・現行大人/子ども料金・時間・湯本657を確認。同名の公衆浴場本体をNominatimで照合し県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://hakone-izumi.info/",
+          "confirms": "施設名と日帰り温泉営業。2026年9月の営業案内へのリンクあり。"
+        },
+        {
+          "url": "https://hakone-izumi.info/wp-content/themes/izumi/price.html",
+          "confirms": "通常入浴料、子ども料金、日帰り営業時間、受付終了時刻、おむつの取れていない幼児の入浴制限。"
+        },
+        {
+          "url": "https://hakone-izumi.info/?p=309",
+          "confirms": "2025年10月1日施行の料金改定。大人1,350円、小人700円で現行料金ページと一致。"
+        },
+        {
+          "url": "https://hakone-izumi.info/wp-content/themes/izumi/access.html",
+          "confirms": "公式埋込み地図のq/hnearに神奈川県足柄下郡箱根町湯本657と和泉を明記。地図の表示中心を施設座標として流用しない。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "天然温泉ご入浴・休憩処 和泉",
+        "address": "神奈川県足柄下郡箱根町湯本657",
+        "address_note": "住所は公式アクセスページの地図q/hnear属性。",
+        "day_use": "confirmed",
+        "adult_fee": "大人1,350円（税込）",
+        "child_fee": "小学6年生まで700円（税込）",
+        "opening_hours": "平日11:00〜21:00、土日祝10:00〜21:00（入浴受付20:00終了）。火曜休館（祝日は営業）、12月31日・1月1日休館。臨時営業は公式案内を確認。",
+        "child_use_notes": "小学6年生まで700円。おむつの取れていない幼児は入浴不可。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "和泉 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%92%8C%E6%B3%89+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 2,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 655127352,
+                "name": "早雲足洗の湯;和泉",
+                "type": "public_bath",
+                "latitude": 35.2316147,
+                "longitude": 139.0992983,
+                "display_name": "早雲足洗の湯;和泉, 国道1号, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 6688401840,
+                "name": "早雲足洗の湯;和泉",
+                "type": "parking",
+                "latitude": 35.2314166,
+                "longitude": 139.0993409,
+                "display_name": "早雲足洗の湯;和泉, 国道1号, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "way",
+          "osm_id": 655127352,
+          "name": "早雲足洗の湯;和泉",
+          "type": "public_bath",
+          "latitude": 35.2316147,
+          "longitude": 139.0992983,
+          "osm_url": "https://www.openstreetmap.org/way/655127352",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "公式の湯本657の和泉と、Nominatimの公衆浴場『早雲足洗の湯;和泉』を照合。近接する同名parking node 6688401840は除外。Nominatimのquarterは塔之澤と補完されるが、正式住所には使用せず公式表記を採用。"
+      },
+      "facility_id": 8271,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式の日帰り営業・現行大人/子ども料金・時間・湯本657を確認。同名の公衆浴場本体をNominatimで照合し県bbox内。既存Canonに同一施設なし。 営業時間: 平日11:00〜21:00、土日祝10:00〜21:00（入浴受付20:00終了）。火曜休館（祝日は営業）、12月31日・1月1日休館。臨時営業は公式案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "天山湯治郷",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/373?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式が日帰りの天山と宿泊の羽衣を区別。天山の料金・子ども区分・時間・住所とNominatimの同名公衆浴場本体を確認し県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://tenzan.jp/",
+          "confirms": "施設名称、湯本茶屋208、現行のお知らせ。"
+        },
+        {
+          "url": "https://tenzan.jp/tenzan/",
+          "confirms": "日帰り利用するひがな湯治天山の入館料・1歳〜小学生の料金・9〜23時（受付22時まで）、内湯・露天風呂。HTML本文の基本情報表を直接取得。"
+        },
+        {
+          "url": "https://tenzan.jp/point/",
+          "confirms": "日帰りの天山・一休と、連泊する羽衣との区別。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "天山湯治郷",
+        "address": "神奈川県足柄下郡箱根町湯本茶屋208",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "大人1,450円（入湯税・消費税込）",
+        "child_fee": "1歳〜小学生700円（税込）",
+        "opening_hours": "ひがな湯治天山9:00〜23:00（最終受付22:00）。定休日なし、12月中旬に5日程度の休館あり。",
+        "child_use_notes": "ひがな湯治天山は1歳〜小学生700円。0歳の入浴可否・料金は取得した料金表では明記なし。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "天山 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E5%B1%B1+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 5,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 636541519,
+                "name": "箱根裏街道",
+                "type": "trunk",
+                "latitude": 35.2876757,
+                "longitude": 138.9627776,
+                "display_name": "箱根裏街道, 東山, 御殿場市, 静岡県, 412-0023, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 974674587,
+                "name": "林道北箱根線（箱根やまなみ林道）",
+                "type": "unclassified",
+                "latitude": 35.162754,
+                "longitude": 138.9859682,
+                "display_name": "林道北箱根線（箱根やまなみ林道）, 山中新田, 三島市, 静岡県, 411-0011, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 379943294,
+                "name": "神郷彦根線",
+                "type": "secondary",
+                "latitude": 35.2498027,
+                "longitude": 136.2429327,
+                "display_name": "神郷彦根線, 戸賀町, 高宮, 彦根市, 滋賀県, 522-8501, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 1058296139,
+                "name": "神郷彦根線",
+                "type": "secondary",
+                "latitude": 35.2537023,
+                "longitude": 136.2461967,
+                "display_name": "神郷彦根線, 小泉町, 高宮, 彦根市, 滋賀県, 522-8501, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 1340991126,
+                "name": "神郷彦根線",
+                "type": "secondary",
+                "latitude": 35.2561569,
+                "longitude": 136.2480601,
+                "display_name": "神郷彦根線, 和田町, 彦根, 彦根市, 滋賀県, 522-8501, 日本"
+              }
+            ]
+          },
+          {
+            "query": "天山湯治郷",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E5%B1%B1%E6%B9%AF%E6%B2%BB%E9%83%B7&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 711405196,
+                "name": "天山湯治郷",
+                "type": "public_bath",
+                "latitude": 35.2249483,
+                "longitude": 139.0886505,
+                "display_name": "天山湯治郷, 神奈川県道732号湯本元箱根線, 湯本茶屋, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              }
+            ]
+          },
+          {
+            "query": "Tenzan Hakone",
+            "url": "https://nominatim.openstreetmap.org/search?q=Tenzan+Hakone&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          }
+        ],
+        "selected": {
+          "osm_type": "way",
+          "osm_id": 711405196,
+          "name": "天山湯治郷",
+          "type": "public_bath",
+          "latitude": 35.2249483,
+          "longitude": 139.0886505,
+          "osm_url": "https://www.openstreetmap.org/way/711405196",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "公式住所の湯本茶屋208と、Nominatimの湯本茶屋・同名public_bath/building:partを照合。『天山 箱根』検索で返った別地域の道路は除外し、施設名全体で再検索。"
+      },
+      "facility_id": 8272,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式が日帰りの天山と宿泊の羽衣を区別。天山の料金・子ども区分・時間・住所とNominatimの同名公衆浴場本体を確認し県bbox内。既存Canonに同一施設なし。 営業時間: ひがな湯治天山9:00〜23:00（最終受付22:00）。定休日なし、12月中旬に5日程度の休館あり。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "箱根大平台温泉組合 姫之湯",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/379?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式フレーム本文で2025年改定後の入浴料金・幼児無料・営業時間・大平台583を確認。Nominatimの同名浴場は公式ドメインと施設内ビュー位置も一致し県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "http://www.himenoyu.net/",
+          "confirms": "観光協会が公式としてリンクするドメイン。HTTP取得できたフレームのSRCがmain01.html。HTTPS取得失敗だけで公式情報なしと判定しない。"
+        },
+        {
+          "url": "http://www.himenoyu.net/main01.html",
+          "confirms": "Shift_JISのフレーム本文を直接取得。名称、大平台583、入浴650円/小学生330円/幼児無料、2025年2月1日料金改定、9:00〜19:30・木曜定休、施設内ビューへの地図リンクを確認。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "箱根大平台温泉組合 姫之湯",
+        "address": "神奈川県足柄下郡箱根町大平台583",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "大人650円（入湯税込）",
+        "child_fee": "小学生330円、幼児無料",
+        "opening_hours": "入浴9:00〜19:30、休憩9:00〜17:00。木曜定休。",
+        "child_use_notes": "小学生330円、幼児無料。湯温43〜44℃の案内があるため、子どもの入浴時は湯温に注意。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "姫之湯 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A7%AB%E4%B9%8B%E6%B9%AF+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 8827004691,
+                "name": "姫之湯",
+                "type": "public_bath",
+                "latitude": 35.2369573,
+                "longitude": 139.0741237,
+                "display_name": "姫之湯, 国道1号, 宮ノ下, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "node",
+          "osm_id": 8827004691,
+          "name": "姫之湯",
+          "type": "public_bath",
+          "latitude": 35.2369573,
+          "longitude": 139.0741237,
+          "osm_url": "https://www.openstreetmap.org/node/8827004691",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "Nominatimの姫之湯はofficial websiteタグがhimenoyu.netと一致。公式施設内ビューの位置35.236897,139.074143とも約7m。自動補完quarterの宮ノ下ではなく、公式の大平台583を正式住所とする。"
+      },
+      "facility_id": 8273,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式フレーム本文で2025年改定後の入浴料金・幼児無料・営業時間・大平台583を確認。Nominatimの同名浴場は公式ドメインと施設内ビュー位置も一致し県bbox内。既存Canonに同一施設なし。 営業時間: 入浴9:00〜19:30、休憩9:00〜17:00。木曜定休。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "天成園",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/5298?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式が宿泊不要の日帰り利用を明示。一般入館料・子ども料金・深夜追加料金・時間・湯本682を確認。Nominatimの同名ホテル建物は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://www.tenseien.co.jp/dayuse/",
+          "confirms": "宿泊不要の日帰り温泉は10時〜翌9時。HTML内の文字情報で一般入館料大人2,730円、小学生1,320円、3歳以上幼児990円を確認。"
+        },
+        {
+          "url": "https://www.tenseien.co.jp/price/",
+          "confirms": "一般入館料、別途大人入湯税50円、深夜24:00〜4:59に滞在する場合の追加料金、大浴場のおむつ制限を確認。"
+        },
+        {
+          "url": "https://www.tenseien.co.jp/access/",
+          "confirms": "箱根湯本温泉天成園、湯本682、公式アクセス地図。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "箱根湯本温泉 天成園",
+        "address": "神奈川県足柄下郡箱根町湯本682",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "中学生以上2,730円＋入湯税50円",
+        "child_fee": "小学生1,320円、3歳〜未就学児990円",
+        "opening_hours": "日帰り温泉10:00〜翌9:00。24:00〜4:59の滞在には深夜料金（大人1,650円、小学生・幼児990円）が別途必要。",
+        "child_use_notes": "小学生1,320円、3歳〜未就学児990円。おむつの取れていない子どもは大浴場不可。中学生以下だけでの利用不可。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "天成園 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%A9%E6%88%90%E5%9C%92+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 5,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 463258305,
+                "name": "箱根湯本温泉　天成園",
+                "type": "hotel",
+                "latitude": 35.2287271,
+                "longitude": 139.0946744,
+                "display_name": "箱根湯本温泉　天成園, 滝通り, 湯本茶屋, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 3945209779,
+                "name": "天成園 カフェプルミエール",
+                "type": "cafe",
+                "latitude": 35.2291561,
+                "longitude": 139.0950756,
+                "display_name": "天成園 カフェプルミエール, 滝通り, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 4585443307,
+                "name": "天成園 屋上浴場",
+                "type": "public_bath",
+                "latitude": 35.22836,
+                "longitude": 139.0941681,
+                "display_name": "天成園 屋上浴場, 滝通り, 湯本茶屋, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 1227363212,
+                "name": "天成園第一駐車場",
+                "type": "parking",
+                "latitude": 35.2294734,
+                "longitude": 139.0955843,
+                "display_name": "天成園第一駐車場, 滝通り, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 1506661041,
+                "name": "天成園第二駐車場",
+                "type": "parking",
+                "latitude": 35.2290261,
+                "longitude": 139.0967491,
+                "display_name": "天成園第二駐車場, 滝通り, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "way",
+          "osm_id": 463258305,
+          "name": "箱根湯本温泉　天成園",
+          "type": "hotel",
+          "latitude": 35.2287271,
+          "longitude": 139.0946744,
+          "osm_url": "https://www.openstreetmap.org/way/463258305",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "Nominatimの箱根湯本温泉天成園のホテル建物。websiteと電話番号が公式と一致。別候補の天成園駐車場は除外。住所は公式の湯本682を採用し、OSMの自動補完quarterは採用しない。"
+      },
+      "facility_id": 8274,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式が宿泊不要の日帰り利用を明示。一般入館料・子ども料金・深夜追加料金・時間・湯本682を確認。Nominatimの同名ホテル建物は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。 営業時間: 日帰り温泉10:00〜翌9:00。24:00〜4:59の滞在には深夜料金（大人1,650円、小学生・幼児990円）が別途必要。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "太閤湯",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/372?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "HOLD",
+      "reason": "宮ノ下223の区営共同浴場について、観光協会ページには公式URLがなく、施設名・住所を指定した検索でも運営主体の公式ドメインを特定できなかった。施設自身による現行大人/子ども料金と時間を確認できず、Nominatimも同名同地域の浴場本体なし。有馬の『太閤の湯』は別施設として除外。閉業・日帰り不可とは断定しない。",
+      "official_sources": [],
+      "verified_fields": {
+        "official_name": null,
+        "address": null,
+        "address_note": null,
+        "day_use": "施設自身の公式発信では未確認。観光協会は区営共同浴場として紹介。",
+        "adult_fee": null,
+        "child_fee": null,
+        "opening_hours": null,
+        "child_use_notes": null
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "not_confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "太閤湯 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%AA%E9%96%A4%E6%B9%AF+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          },
+          {
+            "query": "太閤湯",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%A4%AA%E9%96%A4%E6%B9%AF&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 2,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 3235757461,
+                "name": "太陽讃歌",
+                "type": "pub",
+                "latitude": 35.6582947,
+                "longitude": 139.3387737,
+                "display_name": "太陽讃歌, 8, 東町, 八王子市, 東京都, 192-0082, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 2140012654,
+                "name": "個太郎塾",
+                "type": "training",
+                "latitude": 35.660295,
+                "longitude": 139.413109,
+                "display_name": "個太郎塾, 川崎街道, 高幡, 日野市, 東京都, 191-0031, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": null,
+        "match_notes": "宮ノ下223の区営共同浴場について、観光協会ページには公式URLがなく、施設名・住所を指定した検索でも運営主体の公式ドメインを特定できなかった。施設自身による現行大人/子ども料金と時間を確認できず、Nominatimも同名同地域の浴場本体なし。有馬の『太閤の湯』は別施設として除外。閉業・日帰り不可とは断定しない。"
+      },
+      "official_site_search": {
+        "queries": [
+          "太閤湯 宮ノ下 公式",
+          "\"太閤湯\" \"公式サイト\" 宮ノ下 223"
+        ],
+        "checked_discovery_sources": [
+          "https://www.hakone.or.jp/372?gana=member",
+          "https://machispa.la.coocan.jp/html_hkn_s/taikouyu.htm",
+          "https://onsen.nifty.com/hakone-onsen/onsen005862/"
+        ],
+        "outcome": "独自の運営主体公式ドメインを特定できず。第三者掲載内容で欠損を補わない。"
+      },
+      "discovery_address": "神奈川県足柄下郡箱根町宮ノ下223"
+    },
+    {
+      "name": "箱根高原ホテル",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/2054?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "HOLD",
+      "reason": "公式で名称・元箱根（湖尻）164・日帰り料金（大人1,500円、小学生750円、未就学児無料）・12〜16時を確認済み。ただしNominatimで和英の施設名と箱根町を組み合わせて検索しても同名ホテル本体が得られず、『仙石高原』バス停等しか返らない検索もあった。住所代表点や別施設を採用せず、施設本体座標未確定によりHOLD。",
+      "official_sources": [
+        {
+          "url": "https://hakonekogenhotel.jp/bath/index.html",
+          "confirms": "日帰り入浴12〜16時・受付15:30終了、大人1,500円/小学生750円、所在地元箱根（湖尻）164。貸切風呂は日帰り時間帯休止。"
+        },
+        {
+          "url": "https://hakonekogenhotel.jp/sp/index.html",
+          "confirms": "現行の日帰り営業時間案内、未就学児無料。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "箱根高原ホテル",
+        "address": "神奈川県足柄下郡箱根町元箱根（湖尻）164",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "大人1,500円",
+        "child_fee": "小学生750円、未就学児無料",
+        "opening_hours": "12:00〜16:00（最終受付15:30）、不定休。日帰りは貸切風呂利用不可。",
+        "child_use_notes": null
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "not_confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "箱根高原ホテル",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E7%AE%B1%E6%A0%B9%E9%AB%98%E5%8E%9F%E3%83%9B%E3%83%86%E3%83%AB&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          },
+          {
+            "query": "Hakone Kogen Hotel",
+            "url": "https://nominatim.openstreetmap.org/search?q=Hakone+Kogen+Hotel&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          },
+          {
+            "query": "箱根高原ホテル 箱根町",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E7%AE%B1%E6%A0%B9%E9%AB%98%E5%8E%9F%E3%83%9B%E3%83%86%E3%83%AB+%E7%AE%B1%E6%A0%B9%E7%94%BA&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          },
+          {
+            "query": "Hakone Kogen",
+            "url": "https://nominatim.openstreetmap.org/search?q=Hakone+Kogen&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.915767%2C35.672897%2C139.8577511%2C34.9571655&bounded=1&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 1442567628,
+                "name": "仙石高原",
+                "type": "bus_stop",
+                "latitude": 35.2588821,
+                "longitude": 139.000836,
+                "display_name": "仙石高原, 湯河原箱根仙石原線, 仙石原, 箱根町, 足柄下郡, 神奈川県, 250-0631, 日本"
+              }
+            ]
+          },
+          {
+            "query": "Hakone Kōgen Hotel",
+            "url": "https://nominatim.openstreetmap.org/search?q=Hakone+K%C5%8Dgen+Hotel&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.915767%2C35.672897%2C139.8577511%2C34.9571655&bounded=1&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          },
+          {
+            "query": "箱根高原",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E7%AE%B1%E6%A0%B9%E9%AB%98%E5%8E%9F&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.915767%2C35.672897%2C139.8577511%2C34.9571655&bounded=1&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 2547609448,
+                "name": "翔",
+                "type": "fast_food",
+                "latitude": 35.5696687,
+                "longitude": 139.4011115,
+                "display_name": "翔, 芝溝街道, 淵野辺四丁目, 淵野辺本町, 中央区, 相模原市, 神奈川県, 252-5258, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": null,
+        "match_notes": "公式で名称・元箱根（湖尻）164・日帰り料金（大人1,500円、小学生750円、未就学児無料）・12〜16時を確認済み。ただしNominatimで和英の施設名と箱根町を組み合わせて検索しても同名ホテル本体が得られず、『仙石高原』バス停等しか返らない検索もあった。住所代表点や別施設を採用せず、施設本体座標未確定によりHOLD。"
+      }
+    },
+    {
+      "name": "箱根湯寮",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/674?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "日帰り専門を公式確認。変動する大人料金・小学生料金・未就学児の大浴場不可/貸切条件・営業時間・塔之澤4を確認。Nominatimの同名浴場本体は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://www.hakoneyuryo.jp/",
+          "confirms": "宿泊設備のない日帰り専門施設、塔之澤4。"
+        },
+        {
+          "url": "https://www.hakoneyuryo.jp/price/",
+          "confirms": "大浴場の大人平日1,700〜1,800円/土休日2,000〜2,200円、小学生1,000円。未就学児は大浴場不可、貸切風呂利用。おむつ使用者は入浴不可。平日/土休日営業時間と受付時刻。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "箱根湯寮",
+        "address": "神奈川県足柄下郡箱根町塔之澤4",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "中学生以上 平日1,700〜1,800円・土休日2,000〜2,200円（日別料金表を確認）",
+        "child_fee": "小学生1,000円。未就学児は大浴場不可、貸切個室露天風呂を利用（別料金）",
+        "opening_hours": "大浴場 平日10:00〜20:00（受付19:00まで）、土休日10:00〜21:00（受付20:00まで）。不定期のメンテナンス休館あり。",
+        "child_use_notes": "大浴場は小学生以上、未就学児は貸切個室露天風呂（別料金）を利用。おむつ使用者は入浴不可。貸切風呂は18歳未満のみでの利用不可。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "箱根湯寮",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E7%AE%B1%E6%A0%B9%E6%B9%AF%E5%AF%AE&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "relation",
+                "osm_id": 19360958,
+                "name": "箱根湯寮",
+                "type": "public_bath",
+                "latitude": 35.2338333,
+                "longitude": 139.0958329,
+                "display_name": "箱根湯寮, 国道1号, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "relation",
+          "osm_id": 19360958,
+          "name": "箱根湯寮",
+          "type": "public_bath",
+          "latitude": 35.2338333,
+          "longitude": 139.0958329,
+          "osm_url": "https://www.openstreetmap.org/relation/19360958",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "Nominatimの同名public_bath/buildingと塔之澤の地域が一致。公式URLと電話番号も一致。"
+      },
+      "facility_id": 8275,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "日帰り専門を公式確認。変動する大人料金・小学生料金・未就学児の大浴場不可/貸切条件・営業時間・塔之澤4を確認。Nominatimの同名浴場本体は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。 営業時間: 大浴場 平日10:00〜20:00（受付19:00まで）、土休日10:00〜21:00（受付20:00まで）。不定期のメンテナンス休館あり。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "湯の里 おかだ",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/374?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式で通常/早朝の日帰り受付、現行大人/小学生料金・未就学児無料、時間、湯本茶屋191を確認。Nominatimで駐車場と区別して浴場建物本体を照合し県bbox内。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://www.yunosato-y.jp/",
+          "confirms": "日帰り温泉の名称・湯本茶屋191、通常大人1,650円/小学生800円/未就学児無料、11〜23時・受付22時まで、早朝入浴料金と6〜9時。授乳室・ベビーバス貸出。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "湯の里 おかだ",
+        "address": "神奈川県足柄下郡箱根町湯本茶屋191",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "中学生以上1,650円（早朝入浴1,000円）",
+        "child_fee": "小学生800円（早朝入浴500円）、小学生未満無料",
+        "opening_hours": "通常11:00〜23:00（最終入場22:00）、早朝6:00〜9:00。サウナは12:00〜22:00。休館日は公式案内を確認。",
+        "child_use_notes": "小学生800円、未就学児無料。早朝は小学生500円。公式は混浴6歳まで、授乳室とベビーバス・ベビーソープ貸出を案内。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "湯の里おかだ",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E6%B9%AF%E3%81%AE%E9%87%8C%E3%81%8A%E3%81%8B%E3%81%A0&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 2,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 1227363285,
+                "name": "湯の里おかだ",
+                "type": "public_bath",
+                "latitude": 35.227091,
+                "longitude": 139.0909198,
+                "display_name": "湯の里おかだ, 滝通り, 湯本茶屋, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 711399500,
+                "name": "湯の里おかだ",
+                "type": "parking",
+                "latitude": 35.2272218,
+                "longitude": 139.0911838,
+                "display_name": "湯の里おかだ, 滝通り, 湯本茶屋, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "way",
+          "osm_id": 1227363285,
+          "name": "湯の里おかだ",
+          "type": "public_bath",
+          "latitude": 35.227091,
+          "longitude": 139.0909198,
+          "osm_url": "https://www.openstreetmap.org/way/1227363285",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "公式住所の湯本茶屋191とNominatimの同名public_bath/buildingを照合。同名のparking way 711399500と隣接ホテルは採用しない。"
+      },
+      "facility_id": 8276,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式で通常/早朝の日帰り受付、現行大人/小学生料金・未就学児無料、時間、湯本茶屋191を確認。Nominatimで駐車場と区別して浴場建物本体を照合し県bbox内。既存Canonに同一施設なし。 営業時間: 通常11:00〜23:00（最終入場22:00）、早朝6:00〜9:00。サウナは12:00〜22:00。休館日は公式案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "亀の湯",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/371?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "HOLD",
+      "reason": "二ノ平1080の亀の湯は、施設名・地区を指定した検索と観光協会の個別ページで独自の公式ドメインを特定できず、紹介記事の公式リンクも観光協会へ戻る。第三者記事間で子ども料金等が異なり、施設自身による現行料金・時間を確定できない。Nominatimには同名浴場way 711378707があるが、公式住所照合ができないため採用しない。閉業・日帰り不可とは断定しない。",
+      "official_sources": [],
+      "verified_fields": {
+        "official_name": null,
+        "address": null,
+        "address_note": null,
+        "day_use": "施設自身の公式発信では未確認。観光協会は共同浴場として紹介。",
+        "adult_fee": null,
+        "child_fee": null,
+        "opening_hours": null,
+        "child_use_notes": null
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "not_confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "亀の湯 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E4%BA%80%E3%81%AE%E6%B9%AF+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 2,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 711378707,
+                "name": "二ノ平温泉;亀の湯",
+                "type": "public_bath",
+                "latitude": 35.242613,
+                "longitude": 139.0495507,
+                "display_name": "二ノ平温泉;亀の湯, 関本小涌谷線, 木賀, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 6688287518,
+                "name": "二ノ平温泉;亀の湯",
+                "type": "parking",
+                "latitude": 35.2424717,
+                "longitude": 139.0495415,
+                "display_name": "二ノ平温泉;亀の湯, 関本小涌谷線, 木賀, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": null,
+        "match_notes": "二ノ平1080の亀の湯は、施設名・地区を指定した検索と観光協会の個別ページで独自の公式ドメインを特定できず、紹介記事の公式リンクも観光協会へ戻る。第三者記事間で子ども料金等が異なり、施設自身による現行料金・時間を確定できない。Nominatimには同名浴場way 711378707があるが、公式住所照合ができないため採用しない。閉業・日帰り不可とは断定しない。"
+      },
+      "official_site_search": {
+        "queries": [
+          "亀の湯 箱根 二ノ平 公式",
+          "\"亀の湯\" \"二ノ平\" ホームページ"
+        ],
+        "checked_discovery_sources": [
+          "https://www.hakone.or.jp/371?gana=member",
+          "https://machispa.la.coocan.jp/html_hkn_s/kamenoyu_ni.htm",
+          "https://tabi-mag.jp/kn0245/",
+          "https://travel.yahoo.co.jp/kanko/spot-00033445/"
+        ],
+        "outcome": "独自の運営主体公式ドメインを特定できず。第三者掲載内容で欠損を補わない。"
+      },
+      "discovery_address": "神奈川県足柄下郡箱根町二ノ平1080"
+    },
+    {
+      "name": "かっぱ天国",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/263?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式で日帰り露天風呂900円/小人400円・時間を確認。公式埋込み地図に湯本777を明記。Nominatimの箱根町の同名公衆浴場を照合し県bbox内。小人の年齢区分は未記載として保持。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://www.kappa1059.co.jp/",
+          "confirms": "日帰り入浴を明示。営業時間。公式HTMLの埋込み地図aria-labelとqに湯本777の住所を明記。"
+        },
+        {
+          "url": "https://www.kappa1059.co.jp/施設案内料金",
+          "confirms": "露天風呂の入浴料大人900円/小人400円。貸切風呂45分1,000円は入浴料別途。宿泊料金表とは分けて確認。"
+        },
+        {
+          "url": "https://www.kappa1059.co.jp/アクセス",
+          "confirms": "箱根湯本駅真裏の高台、駅から徒歩3分・フロントまで84段の階段。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "かっぱ天国",
+        "address": "神奈川県足柄下郡箱根町湯本777",
+        "address_note": "住所は公式ページの地図aria-label/q属性。",
+        "day_use": "confirmed",
+        "adult_fee": "大人900円（税込）",
+        "child_fee": "小人400円（税込・日帰り入浴の年齢区分は明記なし）",
+        "opening_hours": "平日10:00〜20:00、土日祝10:00〜21:00。",
+        "child_use_notes": "日帰り入浴は小人400円。日帰り料金欄の年齢区分は明記なしのため、宿泊料金の年齢区分を転用しない。貸切風呂は45分1,000円に各人の入浴料が別途必要。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "かっぱ天国",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E3%81%8B%E3%81%A3%E3%81%B1%E5%A4%A9%E5%9B%BD&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 2,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 2046570832,
+                "name": "かっぱ天国",
+                "type": "public_bath",
+                "latitude": 35.233489,
+                "longitude": 139.1033618,
+                "display_name": "かっぱ天国, 国道1号, 塔之澤, 箱根町, 足柄下郡, 神奈川県, 250-0315, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 824715325,
+                "name": "かっぱ天国",
+                "type": "pub",
+                "latitude": 36.3295504,
+                "longitude": 138.4258616,
+                "display_name": "かっぱ天国, 臼田橋, 本町三丁目, 丁, 小諸市, 長野県, 384-0014, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "node",
+          "osm_id": 2046570832,
+          "name": "かっぱ天国",
+          "type": "public_bath",
+          "latitude": 35.233489,
+          "longitude": 139.1033618,
+          "osm_url": "https://www.openstreetmap.org/node/2046570832",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "公式の湯本777・箱根湯本駅北側の高台という案内と、Nominatimの箱根町の同名public_bathを照合。長野県小諸市の同名pubは除外。自動補完quarterの塔之澤を正式住所へ転用しない。"
+      },
+      "facility_id": 8277,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式で日帰り露天風呂900円/小人400円・時間を確認。公式埋込み地図に湯本777を明記。Nominatimの箱根町の同名公衆浴場を照合し県bbox内。小人の年齢区分は未記載として保持。既存Canonに同一施設なし。 営業時間: 平日10:00〜20:00、土日祝10:00〜21:00。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "川涌の湯 マウントビュー箱根",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/8131?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式で宿泊不要の日帰り90分・大人1,200円/子供630円・11〜15時・仙石原885を確認。Nominatimの同名ホテルPOIと公式地図を照合し県bbox内。子どもの年齢区分は未記載として保持。既存Canonに同一施設なし。",
+      "official_sources": [
+        {
+          "url": "https://www.mvhakone.jp/",
+          "confirms": "施設名、HTMLフッターに神奈川県箱根町仙石原885、公式埋込み地図、2026年9〜10月の日帰り休館日。"
+        },
+        {
+          "url": "https://www.mvhakone.jp/spa/?id=sec3",
+          "confirms": "日帰りの男女別大浴場・露天風呂は90分、大人1,200円/子供630円、11〜15時。貸切は別料金・11〜14時。宿泊者用24時間案内と区別。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "川涌の湯 マウントビュー箱根",
+        "address": "神奈川県足柄下郡箱根町仙石原885",
+        "address_note": "公式の神奈川県箱根町仙石原885に足柄下郡を補完。",
+        "day_use": "confirmed",
+        "adult_fee": "大人1,200円（男女別大浴場・露天風呂、90分）",
+        "child_fee": "子供630円（公式日帰り料金欄に年齢区分の明記なし）",
+        "opening_hours": "日帰り大浴場・露天風呂11:00〜15:00（90分）。日帰り貸切露天風呂11:00〜14:00。火曜定休を基本に臨時変更あり、公式の休館日案内を確認。",
+        "child_use_notes": "日帰り子供630円。施設公式の取得した料金欄では年齢区分がないため、観光協会掲載の2〜11歳を公式確認済みとして転記しない。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [],
+        "matching_facility_id": null,
+        "review": "名称・住所・公式URLを正規化して照合。同一施設の既存行なし。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "マウントビュー箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E3%83%9E%E3%82%A6%E3%83%B3%E3%83%88%E3%83%93%E3%83%A5%E3%83%BC%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 1,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 8834028684,
+                "name": "Mount View Hakone マウントビュー箱根",
+                "type": "hotel",
+                "latitude": 35.2698136,
+                "longitude": 139.0116588,
+                "display_name": "Mount View Hakone マウントビュー箱根, 湯河原箱根仙石原線, 仙石原, 箱根町, 足柄下郡, 神奈川県, 250-0631, 日本"
+              }
+            ]
+          }
+        ],
+        "selected": {
+          "osm_type": "node",
+          "osm_id": 8834028684,
+          "name": "Mount View Hakone マウントビュー箱根",
+          "type": "hotel",
+          "latitude": 35.2698136,
+          "longitude": 139.0116588,
+          "osm_url": "https://www.openstreetmap.org/node/8834028684",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "公式の仙石原885と同地域の同名ホテルPOI。公式埋込み地図の施設名と位置35.2699171,139.0114753も近接し、仙石文化センター前というアクセス案内と整合。"
+      },
+      "facility_id": 8278,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式で宿泊不要の日帰り90分・大人1,200円/子供630円・11〜15時・仙石原885を確認。Nominatimの同名ホテルPOIと公式地図を照合し県bbox内。子どもの年齢区分は未記載として保持。既存Canonに同一施設なし。 営業時間: 日帰り大浴場・露天風呂11:00〜15:00（90分）。日帰り貸切露天風呂11:00〜14:00。火曜定休を基本に臨時変更あり、公式の休館日案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "芦ノ湖畔 蛸川温泉 龍宮殿(龍宮殿本館)",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/3630?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "ADD",
+      "reason": "公式で日帰り本館の営業・2026年4月改定後の一般大人/小学生/幼児料金・時間・元箱根139を確認。Nominatimで宿泊棟/バス停と区別して日帰り浴場本館を照合し県bbox内。同住所の既存箱根園水族館とは別施設。",
+      "official_sources": [
+        {
+          "url": "https://www.princehotels.co.jp/ryuguden/honkan/",
+          "confirms": "本館が日帰り温泉であること、芦ノ湖と富士山を望む入浴施設。"
+        },
+        {
+          "url": "https://www.princehotels.co.jp/ryuguden/honkan_jikan_ryokin/",
+          "confirms": "一般の現行料金・小学生/3歳以上幼児料金・平日9時/土休日8時〜20時（受付19時まで）・3歳未満不可・保護者同伴。宿泊者の6時開始と区別。"
+        },
+        {
+          "url": "https://www.princehotels.co.jp/ryuguden/informations/price_revision/",
+          "confirms": "2026年4月1日料金改定。一般大人2,300/2,600円、小学生1,300/1,600円、幼児700/1,000円で現行料金表と一致。"
+        },
+        {
+          "url": "https://www.princehotels.co.jp/ryuguden/honkan_access2026/",
+          "confirms": "日帰り温泉本館の名称・元箱根139・電話0460-83-1126。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "絶景日帰り温泉 龍宮殿本館",
+        "address": "神奈川県足柄下郡箱根町元箱根139",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "中学生以上 平日2,300円・土休日2,600円（消費税・入湯税込）",
+        "child_fee": "小学生 平日1,300円・土休日1,600円、3歳〜未就学児 平日700円・土休日1,000円。3歳未満入浴不可",
+        "opening_hours": "日帰り 平日9:00〜20:00、土休日8:00〜20:00（最終受付19:00）。宿泊者専用の6:00開始は日帰りに適用しない。",
+        "child_use_notes": "3歳未満入浴不可。小学生以下は保護者同伴。7歳以上または身長120cm以上は男女の混浴不可。タオル等は別料金。"
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [
+          7008
+        ],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [
+          840,
+          7008
+        ],
+        "matching_facility_id": null,
+        "review": "住所・運営ドメインを共有する7008は箱根園水族館。浴場とは名称・用途・公式URLパスが異なるため除外。"
+      },
+      "coordinate_verification": {
+        "status": "confirmed",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "龍宮殿",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E9%BE%8D%E5%AE%AE%E6%AE%BF&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 5,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "node",
+                "osm_id": 3957980515,
+                "name": "龍宮寺",
+                "type": "place_of_worship",
+                "latitude": 33.5945042,
+                "longitude": 130.4134048,
+                "display_name": "龍宮寺, 博多停車場線, 博多駅前二丁目, 冷泉町, 博多区, 福岡市, 福岡県, 812-0025, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 725734287,
+                "name": "上宮王院太子殿 (本堂)",
+                "type": "yes",
+                "latitude": 35.0149064,
+                "longitude": 135.7073046,
+                "display_name": "上宮王院太子殿 (本堂), 花園停車場広隆寺線, 太秦垣内町, 御室岡ノ裾町, 右京区, 京都市, 京都府, 616-0000, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 597995416,
+                "name": "神殿公園",
+                "type": "park",
+                "latitude": 34.9381788,
+                "longitude": 137.1808063,
+                "display_name": "神殿公園, 竜美新町, 岡崎市, 愛知県, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 739741771,
+                "name": "湊御殿公園",
+                "type": "park",
+                "latitude": 34.2174361,
+                "longitude": 135.1584995,
+                "display_name": "湊御殿公園, 出口新端ノ丁, 和歌山市, 和歌山県, 640-8511, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 1131080678,
+                "name": "宮平発電所",
+                "type": "industrial",
+                "latitude": 35.950699,
+                "longitude": 138.9328038,
+                "display_name": "宮平発電所, 大滝, 秩父市, 埼玉県, 日本"
+              }
+            ]
+          },
+          {
+            "query": "龍宮殿 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E9%BE%8D%E5%AE%AE%E6%AE%BF+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 3,
+            "error": null,
+            "results": [
+              {
+                "osm_type": "way",
+                "osm_id": 835174708,
+                "name": "芦ノ湖畔 蛸川温泉 龍宮殿",
+                "type": "hotel",
+                "latitude": 35.2116243,
+                "longitude": 139.0108791,
+                "display_name": "芦ノ湖畔 蛸川温泉 龍宮殿, Koyama Street, 元箱根, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "way",
+                "osm_id": 835174712,
+                "name": "絶景日帰り温泉 龍宮殿本館",
+                "type": "public_bath",
+                "latitude": 35.2102411,
+                "longitude": 139.0112126,
+                "display_name": "絶景日帰り温泉 龍宮殿本館, Koyama Street, 元箱根, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              },
+              {
+                "osm_type": "node",
+                "osm_id": 4380262592,
+                "name": "龍宮殿前",
+                "type": "bus_stop",
+                "latitude": 35.2112529,
+                "longitude": 139.0116031,
+                "display_name": "龍宮殿前, Koyama Street, 元箱根, 箱根町, 足柄下郡, 神奈川県, 250-0398, 日本"
+              }
+            ]
+          },
+          {
+            "query": "Ryuguden",
+            "url": "https://nominatim.openstreetmap.org/search?q=Ryuguden&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&viewbox=138.90%2C35.67%2C139.82%2C35.12&bounded=1&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          }
+        ],
+        "selected": {
+          "osm_type": "way",
+          "osm_id": 835174712,
+          "name": "絶景日帰り温泉 龍宮殿本館",
+          "type": "public_bath",
+          "latitude": 35.2102411,
+          "longitude": 139.0112126,
+          "osm_url": "https://www.openstreetmap.org/way/835174712",
+          "matched_region": "神奈川県箱根町",
+          "prefecture_bbox_pass": true
+        },
+        "match_notes": "元箱根の『絶景日帰り温泉 龍宮殿本館』public_bathを選択。宿泊棟way 835174708と龍宮殿前バス停node 4380262592は除外。既存id7008の箱根園水族館は同じ住所/運営ドメインでも別名称・別用途・別公式パスのため重複ではない。"
+      },
+      "facility_id": 8279,
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "verification_notes": "公式で日帰り本館の営業・2026年4月改定後の一般大人/小学生/幼児料金・時間・元箱根139を確認。Nominatimで宿泊棟/バス停と区別して日帰り浴場本館を照合し県bbox内。同住所の既存箱根園水族館とは別施設。 営業時間: 日帰り 平日9:00〜20:00、土休日8:00〜20:00（最終受付19:00）。宿泊者専用の6:00開始は日帰りに適用しない。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "name": "別邸 やすらぎ",
+      "prefecture_id": "kanagawa",
+      "discovery_source": "https://www.hakone.or.jp/8240?gana=member",
+      "prior_disposition": "HOLD",
+      "disposition": "DUPLICATE",
+      "reason": "公式がユネッサン『森の湯』内の貸切風呂6室として位置づけ、既存facility_id 825（箱根小涌園ユネッサン）と正規化住所二ノ平1297・公式ドメインが一致。別の独立施設ではなく既存施設内の入浴設備としてDUPLICATE。料金・予約枠・家族利用は公式で確認済み。既存825の行は変更しない。",
+      "official_sources": [
+        {
+          "url": "https://www.yunessun.com/morinoyu/reserved/",
+          "confirms": "既存ユネッサンの森の湯に含まれる貸切風呂6室として別邸やすらぎを掲載。料金7,000〜11,000円、11〜20時内の90/120分枠、二ノ平1297。"
+        },
+        {
+          "url": "https://www.yunessun.com/morinoyu/",
+          "confirms": "森の湯をユネッサンの本格日帰り温泉エリアとして紹介。"
+        },
+        {
+          "url": "https://www.yunessun.com/news/detail/?CN=434322",
+          "confirms": "2026年9月18日の公式案内。子ども連れで利用できる森の湯内の貸切風呂、WEB事前予約制。"
+        }
+      ],
+      "verified_fields": {
+        "official_name": "別邸 やすらぎ",
+        "address": "神奈川県足柄下郡箱根町二ノ平1297",
+        "address_note": null,
+        "day_use": "confirmed",
+        "adult_fee": "貸切室単位7,000〜11,000円（税込）。90分枠7,000円〜、120分枠10,000円〜",
+        "child_fee": "室単位料金。公式は子ども連れの利用を案内し、独立した小人入浴料金は掲載していない。",
+        "opening_hours": "壱〜参は11:00〜12:30、13:00〜15:00、15:30〜17:30、18:00〜20:00。肆〜陸は11:00〜13:00、13:30〜15:30、16:00〜18:00、18:30〜20:00。WEB予約制。",
+        "child_use_notes": null
+      },
+      "duplicate_check": {
+        "baseline_commit": "7a2871ee02cea9fdaa56d4aee3d060764c75d998",
+        "baseline_rows_compared": 5996,
+        "normalized_name_matches": [],
+        "normalized_address_matches": [
+          825
+        ],
+        "normalized_official_url_matches": [],
+        "same_official_host_matches_in_kanagawa": [
+          825
+        ],
+        "matching_facility_id": 825,
+        "review": "名称は施設内設備の別名。公式の施設階層（ユネッサン→森の湯→別邸やすらぎ）、二ノ平1297、yunessun.comが既存825と一致。"
+      },
+      "coordinate_verification": {
+        "status": "not_required_for_duplicate",
+        "provider": "Nominatim / OpenStreetMap",
+        "attribution": "© OpenStreetMap contributors, ODbL 1.0; https://www.openstreetmap.org/copyright",
+        "query_attempts": [
+          {
+            "query": "別邸 やすらぎ 箱根",
+            "url": "https://nominatim.openstreetmap.org/search?q=%E5%88%A5%E9%82%B8+%E3%82%84%E3%81%99%E3%82%89%E3%81%8E+%E7%AE%B1%E6%A0%B9&format=jsonv2&addressdetails=1&namedetails=1&extratags=1&countrycodes=jp&limit=5",
+            "result_count": 0,
+            "error": null,
+            "results": []
+          }
+        ],
+        "selected": null,
+        "match_notes": "既存施設内設備として重複排除。別邸単独のNominatim検索は0件。既存Canon座標の再検証・変更は対象外。"
+      },
+      "duplicate_facility_id": 825
+    }
+  ],
+  "additions": [
+    {
+      "facility_id": 8271,
+      "name": "天然温泉ご入浴・休憩処 和泉",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://hakone-izumi.info/",
+        "https://hakone-izumi.info/wp-content/themes/izumi/price.html",
+        "https://hakone-izumi.info/?p=309",
+        "https://hakone-izumi.info/wp-content/themes/izumi/access.html"
+      ],
+      "address": "神奈川県足柄下郡箱根町湯本657",
+      "adult_fee": "大人1,350円（税込）",
+      "child_fee": "小学6年生まで700円（税込）",
+      "latitude": 35.2316147,
+      "longitude": 139.0992983,
+      "verification_notes": "公式の日帰り営業・現行大人/子ども料金・時間・湯本657を確認。同名の公衆浴場本体をNominatimで照合し県bbox内。既存Canonに同一施設なし。 営業時間: 平日11:00〜21:00、土日祝10:00〜21:00（入浴受付20:00終了）。火曜休館（祝日は営業）、12月31日・1月1日休館。臨時営業は公式案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8272,
+      "name": "天山湯治郷",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://tenzan.jp/",
+        "https://tenzan.jp/tenzan/",
+        "https://tenzan.jp/point/"
+      ],
+      "address": "神奈川県足柄下郡箱根町湯本茶屋208",
+      "adult_fee": "大人1,450円（入湯税・消費税込）",
+      "child_fee": "1歳〜小学生700円（税込）",
+      "latitude": 35.2249483,
+      "longitude": 139.0886505,
+      "verification_notes": "公式が日帰りの天山と宿泊の羽衣を区別。天山の料金・子ども区分・時間・住所とNominatimの同名公衆浴場本体を確認し県bbox内。既存Canonに同一施設なし。 営業時間: ひがな湯治天山9:00〜23:00（最終受付22:00）。定休日なし、12月中旬に5日程度の休館あり。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8273,
+      "name": "箱根大平台温泉組合 姫之湯",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "http://www.himenoyu.net/",
+        "http://www.himenoyu.net/main01.html"
+      ],
+      "address": "神奈川県足柄下郡箱根町大平台583",
+      "adult_fee": "大人650円（入湯税込）",
+      "child_fee": "小学生330円、幼児無料",
+      "latitude": 35.2369573,
+      "longitude": 139.0741237,
+      "verification_notes": "公式フレーム本文で2025年改定後の入浴料金・幼児無料・営業時間・大平台583を確認。Nominatimの同名浴場は公式ドメインと施設内ビュー位置も一致し県bbox内。既存Canonに同一施設なし。 営業時間: 入浴9:00〜19:30、休憩9:00〜17:00。木曜定休。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8274,
+      "name": "箱根湯本温泉 天成園",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.tenseien.co.jp/dayuse/",
+        "https://www.tenseien.co.jp/price/",
+        "https://www.tenseien.co.jp/access/"
+      ],
+      "address": "神奈川県足柄下郡箱根町湯本682",
+      "adult_fee": "中学生以上2,730円＋入湯税50円",
+      "child_fee": "小学生1,320円、3歳〜未就学児990円",
+      "latitude": 35.2287271,
+      "longitude": 139.0946744,
+      "verification_notes": "公式が宿泊不要の日帰り利用を明示。一般入館料・子ども料金・深夜追加料金・時間・湯本682を確認。Nominatimの同名ホテル建物は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。 営業時間: 日帰り温泉10:00〜翌9:00。24:00〜4:59の滞在には深夜料金（大人1,650円、小学生・幼児990円）が別途必要。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8275,
+      "name": "箱根湯寮",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.hakoneyuryo.jp/",
+        "https://www.hakoneyuryo.jp/price/"
+      ],
+      "address": "神奈川県足柄下郡箱根町塔之澤4",
+      "adult_fee": "中学生以上 平日1,700〜1,800円・土休日2,000〜2,200円（日別料金表を確認）",
+      "child_fee": "小学生1,000円。未就学児は大浴場不可、貸切個室露天風呂を利用（別料金）",
+      "latitude": 35.2338333,
+      "longitude": 139.0958329,
+      "verification_notes": "日帰り専門を公式確認。変動する大人料金・小学生料金・未就学児の大浴場不可/貸切条件・営業時間・塔之澤4を確認。Nominatimの同名浴場本体は公式URL/電話一致、県bbox内。既存Canonに同一施設なし。 営業時間: 大浴場 平日10:00〜20:00（受付19:00まで）、土休日10:00〜21:00（受付20:00まで）。不定期のメンテナンス休館あり。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8276,
+      "name": "湯の里 おかだ",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.yunosato-y.jp/"
+      ],
+      "address": "神奈川県足柄下郡箱根町湯本茶屋191",
+      "adult_fee": "中学生以上1,650円（早朝入浴1,000円）",
+      "child_fee": "小学生800円（早朝入浴500円）、小学生未満無料",
+      "latitude": 35.227091,
+      "longitude": 139.0909198,
+      "verification_notes": "公式で通常/早朝の日帰り受付、現行大人/小学生料金・未就学児無料、時間、湯本茶屋191を確認。Nominatimで駐車場と区別して浴場建物本体を照合し県bbox内。既存Canonに同一施設なし。 営業時間: 通常11:00〜23:00（最終入場22:00）、早朝6:00〜9:00。サウナは12:00〜22:00。休館日は公式案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8277,
+      "name": "かっぱ天国",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.kappa1059.co.jp/",
+        "https://www.kappa1059.co.jp/施設案内料金",
+        "https://www.kappa1059.co.jp/アクセス"
+      ],
+      "address": "神奈川県足柄下郡箱根町湯本777",
+      "adult_fee": "大人900円（税込）",
+      "child_fee": "小人400円（税込・日帰り入浴の年齢区分は明記なし）",
+      "latitude": 35.233489,
+      "longitude": 139.1033618,
+      "verification_notes": "公式で日帰り露天風呂900円/小人400円・時間を確認。公式埋込み地図に湯本777を明記。Nominatimの箱根町の同名公衆浴場を照合し県bbox内。小人の年齢区分は未記載として保持。既存Canonに同一施設なし。 営業時間: 平日10:00〜20:00、土日祝10:00〜21:00。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8278,
+      "name": "川涌の湯 マウントビュー箱根",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.mvhakone.jp/",
+        "https://www.mvhakone.jp/spa/?id=sec3"
+      ],
+      "address": "神奈川県足柄下郡箱根町仙石原885",
+      "adult_fee": "大人1,200円（男女別大浴場・露天風呂、90分）",
+      "child_fee": "子供630円（公式日帰り料金欄に年齢区分の明記なし）",
+      "latitude": 35.2698136,
+      "longitude": 139.0116588,
+      "verification_notes": "公式で宿泊不要の日帰り90分・大人1,200円/子供630円・11〜15時・仙石原885を確認。Nominatimの同名ホテルPOIと公式地図を照合し県bbox内。子どもの年齢区分は未記載として保持。既存Canonに同一施設なし。 営業時間: 日帰り大浴場・露天風呂11:00〜15:00（90分）。日帰り貸切露天風呂11:00〜14:00。火曜定休を基本に臨時変更あり、公式の休館日案内を確認。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "facility_id": 8279,
+      "name": "絶景日帰り温泉 龍宮殿本館",
+      "prefecture_id": "kanagawa",
+      "category_id": "experience",
+      "category_reason": "日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。",
+      "official_sources": [
+        "https://www.princehotels.co.jp/ryuguden/honkan/",
+        "https://www.princehotels.co.jp/ryuguden/honkan_jikan_ryokin/",
+        "https://www.princehotels.co.jp/ryuguden/informations/price_revision/",
+        "https://www.princehotels.co.jp/ryuguden/honkan_access2026/"
+      ],
+      "address": "神奈川県足柄下郡箱根町元箱根139",
+      "adult_fee": "中学生以上 平日2,300円・土休日2,600円（消費税・入湯税込）",
+      "child_fee": "小学生 平日1,300円・土休日1,600円、3歳〜未就学児 平日700円・土休日1,000円。3歳未満入浴不可",
+      "latitude": 35.2102411,
+      "longitude": 139.0112126,
+      "verification_notes": "公式で日帰り本館の営業・2026年4月改定後の一般大人/小学生/幼児料金・時間・元箱根139を確認。Nominatimで宿泊棟/バス停と区別して日帰り浴場本館を照合し県bbox内。同住所の既存箱根園水族館とは別施設。 営業時間: 日帰り 平日9:00〜20:00、土休日8:00〜20:00（最終受付19:00）。宿泊者専用の6:00開始は日帰りに適用しない。 日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    }
+  ],
+  "coverage_stamp_resync": {
+    "enumeration": "再列挙: git grep -lによるstamp-key検索、および依存/ビルド/Gitディレクトリを除外したworkspace JSON全文検索（ignored JSONも含む）。コード・説明文はstamp更新対象外。",
+    "target_file_count": 5,
+    "files": [
+      {
+        "path": "data/asoview_facility_actions.json",
+        "hash_fields": 1,
+        "count_fields": 1
+      },
+      {
+        "path": "data/rakuten_facility_actions.json",
+        "hash_fields": 1,
+        "count_fields": 1
+      },
+      {
+        "path": "docs/audits/asoview-reverse-discovery-candidates-2026-08-26.json",
+        "hash_fields": 1,
+        "count_fields": 1
+      },
+      {
+        "path": "docs/audits/facility-ops-verification-groupb-2026-09-16.json",
+        "hash_fields": 1,
+        "count_fields": 0
+      },
+      {
+        "path": "docs/audits/rakuten-facility-discovery-candidates-2026-08-26.json",
+        "hash_fields": 1,
+        "count_fields": 1
+      }
+    ],
+    "hash_algorithm": "SHA-256(JSON.stringify(JSON.parse(Canon UTF-8))) — existing validator convention",
+    "previous_canon_digest": "2d6a2e857051a98d1a0b1c58fb647d20af1a9a84bb54250b6aad099dbdf88ab9",
+    "new_canon_digest": "6f9f831490f4f9d79411420abacb92849d11c1503bd0d76cbb46c8132c399ce6",
+    "previous_canon_count": 5996,
+    "new_canon_count": 6005,
+    "scope_note": "Canon参照hash/countの同期のみ。各coverage監査のaudited_at・候補判定・オファー・履歴は更新せず、この9件のaffiliate等再監査済みを意味しない。"
+  },
+  "verification": {
+    "existing_facility_rows_unchanged": true,
+    "existing_facility_rows_compared": 5996,
+    "new_facility_ids": [
+      8271,
+      8272,
+      8273,
+      8274,
+      8275,
+      8276,
+      8277,
+      8278,
+      8279
+    ],
+    "registry_added_ids": [
+      8271,
+      8272,
+      8273,
+      8274,
+      8275,
+      8276,
+      8277,
+      8278,
+      8279
+    ],
+    "parent_audit_unchanged": true,
+    "source_of_assertions": "apply-time assertions compare original parsed rows and original parent file SHA; final precommit checks and lint/build are reported in the PR."
+  },
+  "authority_boundary": "PR openで引継ぎ。merge、Cloudflare deploy、本番確認、PM private Memory/ledgerの読み書きは実施しない。",
+  "parent_audit_hash_basis": "SHA-256 of baseline Git blob bytes (LF); Windows checkout CRLF is ignored when comparing unchanged content."
+}
