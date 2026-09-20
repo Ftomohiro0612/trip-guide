@@ -4,7 +4,7 @@ import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
 import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
-import SilverWeekCta from "@/components/SilverWeekCta";
+import SeasonalOutingCta from "@/components/SeasonalOutingCta";
 import {
   eventPrefectures,
   getBuildDateString,
@@ -63,7 +63,7 @@ export default function EventsIndexPage() {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
-        <SilverWeekCta />
+        <SeasonalOutingCta placement="events" />
         <AffiliateExperienceCta placement="events_index" />
 
         <ResponsiveResultsMap
