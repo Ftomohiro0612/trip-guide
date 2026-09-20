@@ -2,7 +2,7 @@
   "metadata": {
     "site_name": "trip-guide.net",
     "site_description": "全国47都道府県の子供向け遊び場検索サイト",
-    "total_facilities": 5996,
+    "total_facilities": 6005,
     "prefectures": [
       {
         "id": "shizuoka",
@@ -27,7 +27,7 @@
       {
         "id": "kanagawa",
         "name": "神奈川県",
-        "count": 204
+        "count": 213
       },
       {
         "id": "chiba",
@@ -314,7 +314,7 @@
       {
         "id": "experience",
         "name": "体験",
-        "count": 612
+        "count": 621
       },
       {
         "id": "nature-park",
@@ -318848,6 +318848,420 @@
       "source_checked_at": "2026-09-19",
       "data_quality_status": "confirmed",
       "source_notes": "公式一次情報で名称・所在地・日帰り入浴と料金を確認。公式住所を先に確認し、Nominatimの同名・同地域の施設本体（OSM way 645318189）を照合、県bbox検証。入浴中心のためOwner指定のexperienceを使用。特定日料金や臨時休業は公式案内を確認。"
+    },
+    {
+      "id": 8271,
+      "slug": "facility-8271",
+      "name": "天然温泉ご入浴・休憩処 和泉",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町湯本657",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,350円（税込）",
+      "child_fee": "小学6年生まで700円（税込）",
+      "child_use_status": "confirmed",
+      "child_use_notes": "小学6年生まで700円。おむつの取れていない幼児は入浴不可。",
+      "description": "箱根湯本にある日帰り温泉。複数の源泉を使った内湯や露天風呂で、立ち寄り入浴を楽しめる。小学6年生までの子ども料金があり、おむつの取れていない幼児は入浴できない。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://hakone-izumi.info/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "源泉の異なる湯船を巡る",
+        "露天風呂に入る"
+      ],
+      "unique_selling_point": "箱根湯本の複数の源泉を使い、内湯と露天風呂を楽しむ日帰り温泉。",
+      "experience_tags": [
+        "源泉の異なる湯船を巡る",
+        "露天風呂に入る"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2316147,
+      "longitude": 139.0992983,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://hakone-izumi.info/,https://hakone-izumi.info/wp-content/themes/izumi/price.html,https://hakone-izumi.info/?p=309,https://hakone-izumi.info/wp-content/themes/izumi/access.html",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 平日11:00〜21:00、土日祝10:00〜21:00（入浴受付20:00終了）。火曜休館（祝日は営業）、12月31日・1月1日休館。臨時営業は公式案内を確認。 Nominatimの同名・同地域の施設本体（OSM way 655127352）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8272,
+      "slug": "facility-8272",
+      "name": "天山湯治郷",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町湯本茶屋208",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,450円（入湯税・消費税込）",
+      "child_fee": "1歳〜小学生700円（税込）",
+      "child_use_status": "confirmed",
+      "child_use_notes": "ひがな湯治天山は1歳〜小学生700円。0歳の入浴可否・料金は取得した料金表では明記なし。",
+      "description": "箱根・奥湯本の須雲川沿いにある温泉施設。日帰り利用の「ひがな湯治 天山」では、内湯や露天風呂に加え、食事や休憩の時間も過ごせる。1歳から小学生までの子ども料金が設定されている。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://tenzan.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "内湯と露天風呂を巡る",
+        "入浴後に休憩する"
+      ],
+      "unique_selling_point": "奥湯本の谷あいで、湯治場の内湯と露天風呂を日帰りで利用できる。",
+      "experience_tags": [
+        "内湯と露天風呂を巡る",
+        "入浴後に休憩する"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2249483,
+      "longitude": 139.0886505,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://tenzan.jp/,https://tenzan.jp/tenzan/,https://tenzan.jp/point/",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: ひがな湯治天山9:00〜23:00（最終受付22:00）。定休日なし、12月中旬に5日程度の休館あり。 Nominatimの同名・同地域の施設本体（OSM way 711405196）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8273,
+      "slug": "facility-8273",
+      "name": "箱根大平台温泉組合 姫之湯",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町大平台583",
+      "indoor_outdoor": "屋内",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人650円（入湯税込）",
+      "child_fee": "小学生330円、幼児無料",
+      "child_use_status": "confirmed",
+      "child_use_notes": "小学生330円、幼児無料。湯温43〜44℃の案内があるため、子どもの入浴時は湯温に注意。",
+      "description": "大平台温泉組合が運営する日帰り入浴施設。男女別の湯船と休憩室を備え、小学生料金と幼児無料の設定がある。公式案内の湯温は43〜44℃のため、子どもと利用する際は湯の熱さに気を配りたい。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "http://www.himenoyu.net/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "大平台の温泉に入る",
+        "休憩室でくつろぐ"
+      ],
+      "unique_selling_point": "大平台の温泉を男女別の浴場で楽しめる、温泉組合の日帰り施設。",
+      "experience_tags": [
+        "大平台の温泉に入る",
+        "休憩室でくつろぐ"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2369573,
+      "longitude": 139.0741237,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "http://www.himenoyu.net/,http://www.himenoyu.net/main01.html",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 入浴9:00〜19:30、休憩9:00〜17:00。木曜定休。 Nominatimの同名・同地域の施設本体（OSM node 8827004691）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8274,
+      "slug": "facility-8274",
+      "name": "箱根湯本温泉 天成園",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町湯本682",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "中学生以上2,730円＋入湯税50円",
+      "child_fee": "小学生1,320円、3歳〜未就学児990円",
+      "child_use_status": "confirmed",
+      "child_use_notes": "小学生1,320円、3歳〜未就学児990円。おむつの取れていない子どもは大浴場不可。中学生以下だけでの利用不可。",
+      "description": "箱根湯本の温泉宿で、宿泊せずに日帰り入浴も利用できる。屋上天空大露天風呂や休憩スペースがあり、庭園の散策と組み合わせて過ごせる。小学生と幼児の料金があり、深夜帯の滞在には追加料金が掛かる。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://www.tenseien.co.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "屋上の露天風呂に入る",
+        "庭園を散策する"
+      ],
+      "unique_selling_point": "屋上の露天風呂と庭園を備え、日帰りでも長時間滞在できる温泉宿。",
+      "experience_tags": [
+        "屋上の露天風呂に入る",
+        "庭園を散策する"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2287271,
+      "longitude": 139.0946744,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.tenseien.co.jp/dayuse/,https://www.tenseien.co.jp/price/,https://www.tenseien.co.jp/access/",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 日帰り温泉10:00〜翌9:00。24:00〜4:59の滞在には深夜料金（大人1,650円、小学生・幼児990円）が別途必要。 Nominatimの同名・同地域の施設本体（OSM way 463258305）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8275,
+      "slug": "facility-8275",
+      "name": "箱根湯寮",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町塔之澤4",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "中学生以上 平日1,700〜1,800円・土休日2,000〜2,200円（日別料金表を確認）",
+      "child_fee": "小学生1,000円。未就学児は大浴場不可、貸切個室露天風呂を利用（別料金）",
+      "child_use_status": "confirmed",
+      "child_use_notes": "大浴場は小学生以上、未就学児は貸切個室露天風呂（別料金）を利用。おむつ使用者は入浴不可。貸切風呂は18歳未満のみでの利用不可。",
+      "description": "箱根湯本の里山にある日帰り温泉。内湯や露天風呂を備えた大浴場と、貸切個室露天風呂を利用できる。大浴場は小学生以上が対象で、未就学児は貸切風呂の利用となる。",
+      "target_age": "大浴場は小学生以上、未就学児は貸切風呂の利用条件を確認",
+      "url": "https://www.hakoneyuryo.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "里山を眺めて露天風呂に入る",
+        "貸切個室露天風呂で過ごす"
+      ],
+      "unique_selling_point": "里山の景色を望む大浴場と、19室の貸切個室露天風呂を備える日帰り温泉。",
+      "experience_tags": [
+        "里山を眺めて露天風呂に入る",
+        "貸切個室露天風呂で過ごす"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2338333,
+      "longitude": 139.0958329,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.hakoneyuryo.jp/,https://www.hakoneyuryo.jp/price/",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 大浴場 平日10:00〜20:00（受付19:00まで）、土休日10:00〜21:00（受付20:00まで）。不定期のメンテナンス休館あり。 Nominatimの同名・同地域の施設本体（OSM relation 19360958）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8276,
+      "slug": "facility-8276",
+      "name": "湯の里 おかだ",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町湯本茶屋191",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "中学生以上1,650円（早朝入浴1,000円）",
+      "child_fee": "小学生800円（早朝入浴500円）、小学生未満無料",
+      "child_use_status": "confirmed",
+      "child_use_notes": "小学生800円、未就学児無料。早朝は小学生500円。公式は混浴6歳まで、授乳室とベビーバス・ベビーソープ貸出を案内。",
+      "description": "箱根湯本の湯坂山中腹にある日帰り温泉。山々を眺める露天風呂や休憩処があり、通常の入浴に加えて早朝入浴も利用できる。小学生料金と未就学児無料の設定があり、授乳室やベビーバスの貸出も案内されている。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://www.yunosato-y.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "山々を眺めて露天風呂に入る",
+        "湯上がりに休憩する"
+      ],
+      "unique_selling_point": "箱根の山々を眺める露天風呂と、早朝にも立ち寄れる入浴時間を備える。",
+      "experience_tags": [
+        "山々を眺めて露天風呂に入る",
+        "湯上がりに休憩する"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.227091,
+      "longitude": 139.0909198,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.yunosato-y.jp/",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 通常11:00〜23:00（最終入場22:00）、早朝6:00〜9:00。サウナは12:00〜22:00。休館日は公式案内を確認。 Nominatimの同名・同地域の施設本体（OSM way 1227363285）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8277,
+      "slug": "facility-8277",
+      "name": "かっぱ天国",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町湯本777",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人900円（税込）",
+      "child_fee": "小人400円（税込・日帰り入浴の年齢区分は明記なし）",
+      "child_use_status": "confirmed",
+      "child_use_notes": "日帰り入浴は小人400円。日帰り料金欄の年齢区分は明記なしのため、宿泊料金の年齢区分を転用しない。貸切風呂は45分1,000円に各人の入浴料が別途必要。",
+      "description": "箱根湯本駅の裏手の高台にある温泉施設。日帰りで露天風呂や足湯、別料金の貸切風呂を利用できる。小人料金があり、フロントまでは84段の階段を上るため、荷物を少なくして訪れたい。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://www.kappa1059.co.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "高台の露天風呂に入る",
+        "足湯から湯本の町並みを眺める"
+      ],
+      "unique_selling_point": "箱根湯本駅近くの高台で、露天風呂と町並みを見下ろす足湯を楽しめる。",
+      "experience_tags": [
+        "高台の露天風呂に入る",
+        "足湯から湯本の町並みを眺める"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.233489,
+      "longitude": 139.1033618,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.kappa1059.co.jp/,https://www.kappa1059.co.jp/施設案内料金,https://www.kappa1059.co.jp/アクセス",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 平日10:00〜20:00、土日祝10:00〜21:00。 Nominatimの同名・同地域の施設本体（OSM node 2046570832）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8278,
+      "slug": "facility-8278",
+      "name": "川涌の湯 マウントビュー箱根",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町仙石原885",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "大人1,200円（男女別大浴場・露天風呂、90分）",
+      "child_fee": "子供630円（公式日帰り料金欄に年齢区分の明記なし）",
+      "child_use_status": "confirmed",
+      "child_use_notes": "日帰り子供630円。施設公式の取得した料金欄では年齢区分がないため、観光協会掲載の2〜11歳を公式確認済みとして転記しない。",
+      "description": "箱根仙石原にある温泉旅館で、宿泊者以外の日帰り入浴も受け付けている。男女別の大浴場とにごり湯の露天風呂を90分利用でき、別料金の貸切露天風呂もある。日帰り利用は宿泊者の入浴時間とは異なる。",
+      "target_age": "子ども〜大人（公式の年齢・同伴条件を確認）",
+      "url": "https://www.mvhakone.jp/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "にごり湯の露天風呂に入る",
+        "貸切露天風呂を利用する"
+      ],
+      "unique_selling_point": "仙石原のにごり湯を、宿泊せずに男女別の露天風呂で楽しめる。",
+      "experience_tags": [
+        "にごり湯の露天風呂に入る",
+        "貸切露天風呂を利用する"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2698136,
+      "longitude": 139.0116588,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.mvhakone.jp/,https://www.mvhakone.jp/spa/?id=sec3",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 日帰り大浴場・露天風呂11:00〜15:00（90分）。日帰り貸切露天風呂11:00〜14:00。火曜定休を基本に臨時変更あり、公式の休館日案内を確認。 Nominatimの同名・同地域の施設本体（OSM node 8834028684）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
+    },
+    {
+      "id": 8279,
+      "slug": "facility-8279",
+      "name": "絶景日帰り温泉 龍宮殿本館",
+      "prefecture": "神奈川県",
+      "prefecture_id": "kanagawa",
+      "category": "体験",
+      "category_id": "experience",
+      "address": "神奈川県足柄下郡箱根町元箱根139",
+      "indoor_outdoor": "屋内・屋外",
+      "rain_friendly": "◎",
+      "is_free": false,
+      "fee_type": "有料",
+      "adult_fee": "中学生以上 平日2,300円・土休日2,600円（消費税・入湯税込）",
+      "child_fee": "小学生 平日1,300円・土休日1,600円、3歳〜未就学児 平日700円・土休日1,000円。3歳未満入浴不可",
+      "child_use_status": "confirmed",
+      "child_use_notes": "3歳未満入浴不可。小学生以下は保護者同伴。7歳以上または身長120cm以上は男女の混浴不可。タオル等は別料金。",
+      "description": "芦ノ湖畔にある龍宮殿の本館を使った日帰り温泉。湖と富士山を望む内湯や露天風呂があり、宿泊せずに蛸川温泉を楽しめる。小学生と3歳以上の幼児に料金設定があり、3歳未満は入浴できない。",
+      "target_age": "3歳以上（小学生以下は保護者同伴）",
+      "url": "https://www.princehotels.co.jp/ryuguden/honkan/",
+      "tags": [
+        "日帰り温泉",
+        "日帰り入浴"
+      ],
+      "signature_experiences": [
+        "芦ノ湖を眺めて温泉に入る",
+        "伝統建築の本館で過ごす"
+      ],
+      "unique_selling_point": "芦ノ湖と富士山を望む龍宮殿本館で、日帰りの温泉入浴を楽しめる。",
+      "experience_tags": [
+        "芦ノ湖を眺めて温泉に入る",
+        "伝統建築の本館で過ごす"
+      ],
+      "summer_water_play": "×",
+      "latitude": 35.2102411,
+      "longitude": 139.0112126,
+      "geocode_source": "nominatim",
+      "image": null,
+      "image_attribution": null,
+      "image_source": null,
+      "recommended_for_tags": [],
+      "source_urls": "https://www.princehotels.co.jp/ryuguden/honkan/,https://www.princehotels.co.jp/ryuguden/honkan_jikan_ryokin/,https://www.princehotels.co.jp/ryuguden/informations/price_revision/,https://www.princehotels.co.jp/ryuguden/honkan_access2026/",
+      "source_checked_at": "2026-09-20",
+      "data_quality_status": "confirmed",
+      "source_notes": "公式で名称・住所・現行の日帰り入浴料金・子ども条件を確認。営業時間: 日帰り 平日9:00〜20:00、土休日8:00〜20:00（最終受付19:00）。宿泊者専用の6:00開始は日帰りに適用しない。 Nominatimの同名・同地域の施設本体（OSM way 835174712）を照合し神奈川県bbox内を確認。日帰りの入浴体験が中心で、遊泳・水遊びプールを公式情報で確認していないため、2026-09-19 Owner決定のexperienceを継続。"
     }
   ]
 }
