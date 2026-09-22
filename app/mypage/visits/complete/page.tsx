@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import FacilityCard from "@/components/FacilityCard";
 import {
   TrackedAnotherVisitLink,
   VisitCompletionViewEvent,
@@ -138,6 +139,16 @@ export default function VisitCompletePage() {
           )}
         </div>
       </section>
+
+      <div className="space-y-1 text-sm text-slate-600">
+        <p>これで家族{data.familyTotal}回目のおでかけです。</p>
+        {data.primaryCopy && <p>{data.primaryCopy.progress}</p>}
+        {data.primaryCopy?.hint && <p className="text-xs">{data.primaryCopy.hint}</p>}
+      </div>
+      {data.nextFacility && <section className="w-full space-y-3 text-left">
+        <h2 className="font-bold text-slate-800">次のおでかけ候補</h2>
+        <FacilityCard facility={data.nextFacility} />
+      </section>}
 
       <div className="w-full space-y-3">
         <Link
