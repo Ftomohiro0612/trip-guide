@@ -7,7 +7,7 @@ import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import { JsonLd } from "@/components/JsonLd";
 import MapViewClient from "@/components/MapViewClient";
-import SilverWeekCta from "@/components/SilverWeekCta";
+import SeasonalOutingCta from "@/components/SeasonalOutingCta";
 import {
   PreferenceRankingMiniExample,
   RecommendationMiniExample,
@@ -601,7 +601,7 @@ export default function HomePage() {
       </section>
 
       <div className="mx-auto flex max-w-6xl flex-col px-4">
-        <SilverWeekCta />
+        <SeasonalOutingCta />
 
         <section
           className="order-1 mt-8"
