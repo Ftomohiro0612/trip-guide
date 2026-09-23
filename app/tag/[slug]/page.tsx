@@ -8,7 +8,7 @@ import {
 } from "@/components/FacilityPagination";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
-import { visibleFacilities, prefectures } from "@/lib/facilities";
+import { discoverableFacilities, prefectures } from "@/lib/facilities";
 import {
   TAG_META,
   buildTagFacilityFilterHref,
@@ -43,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const meta = getTagMetaBySlug(slug);
   if (!meta) return { title: "見つかりませんでした" };
-  const list = getTagFacilities(meta, visibleFacilities);
+  const list = getTagFacilities(meta, discoverableFacilities);
   const isYoungKids = meta.slug === "kids-0-3";
   return {
     title: isYoungKids
@@ -65,7 +65,7 @@ export default async function TagPage({ params, searchParams }: Props) {
   if (!meta) notFound();
   const isYoungKids = meta.slug === "kids-0-3";
 
-  const list = getTagFacilities(meta, visibleFacilities);
+  const list = getTagFacilities(meta, discoverableFacilities);
   const selectedPrefectureId = resolvePrefectureId(
     asSingleParam(sp.prefecture),
     prefectures,

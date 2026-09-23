@@ -7,7 +7,7 @@ import {
   toEventView,
   type EventItem,
 } from "@/lib/events";
-import { visibleFacilities } from "@/lib/facilities";
+import { discoverableFacilities } from "@/lib/facilities";
 import { isChildRecommendationEligible } from "@/lib/facility-child-use";
 import {
   currentChildAge,
@@ -160,7 +160,7 @@ export function buildMypageRecommendations({
   selectedPrefectureIds,
   visitedSlugs,
   today = getBuildDateString(),
-  facilitySource = visibleFacilities,
+  facilitySource = discoverableFacilities,
   eventSource,
   facilityLimit = 4,
   eventLimit = 4,

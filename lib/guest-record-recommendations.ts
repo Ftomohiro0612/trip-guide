@@ -1,4 +1,4 @@
-import { visibleFacilities } from "@/lib/facilities";
+import { discoverableFacilities } from "@/lib/facilities";
 import { isChildRecommendationEligible } from "@/lib/facility-child-use";
 import {
   getGuestInterestTags,
@@ -19,7 +19,7 @@ function appendToGroup(map: Map<string, Facility[]>, key: string, facility: Faci
   map.set(key, group);
 }
 
-for (const facility of visibleFacilities) {
+for (const facility of discoverableFacilities) {
   if (!isChildRecommendationEligible(facility)) continue;
   const guestTags = getGuestInterestTags(facility.recommended_for_tags);
   guestTagsByFacilityId.set(facility.id, guestTags);

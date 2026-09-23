@@ -19,5 +19,6 @@ export function toMapFacilities(
     rain_friendly: facility.rain_friendly,
     target_age: facility.target_age,
     things_to_do: facility.things_to_do,
+    closure_status: facility.closure_status,
   }));
 }

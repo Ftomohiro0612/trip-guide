@@ -1,5 +1,5 @@
 import craftEvidenceJson from "@/data/craft_category_evidence.json";
-import { prefectures, visibleFacilities } from "@/lib/facilities";
+import { prefectures, discoverableFacilities } from "@/lib/facilities";
 import {
   FACILITIES_PER_PAGE,
   paginateFacilities,
@@ -145,10 +145,10 @@ export function getFacilitiesForCategoryPage({
     categoryId === "craft" ? resolveCraftTypeId(craftTypeId) : null;
   const baseFacilities =
     categoryId === "craft"
-      ? visibleFacilities.filter((facility) =>
+      ? discoverableFacilities.filter((facility) =>
           Boolean(getVerifiedCraftEvidence(facility.id)),
         )
-      : visibleFacilities.filter(
+      : discoverableFacilities.filter(
           (facility) => facility.category_id === categoryId,
         );
   const craftTypeLabel = selectedCraftTypeId

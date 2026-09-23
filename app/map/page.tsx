@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import MapViewClient from "@/components/MapViewClient";
-import { prefectures, visibleFacilities } from "@/lib/facilities";
+import { prefectures, discoverableFacilities } from "@/lib/facilities";
 import { toMapFacilities } from "@/lib/map-facilities";
 
-const mapFacilities = toMapFacilities(visibleFacilities);
+const mapFacilities = toMapFacilities(discoverableFacilities);
 
 export const metadata: Metadata = {
   title: "地図から探す",

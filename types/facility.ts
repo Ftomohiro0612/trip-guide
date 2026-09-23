@@ -98,6 +98,8 @@ export type ChildUseStatus =
   | "restricted"
   | "not_allowed";
 
+export type ClosureStatus = "temporarily_closed" | "permanently_closed";
+
 export interface Facility {
   id: number;
   slug: string;
@@ -137,6 +139,8 @@ export interface Facility {
   source_urls?: string;
   source_checked_at?: string;
   data_quality_status?: DataQualityStatus;
+  closure_status?: ClosureStatus;
+  closure_note?: string;
   source_notes?: string;
   /**
    * ひらがな/カタカナ/漢字化した読みなど、正式名称とは表記が異なるが

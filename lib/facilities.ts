@@ -14,10 +14,13 @@ export const facilities: Facility[] = data.facilities;
 export const visibleFacilities: Facility[] = facilities.filter(
   (f) => f.data_quality_status !== "exclude_candidate",
 );
+export const discoverableFacilities: Facility[] = visibleFacilities.filter(
+  (f) => f.closure_status !== "permanently_closed",
+);
 export const metadata = data.metadata;
 export const prefectures: PrefectureMeta[] = data.metadata.prefectures;
 export const categories: CategoryMeta[] = data.metadata.categories;
-const selectRelatedFacilities = createRelatedFacilitySelector(visibleFacilities);
+const selectRelatedFacilities = createRelatedFacilitySelector(discoverableFacilities);
 
 export function isFacilityVisible(
   facility: Facility | undefined,
@@ -32,6 +35,12 @@ export function isVisibleFacilitySlug(slug: string): boolean {
   return isFacilityVisible(getFacilityBySlug(slug));
 }
 
+export function isFacilityDiscoverable(
+  facility: Facility | undefined,
+): facility is Facility {
+  return isFacilityVisible(facility) && facility.closure_status !== "permanently_closed";
+}
+
 export function getFacilityBySlug(slug: string): Facility | undefined {
   return facilities.find((f) => f.slug === slug);
 }
@@ -41,11 +50,11 @@ export function getAllSlugs(): string[] {
 }
 
 export function getFacilitiesByPrefecture(prefId: PrefectureId): Facility[] {
-  return visibleFacilities.filter((f) => f.prefecture_id === prefId);
+  return discoverableFacilities.filter((f) => f.prefecture_id === prefId);
 }
 
 export function getFacilitiesByCategory(categoryId: string): Facility[] {
-  return visibleFacilities.filter((f) => f.category_id === categoryId);
+  return discoverableFacilities.filter((f) => f.category_id === categoryId);
 }
 
 export function getRelatedFacilities(facility: Facility, limit = 3): Facility[] {

@@ -17,8 +17,9 @@ export type PilotCrossParam = {
   categoryId: (typeof PILOT_CATS)[number];
 };
 
-const visibleFacilities = data.facilities.filter(
-  (f) => f.data_quality_status !== "exclude_candidate",
+const discoverableFacilities = data.facilities.filter(
+  (f) => f.data_quality_status !== "exclude_candidate" &&
+    f.closure_status !== "permanently_closed",
 );
 
 function isPilotPref(prefId: string): prefId is (typeof PILOT_PREFS)[number] {
@@ -32,7 +33,7 @@ function isPilotCat(catId: string): catId is (typeof PILOT_CATS)[number] {
 export function isPilotCross(prefId: string, catId: string): boolean {
   if (!isPilotPref(prefId) || !isPilotCat(catId)) return false;
 
-  const count = visibleFacilities.filter(
+  const count = discoverableFacilities.filter(
     (f) =>
       f.prefecture_id === (prefId as PrefectureId) && f.category_id === catId,
   ).length;

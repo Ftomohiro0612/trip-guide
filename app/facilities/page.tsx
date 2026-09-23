@@ -7,7 +7,7 @@ import ActiveFilterChips from "@/components/ActiveFilterChips";
 import ChildAgeQuickFilter from "@/components/ChildAgeQuickFilter";
 import NearbyFilterableFacilityList from "@/components/NearbyFilterableFacilityList";
 import PrefectureSelector from "@/components/PrefectureSelector";
-import { visibleFacilities, prefectures, categories } from "@/lib/facilities";
+import { discoverableFacilities, prefectures, categories } from "@/lib/facilities";
 import type { RawSearchParams } from "@/lib/filter";
 import { RECOMMENDED_FOR_TAG_HEADLINE } from "@/lib/recommended-tags";
 import { getFacilityListResults } from "@/lib/facility-list-results";
@@ -63,7 +63,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
   const page = paginateFacilities(results, asSingleParam(sp.page));
   const nameSuggestions =
     filters.q && results.length === 0
-      ? findFacilityNameSuggestions(filters.q, visibleFacilities)
+      ? findFacilityNameSuggestions(filters.q, discoverableFacilities)
       : [];
   const nearbyDataHref = buildNearbyDataHref(sp);
   const visiblePrefectures = prefectures.map((p) => ({
@@ -72,7 +72,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
   }));
   const visibleCategories = categories.map((c) => ({
     ...c,
-    count: visibleFacilities.filter((f) => f.category_id === c.id).length,
+    count: discoverableFacilities.filter((f) => f.category_id === c.id).length,
   }));
   const headline = recommendedTag
     ? selectedPrefecture
@@ -118,7 +118,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
               {results.length}件の施設
             </>
           ) : (
-            <>全 {visibleFacilities.length} 施設 / 表示中 {results.length} 件</>
+            <>全 {discoverableFacilities.length} 施設 / 表示中 {results.length} 件</>
           )}
         </p>
         {nameSuggestions.length > 0 && (

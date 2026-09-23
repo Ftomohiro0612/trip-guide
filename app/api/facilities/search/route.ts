@@ -29,7 +29,9 @@ function isVisibleFacilitySearchSource(
   value: unknown,
 ): value is FacilitySearchSource {
   if (!isFacilitySearchSource(value)) return false;
-  return (value as Record<string, unknown>).data_quality_status !== "exclude_candidate";
+  const source = value as Record<string, unknown>;
+  return source.data_quality_status !== "exclude_candidate" &&
+    source.closure_status !== "permanently_closed";
 }
 
 const facilities = isRecord(facilitiesJson) && Array.isArray(facilitiesJson.facilities)

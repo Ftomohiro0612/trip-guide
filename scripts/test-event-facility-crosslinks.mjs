@@ -82,7 +82,8 @@ test("event recommendations exclude non-public, invalid, and venue facilities", 
       facilityFixture(2, 2),
       facilityFixture(3, 3, { data_quality_status: "exclude_candidate" }),
       facilityFixture(4, 4, { latitude: null }),
-      facilityFixture(5, 5),
+      facilityFixture(5, 5, { closure_status: "temporarily_closed" }),
+      facilityFixture(6, 6, { closure_status: "permanently_closed" }),
     ],
     encodedDistance,
   );
@@ -294,7 +295,7 @@ test("analytics payloads expose only the approved non-personal contract", () => 
   ]);
 });
 
-test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () => {
+test("current canon at fixed 2026-07-21 date remains deterministic and clean", () => {
   const fixtures = loadCanonicalFixtures(SNAPSHOT_TODAY);
   const first = deriveSummerCrosslinks({
     ...fixtures,
@@ -331,9 +332,15 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
   }
 
   assert.equal(first.rulesetVersion, SUMMER_CROSSLINK_RULESET_VERSION);
-  assert.equal(fixtures.events.length, 431);
-  assert.equal(first.diagnostics.mappableEventCount, 112);
-  assert.equal(first.diagnostics.eventToFacilityEventCount, 111);
+  // Refresh coverage against the current canon, keeping the evaluation date fixed.
+  assert.equal(fixtures.events.length, 429);
+  assert.equal(first.diagnostics.mappableEventCount, 110);
+  assert.equal(first.diagnostics.eventToFacilityEventCount, 109);
+  const permanentlyClosedIds = new Set(
+    fixtures.facilities.filter((facility) => facility.closure_status === "permanently_closed")
+      .map((facility) => facility.id),
+  );
+  assert.equal(eventLists.flat().some(({ facilityId }) => permanentlyClosedIds.has(facilityId)), false);
   assert.equal(eventLists.every((items) => items.length <= 5), true);
   assert.equal(facilityLists.every((items) => items.length <= 3), true);
   assert.equal(
@@ -456,22 +463,22 @@ test("fixed 2026-07-21 canonical snapshot remains deterministic and clean", () =
         first.diagnostics.facilityToEventRecommendationCount,
     },
     {
-      inputEventCount: 431,
-      inputFacilityCount: 4704,
-      publicFacilityCount: 4695,
-      mappableEventCount: 112,
+      inputEventCount: 429,
+      inputFacilityCount: 6005,
+      publicFacilityCount: 5996,
+      mappableEventCount: 110,
       holdEventCount: 319,
       missingLocationCount: 0,
       excludedFacilityCount: 9,
-      eventToFacilityEventCount: 111,
-      eventToFacilityRecommendationCount: 500,
-      facilityToEventFacilityCount: 1488,
-      facilityToEventThreeCandidateCount: 224,
-      facilityToEventRecommendationCount: 2207,
+      eventToFacilityEventCount: 109,
+      eventToFacilityRecommendationCount: 503,
+      facilityToEventFacilityCount: 1935,
+      facilityToEventThreeCandidateCount: 311,
+      facilityToEventRecommendationCount: 2927,
     },
   );
-  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 8);
-  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 8);
+  assert.equal(first.diagnostics.eventToFacilitySelfExclusionCount, 6);
+  assert.equal(first.diagnostics.facilityToEventSelfExclusionCount, 6);
 });
 
 function eventFixture(overrides = {}) {

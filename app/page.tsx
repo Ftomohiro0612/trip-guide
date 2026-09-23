@@ -21,7 +21,7 @@ import {
   getFacilitiesByCategory,
   getFacilitiesByPrefecture,
   prefectures,
-  visibleFacilities,
+  discoverableFacilities,
 } from "@/lib/facilities";
 import { prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
 
-const mapFacilities = toMapFacilities(visibleFacilities);
+const mapFacilities = toMapFacilities(discoverableFacilities);
 
 const PREFECTURE_REGIONS = [
   {
@@ -380,25 +380,25 @@ function HeroMemoryCardCluster() {
 }
 
 function countByFacilityTag(tag: FacilityTag) {
-  return visibleFacilities.filter((facility) => facility.tags.includes(tag))
+  return discoverableFacilities.filter((facility) => facility.tags.includes(tag))
     .length;
 }
 
 function countByRecommendedTag(tag: RecommendedForTag) {
-  return visibleFacilities.filter((facility) =>
+  return discoverableFacilities.filter((facility) =>
     (facility.recommended_for_tags ?? []).includes(tag),
   ).length;
 }
 
 export default function HomePage() {
   const facilityCountLabel =
-    visibleFacilities.length >= 1000
+    discoverableFacilities.length >= 1000
       ? `${(
-          Math.floor(visibleFacilities.length / 100) * 100
+          Math.floor(discoverableFacilities.length / 100) * 100
         ).toLocaleString("ja-JP")}施設超`
-      : `${visibleFacilities.length}施設`;
+      : `${discoverableFacilities.length}施設`;
   const totalFacilityCountLabel =
-    visibleFacilities.length.toLocaleString("ja-JP");
+    discoverableFacilities.length.toLocaleString("ja-JP");
   const prefecturesById = new Map(
     prefectures.map((prefecture) => [prefecture.id, prefecture]),
   );
@@ -429,7 +429,7 @@ export default function HomePage() {
       label: "雨の日でも遊べる",
       icon: "☔",
       href: "/tag/rainy-day",
-      count: visibleFacilities.filter((f) => f.rain_friendly === "◎").length,
+      count: discoverableFacilities.filter((f) => f.rain_friendly === "◎").length,
       bg: "bg-sky-50",
       border: "border-sky-200",
       hoverBorder: "hover:border-sky-400 focus-visible:border-sky-400",
@@ -487,7 +487,7 @@ export default function HomePage() {
     },
   ];
   const featured = FEATURED_FACILITY_IDS.map((id) =>
-    visibleFacilities.find((facility) => facility.id === id),
+    discoverableFacilities.find((facility) => facility.id === id),
   ).filter((facility): facility is Facility => Boolean(facility));
 
   const websiteJsonLd = {
