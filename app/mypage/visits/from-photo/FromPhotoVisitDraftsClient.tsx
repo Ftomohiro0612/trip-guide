@@ -6,7 +6,9 @@ import { useRouter } from "next/navigation";
 import { useEffect, useMemo, useRef, useState } from "react";
 import { PHOTO_UPLOAD_ENABLED } from "@/lib/config";
 import { createClient } from "@/lib/supabase/client";
-import { storeVisitEdit } from "@/lib/visit-flow-session";
+import { storeVisitCompletion, storeVisitEdit } from "@/lib/visit-flow-session";
+import QuickVisitReactions from "@/components/QuickVisitReactions";
+import { hasQuickReactions, insertQuickChildren, type QuickReactions } from "@/lib/quick-visit";
 import { isMissingVisitCoordinateColumnError } from "@/lib/visit-place-coordinates";
 import {
   MAX_PHOTOS_PER_VISIT,
@@ -79,6 +81,8 @@ type VisitDraft = {
   searchQuery: string;
   existingMatch: ExistingVisitMatch | null;
   createSeparate: boolean;
+  reactions: QuickReactions;
+  parentMemo: string;
 };
 
 type SearchState = Record<string, FacilityChoice[]>;
@@ -234,6 +238,8 @@ function createDrafts(
       searchQuery: "",
       existingMatch: null,
       createSeparate: false,
+      reactions: {},
+      parentMemo: "",
     });
   }
 
@@ -523,6 +529,7 @@ function shouldSkipConfirmation(drafts: VisitDraft[]): boolean {
   if (drafts.length !== 1) return false;
   const draft = drafts[0];
   const isMerge = Boolean(draft.existingMatch) && !draft.createSeparate;
+  if (!isMerge) return false;
   const facilityConfirmed = isMerge || draft.candidates.length === 1;
   return (
     Boolean(draft.detectedDate) &&
@@ -552,6 +559,12 @@ export default function FromPhotoVisitDraftsClient({
   const searchTimersRef = useRef<Record<string, number>>({});
   const searchControllersRef = useRef<Record<string, AbortController>>({});
   const lastSearchQueriesRef = useRef<Record<string, string>>({});
+  // Preserve successful new inserts/uploads across a partial batch retry.
+  const newSavesRef = useRef(new Map<string, { visitId: string; photos: DraftPhoto[]; uploaded: number }>());
+  const completedSavesRef = useRef(new Map<string, { visitId: string; createdDraft: boolean }>());
+  const [persistedDraftIds, setPersistedDraftIds] = useState<string[]>([]);
+  const [saveBlocked, setSaveBlocked] = useState(false);
+  const submissionLock = useRef(false);
 
   useEffect(() => {
     draftsRef.current = drafts;
@@ -651,7 +664,9 @@ export default function FromPhotoVisitDraftsClient({
   const canSave =
     selectedDrafts.length > 0 &&
     selectedDrafts.every(isPersistableDraft) &&
+    selectedDrafts.every((draft) => (draft.existingMatch && !draft.createSeparate) || hasQuickReactions(draft.reactions)) &&
     !preparing &&
+    !saveBlocked &&
     !saving;
 
   const photoCount = useMemo(
@@ -686,6 +701,7 @@ export default function FromPhotoVisitDraftsClient({
         if (!active) return;
         setDrafts((current) =>
           current.map((draft) => {
+            if (persistedDraftIds.includes(draft.id)) return draft;
             const next = resolved.find((item) => item.id === draft.id);
             return next
               ? {
@@ -712,7 +728,7 @@ export default function FromPhotoVisitDraftsClient({
     return () => {
       active = false;
     };
-  }, [drafts.length, matchSignature, preparing, saving]);
+  }, [drafts.length, matchSignature, preparing, saving, persistedDraftIds]);
 
   function replaceDrafts(nextDrafts: VisitDraft[]) {
     draftsRef.current.forEach((draft) => {
@@ -945,6 +961,10 @@ export default function FromPhotoVisitDraftsClient({
     draft: VisitDraft,
     userId: string,
   ): Promise<{ visitId: string; createdDraft: boolean }> {
+    const completed = completedSavesRef.current.get(draft.id);
+    if (completed) return completed;
+    const pending = newSavesRef.current.get(draft.id);
+    if (pending) return finishNewSave(draft.id, userId, pending);
     const effectiveDraft = draft.createSeparate
       ? draft
       : (await resolveExistingMatches([draft], userId))[0];
@@ -1041,6 +1061,9 @@ export default function FromPhotoVisitDraftsClient({
       return { visitId: effectiveDraft.existingMatch.id, createdDraft: false };
     }
 
+    if (!hasQuickReactions(effectiveDraft.reactions)) {
+      throw new Error("参加した子どもごとに反応タグを1〜2個選んでください。");
+    }
     const supabase = createClient();
     const visitedDate = new Date(`${effectiveDraft.visitedOn}T00:00:00`);
     const visitedYear = visitedDate.getFullYear();
@@ -1053,14 +1076,15 @@ export default function FromPhotoVisitDraftsClient({
       user_id: userId,
       facility_slug: facilitySlug,
       facility_name: facilityName,
-      status: "draft",
+      status: "published",
       visited_on: effectiveDraft.visitedOn,
       visited_year: visitedYear,
       visited_month: visitedMonth,
       date_precision: "exact",
       is_past_entry: effectiveDraft.visitedOn < today,
-      family_revisit: "conditional",
-      parent_fatigue: "normal",
+      family_revisit: null,
+      parent_fatigue: null,
+      parent_memo: effectiveDraft.parentMemo.trim() || null,
     };
     const placeCoordinates = isManualFacilitySlug(facilitySlug)
       ? selectedPhotos.find((photo) => photo.gps)?.gps ?? null
@@ -1097,23 +1121,44 @@ export default function FromPhotoVisitDraftsClient({
       throw new Error(visitError?.message ?? "記録の保存に失敗しました。");
     }
 
+    try {
+      await insertQuickChildren(visit.id, effectiveDraft.visitedOn, effectiveDraft.reactions);
+    } catch (error) {
+      const cleanup = await supabase.from("visits").delete().eq("id", visit.id).eq("user_id", userId);
+      if (cleanup.error) {
+        setSaveBlocked(true);
+        throw new Error("記録の保存を完了できませんでした。おでかけ履歴を確認してください。");
+      }
+      throw error;
+    }
+    const progress = { visitId: visit.id, photos: selectedPhotos, uploaded: 0 };
+    newSavesRef.current.set(draft.id, progress);
+    setPersistedDraftIds((current) => [...current, draft.id]);
+    return finishNewSave(draft.id, userId, progress);
+  }
+
+  async function finishNewSave(draftId: string, userId: string, progress: { visitId: string; photos: DraftPhoto[]; uploaded: number }) {
     if (PHOTO_UPLOAD_ENABLED) {
-      for (const [sortOrder, photo] of selectedPhotos.entries()) {
+      while (progress.uploaded < progress.photos.length) {
+        const photo = progress.photos[progress.uploaded];
         await uploadPhoto({
           file: photo.file,
           takenOn: photo.takenOn,
-          visitId: visit.id,
+          visitId: progress.visitId,
           userId,
-          sortOrder,
+          sortOrder: progress.uploaded,
         });
+        progress.uploaded += 1;
       }
     }
-
-    return { visitId: visit.id, createdDraft: true };
+    const result = { visitId: progress.visitId, createdDraft: true };
+    completedSavesRef.current.set(draftId, result);
+    return result;
   }
 
   async function saveDrafts() {
-    if (!canSave) return;
+    if (!canSave || submissionLock.current) return;
+    submissionLock.current = true;
     setSaving(true);
     setError(null);
 
@@ -1138,13 +1183,9 @@ export default function FromPhotoVisitDraftsClient({
       }
 
       replaceDrafts([]);
-      if (createdDraftIds.length === 1) {
-        const createdId = createdDraftIds[0];
-        storeVisitEdit({ visitId: createdId, batchIds: createdDraftIds });
-        router.push("/mypage/visits/edit");
-      } else if (createdDraftIds.length > 1) {
-        storeVisitEdit({ visitId: createdDraftIds[0], batchIds: createdDraftIds });
-        router.push("/mypage/visits/from-photo/complete");
+      if (createdDraftIds.length > 0) {
+        storeVisitCompletion({ visitId: createdDraftIds[0], batchIds: createdDraftIds, entryMethod: "photo_publish" });
+        router.push("/mypage/visits/complete");
       } else if (lastVisitId && draftsToSave.length === 1) {
         storeVisitEdit({ visitId: lastVisitId });
         router.push("/mypage/visits/edit");
@@ -1158,6 +1199,8 @@ export default function FromPhotoVisitDraftsClient({
           : "一括作成に失敗しました。",
       );
       setSaving(false);
+    } finally {
+      submissionLock.current = false;
     }
   }
 
@@ -1267,6 +1310,7 @@ export default function FromPhotoVisitDraftsClient({
               key={draft.id}
               className="rounded-xl border border-slate-200 bg-white p-4 space-y-4"
             >
+              <fieldset disabled={saving || persistedDraftIds.includes(draft.id)} className="min-w-0 space-y-4">
               <div className="flex items-start justify-between gap-3">
                 <label className="flex min-w-0 items-center gap-2">
                   <input
@@ -1293,7 +1337,7 @@ export default function FromPhotoVisitDraftsClient({
                   )}
                   {draft.createSeparate && (
                     <span className="rounded-full bg-amber-100 px-2 py-0.5 text-[11px] font-bold text-amber-700">
-                      新規下書き
+                      新規記録
                     </span>
                   )}
                 </label>
@@ -1500,6 +1544,16 @@ export default function FromPhotoVisitDraftsClient({
                 </section>
               </div>
 
+              {draft.facilitySlug && (!draft.existingMatch || draft.createSeparate) && (
+                <div className="space-y-3">
+                  <QuickVisitReactions value={draft.reactions} disabled={saving || persistedDraftIds.includes(draft.id)} onChange={(reactions) => setDrafts((current) => withUpdatedDraft(current, draft.id, (item) => ({ ...item, reactions })))} />
+                  <details>
+                    <summary className="cursor-pointer text-sm">コメント（任意）</summary>
+                    <textarea aria-label="コメント" disabled={saving || persistedDraftIds.includes(draft.id)} value={draft.parentMemo} onChange={(event) => setDrafts((current) => withUpdatedDraft(current, draft.id, (item) => ({ ...item, parentMemo: event.target.value })))} className="mt-2 w-full rounded-lg border border-slate-200 p-2 text-sm" />
+                  </details>
+                </div>
+              )}
+
               <section className="space-y-2">
                 <div className="flex items-center justify-between gap-3">
                   <p className="text-xs font-bold text-slate-600">
@@ -1659,6 +1713,7 @@ export default function FromPhotoVisitDraftsClient({
                   </>
                 )}
               </section>
+              </fieldset>
             </article>
             );
           })}

@@ -6,6 +6,7 @@ import CategoryBar from "@/components/CategoryBar";
 import ChildAvatar from "@/components/ChildAvatar";
 import ChildRecommendationSection from "@/components/ChildRecommendationSection";
 import MypageHero from "@/components/MypageHero";
+import VisitIntentBanner from "@/components/VisitIntentBanner";
 import MonthlyBarChart, { type MonthData } from "@/components/MonthlyBarChart";
 import MonthlyDiffCard from "@/components/MonthlyDiffCard";
 import MypageRecommendationSection from "@/components/MypageRecommendationSection";
@@ -67,7 +68,7 @@ type VisitStat = VisitEventSnapshot & {
   facility_name: string;
   visited_on: string | null;
   created_at: string;
-  family_revisit: string;
+  family_revisit: string | null;
   parent_fatigue: string | null;
   place_latitude?: number | null;
   place_longitude?: number | null;
@@ -112,7 +113,7 @@ function isVisitStat(value: unknown): value is VisitStat {
     typeof value.facility_slug === "string" &&
     typeof value.facility_name === "string" &&
     typeof value.created_at === "string" &&
-    typeof value.family_revisit === "string"
+    (typeof value.family_revisit === "string" || value.family_revisit === null)
   );
 }
 
@@ -676,6 +677,7 @@ export default async function MypagePage() {
 
   return (
     <div className="mx-auto max-w-lg space-y-6 px-4 py-5 lg:grid lg:max-w-6xl lg:grid-cols-2 lg:items-start lg:gap-x-8 lg:gap-y-8 lg:space-y-0 lg:py-8">
+      <VisitIntentBanner />
       <div data-mypage-section="hero" className="lg:col-span-2 lg:order-1">
         <MypageHero kids={heroChildren} stats={familyStats} />
       </div>

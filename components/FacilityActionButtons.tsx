@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import WishlistPlanChips from "@/components/WishlistPlanChips";
+
 import { useFacilityGuestRecord } from "@/components/FacilityGuestRecordProvider";
 import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
 
@@ -44,6 +47,9 @@ export default function FacilityActionButtons({
       >
         この場所を記録する
       </button>
+      <Link href="/mypage/visits/from-photo" className="block rounded-xl bg-sky-50 px-3 py-2 text-center text-xs font-bold text-brand ring-1 ring-sky-100 hover:bg-sky-100">
+        📷 写真から記録することもできます
+      </Link>
       <button
         onClick={handleWishlist}
         disabled={toggling}
@@ -55,6 +61,7 @@ export default function FacilityActionButtons({
       >
         {toggling ? "..." : isWishlisted ? "行きたいリスト済み" : "行きたいに追加"}
       </button>
+      {isWishlisted && <WishlistPlanChips facilitySlug={facilitySlug} />}
     </div>
   );
 }

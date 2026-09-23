@@ -9,6 +9,8 @@ import {
 } from "@/lib/visit-completion";
 import { createClient } from "@/lib/supabase/server";
 import { familyRevisitLabels, visitLabel } from "@/lib/visit-labels";
+import { visibleFacilities } from "@/lib/facilities";
+import { nextVisitCandidate } from "@/lib/visit-next-candidate";
 
 type FacilitySource = {
   slug: string;
@@ -19,6 +21,7 @@ type FacilitySource = {
 
 type VisitRow = {
   id: string;
+  status: string;
   facility_slug: string;
   facility_name: string;
   visited_on: string | null;
@@ -44,10 +47,9 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
     supabase
       .from("visits")
       .select(
-        "id, facility_slug, facility_name, visited_on, family_revisit, parent_memo, visit_children(child_id)",
+        "id, status, facility_slug, facility_name, visited_on, family_revisit, parent_memo, visit_children(child_id)",
       )
-      .eq("user_id", user.id)
-      .eq("status", "published"),
+      .eq("user_id", user.id),
     supabase
       .from("children")
       .select("id, nickname, sort_order")
@@ -69,7 +71,8 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
     return { status: "error" as const };
   }
 
-  const visitRows = (visitResult.data ?? []) as VisitRow[];
+  const allVisitRows = (visitResult.data ?? []) as VisitRow[];
+  const visitRows = allVisitRows.filter((visit) => visit.status === "published");
   const visits: CompletionVisit[] = visitRows.map((visit) => ({
       id: visit.id,
       facilitySlug: visit.facility_slug,
@@ -94,6 +97,8 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
   const displayChild =
     summary.primaryChild ?? (summary.children.length === 1 ? summary.children[0] : null);
   const facility = facilityBySlug.get(currentVisit.facilitySlug);
+  const nextFacility = nextVisitCandidate(visibleFacilities, currentVisit.facilitySlug, displayChild?.id ?? null,
+    allVisitRows.map((visit) => ({ facilitySlug: visit.facility_slug, childIds: (visit.visit_children ?? []).map((link) => link.child_id) })));
   const remainingDraftIds = safeBatchIds.filter((id) =>
     (siblingResult.data ?? []).some((visit) => visit.id === id),
   );
@@ -122,6 +127,7 @@ export async function loadVisitCompletion(visitId: string, batchIds: string[]) {
 
   return {
     status: "ok" as const,
+    nextFacility,
     familyTotal: summary.familyTotal,
     children: summary.children.map(({ id, nickname, visitCount }) => ({
       id,
