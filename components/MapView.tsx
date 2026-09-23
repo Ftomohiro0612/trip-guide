@@ -13,6 +13,7 @@ import L from "leaflet";
 import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
+import FacilityClosureBadge from "@/components/FacilityClosureBadge";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
@@ -45,6 +46,7 @@ export type MapFacility = Pick<
   | "rain_friendly"
   | "target_age"
   | "things_to_do"
+  | "closure_status"
 >;
 
 export type UserFacilityStatus = {
@@ -685,6 +687,7 @@ function FacilityMarker({
             />
             {facility.name}
           </p>
+          <FacilityClosureBadge status={facility.closure_status} compact />
           {hasImage && (
             <div className="relative h-[54px] w-24 max-w-full overflow-hidden rounded">
               <Image

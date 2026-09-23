@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
 import FacilityCard from "@/components/FacilityCard";
+import FacilityClosureBadge from "@/components/FacilityClosureBadge";
 import FacilityEvents from "@/components/FacilityEvents";
 import FacilityGuestRecordProvider from "@/components/FacilityGuestRecordProvider";
 import FacilityNearbySummerEvents from "@/components/FacilityNearbySummerEvents";
@@ -288,7 +289,13 @@ export default async function FacilityDetailPage({ params }: Props) {
                 <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-black text-white backdrop-blur-sm">
                   👶 {facility.target_age}
                 </span>
+                <FacilityClosureBadge status={facility.closure_status} />
               </div>
+              {facility.closure_status && facility.closure_note && (
+                <p className="mt-3 rounded-lg bg-black/60 px-3 py-2 text-sm leading-relaxed text-white">
+                  {facility.closure_note}
+                </p>
+              )}
               {facility.image && (
                 <FacilityPhotoSearchLink
                   facilityName={facility.name}

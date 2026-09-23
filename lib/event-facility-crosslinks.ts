@@ -45,6 +45,7 @@ export interface CrosslinkFacilityInput {
   rain_friendly: string;
   indoor_outdoor: string;
   data_quality_status?: string;
+  closure_status?: string;
 }
 
 export interface CrosslinkEventInput {
@@ -217,6 +218,7 @@ export function selectFacilitiesForEvent(
   const eventCoordinate = [location.latitude, location.longitude] as const;
   const candidates = facilities
     .filter(isPublicFacility)
+    .filter((facility) => facility.closure_status !== "permanently_closed")
     .filter(hasValidCoordinates)
     .filter((facility) => !venueFacilityIds.has(facility.id))
     .flatMap((facility) => {

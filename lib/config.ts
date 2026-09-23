@@ -15,5 +15,5 @@ export const SERVICE = {
 export const PHOTO_UPLOAD_ENABLED: boolean = true;
 
 // トップ「おすすめ施設」の固定キュレーション（並び順は表示順）。
-// 非表示施設は page.tsx 側で visibleFacilities から探すため自動除外される。
+// 非表示施設は page.tsx 側で discoverableFacilities から探すため自動除外される。
 export const FEATURED_FACILITY_IDS: number[] = [801, 675, 245, 782, 518, 136];

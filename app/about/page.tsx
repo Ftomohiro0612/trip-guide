@@ -4,7 +4,7 @@ import { SERVICE } from "@/lib/config";
 import {
   getFacilitiesByPrefecture,
   prefectures,
-  visibleFacilities,
+  discoverableFacilities,
 } from "@/lib/facilities";
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default function AboutPage() {
         <p className="text-slate-700 leading-relaxed">
           「今日どこ行こう？」「雨だけど楽しめる場所はある？」「無料で遊べる施設は？」
           こんな日常的な疑問に、3秒で答えを返すことを目指しています。
-          現在は全国{prefectures.length}都道府県の {visibleFacilities.length}{" "}
+          現在は全国{prefectures.length}都道府県の {discoverableFacilities.length}{" "}
           施設を掲載しています。
         </p>
         <p className="mt-3 text-slate-700 leading-relaxed">

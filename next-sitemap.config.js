@@ -43,6 +43,9 @@ module.exports = {
     "/manifest.webmanifest",
     "/terms",
     "/privacy",
+    ...facilitiesData.facilities
+      .filter((facility) => facility.closure_status === "permanently_closed")
+      .map((facility) => `/facilities/${facility.slug}`),
   ],
   robotsTxtOptions: {
     policies: [

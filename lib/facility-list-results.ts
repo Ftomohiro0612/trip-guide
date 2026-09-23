@@ -1,4 +1,4 @@
-import { visibleFacilities, prefectures } from "@/lib/facilities";
+import { discoverableFacilities, prefectures } from "@/lib/facilities";
 import {
   applyFilters,
   parseFilterParams,
@@ -34,7 +34,7 @@ export function getFacilityListResults(searchParams: RawSearchParams) {
     prefectures,
   );
   const filtersWithoutArea = { ...filters, prefectures: [] };
-  const baseResults = applyFilters(visibleFacilities, filtersWithoutArea);
+  const baseResults = applyFilters(discoverableFacilities, filtersWithoutArea);
   const tagFilteredResults = recommendedTag
     ? baseResults.filter((facility) =>
         (facility.recommended_for_tags ?? []).includes(recommendedTag),

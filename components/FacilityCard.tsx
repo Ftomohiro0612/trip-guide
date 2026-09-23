@@ -8,6 +8,7 @@ import type { Facility } from "@/types/facility";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
 import FacilityPhotoSearchLink from "@/components/FacilityPhotoSearchLink";
+import FacilityClosureBadge from "@/components/FacilityClosureBadge";
 
 interface Props {
   facility: Facility;
@@ -68,18 +69,25 @@ export default function FacilityCard({ facility, proximityLabel }: Props) {
             />
           </div>
         )}
-        {facility.is_free && (
-          <span className="absolute top-2 left-2 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm z-10">
-            🆓 無料
+        <div className="absolute top-2 left-2 right-2 z-10 flex flex-wrap items-start gap-2 pointer-events-none">
+          {facility.is_free && (
+            <span className="bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded-md shadow-sm">
+              🆓 無料
+            </span>
+          )}
+          <span
+            className={`ml-auto text-xs font-bold px-2 py-1 rounded-md ${rainStyles[facility.rain_friendly]}`}
+            title={`雨対応: ${facility.rain_friendly}`}
+          >
+            ☂️ {facility.rain_friendly}
           </span>
-        )}
-        <span
-          className={`absolute top-2 right-2 text-xs font-bold px-2 py-1 rounded-md z-10 ${rainStyles[facility.rain_friendly]}`}
-          title={`雨対応: ${facility.rain_friendly}`}
-        >
-          ☂️ {facility.rain_friendly}
-        </span>
+        </div>
       </div>
+      {facility.closure_status && (
+        <div className="px-4 pt-3">
+          <FacilityClosureBadge status={facility.closure_status} compact />
+        </div>
+      )}
       <div className="p-4 flex flex-col flex-1 gap-2">
         <div className="flex items-center gap-1.5 text-xs text-slate-500">
           <CategoryIcon
