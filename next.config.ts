@@ -5,6 +5,12 @@ const nextConfig: NextConfig = {
   // Keeping this tiny generated package external prevents webpack from
   // embedding the same JSON independently in every route chunk.
   serverExternalPackages: ["@memorip/runtime-canon"],
+  // Facility page count has grown past 6,000; occasional pages exceed the
+  // Next.js default 60s static-generation cap under Windows build load
+  // (2026-09-25 SUPP-3 deploy: 3 consecutive cf:build failures, each on a
+  // different, unrelated facility page). Raised with headroom rather than
+  // tuned to the exact observed duration.
+  staticPageGenerationTimeout: 180,
   images: {
     // Facility images are pre-generated static assets. Remote Supabase images
     // are served directly as well, so neither path consumes a request-time
