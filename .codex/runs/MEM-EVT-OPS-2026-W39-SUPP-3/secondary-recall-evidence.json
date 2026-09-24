@@ -1,0 +1,323 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W39-SUPP-3",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-09-24T19:47:51.218Z",
+  "horizon_end_date": "2026-11-30",
+  "per_region": {
+    "gunma": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=10",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:49.001Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=10&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:49.138Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=10&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:49.281Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=10&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:49.786Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=10&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:49.829Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 44,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 44,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    },
+    "osaka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=27",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:50.261Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=27&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:50.294Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=27&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:50.339Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=27&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:50.736Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=27&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:50.780Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 46,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 46,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    },
+    "shizuoka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=22",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:51.309Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=22&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:51.333Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=22&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:51.381Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=22&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:51.938Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=22&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:51.982Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 43,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 0,
+      "stale_false": 43,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    },
+    "fukuoka": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=40",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:52.474Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=40&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:52.498Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=40&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:52.548Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=40&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:53.005Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=40&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:53.051Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 38,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 4,
+      "stale_false": 34,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "candidate_hold_reason": "Secondary candidate also appeared on an official regional surface, but full adoption fields were not individually verified; held without guessing.",
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    },
+    "ehime": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=38",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:53.499Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=38&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:53.523Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=38&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:53.565Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=38&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:53.897Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=38&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:53.941Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 40,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 2,
+      "stale_false": 38,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "candidate_hold_reason": "Secondary candidate also appeared on an official regional surface, but full adoption fields were not individually verified; held without guessing.",
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    },
+    "ibaraki": {
+      "sources_checked": [
+        {
+          "url": "https://hanabi.walkerplus.com/2026/?pref=8",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:54.229Z",
+          "source_type": "fireworks_festival_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=8&page=1",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:54.253Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=8&page=1",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:54.309Z",
+          "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.walkerplus.com/event_list/2026/?pref=8&page=2",
+          "status": 404,
+          "checked_at": "2026-09-24T19:48:54.930Z",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids[]=8&page=2",
+          "status": 200,
+          "checked_at": "2026-09-24T19:48:54.990Z",
+          "source_type": "family_event_portal"
+        }
+      ],
+      "pages_fetched": 2,
+      "paging_stop_reason": "no_further_pages",
+      "candidates_found": 47,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 2,
+      "stale_false": 45,
+      "type_coverage_not_applicable": [
+        {
+          "source_type": "fireworks_festival_portal",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        },
+        {
+          "source_type": "area_event_calendar",
+          "reason": "The secondary surface was fetched in this run but did not return a successful response for this prefecture; no coverage is claimed for the failed type."
+        }
+      ],
+      "candidate_hold_reason": "Secondary candidate also appeared on an official regional surface, but full adoption fields were not individually verified; held without guessing.",
+      "stale_false_reason": "Secondary candidate was not corroborated on the fetched official regional surfaces in this run."
+    }
+  }
+}
