@@ -12,9 +12,9 @@ import { visibleFacilities } from "@/lib/facilities";
 import { getTagFacilities, getTagMetaBySlug } from "@/lib/tags";
 
 const panelClass =
-  "overflow-hidden rounded-3xl border border-amber-200 bg-gradient-to-br from-amber-50 to-orange-50 px-5 py-7 shadow-xl shadow-amber-100/50 sm:px-8 sm:py-9 lg:px-10";
+  "overflow-hidden rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 to-rose-50 px-5 py-7 shadow-xl shadow-red-100/50 sm:px-8 sm:py-9 lg:px-10";
 const linkClass =
-  "inline-flex min-h-11 items-center rounded-full bg-amber-900 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-amber-800";
+  "inline-flex min-h-11 items-center rounded-full bg-red-800 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-red-700";
 
 export default function SeasonalOutingCta({
   placement = "home",
@@ -99,7 +99,7 @@ export default function SeasonalOutingCta({
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <h2
               id={`seasonal-events-heading-${placement}`}
-              className="text-2xl font-bold tracking-tight text-amber-950 sm:text-3xl"
+              className="text-2xl font-bold tracking-tight text-red-950 sm:text-3xl"
             >
               季節・週末のイベント
             </h2>
@@ -124,7 +124,7 @@ export default function SeasonalOutingCta({
           <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
             <h2
               id={`seasonal-facilities-heading-${placement}`}
-              className="text-2xl font-bold tracking-tight text-amber-950 sm:text-3xl"
+              className="text-2xl font-bold tracking-tight text-red-950 sm:text-3xl"
             >
               季節を楽しむ施設
             </h2>
