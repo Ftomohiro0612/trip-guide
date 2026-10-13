@@ -36,16 +36,17 @@ Apply this section only when the entire user message is exactly `セッション
 ### `セッション開始`
 
 1. Read only the fixed `current-session.md` above. Record its `updated_at`, `session`, and SHA-256 at read time as the write base.
-2. Confirm that the frontmatter `scope` is `memorips`, and use only the frontmatter and `# Current State` as the initial resume pointer.
-3. Briefly report the recorded current position, exact stop point/state, and next major direction.
+2. Confirm that the frontmatter `scope` is `memorips`, and use only the frontmatter and the three top-level sections `# Current State`, `# Claude Code Handoff`, `# Codex Handoff` as the initial resume pointer (format aligned to the Cauvix scopes' `current-session.md` layout, Owner decision 2026-09-14).
+3. Briefly report the recorded current position, exact stop point/state, and next major direction. This report comes only from the fixed file, never from a Monitor's output.
 4. Before the initial report, do not read an archive, this Product repository, Git/GitHub, Issues, Production, another memory, or another scope. Do not start investigation, implementation, verification, or a Monitor. This restriction does not reach the standing Session Monitor already started by the SessionStart hook before this shorthand ran (see "Session Monitor" below) — that Monitor is hook-managed lifecycle infrastructure, not something the PM starts under this contract.
+   - Mission Monitor exception (Owner decision 2026-08-05): after the initial report, if `# Codex Handoff` › `## Target` records an `EXTERNAL_WAIT` on an independent Mission-lane Codex CLI process with a PID/worktree/branch/log identity, the PM may invoke exactly one read-only Mission Monitor for it, running `scripts/session-monitor/mission-watch.sh` (contract: `scripts/session-monitor/README.md`) with the identity fields taken verbatim from the fixed file. The script performs its own reuse check. It must stay strictly read-only: it never writes to Product, Git, Production, agmsg, Session Memory, or hot memory, never ACKs or marks agmsg messages read, never starts, stops, or modifies the Mission, and never substitutes for Owner judgment. Reconcile what it observes with the canonical facts before treating either as authoritative.
 5. After the initial report, safely fetch the private Memory and Product repositories without overwriting, cleaning, stashing, resetting, deleting, or altering another worktree's local/untracked files.
 6. Read the private autonomous sources listed at the top of this file and reconcile the local fixed Session Memory against current GitHub/Product/Production facts. The fixed file is a fast pointer, not superior canon; mark stale statements as superseded rather than following an obsolete stop point.
 7. Continue only within a valid authorization envelope. Re-check the current Mission, Owner decisions, active Issues/PRs, exact Product baseline, relevant Production/aggregate evidence, and external-action ledger before changing anything.
 8. Perform the highest expected-value permitted Mission action, verify the real result, update the private ledgers/frontier, and continue. When a changed-risk review reaches its first formal `GREEN / blocking 0`, end that review lane only and select the next permitted Mission action.
 9. Stop only in one of the private contract states: `MEASUREMENT_WAIT`, `EXTERNAL_WAIT`, `OWNER_REQUIRED`, `BUDGET_LIMITED`, `POLICY_STOP`, `STUCK`, `ACHIEVED`, or `KILLED`. A wait must include a dependency, next trigger/time, exact continuation action, and why no other higher-value permitted action can proceed.
 10. Preserve exact Owner boundaries. An existing Mission does not authorize a new/increased spend, new-prefecture expansion, unauthorized main integration/Production deploy/publication/database migration, destructive action, permission expansion, analytics/privacy expansion, price/root monetization change, or weakened guardrail.
-11. If the fixed file is missing, its scope does not match, or `# Current State` is missing, report that fact. After the initial report, the private GitHub Memory may still be used as the canonical recovery route if it is safely accessible; do not invent or infer missing local facts.
+11. If the fixed file is missing, its scope does not match, or any of `# Current State`, `# Claude Code Handoff`, `# Codex Handoff` is missing, report that fact. After the initial report, the private GitHub Memory may still be used as the canonical recovery route if it is safely accessible; do not invent or infer missing local facts.
 
 ### `セッション終了`
 
@@ -66,8 +67,9 @@ Steps:
 2. If no write base was recorded earlier this session, read the fixed file
    once now and record its `updated_at`, `session`, and SHA-256 as the write
    base.
-3. Compare the new frontmatter + `# Current State` this session would write
-   against what the fixed file currently holds. If there is no difference,
+3. Compare the new frontmatter + `# Current State` + `# Claude Code Handoff`
+   + `# Codex Handoff` this session would write against what the fixed file
+   currently holds. If there is no difference,
    skip archiving and replacing entirely — emit `Close: CLOSE_NO_CHANGE` and
    end.
 4. If there is a change to persist but no write base exists (e.g. resumed
@@ -82,10 +84,16 @@ Steps:
    convention. If this write fails for any reason, do not modify the fixed
    file — emit `Close: CLOSE_BLOCKED — archive failed: <reason>` and end.
 7. Replace the whole fixed file with only the latest position confirmed in
-   this session. Keep frontmatter and one `# Current State` containing only
-   what is needed to restore the current position, fixed decisions, HOLD,
-   out-of-scope boundaries, stop point, and next major direction. Do not
-   append or retain past history. If this write fails, emit
+   this session. Keep frontmatter and three top-level sections, containing
+   only what is needed to restore the current position:
+   - `# Current State` — `## Fixed decisions`, `## HOLD / Out of Scope`.
+   - `# Claude Code Handoff` — `## PM Lane` (compact status of the active
+     track), `## Decision State` (items needing Owner judgment),
+     `## Resume Point` (what the next PM session does first).
+   - `# Codex Handoff` — `## Target` (any independent Codex CLI dispatch
+     identity: PID/worktree/branch/log/state path, or a plain statement that
+     none is running), `## Decision State`, `## Resume Point`.
+   Do not append or retain past history. If this write fails, emit
    `Close: CLOSE_BLOCKED — replace failed: <reason>` and end — the archive
    from step 6 is already saved and is not rolled back.
 8. Immediately after replacing, read the fixed file back and confirm it
@@ -131,7 +139,7 @@ It exists independently of whether the session's first message happens to be
   `セッション開始`/`セッション終了` shorthand flows — the restrictions
   above remain in force unchanged for everything else.
 
-Do not create a dedicated workspace, agmsg destination, Monitor, binding, Owner Pack, ZIP, or additional infrastructure for these shorthands unless it can change an Owner decision and is separately justified. The standing, hook-managed Session Monitor defined above is a narrow, pre-authorized exception to this clause — it does not need separate per-session justification, and it does not license any other Monitor or infrastructure under this clause.
+Do not create a dedicated workspace, agmsg destination, Monitor, binding, Owner Pack, ZIP, or additional infrastructure for these shorthands unless it can change an Owner decision and is separately justified. The standing, hook-managed Session Monitor defined above and the tracked, read-only Mission Monitor (`scripts/session-monitor/`, under the `セッション開始` exception) are the only narrow, pre-authorized exceptions to this clause — they do not need separate per-session justification, and they do not license any other Monitor or infrastructure under this clause.
 
 <!-- BEGIN:nextjs-agent-rules -->
 # This is NOT the Next.js you know
