@@ -16,13 +16,22 @@ Then inspect only the Product/Production evidence required by the selected Missi
 
 Do not copy private hot memory, secrets, PII, child/family details, row-level Production data, private URLs, or credentials into this public repository.
 
+## Workspace role binding
+
+The role is decided by the workspace (checkout root) the session runs in, never by a guess:
+
+| Workspace | Role | Scope | Fixed Session Memory |
+|---|---|---|---|
+| `C:\Users\tomo-\Documents\Memorip` | Memorips PM | `memorips` | `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` |
+| `C:\Users\tomo-\Documents\memorips-growth` | Memorips Growth PM | `memorips-growth` | `C:\Users\tomo-\Documents\ai-session-memory\memorips-growth\current-session.md` |
+
+Memorips Growth PM (Owner GO 2026-10-13): finds growth opportunities from real search demand (Google Search Console and similar: queries, positions, CTR, landing pages, coverage gaps) and turns existing facility / event / seasonal data into Organic Search inflow connected to 探す→行く→記録する→好きが分かる→次のおでかけ. Growth decides *where* growth is worth pursuing and returns that to the existing lanes through the Memorips PM; it does not run its own bulk facility/event intake or an SEO article factory, and it does not duplicate FacilityOps / EventOps / Memorips PM work. Organic Search is the current channel. Growth has no merge, deploy, publication, or canon authority. Product semantics changes, large new content systems, auto-generated pages, and paid measures or new paid dependencies return to the Owner. The canonical Owner decision is in the private Memory repository (`active-decisions.md`).
+
 ## Memorips PM fixed Session Memory shorthands
 
 Apply this section only when the entire user message is exactly `セッション開始` or exactly `セッション終了`. Do not activate it for a substring, quoted example, longer request, or another scope.
 
-- Role: Memorips PM
-- Expected scope: `memorips`
-- Fixed Session Memory: `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md`
+- Role, expected scope, and Fixed Session Memory: the row of the Workspace role binding table above for the current workspace. Every `memorips` in the steps below means that row's scope, and "the fixed file" means that row's Fixed Session Memory. A workspace not in the table has no shorthand; report that and wait.
 
 ### `セッション開始`
 
