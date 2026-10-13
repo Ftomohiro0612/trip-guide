@@ -27,8 +27,8 @@ production、archive、他memoryを読まない。固定pathの不存在、scope
 ## 固定Session Memory（唯一のread-first）
 
 - 完全一致の `セッション開始` / `セッション終了` はroot `AGENTS.md`のショートハンド契約を唯一の正本とする。
-- 通常のセッション開始時も、最初に `C:\Users\tomo-\Documents\ai-session-memory\memorips\current-session.md` の1ファイルだけを読む。
-- frontmatterの `scope` が `memorips` であることを確認する。
+- 通常のセッション開始時も、最初に `AGENTS.md` の Workspace role binding 表で現在のworkspaceの行が指す固定Session Memoryの1ファイルだけを読む(`Documents\Memorip` = `ai-session-memory\memorips\current-session.md`、`Documents\memorips-growth` = `ai-session-memory\memorips-growth\current-session.md`)。
+- frontmatterの `scope` がその行のscope(`memorips` / `memorips-growth`)と一致することを確認する。
 - 初回報告は「現在の停止点」「次の1手」「Owner判断待ち」「未確認事項」だけとする。
 - 初回報告前は、Git、Issue、remote、production、過去ログ、他memory、通常の作業worktreeを確認せず、monitorも開始しない。
 - 固定ファイルが存在しない、またはscopeが一致しない場合は、他ファイルを探索・推測せず、その事実だけを報告して待機する。
@@ -54,7 +54,8 @@ production、archive、他memoryを読まない。固定pathの不存在、scope
 
 **本節が役割の唯一の正本（2026-08-04 役割正本統一・Owner確定）。他ファイルに矛盾する記載があれば本節を優先する。**
 
-- Claude Code PM（このスレッド）: Mission・優先順位・Codexへの作業依頼・受入・Owner escalation・hot memory管理
+- Claude Code PM（`Documents\Memorip`）: Mission・優先順位・Codexへの作業依頼・受入・Owner escalation・hot memory管理
+- Claude Code Growth PM（`Documents\memorips-growth`、2026-10-13 Owner GO）: Search Console等の実需要から成長機会を特定し、Memorips PM経由で既存laneへ返す。merge・deploy・publication権限なし、FacilityOps / EventOps / Memorips PMと実作業を重複させない
 - Codex: 調査・正本確認・データ更新・実装・automated validation・必要な独立検証・本番観測
 - Fable 5: Ownerが具体的scopeを明示した場合だけの単発read-only上位レビュー
 - Owner: GO／NO-GO／HOLD・権限境界・事業判断
