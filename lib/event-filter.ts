@@ -167,7 +167,8 @@ export function getEventDatePresetRange(
     };
   }
 
-  const daysUntilSaturday = (6 - parsed.getUTCDay() + 7) % 7;
+  const day = parsed.getUTCDay();
+  const daysUntilSaturday = day === 0 ? -1 : 6 - day;
   const saturday = new Date(parsed.getTime() + daysUntilSaturday * 86_400_000);
   const sunday = new Date(saturday.getTime() + 86_400_000);
   return {

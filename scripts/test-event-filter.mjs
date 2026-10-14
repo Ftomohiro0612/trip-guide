@@ -92,9 +92,23 @@ test("invalid reversed range reports an error and returns no results", () => {
 });
 
 test("weekend and month presets resolve as exclusive inclusive ranges", () => {
-  assert.deepEqual(getEventDatePresetRange("weekend", "2026-07-21"), {
-    startDate: "2026-07-25",
-    endDate: "2026-07-26",
+  for (const referenceDate of ["2026-10-14", "2026-10-17", "2026-10-18"]) {
+    assert.deepEqual(
+      getEventDatePresetRange("weekend", referenceDate),
+      {
+        startDate: "2026-10-17",
+        endDate: "2026-10-18",
+      },
+      referenceDate,
+    );
+  }
+  assert.deepEqual(getEventDatePresetRange("weekend", "2026-10-19"), {
+    startDate: "2026-10-24",
+    endDate: "2026-10-25",
+  });
+  assert.deepEqual(getEventDatePresetRange("weekend", "2026-10-26"), {
+    startDate: "2026-10-31",
+    endDate: "2026-11-01",
   });
   assert.deepEqual(getEventDatePresetRange("month", "2026-07-21"), {
     startDate: "2026-07-01",
