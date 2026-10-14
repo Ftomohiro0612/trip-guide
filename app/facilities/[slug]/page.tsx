@@ -32,7 +32,7 @@ import {
 } from "@/lib/facility-metadata";
 import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
-import { getBuildDateString } from "@/lib/events";
+import { getBuildDateString, isEventPrefecture } from "@/lib/events";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
 import { getRakutenFacilityAction } from "@/lib/rakuten-facility-actions";
@@ -584,17 +584,33 @@ export default async function FacilityDetailPage({ params }: Props) {
         </aside>
       </div>
 
-      {related.length > 0 && (
-        <section className="mx-auto max-w-5xl px-4 pb-14">
-          <p className="text-xs font-black tracking-[0.18em] text-amber-600">MORE PLACES TO PLAY</p>
-          <h2 className="mt-1 mb-5 text-2xl font-black text-slate-950">同じカテゴリ・近隣の施設</h2>
+      <section className="mx-auto max-w-5xl px-4 pb-14">
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">MORE PLACES TO PLAY</p>
+        <h2 className="mt-1 mb-5 text-2xl font-black text-slate-950">同じカテゴリ・近隣の施設</h2>
+        {related.length > 0 && (
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {related.map((f) => (
               <FacilityCard key={f.id} facility={f} />
             ))}
           </div>
-        </section>
-      )}
+        )}
+        <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
+          <Link
+            href={`/prefecture/${facility.prefecture_id}`}
+            className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
+          >
+            {facility.prefecture}の子ども向け遊び場をもっと見る
+          </Link>
+          {isEventPrefecture(facility.prefecture_id) && (
+            <Link
+              href={`/events/${facility.prefecture_id}`}
+              className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
+            >
+              {facility.prefecture}の子ども向けイベント
+            </Link>
+          )}
+        </div>
+      </section>
       </div>
     </FacilityGuestRecordProvider>
   );
