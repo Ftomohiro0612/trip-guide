@@ -1,5 +1,9 @@
 import { facilitiesData as facilitiesJson } from "@memorip/runtime-canon";
-import { createRelatedFacilitySelector } from "@/lib/related-facilities.mjs";
+import { createFacilityNextStopSelector } from "@/lib/facility-next-stops.mjs";
+import {
+  createFacilityPageLinkSelector,
+  createRelatedFacilitySelector,
+} from "@/lib/related-facilities.mjs";
 import type {
   CategoryMeta,
   Facility,
@@ -21,6 +25,27 @@ export const metadata = data.metadata;
 export const prefectures: PrefectureMeta[] = data.metadata.prefectures;
 export const categories: CategoryMeta[] = data.metadata.categories;
 const selectRelatedFacilities = createRelatedFacilitySelector(discoverableFacilities);
+const selectFacilityPageLinks = createFacilityPageLinkSelector(visibleFacilities);
+const selectFacilityNextStops = createFacilityNextStopSelector(
+  discoverableFacilities,
+);
+
+export type FacilityNextStop = {
+  facility: Facility;
+  distanceKm: number;
+  ranking: {
+    distanceBand: number;
+    ageFit: number;
+    familyValue: number;
+    complementaryCategory: boolean;
+  };
+  reasons: string[];
+};
+
+export type FacilityNextStops = {
+  radiusKm: number;
+  candidates: FacilityNextStop[];
+};
 
 export function isFacilityVisible(
   facility: Facility | undefined,
@@ -59,6 +84,20 @@ export function getFacilitiesByCategory(categoryId: string): Facility[] {
 
 export function getRelatedFacilities(facility: Facility, limit = 3): Facility[] {
   return selectRelatedFacilities(facility, limit) as Facility[];
+}
+
+export function getFacilityPageLinks(
+  facility: Facility,
+  limit = 3,
+): Facility[] {
+  return selectFacilityPageLinks(facility, limit) as Facility[];
+}
+
+export function getFacilityNextStops(
+  facility: Facility,
+  limit = 4,
+): FacilityNextStops {
+  return selectFacilityNextStops(facility, limit) as FacilityNextStops;
 }
 
 export function getPrefectureMeta(id: PrefectureId): PrefectureMeta | undefined {
