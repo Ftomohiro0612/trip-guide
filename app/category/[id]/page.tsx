@@ -333,21 +333,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           <FacilityPaginationSummary page={result.page} />
         </div>
 
-        {result.mapFacilities.length > 0 && (
-          <section className="mb-8" aria-labelledby="category-map-heading">
-            <h2
-              id="category-map-heading"
-              className="mb-3 mt-6 text-xl font-bold text-slate-900"
-            >
-              📍 このページの施設を地図で見る
-              <span className="ml-2 text-sm font-normal text-slate-500">
-                {result.page.totalItems}施設中 {result.mapFacilities.length}件
-              </span>
-            </h2>
-            <MapViewClient facilities={result.mapFacilities} height={420} />
-          </section>
-        )}
-
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           <Stat label="該当施設" count={result.page.totalItems} emoji="🎈" />
           <Stat label="雨でも快適" count={rainCount} emoji="☂️" />
@@ -421,6 +406,21 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         ))}
 
         <FacilityPaginationControls page={result.page} />
+
+        {result.mapFacilities.length > 0 && (
+          <section className="mt-10" aria-labelledby="category-map-heading">
+            <h2
+              id="category-map-heading"
+              className="mb-3 text-xl font-bold text-slate-900"
+            >
+              📍 このページの施設を地図で見る
+              <span className="ml-2 text-sm font-normal text-slate-500">
+                {result.page.totalItems}施設中 {result.mapFacilities.length}件
+              </span>
+            </h2>
+            <MapViewClient facilities={result.mapFacilities} height={420} />
+          </section>
+        )}
 
         <section className="mt-12">
           <h2 className="mb-3 text-xl font-bold">他のカテゴリもチェック</h2>
