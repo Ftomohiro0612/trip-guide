@@ -15,6 +15,10 @@ const summerPageSource = fs.readFileSync(
   path.join(root, "app/events/summer/page.tsx"),
   "utf8",
 );
+const summerDateContentSource = fs.readFileSync(
+  path.join(root, "components/SummerDateContent.tsx"),
+  "utf8",
+);
 const summerMapSource = fs.readFileSync(
   path.join(root, "components/SummerEventMap.tsx"),
   "utf8",
@@ -345,7 +349,10 @@ const visibleMissingLocationEvents = visibleAdoptedEvents.filter(
   (event) => !summerLocations.locations_by_event_id?.[event.id],
 );
 
-validateSummerMapUiContract(summerPageSource, summerMapSource);
+validateSummerMapUiContract(
+  `${summerPageSource}\n${summerDateContentSource}`,
+  summerMapSource,
+);
 validateSummerLocationResearch(
   summerLocationResearch,
   summerLocations.locations_by_event_id ?? {},
@@ -737,19 +744,19 @@ function validateSummerMapUiContract(pageSource, mapSource) {
       "map points must use the same visibleEvents date population as the list",
     ],
     [
-      /getSummerEventMapCoverage\(visibleEvents, mapPoints\)/u,
+      /getSummerEventMapCoverage\(\s*currentViews\.map\(\(view\) => view\.event\),\s*currentPoints,\s*\)/u,
       "map UI counts must come from the shared coverage calculation",
     ],
     [
-      /data-summer-map-listed-count=\{mapCoverage\.listedCount\}/u,
+      /data-summer-map-listed-count=\{coverage\.listedCount\}/u,
       "map UI must expose the calculated listed count",
     ],
     [
-      /data-summer-map-mapped-count=\{mapCoverage\.mappedCount\}/u,
+      /data-summer-map-mapped-count=\{coverage\.mappedCount\}/u,
       "map UI must expose the calculated mapped count",
     ],
     [
-      /data-summer-map-unmapped-count=\{mapCoverage\.unmappedCount\}/u,
+      /data-summer-map-unmapped-count=\{coverage\.unmappedCount\}/u,
       "map UI must expose the calculated unmapped count",
     ],
     [

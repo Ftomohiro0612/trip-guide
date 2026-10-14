@@ -12,7 +12,20 @@ import type {
   PrefectureId,
   RecommendedForTag,
 } from "@/types/facility";
+import {
+  getEventLastDate,
+  getNextEventDate,
+  getTokyoDateString,
+  isThisMonth,
+  isThisWeekend,
+} from "@/lib/event-dates";
 export { isPdfOfficialUrl } from "@/lib/event-urls";
+export {
+  getEventLastDate,
+  getNextEventDate,
+  isThisMonth,
+  isThisWeekend,
+} from "@/lib/event-dates";
 
 export type EventStatus =
   | "scheduled"
@@ -235,18 +248,7 @@ const facilityIdSet = new Set(facilities.map((facility) => facility.id));
 const facilityById = new Map(facilities.map((facility) => [facility.id, facility]));
 
 export function getBuildDateString(date = new Date()): string {
-  // 日本向けサイトのため "今日" は Asia/Tokyo 基準で判定する。
-  // Vercel ビルドサーバは UTC のため、日本で当日確認したイベントが
-  // 未来(age<0)扱いになり非表示になる問題があった。
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Asia/Tokyo",
-    year: "numeric",
-    month: "2-digit",
-    day: "2-digit",
-  }).formatToParts(date);
-  const pick = (type: string) =>
-    parts.find((part) => part.type === type)?.value ?? "";
-  return `${pick("year")}-${pick("month")}-${pick("day")}`;
+  return getTokyoDateString(date);
 }
 
 export function isVisibleEvent(
@@ -261,18 +263,17 @@ export function isVisibleEvent(
     event.facility_id === null && Boolean(event.venue_name?.trim());
   const hasValidFacility =
     event.facility_id !== null && facilityIds.has(event.facility_id);
-  const hasRemainingOccurrence =
-    !event.occurrence_dates || getNextEventDate(event, todayString) !== null;
+  const lastDate = getEventLastDate(event);
 
   return (
     VISIBLE_STATUSES.has(event.status) &&
-    (event.end_date === null || event.end_date >= todayString) &&
+    lastDate !== null &&
+    lastDate >= todayString &&
     checkedAgeDays !== null &&
     checkedAgeDays >= 0 &&
     checkedAgeDays <= maxAgeDays &&
     /^https?:\/\/\S+$/u.test(event.official_url.trim()) &&
-    (hasValidFacility || hasValidVenue) &&
-    hasRemainingOccurrence
+    (hasValidFacility || hasValidVenue)
   );
 }
 
@@ -390,53 +391,6 @@ export function isSummerMainEvent(event: EventItem): boolean {
   );
 }
 
-export function getNextEventDate(
-  event: EventItem,
-  today: string | Date = getBuildDateString(),
-): string | null {
-  const todayString = normalizeDateInput(today);
-  if (event.occurrence_dates && event.occurrence_dates.length > 0) {
-    return event.occurrence_dates.find((date) => date >= todayString) ?? null;
-  }
-  if (event.start_date === null) return null;
-  const endDate = event.end_date ?? event.start_date;
-  if (endDate < todayString) return null;
-  return event.start_date <= todayString ? todayString : event.start_date;
-}
-
-export function isThisWeekend(
-  event: EventItem,
-  today: string | Date = getBuildDateString(),
-): boolean {
-  const todayMs = parseDateOnly(normalizeDateInput(today));
-  if (todayMs === null) return false;
-  const day = new Date(todayMs).getUTCDay();
-  const daysUntilSaturday = (6 - day + 7) % 7;
-  const saturday = todayMs + daysUntilSaturday * 86_400_000;
-  const sunday = saturday + 86_400_000;
-  return eventDateRangeIntersects(event, saturday, sunday);
-}
-
-export function isThisMonth(
-  event: EventItem,
-  today: string | Date = getBuildDateString(),
-): boolean {
-  const todayMs = parseDateOnly(normalizeDateInput(today));
-  if (todayMs === null) return false;
-  const todayDate = new Date(todayMs);
-  const monthStart = Date.UTC(
-    todayDate.getUTCFullYear(),
-    todayDate.getUTCMonth(),
-    1,
-  );
-  const monthEnd = Date.UTC(
-    todayDate.getUTCFullYear(),
-    todayDate.getUTCMonth() + 1,
-    0,
-  );
-  return eventDateRangeIntersects(event, monthStart, monthEnd);
-}
-
 function compareEventsByStartDate(a: EventItem, b: EventItem): number {
   if (a.start_date === null && b.start_date === null) {
     return b.display_priority - a.display_priority || a.id.localeCompare(b.id);
@@ -484,25 +438,6 @@ function parseDateOnly(value: string | null): number | null {
   if (value === null || !/^\d{4}-\d{2}-\d{2}$/u.test(value)) return null;
   const [year, month, day] = value.split("-").map(Number);
   return Date.UTC(year, month - 1, day);
-}
-
-function eventDateRangeIntersects(
-  event: EventItem,
-  rangeStart: number,
-  rangeEnd: number,
-): boolean {
-  if (event.occurrence_dates && event.occurrence_dates.length > 0) {
-    return event.occurrence_dates.some((date) => {
-      const occurrence = parseDateOnly(date);
-      return (
-        occurrence !== null && occurrence >= rangeStart && occurrence <= rangeEnd
-      );
-    });
-  }
-  const start = parseDateOnly(event.start_date);
-  if (start === null) return false;
-  const end = parseDateOnly(event.end_date) ?? start;
-  return start <= rangeEnd && end >= rangeStart;
 }
 
 function normalizeSummerEvent(source: SummerEventSource): EventItem {

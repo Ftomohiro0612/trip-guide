@@ -11,6 +11,8 @@ import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
 import EventDateReservationFilters from "@/components/EventDateReservationFilters";
 import EventNearbyFacilities from "@/components/EventNearbyFacilities";
+import { useTokyoToday } from "@/components/useTokyoToday";
+import { refreshEventViewsForDate } from "@/lib/event-dates";
 import {
   EVENT_PAGE_SIZE,
   filterEventViews,
@@ -44,6 +46,7 @@ interface SummerEventExplorerProps {
   initialQuickFilter?: "free";
   initialDatePreset?: EventDatePreset;
   initialReservation?: EventReservationFilter;
+  maxAgeDays: number;
   referenceDate: string;
 }
 
@@ -146,8 +149,10 @@ export default function SummerEventExplorer({
   initialQuickFilter,
   initialDatePreset,
   initialReservation,
+  maxAgeDays,
   referenceDate,
 }: SummerEventExplorerProps) {
+  const today = useTokyoToday();
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const filteredViewsRef = useRef<EventView[]>([]);
   const allOrderedViewsRef = useRef<EventView[]>([]);
@@ -171,33 +176,40 @@ export default function SummerEventExplorer({
   );
   const [reservation, setReservation] =
     useState<EventReservationFilter | null>(initialReservation ?? null);
+  const [queryReady, setQueryReady] = useState(false);
+  const currentViews = useMemo(
+    () =>
+      today ? refreshEventViewsForDate(views, today, maxAgeDays) : views,
+    [maxAgeDays, today, views],
+  );
 
   const filteredViews = useMemo(
     () =>
-      filterEventViews(views, {
+      filterEventViews(currentViews, {
         eventTypes: selectedTypes,
         prefectures: selectedPrefectures,
         quickFilters: selectedQuickFilters,
         recommendedTags: [],
         dateRange,
         datePreset,
-        referenceDate,
+        referenceDate: today ?? referenceDate,
         reservation,
       }).filter((view) => Boolean(view.event.event_type)),
     [
       datePreset,
       dateRange,
+      currentViews,
       referenceDate,
       reservation,
       selectedPrefectures,
       selectedQuickFilters,
       selectedTypes,
-      views,
+      today,
     ],
   );
   const allOrderedViews = useMemo(
-    () => orderViewsByEventType(views),
-    [views],
+    () => orderViewsByEventType(currentViews),
+    [currentViews],
   );
   const orderedFilteredViews = useMemo(
     () => orderViewsByEventType(filteredViews),
@@ -214,6 +226,35 @@ export default function SummerEventExplorer({
     selectedQuickFilters.length > 0 ||
     Boolean(dateRange.startDate || dateRange.endDate || datePreset) ||
     reservation !== null;
+
+  useEffect(() => {
+    const frame = window.requestAnimationFrame(() => {
+      const query = new URLSearchParams(window.location.search);
+      const type = query.get("type");
+      const quick = query.get("quick");
+      const date = query.get("date");
+      const reservationQuery = query.get("reservation");
+
+      if (isSummerEventType(type)) setSelectedTypes([type]);
+      if (quick === "free") setSelectedQuickFilters(["free"]);
+      if (date === "weekend" || date === "month") {
+        setDatePreset(date);
+      } else if (quick === "weekend" || quick === "month") {
+        setDatePreset(quick);
+      }
+      if (
+        reservationQuery === "required" ||
+        reservationQuery === "not_required"
+      ) {
+        setReservation(reservationQuery);
+      } else if (quick === "noReservation") {
+        setReservation("not_required");
+      }
+      setQueryReady(true);
+    });
+
+    return () => window.cancelAnimationFrame(frame);
+  }, []);
 
   const revealHashTarget = useCallback((hash: string) => {
     const staticTargetId = getSummerStaticAnchorTargetId(hash);
@@ -299,6 +340,9 @@ export default function SummerEventExplorer({
     <section
       id="summer-filters"
       aria-labelledby="summer-filter-heading"
+      aria-hidden={today && queryReady ? undefined : true}
+      hidden={!today || !queryReady}
+      data-access-date={today ?? undefined}
       className="scroll-mt-32 sm:scroll-mt-24"
     >
       <div className="rounded-2xl border border-indigo-100 bg-white p-4 shadow-sm sm:p-5">
@@ -563,6 +607,15 @@ function getSummerEventTypeFromHeadingHash(
 function orderViewsByEventType(views: readonly EventView[]): EventView[] {
   return EVENT_TYPES.flatMap((type) =>
     views.filter((view) => view.event.event_type === type.id),
+  );
+}
+
+function isSummerEventType(value: string | null): value is SummerEventType {
+  return (
+    value === "fireworks" ||
+    value === "summer_festival" ||
+    value === "summer_tradition" ||
+    value === "night_outing"
   );
 }
 

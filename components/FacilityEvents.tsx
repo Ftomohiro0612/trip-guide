@@ -1,6 +1,7 @@
-import Link from "next/link";
-import EventCard from "@/components/EventCard";
+import FacilityEventsClient from "@/components/FacilityEventsClient";
 import {
+  EVENT_PAGE_MAX_AGE_DAYS,
+  getBuildDateString,
   getVisibleEventsByFacility,
   isEventPrefecture,
   toEventView,
@@ -17,7 +18,13 @@ export default function FacilityEvents({
   facilityId,
   prefectureId,
 }: FacilityEventsProps) {
-  const events = getVisibleEventsByFacility(facilityId);
+  const today = getBuildDateString();
+  const events = getVisibleEventsByFacility(
+    facilityId,
+    today,
+    EVENT_PAGE_MAX_AGE_DAYS,
+    Number.MAX_SAFE_INTEGER,
+  );
   if (events.length === 0) return null;
 
   const prefecture = isEventPrefecture(prefectureId)
@@ -25,32 +32,10 @@ export default function FacilityEvents({
     : undefined;
 
   return (
-    <section
-      className="rounded-[2rem] bg-white p-5 shadow-sm ring-1 ring-amber-100 sm:p-8"
-      aria-labelledby="facility-events-heading"
-    >
-      <p className="text-xs font-black tracking-[0.18em] text-amber-600">UPCOMING EVENTS</p>
-      <h2 id="facility-events-heading" className="mt-1 mb-4 text-2xl font-black text-slate-950">
-        この施設の今後のイベント
-      </h2>
-      <div className="grid gap-3">
-        {events.map((event) => (
-          <EventCard
-            key={event.id}
-            view={toEventView(event)}
-            showPrefecture={false}
-            showFacilityLink={false}
-          />
-        ))}
-      </div>
-      {prefecture ? (
-        <Link
-          href={`/events/${prefecture.id}`}
-          className="mt-3 inline-flex text-sm font-bold text-brand hover:text-brand-dark hover:underline"
-        >
-          {prefecture.name}のイベントをもっと見る →
-        </Link>
-      ) : null}
-    </section>
+    <FacilityEventsClient
+      views={events.map((event) => toEventView(event, today))}
+      maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+      prefecture={prefecture && { id: prefecture.id, name: prefecture.name }}
+    />
   );
 }

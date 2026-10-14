@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
+import AccessTimeEventResultsMap from "@/components/AccessTimeEventResultsMap";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
-import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import SeasonalOutingCta from "@/components/SeasonalOutingCta";
 import {
+  EVENT_PAGE_MAX_AGE_DAYS,
   eventPrefectures,
   getBuildDateString,
   getFacilityForEvent,
@@ -25,14 +26,20 @@ export default function EventsIndexPage() {
   const today = getBuildDateString();
   const visibleEvents = getVisibleEvents(today);
   const eventViews = visibleEvents.map((event) => toEventView(event, today));
-  const eventFacilities = Array.from(
-    new Map(
-      visibleEvents.flatMap((event) => {
-        const facility = getFacilityForEvent(event);
-        return facility ? [[facility.id, facility] as const] : [];
-      }),
-    ).values(),
-  );
+  const eventFacilityMap = new Map<
+    number,
+    { facility: NonNullable<ReturnType<typeof getFacilityForEvent>>; eventIds: string[] }
+  >();
+  for (const event of visibleEvents) {
+    const facility = getFacilityForEvent(event);
+    if (!facility) continue;
+    const entry = eventFacilityMap.get(facility.id) ?? {
+      facility,
+      eventIds: [],
+    };
+    entry.eventIds.push(event.id);
+    eventFacilityMap.set(facility.id, entry);
+  }
   const prefectureOptions = eventPrefectures.map((prefectureId) => ({
     id: prefectureId,
     name: getEventPrefectureLabel(prefectureId),
@@ -66,15 +73,17 @@ export default function EventsIndexPage() {
         <SeasonalOutingCta placement="events" />
         <AffiliateExperienceCta placement="events_index" />
 
-        <ResponsiveResultsMap
-          facilities={eventFacilities}
-          heading="地図で探す"
+        <AccessTimeEventResultsMap
+          entries={Array.from(eventFacilityMap.values())}
+          views={eventViews}
+          maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
         />
 
         <div className="mt-10">
           <EventFilterBar
             views={eventViews}
             prefectureOptions={prefectureOptions}
+            maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
             referenceDate={today}
           />
         </div>

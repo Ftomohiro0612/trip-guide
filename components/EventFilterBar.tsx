@@ -4,6 +4,8 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import type { ReactNode } from "react";
 import EventCard from "@/components/EventCard";
 import EventDateReservationFilters from "@/components/EventDateReservationFilters";
+import { useTokyoToday } from "@/components/useTokyoToday";
+import { refreshEventViewsForDate } from "@/lib/event-dates";
 import {
   filterEventViews,
   getDateOnlyInTimeZone,
@@ -27,6 +29,7 @@ interface EventFilterBarProps {
   prefectureOptions?: PrefectureOption[];
   showPrefectureFilter?: boolean;
   showPrefectureOnCard?: boolean;
+  maxAgeDays: number;
   referenceDate: string;
 }
 
@@ -40,8 +43,10 @@ export default function EventFilterBar({
   prefectureOptions = [],
   showPrefectureFilter = true,
   showPrefectureOnCard = true,
+  maxAgeDays,
   referenceDate,
 }: EventFilterBarProps) {
+  const today = useTokyoToday();
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedPrefectures, setSelectedPrefectures] = useState<
@@ -56,12 +61,17 @@ export default function EventFilterBar({
   });
   const [datePreset, setDatePreset] = useState<EventDatePreset | null>(null);
   const [datePresetReferenceDate, setDatePresetReferenceDate] =
-    useState(referenceDate);
+    useState<string | null>(null);
   const [reservation, setReservation] =
     useState<EventReservationFilter | null>(null);
   const [selectedRecommendedTags, setSelectedRecommendedTags] = useState<
     RecommendedForTag[]
   >([]);
+  const currentViews = useMemo(
+    () =>
+      today ? refreshEventViewsForDate(views, today, maxAgeDays) : views,
+    [maxAgeDays, today, views],
+  );
 
   useEffect(() => {
     if (window.location.pathname !== "/events") return;
@@ -86,7 +96,7 @@ export default function EventFilterBar({
 
   const availableRecommendedTags = useMemo(() => {
     const tags = new Set<RecommendedForTag>();
-    for (const view of views) {
+    for (const view of currentViews) {
       for (const tag of view.event.recommended_for_tags) tags.add(tag);
     }
     return Array.from(tags).sort((a, b) =>
@@ -95,12 +105,12 @@ export default function EventFilterBar({
         "ja",
       ),
     );
-  }, [views]);
+  }, [currentViews]);
 
   const filteredViews = useMemo(
     () =>
       filterEventViews(
-        views,
+        currentViews,
         {
           eventTypes: [],
           prefectures: selectedPrefectures,
@@ -108,7 +118,7 @@ export default function EventFilterBar({
           recommendedTags: selectedRecommendedTags,
           dateRange,
           datePreset,
-          referenceDate: datePresetReferenceDate,
+          referenceDate: datePresetReferenceDate ?? today ?? referenceDate,
           reservation,
         },
         showPrefectureFilter,
@@ -120,9 +130,11 @@ export default function EventFilterBar({
       datePreset,
       dateRange,
       datePresetReferenceDate,
+      referenceDate,
       reservation,
       showPrefectureFilter,
-      views,
+      currentViews,
+      today,
     ],
   );
 
@@ -162,7 +174,12 @@ export default function EventFilterBar({
   }
 
   return (
-    <section aria-labelledby="event-list-heading">
+    <section
+      aria-labelledby="event-list-heading"
+      aria-hidden={today ? undefined : true}
+      hidden={!today}
+      data-access-date={today ?? undefined}
+    >
       <div className="mb-5 rounded-lg border border-slate-200 bg-white p-4">
         <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
           <div>
@@ -195,7 +212,7 @@ export default function EventFilterBar({
               setSelectedRecommendedTags([]);
               setDateRange({ startDate: "", endDate: "" });
               setDatePreset(null);
-              setDatePresetReferenceDate(referenceDate);
+              setDatePresetReferenceDate(null);
               setReservation(null);
             }}
             disabled={!hasActiveFilters}
