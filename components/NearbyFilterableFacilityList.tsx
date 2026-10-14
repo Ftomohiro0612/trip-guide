@@ -9,7 +9,7 @@ import {
   FacilityPaginationSummary,
   type FacilityPageSummary,
 } from "@/components/FacilityPagination";
-import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
+import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
 import {
   buildFacilityPageHref,
   paginateFacilities,
@@ -31,6 +31,7 @@ interface Props {
   facilities: Facility[];
   page: FacilityPageSummary;
   nearbyDataHref: string;
+  mapDataHref: string;
   heading?: string;
   showMap?: boolean;
 }
@@ -39,6 +40,7 @@ export default function NearbyFilterableFacilityList({
   facilities,
   page,
   nearbyDataHref,
+  mapDataHref,
   heading = "施設一覧",
   showMap = true,
 }: Props) {
@@ -325,16 +327,13 @@ export default function NearbyFilterableFacilityList({
         </button>
       )}
 
-      {showMap &&
-        (hasArea || (
-          !waitingForLocation && !loadingCandidates && displayedFacilities.length > 0
-        )) && (
-          <ResponsiveResultsMap
-            facilities={displayedFacilities}
-            totalItems={effectivePage.totalItems}
-            enableAreaSearch={pathname === "/facilities"}
-          />
-        )}
+      {showMap && (hasArea || page.totalItems > 0) && (
+        <ResponsiveDiscoveryMap
+          dataHref={mapDataHref}
+          totalItems={page.totalItems}
+          enableAreaSearch={pathname === "/facilities"}
+        />
+      )}
 
       {waitingForLocation ? (
         <div className="rounded-2xl border border-amber-200 bg-amber-50 py-12 text-center">

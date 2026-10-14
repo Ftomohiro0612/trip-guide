@@ -3,7 +3,8 @@
 import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 import { createClient } from "@/lib/supabase/client";
-import type { MapFacility, UserStatusMap } from "./MapView";
+import type { MapFacility } from "@/lib/map-facilities";
+import type { UserStatusMap } from "./MapView";
 
 const MapView = dynamic(() => import("./MapView"), {
   ssr: false,
@@ -24,6 +25,9 @@ interface Props {
   height?: number;
   storageKey?: string;
   enableAreaSearch?: boolean;
+  clustered?: boolean;
+  highlightedFacilityId?: number;
+  totalItems?: number;
 }
 
 export default function MapViewClient(props: Props) {

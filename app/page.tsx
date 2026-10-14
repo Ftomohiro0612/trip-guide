@@ -6,7 +6,7 @@ import CategoryIcon from "@/components/CategoryIcon";
 import FacilityCard from "@/components/FacilityCard";
 import HeroSearch from "@/components/HeroSearch";
 import { JsonLd } from "@/components/JsonLd";
-import MapViewClient from "@/components/MapViewClient";
+import DiscoveryMap from "@/components/DiscoveryMap";
 import SeasonalOutingCta from "@/components/SeasonalOutingCta";
 import {
   PreferenceRankingMiniExample,
@@ -25,7 +25,6 @@ import {
 } from "@/lib/facilities";
 import { prefectureIconImages } from "@/lib/icons";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import { toMapFacilities } from "@/lib/map-facilities";
 import type {
   Facility,
   FacilityTag,
@@ -35,8 +34,6 @@ import type {
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
 };
-
-const mapFacilities = toMapFacilities(discoverableFacilities);
 
 const PREFECTURE_REGIONS = [
   {
@@ -626,8 +623,9 @@ export default function HomePage() {
               大きな地図で見る →
             </Link>
           </div>
-          <MapViewClient
-            facilities={mapFacilities}
+          <DiscoveryMap
+            dataHref="/api/discovery-map?scope=all"
+            expectedCount={discoverableFacilities.length}
             height={520}
             storageKey="home"
           />

@@ -8,7 +8,7 @@ import {
   FacilityPaginationControls,
   FacilityPaginationSummary,
 } from "@/components/FacilityPagination";
-import MapViewClient from "@/components/MapViewClient";
+import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import {
   categories,
@@ -42,6 +42,17 @@ function craftTypeHref(prefectureId: string, craftTypeId: string | null) {
   if (craftTypeId) params.set("craft_type", craftTypeId);
   params.set("page", "1");
   return `?${params.toString()}`;
+}
+
+function categoryMapDataHref(
+  categoryId: string,
+  prefectureId: string | null,
+  craftTypeId: string | null,
+) {
+  const params = new URLSearchParams({ scope: "category", category: categoryId });
+  if (prefectureId) params.set("prefecture", prefectureId);
+  if (craftTypeId) params.set("craft_type", craftTypeId);
+  return `/api/discovery-map?${params.toString()}`;
 }
 
 export function generateStaticParams() {
@@ -407,19 +418,18 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
         <FacilityPaginationControls page={result.page} />
 
-        {result.mapFacilities.length > 0 && (
-          <section className="mt-10" aria-labelledby="category-map-heading">
-            <h2
-              id="category-map-heading"
-              className="mb-3 text-xl font-bold text-slate-900"
-            >
-              📍 このページの施設を地図で見る
-              <span className="ml-2 text-sm font-normal text-slate-500">
-                {result.page.totalItems}施設中 {result.mapFacilities.length}件
-              </span>
-            </h2>
-            <MapViewClient facilities={result.mapFacilities} height={420} />
-          </section>
+        {result.filteredFacilities.length > 0 && (
+          <ResponsiveDiscoveryMap
+            dataHref={categoryMapDataHref(
+              meta.id,
+              result.selectedPrefectureId,
+              result.selectedCraftTypeId,
+            )}
+            heading={`${selectedPrefecture ? `${selectedPrefecture.name}の` : ""}該当する施設を地図で見る`}
+            totalItems={result.filteredFacilities.length}
+            height={420}
+            storageKey={`category:${meta.id}:${result.selectedPrefectureId ?? "all"}:${result.selectedCraftTypeId ?? "all"}`}
+          />
         )}
 
         <section className="mt-12">

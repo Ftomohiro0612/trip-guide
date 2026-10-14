@@ -48,6 +48,16 @@ function buildNearbyDataHref(searchParams: RawSearchParams): string {
     : "/api/facilities/page-data";
 }
 
+function buildMapDataHref(searchParams: RawSearchParams): string {
+  const params = new URLSearchParams({ scope: "facilities" });
+  for (const [key, rawValue] of Object.entries(searchParams)) {
+    if (rawValue === undefined || key === "page" || key === "sort") continue;
+    const values = Array.isArray(rawValue) ? rawValue : [rawValue];
+    for (const value of values) params.append(key, value);
+  }
+  return `/api/discovery-map?${params.toString()}`;
+}
+
 export default async function FacilitiesPage({ searchParams }: Props) {
   const sp = await searchParams;
   const {
@@ -66,6 +76,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
       ? findFacilityNameSuggestions(filters.q, discoverableFacilities)
       : [];
   const nearbyDataHref = buildNearbyDataHref(sp);
+  const mapDataHref = buildMapDataHref(sp);
   const visiblePrefectures = prefectures.map((p) => ({
     ...p,
     count: tagFilteredResults.filter((f) => f.prefecture_id === p.id).length,
@@ -165,6 +176,7 @@ export default async function FacilitiesPage({ searchParams }: Props) {
             facilities={page.items}
             page={page}
             nearbyDataHref={nearbyDataHref}
+            mapDataHref={mapDataHref}
           />
         </section>
       </div>

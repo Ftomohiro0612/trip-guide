@@ -6,6 +6,7 @@ import {
   TileLayer,
   CircleMarker,
   Popup,
+  Tooltip,
   useMap,
   useMapEvents,
 } from "react-leaflet";
@@ -13,12 +14,13 @@ import L from "leaflet";
 import type { LeafletEvent } from "leaflet";
 import "leaflet/dist/leaflet.css";
 import Link from "next/link";
+import Image from "next/image";
 import FacilityClosureBadge from "@/components/FacilityClosureBadge";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import Image from "next/image";
 import CategoryIcon from "@/components/CategoryIcon";
 import styles from "./MapView.module.css";
-import type { Facility, PrefectureId } from "@/types/facility";
+import type { PrefectureId } from "@/types/facility";
+import type { MapFacility } from "@/lib/map-facilities";
 import { driveTimeEstimateLabel, haversineDistanceKm } from "@/lib/distance";
 import { formatBBoxParam, parseBBoxParam } from "@/lib/geo-bounds";
 
@@ -28,26 +30,10 @@ interface Props {
   userStatus?: UserStatusMap;
   storageKey?: string;
   enableAreaSearch?: boolean;
+  clustered?: boolean;
+  highlightedFacilityId?: number;
+  totalItems?: number;
 }
-
-export type MapFacility = Pick<
-  Facility,
-  | "id"
-  | "slug"
-  | "name"
-  | "image"
-  | "prefecture"
-  | "prefecture_id"
-  | "category"
-  | "category_id"
-  | "latitude"
-  | "longitude"
-  | "is_free"
-  | "rain_friendly"
-  | "target_age"
-  | "things_to_do"
-  | "closure_status"
->;
 
 export type UserFacilityStatus = {
   visitCount: number;
@@ -218,6 +204,9 @@ export default function MapView({
   height = 520,
   storageKey,
   enableAreaSearch = false,
+  clustered = false,
+  highlightedFacilityId,
+  totalItems,
 }: Props) {
   const placed = useMemo(() => facilities.filter(hasCoords), [facilities]);
   const searchParams = useSearchParams();
@@ -362,7 +351,7 @@ export default function MapView({
         )}
 
         <div className="absolute z-[650] bottom-3 left-3 bg-white/95 backdrop-blur px-3 py-1.5 rounded-full shadow-sm text-xs font-medium text-slate-700">
-          {visible.length} 施設を表示中
+          {(totalItems ?? visible.length).toLocaleString("ja-JP")} 施設
         </div>
 
         <MapContainer
@@ -405,17 +394,185 @@ export default function MapView({
               source={currentLocation.source}
             />
           )}
-          {rendered.map((f) => (
-            <FacilityMarker
-              key={f.id}
-              facility={f}
-              color={PREF_COLORS[f.prefecture_id]}
+          {clustered ? (
+            <ClusteredFacilityLayer
+              facilities={placed}
               currentLocation={currentLocation?.position ?? null}
+              highlightedFacilityId={highlightedFacilityId}
             />
-          ))}
+          ) : (
+            rendered.map((f) => (
+              <FacilityMarker
+                key={f.id}
+                facility={f}
+                color={PREF_COLORS[f.prefecture_id]}
+                currentLocation={currentLocation?.position ?? null}
+                highlighted={f.id === highlightedFacilityId}
+              />
+            ))
+          )}
         </MapContainer>
       </div>
     </div>
+  );
+}
+
+const CLUSTER_CELL_SIZE_PX = 64;
+const INDIVIDUAL_MARKER_ZOOM = 16;
+
+type Cluster = {
+  id: string;
+  facilities: PlacedFacility[];
+  center: [number, number];
+  bounds: L.LatLngBounds;
+};
+
+function spreadOverlappingMarkers(
+  facilities: PlacedFacility[],
+): PlacedFacility[] {
+  const groups = new Map<string, PlacedFacility[]>();
+  for (const facility of facilities) {
+    const key = `${facility.latitude.toFixed(6)},${facility.longitude.toFixed(6)}`;
+    const group = groups.get(key) ?? [];
+    group.push(facility);
+    groups.set(key, group);
+  }
+
+  return Array.from(groups.values()).flatMap((group) => {
+    if (group.length === 1) return group;
+    const radius = 0.0004;
+    return group.map((facility, index) => {
+      const angle = (index / group.length) * Math.PI * 2;
+      return {
+        ...facility,
+        latitude: facility.latitude + Math.sin(angle) * radius,
+        longitude: facility.longitude + Math.cos(angle) * radius,
+      };
+    });
+  });
+}
+
+function ClusteredFacilityLayer({
+  facilities,
+  currentLocation,
+  highlightedFacilityId,
+}: {
+  facilities: PlacedFacility[];
+  currentLocation: [number, number] | null;
+  highlightedFacilityId?: number;
+}) {
+  const map = useMap();
+  const [viewVersion, setViewVersion] = useState(0);
+  useMapEvents({
+    moveend: () => setViewVersion((value) => value + 1),
+    zoomend: () => setViewVersion((value) => value + 1),
+    resize: () => setViewVersion((value) => value + 1),
+  });
+
+  const { clusters, individuals } = useMemo(() => {
+    void viewVersion;
+    const zoom = map.getZoom();
+    const viewport = map.getBounds().pad(0.25);
+    const inViewport = facilities.filter((facility) =>
+      viewport.contains([facility.latitude, facility.longitude]),
+    );
+
+    if (zoom >= INDIVIDUAL_MARKER_ZOOM) {
+      return {
+        clusters: [] as Cluster[],
+        individuals: spreadOverlappingMarkers(inViewport),
+      };
+    }
+
+    const groups = new Map<string, PlacedFacility[]>();
+    for (const facility of inViewport) {
+      const projected = map.project(
+        [facility.latitude, facility.longitude],
+        zoom,
+      );
+      const key = `${Math.floor(projected.x / CLUSTER_CELL_SIZE_PX)}:${Math.floor(projected.y / CLUSTER_CELL_SIZE_PX)}`;
+      const group = groups.get(key) ?? [];
+      group.push(facility);
+      groups.set(key, group);
+    }
+
+    const nextClusters: Cluster[] = [];
+    const nextIndividuals: PlacedFacility[] = [];
+    for (const [id, group] of groups) {
+      if (group.length === 1) {
+        nextIndividuals.push(group[0]);
+        continue;
+      }
+      const latitude =
+        group.reduce((sum, facility) => sum + facility.latitude, 0) /
+        group.length;
+      const longitude =
+        group.reduce((sum, facility) => sum + facility.longitude, 0) /
+        group.length;
+      nextClusters.push({
+        id,
+        facilities: group,
+        center: [latitude, longitude],
+        bounds: L.latLngBounds(
+          group.map(
+            (facility) =>
+              [facility.latitude, facility.longitude] as [number, number],
+          ),
+        ),
+      });
+    }
+    return { clusters: nextClusters, individuals: nextIndividuals };
+  }, [facilities, map, viewVersion]);
+
+  return (
+    <>
+      {clusters.map((cluster) => {
+        const highlighted = cluster.facilities.some(
+          (facility) => facility.id === highlightedFacilityId,
+        );
+        return (
+          <CircleMarker
+            key={`cluster:${cluster.id}`}
+            center={cluster.center}
+            radius={Math.min(25, 12 + Math.log2(cluster.facilities.length) * 2.2)}
+            pathOptions={{
+              color: highlighted ? "#f59e0b" : "#ffffff",
+              weight: highlighted ? 4 : 3,
+              fillColor: "#0369a1",
+              fillOpacity: 0.9,
+            }}
+            eventHandlers={{
+              click: () => {
+                map.fire("areasearch:programmaticMove");
+                map.flyToBounds(cluster.bounds, {
+                  padding: [36, 36],
+                  maxZoom: Math.min(INDIVIDUAL_MARKER_ZOOM, map.getZoom() + 3),
+                  duration: 0.45,
+                });
+              },
+            }}
+          >
+            <Tooltip
+              permanent
+              direction="center"
+              opacity={1}
+              className={styles.clusterCount}
+            >
+              {cluster.facilities.length}
+            </Tooltip>
+          </CircleMarker>
+        );
+      })}
+      {individuals.map((facility) => (
+        <FacilityMarker
+          key={facility.id}
+          facility={facility}
+          color={PREF_COLORS[facility.prefecture_id]}
+          currentLocation={currentLocation}
+          highlighted={facility.id === highlightedFacilityId}
+        />
+      ))}
+    </>
   );
 }
 
@@ -637,13 +794,15 @@ function FacilityMarker({
   facility,
   color,
   currentLocation,
+  highlighted = false,
 }: {
   facility: PlacedFacility;
   color: string;
   currentLocation: [number, number] | null;
+  highlighted?: boolean;
 }) {
-  const highlighted =
-    facility.rain_friendly === "◎" || facility.is_free;
+  const emphasized =
+    highlighted || facility.rain_friendly === "◎" || facility.is_free;
   const driveEstimate = currentLocation
     ? driveTimeEstimateLabel(
         haversineDistanceKm(currentLocation, [
@@ -657,15 +816,14 @@ function FacilityMarker({
         .filter((item) => item.trim().length > 0)
         .slice(0, 3)
     : [];
-  const hasImage = !!facility.image;
-
+  const hasImage = Boolean(facility.image);
   return (
     <CircleMarker
       center={[facility.latitude, facility.longitude]}
-      radius={highlighted ? 8 : 6}
+      radius={highlighted ? 9 : emphasized ? 8 : 6}
       pathOptions={{
-        color: "#ffffff",
-        weight: 2,
+        color: highlighted ? "#f59e0b" : "#ffffff",
+        weight: highlighted ? 4 : 2,
         fillColor: color,
         fillOpacity: 0.9,
       }}
@@ -704,9 +862,11 @@ function FacilityMarker({
               🚗 現在地から {driveEstimate}
             </p>
           )}
-          <p className="text-[11px] leading-snug text-slate-700">
-            対象年齢: {facility.target_age}
-          </p>
+          {facility.target_age && (
+            <p className="text-[11px] leading-snug text-slate-700">
+              対象年齢: {facility.target_age}
+            </p>
+          )}
           {thingsToDo.length > 0 && (
             <ul className="space-y-0.5" aria-label="この施設でできそうなこと">
               {thingsToDo.map((item) => (
