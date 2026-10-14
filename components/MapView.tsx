@@ -1,10 +1,17 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import {
   MapContainer,
   TileLayer,
   CircleMarker,
+  Polyline,
   Popup,
   Tooltip,
   useMap,
@@ -109,6 +116,11 @@ type CurrentLocationState = {
 
 type PersistedMapViewState = {
   center: [number, number];
+  zoom: number;
+};
+
+type MapViewportState = {
+  bounds: string;
   zoom: number;
 };
 
@@ -218,6 +230,9 @@ export default function MapView({
     useState<CurrentLocationState | null>(() => readPersistedCurrentLocation());
   const [locationNotice, setLocationNotice] = useState<string | null>(null);
   const [locating, setLocating] = useState(false);
+  const [viewportState, setViewportState] = useState<MapViewportState | null>(
+    null,
+  );
   const savedSnapshot = useRef<PersistedMapViewState>({
     center: initialState?.center ?? DEFAULT_CENTER,
     zoom: initialState?.zoom ?? DEFAULT_ZOOM,
@@ -269,37 +284,25 @@ export default function MapView({
   }, []);
 
   const visible = placed;
+  const singlePrefecture = useMemo(
+    () => new Set(placed.map((facility) => facility.prefecture_id)).size === 1,
+    [placed],
+  );
+  const forceIndividualMarkers =
+    initialArea !== null || highlightedFacilityId !== undefined || singlePrefecture;
+  const markerMode =
+    forceIndividualMarkers ||
+    (viewportState?.zoom ?? DEFAULT_ZOOM) >= PREFECTURE_LEVEL_ZOOM
+      ? "pins"
+      : "clusters";
 
-  // Spread overlapping markers in a small circle so each is clickable
-  // (e.g. キポキポ + 恩賜林庭園 at identical coords would otherwise stack
-  // and only the top one is visible). The offset is ~30-40m, smaller than
-  // street-level zoom resolution.
-  const rendered = useMemo(() => {
-    const groups = new Map<string, PlacedFacility[]>();
-    for (const f of visible) {
-      const key = `${f.latitude.toFixed(6)},${f.longitude.toFixed(6)}`;
-      const list = groups.get(key) ?? [];
-      list.push(f);
-      groups.set(key, list);
-    }
-    const out: PlacedFacility[] = [];
-    for (const list of groups.values()) {
-      if (list.length === 1) {
-        out.push(list[0]);
-        continue;
-      }
-      const radius = 0.0004; // ~40m
-      list.forEach((f, i) => {
-        const angle = (i / list.length) * Math.PI * 2;
-        out.push({
-          ...f,
-          latitude: f.latitude + Math.sin(angle) * radius,
-          longitude: f.longitude + Math.cos(angle) * radius,
-        });
-      });
-    }
-    return out;
-  }, [visible]);
+  const updateViewportState = useCallback((next: MapViewportState) => {
+    setViewportState((current) =>
+      current?.zoom === next.zoom && current.bounds === next.bounds
+        ? current
+        : next,
+    );
+  }, []);
 
   const handleLocate = () => {
     if (typeof navigator === "undefined" || !navigator.geolocation) {
@@ -328,7 +331,12 @@ export default function MapView({
   };
 
   return (
-    <div className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white">
+    <div
+      className="rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-white"
+      data-map-bounds={viewportState?.bounds ?? ""}
+      data-map-marker-mode={markerMode}
+      data-map-zoom={viewportState?.zoom ?? ""}
+    >
       <div className="flex flex-wrap gap-2 p-3 bg-slate-50/80 border-b border-slate-100">
         <button
           type="button"
@@ -369,6 +377,7 @@ export default function MapView({
             attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
           />
+          <MapViewportReporter onChange={updateViewportState} />
           <FitBoundsOnChange
             points={placed}
             fitMode={
@@ -399,9 +408,10 @@ export default function MapView({
               facilities={placed}
               currentLocation={currentLocation?.position ?? null}
               highlightedFacilityId={highlightedFacilityId}
+              forceIndividualMarkers={forceIndividualMarkers}
             />
           ) : (
-            rendered.map((f) => (
+            placed.map((f) => (
               <FacilityMarker
                 key={f.id}
                 facility={f}
@@ -417,8 +427,42 @@ export default function MapView({
   );
 }
 
+function MapViewportReporter({
+  onChange,
+}: {
+  onChange: (state: MapViewportState) => void;
+}) {
+  const map = useMap();
+  const report = useCallback(() => {
+    const bounds = map.getBounds();
+    onChange({
+      bounds: [
+        bounds.getSouth(),
+        bounds.getWest(),
+        bounds.getNorth(),
+        bounds.getEast(),
+      ].join(","),
+      zoom: map.getZoom(),
+    });
+  }, [map, onChange]);
+
+  useMapEvents({
+    moveend: report,
+    zoomend: report,
+    resize: report,
+  });
+
+  useEffect(() => {
+    report();
+  }, [report]);
+
+  return null;
+}
+
 const CLUSTER_CELL_SIZE_PX = 64;
-const INDIVIDUAL_MARKER_ZOOM = 16;
+export const PREFECTURE_LEVEL_ZOOM = 9;
+const MARKER_MIN_SEPARATION_PX = 18;
+const GOLDEN_ANGLE_RADIANS = Math.PI * (3 - Math.sqrt(5));
 
 type Cluster = {
   id: string;
@@ -427,28 +471,76 @@ type Cluster = {
   bounds: L.LatLngBounds;
 };
 
+type RenderedFacility = {
+  facility: PlacedFacility;
+  position: [number, number];
+  displaced: boolean;
+};
+
 function spreadOverlappingMarkers(
   facilities: PlacedFacility[],
-): PlacedFacility[] {
-  const groups = new Map<string, PlacedFacility[]>();
-  for (const facility of facilities) {
-    const key = `${facility.latitude.toFixed(6)},${facility.longitude.toFixed(6)}`;
-    const group = groups.get(key) ?? [];
-    group.push(facility);
-    groups.set(key, group);
-  }
+  map: L.Map,
+  zoom: number,
+  highlightedFacilityId?: number,
+): RenderedFacility[] {
+  const occupied = new Map<string, L.Point[]>();
+  const ordered = [...facilities].sort((left, right) => {
+    if (left.id === highlightedFacilityId) return -1;
+    if (right.id === highlightedFacilityId) return 1;
+    return left.id - right.id;
+  });
 
-  return Array.from(groups.values()).flatMap((group) => {
-    if (group.length === 1) return group;
-    const radius = 0.0004;
-    return group.map((facility, index) => {
-      const angle = (index / group.length) * Math.PI * 2;
-      return {
-        ...facility,
-        latitude: facility.latitude + Math.sin(angle) * radius,
-        longitude: facility.longitude + Math.cos(angle) * radius,
-      };
-    });
+  return ordered.map((facility) => {
+    const origin = map.project([facility.latitude, facility.longitude], zoom);
+    let markerPoint = origin;
+
+    const cellX = (point: L.Point) =>
+      Math.floor(point.x / MARKER_MIN_SEPARATION_PX);
+    const cellY = (point: L.Point) =>
+      Math.floor(point.y / MARKER_MIN_SEPARATION_PX);
+    const cellKey = (x: number, y: number) => `${x}:${y}`;
+    const collides = (candidate: L.Point) => {
+      const x = cellX(candidate);
+      const y = cellY(candidate);
+      for (let offsetX = -1; offsetX <= 1; offsetX += 1) {
+        for (let offsetY = -1; offsetY <= 1; offsetY += 1) {
+          const nearby = occupied.get(cellKey(x + offsetX, y + offsetY)) ?? [];
+          if (
+            nearby.some(
+              (placedPoint) =>
+                placedPoint.distanceTo(candidate) < MARKER_MIN_SEPARATION_PX,
+            )
+          ) {
+            return true;
+          }
+        }
+      }
+      return false;
+    };
+
+    if (collides(markerPoint)) {
+      for (let attempt = 1; attempt <= 240; attempt += 1) {
+        const radius = MARKER_MIN_SEPARATION_PX * Math.sqrt(attempt);
+        const angle = attempt * GOLDEN_ANGLE_RADIANS;
+        const candidate = L.point(
+          origin.x + Math.cos(angle) * radius,
+          origin.y + Math.sin(angle) * radius,
+        );
+        if (!collides(candidate)) {
+          markerPoint = candidate;
+          break;
+        }
+      }
+    }
+
+    const key = cellKey(cellX(markerPoint), cellY(markerPoint));
+    occupied.set(key, [...(occupied.get(key) ?? []), markerPoint]);
+    const markerPosition = map.unproject(markerPoint, zoom);
+    return {
+      facility,
+      position: [markerPosition.lat, markerPosition.lng],
+      displaced: !markerPoint.equals(origin),
+    };
   });
 }
 
@@ -456,10 +548,12 @@ function ClusteredFacilityLayer({
   facilities,
   currentLocation,
   highlightedFacilityId,
+  forceIndividualMarkers,
 }: {
   facilities: PlacedFacility[];
   currentLocation: [number, number] | null;
   highlightedFacilityId?: number;
+  forceIndividualMarkers: boolean;
 }) {
   const map = useMap();
   const [viewVersion, setViewVersion] = useState(0);
@@ -472,15 +566,21 @@ function ClusteredFacilityLayer({
   const { clusters, individuals } = useMemo(() => {
     void viewVersion;
     const zoom = map.getZoom();
-    const viewport = map.getBounds().pad(0.25);
+    const showIndividuals = forceIndividualMarkers || zoom >= PREFECTURE_LEVEL_ZOOM;
+    const viewport = map.getBounds().pad(showIndividuals ? 0.05 : 0.25);
     const inViewport = facilities.filter((facility) =>
       viewport.contains([facility.latitude, facility.longitude]),
     );
 
-    if (zoom >= INDIVIDUAL_MARKER_ZOOM) {
+    if (showIndividuals) {
       return {
         clusters: [] as Cluster[],
-        individuals: spreadOverlappingMarkers(inViewport),
+        individuals: spreadOverlappingMarkers(
+          inViewport,
+          map,
+          zoom,
+          highlightedFacilityId,
+        ),
       };
     }
 
@@ -497,10 +597,14 @@ function ClusteredFacilityLayer({
     }
 
     const nextClusters: Cluster[] = [];
-    const nextIndividuals: PlacedFacility[] = [];
+    const nextIndividuals: RenderedFacility[] = [];
     for (const [id, group] of groups) {
       if (group.length === 1) {
-        nextIndividuals.push(group[0]);
+        nextIndividuals.push({
+          facility: group[0],
+          position: [group[0].latitude, group[0].longitude],
+          displaced: false,
+        });
         continue;
       }
       const latitude =
@@ -522,7 +626,7 @@ function ClusteredFacilityLayer({
       });
     }
     return { clusters: nextClusters, individuals: nextIndividuals };
-  }, [facilities, map, viewVersion]);
+  }, [facilities, forceIndividualMarkers, highlightedFacilityId, map, viewVersion]);
 
   return (
     <>
@@ -534,6 +638,7 @@ function ClusteredFacilityLayer({
           <CircleMarker
             key={`cluster:${cluster.id}`}
             center={cluster.center}
+            className="map-count-cluster"
             radius={Math.min(25, 12 + Math.log2(cluster.facilities.length) * 2.2)}
             pathOptions={{
               color: highlighted ? "#f59e0b" : "#ffffff",
@@ -546,7 +651,7 @@ function ClusteredFacilityLayer({
                 map.fire("areasearch:programmaticMove");
                 map.flyToBounds(cluster.bounds, {
                   padding: [36, 36],
-                  maxZoom: Math.min(INDIVIDUAL_MARKER_ZOOM, map.getZoom() + 3),
+                  maxZoom: Math.min(PREFECTURE_LEVEL_ZOOM, map.getZoom() + 3),
                   duration: 0.45,
                 });
               },
@@ -563,10 +668,23 @@ function ClusteredFacilityLayer({
           </CircleMarker>
         );
       })}
-      {individuals.map((facility) => (
+      {individuals.some(({ displaced }) => displaced) && (
+        <Polyline
+          positions={individuals
+            .filter(({ displaced }) => displaced)
+            .map(({ facility, position }) => [
+              [facility.latitude, facility.longitude] as [number, number],
+              position,
+            ])}
+          interactive={false}
+          pathOptions={{ color: "#64748b", opacity: 0.35, weight: 1 }}
+        />
+      )}
+      {individuals.map(({ facility, position }) => (
         <FacilityMarker
           key={facility.id}
           facility={facility}
+          position={position}
           color={PREF_COLORS[facility.prefecture_id]}
           currentLocation={currentLocation}
           highlighted={facility.id === highlightedFacilityId}
@@ -792,11 +910,13 @@ function CurrentLocationMarker({
 
 function FacilityMarker({
   facility,
+  position,
   color,
   currentLocation,
   highlighted = false,
 }: {
   facility: PlacedFacility;
+  position?: [number, number];
   color: string;
   currentLocation: [number, number] | null;
   highlighted?: boolean;
@@ -819,7 +939,8 @@ function FacilityMarker({
   const hasImage = Boolean(facility.image);
   return (
     <CircleMarker
-      center={[facility.latitude, facility.longitude]}
+      center={position ?? [facility.latitude, facility.longitude]}
+      className={`map-facility-pin${highlighted ? " map-facility-pin-highlighted" : ""}`}
       radius={highlighted ? 9 : emphasized ? 8 : 6}
       pathOptions={{
         color: highlighted ? "#f59e0b" : "#ffffff",
