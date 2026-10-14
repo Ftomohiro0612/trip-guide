@@ -18,6 +18,8 @@
     "events:summer:test": "node --test scripts/test-summer-hub.mjs",
     "events:filter:test": "node --test scripts/test-event-filter.mjs",
     "events:date:test": "node --test scripts/test-event-dates.mjs",
+    "events:discovery:test": "node --test scripts/test-event-discovery.cjs",
+    "events:discovery:audit": "node scripts/audit-event-discovery.cjs",
     "crosslinks:test": "node --test scripts/test-event-facility-crosslinks.mjs",
     "visits:comparison:test": "node --test scripts/test-visit-comparison.mjs",
     "facilities:wave:validate": "node scripts/validate-facility-prefecture-wave.mjs",

@@ -19,6 +19,10 @@ import {
   isThisMonth,
   isThisWeekend,
 } from "@/lib/event-dates";
+import {
+  deriveEventDiscoveryType,
+  type EventDiscoveryType,
+} from "@/lib/event-discovery";
 export { isPdfOfficialUrl } from "@/lib/event-urls";
 export {
   getEventLastDate,
@@ -139,6 +143,7 @@ export interface EventView {
   facilitySlug: string | null;
   venueName: string | null;
   prefectureLabel: string;
+  discoveryType: EventDiscoveryType;
   isThisWeekend: boolean;
   isThisMonth: boolean;
 }
@@ -358,6 +363,7 @@ export function toEventView(
     facilitySlug: facility?.slug ?? null,
     venueName: facility?.name ?? event.venue_name?.trim() ?? null,
     prefectureLabel: getEventPrefectureLabel(event.prefecture),
+    discoveryType: deriveEventDiscoveryType(event),
     isThisWeekend: isThisWeekend(event, today),
     isThisMonth: isThisMonth(event, today),
   };

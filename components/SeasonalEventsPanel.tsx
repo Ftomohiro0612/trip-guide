@@ -2,19 +2,15 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
-import EventCard from "@/components/EventCard";
+import CompactEventCard from "@/components/CompactEventCard";
 import { useTokyoToday } from "@/components/useTokyoToday";
+import { refreshEventViewsForDate } from "@/lib/event-dates";
 import {
-  getNextEventDate,
-  isThisWeekend,
-  refreshEventViewsForDate,
-} from "@/lib/event-dates";
+  getCompactEventAppealTags,
+  selectChildEventViews,
+  selectSeasonalEventViews,
+} from "@/lib/event-discovery";
 import type { EventView } from "@/lib/events";
-
-const panelClass =
-  "overflow-hidden rounded-3xl border border-red-200 bg-gradient-to-br from-red-50 to-rose-50 px-5 py-7 shadow-xl shadow-red-100/50 sm:px-8 sm:py-9 lg:px-10";
-const linkClass =
-  "inline-flex min-h-11 items-center rounded-full bg-red-800 px-5 py-2 text-sm font-bold text-white transition-colors hover:bg-red-700";
 
 export default function SeasonalEventsPanel({
   views,
@@ -28,75 +24,137 @@ export default function SeasonalEventsPanel({
   placement: "home" | "events";
 }) {
   const today = useTokyoToday();
-  const renderDate = today ?? referenceDate;
-  const selectedViews = useMemo(() => {
+  const selection = useMemo(() => {
+    const renderDate = today ?? referenceDate;
     const currentViews = today
       ? refreshEventViewsForDate(views, today, maxAgeDays)
       : views;
-    const eventPrefectures = new Set<string>();
+    const seasonal = selectSeasonalEventViews(currentViews, renderDate);
+    const child = selectChildEventViews(
+      currentViews,
+      renderDate,
+      new Set(seasonal.map((view) => view.event.id)),
+    );
+    return { child, seasonal };
+  }, [maxAgeDays, referenceDate, today, views]);
 
-    return currentViews
-      .flatMap((view) => {
-        const nextDate = getNextEventDate(view.event, renderDate);
-        if (nextDate === null) return [];
-        const occurrenceCount = view.event.occurrence_dates?.length ?? 0;
-        const startDate = view.event.start_date ?? nextDate;
-        const duration =
-          occurrenceCount ||
-          (Date.parse(view.event.end_date ?? startDate) -
-            Date.parse(startDate)) /
-            86_400_000 +
-            1;
-        if (occurrenceCount === 0 && duration > 92) return [];
-        return [{ view, nextDate, duration }];
-      })
-      .sort((a, b) => {
-        const weekendOrder =
-          Number(isThisWeekend(b.view.event, renderDate)) -
-          Number(isThisWeekend(a.view.event, renderDate));
-        return (
-          weekendOrder ||
-          a.nextDate.localeCompare(b.nextDate) ||
-          a.duration - b.duration ||
-          a.view.event.id.localeCompare(b.view.event.id)
-        );
-      })
-      .filter(({ view }) => {
-        if (eventPrefectures.has(view.event.prefecture)) return false;
-        eventPrefectures.add(view.event.prefecture);
-        return true;
-      })
-      .slice(0, 3)
-      .map(({ view }) => view);
-  }, [maxAgeDays, renderDate, today, views]);
+  if (!today) return null;
 
-  if (selectedViews.length === 0) return null;
+  if (placement === "events") {
+    if (selection.child.picks.length === 0) return null;
+    return (
+      <section
+        data-seasonal-panel="child-events"
+        data-access-date={today}
+        aria-labelledby="child-events-heading-events"
+        className="mt-10 border-t border-slate-200 pt-7"
+      >
+        <div className="mb-3 flex items-end justify-between gap-3">
+          <h2
+            id="child-events-heading-events"
+            className="text-lg font-bold text-slate-900"
+          >
+            子どもが喜ぶおすすめイベント
+          </h2>
+          <Link href="/events" className="text-sm font-bold text-brand hover:underline">
+            すべて見る →
+          </Link>
+        </div>
+        <div className="flex snap-x gap-3 overflow-x-auto pb-2 sm:grid sm:grid-cols-3 sm:overflow-visible">
+          {selection.child.picks.map((pick) => (
+            <CompactEventCard
+              key={pick.view.event.id}
+              view={pick.view}
+              appealTags={pick.matchedTags}
+              horizontal
+            />
+          ))}
+        </div>
+      </section>
+    );
+  }
+
+  if (selection.seasonal.length === 0 && selection.child.picks.length === 0) {
+    return null;
+  }
 
   return (
-    <section
-      data-seasonal-panel="events"
-      aria-labelledby={`seasonal-events-heading-${placement}`}
-      aria-hidden={today ? undefined : true}
-      hidden={!today}
-      data-access-date={today ?? undefined}
-      className={panelClass}
-    >
-      <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-        <h2
-          id={`seasonal-events-heading-${placement}`}
-          className="text-2xl font-bold tracking-tight text-red-950 sm:text-3xl"
+    <div data-access-date={today} className="grid gap-9">
+      {selection.seasonal.length > 0 ? (
+        <section
+          data-seasonal-panel="events"
+          aria-labelledby="seasonal-events-heading-home"
+          className="py-2"
         >
-          季節・週末のイベント
+          <SectionHeading
+            id="seasonal-events-heading-home"
+            eyebrow="今日・今週末どこへ行く？"
+            title="季節・週末のイベント"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {selection.seasonal.map((view) => (
+              <CompactEventCard
+                key={view.event.id}
+                view={view}
+                appealTags={getCompactEventAppealTags(view.event)}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
+
+      {selection.child.picks.length > 0 ? (
+        <section
+          data-seasonal-panel="child-events"
+          aria-labelledby="child-events-heading-home"
+          className="py-2"
+        >
+          <SectionHeading
+            id="child-events-heading-home"
+            eyebrow="子どもの「好き」から選ぶ"
+            title="子どもが喜ぶおすすめイベント"
+          />
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {selection.child.picks.map((pick) => (
+              <CompactEventCard
+                key={pick.view.event.id}
+                view={pick.view}
+                appealTags={pick.matchedTags}
+              />
+            ))}
+          </div>
+        </section>
+      ) : null}
+    </div>
+  );
+}
+
+function SectionHeading({
+  eyebrow,
+  id,
+  title,
+}: {
+  eyebrow: string;
+  id: string;
+  title: string;
+}) {
+  return (
+    <div className="mb-4 flex flex-wrap items-end justify-between gap-2">
+      <div>
+        <p className="text-xs font-bold text-rose-700">{eyebrow}</p>
+        <h2
+          id={id}
+          className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl"
+        >
+          {title}
         </h2>
-        <Link href="/events" className={linkClass}>
-          イベントをもっと見る →
-        </Link>
       </div>
-      <div className="grid gap-4">
-        {selectedViews.map((view) => (
-          <EventCard key={view.event.id} view={view} />
-        ))}
-      </div>
-    </section>
+      <Link
+        href="/events"
+        className="text-sm font-bold text-brand hover:text-brand-dark hover:underline"
+      >
+        イベントをもっと見る →
+      </Link>
+    </div>
   );
 }

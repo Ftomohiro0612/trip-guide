@@ -51,7 +51,7 @@ export default function EventsIndexPage() {
         items={[{ name: "ホーム", href: "/" }, { name: "イベント" }]}
       />
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-9">
           <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
             <Link href="/" className="hover:text-brand hover:underline">
               ホーム
@@ -61,7 +61,7 @@ export default function EventsIndexPage() {
           </nav>
           <p className="text-sm font-bold text-brand">公式確認済みイベント</p>
           <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            子どもと行けるイベントを、日付・エリア・“好き”から探す
+            子どもと行けるイベントを探す
           </h1>
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
             公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。
@@ -69,22 +69,23 @@ export default function EventsIndexPage() {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
-        <SeasonalOutingCta placement="events" />
-        <AffiliateExperienceCta placement="events_index" />
-
-        <AccessTimeEventResultsMap
-          entries={Array.from(eventFacilityMap.values())}
+      <div className="mx-auto max-w-6xl px-4 py-5 sm:py-8">
+        <EventFilterBar
           views={eventViews}
+          prefectureOptions={prefectureOptions}
           maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+          referenceDate={today}
         />
 
+        <SeasonalOutingCta placement="events" />
         <div className="mt-10">
-          <EventFilterBar
+          <AffiliateExperienceCta placement="events_index" />
+        </div>
+        <div className="mt-10">
+          <AccessTimeEventResultsMap
+            entries={Array.from(eventFacilityMap.values())}
             views={eventViews}
-            prefectureOptions={prefectureOptions}
             maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
-            referenceDate={today}
           />
         </div>
       </div>
