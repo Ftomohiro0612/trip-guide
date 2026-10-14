@@ -1,6 +1,7 @@
 import { ImageResponse } from "next/og";
 import { getFacilityBySlug, isFacilityVisible } from "@/lib/facilities";
 import { categoryIcon } from "@/lib/icons";
+import { getFacilityTargetAgeForMetadata } from "@/lib/facility-metadata";
 import {
   OG_CONTENT_TYPE,
   OG_SIZE,
@@ -49,7 +50,10 @@ export default async function Image({
   if (facility.rain_friendly === "◎") {
     badges.push({ label: "☂️ 雨でも快適" });
   }
-  badges.push({ label: `👶 ${facility.target_age}` });
+  const targetAge = getFacilityTargetAgeForMetadata(facility.target_age);
+  if (targetAge) {
+    badges.push({ label: `👶 ${targetAge}` });
+  }
 
   return renderOgImage({
     emoji: categoryIcon(facility.category_id),

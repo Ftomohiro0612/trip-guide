@@ -26,6 +26,10 @@ import {
 } from "@/lib/facilities";
 import { getGuestInterestTags } from "@/lib/guest-record";
 import { getGuestRecordRecommendationCandidates } from "@/lib/guest-record-recommendations";
+import {
+  buildFacilityMetadataDescription,
+  getFacilityTargetAgeForMetadata,
+} from "@/lib/facility-metadata";
 import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
 import { getBuildDateString } from "@/lib/events";
@@ -58,7 +62,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   );
   return {
     title: `${facility.name} (${facility.prefecture})`,
-    description: `${desc} / 対象年齢: ${facility.target_age} / 雨対応: ${facility.rain_friendly}`,
+    description: buildFacilityMetadataDescription({
+      description: desc,
+      targetAge: facility.target_age,
+      rainFriendly: facility.rain_friendly,
+    }),
     alternates: { canonical: `/facilities/${facility.slug}` },
   };
 }
@@ -153,6 +161,9 @@ export default async function FacilityDetailPage({ params }: Props) {
     "from-sky-400 to-emerald-400";
   const mapQuery = encodeURIComponent(`${facility.name} ${facility.address}`);
   const mapEmbedSrc = `https://www.google.com/maps?q=${mapQuery}&output=embed`;
+  const targetAgeForMetadata = getFacilityTargetAgeForMetadata(
+    facility.target_age,
+  );
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "TouristAttraction",
@@ -165,11 +176,14 @@ export default async function FacilityDetailPage({ params }: Props) {
     },
     isAccessibleForFree: facility.is_free,
     url: facility.url ?? undefined,
-    suitableForAges: facility.target_age,
+    ...(targetAgeForMetadata
+      ? { suitableForAges: targetAgeForMetadata }
+      : {}),
   };
 
   return (
     <FacilityGuestRecordProvider
+      facilityId={facility.id}
       facilitySlug={facility.slug}
       facilityName={facility.name}
       interestTags={guestInterestTags}
@@ -461,6 +475,7 @@ export default async function FacilityDetailPage({ params }: Props) {
           />
 
           <FacilityPublicRecordsEmptyCard
+            facilityId={facility.id}
             facilitySlug={facility.slug}
             facilityName={facility.name}
           />
