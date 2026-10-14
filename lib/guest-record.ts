@@ -98,14 +98,16 @@ function isGuestRecordDraft(value: unknown): value is GuestRecordDraft {
   );
 }
 
-export function storeGuestRecordDraft(draft: GuestRecordDraft): void {
+export function storeGuestRecordDraft(draft: GuestRecordDraft): boolean {
   try {
     window.sessionStorage.setItem(
       GUEST_RECORD_DRAFT_SESSION_KEY,
       JSON.stringify(draft),
     );
+    return true;
   } catch {
     // The URL remains the navigation source of truth; storage is best effort.
+    return false;
   }
 }
 

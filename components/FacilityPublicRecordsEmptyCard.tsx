@@ -6,9 +6,11 @@ import { useWishlist } from "@/components/WishlistProvider";
 import { buildAuthDest } from "@/lib/auth-dest";
 
 export default function FacilityPublicRecordsEmptyCard({
+  facilityId,
   facilitySlug,
   facilityName,
 }: {
+  facilityId: number | string;
   facilitySlug: string;
   facilityName: string;
 }) {
@@ -18,6 +20,13 @@ export default function FacilityPublicRecordsEmptyCard({
 
   function handleVisit() {
     if (loadState === "loading") return;
+    if (typeof window.gtag === "function") {
+      window.gtag("event", "record_cta_click", {
+        facility_id: String(facilityId),
+        intent_type: "record",
+        cta_location: "public_records_empty_card",
+      });
+    }
     if (loadState === "guest") {
       openGuestRecord();
       return;

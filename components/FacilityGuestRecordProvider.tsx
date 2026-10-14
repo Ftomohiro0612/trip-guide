@@ -65,12 +65,14 @@ export function useFacilityGuestRecord() {
 }
 
 export default function FacilityGuestRecordProvider({
+  facilityId,
   facilitySlug,
   facilityName,
   interestTags,
   recommendationCandidates,
   children,
 }: {
+  facilityId: number | string;
   facilitySlug: string;
   facilityName: string;
   interestTags: GuestInterestTag[];
@@ -90,6 +92,7 @@ export default function FacilityGuestRecordProvider({
       {open && (
         <GuestRecordExperience
           key={facilitySlug}
+          facilityId={facilityId}
           facilitySlug={facilitySlug}
           facilityName={facilityName}
           interestTags={interestTags}
@@ -102,6 +105,7 @@ export default function FacilityGuestRecordProvider({
 }
 
 export function GuestRecordExperience({
+  facilityId,
   facilitySlug,
   facilityName,
   interestTags,
@@ -109,6 +113,7 @@ export function GuestRecordExperience({
   onClose,
   closeLabel = "施設ページへ戻る",
 }: {
+  facilityId?: number | string;
   facilitySlug: string;
   facilityName: string;
   interestTags: GuestInterestTag[];
@@ -159,7 +164,17 @@ export function GuestRecordExperience({
       familyRevisit,
       parentFatigue,
     };
-    storeGuestRecordDraft(draft);
+    const saved = storeGuestRecordDraft(draft);
+    if (
+      saved &&
+      facilityId !== undefined &&
+      typeof window.gtag === "function"
+    ) {
+      window.gtag("event", "guest_record_saved", {
+        facility_id: String(facilityId),
+        record_type: "guest",
+      });
+    }
     setStep("complete");
   }
 
