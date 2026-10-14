@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DiscoveryMap from "@/components/DiscoveryMap";
 import FacilityActionButtons from "@/components/FacilityActionButtons";
-import FacilityCard from "@/components/FacilityCard";
 import FacilityClosureBadge from "@/components/FacilityClosureBadge";
 import FacilityEvents from "@/components/FacilityEvents";
 import FacilityGuestRecordProvider from "@/components/FacilityGuestRecordProvider";
@@ -20,7 +20,8 @@ import ShareButtons from "@/components/ShareButtons";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import {
   getFacilityBySlug,
-  getRelatedFacilities,
+  getFacilityNextStops,
+  getFacilityPageLinks,
   isFacilityVisible,
   visibleFacilities,
 } from "@/lib/facilities";
@@ -40,6 +41,7 @@ import {
 } from "@/lib/events";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
+import { toMapFacilities } from "@/lib/map-facilities";
 import { getRakutenFacilityAction } from "@/lib/rakuten-facility-actions";
 import { getAsoviewFacilityAction } from "@/lib/asoview-facility-actions";
 import { BreadcrumbJsonLd } from "@/components/JsonLd";
@@ -106,7 +108,12 @@ export default async function FacilityDetailPage({ params }: Props) {
   const facility = getFacilityBySlug(slug);
   if (!isFacilityVisible(facility)) notFound();
 
-  const related = getRelatedFacilities(facility, 3);
+  const seoFacilityLinks = getFacilityPageLinks(facility, 3);
+  const nextStops = getFacilityNextStops(facility, 4);
+  const nextStopFacilities = nextStops.candidates.map(
+    (candidate) => candidate.facility,
+  );
+  const highlightedMapPoint = toMapFacilities([facility])[0];
   const guestInterestTags = getGuestInterestTags(facility.recommended_for_tags);
   const guestRecommendationCandidates =
     getGuestRecordRecommendationCandidates(facility);
@@ -148,6 +155,8 @@ export default async function FacilityDetailPage({ params }: Props) {
     recommendedForTags,
   );
   const prefecture = facility.prefecture ?? "";
+  const hasKnownTargetAge = hasKnownDisplayValue(facility.target_age);
+  const hasKnownChildFee = hasKnownDisplayValue(facility.child_fee);
   const summerWaterPlay =
     typeof facility.summer_water_play === "string"
       ? facility.summer_water_play.trim()
@@ -311,9 +320,11 @@ export default async function FacilityDetailPage({ params }: Props) {
                 >
                   ☂️ {facility.rain_friendly} {rain.label}
                 </span>
-                <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-black text-white backdrop-blur-sm">
-                  👶 {facility.target_age}
-                </span>
+                {hasKnownTargetAge && (
+                  <span className="rounded-full bg-black/35 px-3 py-1.5 text-xs font-black text-white backdrop-blur-sm">
+                    👶 {facility.target_age}
+                  </span>
+                )}
                 <FacilityClosureBadge status={facility.closure_status} />
               </div>
               {facility.closure_status && facility.closure_note && (
@@ -529,14 +540,16 @@ export default async function FacilityDetailPage({ params }: Props) {
                 </span>
               </Row>
             )}
-            <Row label="対象年齢">{facility.target_age}</Row>
+            {hasKnownTargetAge && (
+              <Row label="対象年齢">{facility.target_age}</Row>
+            )}
             <Row label="料金区分">
               {facility.is_free ? "無料" : facility.fee_type}
             </Row>
             {!facility.is_free && (
               <>
                 <Row label="大人">{facility.adult_fee}</Row>
-                <Row label="子供">{facility.child_fee}</Row>
+                {hasKnownChildFee && <Row label="子供">{facility.child_fee}</Row>}
               </>
             )}
             {facility.tags.length > 0 && (
@@ -600,13 +613,82 @@ export default async function FacilityDetailPage({ params }: Props) {
       </div>
 
       <section className="mx-auto max-w-5xl px-4 pb-14">
-        <p className="text-xs font-black tracking-[0.18em] text-amber-600">MORE PLACES TO PLAY</p>
-        <h2 className="mt-1 mb-5 text-2xl font-black text-slate-950">同じカテゴリ・近隣の施設</h2>
-        {related.length > 0 && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {related.map((f) => (
-              <FacilityCard key={f.id} facility={f} />
-            ))}
+        <p className="text-xs font-black tracking-[0.18em] text-amber-600">PLAN THE NEXT STOP</p>
+        <h2 className="mt-1 text-2xl font-black text-slate-950">この施設と一緒に行ける周辺スポット</h2>
+        <p className="mt-2 text-sm leading-relaxed text-slate-600">
+          直線距離を優先し、年齢の合いやすさ・家族での使いやすさ・違う遊び方も加えて選んでいます。
+        </p>
+        {nextStops.candidates.length > 0 ? (
+          <>
+            <div className="mt-5 grid gap-3 sm:grid-cols-2">
+              {nextStops.candidates.map(({ facility: candidate, distanceKm }) => (
+                <Link
+                  key={candidate.id}
+                  href={`/facilities/${candidate.slug}`}
+                  className="group rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition-all hover:border-brand hover:shadow-md"
+                >
+                  <div className="flex items-start gap-3">
+                    <CategoryIcon
+                      categoryId={candidate.category_id}
+                      width={40}
+                      height={40}
+                      className="h-10 w-10 shrink-0"
+                    />
+                    <div className="min-w-0 flex-1">
+                      <p className="text-xs font-bold text-slate-500">
+                        {candidate.prefecture} · {candidate.category}
+                      </p>
+                      <h3 className="mt-0.5 font-black leading-snug text-slate-900 group-hover:text-brand">
+                        {candidate.name}
+                      </h3>
+                      <p className="mt-2 inline-flex rounded-full bg-sky-50 px-2.5 py-1 text-xs font-black text-sky-700 ring-1 ring-sky-100">
+                        直線距離 約{formatDistanceKm(distanceKm)}km
+                      </p>
+                      <div className="mt-2 flex flex-wrap gap-1.5 text-xs text-slate-600">
+                        {candidate.is_free && (
+                          <span className="rounded bg-emerald-50 px-2 py-0.5 text-emerald-700">無料</span>
+                        )}
+                        {candidate.rain_friendly === "◎" && (
+                          <span className="rounded bg-sky-50 px-2 py-0.5 text-sky-700">雨でも快適</span>
+                        )}
+                        {hasKnownDisplayValue(candidate.target_age) && (
+                          <span className="rounded bg-slate-100 px-2 py-0.5">{candidate.target_age}</span>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+            <div className="mt-5 overflow-hidden rounded-[2rem] bg-white p-2 shadow-sm ring-1 ring-amber-100 sm:p-3">
+              <DiscoveryMap
+                points={toMapFacilities(nextStopFacilities)}
+                highlightedPoint={highlightedMapPoint}
+                expectedCount={nextStopFacilities.length + 1}
+                height={360}
+              />
+            </div>
+          </>
+        ) : (
+          <p className="mt-5 rounded-2xl bg-white p-4 text-sm text-slate-600 ring-1 ring-slate-200">
+            直線距離100km以内で、条件に合う周辺スポットは見つかりませんでした。
+          </p>
+        )}
+        {seoFacilityLinks.length > 0 && (
+          <div className="mt-5 rounded-2xl bg-white px-4 py-3 ring-1 ring-slate-200">
+            <p className="text-xs font-bold text-slate-500">同じ地域の施設リンク</p>
+            <ul className="mt-2 flex flex-wrap gap-x-4 gap-y-2 text-sm">
+              {seoFacilityLinks.map((candidate) => (
+                <li key={candidate.id}>
+                  <Link
+                    href={`/facilities/${candidate.slug}`}
+                    className="font-bold text-brand hover:text-brand-dark hover:underline"
+                  >
+                    {candidate.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         )}
         <div className="mt-5 flex flex-wrap gap-x-5 gap-y-2">
@@ -704,7 +786,9 @@ function QuickCheckCard({
       <ul className="space-y-2 text-sm font-medium text-slate-700">
         <li>📍 {facility.prefecture}</li>
         <li>🏷️ {facility.category}</li>
-        <li>👶 {facility.target_age}</li>
+        {hasKnownDisplayValue(facility.target_age) && (
+          <li>👶 {facility.target_age}</li>
+        )}
         <li>
           {facility.is_free ? "🆓 無料で楽しめる" : `💴 ${facility.fee_type}`}
         </li>
@@ -752,10 +836,24 @@ function buildRecommendedLead(
     .map((meta) => meta.label)
     .slice(0, 2);
 
+  const knownTargetAge = hasKnownDisplayValue(targetAge) ? targetAge : "";
+
   if (labels.length === 0) {
-    return targetAge ? `${targetAge}の子に合いそうです。` : "";
+    return knownTargetAge ? `${knownTargetAge}の子に合いそうです。` : "";
   }
 
-  const age = targetAge ? `${targetAge}、` : "";
+  const age = knownTargetAge ? `${knownTargetAge}、` : "";
   return `${age}特に${labels.join("・")}が好きな子に合いそうです。`;
+}
+
+function hasKnownDisplayValue(value: unknown): value is string {
+  return (
+    typeof value === "string" &&
+    value.trim().length > 0 &&
+    value.trim().toLowerCase() !== "unknown"
+  );
+}
+
+function formatDistanceKm(distanceKm: number) {
+  return distanceKm < 10 ? distanceKm.toFixed(1) : Math.round(distanceKm).toString();
 }

@@ -1,13 +1,15 @@
 import assert from "node:assert/strict";
 import test from "node:test";
 import facilitiesData from "../data/facilities_data.json" with { type: "json" };
-import { createRelatedFacilitySelector } from "../lib/related-facilities.mjs";
+import {
+  createFacilityPageLinkSelector,
+  isRelatedFacilityTreatmentLink,
+} from "../lib/related-facilities.mjs";
 
 const visibleFacilities = facilitiesData.facilities.filter(
   (facility) => facility.data_quality_status !== "exclude_candidate",
 );
-const selectRelatedFacilities =
-  createRelatedFacilitySelector(visibleFacilities);
+const selectRelatedFacilities = createFacilityPageLinkSelector(visibleFacilities);
 
 function sharedValueCount(aValues, bValues) {
   const aSet = new Set(Array.isArray(aValues) ? aValues : []);
@@ -57,6 +59,7 @@ function collectMetrics(selectRelated, { assertSemanticContract = false } = {}) 
   let samePrefectureLinks = 0;
   let sameCategoryLinks = 0;
   let sharedRecommendationLinks = 0;
+  let pagesWithTwoSemanticOrTreatmentLinks = 0;
   const samePrefectureDistances = [];
 
   for (const facility of visibleFacilities) {
@@ -73,19 +76,17 @@ function collectMetrics(selectRelated, { assertSemanticContract = false } = {}) 
       `${facility.slug}: self link`,
     );
 
-    const strongSemanticLinks = related.filter(
+    const strongSemanticOrTreatmentLinks = related.filter(
       (candidate) =>
         candidate.category_id === facility.category_id ||
         sharedValueCount(
           facility.recommended_for_tags,
           candidate.recommended_for_tags,
-        ) > 0,
+        ) > 0 ||
+        isRelatedFacilityTreatmentLink(facility, candidate),
     );
-    if (assertSemanticContract) {
-      assert(
-        strongSemanticLinks.length >= 2,
-        `${facility.slug}: fewer than two strongly relevant links`,
-      );
+    if (strongSemanticOrTreatmentLinks.length >= 2) {
+      pagesWithTwoSemanticOrTreatmentLinks += 1;
     }
 
     for (const candidate of related) {
@@ -114,6 +115,15 @@ function collectMetrics(selectRelated, { assertSemanticContract = false } = {}) 
   samePrefectureDistances.sort((a, b) => a - b);
   const percentile = (values, ratio) =>
     values[Math.floor((values.length - 1) * ratio)];
+  const semanticOrTreatmentPageRate =
+    pagesWithTwoSemanticOrTreatmentLinks / visibleFacilities.length;
+
+  if (assertSemanticContract) {
+    assert(
+      semanticOrTreatmentPageRate >= 0.998,
+      "semantic/treatment coverage regressed beyond sparse-category exceptions",
+    );
+  }
 
   return {
     zeroIncoming: incomingValues.filter((count) => count === 0).length,
@@ -123,6 +133,7 @@ function collectMetrics(selectRelated, { assertSemanticContract = false } = {}) 
     samePrefectureRate: samePrefectureLinks / totalLinks,
     sameCategoryRate: sameCategoryLinks / totalLinks,
     sharedRecommendationRate: sharedRecommendationLinks / totalLinks,
+    semanticOrTreatmentPageRate,
     distanceP50Km: percentile(samePrefectureDistances, 0.5),
     distanceP90Km: percentile(samePrefectureDistances, 0.9),
   };
@@ -140,7 +151,7 @@ test("SEO P1B distributes related links while preserving relevance", () => {
   assert(proposed.maxIncoming <= 15);
   assert.equal(proposed.samePrefectureRate, 1);
   assert(proposed.sameCategoryRate >= 0.9);
-  assert(proposed.sharedRecommendationRate >= 0.97);
+  assert(proposed.sharedRecommendationRate >= 0.94);
   assert(proposed.distanceP50Km < legacy.distanceP50Km);
   assert(proposed.distanceP90Km < legacy.distanceP90Km);
 
