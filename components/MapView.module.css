@@ -26,3 +26,19 @@
 .popup .details {
   color: white;
 }
+
+.clusterCount:global(.leaflet-tooltip) {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  color: white;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 1;
+  padding: 0;
+  pointer-events: none;
+}
+
+.clusterCount:global(.leaflet-tooltip)::before {
+  display: none;
+}

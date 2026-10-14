@@ -51,6 +51,18 @@ const responsiveMapSource = await readFile(
   new URL("../components/ResponsiveResultsMap.tsx", import.meta.url),
   "utf8",
 );
+const responsiveDiscoveryMapSource = await readFile(
+  new URL("../components/ResponsiveDiscoveryMap.tsx", import.meta.url),
+  "utf8",
+);
+const discoveryMapSource = await readFile(
+  new URL("../components/DiscoveryMap.tsx", import.meta.url),
+  "utf8",
+);
+const discoveryMapRouteSource = await readFile(
+  new URL("../app/api/discovery-map/route.ts", import.meta.url),
+  "utf8",
+);
 const tagPageSource = await readFile(
   new URL("../app/tag/[slug]/page.tsx", import.meta.url),
   "utf8",
@@ -269,9 +281,9 @@ test("category page reuses one grouping contract and keeps diversified craft nat
   );
 });
 
-test("facility and tag maps render the current page slice before cards and pagination", () => {
+test("facility discovery map is filter-scoped while tag map keeps its page slice", () => {
   const nearbyMapIndex = nearbyListSource.indexOf(
-    "facilities={displayedFacilities}",
+    "dataHref={mapDataHref}",
   );
   const nearbyCardsIndex = nearbyListSource.indexOf("data-facility-card-grid");
   const nearbyPaginationIndex = nearbyListSource.indexOf(
@@ -282,7 +294,7 @@ test("facility and tag maps render the current page slice before cards and pagin
   assert.ok(nearbyMapIndex < nearbyPaginationIndex);
   assert.equal(
     nearbyListSource.match(
-      /<ResponsiveResultsMap[\s\S]*?facilities=\{displayedFacilities\}[\s\S]*?totalItems=\{effectivePage\.totalItems\}/gu,
+      /<ResponsiveDiscoveryMap[\s\S]*?dataHref=\{mapDataHref\}[\s\S]*?totalItems=\{page\.totalItems\}/gu,
     )?.length,
     1,
   );
@@ -315,8 +327,16 @@ test("facility and tag maps render the current page slice before cards and pagin
     /`\$\{totalItems\}施設中 \$\{facilities\.length\}件`/u,
   );
   assert.match(
+    responsiveDiscoveryMapSource,
+    /heading = "該当する施設を地図で見る"/u,
+  );
+  assert.match(
+    responsiveDiscoveryMapSource,
+    /\{totalItems\.toLocaleString\("ja-JP"\)\}施設/u,
+  );
+  assert.match(
     categoryPageSource,
-    /\{result\.page\.totalItems\}施設中 \{result\.mapFacilities\.length\}件/u,
+    /<ResponsiveDiscoveryMap[\s\S]*totalItems=\{result\.filteredFacilities\.length\}/u,
   );
   assert.match(
     categoryPageSource,
@@ -328,9 +348,10 @@ test("facility and tag maps render the current page slice before cards and pagin
   );
   assert.match(responsiveMapSource, /useState\(false\)/u);
   assert.match(responsiveMapSource, /\(isDesktop \|\| mobileOpen\)/u);
+  assert.match(responsiveDiscoveryMapSource, /\(isDesktop \|\| mobileOpen\)/u);
 });
 
-test("nearby map reuses the client-only page slice without sending coordinates", () => {
+test("nearby map uses all matching points without sending location coordinates", () => {
   assert.match(
     nearbyListSource,
     /fetch\(nearbyDataHref,[\s\S]*signal: controller\.signal/u,
@@ -345,7 +366,15 @@ test("nearby map reuses the client-only page slice without sending coordinates",
   );
   assert.match(
     nearbyListSource,
-    /<ResponsiveResultsMap[\s\S]*facilities=\{displayedFacilities\}[\s\S]*totalItems=\{effectivePage\.totalItems\}/u,
+    /<ResponsiveDiscoveryMap[\s\S]*dataHref=\{mapDataHref\}[\s\S]*totalItems=\{page\.totalItems\}/u,
+  );
+  assert.match(discoveryMapSource, /new IntersectionObserver\(/u);
+  assert.match(discoveryMapSource, /clustered/u);
+  assert.match(discoveryMapRouteSource, /searchParams\.delete\("page"\)/u);
+  assert.match(discoveryMapRouteSource, /searchParams\.delete\("sort"\)/u);
+  assert.match(
+    discoveryMapRouteSource,
+    /getFacilityListResults\([\s\S]*rawSearchParamsFromUrl\(searchParams\)[\s\S]*\)\.results/u,
   );
 });
 

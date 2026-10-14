@@ -4,7 +4,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
 import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
-import MapViewClient from "@/components/MapViewClient";
+import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
 import PrefectureDiscoveryFacilityList from "@/components/PrefectureDiscoveryFacilityList";
 import {
   categories,
@@ -265,26 +265,18 @@ export default async function PrefecturePage({ params }: Props) {
         </div>
 
         {list.length > 0 && (
-          <section
+          <div
             id={isNagano ? "nagano-facility-map" : undefined}
-            className="mt-10 scroll-mt-24"
-            aria-labelledby="prefecture-map-heading"
+            className="scroll-mt-24"
           >
-            <h2
-              id="prefecture-map-heading"
-              className="mb-3 text-xl font-bold text-slate-900"
-            >
-              📍 {meta.name}内の施設マップ
-              <span className="ml-2 text-sm font-normal text-slate-500">
-                {list.length}件
-              </span>
-            </h2>
-            <MapViewClient
-              facilities={list}
+            <ResponsiveDiscoveryMap
+              dataHref={`/api/discovery-map?scope=prefecture&prefecture=${meta.id}`}
+              heading={`${meta.name}内の施設マップ`}
+              totalItems={list.length}
               height={420}
               storageKey={`prefecture:${meta.id}`}
             />
-          </section>
+          </div>
         )}
 
         <section className="mt-12">
