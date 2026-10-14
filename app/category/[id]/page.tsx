@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
 import FacilityCard from "@/components/FacilityCard";
 import {
   FacilityPaginationControls,
@@ -159,35 +160,21 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           href: `/facilities/${facility.slug}`,
         }))}
       />
-      <section className="relative bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-400 text-white">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
-          <nav aria-label="パンくず" className="mb-4 text-xs text-white/90">
-            <Link href="/" className="hover:underline">
-              ホーム
-            </Link>
-            <span className="mx-1.5">/</span>
-            <span>{meta.name}</span>
-          </nav>
-          <div className="flex items-start gap-4">
-            <CategoryIcon
-              categoryId={meta.id}
-              width={80}
-              height={80}
-              className="h-16 w-16 shrink-0 drop-shadow sm:h-20 sm:w-20"
-            />
-            <div className="flex-1">
-              <p className="text-xs font-medium opacity-95">カテゴリ特集</p>
-              <h1 className="mt-1 text-2xl font-bold tracking-tight drop-shadow sm:text-4xl">
-                {pageTitle}
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm opacity-95 sm:text-base">
-                {desc}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DiscoveryLandingHero
+        imageSrc={`/images/landing/category/${meta.id}.webp`}
+        breadcrumb={meta.name}
+        eyebrow="カテゴリ特集"
+        title={pageTitle}
+        description={desc}
+        icon={
+          <CategoryIcon
+            categoryId={meta.id}
+            width={80}
+            height={80}
+            className="h-12 w-12 shrink-0 drop-shadow sm:h-20 sm:w-20"
+          />
+        }
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
         <PrefectureSelector
