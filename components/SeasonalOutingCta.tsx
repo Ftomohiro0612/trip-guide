@@ -1,11 +1,10 @@
 import Link from "next/link";
-import EventCard from "@/components/EventCard";
 import FacilityCard from "@/components/FacilityCard";
+import SeasonalEventsPanel from "@/components/SeasonalEventsPanel";
 import {
+  EVENT_PAGE_MAX_AGE_DAYS,
   getBuildDateString,
-  getNextEventDate,
   getVisibleEvents,
-  isThisWeekend,
   toEventView,
 } from "@/lib/events";
 import { visibleFacilities } from "@/lib/facilities";
@@ -22,40 +21,9 @@ export default function SeasonalOutingCta({
   placement?: "home" | "events";
 }) {
   const today = getBuildDateString();
-  const eventPrefectures = new Set<string>();
-  const selectedEvents = getVisibleEvents(today)
-    .flatMap((event) => {
-      const nextDate = getNextEventDate(event, today);
-      if (nextDate === null) return [];
-      const occurrenceCount = event.occurrence_dates?.length ?? 0;
-      // Date-only strings parse as UTC; count both endpoints of the period.
-      const startDate = event.start_date ?? nextDate;
-      const duration =
-        occurrenceCount ||
-        (Date.parse(event.end_date ?? startDate) - Date.parse(startDate)) /
-          86_400_000 +
-          1;
-      if (occurrenceCount === 0 && duration > 92) return [];
-      return [{ event, nextDate, duration }];
-    })
-    .sort((a, b) => {
-      const weekendOrder =
-        Number(isThisWeekend(b.event, today)) -
-        Number(isThisWeekend(a.event, today));
-      return (
-        weekendOrder ||
-        a.nextDate.localeCompare(b.nextDate) ||
-        a.duration - b.duration ||
-        a.event.id.localeCompare(b.event.id)
-      );
-    })
-    .filter(({ event }) => {
-      if (eventPrefectures.has(event.prefecture)) return false;
-      eventPrefectures.add(event.prefecture);
-      return true;
-    })
-    .slice(0, 3)
-    .map(({ event }) => event);
+  const eventViews = getVisibleEvents(today).map((event) =>
+    toEventView(event, today),
+  );
   const facilityPrefectures = new Set<string>();
   const facilityCategories = new Set<string>();
   const selectedFacilities = getTagFacilities(
@@ -76,7 +44,7 @@ export default function SeasonalOutingCta({
     })
     .slice(0, 3);
 
-  if (selectedEvents.length === 0 && selectedFacilities.length === 0) {
+  if (eventViews.length === 0 && selectedFacilities.length === 0) {
     return null;
   }
 
@@ -90,30 +58,12 @@ export default function SeasonalOutingCta({
           : "order-0 mt-6 grid gap-6 sm:mt-8"
       }
     >
-      {selectedEvents.length > 0 && (
-        <section
-          data-seasonal-panel="events"
-          aria-labelledby={`seasonal-events-heading-${placement}`}
-          className={panelClass}
-        >
-          <div className="mb-5 flex flex-wrap items-center justify-between gap-3">
-            <h2
-              id={`seasonal-events-heading-${placement}`}
-              className="text-2xl font-bold tracking-tight text-red-950 sm:text-3xl"
-            >
-              季節・週末のイベント
-            </h2>
-            <Link href="/events" className={linkClass}>
-              イベントをもっと見る →
-            </Link>
-          </div>
-          <div className="grid gap-4">
-            {selectedEvents.map((event) => (
-              <EventCard key={event.id} view={toEventView(event, today)} />
-            ))}
-          </div>
-        </section>
-      )}
+      <SeasonalEventsPanel
+        views={eventViews}
+        referenceDate={today}
+        maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+        placement={placement}
+      />
 
       {selectedFacilities.length > 0 && (
         <section

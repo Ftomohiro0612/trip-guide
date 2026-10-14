@@ -2,9 +2,11 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
+import AccessTimeEventCount from "@/components/AccessTimeEventCount";
 import EventFilterBar from "@/components/EventFilterBar";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import {
+  EVENT_PAGE_MAX_AGE_DAYS,
   eventPrefectures,
   getBuildDateString,
   getEventPrefectureLabel,
@@ -84,9 +86,10 @@ export default async function PrefectureEventsPage({ params }: Props) {
           <p className="mt-4 max-w-3xl text-sm leading-relaxed text-slate-600 sm:text-base">
             公式サイトで確認できたイベントだけを掲載し、終了したものは自動的に表示されなくなります。日程・料金の最新情報は各公式サイトでご確認ください。
           </p>
-          <p className="mt-3 text-xs font-medium text-slate-500">
-            掲載中 {visibleEvents.length}件
-          </p>
+          <AccessTimeEventCount
+            views={eventViews}
+            maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+          />
         </div>
       </section>
 
@@ -98,6 +101,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
         ) : (
           <EventFilterBar
             views={eventViews}
+            maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
             showPrefectureFilter={false}
             showPrefectureOnCard={false}
             referenceDate={today}

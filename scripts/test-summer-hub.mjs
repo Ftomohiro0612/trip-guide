@@ -65,6 +65,10 @@ const summerExplorerSource = readFileSync(
   new URL("../components/SummerEventExplorer.tsx", import.meta.url),
   "utf8",
 );
+const summerDateContentSource = readFileSync(
+  new URL("../components/SummerDateContent.tsx", import.meta.url),
+  "utf8",
+);
 const sharedDateReservationFilterSource = readFileSync(
   new URL("../components/EventDateReservationFilters.tsx", import.meta.url),
   "utf8",
@@ -94,14 +98,14 @@ const SUMMER_EVENT_TYPE_ORDER = [
 ];
 
 test("Summer hero cards use event-date wording without changing date selection", () => {
-  assert.match(summerPageSource, /開催日が近い順/u);
+  assert.match(summerDateContentSource, /開催日が近い順/u);
   assert.match(
-    summerPageSource,
-    /formatHeroDate\(getNextEventDate\(event, today\)\)/u,
+    summerDateContentSource,
+    /formatHeroDate\(getNextEventDate\(event, renderDate\)\)/u,
   );
-  assert.match(summerPageSource, /`\$\{formatDate\(value\)\}開催`/u);
-  assert.doesNotMatch(summerPageSource, /次回開催日/u);
-  assert.doesNotMatch(summerPageSource, /次回\s+\{formatDate/u);
+  assert.match(summerDateContentSource, /`\$\{Number\(month\)\}月\$\{Number\(day\)\}日開催`/u);
+  assert.doesNotMatch(summerDateContentSource, /次回開催日/u);
+  assert.doesNotMatch(summerDateContentSource, /次回\s+\{formatDate/u);
 });
 
 function fixture(
@@ -273,8 +277,8 @@ test("Summer Hero title stays fixed when supported prefectures grow", () => {
     /<h1[^>]*>\s*\{SUMMER_HERO_TITLE\}\s*<\/h1>/su,
   );
   assert.match(
-    summerPageSource,
-    /全国\{prefectureCount\}都道府県・\{visibleEvents\.length\}件を掲載/u,
+    summerDateContentSource,
+    /全国\{prefectureCount\}都道府県・\{currentViews\.length\}件を掲載/u,
   );
 });
 
@@ -887,12 +891,12 @@ test("all Summer query entry anchors keep filters and clear the sticky header", 
   assert.equal(getSummerStaticAnchorTargetId("#summer-filters%E0%A4%A"), null);
 
   for (const eventType of SUMMER_EVENT_TYPE_ORDER) {
-    assert.match(summerPageSource, new RegExp(`\\b${eventType}\\b`, "u"));
+    assert.match(summerExplorerSource, new RegExp(`\\b${eventType}\\b`, "u"));
   }
-  assert.match(summerPageSource, /query\.quick === "free"/u);
+  assert.match(summerExplorerSource, /quick === "free"/u);
   assert.match(summerExplorerSource, /id: "free"/u);
-  assert.match(summerPageSource, /query\.quick === "weekend"/u);
-  assert.match(summerPageSource, /query\.quick === "noReservation"/u);
+  assert.match(summerExplorerSource, /quick === "weekend"/u);
+  assert.match(summerExplorerSource, /quick === "noReservation"/u);
   for (const datePreset of ["weekend", "month"]) {
     assert.match(
       sharedDateReservationFilterSource,
@@ -915,7 +919,7 @@ test("all Summer query entry anchors keep filters and clear the sticky header", 
     /id="summer-filter-heading"\s+tabIndex=\{-1\}\s+className="scroll-mt-32[^"]*sm:scroll-mt-24/u,
   );
   assert.match(
-    summerPageSource,
+    summerDateContentSource,
     /id="summer-event-map-heading"\s+tabIndex=\{-1\}\s+className="mt-1 scroll-mt-32[^"]*sm:scroll-mt-24/u,
   );
   assert.match(

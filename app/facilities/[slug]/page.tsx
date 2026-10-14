@@ -32,7 +32,12 @@ import {
 } from "@/lib/facility-metadata";
 import { prefectureGradients } from "@/lib/icons";
 import { getRecommendedForTagMeta } from "@/lib/recommended-tags";
-import { getBuildDateString, isEventPrefecture } from "@/lib/events";
+import {
+  getBuildDateString,
+  getEventById,
+  isEventPrefecture,
+  SUMMER_HUB_MAX_AGE_DAYS,
+} from "@/lib/events";
 import { getSummerCrosslinkData } from "@/lib/summer-crosslink-data";
 import { tagHref } from "@/lib/tags";
 import { getRakutenFacilityAction } from "@/lib/rakuten-facility-actions";
@@ -108,6 +113,12 @@ export default async function FacilityDetailPage({ params }: Props) {
   const today = getBuildDateString();
   const nearbySummerEvents =
     getSummerCrosslinkData(today).facilityToEvents[String(facility.id)] ?? [];
+  const nearbySummerEventDates = Object.fromEntries(
+    nearbySummerEvents.flatMap((recommendation) => {
+      const event = getEventById(recommendation.eventId);
+      return event ? [[recommendation.eventId, event] as const] : [];
+    }),
+  );
   const rain = RAIN_LABELS[facility.rain_friendly] ?? RAIN_FALLBACK;
   const heroSummary =
     typeof facility.unique_selling_point === "string"
@@ -465,7 +476,11 @@ export default async function FacilityDetailPage({ params }: Props) {
             prefectureId={facility.prefecture_id}
           />
 
-          <FacilityNearbySummerEvents recommendations={nearbySummerEvents} />
+          <FacilityNearbySummerEvents
+            recommendations={nearbySummerEvents}
+            eventDatesById={nearbySummerEventDates}
+            maxAgeDays={SUMMER_HUB_MAX_AGE_DAYS}
+          />
 
           <FacilityGallery
             images={galleryImages}

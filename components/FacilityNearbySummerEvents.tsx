@@ -1,6 +1,13 @@
 "use client";
 
+import { useMemo } from "react";
 import { useCrosslinkAnalytics } from "@/components/useCrosslinkAnalytics";
+import { useTokyoToday } from "@/components/useTokyoToday";
+import {
+  getNextEventDate,
+  isEventDiscoverableOnDate,
+  type EventDateFields,
+} from "@/lib/event-dates";
 import {
   formatStraightLineDistance,
   type FacilityEventRecommendation,
@@ -16,24 +23,45 @@ const EVENT_TYPE_LABELS: Record<string, string> = {
 
 interface FacilityNearbySummerEventsProps {
   recommendations: readonly FacilityEventRecommendation[];
+  eventDatesById: Record<string, EventDateFields>;
+  maxAgeDays: number;
 }
 
 export default function FacilityNearbySummerEvents({
   recommendations,
+  eventDatesById,
+  maxAgeDays,
 }: FacilityNearbySummerEventsProps) {
+  const today = useTokyoToday();
+  const currentRecommendations = useMemo(
+    () =>
+      recommendations.flatMap((recommendation) => {
+        if (!today) return [recommendation];
+        const event = eventDatesById[recommendation.eventId];
+        if (!event || !isEventDiscoverableOnDate(event, today, maxAgeDays)) {
+          return [];
+        }
+        const nextDate = getNextEventDate(event, today);
+        return nextDate ? [{ ...recommendation, nextDate }] : [];
+      }),
+    [eventDatesById, maxAgeDays, recommendations, today],
+  );
   const { sectionRef, trackClick } = useCrosslinkAnalytics(
     "facility_to_event",
-    recommendations.length,
+    currentRecommendations.length,
   );
-  if (recommendations.length === 0) return null;
+  if (currentRecommendations.length === 0) return null;
 
   return (
     <section
       ref={sectionRef}
       className="rounded-[2rem] bg-indigo-50/70 p-5 shadow-sm ring-1 ring-indigo-100 sm:p-8"
       aria-labelledby="facility-nearby-summer-events-heading"
+      aria-hidden={today ? undefined : true}
+      hidden={!today}
+      data-access-date={today ?? undefined}
       data-crosslink-section="facility_to_event"
-      data-crosslink-item-count={recommendations.length}
+      data-crosslink-item-count={currentRecommendations.length}
     >
       <p className="text-xs font-black tracking-[0.18em] text-indigo-600">
         この施設とあわせて楽しめそう
@@ -49,7 +77,7 @@ export default function FacilityNearbySummerEvents({
       </p>
 
       <ul className="mt-4 grid gap-2.5">
-        {recommendations.map((recommendation, index) => (
+        {currentRecommendations.map((recommendation, index) => (
           <li key={recommendation.eventId}>
             <a
               href={`/events/summer#${getSummerEventAnchorId(recommendation.eventId)}`}
