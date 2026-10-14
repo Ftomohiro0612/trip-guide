@@ -22,6 +22,14 @@ const facilitiesData = require("./data/facilities_data.json");
 // 正本(data/facilities_data.json の metadata.categories)。
 // app/category/[id]/page.tsx の generateStaticParams と同じ一覧を参照する。
 const categoryIds = facilitiesData.metadata.categories.map((c) => c.id);
+const discoveryThemeSlugs = [
+  "rainy-day",
+  "free",
+  "kids-0-3",
+  "elementary",
+  "water-play",
+  "playground",
+];
 
 /** @type {import('next-sitemap').IConfig} */
 module.exports = {
@@ -66,10 +74,16 @@ module.exports = {
     const categoryPaths = await Promise.all(
       categoryIds.map((id) => config.transform(config, `/category/${id}`)),
     );
+    const discoveryThemePaths = await Promise.all(
+      discoveryThemeSlugs.map((slug) =>
+        config.transform(config, `/tag/${slug}`),
+      ),
+    );
 
     return [
       await config.transform(config, "/facilities"),
       ...categoryPaths,
+      ...discoveryThemePaths,
       await config.transform(config, "/events"),
       await config.transform(config, "/events/summer"),
       await config.transform(config, "/events/tokyo"),
@@ -95,6 +109,8 @@ module.exports = {
     else if (/^\/prefecture\/[^/]+\/category\/[^/]+$/.test(path))
       priority = 0.8;
     else if (path.startsWith("/prefecture/") || path.startsWith("/category/"))
+      priority = 0.9;
+    else if (discoveryThemeSlugs.some((slug) => path === `/tag/${slug}`))
       priority = 0.9;
     else if (path === "/events/summer") priority = 0.9;
     else if (path === "/events") priority = 0.85;

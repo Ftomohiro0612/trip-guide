@@ -16,6 +16,7 @@ export function selectSeasonalFacilities(
   facilities: readonly Facility[],
   accessDate: string,
   limit = 3,
+  diversity: "both" | "prefecture" | "category" | "none" = "both",
 ): SeasonalFacilityPick[] {
   const month = Number(accessDate.slice(5, 7));
   if (!Number.isInteger(month) || month < 1 || month > 12) return [];
@@ -30,17 +31,37 @@ export function selectSeasonalFacilities(
     .filter((pick): pick is SeasonalFacilityPick => Boolean(pick.reason))
     .sort((a, b) => a.facility.id - b.facility.id)
     .filter(({ facility }) => {
-      if (
+      if (diversity === "both" && (
         prefectures.has(facility.prefecture_id) ||
         categories.has(facility.category_id)
-      ) {
-        return false;
-      }
+      )) return false;
+      if (diversity === "prefecture" && prefectures.has(facility.prefecture_id)) return false;
+      if (diversity === "category" && categories.has(facility.category_id)) return false;
       prefectures.add(facility.prefecture_id);
       categories.add(facility.category_id);
       return true;
     })
     .slice(0, limit);
+}
+
+export function selectSeasonalCandidateFacilities(
+  facilities: readonly Facility[],
+  limit = 3,
+  diversity: "both" | "prefecture" | "category" | "none" = "both",
+): Facility[] {
+  const candidates = new Map<number, Facility>();
+  for (let month = 1; month <= 12; month += 1) {
+    const accessDate = `2000-${String(month).padStart(2, "0")}-15`;
+    for (const pick of selectSeasonalFacilities(
+      facilities,
+      accessDate,
+      limit,
+      diversity,
+    )) {
+      candidates.set(pick.facility.id, pick.facility);
+    }
+  }
+  return [...candidates.values()].sort((left, right) => left.id - right.id);
 }
 
 export function getSeasonalFacilityReason(
