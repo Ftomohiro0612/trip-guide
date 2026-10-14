@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
 import MapViewClient from "@/components/MapViewClient";
 import PrefectureDiscoveryFacilityList from "@/components/PrefectureDiscoveryFacilityList";
 import {
@@ -11,7 +12,7 @@ import {
   getPrefectureMeta,
   prefectures,
 } from "@/lib/facilities";
-import { prefectureGradients, prefectureIconImages } from "@/lib/icons";
+import { prefectureIconImages } from "@/lib/icons";
 import { prefectureDescriptions } from "@/lib/descriptions";
 import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
@@ -103,7 +104,6 @@ export default async function PrefecturePage({ params }: Props) {
   const desc = prefectureDescriptions[meta.id];
   const list = getFacilitiesByPrefecture(meta.id);
   const visibleCount = list.length;
-  const gradient = prefectureGradients[meta.id];
   const isNagano = meta.id === "nagano";
   const sortedList = list.slice().sort((a, b) => {
     const score = (facility: (typeof list)[number]) =>
@@ -140,41 +140,28 @@ export default async function PrefecturePage({ params }: Props) {
           href: `/facilities/${f.slug}`,
         }))}
       />
-      <section className={`relative bg-gradient-to-br ${gradient} text-white`}>
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
-          <nav aria-label="パンくず" className="text-xs text-white/90 mb-4">
-            <Link href="/" className="hover:underline">
-              ホーム
-            </Link>
-            <span className="mx-1.5">/</span>
-            <span>{meta.name}</span>
-          </nav>
-          <div className="flex items-start gap-4">
-            <Image
-              src={prefectureIconImages[meta.id]}
-              alt=""
-              width={96}
-              height={96}
-              unoptimized
-              className="h-16 w-16 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24"
-              aria-hidden
-              priority
-            />
-            <div className="flex-1">
-              <p className="text-xs font-medium opacity-95">エリア特集</p>
-              <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {isNagano
-                  ? `長野県の子供の遊び場 ${visibleCount}選`
-                  : `${meta.name}の子供向け遊び場 ${visibleCount}選`}
-              </h1>
-              <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
-                {desc.lead}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DiscoveryLandingHero
+        imageSrc={`/images/landing/prefecture/${meta.id}.webp`}
+        breadcrumb={meta.name}
+        eyebrow="エリア特集"
+        title={
+          isNagano
+            ? `長野県の子供の遊び場 ${visibleCount}選`
+            : `${meta.name}の子供向け遊び場 ${visibleCount}選`
+        }
+        description={desc.lead}
+        icon={
+          <Image
+            src={prefectureIconImages[meta.id]}
+            alt=""
+            width={96}
+            height={96}
+            unoptimized
+            className="h-12 w-12 shrink-0 object-contain drop-shadow-lg sm:h-24 sm:w-24"
+            aria-hidden
+          />
+        }
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
         {isNagano && (
@@ -213,29 +200,6 @@ export default async function PrefecturePage({ params }: Props) {
             </div>
           </section>
         )}
-        {list.length > 0 && (
-          <section
-            id={isNagano ? "nagano-facility-map" : undefined}
-            className="mb-8 scroll-mt-24"
-            aria-labelledby="prefecture-map-heading"
-          >
-            <h2
-              id="prefecture-map-heading"
-              className="text-xl font-bold text-slate-900 mb-3"
-            >
-              📍 {meta.name}内の施設マップ
-              <span className="text-sm font-normal text-slate-500 ml-2">
-                {list.length}件
-              </span>
-            </h2>
-            <MapViewClient
-              facilities={list}
-              height={420}
-              storageKey={`prefecture:${meta.id}`}
-            />
-          </section>
-        )}
-
         <p className="text-slate-700 leading-relaxed max-w-3xl">{desc.long}</p>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
@@ -269,7 +233,7 @@ export default async function PrefecturePage({ params }: Props) {
           <h2 id="cat-heading" className="text-xl font-bold mb-3">
             {meta.name}のカテゴリ別
           </h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 lg:pr-2">
             {categoryCounts.map((c) => (
               <Link
                 key={c.id}
@@ -299,6 +263,29 @@ export default async function PrefecturePage({ params }: Props) {
             prefectureName={meta.name}
           />
         </div>
+
+        {list.length > 0 && (
+          <section
+            id={isNagano ? "nagano-facility-map" : undefined}
+            className="mt-10 scroll-mt-24"
+            aria-labelledby="prefecture-map-heading"
+          >
+            <h2
+              id="prefecture-map-heading"
+              className="mb-3 text-xl font-bold text-slate-900"
+            >
+              📍 {meta.name}内の施設マップ
+              <span className="ml-2 text-sm font-normal text-slate-500">
+                {list.length}件
+              </span>
+            </h2>
+            <MapViewClient
+              facilities={list}
+              height={420}
+              storageKey={`prefecture:${meta.id}`}
+            />
+          </section>
+        )}
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">近くのエリアもチェック</h2>

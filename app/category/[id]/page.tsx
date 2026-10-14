@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
 import FacilityCard from "@/components/FacilityCard";
 import {
   FacilityPaginationControls,
@@ -159,35 +160,21 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           href: `/facilities/${facility.slug}`,
         }))}
       />
-      <section className="relative bg-gradient-to-br from-orange-400 via-amber-400 to-yellow-400 text-white">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
-          <nav aria-label="パンくず" className="mb-4 text-xs text-white/90">
-            <Link href="/" className="hover:underline">
-              ホーム
-            </Link>
-            <span className="mx-1.5">/</span>
-            <span>{meta.name}</span>
-          </nav>
-          <div className="flex items-start gap-4">
-            <CategoryIcon
-              categoryId={meta.id}
-              width={80}
-              height={80}
-              className="h-16 w-16 shrink-0 drop-shadow sm:h-20 sm:w-20"
-            />
-            <div className="flex-1">
-              <p className="text-xs font-medium opacity-95">カテゴリ特集</p>
-              <h1 className="mt-1 text-2xl font-bold tracking-tight drop-shadow sm:text-4xl">
-                {pageTitle}
-              </h1>
-              <p className="mt-3 max-w-2xl text-sm opacity-95 sm:text-base">
-                {desc}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DiscoveryLandingHero
+        imageSrc={`/images/landing/category/${meta.id}.webp`}
+        breadcrumb={meta.name}
+        eyebrow="カテゴリ特集"
+        title={pageTitle}
+        description={desc}
+        icon={
+          <CategoryIcon
+            categoryId={meta.id}
+            width={80}
+            height={80}
+            className="h-12 w-12 shrink-0 drop-shadow sm:h-20 sm:w-20"
+          />
+        }
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
         <PrefectureSelector
@@ -346,21 +333,6 @@ export default async function CategoryPage({ params, searchParams }: Props) {
           <FacilityPaginationSummary page={result.page} />
         </div>
 
-        {result.mapFacilities.length > 0 && (
-          <section className="mb-8" aria-labelledby="category-map-heading">
-            <h2
-              id="category-map-heading"
-              className="mb-3 mt-6 text-xl font-bold text-slate-900"
-            >
-              📍 このページの施設を地図で見る
-              <span className="ml-2 text-sm font-normal text-slate-500">
-                {result.page.totalItems}施設中 {result.mapFacilities.length}件
-              </span>
-            </h2>
-            <MapViewClient facilities={result.mapFacilities} height={420} />
-          </section>
-        )}
-
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           <Stat label="該当施設" count={result.page.totalItems} emoji="🎈" />
           <Stat label="雨でも快適" count={rainCount} emoji="☂️" />
@@ -434,6 +406,21 @@ export default async function CategoryPage({ params, searchParams }: Props) {
         ))}
 
         <FacilityPaginationControls page={result.page} />
+
+        {result.mapFacilities.length > 0 && (
+          <section className="mt-10" aria-labelledby="category-map-heading">
+            <h2
+              id="category-map-heading"
+              className="mb-3 text-xl font-bold text-slate-900"
+            >
+              📍 このページの施設を地図で見る
+              <span className="ml-2 text-sm font-normal text-slate-500">
+                {result.page.totalItems}施設中 {result.mapFacilities.length}件
+              </span>
+            </h2>
+            <MapViewClient facilities={result.mapFacilities} height={420} />
+          </section>
+        )}
 
         <section className="mt-12">
           <h2 className="mb-3 text-xl font-bold">他のカテゴリもチェック</h2>
