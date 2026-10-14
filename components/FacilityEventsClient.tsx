@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useMemo } from "react";
-import EventCard from "@/components/EventCard";
+import FacilityEventCard from "@/components/FacilityEventCard";
 import { useTokyoToday } from "@/components/useTokyoToday";
 import { refreshEventViewsForDate } from "@/lib/event-dates";
 import type { EventView } from "@/lib/events";
@@ -42,12 +42,7 @@ export default function FacilityEventsClient({
       </h2>
       <div className="grid gap-3">
         {currentViews.map((view) => (
-          <EventCard
-            key={view.event.id}
-            view={view}
-            showPrefecture={false}
-            showFacilityLink={false}
-          />
+          <FacilityEventCard key={view.event.id} view={view} />
         ))}
       </div>
       {prefecture ? (
