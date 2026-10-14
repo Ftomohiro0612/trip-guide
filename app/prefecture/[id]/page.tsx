@@ -233,7 +233,7 @@ export default async function PrefecturePage({ params }: Props) {
           <h2 id="cat-heading" className="text-xl font-bold mb-3">
             {meta.name}のカテゴリ別
           </h2>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap gap-2 lg:pr-2">
             {categoryCounts.map((c) => (
               <Link
                 key={c.id}
