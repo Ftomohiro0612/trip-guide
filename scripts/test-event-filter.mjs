@@ -299,6 +299,46 @@ test("type and prefecture are OR within groups while all groups combine with AND
   assert.equal(paginateEventViews(filtered, 99).currentPage, 1);
 });
 
+test("keyword search normalizes width and kana and supports partial festival matches", () => {
+  const views = [
+    view("festival", {
+      title: "親子で楽しむ秋祭り",
+      summary: "屋台と季節行事を楽しめます。",
+      tags: ["お祭り"],
+    }),
+    view("planetarium", {
+      title: "プラネタリウム 星空案内",
+      summary: "秋の星座を紹介します。",
+    }),
+  ];
+  assert.deepEqual(
+    filterEventViews(views, selection({ keyword: "祭り" })).map(
+      (item) => item.event.id,
+    ),
+    ["festival"],
+  );
+  assert.deepEqual(
+    filterEventViews(views, selection({ keyword: "ぷらねたりうむ" })).map(
+      (item) => item.event.id,
+    ),
+    ["planetarium"],
+  );
+});
+
+test("discovery event type filters the build-time classification", () => {
+  const views = [
+    { ...view("festival"), discoveryType: "festival_seasonal" },
+    { ...view("animal"), discoveryType: "animals" },
+  ];
+  assert.deepEqual(
+    filterEventViews(
+      views,
+      selection({ discoveryTypes: ["animals"] }),
+    ).map((item) => item.event.id),
+    ["animal"],
+  );
+});
+
 function event(overrides = {}) {
   return {
     start_date: null,
@@ -311,6 +351,9 @@ function view(id, overrides = {}) {
   return {
     event: {
       id,
+      title: id,
+      summary: "",
+      tags: [],
       prefecture: "tokyo",
       event_type: "fireworks",
       recommended_for_tags: [],
@@ -323,6 +366,9 @@ function view(id, overrides = {}) {
     },
     isThisWeekend: false,
     isThisMonth: false,
+    facilityName: null,
+    venueName: null,
+    prefectureLabel: "東京都",
   };
 }
 

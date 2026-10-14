@@ -67,7 +67,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
       />
 
       <section className="border-b border-slate-200 bg-white">
-        <div className="mx-auto max-w-6xl px-4 py-10 sm:py-14">
+        <div className="mx-auto max-w-6xl px-4 py-6 sm:py-9">
           <nav aria-label="パンくず" className="mb-4 text-xs text-slate-500">
             <Link href="/" className="hover:text-brand hover:underline">
               ホーム
@@ -93,7 +93,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
         </div>
       </section>
 
-      <div className="mx-auto max-w-6xl px-4 py-8 sm:py-10">
+      <div className="mx-auto max-w-6xl px-4 py-5 sm:py-8">
         {eventViews.length === 0 ? (
           <div className="rounded-lg border border-slate-200 bg-white p-6 text-center text-sm text-slate-600">
             現在掲載中のイベントはありません。

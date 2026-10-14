@@ -1,3 +1,5 @@
+import type { EventDiscoveryType } from "@/lib/event-discovery";
+
 export type EventTypeFilterValue =
   | "fireworks"
   | "summer_festival"
@@ -36,6 +38,9 @@ export interface EventPage<T> {
 
 interface FilterableEventView {
   event: {
+    title: string;
+    summary: string;
+    tags: readonly string[];
     prefecture: string;
     event_type?: EventTypeFilterValue;
     recommended_for_tags: readonly string[];
@@ -46,12 +51,18 @@ interface FilterableEventView {
     end_date?: string | null;
     occurrence_dates?: readonly string[];
   };
+  discoveryType?: EventDiscoveryType;
+  facilityName?: string | null;
+  venueName?: string | null;
+  prefectureLabel?: string;
   isThisWeekend: boolean;
   isThisMonth: boolean;
 }
 
 export interface EventFilterSelection {
   eventTypes: readonly EventTypeFilterValue[];
+  discoveryTypes?: readonly EventDiscoveryType[];
+  keyword?: string;
   prefectures: readonly string[];
   quickFilters: readonly EventQuickFilter[];
   recommendedTags: readonly string[];
@@ -73,6 +84,28 @@ export function filterEventViews<T extends FilterableEventView>(
 
   return views.filter((view) => {
     const { event } = view;
+
+    if (
+      selection.keyword &&
+      !eventMatchesKeyword(
+        {
+          event,
+          facilityName: view.facilityName ?? null,
+          venueName: view.venueName ?? null,
+          prefectureLabel: view.prefectureLabel ?? event.prefecture,
+        },
+        selection.keyword,
+      )
+    ) {
+      return false;
+    }
+    if (
+      selection.discoveryTypes &&
+      selection.discoveryTypes.length > 0 &&
+      (!view.discoveryType || !selection.discoveryTypes.includes(view.discoveryType))
+    ) {
+      return false;
+    }
 
     // Unclassified legacy events remain visible until a type is selected.
     if (
@@ -110,6 +143,48 @@ export function filterEventViews<T extends FilterableEventView>(
       matchesEventQuickFilter(view, filter),
     );
   });
+}
+
+export function eventMatchesKeyword(
+  view: {
+    event: {
+      title: string;
+      summary: string;
+      tags: readonly string[];
+      recommended_for_tags: readonly string[];
+    };
+    facilityName: string | null;
+    venueName: string | null;
+    prefectureLabel: string;
+  },
+  keyword: string,
+): boolean {
+  const needle = normalizeEventSearchText(keyword.trim());
+  if (!needle) return true;
+  const { event } = view;
+  const haystack = normalizeEventSearchText(
+    [
+      event.title,
+      event.summary,
+      ...event.tags,
+      ...event.recommended_for_tags,
+      view.venueName ?? "",
+      view.facilityName ?? "",
+      view.prefectureLabel,
+    ].join(" "),
+  );
+  return haystack.includes(needle);
+}
+
+export function normalizeEventSearchText(value: string): string {
+  return value
+    .normalize("NFKC")
+    .toLocaleLowerCase("ja-JP")
+    .replace(/[ァ-ヶ]/gu, (character) =>
+      String.fromCharCode(character.charCodeAt(0) - 0x60),
+    )
+    .replace(/\s+/gu, " ")
+    .trim();
 }
 
 export function eventMatchesDateRange(
