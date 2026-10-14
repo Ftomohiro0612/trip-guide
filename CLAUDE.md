@@ -29,7 +29,15 @@ production、archive、他memoryを読まない。固定pathの不存在、scope
 - 完全一致の `セッション開始` / `セッション終了` はroot `AGENTS.md`のショートハンド契約を唯一の正本とする。
 - 通常のセッション開始時も、最初に `AGENTS.md` の Workspace role binding 表で現在のworkspaceの行が指す固定Session Memoryの1ファイルだけを読む(`Documents\Memorip` = `ai-session-memory\memorips\current-session.md`、`Documents\memorips-growth` = `ai-session-memory\memorips-growth\current-session.md`)。
 - frontmatterの `scope` がその行のscope(`memorips` / `memorips-growth`)と一致することを確認する。
-- 初回報告は「現在の停止点」「次の1手」「Owner判断待ち」「未確認事項」だけとする。
+- 初回報告は固定ファイルの見出しごとの要約とし、次の順で書く(Owner指示 2026-10-14、Cauvix PM の開始報告と同じ粒度):
+  1. 見出し `セッション開始報告(<Role> / scope <scope>)`
+  2. frontmatter 行: status / updated_at / session / scope(期待scopeと一致か) / write base sha256(先頭8桁)
+  3. **Current State(要約)**: 現在地(PR番号・commit・Mission ID・Version 等の識別子付き)、確定方針の要点、HOLD 維持の列挙
+  4. **Claude Code Handoff(要約)**: Lane の状態、再開手順(Resume Point を番号付きで)、やらないこと
+  5. **Owner 判断待ち / Owner 操作待ち**: 件数と中身(0件でも明記)
+  6. **Codex Handoff(要約)**: 実行中 Mission の識別(PID / worktree / branch)、Codex 側の判断待ち
+  7. **未確認事項**: 固定ファイル時点の記載で、まだ照合していないもの
+  8. **継続判定**: この後どこまで自律で進めるか
 - 初回報告前は、Git、Issue、remote、production、過去ログ、他memory、通常の作業worktreeを確認せず、monitorも開始しない。
 - 固定ファイルが存在しない、またはscopeが一致しない場合は、他ファイルを探索・推測せず、その事実だけを報告して待機する。
 - テンプレート、旧current-state、Claude memory、`HANDOFF.md`、`MEMORIPS_AI_ROLES.md`、その他の引継ぎ文書へフォールバックしない。
