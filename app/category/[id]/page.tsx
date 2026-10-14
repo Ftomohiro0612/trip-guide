@@ -2,13 +2,17 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DecisionLandingPanel from "@/components/DecisionLandingPanel";
 import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
+import FacilitiesSearchCta from "@/components/FacilitiesSearchCta";
 import FacilityCard from "@/components/FacilityCard";
 import {
   FacilityPaginationControls,
   FacilityPaginationSummary,
 } from "@/components/FacilityPagination";
 import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
+import LandingEventPicks from "@/components/LandingEventPicks";
+import LandingSeasonalPicks from "@/components/LandingSeasonalPicks";
 import PrefectureSelector from "@/components/PrefectureSelector";
 import {
   categories,
@@ -25,6 +29,18 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import { isPilotCross } from "@/lib/crossings";
 import type { RawSearchParams } from "@/lib/filter";
 import { groupFacilityPageByPrefecture } from "@/lib/facility-pagination";
+import {
+  buildFacilitiesHref,
+  isDecisionPickEligible,
+  selectDecisionPicks,
+} from "@/lib/discovery-landings";
+import {
+  EVENT_PAGE_MAX_AGE_DAYS,
+  getBuildDateString,
+  getVisibleEvents,
+  toEventView,
+} from "@/lib/events";
+import { selectSeasonalCandidateFacilities } from "@/lib/seasonal-facilities";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -118,8 +134,7 @@ export default async function CategoryPage({ params, searchParams }: Props) {
     count: result.prefectureCounts.get(prefecture.id) ?? 0,
   }));
   const desc = categoryDescriptions[meta.id] ?? "";
-  const isNationwideAquarium =
-    meta.id === "aquarium" && !selectedPrefecture;
+  const isNationwideAquarium = meta.id === "aquarium" && !selectedPrefecture;
   const isNationwideScenic = meta.id === "scenic" && !selectedPrefecture;
   const isNationwidePark = meta.id === "park" && !selectedPrefecture;
   const pageTitle = isNationwideAquarium
@@ -158,6 +173,30 @@ export default async function CategoryPage({ params, searchParams }: Props) {
   const areaCount = new Set(
     result.filteredFacilities.map((facility) => facility.prefecture_id),
   ).size;
+  const decisionPicks = selectDecisionPicks(
+    result.filteredFacilities,
+    { type: "category" },
+  );
+  const referenceDate = getBuildDateString();
+  const targetFacilityIds = new Set(
+    result.filteredFacilities.map((facility) => facility.id),
+  );
+  const linkedEventViews = getVisibleEvents(
+    referenceDate,
+    EVENT_PAGE_MAX_AGE_DAYS,
+  )
+    .filter(
+      (event) =>
+        event.facility_id !== null && targetFacilityIds.has(event.facility_id),
+    )
+    .slice(0, 12)
+    .map((event) => toEventView(event, referenceDate));
+  const seasonalCandidates = selectSeasonalCandidateFacilities(
+    result.filteredFacilities.filter(isDecisionPickEligible),
+    3,
+    "prefecture",
+  );
+  const facilitiesHref = buildFacilitiesHref({ categories: meta.id });
 
   return (
     <div>
@@ -188,101 +227,33 @@ export default async function CategoryPage({ params, searchParams }: Props) {
       />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
+        <DecisionLandingPanel
+          eyebrow="今の条件で決める"
+          title={`${meta.name}のおすすめ候補`}
+          summary={`${result.filteredFacilities.length}施設から、雨の日・小さな子・無料など既存の情報がはっきりした候補を先に比較できます。`}
+          picks={decisionPicks}
+        >
+          <LandingEventPicks
+            heading={`開催中・これからの${meta.name}イベント`}
+            views={linkedEventViews}
+            referenceDate={referenceDate}
+            maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+          />
+          <LandingSeasonalPicks
+            facilities={seasonalCandidates}
+            referenceDate={referenceDate}
+            diversity="prefecture"
+            heading="既存情報に今月の時期が明記された候補"
+          />
+        </DecisionLandingPanel>
+
+        <div className="mt-6">
         <PrefectureSelector
           prefectures={prefectureOptions}
           selectedId={selectedPrefectureId}
           disableEmpty
         />
-        {isNationwideAquarium && (
-          <section
-            className="mt-5 rounded-2xl border border-sky-200 bg-sky-50 p-4 sm:p-5"
-            aria-labelledby="indoor-aquarium-guide"
-          >
-            <h2
-              id="indoor-aquarium-guide"
-              className="text-lg font-bold text-slate-900"
-            >
-              雨の日も楽しみやすい水族館の選び方
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              水族館は屋内展示が中心ですが、イルカショーや館内の移動に屋外エリアを含む施設もあります。都道府県で絞り、施設名を開いて料金や雨の日の過ごしやすさを確認すると、家族に合う候補を選びやすくなります。
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
-              <a
-                href="#facility-results"
-                className="text-brand hover:text-brand-dark"
-              >
-                全国の水族館を見る ↓
-              </a>
-              <Link
-                href="/tag/rainy-day"
-                className="text-brand hover:text-brand-dark"
-              >
-                雨でも快適な施設だけを見る →
-              </Link>
-            </div>
-          </section>
-        )}
-        {isNationwideScenic && (
-          <section
-            className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 sm:p-5"
-            aria-labelledby="family-scenic-guide"
-          >
-            <h2
-              id="family-scenic-guide"
-              className="text-lg font-bold text-slate-900"
-            >
-              家族で楽しめる絶景・自然散策の選び方
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              滝・渓谷・湖・海岸・高原など、自然の景色を楽しめる場所を全国から掲載しています。遊歩道の距離や高低差、季節によって歩きやすさが変わるため、地図と施設詳細を確認して家族に合う行き先を選びましょう。
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
-              <a
-                href="#facility-results"
-                className="text-brand hover:text-brand-dark"
-              >
-                絶景スポット一覧を見る ↓
-              </a>
-              <Link
-                href="/facilities?categories=scenic&tags=0-3歳OK"
-                className="text-brand hover:text-brand-dark"
-              >
-                0〜3歳向けの候補を見る →
-              </Link>
-            </div>
-          </section>
-        )}
-        {isNationwidePark && (
-          <section
-            className="mt-5 rounded-2xl border border-lime-200 bg-lime-50 p-4 sm:p-5"
-            aria-labelledby="family-large-park-guide"
-          >
-            <h2
-              id="family-large-park-guide"
-              className="text-lg font-bold text-slate-900"
-            >
-              家族で楽しめる大型公園の選び方
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              大型遊具、芝生広場、水遊び場など、公園によって楽しみ方が異なります。関東を含む都道府県で行ける範囲を絞り、地図と施設詳細から家族に合う公園を選びましょう。
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
-              <a
-                href="#facility-results"
-                className="text-brand hover:text-brand-dark"
-              >
-                全国の大型公園を見る ↓
-              </a>
-              <Link
-                href="/facilities?categories=park&fee=free"
-                className="text-brand hover:text-brand-dark"
-              >
-                無料で遊べる公園を見る →
-              </Link>
-            </div>
-          </section>
-        )}
+        </div>
         {meta.id === "craft" && (
           <section
             className="mt-5"
@@ -330,6 +301,20 @@ export default async function CategoryPage({ params, searchParams }: Props) {
               })}
             </div>
           </section>
+        )}
+
+        {result.filteredFacilities.length > 0 && (
+          <ResponsiveDiscoveryMap
+            dataHref={categoryMapDataHref(
+              meta.id,
+              result.selectedPrefectureId,
+              result.selectedCraftTypeId,
+            )}
+            heading={`${selectedPrefecture ? `${selectedPrefecture.name}の` : ""}該当する施設を地図で見る`}
+            totalItems={result.filteredFacilities.length}
+            height={420}
+            storageKey={`category:${meta.id}:${result.selectedPrefectureId ?? "all"}:${result.selectedCraftTypeId ?? "all"}`}
+          />
         )}
 
         <div className="mt-5" id="facility-results">
@@ -418,19 +403,10 @@ export default async function CategoryPage({ params, searchParams }: Props) {
 
         <FacilityPaginationControls page={result.page} />
 
-        {result.filteredFacilities.length > 0 && (
-          <ResponsiveDiscoveryMap
-            dataHref={categoryMapDataHref(
-              meta.id,
-              result.selectedPrefectureId,
-              result.selectedCraftTypeId,
-            )}
-            heading={`${selectedPrefecture ? `${selectedPrefecture.name}の` : ""}該当する施設を地図で見る`}
-            totalItems={result.filteredFacilities.length}
-            height={420}
-            storageKey={`category:${meta.id}:${result.selectedPrefectureId ?? "all"}:${result.selectedCraftTypeId ?? "all"}`}
-          />
-        )}
+        <FacilitiesSearchCta
+          href={facilitiesHref}
+          conditionLabel={meta.name}
+        />
 
         <section className="mt-12">
           <h2 className="mb-3 text-xl font-bold">他のカテゴリもチェック</h2>

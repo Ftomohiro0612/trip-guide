@@ -3,7 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import CategoryIcon from "@/components/CategoryIcon";
+import DecisionLandingPanel from "@/components/DecisionLandingPanel";
 import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
+import FacilitiesSearchCta from "@/components/FacilitiesSearchCta";
+import LandingEventPicks from "@/components/LandingEventPicks";
+import LandingSeasonalPicks from "@/components/LandingSeasonalPicks";
 import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
 import PrefectureDiscoveryFacilityList from "@/components/PrefectureDiscoveryFacilityList";
 import {
@@ -18,6 +22,20 @@ import { BreadcrumbJsonLd, ItemListJsonLd } from "@/components/JsonLd";
 import type { PrefectureId } from "@/types/facility";
 import { isPilotCross } from "@/lib/crossings";
 import { haversineDistanceKm, type Coordinate } from "@/lib/distance";
+import {
+  buildFacilitiesHref,
+  getMunicipalityParseCoverage,
+  groupFacilitiesByMunicipality,
+  isDecisionPickEligible,
+  selectDecisionPicks,
+} from "@/lib/discovery-landings";
+import {
+  EVENT_PAGE_MAX_AGE_DAYS,
+  getBuildDateString,
+  getVisibleEvents,
+  toEventView,
+} from "@/lib/events";
+import { selectSeasonalCandidateFacilities } from "@/lib/seasonal-facilities";
 
 interface Props {
   params: Promise<{ id: string }>;
@@ -124,6 +142,27 @@ export default async function PrefecturePage({ params }: Props) {
   const rainCount = list.filter((f) => f.rain_friendly === "◎").length;
   const freeCount = list.filter((f) => f.is_free).length;
   const babyCount = list.filter((f) => f.tags.includes("0-3歳OK")).length;
+  const decisionPicks = selectDecisionPicks(list, { type: "prefecture" });
+  const municipalityGroups = groupFacilitiesByMunicipality(list, meta.name);
+  const municipalityCoverage = getMunicipalityParseCoverage(list, meta.name);
+  const referenceDate = getBuildDateString();
+  const targetFacilityIds = new Set(list.map((facility) => facility.id));
+  const linkedEventViews = getVisibleEvents(
+    referenceDate,
+    EVENT_PAGE_MAX_AGE_DAYS,
+  )
+    .filter(
+      (event) =>
+        event.facility_id !== null && targetFacilityIds.has(event.facility_id),
+    )
+    .slice(0, 12)
+    .map((event) => toEventView(event, referenceDate));
+  const seasonalCandidates = selectSeasonalCandidateFacilities(
+    list.filter(isDecisionPickEligible),
+    3,
+    "category",
+  );
+  const facilitiesHref = buildFacilitiesHref({ prefectures: meta.id });
 
   return (
     <div>
@@ -164,43 +203,34 @@ export default async function PrefecturePage({ params }: Props) {
       />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
-        {isNagano && (
-          <section
-            className="mb-8 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 sm:p-5"
-            aria-labelledby="nagano-playground-guide"
+        <DecisionLandingPanel
+          eyebrow="このエリアで今決める"
+          title={`${meta.name}のおすすめ候補`}
+          summary={`${visibleCount}施設から、天気・小さな子・料金と、市区町村ごとの行き先を先に比べられます。`}
+          picks={decisionPicks}
+          municipalityGroups={municipalityGroups}
+          prefectureId={meta.id}
+        >
+          <LandingEventPicks
+            heading="今週末・これからの施設イベント"
+            views={linkedEventViews}
+            referenceDate={referenceDate}
+            maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
+          />
+          <LandingSeasonalPicks
+            facilities={seasonalCandidates}
+            referenceDate={referenceDate}
+            diversity="category"
+            heading="既存情報に今月の時期が明記された候補"
+          />
+          <p
+            className="mt-4 text-xs text-slate-500"
+            data-municipality-coverage={`${municipalityCoverage.parsed}/${municipalityCoverage.total}`}
           >
-            <h2
-              id="nagano-playground-guide"
-              className="text-lg font-bold text-slate-900"
-            >
-              長野県で子どもの遊び場を選ぶポイント
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              軽井沢・松本・諏訪・八ヶ岳などエリアが広く、同じ県内でも移動時間が長くなります。先に地図で行きたい地域を確認し、天気や子どもの年齢に合う条件で絞ると候補を選びやすくなります。
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
-              <a
-                href="#nagano-facility-map"
-                className="text-brand hover:text-brand-dark"
-              >
-                地図から探す ↓
-              </a>
-              <Link
-                href="/facilities?prefecture=nagano&rain=◎"
-                className="text-brand hover:text-brand-dark"
-              >
-                雨でも快適な施設 →
-              </Link>
-              <Link
-                href="/facilities?prefecture=nagano&tags=0-3歳OK"
-                className="text-brand hover:text-brand-dark"
-              >
-                0〜3歳向け施設 →
-              </Link>
-            </div>
-          </section>
-        )}
-        <p className="text-slate-700 leading-relaxed max-w-3xl">{desc.long}</p>
+            住所から市区町村を抽出できた施設: {municipalityCoverage.parsed}/
+            {municipalityCoverage.total}（{municipalityCoverage.percent.toFixed(1)}%）
+          </p>
+        </DecisionLandingPanel>
 
         <div className="mt-6 grid grid-cols-2 sm:grid-cols-4 gap-3">
           <StatCard
@@ -228,6 +258,21 @@ export default async function PrefecturePage({ params }: Props) {
             emoji="👶"
           />
         </div>
+
+        {list.length > 0 && (
+          <div
+            id={isNagano ? "nagano-facility-map" : undefined}
+            className="scroll-mt-24"
+          >
+            <ResponsiveDiscoveryMap
+              dataHref={`/api/discovery-map?scope=prefecture&prefecture=${meta.id}`}
+              heading={`${meta.name}内の施設マップ`}
+              totalItems={list.length}
+              height={420}
+              storageKey={`prefecture:${meta.id}`}
+            />
+          </div>
+        )}
 
         <section className="mt-10" aria-labelledby="cat-heading">
           <h2 id="cat-heading" className="text-xl font-bold mb-3">
@@ -264,20 +309,10 @@ export default async function PrefecturePage({ params }: Props) {
           />
         </div>
 
-        {list.length > 0 && (
-          <div
-            id={isNagano ? "nagano-facility-map" : undefined}
-            className="scroll-mt-24"
-          >
-            <ResponsiveDiscoveryMap
-              dataHref={`/api/discovery-map?scope=prefecture&prefecture=${meta.id}`}
-              heading={`${meta.name}内の施設マップ`}
-              totalItems={list.length}
-              height={420}
-              storageKey={`prefecture:${meta.id}`}
-            />
-          </div>
-        )}
+        <FacilitiesSearchCta
+          href={facilitiesHref}
+          conditionLabel={meta.name}
+        />
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">近くのエリアもチェック</h2>

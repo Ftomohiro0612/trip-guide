@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import DecisionLandingPanel from "@/components/DecisionLandingPanel";
+import DiscoveryLandingHero from "@/components/DiscoveryLandingHero";
+import FacilitiesSearchCta from "@/components/FacilitiesSearchCta";
 import FacilityCard from "@/components/FacilityCard";
 import {
   FacilityPaginationControls,
   FacilityPaginationSummary,
 } from "@/components/FacilityPagination";
 import PrefectureSelector from "@/components/PrefectureSelector";
-import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
+import ResponsiveDiscoveryMap from "@/components/ResponsiveDiscoveryMap";
+import LandingSeasonalPicks from "@/components/LandingSeasonalPicks";
 import { discoverableFacilities, prefectures } from "@/lib/facilities";
 import {
   TAG_META,
   buildTagFacilityFilterHref,
   getTagFacilities,
+  getTagFacilityFilterParams,
   getTagMetaBySlug,
 } from "@/lib/tags";
 import { resolvePrefectureId } from "@/lib/facility-area-filter";
@@ -24,6 +29,14 @@ import {
   orderFacilitiesByPrefecture,
   paginateFacilities,
 } from "@/lib/facility-pagination";
+import {
+  buildFacilitiesHref,
+  buildThemeMapHref,
+  isDecisionPickEligible,
+  selectDecisionPicks,
+} from "@/lib/discovery-landings";
+import { getBuildDateString } from "@/lib/events";
+import { selectSeasonalCandidateFacilities } from "@/lib/seasonal-facilities";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -54,6 +67,13 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       : `${meta.lead} 全国${prefectures.length}都道府県で${meta.title}を${list.length}施設掲載。`,
     alternates: {
       canonical: `/tag/${meta.slug}`,
+    },
+    openGraph: {
+      title: isYoungKids
+        ? `0〜3歳の子供と楽しめる遊び場 ${list.length}選`
+        : `${meta.title} ${list.length}選`,
+      description: meta.lead,
+      url: `/tag/${meta.slug}`,
     },
   };
 }
@@ -99,6 +119,22 @@ export default async function TagPage({ params, searchParams }: Props) {
     : isYoungKids
       ? "0〜3歳の子供と楽しめる遊び場"
       : meta.title;
+  const filterParams = getTagFacilityFilterParams(meta);
+  const decisionPicks = selectDecisionPicks(
+    filteredList,
+    { type: "theme", slug: meta.slug, recommendedTag: meta.recommendedTag },
+  );
+  const facilitiesHref = buildFacilitiesHref(filterParams);
+  const mapHref = buildThemeMapHref({
+    ...filterParams,
+    ...(selectedPrefectureId ? { prefecture: selectedPrefectureId } : {}),
+  });
+  const referenceDate = getBuildDateString();
+  const seasonalCandidates = selectSeasonalCandidateFacilities(
+    filteredList.filter(isDecisionPickEligible),
+    3,
+    "both",
+  );
 
   return (
     <div>
@@ -116,77 +152,51 @@ export default async function TagPage({ params, searchParams }: Props) {
           href: `/facilities/${f.slug}`,
         }))}
       />
-      <section className="relative bg-gradient-to-br from-sky-400 via-cyan-400 to-emerald-400 text-white">
-        <div className="absolute inset-0 bg-black/10" />
-        <div className="relative mx-auto max-w-5xl px-4 py-10 sm:py-14">
-          <nav aria-label="パンくず" className="text-xs text-white/90 mb-4">
-            <Link href="/" className="hover:underline">
-              ホーム
-            </Link>
-            <span className="mx-1.5">/</span>
-            <span>タグ</span>
-            <span className="mx-1.5">/</span>
-            <span>{meta.title}</span>
-          </nav>
-          <div className="flex items-start gap-4">
-            <span className="text-5xl sm:text-7xl drop-shadow" aria-hidden>
-              {meta.emoji}
-            </span>
-            <div className="flex-1">
-              <p className="text-xs font-medium opacity-95">タグ特集</p>
-              <h1 className="text-2xl sm:text-4xl font-bold drop-shadow tracking-tight mt-1">
-                {pageTitle}
-              </h1>
-              <p className="mt-3 text-sm sm:text-base opacity-95 max-w-2xl">
-                {meta.lead}
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DiscoveryLandingHero
+        breadcrumb={meta.title}
+        eyebrow="テーマ特集"
+        title={pageTitle}
+        description={meta.lead}
+        icon={
+          <span className="shrink-0 text-5xl drop-shadow sm:text-7xl" aria-hidden>
+            {meta.emoji}
+          </span>
+        }
+      />
 
       <div className="mx-auto max-w-6xl px-4 py-8">
+        <DecisionLandingPanel
+          eyebrow="このテーマで今決める"
+          title={`${meta.title}のおすすめ候補`}
+          summary={meta.whyNow}
+          picks={decisionPicks}
+        >
+          <LandingSeasonalPicks
+            facilities={seasonalCandidates}
+            referenceDate={referenceDate}
+            diversity="both"
+            heading="既存情報に今月の時期が明記された候補"
+          />
+        </DecisionLandingPanel>
+
+        <div className="mt-6">
         <PrefectureSelector
           prefectures={prefectureOptions}
           selectedId={selectedPrefectureId}
           disableEmpty
         />
-        {isYoungKids && !selectedPrefecture && (
-          <section
-            className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 sm:p-5"
-            aria-labelledby="young-kids-playground-guide"
-          >
-            <h2
-              id="young-kids-playground-guide"
-              className="text-lg font-bold text-slate-900"
-            >
-              赤ちゃん・幼児との遊び場選び
-            </h2>
-            <p className="mt-2 text-sm leading-7 text-slate-700">
-              同じ0〜3歳向けでも、屋内外、料金、移動のしやすさで過ごし方が変わります。都道府県で行ける範囲を絞り、当日の天気や家族の予定に合う施設を選びましょう。
-            </p>
-            <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
-              <a
-                href="#facility-results"
-                className="text-brand hover:text-brand-dark"
-              >
-                0〜3歳向け施設を見る ↓
-              </a>
-              <Link
-                href="/facilities?tags=0-3歳OK&rain=◎"
-                className="text-brand hover:text-brand-dark"
-              >
-                雨でも快適な施設 →
-              </Link>
-              <Link
-                href="/facilities?tags=0-3歳OK&fee=free"
-                className="text-brand hover:text-brand-dark"
-              >
-                無料で遊べる施設 →
-              </Link>
-            </div>
-          </section>
+        </div>
+
+        {filteredList.length > 0 && (
+          <ResponsiveDiscoveryMap
+            dataHref={mapHref}
+            heading={`${selectedPrefecture ? `${selectedPrefecture.name}の` : ""}該当する施設を地図で見る`}
+            totalItems={filteredList.length}
+            height={420}
+            storageKey={`tag:${meta.slug}:${selectedPrefectureId ?? "all"}`}
+          />
         )}
+
         <div className="mt-5" id="facility-results">
           <h2
             id="facility-results-heading"
@@ -198,7 +208,6 @@ export default async function TagPage({ params, searchParams }: Props) {
           </h2>
           <FacilityPaginationSummary page={facilityPage} />
         </div>
-        <p className="text-slate-700 leading-relaxed max-w-3xl">{meta.long}</p>
 
         {filteredList.length === 0 && (
           <div className="mt-8 rounded-2xl border border-slate-200 bg-white py-14 text-center">
@@ -209,13 +218,6 @@ export default async function TagPage({ params, searchParams }: Props) {
               別の都道府県または全国を選んでください。
             </p>
           </div>
-        )}
-
-        {filteredList.length > 0 && (
-          <ResponsiveResultsMap
-            facilities={facilityPage.items}
-            totalItems={facilityPage.totalItems}
-          />
         )}
 
         {byPref.map((p) =>
@@ -259,6 +261,11 @@ export default async function TagPage({ params, searchParams }: Props) {
         )}
 
         <FacilityPaginationControls page={facilityPage} />
+
+        <FacilitiesSearchCta
+          href={facilitiesHref}
+          conditionLabel={meta.title}
+        />
 
         <section className="mt-12">
           <h2 className="text-xl font-bold mb-3">他のテーマもチェック</h2>

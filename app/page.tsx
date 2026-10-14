@@ -418,7 +418,7 @@ export default function HomePage() {
     {
       label: "水遊びが好き",
       icon: RECOMMENDED_FOR_TAG_META.water_play.icon,
-      href: "/facilities?recommended_tag=water_play",
+      href: "/tag/water-play",
     },
   ];
   const themeLinks = [
@@ -445,7 +445,7 @@ export default function HomePage() {
     {
       label: "水遊び",
       icon: RECOMMENDED_FOR_TAG_META.water_play.icon,
-      href: "/facilities?recommended_tag=water_play",
+      href: "/tag/water-play",
       count: countByRecommendedTag("water_play"),
       bg: "bg-violet-50",
       border: "border-violet-200",
@@ -455,7 +455,7 @@ export default function HomePage() {
     {
       label: "大型遊具",
       icon: RECOMMENDED_FOR_TAG_META.playground.icon,
-      href: "/facilities?recommended_tag=playground",
+      href: "/tag/playground",
       count: countByRecommendedTag("playground"),
       bg: "bg-amber-50",
       border: "border-amber-200",

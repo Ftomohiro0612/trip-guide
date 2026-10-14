@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface Props {
-  imageSrc: string;
+  imageSrc?: string;
   breadcrumb: string;
   eyebrow: string;
   title: string;
@@ -24,15 +24,19 @@ export default function DiscoveryLandingHero({
       className="relative h-40 overflow-hidden bg-slate-800 text-white sm:h-64"
       data-discovery-hero
     >
-      <Image
-        src={imageSrc}
-        alt=""
-        width={1600}
-        height={640}
-        sizes="100vw"
-        className="absolute inset-0 h-full w-full object-cover object-center"
-        fetchPriority="high"
-      />
+      {imageSrc ? (
+        <Image
+          src={imageSrc}
+          alt=""
+          width={1600}
+          height={640}
+          sizes="100vw"
+          className="absolute inset-0 h-full w-full object-cover object-center"
+          fetchPriority="high"
+        />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-br from-sky-500 via-cyan-500 to-emerald-500" />
+      )}
       <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-900/80 to-slate-900/10" />
       <div className="relative mx-auto flex h-full max-w-5xl flex-col px-4 py-3 sm:py-7">
         <nav aria-label="パンくず" className="mb-2 text-xs text-white/90 sm:mb-4">
