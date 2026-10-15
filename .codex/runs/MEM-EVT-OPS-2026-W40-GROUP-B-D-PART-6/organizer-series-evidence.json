@@ -1,0 +1,110 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-D-PART-6",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-15T17:32:33.408235+00:00",
+  "horizon_end_date": "2026-12-11",
+  "per_region": {
+    "tochigi": {
+      "sources_checked": [
+        {
+          "url": "https://www.tochigi-agri.or.jp/archives/1586",
+          "status": 403,
+          "checked_at": "2026-10-15T17:32:33.408256+00:00",
+          "organizer_name": "栃木県農業振興公社",
+          "multi_venue_basis": "食農体験講座は匠屋（さくら市）、黒崎乳業（芳賀町）、猪野さんちのいちご農園（真岡市）の3会場"
+        },
+        {
+          "url": "https://www.pref.tochigi.lg.jp/c10/kouhou/r08_geizyutusai_bijyututen_kouhou.html",
+          "status": 200,
+          "checked_at": "2026-10-15T17:32:34.876670+00:00",
+          "organizer_name": "栃木県・栃木県文化協会",
+          "multi_venue_basis": "美術展を県立美術館・県総合文化センター・ミナテラスの3会場で開催",
+          "host_shared_with_registry_reason": "県公式ドメインだが単一施設のイベントページではなく県文化協会と県が主催する3会場の芸術祭公式日程"
+        }
+      ],
+      "candidates_found": 5,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 5,
+      "stale_false": 0,
+      "candidate_dispositions": [
+        {
+          "title": "食農体験講座 米10/25",
+          "disposition": "hold",
+          "reason": "主催公社の公式詳細はHTTP403。県の補完情報では詳細会場が参加者個別通知のため公開会場を確定できない。",
+          "source_url": "https://www.tochigi-agri.or.jp/archives/1586"
+        },
+        {
+          "title": "食農体験講座 畜産11/7",
+          "disposition": "hold",
+          "reason": "主催公社の公式詳細はHTTP403。県の補完情報では詳細会場が参加者個別通知のため公開会場を確定できない。",
+          "source_url": "https://www.tochigi-agri.or.jp/archives/1586"
+        },
+        {
+          "title": "食農体験講座 いちご1/30",
+          "disposition": "hold",
+          "reason": "主催公社の公式詳細はHTTP403。県の補完情報では詳細会場が参加者個別通知のため公開会場を確定できない。",
+          "source_url": "https://www.tochigi-agri.or.jp/archives/1586"
+        },
+        {
+          "title": "芸術祭美術展 日本画・書道・写真10/24-11/3",
+          "disposition": "hold",
+          "reason": "当run再取得の主催公式で会期・会場・無料観覧を確認。地域祭事として交通・最新変更案内を確定できず地域単位のHOLD継続。",
+          "source_url": "https://www.pref.tochigi.lg.jp/c10/kouhou/r08_geizyutusai_bijyututen_kouhou.html"
+        },
+        {
+          "title": "芸術祭美術展 若手入賞作品11/11-20",
+          "disposition": "hold",
+          "reason": "当run再取得の主催公式で会期・会場・無料観覧を確認。地域祭事として交通・最新変更案内を確定できず地域単位のHOLD継続。",
+          "source_url": "https://www.pref.tochigi.lg.jp/c10/kouhou/r08_geizyutusai_bijyututen_kouhou.html"
+        }
+      ]
+    },
+    "yamanashi": {
+      "sources_checked": [
+        {
+          "url": "https://splawars.com/schedule/",
+          "status": 200,
+          "checked_at": "2026-10-15T17:48:00.681987+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "主催者の公式スケジュールは笛吹川フルーツ公園・富士川クラフトパークなど県内外の複数会場を列挙"
+        },
+        {
+          "url": "https://splawars.com/schedule/page/2/",
+          "status": 200,
+          "checked_at": "2026-10-15T17:48:17.448770+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "主催者の県内外複数会場シリーズの日程2ページ目"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/event/kenhaku/0809/kaikimonogatari.html",
+          "status": 200,
+          "checked_at": "2026-10-15T17:48:18.862463+00:00",
+          "organizer_name": "山梨県立博物館",
+          "multi_venue_basis": "企画展の主催者が都留市の天野商店等、富士吉田市の光織物、博物館の3か所の関連体験を主催",
+          "host_shared_with_registry_reason": "県公式ドメインだが博物館内だけの予定ではなく、都留・富士吉田の別工場を含む公式主催ツアー日程"
+        }
+      ],
+      "candidates_found": 2,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 2,
+      "stale_false": 0,
+      "candidate_dispositions": [
+        {
+          "title": "織物工場見学 都留10/19",
+          "disposition": "hold",
+          "reason": "当runで主催公式を再取得。10/1受付開始・無料・小学4年以上・現地集合を確認。申込フォームの現況と正確な集合地点を未確認。",
+          "source_url": "https://www.pref.yamanashi.jp/event/kenhaku/0809/kaikimonogatari.html"
+        },
+        {
+          "title": "織物工場見学 富士吉田11/21",
+          "disposition": "hold",
+          "reason": "当runで主催公式を再取得。10/1受付開始・無料・小学4年以上・現地集合を確認。申込フォームの現況と正確な集合地点を未確認。",
+          "source_url": "https://www.pref.yamanashi.jp/event/kenhaku/0809/kaikimonogatari.html"
+        }
+      ],
+      "review": "SPLAWARS all 14 current schedule entries across 2 pages evaluated; Yamanashi occurrences July-September are already past and excluded from backfill. No current/future Yamanashi SPLAWARS candidate. Museum exhibition/lectures already adjudicated in regional unit; factory tours retained as two HOLDs."
+    }
+  }
+}
