@@ -4275,8 +4275,8 @@
       ],
       "candidates_found": 340,
       "added": 6,
-      "duplicate_or_already_present": 5,
-      "hold": 312,
+      "duplicate_or_already_present": 3,
+      "hold": 314,
       "stale_false": 17,
       "candidates": [
         {
@@ -4534,14 +4534,15 @@
         },
         {
           "title": "企画展 サンマの学校",
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一の会場・開催日・主催情報で既存IDと照合。マージ済みデータ＋本ラン追加集合で同一イベント（Productionは反映時に再確認）。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://www.aquamarine.or.jp/events/exhibition_sanma2026/",
-          "event_id": "evt-fukushima-202607-01",
           "secondary_url": "https://odekake-fukushima.jp/events/%E3%81%84%E3%82%8F%E3%81%8D%E5%B8%82-%E4%BC%81%E7%94%BB%E5%B1%95-%E3%82%B5%E3%83%B3%E3%83%9E%E3%81%AE%E5%AD%A6%E6%A0%A1-2026-07-15/",
           "primary_url": "https://www.aquamarine.or.jp/events/exhibition_sanma2026/",
           "official_text_sha256": "e18a81d0a30fe259f65d226240995c29c41b3c27697699b9a576cc91eb1cb89d",
-          "recall_index": 9
+          "recall_index": 9,
+          "existing_event_id": "evt-fukushima-202607-01",
+          "prior_assessment": "同一の会場・開催日・主催情報で既存IDと照合。マージ済みデータ＋本ラン追加集合で同一イベント（Productionは反映時に再確認）。"
         },
         {
           "title": "ふくしま森のマルシェ",
@@ -7229,13 +7230,14 @@
         },
         {
           "title": "企画展「サンマの学校」開校編",
-          "disposition": "duplicate_or_already_present",
-          "reason": "公式の現会期は2027/1/11まで。二次の11/30終期を採用しない。同一企画展の既存IDをmerged setで確認。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://www.aquamarine.or.jp/events/exhibition_sanma2026/",
-          "event_id": "evt-fukushima-202607-01",
           "secondary_url": "https://iko-yo.net/events/584385",
           "primary_url": "https://www.aquamarine.or.jp/events/exhibition_sanma2026/",
-          "family_recall_index": 6
+          "family_recall_index": 6,
+          "existing_event_id": "evt-fukushima-202607-01",
+          "prior_assessment": "公式の現会期は2027/1/11まで。二次の11/30終期を採用しない。同一企画展の既存IDをmerged setで確認。"
         },
         {
           "title": "脱出島絶対王者!!直伝　あばれる君 熱血授業 in ゆめはっと",
@@ -9070,8 +9072,8 @@
       ],
       "candidates_found": 96,
       "added": 2,
-      "duplicate_or_already_present": 6,
-      "hold": 79,
+      "duplicate_or_already_present": 5,
+      "hold": 80,
       "stale_false": 9,
       "candidates": [
         {
@@ -9721,14 +9723,15 @@
         },
         {
           "title": "土佐二万石の260年",
-          "disposition": "duplicate_or_already_present",
-          "reason": "二次表題の省略/誤記を採用せず、公式主催者・会期・会場で既存IDに照合。merged rendered setで確認。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://www.kochi-johaku.jp/exhibition/8916/",
-          "event_id": "evt-6618-202609-34f195",
           "secondary_url": "https://iko-yo.net/event_lites/detail/32412",
           "primary_url": "https://www.kochi-johaku.jp/exhibition/8916/",
           "official_text_sha256": "029b820e87dc546d0b422bc869d9493de30c13769f1b11a44987f2ad230724ce",
-          "family_recall_index": 7
+          "family_recall_index": 7,
+          "existing_event_id": "evt-6618-202609-34f195",
+          "prior_assessment": "二次表題の省略/誤記を採用せず、公式主催者・会期・会場で既存IDに照合。merged rendered setで確認。"
         },
         {
           "title": "6歳になったら机を作ろう！木こり&机作り体験 in高知",

@@ -2044,8 +2044,8 @@
       ],
       "candidates_found": 151,
       "added": 6,
-      "duplicate_or_already_present": 6,
-      "hold": 111,
+      "duplicate_or_already_present": 2,
+      "hold": 115,
       "stale_false": 28,
       "candidates": [
         {
@@ -2332,10 +2332,11 @@
         },
         {
           "title": "AR謎解きスタンプラリー「精霊のカケラを探せ」",
-          "disposition": "duplicate_or_already_present",
-          "reason": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://kochi-tabi.jp/search_event.html?id=18678",
-          "event_id": "evt-kochi-tsuno-ar-riddle-rally-20260711"
+          "existing_event_id": "evt-kochi-tsuno-ar-riddle-rally-20260711",
+          "prior_assessment": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。"
         },
         {
           "title": "第23回ハガキでごめんなさい全国コンクール",
@@ -2351,17 +2352,19 @@
         },
         {
           "title": "南国I.C.わくわくゾーンスタンプラリー",
-          "disposition": "duplicate_or_already_present",
-          "reason": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://kochi-tabi.jp/search_event.html?id=18612",
-          "event_id": "evt-kochi-nankoku-ic-wakuwaku-rally-20260418"
+          "existing_event_id": "evt-kochi-nankoku-ic-wakuwaku-rally-20260418",
+          "prior_assessment": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。"
         },
         {
           "title": "企画展「土佐藩と山内家　―土佐20万石の260年―」【高知城歴史博物館】",
-          "disposition": "duplicate_or_already_present",
-          "reason": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://kochi-tabi.jp/search_event.html?id=18561",
-          "event_id": "evt-6618-202609-34f195"
+          "existing_event_id": "evt-6618-202609-34f195",
+          "prior_assessment": "既存イベントIDと開催期間・会場・主催情報をmerged data setで照合、Production反映時にも確認。"
         },
         {
           "title": "デジタルdeスタンプラリー「カレコレ」",
@@ -2681,11 +2684,12 @@
         },
         {
           "title": "AR謎解きスタンプラリー「精霊のカケラを探せ」",
-          "disposition": "duplicate_or_already_present",
-          "reason": "観光局の同一イベントを先行単位で判定済み。",
+          "disposition": "hold",
+          "reason": "既存IDとの会期・会場照合はできたが、既存source_checked_at=2026-08-23が現行30日鮮度窓を超えるため公開済み重複とは数えない。公式再確認に伴う既存イベント全参加条件の差分照合を完了していないため既存行を更新せずHOLD。単一データファイルへの存在をProduction表示の代用にしない。",
           "source_url": "https://kochi-tabi.jp/search_event.html?id=18678",
           "prior_disposition": "duplicate_or_already_present",
-          "event_id": "evt-kochi-tsuno-ar-riddle-rally-20260711"
+          "existing_event_id": "evt-kochi-tsuno-ar-riddle-rally-20260711",
+          "prior_assessment": "観光局の同一イベントを先行単位で判定済み。"
         },
         {
           "title": "“車いす利用者向け高知観光モニターツアー”のご案内",
