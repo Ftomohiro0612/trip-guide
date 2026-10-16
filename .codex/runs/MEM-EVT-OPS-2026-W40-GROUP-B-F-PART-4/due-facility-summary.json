@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-4",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T15:52:45.968945+00:00",
+  "executed_at": "2026-10-16T15:54:41.102186+00:00",
   "process_started_at": "2026-10-16T14:53:27.3388002Z",
   "due_facility_ids": [
     782,
@@ -49,8 +49,8 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 2,
-    "candidate_found_added": 31,
-    "candidate_found_duplicate": 2,
+    "candidate_found_added": 30,
+    "candidate_found_duplicate": 3,
     "candidate_found_hold": 5,
     "source_unresolved": 0
   },
@@ -90,8 +90,8 @@
       ],
       "total": 30,
       "no_current_or_future_event": 2,
-      "candidate_found_added": 23,
-      "candidate_found_duplicate": 2,
+      "candidate_found_added": 22,
+      "candidate_found_duplicate": 3,
       "candidate_found_hold": 3,
       "source_unresolved": 0,
       "sources_checked": [
@@ -5541,10 +5541,10 @@
             },
             {
               "title": "えのすいecoデー Vol.193",
-              "disposition": "added",
-              "event_id": "evt-813-w40f4-eco193",
+              "disposition": "duplicate",
+              "event_id": "evt-813-w38-eco193",
               "url": "https://www.enosui.com/evententry.php?eid=02692",
-              "participability": "通常参加可能"
+              "reason": "最終QAで施設IDなしの既存レコードを発見。未公開の新規重複を除き既存レコードを本Missionの確認日で更新。"
             },
             {
               "title": "えのすいecoデー Vol.194",
@@ -5783,7 +5783,11 @@
           ],
           "disposition": "candidate_found_added",
           "reason": "公式一覧の全現行候補・22個別詳細で判断。7新規、3既存再確認、8過去回終了。古い9月入場予約条件を除去。",
-          "completed_at": "2026-10-16T15:12:59.785275+00:00"
+          "completed_at": "2026-10-16T15:12:59.785275+00:00",
+          "qa_correction": {
+            "at": "2026-10-16T15:54:41.102044+00:00",
+            "reason": "Post-patrol final validation correction, after all40 facility appends. Original sequential execution deviation disclosed; no inherited evidence."
+          }
         },
         {
           "facility_id": 829,
@@ -5808,10 +5812,9 @@
           "candidates": [
             {
               "title": "ぷらぱあく",
-              "disposition": "added",
-              "event_id": "evt-829-w40f4-plapark",
+              "disposition": "hold",
               "url": "https://odawara-jigyo-kyokai.jp/wanpaku/e/2026/10/post-112.php",
-              "participability": "条件付き参加可能"
+              "reason": "参加料金・申込方法の記載がなく、実際の参加経路の確証が不十分。QAで未公開新規レコードを取り下げ、推測を避け保留。"
             },
             {
               "title": "ふれあい動物園11/15・12/12",
@@ -5830,9 +5833,13 @@
               "disposition": "reconfirmed"
             }
           ],
-          "disposition": "candidate_found_added",
-          "reason": "公式一覧全10件と新規・既存個別本文確認。過去8件は終了告知・日程過去。新規ぷらぱあく追加、動物園再確認。",
-          "completed_at": "2026-10-16T15:13:16.487923+00:00"
+          "disposition": "candidate_found_duplicate",
+          "reason": "既存ふれあい動物園2開催を再確認。ぷらぱあくは参加経路不確定のため最終QAでHOLDへ訂正。",
+          "completed_at": "2026-10-16T15:13:16.487923+00:00",
+          "qa_correction": {
+            "at": "2026-10-16T15:54:41.102072+00:00",
+            "reason": "Post-patrol final validation correction, after all40 facility appends. Original sequential execution deviation disclosed; no inherited evidence."
+          }
         },
         {
           "facility_id": 830,
@@ -6684,7 +6691,11 @@
           ],
           "disposition": "candidate_found_added",
           "reason": "公式ブログ最新7件・月間全候補と絵画展・和紙展詳細確認。2新規、1既存再確認、2過去回終了。",
-          "completed_at": "2026-10-16T15:18:33.642040+00:00"
+          "completed_at": "2026-10-16T15:18:33.642040+00:00",
+          "qa_correction": {
+            "at": "2026-10-16T15:54:41.102090+00:00",
+            "reason": "Post-patrol final validation correction, after all40 facility appends. Original sequential execution deviation disclosed; no inherited evidence."
+          }
         },
         {
           "facility_id": 848,
@@ -11765,5 +11776,11 @@
       ],
       "existing_event_holds": []
     }
-  }
+  },
+  "qa_notes": [
+    "Final QA removed an unpublished duplicate eco193 and held unpublished plapark for unconfirmed participation path; refreshed the genuine existing null-facility eco193.",
+    "Eco194/195 use facility_id:null with the officially stated beach venue, rather than the organizing aquarium location.",
+    "Neutralized washi artist attribution; made new-record price booleans and reservation flags follow the explicit labels.",
+    "These final corrections occurred after the40 sequential completion appends. Earlier post-completion corrections at782/833 remain explicitly disclosed."
+  ]
 }
