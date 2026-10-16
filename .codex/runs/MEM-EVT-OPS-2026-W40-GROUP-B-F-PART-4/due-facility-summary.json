@@ -2221,7 +2221,7 @@
         },
         {
           "url": "https://l-tike.com/event/mevent/?mid=766403",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-16T15:31:04.917161+00:00"
         },
         {
@@ -8519,7 +8519,7 @@
             },
             {
               "url": "https://l-tike.com/event/mevent/?mid=766403",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-16T15:31:04.917161+00:00"
             }
           ],
@@ -11835,6 +11835,7 @@
     "Final QA removed an unpublished duplicate eco193 and held unpublished plapark for unconfirmed participation path; refreshed the genuine existing null-facility eco193.",
     "Eco194/195 use facility_id:null with the officially stated beach venue, rather than the organizing aquarium location.",
     "Neutralized washi artist attribution; made new-record price booleans and reservation flags follow the explicit labels.",
-    "These final corrections occurred after the40 sequential completion appends. Earlier post-completion corrections at782/833 remain explicitly disclosed."
+    "These final corrections occurred after the40 sequential completion appends. Earlier post-completion corrections at782/833 remain explicitly disclosed.",
+    "Normalized JSON string HTTP codes to integers and fetch_failed to the permitted error vocabulary; underlying request results unchanged."
   ]
 }
