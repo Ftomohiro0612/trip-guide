@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-4",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T15:54:41.102186+00:00",
+  "executed_at": "2026-10-16T15:57:05.914646+00:00",
   "process_started_at": "2026-10-16T14:53:27.3388002Z",
   "due_facility_ids": [
     782,
@@ -52,7 +52,21 @@
     "candidate_found_added": 30,
     "candidate_found_duplicate": 3,
     "candidate_found_hold": 5,
-    "source_unresolved": 0
+    "source_unresolved": 0,
+    "event_changes": {
+      "added": 146,
+      "modified": 217,
+      "ended": 124,
+      "cancelled": 1,
+      "deleted": 0
+    },
+    "candidate_encounters_by_disposition": {
+      "added": 146,
+      "hold": 261,
+      "out_of_scope": 22,
+      "duplicate": 72,
+      "stale": 13
+    }
   },
   "per_region": {
     "kanagawa": {
@@ -8828,7 +8842,21 @@
           "completed_at": "2026-10-16T15:33:52.157809+00:00"
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_encounters_by_disposition": {
+        "added": 108,
+        "hold": 210,
+        "out_of_scope": 12,
+        "duplicate": 65,
+        "stale": 6
+      },
+      "product_event_changes": {
+        "added": 108,
+        "modified": 172,
+        "ended": 99,
+        "cancelled": 1,
+        "deleted": 0
+      }
     },
     "kochi": {
       "facility_ids": [
@@ -9003,7 +9031,19 @@
           "completed_at": "2026-10-16T15:34:57.294672+00:00"
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_encounters_by_disposition": {
+        "hold": 5,
+        "out_of_scope": 1,
+        "stale": 1
+      },
+      "product_event_changes": {
+        "added": 0,
+        "modified": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "kyoto": {
       "facility_ids": [
@@ -11774,7 +11814,21 @@
           "completed_at": "2026-10-16T15:52:45.968883+00:00"
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_encounters_by_disposition": {
+        "added": 38,
+        "hold": 46,
+        "duplicate": 7,
+        "stale": 6,
+        "out_of_scope": 9
+      },
+      "product_event_changes": {
+        "added": 38,
+        "modified": 45,
+        "ended": 25,
+        "cancelled": 0,
+        "deleted": 0
+      }
     }
   },
   "qa_notes": [
