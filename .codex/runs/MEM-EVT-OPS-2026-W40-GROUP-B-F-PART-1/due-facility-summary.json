@@ -3270,13 +3270,13 @@
         },
         {
           "url": "https://www.gyoda-p.server-shared.com/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-16T10:34:46.186427+00:00",
           "error": "HTTPSConnectionPool(host='www.gyoda-p.server-shared.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
         },
         {
           "url": "https://www.gyoda-p.server-shared.com/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-16T10:34:55.965660+00:00",
           "error": "HTTPSConnectionPool(host='www.gyoda-p.server-shared.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
         },
@@ -10771,13 +10771,13 @@
           "sources_checked": [
             {
               "url": "https://www.gyoda-p.server-shared.com/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-16T10:34:46.186427+00:00",
               "error": "HTTPSConnectionPool(host='www.gyoda-p.server-shared.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
             },
             {
               "url": "https://www.gyoda-p.server-shared.com/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-16T10:34:55.965660+00:00",
               "error": "HTTPSConnectionPool(host='www.gyoda-p.server-shared.com', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
             },
@@ -12542,7 +12542,7 @@
       "sources_checked": [
         {
           "url": "https://www.hiro-kon.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:44:05.217947+00:00",
           "error": "HTTPSConnectionPool(host='www.hiro-kon.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiro-kon.jp', port=443) at 0x1c8e65c5fd0>, 'Connection to www.hiro-kon.jp timed out. (connect timeout=40)'))"
         },
@@ -12556,7 +12556,7 @@
         },
         {
           "url": "https://www.hiro-kon.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:44:40.628723+00:00",
           "error": "HTTPSConnectionPool(host='www.hiro-kon.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiro-kon.jp', port=443) at 0x1e28e205fd0>, 'Connection to www.hiro-kon.jp timed out. (connect timeout=40)'))"
         },
@@ -12578,7 +12578,7 @@
         },
         {
           "url": "https://www.asazoo.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:46:09.143408+00:00",
           "error": "HTTPSConnectionPool(host='www.asazoo.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.asazoo.jp', port=443) at 0x1e9025aa270>, 'Connection to www.asazoo.jp timed out. (connect timeout=40)'))"
         },
@@ -12592,7 +12592,7 @@
         },
         {
           "url": "https://www.asazoo.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:47:08.194763+00:00",
           "error": "HTTPSConnectionPool(host='www.asazoo.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.asazoo.jp', port=443) at 0x21115fda270>, 'Connection to www.asazoo.jp timed out. (connect timeout=40)'))"
         },
@@ -12646,7 +12646,7 @@
         },
         {
           "url": "https://www.hiroshima-bot.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:48:50.686778+00:00",
           "error": "HTTPSConnectionPool(host='www.hiroshima-bot.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiroshima-bot.jp', port=443) at 0x1fcb9142510>, 'Connection to www.hiroshima-bot.jp timed out. (connect timeout=20)'))"
         },
@@ -12660,7 +12660,7 @@
         },
         {
           "url": "https://www.hiroshima-bot.jp/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-16T10:49:23.071056+00:00",
           "error": "HTTPSConnectionPool(host='www.hiroshima-bot.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiroshima-bot.jp', port=443) at 0x19847952510>, 'Connection to www.hiroshima-bot.jp timed out. (connect timeout=20)'))"
         },
@@ -12849,7 +12849,7 @@
           "sources_checked": [
             {
               "url": "https://www.hiro-kon.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:44:05.217947+00:00",
               "error": "HTTPSConnectionPool(host='www.hiro-kon.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiro-kon.jp', port=443) at 0x1c8e65c5fd0>, 'Connection to www.hiro-kon.jp timed out. (connect timeout=40)'))"
             },
@@ -12863,7 +12863,7 @@
             },
             {
               "url": "https://www.hiro-kon.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:44:40.628723+00:00",
               "error": "HTTPSConnectionPool(host='www.hiro-kon.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiro-kon.jp', port=443) at 0x1e28e205fd0>, 'Connection to www.hiro-kon.jp timed out. (connect timeout=40)'))"
             },
@@ -12969,7 +12969,7 @@
           "sources_checked": [
             {
               "url": "https://www.asazoo.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:46:09.143408+00:00",
               "error": "HTTPSConnectionPool(host='www.asazoo.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.asazoo.jp', port=443) at 0x1e9025aa270>, 'Connection to www.asazoo.jp timed out. (connect timeout=40)'))"
             },
@@ -12983,7 +12983,7 @@
             },
             {
               "url": "https://www.asazoo.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:47:08.194763+00:00",
               "error": "HTTPSConnectionPool(host='www.asazoo.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.asazoo.jp', port=443) at 0x21115fda270>, 'Connection to www.asazoo.jp timed out. (connect timeout=40)'))"
             },
@@ -13133,7 +13133,7 @@
           "sources_checked": [
             {
               "url": "https://www.hiroshima-bot.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:48:50.686778+00:00",
               "error": "HTTPSConnectionPool(host='www.hiroshima-bot.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiroshima-bot.jp', port=443) at 0x1fcb9142510>, 'Connection to www.hiroshima-bot.jp timed out. (connect timeout=20)'))"
             },
@@ -13147,7 +13147,7 @@
             },
             {
               "url": "https://www.hiroshima-bot.jp/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-16T10:49:23.071056+00:00",
               "error": "HTTPSConnectionPool(host='www.hiroshima-bot.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hiroshima-bot.jp', port=443) at 0x19847952510>, 'Connection to www.hiroshima-bot.jp timed out. (connect timeout=20)'))"
             },
