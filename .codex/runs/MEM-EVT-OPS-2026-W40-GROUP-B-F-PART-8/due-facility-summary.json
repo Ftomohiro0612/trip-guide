@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-8",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T21:32:11.963706+00:00",
+  "executed_at": "2026-10-16T21:36:36.900434+00:00",
   "process_started_at": "2026-10-16T20:25:00+00:00",
   "due_facility_ids": [
     2164,
@@ -2516,6 +2516,11 @@
               "title": "日達れんげ展・切り絵WS・サイン会・月見会・春夏企画",
               "disposition": "past",
               "reason": "各会期は10/12以前に終了"
+            },
+            {
+              "title": "天童のさとうわきこ展・関連トーク",
+              "disposition": "out_of_scope",
+              "reason": "小さな絵本美術館の公式告知が山形の天童開催を紹介していたが、今回の対象施設・地域外。日付は10/8～11/23の案内、追加の現地調査・登録は行わない。"
             }
           ],
           "existing_event_judgments": [],
@@ -9224,7 +9229,6 @@
               "source_checked_at": "2026-10-17",
               "source_urls": [
                 "https://www.tennojizoo.jp/wp-content/uploads/2026/07/press20260716.pdf",
-                "https://www.tennojizoo.jp/info/outline/",
                 "https://www.tennojizoo.jp/information/48817/",
                 "https://www.tennojizoo.jp/wp-content/uploads/2026/10/HP時間変更-1024x576.jpg"
               ],
@@ -11221,7 +11225,7 @@
           "facility_id": 1352,
           "name": "万博記念公園",
           "disposition": "candidate_found_added",
-          "reason": "全3ページ41公園企画・3スポーツ企画、主催者各詳細・告知・公式カレンダーを評価。既存11件を再確認、限定例外はHOLD。",
+          "reason": "全3ページ41公園企画・3スポーツ企画、主催者各詳細・告知・公式カレンダーを評価。既存11件を再確認、限定例外はHOLD。 検証後、共有URL・同日衝突4候補を追加からHOLDへ変更。",
           "candidates": [
             {
               "title": "秋の山野草展",
@@ -11232,24 +11236,21 @@
             },
             {
               "title": "森のコンサート at 西大路広場",
-              "disposition": "added",
-              "event_id": "evt-1352-f8-forest-concert",
-              "participability": "通常参加可能",
-              "reason": "予約不要"
+              "disposition": "hold",
+              "reason": "同じ公式URL・同日で既存または別採用企画と衝突する shared-source-shape。事実上は別企画だが、新たな検証例外を承認なく増やさず、今回の追加から外してPM判断へ。",
+              "proposed_event_id": "evt-1352-f8-forest-concert"
             },
             {
               "title": "気まぐれ演奏会",
-              "disposition": "added",
-              "event_id": "evt-1352-f8-spontaneous-concert",
-              "participability": "通常参加可能",
-              "reason": "ふらっと立ち寄って観覧可"
+              "disposition": "hold",
+              "reason": "同じ公式URL・同日で既存または別採用企画と衝突する shared-source-shape。事実上は別企画だが、新たな検証例外を承認なく増やさず、今回の追加から外してPM判断へ。",
+              "proposed_event_id": "evt-1352-f8-spontaneous-concert"
             },
             {
               "title": "みんなでしゃぼん玉あそび",
-              "disposition": "added",
-              "event_id": "evt-1352-f8-bubbles",
-              "participability": "通常参加可能",
-              "reason": "当日受付、道具交換可・何人でも利用可"
+              "disposition": "hold",
+              "reason": "同じ公式URL・同日で既存または別採用企画と衝突する shared-source-shape。事実上は別企画だが、新たな検証例外を承認なく増やさず、今回の追加から外してPM判断へ。",
+              "proposed_event_id": "evt-1352-f8-bubbles"
             },
             {
               "title": "京都橘高等学校マーチングパレード・中学校吹奏楽部演奏",
@@ -11267,10 +11268,9 @@
             },
             {
               "title": "パン天国 ～2026 秋～",
-              "disposition": "added",
-              "event_id": "evt-1352-f8-bread",
-              "participability": "通常参加可能",
-              "reason": "当日来場可"
+              "disposition": "hold",
+              "reason": "同じ公式URL・同日で既存または別採用企画と衝突する shared-source-shape。事実上は別企画だが、新たな検証例外を承認なく増やさず、今回の追加から外してPM判断へ。",
+              "proposed_event_id": "evt-1352-f8-bread"
             },
             {
               "title": "ロハスフェスタ万博 2026秋",
@@ -11451,7 +11451,7 @@
             {
               "title": "万博記念公園「プロジェクションマッピングイベント」を開催します",
               "disposition": "hold",
-              "reason": "金土日祝＋12/28～30という指定日と【計20日間】の整合を確認できず、事務局開設準備中、夜間荒天・子ども帰路条件も未確定。"
+              "reason": "指定日の計算は20日間で一致することを確認。夜間企画の荒天時中止・延期基準が公式案内で未公表のため、季節行事の必須条件が揃うまでHOLD。"
             },
             {
               "title": "子ども農体験 ～田んぼで学ぶSDGs～ ＜要事前申込＞",
@@ -12793,5 +12793,36 @@
         }
       ]
     }
+  },
+  "baseline_product_head": "bcd00fd5658d166c67975a314d67b7a1d07a0fdc",
+  "existing_event_scope_reconciliation": {
+    "dispatch_declared_current_future_count": 45,
+    "observed_baseline_current_future_count": 52,
+    "all_observed_records_individually_evaluated": true,
+    "reason": "実際の開始時Product baselineで、対象facility_idのscheduled/ongoingかつ終了日が本日以降の既存レコード52件。依頼の施設スコープは変更せず全52件を今回取得した公式情報で確認。"
+  },
+  "execution_totals": {
+    "sources_checked": 504,
+    "events_added": 177,
+    "existing_events_updated": 52,
+    "events_deleted": 0,
+    "registry_rows_checked": 40,
+    "registry_primary_urls_repaired": 10,
+    "candidate_dispositions": {
+      "added": 177,
+      "past": 21,
+      "not_event": 9,
+      "duplicate": 36,
+      "hold": 137,
+      "out_of_scope": 4,
+      "out_of_audience": 7,
+      "duplicate_component": 5
+    },
+    "added_participability": {
+      "通常参加可能": 114,
+      "条件付き参加可能": 63
+    },
+    "source_family_hold_records": 3,
+    "hold_count_unit": "candidate encounter records; some entries group multiple related candidates; source-family holds may overlap those records"
   }
 }
