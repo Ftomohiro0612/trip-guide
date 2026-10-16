@@ -64,6 +64,28 @@ never assert `CLOSE_OK` as a default or from a partially-completed sequence.
 Steps:
 
 1. Do not perform additional investigation, implementation, or verification.
+   The pending-ACK sweep below is the one exception, and it runs before step 2.
+
+   **Pending-ACK sweep** (canonical source: `Ftomohiro0612/ai-agent-control-center`
+   `docs/session-memory-protocol.md` §6 step 3, PR #116). Take only the
+   handoffs that were received this session, read in full this session, and
+   addressed to this role. Check each one's state with the installed role
+   handoff wrapper's `-Mode Status`, and send `-Mode Ack` only for the ones
+   that are `PENDING_ACK`.
+   - Skip `COMPLETE` / `WITHDRAWN`.
+   - Do not ACK a handoff whose full body was not read this session.
+   - Do not search the inbox to find ACK targets.
+   - If there is no target, do nothing.
+   - An ACK records receipt, not completion. Keep any unfinished follow-up in
+     the replacement's Resume Point together with its handoff ID.
+   - An ACK failure does not stop the close and does not by itself change the
+     Close label. Record the handoff ID and the `REJECTED` reason in the
+     replacement, and do not retry through another route.
+   - This sweep does not modify the archive, the fixed file, or any external
+     record.
+   - Why: the wrapper rejects an ACK from a process started after the
+     original handoff was created, so a handoff left unACKed at session end
+     cannot be ACKed by a later session.
 2. If no write base was recorded earlier this session, read the fixed file
    once now and record its `updated_at`, `session`, and SHA-256 as the write
    base.
