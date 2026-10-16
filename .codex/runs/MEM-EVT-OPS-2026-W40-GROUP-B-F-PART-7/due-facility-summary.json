@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-7",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T19:40:24.655519+00:00",
+  "executed_at": "2026-10-16T19:44:41.256812+00:00",
   "process_started_at": "2026-10-16T19:06:37.8937311Z",
   "due_facility_ids": [
     87,
@@ -3631,10 +3631,67 @@
             },
             {
               "title": "日本世界の昆虫展示・販売会",
-              "disposition": "added",
-              "event_id": "evt-201-202610-f7-insect",
-              "participability": "通常参加可能",
-              "category": "facility_hosted"
+              "disposition": "hold",
+              "category": "facility_hosted",
+              "reason": "公式飼育員ブログの11/3の曜日ラベルが2026年暦と不一致。showakinen-koen.jp専用の曜日無視規則を他ドメインへ適用しない。期間/開催日を推測して採用せず本候補をHOLD。",
+              "sources_checked": [
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:29.748635+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/",
+                  "sha256": "fa131a8a4c4d1f6a8f4015e1567fe414a1890644a7b0cf88d793d6a6a42802fc"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:42.247001+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "sha256": "05ed844accdebe9d13df469a5fdf4067342739f5a1cfeefbbdcdaa5f8a5df286"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:43.375896+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "sha256": "a2d9d5756ea73478f6326705ae9ff2d94211a0c0e8926a630e8152fab4b76ab9"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:44.599749+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "sha256": "2caa3f95a589747621a58211d23182fef8759ee16146aebb62703ea700d28977"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:52.780455+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "sha256": "c4ae7009095177a19ea07c2d022e176cedb0d4ff6a4d6537e8e74e74f68d29e7"
+                },
+                {
+                  "url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:53.905889+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "sha256": "347ab6b867f128bd9b78c776a1fc95c67d2e28fed9cc15f970a83fd1a90881a2"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:14:01.122018+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "sha256": "9855a48d490025e97edd361b41457b2093af1523985a3cccb7cf17221d0cddd6"
+                }
+              ]
             },
             {
               "title": "秋の動物園まつり10/31・11/1",
@@ -4231,32 +4288,6 @@
                 "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html"
               ],
               "source_notes": "2026-10-17に動物園が直リンクする飼育員ブログと市公式年間予定を取得。日程・時間・会場カピバラ舎を確認。通常入園で見学可、月曜等・年末年始休園。"
-            },
-            {
-              "id": "evt-201-202610-f7-insect",
-              "title": "日本世界の昆虫展示・販売会",
-              "summary": "珍しいチョウやカブトムシ、クワガタなどを展示し、一部を販売する。",
-              "start_date": "2026-10-17",
-              "end_date": "2026-11-03",
-              "occurrence_dates": [
-                "2026-10-17",
-                "2026-10-18",
-                "2026-10-24",
-                "2026-10-25",
-                "2026-10-31",
-                "2026-11-01",
-                "2026-11-03"
-              ],
-              "date_label": "11月3日までの土日祝",
-              "time_label": "終日（開園9:00～16:45、券売16:00まで）",
-              "price_label": "入園料：一般400円、小中学生100円、未就学児無料、購入品は別途",
-              "is_indoor": false,
-              "official_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
-              "source_urls": [
-                "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
-                "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html"
-              ],
-              "source_notes": "2026-10-17に公式飼育員ブログを取得。10/3～11/3の土日祝、ふれあいはうす横テントと確認。今後の開催日だけを登録。11/3の曜日ラベルは暦と異なるため要注意だが数値日付・土日祝条件は明記。"
             }
           ],
           "completed_at": "2026-10-16T19:14:29.874588+00:00",
@@ -13111,13 +13142,13 @@
       "candidate_found_hold": 3,
       "source_unresolved": 1,
       "candidate_totals": {
-        "added": 55,
-        "hold": 117,
+        "added": 54,
+        "hold": 118,
         "duplicate": 16
       },
       "candidates_found": 188,
       "added_participability": {
-        "通常参加可能": 36,
+        "通常参加可能": 35,
         "条件付き参加可能": 19
       },
       "candidate_category_totals": {
@@ -13132,9 +13163,9 @@
           "hold": 0
         },
         "facility_hosted": {
-          "added": 54,
+          "added": 53,
           "duplicate": 16,
-          "hold": 105
+          "hold": 106
         }
       }
     }
@@ -13152,6 +13183,11 @@
     {
       "facility_id": 2152,
       "correction": "Restored successful education_program fetch metadata from this process own tool output at 19:25:18.054752Z; concurrent cache-write dropped that one record. Source content was read in full in this run; no prior-run evidence used."
+    },
+    {
+      "facility_id": 201,
+      "event_id": "evt-201-202610-f7-insect",
+      "correction": "Removed own provisional insect addition before publication: a weekday/date inconsistency is not covered by the showakinen-only exception. Candidate held; no baseline event deleted."
     }
   ],
   "candidate_counting": "Distinct named programs are separately tallied; recurrence dates of one program form one candidate. Expired or permanent services are evaluated in each facility reason and are not current/future candidates."
