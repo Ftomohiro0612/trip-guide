@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-8",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T22:51:35.745909+00:00",
+  "executed_at": "2026-10-16T22:57:14.685978+00:00",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
     2164,
@@ -48,8 +48,8 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 6,
-    "candidate_found_added": 8,
-    "candidate_found_duplicate": 22,
+    "candidate_found_added": 9,
+    "candidate_found_duplicate": 21,
     "candidate_found_hold": 3,
     "source_unresolved": 1
   },
@@ -82,8 +82,8 @@
       ],
       "total": 23,
       "no_current_or_future_event": 4,
-      "candidate_found_added": 3,
-      "candidate_found_duplicate": 15,
+      "candidate_found_added": 4,
+      "candidate_found_duplicate": 14,
       "candidate_found_hold": 1,
       "source_unresolved": 0,
       "sources_checked": [
@@ -1365,8 +1365,8 @@
           ]
         },
         {
-          "disposition": "candidate_found_duplicate",
-          "reason": "既存4件と別会場10/31観望会を公式詳細と10月PDFで再確認。新着・企画展・ロビー展示も確認。",
+          "disposition": "candidate_found_added",
+          "reason": "既存4件と別会場10/31観望会を公式詳細と10月PDFで再確認。新着・企画展・ロビー展示も確認。 自己QAで矢じり講座の開いている申込経路を再評価し1件追加。",
           "candidates": [
             {
               "title": "研究・創意工夫展／ロボットハンド／10/17観望会／ガイア衛星",
@@ -1397,8 +1397,10 @@
             },
             {
               "title": "11/1黒曜石で矢じりをつくってみよう",
-              "disposition": "HOLD",
-              "reason": "先着10名メール受付締切10/18と記載、現在の定員充足状況は公式に出ておらず確実な残枠は未確認。"
+              "disposition": "added",
+              "reason": "自己QAでHOLD判定を訂正。既に本実行で取得済の市公式PDFに10/18までのメール受付を明記。残席非公開のみではHOLDしない。",
+              "event_id": "evt-2167-f8-a2-arrowhead",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "信州の空写真展・ロビー活動発表展・10/4民話ツアー・10/10植物観察・10/10-11さきおり・10/11昼の星・10/12守矢周辺歩き",
@@ -3837,12 +3839,12 @@
         },
         {
           "url": "https://www.minpaku.ac.jp/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.337455+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/69812",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.338062+00:00"
         },
         {
@@ -3852,7 +3854,7 @@
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/69685",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.339142+00:00"
         },
         {
@@ -3862,102 +3864,102 @@
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72958",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.837729+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72960",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.845796+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72961",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:32.860381+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72962",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.326291+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72963",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.327788+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/72964",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.328543+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/73353",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.380187+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/73364",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.388772+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/74585",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.920230+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/74586",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.920466+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75842",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.924299+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75862",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.937428+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/76246",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:33.951569+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/76247",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.382910+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75998",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.388918+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/74401",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.414255+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75477",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.418979+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/76214",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.422272+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75683",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.899238+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75083",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.907212+00:00"
         },
         {
@@ -3967,12 +3969,12 @@
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/73938",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.950040+00:00"
         },
         {
           "url": "https://www.minpaku.ac.jp/ai1ec_event/75807",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-16T22:43:34.970640+00:00"
         },
         {
@@ -5629,12 +5631,12 @@
           "sources_checked": [
             {
               "url": "https://www.minpaku.ac.jp/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.337455+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/69812",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.338062+00:00"
             },
             {
@@ -5644,7 +5646,7 @@
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/69685",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.339142+00:00"
             },
             {
@@ -5654,102 +5656,102 @@
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72958",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.837729+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72960",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.845796+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72961",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:32.860381+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72962",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.326291+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72963",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.327788+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/72964",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.328543+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/73353",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.380187+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/73364",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.388772+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/74585",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.920230+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/74586",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.920466+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75842",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.924299+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75862",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.937428+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/76246",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:33.951569+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/76247",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.382910+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75998",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.388918+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/74401",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.414255+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75477",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.418979+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/76214",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.422272+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75683",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.899238+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75083",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.907212+00:00"
             },
             {
@@ -5759,12 +5761,12 @@
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/73938",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.950040+00:00"
             },
             {
               "url": "https://www.minpaku.ac.jp/ai1ec_event/75807",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-16T22:43:34.970640+00:00"
             },
             {
@@ -6718,5 +6720,16 @@
         }
       ]
     }
+  },
+  "event_changes": {
+    "added": 21,
+    "updated": 219,
+    "cancelled_or_postponed": 0,
+    "ended": 0,
+    "deleted": 0,
+    "source_checked_at_note": "All scoped baseline registry and current-event date stamps already equal 2026-10-17 from same-day prior Product integration. This attempt independently fetched sources; 219 reconfirmations recorded in fresh source_notes, 2 event conflicts kept unchanged as holds. No prior evidence reused.",
+    "registry_url_successfully_patrolled": 39,
+    "registry_date_stamps_changed": 0,
+    "existing_event_holds": 2
   }
 }
