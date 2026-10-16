@@ -779,7 +779,16 @@
           "reason": "市公式施設案内は通常の公園設備・利用紹介のみ。開催日と参加方法を持つ現在未来の企画やイベントへのリンクは掲載なし。常設利用はイベント化しない。"
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_judgment_entry_counts": {
+        "total": 20,
+        "by_disposition": {
+          "added": 5,
+          "duplicate": 2,
+          "hold": 11,
+          "past": 2
+        }
+      }
     },
     "chiba": {
       "facility_ids": [
@@ -11982,7 +11991,25 @@
           "additions": []
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_judgment_entry_counts": {
+        "total": 319,
+        "by_disposition": {
+          "hold": 137,
+          "out_of_scope": 4,
+          "past": 4,
+          "not_event": 10,
+          "added": 70,
+          "cancelled_not_added": 3,
+          "duplicate": 68,
+          "no_open_candidate": 1,
+          "past_or_standing": 1,
+          "not_eligible": 9,
+          "operational_notice": 1,
+          "past_not_added": 10,
+          "duplicate_updated": 1
+        }
+      }
     },
     "fukushima": {
       "facility_ids": [
@@ -12524,7 +12551,16 @@
           ]
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_judgment_entry_counts": {
+        "total": 15,
+        "by_disposition": {
+          "added": 2,
+          "hold": 10,
+          "not_eligible": 2,
+          "not_event": 1
+        }
+      }
     },
     "hiroshima": {
       "facility_ids": [
@@ -13649,7 +13685,38 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_judgment_entry_counts": {
+        "total": 49,
+        "by_disposition": {
+          "duplicate": 2,
+          "hold": 40,
+          "not_eligible": 2,
+          "added": 1,
+          "not_event": 3,
+          "duplicate_hold": 1
+        }
+      }
+    }
+  },
+  "candidate_judgment_entry_counts": {
+    "unit": "Recorded candidate judgment entries. An explicitly named source-family/group entry may contain multiple related items; these are not asserted as an individual event census. Added entries are individual Product IDs. Existing-event HOLDs are counted separately.",
+    "total": 403,
+    "by_disposition": {
+      "added": 78,
+      "duplicate": 72,
+      "hold": 198,
+      "past": 6,
+      "out_of_scope": 4,
+      "not_event": 14,
+      "cancelled_not_added": 3,
+      "no_open_candidate": 1,
+      "past_or_standing": 1,
+      "not_eligible": 13,
+      "operational_notice": 1,
+      "past_not_added": 10,
+      "duplicate_updated": 1,
+      "duplicate_hold": 1
     }
   }
 }
