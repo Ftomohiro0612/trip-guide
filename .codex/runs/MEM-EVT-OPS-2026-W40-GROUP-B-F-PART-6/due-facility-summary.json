@@ -3882,6 +3882,14 @@
           "final_url": "https://www.n-kaihatu.com/naganobi",
           "title": "ながのこども館　ながノビ！",
           "content_sha256": "ee51e68bc471fd2180921c4093650fe2525d2d6bb1e95e6925b0381cf07dbaae"
+        },
+        {
+          "facility_id": 55,
+          "url": "https://www.city.komoro.lg.jp/material/files/group/3/202604P7.pdf",
+          "checked_at": "2026-10-16T18:44:01.317904+00:00",
+          "status": 200,
+          "final_url": "https://www.city.komoro.lg.jp/material/files/group/3/202604P7.pdf",
+          "content_sha256": "8851448b4ab3eec3426cbf56e2db34c1a55008a459c896c2d421a7d26872a2bf"
         }
       ],
       "facility_results": [
@@ -4051,7 +4059,7 @@
         },
         {
           "disposition": "candidate_found_hold",
-          "reason": "未登録ソースを京都などへ推測せず、小諸市公式の当該児童遊園地情報と秋感謝祭結果を新規取得。最新個別イベントは9月27日終了。",
+          "reason": "施設公式分類・9/27開催済み報告と年度日程PDFを内容確認。11/21〜22感謝祭は予定表のみ、時間・参加条件の現行詳細未公表としてHOLD。",
           "candidates": [
             {
               "title": "児童遊園地秋の感謝祭9月27日",
@@ -4061,7 +4069,8 @@
             {
               "title": "児童遊園地秋の感謝祭11月21〜22日（年度日程表）",
               "disposition": "hold",
-              "reason": "検索で市年度日程表に予定を確認したが、最新施設の個別開催案内・条件は未確認。予定を確定として追加しない。"
+              "reason": "検索で市年度日程表に予定を確認したが、最新施設の個別開催案内・条件は未確認。予定を確定として追加しない。",
+              "source_url": "https://www.city.komoro.lg.jp/material/files/group/3/202604P7.pdf"
             }
           ],
           "existing_events_reviewed": [],
