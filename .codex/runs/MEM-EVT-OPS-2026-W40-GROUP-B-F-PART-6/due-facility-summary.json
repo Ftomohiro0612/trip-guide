@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T18:00:03.775996+00:00",
+  "executed_at": "2026-10-16T18:40:35.931572+00:00",
   "process_started_at": "2026-10-16T17:56:28.0527539Z",
   "due_facility_ids": [
     1639,
@@ -48,10 +48,10 @@
   "prior_run_evidence_reused": false,
   "aggregate": {
     "total": 40,
-    "no_current_or_future_event": 7,
+    "no_current_or_future_event": 6,
     "candidate_found_added": 14,
-    "candidate_found_duplicate": 1,
-    "candidate_found_hold": 15,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 17,
     "source_unresolved": 3
   },
   "per_region": {
@@ -76,8 +76,8 @@
       "total": 15,
       "no_current_or_future_event": 1,
       "candidate_found_added": 7,
-      "candidate_found_duplicate": 1,
-      "candidate_found_hold": 4,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 5,
       "source_unresolved": 2,
       "sources_checked": [
         {
@@ -1144,7 +1144,14 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:00:27.694253+00:00",
-          "facility_name": "京都市学校歴史博物館"
+          "facility_name": "京都市学校歴史博物館",
+          "added_count": 2,
+          "hold_count": 9,
+          "candidate_counts": {
+            "added": 2,
+            "hold": 9,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1336,7 +1343,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:03:25.487149+00:00",
-          "facility_name": "京都市京セラ美術館"
+          "facility_name": "京都市京セラ美術館",
+          "candidate_counts": {
+            "added": 13,
+            "hold": 18,
+            "duplicate": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -1376,7 +1388,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:04:20.572797+00:00",
-          "facility_name": "岡崎公園"
+          "facility_name": "岡崎公園",
+          "candidate_counts": {
+            "hold": 5
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1451,7 +1466,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:05:45.509109+00:00",
-          "facility_name": "京都国立博物館"
+          "facility_name": "京都国立博物館",
+          "candidate_counts": {
+            "added": 3,
+            "hold": 6,
+            "duplicate": 2
+          }
         },
         {
           "disposition": "source_unresolved",
@@ -1468,7 +1488,8 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:06:04.538551+00:00",
-          "facility_name": "イオンモールKYOTO"
+          "facility_name": "イオンモールKYOTO",
+          "candidate_counts": {}
         },
         {
           "disposition": "candidate_found_hold",
@@ -1553,10 +1574,13 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:06:31.080163+00:00",
-          "facility_name": "友愛の丘"
+          "facility_name": "友愛の丘",
+          "candidate_counts": {
+            "hold": 14
+          }
         },
         {
-          "disposition": "candidate_found_duplicate",
+          "disposition": "candidate_found_hold",
           "reason": "現行見学デーの日程・無料・年齢制限なし・ラリー等の申込不要を再確認。既存イベントの公式確認日を更新。",
           "candidates": [
             {
@@ -1580,7 +1604,7 @@
             "evt-d8-kyoto-ndl-open-day-2026"
           ],
           "added_count": 0,
-          "hold_count": 0,
+          "hold_count": 1,
           "updated_event_ids": [
             "evt-d8-kyoto-ndl-open-day-2026"
           ],
@@ -1588,7 +1612,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:06:52.526296+00:00",
-          "facility_name": "国立国会図書館関西館"
+          "facility_name": "国立国会図書館関西館",
+          "candidate_counts": {
+            "duplicate": 1,
+            "excluded": 1,
+            "hold": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1686,7 +1715,14 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:08:34.128249+00:00",
-          "facility_name": "イオンモール久御山"
+          "facility_name": "イオンモール久御山",
+          "candidate_counts": {
+            "added": 6,
+            "hold": 6,
+            "duplicate": 1,
+            "excluded": 1,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "source_unresolved",
@@ -1700,7 +1736,8 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:08:53.863920+00:00",
-          "facility_name": "サントリー〈天然水のビール工場〉京都"
+          "facility_name": "サントリー〈天然水のビール工場〉京都",
+          "candidate_counts": {}
         },
         {
           "disposition": "candidate_found_hold",
@@ -1745,7 +1782,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:09:26.195543+00:00",
-          "facility_name": "道の駅 京丹波 味夢の里"
+          "facility_name": "道の駅 京丹波 味夢の里",
+          "candidate_counts": {
+            "hold": 6
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1781,7 +1821,13 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:10:24.406754+00:00",
-          "facility_name": "福知山城"
+          "facility_name": "福知山城",
+          "candidate_counts": {
+            "added": 1,
+            "hold": 1,
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1819,7 +1865,13 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:10:54.777876+00:00",
-          "facility_name": "舞鶴引揚記念館"
+          "facility_name": "舞鶴引揚記念館",
+          "candidate_counts": {
+            "added": 1,
+            "hold": 1,
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -1839,7 +1891,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:11:14.281877+00:00",
-          "facility_name": "舞鶴港とれとれセンター"
+          "facility_name": "舞鶴港とれとれセンター",
+          "candidate_counts": {
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -1893,7 +1948,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:11:54.983279+00:00",
-          "facility_name": "京都大学総合博物館"
+          "facility_name": "京都大学総合博物館",
+          "candidate_counts": {
+            "added": 3,
+            "hold": 2,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -1918,9 +1978,56 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:12:17.043419+00:00",
-          "facility_name": "WOOD DESIGN PARK 京都－彩－"
+          "facility_name": "WOOD DESIGN PARK 京都－彩－",
+          "candidate_counts": {
+            "hold": 1,
+            "excluded": 1
+          }
         }
-      ]
+      ],
+      "candidate_counts": {
+        "added": 29,
+        "hold": 70,
+        "excluded": 7,
+        "duplicate": 5,
+        "stale_false": 4
+      },
+      "added_event_ids": [
+        "evt-f6-1639-modern-school-2026",
+        "evt-f6-1639-kite-2026",
+        "evt-f6-1640-poyoyon-1018",
+        "evt-f6-1640-animal-talk-1121",
+        "evt-f6-1640-tsuzure-1020",
+        "evt-f6-1640-handweave-2026",
+        "evt-f6-1640-liminal-2026",
+        "evt-f6-1640-tosa-2026",
+        "evt-f6-1640-collection-autumn-2026",
+        "evt-f6-1640-zen-ghibli-2026",
+        "evt-f6-1640-yamaga-2026",
+        "evt-f6-1640-wall-2026",
+        "evt-f6-1640-hakuin-2026",
+        "evt-f6-1640-fujino-2027",
+        "evt-f6-1640-collection-winter-2027",
+        "evt-f6-1642-genji-2026",
+        "evt-f6-1642-genji-workshop-2026",
+        "evt-f6-1642-gallery-winter-2026",
+        "evt-f6-1652-witch-hat",
+        "evt-f6-1652-candy-bag",
+        "evt-f6-1652-experiment-lab",
+        "evt-f6-1652-trick-or-treat",
+        "evt-f6-1652-inobun-candy",
+        "evt-f6-1652-portrait-oct",
+        "evt-f6-1657-citizens-rebuild-2026",
+        "evt-f6-1658-three-years-2026",
+        "evt-f6-6874-chemistry-2026",
+        "evt-f6-6874-itani-2026",
+        "evt-f6-6874-children-oct"
+      ],
+      "added_participability": {
+        "通常参加可能": 25,
+        "条件付き参加可能": 4
+      },
+      "candidate_count_unit": "Named candidate/series encounter records; compound series explicitly lists all affected occurrences. Facility dispositions are exclusive; candidate holds remain attached even when facility added another event."
     },
     "mie": {
       "facility_ids": [
@@ -2024,9 +2131,27 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:13:05.125224+00:00",
-          "facility_name": "ちきゅうのにわ 東員店"
+          "facility_name": "ちきゅうのにわ 東員店",
+          "candidate_counts": {
+            "added": 2,
+            "stale_false": 1,
+            "excluded": 1
+          }
         }
-      ]
+      ],
+      "candidate_counts": {
+        "added": 2,
+        "stale_false": 1,
+        "excluded": 1
+      },
+      "added_event_ids": [
+        "evt-f6-6936-halloween-box",
+        "evt-f6-6936-halloween-fishing"
+      ],
+      "added_participability": {
+        "通常参加可能": 2
+      },
+      "candidate_count_unit": "Named candidate/series encounter records; compound series explicitly lists all affected occurrences. Facility dispositions are exclusive; candidate holds remain attached even when facility added another event."
     },
     "nagano": {
       "facility_ids": [
@@ -2056,10 +2181,10 @@
         86
       ],
       "total": 24,
-      "no_current_or_future_event": 6,
+      "no_current_or_future_event": 5,
       "candidate_found_added": 6,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 11,
+      "candidate_found_hold": 12,
       "source_unresolved": 1,
       "sources_checked": [
         {
@@ -3817,7 +3942,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:14:09.076437+00:00",
-          "facility_name": "白樺リゾート 池の平ファミリーランド"
+          "facility_name": "白樺リゾート 池の平ファミリーランド",
+          "candidate_counts": {
+            "hold": 5,
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -3883,7 +4013,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:14:56.592880+00:00",
-          "facility_name": "チロルの森"
+          "facility_name": "チロルの森",
+          "candidate_counts": {
+            "added": 3,
+            "hold": 4,
+            "excluded": 1
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -3908,10 +4043,14 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:15:10.234651+00:00",
-          "facility_name": "戸隠民俗館・忍法資料館・忍者からくり屋敷"
+          "facility_name": "戸隠民俗館・忍法資料館・忍者からくり屋敷",
+          "candidate_counts": {
+            "excluded": 1,
+            "stale_false": 1
+          }
         },
         {
-          "disposition": "no_current_or_future_event",
+          "disposition": "candidate_found_hold",
           "reason": "未登録ソースを京都などへ推測せず、小諸市公式の当該児童遊園地情報と秋感謝祭結果を新規取得。最新個別イベントは9月27日終了。",
           "candidates": [
             {
@@ -3927,13 +4066,17 @@
           ],
           "existing_events_reviewed": [],
           "added_count": 0,
-          "hold_count": 0,
+          "hold_count": 1,
           "updated_event_ids": [],
           "facility_id": 55,
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:15:36.222997+00:00",
-          "facility_name": "小諸市児童遊園地"
+          "facility_name": "小諸市児童遊園地",
+          "candidate_counts": {
+            "stale_false": 1,
+            "hold": 1
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -3953,7 +4096,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:16:14.905525+00:00",
-          "facility_name": "Trick Art Museum Karuizawa"
+          "facility_name": "Trick Art Museum Karuizawa",
+          "candidate_counts": {
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -3995,7 +4141,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:20:34.277647+00:00",
-          "facility_name": "茶臼山動物園"
+          "facility_name": "茶臼山動物園",
+          "candidate_counts": {
+            "hold": 2,
+            "duplicate": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4029,7 +4180,11 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:21:03.898799+00:00",
-          "facility_name": "城山動物園"
+          "facility_name": "城山動物園",
+          "candidate_counts": {
+            "hold": 2,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4059,7 +4214,11 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:21:40.840619+00:00",
-          "facility_name": "わくわくどうぶつ王国"
+          "facility_name": "わくわくどうぶつ王国",
+          "candidate_counts": {
+            "hold": 1,
+            "excluded": 2
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4082,8 +4241,8 @@
             },
             {
               "title": "だれのたまご？",
-              "disposition": "hold",
-              "reason": "公式詳細・9月カレンダーの企画。今後も参加できる期間か、開催終了日を確定できず過去企画の延長を推測しない。"
+              "disposition": "stale_false",
+              "reason": "公式個別詳細で9/19〜23と明記。終了済みのため新規登録しない。"
             },
             {
               "title": "アカモズスクール、ビーバーデイ、よるのいいだどうぶつえん、9月街ブラ謎解き",
@@ -4104,7 +4263,7 @@
             "evt-64-202609-lane3-11"
           ],
           "added_count": 0,
-          "hold_count": 4,
+          "hold_count": 3,
           "updated_event_ids": [
             "evt-64-202609-lane3-09",
             "evt-64-202610-lane3-10",
@@ -4114,7 +4273,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:22:54.308257+00:00",
-          "facility_name": "飯田市立動物園"
+          "facility_name": "飯田市立動物園",
+          "candidate_counts": {
+            "hold": 3,
+            "stale_false": 2,
+            "excluded": 1
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -4139,7 +4303,11 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:23:12.354821+00:00",
-          "facility_name": "松本市アルプス公園 小鳥と小動物の森"
+          "facility_name": "松本市アルプス公園 小鳥と小動物の森",
+          "candidate_counts": {
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -4164,7 +4332,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:23:47.276053+00:00",
-          "facility_name": "namco(ナムコ)あそびパーク 軽井沢プリンスショッピングプラザ店"
+          "facility_name": "namco(ナムコ)あそびパーク 軽井沢プリンスショッピングプラザ店",
+          "candidate_counts": {
+            "excluded": 2
+          }
         },
         {
           "disposition": "no_current_or_future_event",
@@ -4194,7 +4365,10 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:24:13.136042+00:00",
-          "facility_name": "軽井沢キッズパーク KIDSPARK"
+          "facility_name": "軽井沢キッズパーク KIDSPARK",
+          "candidate_counts": {
+            "excluded": 3
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -4241,7 +4415,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:26:41.864243+00:00",
-          "facility_name": "Nature Kids Forest House"
+          "facility_name": "Nature Kids Forest House",
+          "candidate_counts": {
+            "added": 2,
+            "hold": 3,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -4267,7 +4446,11 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:27:50.926071+00:00",
-          "facility_name": "ASOBLE イオンモール須坂店"
+          "facility_name": "ASOBLE イオンモール須坂店",
+          "candidate_counts": {
+            "added": 1,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "source_unresolved",
@@ -4281,7 +4464,8 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:28:22.649453+00:00",
-          "facility_name": "イオンモール松本(キッズスペース)"
+          "facility_name": "イオンモール松本(キッズスペース)",
+          "candidate_counts": {}
         },
         {
           "disposition": "candidate_found_added",
@@ -4319,7 +4503,11 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:29:13.413765+00:00",
-          "facility_name": "ファミリーモール and LIFE 木育ひろばぬくもく"
+          "facility_name": "ファミリーモール and LIFE 木育ひろばぬくもく",
+          "candidate_counts": {
+            "added": 3,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -4405,7 +4593,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:30:17.665376+00:00",
-          "facility_name": "レイクウォーク岡谷"
+          "facility_name": "レイクウォーク岡谷",
+          "candidate_counts": {
+            "added": 9,
+            "excluded": 1,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4435,7 +4628,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:31:09.659604+00:00",
-          "facility_name": "道の駅 小坂田公園"
+          "facility_name": "道の駅 小坂田公園",
+          "candidate_counts": {
+            "hold": 1,
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4480,7 +4678,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:32:04.881833+00:00",
-          "facility_name": "サンマリーンながの"
+          "facility_name": "サンマリーンながの",
+          "candidate_counts": {
+            "hold": 2,
+            "excluded": 3,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_added",
@@ -4567,7 +4770,13 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:33:29.480404+00:00",
-          "facility_name": "ながのこども館「ながノビ！」"
+          "facility_name": "ながのこども館「ながノビ！」",
+          "candidate_counts": {
+            "added": 8,
+            "hold": 2,
+            "excluded": 1,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4607,7 +4816,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:34:18.437489+00:00",
-          "facility_name": "ナガノフォレストビレッジ 森の駅Daizahoushi"
+          "facility_name": "ナガノフォレストビレッジ 森の駅Daizahoushi",
+          "candidate_counts": {
+            "hold": 2,
+            "stale_false": 2,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4672,7 +4886,12 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:35:05.717281+00:00",
-          "facility_name": "北斎館キッズルーム「水戸久斎」"
+          "facility_name": "北斎館キッズルーム「水戸久斎」",
+          "candidate_counts": {
+            "hold": 8,
+            "excluded": 1,
+            "stale_false": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
@@ -4816,61 +5035,66 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:37:42.425527+00:00",
-          "facility_name": "sakumo佐久市子ども未来館"
+          "facility_name": "sakumo佐久市子ども未来館",
+          "candidate_counts": {
+            "hold": 22,
+            "stale_false": 1,
+            "excluded": 1
+          }
         },
         {
           "disposition": "candidate_found_hold",
-          "reason": "同一URLを施設86の番で新規取得し全12件を内容評価。市公式開館告知と運営者公式で旧施設の継承を確認、82とは別の現役施設として新規催事を帰属させず10候補を共通HOLD。",
+          "reason": "施設86の番で共有URLを新規取得し全12件を内容評価。市旧開館告知は404、現運営者公式200で旧少年科学センター（1985〜2022）からの継承を確認。82とは別の現役施設として催事を二重帰属させず10候補HOLD。",
           "candidates": [
             {
               "title": "10/31ハロウィングッズ",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/17信大マスク工作",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/3〜31秋ランプ",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/3〜31音の科学ショー",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/1〜30粘土オーナメント",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/19リトミック",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/21親子アート",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/22親子ビクス",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/28おはなしなあに",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "10/25プログラミング",
               "disposition": "hold",
-              "reason": "公式市の開館告知と指定管理者で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
+              "reason": "現指定管理者公式で旧少年科学センター→ながノビへの改装/継承を確認。現在の催事は施設82ながノビのもので、旧名施設86へ二重登録しない。FacilityOpsによる旧施設86/82の重複・継承整理待ち。"
             },
             {
               "title": "スタンプカード・ジェラート販売",
@@ -4886,9 +5110,119 @@
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-6",
           "executed_in_this_mission": true,
           "executed_at": "2026-10-16T18:38:09.484933+00:00",
-          "facility_name": "長野市少年科学センター"
+          "facility_name": "長野市少年科学センター",
+          "candidate_counts": {
+            "hold": 10,
+            "excluded": 1
+          }
         }
+      ],
+      "candidate_counts": {
+        "hold": 68,
+        "stale_false": 16,
+        "excluded": 26,
+        "added": 26,
+        "duplicate": 1
+      },
+      "added_event_ids": [
+        "evt-f6-53-bubble-1103",
+        "evt-f6-53-stone-1017",
+        "evt-f6-53-sylvanian-1024",
+        "evt-f6-75-autumn-kids",
+        "evt-f6-75-wild-safari",
+        "evt-f6-76-oyako-halloween",
+        "evt-f6-78-handprint-pochette",
+        "evt-f6-78-baby-massage-photo",
+        "evt-f6-78-rhythm-1112",
+        "evt-f6-79-aquarium-oct",
+        "evt-f6-79-yoshio-1024",
+        "evt-f6-79-pompompurin-1025",
+        "evt-f6-79-big-bowling",
+        "evt-f6-79-power-juggling",
+        "evt-f6-79-black-dungeon",
+        "evt-f6-79-kashitaro-live",
+        "evt-f6-79-daiki-illusion",
+        "evt-f6-79-power-of-music",
+        "evt-f6-82-halloween-goods",
+        "evt-f6-82-cutting-mask",
+        "evt-f6-82-autumn-lamp",
+        "evt-f6-82-sound-science",
+        "evt-f6-82-autumn-art",
+        "evt-f6-82-oyako-bics",
+        "evt-f6-82-story-1028",
+        "evt-f6-82-programming-oct"
+      ],
+      "added_participability": {
+        "通常参加可能": 11,
+        "条件付き参加可能": 15
+      },
+      "candidate_count_unit": "Named candidate/series encounter records; compound series explicitly lists all affected occurrences. Facility dispositions are exclusive; candidate holds remain attached even when facility added another event."
+    }
+  },
+  "product_diff_counts": {
+    "added": 57,
+    "updated": 17,
+    "ended": 15,
+    "deleted": 0
+  },
+  "source_family_holds": [
+    {
+      "facility_id": 84,
+      "reason": "本館催事と登録キッズルームの会場・対象が一致しない。",
+      "affected_candidates": [
+        "1/11フランスを感じるカルテット演奏会",
+        "12/20ミニ講演会",
+        "12/13クリスマス準備ワークショップ",
+        "10/31・11/3・14・22ギャラリートーク",
+        "10/23フランスナント友好セレモニー",
+        "北斎館コレクション展10/14〜22",
+        "フランスナント凱旋展10/24〜1/17",
+        "Beautiful Hokusai1/23〜3/28"
+      ]
+    },
+    {
+      "facility_id": 85,
+      "reason": "Product施設85住所佐久平駅東1-1と公式現住所岩村田1931-1が不一致。施設位置整合性確認はFacilityOpsへ。",
+      "affected_candidates": [
+        "10/31親子かぼちゃランタン",
+        "11/3超まよっちゃう展",
+        "11/17むちゅーたまご",
+        "10/17・18ハンディークリーナー",
+        "10/24・25ハロウィンランプシェード",
+        "11/1・3マジカル貯金箱",
+        "11/7・8かさ袋ロケット",
+        "11/14・15水ぺたキャンディーポット",
+        "11/28・29そらいろサンキャッチャー",
+        "12/5・6モールツリー",
+        "12/12・13サンタさんおうちメモスタンド",
+        "12/19・20クリスマスポップアップカード",
+        "12/26・27お正月しめなわリース",
+        "10月ハロウィンステッキ（幼児工作）",
+        "11月紙コップみのむし（幼児工作）",
+        "12月まるペタスノードーム（幼児工作）",
+        "10〜12月ちびっこカレンダーづくり",
+        "10/23・11/24・12/15おはなしのじかん",
+        "11/27〜12/25クリスマスファンタジーIV",
+        "11/21〜23レザーサウルス",
+        "12/19星はめぐり、歌はつづく",
+        "10/18油井宇宙飛行士報告会"
+      ]
+    },
+    {
+      "facility_id": 86,
+      "reason": "旧少年科学センターと後継ながノビ82の施設継承/重複整理待ち。",
+      "affected_candidates": [
+        "10/31ハロウィングッズ",
+        "10/17信大マスク工作",
+        "10/3〜31秋ランプ",
+        "10/3〜31音の科学ショー",
+        "10/1〜30粘土オーナメント",
+        "10/19リトミック",
+        "10/21親子アート",
+        "10/22親子ビクス",
+        "10/28おはなしなあに",
+        "10/25プログラミング"
       ]
     }
-  }
+  ]
 }
