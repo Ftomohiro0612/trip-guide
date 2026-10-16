@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-7",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T19:44:41.256812+00:00",
+  "executed_at": "2026-10-16T20:00:32.699003+00:00",
   "process_started_at": "2026-10-16T19:06:37.8937311Z",
   "due_facility_ids": [
     87,
@@ -3620,7 +3620,7 @@
         {
           "facility_id": 201,
           "disposition": "candidate_found_added",
-          "reason": "市トップだけでなく動物園トップ・イベント一覧・秋祭り詳細・飼育員公式ブログ・年間予定・公園フェスを内容評価。祭り構成の工作/ガイド等は包括催事の内訳として確認。",
+          "reason": "市トップだけでなく動物園トップ・イベント一覧・秋祭り詳細・飼育員公式ブログ・年間予定・公園フェスを内容評価。祭り構成の工作/ガイド等は包括催事の内訳として確認。 秋まつりの動物ガイド・工作・ビンゴ等は包括行事の構成プログラムとして秋まつり/HalloweenのHOLDに含め、重複独立計上しない。期間が独立したカピバラ温泉と昆虫展示は別判定。",
           "candidates": [
             {
               "title": "カピバラ温泉～華の湯～11/1～2/28",
@@ -4268,6 +4268,134 @@
                 }
               ],
               "category": "fireworks_festivals_seasonal"
+            },
+            {
+              "title": "動物たちに年賀状を送ろう12/15〜1/15",
+              "disposition": "hold",
+              "reason": "年間予定のみ。郵送企画の具体的受付経路・来園参加条件が未公開。",
+              "category": "facility_hosted",
+              "sources_checked": [
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:29.748635+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/",
+                  "sha256": "fa131a8a4c4d1f6a8f4015e1567fe414a1890644a7b0cf88d793d6a6a42802fc"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:42.247001+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "sha256": "05ed844accdebe9d13df469a5fdf4067342739f5a1cfeefbbdcdaa5f8a5df286"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:43.375896+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "sha256": "a2d9d5756ea73478f6326705ae9ff2d94211a0c0e8926a630e8152fab4b76ab9"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:44.599749+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "sha256": "2caa3f95a589747621a58211d23182fef8759ee16146aebb62703ea700d28977"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:52.780455+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "sha256": "c4ae7009095177a19ea07c2d022e176cedb0d4ff6a4d6537e8e74e74f68d29e7"
+                },
+                {
+                  "url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:53.905889+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "sha256": "347ab6b867f128bd9b78c776a1fc95c67d2e28fed9cc15f970a83fd1a90881a2"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:14:01.122018+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "sha256": "9855a48d490025e97edd361b41457b2093af1523985a3cccb7cf17221d0cddd6"
+                }
+              ]
+            },
+            {
+              "title": "出張ふれあい動物園12月〜2月",
+              "disposition": "hold",
+              "reason": "定例の出張依頼受付。個別会場・日程と一般家族の参加経路が未確定。",
+              "category": "facility_hosted",
+              "sources_checked": [
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:29.748635+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/",
+                  "sha256": "fa131a8a4c4d1f6a8f4015e1567fe414a1890644a7b0cf88d793d6a6a42802fc"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:42.247001+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html",
+                  "sha256": "05ed844accdebe9d13df469a5fdf4067342739f5a1cfeefbbdcdaa5f8a5df286"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:43.375896+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+                  "sha256": "a2d9d5756ea73478f6326705ae9ff2d94211a0c0e8926a630e8152fab4b76ab9"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:44.599749+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
+                  "sha256": "2caa3f95a589747621a58211d23182fef8759ee16146aebb62703ea700d28977"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:52.780455+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/index.html",
+                  "sha256": "c4ae7009095177a19ea07c2d022e176cedb0d4ff6a4d6537e8e74e74f68d29e7"
+                },
+                {
+                  "url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:13:53.905889+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+                  "sha256": "347ab6b867f128bd9b78c776a1fc95c67d2e28fed9cc15f970a83fd1a90881a2"
+                },
+                {
+                  "url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "status": 200,
+                  "checked_at": "2026-10-16T19:14:01.122018+00:00",
+                  "facility_id": 201,
+                  "final_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/8740.html",
+                  "sha256": "9855a48d490025e97edd361b41457b2093af1523985a3cccb7cf17221d0cddd6"
+                }
+              ]
             }
           ],
           "additions": [
@@ -4280,7 +4408,7 @@
               "time_label": "平日11:00～、土日祝11:00～／14:00～（入浴は動物の気分次第）",
               "price_label": "入園料：一般400円、小中学生100円、未就学児無料（11/1は全員無料）",
               "is_indoor": false,
-              "official_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
+              "official_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
               "source_urls": [
                 "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
                 "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
@@ -13143,10 +13271,10 @@
       "source_unresolved": 1,
       "candidate_totals": {
         "added": 54,
-        "hold": 118,
+        "hold": 120,
         "duplicate": 16
       },
-      "candidates_found": 188,
+      "candidates_found": 190,
       "added_participability": {
         "通常参加可能": 35,
         "条件付き参加可能": 19
@@ -13165,7 +13293,7 @@
         "facility_hosted": {
           "added": 53,
           "duplicate": 16,
-          "hold": 106
+          "hold": 108
         }
       }
     }
@@ -13188,6 +13316,11 @@
       "facility_id": 201,
       "event_id": "evt-201-202610-f7-insect",
       "correction": "Removed own provisional insect addition before publication: a weekday/date inconsistency is not covered by the showakinen-only exception. Candidate held; no baseline event deleted."
+    },
+    {
+      "facility_id": 201,
+      "event_id": "evt-201-202611-f7-capybara",
+      "correction": "Corrected own selected official_url to the actually fetched zoo-operated keeper blog that explicitly states the capybara schedule. City festival page only supports November1 free admission. No new source fetch or prior-run evidence used."
     }
   ],
   "candidate_counting": "Distinct named programs are separately tallied; recurrence dates of one program form one candidate. Expired or permanent services are evaluated in each facility reason and are not current/future candidates."
