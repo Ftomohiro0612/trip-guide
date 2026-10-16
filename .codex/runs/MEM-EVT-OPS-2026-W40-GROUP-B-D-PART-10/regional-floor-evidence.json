@@ -628,13 +628,63 @@
           "checked_at": "2026-10-16T06:47:31.563733+00:00",
           "source_type": "tourism_board",
           "fetch_role": "prepublication_required_fields_audit"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/calendar.html",
+          "status": 200,
+          "checked_at": "2026-10-16T07:10:35.906999+00:00",
+          "source_type": "municipal_official",
+          "coverage_note": "県庁所在地の公式カレンダーを公開前QAで補強。いわき市の既存チェックを置換せず追加。"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "status": 200,
+          "checked_at": "2026-10-16T07:11:56.705089+00:00",
+          "source_type": "municipal_official",
+          "coverage_note": "県庁所在地公式カレンダーが読み込む全イベントJSON。HTMLの10月表示だけで止めず56日先以降を確認。"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/soshiki/5/1020/1071/1/5585.html",
+          "status": 200,
+          "checked_at": "2026-10-16T07:13:57.026461+00:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/soshiki/12/1063/1/5/18629.html",
+          "status": 200,
+          "checked_at": "2026-10-16T07:15:16.725726+00:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://logoform.jp/form/PBtX/1798845",
+          "status": 200,
+          "checked_at": "2026-10-16T07:16:53.346126+00:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/toshokan/event/20318.html",
+          "status": 200,
+          "checked_at": "2026-10-16T07:16:55.378723+00:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/3/20583.html",
+          "status": 200,
+          "checked_at": "2026-10-16T07:17:25.048466+00:00",
+          "source_type": "municipal_official"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/material/files/group/36/festa2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-16T07:18:10.463945+00:00",
+          "source_type": "municipal_official"
         }
       ],
-      "candidates_found": 96,
-      "added": 13,
+      "candidates_found": 122,
+      "added": 14,
       "duplicate_or_already_present": 6,
-      "hold": 69,
-      "stale_false": 8,
+      "hold": 73,
+      "stale_false": 29,
       "candidates": [
         {
           "title": "檜枝岐村の夜空創星プロジェクト 屋外300機ドローンショー",
@@ -1403,8 +1453,239 @@
           "reason": "11/14開催は市公式確認。公式が交通規制時間/駐車場/プログラム詳細を今後公表と明記、雨天/延期条件も未公表。火の粉・入山規制・夜間/一方通行の注意があり、幼児向けと推測しない。",
           "source_url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/event/taimatsu_akashi/1015028.html",
           "event_category": "花火／祭り・季節行事"
+        },
+        {
+          "title": "【終了】7/19「まちなか防災ラボinふくしま」開催!",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-07-19が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/1/3/3684.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-07-19"
+        },
+        {
+          "title": "連携協定団体との取り組み(空き家無料相談会・各種事業)",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-07-25が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/12/1059/4/2/4374.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-07-25"
+        },
+        {
+          "title": "第14回宮畑ウォーク",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-11-15が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/2/4/4412.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2025-11-15"
+        },
+        {
+          "title": "大人のビブリオバトルを開催しました",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-01-25が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/toshokan/event/5370.html",
+          "event_category": "施設開催イベント",
+          "calendar_last_date": "2026-01-25"
+        },
+        {
+          "title": "第10回阿武隈川春のサイクリング",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-04-25が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/11/1058/1/12530.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-04-25"
+        },
+        {
+          "title": "縄文シティサミットinふくしま",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-08-24が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/2/3/13298.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2025-08-24"
+        },
+        {
+          "title": "縄文の日夏の陣",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-08-24が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/2/3/13574.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2025-08-24"
+        },
+        {
+          "title": "福島市民のくらし展を開催します（終了しました）",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-08-30が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1070/3/13657.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2025-08-30"
+        },
+        {
+          "title": "「夜の民家園」を開催します！",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-07-19が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/2/5/14196.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2025-07-19"
+        },
+        {
+          "title": "【終了】「浄土平星まつり2026」開催します！",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-06-13が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/5/1019/3/14420.html",
+          "event_category": "花火／祭り・季節行事",
+          "calendar_last_date": "2026-06-13"
+        },
+        {
+          "title": "「女性の健康セミナー」を開催します",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-10-14が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/9/1047/2/14897.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-10-14"
+        },
+        {
+          "title": "ふくしま水素まつり",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-09-27が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/2/15195.html",
+          "event_category": "花火／祭り・季節行事",
+          "calendar_last_date": "2025-09-27"
+        },
+        {
+          "title": "2025ふくしま環境フェスタ ～遊んで学ぶ！エコなふくしまのみらい～",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2025-10-05が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/3/15205.html",
+          "event_category": "花火／祭り・季節行事",
+          "calendar_last_date": "2025-10-05"
+        },
+        {
+          "title": "【開催終了】生涯学習ボランティア養成講座・生涯学習講演会",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-02-08が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/19/1074/2/16641.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-02-08"
+        },
+        {
+          "title": "令和7年度健都ふくしま創造市民会議『みんなで運動 ずっと健脚！』を開催しました",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-02-17が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/9/1047/1/3/16698.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-02-17"
+        },
+        {
+          "title": "【終了しました】「GO!GO!健康体験DAY!!～たのしく健脚・おいしく適しお～」を開催します！",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-01-26が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/9/1047/1/16725.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-01-26"
+        },
+        {
+          "title": "企画展示「西久保遺跡と古代信夫郡」",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-02-23が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/2/3/17200.html",
+          "event_category": "施設開催イベント",
+          "calendar_last_date": "2026-02-23"
+        },
+        {
+          "title": "【開催報告】R8年度健脚セミナー「運動は生活の中にある！」を開催しました！",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-05-14が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/9/1047/1/17393.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-05-14"
+        },
+        {
+          "title": "書道×福島市民憲章～墨にのせて未来へつなぐ～",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-05-24が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/2/1003/1/17874.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-05-24"
+        },
+        {
+          "title": "【企画展】スケッチ写真「モンゴル1943年」『スーホの白い馬』絵本画家・赤羽末吉",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-08-16が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/soshiki/7/1032/1/6/18679.html",
+          "event_category": "施設開催イベント",
+          "calendar_last_date": "2026-08-16"
+        },
+        {
+          "title": "企業向け「ふくしま外国人雇用管理セミナー」を開催します",
+          "disposition": "stale_false",
+          "reason": "県庁所在地公式カレンダーJSONの数値終了日2026-10-09が本run当日より前。2026年の現行回へ読み替えず、過去回の追加・更新をしない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/calendar.json",
+          "primary_url": "https://www.city.fukushima.fukushima.jp/f-work/companies/foreign-workers/20219.html",
+          "event_category": "自治体・地域イベント",
+          "calendar_last_date": "2026-10-09"
+        },
+        {
+          "title": "ふくしま産業交流フェア 令和9年1月29日開催",
+          "disposition": "hold",
+          "reason": "公式の開催日・会場と企業間交流・商談主体の内容を確認。体験型ブースは予定段階で、親子一般来場者の参加経路・子どもの対象条件を現時点の募集主体ページから確定できない。出展費用無料を一般参加無料へ転用せずHOLD。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/soshiki/5/1020/1071/1/5585.html",
+          "event_category": "自治体・地域イベント"
+        },
+        {
+          "title": "ふくしまデジタルイノベーションアワード2026（産業交流フェア同時開催）",
+          "disposition": "hold",
+          "reason": "産業交流フェア公式内の同時開催リンクで発見。親子で参加できる独立した企画の実施時刻・一般参加条件はこの公式面に未記載。企業向け同時開催の表記だけで家族向け参加経路を推定せずHOLD。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/soshiki/5/1020/1071/1/5585.html",
+          "linked_official_url": "https://www.city.fukushima.fukushima.jp/soshiki/2/1004/1/8/18465.html",
+          "event_category": "自治体・地域イベント"
+        },
+        {
+          "title": "【読書週間事業】講座「福島市と競馬場」",
+          "disposition": "hold",
+          "reason": "公式個別ページが定員到達で受付終了を明示。カレンダーJSONの受付期間中という機械的状態で上書きせず、現時点に参加経路がないため新規追加しない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/toshokan/event/20318.html",
+          "event_category": "施設開催イベント",
+          "participability": "受付終了・参加不能"
+        },
+        {
+          "title": "2026ふくしま環境フェスタ・水素まつり（市主催公式再確認）",
+          "disposition": "hold",
+          "reason": "主催市の現行ページと公式チラシ2面を取得・目視し、11/8、10〜15時、こむこむ、入場無料、子ども向け実験工作、交通案内を確認。ただし荒天時の中止・延期対応が記載されていないため、この祭りの先行HOLDを維持。屋内開催だから不要とは扱わない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/3/20583.html",
+          "event_category": "花火／祭り・季節行事",
+          "supporting_source_url": "https://www.city.fukushima.fukushima.jp/material/files/group/36/festa2026.pdf",
+          "visual_pdf_review_completed": true
+        },
+        {
+          "title": "福島駅東口再開発 現場見学会",
+          "disposition": "added",
+          "reason": "市公式で日時・無料・募集期間・保護者同伴を確認。指定申込フォームのブラウザ表示でも10/7〜10/30受付、未就学児の選択肢と午後回への抽選振分けを確認。ヘルメットは主催用意、長袖・長ズボン・運動靴・軍手を着用準備しサンダル不可。天候・工事状況により内容変更あり、変更は市HPで告知。主催撮影写真の市HP等公開への了承条件あり。入力・申込送信は行っていない。",
+          "source_url": "https://www.city.fukushima.fukushima.jp/soshiki/12/1063/1/5/18629.html",
+          "event_id": "evt-d10-fukushima-station-construction-tour-2026",
+          "event_category": "自治体・地域イベント",
+          "participability": "条件付き参加可能"
         }
-      ]
+      ],
+      "capital_calendar_coverage_note": "公開前QAで県庁所在地公式calendar.htmlと全25件calendar.jsonを補強。21過去回は個別stale_false、未来4件と同時開催1件を個別判定。JSONは2027/1/29まで含む全件で尽き、56日先以降を確認。既存のいわき市11月・12月確認を置き換えない。"
     },
     "kochi": {
       "sources_checked": [
