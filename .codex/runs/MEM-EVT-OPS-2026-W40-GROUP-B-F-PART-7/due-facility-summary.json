@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-7",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-16T19:33:14.460346+00:00",
+  "executed_at": "2026-10-16T19:34:34.133262+00:00",
   "process_started_at": "2026-10-16T19:06:37.8937311Z",
   "due_facility_ids": [
     87,
@@ -48,10 +48,10 @@
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
     "total": 40,
-    "no_current_or_future_event": 14,
-    "candidate_found_added": 18,
-    "candidate_found_duplicate": 3,
-    "candidate_found_hold": 4,
+    "no_current_or_future_event": 15,
+    "candidate_found_added": 17,
+    "candidate_found_duplicate": 4,
+    "candidate_found_hold": 3,
     "source_unresolved": 1
   },
   "per_region": {
@@ -142,14 +142,14 @@
         },
         {
           "url": "https://www.ngn.janis.or.jp/~shinmachi-museum/",
-          "status": 0,
+          "status": "error",
           "checked_at": "2026-10-16T19:08:48.771365+00:00",
           "facility_id": 88,
           "error": "HTTPSConnectionPool(host='www.ngn.janis.or.jp', port=443): Max retries exceeded with url: /~shinmachi-museum/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ngn.janis.or.jp', port=443): Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。\"))"
         },
         {
           "url": "https://www.ngn.janis.or.jp/~shinmachi-museum/",
-          "status": 0,
+          "status": "error",
           "checked_at": "2026-10-16T19:09:26.044228+00:00",
           "facility_id": 88,
           "error": "HTTPSConnectionPool(host='www.ngn.janis.or.jp', port=443): Max retries exceeded with url: /~shinmachi-museum/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ngn.janis.or.jp', port=443): Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。\"))"
@@ -444,21 +444,21 @@
         },
         {
           "url": "https://owl-adventure.com/",
-          "status": 0,
+          "status": "dns_error",
           "checked_at": "2026-10-16T19:14:30.838788+00:00",
           "facility_id": 202,
           "error": "HTTPSConnectionPool(host='owl-adventure.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='owl-adventure.com', port=443): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
           "url": "https://owl-adventure.com/",
-          "status": 0,
+          "status": "dns_error",
           "checked_at": "2026-10-16T19:14:36.277258+00:00",
           "facility_id": 202,
           "error": "HTTPSConnectionPool(host='owl-adventure.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='owl-adventure.com', port=443): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
           "url": "http://owl-adventure.com/",
-          "status": 0,
+          "status": "dns_error",
           "checked_at": "2026-10-16T19:14:37.118510+00:00",
           "facility_id": 202,
           "error": "HTTPConnectionPool(host='owl-adventure.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='owl-adventure.com', port=80): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
@@ -1049,14 +1049,14 @@
         },
         {
           "url": "http://museum.umic.ueda.nagano.jp/hakubutsukan/",
-          "status": 0,
+          "status": "dns_error",
           "checked_at": "2026-10-16T19:22:24.274716+00:00",
           "facility_id": 2151,
           "error": "HTTPConnectionPool(host='museum.umic.ueda.nagano.jp', port=80): Max retries exceeded with url: /hakubutsukan/ (Caused by NameResolutionError(\"HTTPConnection(host='museum.umic.ueda.nagano.jp', port=80): Failed to resolve 'museum.umic.ueda.nagano.jp' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
           "url": "http://museum.umic.ueda.nagano.jp/hakubutsukan/",
-          "status": 0,
+          "status": "dns_error",
           "checked_at": "2026-10-16T19:22:31.822626+00:00",
           "facility_id": 2151,
           "error": "HTTPConnectionPool(host='museum.umic.ueda.nagano.jp', port=80): Max retries exceeded with url: /hakubutsukan/ (Caused by NameResolutionError(\"HTTPConnection(host='museum.umic.ueda.nagano.jp', port=80): Failed to resolve 'museum.umic.ueda.nagano.jp' ([Errno 11001] getaddrinfo failed)\"))"
@@ -1455,21 +1455,21 @@
         },
         {
           "url": "https://www.takizawa-bokujo.jp/",
-          "status": 0,
+          "status": "error",
           "checked_at": "2026-10-16T19:29:51.315047+00:00",
           "facility_id": 2158,
           "error": "HTTPSConnectionPool(host='www.takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
         },
         {
           "url": "https://www.takizawa-bokujo.jp/",
-          "status": 0,
+          "status": "error",
           "checked_at": "2026-10-16T19:29:56.991121+00:00",
           "facility_id": 2158,
           "error": "HTTPSConnectionPool(host='www.takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
         },
         {
           "url": "https://takizawa-bokujo.jp/",
-          "status": 0,
+          "status": "error",
           "checked_at": "2026-10-16T19:29:57.859544+00:00",
           "facility_id": 2158,
           "error": "HTTPSConnectionPool(host='takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
@@ -1689,6 +1689,14 @@
           "facility_id": 2163,
           "final_url": "https://www.ilf.jp/show/schedule/",
           "sha256": "5e8ae43a131f2149990cc628fb9fa1b52b2812f293304feccb3fd9da7baa5e29"
+        },
+        {
+          "url": "https://www.santomyuze.com/museumevent/education_program/",
+          "status": 200,
+          "checked_at": "2026-10-16T19:25:18.054752+00:00",
+          "facility_id": 2152,
+          "final_url": "https://www.santomyuze.com/museumevent/education_program/",
+          "sha256": "e10ba2d12a4bf67f6c0868b1c9fe2b3ae9ed18a202c91ce4665fa5803ac39b76"
         }
       ],
       "facility_dispositions": [
@@ -1890,14 +1898,14 @@
           "sources_checked": [
             {
               "url": "https://www.ngn.janis.or.jp/~shinmachi-museum/",
-              "status": 0,
+              "status": "error",
               "checked_at": "2026-10-16T19:08:48.771365+00:00",
               "facility_id": 88,
               "error": "HTTPSConnectionPool(host='www.ngn.janis.or.jp', port=443): Max retries exceeded with url: /~shinmachi-museum/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ngn.janis.or.jp', port=443): Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。\"))"
             },
             {
               "url": "https://www.ngn.janis.or.jp/~shinmachi-museum/",
-              "status": 0,
+              "status": "error",
               "checked_at": "2026-10-16T19:09:26.044228+00:00",
               "facility_id": 88,
               "error": "HTTPSConnectionPool(host='www.ngn.janis.or.jp', port=443): Max retries exceeded with url: /~shinmachi-museum/ (Caused by NewConnectionError(\"HTTPSConnection(host='www.ngn.janis.or.jp', port=443): Failed to establish a new connection: [WinError 10061] 対象のコンピューターによって拒否されたため、接続できませんでした。\"))"
@@ -2367,8 +2375,9 @@
               "time_label": "平日11:00～、土日祝11:00～／14:00～（入浴は動物の気分次第）",
               "price_label": "入園料：一般400円、小中学生100円、未就学児無料（11/1は全員無料）",
               "is_indoor": false,
-              "official_url": "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
+              "official_url": "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
               "source_urls": [
+                "https://www.city.suzaka.nagano.jp/suzaka_zoo/event/5925.html",
                 "https://blog.suzaka.jp/zoo/2026/10/03/p44741",
                 "https://www.city.suzaka.nagano.jp/suzaka_zoo/info/699.html",
                 "https://www.city.suzaka.nagano.jp/suzaka_zoo/index.html"
@@ -2472,21 +2481,21 @@
           "sources_checked": [
             {
               "url": "https://owl-adventure.com/",
-              "status": 0,
+              "status": "dns_error",
               "checked_at": "2026-10-16T19:14:30.838788+00:00",
               "facility_id": 202,
               "error": "HTTPSConnectionPool(host='owl-adventure.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='owl-adventure.com', port=443): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
               "url": "https://owl-adventure.com/",
-              "status": 0,
+              "status": "dns_error",
               "checked_at": "2026-10-16T19:14:36.277258+00:00",
               "facility_id": 202,
               "error": "HTTPSConnectionPool(host='owl-adventure.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='owl-adventure.com', port=443): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
               "url": "http://owl-adventure.com/",
-              "status": 0,
+              "status": "dns_error",
               "checked_at": "2026-10-16T19:14:37.118510+00:00",
               "facility_id": 202,
               "error": "HTTPConnectionPool(host='owl-adventure.com', port=80): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPConnection(host='owl-adventure.com', port=80): Failed to resolve 'owl-adventure.com' ([Errno 11001] getaddrinfo failed)\"))"
@@ -3913,7 +3922,7 @@
         },
         {
           "facility_id": 2151,
-          "disposition": "candidate_found_added",
+          "disposition": "candidate_found_duplicate",
           "registry_url": "https://museum.umic.jp/hakubutsukan/",
           "reason": "旧ドメインDNS失敗を再試行、既存Productの現行公式URLで全本文を確認。企画展の会期一致、古いsource_checked_atを更新。",
           "existing_event_updates": {
@@ -3931,9 +3940,8 @@
             },
             {
               "title": "ミュージアムトーク10/17",
-              "disposition": "added",
-              "event_id": "evt-2151-202610-f7-talk",
-              "participability": "通常参加可能"
+              "disposition": "hold",
+              "reason": "公式本文で時刻と会場は確認できたが、予約不要・当日受付等の参加経路が明示されていない。検証時に暫定追加を取り消しHOLDへ修正。"
             },
             {
               "title": "10/31記念講演会（博物館講座第4回と同一）",
@@ -3946,34 +3954,19 @@
               "reason": "別館会場の連続専門講座。親子参加の対象条件と単発参加経路が不明、11/26は10/23受付開始前。"
             }
           ],
-          "additions": [
-            {
-              "id": "evt-2151-202610-f7-talk",
-              "title": "上田城と城主たち ミュージアムトーク",
-              "summary": "歴代城主と上田城の関わりを紹介する企画展を、解説とともに鑑賞する。",
-              "start_date": "2026-10-17",
-              "end_date": "2026-10-17",
-              "time_label": "13:30～14:30",
-              "price_label": "入館料等は公式案内を確認",
-              "is_free": null,
-              "reservation": "unknown",
-              "reservation_label": "参加方法は館へ確認",
-              "official_url": "https://museum.umic.jp/hakubutsukan/",
-              "source_notes": "2026-10-17に公式企画展ページで当日ミュージアムトーク日時・会場を確認。終了済み9/5・9/26回は追加しない。独立した講演会と区別。"
-            }
-          ],
+          "additions": [],
           "completed_at": "2026-10-16T19:22:55.128191+00:00",
           "sources_checked": [
             {
               "url": "http://museum.umic.ueda.nagano.jp/hakubutsukan/",
-              "status": 0,
+              "status": "dns_error",
               "checked_at": "2026-10-16T19:22:24.274716+00:00",
               "facility_id": 2151,
               "error": "HTTPConnectionPool(host='museum.umic.ueda.nagano.jp', port=80): Max retries exceeded with url: /hakubutsukan/ (Caused by NameResolutionError(\"HTTPConnection(host='museum.umic.ueda.nagano.jp', port=80): Failed to resolve 'museum.umic.ueda.nagano.jp' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
               "url": "http://museum.umic.ueda.nagano.jp/hakubutsukan/",
-              "status": 0,
+              "status": "dns_error",
               "checked_at": "2026-10-16T19:22:31.822626+00:00",
               "facility_id": 2151,
               "error": "HTTPConnectionPool(host='museum.umic.ueda.nagano.jp', port=80): Max retries exceeded with url: /hakubutsukan/ (Caused by NameResolutionError(\"HTTPConnection(host='museum.umic.ueda.nagano.jp', port=80): Failed to resolve 'museum.umic.ueda.nagano.jp' ([Errno 11001] getaddrinfo failed)\"))"
@@ -4179,6 +4172,14 @@
               "facility_id": 2152,
               "final_url": "https://www.santomyuze.com/wp/wp-content/uploads/2026/09/9440d1d08975b0127288e375563d28ea.pdf",
               "sha256": "602b3117115e6245e548d2896495f2d27b9ac56804c20b0a787b28027d29b68e"
+            },
+            {
+              "url": "https://www.santomyuze.com/museumevent/education_program/",
+              "status": 200,
+              "checked_at": "2026-10-16T19:25:18.054752+00:00",
+              "facility_id": 2152,
+              "final_url": "https://www.santomyuze.com/museumevent/education_program/",
+              "sha256": "e10ba2d12a4bf67f6c0868b1c9fe2b3ae9ed18a202c91ce4665fa5803ac39b76"
             }
           ]
         },
@@ -4342,13 +4343,17 @@
               "title": "白バイ・パトカーの展示＆乗車体験",
               "start_date": "2026-11-22",
               "end_date": "2026-11-22",
-              "official_url": "https://www.area.ueda.nagano.jp/sozokan/img/kagaku_ura.jpg",
+              "official_url": "https://www.ueda-rpc.or.jp/wp-content/uploads/2026/10/souzou_event_202610_sousaten.pdf",
               "is_free": true,
               "price_label": "無料",
               "time_label": "13:30〜15:00",
               "is_indoor": false,
               "reservation_label": "当日自由参加",
-              "source_notes": "第一駐車場。イベント内容変更の場合あり。"
+              "source_notes": "第一駐車場。イベント内容変更の場合あり。",
+              "source_urls": [
+                "https://www.ueda-rpc.or.jp/wp-content/uploads/2026/10/souzou_event_202610_sousaten.pdf",
+                "https://www.area.ueda.nagano.jp/sozokan/img/kagaku_ura.jpg"
+              ]
             },
             {
               "id": "evt-2153-2026-f7-radio",
@@ -4939,35 +4944,29 @@
         },
         {
           "facility_id": 2158,
-          "disposition": "candidate_found_hold",
+          "disposition": "no_current_or_future_event",
           "registry_url": "http://www.takizawa-bokujo.jp/",
-          "reason": "HTTPSは証明書ホスト名不一致を再確認、HTTP公式は現行本文を取得。10/3公開行事は過去、恒常牧場体験はイベント化しない。貸切告知は一般参加経路なし。",
-          "candidates": [
-            {
-              "title": "貸し切りイベント10月告知",
-              "disposition": "hold",
-              "reason": "公式に貸切イベントと案内され、一般来場者が参加できる公開イベントではない。施設貸切制限と混同して追加しない。"
-            }
-          ],
+          "reason": "HTTPS不一致は再試行済み。HTTP公式新着と貸切詳細を確認し、貸切は10/11で既に終了と解決。10/3イベントも終了済み。現行・今後の特別イベントは発見せず。",
+          "candidates": [],
           "completed_at": "2026-10-16T19:30:14.102434+00:00",
           "sources_checked": [
             {
               "url": "https://www.takizawa-bokujo.jp/",
-              "status": 0,
+              "status": "error",
               "checked_at": "2026-10-16T19:29:51.315047+00:00",
               "facility_id": 2158,
               "error": "HTTPSConnectionPool(host='www.takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
             },
             {
               "url": "https://www.takizawa-bokujo.jp/",
-              "status": 0,
+              "status": "error",
               "checked_at": "2026-10-16T19:29:56.991121+00:00",
               "facility_id": 2158,
               "error": "HTTPSConnectionPool(host='www.takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
             },
             {
               "url": "https://takizawa-bokujo.jp/",
-              "status": 0,
+              "status": "error",
               "checked_at": "2026-10-16T19:29:57.859544+00:00",
               "facility_id": 2158,
               "error": "HTTPSConnectionPool(host='takizawa-bokujo.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'takizawa-bokujo.jp'. (_ssl.c:1081)\")))"
@@ -5355,69 +5354,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -5425,85 +5362,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -5511,35 +5370,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -5554,69 +5385,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -5624,85 +5393,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -5710,35 +5401,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -5753,69 +5416,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -5823,85 +5424,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -5909,35 +5432,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -5952,69 +5447,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -6022,85 +5455,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -6108,35 +5463,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -6151,69 +5478,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -6221,85 +5486,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -6307,35 +5494,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -6350,69 +5509,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -6420,85 +5517,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -6506,35 +5525,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -6549,69 +5540,7 @@
                   "checked_at": "2026-10-16T19:31:56.043374+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/202609_doikayaten/",
-                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/b09fae7b039f5233b5b2e9ac7ae26419?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate2-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAHjAQMAAACHO/9LAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFNJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BfNjAAH/53Y3AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_01-1024x483.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAALEAQMAAACsetBYAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAG5JREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4F2TTAAEVvbJ7AAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_02-03-1024x708.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAJPAQMAAADYDTRDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGBJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwFsp3gABiYGidQAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_04-1024x591.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKjAQMAAAC5i++6AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGtJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC8BVQyAAG604MLAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_05-1024x675.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABwYAAAeAAQMAAAD+d6HDAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAbtJREFUGBntwQENAAAAwiD7p34PBwwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIBrAZ9aAAEPQB7PAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtIAAAQAAQMAAAD2giz3AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_07-722x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAF5AQMAAAA7xspuAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAEZJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAG8BvfkAASzd+PYAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_08-1024x377.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAIGAQMAAADwWm/nAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAFZJREFUGBntwQEBAAAAgqD+r3ZIwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgXgUVAAGCOZqzAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_09-1024x518.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAKrAQMAAABV2G3XAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAGxJREFUGBntwTEBAAAAwiD7p14MH2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAvAVYOgABiXISYgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10-1024x683.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANYAAAEsAQMAAACFU9+mAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/05/260511_top-214x300.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日 最終更新日時 : 2026年9月13日 イルフ童画館 2026年9月10日(木)～11月16日(月) どいかやさんは、自然と生き物たちの物語を、美しい色彩と情感豊かな言葉で表現し続ける絵本作家です。今年でデビュー30 年を迎えます。 大学生の時に、絵本公募に応募した「くりむくんとおさかな」をきっかけに絵本の世界へ本格的に足を踏み入れます。1996 年『チップとチョコのおでかけ』（文溪堂）でデビューし、「チリとチリリ」シリーズ（アリス館）は９作品におよぶなど、これまでに多くの絵本作品を世に送り出してきました。どいさんの絵本は、一貫した自然や生き物に対する敬意が感じられ、その自然と共存するライフスタイルや考え方が、読者の共感を得ています。 デビュー作品から最新作まで広くご覧いただきながら、どいさんの創作への姿勢を30 年の画業とともに振り返る展覧会です。 会 　 期 2026年9月10日(木)～11月16日(月) 休　館　日 水曜日（祝日は開館） 開  館  時  間 9：00～18：00（入館受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館／公益財団法人おかや文化振興事業団 協　　　力 教育画劇、あすなろ書房、アリス館、文溪堂、刈谷市美術館 ©Kaya Doi 「パーチとマーチとフラワーさん」（2026年 教育画劇） 「くりむくんとおさかな」（1990年） 「たまちゃんとあかちゃん」（1994年） 「チップとチョコのおでかけ」（1996年 文溪堂） 「ナナカラやまものがたり①くまおばあちゃんのジャム」（2022年 あすなろ書房） 「なかよしかぜ」角野栄子 作（2024年 教育画劇） 「アイヌのむかしばなし ひまなこなべ」文・萱野茂（2016年 あすなろ書房） 「チリとチリリ」（2003年 アリス館） クリックすると拡大表示されます 関連特別イベント トークイベント「どいかやさんと絵本のはなし」 登 壇 者 どいかやさん（絵本作家） 土井章史さん（編集者、トムズボックス主宰） 大場裕理さん（教育画劇 編集者） 聞 き 手 イルフ童画館学芸員 河西見佳 日　 時 9月19日（土）13：30開始 場　 所 1階　えほんライブラリー「はらっぱ」 参 加 費 無料、要申込み（0266-24-3319） ※定員に達したため、受付終了しました。 どいかやさんをデビュー当時からよく知るお二人と、どいかやさん御本人に30 年を振り返りながら、どいさんの絵本とその周辺についてお話いただきます。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍WS（中級者向け） 9 月11 日（金）10：00 ～16：00 9 月13 日（日）10：00 ～16：00 ■ じいじとばあばへのプレゼント花びんをつくろう 9 月20 日（日）13：30 ～ ■ 学芸員によるギャラリートーク 9 月22 日（火）10：30 ～ ■ ポシェットとプラ板でペンダントをつくろう 10 月 3日（土）13：30 ～ ■ フェルトを切って貼って絵をつくろう 10 月4 日（日）13：30 ～ ■ 刊本作品読み語り 10 月 17日（土）10：30 ～ ■ こども・初心者向け 製本ワークショップ 10 月 24日（土）13：30 ～ ■ ハロウィン朗読会とハロウィングッズをつくろう 10 月 31日（土）13：30 ～ ■ ゆびあみでマフラーを編んでみよう 11 月 1日（日）13：30 ～ ご予約・お問い合わせはイルフ童画館（tel.0266-24-3319）まで。 詳しくは下記詳細ページをご確認ください。 （イベント・ワークショップは状況により中止または延期する場合があります。） イベント・ワークショップの詳細はこちら 【同時開催】武井武雄 収蔵作品展 3階  武井武雄展示室 「刊本作品と自然について」 「刊本作品と自然について」と題して、武井が「自然」をテーマに創作した作品群をご紹介いたします。また、刊本作品の中か ら環境問題や社会問題をモチーフとした作品の数々をご紹介するとともに、武井の自然へのまなざしをご鑑賞いただきます。 刊本作品No.8 宇宙裁縫師 1961年 企画展カテゴリー 開催中の企画展 前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日 次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_06.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_10.jpg"
-                    ],
-                    [
-                      "開催中の企画展",
-                      "https://www.ilf.jp/exhibition-cat/now/"
-                    ],
-                    [
-                      "前の記事 西村敏雄展　『バルバルさん』から広がる絵本の世界 2026年5月11日",
-                      "https://www.ilf.jp/exhibition/202605__nishimuratoshioten/"
-                    ],
-                    [
-                      "次の記事 第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日",
-                      "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/"
-                    ]
-                  ]
+                  "sha256": "b485bdec0be59837f818ecd9a7b267556668d854ea86b32fb3ce66ffde569e45"
                 },
                 {
                   "url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
@@ -6619,85 +5548,7 @@
                   "checked_at": "2026-10-16T19:31:58.565819+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/exhibition/dougataisyousakuhinten_13/",
-                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeAQMAAAAB/jzhAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAAtJREFUCB1jGJQAAACWAAFbFORbAAAAAElFTkSuQmCC",
-                    "https://secure.gravatar.com/avatar/aaaad8cac20e056e4cfd9d2e7111b6d4?s=30&d=mm&r=g",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAtQAAAQAAQMAAAD7nFywAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAHJJREFUGBntwYEAAAAAw6D7U0/hANUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuARwDwABBxAtdgAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/13th-doga-gp-724x1024.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAX4AQMAAABlgkYAAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAXtJREFUGBntwTEBAAAAwiD7p14JT2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMBdnsMAAfbpbPIAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsAQMAAABDsxw2AAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAACJJREFUGBntwTEBAAAAwiD7p14KP2AAAAAAAAAAAAAAANwELbQAAZOJhkQAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709-300x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAU+AQMAAACiM7upAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVBJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHArvmgAB5WtwPAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANAAAAEsAQMAAACITa/hAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB5JREFUGBntwTEBAAAAwiD7p14LL2AAAAAAAAAAwEUfpAABprYZLAAAAABJRU5ErkJggg==",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK-208x300.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVOAQMAAACpEbZoAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVRJREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABcC/qoAAbz3YM4AAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAVGAQMAAABFQjQFAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAVJJREFUGBntwTEBAAAAwiD7p95rCGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACcAPciAAEmrd8uAAAAAElFTkSuQmCC",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg",
-                    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAANQAAAEsAQMAAACBpg+bAAAAA1BMVEUAAACnej3aAAAAAXRSTlMAQObYZgAAAB9JREFUGBntwTEBAAAAwiD7p14ND2AAAAAAAAAAAGcCINAAAc/QhAwAAAAASUVORK5CYII=",
-                    "https://www.ilf.jp/wp/wp-content/uploads/2026/07/doikayaten_00_tate-212x300.jpg",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "第13回武井武雄記念 日本童画大賞 受賞者展 2026年10月10日 最終更新日時 : 2026年10月10日 管理者 2026年11月21日(土)～12月22日(火) 武井武雄は「子どもの心にふれる絵」の創造を目指し、「童画」という言葉を生み出しました。当館では、武井の「童画」の精神を受け継ぎ、新しい時代の「武井武雄」を探求するために、「武井武雄記念 日本童画大賞」を開催しております。 2025年度の第13回では、多数の応募作品の中から厳正な審査を経て、タブロー部門（テーマ「ともだち」）で大賞をかいすみ、優秀賞を山口新が受賞し、絵本部門では大賞をケイツカサ、優秀賞をけしょうまいが受賞しました。 個性あふれる受賞作品をはじめ、受賞者たちの過去の作品から最新作まで幅広くご紹介します。次代の童画界を担う表現力豊かな4名の芸術家たちが生み出す、多彩な作品の数々をお楽しみください。 会 　 期 2026年11月21日(土)～12月22日(火) 休　館　日 水曜日（祝日は開館） 開 館 時 間 9：00～18：00（受付は17：30まで） 入　館　料 詳しくはこちら 主 　 催 イルフ童画館、公益財団法人おかや文化振興事業団 第13回日本童画大賞　タブロー部門　大賞 かいすみ「優しくなりたい」2025年 かいすみ「すなあそび」2026年 第13回日本童画大賞　絵本部門　大賞 ケイツカサ「ニンじゃがポテト」2025年 ケイツカサ「ウナギツネ」2026年 第13回日本童画大賞　タブロー部門　優秀賞 山口新「ひみつ」2025年 山口新「BooK」2026年 第13回日本童画大賞　タブロー部門　優秀賞 けしょうまい「なくいえ」2025年 けしょうまい「なくいえ」2025年 クリックすると拡大表示されます 関連特別イベント 受賞作家によるギャラリートーク 日   時 11月21日（土）10：30開始 会　　場 イルフ童画館2階　 第1企画展示室 参加方法 予約不要／無料（ただし要入館券） 受賞作品の創作秘話や創作過程についてお話いただくとともに、これからの活動についても伺います。どのようにして作品が誕生し受賞するにいたったのか、制作している方や興味のある方はぜひご参加ください。 会期中のワークショップ ■ 武井武雄作品ビーズ刺繍ワークショップ（中級者向け） 11月27日（金）、29日（日）各日10：00～／ 要予約 ■ 刊本作品読み語り 11月28日（土）10：30～／ 予約不要 ■ クリスマス朗読会＆クリスマスWS 12月5日（土）、6日（日）各日10：30～／ 要予約 （ただし朗読会のみの参加は 予約不要 ） ■ 学芸員によるギャラリートーク 12月12日（土）10：30～／ 予約不要 ■ 羊毛フェルトでお正月飾り鏡もちをつくろう 12月13日（日）13：30～／ 要予約 イベント・ワークショップの詳細はこちら 【同時開催】 3階武井武雄展示室 大澤コレクション展 武井武雄と親交の深かった大澤三武郎氏が、1997（平成9）年、イルフ童画館の開館に先立ち、より多くの人に武井の童画に触れてほしいとの願いから、収集してきた武井作品を寄贈しました。そのコレクションをご紹介します。 2階第2企画展示室 モーリス・センダック展 世界中の子どもたちを魅了し続けるモーリス・センダックは、高校卒業後、ニューヨークのF.A.O.シュワーツ玩具店で働きながらデザインの勉強を続け、絵本の挿絵を手がけたことをきっかけに、イラストレーターとして活躍します。本展では、絵本『かいじゅうたちのいるところ』をはじめ、当館で収蔵するモーリス・センダックの作品をご紹介いたします。 企画展カテゴリー 次回開催予定の企画展 前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                  "links": [
-                    [
-                      "詳しくはこちら",
-                      "https://www.ilf.jp/info/guide/#nyukanryo"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/a11c873d0df415753986ed21fa006a6c.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6384.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6708.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/IMG_6709.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1fc9bce05472273d3985835e00e902d9.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/BooK.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe87ef7da9f7ad.jpg"
-                    ],
-                    [
-                      "",
-                      "https://www.ilf.jp/wp/wp-content/uploads/2026/10/1a0bfe8918be8b6fbe.jpg"
-                    ],
-                    [
-                      "イベント・ワークショップの詳細はこちら",
-                      "https://www.ilf.jp/show/event_workshop/"
-                    ],
-                    [
-                      "次回開催予定の企画展",
-                      "https://www.ilf.jp/exhibition-cat/next/"
-                    ],
-                    [
-                      "前の記事 デビュー30周年 どいかや 絵本原画展　自然と生き物、それから絵本 2026年7月21日",
-                      "https://www.ilf.jp/exhibition/202609_doikayaten/"
-                    ]
-                  ]
+                  "sha256": "074370232b6be529fe88428007e4cb603908e7721d5791ac8152ce7c96208f3c"
                 },
                 {
                   "url": "https://www.ilf.jp/event_workshop/",
@@ -6705,35 +5556,7 @@
                   "checked_at": "2026-10-16T19:32:07.903763+00:00",
                   "facility_id": 2163,
                   "final_url": "https://www.ilf.jp/show/event_workshop/",
-                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba",
-                  "images": [
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png",
-                    "data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw==",
-                    "https://ilf.jp/wp/wp-content/uploads/2022/03/logo-1.png"
-                  ],
-                  "text": "開催予定のイベント・ワークショップ イベント・ワークショップの予約方法 ご予約は、お電話（0266-24-3319）のみ受付しております。 ご予約の際は、下記の内容をお伝えください。 ・参加される方のお名前（複数人で参加する場合は、全員のお名前） ・代表者様の電話番号 ※低学年以下のお子様は保護者同伴でご参加ください。 ※イベント・ワークショップの都合上、お子様の年齢をお伺いする場合がございます。 ※予約後、キャンセルする場合は必ずお電話にてご連絡ください。 ※現在公開中のイベント・ワークショップは、情報公開中の展覧会期間のイベントになります。 ※イベント・ワークショップは、諸事情により変更や中止になる場合がございます。 ※イベント・ワークショップ名の詳細リンクがないものは随時更新いたします。 10月のイベント 詳細はイベント・ワークショップ名をクリックしてください 日時 イベント・ワークショップ名 参加費 予約状況 2026年10月3日 - 13：30～ ポシェットとプラ板でペンダントをつくろう 400円 終了しました。 2026年10月4日 - 13：30～ フェルトを切って貼って絵をつくろう！ 300円 終了しました。 2026年10月17日 - 10：30～ 刊本作品読み語り 無料 予約不要 2026年10月24日 - 13：30～ こども・初心者向け 製本ワークショップ 300円 キャンセル待ち 2026年10月31日 - 13：30～ ハロウィン朗読会とハロウィングッズをつくろう ワークショップのみ200円 受付中 11月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません 12月のイベント 詳細はイベント・ワークショップ名をクリックしてください イベントは予定されておりません",
-                  "links": [
-                    [
-                      "ポシェットとプラ板でペンダントをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%9d%e3%82%b7%e3%82%a7%e3%83%83%e3%83%88%e3%81%a8%e3%83%97%e3%83%a9%e6%9d%bf%e3%81%a7%e3%83%9a%e3%83%b3%e3%83%80%e3%83%b3%e3%83%88%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ],
-                    [
-                      "フェルトを切って貼って絵をつくろう！",
-                      "https://www.ilf.jp/xo_event/%e3%83%95%e3%82%a7%e3%83%ab%e3%83%88%e3%82%92%e5%88%87%e3%81%a3%e3%81%a6%e8%b2%bc%e3%81%a3%e3%81%a6%e7%b5%b5%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86%ef%bc%81/"
-                    ],
-                    [
-                      "刊本作品読み語り",
-                      "https://www.ilf.jp/xo_event/%e5%88%8a%e6%9c%ac%e4%bd%9c%e5%93%81%e8%aa%ad%e3%81%bf%e8%aa%9e%e3%82%8a-8/"
-                    ],
-                    [
-                      "こども・初心者向け 製本ワークショップ",
-                      "https://www.ilf.jp/xo_event/%e3%81%93%e3%81%a9%e3%82%82%e3%83%bb%e5%88%9d%e5%bf%83%e8%80%85%e5%90%91%e3%81%91-%e8%a3%bd%e6%9c%ac%e3%83%af%e3%83%bc%e3%82%af%e3%82%b7%e3%83%a7%e3%83%83%e3%83%97/"
-                    ],
-                    [
-                      "ハロウィン朗読会とハロウィングッズをつくろう",
-                      "https://www.ilf.jp/xo_event/%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e6%9c%97%e8%aa%ad%e4%bc%9a%e3%81%a8%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b3%e3%82%b0%e3%83%83%e3%82%ba%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
-                    ]
-                  ]
+                  "sha256": "cf1c90bca9c53c594ac6959a62e2e683917dae967454c7d83dc3c3936dc886ba"
                 }
               ]
             },
@@ -6824,11 +5647,36 @@
           ]
         }
       ],
-      "no_current_or_future_event": 14,
-      "candidate_found_added": 18,
-      "candidate_found_duplicate": 3,
-      "candidate_found_hold": 4,
-      "source_unresolved": 1
+      "no_current_or_future_event": 15,
+      "candidate_found_added": 17,
+      "candidate_found_duplicate": 4,
+      "candidate_found_hold": 3,
+      "source_unresolved": 1,
+      "candidate_totals": {
+        "added": 55,
+        "hold": 89,
+        "duplicate": 16
+      },
+      "candidates_found": 160,
+      "added_participability": {
+        "通常参加可能": 36,
+        "条件付き参加可能": 19
+      }
     }
-  }
+  },
+  "final_review_corrections": [
+    {
+      "facility_id": 2151,
+      "event_id": "evt-2151-202610-f7-talk",
+      "correction": "Publication QA removed own provisional addition; candidate remains HOLD because participation path unconfirmed. Existing Product baseline event unaffected."
+    },
+    {
+      "facility_id": 2158,
+      "correction": "Fetched private-hire notice explicitly says October 11, already past. Corrected provisional hold to no_current_or_future_event; no Product event had been added."
+    },
+    {
+      "facility_id": 2152,
+      "correction": "Restored successful education_program fetch metadata from this process own tool output at 19:25:18.054752Z; concurrent cache-write dropped that one record. Source content was read in full in this run; no prior-run evidence used."
+    }
+  ]
 }
