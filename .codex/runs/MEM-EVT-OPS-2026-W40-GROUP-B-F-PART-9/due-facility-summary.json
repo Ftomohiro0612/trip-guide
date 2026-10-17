@@ -66,7 +66,7 @@
       "条件付き参加可能": 57,
       "通常参加可能": 74
     },
-    "source_fetch_attempts": 476
+    "source_fetch_attempts": 480
   },
   "per_region": {
     "osaka": {
@@ -456,6 +456,32 @@
           "url": "https://www.city.osakasayama.osaka.jp/material/files/group/51/puchisatoreku20262gakki.pdf",
           "status": 200,
           "checked_at": "2026-10-16T23:31:13.994827+00:00"
+        },
+        {
+          "facility_id": 1381,
+          "url": "https://www.city.hannan.lg.jp/kakuka/toshi/machi/wanpaku/",
+          "status": 404,
+          "checked_at": "2026-10-16T23:23:45.649425+00:00"
+        },
+        {
+          "facility_id": 1381,
+          "url": "https://www.city.hannan.lg.jp/kakuka/toshi/machi/wanpaku/",
+          "status": 404,
+          "checked_at": "2026-10-16T23:23:52.584174+00:00"
+        },
+        {
+          "facility_id": 1388,
+          "url": "https://www.savor-farm.or.jp/",
+          "status": "error",
+          "checked_at": "2026-10-16T23:24:39.359881+00:00",
+          "raw_status": "fetch_error"
+        },
+        {
+          "facility_id": 1388,
+          "url": "https://www.savor-farm.or.jp/",
+          "status": "error",
+          "checked_at": "2026-10-16T23:24:44.977152+00:00",
+          "raw_status": "fetch_error"
         }
       ],
       "facilities": [
@@ -479,6 +505,18 @@
               "url": "https://www.city.hannan.lg.jp/kakuka/mirai/mkatsu/spot/yamanakadani/8932.html",
               "status": 200,
               "checked_at": "2026-10-16T23:24:30.955261+00:00"
+            },
+            {
+              "facility_id": 1381,
+              "url": "https://www.city.hannan.lg.jp/kakuka/toshi/machi/wanpaku/",
+              "status": 404,
+              "checked_at": "2026-10-16T23:23:45.649425+00:00"
+            },
+            {
+              "facility_id": 1381,
+              "url": "https://www.city.hannan.lg.jp/kakuka/toshi/machi/wanpaku/",
+              "status": 404,
+              "checked_at": "2026-10-16T23:23:52.584174+00:00"
             }
           ]
         },
@@ -616,6 +654,20 @@
               "url": "https://docs.google.com/forms/d/e/1FAIpQLSe6r7l9F4izcfIiZ4w3E8HkRlYN_2EwMUUuLcrBP9nP7ub72A/viewform",
               "status": 200,
               "checked_at": "2026-10-16T23:25:20.713717+00:00"
+            },
+            {
+              "facility_id": 1388,
+              "url": "https://www.savor-farm.or.jp/",
+              "status": "error",
+              "checked_at": "2026-10-16T23:24:39.359881+00:00",
+              "raw_status": "fetch_error"
+            },
+            {
+              "facility_id": 1388,
+              "url": "https://www.savor-farm.or.jp/",
+              "status": "error",
+              "checked_at": "2026-10-16T23:24:44.977152+00:00",
+              "raw_status": "fetch_error"
             }
           ]
         },
@@ -8820,7 +8872,85 @@
         "Summer event anchors resolve later pages and ignore invalid hashes safely"
       ]
     },
-    "raw_log_source_url_trace": "476/476 present",
-    "scope": "40 exact IDs, 40 sequential completion rows; 39 successful registry freshness rows, no out-of-scope changes"
+    "raw_log_source_url_trace": "480/480 present; four initial failed requests restored from this run own raw log with original timestamps",
+    "scope": "40 exact IDs, 40 sequential completion rows; 39 successful registry freshness rows, no out-of-scope changes",
+    "sequencing_exception": "During initial helper setup, the first append for facility1381 failed with ModuleNotFoundError; two DNS-failed facility1388 requests ran before that completion row was successfully appended. The append was corrected and facility1388 was freshly fetched again at its assigned position. All content evaluations/Product or HOLD decisions and forty final completion rows follow the dispatched order. No failed preflight is counted as a successful patrol.",
+    "evidence_gate": "PASS: exact forty IDs, own raw sources and Product URL trace, four existing refreshes,39 registry successes; failed attempts do not advance liveness"
+  },
+  "source_family_holds": [
+    {
+      "facility_id": 471,
+      "reason": "公式HTMLのカレンダー・体験プログラムは動的表示で個別開催データを抽出できず、具体的な将来日程を確定できない。source-family-level bounded HOLD。",
+      "affected_candidates": [
+        "動的イベントカレンダー／定時プログラム一覧"
+      ],
+      "count": 1,
+      "included_in_candidate_hold_total": true
+    },
+    {
+      "facility_id": 515,
+      "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+      "affected_candidates": [
+        "秋の山野草展10/24～26",
+        "菊花展10/28～11/23",
+        "老鴉柿展10/31～11/1",
+        "根付き植物リース11/21",
+        "親子クリスマススワッグ11/28",
+        "カブトムシを育てよう12/5",
+        "新春盆栽寄せ植え12/5",
+        "サクラソウの育て方2027/2/6",
+        "春のハンギングバスケット2027/2/20",
+        "椿展2027/3/6～22",
+        "椿展茶会2027/3/6",
+        "自然林を歩こう2027/3月",
+        "インモーション体験11/1～2027/1/24土日祝",
+        "落ち葉プール11月頃",
+        "クリスマス装飾11月中旬～12月"
+      ],
+      "count": 15,
+      "included_in_candidate_hold_total": true
+    },
+    {
+      "facility_id": 519,
+      "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+      "affected_candidates": [
+        "オーストラリアフェア10/24・25",
+        "ハンドアート10/24（受付詳細未定）",
+        "アボリジナル・アート10/25",
+        "ディジュリドゥミニライブ10/25",
+        "ディジュリドゥ制作・吹き方10/25",
+        "コアラのマーチ配布10/24・キャラクター撮影",
+        "フェアのワークショップ・物販・グルメ（詳細未定）"
+      ],
+      "count": 7,
+      "included_in_candidate_hold_total": true
+    }
+  ],
+  "production_verification": {
+    "candidate_head": "7504cc49400ff357d9daaae46093bb2484e2366e",
+    "merged_main": "713db1a45b62186477368af62a0cf236ba986c74",
+    "pr": 156,
+    "cloudflare_version": "81c08e07-de00-415f-a900-12d15993fed8",
+    "deployment_id": "330c8036-03bc-4bfd-adb9-71a4c9bd9b34",
+    "deployment_created_at": "2026-10-17T00:32:44.107331Z",
+    "deploy_command_exit": 0,
+    "active_percentage": 100,
+    "live_checked_at": "2026-10-17T00:33:30.701344+00:00",
+    "affected_urls": [
+      "https://memorips.com/events/osaka",
+      "https://memorips.com/events/saitama"
+    ],
+    "all_135_added_or_updated_cards_verified": true,
+    "preview_production_card_match": true,
+    "preview_production_html_bytes_match": true,
+    "visible_cards": {
+      "osaka": 190,
+      "saitama": 181
+    },
+    "sentinel": {
+      "result": "GREEN",
+      "blocking": 0
+    },
+    "evidence_finalization": "Only failed-request accounting and verification metadata finalized on the run branch after deployment; Product data identical to the deployed merge; no second merge or deploy."
   }
 }
