@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-17T04:40:37.706917+00:00",
+  "executed_at": "2026-10-17T04:47:13.664913+00:00",
   "due_facility_ids": [
     382,
     383,
@@ -45,21 +45,21 @@
     433
   ],
   "aggregate": {
-    "no_current_or_future_event": 1,
-    "candidate_found_added": 6,
+    "no_current_or_future_event": 4,
+    "candidate_found_added": 10,
     "candidate_found_duplicate": 0,
-    "candidate_found_hold": 2,
+    "candidate_found_hold": 5,
     "source_unresolved": 1,
-    "total": 10
+    "total": 20
   },
   "per_region": {
     "tochigi": {
-      "no_current_or_future_event": 1,
-      "candidate_found_added": 6,
+      "no_current_or_future_event": 4,
+      "candidate_found_added": 10,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 2,
+      "candidate_found_hold": 5,
       "source_unresolved": 1,
-      "total": 10,
+      "total": 20,
       "facility_ids": [
         382,
         383,
@@ -70,7 +70,17 @@
         389,
         390,
         391,
-        392
+        392,
+        399,
+        400,
+        401,
+        402,
+        403,
+        404,
+        406,
+        408,
+        409,
+        410
       ],
       "sources_checked": [
         {
@@ -807,6 +817,430 @@
           "final_url": "https://www.pref.tochigi.lg.jp/c09/education/sports/shisetsu/icearena.html",
           "title": "栃木県／栃木県立日光霧降アイスアリーナ",
           "text_sha256": "b511df73dcb40a9158af33f568ed49d84e55d1130372e302eee779185fa95b2f"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://chuzenjikokisen.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:40:53.253432+00:00",
+          "error": "HTTPSConnectionPool(host='chuzenjikokisen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chuzenjikokisen.com', port=443): Failed to resolve 'chuzenjikokisen.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://chuzenjikokisen.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:40:58.504697+00:00",
+          "error": "HTTPSConnectionPool(host='chuzenjikokisen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chuzenjikokisen.com', port=443): Failed to resolve 'chuzenjikokisen.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://www.chuzenjiko-cruise.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:06.918852+00:00",
+          "final_url": "https://chuzenjiko-cruise.com/",
+          "title": "中禅寺湖遊覧船クルージング│公式サイト",
+          "text_sha256": "479cf160a482c5f37443d41f9ea9ec20920940b34812463ceabb53ef7553b845"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://tyukisen.hatenablog.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:14.450285+00:00",
+          "final_url": "https://tyukisen.hatenablog.com/",
+          "title": "　 中禅寺湖遊覧船　　　   　新造船ブログ　",
+          "text_sha256": "315a61e297a9e46da3325939f75573ed281aae8b0498435d6eccaba648f440a4"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://chuzenjiko-cruise.com/news.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:24.804580+00:00",
+          "final_url": "https://chuzenjiko-cruise.com/news.html",
+          "title": "",
+          "text_sha256": "8660ab84a348cb53e5a5896c480d0178abda4bfa546003113e3f7c554c49785b"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://chuzenjiko-cruise.com/fee.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:31.748230+00:00",
+          "final_url": "https://chuzenjiko-cruise.com/fee.html",
+          "title": "中禅寺湖遊覧船クルージング│運賃表",
+          "text_sha256": "43a5a20a33eef8428ae7d5cae5df11a6b3ec7cc0855310b26b8b3fd04b33b2fd"
+        },
+        {
+          "facility_id": 399,
+          "url": "https://chuzenjiko-cruise.com/access.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:33.328391+00:00",
+          "final_url": "https://chuzenjiko-cruise.com/access.html",
+          "title": "中禅寺湖遊覧船クルージング│交通案内",
+          "text_sha256": "5e819a81c901a1f751979f77fd47a93b52d0278eb19bacb61ccce8e01a364dbd"
+        },
+        {
+          "facility_id": 400,
+          "url": "https://linekudari.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:41:50.711960+00:00",
+          "final_url": "https://linekudari.com/",
+          "title": "鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+          "text_sha256": "a0a13d763bfb0042cd38b9c021559705c842bc3a686ce49525748cd6a63c4063"
+        },
+        {
+          "facility_id": 400,
+          "url": "https://linekudari.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:00.496977+00:00",
+          "final_url": "https://linekudari.com/",
+          "title": "鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+          "text_sha256": "64e2cd1755827c6f901b71dabae9f35c92a0a516c4f74c5de0af159754c7b671"
+        },
+        {
+          "facility_id": 400,
+          "url": "https://linekudari.com/2026/07/88703/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:07.833280+00:00",
+          "final_url": "https://linekudari.com/2026/07/88703/",
+          "title": "～鬼怒川焔火（きぬがわえんか）～ | 鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+          "text_sha256": "1b72504718bde4c0ff62c1a671ba96ad0c93844d21b4aae8d408fd7228f338d6"
+        },
+        {
+          "facility_id": 400,
+          "url": "https://linekudari.com/2026/07/88607/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:09.385020+00:00",
+          "final_url": "https://linekudari.com/2026/07/88607/",
+          "title": "鬼怒川温泉　魚のつかみどりin小原沢 | 鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+          "text_sha256": "f4806cabed3af572d1b57136bc172142ae6858c96a604e834c498629087be354"
+        },
+        {
+          "facility_id": 401,
+          "url": "https://www.tobu.co.jp/marusan/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:42:18.459083+00:00",
+          "final_url": "https://www.tobu.co.jp/marusan/",
+          "title": "お探しのページが見つかりませんでした - 404エラー｜東武鉄道公式サイト",
+          "text_sha256": "b03bc171455c8fee79504233ce375796ae92461f3aeaaf4e8ed34a7e3096b2ec"
+        },
+        {
+          "facility_id": 401,
+          "url": "https://www.tobu.co.jp/marusan/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:42:26.734912+00:00",
+          "final_url": "https://www.tobu.co.jp/marusan/",
+          "title": "お探しのページが見つかりませんでした - 404エラー｜東武鉄道公式サイト",
+          "text_sha256": "b03bc171455c8fee79504233ce375796ae92461f3aeaaf4e8ed34a7e3096b2ec"
+        },
+        {
+          "facility_id": 401,
+          "url": "https://ropeway.kinu1.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:28.371806+00:00",
+          "final_url": "https://ropeway.kinu1.com/",
+          "title": "鬼怒川温泉ロープウェイ | ",
+          "text_sha256": "d6c721259b792338b7c5e63afba9d7caac2aa7b1bf9f8eee5b3f9fa5a49beb3b"
+        },
+        {
+          "facility_id": 402,
+          "url": "https://www.nikko-ozasa.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:38.421534+00:00",
+          "final_url": "https://www.nikko-ozasa.jp/",
+          "title": "日光霧降高原 大笹牧場",
+          "text_sha256": "e995c8ea68024d4933abcc6aac7f4d76139b9183d333a09ec873a1b19763bb00"
+        },
+        {
+          "facility_id": 402,
+          "url": "https://www.nikko-ozasa.jp/event-schedule",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:44.991905+00:00",
+          "final_url": "https://www.nikko-ozasa.jp/event-schedule",
+          "title": "イベント・スケジュール",
+          "text_sha256": "bdc1c6d3339ae3e7a4d6c06d045cda8b30f9f15b7278536fcbc5584a0d04dd92"
+        },
+        {
+          "facility_id": 402,
+          "url": "https://www.nikko-ozasa.jp/news/?p=2263",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:46.618616+00:00",
+          "final_url": "https://www.nikko-ozasa.jp/news/?p=2263",
+          "title": "【重要】2026年7月4日（土）からの無料バス運行変更について",
+          "text_sha256": "758d67e5fee451e855133efdad64144d7313261968aca368bbb7d08c0bea7323"
+        },
+        {
+          "facility_id": 402,
+          "url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/10/664e369d32215766560aa264764464b9.jpg",
+          "status": 200,
+          "checked_at": "2026-10-17T04:42:57.558645+00:00",
+          "final_url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/10/664e369d32215766560aa264764464b9.jpg",
+          "title": "Official image",
+          "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+        },
+        {
+          "facility_id": 402,
+          "url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/08/b7210725af822e1e39a334e79833bb80.jpeg",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:08.307734+00:00",
+          "final_url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/08/b7210725af822e1e39a334e79833bb80.jpeg",
+          "title": "Official image",
+          "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:22.129184+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/",
+          "title": "日光自然博物館",
+          "text_sha256": "17f0295a55befade4256fc1ce327d69b58d13f9d4655576f288607376a678d85"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/news_p.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:31.300695+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/news_p.html",
+          "title": "お知らせ｜日光自然博物館",
+          "text_sha256": "2f1725767ccb3ded919b63a17804eb361c1640decee4dbca213aefbf2fce16bb"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:32.981652+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+          "title": "【令和8年11月14日(土)新企画モニターツアー】仲田ガイドと行く！男体西麓ランブリングツアー｜11月のガイドツアー｜日光自然博物館",
+          "text_sha256": "b2a65bd9cc2df89f63a7bf24d1867642abb937fe56ed471c05fac26dea3e2cb0"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:34.746821+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+          "title": "【令和8年10月 手軽に自然体験】戦場ヶ原秋のガイドウォーク（その他日程も随時追加の可能性あり）｜10月のガイドツアー｜日光自然博物館",
+          "text_sha256": "5c9e8552b8ca4449ab08c135a91b9ca3c086534ddc79a3837756d0d76091508a"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:36.179642+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+          "title": "【令和8年10月17日 気軽に楽しめる秋の昆虫観察】昆虫観察の極意を伝授！ムシ男と探す「木柵ウォッチング」｜10月のガイドツアー｜日光自然博物館",
+          "text_sha256": "6d012aef78018846086666e78a2bd48501c73830978ebf274b037d76ca9fba3e"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/guide.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:37.624831+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/guide.html",
+          "title": "ネイチャーガイド｜日光自然博物館",
+          "text_sha256": "1eacfad4e776014dd1b94a7a015ed4c45b0cec72c68e40d0698984117ec96a6a"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:46.300081+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+          "title": "【令和8年11月14日(土)新企画モニターツアー】仲田ガイドと行く！男体西麓ランブリングツアー｜11月のガイドツアー｜日光自然博物館",
+          "text_sha256": "b2a65bd9cc2df89f63a7bf24d1867642abb937fe56ed471c05fac26dea3e2cb0"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:47.886272+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+          "title": "【令和8年10月 手軽に自然体験】戦場ヶ原秋のガイドウォーク（その他日程も随時追加の可能性あり）｜10月のガイドツアー｜日光自然博物館",
+          "text_sha256": "5c9e8552b8ca4449ab08c135a91b9ca3c086534ddc79a3837756d0d76091508a"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:56.709566+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+          "title": "【令和8年10月17日 気軽に楽しめる秋の昆虫観察】昆虫観察の極意を伝授！ムシ男と探す「木柵ウォッチング」｜10月のガイドツアー｜日光自然博物館",
+          "text_sha256": "6d012aef78018846086666e78a2bd48501c73830978ebf274b037d76ca9fba3e"
+        },
+        {
+          "facility_id": 403,
+          "url": "https://www.nikko-nsm.co.jp/nnm.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:43:58.353077+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/nnm.html",
+          "title": "栃木県立日光自然博物館｜日光自然博物館",
+          "text_sha256": "3b3c7506eb18738c443fd899b361a966aa93b06f60d8027af41b9baa12387c36"
+        },
+        {
+          "facility_id": 404,
+          "url": "https://www.park-tochigi.com/tamozawa/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:44:37.438728+00:00",
+          "final_url": "https://www.park-tochigi.com/tamozawa/",
+          "title": "日光田母沢御用邸記念公園",
+          "text_sha256": "95ae27bc0d6ec0eb322c85add48e99bb969b98ab4b1b721778412b907363264a"
+        },
+        {
+          "facility_id": 404,
+          "url": "https://www.park-tochigi.com/tamozawa/event/秋の音楽祭3",
+          "status": 200,
+          "checked_at": "2026-10-17T04:44:51.600506+00:00",
+          "final_url": "https://www.park-tochigi.com/tamozawa/event/%E7%A7%8B%E3%81%AE%E9%9F%B3%E6%A5%BD%E7%A5%AD3",
+          "title": "秋の音楽祭　Ⅱ　Qbic | 日光田母沢御用邸記念公園",
+          "text_sha256": "69a81c8d52ba1f3875bbf2d6e26cd1fd0e585e4dced79d1c30afa0e8b521d780"
+        },
+        {
+          "facility_id": 404,
+          "url": "https://www.park-tochigi.com/tamozawa/event/御食堂-室内特別公開",
+          "status": 200,
+          "checked_at": "2026-10-17T04:44:54.121727+00:00",
+          "final_url": "https://www.park-tochigi.com/tamozawa/event/%E5%BE%A1%E9%A3%9F%E5%A0%82-%E5%AE%A4%E5%86%85%E7%89%B9%E5%88%A5%E5%85%AC%E9%96%8B",
+          "title": "御食堂 室内特別公開 | 日光田母沢御用邸記念公園",
+          "text_sha256": "47ca4c3890ab0590ba914f251c7ba25359552676a0c3116276af6563a4b1d68e"
+        },
+        {
+          "facility_id": 404,
+          "url": "https://www.park-tochigi.com/tamozawa/event/二階「御日拝所」室内特別公開",
+          "status": 200,
+          "checked_at": "2026-10-17T04:44:56.434490+00:00",
+          "final_url": "https://www.park-tochigi.com/tamozawa/event/%E4%BA%8C%E9%9A%8E%E3%80%8C%E5%BE%A1%E6%97%A5%E6%8B%9D%E6%89%80%E3%80%8D%E5%AE%A4%E5%86%85%E7%89%B9%E5%88%A5%E5%85%AC%E9%96%8B",
+          "title": "二階「御日拝所」室内特別公開 | 日光田母沢御用邸記念公園",
+          "text_sha256": "dbeaefa5bfa36b9fabeb61bf6ce3408e9213dbdf4bd94c2115de93a6e60591ed"
+        },
+        {
+          "facility_id": 406,
+          "url": "https://www.nikkohanaichimonme.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:45:15.715071+00:00",
+          "error": "HTTPSConnectionPool(host='www.nikkohanaichimonme.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nikkohanaichimonme.com', port=443): Failed to resolve 'www.nikkohanaichimonme.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 406,
+          "url": "https://www.nikkohanaichimonme.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:45:21.347399+00:00",
+          "error": "HTTPSConnectionPool(host='www.nikkohanaichimonme.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nikkohanaichimonme.com', port=443): Failed to resolve 'www.nikkohanaichimonme.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 406,
+          "url": "https://nikko-hanaichimonme.jp/category/news",
+          "status": 200,
+          "checked_at": "2026-10-17T04:45:28.562629+00:00",
+          "final_url": "https://nikko-hanaichimonme.jp/category/news",
+          "title": "お知らせ | 日光花いちもんめ【公式】",
+          "text_sha256": "15672c0d344a7023043b0f27141dfa1c73e5ddf62602c350f5948ae830b6e57c"
+        },
+        {
+          "facility_id": 408,
+          "url": "https://www.park-tochigi.com/italy/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:45:41.791719+00:00",
+          "final_url": "https://www.park-tochigi.com/italy/",
+          "title": "Nothing found for  Italy",
+          "text_sha256": "6b3bf747c9aa3610197ba97bd7704b569b4ea8087dfb1f25faa2fdf7b99be866"
+        },
+        {
+          "facility_id": 408,
+          "url": "https://www.park-tochigi.com/italy/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:45:48.728327+00:00",
+          "final_url": "https://www.park-tochigi.com/italy/",
+          "title": "Nothing found for  Italy",
+          "text_sha256": "6b3bf747c9aa3610197ba97bd7704b569b4ea8087dfb1f25faa2fdf7b99be866"
+        },
+        {
+          "facility_id": 408,
+          "url": "https://www.nikko-nsm.co.jp/italy.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:45:50.143311+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/italy.html",
+          "title": "イタリア大使館別荘記念公園｜日光自然博物館",
+          "text_sha256": "98fa80e256e9bd19db31402bcfa3512a1d4def729082b06236aee8dc7064d603"
+        },
+        {
+          "facility_id": 409,
+          "url": "https://www.park-tochigi.com/britain/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:46:04.999730+00:00",
+          "final_url": "https://www.park-tochigi.com/britain/",
+          "title": "Nothing found for  Britain",
+          "text_sha256": "00353426f028f83337acd7af4099bbedcba72c23d0e4baf1c10485baa0e10df1"
+        },
+        {
+          "facility_id": 409,
+          "url": "https://www.park-tochigi.com/britain/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:46:06.878848+00:00",
+          "final_url": "https://www.park-tochigi.com/britain/",
+          "title": "Nothing found for  Britain",
+          "text_sha256": "00353426f028f83337acd7af4099bbedcba72c23d0e4baf1c10485baa0e10df1"
+        },
+        {
+          "facility_id": 409,
+          "url": "https://www.nikko-nsm.co.jp/british.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:08.268820+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/british.html",
+          "title": "英国大使館別荘記念公園｜日光自然博物館",
+          "text_sha256": "e1ebf27d51538b8a7d3444d63748fd1a953943be63f5f38b99e3ae40e3b6c6bb"
+        },
+        {
+          "facility_id": 409,
+          "url": "https://www.nikko-nsm.co.jp/news_d.html?0:772",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:18.483704+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/news_d.html?0:772",
+          "title": "英国大使館別荘記念公園 開園10周年記念イベント 第八弾「湖畔の英国別荘 ～晩秋の調べ音楽会～」開催のお知らせ｜日光自然博物館",
+          "text_sha256": "54d6051fa5849e890bf279e6c5cf0efbdb84b72ea3276a1da5fafa07fd66c1f2"
+        },
+        {
+          "facility_id": 409,
+          "url": "https://www.nikko-nsm.co.jp/news_p.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:19.794559+00:00",
+          "final_url": "https://www.nikko-nsm.co.jp/news_p.html",
+          "title": "お知らせ｜日光自然博物館",
+          "text_sha256": "2f1725767ccb3ded919b63a17804eb361c1640decee4dbca213aefbf2fce16bb"
+        },
+        {
+          "facility_id": 410,
+          "url": "https://www.toshogu.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:45.290068+00:00",
+          "final_url": "https://toshogu.jp/",
+          "title": " 日光東照宮ホームページ ",
+          "text_sha256": "f9119ea930db8fc0e64e637648be7d69726aaf6d7ffb218ab0284852fd8dc392"
+        },
+        {
+          "facility_id": 410,
+          "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=44#block117",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:51.767586+00:00",
+          "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=44#block117",
+          "title": " 第４回　日本宝樹展（秋季）のお知らせ（10月23日～28日） ",
+          "text_sha256": "117ab86be07b49d2c3a2513900d21ff96626125ff0756085cb560ba3a1687731"
+        },
+        {
+          "facility_id": 410,
+          "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=43#block117",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:53.703998+00:00",
+          "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=43#block117",
+          "title": " 東照宮秋季大祭のお知らせ（10月16・17日） ",
+          "text_sha256": "7626f4d27518f8fa514f09818b59f668dc7a1216aa1fcaecdd67f045d2894747"
+        },
+        {
+          "facility_id": 410,
+          "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
+          "status": 200,
+          "checked_at": "2026-10-17T04:46:55.327286+00:00",
+          "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
+          "title": " 七五三祈祷のお知らせ ",
+          "text_sha256": "7efca0e774149fba4f65384d4cc241950cf421a7322ca7aa00fd28d90c10f2eb"
         }
       ],
       "facilities": [
@@ -2258,6 +2692,700 @@
               "final_url": "https://www.pref.tochigi.lg.jp/c09/education/sports/shisetsu/icearena.html",
               "title": "栃木県／栃木県立日光霧降アイスアリーナ",
               "text_sha256": "b511df73dcb40a9158af33f568ed49d84e55d1130372e302eee779185fa95b2f"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:41:49.294742+00:00",
+          "facility_id": 399,
+          "facility_name": "中禅寺湖機船 遊覧船",
+          "disposition": "candidate_found_added",
+          "reason": "不達旧URL再試行後、現公式と最新newsを確認。限定サンセット便を追加、定期遊覧/物販/オンライン写真投稿は対象外、夏ぬりえは終了済み。",
+          "candidates": [
+            {
+              "title": "10月サンセットクルーズ",
+              "disposition": "added",
+              "event_id": "evt-f12-399-sunset",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "フォトコンテスト2026秋",
+              "disposition": "excluded",
+              "reason": "オンライン写真投稿で現地の特別参加企画ではない"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 399,
+              "url": "https://chuzenjikokisen.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:40:53.253432+00:00",
+              "error": "HTTPSConnectionPool(host='chuzenjikokisen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chuzenjikokisen.com', port=443): Failed to resolve 'chuzenjikokisen.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://chuzenjikokisen.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:40:58.504697+00:00",
+              "error": "HTTPSConnectionPool(host='chuzenjikokisen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chuzenjikokisen.com', port=443): Failed to resolve 'chuzenjikokisen.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://www.chuzenjiko-cruise.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:06.918852+00:00",
+              "final_url": "https://chuzenjiko-cruise.com/",
+              "title": "中禅寺湖遊覧船クルージング│公式サイト",
+              "text_sha256": "479cf160a482c5f37443d41f9ea9ec20920940b34812463ceabb53ef7553b845"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://tyukisen.hatenablog.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:14.450285+00:00",
+              "final_url": "https://tyukisen.hatenablog.com/",
+              "title": "　 中禅寺湖遊覧船　　　   　新造船ブログ　",
+              "text_sha256": "315a61e297a9e46da3325939f75573ed281aae8b0498435d6eccaba648f440a4"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://chuzenjiko-cruise.com/news.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:24.804580+00:00",
+              "final_url": "https://chuzenjiko-cruise.com/news.html",
+              "title": "",
+              "text_sha256": "8660ab84a348cb53e5a5896c480d0178abda4bfa546003113e3f7c554c49785b"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://chuzenjiko-cruise.com/fee.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:31.748230+00:00",
+              "final_url": "https://chuzenjiko-cruise.com/fee.html",
+              "title": "中禅寺湖遊覧船クルージング│運賃表",
+              "text_sha256": "43a5a20a33eef8428ae7d5cae5df11a6b3ec7cc0855310b26b8b3fd04b33b2fd"
+            },
+            {
+              "facility_id": 399,
+              "url": "https://chuzenjiko-cruise.com/access.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:33.328391+00:00",
+              "final_url": "https://chuzenjiko-cruise.com/access.html",
+              "title": "中禅寺湖遊覧船クルージング│交通案内",
+              "text_sha256": "5e819a81c901a1f751979f77fd47a93b52d0278eb19bacb61ccce8e01a364dbd"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:42:16.375410+00:00",
+          "facility_id": 400,
+          "facility_name": "鬼怒川ライン下り",
+          "disposition": "no_current_or_future_event",
+          "reason": "公式本文と最新企画詳細を評価。焔火は最終10/10、魚つかみどりは8/22終了。通常ライン下り・セット券・営業案内は別イベントにしない。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 400,
+              "url": "https://linekudari.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:41:50.711960+00:00",
+              "final_url": "https://linekudari.com/",
+              "title": "鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+              "text_sha256": "a0a13d763bfb0042cd38b9c021559705c842bc3a686ce49525748cd6a63c4063"
+            },
+            {
+              "facility_id": 400,
+              "url": "https://linekudari.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:00.496977+00:00",
+              "final_url": "https://linekudari.com/",
+              "title": "鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+              "text_sha256": "64e2cd1755827c6f901b71dabae9f35c92a0a516c4f74c5de0af159754c7b671"
+            },
+            {
+              "facility_id": 400,
+              "url": "https://linekudari.com/2026/07/88703/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:07.833280+00:00",
+              "final_url": "https://linekudari.com/2026/07/88703/",
+              "title": "～鬼怒川焔火（きぬがわえんか）～ | 鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+              "text_sha256": "1b72504718bde4c0ff62c1a671ba96ad0c93844d21b4aae8d408fd7228f338d6"
+            },
+            {
+              "facility_id": 400,
+              "url": "https://linekudari.com/2026/07/88607/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:09.385020+00:00",
+              "final_url": "https://linekudari.com/2026/07/88607/",
+              "title": "鬼怒川温泉　魚のつかみどりin小原沢 | 鬼怒川ライン下り | 大自然が創造した渓谷美の極みとして名高い鬼怒川の素晴らしさを満喫",
+              "text_sha256": "f4806cabed3af572d1b57136bc172142ae6858c96a604e834c498629087be354"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:42:37.045063+00:00",
+          "facility_id": 401,
+          "facility_name": "東武鬼怒川ロープウェイ(おさるの山)",
+          "disposition": "no_current_or_future_event",
+          "reason": "旧URL404を再試行。ライン下り公式からリンクされた現運営公式を確認。通常運行・おさる見学・セット券・整備運休案内のみで日付確定特別企画なし。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 401,
+              "url": "https://www.tobu.co.jp/marusan/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:42:18.459083+00:00",
+              "final_url": "https://www.tobu.co.jp/marusan/",
+              "title": "お探しのページが見つかりませんでした - 404エラー｜東武鉄道公式サイト",
+              "text_sha256": "b03bc171455c8fee79504233ce375796ae92461f3aeaaf4e8ed34a7e3096b2ec"
+            },
+            {
+              "facility_id": 401,
+              "url": "https://www.tobu.co.jp/marusan/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:42:26.734912+00:00",
+              "final_url": "https://www.tobu.co.jp/marusan/",
+              "title": "お探しのページが見つかりませんでした - 404エラー｜東武鉄道公式サイト",
+              "text_sha256": "b03bc171455c8fee79504233ce375796ae92461f3aeaaf4e8ed34a7e3096b2ec"
+            },
+            {
+              "facility_id": 401,
+              "url": "https://ropeway.kinu1.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:28.371806+00:00",
+              "final_url": "https://ropeway.kinu1.com/",
+              "title": "鬼怒川温泉ロープウェイ | ",
+              "text_sha256": "d6c721259b792338b7c5e63afba9d7caac2aa7b1bf9f8eee5b3f9fa5a49beb3b"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:43:20.357565+00:00",
+          "facility_id": 402,
+          "facility_name": "日光霧降高原 大笹牧場",
+          "disposition": "candidate_found_hold",
+          "reason": "10/24大感謝祭の最新画像を目視確認。牛乳早飲み・ビンゴ・落書き牧草ロール・ヤギ散歩・ふれあい動物園・ふわふわ遊具・無料配布を含む。送迎情報確認済みだが、感謝祭の雨天/荒天時条件未掲載。8/1夏祭りの雨天条件は流用しない。",
+          "candidates": [
+            {
+              "title": "大笹牧場大感謝祭2026（10/24、全ステージ・体験・配布を含む）",
+              "disposition": "hold",
+              "reason": "最新公式ポスターに雨天/荒天中止・延期条件がない。夏祭りの条件を秋へ推定適用しない"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 402,
+              "url": "https://www.nikko-ozasa.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:38.421534+00:00",
+              "final_url": "https://www.nikko-ozasa.jp/",
+              "title": "日光霧降高原 大笹牧場",
+              "text_sha256": "e995c8ea68024d4933abcc6aac7f4d76139b9183d333a09ec873a1b19763bb00"
+            },
+            {
+              "facility_id": 402,
+              "url": "https://www.nikko-ozasa.jp/event-schedule",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:44.991905+00:00",
+              "final_url": "https://www.nikko-ozasa.jp/event-schedule",
+              "title": "イベント・スケジュール",
+              "text_sha256": "bdc1c6d3339ae3e7a4d6c06d045cda8b30f9f15b7278536fcbc5584a0d04dd92"
+            },
+            {
+              "facility_id": 402,
+              "url": "https://www.nikko-ozasa.jp/news/?p=2263",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:46.618616+00:00",
+              "final_url": "https://www.nikko-ozasa.jp/news/?p=2263",
+              "title": "【重要】2026年7月4日（土）からの無料バス運行変更について",
+              "text_sha256": "758d67e5fee451e855133efdad64144d7313261968aca368bbb7d08c0bea7323"
+            },
+            {
+              "facility_id": 402,
+              "url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/10/664e369d32215766560aa264764464b9.jpg",
+              "status": 200,
+              "checked_at": "2026-10-17T04:42:57.558645+00:00",
+              "final_url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/10/664e369d32215766560aa264764464b9.jpg",
+              "title": "Official image",
+              "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+            },
+            {
+              "facility_id": 402,
+              "url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/08/b7210725af822e1e39a334e79833bb80.jpeg",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:08.307734+00:00",
+              "final_url": "https://www.nikko-ozasa.jp/cms/wp-content/uploads/2026/08/b7210725af822e1e39a334e79833bb80.jpeg",
+              "title": "Official image",
+              "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:44:35.948021+00:00",
+          "facility_id": 403,
+          "facility_name": "日光自然博物館",
+          "disposition": "candidate_found_added",
+          "reason": "主催公式の企画一覧・ガイド詳細を評価。展示2件と実会場戦場ヶ原の秋ガイド1件追加、既存夏企画2件ended。3候補を理由付きHOLD。",
+          "candidates": [
+            {
+              "title": "これに出会いたい！奥日光のとっておきVer.2 秋冬編",
+              "disposition": "added",
+              "event_id": "evt-f12-403-autumn",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "英国大使館別荘記念公園 フォトコンテスト2026入賞作品展示（日光自然博物館）",
+              "disposition": "added",
+              "event_id": "evt-f12-403-photo",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "日光自然博物館 戦場ヶ原秋のガイドウォーク",
+              "disposition": "added",
+              "event_id": "evt-f12-403-autumn-walk",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "男体西麓ランブリング11/14",
+              "disposition": "hold",
+              "reason": "公式タイトル11/14(土)と本文11/14(火)が不一致、10歳以上でマニア向け長距離モニター企画"
+            },
+            {
+              "title": "ムシ男と木柵ウォッチング10/17",
+              "disposition": "hold",
+              "reason": "申込期限10/16 15時を過ぎ、当日受付経路が書かれていない。受付開始8:15/8:00も内部不一致"
+            },
+            {
+              "title": "湖畔の英国別荘 晩秋の調べ音楽会",
+              "disposition": "hold",
+              "reason": "別会場の英国別荘（facility409）であるため本博物館には紐付けない。409順番で独立評価する"
+            },
+            {
+              "title": "トワイライトヨガ10/11・夏展示9/6終了",
+              "disposition": "excluded",
+              "reason": "終了済み"
+            },
+            {
+              "title": "Eバイク常設レンタル・花カレンダー販売・Instagram応募",
+              "disposition": "excluded",
+              "reason": "通常営業や物販/写真投稿で独立した家族向け現地イベントではない"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:22.129184+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/",
+              "title": "日光自然博物館",
+              "text_sha256": "17f0295a55befade4256fc1ce327d69b58d13f9d4655576f288607376a678d85"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/news_p.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:31.300695+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/news_p.html",
+              "title": "お知らせ｜日光自然博物館",
+              "text_sha256": "2f1725767ccb3ded919b63a17804eb361c1640decee4dbca213aefbf2fce16bb"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:32.981652+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+              "title": "【令和8年11月14日(土)新企画モニターツアー】仲田ガイドと行く！男体西麓ランブリングツアー｜11月のガイドツアー｜日光自然博物館",
+              "text_sha256": "b2a65bd9cc2df89f63a7bf24d1867642abb937fe56ed471c05fac26dea3e2cb0"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:34.746821+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+              "title": "【令和8年10月 手軽に自然体験】戦場ヶ原秋のガイドウォーク（その他日程も随時追加の可能性あり）｜10月のガイドツアー｜日光自然博物館",
+              "text_sha256": "5c9e8552b8ca4449ab08c135a91b9ca3c086534ddc79a3837756d0d76091508a"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:36.179642+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+              "title": "【令和8年10月17日 気軽に楽しめる秋の昆虫観察】昆虫観察の極意を伝授！ムシ男と探す「木柵ウォッチング」｜10月のガイドツアー｜日光自然博物館",
+              "text_sha256": "6d012aef78018846086666e78a2bd48501c73830978ebf274b037d76ca9fba3e"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/guide.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:37.624831+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/guide.html",
+              "title": "ネイチャーガイド｜日光自然博物館",
+              "text_sha256": "1eacfad4e776014dd1b94a7a015ed4c45b0cec72c68e40d0698984117ec96a6a"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:46.300081+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:770",
+              "title": "【令和8年11月14日(土)新企画モニターツアー】仲田ガイドと行く！男体西麓ランブリングツアー｜11月のガイドツアー｜日光自然博物館",
+              "text_sha256": "b2a65bd9cc2df89f63a7bf24d1867642abb937fe56ed471c05fac26dea3e2cb0"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:47.886272+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:503",
+              "title": "【令和8年10月 手軽に自然体験】戦場ヶ原秋のガイドウォーク（その他日程も随時追加の可能性あり）｜10月のガイドツアー｜日光自然博物館",
+              "text_sha256": "5c9e8552b8ca4449ab08c135a91b9ca3c086534ddc79a3837756d0d76091508a"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:56.709566+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/tourlist_d.html?0:765",
+              "title": "【令和8年10月17日 気軽に楽しめる秋の昆虫観察】昆虫観察の極意を伝授！ムシ男と探す「木柵ウォッチング」｜10月のガイドツアー｜日光自然博物館",
+              "text_sha256": "6d012aef78018846086666e78a2bd48501c73830978ebf274b037d76ca9fba3e"
+            },
+            {
+              "facility_id": 403,
+              "url": "https://www.nikko-nsm.co.jp/nnm.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:43:58.353077+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/nnm.html",
+              "title": "栃木県立日光自然博物館｜日光自然博物館",
+              "text_sha256": "3b3c7506eb18738c443fd899b361a966aa93b06f60d8027af41b9baa12387c36"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:45:13.931013+00:00",
+          "facility_id": 404,
+          "facility_name": "田母沢御用邸記念公園",
+          "disposition": "candidate_found_added",
+          "reason": "室内特別公開1件追加。御食堂は一覧と詳細の10/19曜日不一致、音楽祭はQbicの出演者欄と本文下部の出演者が別人でHOLD。",
+          "candidates": [
+            {
+              "title": "二階御日拝所室内特別公開",
+              "disposition": "added",
+              "event_id": "evt-f12-404-gonippaijo",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "御食堂室内特別公開",
+              "disposition": "hold",
+              "reason": "一覧2026/10/19(日)、詳細2026/10/19(月)の公式内不一致"
+            },
+            {
+              "title": "秋の音楽祭ⅡQbic10/17",
+              "disposition": "hold",
+              "reason": "出演Qbic佐藤/打保/前川の記載と同一詳細ページ下部の福田/阿久澤/大塚が不一致。現在午後公演前だが推測しない"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 404,
+              "url": "https://www.park-tochigi.com/tamozawa/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:44:37.438728+00:00",
+              "final_url": "https://www.park-tochigi.com/tamozawa/",
+              "title": "日光田母沢御用邸記念公園",
+              "text_sha256": "95ae27bc0d6ec0eb322c85add48e99bb969b98ab4b1b721778412b907363264a"
+            },
+            {
+              "facility_id": 404,
+              "url": "https://www.park-tochigi.com/tamozawa/event/秋の音楽祭3",
+              "status": 200,
+              "checked_at": "2026-10-17T04:44:51.600506+00:00",
+              "final_url": "https://www.park-tochigi.com/tamozawa/event/%E7%A7%8B%E3%81%AE%E9%9F%B3%E6%A5%BD%E7%A5%AD3",
+              "title": "秋の音楽祭　Ⅱ　Qbic | 日光田母沢御用邸記念公園",
+              "text_sha256": "69a81c8d52ba1f3875bbf2d6e26cd1fd0e585e4dced79d1c30afa0e8b521d780"
+            },
+            {
+              "facility_id": 404,
+              "url": "https://www.park-tochigi.com/tamozawa/event/御食堂-室内特別公開",
+              "status": 200,
+              "checked_at": "2026-10-17T04:44:54.121727+00:00",
+              "final_url": "https://www.park-tochigi.com/tamozawa/event/%E5%BE%A1%E9%A3%9F%E5%A0%82-%E5%AE%A4%E5%86%85%E7%89%B9%E5%88%A5%E5%85%AC%E9%96%8B",
+              "title": "御食堂 室内特別公開 | 日光田母沢御用邸記念公園",
+              "text_sha256": "47ca4c3890ab0590ba914f251c7ba25359552676a0c3116276af6563a4b1d68e"
+            },
+            {
+              "facility_id": 404,
+              "url": "https://www.park-tochigi.com/tamozawa/event/二階「御日拝所」室内特別公開",
+              "status": 200,
+              "checked_at": "2026-10-17T04:44:56.434490+00:00",
+              "final_url": "https://www.park-tochigi.com/tamozawa/event/%E4%BA%8C%E9%9A%8E%E3%80%8C%E5%BE%A1%E6%97%A5%E6%8B%9D%E6%89%80%E3%80%8D%E5%AE%A4%E5%86%85%E7%89%B9%E5%88%A5%E5%85%AC%E9%96%8B",
+              "title": "二階「御日拝所」室内特別公開 | 日光田母沢御用邸記念公園",
+              "text_sha256": "dbeaefa5bfa36b9fabeb61bf6ce3408e9213dbdf4bd94c2115de93a6e60591ed"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:45:40.194348+00:00",
+          "facility_id": 406,
+          "facility_name": "日光花いちもんめ",
+          "disposition": "candidate_found_hold",
+          "reason": "旧URL不達を再試行、現公式新着全文で評価。ダリア園は開園日のみで会期末未確定、冬いちごは12月下旬予定段階。夏いちご7/31・ビオラ5/10は終了済み。常設ベゴニア・小動物は追加しない。",
+          "candidates": [
+            {
+              "title": "日光ダリア園2026",
+              "disposition": "hold",
+              "reason": "8/15開園と悪天候臨時閉園は記載、終了日未確定"
+            },
+            {
+              "title": "冬いちご狩り2026-27",
+              "disposition": "hold",
+              "reason": "12月下旬オープン予定のみで具体的開催日・参加受付未確定"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 406,
+              "url": "https://www.nikkohanaichimonme.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:45:15.715071+00:00",
+              "error": "HTTPSConnectionPool(host='www.nikkohanaichimonme.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nikkohanaichimonme.com', port=443): Failed to resolve 'www.nikkohanaichimonme.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 406,
+              "url": "https://www.nikkohanaichimonme.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:45:21.347399+00:00",
+              "error": "HTTPSConnectionPool(host='www.nikkohanaichimonme.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.nikkohanaichimonme.com', port=443): Failed to resolve 'www.nikkohanaichimonme.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 406,
+              "url": "https://nikko-hanaichimonme.jp/category/news",
+              "status": 200,
+              "checked_at": "2026-10-17T04:45:28.562629+00:00",
+              "final_url": "https://nikko-hanaichimonme.jp/category/news",
+              "title": "お知らせ | 日光花いちもんめ【公式】",
+              "text_sha256": "15672c0d344a7023043b0f27141dfa1c73e5ddf62602c350f5948ae830b6e57c"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:46:03.116883+00:00",
+          "facility_id": 408,
+          "facility_name": "イタリア大使館別荘記念公園",
+          "disposition": "no_current_or_future_event",
+          "reason": "登録URL404を再試行後、現運営者の当施設公式ページ全文を確認。通常の別荘展示/カフェ/見学・アクセス案内のみで、当施設会場の日付確定特別企画なし。現公式をsecondary登録。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 408,
+              "url": "https://www.park-tochigi.com/italy/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:45:41.791719+00:00",
+              "final_url": "https://www.park-tochigi.com/italy/",
+              "title": "Nothing found for  Italy",
+              "text_sha256": "6b3bf747c9aa3610197ba97bd7704b569b4ea8087dfb1f25faa2fdf7b99be866"
+            },
+            {
+              "facility_id": 408,
+              "url": "https://www.park-tochigi.com/italy/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:45:48.728327+00:00",
+              "final_url": "https://www.park-tochigi.com/italy/",
+              "title": "Nothing found for  Italy",
+              "text_sha256": "6b3bf747c9aa3610197ba97bd7704b569b4ea8087dfb1f25faa2fdf7b99be866"
+            },
+            {
+              "facility_id": 408,
+              "url": "https://www.nikko-nsm.co.jp/italy.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:45:50.143311+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/italy.html",
+              "title": "イタリア大使館別荘記念公園｜日光自然博物館",
+              "text_sha256": "98fa80e256e9bd19db31402bcfa3512a1d4def729082b06236aee8dc7064d603"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:46:43.613613+00:00",
+          "facility_id": 409,
+          "facility_name": "英国大使館別荘記念公園",
+          "disposition": "candidate_found_added",
+          "reason": "登録URL404を再試行後、現公式と主催者最新コンサート・企画一覧を新規取得。音楽会1件と写真展示2件追加、2件HOLD。403紹介分は当会場に解決。",
+          "candidates": [
+            {
+              "title": "湖畔の英国別荘 ～晩秋の調べ音楽会～",
+              "disposition": "added",
+              "event_id": "evt-f12-409-concert",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "英国大使館別荘フォトコンテスト2026 夏部門入賞作品展示",
+              "disposition": "added",
+              "event_id": "evt-f12-409-summer-photo",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "英国大使館別荘フォトコンテスト2026 秋・雨部門入賞作品展示",
+              "disposition": "added",
+              "event_id": "evt-f12-409-autumn-rain-photo",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "特別コンサート11/15",
+              "disposition": "hold",
+              "reason": "開催決定の予告のみで開始時刻・出演詳細は後日発表"
+            },
+            {
+              "title": "開園10周年ピンバッジプレゼント",
+              "disposition": "hold",
+              "reason": "毎日抽選と記載、キャンペーン終了日未記載"
+            },
+            {
+              "title": "月替りカフェメニュー・写真応募",
+              "disposition": "excluded",
+              "reason": "通常飲食営業・オンライン投稿を独立イベント化しない"
+            },
+            {
+              "title": "403でHOLDした晩秋音楽会",
+              "disposition": "duplicate",
+              "reason": "今回の409会場の追加evt-f12-409-concertとして解決。403には紐付けない"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 409,
+              "url": "https://www.park-tochigi.com/britain/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:46:04.999730+00:00",
+              "final_url": "https://www.park-tochigi.com/britain/",
+              "title": "Nothing found for  Britain",
+              "text_sha256": "00353426f028f83337acd7af4099bbedcba72c23d0e4baf1c10485baa0e10df1"
+            },
+            {
+              "facility_id": 409,
+              "url": "https://www.park-tochigi.com/britain/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:46:06.878848+00:00",
+              "final_url": "https://www.park-tochigi.com/britain/",
+              "title": "Nothing found for  Britain",
+              "text_sha256": "00353426f028f83337acd7af4099bbedcba72c23d0e4baf1c10485baa0e10df1"
+            },
+            {
+              "facility_id": 409,
+              "url": "https://www.nikko-nsm.co.jp/british.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:08.268820+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/british.html",
+              "title": "英国大使館別荘記念公園｜日光自然博物館",
+              "text_sha256": "e1ebf27d51538b8a7d3444d63748fd1a953943be63f5f38b99e3ae40e3b6c6bb"
+            },
+            {
+              "facility_id": 409,
+              "url": "https://www.nikko-nsm.co.jp/news_d.html?0:772",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:18.483704+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/news_d.html?0:772",
+              "title": "英国大使館別荘記念公園 開園10周年記念イベント 第八弾「湖畔の英国別荘 ～晩秋の調べ音楽会～」開催のお知らせ｜日光自然博物館",
+              "text_sha256": "54d6051fa5849e890bf279e6c5cf0efbdb84b72ea3276a1da5fafa07fd66c1f2"
+            },
+            {
+              "facility_id": 409,
+              "url": "https://www.nikko-nsm.co.jp/news_p.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:19.794559+00:00",
+              "final_url": "https://www.nikko-nsm.co.jp/news_p.html",
+              "title": "お知らせ｜日光自然博物館",
+              "text_sha256": "2f1725767ccb3ded919b63a17804eb361c1640decee4dbca213aefbf2fce16bb"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:47:13.649488+00:00",
+          "facility_id": 410,
+          "facility_name": "日光東照宮",
+          "disposition": "candidate_found_hold",
+          "reason": "公式新着3詳細を確認。秋季大祭・献菓展・日本宝樹展・七五三の4候補を個別HOLD。一般参列不可の祭典を公開参加と誤記しない。",
+          "candidates": [
+            {
+              "title": "東照宮秋季大祭10/16・17",
+              "disposition": "hold",
+              "reason": "公開行列と一般参列不可の祭典を区別。渋滞/電車推奨は公式記載、雨天/荒天変更条件・幼児観覧条件が未確認"
+            },
+            {
+              "title": "献菓展10/15～20",
+              "disposition": "hold",
+              "reason": "東廻廊会場と日付のみ、鑑賞時間・参加条件未確定"
+            },
+            {
+              "title": "第4回日本宝樹展10/23～28",
+              "disposition": "hold",
+              "reason": "会場は日光東照宮境内とだけ記載、公開時間・具体的鑑賞エリア/必要拝観券未確定"
+            },
+            {
+              "title": "七五三祈祷2026",
+              "disposition": "hold",
+              "reason": "祈祷料/授与品の案内のみで具体的開催期間・予約条件未確定"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 410,
+              "url": "https://www.toshogu.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:45.290068+00:00",
+              "final_url": "https://toshogu.jp/",
+              "title": " 日光東照宮ホームページ ",
+              "text_sha256": "f9119ea930db8fc0e64e637648be7d69726aaf6d7ffb218ab0284852fd8dc392"
+            },
+            {
+              "facility_id": 410,
+              "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=44#block117",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:51.767586+00:00",
+              "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=44#block117",
+              "title": " 第４回　日本宝樹展（秋季）のお知らせ（10月23日～28日） ",
+              "text_sha256": "117ab86be07b49d2c3a2513900d21ff96626125ff0756085cb560ba3a1687731"
+            },
+            {
+              "facility_id": 410,
+              "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=43#block117",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:53.703998+00:00",
+              "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=43#block117",
+              "title": " 東照宮秋季大祭のお知らせ（10月16・17日） ",
+              "text_sha256": "7626f4d27518f8fa514f09818b59f668dc7a1216aa1fcaecdd67f045d2894747"
+            },
+            {
+              "facility_id": 410,
+              "url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
+              "status": 200,
+              "checked_at": "2026-10-17T04:46:55.327286+00:00",
+              "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
+              "title": " 七五三祈祷のお知らせ ",
+              "text_sha256": "7efca0e774149fba4f65384d4cc241950cf421a7322ca7aa00fd28d90c10f2eb"
             }
           ]
         }
