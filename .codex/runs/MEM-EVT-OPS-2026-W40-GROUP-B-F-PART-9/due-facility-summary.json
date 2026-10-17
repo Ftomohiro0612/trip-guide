@@ -52,7 +52,21 @@
     "candidate_found_added": 28,
     "candidate_found_duplicate": 0,
     "candidate_found_hold": 7,
-    "source_unresolved": 0
+    "source_unresolved": 0,
+    "candidate_totals": {
+      "found": 361,
+      "added": 131,
+      "duplicate": 37,
+      "hold": 193
+    },
+    "existing_events_updated": 4,
+    "registry_freshness_updated": 39,
+    "events_deleted": 0,
+    "participability_totals": {
+      "条件付き参加可能": 57,
+      "通常参加可能": 74
+    },
+    "source_fetch_attempts": 476
   },
   "per_region": {
     "osaka": {
@@ -481,51 +495,59 @@
               "disposition": "added",
               "event_id": "evt-f9-1388-20261017",
               "participability": "条件付き参加可能",
-              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9010%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9010%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             },
             {
               "title": "甘口みそ作り体験【10月】",
               "disposition": "added",
               "event_id": "evt-f9-1388-20261025",
               "participability": "条件付き参加可能",
-              "source_url": "https://savorfarm.jp/event_blog/%e7%94%98%e5%8f%a3%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9010%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e7%94%98%e5%8f%a3%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9010%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             },
             {
               "title": "第2回わんわんマルシェ",
               "disposition": "added",
               "event_id": "evt-f9-1388-20261101",
               "participability": "通常参加可能",
-              "source_url": "https://savorfarm.jp/event_blog/%e7%ac%ac%ef%bc%92%e5%9b%9e%e3%82%8f%e3%82%93%e3%82%8f%e3%82%93%e3%83%9e%e3%83%ab%e3%82%b7%e3%82%a7/"
+              "source_url": "https://savorfarm.jp/event_blog/%e7%ac%ac%ef%bc%92%e5%9b%9e%e3%82%8f%e3%82%93%e3%82%8f%e3%82%93%e3%83%9e%e3%83%ab%e3%82%b7%e3%82%a7/",
+              "category": "facility_hosted"
             },
             {
               "title": "ドッグラン ハレガーデンオープン",
               "disposition": "hold",
               "reason": "開業告知のみで催事内容・時間・参加条件の詳細なし。",
-              "source_url": "https://savorfarm.jp/event_blog/%e3%83%89%e3%83%83%e3%82%b0%e3%83%a9%e3%83%b3%e3%80%80%e3%83%8f%e3%83%ac%e3%82%ac%e3%83%bc%e3%83%87%e3%83%b3%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3/"
+              "source_url": "https://savorfarm.jp/event_blog/%e3%83%89%e3%83%83%e3%82%b0%e3%83%a9%e3%83%b3%e3%80%80%e3%83%8f%e3%83%ac%e3%82%ac%e3%83%bc%e3%83%87%e3%83%b3%e3%82%aa%e3%83%bc%e3%83%97%e3%83%b3/",
+              "category": "facility_hosted"
             },
             {
               "title": "白みそ作り体験【11月】",
               "disposition": "hold",
               "reason": "公式申込フォームは10月下旬から。現時点の受付開始未確認。",
-              "source_url": "https://savorfarm.jp/event_blog/%e7%99%bd%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9011%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e7%99%bd%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9011%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             },
             {
               "title": "染め体験【11月】",
               "disposition": "hold",
               "reason": "申込フォームは10月下旬からで、リンク先は10月体験。11月受付未開始。",
-              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9011%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9011%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             },
             {
               "title": "白みそ作り体験【12月】",
               "disposition": "hold",
               "reason": "申込フォームは10月下旬から。現時点の受付開始未確認。",
-              "source_url": "https://savorfarm.jp/event_blog/%e7%99%bd%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9012%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e7%99%bd%e3%81%bf%e3%81%9d%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e3%80%9012%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             },
             {
               "title": "染め体験【12月】",
               "disposition": "hold",
               "reason": "申込フォームは11月下旬から。キャンセル月記載にも不整合があり、現在参加申込不可。",
-              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9012%e6%9c%88%e3%80%91/"
+              "source_url": "https://savorfarm.jp/event_blog/%e6%9f%93%e3%82%81%e4%bd%93%e9%a8%93%e3%80%9012%e6%9c%88%e3%80%91/",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -610,12 +632,14 @@
               "disposition": "added",
               "event_id": "evt-f9-1390-wonderforest-20261025",
               "participability": "通常参加可能",
-              "source_url": "https://www.town.kumatori.lg.jp/soshiki/doro/gyomu/kanko-joho/shizen/13301.html"
+              "source_url": "https://www.town.kumatori.lg.jp/soshiki/doro/gyomu/kanko-joho/shizen/13301.html",
+              "category": "facility_hosted"
             },
             {
               "title": "てるてる坊主を作りませんか？",
               "disposition": "hold",
-              "reason": "材料提供告知のみで実施日時・受付条件が特定できない。"
+              "reason": "材料提供告知のみで実施日時・受付条件が特定できない。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -687,7 +711,8 @@
               "title": "第52回大正区民まつり",
               "disposition": "hold",
               "reason": "10/18 10～16時 千島公園は確認。主催詳細はプログラム準備中で、荒天中止・延期、交通案内、幼児連れ参加判断情報を確定できない。",
-              "source_url": "https://www.osakacommunity.jp/2026/06/15/news-77153/"
+              "source_url": "https://www.osakacommunity.jp/2026/06/15/news-77153/",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -730,7 +755,8 @@
               "disposition": "added",
               "event_id": "evt-f9-1410-marche-20261129",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.osaka.lg.jp/asahi/page/0000678989.html"
+              "source_url": "https://www.city.osaka.lg.jp/asahi/page/0000678989.html",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -801,7 +827,8 @@
               "title": "田尻漁港日曜朝市 10月18日・25日",
               "disposition": "hold",
               "reason": "現在将来の開催日は確認できるが、取得できた公式本文は営業日案内で開催時刻・子ども体験の内容が確定できない。通常営業と期間限定催事を混同せず保留。",
-              "source_url": "https://tajiri-asaichi.com/"
+              "source_url": "https://tajiri-asaichi.com/",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -878,7 +905,8 @@
               "title": "松下幸之助 紙面に託したメッセージ ―企業広告の変遷―",
               "disposition": "hold",
               "reason": "公式トップは開催中と記載、詳細は広告19作品の紹介だが開始・終了年月日の明示なし。会期を推測しない。",
-              "source_url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum/konosuke-museum/corporate_ad.html"
+              "source_url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum/konosuke-museum/corporate_ad.html",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -913,12 +941,14 @@
             {
               "title": "寺子屋いずみ 第1回 創り変えられる豊臣時代の記憶",
               "disposition": "hold",
-              "reason": "11/1 13:30～15時、無料、10/6申込開始は確認できるが、家族・子ども向け参加対象を示す情報がなく、専門的歴史講座の家族適合を判断できない。"
+              "reason": "11/1 13:30～15時、無料、10/6申込開始は確認できるが、家族・子ども向け参加対象を示す情報がなく、専門的歴史講座の家族適合を判断できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "寺子屋いずみ 第2回 池上曽根遺跡の最新の調査成果",
               "disposition": "hold",
-              "reason": "12/19開催、11/6受付開始で現時点未受付。"
+              "reason": "12/19開催、11/6受付開始で現時点未受付。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -1014,48 +1044,55 @@
               "disposition": "added",
               "event_id": "evt-f9-1442-20261024",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "作ってあそぼう",
               "disposition": "added",
               "event_id": "evt-f9-1442-20261101",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "facility_hosted"
             },
             {
               "title": "どんぐり工作",
               "disposition": "added",
               "event_id": "evt-f9-1442-20261114",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "facility_hosted"
             },
             {
               "title": "落ち葉でしおり作り",
               "disposition": "added",
               "event_id": "evt-f9-1442-20261128",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "facility_hosted"
             },
             {
               "title": "クリスマス飾り作り",
               "disposition": "added",
               "event_id": "evt-f9-1442-20261212",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "お正月飾り工作",
               "disposition": "added",
               "event_id": "evt-f9-1442-20261226",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html"
+              "source_url": "https://www.city.osakasayama.osaka.jp/sosiki/kyouikubu/shougaigakushuu/shakaikyoiku/8/1657518388573.html",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "市民ふれあいの里へ Let’s GO！",
               "disposition": "hold",
               "reason": "11/14・21の子ども編集委員会は公式に定員に達しましたと明記。新規参加不可。",
-              "source_url": "https://www.osakasayama-bunka.jp/event/42106/"
+              "source_url": "https://www.osakasayama-bunka.jp/event/42106/",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -1098,7 +1135,37 @@
           ]
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_totals": {
+        "added": 11,
+        "duplicate": 0,
+        "hold": 12,
+        "found": 23
+      },
+      "participability_totals": {
+        "条件付き参加可能": 8,
+        "通常参加可能": 3
+      },
+      "candidate_categories": {
+        "fireworks_festivals_seasonal": {
+          "found": 3,
+          "added": 3,
+          "duplicate": 0,
+          "hold": 0
+        },
+        "municipal_regional": {
+          "found": 0,
+          "added": 0,
+          "duplicate": 0,
+          "hold": 0
+        },
+        "facility_hosted": {
+          "found": 20,
+          "added": 8,
+          "duplicate": 0,
+          "hold": 12
+        }
+      }
     },
     "saitama": {
       "facility_ids": [
@@ -3643,12 +3710,14 @@
               "disposition": "added",
               "event_id": "evt-f9-471-advertising-20260711",
               "participability": "通常参加可能",
-              "source_url": "https://www.railway-museum.jp/event/exhibition.html"
+              "source_url": "https://www.railway-museum.jp/event/exhibition.html",
+              "category": "facility_hosted"
             },
             {
               "title": "動的イベントカレンダー／定時プログラム一覧",
               "disposition": "hold",
-              "reason": "公式HTMLのカレンダー・体験プログラムは動的表示で個別開催データを抽出できず、具体的な将来日程を確定できない。source-family-level bounded HOLD。"
+              "reason": "公式HTMLのカレンダー・体験プログラムは動的表示で個別開催データを抽出できず、具体的な将来日程を確定できない。source-family-level bounded HOLD。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -3715,138 +3784,160 @@
               "disposition": "added",
               "event_id": "evt-f9-472-dressing-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou",
+              "category": "facility_hosted"
             },
             {
               "title": "県民の日特別イベント 唐破風お囃子LIVE!2026",
               "disposition": "added",
               "event_id": "evt-f9-472-karahafu-2026",
               "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou",
+              "category": "facility_hosted"
             },
             {
               "title": "博物館バックヤードツアー",
               "disposition": "added",
               "event_id": "evt-f9-472-backyard-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/taiken-ibento/ibentozyouhou",
+              "category": "facility_hosted"
             },
             {
               "title": "特別展 文人画家の寄り道－文晁、崋山と同好の士－",
               "disposition": "added",
               "event_id": "evt-f9-472-bunjinga-2026",
               "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga",
+              "category": "facility_hosted"
             },
             {
               "title": "特別展記念講演会「文人画は中国から」",
               "disposition": "added",
               "event_id": "evt-f9-472-lecture-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga",
+              "category": "facility_hosted"
             },
             {
               "title": "歴史民俗講座「文人の推し活」",
               "disposition": "added",
               "event_id": "evt-f9-472-oshikatsu-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/bunjinga",
+              "category": "facility_hosted"
             },
             {
               "title": "美術特集展示 聖なる人びと－三十六歌仙額と賢聖障子絵－",
               "disposition": "added",
               "event_id": "evt-f9-472-holy-2026",
               "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten",
+              "category": "facility_hosted"
             },
             {
               "title": "美術特集展示 きん・ぎん・すなご－金工品と装飾経－",
-              "disposition": "added",
-              "event_id": "evt-f9-472-gold-2026",
-              "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten"
+              "disposition": "hold",
+              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten",
+              "reason": "公式の会期開始は2026/10/27だが曜日を月曜と表記（実際は火曜）。当該サイトには曜日を無視するOwner例外がないため、この日付事実のみHOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "民俗コラム展示 竹縄－「最強ロープ」ができるまで－",
               "disposition": "added",
               "event_id": "evt-f9-472-rope-2026",
               "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten",
+              "category": "facility_hosted"
             },
             {
               "title": "考古特集展示 大宮公園内遺跡 博物館の下には…？",
               "disposition": "added",
               "event_id": "evt-f9-472-ruins-2026",
               "participability": "通常参加可能",
-              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten"
+              "source_url": "https://saitama-rekimin.spec.ed.jp/tenjiannai/josetsuten",
+              "category": "facility_hosted"
             },
             {
               "title": "民俗工芸実演「掛軸の表具」",
               "disposition": "duplicate",
               "event_id": "evt-d7-saitama-031-2026",
-              "reason": "既存イベントを公式詳細で再確認し確認日を更新。"
+              "reason": "既存イベントを公式詳細で再確認し確認日を更新。",
+              "category": "facility_hosted"
             },
             {
               "title": "ベーゴマ教室",
               "disposition": "hold",
-              "reason": "10/17開催だが9/25申込締切済み、当日参加経路なし。"
+              "reason": "10/17開催だが9/25申込締切済み、当日参加経路なし。",
+              "category": "facility_hosted"
             },
             {
               "title": "歴史特集展示 川村碩布と俳諧",
               "disposition": "hold",
-              "reason": "同じ公式頁に会期開始9/15と前期開始9/13の数値不整合。"
+              "reason": "同じ公式頁に会期開始9/15と前期開始9/13の数値不整合。",
+              "category": "facility_hosted"
             },
             {
               "title": "歴史民俗講座 埼玉県と昔話",
               "disposition": "hold",
-              "reason": "12/12開催、11/12受付開始で未受付。"
+              "reason": "12/12開催、11/12受付開始で未受付。",
+              "category": "facility_hosted"
             },
             {
               "title": "歴史民俗講座 縄文時代の顔のついた土製品",
               "disposition": "hold",
-              "reason": "2027/1/30開催、12/30受付開始で未受付。"
+              "reason": "2027/1/30開催、12/30受付開始で未受付。",
+              "category": "facility_hosted"
             },
             {
               "title": "埼玉と航空",
               "disposition": "hold",
-              "reason": "12/15～2027/3/7の開催予定のみ、具体的な展示説明未公開。"
+              "reason": "12/15～2027/3/7の開催予定のみ、具体的な展示説明未公開。",
+              "category": "facility_hosted"
             },
             {
               "title": "花の園－花鳥画を中心に－",
               "disposition": "hold",
-              "reason": "2027/1/19～3/7の開催予定のみ、具体的な展示説明未公開。"
+              "reason": "2027/1/19～3/7の開催予定のみ、具体的な展示説明未公開。",
+              "category": "facility_hosted"
             },
             {
               "title": "信仰を形に－仏教彫刻と慈光寺経－",
               "disposition": "hold",
-              "reason": "2027/3/9～5月頃予定で終了日未確定。"
+              "reason": "2027/3/9～5月頃予定で終了日未確定。",
+              "category": "facility_hosted"
             },
             {
               "title": "開運！福を招く福熊手",
               "disposition": "hold",
-              "reason": "12/1～2027/3/7の開催予定のみ、具体的な展示説明未公開。"
+              "reason": "12/1～2027/3/7の開催予定のみ、具体的な展示説明未公開。",
+              "category": "facility_hosted"
             },
             {
               "title": "天体観測",
               "disposition": "hold",
-              "reason": "2027/3/9開始予定のみ、終了日未確定。"
+              "reason": "2027/3/9開始予定のみ、終了日未確定。",
+              "category": "facility_hosted"
             },
             {
               "title": "鍬、ならべてみました K（鍬）―1グランプリ",
               "disposition": "hold",
-              "reason": "2027/3/9開始予定のみ、終了日未確定。"
+              "reason": "2027/3/9開始予定のみ、終了日未確定。",
+              "category": "facility_hosted"
             },
             {
               "title": "展示解説（全体の見どころ）",
               "disposition": "duplicate",
               "event_id": "evt-f9-472-bunjinga-2026",
-              "reason": "新規採用の特別展記録内に開催日時・参加方法を含める関連解説。別イベントとして重複登録しない。"
+              "reason": "新規採用の特別展記録内に開催日時・参加方法を含める関連解説。別イベントとして重複登録しない。",
+              "category": "facility_hosted"
             },
             {
               "title": "はじめての山水画",
               "disposition": "duplicate",
               "event_id": "evt-f9-472-bunjinga-2026",
-              "reason": "新規採用の特別展記録内に開催日時・参加方法を含める関連解説。別イベントとして重複登録しない。"
+              "reason": "新規採用の特別展記録内に開催日時・参加方法を含める関連解説。別イベントとして重複登録しない。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -3895,7 +3986,8 @@
               "disposition": "added",
               "event_id": "evt-f9-473-contact-202610",
               "participability": "通常参加可能",
-              "source_url": "https://www.parks.or.jp/omiyazoo/event/006/006479.html"
+              "source_url": "https://www.parks.or.jp/omiyazoo/event/006/006479.html",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -3950,145 +4042,168 @@
               "disposition": "added",
               "event_id": "evt-f9-475-science-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067171.html"
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067171.html",
+              "category": "facility_hosted"
             },
             {
               "title": "コロコロコクーンをつくろう",
               "disposition": "added",
               "event_id": "evt-f9-475-cocoon-2026",
-              "participability": "通常参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081433.html"
+              "participability": "条件付き参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081433.html",
+              "category": "facility_hosted"
             },
             {
               "title": "若田光一宇宙飛行士コーナー体験ツアー（10・11月）",
               "disposition": "added",
               "event_id": "evt-f9-475-wakata-tour-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081697.html"
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081697.html",
+              "category": "facility_hosted"
             },
             {
               "title": "太陽観察会（10・11月）",
               "disposition": "added",
               "event_id": "evt-f9-475-sun-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p089213.html"
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p089213.html",
+              "category": "facility_hosted"
             },
             {
               "title": "特別サイエンスショー 科学戦隊さいレンジャー",
               "disposition": "added",
               "event_id": "evt-f9-475-sairanger-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067924.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067924.html",
+              "category": "facility_hosted"
             },
             {
               "title": "「宇宙のまち さいたま」記念フォーラム",
               "disposition": "added",
               "event_id": "evt-f9-475-space-forum-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p133558.html"
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p133558.html",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム パウ・パトロール アルティメットレスキュー！てんもんだいをおいかけろ",
               "disposition": "added",
               "event_id": "evt-f9-475-paw-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127725.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127725.html",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム クレヨンしんちゃん 宇宙からの来訪者 カスカベ大パニック",
               "disposition": "added",
               "event_id": "evt-f9-475-shinchan-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127618.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127618.html",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム ＭＭＸ 火星衛星探査計画",
               "disposition": "added",
               "event_id": "evt-f9-475-mmx-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131703.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131703.html",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム ダイナソートラベラーズ 飛行の起源をさぐれ！",
               "disposition": "added",
               "event_id": "evt-f9-475-dinosaur-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131705.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131705.html",
+              "category": "facility_hosted"
             },
             {
               "title": "特別投影 はじめてのプラネタリウム",
               "disposition": "added",
               "event_id": "evt-f9-475-first-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p096661.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p096661.html",
+              "category": "facility_hosted"
             },
             {
               "title": "特別投影 Challenge to the UNIVERSE!～若田光一の宇宙～",
               "disposition": "added",
               "event_id": "evt-f9-475-challenge-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p081537.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p081537.html",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウムの日 特別投影",
               "disposition": "added",
               "event_id": "evt-f9-475-planet-day-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://www.city.saitama.lg.jp/kagakukan/news/p117361.html"
+              "participability": "通常参加可能",
+              "source_url": "https://www.city.saitama.lg.jp/kagakukan/news/p117361.html",
+              "category": "facility_hosted"
             },
             {
               "title": "若田光一宇宙飛行士講演会",
               "disposition": "hold",
-              "reason": "12/19開催、11/4～12/5申込で未受付。"
+              "reason": "12/19開催、11/4～12/5申込で未受付。",
+              "category": "facility_hosted"
             },
             {
               "title": "ハートキッズ教室（午前）",
               "disposition": "hold",
-              "reason": "11/21開催、10/10受付締切済み。"
+              "reason": "11/21開催、10/10受付締切済み。",
+              "category": "facility_hosted"
             },
             {
               "title": "ハートキッズ教室（午後）",
               "disposition": "hold",
-              "reason": "11/21開催、10/10受付締切済み。"
+              "reason": "11/21開催、10/10受付締切済み。",
+              "category": "facility_hosted"
             },
             {
               "title": "第446回天体観望会",
               "disposition": "hold",
-              "reason": "11/21開催、10/10受付締切済み。"
+              "reason": "11/21開催、10/10受付締切済み。",
+              "category": "facility_hosted"
             },
             {
               "title": "コズミックカレッジ キッズコース",
               "disposition": "hold",
-              "reason": "11/29開催だが宇宙劇場の別会場、かつ10/10申込締切済み。"
+              "reason": "11/29開催だが宇宙劇場の別会場、かつ10/10申込締切済み。",
+              "category": "facility_hosted"
             },
             {
               "title": "イナズマデリバリー（平日投影）",
               "disposition": "hold",
-              "reason": "平日15:50と記載されるが、取得した休館日リンクは「本日は休館日です」のみで全休館日カレンダーを確定できず、数値開催日の展開を保留。"
+              "reason": "平日15:50と記載されるが、取得した休館日リンクは「本日は休館日です」のみで全休館日カレンダーを確定できず、数値開催日の展開を保留。",
+              "category": "facility_hosted"
             },
             {
               "title": "宇宙ミッション企画展",
               "disposition": "duplicate",
               "event_id": "evt-f9-475-space-forum-2026",
-              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。"
+              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。",
+              "category": "facility_hosted"
             },
             {
               "title": "11/14探査機はやぶさ2・MMX講演",
               "disposition": "duplicate",
               "event_id": "evt-f9-475-space-forum-2026",
-              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。"
+              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。",
+              "category": "facility_hosted"
             },
             {
               "title": "11/15サポーターワークショップ",
               "disposition": "duplicate",
               "event_id": "evt-f9-475-space-forum-2026",
-              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。"
+              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。",
+              "category": "facility_hosted"
             },
             {
               "title": "科学教育振興展覧会最優秀作品",
               "disposition": "duplicate",
               "event_id": "evt-f9-475-space-forum-2026",
-              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。"
+              "reason": "同一の記念フォーラムの構成プログラム。採用した親企画に期間・条件を記載。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -4232,37 +4347,43 @@
               "title": "特別企画展「辻村寿三郎～人形曼陀羅 REVIVAL～」",
               "disposition": "duplicate",
               "event_id": "evt-saitama-jusaburo-exhibition-20260919",
-              "reason": "既存を再確認し日時・料金・参加条件・statusと確認日を更新。"
+              "reason": "既存を再確認し日時・料金・参加条件・statusと確認日を更新。",
+              "category": "facility_hosted"
             },
             {
               "title": "二代目辻村寿三郎氏サイン会",
               "disposition": "duplicate",
               "event_id": "evt-saitama-jusaburo-exhibition-20260919",
-              "reason": "関連企画として既存展覧会のsource_notesに11/1日時と購入条件を反映。"
+              "reason": "関連企画として既存展覧会のsource_notesに11/1日時と購入条件を反映。",
+              "category": "facility_hosted"
             },
             {
               "title": "第33回伝統工芸人形展",
               "disposition": "added",
               "event_id": "evt-f9-476-dolls-2026",
               "participability": "通常参加可能",
-              "source_url": "https://ningyo-muse.jp/modules/exhibition/index.php?action=PageView&page_id=61"
+              "source_url": "https://ningyo-muse.jp/modules/exhibition/index.php?action=PageView&page_id=61",
+              "category": "facility_hosted"
             },
             {
               "title": "学芸員による常設展展示解説",
               "disposition": "added",
               "event_id": "evt-f9-476-gallery-2026",
               "participability": "通常参加可能",
-              "source_url": "https://ningyo-muse.jp/modules/news/index.php?action=PageView&page_id=248"
+              "source_url": "https://ningyo-muse.jp/modules/news/index.php?action=PageView&page_id=248",
+              "category": "facility_hosted"
             },
             {
               "title": "二代目辻村寿三郎トークショー＆人形舞（11/1）",
               "disposition": "hold",
-              "reason": "10/5申込締切、現在新規参加不可。"
+              "reason": "10/5申込締切、現在新規参加不可。",
+              "category": "facility_hosted"
             },
             {
               "title": "にんぱくの雛祭り ～お雛さまのよそおい～（仮）",
               "disposition": "hold",
-              "reason": "2027/1/23～3/22の会期・内容は確認したが名称は仮で、開催時刻・料金・休館条件の詳細未公開。"
+              "reason": "2027/1/23～3/22の会期・内容は確認したが名称は仮で、開催時刻・料金・休館条件の詳細未公開。",
+              "category": "fireworks_festivals_seasonal"
             }
           ],
           "sources_checked": [
@@ -4323,66 +4444,77 @@
               "disposition": "added",
               "event_id": "evt-f9-479-sword-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1022440.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1022440.html",
+              "category": "facility_hosted"
             },
             {
               "title": "こども体験教室「はにわを作ろう」",
               "disposition": "added",
               "event_id": "evt-f9-479-haniwa-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1017682.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1017682.html",
+              "category": "facility_hosted"
             },
             {
               "title": "民俗芸能実演「石田の獅子舞」",
               "disposition": "added",
               "event_id": "evt-f9-479-shishimai-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1022940.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1022940.html",
+              "category": "facility_hosted"
             },
             {
               "title": "機織り実演・体験（10・11月）",
               "disposition": "added",
               "event_id": "evt-f9-479-weaving-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1013718.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/museum/1013715/1013718.html",
+              "category": "facility_hosted"
             },
             {
               "title": "大人体験教室 縄文土器・土偶作り",
               "disposition": "hold",
-              "reason": "高校生以上の大人教室で家族・子ども参加対象外。"
+              "reason": "高校生以上の大人教室で家族・子ども参加対象外。",
+              "category": "facility_hosted"
             },
             {
               "title": "大人体験教室 友禅染め",
               "disposition": "hold",
-              "reason": "高校生以上、かつ10/5受付終了。"
+              "reason": "高校生以上、かつ10/5受付終了。",
+              "category": "facility_hosted"
             },
             {
               "title": "古文書講座 中級編",
               "disposition": "hold",
-              "reason": "高校生以上で古文書読解能力を要求する大人事業。家族対象外。"
+              "reason": "高校生以上で古文書読解能力を要求する大人事業。家族対象外。",
+              "category": "facility_hosted"
             },
             {
               "title": "古文書講座 初級編",
               "disposition": "hold",
-              "reason": "高校生以上の大人事業、9/8受付終了。"
+              "reason": "高校生以上の大人事業、9/8受付終了。",
+              "category": "facility_hosted"
             },
             {
               "title": "刀剣研磨実演",
               "disposition": "duplicate",
               "event_id": "evt-f9-479-sword-2026",
-              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。"
+              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。",
+              "category": "facility_hosted"
             },
             {
               "title": "銘切実演・プレート",
               "disposition": "duplicate",
               "event_id": "evt-f9-479-sword-2026",
-              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。"
+              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。",
+              "category": "facility_hosted"
             },
             {
               "title": "出品刀解説",
               "disposition": "duplicate",
               "event_id": "evt-f9-479-sword-2026",
-              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。"
+              "reason": "名刀展の関連事業として親記録の案内に開催日と条件を包含。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -4460,74 +4592,86 @@
               "title": "生誕150年 杉浦非水と『非水百花譜』",
               "disposition": "duplicate",
               "event_id": "evt-d7-saitama-area-hisui-2026",
-              "reason": "本日公式再確認、status ongoing・確認日更新。"
+              "reason": "本日公式再確認、status ongoing・確認日更新。",
+              "category": "facility_hosted"
             },
             {
               "title": "常設展第3期 生誕120年 内田静馬",
               "disposition": "added",
               "event_id": "evt-f9-483-uchida-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1016366/1020852.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1016366/1020852.html",
+              "category": "facility_hosted"
             },
             {
               "title": "相原求一朗の画業3",
               "disposition": "added",
               "event_id": "evt-f9-483-aihara-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1018596/1018862.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1018596/1018862.html",
+              "category": "facility_hosted"
             },
             {
               "title": "西村大喜展 そっと触れる彫刻",
               "disposition": "added",
               "event_id": "evt-f9-483-touch-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1013606/1020857.html"
+              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/tenrankai/1013606/1020857.html",
+              "category": "facility_hosted"
             },
             {
               "title": "初日プチ工房 非水図案の缶バッジを作ろう",
               "disposition": "added",
               "event_id": "evt-f9-483-badge-2026",
-              "participability": "通常参加可能",
-              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/a-event/1022447/1022450.html"
+              "participability": "条件付き参加可能",
+              "source_url": "https://www.city.kawagoe.saitama.jp/artmuseum/a-event/1022447/1022450.html",
+              "category": "facility_hosted"
             },
             {
               "title": "杉浦非水のデザイン講演会",
               "disposition": "hold",
-              "reason": "10/17 9時受付開始。確認時刻8:37では開始前。"
+              "reason": "10/17 9時受付開始。確認時刻8:37では開始前。",
+              "category": "facility_hosted"
             },
             {
               "title": "自分の絵を千代紙にしよう",
               "disposition": "hold",
-              "reason": "10/17 9時受付開始。確認時刻8:37では開始前。"
+              "reason": "10/17 9時受付開始。確認時刻8:37では開始前。",
+              "category": "facility_hosted"
             },
             {
               "title": "ジュニアアートスクエア 文字のデザイン",
               "disposition": "hold",
-              "reason": "同一公式詳細に先着追加募集の現行タイトル・本文と、10/5締切・申込終了・抽選20名の残存表記が併存。現在の受付条件が内部不整合。"
+              "reason": "同一公式詳細に先着追加募集の現行タイトル・本文と、10/5締切・申込終了・抽選20名の残存表記が併存。現在の受付条件が内部不整合。",
+              "category": "facility_hosted"
             },
             {
               "title": "原画のいろは小話",
               "disposition": "duplicate",
               "event_id": "evt-d7-saitama-area-hisui-2026",
-              "reason": "既存特別展に申込不要の関連日時を追記。"
+              "reason": "既存特別展に申込不要の関連日時を追記。",
+              "category": "facility_hosted"
             },
             {
               "title": "シルエット図のこと小話",
               "disposition": "duplicate",
               "event_id": "evt-d7-saitama-area-hisui-2026",
-              "reason": "既存特別展に申込不要の関連日時を追記。"
+              "reason": "既存特別展に申込不要の関連日時を追記。",
+              "category": "facility_hosted"
             },
             {
               "title": "学芸員による展示解説",
               "disposition": "duplicate",
               "event_id": "evt-d7-saitama-area-hisui-2026",
-              "reason": "既存特別展に申込不要の関連日時を追記。"
+              "reason": "既存特別展に申込不要の関連日時を追記。",
+              "category": "facility_hosted"
             },
             {
               "title": "集まって、え・み～る（第3期）",
               "disposition": "duplicate",
               "event_id": "evt-f9-483-uchida-2026",
-              "reason": "12/12 14時の鑑賞プログラムを採用した内田静馬展の参加案内に包含。"
+              "reason": "12/12 14時の鑑賞プログラムを採用した内田静馬展の参加案内に包含。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -4630,84 +4774,98 @@
               "disposition": "added",
               "event_id": "evt-f9-485-rose-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/page.jsp?id=48353"
+              "source_url": "https://www.seibuen-amusement-park.jp/page.jsp?id=48353",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "わんわん西武園ゆうえんち～わんだふるハロウィン～",
               "disposition": "added",
               "event_id": "evt-f9-485-dog-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/event/pet202610/index.html"
+              "source_url": "https://www.seibuen-amusement-park.jp/event/pet202610/index.html",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "渡辺美里 所沢凱旋記念コラボ",
               "disposition": "added",
               "event_id": "evt-f9-485-misato-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/event/misatowatanabe2026/index.html"
+              "source_url": "https://www.seibuen-amusement-park.jp/event/misatowatanabe2026/index.html",
+              "category": "facility_hosted"
             },
             {
               "title": "ハイカラ・ハロウィン2026",
               "disposition": "added",
               "event_id": "evt-f9-485-halloween-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/event/halloween_2026/index.html"
+              "source_url": "https://www.seibuen-amusement-park.jp/event/halloween_2026/index.html",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "パラレルワールドとしまえん",
               "disposition": "added",
               "event_id": "evt-f9-485-toshimaen-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/event/toshimaen100th/index.html"
+              "source_url": "https://www.seibuen-amusement-park.jp/event/toshimaen100th/index.html",
+              "category": "facility_hosted"
             },
             {
               "title": "阿波おどり in 西武園ゆうえんち～2026秋～",
               "disposition": "added",
               "event_id": "evt-f9-485-awa-2026",
               "participability": "通常参加可能",
-              "source_url": "https://www.seibuen-amusement-park.jp/news/awaodori20261108/index.html"
+              "source_url": "https://www.seibuen-amusement-park.jp/news/awaodori20261108/index.html",
+              "category": "facility_hosted"
             },
             {
               "title": "SideM 超!!レトローズパーティ",
               "disposition": "added",
               "event_id": "evt-f9-485-sidem-2026",
               "participability": "条件付き参加可能",
-              "source_url": "https://atfes.com/contents/cho-retroseparty/rally"
+              "source_url": "https://atfes.com/contents/cho-retroseparty/rally",
+              "category": "facility_hosted"
             },
             {
               "title": "ウルトラマンウィーク／ゴジラウィーク",
               "disposition": "hold",
-              "reason": "10/26～11/8の一覧期間と期間限定利用制限は確認できるが、各ウィークの数値日程区分を取得本文から確定できない。"
+              "reason": "10/26～11/8の一覧期間と期間限定利用制限は確認できるが、各ウィークの数値日程区分を取得本文から確定できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "王舞学園 特別課外ライブ・ホームルーム",
               "disposition": "hold",
-              "reason": "10/17の専用ライブ券は先着数量限定。実売残席未確認。ホームルームの整理券状況も未確認。"
+              "reason": "10/17の専用ライブ券は先着数量限定。実売残席未確認。ホームルームの整理券状況も未確認。",
+              "category": "facility_hosted"
             },
             {
               "title": "夜のイマーシブショー",
               "disposition": "hold",
-              "reason": "日程・18:15公演5400円～は確認できるが、子どもの利用年齢・子ども料金と現販売枠を確定できない。"
+              "reason": "日程・18:15公演5400円～は確認できるが、子どもの利用年齢・子ども料金と現販売枠を確定できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "バラエン演奏会",
               "disposition": "hold",
-              "reason": "開催時刻は後日発表。"
+              "reason": "開催時刻は後日発表。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "バラエン撮影会",
               "disposition": "hold",
-              "reason": "開催時刻は後日発表。"
+              "reason": "開催時刻は後日発表。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "バラ摘み体験",
               "disposition": "hold",
-              "reason": "11/21～23・定員5名は確認できるが時刻・受付方法が後日発表。"
+              "reason": "11/21～23・定員5名は確認できるが時刻・受付方法が後日発表。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "SideM 超!!スペシャルパーティ（10/31、11/1、11/22）",
               "disposition": "hold",
-              "reason": "専用先着券、現販売残席未確認。通常ラリーとは別の参加経路として保留。"
+              "reason": "専用先着券、現販売残席未確認。通常ラリーとは別の参加経路として保留。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -4845,70 +5003,82 @@
               "title": "銀河鉄道999 THE GALAXY EXPERIENCE あの旅は、まだ続いている。",
               "disposition": "duplicate",
               "event_id": "evt-486-202604-01",
-              "reason": "公式で延長を確認し10/26から11/23へ終了日修正・確認日更新。"
+              "reason": "公式で延長を確認し10/26から11/23へ終了日修正・確認日更新。",
+              "category": "facility_hosted"
             },
             {
               "title": "松本零士展 創作の旅路",
               "disposition": "added",
               "event_id": "evt-f9-486-leiji-2026",
-              "participability": "条件付き参加可能",
-              "source_url": "https://kadcul.com/event/274"
+              "participability": "通常参加可能",
+              "source_url": "https://kadcul.com/event/274",
+              "category": "facility_hosted"
             },
             {
               "title": "わたしをすくう エッセイマンガの処方箋展",
               "disposition": "added",
               "event_id": "evt-f9-486-essay-2026",
               "participability": "通常参加可能",
-              "source_url": "https://kadcul.com/event/276"
+              "source_url": "https://kadcul.com/event/276",
+              "category": "facility_hosted"
             },
             {
               "title": "虫へんはみんなむし－蟲をめぐる博物誌",
               "disposition": "added",
               "event_id": "evt-f9-486-mushi-2026",
               "participability": "通常参加可能",
-              "source_url": "https://kadcul.com/event/289"
+              "source_url": "https://kadcul.com/event/289",
+              "category": "facility_hosted"
             },
             {
               "title": "10月のよみきかせ会",
               "disposition": "added",
               "event_id": "evt-f9-486-reading-2026",
               "participability": "通常参加可能",
-              "source_url": "https://kadcul.com/event/190"
+              "source_url": "https://kadcul.com/event/190",
+              "category": "facility_hosted"
             },
             {
               "title": "角川源義の時代",
               "disposition": "hold",
-              "reason": "公式詳細で終了日未定。既存必須end_dateを推測しない。"
+              "reason": "公式詳細で終了日未定。既存必須end_dateを推測しない。",
+              "category": "facility_hosted"
             },
             {
               "title": "武蔵野プライド展",
               "disposition": "hold",
-              "reason": "公式詳細で終了日未定。"
+              "reason": "公式詳細で終了日未定。",
+              "category": "facility_hosted"
             },
             {
               "title": "SFセレクション",
               "disposition": "hold",
-              "reason": "公式詳細で終了日未定。"
+              "reason": "公式詳細で終了日未定。",
+              "category": "facility_hosted"
             },
             {
               "title": "謎めくミュージアムと記憶の欠片",
               "disposition": "hold",
-              "reason": "11/5開始、公式詳細で終了日未定。"
+              "reason": "11/5開始、公式詳細で終了日未定。",
+              "category": "facility_hosted"
             },
             {
               "title": "11月よみきかせ会",
               "disposition": "hold",
-              "reason": "11/2・22は開催予定のみ、時刻はまだ具体的に明示されていない。"
+              "reason": "11/2・22は開催予定のみ、時刻はまだ具体的に明示されていない。",
+              "category": "facility_hosted"
             },
             {
               "title": "エッセイマンガが心をすくうとき",
               "disposition": "hold",
-              "reason": "11/7無料先着チケット制で現在の残席を公式本文のみでは確定できない。"
+              "reason": "11/7無料先着チケット制で現在の残席を公式本文のみでは確定できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "育児にも効く！エッセイマンガとは",
               "disposition": "hold",
-              "reason": "12/13開催、申込は11月初旬より開始予定。"
+              "reason": "12/13開催、申込は11月初旬より開始予定。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -5028,116 +5198,137 @@
               "title": "MATSURI「恋の中央線」リリース記念ミニライブ",
               "disposition": "added",
               "event_id": "evt-f9-487-matsuri-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "おでかけ子ザメ おいSEA たのSEA サクラタウンさんぽ",
               "disposition": "added",
               "event_id": "evt-f9-487-kozame-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ふれあいどうぶつ園 in ところざわサクラタウン 2026秋",
               "disposition": "added",
               "event_id": "evt-f9-487-zoo-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "花と過ごすひととき「わたしだけの花束づくり」",
               "disposition": "added",
               "event_id": "evt-f9-487-flower-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "サクラタウン ハロウィンマルシェ",
               "disposition": "added",
               "event_id": "evt-f9-487-halloween-2026",
-              "participability": "条件付き参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "喫茶来 TOKOROZAWA TEA FES 2026",
               "disposition": "added",
               "event_id": "evt-f9-487-tea-2026",
-              "participability": "条件付き参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "秋のパンマルシェ2026",
               "disposition": "hold",
-              "reason": "開催日・時間・親子向け体験は確認できたが、屋外催事の雨天・荒天対応が明記されず季節催事の必須条件が不足"
+              "reason": "開催日・時間・親子向け体験は確認できたが、屋外催事の雨天・荒天対応が明記されず季節催事の必須条件が不足",
+              "category": "facility_hosted"
             },
             {
               "title": "神職1日体験10/17",
               "disposition": "hold",
-              "reason": "申込締切10/15を経過"
+              "reason": "申込締切10/15を経過",
+              "category": "facility_hosted"
             },
             {
               "title": "神職1日体験12/20",
               "disposition": "hold",
-              "reason": "体験の開始・終了時刻未確認。社務所開所時間をイベント時間へ転用しない"
+              "reason": "体験の開始・終了時刻未確認。社務所開所時間をイベント時間へ転用しない",
+              "category": "facility_hosted"
             },
             {
               "title": "巫女1日体験11/21",
               "disposition": "hold",
-              "reason": "公式申込フォームがキャンセル待ちのみ受付中"
+              "reason": "公式申込フォームがキャンセル待ちのみ受付中",
+              "category": "facility_hosted"
             },
             {
               "title": "将棋めしコンテスト11/14",
               "disposition": "hold",
-              "reason": "所沢市公式ページが申込締切済み（10/7）、当日参加経路なし"
+              "reason": "所沢市公式ページが申込締切済み（10/7）、当日参加経路なし",
+              "category": "facility_hosted"
             },
             {
               "title": "ハロウィン花手水",
               "disposition": "hold",
-              "reason": "観覧期間・無料は判明するが観覧可能時間が未確認"
+              "reason": "観覧期間・無料は判明するが観覧可能時間が未確認",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "ハワイアンフェス2026",
               "disposition": "hold",
-              "reason": "屋外催事の荒天中止等の条件が未公表"
+              "reason": "屋外催事の荒天中止等の条件が未公表",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "武蔵野回廊文化祭2026",
               "disposition": "hold",
-              "reason": "屋外地域祭の雨天・荒天対応未確認。関連将棋めしは市公式で受付終了"
+              "reason": "屋外地域祭の雨天・荒天対応未確認。関連将棋めしは市公式で受付終了",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "源義経の景色",
               "disposition": "hold",
-              "reason": "終了日未確定。486でも同じ候補をHOLD"
+              "reason": "終了日未確定。486でも同じ候補をHOLD",
+              "category": "facility_hosted"
             },
             {
               "title": "まぼろしの武蔵野",
               "disposition": "hold",
-              "reason": "終了日未確定。486でも同じ候補をHOLD"
+              "reason": "終了日未確定。486でも同じ候補をHOLD",
+              "category": "facility_hosted"
             },
             {
               "title": "謎解き11/5開始",
               "disposition": "hold",
-              "reason": "終了日未確定。486でも同じ候補をHOLD"
+              "reason": "終了日未確定。486でも同じ候補をHOLD",
+              "category": "facility_hosted"
             },
             {
               "title": "虫へん",
               "disposition": "duplicate",
               "event_id": "evt-f9-486-mushi-2026",
-              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける"
+              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける",
+              "category": "facility_hosted"
             },
             {
               "title": "エッセイ",
               "disposition": "duplicate",
               "event_id": "evt-f9-486-essay-2026",
-              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける"
+              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける",
+              "category": "facility_hosted"
             },
             {
               "title": "松本零士展",
               "disposition": "duplicate",
               "event_id": "evt-f9-486-leiji-2026",
-              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける"
+              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける",
+              "category": "facility_hosted"
             },
             {
               "title": "銀河鉄道999",
               "disposition": "duplicate",
               "event_id": "evt-486-202604-01",
-              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける"
+              "reason": "同一敷地の角川武蔵野ミュージアム施設486で本run中に反映済み。別施設IDへの二重掲載を避ける",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -5304,27 +5495,32 @@
             {
               "title": "リフレッシュヨガ10/17・11/14",
               "disposition": "hold",
-              "reason": "公式チラシは毎月第3土曜、本文は11/14（土曜だが第2土曜）と不一致。子ども参加条件も明記されず、日付と家族参加可否を推定しない"
+              "reason": "公式チラシは毎月第3土曜、本文は11/14（土曜だが第2土曜）と不一致。子ども参加条件も明記されず、日付と家族参加可否を推定しない",
+              "category": "facility_hosted"
             },
             {
               "title": "ほんわかヨガ11/11",
               "disposition": "hold",
-              "reason": "日時・料金・当日空席参加はチラシで確認。子どもの対象条件がなく託児なし、家族向け参加条件未確認"
+              "reason": "日時・料金・当日空席参加はチラシで確認。子どもの対象条件がなく託児なし、家族向け参加条件未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "所沢飛行場と航空公園のあゆみ",
               "disposition": "hold",
-              "reason": "公式チラシで18歳以上限定。子連れの参加経路は確認できず家族イベントとして追加しない"
+              "reason": "公式チラシで18歳以上限定。子連れの参加経路は確認できず家族イベントとして追加しない",
+              "category": "facility_hosted"
             },
             {
               "title": "ロゲットカード",
               "disposition": "hold",
-              "reason": "随時配布、予告なく終了。イベント終了日が未設定で日付を創作しない"
+              "reason": "随時配布、予告なく終了。イベント終了日が未設定で日付を創作しない",
+              "category": "facility_hosted"
             },
             {
               "title": "PARK PIANO",
               "disposition": "hold",
-              "reason": "2025/8/4掲載の告知で、現時点の開催日程・時間が本文で確認できない"
+              "reason": "2025/8/4掲載の告知で、現時点の開催日程・時間が本文で確認できない",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -5402,189 +5598,224 @@
               "title": "祝還暦！あなたとわたしと、入間市の60年",
               "disposition": "added",
               "event_id": "evt-f9-490-anniversary-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ALIT 館庭の自然散歩",
               "disposition": "added",
               "event_id": "evt-f9-490-nature-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ALIT 機織り体験",
               "disposition": "added",
               "event_id": "evt-f9-490-weaving-2026",
-              "participability": "通常参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "サイエンスバー「お米とビー玉を使って実験」",
               "disposition": "added",
               "event_id": "evt-f9-490-rice-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "サイエンスバー「うすめたうがい薬をごはんにかけるとどうなる？」",
               "disposition": "added",
               "event_id": "evt-f9-490-iodine-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ALIT 親子リトミック教室",
               "disposition": "added",
               "event_id": "evt-f9-490-rhythm-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ALIT デッサン教室",
               "disposition": "added",
               "event_id": "evt-f9-490-drawing-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "空へはばたけ！飛行機のススメ",
               "disposition": "added",
               "event_id": "evt-f9-490-flight-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "いるティーサンタをさがそう！2026",
               "disposition": "added",
               "event_id": "evt-f9-490-santa-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "第30回 むかしのくらしと道具展",
               "disposition": "added",
               "event_id": "evt-f9-490-tools-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "西洋館　弦楽四重奏コンサート 10月30日(金)",
               "disposition": "hold",
-              "reason": "別会場の旧石川組製糸西洋館。入間市博物館490への誤紐付けを避ける。申込経路も本文未記載"
+              "reason": "別会場の旧石川組製糸西洋館。入間市博物館490への誤紐付けを避ける。申込経路も本文未記載",
+              "category": "facility_hosted"
             },
             {
               "title": "七五三撮影会㏌旧石川組製糸西洋館Vol.6 11月 7日( 土 )～11月 8日( 日 )",
               "disposition": "hold",
-              "reason": "別会場の旧石川組製糸西洋館。申込経路未確認"
+              "reason": "別会場の旧石川組製糸西洋館。申込経路未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学研究生コース5【喫茶実験・官能検査】 11月 7日( 土 )",
               "disposition": "hold",
-              "reason": "公式詳細で申込終了"
+              "reason": "公式詳細で申込終了",
+              "category": "facility_hosted"
             },
             {
               "title": "野田双子織育成講座（1） 11月11日(水)",
               "disposition": "hold",
-              "reason": "関連の公式新着で定員到達・受付終了"
+              "reason": "関連の公式新着で定員到達・受付終了",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学　手揉み製茶体験4　火入れ 11月15日( 日 )",
               "disposition": "hold",
-              "reason": "今年度申込終了"
+              "reason": "今年度申込終了",
+              "category": "facility_hosted"
             },
             {
               "title": "野田双子織育成講座（2） 11月18日(水)",
               "disposition": "hold",
-              "reason": "同じ2回連続講座の公式新着で受付終了"
+              "reason": "同じ2回連続講座の公式新着で受付終了",
+              "category": "facility_hosted"
             },
             {
               "title": "アロタイ（アロマ＋タイ古式ストレッチ）体験 11月19日(木)",
               "disposition": "hold",
-              "reason": "子ども参加・同伴条件が未公表で親子参加可否を推定しない"
+              "reason": "子ども参加・同伴条件が未公表で親子参加可否を推定しない",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学　狭山茶の生産地見学ツアー～自園・自製・自販型～ 11月21日( 土 )",
               "disposition": "hold",
-              "reason": "公式詳細で申込終了。別会場茶園"
+              "reason": "公式詳細で申込終了。別会場茶園",
+              "category": "facility_hosted"
             },
             {
               "title": "西洋館ミニコンサート「室岡惣七の建築に響く音楽」 11月21日( 土 )",
               "disposition": "hold",
-              "reason": "別会場の旧石川組製糸西洋館。料金・空席条件未確認"
+              "reason": "別会場の旧石川組製糸西洋館。料金・空席条件未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学　「写真と映像でたどる入間市の60年と狭山茶」 11月28日( 土 )",
               "disposition": "hold",
-              "reason": "カレンダー詳細定員100人と関連展の現行ページ先着50人の整合・子ども参加条件を確認できず、親子向けとして推定登録しない"
+              "reason": "カレンダー詳細定員100人と関連展の現行ページ先着50人の整合・子ども参加条件を確認できず、親子向けとして推定登録しない",
+              "category": "facility_hosted"
             },
             {
               "title": "西洋館　あわてんぼうのクリスマス茶会Part2 11月29日( 日 )",
               "disposition": "hold",
-              "reason": "別会場。小学生料金と「小学生以下参加不可」が同じ本文で矛盾"
+              "reason": "別会場。小学生料金と「小学生以下参加不可」が同じ本文で矛盾",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "アロタイ（アロマ＋タイ古式ストレッチ）体験 12月 3日(木)",
               "disposition": "hold",
-              "reason": "子ども参加・同伴条件が未公表"
+              "reason": "子ども参加・同伴条件が未公表",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学「中国茶の魅力～知って・見て・味わう～」 12月 5日( 土 )",
               "disposition": "hold",
-              "reason": "公式詳細で申込終了"
+              "reason": "公式詳細で申込終了",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学　復元「旧黒須銀行」見学のススメ 12月12日( 土 )",
               "disposition": "hold",
-              "reason": "申込経路および子ども対象条件が未確認"
+              "reason": "申込経路および子ども対象条件が未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "入間市書道展（入間市児童生徒書初め展示会）＊同時開催 2月24日(水)～ 2月28日( 日 )",
               "disposition": "hold",
-              "reason": "会場と観覧料金・参加条件が本文未記載"
+              "reason": "会場と観覧料金・参加条件が本文未記載",
+              "category": "facility_hosted"
             },
             {
               "title": "合同写真クラブ 3月 2日(火)～ 3月 7日( 日 )",
               "disposition": "hold",
-              "reason": "市民ギャラリー展、観覧料金が未記載で通常参加条件未確認"
+              "reason": "市民ギャラリー展、観覧料金が未記載で通常参加条件未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "第11回フォトいるまの写真展 3月 3日(水)～ 3月 7日( 日 )",
               "disposition": "hold",
-              "reason": "特別展示室展の観覧料金未記載"
+              "reason": "特別展示室展の観覧料金未記載",
+              "category": "facility_hosted"
             },
             {
               "title": "第27回　四季彩会写真展 3月 9日(火)～ 3月14日( 日 )",
               "disposition": "hold",
-              "reason": "無料は確認したが家族向け独立催事としての体験・対象案内が未公表"
+              "reason": "無料は確認したが家族向け独立催事としての体験・対象案内が未公表",
+              "category": "facility_hosted"
             },
             {
               "title": "第10回　宮寺写真クラブ展 3月 9日(火)～ 3月14日( 日 )",
               "disposition": "hold",
-              "reason": "市民ギャラリー展の観覧料金未記載"
+              "reason": "市民ギャラリー展の観覧料金未記載",
+              "category": "facility_hosted"
             },
             {
               "title": "第四回フォトウェスト写真展 3月19日(金)～ 3月21日( 日 )",
               "disposition": "hold",
-              "reason": "特別展示室展の観覧料金未記載"
+              "reason": "特別展示室展の観覧料金未記載",
+              "category": "facility_hosted"
             },
             {
               "title": "お茶大学　研究発表会「慈光茶復興プロジェクト」 3月 6日( 土 )",
               "disposition": "hold",
-              "reason": "研究発表会の参加受付経路・子ども参加条件未確認"
+              "reason": "研究発表会の参加受付経路・子ども参加条件未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "おやこ手打ちうどん教室11/21",
               "disposition": "hold",
-              "reason": "別会場の宮寺・二本木分館、11/5受付開始前"
+              "reason": "別会場の宮寺・二本木分館、11/5受付開始前",
+              "category": "facility_hosted"
             },
             {
               "title": "11/1市制施行記念無料観覧",
               "disposition": "duplicate",
               "event_id": "evt-f9-490-anniversary-2026",
-              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない"
+              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない",
+              "category": "facility_hosted"
             },
             {
               "title": "11/14県民の日無料観覧",
               "disposition": "duplicate",
               "event_id": "evt-f9-490-anniversary-2026",
-              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない"
+              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない",
+              "category": "facility_hosted"
             },
             {
               "title": "特別展ギャラリートーク3回・サンスイ演奏・サツマダンゴ試食",
               "disposition": "duplicate",
               "event_id": "evt-f9-490-anniversary-2026",
-              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない"
+              "reason": "同一特別展の関連プログラム。無料日の条件は親レコードに記載、別件を水増ししない",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -5884,27 +6115,32 @@
               "title": "秋の自然観察会",
               "disposition": "added",
               "event_id": "evt-f9-491-nature-20261024",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "コツメカワウソ誕生日",
               "disposition": "hold",
-              "reason": "専用動物園は既存facility492で本part範囲外。加えて同一公式詳細が10/18対10/19、11/7対11/8で数値日付不一致"
+              "reason": "専用動物園は既存facility492で本part範囲外。加えて同一公式詳細が10/18対10/19、11/7対11/8で数値日付不一致",
+              "category": "facility_hosted"
             },
             {
               "title": "動物園のハロウィン",
               "disposition": "hold",
-              "reason": "専用動物園facility492は本part範囲外。491へ誤紐付けしない"
+              "reason": "専用動物園facility492は本part範囲外。491へ誤紐付けしない",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "ポニー・ロバ体重測定",
               "disposition": "hold",
-              "reason": "専用動物園facility492は本part範囲外"
+              "reason": "専用動物園facility492は本part範囲外",
+              "category": "facility_hosted"
             },
             {
               "title": "シラコバトのお話",
               "disposition": "hold",
-              "reason": "専用動物園facility492は本part範囲外"
+              "reason": "専用動物園facility492は本part範囲外",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -5970,116 +6206,136 @@
               "title": "搾りたてはちみつを味わう養蜂体験",
               "disposition": "added",
               "event_id": "evt-f9-493-honey-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ミニウッドランタンづくり",
               "disposition": "added",
               "event_id": "evt-f9-493-lantern-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ムーミン谷のシルバーリングづくり",
               "disposition": "added",
               "event_id": "evt-f9-493-silver-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ハーベスト柄 缶バッジマグネットづくり",
               "disposition": "added",
               "event_id": "evt-f9-493-badge-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ムーミン絵本「それからどうなるの？」読み聞かせ",
               "disposition": "added",
               "event_id": "evt-f9-493-reading-sat-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "「ムーミントロールとムーミンやしきのひみつ」読み聞かせ",
               "disposition": "added",
               "event_id": "evt-f9-493-reading-sun-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "絵本の世界へとびこもう！立体絵本の読み聞かせ",
               "disposition": "added",
               "event_id": "evt-f9-493-reading-3d-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "メッツァ・難民支援ウィークエンド2026",
               "disposition": "added",
               "event_id": "evt-f9-493-unhcr-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ムーミン谷のクリスマス2026",
               "disposition": "added",
               "event_id": "evt-f9-493-christmas-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "ムーミン谷の湖上花火大会2026 秋・冬",
               "disposition": "added",
               "event_id": "evt-f9-493-fireworks-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "超ニョロニョロの日＆超ニョロニョロフェスタ2026",
               "disposition": "added",
               "event_id": "evt-f9-493-nyoro-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "ハーベスト2026",
               "disposition": "hold",
-              "reason": "会期と内容は判明するが屋外季節催事全体の雨天対応未確認。ヨクサルは10/20・21出演休止を最新通知で確認"
+              "reason": "会期と内容は判明するが屋外季節催事全体の雨天対応未確認。ヨクサルは10/20・21出演休止を最新通知で確認",
+              "category": "facility_hosted"
             },
             {
               "title": "プレミアム年パス撮影会",
               "disposition": "hold",
-              "reason": "会員限定の専用メール経由購入、現時点の30組枠の空席は公開情報から確認できない"
+              "reason": "会員限定の専用メール経由購入、現時点の30組枠の空席は公開情報から確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "ムーミン谷の彗星",
               "disposition": "hold",
-              "reason": "4/11開始、終了日未設定。恒常施設演出の日付を創作しない"
+              "reason": "4/11開始、終了日未設定。恒常施設演出の日付を創作しない",
+              "category": "facility_hosted"
             },
             {
               "title": "メッツァの北欧クリスマス",
               "disposition": "hold",
-              "reason": "隣接ビレッジは別施設。493のパーク催事と混同しない"
+              "reason": "隣接ビレッジは別施設。493のパーク催事と混同しない",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "ニョロニョロのバルーン作り11/11",
               "disposition": "hold",
-              "reason": "所要20分と対象条件は確認、開始時刻・受付経路未公表。親フェスタ案内の一部として記載し単独登録をHOLD"
+              "reason": "所要20分と対象条件は確認、開始時刻・受付経路未公表。親フェスタ案内の一部として記載し単独登録をHOLD",
+              "category": "facility_hosted"
             },
             {
               "title": "10月・11月・12月ショースケジュール",
               "disposition": "duplicate",
               "event_id": "evt-f9-493-christmas-2026",
-              "reason": "同一催事の別公式告知または親プログラムに含む"
+              "reason": "同一催事の別公式告知または親プログラムに含む",
+              "category": "facility_hosted"
             },
             {
               "title": "クリスマス雪遊び・短編・ナイトショー",
               "disposition": "duplicate",
               "event_id": "evt-f9-493-christmas-2026",
-              "reason": "同一催事の別公式告知または親プログラムに含む"
+              "reason": "同一催事の別公式告知または親プログラムに含む",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "難民支援プレスリリース",
               "disposition": "duplicate",
               "event_id": "evt-f9-493-unhcr-2026",
-              "reason": "同一催事の別公式告知または親プログラムに含む"
+              "reason": "同一催事の別公式告知または親プログラムに含む",
+              "category": "facility_hosted"
             },
             {
               "title": "超ニョロニョロの日花火",
               "disposition": "duplicate",
               "event_id": "evt-f9-493-fireworks-2026",
-              "reason": "同一催事の別公式告知または親プログラムに含む"
+              "reason": "同一催事の別公式告知または親プログラムに含む",
+              "category": "fireworks_festivals_seasonal"
             }
           ],
           "sources_checked": [
@@ -6306,28 +6562,33 @@
               "title": "学びの友からのふみ",
               "disposition": "added",
               "event_id": "evt-f9-496-letters-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "見どころ解説11/1・11/14",
               "disposition": "duplicate",
               "event_id": "evt-f9-496-letters-2026",
-              "reason": "同じ展覧会の無料関連プログラムに含む"
+              "reason": "同じ展覧会の無料関連プログラムに含む",
+              "category": "facility_hosted"
             },
             {
               "title": "国民教化と女教院の時代10/24",
               "disposition": "hold",
-              "reason": "別会場市民会館。博物館496への誤紐付けを避ける。家族参加対象も未確認"
+              "reason": "別会場市民会館。博物館496への誤紐付けを避ける。家族参加対象も未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "田中かく遺稿おもかげを読む11/22",
               "disposition": "hold",
-              "reason": "PDFで14～15:30と20名募集を確認。家族向け参加条件・空席の現状は未確認"
+              "reason": "PDFで14～15:30と20名募集を確認。家族向け参加条件・空席の現状は未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "地方史研究協議会飯能大会",
               "disposition": "hold",
-              "reason": "会場は市民会館と市内巡見、博物館施設496の開催ではない。本part範囲外へ拡大しない"
+              "reason": "会場は市民会館と市内巡見、博物館施設496の開催ではない。本part範囲外へ拡大しない",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -6411,18 +6672,21 @@
               "title": "ノルディックウォーキング",
               "disposition": "added",
               "event_id": "evt-f9-501-nordic-20261025",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "e-Palette乗車体験会",
               "disposition": "added",
               "event_id": "evt-f9-501-epalette-20261024",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "PICA焚火王選手権",
               "disposition": "hold",
-              "reason": "別施設PICA宿泊者限定。公園だよりに現行開催日程がなく専用施設の次回確認へ。501への誤紐付けを避ける"
+              "reason": "別施設PICA宿泊者限定。公園だよりに現行開催日程がなく専用施設の次回確認へ。501への誤紐付けを避ける",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -6475,52 +6739,62 @@
             {
               "title": "SLぽかぽかいい風呂×熊谷シティFC号11/3",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SL埼玉県民の日号11/14",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SL創立記念日号11/8",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SLふかや花園アウトレット記念号11/1",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SLねんりんピック号10/24",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SLあの花15周年号11/7",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "親子で学ぶSLサイバーセキュリティ号10/31",
               "disposition": "hold",
-              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。"
+              "reason": "全席指定のSL乗車企画。公式予約先はログイン必須で公開空席を確認できず、当日無条件乗車を推定しない。サイバー号の駅前企画は確認できるがSL乗車とは別条件。",
+              "category": "facility_hosted"
             },
             {
               "title": "SLティアラ21号11/21",
               "disposition": "hold",
-              "reason": "指定席発売は運行1か月前0時からで、このrun時点では未発売。イチローズモルトは酒類中心、子どもの体験経路を追加推定しない"
+              "reason": "指定席発売は運行1か月前0時からで、このrun時点では未発売。イチローズモルトは酒類中心、子どもの体験経路を追加推定しない",
+              "category": "facility_hosted"
             },
             {
               "title": "SLイチローズモルト号11/22",
               "disposition": "hold",
-              "reason": "指定席発売は運行1か月前0時からで、このrun時点では未発売。イチローズモルトは酒類中心、子どもの体験経路を追加推定しない"
+              "reason": "指定席発売は運行1か月前0時からで、このrun時点では未発売。イチローズモルトは酒類中心、子どもの体験経路を追加推定しない",
+              "category": "facility_hosted"
             },
             {
               "title": "SL秩父錦号10/17",
               "disposition": "hold",
-              "reason": "酒類の車内特別販売中心で子ども向け体験経路なし。全席指定の空席も公開確認不可"
+              "reason": "酒類の車内特別販売中心で子ども向け体験経路なし。全席指定の空席も公開確認不可",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -6622,49 +6896,58 @@
               "title": "きかんしゃトーマスの世界展",
               "disposition": "added",
               "event_id": "evt-f9-513-thomas-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "出発！キミのトレイン―動くおえかき",
               "disposition": "added",
               "event_id": "evt-f9-513-train-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "わくわくワークショップ 10月",
               "disposition": "added",
               "event_id": "evt-f9-513-wakuwaku-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "木挽町のあだ討ち10/17",
               "disposition": "hold",
-              "reason": "前売終了。完売時は当日券なしとの条件で、今日の残席を確認できない"
+              "reason": "前売終了。完売時は当日券なしとの条件で、今日の残席を確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "原節子・吉永小百合フィルム上映11/3",
               "disposition": "hold",
-              "reason": "前売10/23開始前。当日券は前売未完売時のみで参加枠を確認できない"
+              "reason": "前売10/23開始前。当日券は前売未完売時のみで参加枠を確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "トーマス県民の日関連イベント11/14",
               "disposition": "hold",
-              "reason": "詳細後日公表、内容・時刻・参加方法未定"
+              "reason": "詳細後日公表、内容・時刻・参加方法未定",
+              "category": "facility_hosted"
             },
             {
               "title": "上映と講演・三上於菟吉11/1",
               "disposition": "hold",
-              "reason": "300名先着で電話等申込可だが、家族向け対象・現在残席未確認"
+              "reason": "300名先着で電話等申込可だが、家族向け対象・現在残席未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "ジュニアムービー・トリック編11/8・12/13・2027/1/10・2/14・3/14",
               "disposition": "hold",
-              "reason": "公式の約90日前予約制。公開予約ページの当月表示では未来枠の受付状況を確認できず、未発売や空席を推定しない"
+              "reason": "公式の約90日前予約制。公開予約ページの当月表示では未来枠の受付状況を確認できず、未発売や空席を推定しない",
+              "category": "facility_hosted"
             },
             {
               "title": "ジュニアムービー・テクニック編10/25・11/29・12/27・2027/1/31・2/28・3/28",
               "disposition": "hold",
-              "reason": "10/25は公式予約ページで受付締切。後日回は約90日前受付制で未来枠の実際の受付状況未確認"
+              "reason": "10/25は公式予約ページで受付締切。後日回は約90日前受付制で未来枠の実際の受付状況未確認",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -6784,91 +7067,107 @@
               "title": "10月のサイエンスショー",
               "disposition": "added",
               "event_id": "evt-f9-514-show-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "10月のわくわくワーク",
               "disposition": "added",
               "event_id": "evt-f9-514-work-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "七色☆ボトルをつくろう",
               "disposition": "added",
               "event_id": "evt-f9-514-bottle-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "にこにこ実験室「電池の科学」",
               "disposition": "added",
               "event_id": "evt-f9-514-battery-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "キッズアワー「秋の星座とお月見」",
               "disposition": "added",
               "event_id": "evt-f9-514-kids-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "天文講演会「月と火星に降る流れ星」",
               "disposition": "added",
               "event_id": "evt-f9-514-lecture-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "天文台ガイドツアー 10月",
               "disposition": "added",
               "event_id": "evt-f9-514-tour-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ウーパールーパーなどのえさやり体験",
               "disposition": "added",
               "event_id": "evt-f9-514-feeding-2026",
-              "participability": "条件付き参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "One Step Beyond―火星へと続く道",
               "disposition": "added",
               "event_id": "evt-f9-514-mars-2026",
-              "participability": "条件付き参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム「チ。―地球の運動について―」",
               "disposition": "added",
               "event_id": "evt-f9-514-chi-2026",
-              "participability": "条件付き参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "秋のお月見10/24",
               "disposition": "hold",
-              "reason": "10/14申込終了、当日参加経路なし"
+              "reason": "10/14申込終了、当日参加経路なし",
+              "category": "facility_hosted"
             },
             {
               "title": "スマホで土星を撮ろう11/15",
               "disposition": "hold",
-              "reason": "高校生以上・中学生以下の同伴も不可。受付は10/20開始前"
+              "reason": "高校生以上・中学生以下の同伴も不可。受付は10/20開始前",
+              "category": "facility_hosted"
             },
             {
               "title": "サイエンスクラブ12/19・2027/1/23・2/27",
               "disposition": "hold",
-              "reason": "各回抽選の申込開始前（12/1、1/5、2/9）"
+              "reason": "各回抽選の申込開始前（12/1、1/5、2/9）",
+              "category": "facility_hosted"
             },
             {
               "title": "わくわく屋台村11/14",
               "disposition": "hold",
-              "reason": "ボランティア募集告知のみで一般参加者の開催時刻・料金・参加条件未公開"
+              "reason": "ボランティア募集告知のみで一般参加者の開催時刻・料金・参加条件未公開",
+              "category": "facility_hosted"
             },
             {
               "title": "ぼくらの科学展11/1～29・土曜体験・日祝発表",
               "disposition": "hold",
-              "reason": "学校団体募集要項段階で、一般来館者の確定プログラム・各回時刻が未公表"
+              "reason": "学校団体募集要項段階で、一般来館者の確定プログラム・各回時刻が未公表",
+              "category": "facility_hosted"
             },
             {
               "title": "うきうき探検",
               "disposition": "hold",
-              "reason": "同一公式本文でシート配布20分間と10分経過で終了の不一致。受付条件を推測しない"
+              "reason": "同一公式本文でシート配布20分間と10分経過で終了の不一致。受付条件を推測しない",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -7060,108 +7359,129 @@
               "title": "秋のグリーンセンターまつり",
               "disposition": "added",
               "event_id": "evt-f9-515-autumn-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "見沼代用水300周年プレイベント",
               "disposition": "duplicate",
               "event_id": "evt-f9-515-autumn-2026",
-              "reason": "同時同会場の共同開催プログラムとして親レコードに統合"
+              "reason": "同時同会場の共同開催プログラムとして親レコードに統合",
+              "category": "facility_hosted"
             },
             {
               "title": "かけっこ教室10/18",
               "disposition": "hold",
-              "reason": "公式LoGoフォームがJavaScript必須で、選択可能日時による先着残枠が確認できない"
+              "reason": "公式LoGoフォームがJavaScript必須で、選択可能日時による先着残枠が確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "かけっこ教室11/1",
               "disposition": "hold",
-              "reason": "同じ公式申込先の先着残枠が確認できない。11/7から11/1へ変更は現行公式で確認済み"
+              "reason": "同じ公式申込先の先着残枠が確認できない。11/7から11/1へ変更は現行公式で確認済み",
+              "category": "facility_hosted"
             },
             {
               "title": "親子寄せ植え教室10/31",
               "disposition": "hold",
-              "reason": "16組先着の公式申込フォームで残枠が確認できない"
+              "reason": "16組先着の公式申込フォームで残枠が確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "ハロウィン装飾",
               "disposition": "hold",
-              "reason": "開始が9月中旬、明確な数値開始日未公表。秋の自然見頃と装飾を推定日付で登録しない"
+              "reason": "開始が9月中旬、明確な数値開始日未公表。秋の自然見頃と装飾を推定日付で登録しない",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "秋の山野草展10/24～26",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "菊花展10/28～11/23",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "老鴉柿展10/31～11/1",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "根付き植物リース11/21",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "親子クリスマススワッグ11/28",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "カブトムシを育てよう12/5",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "新春盆栽寄せ植え12/5",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "サクラソウの育て方2027/2/6",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "春のハンギングバスケット2027/2/20",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "椿展2027/3/6～22",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "椿展茶会2027/3/6",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "自然林を歩こう2027/3月",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "インモーション体験11/1～2027/1/24土日祝",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "落ち葉プール11月頃",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "クリスマス装飾11月中旬～12月",
               "disposition": "hold",
-              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。"
+              "reason": "年間計画にのみ掲載。表自体が変更可能と明示、会場・実施時刻・料金／申込の確定詳細が未公表というsource-family HOLD。",
+              "category": "fireworks_festivals_seasonal"
             }
           ],
           "sources_checked": [
@@ -7251,48 +7571,56 @@
               "title": "パレットパーク ちぎり絵で落ち葉をつくろう",
               "disposition": "added",
               "event_id": "evt-f9-516-leaves-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "親子で能楽体験！名刀「小狐丸」の誕生",
               "disposition": "added",
               "event_id": "evt-f9-516-noh-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "アートスクール パーティーの参加者になろう！",
               "disposition": "added",
               "event_id": "evt-f9-516-party-work-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "アトリアのガラス窓に絵を描こう",
               "disposition": "added",
               "event_id": "evt-f9-516-glass-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ATLIA 20th ANNIVERSARY PARTY",
               "disposition": "added",
               "event_id": "evt-f9-516-anniversary-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "障害のある仲間たち×初午太鼓×臨床美術 ワークショップ成果展示",
               "disposition": "added",
               "event_id": "evt-f9-516-rhythm-art-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "日本画講座",
               "disposition": "hold",
-              "reason": "2日連続講座初日は終了、定員到達で受付終了。15歳以上対象"
+              "reason": "2日連続講座初日は終了、定員到達で受付終了。15歳以上対象",
+              "category": "facility_hosted"
             },
             {
               "title": "塗り絵コーナー",
               "disposition": "duplicate",
               "event_id": "evt-f9-516-anniversary-2026",
-              "reason": "20周年展会場内で同期間、親レコードの関連体験として記載"
+              "reason": "20周年展会場内で同期間、親レコードの関連体験として記載",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -7382,109 +7710,129 @@
               "title": "コアラ40周年企画展 KOALAB",
               "disposition": "added",
               "event_id": "evt-f9-519-koalab-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "キリンのバックヤードツアー",
               "disposition": "added",
               "event_id": "evt-f9-519-giraffe-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ZOO HOPPER GUIDE プライベートガイド",
               "disposition": "added",
               "event_id": "evt-f9-519-hopper-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "アニマルステージ2026秋",
               "disposition": "added",
               "event_id": "evt-f9-519-stage-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ハロウィン缶バッジをつくろう",
               "disposition": "added",
               "event_id": "evt-f9-519-badge-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "水辺のいきもの観察会",
               "disposition": "added",
               "event_id": "evt-f9-519-nature-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "身近な材料でクリスマスリースを作ろう",
               "disposition": "added",
               "event_id": "evt-f9-519-wreath-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "世界ねずっ地図",
               "disposition": "hold",
-              "reason": "自宅制作・SNS投稿中心で来園不要。おでかけイベントとしての現地参加経路なし"
+              "reason": "自宅制作・SNS投稿中心で来園不要。おでかけイベントとしての現地参加経路なし",
+              "category": "facility_hosted"
             },
             {
               "title": "ワークシート問題・解答・解説",
               "disposition": "hold",
-              "reason": "ダウンロード教材の提供、独立した日時限定の催事ではない"
+              "reason": "ダウンロード教材の提供、独立した日時限定の催事ではない",
+              "category": "facility_hosted"
             },
             {
               "title": "オーストラリアからのライブガイド10/18",
               "disposition": "hold",
-              "reason": "オンライン視聴のみ、現地会場案内なし。本partで現地施設イベントに誤分類しない"
+              "reason": "オンライン視聴のみ、現地会場案内なし。本partで現地施設イベントに誤分類しない",
+              "category": "facility_hosted"
             },
             {
               "title": "アートフェスタ屋外展示10/1～12/29",
               "disposition": "hold",
-              "reason": "屋外のアート展示について雨天・荒天時の公開条件未確認。室内リース体験は独立して確認済み"
+              "reason": "屋外のアート展示について雨天・荒天時の公開条件未確認。室内リース体験は独立して確認済み",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "めざせアニマルトレーナー11/21・22",
               "disposition": "hold",
-              "reason": "募集期間内の抽選企画だが、公式MicrosoftフォームがLoadingのみで受付可否を確認できない"
+              "reason": "募集期間内の抽選企画だが、公式MicrosoftフォームがLoadingのみで受付可否を確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "オーストラリアフェア10/24・25",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "ハンドアート10/24（受付詳細未定）",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "アボリジナル・アート10/25",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "ディジュリドゥミニライブ10/25",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "ディジュリドゥ制作・吹き方10/25",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "コアラのマーチ配布10/24・キャラクター撮影",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "フェアのワークショップ・物販・グルメ（詳細未定）",
               "disposition": "hold",
-              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。"
+              "reason": "オーストラリアフェアとリンク先アートフェスタが、同じ10/25アート体験を「各20組・幼児～小中学生と保護者」と「各20名・3～15歳と保護者」で不一致。source-familyの参加条件を混在採用せず関連全件HOLD。",
+              "category": "facility_hosted"
             },
             {
               "title": "40周年限定ステッカー10/17・18・23・24・25",
               "disposition": "duplicate",
               "event_id": "evt-f9-519-koalab-2026",
-              "reason": "同じ40周年親企画の来園特典、別件にしない。各日9:30から先着200名、24・25は500名。"
+              "reason": "同じ40周年親企画の来園特典、別件にしない。各日9:30から先着200名、24・25は500名。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -7622,60 +7970,71 @@
               "title": "科学家楽狂と科学家ちきん「科学で漫才！」",
               "disposition": "added",
               "event_id": "evt-f9-522-comedy-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ぐるくるフラワー七変化",
               "disposition": "added",
               "event_id": "evt-f9-522-flower-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "かぼちゃのおかし箱づくり",
               "disposition": "added",
               "event_id": "evt-f9-522-paper-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ミラクル 10月のサイエンスショー",
               "disposition": "added",
               "event_id": "evt-f9-522-show-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "通常サイエンスショー10/17",
               "disposition": "hold",
-              "reason": "同じ4階ホールの特別ショー14:30～15:10と通常14:45～15:15が重複。どちらが置換か明示なく通常回だけHOLD"
+              "reason": "同じ4階ホールの特別ショー14:30～15:10と通常14:45～15:15が重複。どちらが置換か明示なく通常回だけHOLD",
+              "category": "facility_hosted"
             },
             {
               "title": "大人の科学教室10/25",
               "disposition": "hold",
-              "reason": "高校生～大人対象の6名講座で、小学生以下の親子参加経路なし"
+              "reason": "高校生～大人対象の6名講座で、小学生以下の親子参加経路なし",
+              "category": "facility_hosted"
             },
             {
               "title": "滑車の原理10/31",
               "disposition": "hold",
-              "reason": "月報には小5～中学生24名・10～11:30とあるが、現行ニュースの個別申込先が未掲載で受付可否未確認"
+              "reason": "月報には小5～中学生24名・10～11:30とあるが、現行ニュースの個別申込先が未掲載で受付可否未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "科学実験・備長炭電池10/17～30",
               "disposition": "hold",
-              "reason": "公式予約表の日時別選択にJavaScriptが必要で各回空席・開催条件未確認"
+              "reason": "公式予約表の日時別選択にJavaScriptが必要で各回空席・開催条件未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "科学実験・脱炭素発電10/17～30",
               "disposition": "hold",
-              "reason": "同じ公式予約表で日時別の空席・実施を確認できない"
+              "reason": "同じ公式予約表で日時別の空席・実施を確認できない",
+              "category": "facility_hosted"
             },
             {
               "title": "科学工作・のぼるてんとう虫10/17～30",
               "disposition": "hold",
-              "reason": "日時別予約枠の現状未確認。未就学児や見学家族の入室不可を確認"
+              "reason": "日時別予約枠の現状未確認。未就学児や見学家族の入室不可を確認",
+              "category": "facility_hosted"
             },
             {
               "title": "科学工作・偏光万華鏡10/17～30",
               "disposition": "hold",
-              "reason": "日時別予約枠の現状未確認。同伴条件と締切30分前を確認"
+              "reason": "日時別予約枠の現状未確認。同伴条件と締切30分前を確認",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -7782,12 +8141,14 @@
             {
               "title": "赤沼の獅子舞10/18",
               "disposition": "hold",
-              "reason": "会場は赤沼神社、施設523開催ではない。祭事の雨天対応・交通・幼児参加条件が未確認"
+              "reason": "会場は赤沼神社、施設523開催ではない。祭事の雨天対応・交通・幼児参加条件が未確認",
+              "category": "facility_hosted"
             },
             {
               "title": "銚子口の獅子舞10/18",
               "disposition": "hold",
-              "reason": "会場は銚子口香取神社、施設523開催ではない。祭事の雨天対応・交通・幼児参加条件が未確認"
+              "reason": "会場は銚子口香取神社、施設523開催ではない。祭事の雨天対応・交通・幼児参加条件が未確認",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -7817,94 +8178,111 @@
               "title": "それいけ！アンパンマン ショー",
               "disposition": "added",
               "event_id": "evt-f9-526-anpan-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "名探偵プリキュア！ ショー",
               "disposition": "added",
               "event_id": "evt-f9-526-precure-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "小島よしお お笑いステージ",
               "disposition": "added",
               "event_id": "evt-f9-526-kojima-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "動物園ショートバックヤードツアー",
               "disposition": "added",
               "event_id": "evt-f9-526-backyard-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "キャットウォーク探検隊",
               "disposition": "added",
               "event_id": "evt-f9-526-catwalk-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ハロウィンゆうえんち2026",
               "disposition": "added",
               "event_id": "evt-f9-526-halloween-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "10月の動物ガイド・パフォーマンス",
               "disposition": "added",
               "event_id": "evt-f9-526-zoo-october-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "ウインターイルミネーション2026-2027",
               "disposition": "hold",
-              "reason": "日程・料金・開催曜日は確認。季節行事の必須確認である雨天・荒天時の開催可否を公式PDFに確認できない。"
+              "reason": "日程・料金・開催曜日は確認。季節行事の必須確認である雨天・荒天時の開催可否を公式PDFに確認できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "ホワイトタイガーのおやつタイム10/17・24・31",
               "disposition": "hold",
-              "reason": "代替HTMLは10/17・31のみ、日別画像は10/24も掲載。HTML自体が集合時刻の公式不一致を明記。"
+              "reason": "代替HTMLは10/17・31のみ、日別画像は10/24も掲載。HTML自体が集合時刻の公式不一致を明記。",
+              "category": "facility_hosted"
             },
             {
               "title": "ホワイトタイガーのディナータイム10/24・25・31",
               "disposition": "hold",
-              "reason": "ハロウィンPDF17:00、代替HTML・当日画像17:30で数値時刻が不一致。"
+              "reason": "ハロウィンPDF17:00、代替HTML・当日画像17:30で数値時刻が不一致。",
+              "category": "facility_hosted"
             },
             {
               "title": "Cat World Secret Night10/17",
               "disposition": "hold",
-              "reason": "完売。商品本文10/17・17:15～19:15、注意欄の有効日は10/18で不一致。"
+              "reason": "完売。商品本文10/17・17:15～19:15、注意欄の有効日は10/18で不一致。",
+              "category": "facility_hosted"
             },
             {
               "title": "ゾウトレーニング見学11/7",
               "disposition": "hold",
-              "reason": "本文・商品名11/7だが商品詳細の利用可能日は10/7で不一致。"
+              "reason": "本文・商品名11/7だが商品詳細の利用可能日は10/7で不一致。",
+              "category": "facility_hosted"
             },
             {
               "title": "裏側ナイトZOOツアー10/24",
               "disposition": "hold",
-              "reason": "公式販売ページで在庫×・完売を確認。"
+              "reason": "公式販売ページで在庫×・完売を確認。",
+              "category": "facility_hosted"
             },
             {
               "title": "VR BASE TOKYO TOBU ZOO",
               "disposition": "hold",
-              "reason": "期間限定表記のみで開催期間の終期を確認できない。"
+              "reason": "期間限定表記のみで開催期間の終期を確認できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "UFOドーム 呪石",
               "disposition": "hold",
-              "reason": "期間限定表記のみで開催期間の終期を確認できない。"
+              "reason": "期間限定表記のみで開催期間の終期を確認できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "宝石探し",
               "disposition": "hold",
-              "reason": "期間限定表記のみで開催期間の終期を確認できない。"
+              "reason": "期間限定表記のみで開催期間の終期を確認できない。",
+              "category": "facility_hosted"
             },
             {
               "title": "ハロウィン夜間パレード・カボチャプレゼント・仮装割引・ナイトスリルライド・タイガー以外のアニマルディナー",
               "disposition": "duplicate",
               "event_id": "evt-f9-526-halloween-2026",
-              "reason": "同じハロウィン公式PDFの構成プログラムとして親イベントに統合。"
+              "reason": "同じハロウィン公式PDFの構成プログラムとして親イベントに統合。",
+              "category": "fireworks_festivals_seasonal"
             }
           ],
           "sources_checked": [
@@ -8084,13 +8462,15 @@
               "title": "音街っくコンサート♪",
               "disposition": "added",
               "event_id": "evt-f9-527-concert-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "いきもの観察デー",
               "disposition": "duplicate",
               "event_id": "evt-f9-527-concert-2026",
-              "reason": "同日・同会場の移動水族館／生き物観察会をコンサート親イベントの案内に統合。"
+              "reason": "同日・同会場の移動水族館／生き物観察会をコンサート親イベントの案内に統合。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -8144,128 +8524,152 @@
               "title": "おやこで星をみよう エチオピア王家の星々を探そう！",
               "disposition": "added",
               "event_id": "evt-f9-529-swan-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "おやこで星をみよう アンドロメダ星雲とスバルを探そう！",
               "disposition": "added",
               "event_id": "evt-f9-529-andromeda-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "特別天体イベント 飛ぶか？ふたご座流星群",
               "disposition": "added",
               "event_id": "evt-f9-529-geminids-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "特別天体イベント 月面Xを探そう！",
               "disposition": "added",
               "event_id": "evt-f9-529-moonx-2026",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "category": "facility_hosted"
             },
             {
-              "title": "プラネタリウム 恐竜の記憶",
+              "title": "加須未来館プラネタリウム 10・11月番組",
               "disposition": "added",
               "event_id": "evt-f9-529-dinosaur-2026",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム アンパンマン 星の色と空の色",
-              "disposition": "added",
-              "event_id": "evt-f9-529-anpan-2026",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "event_id": "evt-f9-529-dinosaur-2026",
+              "reason": "同一の10・11月プラネタリウム番組案内として全3番組・曜日別時間を親レコードに統合。",
+              "category": "facility_hosted"
             },
             {
               "title": "プラネタリウム 銀河鉄道の夜",
-              "disposition": "added",
-              "event_id": "evt-f9-529-galaxy-2026",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "event_id": "evt-f9-529-dinosaur-2026",
+              "reason": "同一の10・11月プラネタリウム番組案内として全3番組・曜日別時間を親レコードに統合。",
+              "category": "facility_hosted"
             },
             {
               "title": "秋の収穫感謝祭11/15（電子腕時計教室・オカリナ特別投影を含む）",
               "disposition": "hold",
-              "reason": "公式に日程・会場・子ども向け催しを確認したが、季節行事の必須確認である雨天・荒天時の扱いを確認できない。腕時計教室は抽選締切・申込経路も未記載。"
+              "reason": "公式に日程・会場・子ども向け催しを確認したが、季節行事の必須確認である雨天・荒天時の扱いを確認できない。腕時計教室は抽選締切・申込経路も未記載。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "フリー・トライデー マイ貯金箱10/18／木細工ハロウィン10/25",
               "disposition": "hold",
-              "reason": "総合イベント案内は13:00～15:30、個別ページは13:00～16:00（受付15:30まで）で終了時刻が不一致。料金も内容次第とあり個別金額不明。"
+              "reason": "総合イベント案内は13:00～15:30、個別ページは13:00～16:00（受付15:30まで）で終了時刻が不一致。料金も内容次第とあり個別金額不明。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "毎週土曜の夜間天体観望会",
               "disposition": "hold",
-              "reason": "定例の19:00～21:00・自由参加は確認。単独イベントの終了日を示さない常設的運用のため数値終期を捏造しない。"
+              "reason": "定例の19:00～21:00・自由参加は確認。単独イベントの終了日を示さない常設的運用のため数値終期を捏造しない。",
+              "category": "facility_hosted"
             },
             {
               "title": "おやこで星をみよう10/17",
               "disposition": "hold",
-              "reason": "申込締切10/2を経過。"
+              "reason": "申込締切10/2を経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "JAXA筑波宇宙センター親子バス見学10/18",
               "disposition": "hold",
-              "reason": "申込締切4/24・募集終了。会場も県外で本施設開催ではない。"
+              "reason": "申込締切4/24・募集終了。会場も県外で本施設開催ではない。",
+              "category": "facility_hosted"
             },
             {
               "title": "レジンアクセサリー10/17",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "塩あんびんといちじくワイン煮11/7",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "地粉手打ちそば12/12",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "手づくり味噌1/16",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "キムチとごはん1/23",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "こんにゃくと白和え2/13",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "手づくり味噌2/20",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "桜餅と菜の花3/6",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "クリスマスリース12/5",
               "disposition": "hold",
-              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。"
+              "reason": "公式年間予定・個別ページの対象は18歳以上で、親子・子どもの参加経路がない。前2件は申込期限も経過。",
+              "category": "fireworks_festivals_seasonal"
             },
             {
               "title": "段ボール恐竜3/13",
               "disposition": "hold",
-              "reason": "親子対象だが3か月前受付開始のため12/13以前は申込不可。"
+              "reason": "親子対象だが3か月前受付開始のため12/13以前は申込不可。",
+              "category": "facility_hosted"
             },
             {
               "title": "大根づくり11/14",
               "disposition": "hold",
-              "reason": "全4日参加の連続講座。申込締切8/5・前三回経過。"
+              "reason": "全4日参加の連続講座。申込締切8/5・前三回経過。",
+              "category": "facility_hosted"
             },
             {
               "title": "春じゃがいもづくり3/6～",
               "disposition": "hold",
-              "reason": "全日程参加の連続講座。3か月前受付開始のため12/6以前は申込不可。"
+              "reason": "全日程参加の連続講座。3か月前受付開始のため12/6以前は申込不可。",
+              "category": "facility_hosted"
             }
           ],
           "sources_checked": [
@@ -8368,7 +8772,55 @@
           "facility_id": 523,
           "reason": "公式の休館案内：2026/10/1～2028/3予定、建物改修により展示閲覧不可。施設データは本partで変更せずPMへ施設運営情報として引継ぐ。3D資料公開はオンライン教材。"
         }
-      ]
+      ],
+      "candidate_totals": {
+        "added": 120,
+        "duplicate": 37,
+        "hold": 181,
+        "found": 338
+      },
+      "participability_totals": {
+        "通常参加可能": 71,
+        "条件付き参加可能": 49
+      },
+      "candidate_categories": {
+        "fireworks_festivals_seasonal": {
+          "found": 36,
+          "added": 11,
+          "duplicate": 3,
+          "hold": 22
+        },
+        "municipal_regional": {
+          "found": 0,
+          "added": 0,
+          "duplicate": 0,
+          "hold": 0
+        },
+        "facility_hosted": {
+          "found": 302,
+          "added": 109,
+          "duplicate": 34,
+          "hold": 159
+        }
+      }
     }
+  },
+  "completion_scope": "Exactly the forty assigned due facilities only; regional discovery/organizer/recall categories belong to other work units and are not claimed here.",
+  "validation": {
+    "event_validators": "PASS errors 0",
+    "event_tests": {
+      "total": 84,
+      "passed": 81,
+      "failed": 3,
+      "baseline_reproduced": true,
+      "baseline": "0bebd2495df2924634cf3279cca58bccfab7f9a8",
+      "failures": [
+        "current canon at fixed 2026-07-21 date remains deterministic and clean",
+        "Summer Hub fixed-date list paginates all types together in groups of 20",
+        "Summer event anchors resolve later pages and ignore invalid hashes safely"
+      ]
+    },
+    "raw_log_source_url_trace": "476/476 present",
+    "scope": "40 exact IDs, 40 sequential completion rows; 39 successful registry freshness rows, no out-of-scope changes"
   }
 }
