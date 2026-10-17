@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-10",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-17T01:49:09.387885+00:00",
+  "executed_at": "2026-10-17T01:59:16.084497+00:00",
   "process_started_at": "2026-10-17T00:41:06.6486363Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -1209,13 +1209,22 @@
           "final_url": "https://www.parks.or.jp/suizokukan/event/009/009380.html",
           "title": "青空ヨガ in 羽生水郷公園 | 羽生水郷公園（さいたま水族館） | 公益財団法人埼玉県公園緑地協会",
           "text_sha256": "954c7e67beb8903f2345d72a9994c35ac9c6bab9e9ccd68af290c3394cccd1ec"
+        },
+        {
+          "facility_id": 547,
+          "url": "https://www.saitama-shizen.info/event/event.html#winterOL",
+          "status": 200,
+          "checked_at": "2026-10-17T01:51:40.143133+00:00",
+          "final_url": "https://www.saitama-shizen.info/event/event.html#winterOL",
+          "title": "埼玉県自然学習センター・北本自然観察公園／イベントのご案内",
+          "text_sha256": "ef58999377ea0f1bf741dada2a740277341e6d344e95d0b8ee8336804cc0b0d2"
         }
       ],
       "existing_event_holds": [
         {
           "facility_id": 558,
           "event_id": "evt-d7-saitama-042-2026",
-          "reason": "県公式は一般410円・学生200円の入場料、館の当該詳細は事前申込者の入館料免除と明記し料金条件が一致しない。午前回は満員、午後回は受付中。既存料金を推測で上書きせずHOLD。",
+          "reason": "県の当該イベントページは費用を一般410円・学生200円と記載する一方、館の詳細は事前申込者の入館料免除と記載。協賛年も県の表題は2027、館の本文は2026で一致しない。午前回満員・午後回受付中は確認できるが、既存タイトルと料金を推測で上書きせず保留。",
           "sources_checked": [
             {
               "url": "https://www.pref.saitama.lg.jp/f2216/library-info/r0811kawahaku02.html",
@@ -1954,6 +1963,15 @@
               "final_url": "https://www.saitama-shizen.info/event/kouza.html",
               "title": "埼玉県自然学習センター／講座のご案内",
               "text_sha256": "3b4f82f3f26071e9826520bb9215dda24a9b05d36766da1ef2219dce19b4d528"
+            },
+            {
+              "facility_id": 547,
+              "url": "https://www.saitama-shizen.info/event/event.html#winterOL",
+              "status": 200,
+              "checked_at": "2026-10-17T01:51:40.143133+00:00",
+              "final_url": "https://www.saitama-shizen.info/event/event.html#winterOL",
+              "title": "埼玉県自然学習センター・北本自然観察公園／イベントのご案内",
+              "text_sha256": "ef58999377ea0f1bf741dada2a740277341e6d344e95d0b8ee8336804cc0b0d2"
             }
           ],
           "candidates": [
@@ -2263,7 +2281,7 @@
               "title": "みんなでラジオ体操",
               "disposition": "hold",
               "event_id": "evt-d7-saitama-042-2026",
-              "reason": "県公式は一般410円・学生200円の入場料、館の当該詳細は事前申込者の入館料免除と明記し料金条件が一致しない。午前回は満員、午後回は受付中。既存料金を推測で上書きせずHOLD。"
+              "reason": "県の当該イベントページは費用を一般410円・学生200円と記載する一方、館の詳細は事前申込者の入館料免除と記載。協賛年も県の表題は2027、館の本文は2026で一致しない。午前回満員・午後回受付中は確認できるが、既存タイトルと料金を推測で上書きせず保留。"
             },
             {
               "title": "みんなで展覧会",
@@ -2297,9 +2315,52 @@
               "reason": "10/24・25・31の館内体験は確認。季節行事として具体時間・荒天時の扱い・交通条件を当該案内で確定できない。"
             },
             {
-              "title": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用",
+              "title": "常設上映",
               "disposition": "hold",
-              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。"
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "鉄砲堰",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "荷船",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "船車",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "給餌",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "日々工作",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "ガリバーウォーク",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
+            },
+            {
+              "title": "顕微鏡利用",
+              "disposition": "hold",
+              "reason": "常設サービス／応相談で今回の期間限定回の開始終了日が確定しない。",
+              "shared_hold_group": "常設上映・鉄砲堰・荷船・船車・給餌・日々工作・ガリバーウォーク・顕微鏡利用"
             },
             {
               "title": "再開記念昆虫シール",
@@ -2440,9 +2501,16 @@
               "reason": "定例自由見学の時刻のみ、期間限定回の開始・終了日を公表せず。"
             },
             {
-              "title": "夕焼け観賞便／雲海観賞便",
+              "title": "夕焼け観賞便",
               "disposition": "hold",
-              "reason": "公式トップに秋期日程あり。ただしロープウェイ・山頂の企画であり小動物公園568での開催ではないため同施設へ誤リンクせずPMへ引継ぎ。"
+              "reason": "公式トップに秋期日程あり。ただしロープウェイ・山頂の企画であり小動物公園568での開催ではないため同施設へ誤リンクせずPMへ引継ぎ。",
+              "shared_hold_group": "夕焼け観賞便／雲海観賞便"
+            },
+            {
+              "title": "雲海観賞便",
+              "disposition": "hold",
+              "reason": "公式トップに秋期日程あり。ただしロープウェイ・山頂の企画であり小動物公園568での開催ではないため同施設へ誤リンクせずPMへ引継ぎ。",
+              "shared_hold_group": "夕焼け観賞便／雲海観賞便"
             },
             {
               "title": "SUSABINO開店・キッチンカー営業・定期検査",
@@ -2835,9 +2903,28 @@
               "reason": "会員値引き施策で独立した家族体験イベントではない。"
             },
             {
-              "title": "オリジナルカード販売／新カード／オータムカード／いもりんカード",
+              "title": "オリジナルカード販売",
               "disposition": "hold",
-              "reason": "物販・アトラクション景品で独立した催事の日付・現時点在庫を確認できない。"
+              "reason": "物販・アトラクション景品で独立した催事の日付・現時点在庫を確認できない。",
+              "shared_hold_group": "オリジナルカード販売／新カード／オータムカード／いもりんカード"
+            },
+            {
+              "title": "新カード",
+              "disposition": "hold",
+              "reason": "物販・アトラクション景品で独立した催事の日付・現時点在庫を確認できない。",
+              "shared_hold_group": "オリジナルカード販売／新カード／オータムカード／いもりんカード"
+            },
+            {
+              "title": "オータムカード",
+              "disposition": "hold",
+              "reason": "物販・アトラクション景品で独立した催事の日付・現時点在庫を確認できない。",
+              "shared_hold_group": "オリジナルカード販売／新カード／オータムカード／いもりんカード"
+            },
+            {
+              "title": "いもりんカード",
+              "disposition": "hold",
+              "reason": "物販・アトラクション景品で独立した催事の日付・現時点在庫を確認できない。",
+              "shared_hold_group": "オリジナルカード販売／新カード／オータムカード／いもりんカード"
             },
             {
               "title": "フォトコンテスト",
@@ -2845,14 +2932,34 @@
               "reason": "11/30締切の写真投稿募集で訪問参加型の催事と区別。"
             },
             {
-              "title": "Go!Go!トレイン／大好きっ子チャレンジ／バースデー",
+              "title": "Go!Go!トレイン",
               "disposition": "hold",
-              "reason": "常設キャンペーンで開始終了日を公表しない。"
+              "reason": "常設キャンペーンで開始終了日を公表しない。",
+              "shared_hold_group": "Go!Go!トレイン／大好きっ子チャレンジ／バースデー"
             },
             {
-              "title": "LINE友だち登録／収穫最速配信",
+              "title": "大好きっ子チャレンジ",
               "disposition": "hold",
-              "reason": "登録・配信案内で家族催事ではない。"
+              "reason": "常設キャンペーンで開始終了日を公表しない。",
+              "shared_hold_group": "Go!Go!トレイン／大好きっ子チャレンジ／バースデー"
+            },
+            {
+              "title": "バースデー",
+              "disposition": "hold",
+              "reason": "常設キャンペーンで開始終了日を公表しない。",
+              "shared_hold_group": "Go!Go!トレイン／大好きっ子チャレンジ／バースデー"
+            },
+            {
+              "title": "LINE友だち登録",
+              "disposition": "hold",
+              "reason": "登録・配信案内で家族催事ではない。",
+              "shared_hold_group": "LINE友だち登録／収穫最速配信"
+            },
+            {
+              "title": "収穫最速配信",
+              "disposition": "hold",
+              "reason": "登録・配信案内で家族催事ではない。",
+              "shared_hold_group": "LINE友だち登録／収穫最速配信"
             }
           ],
           "existing_event_decisions": [
@@ -3529,7 +3636,14 @@
           ],
           "completed_at": "2026-10-17T01:00:15.103227+00:00"
         }
-      ]
+      ],
+      "candidate_encounters": {
+        "added": 59,
+        "duplicate": 2,
+        "excluded_not_family_outing_event": 1,
+        "hold": 94,
+        "past_or_not_candidate": 7
+      }
     },
     "shimane": {
       "facility_ids": [
@@ -3583,7 +3697,8 @@
           "added_event_ids": [],
           "completed_at": "2026-10-17T01:00:48.906283+00:00"
         }
-      ]
+      ],
+      "candidate_encounters": {}
     },
     "shizuoka": {
       "facility_ids": [
@@ -6692,23 +6807,26 @@
         {
           "facility_id": 42,
           "url": "https://www.hobbysquare.jp/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:30:48.336491+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
           "url": "https://www.hobbysquare.jp/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:30:52.928083+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
           "url": "https://www.hobbysquare.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:30:53.262793+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
@@ -6722,16 +6840,18 @@
         {
           "facility_id": 42,
           "url": "https://hobbysquare.jp/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:30:53.704951+00:00",
-          "error": "HTTPSConnectionPool(host='hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
           "url": "http://www.hobbysquare.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:31:03.839663+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
@@ -6754,16 +6874,18 @@
         {
           "facility_id": 42,
           "url": "https://www.hobbysquare.jp/archives/7723",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:31:04.968426+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7723 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7723 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 42,
           "url": "https://www.hobbysquare.jp/archives/7766",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-17T01:31:05.310115+00:00",
-          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7766 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7766 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 47,
@@ -7919,16 +8041,18 @@
         {
           "facility_id": 211,
           "url": "https://kodomokan.entetsuassist-dms.com/event/page/13/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-17T01:41:16.701715+00:00",
-          "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Read timed out. (read timeout=30)"
+          "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Read timed out. (read timeout=30)",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 211,
           "url": "https://kodomokan.entetsuassist-dms.com/event/page/14/",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-17T01:41:47.503826+00:00",
-          "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Max retries exceeded with url: /event/page/14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='kodomokan.entetsuassist-dms.com', port=443) at 0x260d33f9810>, 'Connection to kodomokan.entetsuassist-dms.com timed out. (connect timeout=12)'))"
+          "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Max retries exceeded with url: /event/page/14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='kodomokan.entetsuassist-dms.com', port=443) at 0x260d33f9810>, 'Connection to kodomokan.entetsuassist-dms.com timed out. (connect timeout=12)'))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "facility_id": 211,
@@ -10352,9 +10476,22 @@
               ]
             },
             {
-              "title": "秋の動物園スクール（低・中・高学年3日程）",
+              "title": "秋の動物園スクール（低学年）",
               "disposition": "hold",
-              "reason": "公式10/9 16:30受付終了。現在の参加経路なし。"
+              "reason": "公式10/9 16:30受付終了。現在の参加経路なし。",
+              "shared_hold_group": "秋の動物園スクール（低・中・高学年3日程）"
+            },
+            {
+              "title": "秋の動物園スクール（中学年）",
+              "disposition": "hold",
+              "reason": "公式10/9 16:30受付終了。現在の参加経路なし。",
+              "shared_hold_group": "秋の動物園スクール（低・中・高学年3日程）"
+            },
+            {
+              "title": "秋の動物園スクール（高学年）",
+              "disposition": "hold",
+              "reason": "公式10/9 16:30受付終了。現在の参加経路なし。",
+              "shared_hold_group": "秋の動物園スクール（低・中・高学年3日程）"
             },
             {
               "title": "レッサーパンダのリンゴさがすだもんで！",
@@ -10367,9 +10504,16 @@
               "reason": "継続告知だが終了期日未記載。有限の開催期間を推測しない。"
             },
             {
-              "title": "インカアジサシ・アザラシ食事",
+              "title": "インカアジサシのお食事",
               "disposition": "hold",
-              "reason": "毎日イベント公式ページで現在休止中と明記。"
+              "reason": "毎日イベント公式ページで現在休止中と明記。",
+              "shared_hold_group": "インカアジサシ・アザラシ食事"
+            },
+            {
+              "title": "アザラシのお食事",
+              "disposition": "hold",
+              "reason": "毎日イベント公式ページで現在休止中と明記。",
+              "shared_hold_group": "インカアジサシ・アザラシ食事"
             },
             {
               "title": "夜行性動物館お食事タイム",
@@ -10727,9 +10871,28 @@
               "reason": "通常イベント一覧が一時中止中を明記。"
             },
             {
-              "title": "乗せてみよう・屋外バードショー・室内バードショー・ワールド鳥ップ",
+              "title": "乗せてみよう",
               "disposition": "hold",
-              "reason": "常設日課の案内のみ、終了期間を推測せず未登録。"
+              "reason": "常設日課の案内のみ、終了期間を推測せず未登録。",
+              "shared_hold_group": "乗せてみよう・屋外バードショー・室内バードショー・ワールド鳥ップ"
+            },
+            {
+              "title": "屋外バードショー",
+              "disposition": "hold",
+              "reason": "常設日課の案内のみ、終了期間を推測せず未登録。",
+              "shared_hold_group": "乗せてみよう・屋外バードショー・室内バードショー・ワールド鳥ップ"
+            },
+            {
+              "title": "室内バードショー",
+              "disposition": "hold",
+              "reason": "常設日課の案内のみ、終了期間を推測せず未登録。",
+              "shared_hold_group": "乗せてみよう・屋外バードショー・室内バードショー・ワールド鳥ップ"
+            },
+            {
+              "title": "ワールド鳥ップ",
+              "disposition": "hold",
+              "reason": "常設日課の案内のみ、終了期間を推測せず未登録。",
+              "shared_hold_group": "乗せてみよう・屋外バードショー・室内バードショー・ワールド鳥ップ"
             }
           ],
           "existing_event_decisions": [],
@@ -11283,9 +11446,16 @@
               "event_id": "evt-17-w38-fixed-net"
             },
             {
-              "title": "仮装ダイバー・ディスカバリーオーシャン",
+              "title": "仮装ダイバー",
               "disposition": "hold",
-              "reason": "日付・会場・時刻は公式で確認したが、季節企画として必要な悪天候の扱い・最新変更案内・交通影響の一式が未確認。既存定置網展と同一一覧URLを共有する shared-source-shape も保持。"
+              "reason": "日付・会場・時刻は公式で確認したが、季節企画として必要な悪天候の扱い・最新変更案内・交通影響の一式が未確認。既存定置網展と同一一覧URLを共有する shared-source-shape も保持。",
+              "shared_hold_group": "仮装ダイバー・ディスカバリーオーシャン"
+            },
+            {
+              "title": "ディスカバリーオーシャン",
+              "disposition": "hold",
+              "reason": "日付・会場・時刻は公式で確認したが、季節企画として必要な悪天候の扱い・最新変更案内・交通影響の一式が未確認。既存定置網展と同一一覧URLを共有する shared-source-shape も保持。",
+              "shared_hold_group": "仮装ダイバー・ディスカバリーオーシャン"
             },
             {
               "title": "ハロウィーン・カクレクマノミ企画水槽",
@@ -11537,9 +11707,22 @@
               "reason": "複数会場の予約付き旅行商品。施設18だけの単独イベントとして登録しない。"
             },
             {
-              "title": "海の生きものスタンプラリー・学びシェアシート・LINE2択クイズ",
+              "title": "海の生きものスタンプラリー",
               "disposition": "hold",
-              "reason": "通年企画、特定の開催終期なし。オンライン専用クイズも来園イベントに変換しない。"
+              "reason": "通年企画、特定の開催終期なし。オンライン専用クイズも来園イベントに変換しない。",
+              "shared_hold_group": "海の生きものスタンプラリー・学びシェアシート・LINE2択クイズ"
+            },
+            {
+              "title": "学びシェアシート",
+              "disposition": "hold",
+              "reason": "通年企画、特定の開催終期なし。オンライン専用クイズも来園イベントに変換しない。",
+              "shared_hold_group": "海の生きものスタンプラリー・学びシェアシート・LINE2択クイズ"
+            },
+            {
+              "title": "LINE2択クイズ",
+              "disposition": "hold",
+              "reason": "通年企画、特定の開催終期なし。オンライン専用クイズも来園イベントに変換しない。",
+              "shared_hold_group": "海の生きものスタンプラリー・学びシェアシート・LINE2択クイズ"
             }
           ],
           "existing_event_decisions": [],
@@ -12584,9 +12767,16 @@
               "reason": "道路混雑告知で日程時刻のみ、主催者詳細・雨天・子連れ判断材料を確認できず。"
             },
             {
-              "title": "ノルディック1/16・バード1/24",
+              "title": "ノルディック1/16",
               "disposition": "hold",
-              "reason": "既存シリーズへの追加候補、上記既存シリーズの集合場所・受付時刻HOLDとともに保留。"
+              "reason": "既存シリーズへの追加候補、上記既存シリーズの集合場所・受付時刻HOLDとともに保留。",
+              "shared_hold_group": "ノルディック1/16・バード1/24"
+            },
+            {
+              "title": "バード1/24",
+              "disposition": "hold",
+              "reason": "既存シリーズへの追加候補、上記既存シリーズの集合場所・受付時刻HOLDとともに保留。",
+              "shared_hold_group": "ノルディック1/16・バード1/24"
             }
           ],
           "existing_event_decisions": [],
@@ -14614,23 +14804,26 @@
             {
               "facility_id": 42,
               "url": "https://www.hobbysquare.jp/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:30:48.336491+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
               "url": "https://www.hobbysquare.jp/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:30:52.928083+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
               "url": "https://www.hobbysquare.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:30:53.262793+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
@@ -14644,16 +14837,18 @@
             {
               "facility_id": 42,
               "url": "https://hobbysquare.jp/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:30:53.704951+00:00",
-              "error": "HTTPSConnectionPool(host='hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='hobbysquare.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
               "url": "http://www.hobbysquare.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:31:03.839663+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
@@ -14676,16 +14871,18 @@
             {
               "facility_id": 42,
               "url": "https://www.hobbysquare.jp/archives/7723",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:31:04.968426+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7723 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7723 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 42,
               "url": "https://www.hobbysquare.jp/archives/7766",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-17T01:31:05.310115+00:00",
-              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7766 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.hobbysquare.jp', port=443): Max retries exceeded with url: /archives/7766 (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))",
+              "original_fetch_status": "fetch_failed"
             }
           ],
           "candidates": [
@@ -14696,9 +14893,22 @@
               "participability": "通常参加可能"
             },
             {
-              "title": "ミニ四駆ナイトレース11/21・みんなのミニ四駆ひろば10/8～25・SCM展示会11/7～8",
+              "title": "ミニ四駆ナイトレース11/21",
               "disposition": "hold",
-              "reason": "検索で候補を認識したが公式サイトはTLS失敗/403。再試行・ホーム・HTTP・ブラウザーの公式フォールバックでも内容確認不能。一次情報を確認できず一括source-family HOLD"
+              "reason": "検索で候補を認識したが公式サイトはTLS失敗/403。再試行・ホーム・HTTP・ブラウザーの公式フォールバックでも内容確認不能。一次情報を確認できず一括source-family HOLD",
+              "shared_hold_group": "ミニ四駆ナイトレース11/21・みんなのミニ四駆ひろば10/8～25・SCM展示会11/7～8"
+            },
+            {
+              "title": "みんなのミニ四駆ひろば10/8～25",
+              "disposition": "hold",
+              "reason": "検索で候補を認識したが公式サイトはTLS失敗/403。再試行・ホーム・HTTP・ブラウザーの公式フォールバックでも内容確認不能。一次情報を確認できず一括source-family HOLD",
+              "shared_hold_group": "ミニ四駆ナイトレース11/21・みんなのミニ四駆ひろば10/8～25・SCM展示会11/7～8"
+            },
+            {
+              "title": "SCM展示会11/7～8",
+              "disposition": "hold",
+              "reason": "検索で候補を認識したが公式サイトはTLS失敗/403。再試行・ホーム・HTTP・ブラウザーの公式フォールバックでも内容確認不能。一次情報を確認できず一括source-family HOLD",
+              "shared_hold_group": "ミニ四駆ナイトレース11/21・みんなのミニ四駆ひろば10/8～25・SCM展示会11/7～8"
             }
           ],
           "existing_event_decisions": [],
@@ -16415,16 +16625,18 @@
             {
               "facility_id": 211,
               "url": "https://kodomokan.entetsuassist-dms.com/event/page/13/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-17T01:41:16.701715+00:00",
-              "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Read timed out. (read timeout=30)"
+              "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Read timed out. (read timeout=30)",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 211,
               "url": "https://kodomokan.entetsuassist-dms.com/event/page/14/",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-17T01:41:47.503826+00:00",
-              "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Max retries exceeded with url: /event/page/14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='kodomokan.entetsuassist-dms.com', port=443) at 0x260d33f9810>, 'Connection to kodomokan.entetsuassist-dms.com timed out. (connect timeout=12)'))"
+              "error": "HTTPSConnectionPool(host='kodomokan.entetsuassist-dms.com', port=443): Max retries exceeded with url: /event/page/14/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='kodomokan.entetsuassist-dms.com', port=443) at 0x260d33f9810>, 'Connection to kodomokan.entetsuassist-dms.com timed out. (connect timeout=12)'))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "facility_id": 211,
@@ -19161,9 +19373,16 @@
               "reason": "主催者が募集人数到達で受付終了と明記"
             },
             {
-              "title": "フラ物販併設ウニランプ/チャーム工作",
+              "title": "フラ物販併設ウニランプ工作",
               "disposition": "hold",
-              "reason": "10/18の出店は確認。個別時刻/費用/参加条件未確認"
+              "reason": "10/18の出店は確認。個別時刻/費用/参加条件未確認",
+              "shared_hold_group": "フラ物販併設ウニランプ/チャーム工作"
+            },
+            {
+              "title": "フラ物販併設チャーム工作",
+              "disposition": "hold",
+              "reason": "10/18の出店は確認。個別時刻/費用/参加条件未確認",
+              "shared_hold_group": "フラ物販併設ウニランプ/チャーム工作"
             },
             {
               "title": "50周年アートプロジェクト",
@@ -19216,6 +19435,35 @@
             "evt-212-202609-f10-06"
           ],
           "completed_at": "2026-10-17T01:49:09.387848+00:00"
+        }
+      ],
+      "candidate_encounters": {
+        "added": 92,
+        "cancelled_not_added": 1,
+        "duplicate": 155,
+        "excluded_not_dated_event": 9,
+        "excluded_not_event": 25,
+        "excluded_not_family_event": 6,
+        "hold": 192,
+        "stale_past": 3
+      },
+      "shared_official_source_registry_matches": [
+        {
+          "facility_id": 2058,
+          "name": "ターントクルこども館",
+          "url": "https://yaizu-kodomokan.com/event/",
+          "reason": "施設210の公式出典として本Missionで実取得した共通の親施設イベントページが、レジストリ2058の公式URLにも完全一致。必須freshness照合に従い同じ実取得に対応するlast_checked_atだけ更新。2058の現在/未来の既存イベントは0件。due_facility_ids・40件の順次進捗は変更しない。",
+          "sources_checked": [
+            {
+              "facility_id": 210,
+              "url": "https://yaizu-kodomokan.com/event/",
+              "status": 200,
+              "checked_at": "2026-10-17T01:38:16.043970+00:00",
+              "final_url": "https://yaizu-kodomokan.com/event/",
+              "title": "イベント｜ターントクルこども館（焼津おもちゃ美術館・やいづ えほんと）",
+              "text_sha256": "895e0ed87841a11059f49c96428f8b361fecc44cfaa51a76792b37280d5deec0"
+            }
+          ]
         }
       ]
     }
