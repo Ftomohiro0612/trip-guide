@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-17T04:47:13.664913+00:00",
+  "executed_at": "2026-10-17T05:04:24.352735+00:00",
   "due_facility_ids": [
     382,
     383,
@@ -45,21 +45,21 @@
     433
   ],
   "aggregate": {
-    "no_current_or_future_event": 4,
-    "candidate_found_added": 10,
+    "no_current_or_future_event": 6,
+    "candidate_found_added": 16,
     "candidate_found_duplicate": 0,
-    "candidate_found_hold": 5,
+    "candidate_found_hold": 7,
     "source_unresolved": 1,
-    "total": 20
+    "total": 30
   },
   "per_region": {
     "tochigi": {
-      "no_current_or_future_event": 4,
-      "candidate_found_added": 10,
+      "no_current_or_future_event": 6,
+      "candidate_found_added": 16,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 5,
+      "candidate_found_hold": 7,
       "source_unresolved": 1,
-      "total": 20,
+      "total": 30,
       "facility_ids": [
         382,
         383,
@@ -80,7 +80,17 @@
         406,
         408,
         409,
-        410
+        410,
+        411,
+        412,
+        413,
+        414,
+        416,
+        417,
+        418,
+        419,
+        420,
+        422
       ],
       "sources_checked": [
         {
@@ -1241,6 +1251,697 @@
           "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
           "title": " 七五三祈祷のお知らせ ",
           "text_sha256": "7efca0e774149fba4f65384d4cc241950cf421a7322ca7aa00fd28d90c10f2eb"
+        },
+        {
+          "facility_id": 411,
+          "url": "https://www.futarasan.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:47:29.025312+00:00",
+          "error": "HTTPSConnectionPool(host='www.futarasan.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+        },
+        {
+          "facility_id": 411,
+          "url": "https://www.futarasan.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:47:36.226378+00:00",
+          "error": "HTTPSConnectionPool(host='www.futarasan.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+        },
+        {
+          "facility_id": 411,
+          "url": "http://www.futarasan.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:47:37.705108+00:00",
+          "final_url": "http://www.futarasan.jp/",
+          "title": "日光二荒山神社",
+          "text_sha256": "5ca12c5ed0325e38d014a97079583fdd04cbe12ca3ce51964759be3027ad03eb"
+        },
+        {
+          "facility_id": 411,
+          "url": "http://www.futarasan.jp/pdf/toukenranbu2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T04:47:45.072983+00:00",
+          "final_url": "http://www.futarasan.jp/pdf/toukenranbu2026.pdf",
+          "title": "Official PDF",
+          "text_sha256": "7796637f1fa1abe5da6954c9883ae620372dff78823a123678b1e90ac112bcc8"
+        },
+        {
+          "facility_id": 411,
+          "url": "http://www.futarasan.jp/pdf/yoien2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T04:47:49.447146+00:00",
+          "final_url": "http://www.futarasan.jp/pdf/yoien2026.pdf",
+          "title": "Official PDF",
+          "text_sha256": "32b94e5c85679aeff5d5ac38d9440e96ea8ac460414535f49565d9ec6912b92b"
+        },
+        {
+          "facility_id": 411,
+          "url": "http://www.futarasan.jp/event.shtml",
+          "status": 200,
+          "checked_at": "2026-10-17T04:48:08.680742+00:00",
+          "final_url": "http://www.futarasan.jp/event.shtml",
+          "title": "日光二荒山神社",
+          "text_sha256": "773fed7f5124c781e3f42fd333771c600129505190ed71e7b74776591b9ebf2b"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:48:51.100309+00:00",
+          "final_url": "https://www.rinnoji.or.jp/",
+          "title": "日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "46cbcebaa8313e9b52258939eb7f447ed8efb5d27330226bb8beb86dfd1b1317"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/news/20260927.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:48:57.906521+00:00",
+          "final_url": "https://www.rinnoji.or.jp/news/20260927.html",
+          "title": "慈眼大師の日光中興 | 日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "80de2d62862e9bf00b9e83d9cc86f91f0835f0de6cd04dcffeaedf1bbb54c033"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/news/20260908-05.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:48:59.652215+00:00",
+          "final_url": "https://www.rinnoji.or.jp/news/20260908-05.html",
+          "title": "令和8年 夜間特別拝観「逍遥園ライトアップ」 | 日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "566fe39d29a7212cec29f714a7ab236a896509c5416fa58fbd4df98049ab03af"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/news/20260912.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:49:01.538645+00:00",
+          "final_url": "https://www.rinnoji.or.jp/news/20260912.html",
+          "title": "日光山 中禅寺 夜間参拝のご案内 | 日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "960f053effc9e43aa26543267bc8092149920daef53def026abd4c16a3332942"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/information.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:49:08.598523+00:00",
+          "final_url": "https://www.rinnoji.or.jp/information.html",
+          "title": "拝観のご案内 | 日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "4cb640448bd7b2e30a713c53ac0a47a4b169d77a7db5c06bd61a22ff287adb5b"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/news/content/files/activity/lightup-2026rev02.pdf",
+          "status": 404,
+          "checked_at": "2026-10-17T04:49:10.738030+00:00",
+          "final_url": "https://www.rinnoji.or.jp/news/content/files/activity/lightup-2026rev02.pdf",
+          "title": "Page not found. | 日光山 輪王寺 オフィシャルサイト",
+          "text_sha256": "f562c5cb4ab18d2729fa6daf8d6a299e24242bf4ea186ae5bfb2dd882d0450db"
+        },
+        {
+          "facility_id": 412,
+          "url": "https://www.rinnoji.or.jp/content/files/activity/lightup-2026rev02.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T04:49:18.480927+00:00",
+          "final_url": "https://www.rinnoji.or.jp/content/files/activity/lightup-2026rev02.pdf",
+          "title": "Official PDF",
+          "text_sha256": "a0a828131bdf9d0ca0158b640e8c4900bda7ddf8563da2fb33c5c3b490b285c7"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:49:47.188534+00:00",
+          "final_url": "https://utsunomiya-zoo.com/",
+          "title": "Home - 宇都宮動物園",
+          "text_sha256": "33a734dacb0e7f32636be2292ffcf5be9387925d07c9c35c3415594d208d0381"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:49:58.389619+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/",
+          "title": "イベント一覧 - 宇都宮動物園",
+          "text_sha256": "00b227d24797c5c79e3c5b585e59b0f3e67c61ff252259718123130a149707c6"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e7%89%b9%e5%88%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%883%e6%97%a5%e9%96%93%e3%80%91zoozoo-to-%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%b3%e3%81%be%e3%81%a4%e3%82%8a2026/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:14.515903+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E7%89%B9%E5%88%A5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%883%E6%97%A5%E9%96%93%E3%80%91zoozoo-to-%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E3%81%BE%E3%81%A4%E3%82%8A2026/",
+          "title": "【特別イベント(3日間)】zoozoo to ラーメンまつり2026 - 宇都宮動物園",
+          "text_sha256": "0d7df02e3d6901ba5fbb0bed36e5d46990f187887816c27029a6460363796385"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/%e3%82%be%e3%82%a6%e5%ae%ae%e5%ad%90%e3%81%ae%e3%81%8a%e8%aa%95%e7%94%9f%e6%97%a5%e4%bc%9a/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:16.208532+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%82%BE%E3%82%A6%E5%AE%AE%E5%AD%90%E3%81%AE%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E4%BC%9A/",
+          "title": "【動物園】ゾウの宮子のお誕生日会 - 宇都宮動物園",
+          "text_sha256": "e5c5d148d5e374c00b09911bcbc47a6abff009818186b59e04bf3f11c90e14fe"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e7%89%b9%e5%88%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%91%e5%b8%82%e5%8e%9f%e3%81%9e%e3%81%86%e3%81%ae%e5%9b%bd-%e5%9d%82%e6%9c%ac%e5%b0%8f%e7%99%be%e5%90%88%e5%9c%92%e9%95%b7%e3%81%ae/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:18.098500+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E7%89%B9%E5%88%A5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%91%E5%B8%82%E5%8E%9F%E3%81%9E%E3%81%86%E3%81%AE%E5%9B%BD-%E5%9D%82%E6%9C%AC%E5%B0%8F%E7%99%BE%E5%90%88%E5%9C%92%E9%95%B7%E3%81%AE/",
+          "title": "【特別イベント】市原ぞうの国 坂本小百合園長の特別講演会 - 宇都宮動物園",
+          "text_sha256": "c76ccc839e148c3fb6eb6ea1e0d1d86b05d232d8a53d84390a78f3731ca64472"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e9%81%8a%e5%9c%92%e5%9c%b0%e3%80%91%e3%83%8e%e3%82%b9%e3%82%bf%e3%83%ab%e3%82%b8%e3%83%bcx%e3%82%b7%e3%83%a5%e3%83%bc%e3%83%ab%e3%81%aa%e5%a4%9c%e3%81%ae%e9%81%8a%e5%9c%92%e5%9c%b0/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:20.877637+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E9%81%8A%E5%9C%92%E5%9C%B0%E3%80%91%E3%83%8E%E3%82%B9%E3%82%BF%E3%83%AB%E3%82%B8%E3%83%BCx%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AA%E5%A4%9C%E3%81%AE%E9%81%8A%E5%9C%92%E5%9C%B0/",
+          "title": "【遊園地】ノスタルジー×シュールな夜の遊園地オープン！！ - 宇都宮動物園",
+          "text_sha256": "bacdaa02eed708b06a5910fd6c820983b02fdc4b7b9bce6909843b7bc9e88149"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e5%8b%95%e7%89%a9%e5%9c%92%e3%80%91%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%ab%ef%bc%81%e5%8b%95%e7%89%a9%e8%a7%a3%e8%aa%ac%e6%9d%bf-2/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:22.710433+00:00",
+          "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E5%8B%95%E7%89%A9%E5%9C%92%E3%80%91%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%EF%BC%81%E5%8B%95%E7%89%A9%E8%A7%A3%E8%AA%AC%E6%9D%BF-2/",
+          "title": "【動物園】そっくりさん分かるかな？ - 宇都宮動物園",
+          "text_sha256": "50eef22861556a1c6a6543da9f22ee6cc7acbd631e3454c2c3c19767f40b7bcb"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/guide/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:50:26.489357+00:00",
+          "final_url": "https://utsunomiya-zoo.com/guide/",
+          "title": "ページが見つかりませんでした – 宇都宮動物園",
+          "text_sha256": "f12c8cd1dc880ee0b57fe96c971739de7f06d2e6335d02a3a01f70bd2de33687"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://forms.gle/9Q4BUBZAw8ojrkhTA",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:28.342946+00:00",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLScvbY-QEzldDJ8fbmgeUqTwMUjwqQ_8uOxE7JKDav7DDEj_xA/viewform?usp=send_form",
+          "title": "【10月24日開催】市原ぞうの国園長特別講演会申込フォーム",
+          "text_sha256": "0a1e9ea615d8c221a741006aad47da96d6f6c83a9f017aa10045229a57975983"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/price/",
+          "status": 404,
+          "checked_at": "2026-10-17T04:50:38.947752+00:00",
+          "final_url": "https://utsunomiya-zoo.com/price/",
+          "title": "ページが見つかりませんでした – 宇都宮動物園",
+          "text_sha256": "f12c8cd1dc880ee0b57fe96c971739de7f06d2e6335d02a3a01f70bd2de33687"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/access/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:41.384846+00:00",
+          "final_url": "https://utsunomiya-zoo.com/access/",
+          "title": "アクセス - 宇都宮動物園",
+          "text_sha256": "3868f071ca116516fab594c6bc1ec771969a12be9f293db0c618065929c66b70"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/information/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:50:52.459297+00:00",
+          "final_url": "https://utsunomiya-zoo.com/%E5%96%B6%E6%A5%AD%E6%99%82%E9%96%93%E3%83%BB%E6%96%99%E9%87%91/",
+          "title": "営業時間・料金 - 宇都宮動物園",
+          "text_sha256": "269183c050d1b9b585a1e95a206b27aa84f27996d6fce23b9945efa9b71ff856"
+        },
+        {
+          "facility_id": 413,
+          "url": "https://utsunomiya-zoo.com/wp-content/uploads/2026/11/7d04d93407d56d018866bdc5d3a4e3a9.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T04:53:28.587758+00:00",
+          "final_url": "https://utsunomiya-zoo.com/wp-content/uploads/2026/11/7d04d93407d56d018866bdc5d3a4e3a9.pdf",
+          "title": "Official PDF",
+          "text_sha256": "7e822c35937c62a5016b3174791054c1548b230e31a910bb8c644636084030ab"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:17.922860+00:00",
+          "final_url": "https://t-csm.jp/event",
+          "title": "イベント｜栃木県子ども総合科学館",
+          "text_sha256": "404403621d4e1f8c891d6c7a81f996cf8820a59505d6ffd3cc386e45ae5ab75c"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9559",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:30.362348+00:00",
+          "final_url": "https://t-csm.jp/event/9559",
+          "title": "【10/18、28、11/1、15、20AM、25AMはお休み】あそびのワークショップ「クラフトクッキング」｜栃木県子ども総合科学館",
+          "text_sha256": "c3e7969241d6b5031e2e9e3826fbface7c0f050a21b0654559732d65809abb7b"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/8440",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:39.365686+00:00",
+          "final_url": "https://t-csm.jp/event/8440",
+          "title": "おりがみであそぼう｜栃木県子ども総合科学館",
+          "text_sha256": "d2c9ffff6664d31be45a2cee7d107ec4f895ed5673d4600e1a0e11740ee9e443"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9089",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:41.927842+00:00",
+          "final_url": "https://t-csm.jp/event/9089",
+          "title": "天文台公開｜栃木県子ども総合科学館",
+          "text_sha256": "50d21204cb8a59ae52dd1a41d1d2af5092600181a3e385afb3e4d5981a7012f3"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/6790",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:44.870699+00:00",
+          "final_url": "https://t-csm.jp/event/6790",
+          "title": "星をみる会｜栃木県子ども総合科学館",
+          "text_sha256": "976e9268db39f6b1bd708df85b8071d41b592311ee57d6ad322f993acc239553"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9609",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:46.456324+00:00",
+          "final_url": "https://t-csm.jp/event/9609",
+          "title": "夢を持った瞬間から未来は変わり始めるんだよ｜栃木県子ども総合科学館",
+          "text_sha256": "c5f0230ee020d07691e4d960c1c02368a950b37d7d0fa0e5b0692d5f2e6fea2f"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9292",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:48.425544+00:00",
+          "final_url": "https://t-csm.jp/event/9292",
+          "title": "【参加受付中】プラネタリウム夜間投影〈10月〉｜栃木県子ども総合科学館",
+          "text_sha256": "7e013bf990811c8217d207032aa23106ba1767ef06dfa87b6527ee7920caf104"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/10015",
+          "status": 200,
+          "checked_at": "2026-10-17T04:54:51.497092+00:00",
+          "final_url": "https://t-csm.jp/event/10015",
+          "title": "おへやのまめっこタイム　「ハロウィン・で・あそぼ」｜栃木県子ども総合科学館",
+          "text_sha256": "bc1c776d168216cb4fb5896bef3019d2cf285a1a12d064a9d7ba9373b7e17075"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/7139",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:12.549535+00:00",
+          "final_url": "https://t-csm.jp/event/7139",
+          "title": "JUMP-JAM（ジャンジャン）｜栃木県子ども総合科学館",
+          "text_sha256": "0ab8a788c0488a67e7f8f2d26e2c4e35a7e3709da22e44f35cb8410868395ad0"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/8792",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:14.650873+00:00",
+          "final_url": "https://t-csm.jp/event/8792",
+          "title": "パズルの日｜栃木県子ども総合科学館",
+          "text_sha256": "3ff24ea1dc3e96afb86d4ea9e335c5c25d0d11356e19734d4de71f1f7e8ecec8"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/7866",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:16.909118+00:00",
+          "final_url": "https://t-csm.jp/event/7866",
+          "title": "おはなし屋さん｜栃木県子ども総合科学館",
+          "text_sha256": "8a6ace36253ab5ba49872a66f8b858718a3d62b57c2e1862b1c0adcf443483ca"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/4145",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:18.669166+00:00",
+          "final_url": "https://t-csm.jp/event/4145",
+          "title": "公開天文台100周年 全国一斉観察会「太陽系の天体をみよう」｜栃木県子ども総合科学館",
+          "text_sha256": "c62d61ba2c074285d1a228f724ceaf2d937670332802abaf84ddfd23cbe7267d"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9208",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:20.658738+00:00",
+          "final_url": "https://t-csm.jp/event/9208",
+          "title": "【10/28受付開始】プラネタリウム夜間投影〈11月〉｜栃木県子ども総合科学館",
+          "text_sha256": "571a6ce02a18646ed881b4600753884c39ec4dc994031f8023269d6fd71fed2d"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/event/9909",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:22.593385+00:00",
+          "final_url": "https://t-csm.jp/event/9909",
+          "title": "【11/5受付開始】とちぎ プラネタリウム＆レクチャー Vol.2 「人類が初めて目にしたブラックホールの姿」｜栃木県子ども総合科学館",
+          "text_sha256": "48858072d30ea22e55b99ce0bd45db150947cfaaabc62361bc66a5bec9442d05"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://t-csm.jp/guide",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:25.575920+00:00",
+          "final_url": "https://t-csm.jp/guide",
+          "title": "ご利用案内・料金｜栃木県子ども総合科学館",
+          "text_sha256": "402e1a51bcb1d4b9109c6391b11f6ee10ddb387307a0163252372599b52c013b"
+        },
+        {
+          "facility_id": 414,
+          "url": "https://forms.gle/xZ3TZngUVs7QPe9n9",
+          "status": 200,
+          "checked_at": "2026-10-17T04:55:27.742398+00:00",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf5NLcqz-7jLgZ9dNPtHHCITVz2DCnt5cy1dmbd-wex3DALIg/viewform?usp=send_form",
+          "title": "プラネタリウム夜間投影（10月24日開催）",
+          "text_sha256": "479d7e33e1b44c5ab2040cd4c7fdaba7171f68fd8c6f7b809d27cac056003a4a"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.tochigi.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:14.108981+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/",
+          "title": "宇都宮市公式Webサイト",
+          "text_sha256": "4cff4b8a9fc8de3f1b099ef2372f7538f57b3823ba8985aceb7dc5c26afed936"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016959/1027727.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:31.505457+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016959/1027727.html",
+          "title": "秋の企画展 「八幡山公園100年物語～知られざる歳月の記憶～」｜宇都宮市公式Webサイト",
+          "text_sha256": "72aef729afd5fdbe0ace171fae293b0f278800f42a848c1fce2e6ecd4f1d5d1e"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/index.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:33.493135+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/index.html",
+          "title": "宇都宮城址公園・清明館｜宇都宮市公式Webサイト",
+          "text_sha256": "f31f631e191d94bc5f3be2257dab3f7175fbdc2865b57e4536e98ba59bdc4ecc"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1033031.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:45.894780+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1033031.html",
+          "title": "令和8年度 宇都宮城址まつりを開催します｜宇都宮市公式Webサイト",
+          "text_sha256": "58ad8b457da6a6d0d1c473783f45c0b522399021d66a7dea0702ff23f8228afd"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007296.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:48.649175+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007296.html",
+          "title": "宇都宮城の櫓（やぐら）2階の特別開放のお知らせ｜宇都宮市公式Webサイト",
+          "text_sha256": "3d84c41415670f274df2ad1929884e986f7732e1475b0a1312951e27ffd5c8ee"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007278.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:56:50.275652+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007278.html",
+          "title": "宇都宮城址公園のライトアップ｜宇都宮市公式Webサイト",
+          "text_sha256": "660389c6c7bfa2cb5bceb75a568f612641050278df22b0825b840568ca397819"
+        },
+        {
+          "facility_id": 416,
+          "url": "https://www.utsunomiya-jo.jp/event/yagura.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:57:05.607992+00:00",
+          "final_url": "https://www.utsunomiya-jo.jp/event/yagura.html",
+          "title": "櫓(やぐら)開放イベント | イベント |「よみがえれ！宇都宮城」市民の会",
+          "text_sha256": "c25f99e5cf256d8c3f8c343de1ffdf6142f8b0168a7e8eb1e05dd22e623f9336"
+        },
+        {
+          "facility_id": 417,
+          "url": "https://www.city.utsunomiya.tochigi.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:57:31.272411+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/",
+          "title": "宇都宮市公式Webサイト",
+          "text_sha256": "4cff4b8a9fc8de3f1b099ef2372f7538f57b3823ba8985aceb7dc5c26afed936"
+        },
+        {
+          "facility_id": 417,
+          "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/index.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:57:46.087394+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/index.html",
+          "title": "歴史・文化財イベント情報｜宇都宮市公式Webサイト",
+          "text_sha256": "9f414506775c3a0b311fb9d76df02b15d04246ded982e2a99184529e57ab61c5"
+        },
+        {
+          "facility_id": 417,
+          "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/index.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:57:52.947197+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/index.html",
+          "title": "うつのみや遺跡の広場　イベント情報｜宇都宮市公式Webサイト",
+          "text_sha256": "ebf17089eced4162742424f25630bd15a5e67992c5478fff36e36cb693ffc305"
+        },
+        {
+          "facility_id": 417,
+          "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/1031861.html",
+          "status": 200,
+          "checked_at": "2026-10-17T04:58:01.569679+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/1031861.html",
+          "title": "ニッコウキスゲ写真展｜宇都宮市公式Webサイト",
+          "text_sha256": "6c6afe8a09855a521db7ad665cedd0cdf88fdace673621f22072cbaf639e2b19"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://www.hachimanyama.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:58:12.202821+00:00",
+          "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x24d3968f620>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://www.hachimanyama.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:58:43.714947+00:00",
+          "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x2190f736f90>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://hatimanyama.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:59:13.778434+00:00",
+          "final_url": "https://hatimanyama.jp/",
+          "title": "八幡山公園｜宇都宮を一望できる自然豊かな公園 – 宇都宮を一望できる自然豊かな公園です",
+          "text_sha256": "95af0fcc8d5f074138ce95b49cb7890668f756f1a37ba4f84ec6611037db5f91"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://hatimanyama.jp/公園カレンダー/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:59:25.449242+00:00",
+          "final_url": "https://hatimanyama.jp/%E5%85%AC%E5%9C%92%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/",
+          "title": "公園カレンダー – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+          "text_sha256": "5d2495a3cfbac2a40d0eca46456e76ab15a26bfcbae095eb608f066826547273"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://hatimanyama.jp/各イベントの開催場所について/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:59:27.594479+00:00",
+          "final_url": "https://hatimanyama.jp/%E5%90%84%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E9%96%8B%E5%82%AC%E5%A0%B4%E6%89%80%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+          "title": "各イベントの開催日・場所について – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+          "text_sha256": "caaef35d98ca854b42c0262f396c0fc5374dbf009a98a4db109b1fb1aa0beeff"
+        },
+        {
+          "facility_id": 418,
+          "url": "https://hatimanyama.jp/イベントの荒天休止について/",
+          "status": 200,
+          "checked_at": "2026-10-17T04:59:32.407672+00:00",
+          "final_url": "https://hatimanyama.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E8%8D%92%E5%A4%A9%E4%BC%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+          "title": "イベントの雨天・荒天時の中止について – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+          "text_sha256": "c8e1e49a40d79b06c5c4d15e93bef4c00807e0525ac71fe4751a95bd6f17d521"
+        },
+        {
+          "facility_id": 419,
+          "url": "https://www.hachimanyama.jp/tower/",
+          "status": "error",
+          "checked_at": "2026-10-17T04:59:46.090929+00:00",
+          "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: /tower/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x1ff0976f620>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+        },
+        {
+          "facility_id": 419,
+          "url": "https://www.hachimanyama.jp/tower/",
+          "status": "error",
+          "checked_at": "2026-10-17T05:00:15.275927+00:00",
+          "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: /tower/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x1d623742f90>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+        },
+        {
+          "facility_id": 419,
+          "url": "https://hatimanyama.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T05:00:38.700625+00:00",
+          "final_url": "https://hatimanyama.jp/",
+          "title": "八幡山公園｜宇都宮を一望できる自然豊かな公園 – 宇都宮を一望できる自然豊かな公園です",
+          "text_sha256": "95af0fcc8d5f074138ce95b49cb7890668f756f1a37ba4f84ec6611037db5f91"
+        },
+        {
+          "facility_id": 419,
+          "url": "https://hatimanyama.jp/宇都宮タワー/",
+          "status": 200,
+          "checked_at": "2026-10-17T05:00:41.306504+00:00",
+          "final_url": "https://hatimanyama.jp/events/event/%e5%ae%87%e9%83%bd%e5%ae%ae%e3%82%bf%e3%83%af%e3%83%bc%e3%81%ae%e7%84%a1%e6%96%99%e9%96%8b%e6%94%be/",
+          "title": "宇都宮タワーの元旦無料開放（午前7時20分～10時） – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+          "text_sha256": "a48418af27d092aa418bdd8b30ce43b9be07bc7f02a4bae36139fd5804f96621"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.adv-utsunomiya.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T05:00:59.984199+00:00",
+          "error": "HTTPSConnectionPool(host='www.adv-utsunomiya.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.adv-utsunomiya.jp', port=443): Failed to resolve 'www.adv-utsunomiya.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.adv-utsunomiya.jp/",
+          "status": "error",
+          "checked_at": "2026-10-17T05:01:22.679534+00:00",
+          "error": "HTTPSConnectionPool(host='www.adv-utsunomiya.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.adv-utsunomiya.jp', port=443): Failed to resolve 'www.adv-utsunomiya.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/jigyo/1026397.html",
+          "status": 200,
+          "checked_at": "2026-10-17T05:01:32.329759+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/jigyo/1026397.html",
+          "title": "令和8年度主催事業｜宇都宮市公式Webサイト",
+          "text_sha256": "ce53d9c169c5e68f9964d6a838336432610ada23516749649963a24c70b0cbdf"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/r8-syusaitirasi.pdf",
+          "status": 404,
+          "checked_at": "2026-10-17T05:01:33.853417+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/r8-syusaitirasi.pdf",
+          "title": "宇都宮市公式Webサイト - 指定されたページ、またはファイルは見つかりませんでした。",
+          "text_sha256": "03d941476348e60579e2f0af7ad9c9643428543096a9a5ad69c51b44db047918"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T05:01:40.739495+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+          "title": "Official PDF",
+          "text_sha256": "89d9a2fa0cdfafafd877fde65c3da6c684b2424942bf55d8a40d238c7076895f"
+        },
+        {
+          "facility_id": 420,
+          "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T05:01:55.062629+00:00",
+          "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+          "title": "Official PDF",
+          "text_sha256": "89d9a2fa0cdfafafd877fde65c3da6c684b2424942bf55d8a40d238c7076895f"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreen.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T05:02:16.133435+00:00",
+          "error": "HTTPSConnectionPool(host='kinugreen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kinugreen.com', port=443): Failed to resolve 'kinugreen.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreen.com/",
+          "status": "error",
+          "checked_at": "2026-10-17T05:02:27.939767+00:00",
+          "error": "HTTPSConnectionPool(host='kinugreen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kinugreen.com', port=443): Failed to resolve 'kinugreen.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/",
+          "status": 200,
+          "checked_at": "2026-10-17T05:02:33.438669+00:00",
+          "final_url": "https://kinugreenpark.jp/",
+          "title": "鬼怒グリーンパーク公式サイト",
+          "text_sha256": "cd65bfb6c2d25ee200822c8d98d3824e307ff70a614be4bf502366eace04eee2"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/page_event/page_event-4208",
+          "status": 200,
+          "checked_at": "2026-10-17T05:02:42.353307+00:00",
+          "final_url": "https://kinugreenpark.jp/page_event/page_event-4208",
+          "title": "2026 コスモスまつり | 鬼怒グリーンパーク 公式サイト",
+          "text_sha256": "2d74c037a616ce65a701d06133a1465dcb554960428440058bb53ed78b8ed364"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/info_c/4310.html",
+          "status": 200,
+          "checked_at": "2026-10-17T05:02:45.328962+00:00",
+          "final_url": "https://kinugreenpark.jp/info_c/4310.html",
+          "title": "ワンワンワンマルシェ開催！ | 鬼怒グリーンパーク 公式サイト",
+          "text_sha256": "78f6616d7f76daeb7d991c7fa17a21035f2d82551cd75ec1563c26f0941c2af2"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/info_c/2770.html",
+          "status": 200,
+          "checked_at": "2026-10-17T05:02:47.869005+00:00",
+          "final_url": "https://kinugreenpark.jp/info_c/2770.html",
+          "title": "家庭の日(毎月第3日曜日) | 鬼怒グリーンパーク 公式サイト",
+          "text_sha256": "ce229b94a4a3d446fc288a08cd8cd7093fa56d685b4d1216c2aa9cd331e81044"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/page_event/page_event-4208",
+          "status": 200,
+          "checked_at": "2026-10-17T05:02:59.726529+00:00",
+          "final_url": "https://kinugreenpark.jp/page_event/page_event-4208",
+          "title": "2026 コスモスまつり | 鬼怒グリーンパーク 公式サイト",
+          "text_sha256": "2d74c037a616ce65a701d06133a1465dcb554960428440058bb53ed78b8ed364"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/wp-content/uploads/2025/09/コスモスまつりチラシ3校-1.jpg",
+          "status": 200,
+          "checked_at": "2026-10-17T05:03:08.991118+00:00",
+          "final_url": "https://kinugreenpark.jp/wp-content/uploads/2025/09/%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%B9%E3%81%BE%E3%81%A4%E3%82%8A%E3%83%81%E3%83%A9%E3%82%B73%E6%A0%A1-1.jpg",
+          "title": "Official image",
+          "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/wp-content/uploads/2026/02/DOC261008-20261008154131.pdf",
+          "status": 200,
+          "checked_at": "2026-10-17T05:03:17.615818+00:00",
+          "final_url": "https://kinugreenpark.jp/wp-content/uploads/2026/02/DOC261008-20261008154131.pdf",
+          "title": "Official PDF",
+          "text_sha256": "7e822c35937c62a5016b3174791054c1548b230e31a910bb8c644636084030ab"
+        },
+        {
+          "facility_id": 422,
+          "url": "https://kinugreenpark.jp/qa",
+          "status": 200,
+          "checked_at": "2026-10-17T05:03:45.236957+00:00",
+          "final_url": "https://kinugreenpark.jp/qa",
+          "title": "よくある質問 | 鬼怒グリーンパーク 公式サイト",
+          "text_sha256": "3841826f6f32d81dba52124e3012de607def7ffc42b6bd4f9f42d6cca5564024"
         }
       ],
       "facilities": [
@@ -3386,6 +4087,1012 @@
               "final_url": "https://toshogu.jp/pages/24?detail=1&b_id=117&r_id=38#block117",
               "title": " 七五三祈祷のお知らせ ",
               "text_sha256": "7efca0e774149fba4f65384d4cc241950cf421a7322ca7aa00fd28d90c10f2eb"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:48:49.656781+00:00",
+          "facility_id": 411,
+          "facility_name": "日光二荒山神社",
+          "disposition": "candidate_found_added",
+          "reason": "TLS失敗を再試行しHTTP公式へ到達。期間限定コラボを実会場中宮祠で1件追加。良い縁まつりはPDF目視で会期確認したが雨天/時間等不足でHOLD。通常登山・祈祷・結婚式はイベント化しない。",
+          "candidates": [
+            {
+              "title": "刀剣乱舞ONLINE刀剣展示コラボ",
+              "disposition": "added",
+              "event_id": "evt-f12-411-touken",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "日光良い縁まつり9/15～11/23",
+              "disposition": "hold",
+              "reason": "会期と笹の輪等は公式PDF画像で確認、雨天/荒天時条件と開催時間未記載"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 411,
+              "url": "https://www.futarasan.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:47:29.025312+00:00",
+              "error": "HTTPSConnectionPool(host='www.futarasan.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+            },
+            {
+              "facility_id": 411,
+              "url": "https://www.futarasan.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:47:36.226378+00:00",
+              "error": "HTTPSConnectionPool(host='www.futarasan.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLError(1, '[SSL: SSLV3_ALERT_HANDSHAKE_FAILURE] sslv3 alert handshake failure (_ssl.c:1081)')))"
+            },
+            {
+              "facility_id": 411,
+              "url": "http://www.futarasan.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:47:37.705108+00:00",
+              "final_url": "http://www.futarasan.jp/",
+              "title": "日光二荒山神社",
+              "text_sha256": "5ca12c5ed0325e38d014a97079583fdd04cbe12ca3ce51964759be3027ad03eb"
+            },
+            {
+              "facility_id": 411,
+              "url": "http://www.futarasan.jp/pdf/toukenranbu2026.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T04:47:45.072983+00:00",
+              "final_url": "http://www.futarasan.jp/pdf/toukenranbu2026.pdf",
+              "title": "Official PDF",
+              "text_sha256": "7796637f1fa1abe5da6954c9883ae620372dff78823a123678b1e90ac112bcc8"
+            },
+            {
+              "facility_id": 411,
+              "url": "http://www.futarasan.jp/pdf/yoien2026.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T04:47:49.447146+00:00",
+              "final_url": "http://www.futarasan.jp/pdf/yoien2026.pdf",
+              "title": "Official PDF",
+              "text_sha256": "32b94e5c85679aeff5d5ac38d9440e96ea8ac460414535f49565d9ec6912b92b"
+            },
+            {
+              "facility_id": 411,
+              "url": "http://www.futarasan.jp/event.shtml",
+              "status": 200,
+              "checked_at": "2026-10-17T04:48:08.680742+00:00",
+              "final_url": "http://www.futarasan.jp/event.shtml",
+              "title": "日光二荒山神社",
+              "text_sha256": "773fed7f5124c781e3f42fd333771c600129505190ed71e7b74776591b9ebf2b"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:49:45.213663+00:00",
+          "facility_id": 412,
+          "facility_name": "日光山輪王寺",
+          "disposition": "candidate_found_added",
+          "reason": "宝物殿企画展追加。逍遥園夜間拝観は公式詳細と正しい公式PDFまで取得したが雨天条件不足でHOLD。中禅寺夜間参拝は9月終了。常設展・法話は追加しない。",
+          "candidates": [
+            {
+              "title": "慈眼大師の日光中興",
+              "disposition": "added",
+              "event_id": "evt-f12-412-tengai",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "逍遥園ライトアップ2026（10/23～11/8指定8日）",
+              "disposition": "hold",
+              "reason": "公式詳細とチラシで日程・料金・駐車場は確認したが雨天/荒天変更条件未掲載"
+            },
+            {
+              "title": "中禅寺夜間参拝9/18～22",
+              "disposition": "excluded",
+              "reason": "終了済み、別会場"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:48:51.100309+00:00",
+              "final_url": "https://www.rinnoji.or.jp/",
+              "title": "日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "46cbcebaa8313e9b52258939eb7f447ed8efb5d27330226bb8beb86dfd1b1317"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/news/20260927.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:48:57.906521+00:00",
+              "final_url": "https://www.rinnoji.or.jp/news/20260927.html",
+              "title": "慈眼大師の日光中興 | 日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "80de2d62862e9bf00b9e83d9cc86f91f0835f0de6cd04dcffeaedf1bbb54c033"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/news/20260908-05.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:48:59.652215+00:00",
+              "final_url": "https://www.rinnoji.or.jp/news/20260908-05.html",
+              "title": "令和8年 夜間特別拝観「逍遥園ライトアップ」 | 日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "566fe39d29a7212cec29f714a7ab236a896509c5416fa58fbd4df98049ab03af"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/news/20260912.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:49:01.538645+00:00",
+              "final_url": "https://www.rinnoji.or.jp/news/20260912.html",
+              "title": "日光山 中禅寺 夜間参拝のご案内 | 日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "960f053effc9e43aa26543267bc8092149920daef53def026abd4c16a3332942"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/information.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:49:08.598523+00:00",
+              "final_url": "https://www.rinnoji.or.jp/information.html",
+              "title": "拝観のご案内 | 日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "4cb640448bd7b2e30a713c53ac0a47a4b169d77a7db5c06bd61a22ff287adb5b"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/news/content/files/activity/lightup-2026rev02.pdf",
+              "status": 404,
+              "checked_at": "2026-10-17T04:49:10.738030+00:00",
+              "final_url": "https://www.rinnoji.or.jp/news/content/files/activity/lightup-2026rev02.pdf",
+              "title": "Page not found. | 日光山 輪王寺 オフィシャルサイト",
+              "text_sha256": "f562c5cb4ab18d2729fa6daf8d6a299e24242bf4ea186ae5bfb2dd882d0450db"
+            },
+            {
+              "facility_id": 412,
+              "url": "https://www.rinnoji.or.jp/content/files/activity/lightup-2026rev02.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T04:49:18.480927+00:00",
+              "final_url": "https://www.rinnoji.or.jp/content/files/activity/lightup-2026rev02.pdf",
+              "title": "Official PDF",
+              "text_sha256": "a0a828131bdf9d0ca0158b640e8c4900bda7ddf8563da2fb33c5c3b490b285c7"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:54:15.928408+00:00",
+          "facility_id": 413,
+          "facility_name": "宇都宮動物園",
+          "disposition": "candidate_found_added",
+          "reason": "公式一覧の今後5件を個別確認。4件追加、夜の遊園地1件は公式日付不一致でHOLD。既存7月3件は既にended。過去10/10等、通年サービスは新規対象外。",
+          "candidates": [
+            {
+              "title": "ゾウの宮子のお誕生日会",
+              "disposition": "added",
+              "event_id": "evt-f12-413-miyako"
+            },
+            {
+              "title": "そっくりさん分かるかな？",
+              "disposition": "added",
+              "event_id": "evt-f12-413-lookalike"
+            },
+            {
+              "title": "市原ぞうの国 坂本小百合園長の特別講演会",
+              "disposition": "added",
+              "event_id": "evt-f12-413-lecture"
+            },
+            {
+              "title": "zoozoo to ラーメンまつり2026",
+              "disposition": "added",
+              "event_id": "evt-f12-413-ramen"
+            },
+            {
+              "title": "ノスタルジー×シュールな夜の遊園地（一覧10/24）",
+              "disposition": "hold",
+              "reason": "一覧は10/24開催だが同じ詳細ページの開催日欄は6月13日。公式内部で数字日付が不一致。夜間券を推測して登録しない。",
+              "sources_checked": [
+                "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e9%81%8a%e5%9c%92%e5%9c%b0%e3%80%91%e3%83%8e%e3%82%b9%e3%82%bf%e3%83%ab%e3%82%b8%e3%83%bcx%e3%82%b7%e3%83%a5%e3%83%bc%e3%83%ab%e3%81%aa%e5%a4%9c%e3%81%ae%e9%81%8a%e5%9c%92%e5%9c%b0/",
+                "https://utsunomiya-zoo.com/event-posts/"
+              ]
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:49:47.188534+00:00",
+              "final_url": "https://utsunomiya-zoo.com/",
+              "title": "Home - 宇都宮動物園",
+              "text_sha256": "33a734dacb0e7f32636be2292ffcf5be9387925d07c9c35c3415594d208d0381"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:49:58.389619+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/",
+              "title": "イベント一覧 - 宇都宮動物園",
+              "text_sha256": "00b227d24797c5c79e3c5b585e59b0f3e67c61ff252259718123130a149707c6"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e7%89%b9%e5%88%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%883%e6%97%a5%e9%96%93%e3%80%91zoozoo-to-%e3%83%a9%e3%83%bc%e3%83%a1%e3%83%b3%e3%81%be%e3%81%a4%e3%82%8a2026/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:14.515903+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E7%89%B9%E5%88%A5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%883%E6%97%A5%E9%96%93%E3%80%91zoozoo-to-%E3%83%A9%E3%83%BC%E3%83%A1%E3%83%B3%E3%81%BE%E3%81%A4%E3%82%8A2026/",
+              "title": "【特別イベント(3日間)】zoozoo to ラーメンまつり2026 - 宇都宮動物園",
+              "text_sha256": "0d7df02e3d6901ba5fbb0bed36e5d46990f187887816c27029a6460363796385"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/%e3%82%be%e3%82%a6%e5%ae%ae%e5%ad%90%e3%81%ae%e3%81%8a%e8%aa%95%e7%94%9f%e6%97%a5%e4%bc%9a/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:16.208532+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%82%BE%E3%82%A6%E5%AE%AE%E5%AD%90%E3%81%AE%E3%81%8A%E8%AA%95%E7%94%9F%E6%97%A5%E4%BC%9A/",
+              "title": "【動物園】ゾウの宮子のお誕生日会 - 宇都宮動物園",
+              "text_sha256": "e5c5d148d5e374c00b09911bcbc47a6abff009818186b59e04bf3f11c90e14fe"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e7%89%b9%e5%88%a5%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%91%e5%b8%82%e5%8e%9f%e3%81%9e%e3%81%86%e3%81%ae%e5%9b%bd-%e5%9d%82%e6%9c%ac%e5%b0%8f%e7%99%be%e5%90%88%e5%9c%92%e9%95%b7%e3%81%ae/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:18.098500+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E7%89%B9%E5%88%A5%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%91%E5%B8%82%E5%8E%9F%E3%81%9E%E3%81%86%E3%81%AE%E5%9B%BD-%E5%9D%82%E6%9C%AC%E5%B0%8F%E7%99%BE%E5%90%88%E5%9C%92%E9%95%B7%E3%81%AE/",
+              "title": "【特別イベント】市原ぞうの国 坂本小百合園長の特別講演会 - 宇都宮動物園",
+              "text_sha256": "c76ccc839e148c3fb6eb6ea1e0d1d86b05d232d8a53d84390a78f3731ca64472"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e9%81%8a%e5%9c%92%e5%9c%b0%e3%80%91%e3%83%8e%e3%82%b9%e3%82%bf%e3%83%ab%e3%82%b8%e3%83%bcx%e3%82%b7%e3%83%a5%e3%83%bc%e3%83%ab%e3%81%aa%e5%a4%9c%e3%81%ae%e9%81%8a%e5%9c%92%e5%9c%b0/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:20.877637+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E9%81%8A%E5%9C%92%E5%9C%B0%E3%80%91%E3%83%8E%E3%82%B9%E3%82%BF%E3%83%AB%E3%82%B8%E3%83%BCx%E3%82%B7%E3%83%A5%E3%83%BC%E3%83%AB%E3%81%AA%E5%A4%9C%E3%81%AE%E9%81%8A%E5%9C%92%E5%9C%B0/",
+              "title": "【遊園地】ノスタルジー×シュールな夜の遊園地オープン！！ - 宇都宮動物園",
+              "text_sha256": "bacdaa02eed708b06a5910fd6c820983b02fdc4b7b9bce6909843b7bc9e88149"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/event-posts/%e3%80%90%e5%8b%95%e7%89%a9%e5%9c%92%e3%80%91%e3%82%aa%e3%83%aa%e3%82%b8%e3%83%8a%e3%83%ab%ef%bc%81%e5%8b%95%e7%89%a9%e8%a7%a3%e8%aa%ac%e6%9d%bf-2/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:22.710433+00:00",
+              "final_url": "https://utsunomiya-zoo.com/event-posts/%E3%80%90%E5%8B%95%E7%89%A9%E5%9C%92%E3%80%91%E3%82%AA%E3%83%AA%E3%82%B8%E3%83%8A%E3%83%AB%EF%BC%81%E5%8B%95%E7%89%A9%E8%A7%A3%E8%AA%AC%E6%9D%BF-2/",
+              "title": "【動物園】そっくりさん分かるかな？ - 宇都宮動物園",
+              "text_sha256": "50eef22861556a1c6a6543da9f22ee6cc7acbd631e3454c2c3c19767f40b7bcb"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/guide/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:50:26.489357+00:00",
+              "final_url": "https://utsunomiya-zoo.com/guide/",
+              "title": "ページが見つかりませんでした – 宇都宮動物園",
+              "text_sha256": "f12c8cd1dc880ee0b57fe96c971739de7f06d2e6335d02a3a01f70bd2de33687"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://forms.gle/9Q4BUBZAw8ojrkhTA",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:28.342946+00:00",
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLScvbY-QEzldDJ8fbmgeUqTwMUjwqQ_8uOxE7JKDav7DDEj_xA/viewform?usp=send_form",
+              "title": "【10月24日開催】市原ぞうの国園長特別講演会申込フォーム",
+              "text_sha256": "0a1e9ea615d8c221a741006aad47da96d6f6c83a9f017aa10045229a57975983"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/price/",
+              "status": 404,
+              "checked_at": "2026-10-17T04:50:38.947752+00:00",
+              "final_url": "https://utsunomiya-zoo.com/price/",
+              "title": "ページが見つかりませんでした – 宇都宮動物園",
+              "text_sha256": "f12c8cd1dc880ee0b57fe96c971739de7f06d2e6335d02a3a01f70bd2de33687"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/access/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:41.384846+00:00",
+              "final_url": "https://utsunomiya-zoo.com/access/",
+              "title": "アクセス - 宇都宮動物園",
+              "text_sha256": "3868f071ca116516fab594c6bc1ec771969a12be9f293db0c618065929c66b70"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/information/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:50:52.459297+00:00",
+              "final_url": "https://utsunomiya-zoo.com/%E5%96%B6%E6%A5%AD%E6%99%82%E9%96%93%E3%83%BB%E6%96%99%E9%87%91/",
+              "title": "営業時間・料金 - 宇都宮動物園",
+              "text_sha256": "269183c050d1b9b585a1e95a206b27aa84f27996d6fce23b9945efa9b71ff856"
+            },
+            {
+              "facility_id": 413,
+              "url": "https://utsunomiya-zoo.com/wp-content/uploads/2026/11/7d04d93407d56d018866bdc5d3a4e3a9.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T04:53:28.587758+00:00",
+              "final_url": "https://utsunomiya-zoo.com/wp-content/uploads/2026/11/7d04d93407d56d018866bdc5d3a4e3a9.pdf",
+              "title": "Official PDF",
+              "text_sha256": "7e822c35937c62a5016b3174791054c1548b230e31a910bb8c644636084030ab"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:56:11.783341+00:00",
+          "facility_id": 414,
+          "facility_name": "栃木県子ども総合科学館",
+          "disposition": "candidate_found_added",
+          "reason": "公式一覧全候補を詳細確認。9件追加、6組の保留。成人限定おりがみ教室は対象外。既存で開催日経過のscheduled6件をendedへ。",
+          "candidates": [
+            {
+              "title": "おりがみであそぼう「ぱくぱくカラス」",
+              "disposition": "added",
+              "event_id": "evt-f12-414-8440"
+            },
+            {
+              "title": "天文台公開",
+              "disposition": "added",
+              "event_id": "evt-f12-414-9089"
+            },
+            {
+              "title": "プラネタリウム夜間投影〈10月〉",
+              "disposition": "added",
+              "event_id": "evt-f12-414-9292"
+            },
+            {
+              "title": "おへやのまめっこタイム「ハロウィン・で・あそぼ」",
+              "disposition": "added",
+              "event_id": "evt-f12-414-10015"
+            },
+            {
+              "title": "JUMP-JAM（ジャンジャン）",
+              "disposition": "added",
+              "event_id": "evt-f12-414-7139"
+            },
+            {
+              "title": "パズルの日",
+              "disposition": "added",
+              "event_id": "evt-f12-414-8792"
+            },
+            {
+              "title": "おはなし屋さん",
+              "disposition": "added",
+              "event_id": "evt-f12-414-7866"
+            },
+            {
+              "title": "公開天文台100周年 全国一斉観察会「太陽系の天体をみよう」",
+              "disposition": "added",
+              "event_id": "evt-f12-414-4145"
+            },
+            {
+              "title": "夢を持った瞬間から未来は変わり始めるんだよ（当日参加プログラム）",
+              "disposition": "added",
+              "event_id": "evt-f12-414-9609"
+            },
+            {
+              "title": "クラフトクッキング ミニホットケーキ",
+              "disposition": "hold",
+              "reason": "休止日の見出しは10/28等を終日休止と読めるが本文はAMのみ。数値日付ごとの実施枠が公式内で不一致。"
+            },
+            {
+              "title": "星をみる会 10/17",
+              "disposition": "hold",
+              "reason": "受付終了、当日参加経路なし"
+            },
+            {
+              "title": "星をみる会 11/7",
+              "disposition": "hold",
+              "reason": "受付締切は本日10/17 15時。公開までの受付継続を保証できない短時間の申込窓のため保留。"
+            },
+            {
+              "title": "星をみる会 12/13・2027/1/16・2/7・3/13",
+              "disposition": "hold",
+              "reason": "年次開催日だけで各回の時刻・申込開始・参加条件が未公表"
+            },
+            {
+              "title": "プラネタリウム夜間投影11月",
+              "disposition": "hold",
+              "reason": "10/28受付開始前"
+            },
+            {
+              "title": "ブラックホール講演12/5",
+              "disposition": "hold",
+              "reason": "11/5受付開始前"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:17.922860+00:00",
+              "final_url": "https://t-csm.jp/event",
+              "title": "イベント｜栃木県子ども総合科学館",
+              "text_sha256": "404403621d4e1f8c891d6c7a81f996cf8820a59505d6ffd3cc386e45ae5ab75c"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9559",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:30.362348+00:00",
+              "final_url": "https://t-csm.jp/event/9559",
+              "title": "【10/18、28、11/1、15、20AM、25AMはお休み】あそびのワークショップ「クラフトクッキング」｜栃木県子ども総合科学館",
+              "text_sha256": "c3e7969241d6b5031e2e9e3826fbface7c0f050a21b0654559732d65809abb7b"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/8440",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:39.365686+00:00",
+              "final_url": "https://t-csm.jp/event/8440",
+              "title": "おりがみであそぼう｜栃木県子ども総合科学館",
+              "text_sha256": "d2c9ffff6664d31be45a2cee7d107ec4f895ed5673d4600e1a0e11740ee9e443"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9089",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:41.927842+00:00",
+              "final_url": "https://t-csm.jp/event/9089",
+              "title": "天文台公開｜栃木県子ども総合科学館",
+              "text_sha256": "50d21204cb8a59ae52dd1a41d1d2af5092600181a3e385afb3e4d5981a7012f3"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/6790",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:44.870699+00:00",
+              "final_url": "https://t-csm.jp/event/6790",
+              "title": "星をみる会｜栃木県子ども総合科学館",
+              "text_sha256": "976e9268db39f6b1bd708df85b8071d41b592311ee57d6ad322f993acc239553"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9609",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:46.456324+00:00",
+              "final_url": "https://t-csm.jp/event/9609",
+              "title": "夢を持った瞬間から未来は変わり始めるんだよ｜栃木県子ども総合科学館",
+              "text_sha256": "c5f0230ee020d07691e4d960c1c02368a950b37d7d0fa0e5b0692d5f2e6fea2f"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9292",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:48.425544+00:00",
+              "final_url": "https://t-csm.jp/event/9292",
+              "title": "【参加受付中】プラネタリウム夜間投影〈10月〉｜栃木県子ども総合科学館",
+              "text_sha256": "7e013bf990811c8217d207032aa23106ba1767ef06dfa87b6527ee7920caf104"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/10015",
+              "status": 200,
+              "checked_at": "2026-10-17T04:54:51.497092+00:00",
+              "final_url": "https://t-csm.jp/event/10015",
+              "title": "おへやのまめっこタイム　「ハロウィン・で・あそぼ」｜栃木県子ども総合科学館",
+              "text_sha256": "bc1c776d168216cb4fb5896bef3019d2cf285a1a12d064a9d7ba9373b7e17075"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/7139",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:12.549535+00:00",
+              "final_url": "https://t-csm.jp/event/7139",
+              "title": "JUMP-JAM（ジャンジャン）｜栃木県子ども総合科学館",
+              "text_sha256": "0ab8a788c0488a67e7f8f2d26e2c4e35a7e3709da22e44f35cb8410868395ad0"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/8792",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:14.650873+00:00",
+              "final_url": "https://t-csm.jp/event/8792",
+              "title": "パズルの日｜栃木県子ども総合科学館",
+              "text_sha256": "3ff24ea1dc3e96afb86d4ea9e335c5c25d0d11356e19734d4de71f1f7e8ecec8"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/7866",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:16.909118+00:00",
+              "final_url": "https://t-csm.jp/event/7866",
+              "title": "おはなし屋さん｜栃木県子ども総合科学館",
+              "text_sha256": "8a6ace36253ab5ba49872a66f8b858718a3d62b57c2e1862b1c0adcf443483ca"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/4145",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:18.669166+00:00",
+              "final_url": "https://t-csm.jp/event/4145",
+              "title": "公開天文台100周年 全国一斉観察会「太陽系の天体をみよう」｜栃木県子ども総合科学館",
+              "text_sha256": "c62d61ba2c074285d1a228f724ceaf2d937670332802abaf84ddfd23cbe7267d"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9208",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:20.658738+00:00",
+              "final_url": "https://t-csm.jp/event/9208",
+              "title": "【10/28受付開始】プラネタリウム夜間投影〈11月〉｜栃木県子ども総合科学館",
+              "text_sha256": "571a6ce02a18646ed881b4600753884c39ec4dc994031f8023269d6fd71fed2d"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/event/9909",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:22.593385+00:00",
+              "final_url": "https://t-csm.jp/event/9909",
+              "title": "【11/5受付開始】とちぎ プラネタリウム＆レクチャー Vol.2 「人類が初めて目にしたブラックホールの姿」｜栃木県子ども総合科学館",
+              "text_sha256": "48858072d30ea22e55b99ce0bd45db150947cfaaabc62361bc66a5bec9442d05"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://t-csm.jp/guide",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:25.575920+00:00",
+              "final_url": "https://t-csm.jp/guide",
+              "title": "ご利用案内・料金｜栃木県子ども総合科学館",
+              "text_sha256": "402e1a51bcb1d4b9109c6391b11f6ee10ddb387307a0163252372599b52c013b"
+            },
+            {
+              "facility_id": 414,
+              "url": "https://forms.gle/xZ3TZngUVs7QPe9n9",
+              "status": 200,
+              "checked_at": "2026-10-17T04:55:27.742398+00:00",
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf5NLcqz-7jLgZ9dNPtHHCITVz2DCnt5cy1dmbd-wex3DALIg/viewform?usp=send_form",
+              "title": "プラネタリウム夜間投影（10月24日開催）",
+              "text_sha256": "479d7e33e1b44c5ab2040cd4c7fdaba7171f68fd8c6f7b809d27cac056003a4a"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:57:29.183877+00:00",
+          "facility_id": 416,
+          "facility_name": "宇都宮城址公園",
+          "disposition": "candidate_found_added",
+          "reason": "公式城址公園分類・祭り・特別開放と既存展示を確認。城址まつり追加、既存展示鮮度更新、櫓独立回は保留。フォト応募は来場催事対象外、通年ライトアップは通常運用。",
+          "candidates": [
+            {
+              "title": "令和8年度 宇都宮城址まつり",
+              "disposition": "added",
+              "event_id": "evt-f12-416-festival"
+            },
+            {
+              "title": "八幡山公園100年物語",
+              "disposition": "duplicate",
+              "event_id": "evt-tochigi-w40d6-hachiman100",
+              "reason": "既存清明館展示を公式再確認し鮮度更新"
+            },
+            {
+              "title": "櫓2階特別開放の独立開催分",
+              "disposition": "hold",
+              "reason": "通常毎月第3日曜の案内はあるが直近掲載は9月中止。10/18分は城址まつり内に包含、以後の個別開催告知未確認。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.tochigi.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:14.108981+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/",
+              "title": "宇都宮市公式Webサイト",
+              "text_sha256": "4cff4b8a9fc8de3f1b099ef2372f7538f57b3823ba8985aceb7dc5c26afed936"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016959/1027727.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:31.505457+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016959/1027727.html",
+              "title": "秋の企画展 「八幡山公園100年物語～知られざる歳月の記憶～」｜宇都宮市公式Webサイト",
+              "text_sha256": "72aef729afd5fdbe0ace171fae293b0f278800f42a848c1fce2e6ecd4f1d5d1e"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/index.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:33.493135+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/index.html",
+              "title": "宇都宮城址公園・清明館｜宇都宮市公式Webサイト",
+              "text_sha256": "f31f631e191d94bc5f3be2257dab3f7175fbdc2865b57e4536e98ba59bdc4ecc"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1033031.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:45.894780+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1033031.html",
+              "title": "令和8年度 宇都宮城址まつりを開催します｜宇都宮市公式Webサイト",
+              "text_sha256": "58ad8b457da6a6d0d1c473783f45c0b522399021d66a7dea0702ff23f8228afd"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007296.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:48.649175+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007296.html",
+              "title": "宇都宮城の櫓（やぐら）2階の特別開放のお知らせ｜宇都宮市公式Webサイト",
+              "text_sha256": "3d84c41415670f274df2ad1929884e986f7732e1475b0a1312951e27ffd5c8ee"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007278.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:56:50.275652+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/citypromotion/kanko/meisho/jyiousi/1007278.html",
+              "title": "宇都宮城址公園のライトアップ｜宇都宮市公式Webサイト",
+              "text_sha256": "660389c6c7bfa2cb5bceb75a568f612641050278df22b0825b840568ca397819"
+            },
+            {
+              "facility_id": 416,
+              "url": "https://www.utsunomiya-jo.jp/event/yagura.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:57:05.607992+00:00",
+              "final_url": "https://www.utsunomiya-jo.jp/event/yagura.html",
+              "title": "櫓(やぐら)開放イベント | イベント |「よみがえれ！宇都宮城」市民の会",
+              "text_sha256": "c25f99e5cf256d8c3f8c343de1ffdf6142f8b0168a7e8eb1e05dd22e623f9336"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:58:10.598849+00:00",
+          "facility_id": 417,
+          "facility_name": "うつのみや遺跡の広場",
+          "disposition": "no_current_or_future_event",
+          "reason": "市公式ホームから施設専用イベント一覧、唯一のニッコウキスゲ写真展詳細まで確認。2024/6/1～8/31終了を明記し今後の掲載なし。既存イベントなし。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 417,
+              "url": "https://www.city.utsunomiya.tochigi.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:57:31.272411+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/",
+              "title": "宇都宮市公式Webサイト",
+              "text_sha256": "4cff4b8a9fc8de3f1b099ef2372f7538f57b3823ba8985aceb7dc5c26afed936"
+            },
+            {
+              "facility_id": 417,
+              "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/index.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:57:46.087394+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/index.html",
+              "title": "歴史・文化財イベント情報｜宇都宮市公式Webサイト",
+              "text_sha256": "9f414506775c3a0b311fb9d76df02b15d04246ded982e2a99184529e57ab61c5"
+            },
+            {
+              "facility_id": 417,
+              "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/index.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:57:52.947197+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/index.html",
+              "title": "うつのみや遺跡の広場　イベント情報｜宇都宮市公式Webサイト",
+              "text_sha256": "ebf17089eced4162742424f25630bd15a5e67992c5478fff36e36cb693ffc305"
+            },
+            {
+              "facility_id": 417,
+              "url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/1031861.html",
+              "status": 200,
+              "checked_at": "2026-10-17T04:58:01.569679+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/event/rekishi/1035013/1016960/1031861.html",
+              "title": "ニッコウキスゲ写真展｜宇都宮市公式Webサイト",
+              "text_sha256": "6c6afe8a09855a521db7ad665cedd0cdf88fdace673621f22072cbaf639e2b19"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T04:59:44.056426+00:00",
+          "facility_id": 418,
+          "facility_name": "八幡山公園",
+          "disposition": "candidate_found_hold",
+          "reason": "旧URL2回接続失敗後、現行公式へ到達。新着・カレンダー・実施時間・雨天規定を確認。アニマルの日は参加条件不足HOLD。土日祝定例乗馬・ウサギふれあいは通常サービス。既存なし。",
+          "candidates": [
+            {
+              "title": "アニマルの日（毎月20日）",
+              "disposition": "hold",
+              "reason": "公式は毎月20日11～12時/14～15時と雨天中止の場合ありを示すが、10/20回の料金・参加受付条件を確認できない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 418,
+              "url": "https://www.hachimanyama.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:58:12.202821+00:00",
+              "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x24d3968f620>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+            },
+            {
+              "facility_id": 418,
+              "url": "https://www.hachimanyama.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:58:43.714947+00:00",
+              "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x2190f736f90>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+            },
+            {
+              "facility_id": 418,
+              "url": "https://hatimanyama.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:59:13.778434+00:00",
+              "final_url": "https://hatimanyama.jp/",
+              "title": "八幡山公園｜宇都宮を一望できる自然豊かな公園 – 宇都宮を一望できる自然豊かな公園です",
+              "text_sha256": "95af0fcc8d5f074138ce95b49cb7890668f756f1a37ba4f84ec6611037db5f91"
+            },
+            {
+              "facility_id": 418,
+              "url": "https://hatimanyama.jp/公園カレンダー/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:59:25.449242+00:00",
+              "final_url": "https://hatimanyama.jp/%E5%85%AC%E5%9C%92%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/",
+              "title": "公園カレンダー – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+              "text_sha256": "5d2495a3cfbac2a40d0eca46456e76ab15a26bfcbae095eb608f066826547273"
+            },
+            {
+              "facility_id": 418,
+              "url": "https://hatimanyama.jp/各イベントの開催場所について/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:59:27.594479+00:00",
+              "final_url": "https://hatimanyama.jp/%E5%90%84%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E9%96%8B%E5%82%AC%E5%A0%B4%E6%89%80%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+              "title": "各イベントの開催日・場所について – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+              "text_sha256": "caaef35d98ca854b42c0262f396c0fc5374dbf009a98a4db109b1fb1aa0beeff"
+            },
+            {
+              "facility_id": 418,
+              "url": "https://hatimanyama.jp/イベントの荒天休止について/",
+              "status": 200,
+              "checked_at": "2026-10-17T04:59:32.407672+00:00",
+              "final_url": "https://hatimanyama.jp/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E8%8D%92%E5%A4%A9%E4%BC%91%E6%AD%A2%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6/",
+              "title": "イベントの雨天・荒天時の中止について – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+              "text_sha256": "c8e1e49a40d79b06c5c4d15e93bef4c00807e0525ac71fe4751a95bd6f17d521"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T05:00:55.605295+00:00",
+          "facility_id": 419,
+          "facility_name": "宇都宮タワー",
+          "disposition": "no_current_or_future_event",
+          "reason": "旧URL2回失敗後現公式新着とタワー専用告知へ到達。元旦無料開放は2026/1/1終了を明記。タワーの今後の特別催事掲載なし。通常展望はイベント化しない。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 419,
+              "url": "https://www.hachimanyama.jp/tower/",
+              "status": "error",
+              "checked_at": "2026-10-17T04:59:46.090929+00:00",
+              "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: /tower/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x1ff0976f620>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+            },
+            {
+              "facility_id": 419,
+              "url": "https://www.hachimanyama.jp/tower/",
+              "status": "error",
+              "checked_at": "2026-10-17T05:00:15.275927+00:00",
+              "error": "HTTPSConnectionPool(host='www.hachimanyama.jp', port=443): Max retries exceeded with url: /tower/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.hachimanyama.jp', port=443) at 0x1d623742f90>, 'Connection to www.hachimanyama.jp timed out. (connect timeout=35)'))"
+            },
+            {
+              "facility_id": 419,
+              "url": "https://hatimanyama.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T05:00:38.700625+00:00",
+              "final_url": "https://hatimanyama.jp/",
+              "title": "八幡山公園｜宇都宮を一望できる自然豊かな公園 – 宇都宮を一望できる自然豊かな公園です",
+              "text_sha256": "95af0fcc8d5f074138ce95b49cb7890668f756f1a37ba4f84ec6611037db5f91"
+            },
+            {
+              "facility_id": 419,
+              "url": "https://hatimanyama.jp/宇都宮タワー/",
+              "status": 200,
+              "checked_at": "2026-10-17T05:00:41.306504+00:00",
+              "final_url": "https://hatimanyama.jp/events/event/%e5%ae%87%e9%83%bd%e5%ae%ae%e3%82%bf%e3%83%af%e3%83%bc%e3%81%ae%e7%84%a1%e6%96%99%e9%96%8b%e6%94%be/",
+              "title": "宇都宮タワーの元旦無料開放（午前7時20分～10時） – 八幡山公園｜宇都宮を一望できる自然豊かな公園",
+              "text_sha256": "a48418af27d092aa418bdd8b30ce43b9be07bc7f02a4bae36139fd5804f96621"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T05:02:13.459321+00:00",
+          "facility_id": 420,
+          "facility_name": "宇都宮市冒険活動センター",
+          "disposition": "candidate_found_hold",
+          "reason": "旧URL DNS失敗2回後市公式年度事業と現行チラシを取得・画像確認。未来4件を受付終了/開始前HOLD。10/11フェス、夏キャンプは終了。通常貸出利用は対象外。",
+          "candidates": [
+            {
+              "title": "家族ふれあいデイキャンプ11/29",
+              "disposition": "hold",
+              "reason": "現行公式チラシを画像確認。募集9/1～14（抽選）、市内在住・在勤の小中学生家族対象。受付済で現時点の参加経路なし。"
+            },
+            {
+              "title": "Bouken Day! 2027/1/24",
+              "disposition": "hold",
+              "reason": "開催1か月前1～14日募集で現時点は受付前。年次チラシに時刻・料金など個別条件も未記載。"
+            },
+            {
+              "title": "Bouken Day! 2027/2/21",
+              "disposition": "hold",
+              "reason": "開催1か月前1～14日募集で現時点は受付前。年次チラシに時刻・料金など個別条件も未記載。"
+            },
+            {
+              "title": "Bouken Day! 2027/3/21",
+              "disposition": "hold",
+              "reason": "開催1か月前1～14日募集で現時点は受付前。年次チラシに時刻・料金など個別条件も未記載。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 420,
+              "url": "https://www.adv-utsunomiya.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T05:00:59.984199+00:00",
+              "error": "HTTPSConnectionPool(host='www.adv-utsunomiya.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.adv-utsunomiya.jp', port=443): Failed to resolve 'www.adv-utsunomiya.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 420,
+              "url": "https://www.adv-utsunomiya.jp/",
+              "status": "error",
+              "checked_at": "2026-10-17T05:01:22.679534+00:00",
+              "error": "HTTPSConnectionPool(host='www.adv-utsunomiya.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.adv-utsunomiya.jp', port=443): Failed to resolve 'www.adv-utsunomiya.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 420,
+              "url": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/jigyo/1026397.html",
+              "status": 200,
+              "checked_at": "2026-10-17T05:01:32.329759+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/event/sports/bouken/jigyo/1026397.html",
+              "title": "令和8年度主催事業｜宇都宮市公式Webサイト",
+              "text_sha256": "ce53d9c169c5e68f9964d6a838336432610ada23516749649963a24c70b0cbdf"
+            },
+            {
+              "facility_id": 420,
+              "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/r8-syusaitirasi.pdf",
+              "status": 404,
+              "checked_at": "2026-10-17T05:01:33.853417+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/r8-syusaitirasi.pdf",
+              "title": "宇都宮市公式Webサイト - 指定されたページ、またはファイルは見つかりませんでした。",
+              "text_sha256": "03d941476348e60579e2f0af7ad9c9643428543096a9a5ad69c51b44db047918"
+            },
+            {
+              "facility_id": 420,
+              "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T05:01:40.739495+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+              "title": "Official PDF",
+              "text_sha256": "89d9a2fa0cdfafafd877fde65c3da6c684b2424942bf55d8a40d238c7076895f"
+            },
+            {
+              "facility_id": 420,
+              "url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T05:01:55.062629+00:00",
+              "final_url": "https://www.city.utsunomiya.lg.jp/_res/projects/default_project/_page_/001/026/397/tirashi.pdf",
+              "title": "Official PDF",
+              "text_sha256": "89d9a2fa0cdfafafd877fde65c3da6c684b2424942bf55d8a40d238c7076895f"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-12",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-17T05:04:24.323176+00:00",
+          "facility_id": 422,
+          "facility_name": "鬼怒グリーンパーク",
+          "disposition": "candidate_found_added",
+          "reason": "旧URL2回DNS失敗後現公式へ。未来3候補を本文・画像/PDFで個別評価しコスモスまつり・10/18家庭の日を追加、犬向けマルシェHOLD。10/18大道芸は祭り内に包含、過去演目は追加しない。",
+          "candidates": [
+            {
+              "title": "第37回 鬼怒グリーンパーク コスモスまつり",
+              "disposition": "added",
+              "event_id": "evt-f12-422-cosmos"
+            },
+            {
+              "title": "家庭の日 中学生以下対象施設無料",
+              "disposition": "added",
+              "event_id": "evt-f12-422-familyday"
+            },
+            {
+              "title": "ワンワンワンマルシェ10/31・11/1",
+              "disposition": "hold",
+              "reason": "公式PDF画像で日程・会場・雨天中止・犬向け撮影会先着有料まで確認したが、開催時刻や親子来場の具体条件が未記載。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 422,
+              "url": "https://kinugreen.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T05:02:16.133435+00:00",
+              "error": "HTTPSConnectionPool(host='kinugreen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kinugreen.com', port=443): Failed to resolve 'kinugreen.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreen.com/",
+              "status": "error",
+              "checked_at": "2026-10-17T05:02:27.939767+00:00",
+              "error": "HTTPSConnectionPool(host='kinugreen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kinugreen.com', port=443): Failed to resolve 'kinugreen.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/",
+              "status": 200,
+              "checked_at": "2026-10-17T05:02:33.438669+00:00",
+              "final_url": "https://kinugreenpark.jp/",
+              "title": "鬼怒グリーンパーク公式サイト",
+              "text_sha256": "cd65bfb6c2d25ee200822c8d98d3824e307ff70a614be4bf502366eace04eee2"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/page_event/page_event-4208",
+              "status": 200,
+              "checked_at": "2026-10-17T05:02:42.353307+00:00",
+              "final_url": "https://kinugreenpark.jp/page_event/page_event-4208",
+              "title": "2026 コスモスまつり | 鬼怒グリーンパーク 公式サイト",
+              "text_sha256": "2d74c037a616ce65a701d06133a1465dcb554960428440058bb53ed78b8ed364"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/info_c/4310.html",
+              "status": 200,
+              "checked_at": "2026-10-17T05:02:45.328962+00:00",
+              "final_url": "https://kinugreenpark.jp/info_c/4310.html",
+              "title": "ワンワンワンマルシェ開催！ | 鬼怒グリーンパーク 公式サイト",
+              "text_sha256": "78f6616d7f76daeb7d991c7fa17a21035f2d82551cd75ec1563c26f0941c2af2"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/info_c/2770.html",
+              "status": 200,
+              "checked_at": "2026-10-17T05:02:47.869005+00:00",
+              "final_url": "https://kinugreenpark.jp/info_c/2770.html",
+              "title": "家庭の日(毎月第3日曜日) | 鬼怒グリーンパーク 公式サイト",
+              "text_sha256": "ce229b94a4a3d446fc288a08cd8cd7093fa56d685b4d1216c2aa9cd331e81044"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/page_event/page_event-4208",
+              "status": 200,
+              "checked_at": "2026-10-17T05:02:59.726529+00:00",
+              "final_url": "https://kinugreenpark.jp/page_event/page_event-4208",
+              "title": "2026 コスモスまつり | 鬼怒グリーンパーク 公式サイト",
+              "text_sha256": "2d74c037a616ce65a701d06133a1465dcb554960428440058bb53ed78b8ed364"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/wp-content/uploads/2025/09/コスモスまつりチラシ3校-1.jpg",
+              "status": 200,
+              "checked_at": "2026-10-17T05:03:08.991118+00:00",
+              "final_url": "https://kinugreenpark.jp/wp-content/uploads/2025/09/%E3%82%B3%E3%82%B9%E3%83%A2%E3%82%B9%E3%81%BE%E3%81%A4%E3%82%8A%E3%83%81%E3%83%A9%E3%82%B73%E6%A0%A1-1.jpg",
+              "title": "Official image",
+              "text_sha256": "6a2a7469c609d837962190700c12d4391a5df2f1f8c5f5bc02f66ad24469a9d5"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/wp-content/uploads/2026/02/DOC261008-20261008154131.pdf",
+              "status": 200,
+              "checked_at": "2026-10-17T05:03:17.615818+00:00",
+              "final_url": "https://kinugreenpark.jp/wp-content/uploads/2026/02/DOC261008-20261008154131.pdf",
+              "title": "Official PDF",
+              "text_sha256": "7e822c35937c62a5016b3174791054c1548b230e31a910bb8c644636084030ab"
+            },
+            {
+              "facility_id": 422,
+              "url": "https://kinugreenpark.jp/qa",
+              "status": 200,
+              "checked_at": "2026-10-17T05:03:45.236957+00:00",
+              "final_url": "https://kinugreenpark.jp/qa",
+              "title": "よくある質問 | 鬼怒グリーンパーク 公式サイト",
+              "text_sha256": "3841826f6f32d81dba52124e3012de607def7ffc42b6bd4f9f42d6cca5564024"
             }
           ]
         }
