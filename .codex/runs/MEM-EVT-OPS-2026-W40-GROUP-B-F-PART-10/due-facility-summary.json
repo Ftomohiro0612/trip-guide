@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-10",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-17T01:59:16.084497+00:00",
+  "executed_at": "2026-10-17T02:33:33.094107+00:00",
   "process_started_at": "2026-10-17T00:41:06.6486363Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -19452,7 +19452,7 @@
           "facility_id": 2058,
           "name": "ターントクルこども館",
           "url": "https://yaizu-kodomokan.com/event/",
-          "reason": "施設210の公式出典として本Missionで実取得した共通の親施設イベントページが、レジストリ2058の公式URLにも完全一致。必須freshness照合に従い同じ実取得に対応するlast_checked_atだけ更新。2058の現在/未来の既存イベントは0件。due_facility_ids・40件の順次進捗は変更しない。",
+          "reason": "施設210の出典として実取得したURLは2058の登録URLにも一致するが、2058は指定40施設の外。CompleteはPATROL_SCOPE_EXCLUDEDで除外するため、2058のlast_checked_atは本Missionでは進めず開始時の2026-08-31を維持する。2058の現在/未来の既存イベントは0件。指定due_facility_idsと40件の順次進捗は不変。",
           "sources_checked": [
             {
               "facility_id": 210,
@@ -19463,9 +19463,11 @@
               "title": "イベント｜ターントクルこども館（焼津おもちゃ美術館・やいづ えほんと）",
               "text_sha256": "895e0ed87841a11059f49c96428f8b361fecc44cfaa51a76792b37280d5deec0"
             }
-          ]
+          ],
+          "registry_last_checked_at_advanced": false
         }
       ]
     }
-  }
+  },
+  "scope_correction": "Completeの対象施設クランプに合わせ、共有URLだけで対象外2058の確認日を更新した処理を訂正。公開runtime入力は変更なし。"
 }
