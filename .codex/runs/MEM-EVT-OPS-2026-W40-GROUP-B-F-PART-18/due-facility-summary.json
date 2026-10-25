@@ -22,8 +22,8 @@
     "total": 14,
     "no_current_or_future_event": 1,
     "candidate_found_added": 5,
-    "candidate_found_duplicate": 2,
-    "candidate_found_hold": 5,
+    "candidate_found_duplicate": 1,
+    "candidate_found_hold": 6,
     "source_unresolved": 1
   },
   "per_region": {
@@ -47,8 +47,8 @@
       "total": 14,
       "no_current_or_future_event": 1,
       "candidate_found_added": 5,
-      "candidate_found_duplicate": 2,
-      "candidate_found_hold": 5,
+      "candidate_found_duplicate": 1,
+      "candidate_found_hold": 6,
       "source_unresolved": 1,
       "sources_checked": [
         {
@@ -2663,14 +2663,14 @@
         },
         {
           "facility_id": 6880,
-          "disposition": "candidate_found_duplicate",
-          "reason": "イベント一覧・新着・個別10月企画・mono主催公式の参加方法とバス更新を取得。農YOGA10/12、読み聞かせ10/11等は終了。唯一の開催中候補monoは既存の地域横断ラリーと同一で重複追加しない。",
+          "disposition": "candidate_found_hold",
+          "reason": "公式施設一覧・個別案内・主催公式の参加方法とバス更新を取得。開催中monoは既存の地域横断ラリーと同一だが、既存レコードの確認日2026-09-14は今回時点で30日表示ゲートを超える。施設別に重複追加せず、施設ID nullの地域横断レコード刷新はこのexact due-facility partの範囲外としてHOLD。",
           "candidates": [
             {
               "title": "TVアニメmonoぐるっと南プスまち巡り",
-              "disposition": "duplicate",
+              "disposition": "hold",
               "event_id": "evt-yamanashi-w38-mono-minamialps",
-              "reason": "主催公式の同一6会場ラリー。農の駅ハッピーパークは24時間QR取得できる既存ラリーの1スポットで、施設別の別イベントではない。fumottoで先にHOLDした同企画もこの取得で既存ラリーと同一と判明。",
+              "reason": "同一公式・6会場・期間により既存evt-yamanashi-w38-mono-minamialpsと重複と判明。ただし既存確認日2026-09-14で42日前、現在の表示対象ではない。既存の地域横断facility_id nullレコードの更新は今回14施設限定の範囲外。二重追加せずPMへ刷新判断を返す。",
               "url": "https://mono-minamialps.net/rally/"
             },
             {
@@ -2777,20 +2777,20 @@
         }
       ],
       "candidate_tallies": {
-        "hold": 74,
+        "hold": 75,
         "ended_existing": 2,
         "past_excluded": 10,
         "out_of_event_scope": 5,
         "added": 17,
         "series_container": 1,
         "out_of_family_event_scope": 5,
-        "duplicate": 21,
+        "duplicate": 20,
         "standing_facility_activity": 4,
         "outside_due_facility": 1,
         "outside_scope": 4,
         "past": 2
       },
-      "candidate_tallies_unit": "candidate / distinct series; HOLD counts are encounter records, not the facility disposition totals. The fumotto mono HOLD was subsequently identified as the existing regional series during facility 6880; both observations are retained."
+      "candidate_tallies_unit": "candidate / distinct series. HOLD counts are encounter records, not facility disposition totals. The two mono encounters at fumotto and Happy Park refer to one stale regional record requiring PM scope routing; neither is claimed as currently rendered."
     }
   },
   "prior_run_numbers_reused_as_execution": false,
