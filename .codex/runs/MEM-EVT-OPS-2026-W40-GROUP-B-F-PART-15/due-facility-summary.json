@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-15",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T12:49:36.556642+00:00",
+  "executed_at": "2026-10-25T12:51:50.077595+00:00",
   "process_started_at": "2026-10-25T12:29:53.1348965Z",
   "due_facility_ids": [
     222,
@@ -26,9 +26,9 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 9,
+    "total": 10,
     "no_current_or_future_event": 0,
-    "candidate_found_added": 6,
+    "candidate_found_added": 7,
     "candidate_found_duplicate": 1,
     "candidate_found_hold": 0,
     "source_unresolved": 2
@@ -58,7 +58,7 @@
       ],
       "total": 19,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 6,
+      "candidate_found_added": 7,
       "candidate_found_duplicate": 1,
       "candidate_found_hold": 0,
       "source_unresolved": 2,
@@ -3495,6 +3495,552 @@
             {
               "event_id": "evt-supp1-233-20260926-1178401b",
               "title": "自然動物園 動物愛護週間のおはなし",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-15",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-25T12:51:50.077540+00:00",
+          "facility_id": 236,
+          "disposition": "candidate_found_added",
+          "reason": "公式トップ・API195項目・10月予定全文と個別詳細を照合。現在/通年40項目を判定し独立確認した7企画を追加。",
+          "registry_checked": true,
+          "updates": [
+            {
+              "id": "evt-236-seibo-202609",
+              "source_checked_at": "2026-10-25"
+            },
+            {
+              "id": "evt-supp1-236-20261107-9c4b2b9e",
+              "source_checked_at": "2026-10-25"
+            }
+          ],
+          "additions": [
+            {
+              "id": "evt-236-20261025-f15-f4210674",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "東京文化財ウィーク 解説カードと天然記念物ガイド",
+              "summary": "資料館1階で天然記念物のカードを配布。11/1はツシマテン、11/3は日本の島・水辺の天然記念物を巡るガイド。",
+              "start_date": "2026-10-24",
+              "end_date": "2026-11-03",
+              "date_label": "2026-10-24～2026-11-03",
+              "time_label": "カード9:30～16:30。11/1ガイド16:00、11/3ガイド11:00／13:00",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "カードはなくなり次第終了。ガイドは指定場所に集合",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "資料館1階で天然記念物のカードを配布。11/1はツシマテン、11/3は日本の島・水辺の天然記念物を巡るガイド。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/news/13472/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/news/13472/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "ongoing",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-c66522b0",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "秋のスタンプラリー「続・しんかのふしぎ」",
+              "summary": "クイズを解き生きものや植物を巡り、進化の系統樹を完成させる。",
+              "start_date": "2026-10-10",
+              "end_date": "2026-12-06",
+              "date_label": "2026-10-10～2026-12-06",
+              "time_label": "9:30～17:00（水生物館16:45まで）",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "台紙は正門先・七井門先、平日150部／土日祝800部。各日なくなり次第終了",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "クイズを解き生きものや植物を巡り、進化の系統樹を完成させる。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/news/13386/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/news/13386/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "ongoing",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-9d1d6588",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "身近ないきもの探検「旅するタネ、どうやって どこへいくの？」",
+              "summary": "小学生と保護者が実やタネを観察し、模型で実験。軍手・飲み物、長袖長ズボン、歩きやすい靴。雨天一部変更。",
+              "start_date": "2026-11-15",
+              "end_date": "2026-11-15",
+              "date_label": "2026-11-15～2026-11-15",
+              "time_label": "9:30～12:30",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "WEB抽選11/1締切、保護者を含む30名。1組4名まで",
+              "age_label": "小学生と保護者",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "小学生と保護者が実やタネを観察し、模型で実験。軍手・飲み物、長袖長ズボン、歩きやすい靴。雨天一部変更。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/news/13517/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/news/13517/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-b3676be4",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "折り紙ハロウィン",
+              "summary": "本園資料館2階集会室で折り紙のハロウィン飾りを制作。",
+              "start_date": "2026-10-28",
+              "end_date": "2026-10-28",
+              "date_label": "2026-10-28～2026-10-28",
+              "time_label": "13:30～14:30",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "開催時間内に会場へ。定員30名",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "本園資料館2階集会室で折り紙のハロウィン飾りを制作。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/events/13407/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/events/13407/index.html",
+                "https://www.tokyo-zoo.net/inokashira/news/13193/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-9883dac9",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "アフリカフェア連携 ミーアキャットのおはなし",
+              "summary": "本園ミーアキャット前で飼育係がおはなし。雨天中止。",
+              "start_date": "2026-11-07",
+              "end_date": "2026-11-07",
+              "date_label": "2026-11-07～2026-11-07",
+              "time_label": "10:30～10:40",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "開始までに集合。事前予約不要",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "本園ミーアキャット前で飼育係がおはなし。雨天中止。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/events/13607/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/events/13607/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-e638fb44",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "アフリカフェア連携 フェネックのおはなし",
+              "summary": "本園フェネック前で飼育係がおはなし。雨天中止。",
+              "start_date": "2026-11-07",
+              "end_date": "2026-11-07",
+              "date_label": "2026-11-07～2026-11-07",
+              "time_label": "11:00～11:10",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "開始までに集合。事前予約不要",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "本園フェネック前で飼育係がおはなし。雨天中止。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/events/13608/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/events/13608/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-236-20261025-f15-87a85e6a",
+              "facility_id": 236,
+              "prefecture": "tokyo",
+              "title": "平和祈念像ガイド（10月27日）",
+              "summary": "本園彫刻館A館の平和祈念像原型展示前でボランティアが案内。",
+              "start_date": "2026-10-27",
+              "end_date": "2026-10-27",
+              "date_label": "2026-10-27～2026-10-27",
+              "time_label": "13:30～13:45",
+              "price_label": "参加無料（入園料別）",
+              "reservation_label": "開催時間内に会場へ",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "体験を楽しみたい子に",
+              "recommended_for_note": "本園彫刻館A館の平和祈念像原型展示前でボランティアが案内。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.tokyo-zoo.net/inokashira/news/13193/index.html",
+              "source_urls": [
+                "https://www.tokyo-zoo.net/inokashira/news/13193/index.html"
+              ],
+              "source_checked_at": "2026-10-25",
+              "source_notes": "2026-10-25に公式一次情報を取得し、日程・内容・参加方法を確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "東京文化財ウィーク 解説カードと天然記念物ガイド",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-f4210674",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "秋のスタンプラリー「続・しんかのふしぎ」",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-c66522b0",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "身近ないきもの探検「旅するタネ、どうやって どこへいくの？」",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-9d1d6588",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "折り紙ハロウィン",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-b3676be4",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "アフリカフェア連携 ミーアキャットのおはなし",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-9883dac9",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "アフリカフェア連携 フェネックのおはなし",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-e638fb44",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "平和祈念像ガイド（10月27日）",
+              "disposition": "added",
+              "event_id": "evt-236-20261025-f15-87a85e6a",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "飼育係のいきものガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "学芸員と楽しむ彫刻ガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ガイドツアー",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "みてみてえさの時間だよ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "企画展「西望偉人伝」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "秋のスタンプラリー「続・しんかのふしぎ」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "東京文化財ウィーク「解説カードの配布」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：カイツブリ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ガイドツアー：動物たちの食べもの",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ガイドツアー：動物たちの食べもの",
+              "disposition": "past",
+              "reason": "本日実施の終了時刻が今回実行時点より前。過去追加なし。"
+            },
+            {
+              "title": "ボランティアによるガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "いきもの広場であそぼう",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 特別ガイドツアー「日本の島にすむ天然記念物の動物たち」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "東京文化財ウィーク 飼育係の天然記念物ガイド「オオサンショウウオのおはなし」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：ヤギ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 特別ガイドツアー「水辺にすむ天然記念物の動物たち」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "ボランティアによるヤマドリガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ボランティアによるヤマネコガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ボランティアによるボトルウォッチング",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "こんにちはモルモット",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "学芸員と楽しむ彫刻ガイド",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "おはなし会",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 飼育係の天然記念物ガイド「アマミトゲネズミのおはなし」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "ボランティアによる糸つむぎ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：イノシシ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 飼育係の天然記念物ガイド「アカガシラカラスバトのおはなし」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：アカゲザル",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "飼育係のいきものガイド：和鳥のおはなし",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 飼育係の天然記念物ガイド「ニホンカモシカのおはなし」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：クロツラヘラサギ",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ガイドツアー：島にすむいきものたち",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "ガイドツアー：フクロウのなかまたち",
+              "disposition": "past",
+              "reason": "本日実施の終了時刻が今回実行時点より前。過去追加なし。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：フンボルトペンギン",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "みてみてえさの時間だよ：猛禽",
+              "disposition": "HOLD",
+              "reason": "日程・場所が共通スケジュール参照、または有限な日付範囲なしの定期プログラム。独立確認できた具体日程以外は推定しない。"
+            },
+            {
+              "title": "東京文化財ウィーク 飼育係の天然記念物ガイド「ツシマテンのおはなし」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "秋の夜長の自然文化園 こもれび前コンサート「ちょっと秋風そよぐ演奏会」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            },
+            {
+              "title": "秋の夜長の自然文化園 彫刻ガイド「ちょっとナイト・ミュージアム」",
+              "disposition": "duplicate",
+              "reason": "既存または本Mission包括企画に含む。10/25終了のガイドは過去追加なし。"
+            }
+          ],
+          "existing_event_holds": [],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-236-pool-202609",
+              "title": "ジャブジャブ池 9月まで延長開放",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-236-seibo-202609",
+              "title": "企画展 西望偉人伝",
+              "disposition": "updated",
+              "reason": "公式トップ・API195項目・10月予定全文と個別詳細を照合。現在/通年40項目を判定し独立確認した7企画を追加。"
+            },
+            {
+              "event_id": "evt-236-spinning-202609",
+              "title": "ヒツジの毛で糸つむぎ",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-supp1-236-20261017-c913c2b6",
+              "title": "島のいきもの博 ツシマヤマネコがつなぐ島とわたしたち",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-supp1-236-20261017-961cb6d5",
+              "title": "岡田宗徳さんとヤマネコを描こう お絵描き教室",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-supp1-236-20261107-9c4b2b9e",
+              "title": "ちょっとおでかけ 秋の夜長の自然文化園",
+              "disposition": "updated",
+              "reason": "公式トップ・API195項目・10月予定全文と個別詳細を照合。現在/通年40項目を判定し独立確認した7企画を追加。"
+            },
+            {
+              "event_id": "evt-supp1-236-20260926-898d8ca3",
+              "title": "9月26日の動物ガイドと紙芝居",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-supp1-236-20260927-fc402f4b",
+              "title": "9月27日の動物ガイド・いきものたんけん",
+              "disposition": "past_or_inactive_retained",
+              "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
+            },
+            {
+              "event_id": "evt-supp1-236-20260929-71c251e8",
+              "title": "平和祈念像ガイド",
               "disposition": "past_or_inactive_retained",
               "reason": "終了日が過去または非公開状態の既存記録。現在将来候補として再採用せず既存値を維持。"
             }
