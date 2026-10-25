@@ -3,13 +3,16 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { createClient } from "@/lib/supabase/client";
+import { usePathname } from "next/navigation";
 
 type AuthState = "loading" | "guest" | "authenticated";
 
 export default function HeaderAuthButton() {
+  const shared = usePathname().startsWith("/soudan/");
   const [authState, setAuthState] = useState<AuthState>("loading");
 
   useEffect(() => {
+    if (shared) return;
     let active = true;
 
     async function checkSession() {
@@ -27,7 +30,9 @@ export default function HeaderAuthButton() {
     return () => {
       active = false;
     };
-  }, []);
+  }, [shared]);
+
+  if (shared) return null;
 
   if (authState === "loading") return null;
 

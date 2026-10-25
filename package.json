@@ -9,7 +9,7 @@
     "postbuild": "next-sitemap && node scripts/prepare-cloudflare-runtime-canon.mjs",
     "start": "next start",
     "lint": "eslint",
-    "soudan:test": "node --test scripts/test-soudan-migration-contract.mjs scripts/test-soudan-live-rpc-check.mjs scripts/test-soudan-owner-actions.mjs && node scripts/test-soudan-lib.mjs",
+    "soudan:test": "node --test scripts/test-soudan-migration-contract.mjs scripts/test-soudan-live-rpc-check.mjs scripts/test-soudan-owner-actions.mjs scripts/test-soudan-shared.mjs && node scripts/test-soudan-lib.mjs",
     "experiment:metrics": "node --env-file-if-exists=.env.local scripts/experiment-90d-metrics.mjs",
     "events:validate": "node scripts/validate-events.mjs",
     "events:regular:validate": "node scripts/validate-regular-events.mjs",

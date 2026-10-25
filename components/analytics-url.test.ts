@@ -328,11 +328,12 @@ test("soudan routes redact any segment and token copies in query/hash", async ()
   assert.equal(maskAnalyticsPath(`/soudan`), "/soudan");
   assert.equal(maskAnalyticsPath(`/other/${soudanToken}`), `/other/${soudanToken}`);
   assert.equal(maskAnalyticsPath(null), "");
+  assert.equal(maskAnalyticsUrl(`/soudan/${soudanToken}?${soudanToken}=value#${soudanToken}`).includes(soudanToken), false);
   assert.equal(maskAnalyticsText(`dl=${encodeURIComponent(`https://memorips.com/soudan/${soudanToken}`)}`).includes(soudanToken), false);
 });
 
 test("GA4 inline config and every transport redact raw/encoded soudan URLs", async () => {
-  const url = `https://memorips.com/soudan/${soudanToken}?token=${soudanToken}#${soudanToken}`;
+  const url = `https://memorips.com/soudan/${soudanToken}?token=${soudanToken}&${soudanToken}=value#${soudanToken}`;
   const env = makeAnalyticsEnvironment(url);
   assert.equal(JSON.stringify(env.window.dataLayer).includes(soudanToken), false);
   env.calls.length = 0;

@@ -39,6 +39,8 @@ module.exports = {
   changefreq: "weekly",
   priority: 0.7,
   exclude: [
+    "/soudan/*",
+    "/api/soudan/*",
     "/server-sitemap.xml",
     "/legal/privacy",
     "/legal/terms",

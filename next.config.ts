@@ -23,6 +23,16 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async headers() {
+    return ["/soudan/:path*", "/api/soudan/:path*"].map((source) => ({
+      source,
+      headers: [
+        { key: "Referrer-Policy", value: "no-referrer" },
+        { key: "X-Robots-Tag", value: "noindex, nofollow, noarchive" },
+        { key: "Cache-Control", value: "private, no-store" },
+      ],
+    }));
+  },
   async redirects() {
     return [
       {

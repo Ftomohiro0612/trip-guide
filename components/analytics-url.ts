@@ -32,7 +32,9 @@ export function maskAnalyticsUrl(
     const tokens = [...url.pathname.matchAll(/\/soudan\/([^/]+)/g)].map((match) => match[1]);
     for (const token of tokens) {
       // Even a short, invalid token must not survive in a copy of the route's query/hash.
-      url.search = url.search.replace(/=([^&]*)/g, (_match, value: string) => `=${value.split(token).join(":token")}`);
+      url.search = token.length >= 32
+        ? url.search.split(token).join(":token")
+        : url.search.replace(/=([^&]*)/g, (_match, value: string) => `=${value.split(token).join(":token")}`);
       url.hash = url.hash.split(token).join(":token");
     }
     url.pathname = maskAnalyticsText(url.pathname);

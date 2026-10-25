@@ -14,6 +14,20 @@ export { BucketCachePurge } from "./.build/durable-objects/bucket-cache-purge.js
 const runtimeCanonManifest = "__MEMORIP_RUNTIME_CANON_MANIFEST__";
 let runtimeCanonPromise;
 
+// This worker skips the generated middleware on public routes, including its
+// next.config headers. Enforce the same boundary on every shared response.
+function applySoudanHeaders(response, pathname) {
+  if (
+    pathname !== "/soudan" && !pathname.startsWith("/soudan/") &&
+    pathname !== "/api/soudan" && !pathname.startsWith("/api/soudan/")
+  ) return response;
+  const headers = new Headers(response.headers);
+  headers.set("Referrer-Policy", "no-referrer");
+  headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+  headers.set("Cache-Control", "private, no-store");
+  return new Response(response.body, { status: response.status, statusText: response.statusText, headers });
+}
+
 function getConfiguredRedirect(url) {
   // OpenNext normally evaluates next.config redirects in its middleware
   // bundle. These are kept here so unrelated routes can avoid loading that
@@ -55,6 +69,7 @@ async function runMiddlewareWhenNeeded(request, env, ctx, pathname) {
 
 function requestNeedsRuntimeCanon(pathname) {
   return !(
+    pathname === "/api/soudan" || pathname.startsWith("/api/soudan/") ||
     pathname === "/auth/callback" ||
     pathname === "/mypage/children" ||
     pathname === "/mypage/onboarding" ||
@@ -116,7 +131,7 @@ async function ensureRuntimeCanon(env, requestUrl) {
 
 const worker = {
   async fetch(request, env, ctx) {
-    return runWithCloudflareRequestContext(request, env, ctx, async () => {
+    const response = await runWithCloudflareRequestContext(request, env, ctx, async () => {
       const skewResponse = maybeGetSkewProtectionResponse(request);
       if (skewResponse) return skewResponse;
 
@@ -157,6 +172,7 @@ const worker = {
       const { handler } = await import("./server-functions/default/handler.mjs");
       return handler(reqOrResp, env, ctx, request.signal);
     });
+    return applySoudanHeaders(response, new URL(request.url).pathname);
   },
 };
 

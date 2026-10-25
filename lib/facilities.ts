@@ -66,8 +66,10 @@ export function isFacilityDiscoverable(
   return isFacilityVisible(facility) && facility.closure_status !== "permanently_closed";
 }
 
+let facilitiesBySlug: Map<string, Facility> | undefined;
 export function getFacilityBySlug(slug: string): Facility | undefined {
-  return facilities.find((f) => f.slug === slug);
+  facilitiesBySlug ??= new Map(facilities.map((f) => [f.slug, f]));
+  return facilitiesBySlug.get(slug);
 }
 
 export function getAllSlugs(): string[] {
