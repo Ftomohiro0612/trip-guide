@@ -1,0 +1,287 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-1",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-25T18:33:06.133321+00:00",
+  "horizon_end_date": "2026-12-21",
+  "per_region": {
+    "miyagi": {
+      "sources_checked": [
+        {
+          "url": "https://area.jaf.or.jp/event/feature",
+          "status": 200,
+          "checked_at": "2026-10-25T18:32:16.402683+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "日本自動車連盟（JAF）",
+          "multi_venue_basis": "JAFデー全国公式日程がカンドゥー新利府・谷津干潟・アクアトト等、異なる会場の複数日程を掲載。宮城該当はカンドゥー11/14。単館イベント一覧の代用ではない。",
+          "host_shared_with_registry_reason": "全国の複数会場を集約するJAF主催シリーズ。カンドゥー単館の施設イベントページではない。"
+        },
+        {
+          "url": "https://area.jaf.or.jp/area/2026/09/tohoku/miyagi/events/kandu-event",
+          "status": 200,
+          "checked_at": "2026-10-25T18:32:17.729544+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "日本自動車連盟（JAF）",
+          "multi_venue_basis": "JAFデー全国公式日程がカンドゥー新利府・谷津干潟・アクアトト等、異なる会場の複数日程を掲載。宮城該当はカンドゥー11/14。単館イベント一覧の代用ではない。",
+          "host_shared_with_registry_reason": "全国の複数会場を集約するJAF主催シリーズ。カンドゥー単館の施設イベントページではない。"
+        },
+        {
+          "url": "https://area.jaf.or.jp/area/tohoku/miyagi",
+          "status": 404,
+          "checked_at": "2026-10-25T18:31:41.691472+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "日本自動車連盟（JAF）",
+          "multi_venue_basis": "JAFデー全国公式日程がカンドゥー新利府・谷津干潟・アクアトト等、異なる会場の複数日程を掲載。宮城該当はカンドゥー11/14。単館イベント一覧の代用ではない。",
+          "host_shared_with_registry_reason": "全国の複数会場を集約するJAF主催シリーズ。カンドゥー単館の施設イベントページではない。"
+        },
+        {
+          "url": "https://sendai-green-association.jp/calendar/",
+          "status": 403,
+          "checked_at": "2026-10-25T18:31:43.313037+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "仙台市公園緑地協会",
+          "multi_venue_basis": "青葉の森緑地・太白山自然観察の森等の複数会場を掲載する協会公式カレンダー。直接取得は403。",
+          "host_shared_with_registry_reason": "協会の複数公園横断カレンダーであり単一施設一覧ではない。"
+        },
+        {
+          "url": "https://yoshitake-ten.exhibit.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T18:36:04.583993+00:00",
+          "source_type": "recall_discovered_series",
+          "organizer_name": "ヨシタケシンスケ展 主催者共同体",
+          "multi_venue_basis": "全国巡回展公式が宮城・青森・大分の異なる会場と日程を掲載。宮城開催のみ判定。"
+        },
+        {
+          "url": "https://salonconcert.com/concert-event/261122sendai/",
+          "status": 200,
+          "checked_at": "2026-10-25T18:38:23.953063+00:00",
+          "source_type": "recall_discovered_series",
+          "organizer_name": "サロンオーケストラジャパン／アンフィニ",
+          "multi_venue_basis": "主催公式に仙台のほか町屋・立川・杉並・天童等の複数会場の公演日程。宮城11/22を確認。",
+          "host_shared_with_registry_reason": "全国巡回の複数会場公演源であり単館の施設イベント一覧ではない。"
+        }
+      ],
+      "candidates_found": 11,
+      "added": 0,
+      "duplicate_or_already_present": 3,
+      "hold": 8,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "JAFデー お仕事体験 in カンドゥー新利府",
+          "disposition": "duplicate_or_already_present",
+          "reason": "既存idを合算公開対象（scheduled・未終了）として確認。申込締切を経過したので参加条件のみ公式で更新。",
+          "url": "https://area.jaf.or.jp/area/2026/09/tohoku/miyagi/events/kandu-event",
+          "event_id": "evt-miyagi-w38-verification-kandu-rifu",
+          "existing_event_updated": true,
+          "report_category": "facility_hosted"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 11/7紅葉の鈎取山トレッキング",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。検索面の開催名だけでは定員/受付/料金を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "太白山 11/7晩秋の秋保二口林道ウォーキング",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "太白山 11/14紅葉観察会",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 11/14紅葉ウォッチング",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 11/28森の宝探しアドベンチャー",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 11/22・23紅葉ガイドウォーク",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 12/5・6クリスマスマーケットでリース",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "multi_venue_organizer",
+          "title": "青葉の森 12/12松ぼっくりミニツリー",
+          "disposition": "hold",
+          "reason": "公式calendar直接取得403。個別参加条件を確認できない。",
+          "url": "https://sendai-green-association.jp/calendar/",
+          "source_family": "sendai-green-association.jp",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ヨシタケシンスケ展かもしれない（宮城）",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本実行の二次リコールで発見し同じ一次情報で確認・追加済み。主催者は複数会場巡回を公式に掲載。",
+          "url": "https://yoshitake-ten.exhibit.jp/",
+          "event_id": "evt-miyagi-d1-20261026-7c262097",
+          "report_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "0歳からの・はじめてのオーケストラ（仙台）",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本実行の二次リコールで発見し同じ一次情報で確認・追加済み。主催者は複数会場巡回を公式に掲載。",
+          "url": "https://salonconcert.com/concert-event/261122sendai/",
+          "event_id": "evt-miyagi-d1-20261026-e749a2c1",
+          "report_category": "facility_hosted"
+        }
+      ],
+      "discovery_basis": "既存events_dataのJAF organizer/source_notesと観光側の主催者名を起点。AKIULUMINAのrootも取得したが具体日程が本文にないためsourceとして過大主張しない。県外JAF掲載は範囲外。",
+      "category_breakdown": {
+        "fireworks_festivals_seasonal": {
+          "candidates_found": 0,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 0,
+          "stale_false": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 8,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 8,
+          "stale_false": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 3,
+          "added": 0,
+          "duplicate_or_already_present": 3,
+          "hold": 0,
+          "stale_false": 0
+        }
+      }
+    },
+    "tokyo": {
+      "sources_checked": [
+        {
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "status": 200,
+          "checked_at": "2026-10-25T19:00:13.826558+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東京都交響楽団",
+          "multi_venue_basis": "2026年度一覧に八王子・サントリーホール・調布の複数会場と複数公演を掲載。"
+        },
+        {
+          "url": "https://www.pentel.co.jp/about/pmrp/map2026/",
+          "status": 200,
+          "checked_at": "2026-10-25T19:00:14.667804+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "ぺんてる／Pentel Mural Rookies Project",
+          "multi_venue_basis": "BnA_WALL、THE A.I.R BUILDING、日本橋仮囲いの3会場4壁画を主催者が掲載。"
+        }
+      ],
+      "candidates_found": 5,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 4,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "source_type": "organizer_event_series",
+          "title": "12/18（金）19時〜東京都交響楽団オーケストラ公演に70名ご招待！ 対象は小4〜高校生と保護者、会場は赤坂のサントリーホール。 ハイドンの交響曲第92番《オックスフォード》とリストのダンテ交響曲。 応募は11月16日9:59まで。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一実行の公式再確認：公式一次情報・現在の参加経路を確認。",
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "event_id": "evt-tokyo-d1-20261026-822d17e5",
+          "report_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ヤングシート11/14公演",
+          "disposition": "hold",
+          "reason": "同一実行の公式再確認：申込期間が終了しており新規参加経路なし。",
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ヤングシート12/25公演",
+          "disposition": "hold",
+          "reason": "同一実行の公式再確認：次回募集案内で本実行時点の応募経路が未開設。",
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ヤングシート2027/3/6調布公演",
+          "disposition": "hold",
+          "reason": "同一実行の公式再確認：募集開始前。",
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "report_category": "municipal_regional"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ヤングシート2027/3/20公演",
+          "disposition": "hold",
+          "reason": "同一実行の公式再確認：募集開始前。",
+          "url": "https://www.tmso.or.jp/j/activities/education/young-seat/",
+          "report_category": "municipal_regional"
+        }
+      ],
+      "category_breakdown": {
+        "fireworks_festivals_seasonal": {
+          "candidates_found": 0,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 0,
+          "stale_false": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 4,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 4,
+          "stale_false": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 1,
+          "added": 0,
+          "duplicate_or_already_present": 1,
+          "hold": 0,
+          "stale_false": 0
+        }
+      }
+    }
+  }
+}
