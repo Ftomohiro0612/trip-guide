@@ -25,16 +25,35 @@ export default function Analytics() {
               }
             }
             function maskText(value) {
-              return String(value || '').replace(uuid, ':id');
+              var tokens = [];
+              var masked = String(value || '')
+                .replace(/(\\/soudan\\/)([^/?#&\\s"'<>]+)/g, function(_, prefix, token) {
+                  tokens.push(token);
+                  return prefix + ':token';
+                })
+                .replace(/(%(?:25)?2fsoudan%(?:25)?2f)([^%&\\s"'<>]+)/ig, function(_, prefix, token) {
+                  tokens.push(token);
+                  return prefix + ':token';
+                });
+              tokens.forEach(function(token) {
+                if (token.length >= 32) masked = masked.split(token).join(':token');
+              });
+              return masked.replace(uuid, ':id');
             }
             function memoripAnalyticsUrl(value) {
               if (!value) return '';
               try {
                 var url = new URL(value, window.location.origin);
+                var tokens = url.pathname.match(/\\/soudan\\/[^/]+/g) || [];
+                tokens.forEach(function(path) {
+                  var token = path.slice('/soudan/'.length);
+                  url.search = url.search.replace(/=([^&]*)/g, function(_, value) { return '=' + value.split(token).join(':token'); });
+                  url.hash = url.hash.split(token).join(':token');
+                });
                 url.pathname = maskText(url.pathname);
                 url.search = maskText(url.search);
                 url.hash = maskText(url.hash);
-                return url.toString();
+                return maskText(url.toString());
               } catch (_) {
                 return '';
               }

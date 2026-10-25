@@ -49,7 +49,7 @@ function assertNoRawUuid(calls: TransportCall[]) {
   }
 }
 
-function makeAnalyticsEnvironment() {
+function makeAnalyticsEnvironment(href = `https://trip-guide.net/mypage/visits/${visitUuid}`) {
   const calls: TransportCall[] = [];
 
   class FakeResponse {
@@ -109,7 +109,7 @@ function makeAnalyticsEnvironment() {
 
   const window = {
     location: {
-      href: `https://trip-guide.net/mypage/visits/${visitUuid}`,
+      href,
       origin: "https://trip-guide.net",
     },
     fetch(input: unknown, init?: RequestInit) {
@@ -129,7 +129,7 @@ function makeAnalyticsEnvironment() {
   const sandbox = {
     window,
     navigator,
-    document: { referrer: `https://trip-guide.net/mypage/visits/${visitUuid}` },
+    document: { referrer: href },
     XMLHttpRequest: FakeXMLHttpRequest,
     HTMLImageElement: FakeImage,
     Request: FakeRequest,
@@ -312,4 +312,38 @@ test("GA4 image src masks URLs and blocks unmarked page_view", () => {
   assert.equal(env.calls.length, 2);
   assert.equal(env.calls[1].url, "data:,");
   assertNoRawUuid(env.calls);
+});
+
+const soudanToken = "AbCdEfGhIjKlMnOpQrStUvWxYz012_-9";
+
+test("soudan routes redact any segment and token copies in query/hash", async () => {
+  const { maskAnalyticsPath, maskAnalyticsUrl, maskAnalyticsText } = await import(analyticsModulePath);
+  for (const token of [soudanToken, "x", "%E7%9B%B8%E8%AB%87"]) {
+    const path = `/soudan/${token}?token=${token}&next=/soudan/${token}#${token}`;
+    const masked = maskAnalyticsPath(path);
+    assert.equal(masked, "/soudan/:token?token=:token&next=/soudan/:token#:token");
+    if (token.length >= 32) assert.equal(maskAnalyticsUrl(path).includes(token), false);
+  }
+  for (const path of [`/other?next=${encodeURIComponent(`/soudan/${soudanToken}`)}`, `/other#next=/soudan/${soudanToken}`, `/soudan/${soudanToken}/card`]) assert.equal(maskAnalyticsUrl(path).includes(soudanToken), false);
+  assert.equal(maskAnalyticsPath(`/soudan`), "/soudan");
+  assert.equal(maskAnalyticsPath(`/other/${soudanToken}`), `/other/${soudanToken}`);
+  assert.equal(maskAnalyticsPath(null), "");
+  assert.equal(maskAnalyticsText(`dl=${encodeURIComponent(`https://memorips.com/soudan/${soudanToken}`)}`).includes(soudanToken), false);
+});
+
+test("GA4 inline config and every transport redact raw/encoded soudan URLs", async () => {
+  const url = `https://memorips.com/soudan/${soudanToken}?token=${soudanToken}#${soudanToken}`;
+  const env = makeAnalyticsEnvironment(url);
+  assert.equal(JSON.stringify(env.window.dataLayer).includes(soudanToken), false);
+  env.calls.length = 0;
+  const collect = `https://www.google-analytics.com/g/collect?v=2&dl=${encodeURIComponent(url)}`;
+  env.navigator.sendBeacon(collect, `dr=${encodeURIComponent(url)}`);
+  await env.window.fetch(collect, { method: "POST", body: new URLSearchParams({ dl: url }) });
+  const xhr = new env.XMLHttpRequest();
+  xhr.open("POST", collect);
+  xhr.send(`dl=${url}`);
+  const image = new env.Image() as unknown as { src: string };
+  image.src = collect;
+  assert.equal(env.calls.length, 4);
+  for (const call of env.calls) assert.equal([call.url, bodyText(call.body), bodyText(call.init?.body)].join().includes(soudanToken), false);
 });
