@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T10:30:33.846180+00:00",
+  "executed_at": "2026-10-25T10:33:51.019340+00:00",
   "due_facility_ids": [
     1040,
     6930,
@@ -70,15 +70,17 @@
           "url": "https://www.kanko.town.nogi.lg.jp/",
           "checked_at": "2026-10-25T09:36:07.174519+00:00",
           "facility_id": 1040,
-          "status": "fetch_failed",
-          "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "status": "dns_error",
+          "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "url": "https://www.kanko.town.nogi.lg.jp/",
           "checked_at": "2026-10-25T09:36:07.320876+00:00",
           "facility_id": 1040,
-          "status": "fetch_failed",
-          "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "status": "dns_error",
+          "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_fetch_status": "fetch_failed"
         },
         {
           "url": "https://www.town.nogi.lg.jp/kosodate_kyouiku/nogi_rengagama/",
@@ -361,15 +363,17 @@
               "url": "https://www.kanko.town.nogi.lg.jp/",
               "checked_at": "2026-10-25T09:36:07.174519+00:00",
               "facility_id": 1040,
-              "status": "fetch_failed",
-              "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "status": "dns_error",
+              "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "url": "https://www.kanko.town.nogi.lg.jp/",
               "checked_at": "2026-10-25T09:36:07.320876+00:00",
               "facility_id": 1040,
-              "status": "fetch_failed",
-              "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "status": "dns_error",
+              "error": "HTTPSConnectionPool(host='www.kanko.town.nogi.lg.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kanko.town.nogi.lg.jp', port=443): Failed to resolve 'www.kanko.town.nogi.lg.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_fetch_status": "fetch_failed"
             },
             {
               "url": "https://www.town.nogi.lg.jp/kosodate_kyouiku/nogi_rengagama/",
@@ -1610,6 +1614,15 @@
           "final_url": "https://id-sso.reserva.be/cookiecheck?type=customer&bus_id=idp&auth=",
           "title": "RESERVA",
           "text_sha256": "710814157ff59d3b6314384ae2769537f0df591be70e584a1d226ef028d2baf4"
+        },
+        {
+          "url": "https://id-sso.reserva.be/idp/login",
+          "status": 200,
+          "checked_at": "2026-10-25T10:31:09.904445+00:00",
+          "facility_id": 6830,
+          "final_url": "https://id-sso.reserva.be/cookiecheck?type=customer&bus_id=idp&auth=",
+          "text_sha256": "710814157ff59d3b6314384ae2769537f0df591be70e584a1d226ef028d2baf4",
+          "followup": "フォーム抽出修正後の同一実行内再確認"
         },
         {
           "url": "https://art.bunmori.tokushima.jp/#notice",
@@ -2904,6 +2917,24 @@
           "text_sha256": "40c9ea88dc35a08d0749a47f6c6fbff8f4838e180251b8e1f4d6083260e6e43e"
         },
         {
+          "url": "https://forms.gle/FVosCLDsx3y94Ssj9",
+          "status": 200,
+          "checked_at": "2026-10-25T10:31:07.894988+00:00",
+          "facility_id": 6844,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSen81ZDis0A1KAXaRoEwJ8ckzYalCFgDxAiSOaxygw4UbUzKw/viewform?usp=send_form",
+          "text_sha256": "256ab7071bbd920302bcfed909272b70852bd3063a2563cd497d1f3968e4c4e6",
+          "followup": "フォーム抽出修正後の同一実行内再確認"
+        },
+        {
+          "url": "https://forms.gle/3iQwRCAJomx5wR3A7",
+          "status": 200,
+          "checked_at": "2026-10-25T10:31:09.204867+00:00",
+          "facility_id": 6844,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKswe_N5Tgexg6xVROjVcF0cYZHJshZc1IqSj16Fk7ya0sng/viewform?usp=send_form",
+          "text_sha256": "6ab4329fe23a1c7574e56f2fbf1ff577a9054219eff5676eb42605667f6ab0c6",
+          "followup": "フォーム抽出修正後の同一実行内再確認"
+        },
+        {
           "url": "https://doitsukan.com/info/",
           "checked_at": "2026-10-25T10:05:26.643625+00:00",
           "facility_id": 6846,
@@ -3026,6 +3057,13 @@
           "final_url": "https://caretta.town.minami.lg.jp/general-ticket",
           "title": "一般のお客様入館チケット  |  日和佐うみがめ博物館 カレッタ",
           "text_sha256": "4f291b72999e048a05eff350c5e262a6776f94279f50bf9c8d476f51cd6bdc26"
+        },
+        {
+          "url": "https://caretta.town.minami.lg.jp/wp-content/uploads/2026/09/%E3%83%AC%E3%83%83%E3%83%89-%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB-%E7%A6%81%E7%85%99%E3%80%80A4%E3%80%80%E5%BC%B5%E3%82%8A%E7%B4%99-cleaned.jpg",
+          "status": 200,
+          "checked_at": "2026-10-25T10:32:27.119778+00:00",
+          "facility_id": 6849,
+          "sha256": "427ae8dd25c6be3a4e397d04c4d1abeb5456fcab2f0a693971cbbe328c65de18"
         },
         {
           "url": "https://www.town.kaiyo.lg.jp/bunkamura/event_list/",
@@ -5194,6 +5232,15 @@
               "final_url": "https://id-sso.reserva.be/cookiecheck?type=customer&bus_id=idp&auth=",
               "title": "RESERVA",
               "text_sha256": "710814157ff59d3b6314384ae2769537f0df591be70e584a1d226ef028d2baf4"
+            },
+            {
+              "url": "https://id-sso.reserva.be/idp/login",
+              "status": 200,
+              "checked_at": "2026-10-25T10:31:09.904445+00:00",
+              "facility_id": 6830,
+              "final_url": "https://id-sso.reserva.be/cookiecheck?type=customer&bus_id=idp&auth=",
+              "text_sha256": "710814157ff59d3b6314384ae2769537f0df591be70e584a1d226ef028d2baf4",
+              "followup": "フォーム抽出修正後の同一実行内再確認"
             }
           ]
         },
@@ -5423,6 +5470,12 @@
               "title": "団体向け昔遊び・紙芝居・節分・琴・七夕体験",
               "disposition": "out_of_scope",
               "reason": "保育所・学校等団体の予約プログラムで一般親子の参加経路ではない。"
+            },
+            {
+              "title": "特別展「蜂須賀正勝」",
+              "disposition": "duplicate",
+              "event_id": "evt-tokushima-hachisuka-20261010",
+              "reason": "同一会場・会期・公式URL。既存IDに照合、今回の仮追加を除去"
             }
           ],
           "sources_checked": [
@@ -5588,7 +5641,8 @@
               "title": "ご利用案内：徳島市公式ウェブサイト",
               "text_sha256": "6fa5a97c2554033aa4112d0224dbfdea70222993ceb0aac13dec57c7a60d8ca7"
             }
-          ]
+          ],
+          "followup_resolution": "全件重複検証で蜂須賀正勝展が既存地域イベントevt-tokushima-hachisuka-20261010と同一と確認。今回の重複追加を取り下げ、既存IDの施設リンクと確認日を更新。新規は5件。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -6031,8 +6085,8 @@
             },
             {
               "title": "徳島県の祭り・行事展／シンポジウム",
-              "disposition": "hold",
-              "reason": "会場は文化の森であり本施設ではない。後続の文化の森施設6844の確認で重複を判断する。"
+              "disposition": "duplicate",
+              "reason": "後続6844で展示を追加済み(evt-6844-20261114-festival-exhibit)。シンポジウムは同施設の開催時間未公表HOLDに統合。"
             },
             {
               "title": "遍路ウォーク11/15",
@@ -6385,8 +6439,10 @@
             },
             {
               "title": "ことばのあそびば いとぐち",
-              "disposition": "hold",
-              "reason": "公式リンクの申込フォームはHTTP200だが取得本文がreCAPTCHAとフッターのみ。現在の受付可否を確認できない。"
+              "disposition": "added",
+              "reason": "抽出修正後の再取得で有効な先着8名申込フォーム・500円・保護者条件を確認。以前のreCAPTCHAのみという判定は抽出不備であり撤回。",
+              "participability": "条件付き参加可能",
+              "event_id": "evt-6844-20261103-poetry"
             },
             {
               "title": "Slowly Live 2026",
@@ -7118,8 +7174,27 @@
               "final_url": "https://21ccic.bunmori.tokushima.jp/",
               "title": "徳島県立２１世紀館",
               "text_sha256": "40c9ea88dc35a08d0749a47f6c6fbff8f4838e180251b8e1f4d6083260e6e43e"
+            },
+            {
+              "url": "https://forms.gle/FVosCLDsx3y94Ssj9",
+              "status": 200,
+              "checked_at": "2026-10-25T10:31:07.894988+00:00",
+              "facility_id": 6844,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSen81ZDis0A1KAXaRoEwJ8ckzYalCFgDxAiSOaxygw4UbUzKw/viewform?usp=send_form",
+              "text_sha256": "256ab7071bbd920302bcfed909272b70852bd3063a2563cd497d1f3968e4c4e6",
+              "followup": "フォーム抽出修正後の同一実行内再確認"
+            },
+            {
+              "url": "https://forms.gle/3iQwRCAJomx5wR3A7",
+              "status": 200,
+              "checked_at": "2026-10-25T10:31:09.204867+00:00",
+              "facility_id": 6844,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSeKswe_N5Tgexg6xVROjVcF0cYZHJshZc1IqSj16Fk7ya0sng/viewform?usp=send_form",
+              "text_sha256": "6ab4329fe23a1c7574e56f2fbf1ff577a9054219eff5676eb42605667f6ab0c6",
+              "followup": "フォーム抽出修正後の同一実行内再確認"
             }
-          ]
+          ],
+          "followup_resolution": "フォーム抽出不備を修正し詩のWSを追加。6832バックヤードツアーの当初仮追加は共通詳細との時間矛盾を確認後取り下げHOLD。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7305,6 +7380,13 @@
               "final_url": "https://caretta.town.minami.lg.jp/general-ticket",
               "title": "一般のお客様入館チケット  |  日和佐うみがめ博物館 カレッタ",
               "text_sha256": "4f291b72999e048a05eff350c5e262a6776f94279f50bf9c8d476f51cd6bdc26"
+            },
+            {
+              "url": "https://caretta.town.minami.lg.jp/wp-content/uploads/2026/09/%E3%83%AC%E3%83%83%E3%83%89-%E3%82%B7%E3%83%B3%E3%83%97%E3%83%AB-%E7%A6%81%E7%85%99%E3%80%80A4%E3%80%80%E5%BC%B5%E3%82%8A%E7%B4%99-cleaned.jpg",
+              "status": 200,
+              "checked_at": "2026-10-25T10:32:27.119778+00:00",
+              "facility_id": 6849,
+              "sha256": "427ae8dd25c6be3a4e397d04c4d1abeb5456fcab2f0a693971cbbe328c65de18"
             }
           ]
         },
