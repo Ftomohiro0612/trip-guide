@@ -790,6 +790,9 @@ export default async function MypagePage() {
           <ActionCard href="/mypage/wishlist" icon="⭐" label="行きたい" />
           <ActionCard href="/mypage/visits/from-photo" icon="📷" label="写真から" />
         </div>
+        <Link href="/mypage/soudan" className="mt-3 block rounded-xl border border-brand/15 bg-white p-4 text-sm font-bold text-brand hover:bg-brand/5">
+          おでかけ相談 → <span className="mt-1 block text-xs font-normal text-slate-500">候補・理由・調べたことをまとめて家族に送る</span>
+        </Link>
         <Link href="/facilities" className="mt-2.5 inline-flex min-h-11 items-center rounded-lg px-2 text-xs font-medium text-slate-500 transition-colors hover:text-brand hover:underline">
           🔍 遊び場を探す
         </Link>
