@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T10:33:51.019340+00:00",
+  "executed_at": "2026-10-25T10:38:31.970129+00:00",
   "due_facility_ids": [
     1040,
     6930,
@@ -51,7 +51,14 @@
     "candidate_found_added": 23,
     "candidate_found_duplicate": 0,
     "candidate_found_hold": 8,
-    "source_unresolved": 1
+    "source_unresolved": 1,
+    "event_change_counts": {
+      "added": 66,
+      "updated": 14,
+      "resolved_ended": 20,
+      "deleted": 0
+    },
+    "hold_encounter_records": 121
   },
   "per_region": {
     "tochigi": {
@@ -419,6 +426,14 @@
               "title": "「第9回野木町煉瓦窯秋フェスタ」を開催します | 観光 | 野木町公式ホームページ",
               "text_sha256": "1e7df573d8827c33551f21963603b051a0237fed452dc2552dd8de7c46a21ee2"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-1040-20261119-panel",
+              "title": "野木町煉瓦窯パネル展",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -677,9 +692,35 @@
               "title": "ローズフェスタ 10/17(土)～11/23(月・祝) - とちぎ花センター",
               "text_sha256": "8f900e606c8d3330c108ba83c27d39137abf6c2d5a794f725556947693b7c06c"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6930-20260919-backyard",
+              "title": "特別展「バックヤードの植物展」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         }
-      ]
+      ],
+      "event_change_counts": {
+        "added": 2,
+        "updated": 1,
+        "resolved_ended": 0,
+        "deleted": 0
+      },
+      "addition_participability": {
+        "通常参加可能": 2
+      },
+      "addition_categories": {
+        "facility_hosted": 2
+      },
+      "candidate_encounter_dispositions": {
+        "added": 2,
+        "hold": 9,
+        "duplicate": 2
+      },
+      "candidate_count_note": "Encounter records may group multiple dates or candidates; added_events individually enumerates every Product addition. Holds are bounded and remain unadopted."
     },
     "tokushima": {
       "facility_ids": [
@@ -4361,6 +4402,56 @@
               "title": "ページが見つかりませんでした ｜ あすたむらんど徳島 | 水と緑と光の交流拠点",
               "text_sha256": "39ef45dbdae8c3427b7ba7bbdfa9259b2b6f5d04cf4b2f78ce58e224c30d2059"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6820-20260919-ai",
+              "title": "AIと話そう！未来のくらしラボ",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261010-jordan",
+              "title": "未来を紡ぐヨルダンからの贈り物",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261001-monster",
+              "title": "体験工房「連れ歩きモンスター」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261001-ghost",
+              "title": "体験工房「ゆらゆらゴーストスティック」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261001-show",
+              "title": "10月 屋内サイエンスショー",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261101-show",
+              "title": "11月 屋内サイエンスショー",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261201-show",
+              "title": "12月 屋内サイエンスショー",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6820-20261123-sleep",
+              "title": "熟睡プラ寝たリウム",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -4486,6 +4577,56 @@
               "status": 200,
               "final_url": "https://static.wixstatic.com/media/c46038_7f56be87244a4238b2687d6157476f84~mv2.jpg",
               "sha256": "5e663cdfdb803bc8719daed9f35550c8cbc9471793795ed023a3e0e83fd9c660"
+            }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6821-20261031-play",
+              "title": "マグビルドで遊ぼう・阿波人形浄瑠璃公演",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261107-hospital",
+              "title": "ぬいぐるみ病院",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261108-strap",
+              "title": "木のストラップづくり",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261114-castanet",
+              "title": "木の実を使ったカスタネットづくり",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261122-seed",
+              "title": "飛ぶ種を見て触って作ってみよう",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261128-magbuild",
+              "title": "マグビルドで遊ぼう",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261205-table",
+              "title": "テーブルサッカー体験会",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6821-20261206-cup",
+              "title": "第14回テーブルサッカー おもちゃ美術館CUP",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
             }
           ]
         },
@@ -4646,6 +4787,20 @@
               "title": "動物園のクリスマス | イベント案内 | とくしま動物園",
               "text_sha256": "967d690d3534f97ccf986e17c1677546f7ba56c2f7f1d65499cadc5b7c1b6aaa"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6822-20261105-birds",
+              "title": "コウノトリ・ナベヅル普及啓発パネル展",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6822-20261101-beasts",
+              "title": "博物館アワカルト講座 第1回「獣」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -4765,6 +4920,26 @@
               "title": " 基本情報｜ご利用案内｜大塚国際美術館 - 四国 ・ 徳島県の美術館　観光施設 - ",
               "text_sha256": "d6de1ea5435c94f6709b2b96038e52a9f2857fe91e4dce299fa2289e717b8fac"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6823-20260718-cosplay",
+              "title": "10周年 アートコスプレフェス2026",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6823-20260328-quiz",
+              "title": "QuizKnock×大塚国際美術館 アートクイズブック",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6823-20260901-brain",
+              "title": "世界の名画で脳活！ 落ち穂拾い",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -4811,7 +4986,8 @@
               "title": "渦の道 夕暮れの海上散歩「夕活」 | 渦の道",
               "text_sha256": "beb3470463182b971d6359b936afe330c1d9132180fe355941a48c9f0368416e"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -4866,7 +5042,8 @@
               "title": "【不具合】記念館エディ「Play the Eddy！」について | 大鳴門橋架橋記念館 EDDY",
               "text_sha256": "b5f020d37f91dffb26ce62a9406edb49618f1177ebe4124b5e45d2462d62f935"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -4953,7 +5130,8 @@
               "title": "サイト一時停止のお知らせ",
               "text_sha256": "97c8b3368a686b8e2525be27ceb7ec9673305be600eb9a3289b8d9a0a4a0297f"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -5036,7 +5214,8 @@
               "title": "Database Error",
               "text_sha256": "d3cdbeb52e334575a66a52874dbcafaf1a85a6c477389b9950a218442e7d69c2"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -5242,6 +5421,14 @@
               "text_sha256": "710814157ff59d3b6314384ae2769537f0df591be70e584a1d226ef028d2baf4",
               "followup": "フォーム抽出修正後の同一実行内再確認"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6830-20261108-marche",
+              "title": "おきのすマルシェ",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -5255,16 +5442,15 @@
           "reason": "2階休室を確認し、1階・バックヤードの公式開催プログラムを個別確認。",
           "candidates": [
             {
-              "title": "おやすみカーテン・アートの楽しみ大図鑑・こども鑑賞12/19・2/6・バックヤード3/28",
+              "title": "おやすみカーテン・アートの楽しみ大図鑑・こども鑑賞12/19・2/6",
               "disposition": "added",
               "event_ids": [
                 "evt-6832-20261103-curtain",
                 "evt-6832-20261212-art",
                 "evt-6832-20261219-kids",
-                "evt-6832-20270206-kids",
-                "evt-6832-20270328-backyard"
+                "evt-6832-20270206-kids"
               ],
-              "participability": "通常参加可能2／条件付き参加可能3"
+              "participability": "通常参加可能2／条件付き参加可能2"
             },
             {
               "title": "出張ワークショップ11/22ミライズ・1/11フジグラン北島・2/11イオンモール",
@@ -5273,8 +5459,8 @@
             },
             {
               "title": "文化の森秋祭り",
-              "disposition": "hold",
-              "reason": "施設群共通の企画。後続due6844で主催公式を独立取得して判定する（当館では包括行事として保留）。"
+              "disposition": "duplicate",
+              "reason": "後続6844で同候補の雨天条件不明HOLDに統合、重複計数しない。"
             },
             {
               "title": "ぶんかつギャラリーvol3・展示解説9/22・浮世絵めぐり8/30,9/19・版画音楽9/13・ことばのなぞとき9/5",
@@ -5409,6 +5595,33 @@
               "title": "はじめての浮世絵めぐり - 徳島県立近代美術館",
               "text_sha256": "3a56d12596270cba1df02c91b8101620a209fcf32e451118dfde30234b0e3d70"
             }
+          ],
+          "followup_resolution": "後続6844で共通詳細の時刻矛盾を確認しバックヤード3/28の仮追加を除去、同候補は6844のHOLDに統合。秋祭りも6844の雨天条件不明HOLDに統合。",
+          "added_events": [
+            {
+              "event_id": "evt-6832-20261103-curtain",
+              "title": "おやすみカーテンワークショップ",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6832-20261212-art",
+              "title": "ユニバーサル美術館WEEK アートの楽しみ大図鑑",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6832-20261219-kids",
+              "title": "こども鑑賞クラブ＋「びじゅつかんでクリスマス」",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6832-20270206-kids",
+              "title": "こども鑑賞クラブ＋「休室中スペシャル びじゅつかんにもぐりこめ！」",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -5422,10 +5635,9 @@
           "reason": "企画展・体験事業・現行個別催事と利用案内を確認。既存夏展は10/4終了。",
           "candidates": [
             {
-              "title": "蜂須賀正勝・阿波の庄屋・ひな人形の世界",
+              "title": "阿波の庄屋・ひな人形の世界",
               "disposition": "added",
               "event_ids": [
-                "evt-6834-20261010-masakatsu",
                 "evt-6834-20261128-shoya",
                 "evt-6834-20270206-hina"
               ],
@@ -5642,7 +5854,39 @@
               "text_sha256": "6fa5a97c2554033aa4112d0224dbfdea70222993ceb0aac13dec57c7a60d8ca7"
             }
           ],
-          "followup_resolution": "全件重複検証で蜂須賀正勝展が既存地域イベントevt-tokushima-hachisuka-20261010と同一と確認。今回の重複追加を取り下げ、既存IDの施設リンクと確認日を更新。新規は5件。"
+          "followup_resolution": "全件重複検証で蜂須賀正勝展が既存地域イベントevt-tokushima-hachisuka-20261010と同一と確認。今回の重複追加を取り下げ、既存IDの施設リンクと確認日を更新。新規は5件。",
+          "added_events": [
+            {
+              "event_id": "evt-6834-20261128-shoya",
+              "title": "冬の企画展「阿波の庄屋－板野吹田村から－」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6834-20270206-hina",
+              "title": "春の企画展「ひな人形の世界」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6834-20261129-shogi",
+              "title": "徳島城御城将棋",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6834-20261213-karuta",
+              "title": "子どもかるた教室",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6834-20260702-rally",
+              "title": "蜂須賀家の秘宝を探せ！謎解きウォークラリー",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
+          ]
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -5703,6 +5947,14 @@
               "final_url": "https://www.awaodori-kaikan.jp/newsandtopics",
               "title": "ニュース&トピックス｜新着情報や話題｜阿波おどり会館",
               "text_sha256": "4d310b335cec9c7052d66f46959f704e36191e9566b5917afe4bbce98e17865d"
+            }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6836-20261101-awa",
+              "title": "阿波おどり会館 秋の特別公演",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
             }
           ]
         },
@@ -5765,7 +6017,8 @@
               "title": "マチ★アソビvol.31　アニメ「鬼滅の刃」ロープウェイガイドアナウンス実施！ | マチ★アソビ vol.31",
               "text_sha256": "8fafdb6d4048b4dc166058aad4fe7ee2f85205b0a6d9b17907265e8b2f61d63d"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -5805,7 +6058,8 @@
               "title": "徳島県立　阿波十郎兵衛屋敷",
               "text_sha256": "4bfc009427855695bdad8dfb63d61b75e9112c65fc4e001e6c0eeeda83bba7da"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -5894,6 +6148,20 @@
               "final_url": "https://tokushimazoo.jp/info/166.html",
               "title": "博物館アワカルト講座参加者募集 | お知らせ | とくしま動物園",
               "text_sha256": "0fdd335748bea9e4caadebdc933a771c5e6e06717beb14b90ad5b414e2bf50a3"
+            }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6839-20260627-indigo",
+              "title": "四国大学 藍の家所蔵品展「暮らしの中の藍布」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6839-20261206-colors",
+              "title": "博物館アワカルト講座 第2回「色」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
             }
           ]
         },
@@ -6001,7 +6269,8 @@
               "final_url": "https://wazanoyakata.com/mn/wp-content/uploads/2026/05/%E3%81%82%E3%81%84%E3%81%BE%E3%82%8B%E3%81%97%E3%81%87%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC11%E6%9C%888%E6%97%A5%E5%A4%89%E6%9B%B4-scaled.jpg",
               "sha256": "65c9a4f39ae39d768b2e09c6ddb74931c2853e9aae6c2df8c229e6d85757ecd2"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -6061,7 +6330,8 @@
               "title": "☆「防災の日」特別啓発行事『知っておきたい防災講座「未災地から被災地へ～防災教育を通して生き方を考える～」』｜徳島県立防災センター",
               "text_sha256": "6937135571c50064791aa84ac26e3b801952543ffaa7608bc8213699da864ccb"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -6163,6 +6433,14 @@
               "title": "「令和8年度四国遍路パネル展」を開催します｜徳島県ホームページ",
               "text_sha256": "c71035bee23019ffe1171031c0c69023b35da519087c835ab53d2c7ebef01642"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6842-20261020-excavation",
+              "title": "秋の企画展「発掘調査のはなし ―未来へつなぐ埋蔵文化財―」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -6173,7 +6451,7 @@
           "prefecture": "tokushima",
           "facility_name": "徳島県文化の森総合公園",
           "disposition": "candidate_found_added",
-          "reason": "共通カレンダーと各館の現行ページ・公式通信を内容確認。確定した申込不要の8展示／公演を追加。競合する博物館・鳥居系統は共有理由で候補別HOLD。",
+          "reason": "共通カレンダーと各館ページ・公式通信を確認し、確定した8展示／公演と再取得で受付確認できた詩WSの9件を追加。博物館・鳥居系統は共有理由で候補別HOLD。",
           "candidates": [
             {
               "title": "生きものしらべ隊　落ち葉の下の生きものをしらべよう（午前の部）（徳島県立博物館）",
@@ -6473,6 +6751,12 @@
               "title": "成人向けPC講座・古文書講座・補修ボランティア講座・アガスティア講演",
               "disposition": "excluded",
               "reason": "家族のおでかけを主目的としない専門学習・養成課程。過去の行事、貸館制度、運営案内も追加対象外。"
+            },
+            {
+              "title": "企画展「日本人類学のパイオニア―坪井正五郎」",
+              "disposition": "hold",
+              "url": "https://torii-museum.bunmori.tokushima.jp/event.html#2026kikaku",
+              "reason": "公式通信は9:30～16:00、館自身の同展案内は9:30～17:00と不一致。鳥居龍蔵記念博物館系統HOLDに含める。"
             }
           ],
           "sources_checked": [
@@ -7194,7 +7478,63 @@
               "followup": "フォーム抽出修正後の同一実行内再確認"
             }
           ],
-          "followup_resolution": "フォーム抽出不備を修正し詩のWSを追加。6832バックヤードツアーの当初仮追加は共通詳細との時間矛盾を確認後取り下げHOLD。"
+          "followup_resolution": "フォーム抽出不備を修正し詩のWSを追加。6832バックヤードツアーの当初仮追加は共通詳細との時間矛盾を確認後取り下げHOLD。",
+          "added_events": [
+            {
+              "event_id": "evt-6844-20261027-77144",
+              "title": "企画展「とくしま昭和写真館」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20270126-77145",
+              "title": "企画展「武芸とスポーツ」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261123-77299",
+              "title": "えいごのおはなし会",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261123-77285",
+              "title": "吹奏楽団アババイ ファミリーコンサート",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261107-77272",
+              "title": "お花の展示会",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261212-77307",
+              "title": "受け継がれる伝統芸能",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261220-77296",
+              "title": "第34回コンピューターミュージック演奏会",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261114-festival-exhibit",
+              "title": "企画展示「徳島県の祭り・行事」",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6844-20261103-poetry",
+              "title": "ことばのあそびば いとぐち 詩のワークショップ",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
+          ]
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7276,6 +7616,20 @@
               "final_url": "https://doitsukan.com/info/?start=5&filter=0&year=",
               "title": "鳴門市ドイツ館｜徳島県鳴門市『第九が日本で初めて演奏された地』",
               "text_sha256": "5b25f84aa99cb044d1157eee18cde6bc1b0764c93be44fefdbbcf5b9be9f3176"
+            }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6846-20261009-landscape",
+              "title": "徳島の風景Ⅱ 奈須善彦 絵画作品展",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6846-20261205-christmas",
+              "title": "ドイツ館のクリスマスマーケット2026",
+              "category": "fireworks_festivals_seasonal",
+              "participability": "通常参加可能"
             }
           ]
         },
@@ -7387,6 +7741,14 @@
               "checked_at": "2026-10-25T10:32:27.119778+00:00",
               "facility_id": 6849,
               "sha256": "427ae8dd25c6be3a4e397d04c4d1abeb5456fcab2f0a693971cbbe328c65de18"
+            }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6849-20261031-backyard",
+              "title": "カレッタの裏側見にきぃだ！ バックヤードツアー",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
             }
           ]
         },
@@ -7533,6 +7895,14 @@
               "final_url": "https://www.town.kaiyo.lg.jp/bunkamura/docs/2026091400022/file_contents/R8-10r.jpg",
               "sha256": "261282cf76a3370fd6633394419255fa1a9774b1debd30f4472f1750648cf835"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6853-20261105-craft",
+              "title": "阿波海南文化村工芸館 11月の体験",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -7665,7 +8035,8 @@
               "final_url": "https://asatetu.com/dmv/wp-content/uploads/2026/10/8d7f85585df2eda4bd96c88f1155bb13-558x800.jpg",
               "sha256": "4a474555f60bf6e2d8fb5b41e4a00de3fe709b285a8e7527fb7c14acd61c504d"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7705,7 +8076,8 @@
               "title": "（公園）主な阿南市立都市公園の案内 | 阿南市",
               "text_sha256": "35af1bc7b60191b1bb8fe7f0c9fd3ac8af0857437cbf913cbeb9b818feab80ae"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7754,7 +8126,8 @@
               "title": "森林工房 | 相生森林文化公園あいあいらんど",
               "text_sha256": "56230073642503cb3b5de4dd59f69bd3e496666486b266df99d1a45b635bed60"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7800,7 +8173,8 @@
               "title": "太龍寺ロープウェイお知らせ - 四国ケーブルのケーブルカー・ロープウェイ",
               "text_sha256": "6d05a45b30dbd73e5a358f795caf068ec31bcb0e5a22bcc1de730431826e5bb3"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -7929,6 +8303,14 @@
               "final_url": "https://yamashiro-info.jp/cp-bin/wordpress/wp-content/uploads/2026/09/6b885c35c1f528b1d152066b46ddf54d.png",
               "sha256": "354a4768a0af638eec5ce67749c36a54f04e6e649ab93d811feab71650fc0634"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6860-20261101-earth",
+              "title": "石の博物館で地球探検ツアー",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -7984,6 +8366,14 @@
               "title": "祖谷のかずら橋架け替え工事のお知らせ | 大歩危祖谷ナビ＜三好市公式観光サイト＞",
               "text_sha256": "21385a440d469f9b385c39029a7899c99547f1be5742ee0d936a610a4cbbd757"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6861-20270116-renewal",
+              "title": "祖谷のかずら橋 架け替え見学会",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -8015,7 +8405,8 @@
               "title": "奥祖谷二重かずら橋 | 大歩危祖谷ナビ＜三好市公式観光サイト＞",
               "text_sha256": "23367cbe84154805d1038be169aa9a290896020b08cf389479e2dd52d7df1f6c"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -8089,7 +8480,8 @@
               "title": "イベント情報 - 吉野川ハイウェイオアシス",
               "text_sha256": "198329746489016d35ade4462b104878e8595aa7dc99e5dc45c43fa61ad93be8"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -8138,7 +8530,8 @@
               "title": "観光案内｜観光案内（遊ぶ）｜於安パーク -  つるぎ町",
               "text_sha256": "3460fbf7a4a8e3639ea8b000ecb7fcbdd49fe767e16781e33c5eb70f79db587e"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -8212,7 +8605,8 @@
               "title": "にし阿波の花火の日のご予約について｜新着情報｜四国三郎の郷｜徳島・美馬のキャンプ場 – 女子会・ソロキャンプにやさしい宿泊施設",
               "text_sha256": "e5697647b40bf58553bc4eaecbca5456f116a5e9d97d62978eb8b716a32338c9"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -8382,7 +8776,8 @@
               "final_url": "https://ros-cms-data.s3.ap-northeast-1.amazonaws.com/_file/19106/32d5271102.jpg",
               "sha256": "da591450e8c5f78cd5fc1b87a514aef1ca16f7c3f5ee098415ae466a20f31d7b"
             }
-          ]
+          ],
+          "added_events": []
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-14",
@@ -8575,6 +8970,50 @@
               "title": "ご利用案内 | 那賀町山のおもちゃ美術館",
               "text_sha256": "59024354df3b5be91c768b77be37d8f62aca8e9e994e4c67f91113295144b265"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6896-20261031-tosen",
+              "title": "投扇興体験会",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261101-owl",
+              "title": "ヒラリンとヨッシーのバルーンアート「ふくろう」",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261107-molkky",
+              "title": "ミニモルック体験会",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261115-games",
+              "title": "ジーニアススクエア大会とおはなし会",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261121-igo",
+              "title": "ゆずつみき囲碁",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261128-goodtoy",
+              "title": "グッド・トイ2026であそぼう",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-6896-20261103-horse",
+              "title": "那賀町ほんまもん体験 乗馬・動物ふれあい×木のおもちゃ",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -8638,9 +9077,52 @@
               "final_url": "https://www.city.tokushima.tokushima.jp/kosodate/ikuji/anshin_station/event.files/station_otayori10.pdf",
               "text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6974-20261108-papa",
+              "title": "パパ講座 ～わらべうた＆ベビーマッサージ～",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6974-20261109-massage",
+              "title": "ベビーマッサージDay",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-6974-20261128-grandparents",
+              "title": "祖父母のための子育てサポート講座",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         }
-      ]
+      ],
+      "event_change_counts": {
+        "added": 60,
+        "updated": 8,
+        "resolved_ended": 5,
+        "deleted": 0
+      },
+      "addition_participability": {
+        "通常参加可能": 39,
+        "条件付き参加可能": 21
+      },
+      "addition_categories": {
+        "facility_hosted": 59,
+        "fireworks_festivals_seasonal": 1
+      },
+      "candidate_encounter_dispositions": {
+        "duplicate": 6,
+        "added": 22,
+        "hold": 107,
+        "out_of_scope": 8,
+        "past": 21,
+        "excluded": 8
+      },
+      "candidate_count_note": "Encounter records may group multiple dates or candidates; added_events individually enumerates every Product addition. Holds are bounded and remain unadopted."
     },
     "tokyo": {
       "facility_ids": [
@@ -9142,6 +9624,14 @@
               "title": "東京ジョイポリス - お台場で遊ぶならジョイポリスに決まり！",
               "text_sha256": "5004cfc2fbb0972f1ad5960602efa076798e974a4e8871d218264cc08e0990ed"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-217-20261016-hololive",
+              "title": "ホロライブ×ジョイポリス 秘密結社holoX スペシャルミニライブ",
+              "category": "facility_hosted",
+              "participability": "通常参加可能"
+            }
           ]
         },
         {
@@ -9395,6 +9885,20 @@
               "final_url": "https://www.kidzania.jp/membersite/reserve/calendar?year=2026&mon=11",
               "text_sha256": "4617d9add36d3c90e74bc9177c5946de20614e3ea56086ce8b32fb406d307ed9"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-219-20261120-seiko",
+              "title": "Exciting Week with SEIKO",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-219-20261111-tax",
+              "title": "TAX WEEK 2026",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         },
         {
@@ -9557,9 +10061,38 @@
               "title": "香りってなんだ？AIを通じて嗅覚について学ぶワークショップ",
               "text_sha256": "7f4fc4e9e9b23d7bed039b3deb40bb2e824e07f07bae89fb723fbc585d8b8acc"
             }
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-221-20261115-kaorium",
+              "title": "香りってなんだ？AIを通じて嗅覚について学ぶワークショップ",
+              "category": "facility_hosted",
+              "participability": "条件付き参加可能"
+            }
           ]
         }
-      ]
+      ],
+      "event_change_counts": {
+        "added": 4,
+        "updated": 5,
+        "resolved_ended": 15,
+        "deleted": 0
+      },
+      "addition_participability": {
+        "通常参加可能": 1,
+        "条件付き参加可能": 3
+      },
+      "addition_categories": {
+        "facility_hosted": 4
+      },
+      "candidate_encounter_dispositions": {
+        "added": 3,
+        "duplicate": 2,
+        "hold": 5,
+        "out_of_scope": 2,
+        "not_event": 2
+      },
+      "candidate_count_note": "Encounter records may group multiple dates or candidates; added_events individually enumerates every Product addition. Holds are bounded and remain unadopted."
     }
   }
 }
