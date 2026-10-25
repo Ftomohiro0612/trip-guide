@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { buildLoginRedirect } from "@/lib/auth-dest";
 import { createClient } from "@/lib/supabase/client";
-import { addSoudanCandidate, listSoudanDestinations } from "@/app/mypage/soudan/actions";
+import type { addSoudanCandidate, listSoudanDestinations } from "@/lib/soudan-owner-server";
 import { trackSoudan } from "@/lib/soudan-analytics-client";
 import { buttonClass, Dialog, Notice, useSoudanAction } from "./soudan/Ui";
 
@@ -16,7 +16,13 @@ export default function SoudanAddButton({ kind, reference }: { kind: "facility" 
   const marker = `${kind}:${reference}`;
 
   async function add(destination: string | null) {
-    const result = await addSoudanCandidate({ kind, reference }, destination);
+    const response = await fetch("/api/soudan/candidates", {
+      method: "POST",
+      credentials: "same-origin",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ kind, reference, destination }),
+    });
+    const result: Awaited<ReturnType<typeof addSoudanCandidate>> = await response.json();
     if (!result.ok) { setMessage(result.error); return; }
     if (result.created) trackSoudan({ name: "soudan_create", properties: {} });
     trackSoudan({ name: "soudan_candidate_add", properties: { kind } });
@@ -32,7 +38,8 @@ export default function SoudanAddButton({ kind, reference }: { kind: "facility" 
         window.location.assign(buildLoginRedirect(`${url.pathname}${url.search}${url.hash}`));
         return;
       }
-      const result = await listSoudanDestinations();
+      const response = await fetch("/api/soudan/destinations", { credentials: "same-origin", cache: "no-store" });
+      const result: Awaited<ReturnType<typeof listSoudanDestinations>> = await response.json();
       if (!result.ok) { setMessage(result.error); return; }
       if (result.items.length === 0) await add(null);
       else setItems(result.items);

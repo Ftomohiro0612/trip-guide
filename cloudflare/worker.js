@@ -69,7 +69,7 @@ async function runMiddlewareWhenNeeded(request, env, ctx, pathname) {
 
 function requestNeedsRuntimeCanon(pathname) {
   return !(
-    pathname === "/api/soudan" || pathname.startsWith("/api/soudan/") ||
+    pathname === "/api/soudan/respond" || pathname === "/api/soudan/destinations" ||
     pathname === "/auth/callback" ||
     pathname === "/mypage/children" ||
     pathname === "/mypage/onboarding" ||

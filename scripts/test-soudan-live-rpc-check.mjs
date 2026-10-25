@@ -24,7 +24,7 @@ function plan() {
   }
   push('POST', '/rest/v1/consultations', 'A', [{ id: consultation }]);
   push('POST', '/rest/v1/consultations', 'A', [{ id: otherConsultation }]);
-  push('POST', '/rest/v1/consultation_candidates', 'A', [{ id: candidate }, { id: externalCandidate }, { id: otherCandidate }]);
+  for (const id of [candidate, externalCandidate, otherCandidate]) push('POST', '/rest/v1/consultation_candidates', 'A', [{ id }]);
   for (const method of ['GET', 'PATCH', 'DELETE']) push(method, '/rest/v1/consultations', 'B', []);
   for (const table of ['consultation_candidates', 'consultation_responses']) push('GET', `/rest/v1/${table}`, 'B', []);
   rpcGet({ consultation: { id: consultation }, candidates: [{ id: candidate }, { id: externalCandidate }], responses: [] });
@@ -59,6 +59,12 @@ function scriptedFetch(calls) {
     if (expected.role === 'service') {
       assert.match(url.pathname, /^\/auth\/v1\/admin\/users(?:\/[^/]+)?$/);
       assert.ok(['POST', 'DELETE'].includes(init.method));
+    }
+    if (init.method === 'POST' && url.pathname === '/rest/v1/consultation_candidates') {
+      const row = JSON.parse(init.body);
+      assert.equal(Array.isArray(row), false, 'each candidate must be sent as one object');
+      assert.deepEqual(Object.keys(row).sort(), ['consultation_id', 'kind', 'title', { facility: 'facility_slug', external: 'external_url', event: 'event_id' }[row.kind]].sort());
+      assert.equal(row.consultation_id, row.kind === 'event' ? otherConsultation : consultation);
     }
     return new Response(JSON.stringify(expected.data), { status: expected.status });
   };
