@@ -4,6 +4,7 @@ import type { EventView } from "@/lib/events";
 import { isPdfOfficialUrl } from "@/lib/event-urls";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import EventRecordButton from "@/components/EventRecordButton";
+import SoudanAddButton from "@/components/SoudanAddButton";
 
 interface EventCardProps {
   view: EventView;
@@ -107,6 +108,7 @@ export default function EventCard({
         </div>
         <div className="flex shrink-0 flex-col gap-2">
           <EventRecordButton eventId={event.id} />
+          <SoudanAddButton kind="event" reference={event.id} />
           <TrackedOutboundLink
             href={event.official_url}
             contentType="event"

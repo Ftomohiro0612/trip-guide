@@ -10,6 +10,7 @@ const output = await mkdtemp(join(tmpdir(), 'memorips-soudan-test-'));
 try {
   const files = (await readdir('lib/soudan')).filter((name) => name.endsWith('.ts')).map((name) => `lib/soudan/${name}`);
   files.push('lib/config.ts', 'components/analytics-url.ts', 'components/analytics-url.test.ts');
+  files.push('lib/soudan-owner.ts', 'lib/soudan-owner.test.ts', 'lib/date-jst.ts', 'lib/child-age.ts');
   for (const file of files) {
     const source = (await readFile(file, 'utf8')).replace(/\.ts(["'])/g, '.js$1');
     const compiled = ts.transpileModule(source, { compilerOptions: { target: ts.ScriptTarget.ES2022, module: ts.ModuleKind.CommonJS, esModuleInterop: true } });

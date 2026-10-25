@@ -5,6 +5,7 @@ import { createClient } from "@/lib/supabase/server";
 import DeleteWishButton from "./DeleteWishButton";
 import WishlistAddForm from "./WishlistAddForm";
 import WishlistAutoAdd from "./WishlistAutoAdd";
+import SoudanAddButton from "@/components/SoudanAddButton";
 
 export const metadata: Metadata = { title: "行きたいリスト" };
 
@@ -95,6 +96,7 @@ export default async function WishlistPage({
                       行ったよ！記録する
                     </Link>
                   </div>
+                  {hasFacilityPage && <div className="mt-2"><SoudanAddButton kind="facility" reference={item.facility_slug} /></div>}
                 </div>
                 <DeleteWishButton wishId={item.id} facilityName={item.facility_name} />
               </div>

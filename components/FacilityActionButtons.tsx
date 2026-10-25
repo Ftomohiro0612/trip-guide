@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import WishlistPlanChips from "@/components/WishlistPlanChips";
+import SoudanAddButton from "@/components/SoudanAddButton";
 
 import { useFacilityGuestRecord } from "@/components/FacilityGuestRecordProvider";
 import { useFacilityIntentActions } from "@/components/useFacilityIntentActions";
@@ -62,6 +63,7 @@ export default function FacilityActionButtons({
         {toggling ? "..." : isWishlisted ? "行きたいリスト済み" : "行きたいに追加"}
       </button>
       {isWishlisted && <WishlistPlanChips facilitySlug={facilitySlug} />}
+      <SoudanAddButton kind="facility" reference={facilitySlug} />
     </div>
   );
 }
