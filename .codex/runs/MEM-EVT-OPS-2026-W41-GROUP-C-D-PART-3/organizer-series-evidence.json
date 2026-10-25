@@ -1,0 +1,863 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-3",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-25T22:28:18.721653+00:00",
+  "horizon_end_date": "2026-12-21",
+  "per_region": {
+    "kagoshima": {
+      "sources_checked": [
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:08:57.921905+00:00",
+          "organizer_name": "株式会社リトプラ",
+          "multi_venue_basis": "公式発表が鹿児島・神奈川を含む全国複数パークで同一企画を開催し、全実施会場を明記。",
+          "host_shared_with_registry_reason": "リトプラの登録店別カレンダーと同一ホストだが、このpressは全国20超会場を集約する主催者の公式発表。"
+        },
+        {
+          "url": "https://kanoyashi-kankokyokai.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:09:26.979147+00:00",
+          "organizer_name": "鹿屋市観光協会・鹿屋市認定登山ガイドクラブ",
+          "multi_venue_basis": "同一主催団体が白滝11/28と中岳12/19の異なる山域・雨天代替会場の2回シリーズを案内。",
+          "host_shared_with_registry_reason": "観光協会の複数山域の主催体験一覧であり単一登録施設のイベント面ではない。"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:09:43.541703+00:00",
+          "organizer_name": "株式会社リトプラ",
+          "multi_venue_basis": "全国のリトルプラネット・TOYLO PARK等複数パーク共通の11/9〜1/6コラボ開催を公式発表。",
+          "host_shared_with_registry_reason": "店別ページではなく全国複数会場の主催者発表。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "ハロウィン2026（イオンモールKAGOSHIMA BAY）",
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "event_id": "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
+          "disposition": "duplicate_or_already_present",
+          "category": "facility_hosted",
+          "reason": "既存ID・会場・9/17〜11/1の同一企画。公式再確認日と注記だけ更新。全国他店を鹿児島へ加えない。",
+          "product_action": "source_checked_at/source_notes refreshed",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "白滝ハイキング11/28",
+          "url": "https://kanoyashi-kankokyokai.jp/event/1987/",
+          "disposition": "hold",
+          "category": "municipal_regional",
+          "reason": "同じ登山シリーズの再遭遇。tourism_boardで記録した子ども参加条件・受付枠未確認（中岳は終了時間不一致も）を維持。"
+        },
+        {
+          "title": "中岳登山12/19",
+          "url": "https://kanoyashi-kankokyokai.jp/event/1988/",
+          "disposition": "hold",
+          "category": "municipal_regional",
+          "reason": "同じ登山シリーズの再遭遇。tourism_boardで記録した子ども参加条件・受付枠未確認（中岳は終了時間不一致も）を維持。"
+        },
+        {
+          "title": "みんなで！あそびパーティ2026（イオンモールKAGOSHIMA BAY）",
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "event_id": "evt-litpla-kagoshima-sunsun-20261109",
+          "disposition": "hold",
+          "category": "facility_hosted",
+          "participability": "通常参加可能",
+          "reason": "公式参加経路は確認済みだが、既存の全国キャンペーンURL共有例外に鹿児島追加でfingerprintが変化。Playbook上のPMレビューなしに例外を自己拡張せず、当該1件をHOLD。"
+        }
+      ],
+      "candidates_found": 4,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 3,
+      "stale_false": 0
+    },
+    "kanagawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:12.766832+00:00",
+          "organizer_name": "Litpla",
+          "multi_venue_basis": "神奈川県3会場を含む全国各パークの同一キャンペーン。",
+          "host_shared_with_registry_reason": "店舗単独のカレンダーではなく全国多数会場の開催期間・対象パークを発表する運営会社プレス。"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:13.364538+00:00",
+          "organizer_name": "Litpla",
+          "multi_venue_basis": "神奈川県3会場を含む全国各パークの同一キャンペーン。",
+          "host_shared_with_registry_reason": "店舗単独のカレンダーではなく全国多数会場の開催期間・対象パークを発表する運営会社プレス。"
+        },
+        {
+          "url": "https://creativeweek.net/",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:13.768883+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://www.kanagawa-kenminhall.com/d/rock26_oi",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:14.169912+00:00",
+          "organizer_name": "神奈川県民ホール KANAGAWA33ACT",
+          "multi_venue_basis": "同公式公演から南足柄・愛川・大井の3会場公演へリンク。"
+        },
+        {
+          "url": "https://www.kanagawa-kenminhall.com/d/rock26_minamiashigara",
+          "status": 200,
+          "checked_at": "2026-10-25T22:28:17.065422+00:00",
+          "organizer_name": "神奈川県民ホール KANAGAWA33ACT",
+          "multi_venue_basis": "同公式公演から南足柄・愛川・大井の3会場公演へリンク。"
+        },
+        {
+          "url": "https://www.kanagawa-kenminhall.com/d/rock26_aikawa",
+          "status": 200,
+          "checked_at": "2026-10-25T22:28:17.728493+00:00",
+          "organizer_name": "神奈川県民ホール KANAGAWA33ACT",
+          "multi_venue_basis": "同公式公演から南足柄・愛川・大井の3会場公演へリンク。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=34",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.725606+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=31",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.726867+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=28",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.730434+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=13",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.732269+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=20",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.729667+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=12",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:22.728675+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=7",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.157894+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=22",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.151440+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=11",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.147352+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=8",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.161559+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=41",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.159966+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=30",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.378598+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=14",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.550510+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=6",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.548629+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=9",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.558147+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=35",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.556344+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=37",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.546960+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=44",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.768370+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=21",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.923679+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=18",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.937107+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=38",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:23.942688+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=26",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.110975+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=24",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.110228+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=10",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.135113+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=39",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.296180+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=15",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.309695+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=27",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.307235+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=29",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.460262+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=36",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.458230+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=17",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.481792+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=33",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.645893+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=32",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.673742+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=42",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.676786+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=16",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.817626+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=40",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.822265+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=43",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.820135+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        },
+        {
+          "url": "https://creativeweek.net/event-detail.php?no=19",
+          "status": 200,
+          "checked_at": "2026-10-25T22:27:24.996140+00:00",
+          "organizer_name": "茅ヶ崎市 CHIGASAKI CREATIVE WEEK",
+          "multi_venue_basis": "市博物館・市美術館・市役所・公園・店舗等37個別プログラムを公式主催市が掲載。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）",
+          "event_id": "evt-litpla-toylo-yokohama-halloween2026",
+          "official_sources": [
+            "https://www.litpla.com/news/press/halloween2026-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）",
+          "event_id": "evt-litpla-toylo-musashikosugi-halloween2026",
+          "official_sources": [
+            "https://www.litpla.com/news/press/halloween2026-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー大和鶴間）",
+          "event_id": "evt-litpla-toylo-yamatotsuruma-halloween2026",
+          "official_sources": [
+            "https://www.litpla.com/news/press/halloween2026-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）",
+          "event_id": "evt-kanagawa-w40d4-sunsun-yokohama",
+          "official_sources": [
+            "https://www.litpla.com/news/press/202610-sunsun-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）",
+          "event_id": "evt-kanagawa-w40d4-sunsun-musashikosugi",
+          "official_sources": [
+            "https://www.litpla.com/news/press/202610-sunsun-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー大和鶴間）",
+          "event_id": "evt-kanagawa-w40d4-sunsun-yamatotsuruma",
+          "official_sources": [
+            "https://www.litpla.com/news/press/202610-sunsun-info/"
+          ],
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者全国開催リストの神奈川3会場と当該既存IDを照合。Base+Summer結合の可視条件も検証。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "The Beatlesとアナログ盤を語る minamiashigara",
+          "official_sources": [
+            "https://www.kanagawa-kenminhall.com/d/rock26_minamiashigara"
+          ],
+          "disposition": "hold",
+          "reason": "県域展開の別会場公演。現在の販売枠と子どもの参加条件を確定できず、発売案内だけで参加可としない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "The Beatlesとアナログ盤を語る aikawa",
+          "official_sources": [
+            "https://www.kanagawa-kenminhall.com/d/rock26_aikawa"
+          ],
+          "disposition": "hold",
+          "reason": "県域展開の別会場公演。現在の販売枠と子どもの参加条件を確定できず、発売案内だけで参加可としない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "The Beatlesとアナログ盤を語る 大井11/29",
+          "official_sources": [
+            "https://www.kanagawa-kenminhall.com/d/rock26_oi"
+          ],
+          "disposition": "hold",
+          "reason": "未就学児不可。現在の一般販売枠を確認できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "THE BOTANICAL SHOW 6th",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=34"
+          ],
+          "disposition": "hold",
+          "reason": "屋外植物マルシェの悪天候対応・交通/幼児動線を確定できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "フィエスタ翔２０２６",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=31"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "2026音貞オッペケ祭〜【松下政経塾】と周辺まち歩き・【茅ヶ崎館】トーク＆上映会",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=28"
+          ],
+          "disposition": "hold",
+          "reason": "2つの会場に異なる開催日/条件があるが、ページに各回の時刻がない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "chigasaki kodomo cinema　第６回ちがさきこども映画祭",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=13"
+          ],
+          "disposition": "hold",
+          "reason": "2会場3回上映。会場ごとの収容/当日入場手順を確認できず、一つの連続時刻にまとめない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ちがさきこどもマルシェ2026",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=20"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "熊澤酒造オクトーバーフェスト",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=12"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "HARVEST PARK",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=7"
+          ],
+          "disposition": "hold",
+          "reason": "屋外収穫祭の雨天/荒天・交通/混雑案内を確定できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "みんなで持ちより絵本のじかん",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=22"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "いっしょにあそぼ！",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=11"
+          ],
+          "disposition": "hold",
+          "reason": "予約必要だが募集開始・申込方法/現在の受付状況がページにない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ホノルルミーツ2026",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=8"
+          ],
+          "disposition": "hold",
+          "reason": "複数会場に及ぶ交流行事。個別時間と悪天候/交通影響の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "第３７回茅ヶ崎市遺跡調査発表展示会",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=41"
+          ],
+          "disposition": "added",
+          "reason": "市主催シリーズ一次情報で日付・時間・会場・一般参加条件を確認。",
+          "event_category": "facility_hosted",
+          "event_id": "evt-kanagawa-excavation-20261031",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "第15回茅ヶ崎映画祭",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=30"
+          ],
+          "disposition": "hold",
+          "reason": "多会場の映画祭。上映ごとに料金/予約が異なり、個別参加経路の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "第９回しろやまフェスタ",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=14"
+          ],
+          "disposition": "hold",
+          "reason": "複数会場のフェスタ。悪天候対応と会場間の交通/幼児動線を確認できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "瀧本幹也　LUNATION 朔望―海から天体を読む",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=6"
+          ],
+          "disposition": "hold",
+          "reason": "有料とあるが観覧料金の具体表示と休館日の確認が残る。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "旧相模川橋脚国史跡指定100年記念展示 「ちがさき今昔 ― 古相模川編 ―」",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=9"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "鉄砲道ギャラリー 「CHIGASAKI CREATIVE WEEK 2026」展",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=35"
+          ],
+          "disposition": "hold",
+          "reason": "無料・予約不要だが展示の利用時間が記載されていない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "かとうくみプレンティーズ原画展",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=37"
+          ],
+          "disposition": "hold",
+          "reason": "無料・予約不要だが展示の利用時間が記載されていない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "奥チガくらふと市",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=44"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "茅ヶ崎FM　EBOSHI RADIO STATION",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=21"
+          ],
+          "disposition": "hold",
+          "reason": "ラジオ放送の企画期間。来場して体験できる公開番組の具体日程がない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "CHIGASAKI MUSIC MARKET & BOOK MARCHE",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=18"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "茅ヶ崎あそび場ミュージアム",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=38"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "茅ヶ崎みんなのアートフェス2026",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=26"
+          ],
+          "disposition": "hold",
+          "reason": "複数の有料/無料プログラムをまとめた祭典。個別実施時間と参加経路を確認できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "南湖みんなでやんべぇよ祭",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=24"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "旧相模川橋脚国史跡指定100年記念展示 「ちがさき今昔 ― 古相模川編 ―」関連講演会 「100年前にまもられた文化遺産～史跡旧相模川橋脚～」",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=10"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "生涯学習講座「幸せをデザインする、フィンランドの建築と暮らし」",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=39"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "秋の市史講座・南湖院",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=15"
+          ],
+          "disposition": "stale_false",
+          "reason": "公式詳細の実施日は10/25以前で終了。過去分を新規追加しない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "秋日の読書散歩",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=27"
+          ],
+          "disposition": "hold",
+          "reason": "各参加店の企画と料金が異なり一つの会場/実施時間として確定できない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ちがさきこども選挙2026",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=29"
+          ],
+          "disposition": "hold",
+          "reason": "会場・住所が「未定」。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "開高健の言葉展「明日、世界が滅びるとしても、今日、あなたはリンゴの木を植える」",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=36"
+          ],
+          "disposition": "hold",
+          "reason": "11月の開館日一覧のみ。2027年3月までの全会期の休館条件/子ども料金の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "１０周年記念企画展「ひとが綴る茅ヶ崎の物語」展",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=17"
+          ],
+          "disposition": "hold",
+          "reason": "会期と料金はあるが全会期の開館曜日・休館条件の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "茅ヶ崎市美術館からの贈り物　あかちゃんとおとなのためのプログラム「冬の３DAYS」",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=33"
+          ],
+          "disposition": "added",
+          "reason": "市主催シリーズ一次情報で日付・時間・会場・一般参加条件を確認。",
+          "event_category": "facility_hosted",
+          "event_id": "evt-kanagawa-winter3days-20261106",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ちがさきユニバーサル音楽祭２０２６",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=32"
+          ],
+          "disposition": "hold",
+          "reason": "3会場のストリートライブ。会場別出演時間/雨天対応/幼児動線の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "JULIETs（ジュリエット）",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=42"
+          ],
+          "disposition": "hold",
+          "reason": "上演時間・申込方法は後日告知と明記。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "みるっこ10周年記念アートイベント@ゆかりの人物館",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=16"
+          ],
+          "disposition": "added",
+          "reason": "市主催シリーズ一次情報で日付・時間・会場・一般参加条件を確認。",
+          "event_category": "facility_hosted",
+          "event_id": "evt-kanagawa-mirukko-20261114",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "ピクセルインテリジェンス 湘南イノベーション工場 オープンファクトリー",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=40"
+          ],
+          "disposition": "hold",
+          "reason": "予約必要だが申込経路と現在の募集状況がページにない。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "FROM C",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=43"
+          ],
+          "disposition": "hold",
+          "reason": "屋外文化祭の雨天/荒天対応と交通影響の確認待ち。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "アーリークリスマスナルトマルシェ",
+          "official_sources": [
+            "https://creativeweek.net/event-detail.php?no=19"
+          ],
+          "disposition": "hold",
+          "reason": "屋外マルシェの悪天候対応/3日間の開催変更案内が未確認。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "candidates_found": 46,
+      "added": 3,
+      "duplicate_or_already_present": 6,
+      "hold": 25,
+      "stale_false": 12
+    }
+  },
+  "provenance_note": "全件このMission内の実取得と内容評価。過去runの数値を実行として流用していない。並列追記衝突による生ログのURL欠落は42件の実再取得で補修し、直列ログ追記へ変更。Windows PowerShell5.1の実VerifyEvidenceゲート通過。"
+}
