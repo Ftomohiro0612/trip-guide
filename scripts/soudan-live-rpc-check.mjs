@@ -74,14 +74,21 @@ export async function runLiveCheck({ url, anonKey, serviceKey, fetchImpl = fetch
     }
     c = await addConsultation('primary', { share_enabled: true, share_token_hash: hash });
     const other = await addConsultation('other');
-    const inserted = await request(rest('consultation_candidates'), { method: 'POST', jwt: a.jwt, body: [
+    const rows = [
       { consultation_id: c, kind: 'facility', facility_slug: 'soudan-test-facility', title: '候補1' },
       { consultation_id: c, kind: 'external', external_url: 'https://example.com/outing', title: '候補2' },
       { consultation_id: other, kind: 'event', event_id: 'soudan-test-event', title: '別の相談の候補' },
-    ] });
-    check('create_candidates', inserted.ok && inserted.data?.length === 3);
-    candidate = inserted.data[0].id;
-    const otherCandidate = inserted.data[2].id;
+    ];
+    // PostgREST rejects heterogeneous keys in a bulk array (PGRST102).
+    const inserted = [];
+    for (const body of rows) {
+      const result = await request(rest('consultation_candidates'), { method: 'POST', jwt: a.jwt, body });
+      if (!result.ok || result.data?.length !== 1 || !result.data[0]?.id) break;
+      inserted.push(result.data[0]);
+    }
+    check('create_candidates', inserted.length === 3);
+    candidate = inserted[0].id;
+    const otherCandidate = inserted[2].id;
     for (const [method, body] of [['GET', undefined], ['PATCH', { title: 'forbidden' }], ['DELETE', undefined]]) {
       const r = await request(rest('consultations', `?id=eq.${c}&select=id`), { method, body, jwt: b.jwt });
       check(`B_cannot_${method}_A_consultation`, r.ok && Array.isArray(r.data) && r.data.length === 0);
