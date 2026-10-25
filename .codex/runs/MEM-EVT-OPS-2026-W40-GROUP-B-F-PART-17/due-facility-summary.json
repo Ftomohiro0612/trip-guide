@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T16:09:36.371018+00:00",
+  "executed_at": "2026-10-25T16:24:00.680702+00:00",
   "due_facility_ids": [
     1061,
     1066,
@@ -45,12 +45,12 @@
     194
   ],
   "aggregate": {
-    "total": 30,
+    "total": 40,
     "no_current_or_future_event": 8,
-    "candidate_found_added": 10,
+    "candidate_found_added": 18,
     "candidate_found_duplicate": 2,
     "candidate_found_hold": 9,
-    "source_unresolved": 1
+    "source_unresolved": 3
   },
   "per_region": {
     "tokyo": {
@@ -1214,14 +1214,24 @@
         109,
         110,
         111,
-        113
+        113,
+        115,
+        117,
+        121,
+        122,
+        131,
+        136,
+        155,
+        177,
+        192,
+        194
       ],
-      "total": 5,
+      "total": 15,
       "no_current_or_future_event": 2,
-      "candidate_found_added": 1,
+      "candidate_found_added": 9,
       "candidate_found_duplicate": 1,
       "candidate_found_hold": 1,
-      "source_unresolved": 0,
+      "source_unresolved": 2,
       "sources_checked": [
         {
           "url": "https://www.subaruland.jp/topic/",
@@ -1355,9 +1365,1082 @@
           "checked_at": "2026-10-25T16:05:21.596327+00:00",
           "final_url": "https://www.yatuboku.jp/makiba-event4",
           "text_sha256": "65c1db7d72a144fff1a071a043c2c2c541d51f5bb76e5da064b5b10538980b91"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/event/event.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:47.754953+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/event/event.html",
+          "text_sha256": "af34edd8a1636fd40de0c0fe3389d67ded89e930e4301db4124b968e7aca0663"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/information.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:48.156184+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/information.html",
+          "text_sha256": "184d1f1573e1c0acb8480306c519727018db26e8d79ca5d123beddce3ab7ff4b"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/index.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:53.894175+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/index.html",
+          "text_sha256": "317254dda5229669faf55bcc15a674f4286c272996af444d716fe92c5b00c358"
+        },
+        {
+          "url": "http://morinonakanosuizokukan.kikyouya.co.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:54.226237+00:00",
+          "final_url": "https://morinonakanosuizokukan.kikyouya.co.jp/",
+          "text_sha256": "794e9205d5514b81a4af3a94751542d9afa48cffb2a747e90046a0e8dd7c0b56"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/_src/96939313/image_123650291_%281%29.jpg?v=1789293230652",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:55.702737+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/_src/96939313/image_123650291_%281%29.jpg?v=1789293230652",
+          "text_sha256": "293c01ad67e5ff25b54c448120433ae36f139cff9006fdc92d41cf24b38945b8"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:26.841824+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/",
+          "text_sha256": "37063118ed3106ba59396e5c4e78eeb953c637ece0364aec23933fedd9141da1"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:27.447114+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/calendar/",
+          "text_sha256": "43ee3738cd8b8a23ccbe71396cdb3bbcb5d694638e1bc4b8fb40f81fd665abdc"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/10%e6%9c%88-%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:32.953562+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/10%E6%9C%88-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/",
+          "text_sha256": "cc4545b7fbd70351cdfbb8b0af3e58d3d1c9945cb1a9c51923602406cc8b75cd"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%e5%86%8d%e9%96%8b%e5%82%ac%e3%80%91%e3%81%82%e3%81%95%e3%81%b2%e3%81%ae%e3%82%ad%e3%83%83%e3%82%ba%e3%82%b9%e3%82%af%e3%83%bc%e3%83%ab-%e8%a3%9c%e5%8a%a9%e8%bc%aa%e3%82%92%e3%81%af%e3%81%9a/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:33.565224+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%E5%86%8D%E9%96%8B%E5%82%AC%E3%80%91%E3%81%82%E3%81%95%E3%81%B2%E3%81%AE%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB-%E8%A3%9C%E5%8A%A9%E8%BC%AA%E3%82%92%E3%81%AF%E3%81%9A/",
+          "text_sha256": "512068f086f5c16fb665d43aa2c61e3a320839c596b414dc42769557ece344af"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e9%80%b1%e6%9c%ab%e3%82%ad%e3%83%83%e3%83%81%e3%83%b3%e3%82%ab%e3%83%bcin%e7%ac%9b%e5%90%b9%e5%b7%9d%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%9210%e6%9c%88-2/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:34.282114+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E9%80%B1%E6%9C%AB%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%E3%82%AB%E3%83%BCin%E7%AC%9B%E5%90%B9%E5%B7%9D%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%9210%E6%9C%88-2/",
+          "text_sha256": "04c987e45bc5a924b0fe404954d3553cafd90ef3f1af13f6c0ac225d6a64ecfc"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%ef%bc%91%ef%bc%90%e6%9c%88%e9%96%8b%e5%82%ac%e4%ba%88%e5%ae%9a%e3%80%91%e9%ad%9a%e3%81%ae%e3%81%a4%e3%81%8b%e3%81%bf%e5%8f%96%e3%82%8a%ef%bc%86%e3%81%95%e3%81%b0%e3%81%84%e3%81%a6%e9%a3%9f/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:34.990890+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%EF%BC%91%EF%BC%90%E6%9C%88%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A%E3%80%91%E9%AD%9A%E3%81%AE%E3%81%A4%E3%81%8B%E3%81%BF%E5%8F%96%E3%82%8A%EF%BC%86%E3%81%95%E3%81%B0%E3%81%84%E3%81%A6%E9%A3%9F/",
+          "text_sha256": "0668ae87ba0cdbe3ad3df4f45e5a62599c00fad10dcacd0366f8d07b7a2d8f1a"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%ef%bc%91%ef%bc%91%e6%9c%88%e9%96%8b%e5%82%ac%e4%ba%88%e5%ae%9a%e3%80%91%e9%ad%9a%e3%81%ae%e3%81%a4%e3%81%8b%e3%81%bf%e5%8f%96%e3%82%8a%ef%bc%86%e3%81%95%e3%81%b0%e3%81%84%e3%81%a6%e9%a3%9f/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:35.731342+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%EF%BC%91%EF%BC%91%E6%9C%88%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A%E3%80%91%E9%AD%9A%E3%81%AE%E3%81%A4%E3%81%8B%E3%81%BF%E5%8F%96%E3%82%8A%EF%BC%86%E3%81%95%E3%81%B0%E3%81%84%E3%81%A6%E9%A3%9F/",
+          "text_sha256": "21ff95c557a66e7ddf2ff059245a496e2c7390ab664a344efee821ab505c3fac"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e7%b4%85%e8%91%89%e3%83%af%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a7%e3%82%b9in%e7%ac%9b%e5%90%b9%e5%b7%9d%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%92-3/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:36.566269+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E7%B4%85%E8%91%89%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A7%E3%82%B9in%E7%AC%9B%E5%90%B9%E5%B7%9D%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%92-3/",
+          "text_sha256": "85636abba296bcd42d57f5585b166cb60a846bc41e7aaa1f3bd41b969eec3392"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%92%e3%81%a7%e3%83%a1%e3%83%aa%e3%83%bc%e3%82%af%e3%83%aa%e3%82%b9%e3%83%9e%e3%82%b9%ef%bc%81-3/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:37.399358+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%92%E3%81%A7%E3%83%A1%E3%83%AA%E3%83%BC%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%EF%BC%81-3/",
+          "text_sha256": "3765bd31c36de8cc26177e9582658a2257d30bc0e89aab5fb43984d8e2420912"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/2026%e5%b9%b4%e5%ba%a6%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:38.242330+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/2026%E5%B9%B4%E5%BA%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/",
+          "text_sha256": "101fe161178aa662bb90e401dc5fc0d9b2e68904d4e1f2041de998f4aa1923c2"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/live-garden-project-%e3%81%bf%e3%82%93%e3%81%aa%e3%81%a7%e8%82%b2%e3%81%a6%e3%82%8b%e3%80%81%e5%ad%a6%e3%81%b3%e3%81%ae%e8%8a%b1%e5%a3%87/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:39.152582+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/live-garden-project-%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E8%82%B2%E3%81%A6%E3%82%8B%E3%80%81%E5%AD%A6%E3%81%B3%E3%81%AE%E8%8A%B1%E5%A3%87/",
+          "text_sha256": "b188a1b07b15de59c97825a061de91b2c87df494bd4ec164359d393ca7c435bd"
+        },
+        {
+          "url": "https://ws.formzu.net/dist/S35504062/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:52.158218+00:00",
+          "final_url": "https://ws.formzu.net/fgen/S35504062/",
+          "text_sha256": "788abc55d3982ee555d8f901bb244bafa6658f853c27c80d856817c4f1306deb"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:52.624936+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/",
+          "text_sha256": "2f1a3b98391e3d340e804027895707da2a581bbd020d3ce89fb5d203f3322acf"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/wp/wp-content/uploads/2026/10/10月イベントカレンダー-968x1200.jpg",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:05.272184+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/wp/wp-content/uploads/2026/10/10%E6%9C%88%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC-968x1200.jpg",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/8232/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:05.707620+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/8232/",
+          "text_sha256": "2fb832e3d37d8c77cd1c9c08dce99187843411144f9c1885661f113cfb4d0766"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/7536/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:06.282588+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/7536/",
+          "text_sha256": "ffee29498dbb4a9976e63587349ca78388588f93082de9750a832b92e1aa9ce4"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/2092/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:06.844411+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/2092/",
+          "text_sha256": "cff2f81a0cd4da259939cc6f6b07ca60ee6379480fad46031794f8a300f72d93"
+        },
+        {
+          "url": "https://www.city.yamanashi.yamanashi.jp/soshiki/2/19919.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:15.894854+00:00",
+          "final_url": "https://www.city.yamanashi.yamanashi.jp/soshiki/2/19919.html",
+          "text_sha256": "67846d4e531f07a3a27b24edd1c27e13b1187a96a7f4543140e97fe365b12b79"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:11.646666+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event.html",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:12.034154+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event.html",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:12.340638+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:21.738897+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/shisetsu/kosodate/atago.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:27.808472+00:00",
+          "final_url": "https://www.pref.yamanashi.jp/shisetsu/kosodate/atago.html",
+          "text_sha256": "91d351657fc5b2f0f7f397e031f5152d8a2878b1cdfcad9db312ed4d50b41d4d"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/info",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:28.322451+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/info",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:30.634968+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "3919e2447f6201b34de3a5e03ba0f70a506564b866bff574f295a775d3aeb98b",
+          "method": "rendered_browser"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:52.437339+00:00",
+          "final_url": "https://www.sonekyuryo.jp/event/",
+          "text_sha256": "5dea29de6898c47a51a57064abb5d7275152598b1e29045f1a7fd3a803036b5a"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/oshirase",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:53.382924+00:00",
+          "final_url": "https://www.sonekyuryo.jp/oshirase/",
+          "text_sha256": "17914979ff24554fd2f5346c419134ce0cf6c13844a0df17156bae379b481844"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e4%bb%a4%e5%92%8c8%e5%b9%b411%e6%9c%8823%e6%97%a5%e3%80%80%e3%80%8c%e7%ac%ac17%e5%9b%9e%e3%80%80%e8%90%bd%e3%81%a1%e8%91%89%e3%81%a7%e3%82%84%e3%81%8d%e3%81%84%e3%82%82%ef%bc%81%e3%80%8d/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:00.679066+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E4%BB%A4%E5%92%8C8%E5%B9%B411%E6%9C%8823%E6%97%A5%E3%80%80%E3%80%8C%E7%AC%AC17%E5%9B%9E%E3%80%80%E8%90%BD%E3%81%A1%E8%91%89%E3%81%A7%E3%82%84%E3%81%8D%E3%81%84%E3%82%82%EF%BC%81%E3%80%8D/",
+          "text_sha256": "e6d22b1b6c3b8802d9ef8c9d0a8a7510c5d6af6048be0e39030c75fb5a481123"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e4%bb%a4%e5%92%8c8%e5%b9%b411%e6%9c%887%e6%97%a5%e3%80%80%e5%8f%a4%e4%bb%a3%e3%81%a8%e8%87%aa%e7%84%b6%e3%82%92%e6%a5%bd%e3%81%97%e3%82%80%e6%97%a5/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:01.283009+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E4%BB%A4%E5%92%8C8%E5%B9%B411%E6%9C%887%E6%97%A5%E3%80%80%E5%8F%A4%E4%BB%A3%E3%81%A8%E8%87%AA%E7%84%B6%E3%82%92%E6%A5%BD%E3%81%97%E3%82%80%E6%97%A5/",
+          "text_sha256": "9b6a04ca508aeff94da98533c1cd1e9bfa1bf7ecd7ea4ed37402940c6ddf00e7"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/2026%e5%b9%b4%e5%ba%a6%e3%80%80%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e5%b9%b4%e9%96%93%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:01.830398+00:00",
+          "final_url": "https://www.sonekyuryo.jp/2026%E5%B9%B4%E5%BA%A6%E3%80%80%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%B9%B4%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/",
+          "text_sha256": "e6abb295c9ec0ddc1248832727d5bb85bf6917306278e9a034483ee33dcd8cfe"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e7%ac%ac%ef%bc%92%e5%9b%9e-%e3%82%b9%e3%83%9e%e3%82%a4%e3%83%ab%e3%83%9a%e3%83%83%e3%83%88%e3%83%95%e3%82%a7%e3%82%b9%e3%82%bf-in-%e6%9b%bd%e6%a0%b9%e4%b8%98%e9%99%b5%e5%85%ac%e5%9c%92-2026-%e7%a7%8b/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:02.432465+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E7%AC%AC%EF%BC%92%E5%9B%9E-%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E3%83%9A%E3%83%83%E3%83%88%E3%83%95%E3%82%A7%E3%82%B9%E3%82%BF-in-%E6%9B%BD%E6%A0%B9%E4%B8%98%E9%99%B5%E5%85%AC%E5%9C%92-2026-%E7%A7%8B/",
+          "text_sha256": "d86a22cede755affce748564ff84cba4f6ec4ba328d36738782c638b548c4c8e"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/event/page/2/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:04.524464+00:00",
+          "final_url": "https://www.sonekyuryo.jp/event/page/2/",
+          "text_sha256": "e06d53206ef4d27093a870dd54021680ff2fc453026bd9cce9aa36a81cf4c1fa"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/access",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:15.540104+00:00",
+          "final_url": "https://www.sonekyuryo.jp/access/",
+          "text_sha256": "1cbca0fca6dc97adaee6e28fa5de44b8e5f341958f7c4dbc389c5a50f30067ef"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:51.828372+00:00",
+          "final_url": "https://www.kipokipo.jp/news/event",
+          "text_sha256": "c08afa838e1ff8bacd61da2c501b31f640f1b331754a88da873efeb88cb3ad70"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:52.835782+00:00",
+          "final_url": "https://www.kipokipo.jp/news",
+          "text_sha256": "bab1aa89065a42d4c68db2829896a6fd45655f89daf1537c091740bfe20569b8"
+        },
+        {
+          "url": "https://www.kipokipo.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:19.852088+00:00",
+          "final_url": "https://www.kipokipo.jp/",
+          "text_sha256": "fa1d155e3100e8c1ebb2a7a8eadc0471f58bbc1e923521bb8dcded2fcdba0c7b"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1662",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:20.871318+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1662",
+          "text_sha256": "a1b4c3a8b135b56c7fee4546f67ae3a29ddf055ffae8db9c932a71e9194a9223"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1625",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:21.445541+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1625",
+          "text_sha256": "39ae56fd48867b56712c60b7766ef97a222412bb4ffa7bf9b482dabd1fec2388"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1697",
+          "status": 404,
+          "checked_at": "2026-10-25T16:14:30.721259+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1697",
+          "text_sha256": "2f20b9074b831f474a61945a3556c222fbbaf34c835769990bda08e0436c33ab"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1618",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:31.407452+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1618",
+          "text_sha256": "d90d7632fdc6ddbdb3fb85c0de407043b0611f8a2edb1d38582a8109f1b67ffa"
+        },
+        {
+          "url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/こぶたの会-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:02.722098+00:00",
+          "final_url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/%E3%81%93%E3%81%B6%E3%81%9F%E3%81%AE%E4%BC%9A-724x1024.png",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/もりのおはなし会-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:08.709868+00:00",
+          "final_url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/%E3%82%82%E3%82%8A%E3%81%AE%E3%81%8A%E3%81%AF%E3%81%AA%E3%81%97%E4%BC%9A-724x1024.png",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:29.344712+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/",
+          "text_sha256": "300e6c30bf13be5e2caf67a782e3f4e035d0616a0cc07f02b2530e013cc80143"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:29.969253+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/",
+          "text_sha256": "84ac5a8a721157a72adcf468ffe8471a5834c5dc7c68c6d22ff71535f3b251d4"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:30.485295+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+          "text_sha256": "95b8539309b899369353ff733964b308b3ba105cf0d969cecabdd3e7d7d1ae19"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/calendar.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:31.065438+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/guide/calendar.php",
+          "text_sha256": "cb4617b1946f6e1a7071c334d04e1708cb4ff30a3c4d64e87551afd232238934"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=2&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:49.239253+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=2&ap=4&cnt=36",
+          "text_sha256": "e5f5ab21867a15a7cf9da32d7cfd05e58239c4db593cb84eb70288409e7d6810"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=3&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:49.796885+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=3&ap=4&cnt=36",
+          "text_sha256": "b79aef80074dbadd35d064de3dd47e1bb9544fb9fb52ba2d6f6dd1efb1be4cc4"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=4&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:50.321733+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=4&ap=4&cnt=36",
+          "text_sha256": "bf7835aafbc9dcc9e23d7fe5847486f28d15b056a64e425cda0f165959686b90"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1401",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:01.537605+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1401",
+          "text_sha256": "ace8dfbdd7586058c567d72319cb3e6a076fbccaa58553488ce7ba649135de26"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1408",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:02.113183+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1408",
+          "text_sha256": "0c507633050126c9de0d22b3108be0aeb13f9c351cd5398fe62b3f106f6bd347"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1410",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:02.683581+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1410",
+          "text_sha256": "a82e844fd502f43ed63dc9af4e7d7f338e6e53c017a27b38498fc4478f082828"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1411",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:03.194717+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1411",
+          "text_sha256": "e289a01f89f1a56c329f8a11458838f6bac684b5da66ab11b972e91e104cd6b5"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1414",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:03.676672+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1414",
+          "text_sha256": "7bbe1bdd24f24e6ec7b3ec7de91dcf7994d6e8cfd9d86f6ceab50d04786d13ab"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1420",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:04.412942+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1420",
+          "text_sha256": "9231a30d9fa508133b5c5659fe985248e1d1f6b79e5a223653070f768e5b5354"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1419",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:05.218595+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1419",
+          "text_sha256": "061f869fa7d239f70f03826e83b015f71532704648ec97453c1b523ed9e60ad0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1427",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:06.022966+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1427",
+          "text_sha256": "3c4228376cb0bd2ef7a91c4a047d6f1e2a1dc087c27df91e16ea25a3c20d0412"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1426",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:06.669256+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1426",
+          "text_sha256": "8a3b228229dbfe8831e8d04d9f67a7b51364d37bd3b2ad44427a186abe3f7e04"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1425",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:07.285292+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1425",
+          "text_sha256": "4c1d9623f3e9ea93adaaf1d881272fb677855e07dd7c272aa80b196171cc5a7c"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1458",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:07.921864+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1458",
+          "text_sha256": "fe14c5b3c4758529ccb99d593e61d6bd65f21bf9046b422ce0e6a3668c40181e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1448",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:08.596396+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1448",
+          "text_sha256": "08ce852af2ab02ee6339f23d4a13d46afa80af3d801a054209a51517573b1eda"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1444",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:09.213400+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1444",
+          "text_sha256": "556bebefb2faf4eec4dc666c8ed108d019108a8e4f1f0ba8affb2012c24de735"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1445",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:09.955978+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1445",
+          "text_sha256": "178aaf34571ea782cb29721b5fa29098cff55131a6d4e01073c962ed233c7038"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1446",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:10.732536+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1446",
+          "text_sha256": "6bbe7da2cb9dae3d7473416384e35284815ba856237396ae22cbaafc7a4fffc0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1447",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:11.478040+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1447",
+          "text_sha256": "5cd049a4ef032d1538c8efdfaf4f536c63e642b126016b07ef49da2a42488a8d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=203",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:12.239119+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=203",
+          "text_sha256": "b57eb4c4a3dcb160fdddd6730839cc1d4f4f83aeaf2c9a90e0f86be877b1f7b0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:12.941158+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+          "text_sha256": "c9953a64720dd49234cea83abd051e9e221b05587a414a4ed499509681aee8a6"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=202",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:13.628294+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=202",
+          "text_sha256": "91ebeb818bbea49ab17972f4555fca9434498b3d0d39e4c5aab5ecfe8cef2ac7"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=204",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:14.421146+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=204",
+          "text_sha256": "627e276cc3be84fa87cce77fbe81f4d454e0a34ca7b1524f4e8c059b228f3ab0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1435",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:15.178915+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1435",
+          "text_sha256": "940f808435ecceed8a5bf40304419a367b62e21101341ff3b1a90d1c22494c80"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=214",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:15.922043+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=214",
+          "text_sha256": "d4747fc0b2a34afcfbe05faf93ebddffbfcf2fed4cb08b46115c8b6d04608466"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=210",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:16.713419+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=210",
+          "text_sha256": "90f39f6090b6d51bf43644b93fceda06a26ed4d923268c60dcee0656ba7f295f"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=212",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:17.530090+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=212",
+          "text_sha256": "e0773860704577faa45207520288981dc0b45eec3efde47e15a325d6e775d838"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=209",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:18.161451+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=209",
+          "text_sha256": "b390c6f819edb7b213cdf8ea01a94bf358b61d2f101f4052672ff05e9dad08af"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=211",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:18.900696+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=211",
+          "text_sha256": "d3228b7aa0294e2623034f1d0c419ff76f7b764e8832f817dd40ccdde08ac2ae"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=208",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:19.603878+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=208",
+          "text_sha256": "52052b68aaa82eeb8b0b245704b60f1eaaebad447b3f8d058eab2ed021d4ed84"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=213",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:20.367385+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=213",
+          "text_sha256": "c10a867c25da045abd8dd6c02397091e7cdb22e6e644d47f657e16ff8249c523"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1440",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:21.065023+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1440",
+          "text_sha256": "4588de8df3603abaffa9f8d88337f0895147bfafa274c57fc7882ea992665d7c"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1454",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:21.836235+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1454",
+          "text_sha256": "69b6499e9a4aacb60230bd83a3a68ff295f1af8f7e7c900858f90ddbc1a5ea19"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1430",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:22.471115+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1430",
+          "text_sha256": "c43fe4d32d526f267c64149b34a640da9a92a6f176a798f840c35eb5fc979971"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1429",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:23.208549+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1429",
+          "text_sha256": "9726bea892e7792ce684d9d0f1055757f5b8e86a6ea4535347ea6decb7cb597b"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1428",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:23.967152+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1428",
+          "text_sha256": "3a81e8cd30d2412da5b192e68a05c440f400befc5dadd8f6ee8dd2b747364598"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1422",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:24.695927+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1422",
+          "text_sha256": "3c013e2662e311dfe24fc6f18ee545dc97ba0ccca9a54ce7698b6245eeff7c5e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1421",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:25.436125+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1421",
+          "text_sha256": "adfa991aa4d93016b5b144aa1e2c576ccc0a00e7b5a97fd9fcbc7d09066a9670"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1456",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:26.205934+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1456",
+          "text_sha256": "eab557d97abcfa3190a25032a23a5625f8e46239879b513f3df786c8926557c5"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1455",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:27.007828+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1455",
+          "text_sha256": "98523af9eeaa74e1cbb03250ae77f8215331e521747c002ba21cc131041f50fe"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1441",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:27.665155+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1441",
+          "text_sha256": "2d888c852d94610f79639d7840eebc048a1697dfabf041c39438d36e041ee9d0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1451",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:28.377883+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1451",
+          "text_sha256": "34d10c82c630fbe4bf352a0b1e2b724d7ea347a7916a173686699d730719fa2d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1433",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:29.059409+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1433",
+          "text_sha256": "2ceb4c9e32bfd67f2593bc7f001af45986ef16bafb42762fcb1bc18a50950ae8"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1432",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:29.747694+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1432",
+          "text_sha256": "bec6531778b854c6878a784863d6d519a22167ee2a5c671746175b8b32a5ba78"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1431",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:30.558159+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1431",
+          "text_sha256": "212a2c6184727de4eba23d16fac601ff2239cba5e50cf0a4211c605078e435aa"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1424",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:31.288955+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1424",
+          "text_sha256": "a693d9d36a645822c02eecd5a6543ddb130a85a99ab1db0392f27c7a72a07b60"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1423",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:31.922576+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1423",
+          "text_sha256": "af99eb6714f72d4c379a3b0ba46022874778d00d790fe6c07f7327b2b96050ff"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1442",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:32.584785+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1442",
+          "text_sha256": "eb99897516c61789588a1ca614fe4aa6443b6a9d0ebd768e00b97b13865db4be"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1449",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:33.351358+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1449",
+          "text_sha256": "e511af4d50b4ace72071691f41eb8f66f5c06ee355109193e417402efb8f9a77"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1443",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:34.017326+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1443",
+          "text_sha256": "c579a09662978e21c9857f4e44622a89ea46e28bdc5707f9b105894c29967112"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/exhibition/scienceshow.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:27.343943+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/exhibition/scienceshow.php",
+          "text_sha256": "a4969c3e1d127bad76a8ce8b088f9b8845c8038c337b18c9570dc66b8fe63ed1"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/index.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:27.883353+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/guide/index.php",
+          "text_sha256": "4b063348ff76cdd74e724c827140fc26144775603731c08001442462dc8947d9"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/access.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:28.385605+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/access/",
+          "text_sha256": "ccd16d77f427330a945905b88982ca79697e57fe70424ccd0f2be669055b6823"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=803",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:28.974961+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=803",
+          "text_sha256": "a94bb874a4a3001833e894e0077d147098e01f959125e772865593379907ebce"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=802",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:29.451161+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=802",
+          "text_sha256": "b256972c8f10058d4b26cf4e321f3049c542ee8d7c286859993a5bc43c0df4e6"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1458",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:30.255567+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1458",
+          "text_sha256": "f39653042395b2d7900b2b47bbcc6d0069b1d012ae889c497e5001bb1f4f126d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1444",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:31.019231+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1444",
+          "text_sha256": "adaaacde47f5adfee3d77fd846e5bfe1d8a39b35e811ee822d18e19f57110c89"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1445",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:31.771749+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1445",
+          "text_sha256": "448f08eb614a689f19f90c227326490427e21094bfe3b343fabe6eb74effc32e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event2.php?no=1446",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:32.555966+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event2.php?no=1446",
+          "text_sha256": "8718ba25ca284e3a130d581b11298b6bc4a67284622600ed5936584f9b5fe1ea"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event11.php?no=1448",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:33.174895+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event11.php?no=1448",
+          "text_sha256": "57fd8ef6d4f9864c69dea3fdff680cb050f50953428664f0e2b694956cacc665"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:27.414158+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/",
+          "text_sha256": "3e366a623bdd5f1598d5d5e439d17214f2ae27d24b66191fd6d09fab2114c861"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:28.537767+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/",
+          "text_sha256": "ffa8f5273165224be1457ba792b8b6b835d3f2c0ab4310a3b7db2fbedae9302f"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/museum-bath-titanic/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:29.966999+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/museum-bath-titanic/",
+          "text_sha256": "210efe4abebb7e062f2de48e7df1caf9166ecef8b8783bebb96c2cf21d4033a6"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:31.404462+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/concert/",
+          "text_sha256": "46bdfd825da3e3f7db1594a798f6155a9e41796d6025e67a4073ed06d86102ca"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/price/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:32.972928+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/price/",
+          "text_sha256": "e11d051fca3d6a83ecd6cae4bfcf0a4c2b59c862bd56ec8bc6480ab72c503644"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/info/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:34.510568+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/info/",
+          "text_sha256": "f78d4174cec25ef8afc415c3e6970f9751613f82ea5645a2ebef37e20ea3c649"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/20261106violincello-concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:43.688379+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/20261106violincello-concert/",
+          "text_sha256": "030639b2aacd47ce00d54275cc02a5889ea7d02a3447c221b583987ac452fd47"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/11141115concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:44.777124+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/11141115concert/",
+          "text_sha256": "091c9c2c2b5152c88d89e954e7ee802c1dfda1f8987d79dbced50599018a3c40"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/202611/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:45.821939+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/202611/",
+          "text_sha256": "22286efb6dd63bd3a5cd266304d8c66dddc13fb2fe8260e00472b0c863adb80d"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/akihironishinoexhibition/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:47.007705+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/akihironishinoexhibition/",
+          "text_sha256": "c7c8e61ea36d3277ed9e63c26b72e8d34e125346f443d678387cbea628300ffa"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/bottlegeorge/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:48.355297+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/bottlegeorge/",
+          "text_sha256": "6ffe46c9587b72a525946cc3bef4c060e86d9801f7b25950f91bf55092225fb8"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/organ-holle/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:49.669201+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/organ-holle/",
+          "text_sha256": "3c48e9dcafdd00ead2e94562fc1e4798057843bc82eaabb874138d36526753f8"
+        },
+        {
+          "url": "https://kanegawanomori.jp/news/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:36.469958+00:00",
+          "final_url": "https://kanegawanomori.jp/news/event/",
+          "text_sha256": "ff6434ec9d898559ea8d00c526957b0a51c322eff9704a13f8046cd121909961"
+        },
+        {
+          "url": "https://kanegawanomori.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:37.119395+00:00",
+          "final_url": "https://kanegawanomori.jp/news/",
+          "text_sha256": "d864b7a62ff9be7c6ac284f03b3ff8cbc1a88560f3e6edeef31ad9789f8653a8"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/R8木育体験イベントin金川の森-チラシ-1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:37.489044+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/R8%E6%9C%A8%E8%82%B2%E4%BD%93%E9%A8%93%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88in%E9%87%91%E5%B7%9D%E3%81%AE%E6%A3%AE-%E3%83%81%E3%83%A9%E3%82%B7-1.pdf",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/09/2026年11月.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:48.478027+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/09/2026%E5%B9%B411%E6%9C%88.pdf",
+          "text_sha256": "6bb61f3dfbd93d1bd343dafffa55f5a94511e9b02ad08a6a51d2f9007b641b4c"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/2026年10月.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:49.633291+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/2026%E5%B9%B410%E6%9C%88.pdf",
+          "text_sha256": "c31695ddd7b621334ce4d68a04ccccef4620b5d47f905385e4977917eb7e4373"
+        },
+        {
+          "url": "https://kanegawanomori.jp/info/p5018/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:50.496996+00:00",
+          "final_url": "https://kanegawanomori.jp/info/p5018/",
+          "text_sha256": "6cf84b855f045cb6d717c2da5fa6ea82a13adf2f15941ed66b9c88833da7f0a8"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/【最終①修正】R8木育体験イベントin金川の森-チラシ-002.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:51.130545+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/%E3%80%90%E6%9C%80%E7%B5%82%E2%91%A0%E4%BF%AE%E6%AD%A3%E3%80%91R8%E6%9C%A8%E8%82%B2%E4%BD%93%E9%A8%93%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88in%E9%87%91%E5%B7%9D%E3%81%AE%E6%A3%AE-%E3%83%81%E3%83%A9%E3%82%B7-002.pdf",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://kanegawanomori.jp/news/experience",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:00.183949+00:00",
+          "final_url": "https://kanegawanomori.jp/news/experience/",
+          "text_sha256": "fbf42c50db97f3048440006f40882783e6f4922646e265d7ea121eded294133f"
+        },
+        {
+          "url": "https://kff.digick.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:00.960082+00:00",
+          "final_url": "https://kff.digick.jp/",
+          "text_sha256": "9a5c9bf878dae6a24c8e77300db0e77ef90bce074d1d4b6cbbf6f6452b326ec1"
+        },
+        {
+          "url": "https://kanegawanomori.jp/info/p4982/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:01.890254+00:00",
+          "final_url": "https://kanegawanomori.jp/info/p4982/",
+          "text_sha256": "37405f977810262adb7a527364ca5a7b6703fec46ec354a71ea8c6a6880abe78"
+        },
+        {
+          "url": "https://www.kirienomori.jp/notice/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:58.860676+00:00",
+          "final_url": "https://www.kirienomori.jp/notice/",
+          "text_sha256": "eaccaf8339d5f94504d5fee054807265dc67e7338cfa630454de76ac5528b8a1"
+        },
+        {
+          "url": "https://www.kirienomori.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:59.824065+00:00",
+          "final_url": "https://www.kirienomori.jp/",
+          "text_sha256": "5acab506fcc7b7a8442d5c2a9db3f8f36451b99a04d13d104251c7dd9dea9c1b"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6081/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:00.852692+00:00",
+          "final_url": "https://www.kirienomori.jp/6081/",
+          "text_sha256": "1bc76523b212f5b5d0e9fb680ca8c264e9dea2bcc062ec3791d0e79a7ec189c0"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6445/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:06.656792+00:00",
+          "final_url": "https://www.kirienomori.jp/6445/",
+          "text_sha256": "0c7681e158f3c33d0b713f4daa6d4c5611cd86b527565e1ca351cc92d370e0d1"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6516/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:07.361014+00:00",
+          "final_url": "https://www.kirienomori.jp/6516/",
+          "text_sha256": "beae9528fe17a352587bfd82ce4fc9f68665b6efe2b3b638a3c98c84bcf81de9"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6417/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:07.974437+00:00",
+          "final_url": "https://www.kirienomori.jp/6417/",
+          "text_sha256": "85d5c1b6b8e0429255fffd5fdc34a52c3dee3dee8b5cc2f6c0221e1810f698b8"
+        },
+        {
+          "url": "https://www.kirienomori.jp/5360/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:08.583347+00:00",
+          "final_url": "https://www.kirienomori.jp/5360/",
+          "text_sha256": "94fccc41cb5045212fa56b71d8e341d4c995db253a7e8d3716034cd89e439267"
+        },
+        {
+          "url": "https://www.kirienomori.jp/guide/19/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:38.724482+00:00",
+          "final_url": "https://www.kirienomori.jp/guide/19/",
+          "text_sha256": "63c200c4774a9aeae69ca12db419757d66a03b2d9e03adbd6627f55059b184f6"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/category/event/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:49.712563+00:00",
+          "final_url": "https://www.wellnesspark.jp/category/event/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:50.134058+00:00",
+          "final_url": "https://www.wellnesspark.jp/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/2026/07/27/7495/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:50.448316+00:00",
+          "final_url": "https://www.wellnesspark.jp/2026/07/27/7495/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/category/event/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:13.832808+00:00",
+          "final_url": "https://www.wellnesspark.jp/category/event/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://wellnesspark.jp/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:14.150364+00:00",
+          "final_url": "https://wellnesspark.jp/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/contact/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:14.502489+00:00",
+          "final_url": "https://www.wellnesspark.jp/contact/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/wp-content/uploads/2026/03/カヤネズミ先生R7-27-724x1024.jpg",
+          "status": 200,
+          "checked_at": "2026-10-25T16:23:14.801353+00:00",
+          "final_url": "https://www.wellnesspark.jp/wp-content/uploads/2026/03/%E3%82%AB%E3%83%A4%E3%83%8D%E3%82%BA%E3%83%9F%E5%85%88%E7%94%9FR7-27-724x1024.jpg",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/release/kendosui/0701/uerunesukaizyo.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:23:31.413413+00:00",
+          "final_url": "https://www.pref.yamanashi.jp/release/kendosui/0701/uerunesukaizyo.html",
+          "text_sha256": "7548709451b50685a46dfe172d87fa08a48cae5e19cf2eb76873b715c004a5bb"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/info/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:31.919050+00:00",
+          "final_url": "https://www.wellnesspark.jp/info/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [
+        {
+          "facility_id": 136,
+          "event_id": "evt-136-w38-2026-planet205",
+          "reason": "公式通常番組詳細と通常時刻表は16:00から45分、10/31専用時刻表は同じ番組を16:30～16:45と記載。開始時刻・上映時間が内部矛盾し、修正告知も当該枠を解決しないため既存レコードを変更せず保留。",
+          "sources_checked": [
+            {
+              "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+              "status": 200,
+              "checked_at": "2026-10-25T16:15:30.485295+00:00",
+              "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+              "text_sha256": "95b8539309b899369353ff733964b308b3ba105cf0d969cecabdd3e7d7d1ae19"
+            },
+            {
+              "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+              "status": 200,
+              "checked_at": "2026-10-25T16:16:12.941158+00:00",
+              "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+              "text_sha256": "c9953a64720dd49234cea83abd051e9e221b05587a414a4ed499509681aee8a6"
+            }
+          ]
+        }
+      ]
     }
   },
   "facility_results": [
@@ -3680,6 +4763,2268 @@
         {
           "id": "evt-113-w38-2026-02",
           "status": "ended"
+        }
+      ],
+      "added_ids": []
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:10:20.638984+00:00",
+      "facility_id": 115,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.morinonakano-suizokukan.com/event/event.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:47.754953+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/event/event.html",
+          "text_sha256": "af34edd8a1636fd40de0c0fe3389d67ded89e930e4301db4124b968e7aca0663"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/information.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:48.156184+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/information.html",
+          "text_sha256": "184d1f1573e1c0acb8480306c519727018db26e8d79ca5d123beddce3ab7ff4b"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/index.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:53.894175+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/index.html",
+          "text_sha256": "317254dda5229669faf55bcc15a674f4286c272996af444d716fe92c5b00c358"
+        },
+        {
+          "url": "http://morinonakanosuizokukan.kikyouya.co.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:54.226237+00:00",
+          "final_url": "https://morinonakanosuizokukan.kikyouya.co.jp/",
+          "text_sha256": "794e9205d5514b81a4af3a94751542d9afa48cffb2a747e90046a0e8dd7c0b56"
+        },
+        {
+          "url": "https://www.morinonakano-suizokukan.com/_src/96939313/image_123650291_%281%29.jpg?v=1789293230652",
+          "status": 200,
+          "checked_at": "2026-10-25T16:09:55.702737+00:00",
+          "final_url": "https://www.morinonakano-suizokukan.com/_src/96939313/image_123650291_%281%29.jpg?v=1789293230652",
+          "text_sha256": "293c01ad67e5ff25b54c448120433ae36f139cff9006fdc92d41cf24b38945b8"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "イベント教室・公式トップ・料金案内・スタッフブログ・特別展チラシを確認。10月の終了済み教室は追加せず、受付中の飼育体験を追加。",
+      "updates": [
+        {
+          "id": "evt-115-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-115-w38-2026-02",
+          "status": "ended"
+        },
+        {
+          "id": "evt-115-w38-2026-03",
+          "status": "ended"
+        },
+        {
+          "id": "evt-115-w38-2026-04",
+          "source_checked_at": "2026-10-26"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "百鬼夜行展",
+          "disposition": "duplicate",
+          "event_id": "evt-115-w38-2026-04",
+          "reason": "現在開催中の公式ブログと7/21～11/9の公式チラシを再確認。"
+        },
+        {
+          "title": "25周年魚朱印・ふじすいラボ・池のほとり水槽",
+          "disposition": "excluded",
+          "reason": "グッズ販売と常設展示の更新であり、独立した有限日程イベントではない。"
+        },
+        {
+          "title": "森の中の水族館 飼育体験",
+          "disposition": "added",
+          "event_id": "evt-115-20261026-01",
+          "participability": "条件付き参加可能"
+        }
+      ],
+      "added_ids": [
+        "evt-115-20261026-01"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:12:05.260247+00:00",
+      "facility_id": 117,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://fuefukigawafp.co.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:26.841824+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/",
+          "text_sha256": "37063118ed3106ba59396e5c4e78eeb953c637ece0364aec23933fedd9141da1"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:27.447114+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/calendar/",
+          "text_sha256": "43ee3738cd8b8a23ccbe71396cdb3bbcb5d694638e1bc4b8fb40f81fd665abdc"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/10%e6%9c%88-%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:32.953562+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/10%E6%9C%88-%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC/",
+          "text_sha256": "cc4545b7fbd70351cdfbb8b0af3e58d3d1c9945cb1a9c51923602406cc8b75cd"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%e5%86%8d%e9%96%8b%e5%82%ac%e3%80%91%e3%81%82%e3%81%95%e3%81%b2%e3%81%ae%e3%82%ad%e3%83%83%e3%82%ba%e3%82%b9%e3%82%af%e3%83%bc%e3%83%ab-%e8%a3%9c%e5%8a%a9%e8%bc%aa%e3%82%92%e3%81%af%e3%81%9a/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:33.565224+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%E5%86%8D%E9%96%8B%E5%82%AC%E3%80%91%E3%81%82%E3%81%95%E3%81%B2%E3%81%AE%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%82%AF%E3%83%BC%E3%83%AB-%E8%A3%9C%E5%8A%A9%E8%BC%AA%E3%82%92%E3%81%AF%E3%81%9A/",
+          "text_sha256": "512068f086f5c16fb665d43aa2c61e3a320839c596b414dc42769557ece344af"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e9%80%b1%e6%9c%ab%e3%82%ad%e3%83%83%e3%83%81%e3%83%b3%e3%82%ab%e3%83%bcin%e7%ac%9b%e5%90%b9%e5%b7%9d%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%9210%e6%9c%88-2/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:34.282114+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E9%80%B1%E6%9C%AB%E3%82%AD%E3%83%83%E3%83%81%E3%83%B3%E3%82%AB%E3%83%BCin%E7%AC%9B%E5%90%B9%E5%B7%9D%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%9210%E6%9C%88-2/",
+          "text_sha256": "04c987e45bc5a924b0fe404954d3553cafd90ef3f1af13f6c0ac225d6a64ecfc"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%ef%bc%91%ef%bc%90%e6%9c%88%e9%96%8b%e5%82%ac%e4%ba%88%e5%ae%9a%e3%80%91%e9%ad%9a%e3%81%ae%e3%81%a4%e3%81%8b%e3%81%bf%e5%8f%96%e3%82%8a%ef%bc%86%e3%81%95%e3%81%b0%e3%81%84%e3%81%a6%e9%a3%9f/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:34.990890+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%EF%BC%91%EF%BC%90%E6%9C%88%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A%E3%80%91%E9%AD%9A%E3%81%AE%E3%81%A4%E3%81%8B%E3%81%BF%E5%8F%96%E3%82%8A%EF%BC%86%E3%81%95%E3%81%B0%E3%81%84%E3%81%A6%E9%A3%9F/",
+          "text_sha256": "0668ae87ba0cdbe3ad3df4f45e5a62599c00fad10dcacd0366f8d07b7a2d8f1a"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%80%90%ef%bc%91%ef%bc%91%e6%9c%88%e9%96%8b%e5%82%ac%e4%ba%88%e5%ae%9a%e3%80%91%e9%ad%9a%e3%81%ae%e3%81%a4%e3%81%8b%e3%81%bf%e5%8f%96%e3%82%8a%ef%bc%86%e3%81%95%e3%81%b0%e3%81%84%e3%81%a6%e9%a3%9f/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:35.731342+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%80%90%EF%BC%91%EF%BC%91%E6%9C%88%E9%96%8B%E5%82%AC%E4%BA%88%E5%AE%9A%E3%80%91%E9%AD%9A%E3%81%AE%E3%81%A4%E3%81%8B%E3%81%BF%E5%8F%96%E3%82%8A%EF%BC%86%E3%81%95%E3%81%B0%E3%81%84%E3%81%A6%E9%A3%9F/",
+          "text_sha256": "21ff95c557a66e7ddf2ff059245a496e2c7390ab664a344efee821ab505c3fac"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e7%b4%85%e8%91%89%e3%83%af%e3%82%a4%e3%83%b3%e3%83%95%e3%82%a7%e3%82%b9in%e7%ac%9b%e5%90%b9%e5%b7%9d%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%92-3/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:36.566269+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E7%B4%85%E8%91%89%E3%83%AF%E3%82%A4%E3%83%B3%E3%83%95%E3%82%A7%E3%82%B9in%E7%AC%9B%E5%90%B9%E5%B7%9D%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%92-3/",
+          "text_sha256": "85636abba296bcd42d57f5585b166cb60a846bc41e7aaa1f3bd41b969eec3392"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/%e3%83%95%e3%83%ab%e3%83%bc%e3%83%84%e5%85%ac%e5%9c%92%e3%81%a7%e3%83%a1%e3%83%aa%e3%83%bc%e3%82%af%e3%83%aa%e3%82%b9%e3%83%9e%e3%82%b9%ef%bc%81-3/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:37.399358+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/%E3%83%95%E3%83%AB%E3%83%BC%E3%83%84%E5%85%AC%E5%9C%92%E3%81%A7%E3%83%A1%E3%83%AA%E3%83%BC%E3%82%AF%E3%83%AA%E3%82%B9%E3%83%9E%E3%82%B9%EF%BC%81-3/",
+          "text_sha256": "3765bd31c36de8cc26177e9582658a2257d30bc0e89aab5fb43984d8e2420912"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/2026%e5%b9%b4%e5%ba%a6%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:38.242330+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/2026%E5%B9%B4%E5%BA%A6%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/",
+          "text_sha256": "101fe161178aa662bb90e401dc5fc0d9b2e68904d4e1f2041de998f4aa1923c2"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/event/live-garden-project-%e3%81%bf%e3%82%93%e3%81%aa%e3%81%a7%e8%82%b2%e3%81%a6%e3%82%8b%e3%80%81%e5%ad%a6%e3%81%b3%e3%81%ae%e8%8a%b1%e5%a3%87/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:39.152582+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/event/live-garden-project-%E3%81%BF%E3%82%93%E3%81%AA%E3%81%A7%E8%82%B2%E3%81%A6%E3%82%8B%E3%80%81%E5%AD%A6%E3%81%B3%E3%81%AE%E8%8A%B1%E5%A3%87/",
+          "text_sha256": "b188a1b07b15de59c97825a061de91b2c87df494bd4ec164359d393ca7c435bd"
+        },
+        {
+          "url": "https://ws.formzu.net/dist/S35504062/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:52.158218+00:00",
+          "final_url": "https://ws.formzu.net/fgen/S35504062/",
+          "text_sha256": "788abc55d3982ee555d8f901bb244bafa6658f853c27c80d856817c4f1306deb"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:10:52.624936+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/",
+          "text_sha256": "2f1a3b98391e3d340e804027895707da2a581bbd020d3ce89fb5d203f3322acf"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/wp/wp-content/uploads/2026/10/10月イベントカレンダー-968x1200.jpg",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:05.272184+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/wp/wp-content/uploads/2026/10/10%E6%9C%88%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC-968x1200.jpg",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/8232/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:05.707620+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/8232/",
+          "text_sha256": "2fb832e3d37d8c77cd1c9c08dce99187843411144f9c1885661f113cfb4d0766"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/7536/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:06.282588+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/7536/",
+          "text_sha256": "ffee29498dbb4a9976e63587349ca78388588f93082de9750a832b92e1aa9ce4"
+        },
+        {
+          "url": "https://fuefukigawafp.co.jp/news/2092/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:06.844411+00:00",
+          "final_url": "https://fuefukigawafp.co.jp/news/2092/",
+          "text_sha256": "cff2f81a0cd4da259939cc6f6b07ca60ee6379480fad46031794f8a300f72d93"
+        },
+        {
+          "url": "https://www.city.yamanashi.yamanashi.jp/soshiki/2/19919.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:11:15.894854+00:00",
+          "final_url": "https://www.city.yamanashi.yamanashi.jp/soshiki/2/19919.html",
+          "text_sha256": "67846d4e531f07a3a27b24edd1c27e13b1187a96a7f4543140e97fe365b12b79"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式一覧・全8リンク・月間カレンダー画像・新着・申込フォームを内容確認。受付可能な4企画を追加、予告段階を候補別HOLD。",
+      "candidates": [
+        {
+          "title": "紅葉ワインフェス",
+          "disposition": "hold",
+          "reason": "11/21・22、10～16時の予告のみ。雨天対応・交通案内・子連れ向け具体内容等、季節行事の必要情報は随時更新予定。"
+        },
+        {
+          "title": "フルーツ公園でメリークリスマス！",
+          "disposition": "hold",
+          "reason": "12/5・6、10～16時の予告のみ。具体的参加内容、雨天・交通・子連れ条件は更新待ち。"
+        },
+        {
+          "title": "LIVE GARDEN PROJECT 秋の植栽",
+          "disposition": "hold",
+          "reason": "10月下旬予定のみで確定日・時間・申込窓口未掲載。"
+        },
+        {
+          "title": "くだもの収穫体験",
+          "disposition": "hold",
+          "reason": "生育状況に応じ数日前に告知。現在の一覧に具体的な未来日程なし。"
+        },
+        {
+          "title": "新年準備イベント",
+          "disposition": "hold",
+          "reason": "12/19・20の年間予告のみ、時間・参加条件未公開。"
+        },
+        {
+          "title": "2027新年祭",
+          "disposition": "hold",
+          "reason": "1月上旬の年間予告のみ、具体日未公開。"
+        },
+        {
+          "title": "節分祭",
+          "disposition": "hold",
+          "reason": "1/30・31の年間予告のみ、時間・参加条件未公開。"
+        },
+        {
+          "title": "バレンタイン作戦",
+          "disposition": "hold",
+          "reason": "2/13の年間予告のみ、時間・参加条件未公開。"
+        },
+        {
+          "title": "星空トークショー",
+          "disposition": "hold",
+          "reason": "2/13の年間予告のみ、時間・参加条件未公開。"
+        },
+        {
+          "title": "ひなまつり",
+          "disposition": "hold",
+          "reason": "2/27・28の年間予告のみ、時間・参加条件未公開。"
+        },
+        {
+          "title": "TVアニメmono聖地巡礼スタンプラリー",
+          "disposition": "hold",
+          "reason": "4/11～11/3、ガイド購入者限定の14地点巡回。施設側の案内は当園スタンプ時間のみで、ガイド入手可否と全巡回地点の参加条件を確認できず保留。"
+        },
+        {
+          "title": "山梨市まち歩きスタンプラリー",
+          "disposition": "duplicate",
+          "event_id": "evt-yamanashi-w38-2026-stamprally",
+          "reason": "市公式で11/30までを確認。既存の地域横断イベントに当園も含まれる。"
+        },
+        {
+          "title": "魚のつかみ取り＆さばいて食べよう！（10月）",
+          "disposition": "added",
+          "event_id": "evt-117-20261026-01",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "魚のつかみ取り＆さばいて食べよう！（11月）",
+          "disposition": "added",
+          "event_id": "evt-117-20261026-02",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あさひのキッズスクール 補助輪をはずして乗ってみよう！",
+          "disposition": "added",
+          "event_id": "evt-117-20261026-03",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "週末キッチンカーin笛吹川フルーツ公園（10月31日）",
+          "disposition": "added",
+          "event_id": "evt-117-20261026-04",
+          "participability": "通常参加可能"
+        }
+      ],
+      "updates": [
+        {
+          "id": "evt-117-202608-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-117-202608-02",
+          "status": "ended"
+        },
+        {
+          "id": "evt-117-202608-05",
+          "status": "ended"
+        },
+        {
+          "id": "evt-117-202609-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-117-w38-2026-01",
+          "status": "ended"
+        }
+      ],
+      "added_ids": [
+        "evt-117-20261026-01",
+        "evt-117-20261026-02",
+        "evt-117-20261026-03",
+        "evt-117-20261026-04"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:12:45.590963+00:00",
+      "facility_id": 121,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:11.646666+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event.html",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:12.034154+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event.html",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:12.340638+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:21.738897+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/shisetsu/kosodate/atago.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:27.808472+00:00",
+          "final_url": "https://www.pref.yamanashi.jp/shisetsu/kosodate/atago.html",
+          "text_sha256": "91d351657fc5b2f0f7f397e031f5152d8a2878b1cdfcad9db312ed4d50b41d4d"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/info",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:28.322451+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/info",
+          "text_sha256": "11d228a2da971b7e3a3f70106ceee6d3ed942eba691415537c9d1e8c375a8c6f"
+        },
+        {
+          "url": "https://atagoyama.yya.or.jp/event",
+          "status": 404,
+          "checked_at": "2026-10-25T16:12:30.634968+00:00",
+          "final_url": "https://atagoyama.yya.or.jp/event",
+          "text_sha256": "3919e2447f6201b34de3a5e03ba0f70a506564b866bff574f295a775d3aeb98b",
+          "method": "rendered_browser"
+        }
+      ],
+      "disposition": "source_unresolved",
+      "reason": "公式イベントURLを再取得・ブラウザ再試行、secondary、トップ、新着と県公式施設案内まで確認。施設サイトは全てメンテナンス表示で現行イベント本文取得不能。県案内は通常利用のみ。検索キャッシュを現行事実として採用しない。registry最終確認日は進めない。",
+      "candidates": [
+        {
+          "title": "ハンドベルの音色を聞いてみよう／親子陶芸教室",
+          "disposition": "hold",
+          "reason": "今回の公式ドメイン検索で10月10日の募集告知が見つかるが、ライブの詳細はメンテナンス404。現在の日程・募集状態・参加条件を再確認できない。"
+        }
+      ],
+      "added_ids": []
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:13:43.141822+00:00",
+      "facility_id": 122,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.sonekyuryo.jp/event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:52.437339+00:00",
+          "final_url": "https://www.sonekyuryo.jp/event/",
+          "text_sha256": "5dea29de6898c47a51a57064abb5d7275152598b1e29045f1a7fd3a803036b5a"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/oshirase",
+          "status": 200,
+          "checked_at": "2026-10-25T16:12:53.382924+00:00",
+          "final_url": "https://www.sonekyuryo.jp/oshirase/",
+          "text_sha256": "17914979ff24554fd2f5346c419134ce0cf6c13844a0df17156bae379b481844"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e4%bb%a4%e5%92%8c8%e5%b9%b411%e6%9c%8823%e6%97%a5%e3%80%80%e3%80%8c%e7%ac%ac17%e5%9b%9e%e3%80%80%e8%90%bd%e3%81%a1%e8%91%89%e3%81%a7%e3%82%84%e3%81%8d%e3%81%84%e3%82%82%ef%bc%81%e3%80%8d/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:00.679066+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E4%BB%A4%E5%92%8C8%E5%B9%B411%E6%9C%8823%E6%97%A5%E3%80%80%E3%80%8C%E7%AC%AC17%E5%9B%9E%E3%80%80%E8%90%BD%E3%81%A1%E8%91%89%E3%81%A7%E3%82%84%E3%81%8D%E3%81%84%E3%82%82%EF%BC%81%E3%80%8D/",
+          "text_sha256": "e6d22b1b6c3b8802d9ef8c9d0a8a7510c5d6af6048be0e39030c75fb5a481123"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e4%bb%a4%e5%92%8c8%e5%b9%b411%e6%9c%887%e6%97%a5%e3%80%80%e5%8f%a4%e4%bb%a3%e3%81%a8%e8%87%aa%e7%84%b6%e3%82%92%e6%a5%bd%e3%81%97%e3%82%80%e6%97%a5/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:01.283009+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E4%BB%A4%E5%92%8C8%E5%B9%B411%E6%9C%887%E6%97%A5%E3%80%80%E5%8F%A4%E4%BB%A3%E3%81%A8%E8%87%AA%E7%84%B6%E3%82%92%E6%A5%BD%E3%81%97%E3%82%80%E6%97%A5/",
+          "text_sha256": "9b6a04ca508aeff94da98533c1cd1e9bfa1bf7ecd7ea4ed37402940c6ddf00e7"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/2026%e5%b9%b4%e5%ba%a6%e3%80%80%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e5%b9%b4%e9%96%93%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:01.830398+00:00",
+          "final_url": "https://www.sonekyuryo.jp/2026%E5%B9%B4%E5%BA%A6%E3%80%80%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E5%B9%B4%E9%96%93%E3%82%B9%E3%82%B1%E3%82%B8%E3%83%A5%E3%83%BC%E3%83%AB/",
+          "text_sha256": "e6abb295c9ec0ddc1248832727d5bb85bf6917306278e9a034483ee33dcd8cfe"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/%e7%ac%ac%ef%bc%92%e5%9b%9e-%e3%82%b9%e3%83%9e%e3%82%a4%e3%83%ab%e3%83%9a%e3%83%83%e3%83%88%e3%83%95%e3%82%a7%e3%82%b9%e3%82%bf-in-%e6%9b%bd%e6%a0%b9%e4%b8%98%e9%99%b5%e5%85%ac%e5%9c%92-2026-%e7%a7%8b/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:02.432465+00:00",
+          "final_url": "https://www.sonekyuryo.jp/%E7%AC%AC%EF%BC%92%E5%9B%9E-%E3%82%B9%E3%83%9E%E3%82%A4%E3%83%AB%E3%83%9A%E3%83%83%E3%83%88%E3%83%95%E3%82%A7%E3%82%B9%E3%82%BF-in-%E6%9B%BD%E6%A0%B9%E4%B8%98%E9%99%B5%E5%85%AC%E5%9C%92-2026-%E7%A7%8B/",
+          "text_sha256": "d86a22cede755affce748564ff84cba4f6ec4ba328d36738782c638b548c4c8e"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/event/page/2/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:04.524464+00:00",
+          "final_url": "https://www.sonekyuryo.jp/event/page/2/",
+          "text_sha256": "e06d53206ef4d27093a870dd54021680ff2fc453026bd9cce9aa36a81cf4c1fa"
+        },
+        {
+          "url": "https://www.sonekyuryo.jp/access",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:15.540104+00:00",
+          "final_url": "https://www.sonekyuryo.jp/access/",
+          "text_sha256": "1cbca0fca6dc97adaee6e28fa5de44b8e5f341958f7c4dbc389c5a50f30067ef"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式一覧2ページ・年間スケジュール・新着・3企画詳細・アクセスを確認し3企画追加。過去3企画を終了。",
+      "candidates": [
+        {
+          "title": "古代米でもちつき大会",
+          "disposition": "hold",
+          "reason": "2026年度年間表は「2026年1月11日（月祝）」と記載し年度・曜日・日付が一致しない。次回詳細なし、2027年へ推測修正しない。"
+        },
+        {
+          "title": "竹馬作り",
+          "disposition": "hold",
+          "reason": "年間表は計画中のみ、日程・時間・参加条件未公開。"
+        },
+        {
+          "title": "第17回 落ち葉でやきいも！",
+          "disposition": "added",
+          "event_id": "evt-122-20261026-01",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "古代と自然を楽しむ日",
+          "disposition": "added",
+          "event_id": "evt-122-20261026-02",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "第2回 スマイルペットフェスタ in 曽根丘陵公園 2026秋",
+          "disposition": "added",
+          "event_id": "evt-122-20261026-03",
+          "participability": "通常参加可能"
+        }
+      ],
+      "updates": [
+        {
+          "id": "evt-122-202608-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-122-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-122-w38-2026-02",
+          "status": "ended"
+        }
+      ],
+      "added_ids": [
+        "evt-122-20261026-01",
+        "evt-122-20261026-02",
+        "evt-122-20261026-03"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:15:23.193790+00:00",
+      "facility_id": 131,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.kipokipo.jp/news/event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:51.828372+00:00",
+          "final_url": "https://www.kipokipo.jp/news/event",
+          "text_sha256": "c08afa838e1ff8bacd61da2c501b31f640f1b331754a88da873efeb88cb3ad70"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news",
+          "status": 200,
+          "checked_at": "2026-10-25T16:13:52.835782+00:00",
+          "final_url": "https://www.kipokipo.jp/news",
+          "text_sha256": "bab1aa89065a42d4c68db2829896a6fd45655f89daf1537c091740bfe20569b8"
+        },
+        {
+          "url": "https://www.kipokipo.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:19.852088+00:00",
+          "final_url": "https://www.kipokipo.jp/",
+          "text_sha256": "fa1d155e3100e8c1ebb2a7a8eadc0471f58bbc1e923521bb8dcded2fcdba0c7b"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1662",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:20.871318+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1662",
+          "text_sha256": "a1b4c3a8b135b56c7fee4546f67ae3a29ddf055ffae8db9c932a71e9194a9223"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1625",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:21.445541+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1625",
+          "text_sha256": "39ae56fd48867b56712c60b7766ef97a222412bb4ffa7bf9b482dabd1fec2388"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1697",
+          "status": 404,
+          "checked_at": "2026-10-25T16:14:30.721259+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1697",
+          "text_sha256": "2f20b9074b831f474a61945a3556c222fbbaf34c835769990bda08e0436c33ab"
+        },
+        {
+          "url": "https://www.kipokipo.jp/news/1618",
+          "status": 200,
+          "checked_at": "2026-10-25T16:14:31.407452+00:00",
+          "final_url": "https://www.kipokipo.jp/news/1618",
+          "text_sha256": "d90d7632fdc6ddbdb3fb85c0de407043b0611f8a2edb1d38582a8109f1b67ffa"
+        },
+        {
+          "url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/こぶたの会-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:02.722098+00:00",
+          "final_url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/%E3%81%93%E3%81%B6%E3%81%9F%E3%81%AE%E4%BC%9A-724x1024.png",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/もりのおはなし会-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:08.709868+00:00",
+          "final_url": "https://www.kipokipo.jp/kipocore/wp-content/uploads/2026/07/%E3%82%82%E3%82%8A%E3%81%AE%E3%81%8A%E3%81%AF%E3%81%AA%E3%81%97%E4%BC%9A-724x1024.png",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式イベントカテゴリ・新着・トップ・マルシェ詳細・2企画画像を確認。絵本会と音楽会は7月で終了、マルシェの未来日程は11/22。",
+      "updates": [
+        {
+          "id": "evt-131-w38-2026-01",
+          "status": "ended"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "キポキポマルシェ（11月）",
+          "disposition": "added",
+          "event_id": "evt-131-20261026-01",
+          "participability": "通常参加可能"
+        }
+      ],
+      "added_ids": [
+        "evt-131-20261026-01"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:19:12.795455+00:00",
+      "facility_id": 136,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:29.344712+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/",
+          "text_sha256": "300e6c30bf13be5e2caf67a782e3f4e035d0616a0cc07f02b2530e013cc80143"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:29.969253+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/",
+          "text_sha256": "84ac5a8a721157a72adcf468ffe8471a5834c5dc7c68c6d22ff71535f3b251d4"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:30.485295+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+          "text_sha256": "95b8539309b899369353ff733964b308b3ba105cf0d969cecabdd3e7d7d1ae19"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/calendar.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:31.065438+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/guide/calendar.php",
+          "text_sha256": "cb4617b1946f6e1a7071c334d04e1708cb4ff30a3c4d64e87551afd232238934"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=2&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:49.239253+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=2&ap=4&cnt=36",
+          "text_sha256": "e5f5ab21867a15a7cf9da32d7cfd05e58239c4db593cb84eb70288409e7d6810"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=3&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:49.796885+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=3&ap=4&cnt=36",
+          "text_sha256": "b79aef80074dbadd35d064de3dd47e1bb9544fb9fb52ba2d6f6dd1efb1be4cc4"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=4&ap=4&cnt=36",
+          "status": 200,
+          "checked_at": "2026-10-25T16:15:50.321733+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/?page=4&ap=4&cnt=36",
+          "text_sha256": "bf7835aafbc9dcc9e23d7fe5847486f28d15b056a64e425cda0f165959686b90"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1401",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:01.537605+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1401",
+          "text_sha256": "ace8dfbdd7586058c567d72319cb3e6a076fbccaa58553488ce7ba649135de26"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1408",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:02.113183+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1408",
+          "text_sha256": "0c507633050126c9de0d22b3108be0aeb13f9c351cd5398fe62b3f106f6bd347"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1410",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:02.683581+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1410",
+          "text_sha256": "a82e844fd502f43ed63dc9af4e7d7f338e6e53c017a27b38498fc4478f082828"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1411",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:03.194717+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1411",
+          "text_sha256": "e289a01f89f1a56c329f8a11458838f6bac684b5da66ab11b972e91e104cd6b5"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1414",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:03.676672+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1414",
+          "text_sha256": "7bbe1bdd24f24e6ec7b3ec7de91dcf7994d6e8cfd9d86f6ceab50d04786d13ab"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1420",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:04.412942+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1420",
+          "text_sha256": "9231a30d9fa508133b5c5659fe985248e1d1f6b79e5a223653070f768e5b5354"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1419",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:05.218595+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1419",
+          "text_sha256": "061f869fa7d239f70f03826e83b015f71532704648ec97453c1b523ed9e60ad0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1427",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:06.022966+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1427",
+          "text_sha256": "3c4228376cb0bd2ef7a91c4a047d6f1e2a1dc087c27df91e16ea25a3c20d0412"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1426",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:06.669256+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1426",
+          "text_sha256": "8a3b228229dbfe8831e8d04d9f67a7b51364d37bd3b2ad44427a186abe3f7e04"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1425",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:07.285292+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1425",
+          "text_sha256": "4c1d9623f3e9ea93adaaf1d881272fb677855e07dd7c272aa80b196171cc5a7c"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1458",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:07.921864+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1458",
+          "text_sha256": "fe14c5b3c4758529ccb99d593e61d6bd65f21bf9046b422ce0e6a3668c40181e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1448",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:08.596396+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1448",
+          "text_sha256": "08ce852af2ab02ee6339f23d4a13d46afa80af3d801a054209a51517573b1eda"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1444",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:09.213400+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1444",
+          "text_sha256": "556bebefb2faf4eec4dc666c8ed108d019108a8e4f1f0ba8affb2012c24de735"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1445",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:09.955978+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1445",
+          "text_sha256": "178aaf34571ea782cb29721b5fa29098cff55131a6d4e01073c962ed233c7038"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1446",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:10.732536+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1446",
+          "text_sha256": "6bbe7da2cb9dae3d7473416384e35284815ba856237396ae22cbaafc7a4fffc0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1447",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:11.478040+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1447",
+          "text_sha256": "5cd049a4ef032d1538c8efdfaf4f536c63e642b126016b07ef49da2a42488a8d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=203",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:12.239119+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=203",
+          "text_sha256": "b57eb4c4a3dcb160fdddd6730839cc1d4f4f83aeaf2c9a90e0f86be877b1f7b0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:12.941158+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+          "text_sha256": "c9953a64720dd49234cea83abd051e9e221b05587a414a4ed499509681aee8a6"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=202",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:13.628294+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=202",
+          "text_sha256": "91ebeb818bbea49ab17972f4555fca9434498b3d0d39e4c5aab5ecfe8cef2ac7"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=204",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:14.421146+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=204",
+          "text_sha256": "627e276cc3be84fa87cce77fbe81f4d454e0a34ca7b1524f4e8c059b228f3ab0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1435",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:15.178915+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1435",
+          "text_sha256": "940f808435ecceed8a5bf40304419a367b62e21101341ff3b1a90d1c22494c80"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=214",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:15.922043+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=214",
+          "text_sha256": "d4747fc0b2a34afcfbe05faf93ebddffbfcf2fed4cb08b46115c8b6d04608466"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=210",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:16.713419+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=210",
+          "text_sha256": "90f39f6090b6d51bf43644b93fceda06a26ed4d923268c60dcee0656ba7f295f"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=212",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:17.530090+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=212",
+          "text_sha256": "e0773860704577faa45207520288981dc0b45eec3efde47e15a325d6e775d838"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=209",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:18.161451+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=209",
+          "text_sha256": "b390c6f819edb7b213cdf8ea01a94bf358b61d2f101f4052672ff05e9dad08af"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=211",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:18.900696+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=211",
+          "text_sha256": "d3228b7aa0294e2623034f1d0c419ff76f7b764e8832f817dd40ccdde08ac2ae"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=208",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:19.603878+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=208",
+          "text_sha256": "52052b68aaa82eeb8b0b245704b60f1eaaebad447b3f8d058eab2ed021d4ed84"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=213",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:20.367385+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=213",
+          "text_sha256": "c10a867c25da045abd8dd6c02397091e7cdb22e6e644d47f657e16ff8249c523"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1440",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:21.065023+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1440",
+          "text_sha256": "4588de8df3603abaffa9f8d88337f0895147bfafa274c57fc7882ea992665d7c"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1454",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:21.836235+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1454",
+          "text_sha256": "69b6499e9a4aacb60230bd83a3a68ff295f1af8f7e7c900858f90ddbc1a5ea19"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1430",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:22.471115+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1430",
+          "text_sha256": "c43fe4d32d526f267c64149b34a640da9a92a6f176a798f840c35eb5fc979971"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1429",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:23.208549+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1429",
+          "text_sha256": "9726bea892e7792ce684d9d0f1055757f5b8e86a6ea4535347ea6decb7cb597b"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1428",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:23.967152+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1428",
+          "text_sha256": "3a81e8cd30d2412da5b192e68a05c440f400befc5dadd8f6ee8dd2b747364598"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1422",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:24.695927+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1422",
+          "text_sha256": "3c013e2662e311dfe24fc6f18ee545dc97ba0ccca9a54ce7698b6245eeff7c5e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1421",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:25.436125+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1421",
+          "text_sha256": "adfa991aa4d93016b5b144aa1e2c576ccc0a00e7b5a97fd9fcbc7d09066a9670"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1456",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:26.205934+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1456",
+          "text_sha256": "eab557d97abcfa3190a25032a23a5625f8e46239879b513f3df786c8926557c5"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1455",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:27.007828+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1455",
+          "text_sha256": "98523af9eeaa74e1cbb03250ae77f8215331e521747c002ba21cc131041f50fe"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1441",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:27.665155+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1441",
+          "text_sha256": "2d888c852d94610f79639d7840eebc048a1697dfabf041c39438d36e041ee9d0"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1451",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:28.377883+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1451",
+          "text_sha256": "34d10c82c630fbe4bf352a0b1e2b724d7ea347a7916a173686699d730719fa2d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1433",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:29.059409+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1433",
+          "text_sha256": "2ceb4c9e32bfd67f2593bc7f001af45986ef16bafb42762fcb1bc18a50950ae8"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1432",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:29.747694+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1432",
+          "text_sha256": "bec6531778b854c6878a784863d6d519a22167ee2a5c671746175b8b32a5ba78"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1431",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:30.558159+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1431",
+          "text_sha256": "212a2c6184727de4eba23d16fac601ff2239cba5e50cf0a4211c605078e435aa"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1424",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:31.288955+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1424",
+          "text_sha256": "a693d9d36a645822c02eecd5a6543ddb130a85a99ab1db0392f27c7a72a07b60"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1423",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:31.922576+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1423",
+          "text_sha256": "af99eb6714f72d4c379a3b0ba46022874778d00d790fe6c07f7327b2b96050ff"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1442",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:32.584785+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1442",
+          "text_sha256": "eb99897516c61789588a1ca614fe4aa6443b6a9d0ebd768e00b97b13865db4be"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1449",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:33.351358+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1449",
+          "text_sha256": "e511af4d50b4ace72071691f41eb8f66f5c06ee355109193e417402efb8f9a77"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1443",
+          "status": 200,
+          "checked_at": "2026-10-25T16:16:34.017326+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1443",
+          "text_sha256": "c579a09662978e21c9857f4e44622a89ea46e28bdc5707f9b105894c29967112"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/exhibition/scienceshow.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:27.343943+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/exhibition/scienceshow.php",
+          "text_sha256": "a4969c3e1d127bad76a8ce8b088f9b8845c8038c337b18c9570dc66b8fe63ed1"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/index.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:27.883353+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/guide/index.php",
+          "text_sha256": "4b063348ff76cdd74e724c827140fc26144775603731c08001442462dc8947d9"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/guide/access.php",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:28.385605+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/access/",
+          "text_sha256": "ccd16d77f427330a945905b88982ca79697e57fe70424ccd0f2be669055b6823"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=803",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:28.974961+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=803",
+          "text_sha256": "a94bb874a4a3001833e894e0077d147098e01f959125e772865593379907ebce"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=802",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:29.451161+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/news/info.php?no=802",
+          "text_sha256": "b256972c8f10058d4b26cf4e321f3049c542ee8d7c286859993a5bc43c0df4e6"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1458",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:30.255567+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1458",
+          "text_sha256": "f39653042395b2d7900b2b47bbcc6d0069b1d012ae889c497e5001bb1f4f126d"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1444",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:31.019231+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1444",
+          "text_sha256": "adaaacde47f5adfee3d77fd846e5bfe1d8a39b35e811ee822d18e19f57110c89"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1445",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:31.771749+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event10.php?no=1445",
+          "text_sha256": "448f08eb614a689f19f90c227326490427e21094bfe3b343fabe6eb74effc32e"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event2.php?no=1446",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:32.555966+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event2.php?no=1446",
+          "text_sha256": "8718ba25ca284e3a130d581b11298b6bc4a67284622600ed5936584f9b5fe1ea"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event11.php?no=1448",
+          "status": 200,
+          "checked_at": "2026-10-25T16:17:33.174895+00:00",
+          "final_url": "https://www.kagakukan.pref.yamanashi.jp/inquiry/event11.php?no=1448",
+          "text_sha256": "57fd8ef6d4f9864c69dea3fdff680cb050f50953428664f0e2b694956cacc665"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "全4一覧ページ、47詳細、料金・交通・休館日・募集フォーム5件を取得し全既存・新規候補を個別判断。",
+      "updates": [
+        {
+          "id": "evt-136-202608-04",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202608-05",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202608-06",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-02",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-03",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-04",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-05",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-06",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-07",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-202609-08",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1401",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1408",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1410",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1411",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1414",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1438",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1436",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1439",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1435",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1450",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-1427",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "title": "実験教室「蛍光スライム」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1426",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "title": "工作教室「パンプキンランプ」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1430",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1429",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1433",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1432",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "工作教室「クリスマス☆ラテキャンドル」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1425",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1428",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "こどもクラフト「オリジナルキーホルダー」",
+          "summary": "絵を描いたシュリンクシートをオーブンで縮めて、オリジナルのキーホルダーを作ります。各回10人。",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1431",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1420",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1419",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "title": "サイエンスショー「とべ！ロケット」（10月）",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1422",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンスショー「とべ！ロケット」（11月）",
+          "occurrence_dates": [
+            "2026-11-01",
+            "2026-11-02",
+            "2026-11-03",
+            "2026-11-05",
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-13",
+            "2026-11-14",
+            "2026-11-15",
+            "2026-11-19",
+            "2026-11-20",
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-29",
+            "2026-11-30"
+          ],
+          "time_label": "土日祝11:00／14:00、平日11:00／15:00（各25分）。11/20は休日時刻。11/21～23は特別ショーのため通常ショーなし。 11/21～23はSPショーのため休止。",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1421",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンスショー「バチバチ感電ライブ」（11月）",
+          "occurrence_dates": [
+            "2026-11-01",
+            "2026-11-02",
+            "2026-11-03",
+            "2026-11-05",
+            "2026-11-06",
+            "2026-11-07",
+            "2026-11-08",
+            "2026-11-10",
+            "2026-11-11",
+            "2026-11-12",
+            "2026-11-13",
+            "2026-11-14",
+            "2026-11-15",
+            "2026-11-19",
+            "2026-11-20",
+            "2026-11-24",
+            "2026-11-25",
+            "2026-11-26",
+            "2026-11-27",
+            "2026-11-28",
+            "2026-11-29",
+            "2026-11-30"
+          ],
+          "time_label": "土日祝10:00／13:00／15:00、平日13:00（各25分）。11/20は休日時刻。11/21～23は特別ショーのため通常ショーなし。 11/21～23はSPショーのため休止。",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1424",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンスショー「バチバチ感電ライブ」（12月）",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1423",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンスショー「空気であそぼ」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1440",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1441",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンス屋台「メンボウグライダー」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-1442",
+          "source_checked_at": "2026-10-26",
+          "status": "scheduled",
+          "title": "サイエンス屋台「キラキラオーナメント」",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-energy",
+          "status": "ended"
+        },
+        {
+          "id": "evt-136-w38-2026-planet202",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "occurrence_dates": [
+            "2026-09-19",
+            "2026-09-20",
+            "2026-09-21",
+            "2026-09-22",
+            "2026-09-23",
+            "2026-09-26",
+            "2026-09-27",
+            "2026-10-03",
+            "2026-10-04",
+            "2026-10-10",
+            "2026-10-11",
+            "2026-10-12",
+            "2026-10-17",
+            "2026-10-18",
+            "2026-10-25",
+            "2026-11-01",
+            "2026-11-03"
+          ],
+          "time_label": "10:15～10:45（土日祝、10/31は特別投影のため休止）",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-planet203",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "age_label": "どなたでも",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-planet204",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "age_label": "どなたでも",
+          "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。休館日を公式カレンダーで除外。 2026-10-26に公式詳細・現行一覧・休館日を再確認。"
+        },
+        {
+          "id": "evt-136-w38-2026-bear",
+          "status": "ended"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "カーボン・エミッションゼロ2 水素で未来を救え！",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1401",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "スイッチカー with LEGO EV3",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1408",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "ジャイロシューター with LEGO WeDo2.0",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1410",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "たんていウォッチ with MESH",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1411",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "太陽観望会",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1414",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "光るスライム",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1427",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "おばけかぼちゃランプ",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1426",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "電気で変身！チタンキーホルダー",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1430",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "とことこペンギン",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1429",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "残像クリスマスツリー",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1433",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "ラテキャンドル",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1432",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "もこもこスポンジキーホルダー",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1425",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "折り紙キーホルダー",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1428",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "おえかきイルミネーション",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1431",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー しゃぼん玉タイム",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1420",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー ロケット",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1419",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー ロケット",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1422",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー 静電気",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1421",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー 静電気",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1424",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンスショー 空気",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1423",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンス屋台 ぷらぷらおばけ",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1440",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンス屋台 綿棒グライダー",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1441",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "サイエンス屋台 オーナメント",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-1442",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "パウ・パトロール キッズタイム",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-planet202",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "名探偵コナン 閃光の宇宙船",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-planet203",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "星空散歩 星空の光と闇",
+          "disposition": "duplicate",
+          "event_id": "evt-136-w38-2026-planet204",
+          "reason": "公式詳細を個別再取得し、既存企画の事実・当日参加経路を再確認。"
+        },
+        {
+          "title": "大人クラフト「お正月工作」",
+          "disposition": "excluded",
+          "reason": "18歳以上限定、家族・子ども参加企画ではない。"
+        },
+        {
+          "title": "山梨プラネタリウムフェスティバル2027",
+          "disposition": "hold",
+          "reason": "1/16・17・23・24の開催枠は公開されているが内容調整中と明記。番組・料金・参加経路未公開。"
+        },
+        {
+          "title": "くっつく？くっつかない？手作りシールで大実験！",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-01",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "手づくり乾電池教室",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-02",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "宇宙飛行士選抜試験にちょうせん",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-03",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "親子クラフト「もこもこ！ゆびであむストラップ」",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-04",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "冬の星座を見よう",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-05",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "わくわくわーくしょっぷ",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-06",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "宇宙飛行士くんれんだ！",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-07",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "やまなしサイエンス祭り",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-08",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "SPサイエンスショー",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-09",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "ふたご座流星群を見よう",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-10",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "クリスマスおはなし会",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-11",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "キッズタイム ハロウィン特別投影「ムーンナイトモンスター」",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-12",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "宇宙探検隊 ステラーズ 星と森のストーリー",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-13",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "プラネタリウム版「チ。―地球の運動について―」",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-14",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "星空散歩 ～天動説の世界～",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-15",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "SPACE 開かれた宇宙への扉",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-16",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "山梨県民の日 科学館入館無料",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-17",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "熟睡プラ寝たリウム ～Dreamy Aroma～",
+          "disposition": "added",
+          "event_id": "evt-136-20261026-18",
+          "participability": "通常参加可能"
+        }
+      ],
+      "existing_event_holds": [
+        {
+          "facility_id": 136,
+          "event_id": "evt-136-w38-2026-planet205",
+          "reason": "公式通常番組詳細と通常時刻表は16:00から45分、10/31専用時刻表は同じ番組を16:30～16:45と記載。開始時刻・上映時間が内部矛盾し、修正告知も当該枠を解決しないため既存レコードを変更せず保留。",
+          "sources_checked": [
+            {
+              "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+              "status": 200,
+              "checked_at": "2026-10-25T16:15:30.485295+00:00",
+              "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/",
+              "text_sha256": "95b8539309b899369353ff733964b308b3ba105cf0d969cecabdd3e7d7d1ae19"
+            },
+            {
+              "url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+              "status": 200,
+              "checked_at": "2026-10-25T16:16:12.941158+00:00",
+              "final_url": "https://www.kagakukan.pref.yamanashi.jp/planetarium/info.php?no=205",
+              "text_sha256": "c9953a64720dd49234cea83abd051e9e221b05587a414a4ed499509681aee8a6"
+            }
+          ]
+        }
+      ],
+      "added_ids": [
+        "evt-136-20261026-01",
+        "evt-136-20261026-02",
+        "evt-136-20261026-03",
+        "evt-136-20261026-04",
+        "evt-136-20261026-05",
+        "evt-136-20261026-06",
+        "evt-136-20261026-07",
+        "evt-136-20261026-08",
+        "evt-136-20261026-09",
+        "evt-136-20261026-10",
+        "evt-136-20261026-11",
+        "evt-136-20261026-12",
+        "evt-136-20261026-13",
+        "evt-136-20261026-14",
+        "evt-136-20261026-15",
+        "evt-136-20261026-16",
+        "evt-136-20261026-17",
+        "evt-136-20261026-18"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:20:29.664186+00:00",
+      "facility_id": 155,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:27.414158+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/",
+          "text_sha256": "3e366a623bdd5f1598d5d5e439d17214f2ae27d24b66191fd6d09fab2114c861"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:28.537767+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/",
+          "text_sha256": "ffa8f5273165224be1457ba792b8b6b835d3f2c0ab4310a3b7db2fbedae9302f"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/museum-bath-titanic/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:29.966999+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/museum-bath-titanic/",
+          "text_sha256": "210efe4abebb7e062f2de48e7df1caf9166ecef8b8783bebb96c2cf21d4033a6"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:31.404462+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/concert/",
+          "text_sha256": "46bdfd825da3e3f7db1594a798f6155a9e41796d6025e67a4073ed06d86102ca"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/price/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:32.972928+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/price/",
+          "text_sha256": "e11d051fca3d6a83ecd6cae4bfcf0a4c2b59c862bd56ec8bc6480ab72c503644"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/info/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:34.510568+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/info/",
+          "text_sha256": "f78d4174cec25ef8afc415c3e6970f9751613f82ea5645a2ebef37e20ea3c649"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/20261106violincello-concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:43.688379+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/20261106violincello-concert/",
+          "text_sha256": "030639b2aacd47ce00d54275cc02a5889ea7d02a3447c221b583987ac452fd47"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/11141115concert/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:44.777124+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/11141115concert/",
+          "text_sha256": "091c9c2c2b5152c88d89e954e7ee802c1dfda1f8987d79dbced50599018a3c40"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/202611/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:45.821939+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/202611/",
+          "text_sha256": "22286efb6dd63bd3a5cd266304d8c66dddc13fb2fe8260e00472b0c863adb80d"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/akihironishinoexhibition/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:47.007705+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/akihironishinoexhibition/",
+          "text_sha256": "c7c8e61ea36d3277ed9e63c26b72e8d34e125346f443d678387cbea628300ffa"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/event/bottlegeorge/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:48.355297+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/event/bottlegeorge/",
+          "text_sha256": "6ffe46c9587b72a525946cc3bef4c060e86d9801f7b25950f91bf55092225fb8"
+        },
+        {
+          "url": "https://kawaguchikomusicforest.jp/news/organ-holle/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:19:49.669201+00:00",
+          "final_url": "https://kawaguchikomusicforest.jp/news/organ-holle/",
+          "text_sha256": "3c48e9dcafdd00ead2e94562fc1e4798057843bc82eaabb874138d36526753f8"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式イベント・新着・現行演奏案内・料金・営業日・全現在企画を確認。有限日程の11/6公演を追加。常設展や通常サービスはイベント化しない。",
+      "updates": [
+        {
+          "id": "evt-155-w38-2026-01",
+          "source_checked_at": "2026-10-26",
+          "time_label": "10:00～17:30（最終入館17:00）。公演時間は日別公式スケジュール確認。11/14・15のタイタニック公演は11:15／13:55／15:05から各25分。",
+          "source_urls": [
+            "https://kawaguchikomusicforest.jp/news/museum-bath-titanic/",
+            "https://kawaguchikomusicforest.jp/price/",
+            "https://kawaguchikomusicforest.jp/concert/",
+            "https://kawaguchikomusicforest.jp/info/",
+            "https://kawaguchikomusicforest.jp/news/11141115concert/",
+            "https://kawaguchikomusicforest.jp/news/202611/"
+          ],
+          "source_notes": "2026-10-26公式企画・料金・営業案内を再取得。12/31までの延長、11月無休、11/14・15の特別時刻表を確認。展示・通常公演は入館料内、タイタニックランチは別途7777円・2名から2日前完全予約。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "美術館浴×TITANIC",
+          "disposition": "duplicate",
+          "event_id": "evt-155-w38-2026-01",
+          "reason": "12/31まで延長の公式本文を再確認。"
+        },
+        {
+          "title": "西野亮廣展／千年砦／ボトルジョージ専用劇場／オルゴール・プリンセス・解説ツアー・宿泊プラン",
+          "disposition": "excluded",
+          "reason": "常設展示・常設劇場・通常体験サービス・宿泊商品の案内で有限イベントではない。"
+        },
+        {
+          "title": "紅葉と楽しむ ヴァイオリン＆チェロコンサート",
+          "disposition": "added",
+          "event_id": "evt-155-20261026-01",
+          "participability": "通常参加可能"
+        }
+      ],
+      "added_ids": [
+        "evt-155-20261026-01"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:21:50.204929+00:00",
+      "facility_id": 177,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://kanegawanomori.jp/news/event/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:36.469958+00:00",
+          "final_url": "https://kanegawanomori.jp/news/event/",
+          "text_sha256": "ff6434ec9d898559ea8d00c526957b0a51c322eff9704a13f8046cd121909961"
+        },
+        {
+          "url": "https://kanegawanomori.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:37.119395+00:00",
+          "final_url": "https://kanegawanomori.jp/news/",
+          "text_sha256": "d864b7a62ff9be7c6ac284f03b3ff8cbc1a88560f3e6edeef31ad9789f8653a8"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/R8木育体験イベントin金川の森-チラシ-1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:37.489044+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/R8%E6%9C%A8%E8%82%B2%E4%BD%93%E9%A8%93%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88in%E9%87%91%E5%B7%9D%E3%81%AE%E6%A3%AE-%E3%83%81%E3%83%A9%E3%82%B7-1.pdf",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/09/2026年11月.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:48.478027+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/09/2026%E5%B9%B411%E6%9C%88.pdf",
+          "text_sha256": "6bb61f3dfbd93d1bd343dafffa55f5a94511e9b02ad08a6a51d2f9007b641b4c"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/2026年10月.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:49.633291+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/2026%E5%B9%B410%E6%9C%88.pdf",
+          "text_sha256": "c31695ddd7b621334ce4d68a04ccccef4620b5d47f905385e4977917eb7e4373"
+        },
+        {
+          "url": "https://kanegawanomori.jp/info/p5018/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:50.496996+00:00",
+          "final_url": "https://kanegawanomori.jp/info/p5018/",
+          "text_sha256": "6cf84b855f045cb6d717c2da5fa6ea82a13adf2f15941ed66b9c88833da7f0a8"
+        },
+        {
+          "url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/【最終①修正】R8木育体験イベントin金川の森-チラシ-002.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T16:20:51.130545+00:00",
+          "final_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/%E3%80%90%E6%9C%80%E7%B5%82%E2%91%A0%E4%BF%AE%E6%AD%A3%E3%80%91R8%E6%9C%A8%E8%82%B2%E4%BD%93%E9%A8%93%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88in%E9%87%91%E5%B7%9D%E3%81%AE%E6%A3%AE-%E3%83%81%E3%83%A9%E3%82%B7-002.pdf",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://kanegawanomori.jp/news/experience",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:00.183949+00:00",
+          "final_url": "https://kanegawanomori.jp/news/experience/",
+          "text_sha256": "fbf42c50db97f3048440006f40882783e6f4922646e265d7ea121eded294133f"
+        },
+        {
+          "url": "https://kff.digick.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:00.960082+00:00",
+          "final_url": "https://kff.digick.jp/",
+          "text_sha256": "9a5c9bf878dae6a24c8e77300db0e77ef90bce074d1d4b6cbbf6f6452b326ec1"
+        },
+        {
+          "url": "https://kanegawanomori.jp/info/p4982/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:01.890254+00:00",
+          "final_url": "https://kanegawanomori.jp/info/p4982/",
+          "text_sha256": "37405f977810262adb7a527364ca5a7b6703fec46ec354a71ea8c6a6880abe78"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式イベント・体験一覧、10/11月PDF、新着・中止告知・主催者を確認。同一公式URLの119も含め重複照合し7件追加。",
+      "updates": [
+        {
+          "id": "evt-177-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-177-w38-2026-02",
+          "status": "ended"
+        },
+        {
+          "id": "evt-177-w38-2026-04",
+          "status": "cancelled",
+          "source_checked_at": "2026-10-26",
+          "source_notes": "2026-10-26公式10/24告知を取得。10/25は雨予報のため中止。",
+          "source_urls": [
+            "https://kanegawanomori.jp/info/p5018/"
+          ]
+        },
+        {
+          "id": "evt-177-w38-2026-03",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "reservation_label": "予約不要、当日先着20人",
+          "official_url": "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/【最終①修正】R8木育体験イベントin金川の森-チラシ-002.pdf",
+          "source_urls": [
+            "https://kanegawanomori.jp/wp/wp-content/uploads/2026/08/【最終①修正】R8木育体験イベントin金川の森-チラシ-002.pdf"
+          ],
+          "source_notes": "2026-10-26公式一覧が現在リンクする修正版チラシを取得・画像確認。11/8・11/22各10～15時、各先着20人、参加費無料。雨天延期は後日HP告知。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "やまなし木育体験イベント",
+          "disposition": "duplicate",
+          "event_id": "evt-177-w38-2026-03",
+          "reason": "修正版チラシで未来2日と20人枠を確認。"
+        },
+        {
+          "title": "鳥の渡りってなんだろう？",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-01",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "歴史・文化探訪（金川編）",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-02",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "晩秋の森で自分を満たす森林セラピー",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-03",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "県民の日 金川の森スポーツ体験",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-04",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "金川Foresta Felice ～森とクリスマスと～",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-05",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "森の木の実で遊ぼう！学ぼう！",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-06",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "秋祭りワンワンフェスタ",
+          "disposition": "added",
+          "event_id": "evt-177-20261026-07",
+          "participability": "通常参加可能"
+        }
+      ],
+      "added_ids": [
+        "evt-177-20261026-01",
+        "evt-177-20261026-02",
+        "evt-177-20261026-03",
+        "evt-177-20261026-04",
+        "evt-177-20261026-05",
+        "evt-177-20261026-06",
+        "evt-177-20261026-07"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:22:41.316529+00:00",
+      "facility_id": 192,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.kirienomori.jp/notice/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:58.860676+00:00",
+          "final_url": "https://www.kirienomori.jp/notice/",
+          "text_sha256": "eaccaf8339d5f94504d5fee054807265dc67e7338cfa630454de76ac5528b8a1"
+        },
+        {
+          "url": "https://www.kirienomori.jp/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:21:59.824065+00:00",
+          "final_url": "https://www.kirienomori.jp/",
+          "text_sha256": "5acab506fcc7b7a8442d5c2a9db3f8f36451b99a04d13d104251c7dd9dea9c1b"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6081/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:00.852692+00:00",
+          "final_url": "https://www.kirienomori.jp/6081/",
+          "text_sha256": "1bc76523b212f5b5d0e9fb680ca8c264e9dea2bcc062ec3791d0e79a7ec189c0"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6445/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:06.656792+00:00",
+          "final_url": "https://www.kirienomori.jp/6445/",
+          "text_sha256": "0c7681e158f3c33d0b713f4daa6d4c5611cd86b527565e1ca351cc92d370e0d1"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6516/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:07.361014+00:00",
+          "final_url": "https://www.kirienomori.jp/6516/",
+          "text_sha256": "beae9528fe17a352587bfd82ce4fc9f68665b6efe2b3b638a3c98c84bcf81de9"
+        },
+        {
+          "url": "https://www.kirienomori.jp/6417/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:07.974437+00:00",
+          "final_url": "https://www.kirienomori.jp/6417/",
+          "text_sha256": "85d5c1b6b8e0429255fffd5fdc34a52c3dee3dee8b5cc2f6c0221e1810f698b8"
+        },
+        {
+          "url": "https://www.kirienomori.jp/5360/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:08.583347+00:00",
+          "final_url": "https://www.kirienomori.jp/5360/",
+          "text_sha256": "94fccc41cb5045212fa56b71d8e341d4c995db253a7e8d3716034cd89e439267"
+        },
+        {
+          "url": "https://www.kirienomori.jp/guide/19/",
+          "status": 200,
+          "checked_at": "2026-10-25T16:22:38.724482+00:00",
+          "final_url": "https://www.kirienomori.jp/guide/19/",
+          "text_sha256": "63c200c4774a9aeae69ca12db419757d66a03b2d9e03adbd6627f55059b184f6"
+        }
+      ],
+      "disposition": "candidate_found_added",
+      "reason": "公式新着・トップ・展覧会・全未来企画詳細・交通を確認し3件追加。既存展を再確認、過去3企画を終了。",
+      "updates": [
+        {
+          "id": "evt-192-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-192-w38-2026-03",
+          "status": "ended"
+        },
+        {
+          "id": "evt-192-w38-2026-04",
+          "status": "ended"
+        },
+        {
+          "id": "evt-192-w38-2026-02",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "濃黒切り絵コンペティション受賞作家作品展",
+          "disposition": "duplicate",
+          "event_id": "evt-192-w38-2026-02",
+          "reason": "10/10～12/20の公式本文と料金を再確認。"
+        },
+        {
+          "title": "行政相談パネル展・相談所",
+          "disposition": "excluded",
+          "reason": "行政手続き相談窓口、家族のおでかけ体験企画ではない。"
+        },
+        {
+          "title": "CUT CAT BEATLES／みのぶフェス等トップSNS表示",
+          "disposition": "stale-false",
+          "reason": "公式トップ埋込は2025年の告知と明記。2026年の未来企画として採用しない。"
+        },
+        {
+          "title": "かわいい動物を切り絵で作ってみよう！",
+          "disposition": "added",
+          "event_id": "evt-192-20261026-01",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "切り絵で「小さなおうち」を作ろう！",
+          "disposition": "added",
+          "event_id": "evt-192-20261026-02",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "第2回 daisy杯 ドッグハロウィンイベント",
+          "disposition": "added",
+          "event_id": "evt-192-20261026-03",
+          "participability": "条件付き参加可能"
+        }
+      ],
+      "added_ids": [
+        "evt-192-20261026-01",
+        "evt-192-20261026-02",
+        "evt-192-20261026-03"
+      ]
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:24:00.680102+00:00",
+      "facility_id": 194,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.wellnesspark.jp/category/event/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:49.712563+00:00",
+          "final_url": "https://www.wellnesspark.jp/category/event/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:50.134058+00:00",
+          "final_url": "https://www.wellnesspark.jp/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/2026/07/27/7495/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:22:50.448316+00:00",
+          "final_url": "https://www.wellnesspark.jp/2026/07/27/7495/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/category/event/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:13.832808+00:00",
+          "final_url": "https://www.wellnesspark.jp/category/event/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://wellnesspark.jp/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:14.150364+00:00",
+          "final_url": "https://wellnesspark.jp/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/contact/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:14.502489+00:00",
+          "final_url": "https://www.wellnesspark.jp/contact/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/wp-content/uploads/2026/03/カヤネズミ先生R7-27-724x1024.jpg",
+          "status": 200,
+          "checked_at": "2026-10-25T16:23:14.801353+00:00",
+          "final_url": "https://www.wellnesspark.jp/wp-content/uploads/2026/03/%E3%82%AB%E3%83%A4%E3%83%8D%E3%82%BA%E3%83%9F%E5%85%88%E7%94%9FR7-27-724x1024.jpg",
+          "text_sha256": "e4e66f3c70e3613e62f96a3202f9bcf41627daf0f6745d14a9c071a6ec7d936c"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/release/kendosui/0701/uerunesukaizyo.html",
+          "status": 200,
+          "checked_at": "2026-10-25T16:23:31.413413+00:00",
+          "final_url": "https://www.pref.yamanashi.jp/release/kendosui/0701/uerunesukaizyo.html",
+          "text_sha256": "7548709451b50685a46dfe172d87fa08a48cae5e19cf2eb76873b715c004a5bb"
+        },
+        {
+          "url": "https://www.wellnesspark.jp/info/",
+          "status": 500,
+          "checked_at": "2026-10-25T16:23:31.919050+00:00",
+          "final_url": "https://www.wellnesspark.jp/info/",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ],
+      "disposition": "source_unresolved",
+      "reason": "primaryを再試行、secondary・裸ドメイン・既存詳細・新着・予約窓口・ブラウザ、県公式fallbackを確認したがHTMLは500。公式保存画像だけ200取得でき、既存11/7ガイドの日時・料金を再確認。現在の募集一覧は未解決。registry最終確認日は据置。",
+      "updates": [
+        {
+          "id": "evt-194-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-194-w38-2026-03",
+          "status": "ended"
+        },
+        {
+          "id": "evt-194-w38-2026-04",
+          "status": "ended"
+        },
+        {
+          "id": "evt-194-w38-2026-02",
+          "source_checked_at": "2026-10-26",
+          "status": "ongoing",
+          "source_notes": "2026-10-26公式年間画像を実際に取得・目視。11/7の13:30～15:00、1組200円、当日受付・事前予約可を確認。HTML詳細・予約窓口は500で現在の受付枠は未確認、参加前に電話確認。",
+          "source_urls": [
+            "https://www.wellnesspark.jp/wp-content/uploads/2026/03/カヤネズミ先生R7-27-724x1024.jpg"
+          ]
+        }
+      ],
+      "candidates": [
+        {
+          "title": "かやねずみ先生 秋の旬・不思議自然ガイド",
+          "disposition": "duplicate",
+          "event_id": "evt-194-w38-2026-02",
+          "reason": "11/7の日程・時間・料金は今回取得できた公式画像で確認。"
+        },
+        {
+          "title": "かやねずみ先生 冬の夜・公園サファリイト生きものの観察（12/19）",
+          "disposition": "hold",
+          "reason": "実際に取得した公式年間画像は12/19と掲載するが夜の時間はHP参照。HTML500で時刻・受付状態を確認できない。"
+        },
+        {
+          "title": "森で遊び隊2026（11/14）",
+          "disposition": "hold",
+          "reason": "本実行の公式ドメイン検索には11/14 10～12時・一般1000円の更新があるが、ライブ公式HTML・予約窓口は500で対象年齢・活動内容・空枠未確認。"
+        },
+        {
+          "title": "写友21写真展示会",
+          "disposition": "hold",
+          "reason": "公式検索で里山交流館の告知が見つかるが、本文500で確定終了日・現在展示中かを確認できない。"
+        },
+        {
+          "title": "筋トレくらぶ（10/30）",
+          "disposition": "hold",
+          "reason": "公式検索の月間カレンダーには掲載があるが、ライブ詳細500で対象・料金・参加条件を確認できない。"
         }
       ],
       "added_ids": []
