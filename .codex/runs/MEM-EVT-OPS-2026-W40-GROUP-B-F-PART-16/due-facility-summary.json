@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-16",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T14:52:30.465984+00:00",
+  "executed_at": "2026-10-25T14:54:39.380501+00:00",
   "process_started_at": "2026-10-25T13:50:13Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -49,8 +49,8 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 1,
-    "candidate_found_added": 29,
-    "candidate_found_duplicate": 3,
+    "candidate_found_added": 28,
+    "candidate_found_duplicate": 4,
     "candidate_found_hold": 4,
     "source_unresolved": 3,
     "completed_facilities": 40
@@ -3818,61 +3818,102 @@
           ],
           "existing_event_changes": {
             "evt-255-w38-2026-01": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/takayanagi"
+              ]
             },
             "evt-255-w38-2026-02": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260915kamishibai"
+              ]
             },
             "evt-255-w38-2026-03": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260915qa"
+              ]
             },
             "evt-255-w38-2026-04": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260919-0923candle/"
+              ]
             },
             "evt-255-w38-2026-05": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260919-0923okinawa"
+              ]
             },
             "evt-255-w38-2026-06": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260919picture"
+              ]
             },
             "evt-255-w38-2026-07": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260926/universe/",
+                "https://universe.chimons.org/jsf/",
+                "https://www.jsf.or.jp/event/20261010/universe/",
+                "https://www.jsf.or.jp/event/20261024/universe/"
+              ]
             },
             "evt-255-w38-2026-08": {
               "source_checked_at": "2026-10-25",
               "source_urls": [
                 "https://www.jsf.or.jp/event/forest_30th_present20260921",
-                "https://www.jsf.or.jp/guide/",
                 "https://www.jsf.or.jp/index.html"
               ],
               "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。 2026-09-21に公式で「【臨時休館により休止】FOREST 30周年記念 プレゼント企画」を確認し、9月21日実施分を除外した。11月21日以降の実施日は変更なし。 2026-10-25:旧サイト予防停止中のため公式暫定サイトで開催を再確認。"
             },
             "evt-255-w38-2026-09": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260927/",
+                "https://business.form-mailer.jp/fms/bae5bf94281205"
+              ]
             },
             "evt-255-w38-2026-10": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260927chim-don"
+              ]
             },
             "evt-255-w38-2026-11": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20260927daredemo"
+              ]
             },
             "evt-255-w38-2026-12": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://www.jsf.or.jp/event/20261012/",
+                "https://business.form-mailer.jp/fms/f2be6332220091"
+              ]
             },
             "evt-255-w38-2026-13": {
               "source_checked_at": "2026-10-25",
               "source_urls": [
                 "https://www.jsf.or.jp/event/20261031",
-                "https://www.jsf.or.jp/guide/",
-                "https://business.form-mailer.jp/fms/b7836be2330418",
                 "https://www.jsf.or.jp/index.html"
               ],
               "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。 2026-10-25:旧サイト予防停止中のため公式暫定サイトで開催を再確認。",
               "reservation_label": "10/29まで先着順申込受付中。会員優先。小学4年～中学3年対象、午前・午後どちらでも参加可能な方。"
+            },
+            "evt-255-w38-2026-14": {
+              "source_urls": [
+                "https://www.jpuzzle.jp/2026/09/tokyo-puzzle-day-2026/",
+                "https://www.jsf.or.jp/event/202611puzzle"
+              ]
             }
           },
           "added_event_ids": [],
-          "note": "旧イベントURLを再試行後、公式が案内する暫定サイトで全文を評価。旧URL停止は脆弱性対応の予防措置と明示され、施設閉鎖ではない。"
+          "note": "旧イベントURLを再試行後、公式が案内する暫定サイトで全文を評価。旧URL停止は脆弱性対応の予防措置と明示され、施設閉鎖ではない。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-16",
@@ -4741,7 +4782,6 @@
             "evt-256-w38-planet-voyager": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/voyager/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4749,7 +4789,6 @@
             "evt-256-w38-planet-inazma": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/inazma_delivery/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4757,7 +4796,6 @@
             "evt-256-w38-planet-mmx": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/mmx/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4765,7 +4803,6 @@
             "evt-256-w38-planet-maku": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/makumakun/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4773,7 +4810,6 @@
             "evt-256-w38-planet-rail": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/the_celestial_railroad/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4781,14 +4817,12 @@
             "evt-256-w38-planet-portrait": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/minatocity_portrait_in_time/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ]
             },
             "evt-256-w38-planet-lunch": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/lunchtime/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4796,7 +4830,6 @@
             "evt-256-w38-planet-after": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/after_work/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4804,7 +4837,6 @@
             "evt-256-w38-planet-rail-en": {
               "source_urls": [
                 "https://minato-kagaku.tokyo/planetarium/the-celestial-railroad-%ef%bc%88english-version-%ef%bc%89-2/",
-                "https://minato-kagaku.tokyo/wp-content/uploads/2026/09/planetariuminfo.pdf",
                 "https://minato-kagaku.tokyo/wp-content/uploads/2026/10/planetariuminfo.pdf"
               ],
               "status": "ongoing"
@@ -4843,13 +4875,22 @@
               "status": "ended"
             },
             "evt-256-w38-planet-moon": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://minato-kagaku.tokyo/planetarium/starryskywalk-2026otsukimi/"
+              ]
             },
             "evt-256-w38-planet-fuji": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://minato-kagaku.tokyo/planetarium/fujinohoshigoyomi/"
+              ]
             },
             "evt-256-w38-planet-voyager-en": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://minato-kagaku.tokyo/planetarium/spacegrandadventure-e/"
+              ]
             },
             "evt-256-w38-27": {
               "status": "ended"
@@ -4861,7 +4902,7 @@
             "evt-256-f16-80567fa87",
             "evt-256-f16-eace7ad39"
           ],
-          "note": "イベントカレンダー・番組一覧・公式10/11月PDF・各個別ページ・全19件の公式連携予約ページを本プロセスで取得。旧9月英語回と同じURLが11月回に再利用されているため、旧回終了と新回追加を分けた。"
+          "note": "イベントカレンダー・番組一覧・公式10/11月PDF・各個別ページ・全19件の公式連携予約ページを本プロセスで取得。旧9月英語回と同じURLが11月回に再利用されているため、旧回終了と新回追加を分けた。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-16",
@@ -5386,13 +5427,12 @@
               "source_urls": [
                 "https://www.aquarium.gr.jp/news/events/31639",
                 "https://www.aquarium.gr.jp/",
-                "https://www.aquarium.gr.jp/news/32405",
                 "https://www.aquarium.gr.jp/news/32973"
               ]
             }
           },
           "added_event_ids": [],
-          "note": ""
+          "note": " QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-16",
@@ -6630,25 +6670,53 @@
           ],
           "existing_event_changes": {
             "evt-287-teko-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8729/",
+                "https://business.form-mailer.jp/fms/1815e983363723",
+                "https://business.form-mailer.jp/fms/a0caba03363869"
+              ]
             },
             "evt-287-craft-cafe-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8729/"
+              ]
             },
             "evt-287-brio-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8729/"
+              ]
             },
             "evt-287-halloween-craft-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8658/",
+                "https://calendar.google.com/calendar/ical/fl7e6rqifg0f6i1g17gvdchb20%40group.calendar.google.com/public/basic.ics"
+              ]
             },
             "evt-287-felt-clock-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8658/",
+                "https://calendar.google.com/calendar/ical/fl7e6rqifg0f6i1g17gvdchb20%40group.calendar.google.com/public/basic.ics"
+              ]
             },
             "evt-287-ghost-rattle-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8743/",
+                "https://business.form-mailer.jp/fms/5577c093254982"
+              ]
             },
             "evt-287-paper-kendama-2026": {
-              "status": "ended"
+              "status": "ended",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8658/",
+                "https://calendar.google.com/calendar/ical/fl7e6rqifg0f6i1g17gvdchb20%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/news/news-8743/"
+              ]
             },
             "evt-287-toy-festival-2026": {
               "status": "ended"
@@ -6661,7 +6729,11 @@
               ],
               "end_date": "2027-02-06",
               "date_label": "2026-09-19・2026-12-12・2027-02-06",
-              "status": "ongoing"
+              "status": "ongoing",
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
             },
             "evt-287-table-football-2026": {
               "occurrence_dates": [
@@ -6670,7 +6742,11 @@
                 "2027-03-28"
               ],
               "end_date": "2027-03-28",
-              "date_label": "2026-11-08・2027-01-17・2027-03-28"
+              "date_label": "2026-11-08・2027-01-17・2027-03-28",
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
             },
             "evt-287-baby-sign-2026": {
               "occurrence_dates": [
@@ -6681,7 +6757,11 @@
               ],
               "end_date": "2026-12-16",
               "date_label": "2026-09-16・2026-10-21・2026-11-18・2026-12-16",
-              "status": "ongoing"
+              "status": "ongoing",
+              "source_urls": [
+                "https://r.goope.jp/sunmoon0123/free/tokyo_toy#haji",
+                "https://ws.formzu.net/fgen/S596967499/"
+              ]
             },
             "evt-287-wood-keyholder-2026": {
               "end_date": "2026-11-30",
@@ -6752,16 +6832,42 @@
                 "https://calendar.google.com/calendar/ical/fl7e6rqifg0f6i1g17gvdchb20%40group.calendar.google.com/public/basic.ics",
                 "https://art-play.or.jp/ttm/news/news-8658/",
                 "https://art-play.or.jp/ttm/news/news-8743/",
-                "https://art-play.or.jp/ttm/info/",
                 "https://art-play.or.jp/ttm/news/news-8886/"
               ],
               "status": "ongoing"
             },
             "evt-287-animal-mask-2026": {
-              "status": "ongoing"
+              "status": "ongoing",
+              "source_urls": [
+                "https://art-play.or.jp/ttm/news/news-8743/",
+                "https://calendar.google.com/calendar/ical/fl7e6rqifg0f6i1g17gvdchb20%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/news/news-8658/"
+              ]
             },
             "evt-287-go-2026": {
-              "status": "ongoing"
+              "status": "ongoing",
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
+            },
+            "evt-287-boardgames-2026": {
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
+            },
+            "evt-287-shogi-2026": {
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
+            },
+            "evt-287-othello-2026": {
+              "source_urls": [
+                "https://calendar.google.com/calendar/ical/if95uomaohsouqq397mf156ddk%40group.calendar.google.com/public/basic.ics",
+                "https://art-play.or.jp/ttm/event/"
+              ]
             }
           },
           "added_event_ids": [
@@ -6769,7 +6875,7 @@
             "evt-287-f16-37151715e",
             "evt-287-f16-2dbc786fe"
           ],
-          "note": "主催公式ニュース・通常メニュー・公開ICS2本を今回取得。ICSは日時/RRULE/EXDATE/変更SEQUENCEを照合。287完了前に誤取得した288一覧1件は証跡に採用せず、288の全作業をこの行の後に再取得する。"
+          "note": "主催公式ニュース・通常メニュー・公開ICS2本を今回取得。ICSは日時/RRULE/EXDATE/変更SEQUENCEを照合。287完了前に誤取得した288一覧1件は証跡に採用せず、288の全作業をこの行の後に再取得する。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。 QAで今回未取得の旧補助URLを除去し、今回確認した一次URLを保持。"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-16",
@@ -9945,7 +10051,7 @@
           "executed_in_this_mission": true,
           "executed_at": "2026-10-25T14:47:30.111457+00:00",
           "facility_id": 1054,
-          "disposition": "candidate_found_added",
+          "disposition": "candidate_found_duplicate",
           "sources_checked": [
             {
               "url": "https://www.itbs-sem.jp/event/",
@@ -9991,9 +10097,8 @@
             },
             {
               "title": "第14回 いたばし じゆうな研究作品展",
-              "disposition": "added",
-              "event_id": "evt-1054-f16-8bb646ddd",
-              "participability": "通常参加可能"
+              "disposition": "hold",
+              "reason": "公式年報で会期/時間は確認したが、作品展固有の観覧料が未記載。無料と断定した追加をQAで取り下げ、料金確認までHOLD。"
             },
             {
               "title": "11/14星を見る会",
@@ -10085,9 +10190,7 @@
               ]
             }
           },
-          "added_event_ids": [
-            "evt-1054-f16-8bb646ddd"
-          ],
+          "added_event_ids": [],
           "note": "公式が指示する代替noteと最新PDF全頁を確認。メンテナンス本文をイベント再確認と誤認せず、12/24既存企画は新しい全館ニュースで再確認。"
         },
         {
@@ -10324,8 +10427,8 @@
         }
       ],
       "no_current_or_future_event": 1,
-      "candidate_found_added": 29,
-      "candidate_found_duplicate": 3,
+      "candidate_found_added": 28,
+      "candidate_found_duplicate": 4,
       "candidate_found_hold": 4,
       "source_unresolved": 3
     }
