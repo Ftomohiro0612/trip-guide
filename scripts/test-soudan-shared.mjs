@@ -54,7 +54,7 @@ test('custom Cloudflare worker enforces headers even when generated middleware i
   const helper = ast.statements.find((statement) => ts.isFunctionDeclaration(statement) && statement.name.text === 'applySoudanHeaders');
   assert.ok(helper);
   const applyHeaders = new Function(`${helper.getText(ast)}; return applySoudanHeaders;`)();
-  for (const path of ['/soudan', '/soudan/test', '/soudan/test/', '/api/soudan', '/api/soudan/respond']) {
+  for (const path of ['/soudan', '/soudan/test', '/soudan/test/', '/api/soudan', '/api/soudan/respond', '/api/soudan/destinations', '/api/soudan/candidates']) {
     const original = new Response('unavailable', { status: 404, headers: { 'Cache-Control': 'public, max-age=300' } });
     const response = applyHeaders(original, path);
     assert.equal(response.status, 404);
@@ -67,6 +67,15 @@ test('custom Cloudflare worker enforces headers even when generated middleware i
   const other = new Response('other');
   assert.equal(applyHeaders(other, '/soudan-other'), other);
   assert.match(source, /return applySoudanHeaders\(response, new URL\(request.url\).pathname\)/);
+});
+
+test('worker loads canon for candidate creation, and skips only canon-free soudan APIs', () => {
+  const ast = ts.createSourceFile('worker.js', read('cloudflare/worker.js'), ts.ScriptTarget.Latest, true, ts.ScriptKind.JS);
+  const helper = ast.statements.find((s) => ts.isFunctionDeclaration(s) && s.name.text === 'requestNeedsRuntimeCanon');
+  assert.ok(helper);
+  const needsCanon = new Function(`${helper.getText(ast)}; return requestNeedsRuntimeCanon;`)();
+  for (const path of ['/api/soudan/candidates', '/api/soudan', '/api/soudan/future', '/soudan/token', '/mypage/soudan']) assert.equal(needsCanon(path), true, path);
+  for (const path of ['/api/soudan/respond', '/api/soudan/destinations']) assert.equal(needsCanon(path), false, path);
 });
 
 test('sitemap excludes shared paths without blocking robots from reading noindex', () => {

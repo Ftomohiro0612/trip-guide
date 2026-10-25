@@ -53,6 +53,7 @@ function harness(steps = [], { user = { id: 'owner' } } = {}) {
     const evaluatedModule = { exports: {} };
     cache.set(file, evaluatedModule);
     function require(specifier) {
+      if (specifier === 'server-only') return {};
       if (specifier === 'next/cache') return { revalidatePath: (path) => invalidations.push(path) };
       if (specifier === '@/lib/supabase/server') return { createClient: async () => db };
       const relative = specifier.startsWith('@/') ? specifier.slice(2) : posix.join(posix.dirname(file), specifier);
