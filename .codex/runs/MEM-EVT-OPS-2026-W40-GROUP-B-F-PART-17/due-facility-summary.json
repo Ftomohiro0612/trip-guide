@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T16:05:06.949560+00:00",
+  "executed_at": "2026-10-25T16:09:36.371018+00:00",
   "due_facility_ids": [
     1061,
     1066,
@@ -45,11 +45,11 @@
     194
   ],
   "aggregate": {
-    "total": 29,
+    "total": 30,
     "no_current_or_future_event": 8,
     "candidate_found_added": 10,
     "candidate_found_duplicate": 2,
-    "candidate_found_hold": 8,
+    "candidate_found_hold": 9,
     "source_unresolved": 1
   },
   "per_region": {
@@ -1213,13 +1213,14 @@
         108,
         109,
         110,
-        111
+        111,
+        113
       ],
-      "total": 4,
+      "total": 5,
       "no_current_or_future_event": 2,
       "candidate_found_added": 1,
       "candidate_found_duplicate": 1,
-      "candidate_found_hold": 0,
+      "candidate_found_hold": 1,
       "source_unresolved": 0,
       "sources_checked": [
         {
@@ -1312,6 +1313,48 @@
           "checked_at": "2026-10-25T16:04:45.036641+00:00",
           "final_url": "https://blog.haiji-no-mura.com/",
           "text_sha256": "219191c20e078cb1b7ca629aac501912279a55c9db8a965711c5926a5dc9f22b"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:14.202529+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event",
+          "text_sha256": "8b14726eab1ef2bf6a62a6235ce646d00e1ce701981dee8d5f09726861471837"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-home",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:14.688748+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-home",
+          "text_sha256": "75ccb9d707ed35663444dd88fd6da44989d12fb4615b9bb37d7eeb157d145dc6"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event1",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:20.451662+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event1",
+          "text_sha256": "749b0df610f7fc2e2669f6e6e9bba260ac37cafa50ab4425dca3621f8b96de95"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event2",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:20.869413+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event2",
+          "text_sha256": "a5de4ae64fcc0661e7547c7532e31f2cac60c51e1b8f54a0946dcf0572e2314e"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event3",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:21.255856+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event3",
+          "text_sha256": "b0ac62ef42ea7101413fdf5326c91c3aaf52cca3ca4a3845af4132023d496298"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event4",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:21.596327+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event4",
+          "text_sha256": "65c1db7d72a144fff1a071a043c2c2c541d51f5bb76e5da064b5b10538980b91"
         }
       ],
       "existing_event_holds": []
@@ -3562,6 +3605,81 @@
         {
           "title": "モイストポプリ・ハーバリウム・ボトルフラワー",
           "reason": "毎日の通常体験メニューで限定会期の告知なし。"
+        }
+      ],
+      "added_ids": []
+    },
+    {
+      "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
+      "executed_in_this_mission": true,
+      "executed_at": "2026-10-25T16:09:36.370373+00:00",
+      "facility_id": 113,
+      "prefecture": "yamanashi",
+      "sources_checked": [
+        {
+          "url": "https://www.yatuboku.jp/makiba-event",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:14.202529+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event",
+          "text_sha256": "8b14726eab1ef2bf6a62a6235ce646d00e1ce701981dee8d5f09726861471837"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-home",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:14.688748+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-home",
+          "text_sha256": "75ccb9d707ed35663444dd88fd6da44989d12fb4615b9bb37d7eeb157d145dc6"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event1",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:20.451662+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event1",
+          "text_sha256": "749b0df610f7fc2e2669f6e6e9bba260ac37cafa50ab4425dca3621f8b96de95"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event2",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:20.869413+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event2",
+          "text_sha256": "a5de4ae64fcc0661e7547c7532e31f2cac60c51e1b8f54a0946dcf0572e2314e"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event3",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:21.255856+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event3",
+          "text_sha256": "b0ac62ef42ea7101413fdf5326c91c3aaf52cca3ca4a3845af4132023d496298"
+        },
+        {
+          "url": "https://www.yatuboku.jp/makiba-event4",
+          "status": 200,
+          "checked_at": "2026-10-25T16:05:21.596327+00:00",
+          "final_url": "https://www.yatuboku.jp/makiba-event4",
+          "text_sha256": "65c1db7d72a144fff1a071a043c2c2c541d51f5bb76e5da064b5b10538980b91"
+        }
+      ],
+      "disposition": "candidate_found_hold",
+      "reason": "公式イベント一覧・4企画・最新告知を確認。令和8年度フェルト教室と自然観察会は終了、きのこ教室は中止。",
+      "candidates": [
+        {
+          "title": "まきばウォーク",
+          "disposition": "hold",
+          "reason": "企画ページは7月30日～10月30日の水・木曜、要予約のコースを掲載する一方、ホームの10月8日告知はクマ目撃のため園外へ続く歩道入口を閉鎖とする。掲載日程の年度、閉鎖中の実施可能コースと予約可否が確認できず保留。",
+          "sources": [
+            "https://www.yatuboku.jp/makiba-event2",
+            "https://www.yatuboku.jp/makiba-home"
+          ]
+        }
+      ],
+      "updates": [
+        {
+          "id": "evt-113-w38-2026-01",
+          "status": "ended"
+        },
+        {
+          "id": "evt-113-w38-2026-02",
+          "status": "ended"
         }
       ],
       "added_ids": []
