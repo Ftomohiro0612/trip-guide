@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W40-GROUP-B-F-PART-17",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-25T16:24:00.680702+00:00",
+  "executed_at": "2026-10-25T16:25:55.450023+00:00",
   "due_facility_ids": [
     1061,
     1066,
@@ -3705,14 +3705,14 @@
         {
           "title": "企画展ギャラリートーク11/14・11/28・12/19",
           "disposition": "duplicate",
-          "event_id": "evt-3867-20261026-01",
-          "reason": "同一第3展示室の開催中企画展の解説回。企画展summaryに各日程/時間を明記し包含。"
+          "event_id": "evt-d11-yamagata-prime-hunters-2026",
+          "reason": "検査時にfacility_id:nullの同一会場既存レコードを照合。既存IDを維持し公式確認日を更新。"
         },
         {
           "title": "極東の狩人－阿部祥人が追い求めた氷河期の開拓者たち－",
-          "disposition": "added",
-          "event_id": "evt-3867-20261026-01",
-          "participability": "通常参加可能"
+          "disposition": "duplicate",
+          "event_id": "evt-d11-yamagata-prime-hunters-2026",
+          "reason": "検査時にfacility_id:nullの同一会場既存レコードを照合。既存IDを維持し公式確認日を更新。"
         },
         {
           "title": "ハロウィンナイトミュージアム（山形県立博物館）",
@@ -3722,22 +3722,19 @@
         },
         {
           "title": "文化の日無料開館・親子体験（山形県立博物館）",
-          "disposition": "added",
-          "event_id": "evt-3867-20261026-03",
-          "participability": "通常参加可能"
+          "disposition": "duplicate",
+          "event_id": "evt-d11-yamagata-culture-day-2026",
+          "reason": "検査時にfacility_id:nullの同一会場既存レコードを照合。既存IDを維持し公式確認日を更新。"
         },
         {
           "title": "国宝土偶「縄文の女神」展示解説会",
-          "disposition": "added",
-          "event_id": "evt-3867-20261026-04",
-          "participability": "通常参加可能"
+          "disposition": "duplicate",
+          "event_id": "evt-yamagata-202608-02",
+          "reason": "検査時にfacility_id:nullの同一会場既存レコードを照合。既存IDを維持し公式確認日を更新。"
         }
       ],
       "added_ids": [
-        "evt-3867-20261026-01",
-        "evt-3867-20261026-02",
-        "evt-3867-20261026-03",
-        "evt-3867-20261026-04"
+        "evt-3867-20261026-02"
       ]
     },
     {
@@ -6731,15 +6728,13 @@
         },
         {
           "title": "歴史・文化探訪（金川編）",
-          "disposition": "added",
-          "event_id": "evt-177-20261026-02",
-          "participability": "条件付き参加可能"
+          "disposition": "hold",
+          "reason": "同じ公式月間案内・同日開始の別企画（歴史文化探訪と森林セラピー）であることは確認済み。既存validatorのofficial_url_date_collisionに該当し、PM確認済み例外がないため本runは共有source-shape HOLD。PMは別企画例外の可否を判断。"
         },
         {
           "title": "晩秋の森で自分を満たす森林セラピー",
-          "disposition": "added",
-          "event_id": "evt-177-20261026-03",
-          "participability": "条件付き参加可能"
+          "disposition": "hold",
+          "reason": "同じ公式月間案内・同日開始の別企画（歴史文化探訪と森林セラピー）であることは確認済み。既存validatorのofficial_url_date_collisionに該当し、PM確認済み例外がないため本runは共有source-shape HOLD。PMは別企画例外の可否を判断。"
         },
         {
           "title": "県民の日 金川の森スポーツ体験",
@@ -6768,8 +6763,6 @@
       ],
       "added_ids": [
         "evt-177-20261026-01",
-        "evt-177-20261026-02",
-        "evt-177-20261026-03",
         "evt-177-20261026-04",
         "evt-177-20261026-05",
         "evt-177-20261026-06",
@@ -7030,5 +7023,6 @@
       "added_ids": []
     }
   ],
-  "prior_run_numbers_reused_as_execution": false
+  "prior_run_numbers_reused_as_execution": false,
+  "validation_reconciliation": "Merged-rendered-set duplicate check resolved 3 newly proposed duplicate rows to existing null-facility venue IDs; 2 distinct same-source/date items remain source-shape HOLD pending PM exception review. No pre-existing record removed."
 }
