@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 import { createClient } from "@/lib/supabase/client";
+import { usePathname } from "next/navigation";
 
 type WishlistLoadState = "loading" | "guest" | "ready";
 
@@ -31,6 +32,7 @@ function normalizeSlug(slug: string) {
 }
 
 export function WishlistProvider({ children }: { children: React.ReactNode }) {
+  const shared = usePathname().startsWith("/soudan/");
   const [loadState, setLoadState] = useState<WishlistLoadState>("loading");
   const [userId, setUserId] = useState<string | null>(null);
   const [wishlistSlugs, setWishlistSlugs] = useState<Set<string>>(
@@ -77,6 +79,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
+    if (shared) return;
     let active = true;
 
     const handleLoadError = () => {
@@ -104,7 +107,7 @@ export function WishlistProvider({ children }: { children: React.ReactNode }) {
       window.clearTimeout(initialLoadId);
       subscription.unsubscribe();
     };
-  }, [loadWishlist]);
+  }, [loadWishlist, shared]);
 
   const isWishlisted = useCallback(
     (facilitySlug: string) => wishlistSlugs.has(normalizeSlug(facilitySlug)),

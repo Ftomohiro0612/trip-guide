@@ -312,8 +312,10 @@ export function getVisibleEventsByFacility(
     .slice(0, limit);
 }
 
+let eventsById: Map<string, EventItem> | undefined;
 export function getEventById(eventId: string): EventItem | undefined {
-  return events.find((event) => event.id === eventId);
+  eventsById ??= new Map(events.map((event) => [event.id, event]));
+  return eventsById.get(eventId);
 }
 
 export function getFacilityForEvent(event: EventItem): Facility | undefined {

@@ -47,7 +47,9 @@ export default function Analytics() {
                 var tokens = url.pathname.match(/\\/soudan\\/[^/]+/g) || [];
                 tokens.forEach(function(path) {
                   var token = path.slice('/soudan/'.length);
-                  url.search = url.search.replace(/=([^&]*)/g, function(_, value) { return '=' + value.split(token).join(':token'); });
+                  url.search = token.length >= 32
+                    ? url.search.split(token).join(':token')
+                    : url.search.replace(/=([^&]*)/g, function(_, value) { return '=' + value.split(token).join(':token'); });
                   url.hash = url.hash.split(token).join(':token');
                 });
                 url.pathname = maskText(url.pathname);
