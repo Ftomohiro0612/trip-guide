@@ -86,7 +86,8 @@
       "hold": 2,
       "stale_false": 0,
       "unit_notes": {
-        "organizer_event_series": "既存events_dataの主催/notesと観光詳細の主催者リンクから探索。単施設のeventsページをorganizer代用にしない。"
+        "organizer_event_series": "既存events_dataの主催/notesと観光詳細の主催者リンクから探索。単施設のeventsページをorganizer代用にしない。",
+        "rendered_duplicate_verification": "Previewの全ページを実際に巡回し、通常+summer結合集合の表示IDを全重複候補と照合。滋賀の博物館展示1件（2 encounter）は実表示対象外かつ一次522のためHOLDへ訂正。"
       },
       "late_discovery_note": "secondary中に実行した主催者検索からmulti-venueが確認されたためsource記録追加。候補の終端判定はsecondary evidenceへ記録し二重計上しない。"
     },
@@ -124,28 +125,32 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-shiga-w41-d4-rail-invitation",
           "reason": "本走行の県公式単位で追加済みの同一日・同一会場。",
-          "source_type": "organizer_event_series"
+          "source_type": "organizer_event_series",
+          "event_category": "facility_hosted"
         },
         {
           "title": "明治トリップ長浜散歩",
           "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
           "disposition": "hold",
           "reason": "大人向け着物散策。子どもの参加対象・同伴条件が未確定。",
-          "source_type": "organizer_event_series"
+          "source_type": "organizer_event_series",
+          "event_category": "facility_hosted"
         },
         {
           "title": "育児のご褒美時間",
           "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
           "disposition": "hold",
           "reason": "保護者向け休息・交流で託児はあるが親子で行う体験ではない。現時点の残枠も未確認。",
-          "source_type": "organizer_event_series"
+          "source_type": "organizer_event_series",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第65回写真展／第76回文学祭／第80回美術展と文化祭参加事業群",
           "official_url": "https://www.pref.shiga.lg.jp/sc00/press-release/32537.html",
           "disposition": "hold",
           "reason": "写真展は終了。他は複数会場の総覧。個別参加条件と子ども向け内容を未確定のまま一会場に登録しない（source-family HOLD）。",
-          "source_type": "organizer_event_series"
+          "source_type": "organizer_event_series",
+          "event_category": "fireworks_festival_seasonal"
         }
       ],
       "candidates_found": 4,
@@ -155,7 +160,8 @@
       "stale_false": 0,
       "unit_notes": {
         "organizer_event_series": "既存eventsのJAF主催・source_notes、観光一覧の主催者名、県のシリーズ事業を起点に確認。単一施設のイベントページは主催者カバーとして計上しない。",
-        "secondary_discovered_followup": "二次候補から出たJAFの主催者一次ページを同じ走行で取得。候補はrecall側で一度だけ計上。"
+        "secondary_discovered_followup": "二次候補から出たJAFの主催者一次ページを同じ走行で取得。候補はrecall側で一度だけ計上。",
+        "rendered_duplicate_verification": "Previewの全ページを実際に巡回し、通常+summer結合集合の表示IDを全重複候補と照合。滋賀の博物館展示1件（2 encounter）は実表示対象外かつ一次522のためHOLDへ訂正。"
       }
     }
   }

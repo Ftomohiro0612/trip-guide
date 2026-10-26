@@ -1213,7 +1213,8 @@
         "municipal_official": "県都かつ県内最大市の10～12月カレンダーを通覧。審議会・開庁/相談・シニア限定・成人健康講座・譲渡/飼育実務・人権専門講座は家族のおでかけ催事対象外としてスクリーニング。過去10/25以前の行事は新規採用対象外。家族が鑑賞/体験できる4候補を個別判定。",
         "tourism_board": "GoNAGANO月別10/26以降・11月・12月を終端まで通覧し37候補を全件詳細確認。主催者リンクも取得。候補数は一覧間の同一URLを重複除外した37件。原文/リンク配列は証拠JSONへ埋め込まず一時HTTPキャッシュに限定。",
         "seasonal_new_arrival": "新着一覧は10月告知まで確認。イルミネーションの10/19更新公式で2027年2月までの予告も候補化。施設休業・採用・交通通知は催事として採用しない。",
-        "festival_fireworks": "10/19更新の紅葉11スポットと2025版冬特集を全段確認。現年中止2件、予告/年度不明/必須情報不足を候補別保持。過去冬会期を年だけ繰り越さない。"
+        "festival_fireworks": "10/19更新の紅葉11スポットと2025版冬特集を全段確認。現年中止2件、予告/年度不明/必須情報不足を候補別保持。過去冬会期を年だけ繰り越さない。",
+        "rendered_duplicate_verification": "Previewの全ページを実際に巡回し、通常+summer結合集合の表示IDを全重複候補と照合。滋賀の博物館展示1件（2 encounter）は実表示対象外かつ一次522のためHOLDへ訂正。"
       }
     },
     "shiga": {
@@ -2978,553 +2979,632 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-wartime-nursing",
           "participability": "通常参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "びわこルールキッズ2026大募集！",
           "official_url": "https://www.pref.shiga.lg.jp/dk00/press-release/32524.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "第13回県史編さんミニ展示 「近代滋賀の病院」の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/cd40/press-release/32520.html",
           "disposition": "hold",
           "reason": "医療制度史の展示ケース。子ども向けの鑑賞・体験の根拠が本文にない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度滋賀の福祉の現場から生まれた造形の魅力発信事業",
           "official_url": "https://www.pref.shiga.lg.jp/sc00/press-release/33987.html",
           "disposition": "hold",
           "reason": "複数宿泊施設等に分散し、施設ごとの一般来訪の可否・鑑賞時間が未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "昭和100年記念展第2弾「公文書にみる昭和の戦争の記録」および 沖縄-第32軍司令部壕再現模型展示の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/cd40/press-release/32521.html",
           "disposition": "hold",
           "reason": "公文書史料展示。子ども向け案内がなく、併催模型は10/9終了。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【9月1日（火曜日）から11月30日（月曜日）まで】多賀サービスエリア（下り）を拠点としたレンタサイクル実証実験を実施します！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/32739.html",
           "disposition": "hold",
           "reason": "レンタサイクル実証実験の常設的サービス。子ども用車両・同伴条件が確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "10月は近江の地酒もてなし普及促進月間です！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33505.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "滋賀県が舞台となったオリジナルTVアニメ「さよならララ」特別展示を開催！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33130.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【開催中止】「第14回2026バスの日まつりinびわこ」今年も開催！！",
           "official_url": "https://www.pref.shiga.lg.jp/ra00/press-release/33333.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「桃鉄とびわ湖一周！目指せ 近江の億万長者」の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33347.html",
           "disposition": "hold",
           "reason": "多数の駅・港・観光地を巡るラリー。単一会場の安全なマッピングとスポット別条件が未確定。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和８年度　未来の自分へ【プレコンセプションケア事業】～参加者募集のお知らせ～",
           "official_url": "https://www.pref.shiga.lg.jp/jc00/press-release/33888.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "～歴史的街道景観まちづくり～御代参街道タウンミーティング開催のお知らせ",
           "official_url": "https://www.pref.shiga.lg.jp/ra00/press-release/33373.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和８年度第２回滋賀県立病院経営協議会の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/nb00/press-release/33756.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "デジタル・デザインスキルが学べる「みんなのがっこう2026」を開催します！～北の近江女性IT基礎スキル向上事業～",
           "official_url": "https://www.pref.shiga.lg.jp/fg00/press-release/32530.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "県庁フードドライブを実施します",
           "official_url": "https://www.pref.shiga.lg.jp/df00/press-release/33572.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "健康しが近江歴史探訪会 -前田利家ゆかりの今津浦を訪ねて-",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/32542.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「びわ湖で遊ぼう！自然体験フェア」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/de00/press-release/33105.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "ASK02 滋賀県立美術館 湖北における現代美術展 「金氏徹平 煙と霧 中山道柏原宿」",
           "official_url": "https://www.pref.shiga.lg.jp/sc30/press-release/32538.html",
           "disposition": "hold",
           "reason": "4会場を巡る展示。主受付は示されるが暗い古民家と段差・防寒が必要。幼児同伴時の動線/一会場への安全な集約を保留。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【脱・自己流！】男性向け自分磨きセミナーを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33211.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "滋賀デスティネーションキャンペーン　プレキャンペーンオープニングイベントをJR大阪駅で開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33576.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「幻の安土城」復元プロジェクト・安土城築城450年事業・市町連携事業（探訪会）「安土城築城への道」第1回：史跡百済寺境内",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/32741.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "写真展「モザンビーク・スナップ - アアコシダの子どもたちのまなざし -」を開催",
           "official_url": "https://www.pref.shiga.lg.jp/cc00/press-release/33812.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度滋賀県木造建築セミナーの参加者を募集します！",
           "official_url": "https://www.pref.shiga.lg.jp/dj02/press-release/32523.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "企業の「魅力ある職場づくり」を支援します！～第2回セミナーのご案内～",
           "official_url": "https://www.pref.shiga.lg.jp/fe00/press-release/33762.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "健康しが近江歴史探訪会ー下坂氏館跡と福田寺を訪ねてー開催のお知らせ",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/bunkatusitu/33842.html",
           "disposition": "hold",
           "reason": "約5kmの歴史散策。子ども対象と参加可否・現在の残枠が未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "安土城築城450年×クレヨンしんちゃん　親子で挑む謎解きスタンプラリーを開催！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33588.html",
           "disposition": "hold",
           "reason": "4施設スタンプラリー。施設横断の時間・単一座標の扱いを保留（施設追加を要件にはしない）。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "第７６回“社会を明るくする運動”× 第２回滋賀県再犯防止勉強会 まなびでつながる更生保護シンポジウム 「まなびを行動へ、行動を地域の力へ」について",
           "official_url": "https://www.pref.shiga.lg.jp/ea00/press-release/33577.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「朗読会 司馬遼太郎原作『豊臣家の人々』 ―― 豊臣秀長と北近江・長浜」の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/sc00/press-release/32536.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【来年に開館迫る！】新しい琵琶湖文化館 特別ブース出展in大津祭",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/32983.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "「第56回滋賀県芸術文化祭」の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/sc00/press-release/32537.html",
           "disposition": "hold",
           "reason": "複数会場・複数事業を束ねる芸術文化祭。個別事業の参加経路・家族向け内容を未確定のまま一件にしない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "国宝延暦寺根本中堂および重要文化財延暦寺根本中堂廻廊保存修理工事の現場見学会を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/kenzou/33616.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "彦根城 世界遺産国内推薦候補選定を記念！彦根市キャラクター「ひこにゃん」と 滋賀県出身・アーティスト武元唯衣(たけもとゆい)さんが 「ここ滋賀」に登場！",
           "official_url": "https://www.pref.shiga.lg.jp/sa30/press-release/33777.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「近江の城」魅力発信事業・東京シンポジウム 「近江戦国史12：北近江の戦国史3」",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/32539.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「近江の城」魅力発信事業・東京講座「戦国近江へのいざない～豊臣近江の城」",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/aduchi/33918.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【開催中止】児童虐待防止キャラバン隊の出発式について",
           "official_url": "https://www.pref.shiga.lg.jp/jd00/press-release/34101.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "県立総合病院「小児新棟」の設計説明会を開催します。",
           "official_url": "https://www.pref.shiga.lg.jp/kensou/press-release/33913.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "経営にAIを活かす第一歩 製造業の未来を拓くAI活用セミナーを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/fd00/press-release/33521.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "『北の近江AiR』クラウドファンディング開始＆オープンスタジオ・マルシェ開催！",
           "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33869.html",
           "disposition": "hold",
           "reason": "公開制作・マルシェは10/24終了。11/30はクラウドファンディング期限で来訪イベント期間ではない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "「第46回滋賀県児童生徒発明くふう展」および「第32回滋賀県未来の科学の夢絵画展」の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/fd00/press-release/34140.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【彦根市】しが結出張登録会を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33500.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "2026年滋賀県甲賀市育樹活動の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/dj00/press-release/33055.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「滋賀けんせつみらいフェスタ2026」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ha01/press-release/33556.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "イベント「未来につなげる食と資源の循環～暮らしの中のサーキュラーエコノミー～」を2026年10月17日(土)に開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/df00/press-release/33595.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度プラスチックごみ・食品ロス削減優良取組表彰の表彰式実施について",
           "official_url": "https://www.pref.shiga.lg.jp/df00/press-release/33975.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「しが結」主催婚活イベントを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33212.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度 日本語学習支援者セミナーの開催について",
           "official_url": "https://www.pref.shiga.lg.jp/cc00/press-release/33831.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "今年もパワーアップした 「びわ湖キッズサイクル旅～ビワイチの子2026～」を開催！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/32535.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【野洲市】しが結出張登録会を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33501.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「ファミリーカーニバル2026」　10月18日（日）開催！",
           "official_url": "https://www.pref.shiga.lg.jp/nc00/press-release/33939.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「令和8年度第1回マンション管理基礎セミナー」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/rc00/press-release/33146.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "開催します！！『近江牛を食べて当てよう！キャンペーン』",
           "official_url": "https://www.pref.shiga.lg.jp/ge00/press-release/34197.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度第1回滋賀県原子力安全対策連絡協議会を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/as00/press-release/34141.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "グリーン経済フォーラム2026開催！",
           "official_url": "https://www.pref.shiga.lg.jp/ra00/press-release/33369.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "伝統的工芸品等全国巡回展示販売会「しがのいいもの、旅する工芸」名古屋会場で10月21日(水曜日)～25日(日曜日)開催！",
           "official_url": "https://www.pref.shiga.lg.jp/fd00/press-release/34168.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「県内事業者の外国人材雇用の事例から学ぶ」外国人材雇用好事例共有セミナーを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/fe00/press-release/33971.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和８年度滋賀県更生保護事業関係者顕彰式典について",
           "official_url": "https://www.pref.shiga.lg.jp/ea00/press-release/34198.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "企業の「魅力ある職場づくり」を支援します！～第3回セミナーのご案内～",
           "official_url": "https://www.pref.shiga.lg.jp/fe00/press-release/34389.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "〈参加者募集中〉女性の起業家交流会 みんなのwell-beingのために！ 10月23日（金曜日）",
           "official_url": "https://www.pref.shiga.lg.jp/fg30/press-release/34046.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "5th Anniversaryビワイチの日･ビワイチ週間2026を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33780.html",
           "disposition": "hold",
           "reason": "複数会場のビワイチ企画。個別日時と子どもの走行安全・参加条件を一会場レコードに集約できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "10月26日「ワールドマスターズゲームズ2027関西」米原駅装飾お披露目セレモニーを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/se00/press-release/34324.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度 琵琶湖流域下水道湖南中部浄化センター運営協議会の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/dd30/press-release/34253.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "原発事故から15年、 ふくしまの現在地　 第115回『防災カフェ』",
           "official_url": "https://www.pref.shiga.lg.jp/as00/press-release/34299.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度 滋賀の文化財講座「花湖さんの打出のコヅチ」を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/32540.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度 農業大学校開放講座 農業機械研修1「農業機械基本研修（実技編）」の開催",
           "official_url": "https://www.pref.shiga.lg.jp/ga36/press-release/32914.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "10月31日（土曜日）「滋賀もりづくりアカデミー」受講相談会＆ハーベスタシミュレータ体験（水源の森オータムフェスタとの連携イベント）",
           "official_url": "https://www.pref.shiga.lg.jp/dj02/press-release/34241.html",
           "disposition": "hold",
           "reason": "林業研修相談とシミュレータ。オータムフェスタと同時開催だが体験対象年齢・参加経路未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "【草津市】しが結出張登録会を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33852.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "愛荘町×滋賀県連携フードドライブを実施します。",
           "official_url": "https://www.pref.shiga.lg.jp/df00/press-release/34094.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "10月31日（土曜日）野洲市の滋賀県立近江富士花緑公園にて 森や木に親しむイベント「水源の森オータムフェスタ」を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/dj00/press-release/33715.html",
           "disposition": "hold",
           "reason": "秋祭り。本文で雨天/荒天と交通案内が未確認のため必要4項目を満たさない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "次世代アスリート発掘育成プロジェクト 「滋賀レイキッズ第1３期生」認定証交付式の開催について",
           "official_url": "https://www.pref.shiga.lg.jp/se00/press-release/34377.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "講座「地域活動の魅力」を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/de52/press-release/34259.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "豊臣4days in 北近江 【day3】出演者決定！観覧募集を行います",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33470.html",
           "disposition": "hold",
           "reason": "観覧募集の現時点の受付可否と子ども対象内容の裏取り未了。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "奥びわスポーツの森 スケートボードパークの完成を記念して、「グランドオープンイベント」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/rb00/press-release/34285.html",
           "disposition": "hold",
           "reason": "初心者スケートボード体験の年齢・安全装備・申込方法が未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "官民連携でビワイチを盛り上げる!!ビワイチの日・ビワイチ週間2026第2弾！おもてなし新規企画、続々登場!!",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/34011.html",
           "disposition": "hold",
           "reason": "ビワイチ複数会場の企画群。各会場の参加条件と一会場への安全な集約が未確定。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "新しい琵琶湖⽂化館開館1年前カウントダウンイベント～びわ湖のほとりで未来をえがこう～開催のご案内",
           "official_url": "https://www.pref.shiga.lg.jp/sd00/press-release/33476.html",
           "disposition": "hold",
           "reason": "文化館建設地と周辺公園を巡る催し。工事区域の動線・交通案内が本文だけでは確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "11月３日（火・祝）「ビワイチの日」に、ビワイチのこれからをみんなで考える「ビワイチ・フォーラム」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/33514.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "電気自動車（EV）活用セミナーを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/cg00/press-release/33111.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「令和8年度働く女性のハッピー・キャリアセミナー」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/fg00/press-release/32529.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【11月5日、11月13日】びわ湖カーボンクレジット勉強会を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/cg00/press-release/33602.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "ミニトマト農業体験",
           "official_url": "https://www.pref.shiga.lg.jp/gc00/34414.html",
           "disposition": "hold",
           "reason": "満16歳以上の就農支援講座で幼児・小学生の家族体験ではない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "じんけんミニフェスタ＆しが多文化共生フェスタを開催します！",
@@ -3532,7 +3612,8 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-multiculture",
           "participability": "通常参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「まちの魅力をもっと日常に。」をコンセプトに県北部地域の子育て世代が考え、企画したイベントが開催されます！",
@@ -3540,35 +3621,40 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-rail-invitation",
           "participability": "通常参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "シンポジウム「感染症と共に生きる社会  ～不確実な状況のなかでどう判断し、どう伝えるか～",
           "official_url": "https://www.pref.shiga.lg.jp/ej00/press-release/33351.html",
           "disposition": "hold",
           "reason": "10月の広報カレンダーに掲載されるが、当該催しの実開催は本日の調査より前。過去イベントを新規登録しない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【開催案内】／令和8年度第4回G-NETほっとセミナーのお知らせ（11月13日（金曜日）開催）",
           "official_url": "https://www.pref.shiga.lg.jp/fg30/press-release/33820.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "骨髄バンクドナー登録説明員研修会の参加者を募集します",
           "official_url": "https://www.pref.shiga.lg.jp/eh00/press-release/33612.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【大津市】しが結出張登録会を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/34371.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「木育ワンダーパーク 2026 in 東近江」を開催します！",
@@ -3576,35 +3662,40 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-wood-wonder",
           "participability": "通常参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "【大津市】しが結主催婚活イベントを開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/34373.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【タウンミーティング】SHIGAみらいトーク～わたしたちの暮らしとまちと交通の未来を考える～11月分開催決定！",
           "official_url": "https://www.pref.shiga.lg.jp/ra00/press-release/34093.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "子どもたちの”今”を知る公開講座～安心して自分の思いを言葉にできない子どもたち～",
           "official_url": "https://www.pref.shiga.lg.jp/ja00/press-release/33937.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「失語症」について県民講座を実施します",
           "official_url": "https://www.pref.shiga.lg.jp/ec00/press-release/34415.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "下物ビオトープ観察会～池の水だいたい抜く～",
@@ -3612,21 +3703,24 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-biotope",
           "participability": "条件付き参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和８年度木育講座（製材所＆木育施設見学編）を開催します（受講生募集）",
           "official_url": "https://www.pref.shiga.lg.jp/dj02/press-release/34186.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "東京で「近江ゆかりの会」を開催します！",
           "official_url": "https://www.pref.shiga.lg.jp/ca30/press-release/34039.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【障害者等の文化芸術活動を支える拠点づくり事業】みんなのハート 大きな木をさかせよう",
@@ -3634,56 +3728,64 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-heart-tree",
           "participability": "条件付き参加可能",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "G-NETしがフェスタ2026を開催します！11月29日（日曜日）",
           "official_url": "https://www.pref.shiga.lg.jp/fg30/press-release/34038.html",
           "disposition": "hold",
           "reason": "家族向けフェスタだが2施設に分散。ブース別参加料金・悪天候時対応と交通案内を未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "第3回滋賀県史講演会を開催します",
           "official_url": "https://www.pref.shiga.lg.jp/cd40/press-release/34106.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "令和8年度女性農業者リーダー育成研修会のお知らせ",
           "official_url": "https://www.pref.shiga.lg.jp/gc00/press-release/34262.html",
           "disposition": "hold",
           "reason": "行政・専門研修/支援・広報または成人向け講座。家族のおでかけ向け参加内容を確認できない。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "琵琶湖博物館ナイトミュージアムツアー情報第２弾！近畿・北陸圏発着の日帰りプランも販売中",
           "official_url": "https://www.pref.shiga.lg.jp/de52/press-release/34263.html",
           "disposition": "hold",
           "reason": "ツアー参加者限定で当日券なし。各出発地の在庫・子ども料金と博物館入場時間を未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "「お城EXPO 2026」にて西川貴教さんのスペシャルトークショーが決定！",
           "official_url": "https://www.pref.shiga.lg.jp/sa00/press-release/34154.html",
           "disposition": "hold",
           "reason": "県外の催し。今回の滋賀・長野の開催地域範囲外。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "明治トリップ長浜散歩／育児のご褒美時間",
           "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
           "disposition": "hold",
           "reason": "同じ発表の親子鉄道企画は追加。他2企画（大人の着物散策・母親の休息）は子ども同伴での体験範囲と現時点残枠を未確認。",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月19日～11月13日】「100円バスWeeks」 を実施します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76874.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月24日、25日、31日】大津市科学館「わくわくサイエンス」を開催します",
@@ -3691,56 +3793,64 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-balloon-mouse",
           "participability": "条件付き参加可能",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "【令和8年10月25日】スリースマイルゴルフ（ニュースポーツ）大会参加者を募集します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75944.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月27日、11月3日、11月17日】数多の文化財と歴史を辿る「大津の文学さんぽ」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76051.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月28日】親子のほっとサロン「子どもの頭と心が育つ！絵本の読み聞かせ講座」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75052.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月1日】男女共同参画イベント「みんなで実践！“team家事”のススメ！」 を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77184.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月1日】「大津でつながる 活動交流会＆個別相談会」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76888.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月11日・11月25日】2日で学ぶ介護技術教室を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76248.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月13日】認知症サポーター（個人向け）養成講座を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75181.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月14日～15日】葛川を舞台にした1泊2日の体験プログラム「かつらがわワイルドアドベンチャー」を開催します",
@@ -3748,7 +3858,8 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-wild-adventure",
           "participability": "条件付き参加可能",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "【令和8年11月14日、11月28日】親子でわくわく運動あそびを開催します",
@@ -3756,35 +3867,40 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-wani-play",
           "participability": "条件付き参加可能",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "受付終了【令和8年11月14日】大津市科学館「星空観望会【第4回】冬の流星群を見よう」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76968.html",
           "disposition": "hold",
           "reason": "公式で受付終了。現在の参加経路なし。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月16日】ポールウォーキングで楽しく健康づくりを！効果的に歩くコツをお伝えします",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/64173.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月19日】現役警察官から学ぶ護身術講座を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75056.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月20日】「情報過多な今だからこそ知りたい！お金の落とし穴回避と賢い消費のコツ」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76847.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月21日】天文ドーム「昼間の星観察」を開催します（公開天文台100周年記念事業）",
@@ -3792,224 +3908,256 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-day-stars",
           "participability": "条件付き参加可能",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "【令和8年11月22日】「古民家マッチングツアー（葛川）」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77233.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月28日】発掘調査成果報告会2026を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/70138.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月29日】「大津市科学館プラネタリウム工事見学会」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77305.html",
           "disposition": "hold",
           "reason": "10/24で申込締切。抽選以外の当日参加経路なし。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月1日】こども発達相談センター保護者学習会「幼児期の過敏さについて」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75182.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月3日】虐待防止ファミリーケア研修を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76245.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月5日・令和9年2月6日】大津市科学館 ジュニア天文教室を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77048.html",
           "disposition": "hold",
           "reason": "12/5は11/5受付開始、2/6は1/5受付開始。現時点で申込前。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月5日】第13回ほくぶん子どもまつり「Mr.チョップリン　ビックリ風船人間マジックショー」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77447.html",
           "disposition": "hold",
           "reason": "11/6受付開始。現時点で参加申込ができない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月6日】「文学のまち大津」フォーラムを開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76412.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月8日】こども発達相談センター講座「幼児期（3～5歳児）に大切にしたい身体づくり」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75178.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月8日】いきいきライフセミナーを開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76499.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月10日】「自分の『良さ』を見つける！未来のわたし応援レッスン」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76358.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月12日】大津市食の安全リスクコミュニケーション「鍋料理を安全においしく食べよう！」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76526.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月12日】大津市科学館「星空観望会【第5回】はるか遠い天王星と海王星をさがそう」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77087.html",
           "disposition": "hold",
           "reason": "11/11受付開始、電子申請は準備中。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月25日】大津市科学館「IF（イフ）クラス　講座7　特殊ガラスの工場を見てみよう！」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77065.html",
           "disposition": "hold",
           "reason": "11/1受付開始。現時点では申込前。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年1月12日】こども発達相談センター保護者学習会「小学校生活を楽しくスタートするために」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/75184.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年1月9日】大津市科学館「星空観望会【第6回】冬の大三角とすばるを見よう」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77086.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年1月30日】大津市科学館「科学教室」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77088.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年1月30日】大津市科学館「科学教室　第4回科学工作教室」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77064.html",
           "disposition": "hold",
           "reason": "12/1受付開始、申請準備中。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年2月27日】大津市科学館「星空観望会【第7回】地球に近づいた火星を見よう」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/77085.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和9年3月1日】子育て講座「子育てで大切にしたいこと　発達の視点から」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/74855.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年7月14日～11月1日】三橋節子美術館企画展のお知らせ",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/l/75571.html",
           "disposition": "hold",
           "reason": "作品紹介のみで開館時間・料金・予約条件が本文にない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月23日～10月25日】第16回「叡風会能面展」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/l/76905.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月3日～令和9年2月28日】三橋節子美術館企画展のお知らせ",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/l/66552.html",
           "disposition": "hold",
           "reason": "作品紹介のみで開館時間・料金・予約条件が本文にない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月14日～11月23日】創作クラブ（陶芸・水彩画・絵手紙・水墨画）の「合同作品展」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/l/71682.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和7年10・11月】第34回埋蔵文化財みにみに展「大津むかしむかーし」",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/l/70005.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月～11月】大津市スマホ教室を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/76217.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年4月～令和9年3月】スマホ相談会を実施します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/72536.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月】公民館/コミュニティセンター　各種講座について",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/49457.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年9月～12月】動物愛護センター「犬の飼い方講習会・猫の飼い方講習会」について",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/62758.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【ゆめっこ】イベント・講座情報",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/62593.html",
           "disposition": "hold",
           "reason": "子育て支援施設の複数日程。個別対象年齢と現時点の予約可否を未確認。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【生涯学習センター】イベント・講座情報",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/49469.html",
           "disposition": "hold",
           "reason": "複数講座の案内で、個別の日時・年齢と参加経路を安全に一件へ集約できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【生涯学習センター】視聴覚ライブラリー　子ども映画会のお知らせ",
@@ -4017,105 +4165,120 @@
           "disposition": "added",
           "event_id": "evt-shiga-w41-d4-child-cinema",
           "participability": "通常参加可能",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "facility_hosted"
         },
         {
           "title": "【埋蔵文化財調査センター】展示スケジュール",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/62167.html",
           "disposition": "hold",
           "reason": "展示スケジュール総覧。個展の開催時間と子どもの鑑賞内容の確認が未了。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "リサイクル堆肥の無料配布について（事前予約制）",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/74989.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "公設地方卸売市場一般開放「市場の朝市」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/72153.html",
           "disposition": "hold",
           "reason": "市場の通常一般開放。各回の開催日と子ども向け体験の有無を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【大津市後援事業】文化・芸術イベント一覧",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/c/49467.html",
           "disposition": "hold",
           "reason": "後援事業一覧は主催者ごとの申込/開催条件の確認が必要。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年10月27日、11月3日、11月17日】数多の文化財と歴史を辿る「大津の文学さんぽ」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/76051.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年6月19日～6月25日】大津市美術展覧会について",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/74017.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年6月27日～7月3日】大津市写真展覧会について",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/74018.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年7月8日～11月20日】埋蔵文化財調査センター遺跡紹介展「瀬田廃寺と周辺の遺跡」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/68732.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【大津市後援事業】文化・芸術イベント一覧",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/68268.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年11月28日】発掘調査成果報告会2026を開催します",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/70138.html",
           "disposition": "hold",
           "reason": "保護者・成人向け学習/相談や専門報告。子どもと行く体験内容が確認できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "第79回大津市文化祭がはじまります",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/70854.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "第35回埋蔵文化財みにみに展「大津むかし・むかーし」を開催します",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/72018.html",
           "disposition": "hold",
           "reason": "掲載内容の開催日または対象/申込条件が、この時点で新規に参加できる家族イベントとして確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "【令和8年12月6日】「文学のまち大津」フォーラムを開催します",
           "official_url": "https://www.city.otsu.lg.jp/rb/e/b/76413.html",
           "disposition": "hold",
           "reason": "公表済みの後続企画。現時点の申込開始と家族向け参加条件を確定できない。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "親子でわくわく運動あそび（11/28皇子が丘）",
           "official_url": "https://www.city.otsu.lg.jp/sc/event/e/76063.html",
           "disposition": "hold",
           "reason": "11/28皇子が丘会場は定員到達。11/14和邇会場だけを別記登録。",
-          "source_type": "municipal_official"
+          "source_type": "municipal_official",
+          "event_category": "municipal_regional"
         },
         {
           "title": "ミシガン ハロウィンフェア2026",
@@ -4125,7 +4288,8 @@
           "official_sources_fetched": [
             "https://www.biwakokisen.co.jp/season_event/16890/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "米原ネコ展",
@@ -4136,7 +4300,8 @@
             "https://forms.gle/xzXcSmQhBZP2C6Cp7%EF%BC%89",
             "https://kitabiwako.jp/event/event_65250"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "令和8年度秋季特別展・安土城築城450年記念「天下人の城下町　安土」",
@@ -4147,7 +4312,8 @@
           "official_sources_fetched": [
             "https://azuchi-museum.or.jp/events/special-kikaku/2026-autumn-specialtenkabitonojyoukamachiaduchi/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "びわこ箱館山グリーンシーズン",
@@ -4157,7 +4323,8 @@
           "official_sources_fetched": [
             "https://www.hakodateyama.com/green/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "今津周辺の歴史観光ガイドのご案内",
@@ -4167,7 +4334,8 @@
           "official_sources_fetched": [
             "https://takashima-kanko.jp/2026/05/post_1245.html"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "2026 DOG PREMIUM HALLOWEEN",
@@ -4177,7 +4345,8 @@
           "official_sources_fetched": [
             "http://www.galaxyglamping.com"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "2026 GALAXY STARDUST HALLOWEEN",
@@ -4187,7 +4356,8 @@
           "official_sources_fetched": [
             "http://www.galaxyglamping.com"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "2026 Galaxy Pool Resort HALLOWEEN",
@@ -4197,7 +4367,8 @@
           "official_sources_fetched": [
             "http://www.galaxyglamping.com"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "2026 Galaxy Pool Resort HALLOWEEN",
@@ -4207,7 +4378,8 @@
           "official_sources_fetched": [
             "http://www.galaxyglamping.com"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "2026GLAMP DOME HALLOWEEN",
@@ -4217,18 +4389,20 @@
           "official_sources_fetched": [
             "http://www.galaxyglamping.com"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第 34 回琵琶湖博物館企画展示「博物館はタイムマシン-魚類学者がみた琵琶湖-」",
-          "disposition": "duplicate_or_already_present",
+          "disposition": "hold",
           "event_id": "evt-shiga-202607-01",
-          "reason": "lib/events.tsの公開対象base+summer結合集合に既存。今回の公式URLは522で改変せず。",
+          "reason": "既存IDはあるが確認日が古く現在の実表示対象外。公式博物館の2つの当年展示URLはいずれも522。一次本文を再確認できないため確認日を更新せず、掲載済みとも数えない。",
           "source_url": "https://www.biwako-visitors.jp/event/detail/32524/",
           "official_sources_fetched": [
             "https://www.biwahaku.jp/event/2026/06/_34_--.html"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "紅葉＆夜景",
@@ -4238,7 +4412,8 @@
           "official_sources_fetched": [
             "http://www.hieizan-way.com/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "米原奇譚謎解き「白イノシシの絆と優しい嘘」",
@@ -4246,7 +4421,8 @@
           "reason": "市街地周遊謎解き。公式主催者ページと単一会場の安全なマッピングを未確定。",
           "source_url": "https://www.biwako-visitors.jp/event/detail/32533/",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "「こんぜめぐりちゃんバス 」秋季運行",
@@ -4256,7 +4432,8 @@
           "official_sources_fetched": [
             "https://www.ritto-kanko.com/event/detail/?id=157"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "ヴォーリズ精神と建築に触れる 特別ガイドツアー　2026秋",
@@ -4266,7 +4443,8 @@
           "official_sources_fetched": [
             "http://sweet.ocn.ne.jp"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "municipal_regional"
         },
         {
           "title": "びわ湖こどもの国｢クライミング体験教室」",
@@ -4274,7 +4452,8 @@
           "reason": "恒常的なクライミング教室。日別開催と公式会場の現在の受付・対象条件を未照合。",
           "source_url": "https://www.biwako-visitors.jp/event/detail/23145/",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "謎解きキット付きミシガン乗船プラン",
@@ -4284,7 +4463,8 @@
           "official_sources_fetched": [
             "https://www.biwakokisen.co.jp/season_event/64775/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "特別展「シガラキ・ニューウェーブ：ひろがる創造のいま」",
@@ -4292,7 +4472,8 @@
           "reason": "公式主催者の展示時間・料金・子ども観覧条件の完全照合が未了。",
           "source_url": "https://www.biwako-visitors.jp/event/detail/32559/",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "甲賀の戦国　5回シリーズ",
@@ -4302,7 +4483,8 @@
           "official_sources_fetched": [
             "https://koka-kanko.org/introduce/koka-sengoku26/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "神社に伝わる宝物展",
@@ -4310,7 +4492,8 @@
           "reason": "公式神社の宝物展開催時間・料金と鑑賞の現在条件を未確認。",
           "source_url": "https://www.biwako-visitors.jp/event/detail/32706/",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "OTSU UNAGI＆SAKE FES 2026～大津のうなぎ✕湖酒まつり～ 2026年10月24日(土)・25日(日)\r\n11:00～17:00 大津市や滋賀県の酒蔵の「日本酒」や大津の「クラフトビール」、大津市内の鰻提供店が一同に集い、「[...]",
@@ -4320,7 +4503,8 @@
           "official_sources_fetched": [
             "https://eplus.jp/sf/detail/4196450001?P6=001&P1=0402&P59=1"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "おおつむすびマルシェ ３DAYS 2026年11月1日(日)～3日(火・祝) 〔時間〕1日・3日 10:00 - 15:00 ／ 2日 16:00 - 21:00 ３日間、大津駅前がちょっと特別になる大津駅前で、滋賀・大津の魅力を“ギュッと”感じる「食」のイベ[...]",
@@ -4328,7 +4512,8 @@
           "reason": "季節マルシェ。雨天中止/延期と交通案内の必要情報を未確認。",
           "source_url": "https://otsu.or.jp/event/musubimarche2026nov3days",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "＼巡って集めよう！／滋賀 ご当地 キャラ印めぐり 〔開催期間〕2026年10月4日(日)～2027年3月31日(水) 滋賀の５つのまちを巡って集めよう！集めて楽しい！巡って楽しい！滋賀の魅力を再発見！大津市・甲賀[...]",
@@ -4336,7 +4521,8 @@
           "reason": "5市町のスタンプ企画。単一会場とスポット別参加条件を未確定。",
           "source_url": "https://otsu.or.jp/event/shiga-character_stamp",
           "official_sources_fetched": [],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "ミシガン『ハロウィンフェア2026』／琵琶湖汽船 〔開催期間〕2026年10月1日(木)～10月31日(土) びわ湖の風を感じながら、秋のクルーズを楽しんでみませんか？琵琶湖汽船「ミシガン」では、10/1(木)[...]",
@@ -4346,7 +4532,8 @@
           "official_sources_fetched": [
             "https://www.biwakokisen.co.jp/season_event/16890/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "『ハロウィンフェスタ』／びわ湖大津館 2026年10月3日(土)～31日(土) 秋の花々で賑わうガーデンでハロウィンを楽しもう♪フェスタ期間中、ガーデン内にはハロウィンにちなん[...]",
@@ -4358,7 +4545,8 @@
             "https://www.biwakokisen.co.jp/cruise/michigan/",
             "http://www.biwako-otsukan.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "【日本天台三総本山】秋の特別公開 令和8年（2026年）　秋季 日本一の雄大な琵琶湖を眼下に望める景勝の地でもあり、静寂の中で四季折々を感じられる自然が、訪れ[...]",
@@ -4370,7 +4558,8 @@
             "https://miidera1200.jp/",
             "http://saikyoji.org/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "比叡の秋めぐり／比叡山延暦寺 令和8年（2026年）秋季 比叡山の秋の訪れは早く、例年10月下旬から見頃を迎えます。比叡山の紅葉の中でも最も見事と言われる[...]",
@@ -4380,7 +4569,8 @@
           "official_sources_fetched": [
             "https://www.hieizan.or.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "紅葉ライトアップ『あたら夜もみじ』／ 石山寺 2026年11月13日(金)～11月29日(日) 午後5時30分～午後9時 （最終入山：午後8時30分） 「あたら夜」とは万葉集に登場する雅言葉で“明けるのが惜しいほど美しい夜”石山寺境内には約千本を超[...]",
@@ -4391,7 +4581,8 @@
             "https://www.ishiyamadera.or.jp/guide/event/atarayo",
             "https://www.ishiyamadera.or.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "『客殿 内部初公開』／西教寺 2026年11月7日(土)～12月6日(日) 豊臣秀吉の居城 伏見城の遺構豪華絢爛 安土桃山時代にタイムスリップ！大河ドラマ「豊臣兄弟！」（Ｎ[...]",
@@ -4402,7 +4593,8 @@
             "http://saikyoji.org/publics/index/7/",
             "http://saikyoji.org"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "おとの三井寺 vol.05 「遊びをせんとや 生まれけむ」 2026年11月7日(土)、11月8日(日) 各日14:00開演(13:15開場) 国宝・勧学院客殿で、「おと」が舞うクラリネット、尺八、能、声明、和歌、現代音楽が、時代とジャン[...]",
@@ -4412,7 +4604,8 @@
           "official_sources_fetched": [
             "https://otonomiidera.com/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "滋賀「こども大使」の大視察2026／supported by SWAMURA 2026年10月24日(土)・25日(日) 10:00～16:00（両日とも最終受付15:30） JR湖西線「志賀駅」で、キミを こども大使 に任命するよ！大使名刺を首にかけて、視察に出かけよう！[...]",
@@ -4422,7 +4615,8 @@
           "official_sources_fetched": [
             "https://bluegreen-kosei.net/shigataishi2026/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "『丸木スマ展 73歳からのアーティスト』／滋賀県立美術館 2026年9月11日(金)～11月23日(月・祝) 開場時間：午前9:30～午後5:00（入場 午後4:30 まで） 休館日：毎週月曜日（ただし9/21～23、10/12、11/23は開館、9/24、10/13は休館） 広島県生まれの丸木スマ",
@@ -4435,7 +4629,8 @@
             "https://www.shigamuseum.jp/",
             "https://www.shigamuseum.jp/exhibitions/12995/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第101回企画展『未来へつなぐ大津のたから』／大津市歴史博物館 2026年10月10日(土)～11月23日(月祝) 【開館時間】9時～17時（展示室への入場は16時30分まで） 【休館日】10/13・10/19・10/26・11/2・11/4・11/9・11/16 前期：10月10日(土)～11月1",
@@ -4445,7 +4640,8 @@
           "official_sources_fetched": [
             "https://www.rekihaku.otsu.shiga.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "秋季特別展『百済寺と近江の仏教美術』／MIHO MUSEUM 2026年9月26日(土)～12月6日(日) 午前10時～午後5時(入館は午後4時まで) 休館日：月曜日、10月13日、11月24日 ※10月12日、11月23日は開館 滋賀県東近江市に建つ湖東三山のひとつで、聖徳太子創建と伝わる県内有数",
@@ -4456,7 +4652,8 @@
             "https://www.miho.jp/access/",
             "https://www.miho.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "『土曜日の市場』／近江おごとハーブガーデン 2026年 4月11日／6月20日／9月19日／11月21日\r\n［時間］10時～15時 びわ湖が見える高台の自然豊かなオーガニックハーブガーデン「近江おごとハーブガーデン」にてマルシ[...]",
@@ -4466,7 +4663,8 @@
           "official_sources_fetched": [
             "https://ogotoherbgarden.com/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "終了しました 舞台『成瀬は天下を取りにいく』公演記念　大津と京都を駆け抜ける 周遊スタンプラリー ＜",
@@ -4476,7 +4674,8 @@
           "official_sources_fetched": [
             "https://t.pia.jp/pia/event/event.do?eventBundleCd=b2667289"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "municipal_regional"
         },
         {
           "title": "びわ湖の 桜 と あお 若葉 比叡山延暦寺 比叡山に広大な寺域を持つ、天台宗の総本山。平成6年に世界文化遺産に登録されています。奈良時代末期[...]",
@@ -4488,7 +4687,8 @@
             "http://www.hieizan.co.jp/",
             "https://www.hieizan.or.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "びわ湖の 桜 と あお 若葉 日吉大社 比叡山の東麓にある八王子山の山裾に鎮まる全国3,800余の「山王さん」の総本宮。春には京阪坂本比叡山[...]",
@@ -4499,7 +4699,8 @@
             "http://hiyoshitaisha.jp/access/",
             "https://hiyoshitaisha.jp/"
           ],
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "丸木スマ展 子ども向けトーク11/7・一般トーク11/14・創作コーナー",
@@ -4507,56 +4708,64 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-shiga-w41-d4-maruki-suma",
           "reason": "同じ展覧会の内包企画として新規展示レコードの参加条件に明記。",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "安土特別展記念講演10/31",
           "official_url": "https://azuchi-museum.or.jp/events/special-kikaku/2026-autumn-specialtenkabitonojyoukamachiaduchi/",
           "disposition": "hold",
           "reason": "学術講演。展示観覧と別の申込・定員条件が未確認。",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "古民家のかまど自然米プログラム2026秋",
           "official_url": "https://www.miho.jp/",
           "disposition": "hold",
           "reason": "新着題名のみで開催日・年齢・申込可否が確定できない。",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "event_category": "facility_hosted"
         },
         {
           "title": "びわ湖高島戦国ツアー 信長の朝倉攻め",
           "official_url": "https://www.biwako-visitors.jp/topics/detail/8479/",
           "disposition": "hold",
           "reason": "本文で旅行日・料金・現在の申込状況が確定できない。",
-          "source_type": "seasonal_new_arrival"
+          "source_type": "seasonal_new_arrival",
+          "event_category": "municipal_regional"
         },
         {
           "title": "びわ湖高島スタンプラリー",
           "official_url": "https://www.biwako-visitors.jp/topics/detail/8228/",
           "disposition": "hold",
           "reason": "本文は観光アプリ紹介のみ。開催日・各スポット条件と一会場の扱いを確定できない。",
-          "source_type": "seasonal_new_arrival"
+          "source_type": "seasonal_new_arrival",
+          "event_category": "municipal_regional"
         },
         {
           "title": "高島アウトドアフォトコン2026",
           "official_url": "https://takashima-kanko.jp/bluegreen/photocon/",
           "disposition": "hold",
           "reason": "写真応募企画で固定の来訪会場・体験日時がない。",
-          "source_type": "seasonal_new_arrival"
+          "source_type": "seasonal_new_arrival",
+          "event_category": "facility_hosted"
         },
         {
           "title": "甲賀忍法芸能絵巻",
           "official_url": "https://www.real-ninjakan.com/event-details/1123geinoemaki",
           "disposition": "hold",
           "reason": "子ども対象の無料公演は確認。ページ本文は「さらに表示」で省略され、定員・事前予約の要否と現時点の受付を確定できない。",
-          "source_type": "seasonal_new_arrival"
+          "source_type": "seasonal_new_arrival",
+          "event_category": "facility_hosted"
         },
         {
           "title": "陶板体感 やきものがつなぐ芸術と文化",
           "official_url": "https://www.biwako-visitors.jp/topics/detail/8456/",
           "disposition": "hold",
           "reason": "3会場の展示。工場と主館で鑑賞条件が異なり、主催者公式で個別会期・現在の入場条件の最終照合が未了。",
-          "source_type": "seasonal_new_arrival"
+          "source_type": "seasonal_new_arrival",
+          "event_category": "facility_hosted"
         },
         {
           "title": "比叡のもみじ",
@@ -4564,7 +4773,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "鬼の角、鬼の角奉納図特別公開",
@@ -4572,7 +4782,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "教林坊　秋の特別公開２０２６",
@@ -4582,7 +4793,8 @@
           ],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "11月8日は「信楽たぬきの日」",
@@ -4592,7 +4804,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "別院　ガーデンマム（小菊）",
@@ -4600,7 +4813,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "教林坊　紅葉ライトアップ2026",
@@ -4610,7 +4824,8 @@
           ],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "国宝 湖南三山紅葉めぐり",
@@ -4620,7 +4835,8 @@
           ],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "第23回　おっきん！椋川",
@@ -4630,7 +4846,8 @@
           ],
           "disposition": "hold",
           "reason": "秋の祭り/特別公開。主催者の雨天/中止、最新変更と子ども参加の根拠が全て揃わない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "比叡山延暦寺「鬼追い式」",
@@ -4640,7 +4857,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "歳旦祭",
@@ -4650,7 +4868,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "歳旦祭・新年祈願祭",
@@ -4658,7 +4877,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "比叡山修正会",
@@ -4666,7 +4886,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "歳旦祭",
@@ -4674,7 +4895,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "田中の粥占い",
@@ -4684,7 +4906,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "初観音大般若会",
@@ -4694,7 +4917,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "節分祭",
@@ -4702,7 +4926,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "節分祭（多賀大社）",
@@ -4710,7 +4935,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "田村神社厄除祭",
@@ -4718,7 +4944,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "比叡山大護摩法要",
@@ -4728,7 +4955,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "神照寺　涅槃会法要",
@@ -4738,7 +4966,8 @@
           ],
           "disposition": "hold",
           "reason": "毎年表記のみで次回の年・詳細が未確定。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "弓削の火祭り",
@@ -4748,7 +4977,8 @@
           ],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "篠田の花火",
@@ -4758,7 +4988,8 @@
           ],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "みたらし祭",
@@ -4768,7 +4999,8 @@
           ],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "おごと温泉納涼花火大会",
@@ -4778,7 +5010,8 @@
           ],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "杣川夏まつり",
@@ -4786,7 +5019,8 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "facility_hosted"
         },
         {
           "title": "建部大社船幸祭花火大会",
@@ -4794,27 +5028,30 @@
           "official_sources_fetched": [],
           "disposition": "hold",
           "reason": "2026年の当該開催は終了。年次表記を2027年の確定日と推測しない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "びわ湖秋花火",
           "official_url": "https://www.biwako-visitors.jp/hanabi/",
           "disposition": "hold",
           "reason": "トップは地域住民アンケートのみ。次の参加可能な開催日と参加条件を確認できない。",
-          "source_type": "festival_fireworks"
+          "source_type": "festival_fireworks",
+          "event_category": "fireworks_festival_seasonal"
         }
       ],
       "candidates_found": 235,
       "added": 13,
-      "duplicate_or_already_present": 2,
-      "hold": 215,
+      "duplicate_or_already_present": 1,
+      "hold": 216,
       "stale_false": 5,
       "unit_notes": {
         "prefecture_official": "県公式10・11・12月の全月一覧を取得し99個の固有発表本文を取得、全件を個別判定。候補数は過去/対象外を含む保守的な全リンク台帳。12/21以降の公表済み開催も審査。掲載期間を実開催日とみなさない。",
         "municipal_official": "県庁所在地かつ最大市・大津市の独立した公式一覧と歴史文化一覧を取得。12/21以降・2027年公表済み企画も含む全リンクを確認し、受付前・受付終了を区別。",
         "tourism_board": "県観光ビューローの広域一覧と大津観光協会の秋冬一覧。表示された38件を全件取得・公式リンクも取得。未表示179件を全件実施と主張しない。12月・来春公表済み候補も判定。",
         "seasonal_new_arrival": "観光ビューローの実際の新着一覧（news→topicsリダイレクト）を確認。新着20件を読み、施設紹介/新聞記事/終了販売会/交通告知を区別。5件の具体候補の詳細を取得。season推測URL404を成功扱いしない。",
-        "festival_fireworks": "県観光のまつりと花火カテゴリを独立取得。祭り一覧は12月から来春の年次行事まで到達。26詳細と掲載公式リンクを全取得。教林坊TLS失敗も明記。"
+        "festival_fireworks": "県観光のまつりと花火カテゴリを独立取得。祭り一覧は12月から来春の年次行事まで到達。26詳細と掲載公式リンクを全取得。教林坊TLS失敗も明記。",
+        "rendered_duplicate_verification": "Previewの全ページを実際に巡回し、通常+summer結合集合の表示IDを全重複候補と照合。滋賀の博物館展示1件（2 encounter）は実表示対象外かつ一次522のためHOLDへ訂正。"
       }
     }
   }
