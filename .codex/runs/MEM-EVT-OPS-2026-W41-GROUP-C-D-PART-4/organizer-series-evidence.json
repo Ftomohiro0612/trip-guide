@@ -1,0 +1,162 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-4",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-25T23:31:48.101009+00:00",
+  "horizon_end_date": "2026-12-21",
+  "per_region": {
+    "nagano": {
+      "sources_checked": [
+        {
+          "url": "https://suwa-kouyou.com/",
+          "status": 200,
+          "checked_at": "2026-10-25T23:30:18.362059+00:00",
+          "organizer_name": "諏訪紅葉三山一社めぐり実行委員会",
+          "multi_venue_basis": "佛法紹隆寺・温泉寺・長円寺・諏訪大社下社秋宮の4会場、10/31～11/15を同一公式シリーズで公表",
+          "host_shared_with_registry_reason": "単独寺院の施設eventではなく4つの異なる社寺を横断する公式シリーズ"
+        },
+        {
+          "url": "https://suwa-kouyou.com/datas/kouyou_info_2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-25T23:30:53.098540+00:00",
+          "organizer_name": "諏訪紅葉三山一社めぐり実行委員会",
+          "multi_venue_basis": "佛法紹隆寺・温泉寺・長円寺・諏訪大社下社秋宮の4会場、10/31～11/15を同一公式シリーズで公表",
+          "host_shared_with_registry_reason": "単独寺院の施設eventではなく4つの異なる社寺を横断する公式シリーズ"
+        },
+        {
+          "url": "https://www.suzaka-kankokyokai.jp/event/sweets_suzaka2026/",
+          "status": 200,
+          "checked_at": "2026-10-25T23:30:19.541684+00:00",
+          "organizer_name": "信州須坂観光協会",
+          "multi_venue_basis": "須坂市の23店舗それぞれの住所・営業時間を列挙する10/1～12/28の周遊シリーズ",
+          "host_shared_with_registry_reason": "単一施設ページではなく別住所の23店舗を横断する主催者公式キャンペーン"
+        },
+        {
+          "url": "https://www.tgn.co.jp/funfenfant/",
+          "status": 200,
+          "checked_at": "2026-10-25T23:30:20.025360+00:00",
+          "organizer_name": "T&G FunFenFant",
+          "multi_venue_basis": "同一主催者の全国複数会場シリーズ。既存Productに松本・仙台・浜松等の会場別公式event URLがあり、当runは松本11/10・11のみ確認",
+          "host_shared_with_registry_reason": "T&Gの各地の異なる式場で開催する親子イベントシリーズであり単独施設のeventsページではない"
+        },
+        {
+          "url": "https://www.tgn.co.jp/funfenfant/event/202611ghm/",
+          "status": 200,
+          "checked_at": "2026-10-25T23:30:42.213386+00:00",
+          "organizer_name": "T&G FunFenFant",
+          "multi_venue_basis": "同一主催者の全国複数会場シリーズ。既存Productに松本・仙台・浜松等の会場別公式event URLがあり、当runは松本11/10・11のみ確認",
+          "host_shared_with_registry_reason": "T&Gの各地の異なる式場で開催する親子イベントシリーズであり単独施設のeventsページではない"
+        },
+        {
+          "url": "https://sites.google.com/site/asterism8432/",
+          "status": 200,
+          "checked_at": "2026-10-25T23:45:27.535564+00:00",
+          "organizer_name": "星空案内のアステリズム",
+          "multi_venue_basis": "2026年の白馬ハイランド・ホテルグリーンプラザ白馬・戸隠キャンプ場の会場別日程を同一主催者公式で公表",
+          "host_shared_with_registry_reason": "Google Sites内のこの主催者は3つの異なる長野会場を横断する。単独施設イベントページの代用ではない。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "諏訪紅葉三山一社めぐり（4社寺およびPDF個別企画）",
+          "disposition": "hold",
+          "reason": "現年10/16案内PDF2ページも目視。社寺の地図・駐車場・個別企画はあるが荒天時中止/延期を確認できない。座禅瞑想ヨガ11/6、神話サイト11/8、写経祈願、御朱印、佛法紹隆寺11/7の2組コンサート、温泉寺11/7ライブ、長円寺11/13・14・15の催しは同一季節シリーズの荒天/最新変更条件未充足として全件HOLD。",
+          "event_category": "fireworks_festival_seasonal",
+          "source_family": "suwa-kouyou.com",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "すざかスイーツめぐり2026",
+          "disposition": "hold",
+          "reason": "23店と個別営業時間・条件を公式で確認。単一会場として安全に表示する地点が未確定。",
+          "event_category": "municipal_regional",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "FunFenFant 松本 親子イベント",
+          "disposition": "duplicate_or_already_present",
+          "existing_id": "evt-nagano-w40-d9-funfenfant",
+          "reason": "11/10・11、NEEDS松本、無料入場予約リンクと授乳/おむつ替え設備を現年公式で確認。",
+          "event_category": "facility_hosted",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "candidates_found": 3,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 2,
+      "stale_false": 0,
+      "unit_notes": {
+        "organizer_event_series": "既存events_dataの主催/notesと観光詳細の主催者リンクから探索。単施設のeventsページをorganizer代用にしない。"
+      },
+      "late_discovery_note": "secondary中に実行した主催者検索からmulti-venueが確認されたためsource記録追加。候補の終端判定はsecondary evidenceへ記録し二重計上しない。"
+    },
+    "shiga": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
+          "status": 200,
+          "checked_at": "2026-10-26T00:00:22.495438+00:00",
+          "organizer_name": "滋賀県（北の近江振興事務所／県芸術文化祭実行委員会）",
+          "multi_venue_basis": "県の企画は慶雲館11/10・15と長浜鉄道スクエア11/23の2会場。芸術文化祭は県立美術館とG-NETしがを含む複数会場・複数日。",
+          "host_shared_with_registry_reason": "県公式ドメインが施設のregistryと共通でも、この2URLは単一施設のページではなく2会場以上の県主催シリーズを明示する。"
+        },
+        {
+          "url": "https://www.pref.shiga.lg.jp/sc00/press-release/32537.html",
+          "status": 200,
+          "checked_at": "2026-10-26T00:00:22.861212+00:00",
+          "organizer_name": "滋賀県（北の近江振興事務所／県芸術文化祭実行委員会）",
+          "multi_venue_basis": "県の企画は慶雲館11/10・15と長浜鉄道スクエア11/23の2会場。芸術文化祭は県立美術館とG-NETしがを含む複数会場・複数日。",
+          "host_shared_with_registry_reason": "県公式ドメインが施設のregistryと共通でも、この2URLは単一施設のページではなく2会場以上の県主催シリーズを明示する。"
+        },
+        {
+          "url": "https://area.jaf.or.jp/drive/stamp-rally/kansai/shiga_stamprally_no1650",
+          "status": 200,
+          "checked_at": "2026-10-26T00:02:27.240328+00:00",
+          "organizer_name": "東近江市・いなべ市／JAFドライブスタンプラリー",
+          "multi_venue_basis": "能登川水車とカヌーランド、永源寺など滋賀5地点といなべ5地点を巡る公式10地点シリーズ。",
+          "host_shared_with_registry_reason": "単一施設の催事でなく2市10施設を集約する企画の公式ページ。"
+        }
+      ],
+      "candidates": [
+        {
+          "title": "鉄スクからの招待状",
+          "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-shiga-w41-d4-rail-invitation",
+          "reason": "本走行の県公式単位で追加済みの同一日・同一会場。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "明治トリップ長浜散歩",
+          "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
+          "disposition": "hold",
+          "reason": "大人向け着物散策。子どもの参加対象・同伴条件が未確定。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "育児のご褒美時間",
+          "official_url": "https://www.pref.shiga.lg.jp/ca00/press-release/33738.html",
+          "disposition": "hold",
+          "reason": "保護者向け休息・交流で託児はあるが親子で行う体験ではない。現時点の残枠も未確認。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "第65回写真展／第76回文学祭／第80回美術展と文化祭参加事業群",
+          "official_url": "https://www.pref.shiga.lg.jp/sc00/press-release/32537.html",
+          "disposition": "hold",
+          "reason": "写真展は終了。他は複数会場の総覧。個別参加条件と子ども向け内容を未確定のまま一会場に登録しない（source-family HOLD）。",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "candidates_found": 4,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 3,
+      "stale_false": 0,
+      "unit_notes": {
+        "organizer_event_series": "既存eventsのJAF主催・source_notes、観光一覧の主催者名、県のシリーズ事業を起点に確認。単一施設のイベントページは主催者カバーとして計上しない。",
+        "secondary_discovered_followup": "二次候補から出たJAFの主催者一次ページを同じ走行で取得。候補はrecall側で一度だけ計上。"
+      }
+    }
+  }
+}
