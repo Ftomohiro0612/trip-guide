@@ -1,0 +1,954 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-5",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-26T01:41:46.966792+00:00",
+  "horizon_end_date": "2026-12-21",
+  "prior_run_numbers_reused_as_execution": false,
+  "per_region": {
+    "kyoto": {
+      "sources_checked": [
+        {
+          "url": "https://kyototamba-fair.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-26T01:04:24.742345+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "亀岡保津川公園・亀岡運動公園・園部公園・わち山野草の森・丹波自然運動公園の5拠点にまたがる公式行事一覧",
+          "host_shared_with_registry_reason": "登録施設単独のページではなく、行政/実行委員会が複数の独立会場の企画を集約するsource。"
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:04:25.251192+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "京都府・あいおいニッセイ同和損保・iiba",
+          "multi_venue_basis": "京都府内12事業所/店舗の11〜12月職業体験を公式に列記",
+          "host_shared_with_registry_reason": "登録施設単独のページではなく、行政/実行委員会が複数の独立会場の企画を集約するsource。"
+        },
+        {
+          "url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:04:25.690991+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "下京区ふれあい事業実行委員会・下京区役所",
+          "multi_venue_basis": "複数企業・学校で12種類の体験を11/3〜29に実施する公式シリーズ",
+          "host_shared_with_registry_reason": "登録施設単独のページではなく、行政/実行委員会が複数の独立会場の企画を集約するsource。"
+        },
+        {
+          "url": "https://www.city.kyoto.lg.jp/nisikyo/page/0000317644.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:04:26.154893+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "たけっこぐんぐんプロジェクト委員会",
+          "multi_venue_basis": "つどいの広場2か所・児童館7館・幼稚園6園など複数会場の親子スタンプキャンペーン",
+          "host_shared_with_registry_reason": "登録施設単独のページではなく、行政/実行委員会が複数の独立会場の企画を集約するsource。"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/json/event.json",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:02.408543+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5会場以上の公式Vueカレンダーが使用する全行事JSON"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/288/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:36.935689+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/287/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:37.427952+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/286/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:37.839507+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/226/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:38.236588+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/162/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:38.637849+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/280/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:39.203248+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/241/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:39.633385+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/242/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:40.374640+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/279/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:40.905083+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/278/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:41.400092+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/275/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:43.615040+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/215/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:44.195369+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/172/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:44.828194+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/269/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:45.507134+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/184/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:46.019717+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/265/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:46.727777+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/168/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:47.280727+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/240/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:47.830762+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/239/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:48.331104+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/257/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:48.921720+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/256/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:05:49.494340+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/207/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:06.405979+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/246/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:06.815132+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/251/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:07.223357+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/234/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:07.656556+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/244/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:08.077946+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/236/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:08.508448+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/222/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:08.921447+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/223/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:09.502658+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/220/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:10.145828+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/218/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:10.617698+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/217/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:11.253619+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/212/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:11.837054+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/150/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:12.406929+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/204/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:12.939381+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/201/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:13.474489+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/151/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:14.048144+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/195/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:14.617682+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/175/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:15.343586+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/141/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:15.848930+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        },
+        {
+          "url": "https://kyototamba-fair.jp/event/133/index.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:06:16.625566+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "全国都市緑化フェアin京都丹波実行委員会",
+          "multi_venue_basis": "5拠点以上の公式シリーズ全行事JSONから辿る個別企画"
+        }
+      ],
+      "candidates_found": 65,
+      "added": 4,
+      "duplicate_or_already_present": 1,
+      "hold": 60,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "森の展示室　秋　Market",
+          "official_url": "https://kyototamba-fair.jp/event/288/index.html",
+          "disposition": "hold",
+          "reason": "季節行事の荒天時対応・交通案内の必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】 アートフェスティバルinやぎ2026",
+          "official_url": "https://kyototamba-fair.jp/event/287/index.html",
+          "disposition": "hold",
+          "reason": "季節行事の荒天時対応・交通案内の必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】 美山ふれあいマルシェ",
+          "official_url": "https://kyototamba-fair.jp/event/286/index.html",
+          "disposition": "hold",
+          "reason": "季節行事の荒天時対応・交通案内の必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "植物・園芸資材オークション",
+          "official_url": "https://kyototamba-fair.jp/event/226/index.html",
+          "disposition": "hold",
+          "reason": "園芸資材の販売が中心で子ども向け体験/適合が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "園部城VR体験プレミアムツアー",
+          "official_url": "https://kyototamba-fair.jp/event/162/index.html",
+          "disposition": "hold",
+          "reason": "11/3 Eバイクツアーの年齢・現在空席・料金を本文から確定不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "肉フェス亀岡牛々まつり",
+          "official_url": "https://kyototamba-fair.jp/event/280/index.html",
+          "disposition": "hold",
+          "reason": "荒天中止/会場駐車不可は確認。公共交通の具体案内と幼児の参加条件が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "森の京都　和知小ver. in わち山野草の森",
+          "official_url": "https://kyototamba-fair.jp/event/241/index.html",
+          "disposition": "hold",
+          "reason": "公式同一詳細内の開始9:30頃と10:00が不一致。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "和知小児童による ユキミバナバスガイドツアー",
+          "official_url": "https://kyototamba-fair.jp/event/242/index.html",
+          "disposition": "hold",
+          "reason": "無料シャトルの出発便確認。現在の定員/受付・参加料金の案内が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "自然楽器のこどもオーケストラ",
+          "event_id": "evt-w41d5-kyoto-kids-orchestra",
+          "official_url": "https://kyototamba-fair.jp/event/279/index.html",
+          "disposition": "added",
+          "participability": "条件付き参加可能",
+          "event_category": "施設開催イベント",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】 花いっぱいプロジェクト2026",
+          "official_url": "https://kyototamba-fair.jp/event/278/index.html",
+          "disposition": "hold",
+          "reason": "土作り体験の一般募集は確認。子どもの対象年齢・保護者条件と空席未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】 第24回DONと来い/丹波八坂太鼓祭",
+          "official_url": "https://kyototamba-fair.jp/event/275/index.html",
+          "disposition": "hold",
+          "reason": "太鼓祭は日時/屋内/入場無料確認。荒天時対応と交通影響/案内の必須条件が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "菊花展",
+          "official_url": "https://kyototamba-fair.jp/event/215/index.html",
+          "disposition": "hold",
+          "reason": "会期は上旬表記と特定日が併記。天候等による変更の取扱い未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "京都丹波学園祭",
+          "official_url": "https://kyototamba-fair.jp/event/172/index.html",
+          "disposition": "hold",
+          "reason": "府/event一覧からの同候補は日付誤表示familyとして既にHOLD。独立実行委員会側でも会場交通/中止条件の整合を保留。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "亀岡吹奏楽フェスティバル2026～全８組による音楽イベントを開催～",
+          "official_url": "https://kyototamba-fair.jp/event/269/index.html",
+          "disposition": "hold",
+          "reason": "屋内吹奏楽祭は日付/無料確認。悪天候時の扱い・公共交通案内の必須条件を未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【10月からオープン】京都丹波／亀岡『夢コスモス園』",
+          "official_url": "https://kyototamba-fair.jp/event/184/index.html",
+          "disposition": "hold",
+          "reason": "花の季節催事。通常料金・日程確認も、荒天時対応/交通必須条件が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】秋のカワヒガシマーケット",
+          "official_url": "https://kyototamba-fair.jp/event/265/index.html",
+          "disposition": "hold",
+          "reason": "4会場の回遊マルシェ。荒天時対応と公共交通影響の必須条件が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "特別展「描かれた南丹市」",
+          "event_id": "evt-w41d5-kyoto-nantan-painting",
+          "official_url": "https://kyototamba-fair.jp/event/168/index.html",
+          "disposition": "added",
+          "participability": "通常参加可能",
+          "event_category": "施設開催イベント",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "mori no marché 森のマルシェ",
+          "official_url": "https://kyototamba-fair.jp/event/240/index.html",
+          "disposition": "hold",
+          "reason": "季節行事の荒天時対応・交通案内の必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "森の盆栽展",
+          "official_url": "https://kyototamba-fair.jp/event/239/index.html",
+          "disposition": "hold",
+          "reason": "本文は10/30・11/1の2日、構造化欄は10/30〜11/1連続。10/31の実施可否不一致を解決できず。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "市民参加ステージ",
+          "official_url": "https://kyototamba-fair.jp/event/257/index.html",
+          "disposition": "hold",
+          "reason": "11/7ステージ予定は18:30〜19:00まで存在するが概要11:30〜16:00と不一致。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "みどりの謎解きラリー",
+          "official_url": "https://kyototamba-fair.jp/event/256/index.html",
+          "disposition": "hold",
+          "reason": "屋外ラリーで荒天時扱いの必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェア冠事業】京都新光悦村秋まつり",
+          "official_url": "https://kyototamba-fair.jp/event/207/index.html",
+          "disposition": "hold",
+          "reason": "雨天決行・親子ものづくり確認。交通案内/規制影響未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "亀岡ジャズフェスティバル2026",
+          "official_url": "https://kyototamba-fair.jp/event/246/index.html",
+          "disposition": "hold",
+          "reason": "4会場ジャズ祭。小雨決行のみで荒天中止/延期の扱い未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "にぎわいマルシェ",
+          "official_url": "https://kyototamba-fair.jp/event/251/index.html",
+          "disposition": "hold",
+          "reason": "10/26は雨で出店取り止めを最新案内で確認。後続出店の実施・交通案内を単一開催に統一不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "5分間のフェアメモリアル花火",
+          "official_url": "https://kyototamba-fair.jp/event/234/index.html",
+          "disposition": "hold",
+          "reason": "11/7花火18:30-18:35と荒天中止確認。打上場所は運動公園付近のみで安全な観覧場所・動線・幼児参加評価の公式根拠未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェア冠事業】カヤ・キャン美山ぷらす2026",
+          "official_url": "https://kyototamba-fair.jp/event/244/index.html",
+          "disposition": "hold",
+          "reason": "年間体験は途中参加可。11/28-29の時間・子ども年齢・枠未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "2026大丹波ドライブスタンプラリー",
+          "official_url": "https://kyototamba-fair.jp/event/236/index.html",
+          "disposition": "hold",
+          "reason": "京都/兵庫7市町の19地点が混在。県内参加地点と単一地域レコードの安全な粒度が未確定。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "ツリークライミング教室",
+          "official_url": "https://kyototamba-fair.jp/event/222/index.html",
+          "disposition": "hold",
+          "reason": "先着教室、受付開始確認。現在空席と当日参加経路は未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "京都丹波の自然の中で心と体を整える「里山ウェルネスプログラム」",
+          "official_url": "https://kyototamba-fair.jp/event/223/index.html",
+          "disposition": "hold",
+          "reason": "会場の詳細は申込後のみ連絡。子ども対象/参加可否が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "由良川 いのちの環 水槽展示",
+          "event_id": "evt-w41d5-kyoto-yuragawa-fish",
+          "official_url": "https://kyototamba-fair.jp/event/220/index.html",
+          "disposition": "added",
+          "participability": "通常参加可能",
+          "event_category": "施設開催イベント",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キノコ教室",
+          "official_url": "https://kyototamba-fair.jp/event/218/index.html",
+          "disposition": "hold",
+          "reason": "キノコ教室の受付開始は確認。現在先着空席を未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェアにぎわい事業交付金活用】 カメオカアートボンチ2026 -おみせでさくひんてんvol.8-",
+          "official_url": "https://kyototamba-fair.jp/event/217/index.html",
+          "disposition": "hold",
+          "reason": "12店舗回遊と最終マルシェは時間/条件が異なる。11/8マルシェの荒天等必須条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "鉄道模型ジオラマ オープンデイ",
+          "event_id": "evt-w41d5-kyoto-diorama-open",
+          "official_url": "https://kyototamba-fair.jp/event/212/index.html",
+          "disposition": "added",
+          "participability": "通常参加可能",
+          "event_category": "施設開催イベント",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "わちふらっとウォーキング＆スタンプラリー",
+          "official_url": "https://kyototamba-fair.jp/event/150/index.html",
+          "disposition": "hold",
+          "reason": "推奨回遊経路と曜日確認。屋外季節回遊の荒天時対応を未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "晩秋の山野草展",
+          "official_url": "https://kyototamba-fair.jp/event/204/index.html",
+          "disposition": "hold",
+          "reason": "日付のみで一般観覧時間・料金を未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "里藝大學（さとげいだいがく）",
+          "official_url": "https://kyototamba-fair.jp/event/201/index.html",
+          "disposition": "hold",
+          "reason": "申込締切9/10経過。単発受講の現在受付を確認できず。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "『青空レストラン』 みどりのテーブル 本番編",
+          "official_url": "https://kyototamba-fair.jp/event/195/index.html",
+          "disposition": "hold",
+          "reason": "11/7ランチ3,300円と雨天代替確認。予約先現在枠・子ども参加条件未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "食農DAY　アグリフェスタ",
+          "official_url": "https://kyototamba-fair.jp/event/175/index.html",
+          "disposition": "hold",
+          "reason": "公式はプログラム予定、変更告知前提。荒天/延期必須条件が未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェア冠事業】京都丹波散歩deウォーキング",
+          "official_url": "https://kyototamba-fair.jp/event/141/index.html",
+          "disposition": "hold",
+          "reason": "10/31回は10日前までの申込期限を経過。追加募集/当日枠の明示なし。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "【京都丹波フェア冠事業】京都丹波ガーデニングセミナーin南丹市国際交流会館",
+          "official_url": "https://kyototamba-fair.jp/event/133/index.html",
+          "disposition": "hold",
+          "reason": "各教室初回1週間前が締切、11月後期各教室料金・対象年齢・現在枠を本文から確定不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 アイン薬局桂店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 京都ダイハツU-Car伏見",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 京のお肉処弘総本店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 JAF京都支部",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 ラ・キャリエールクッキングスクール",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 ちきりやガーデン本店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 トヨタカローラ京都城陽店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 日本生命京都支社",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 ファミリーマート京都川島店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 ファミリーマート北白川店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 ファミリーマート山科三条通店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "キッズお仕事体験 福寿園京都本店",
+          "official_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "hold",
+          "reason": "京都府/event/一覧は計量教室11/11対詳細12/14、ポルタ11/10対詳細11/6-7と複数の数値日付不一致。showakinen限定の詳細優先規則は適用不可。この一覧source familyの候補を保留し、府側の訂正またはPM判断を要する。 さらに各回時間・料金・現在の予約枠はiibaアプリ内でのみ公表され、公開府ページだけでは現在の参加経路を検証不可。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 絞りバッグ糸ほどき",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 銅鏡磨き",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 ぬか漬け",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 ゲームプログラミング",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 クリッカーキーホルダー制作",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 豆腐づくり",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 カメラマン",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 エレベーター点検",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 シルクスクリーン",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 油絵制作",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 銅板文様彫金",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "グッジョブ！学びと体験の秋in下京 社会課題アイデア",
+          "official_url": "https://www.city.kyoto.lg.jp/shimogyo/page/0000357062.html",
+          "disposition": "hold",
+          "reason": "一次募集終了。二次募集は空席のある体験のみ。公式予約先Peatixを実fetchしたがHTMLはJS shellで体験別の現在空席・料金・時間を検証できず、参加可能と推定しない。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "らくさいはぐくみスタンプコレクション2026",
+          "event_id": "evt-w41d5-kyoto-rakusai-stamps",
+          "official_url": "https://www.city.kyoto.lg.jp/nisikyo/page/0000317644.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同runの市カレンダー単位で追加済み。複数施設が対象の同一キャンペーンとして再追加なし。",
+          "source_type": "multi_venue_organizer"
+        }
+      ],
+      "organizer_horizon_basis": "公式カレンダーJSの実データ216行を取得、end>=実行日41行すべて個別詳細fetch・判定。付随の教室は2027/3まであり56日先以降も評価。通行パス151はイベントではなく交通商品のため除外。12事業所/12体験も会場単位にHOLDを保持。",
+      "facility_candidate_signals": "公式で恒常の家族利用を示す園部公園、亀岡保津川公園、わち山野草の森、ガレリアかめおか、南丹市立文化博物館は現施設名で一致なし。重複・住所の公式再検証はMEM-FAC-OPSで行う候補信号とし、このMissionでは施設追加しない。"
+    },
+    "nagasaki": {
+      "sources_checked": [
+        {
+          "url": "https://kenten-nagasaki.jp/",
+          "status": 200,
+          "checked_at": "2026-10-26T01:40:53.468057+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "長崎県美術展覧会実行委員会",
+          "multi_venue_basis": "長崎県美術館・佐世保島瀬・諫早・新上五島・波佐見を巡回する公式県展"
+        },
+        {
+          "url": "https://e-oomura.jp/pages/52/",
+          "status": 200,
+          "checked_at": "2026-10-26T01:40:54.880127+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "大村市観光コンベンション協会",
+          "multi_venue_basis": "佐世保〜長崎の複数駅・沿線提携店を巡る11/14・15の公式イベント"
+        },
+        {
+          "url": "https://www.city.nagasaki.lg.jp/site/endou/90684.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:40:56.117417+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "長崎市 遠藤周作文学館",
+          "multi_venue_basis": "文学館と出津地区ふれあいセンターの2会場で11/14の複合企画",
+          "host_shared_with_registry_reason": "市が2つの別会場を束ねる複合事業を主催し、登録単施設のイベントページではない。"
+        },
+        {
+          "url": "https://kenten-nagasaki.jp/71th-expo/",
+          "status": 200,
+          "checked_at": "2026-10-26T01:41:06.303891+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "長崎県美術展覧会実行委員会",
+          "multi_venue_basis": "県展5会場の会期・観覧情報をまとめた公式巡回展告知"
+        },
+        {
+          "url": "https://www.pref.nagasaki.jp/events/47227.html",
+          "status": 200,
+          "checked_at": "2026-10-26T01:41:46.097311+00:00",
+          "source_type": "multi_venue_organizer",
+          "organizer_name": "長崎県美術展覧会実行委員会・長崎県",
+          "multi_venue_basis": "本展3会場と無料移動展2会場の公式巡回日程",
+          "host_shared_with_registry_reason": "県が5つの異なる施設を束ねる県展の巡回一覧。単施設の自前イベントページではない。"
+        }
+      ],
+      "candidates_found": 5,
+      "added": 2,
+      "duplicate_or_already_present": 0,
+      "hold": 3,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "第71回長崎県展 移動展（新上五島町）",
+          "official_url": "https://www.pref.nagasaki.jp/events/47227.html",
+          "event_id": "evt-w41d5-nagasaki-kenten-shinkami",
+          "disposition": "added",
+          "participability": "通常参加可能",
+          "event_category": "facility_hosted",
+          "reason": "県の公式巡回告知で当該会場の会期・時間と無料・予約不要を確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "第71回長崎県展 移動展（波佐見町）",
+          "official_url": "https://www.pref.nagasaki.jp/events/47227.html",
+          "event_id": "evt-w41d5-nagasaki-kenten-hasami",
+          "disposition": "added",
+          "participability": "通常参加可能",
+          "event_category": "facility_hosted",
+          "reason": "県の公式巡回告知で当該会場の会期・時間と無料・予約不要を確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "第71回県展 諫早会場",
+          "official_url": "https://kenten-nagasaki.jp/71th-expo/",
+          "disposition": "hold",
+          "reason": "10/22〜11/1・10/27休館・小中学生無料は確認。主催が料金訂正を告知しており成人料金表は画像のため未確認。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "ぶらり大村線グルメパスポート",
+          "official_url": "https://e-oomura.jp/pages/52/",
+          "disposition": "hold",
+          "reason": "主催複数沿線会場を確認したが、10/26受付終了と明記。",
+          "source_type": "multi_venue_organizer"
+        },
+        {
+          "title": "遠藤周作を偲ぶ一日 複数会場・講演／囲碁／音楽",
+          "official_url": "https://www.city.nagasaki.lg.jp/site/endou/90684.html",
+          "disposition": "hold",
+          "reason": "11/14の2会場・各時刻・シャトルバスと一部予約を確認。専門文学講演／囲碁と子ども向けの対象適合・受付可否の判断が残る。",
+          "source_type": "multi_venue_organizer"
+        }
+      ],
+      "discovery_basis": "既存events_dataのorganizer/source_notesには水族館・科学館・博物館の単施設源が中心。県カレンダーの県展、観光新着の沿線周遊、市カレンダーの2会場記念事業から真正の複数会場主催源を発見して本単位で新規取得。",
+      "facility_candidate_signal": "県展の新上五島町石油備蓄記念会館・波佐見町講堂は会場候補。常設の独立した家族おでかけ価値がこのイベント告知からは確認できないためFacilityOpsへの確定的な施設追加信号にしない。"
+    }
+  }
+}
