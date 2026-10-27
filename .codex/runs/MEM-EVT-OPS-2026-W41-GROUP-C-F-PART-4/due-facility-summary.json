@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-4",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T18:00:43.424182+00:00",
+  "executed_at": "2026-10-27T18:02:13.847526+00:00",
   "due_facility_ids": [
     1929,
     1930,
@@ -47,9 +47,9 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 6,
-    "candidate_found_added": 18,
+    "candidate_found_added": 17,
     "candidate_found_duplicate": 9,
-    "candidate_found_hold": 6,
+    "candidate_found_hold": 7,
     "source_unresolved": 1
   },
   "per_region": {
@@ -98,9 +98,9 @@
       ],
       "total": 40,
       "no_current_or_future_event": 6,
-      "candidate_found_added": 18,
+      "candidate_found_added": 17,
       "candidate_found_duplicate": 9,
-      "candidate_found_hold": 6,
+      "candidate_found_hold": 7,
       "source_unresolved": 1,
       "sources_checked": [
         {
@@ -3575,8 +3575,8 @@
           "executed_in_this_mission": true,
           "executed_at": "2026-10-27T17:52:47.477392+00:00",
           "facility_id": 1999,
-          "disposition": "candidate_found_added",
-          "reason": "新規サンサンTVコラボ1件追加。ハロウィン終了曜日の公式内部不一致は既存event-level HOLD、追加ミッションも同じ保留へ紐付け。",
+          "disposition": "candidate_found_hold",
+          "reason": "新規サンサンTVコラボ1件追加。ハロウィン終了曜日の公式内部不一致は既存event-level HOLD、追加ミッションも同じ保留へ紐付け。 サンサン新企画は公式参加可能だが全国共通URL重複例外変更のPMレビュー待ちHOLDへ最終検証で変更。",
           "event_judgments": []
         },
         {
@@ -6016,10 +6016,8 @@
           "facility_id": 1999,
           "title": "リトルプラネット×サンサンキッズTV「みんなで！あそびパーティ2026」（LECT広島）",
           "url": "https://litpla.com/news/press/202610-sunsun-info/",
-          "disposition": "added",
-          "reason": "全国対象にLECT広島を含むことを店舗ページと照合。11/9～12/31券を11/15までにWEB購入すると総額500円引き、30分コース除外。",
-          "event_id": "evt-w41f4-1999-sunsun-party",
-          "participability": "通常参加可能"
+          "disposition": "hold",
+          "reason": "公式で11/9～1/6の開催・通常参加経路を確認済み。ただし全国共通URLが既存5会場の承認済み重複例外と衝突し、6会場目を加えるvalidator例外の変更にはplaybook上PMレビューが必要。今回は無断例外変更せず採用HOLD。"
         },
         {
           "facility_id": 1999,
