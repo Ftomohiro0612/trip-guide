@@ -1,0 +1,1324 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-8",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-27T05:32:25.721781+00:00",
+  "horizon_end_date": "2026-12-22",
+  "prior_run_numbers_reused_as_execution": false,
+  "per_region": {
+    "chiba": {
+      "sources_checked": [
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-27T04:43:01.828947+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "株式会社リトプラ",
+          "multi_venue_basis": "同一公式プレスリリースが複数パークでのハロウィン企画を公開。千葉県では松戸・船橋・蘇我の3別会場。",
+          "host_shared_with_registry_reason": "litpla.comは登録施設単館ではなく、運営会社による全国複数パーク横断の公式キャンペーン告知。",
+          "content_sha256": "85ec7d61e3616e260ec0acd2e03d33183ad8d1edebd5d9c7f01a580db4d9dacd"
+        },
+        {
+          "url": "https://www.sudo-farm.com/stamp-rally/",
+          "status": 200,
+          "checked_at": "2026-10-27T04:43:26.209072+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "須藤牧場",
+          "multi_venue_basis": "公式スタンプラリーが多数の別店舗を横断し、CB COFFEE・木村ピーナッツなど各会場を公開（公式トップ表示63店舗、観光紹介64店舗）。",
+          "host_shared_with_registry_reason": "牧場単館のイベントページではなく県内64店舗横断キャンペーンと参加店舗表を公開。",
+          "content_sha256": "24cfcaa85c38bbf4c70a972851b0d694dc0b75c3b3c422340676c8ff295b557c"
+        },
+        {
+          "url": "https://www.sudo-farm.com/stamp-rally/stamp-book/list",
+          "status": 200,
+          "checked_at": "2026-10-27T04:43:26.661069+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "須藤牧場",
+          "multi_venue_basis": "公式スタンプラリーが多数の別店舗を横断し、CB COFFEE・木村ピーナッツなど各会場を公開（公式トップ表示63店舗、観光紹介64店舗）。",
+          "host_shared_with_registry_reason": "牧場単館のイベントページではなく県内64店舗横断キャンペーンと参加店舗表を公開。",
+          "content_sha256": "62074a85c7382202673d327cf2f68a2623cfde265931fc1bd7dded2b15d04b59"
+        },
+        {
+          "url": "https://www.2aw.jp/schedule/",
+          "status": 200,
+          "checked_at": "2026-10-27T04:43:27.317270+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "2AW",
+          "multi_venue_basis": "主催団体の公式大会予定。2AWスクエア、館山市城山公園など複数の別会場での日程を掲載。",
+          "content_sha256": "827b0946809fadbb2b7bcc0f1f0f933ad12014fe7aa89bd7ec1758fb006afb2b"
+        }
+      ],
+      "candidates_found": 17,
+      "added": 0,
+      "duplicate_or_already_present": 4,
+      "hold": 13,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "ハロウィン2026（KITE MITE MATSUDO (キテミテマツド)）",
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
+          "event_id": "evt-litpla-litpla-matsudo-halloween2026",
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "ハロウィン2026（リトルプラネット ららぽーとTOKYO-BAY）",
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
+          "event_id": "evt-litpla-lalaport-tokyo-bay-halloween2026",
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーアリオ蘇我）",
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
+          "event_id": "evt-litpla-toylo-soga-halloween2026",
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "第8回千葉生シェイク祭り2026",
+          "url": "https://www.sudo-farm.com/stamp-rally/",
+          "disposition": "hold",
+          "reason": "観光紹介は64店、公式トップは63店で参加数に差があり、店舗別の参加期間にも8月末終了・10月25日終了が混在。現行の対象店舗/参加経路を一つの行に確定せずHOLD。",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "ACTIVE ADVANCE TOURNAMENT Aブロック一回戦",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月1日（日） ACTIVE ADVANCE TOURNAMENT Aブロック一回戦 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "ACTIVE ADVANCE TOURNAMENT Bブロック一回戦",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月3日（火・祝） ACTIVE ADVANCE TOURNAMENT Bブロック一回戦 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "第1回 ファイト！ファイト！館山城―館山城プロレスの陣",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runの地域観光surfaceで追加済み。同じ11月7日13時・館山市城山公園の開催を主催者全体日程で再照合。",
+          "event_id": "evt-chiba-w41d8-tateyama-wrestling",
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "municipal_regional"
+        },
+        {
+          "title": "ACTIVE ADVANCE TOURNAMENT Aブロック二回戦",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月8日（日） ACTIVE ADVANCE TOURNAMENT Aブロック二回戦 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "ACTIVE ADVANCE TOURNAMENT Bブロック二回戦",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月15日（日） ACTIVE ADVANCE TOURNAMENT Bブロック二回戦 18:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "ACTIVE ADVANCE TOURNAMENT 準決勝・決勝戦 in TKPガーデンシティ千葉",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "公式一覧は11月22日、リンク先パスは20261227tkp。同じ開催の詳細と一致を確定できない。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月22日（日） ACTIVE ADVANCE TOURNAMENT 準決勝・決勝戦 in TKPガーデンシティ千葉 13:00"
+        },
+        {
+          "title": "チーバトル271",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年11月29日（日） チーバトル271 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "チーバトル272",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年12月6日（日） チーバトル272 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "チーバトル273",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年12月13日（日） チーバトル273 13:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "2AWスクエア納め2026",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年12月20日（日） 2AWスクエア納め2026 16:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "有限会社山﨑工業プレゼンツ2AW 年内最終興行 GRAND SLAM in TKPガーデンシティ千葉",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2026年12月27日（日） 有限会社山﨑工業プレゼンツ2AW 年内最終興行 GRAND SLAM in TKPガーデンシティ千葉 13:0"
+        },
+        {
+          "title": "十嶋くにお25周年記念",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一般プロレス興行。現時点の販売/残席と子供・未就学児の入場条件の一次確認が揃わないため家族向けの新規追加を保留。",
+          "event_category": "municipal_regional",
+          "listed_date": "2027年1月4日（月） 十嶋くにお25周年記念 12:00 千葉・2AWスクエア"
+        },
+        {
+          "title": "2AW AWARD2026",
+          "url": "https://www.2aw.jp/schedule/",
+          "disposition": "hold",
+          "reason": "一覧の年は2025年12月20日、イベント名は2026で年度矛盾。過去開催としても2026開催としても推測採用しない。",
+          "event_category": "municipal_regional"
+        }
+      ],
+      "search_note": "既存通常/Summer合算のorganizer/source_notes/official_url、県公式観光8ページの主催者を参照。単館イベント一覧を主催者枠に流用せず、リトプラ横断企画・須藤牧場横断企画・2AW複数会場予定を実取得。2AWは2027年1月4日までの全1ページを確認し、東京1件はscope外として除外。",
+      "reporting_category_note": "既存の3区分で候補遭遇を報告。季節行事を優先し、地域回遊/街路等は自治体・地域、展示・館内講座・公演・教室は施設開催に分類。採否・既存Product分類は変更しない。"
+    },
+    "iwate": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.iwate.jp/event/bunka/1099165.html",
+          "status": 200,
+          "checked_at": "2026-10-27T05:18:58.221470+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市連携／岩手県文化振興課）",
+          "multi_venue_basis": "公式共同事業。県内の県立博物館・県立図書館・複数市立博物館等の異なる会場を同一事業の参加一覧で公表。",
+          "host_shared_with_registry_reason": "県の登録施設単館ページではなく、岩手県内の複数市町村・博物館・図書館にまたがる共同事業の公式集約ページ。",
+          "content_sha256": "a01e43afc068af090bd69bfba07142847f891e4f6ce936edfee581bb6356b22f"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:18:58.670111+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市連携／岩手県文化振興課）",
+          "multi_venue_basis": "公式共同事業。県内の県立博物館・県立図書館・複数市立博物館等の異なる会場を同一事業の参加一覧で公表。",
+          "host_shared_with_registry_reason": "県の登録施設単館ページではなく、岩手県内の複数市町村・博物館・図書館にまたがる共同事業の公式集約ページ。",
+          "content_sha256": "2712442505529e85910eff8b431b156f590ae4e3cd1f7d503c3b32ab231761b3"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/pref-iwate/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:19:08.472197+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市連携）",
+          "multi_venue_basis": "岩手県内の異なる文化施設を参加対象として公表する公式共通事業。",
+          "content_sha256": "2ce1ba484f01a62eae205c837aaf6fdd93803ad2ebac6db3cf976dd125051e12"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/?area%5B%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:19:18.572778+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市）",
+          "multi_venue_basis": "県内複数の博物館・美術館等のイベントを同一事業で掲載。",
+          "content_sha256": "627fb7eb7c067dfd2bc173e0486c91ecd8d20eed951c6e2edd0ed0eabe3672d6"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-7-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:19:36.185703+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式地域横断事業の岩手県対象イベント。異なる博物館・図書館・美術館の54企画を公表。",
+          "content_sha256": "4cfb61061ebbd0a4d07976da6a6f482443c20e489853e829a89b833b3878fe38"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/?area%5B%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:24.000972+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "627fb7eb7c067dfd2bc173e0486c91ecd8d20eed951c6e2edd0ed0eabe3672d6"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-7-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:24.727372+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "4cfb61061ebbd0a4d07976da6a6f482443c20e489853e829a89b833b3878fe38"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-14-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:25.407926+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "e3e664af6ec48a43acbdec9e4617628ddfd2baf12fa0776ab9443998a1fd555e"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:26.017045+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "6562dcd1e7cdae67f417e25c238a6d52a88891b885641d33bfada20c00a1e425"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-35-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:26.755206+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "711b1ee2b0c70e6271bbfac15bfe4ba3b1b2af488d17b85d16cf0dc31c5a5a56"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-17-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:27.664173+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "a946eddfc0dcd1e59bb4da3b19068dc6360ffbf1f65a16c379628d559f3b6d4c"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:28.765951+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "b5a1842a7f064c82e53c3dab24cf73ffd390accff77cd224fdd939614ff9bf0f"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-40-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:29.674397+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "396cd70fcf2ea30545db5c0ed619ee720f3fa460111eedeed8e8b688108d019e"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-38-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:30.393761+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "242aa2e9f549f0e6e6ea5278093eff649d98397375a0b302ffc053cc82693e1f"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-3-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:31.216435+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "74a5e455e6a0e9d07a3e651d6b3b623198e793c0bbef34b9950db57e6cf154fc"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-22-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:32.039006+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "4d8973b5b7505ec9044ba0ab070876c439989d94b7064eb80cc064e89e2e5962"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/page/2/?area%5B0%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:32.974499+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "6f9a6e2c1ac4d978d4d498aedb489dbea666889b3affa8457746f76b3b3037a2"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:33.665125+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "8a4f0084964d2a133caa3b78120206155ac56ca87d23fe8f600705e634e3e983"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:34.656464+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "49a2c6f80dfdafebb0a424bbc64e0ba66923cbc0caada23796c093ec794df286"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:36.340863+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "fb1d3cada523bbfc11b8b6c47c678e45bfc18283cad4899bd375fb5fd499c234"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-16-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:37.270364+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "909dfbf87e379ca9d906f4a8ce72b8b8e1e7b510a01b565fed3ad31ad8c312c4"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:38.211467+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "70a1afc122965459bf804c9d528f3054e18b98599f52e2f6ed766b8a3cddb692"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-31-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:39.092203+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "9b0f65ccfbb5f0876674379176c665d29bb60fb4ed868aae046675bbd608e4da"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-2-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:39.938986+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "debfc76173fdd02ed86201fea18e814fd0a6980c7ae889e96924222578c193fd"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-15-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:40.911665+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "b862711de1d2c3e4ea4ebd15b370064254e5315ac1c61ad5b836d839b503669c"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-19-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:41.794665+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "615a5aec03b699765cba6d97302fc67724f1e95e189ca66a6e2b30aebf996ac4"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-31-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:42.592607+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "293c224bc420c12875d42de28c0a23a16920b7312b339b24fda1aeca6f960ab2"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/page/3/?area%5B0%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:43.449809+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "68b9195029a3077b80303247a2bd150ebef9c765a5ffeec75289f41e32378085"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-45-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:44.144948+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "5c1b4b9d7235140b18b13346ac57e8647ba7aa780a40d2386c2b4bdce5cd8a41"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-1-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:44.946219+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "52e3c6df94919d1929d663d6bc6a6262f5219b39ab5356c6368ba50364289a7e"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-37-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:45.725573+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "5eaa9c00d6be182c7b8279704ac34a46b80e75d4f703a92a918fdfcd77ade1b9"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-23-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:46.472714+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "f13d079243161d39597dd339ebf943565d17299944ec6f57ff751bd2c037f860"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-28-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:47.325045+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "614500172c714e8febacfb08b95d4fd13c076023ebb360f7a6462da9c244573c"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:48.241546+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "15c8f1a35f56fadc66e00b7420c80718b1e89c14db90694263b4c6fe6dcee5b2"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:49.134660+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "8838b7e39747a075d9aa8854e616b916b75d8e9df0216f12bf7c062ec4b4f467"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-46-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:50.071141+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "ec570fffbc4a864b9aaea5b7ae7a5131eb0ae277fa33bbb9aa56448b0f4f90de"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-17-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:51.009923+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "fc867a5922fff86c259c35b6e9e3560485500b7a5ff69183fa4f7dc2c3f1df7e"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:51.916883+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "b38ace9a7f0eab2dfc7470a179d04819087c77b2b8b5ac84a2ace8a33d0f4423"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/page/4/?area%5B0%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:52.732852+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "cbeeb673c76240b04c22bb8b8f9a9d1903b3c5440f71daf473e377426bd5b716"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:53.362851+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "ab4f86af4a63ac254a45535139355e499680b7bc08f619e9af0dec0a649ca588"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-39-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:54.325309+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "7e2aa7bc41426ab367f76fb5b99840d384e23cd4543216101caf481309ad4516"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-2-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:55.306266+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "4d21f782f4100844616b61f61a686d70a08a43f6c4bc0c725605b3506b441ed6"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-3-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:56.265367+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "d0ccc9eec4b17e675e775a5d1a383c31fca77c0a204e4672ccd1dd3e7d75cd15"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:57.182354+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "e8e9b7dfe3a7791ed30f3896fa6448d1f51147bdbc920d93bd7c787ad58cd176"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:58.085597+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "9adcc07a0901c803cc654d62dfc30a730e9eea20ff587544bd724c68366cc6dc"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:59.000274+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "a2cad66ff646e3ac8bf8bb7bb1822f5e9ca4e83856dda61c4c746e8c2f28bd49"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:20:59.900854+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "75ff950b294523f69a1dba5f6bcd1ed204f808a65f547aa9b5fe7ab3f2f51d8d"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:00.777001+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "6639e93f1e1774a75a152ea677255e2321484b664fc0f5e2e993d495329e861d"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:01.703869+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "53efe2012d475525da5923d2e40cea5fa1dc911c12f4a4ff8e6c45e02b86d899"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/page/5/?area%5B0%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:02.560372+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "189254fea57b7e8787fb986e4fd03e110eed3b87bb43d18059466ef3cd55969d"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-12-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:03.208696+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "90fe4ac852137d48c321e5b673fe2f7b6d2f92444f898e58fa3b63dae44f06e9"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-34-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:04.117949+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "72254f2ac2d0853628e95b336f72519cb9eb6fb6bcef6ec599ccdda733f7838a"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-35-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:05.022130+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "4f1ef4a55c7c1723e6668fe1191abe6cca65364de53d6a4884743096850a0934"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:05.863183+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "e61ee775c0b5bd10569e19c4bcf3701adb001ddf9c79b63320e711e61b3cb523"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:06.855745+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "db3e5d176835ec9c39c8fc9f406db58a5ddb671df346c8db57df121533e0f2d7"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:07.693372+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "0165932b5a3577ee16f756b4bc4e1c61316daf5c845fe2f715def93051ecb0a6"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:08.584294+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "3abae61f46270940af1753523142fd9c444232254478fab85d100a2e6283bca7"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:09.420686+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "e984353d6ed3f51a11d90728a803a438765dc1d98dcb42f1fd3c885b3976630b"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:10.237976+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "785013a5be00f3bd30112f117c1db9f7a43d21e95368b6d10b7c0130cdc66f6b"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-42-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:11.430400+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "3a5da9714019640f93ed03ad9087cdb556227bd1e258cc467fa060f00a8f51b5"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/page/6/?area%5B0%5D=iwate",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:12.327044+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "8896de8ece99c60f9ff7aec196ab8083f5260080f68178c6239cd49789646c8c"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-3/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:12.948683+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "42f0c29128f301081acae6fc229996097de3d286986284574823d9906a9bc6aa"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-21-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:13.724137+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "36e68bd3f38d8d9f14453f5575079a19d92247139bc728ab04167c84f40290e4"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-21-2/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:14.587614+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "58ed45120de84b7d238544773a223ac462aff4823e0e2a872aab8712b2830e4f"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-1/",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:16.138474+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "東北文化の日（東北6県・仙台市共同事業）",
+          "multi_venue_basis": "公式共同事業の岩手54企画・複数施設の集約一覧、またはその参加登録詳細。施設単独の自主イベント一覧ではない。",
+          "content_sha256": "54ea98d39b28c394080c1e36cfd84867d81692553a12b4c3bbe1c83979ee2d9b"
+        },
+        {
+          "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
+          "status": 200,
+          "checked_at": "2026-10-27T05:21:54.200199+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "早池峰神楽国指定50年記念事業実行委員会",
+          "multi_venue_basis": "同一公式開催案内に大迫体育館の神楽公演、別会場の交流センターでのPV・にぎわい、仲町商店街での御通りを明示。",
+          "host_shared_with_registry_reason": "花巻市内単館のイベントページではなく、体育館・交流センター・商店街の異なる3会場で複数プログラムを行う記念事業の主催公式集約。",
+          "content_sha256": "473f4812a6e6c120c900c38187a386a50db213313f60f75e189c5c0910bf6c08"
+        }
+      ],
+      "candidates_found": 58,
+      "added": 0,
+      "duplicate_or_already_present": 4,
+      "hold": 54,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "企画展｢都南の街道と史跡・文化財｣",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-7-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年7月8日(水)～11月19日(木)",
+          "venue": "盛岡市都南歴史民俗資料館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "企画展「黄金を追う人々と大地」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-14-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年7月25日（土）～11月23日（月・祝）",
+          "venue": "大船渡市立博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第2回企画展「民のために生涯を捧げた男たちー寿庵と長英、それぞれの道ー」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年8月25日(火)～11月29日(日)",
+          "venue": "奥州市立高野長英記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "ミニ企画展「記念館推しのイッピン２」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-35-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月1日(火)～11月29日(日)",
+          "venue": "奥州市立斎藤實記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "宮沢賢治作品翻訳書籍展",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-17-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月2日(水)～2027年1月31日(日)",
+          "venue": "宮沢賢治イーハトーブ館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第71回企画展「原敬と司法省法学校の同窓たち」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-1/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
+          "event_id": "evt-iwate-w41d8-mori-1028525",
+          "listed_date": "2026年9月12日(土)～11月23日(月・祝)",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "菅沼綠 新作展",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-40-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月12日（土）～11月8日（日）",
+          "venue": "石神の丘美術館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "秋の企画展「家臣録から先祖をたどる」（仮題）",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-38-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月15日(火)～11月15日(日)",
+          "venue": "奥州市武家住宅資料館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第74回企画展　生誕200年記念「大島高任－日本近代製鉄の夜明け－」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-3-1/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
+          "event_id": "evt-iwate-w41d8-mori-1035073",
+          "listed_date": "2026年9月19日(土)～11月23日(月・祝)",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "企画展：地の下の挑戦者　金澤隆二展",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-22-1/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
+          "event_id": "evt-iwate-w41d8-kanazawa-art",
+          "listed_date": "2026年9月19日(土)～11月29日(日)",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "特別展「武家のみやび－初代一関藩主 田村建顕と和歌－",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月19日(土)～11月23日（月・祝）",
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "テーマ展「化石のレプリカ展 -We are NOT fakes!-」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年9月26日(土)～12月6日(日)",
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "啄木生誕140周年・盛岡市玉山村合併20周年記念　第2企画展示「たまやまの指定文化財（仮）」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月1日（木）～2027年9月末（予定）",
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "特別展「セロ弾きのはなし」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-16-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月3日（土）～2027年2月14日（日）",
+          "venue": "宮沢賢治記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "重要文化財の公開",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月6日（火）～11月8日（日）",
+          "venue": "奥州市立高野長英記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第62回企画展",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-31-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月10日（土）～2027年1月24日（日）",
+          "venue": "二戸市シビックセンター",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第78回企画展　高村光太郎没後70年「高村光太郎と岩手の人～手紙に見る交流～」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-2-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月14日（水）～2027年2月8日（月）",
+          "venue": "盛岡てがみ館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "新渡戸フェスティバル",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-15-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月17日（土）",
+          "venue": "花巻新渡戸記念館",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "月山降臨-最古の月山紀年銘刀を追う-",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-19-1/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
+          "event_id": "evt-iwate-w41d8-gassan-swords",
+          "listed_date": "2026年10月17日（土）～12月20日（日）",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第18回田中舘愛橘ローマ字書道コンクール入賞作品展",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-31-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月17日（土）～11月8日（日）",
+          "venue": "二戸市シビックセンター",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "令和８年度企画展「帰ってきたMAKUMAE」（仮）",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-45-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月17日(土）～11月29日（日）",
+          "venue": "御所野縄文博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "企画展「第37回啄木資料展」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-1-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月24日(土)～2027年1月17日(日)",
+          "venue": "岩手県立図書館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "まいぶんレキシ体験プログラム～歴史公園でつくろう！遊ぼう！～",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-37-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月25日(日)",
+          "venue": "胆沢城跡歴史公園",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "令和８年度久慈市民芸術文化祭",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-23-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月31日（土）、11月1日（日）",
+          "venue": "久慈市文化会館（十文字チキンアンバーホール）",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "常設展示　製鉄",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-28-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "通年",
+          "venue": "釜石市郷土資料館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第53回　大槌町民文化祭",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月31日(土）～11月3日（火・祝）",
+          "venue": "大槌文化交流センターおしゃっち／城山公園体育館",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "令和８年度大槌町文化財展「崎山弁天遺跡」（仮）",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月31日(土）～11月3日（火・祝）",
+          "venue": "大槌文化交流センターおしゃっち　エントランスホール",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "秋の椿とガーデニングフェスタ",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-46-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年10月31日（土）",
+          "venue": "世界の椿館・碁石",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "宮沢賢治生誕130年記念第５回国際研究大会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-17-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月1日（日）～11月3日（火・祝）",
+          "venue": "なはんプラザ（花巻市定住交流センター）",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "講座「和歌に親しむ（仮）」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月1日（日）",
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "特別展　ギャラリートーク",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-26-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月1日（日）",
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "工作体験イベント　あそんでまなぼう！　うしはく探検隊2026",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-39-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月1日(日)",
+          "venue": "奥州市牛の博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "ミニイベント「切手でしおりをつくろう！」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-2-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）　開催時間①10:00～10:30　②14:00～14:30",
+          "venue": "盛岡てがみ館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "文化の日記念イベント",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-3-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "盛岡市先人記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "啄木スタンプラリー",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "レコード鑑賞会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-4-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "啄木スタンプラリー",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "石川啄木記念館",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "レコード鑑賞会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "石川啄木記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "中高生による科学実験ショー",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日(火・祝)",
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "文化講演会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）",
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "第２７回崎山貝塚縄文まつり",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-12-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日(火・祝)",
+          "venue": "宮古市崎山貝塚縄文の森ミュージアム",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "冬の３館ウォーク",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-34-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日(火・祝)～2027年1月24日(日)",
+          "venue": "奥州市立後藤新平記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "冬の３館ウォーク",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-35-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火・祝）～2027年1月24日（日）",
+          "venue": "奥州市立斎藤實記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "冬の３館ウォーク",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-36-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月3日（火）～令和9年1月24日（日）",
+          "venue": "高野長英記念館、後藤新平記念館、斎藤實記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "原敬命日記念事業「命日記念茶会」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月4日（水）",
+          "venue": "原敬記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "原敬命日記念事業「大宮さんさ踊り記念演舞」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-10-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月4日（水）",
+          "venue": "原敬記念館",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "太陽を見る会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月7日(土)、14日(土)",
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "県博日曜講座",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-11-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月8日（日）",
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "崎山弁天遺跡講演会・シンポジウム（仮）",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-43-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月8日（日）",
+          "venue": "大槌町中央公民館　吉里吉里分館（きりきりぶんかん）",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "秋の武家屋敷お庭巡り",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-42-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月11日(水)～11月18日(水)",
+          "venue": "金ケ崎町城内諏訪小路重要伝統的建造物群保存地区",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "星を見る会",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-9-3/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月14日（土）",
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "俳句まつり",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-21-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月14日（土）",
+          "venue": "日本現代詩歌文学館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "詩人の集い2026―いまを生きる―",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-21-2/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年11月28日（土）",
+          "venue": "日本現代詩歌文学館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "啄木生誕140周年・盛岡市玉山村合併20周年記念\n第21回企画展「歌人　石川啄木の世界（仮）」",
+          "url": "https://tohokubunka.pref.miyagi.jp/events/iwate-5-1/",
+          "disposition": "hold",
+          "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
+          "listed_date": "2026年12月12日（土）～2027年3月22日（月・祝）",
+          "venue": "石川啄木記念館",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "全国神楽まつり 神楽公演（大迫体育館）",
+          "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
+          "disposition": "hold",
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "全国神楽まつり パブリックビューイング（交流センター）",
+          "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
+          "disposition": "hold",
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "全国神楽まつり にぎわい（交流センター駐車場）",
+          "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
+          "disposition": "hold",
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
+        },
+        {
+          "title": "全国神楽まつり 御通り（仲町商店街）",
+          "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
+          "disposition": "hold",
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
+        }
+      ],
+      "search_note": "通常/Summer合算organizer/source_notesの主催者と本runの県・観光掲載を照合。東北文化の日は岩手絞込全6ページ54詳細を取得。さらに50周年神楽事業の3会場4プログラムを主催市で確認。登録詳細に料金/時刻欄不足が多いsource familyを各候補HOLDとして維持。",
+      "reporting_category_note": "既存の3区分で候補遭遇を報告。季節行事を優先し、地域回遊/街路等は自治体・地域、展示・館内講座・公演・教室は施設開催に分類。採否・既存Product分類は変更しない。"
+    }
+  },
+  "verification_note": "18 sequential discovery receipts retain the counts at their completion time. Final candidate QA removed natural-view-only items, resolved later duplicates, and held one child-ineligible provisional item; per_region counts below are final encounter counts, not distinct-event totals."
+}
