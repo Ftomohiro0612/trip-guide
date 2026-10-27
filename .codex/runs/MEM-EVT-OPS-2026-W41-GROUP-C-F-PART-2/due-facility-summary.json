@@ -9822,19 +9822,21 @@
           "executed_at": "2026-10-27T14:31:26.205470+00:00",
           "facility_id": 3999,
           "disposition": "candidate_found_added",
-          "reason": "公式展示・ワークショップ・イベント一覧と全現在/未来候補詳細を個別評価。12/27展終了等を確認、古い開催予定ラベルより実日付で判定。",
+          "reason": "公式展示・ワークショップ・イベント一覧と全現在/未来候補詳細を個別評価。12/27展終了等を確認、古い開催予定ラベルより実日付で判定。 QAで別facility_idの2既存展と重複確認し追加を撤回、3件追加。 QAで別facility_idの2既存展と重複確認し追加を撤回、3件追加。",
           "candidates": [
             {
               "title": "しげの秀一原画展 ～峠から未来へ～",
-              "disposition": "added",
+              "disposition": "duplicate",
               "event_id": "evt-3999-20261027-f2-shigeno",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "reason": "既存evt-w41d7-akita-shigeno / evt-w41d7-akita-takahashiと公式URL・題名・会期が同じ。今回独立追加を取り除く。実表示はPreview/Productionで確認。"
             },
             {
               "title": "画業55周年 高橋よしひろ自薦原画展",
-              "disposition": "added",
+              "disposition": "duplicate",
               "event_id": "evt-3999-20261027-f2-yoshihiro",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "reason": "既存evt-w41d7-akita-shigeno / evt-w41d7-akita-takahashiと公式URL・題名・会期が同じ。今回独立追加を取り除く。実表示はPreview/Productionで確認。"
             },
             {
               "title": "マンガで知る、きもち展",
@@ -9883,8 +9885,6 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "added_event_ids": [
-            "evt-3999-20261027-f2-shigeno",
-            "evt-3999-20261027-f2-yoshihiro",
             "evt-3999-20261027-f2-feelings",
             "evt-3999-20261027-f2-quiz",
             "evt-3999-20261027-f2-mangaweek"
