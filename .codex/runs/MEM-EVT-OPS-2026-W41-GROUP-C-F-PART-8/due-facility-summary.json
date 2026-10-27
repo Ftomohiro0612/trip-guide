@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-8",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T23:28:47.313506+00:00",
+  "executed_at": "2026-10-27T23:35:34.055360+00:00",
   "due_facility_ids": [
     2500,
     2501,
@@ -46,12 +46,12 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 30,
-    "no_current_or_future_event": 12,
-    "candidate_found_added": 6,
-    "candidate_found_duplicate": 3,
-    "candidate_found_hold": 7,
-    "source_unresolved": 2
+    "total": 40,
+    "no_current_or_future_event": 15,
+    "candidate_found_added": 7,
+    "candidate_found_duplicate": 4,
+    "candidate_found_hold": 10,
+    "source_unresolved": 4
   },
   "per_region": {
     "kumamoto": {
@@ -1838,14 +1838,17 @@
         1580,
         1583,
         1600,
-        1644
+        1644,
+        1653,
+        8207,
+        8209
       ],
-      "total": 7,
-      "no_current_or_future_event": 1,
-      "candidate_found_added": 4,
+      "total": 10,
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 5,
       "candidate_found_duplicate": 2,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
+      "source_unresolved": 1,
       "sources_checked": [
         {
           "url": "https://www.kyoto-aquarium.com/",
@@ -2757,6 +2760,164 @@
           "title": "ゲームから飛び出してきたにゃんこたちが！日本全国で大暴れ!『にゃんこ大パーティー！by VILLAGE VANGUARD』が開催決定！ | ポップアップイベント | ヴィレッジヴァンガード",
           "text_sha256": "742fa9c6aa4fed74b39627dc74d500f7962055b2657bf883acef7995300d5636",
           "final_url": "https://www.village-v.co.jp/popup/031531/"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/",
+          "status": 403,
+          "checked_at": "2026-10-27T23:28:58.109393+00:00",
+          "facility_id": 1653,
+          "title": "Access Denied",
+          "text_sha256": "b09af95b6eb3f25809834c6dee230d186825c2890fc5bfde2c7dfe3b96ac5dea",
+          "final_url": "https://www.suntory.co.jp/factory/kyoto/"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/",
+          "status": 403,
+          "checked_at": "2026-10-27T23:29:20.371423+00:00",
+          "facility_id": 1653,
+          "title": "Access Denied",
+          "text_sha256": "8ad3f1e126bc20405b5f0b221625ec5f451f3c98b25c8ef58018342598cc6e42",
+          "final_url": "https://www.suntory.co.jp/factory/kyoto/"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/news/detail/post_10.html",
+          "status": 403,
+          "checked_at": "2026-10-27T23:29:40.665632+00:00",
+          "facility_id": 1653,
+          "title": "Access Denied",
+          "text_sha256": "ae3b64da52aa8798812cb599d7d821a3a1ae1df21164d77168b96c817009c8e8",
+          "final_url": "https://www.suntory.co.jp/factory/kyoto/news/detail/post_10.html"
+        },
+        {
+          "url": "https://ja.kyoto.travel/event/single.php?event_id=15661",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:42.497530+00:00",
+          "facility_id": 1653,
+          "title": "月1回限定‐京都工場　夕暮れのビール体験【サントリー＜天然水のビール工場＞京都】｜【京都市公式】京都観光Navi",
+          "text_sha256": "0d0906e093d4b7d058dcb990a7821d2292ed965a7c189c872d2ac15911f70aac",
+          "final_url": "https://ja.kyoto.travel/event/single.php?event_id=15661"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:47.127914+00:00",
+          "facility_id": 8207,
+          "title": "漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "92a322833f3e2d0ac83d8966c02d1fc39fa71bae591a7a68ec69fb1ced4ae84c",
+          "final_url": "https://www.kanjimuseum.kyoto/"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/work/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:54.242757+00:00",
+          "facility_id": 8207,
+          "title": "ワークショップ | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "9094a0c4ca6013651dee832086aba87a967353ef4bc16824ea0d65c9b0ee2a6b",
+          "final_url": "https://www.kanjimuseum.kyoto/work/"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/kikakutenji/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:55.748463+00:00",
+          "facility_id": 8207,
+          "title": "企画展示 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "84a7809d5e0240e46153a9027e3052e5a94483525106d07d9f28a01c49551dea",
+          "final_url": "https://www.kanjimuseum.kyoto/kikakutenji/"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/news/11810_10.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:57.409617+00:00",
+          "facility_id": 8207,
+          "title": "11/8（日）開館10周年記念 阿辻哲次館長 特別講演会「漢字ミュージアム10年の歩みと漢字文化の今」開催 |  最新情報 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "0d0bcf1f943779609b28ff42c41dddf6d86cb1644088b9a8815fe51b98b67253",
+          "final_url": "https://www.kanjimuseum.kyoto/news/11810_10.html"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/news/kansaibunka2026.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:29:59.039180+00:00",
+          "facility_id": 8207,
+          "title": "2026年度「関西文化の日」における当館の入館無料日について |  最新情報 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "5796582c3d6e2b5f145807268029bd95d768331323c35c9487ed9514d8e507dc",
+          "final_url": "https://www.kanjimuseum.kyoto/news/kansaibunka2026.html"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/news/714.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:00.533177+00:00",
+          "facility_id": 8207,
+          "title": "7/14（火）～【漢字謎解き】「ヒミツの飼育員ミッション」 |  最新情報 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "4baf18e18c84bb371a3d79a87006b7a2a9a82d002fac1a637d769f22e4e062d8",
+          "final_url": "https://www.kanjimuseum.kyoto/news/714.html"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/kikakutenji/detail/kotoshinokanji-ten-2026.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:07.871939+00:00",
+          "facility_id": 8207,
+          "title": "企画展『今年の漢字®展』2026年 | 企画展示 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "961789877c22e7c08278c8138b63977732b56eae55dc0968afaaadc19563057f",
+          "final_url": "https://www.kanjimuseum.kyoto/kikakutenji/detail/kotoshinokanji-ten-2026.html"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/special/chinese-cuisine/index.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:09.822124+00:00",
+          "facility_id": 8207,
+          "title": "おなじみ？中華料理の漢字学｜企画展｜漢検 漢字博物館・図書館 ［漢字ミュージアム］",
+          "text_sha256": "5878d7f83807b4c01944841e5c14ffde9cf0a8ff35df1b60df244e64ecf4c358",
+          "final_url": "https://www.kanjimuseum.kyoto/special/chinese-cuisine/index.html"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/guide/time/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:11.799224+00:00",
+          "facility_id": 8207,
+          "title": "開館時間・入館料について | ご利用案内 | 漢検 漢字博物館・図書館 [漢字ミュージアム]",
+          "text_sha256": "c957778af59624c786ca8ae53bc9d222d9ea481281c84662d6d83985ab423a33",
+          "final_url": "https://www.kanjimuseum.kyoto/guide/time/"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_55.png",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:21.894609+00:00",
+          "facility_id": 8207,
+          "sha256": "989b655d587351442e43259e48667b559058a9e7b131c51c453020c419169175"
+        },
+        {
+          "url": "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+          "status": 200,
+          "checked_at": "2026-10-27T23:30:23.421638+00:00",
+          "facility_id": 8207,
+          "sha256": "31a37c2992e81e6fe514c4c6670e106a549fb544ffa7e4dfef33c49ef16e2b63"
+        },
+        {
+          "url": "https://www.shimadzu.co.jp/memorial-museum/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:04.358930+00:00",
+          "facility_id": 8209,
+          "title": "島津製作所 創業記念資料館 | 島津製作所",
+          "text_sha256": "140de1039dc581d23d39a5757edbf898320aeb02144296661e94b4c753e41788",
+          "final_url": "https://www.shimadzu.co.jp/memorial-museum/"
+        },
+        {
+          "url": "https://www.shimadzu.co.jp/memorial-museum/news/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:14.229531+00:00",
+          "facility_id": 8209,
+          "title": "お知らせ | 島津製作所 創業記念資料館 | 島津製作所",
+          "text_sha256": "bcf04f1a21202a0325ef8e537187b89a49ccbdbefea3129bf13a3ab08e899bb3",
+          "final_url": "https://www.shimadzu.co.jp/memorial-museum/news/"
+        },
+        {
+          "url": "https://www.shimadzu.co.jp/memorial-museum/lab/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:16.078772+00:00",
+          "facility_id": 8209,
+          "title": "実験ラボのご紹介 | 島津製作所 創業記念資料館 | 島津製作所",
+          "text_sha256": "f4558cb854d0ecfb4bde035119acee8efcd1495af41a0268a62191e6a0323e51",
+          "final_url": "https://www.shimadzu.co.jp/memorial-museum/lab/"
         }
       ],
       "facilities": [
@@ -3806,6 +3967,781 @@
               "disposition": "added",
               "event_id": "evt-1644-f8-nyanko",
               "participability": "通常参加可能"
+            }
+          ]
+        },
+        {
+          "facility_id": 1653,
+          "disposition": "source_unresolved",
+          "registry_checked": false,
+          "assessment": "工場公式トップ2回と最新親子ツアー告知が403。secondaryなし、京都市公式観光Naviをfallbackとして取得し11/20の夕暮れビール体験は大人飲酒主体と評価。工場公式の現行家族プログラム/予約残席は読めずsource_unresolved。工場公式primaryは成功していないためregistry鮮度は動かさない。",
+          "candidates": [
+            {
+              "title": "天然水のビール工場 親子ツアー10月",
+              "disposition": "hold",
+              "reason": "公式告知検索で10/31までの案内が浮上したが、このMissionで告知本文/予約ページを直接取得できず、10/31の現在予約枠と参加料金を確認不能。検索抜粋だけでは採用しない。"
+            },
+            {
+              "title": "夕暮れのビール体験11/20",
+              "disposition": "not_adopted",
+              "reason": "市公式で3500円・18時からのビール試飲体験と確認。家族向け催事には採用しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 8207,
+          "disposition": "candidate_found_added",
+          "assessment": "新着・企画展一覧と現行2詳細・工作本文と10/11月の公式画像カレンダー・料金・無料日・謎解き詳細を実読。既存current/future0件、企画展2・工作5・特別無料日1の8件追加。画像カレンダーの11/8・15午後なしを保持。",
+          "add": [
+            {
+              "id": "evt-8207-f8-chinese",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "おなじみ？中華料理の漢字学",
+              "summary": "中華料理の名前や漢字を、回転テーブルや食材クイズ、フォトブースで親子で学ぶ。",
+              "start_date": "2026-07-28",
+              "end_date": "2026-12-20",
+              "date_label": "2026-07-28～2026-12-20",
+              "time_label": "9:30～17:00（最終入館16:30）",
+              "price_label": "通常入館料が必要。未就学児は無料",
+              "reservation_label": "通常入館で観覧。",
+              "age_label": "親子向け",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "中華料理の名前や漢字を、回転テーブルや食材クイズ、フォトブースで親子で学ぶ。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/special/chinese-cuisine/index.html",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/special/chinese-cuisine/index.html",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。通常参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "ongoing",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-8207-f8-kanji-year",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "今年の漢字展2026",
+              "summary": "1995年から2025年までの「今年の漢字」の大書や筆、墨入れなどを展示。世相の変化と漢字をたどる。",
+              "start_date": "2026-10-20",
+              "end_date": "2027-02-14",
+              "date_label": "2026-10-20～2027-02-14",
+              "time_label": "9:30～17:00（最終入館16:30）",
+              "price_label": "通常入館料が必要。未就学児は無料",
+              "reservation_label": "通常入館で観覧。",
+              "age_label": "親子向け",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "1995年から2025年までの「今年の漢字」の大書や筆、墨入れなどを展示。世相の変化と漢字をたどる。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/kikakutenji/detail/kotoshinokanji-ten-2026.html",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/kikakutenji/detail/kotoshinokanji-ten-2026.html",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。通常参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "ongoing",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-8207-f8-beads",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "アイロンビーズで漢字！",
+              "summary": "ドットの集まりで漢字を表すアイロンビーズ工作。",
+              "start_date": "2026-10-31",
+              "end_date": "2026-11-23",
+              "date_label": "2026-10-31・2026-11-08・2026-11-15・2026-11-23",
+              "time_label": "11:00～12:00・14:00～15:00（11/8・15は午前のみ）",
+              "price_label": "入館料＋教材費500円。未就学児の入館は無料",
+              "reservation_label": "当日9:30から1階受付、各回開始15分前まで。先着8名。体験者への付き添いは大人1名。",
+              "age_label": "小学生以上、低学年は保護者同伴",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "ドットの集まりで漢字を表すアイロンビーズ工作。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/work/",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/work/",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_55.png",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。条件付き参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-10-31",
+                "2026-11-08",
+                "2026-11-15",
+                "2026-11-23"
+              ]
+            },
+            {
+              "id": "evt-8207-f8-badge",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "漢字缶バッジ作り！",
+              "summary": "漢字の意味やイメージを考え、直径7.5cmのオリジナル缶バッジをつくる。",
+              "start_date": "2026-11-01",
+              "end_date": "2026-11-22",
+              "date_label": "2026-11-01・2026-11-22",
+              "time_label": "11:00～11:30・14:00～14:30",
+              "price_label": "入館料＋教材費500円。未就学児の入館は無料",
+              "reservation_label": "当日9:30から1階受付、各回開始10分前まで。先着10名。体験者への付き添いは大人1名。",
+              "age_label": "どなたでも、未就学児・低学年は保護者同伴",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "漢字の意味やイメージを考え、直径7.5cmのオリジナル缶バッジをつくる。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/work/",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/work/",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。条件付き参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-11-01",
+                "2026-11-22"
+              ]
+            },
+            {
+              "id": "evt-8207-f8-stamp",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "消しゴムはんこを作ろう！",
+              "summary": "漢字の書体の移り変わりを学びながら、消しゴムのはんこをつくる。",
+              "start_date": "2026-11-03",
+              "end_date": "2026-11-21",
+              "date_label": "2026-11-03・2026-11-14・2026-11-21",
+              "time_label": "11:00～12:00・14:00～15:00",
+              "price_label": "入館料＋教材費500円。未就学児の入館は無料",
+              "reservation_label": "当日9:30から1階受付、各回開始10分前まで。先着10名。体験者への付き添いは大人1名。",
+              "age_label": "小学生以上、低学年は保護者同伴",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "漢字の書体の移り変わりを学びながら、消しゴムのはんこをつくる。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/work/",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/work/",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。条件付き参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-11-03",
+                "2026-11-14",
+                "2026-11-21"
+              ]
+            },
+            {
+              "id": "evt-8207-f8-rubbing",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "拓本を取ろう！",
+              "summary": "墨を使って瓦当の文字や絵を紙に写し取る。",
+              "start_date": "2026-11-07",
+              "end_date": "2026-11-28",
+              "date_label": "2026-11-07・2026-11-28",
+              "time_label": "11:00～11:45・14:00～14:45",
+              "price_label": "入館料＋教材費500円。未就学児の入館は無料",
+              "reservation_label": "当日9:30から1階受付、各回開始10分前まで。先着10名。体験者への付き添いは大人1名。",
+              "age_label": "小学生以上、低学年は保護者同伴",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "墨を使って瓦当の文字や絵を紙に写し取る。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/work/",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/work/",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。条件付き参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-11-07",
+                "2026-11-28"
+              ]
+            },
+            {
+              "id": "evt-8207-f8-tree808",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "808字の木プロジェクト",
+              "summary": "日中韓共通漢字808字から指定の1字をアイロンビーズで制作。持ち帰りはできず、翌月初旬から約1年間館内展示。",
+              "start_date": "2026-11-29",
+              "end_date": "2026-11-29",
+              "date_label": "2026-11-29",
+              "time_label": "11:00～12:00・14:00～15:00",
+              "price_label": "入館料＋教材費500円。未就学児の入館は無料",
+              "reservation_label": "当日9:30から1階受付、各回開始10分前まで。先着10名。体験者への付き添いは大人1名。",
+              "age_label": "小学生以上、低学年は保護者同伴",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "日中韓共通漢字808字から指定の1字をアイロンビーズで制作。持ち帰りはできず、翌月初旬から約1年間館内展示。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/work/",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/work/",
+                "https://www.kanjimuseum.kyoto/d241aaf46950feae115d159dd68c311d_56.png",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。条件付き参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-11-29"
+              ]
+            },
+            {
+              "id": "evt-8207-f8-free-day",
+              "facility_id": 8207,
+              "prefecture": "kyoto",
+              "title": "関西文化の日 漢字ミュージアム入館無料",
+              "summary": "漢字を見て、触れて、学べる館内展示を無料で楽しめる特別入館日。",
+              "start_date": "2026-11-18",
+              "end_date": "2026-11-18",
+              "date_label": "2026-11-18～2026-11-18",
+              "time_label": "9:30～17:00（最終入館16:30）",
+              "price_label": "入館無料。通常有料のワークショップ等は別途",
+              "reservation_label": "事前申込不要、混雑時は入館待ちの場合あり。",
+              "age_label": "どなたでも",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "漢字を見て、触れて、学べる館内展示を無料で楽しめる特別入館日。",
+              "is_free": true,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kanjimuseum.kyoto/news/kansaibunka2026.html",
+              "source_urls": [
+                "https://www.kanjimuseum.kyoto/news/kansaibunka2026.html",
+                "https://www.kanjimuseum.kyoto/guide/time/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・開催予定・参加方法を確認。通常参加可能。 月曜（祝日は翌平日）・年末年始休館、臨時休館は公式確認。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "おなじみ？中華料理の漢字学",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-chinese",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "今年の漢字展2026",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-kanji-year",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "アイロンビーズで漢字！",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-beads",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "漢字缶バッジ作り！",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-badge",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "消しゴムはんこを作ろう！",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-stamp",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "拓本を取ろう！",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-rubbing",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "808字の木プロジェクト",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-tree808",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "関西文化の日 漢字ミュージアム入館無料",
+              "disposition": "added",
+              "event_id": "evt-8207-f8-free-day",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "阿辻館長10周年講演",
+              "disposition": "not_adopted",
+              "reason": "漢字政策・情報機器・文字コードの90分一般/教育関係者向け講演。新規の幼児家族向け体験には採用しない。"
+            },
+            {
+              "title": "漢字カルタ・漢字で遊ぼう",
+              "disposition": "hold",
+              "reason": "公式ワークショップ本文で休止中・次回未定と明示。"
+            },
+            {
+              "title": "粘土で漢字・拓本等の10/25以前回",
+              "disposition": "ended_not_added",
+              "reason": "取得した10月カレンダーで終了。新規バックフィルなし。"
+            },
+            {
+              "title": "ヒミツの飼育員ミッション/漢字動物園",
+              "disposition": "ended_not_added",
+              "reason": "公式詳細で10/12終了。古い新着の開催中表記だけで採用しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 8209,
+          "disposition": "no_current_or_future_event",
+          "assessment": "公式トップ・全新着・実験ラボを内容評価。最新10/20は年末年始休館、講演5/30とサイエンスフェス2/1は終了、2025モダン建築祭は前年。通常予約制見学と実験ラボの団体教育サービスを新規期間限定催事にはせず、現在/未来の特別イベントなし。既存current/future0件。"
+        }
+      ]
+    },
+    "miyagi": {
+      "facility_ids": [
+        2192,
+        2195,
+        2197,
+        2198,
+        2199,
+        2200,
+        2205
+      ],
+      "total": 7,
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 1,
+      "candidate_found_hold": 3,
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11841",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:19.308985+00:00",
+          "facility_id": 2192,
+          "title": "宮城県慶長使節船ミュージアム（サン・ファン館） | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "a9a57b051265dbd96fe999e256523806710e7d96d8837ba82d759fda75e52379",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11841"
+        },
+        {
+          "url": "https://www.santjuan.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:29.010881+00:00",
+          "facility_id": 2192,
+          "title": "伊達政宗の黒船｜サン・ファン館 - 宮城県慶長使節船ミュージアム",
+          "text_sha256": "184cc0d95b132035cdfc7be1c665f1ac628fdb228872e628085fa119260f0b34",
+          "final_url": "https://www.santjuan.or.jp/"
+        },
+        {
+          "url": "https://www.santjuan.or.jp/event/2705",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:31.028515+00:00",
+          "facility_id": 2192,
+          "title": "宮城県慶長使節船ミュージアム開館30周年記念企画展「山口晃 ファ士クラ渡海遣欧奇から読み解くトリビア10」 | イベント | 伊達政宗の黒船｜サン・ファン館 - 宮城県慶長使節船ミュージアム",
+          "text_sha256": "fa5711b2da96cdf5c03b0599a56f862cb3ab01eb8695127acae876b1dbf42dab",
+          "final_url": "https://www.santjuan.or.jp/event/2705/"
+        },
+        {
+          "url": "https://www.santjuan.or.jp/event/2845",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:39.713620+00:00",
+          "facility_id": 2192,
+          "title": "夜間特別開館 ファンタジーフェスタ2026 | イベント | 伊達政宗の黒船｜サン・ファン館 - 宮城県慶長使節船ミュージアム",
+          "text_sha256": "cb65cb67a5d111bb6a55338095fde904dacb74998e5e1eed9abe027b0c238db8",
+          "final_url": "https://www.santjuan.or.jp/event/2845/"
+        },
+        {
+          "url": "https://www.santjuan.or.jp/experience/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:41.373432+00:00",
+          "facility_id": 2192,
+          "title": "体験 | 伊達政宗の黒船｜サン・ファン館 - 宮城県慶長使節船ミュージアム",
+          "text_sha256": "e03b2f30b8be5ad0f99ba0c70d69b0735490b214ce2285372a89915003c01307",
+          "final_url": "https://www.santjuan.or.jp/experience/"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15767",
+          "status": 200,
+          "checked_at": "2026-10-27T23:31:45.367470+00:00",
+          "facility_id": 2195,
+          "title": "角田市スペースタワー・コスモハウス | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "81c8b4dd696b361260ee1bdff012430ae2d8b4d47c46165724990315e1be397b",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15767"
+        },
+        {
+          "url": "https://www.kakuda-kousha.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:32:18.163511+00:00",
+          "facility_id": 2195,
+          "title": "(公財)角田市地域振興公社 ► かくだスポーツビレッジを管理しています",
+          "text_sha256": "0f175820f986a608105cc9bf08df099a8ea24598e58aca70e9096a717ec80d97",
+          "final_url": "https://www.kakuda-kousha.com/"
+        },
+        {
+          "url": "https://www.city.kakuda.lg.jp/site/kokokakuda/1157.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:32:20.173929+00:00",
+          "facility_id": 2195,
+          "title": "親子宇宙教室 - 角田市公式ホームページ",
+          "text_sha256": "e13c84172c77cb00670360349d443acc48913e33fc21dc8bf769a32f1407c048",
+          "final_url": "https://www.city.kakuda.lg.jp/site/kokokakuda/1157.html"
+        },
+        {
+          "url": "https://www.kakuda-kousha.com/%e5%ae%87%e5%ae%99%e6%95%99%e5%ae%a4%e3%80%8011%e6%9c%88/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:32:26.204523+00:00",
+          "facility_id": 2195,
+          "title": "宇宙教室 11月 ► (公財)角田市地域振興公社",
+          "text_sha256": "e2d2b3836eed233513b04e5317d63664cfe843ecc47946b84d6493f78b9bb2ac",
+          "final_url": "https://www.kakuda-kousha.com/%E5%AE%87%E5%AE%99%E6%95%99%E5%AE%A4%E3%80%8011%E6%9C%88/"
+        },
+        {
+          "url": "https://www.city.kakuda.lg.jp/uploaded/attachment/10398.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:32:28.415650+00:00",
+          "facility_id": 2195,
+          "sha256": "bf7da24bd4a61660d1be9b341db2829426794b53623fbc0f2fb1d7b0468d6ebd"
+        },
+        {
+          "url": "https://www.city.kakuda.lg.jp/uploaded/attachment/10397.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:32:42.472487+00:00",
+          "facility_id": 2195,
+          "sha256": "bf2a8d8af2ab4bd5a9e16d04675d253f562d5deaac863e725c8ce3545cbad8f8"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20872",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:08.135886+00:00",
+          "facility_id": 2197,
+          "title": "南三陸YES工房　体験ワークショップ | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "8034c183aa89f3a798226679dc923fa0b3130913cb72393fcdd786097042c84f",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20872"
+        },
+        {
+          "url": "https://yes-factory.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:13.861747+00:00",
+          "facility_id": 2197,
+          "title": "SDGsな木製オリジナルグッズならYES FACTORY｜一般社団法人南三陸YES工房",
+          "text_sha256": "15595fcd56b04407012bc5f2f2e5ce005dd9b70c123e8463ef8288537bf98093",
+          "final_url": "https://yes-factory.jp/"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16597",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:26.644588+00:00",
+          "facility_id": 2198,
+          "title": "弥治郎こけし村 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "ff06f8b199b7b81f6c3e36d9c6a0e7884b4ead751ffa5362beb8adc0a6cb4ccc",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16597"
+        },
+        {
+          "url": "https://shiroishi.ne.jp/news/8042",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:39.351783+00:00",
+          "facility_id": 2198,
+          "title": "【10月18日】弥治郎こけし村ふれあい祭り | しろいし旅カタログ",
+          "text_sha256": "3b449e928f955cd605896db9394fc652283818260a46e679e3567c52c6ded912",
+          "final_url": "https://shiroishi.ne.jp/news/8042"
+        },
+        {
+          "url": "https://ameblo.jp/yajiroukokeshimura/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:41.934508+00:00",
+          "facility_id": 2198,
+          "title": "弥治郎こけし村ブログ",
+          "text_sha256": "bf9f8a9674b1decde2dfbae5df29dd39b05c8a37776a4ce706dcdf4af8ebac70",
+          "final_url": "https://ameblo.jp/yajiroukokeshimura/"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=19112",
+          "status": 200,
+          "checked_at": "2026-10-27T23:33:58.986481+00:00",
+          "facility_id": 2199,
+          "title": "細倉マインパーク | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "88d423b7bb5801b9a97dc342ae3a6fd2677681b1e5f714d2c2a40601286f92ff",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=19112"
+        },
+        {
+          "url": "https://www.kuriharacity.jp/geopark/030/010/210/PAGE000000000000015720.html",
+          "status": 404,
+          "checked_at": "2026-10-27T23:34:14.173374+00:00",
+          "facility_id": 2199,
+          "title": "お探しのページが見つかりません。｜宮城県栗原市",
+          "text_sha256": "db4e935777fa06eb54f9aa00eb9e1247607deccc56a45eaa31e99c2e8c6b3827",
+          "final_url": "https://www.kuriharacity.jp/geopark/030/010/210/PAGE000000000000015720.html"
+        },
+        {
+          "url": "https://visit-kurihara.travel/spots/120",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:15.878360+00:00",
+          "facility_id": 2199,
+          "title": "細倉マインパーク | 観光・体験・グルメ検索 | ぎゅぎゅっとくりはら",
+          "text_sha256": "c1400b03c38f259ecc6c78fe1292325d8f7c1d8dece8ee874dc9cc8ea29f9d34",
+          "final_url": "https://visit-kurihara.travel/spots/120"
+        },
+        {
+          "url": "https://www.facebook.com/HOSOKURAMINEPARK",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:18.150818+00:00",
+          "facility_id": 2199,
+          "title": "細倉マインパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://www.facebook.com/HOSOKURAMINEPARK"
+        },
+        {
+          "url": "https://www.facebook.com/HOSOKURAMINEPARK",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:31.594610+00:00",
+          "facility_id": 2199,
+          "title": "細倉マインパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://www.facebook.com/HOSOKURAMINEPARK"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16484",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:34.603388+00:00",
+          "facility_id": 2200,
+          "title": "気仙沼シャークミュージアム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "c340b44e02aef4eabf10c7a70ed7969460920b8a0f764c508611241b4f684c3e",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16484"
+        },
+        {
+          "url": "https://www.uminoichi.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:41.528562+00:00",
+          "facility_id": 2200,
+          "title": "気仙沼「海の市」/シャークミュージアム",
+          "text_sha256": "a775ebd02de04242733c004e623225194e0f2ddf88852bf1a08a758b1efcd6f5",
+          "final_url": "https://www.uminoichi.com/"
+        },
+        {
+          "url": "https://www.uminoichi.com/museum",
+          "status": 200,
+          "checked_at": "2026-10-27T23:34:59.722396+00:00",
+          "facility_id": 2200,
+          "title": "シャークミュージアム │ 気仙沼「海の市」/シャークミュージアム",
+          "text_sha256": "d7a283751b30d797d8613424215dee019efaffad78ef006f60bb8566e1bc62b3",
+          "final_url": "https://www.uminoichi.com/museum"
+        },
+        {
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16483",
+          "status": 200,
+          "checked_at": "2026-10-27T23:35:03.720438+00:00",
+          "facility_id": 2205,
+          "title": "ガラス工房　元 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "e1e9c1853d2b72ff969dd95084e1283a96f6867ae0d766d91468391e2baf0c7f",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16483"
+        },
+        {
+          "url": "https://teshigoto-akiu.jp/m05_gen/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:35:17.086201+00:00",
+          "facility_id": 2205,
+          "title": "ガラス工房 元 ［ガラス］ 佐藤 元洋／知暁｜手しごとAKIU",
+          "text_sha256": "9b05533f5a77d7cf3bbd240aa69805dc6ca9c41ab03c42ae92ca7e1711814d59",
+          "final_url": "https://teshigoto-akiu.jp/m05_gen/"
+        },
+        {
+          "url": "https://www.akiulumina.jp/art.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:35:18.710830+00:00",
+          "facility_id": 2205,
+          "title": "アキウルミナート | アキウルミナ AKIULUMINA",
+          "text_sha256": "619ce82ea1b7f8ce7a4f8bbfb2d3b29e295b18a102c636cacd258eb738606906",
+          "final_url": "https://www.akiulumina.jp/art.html"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 2192,
+          "disposition": "candidate_found_duplicate",
+          "assessment": "県観光連盟公式と館公式トップ・既存展詳細・体験一覧・12/19特別開館詳細を実読。既存山口晃展の日程料金・11/15/22申込不要トークを再確認して鮮度更新。既存展内トークを重複追加しない。体験一覧は9/20以前の終了催事。",
+          "refresh": [
+            "evt-miyagi-d1-20261026-d5f8aa1e"
+          ],
+          "candidates": [
+            {
+              "title": "山口晃 ファ士クラ渡海遣欧奇から読み解くトリビア10／ギャラリートーク",
+              "disposition": "duplicate",
+              "event_id": "evt-miyagi-d1-20261026-d5f8aa1e"
+            },
+            {
+              "title": "ファンタジーフェスタ2026",
+              "disposition": "hold",
+              "reason": "12/19 16:30～20:00・一般500円/高校生以下無料・申込不要は公式で確認。屋外トーチ/天体観測の悪天候中止は明示されるが、夜間開館全体の荒天対応と幼児の火を使う体験参加条件は未確認。季節イベントのこの未確定部分をHOLDし、日程自体は否定しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 2195,
+          "disposition": "candidate_found_hold",
+          "assessment": "県観光公式、市の親子教室ページ、指定管理者の新着と11月詳細、2026年度公式PDF2点を実読・画像確認。11月2教室の名/組および低学年条件に相違がありsource-family HOLD。10/18はやぶさまつりは終了、他施設スポーツ教室は範囲外。既存current/future0件。",
+          "candidates": [
+            {
+              "title": "11/15 高性能紙飛行機",
+              "disposition": "hold",
+              "source_family": "kakuda-kousha.com / city.kakuda annual schedule",
+              "reason": "10/3公式告知は各15名・最少5名、市公式2026年度表は各15組・最少5組。紙飛行機は年間表が小学2以下保護者同伴参加可、最新本文が小学3以上。実際の定員単位/低学年参加条件が一致せず、受付の誤誘導を避け同じ11月source-family2件をHOLD。"
+            },
+            {
+              "title": "11/15 秋の空天体観測",
+              "disposition": "hold",
+              "source_family": "kakuda-kousha.com / city.kakuda annual schedule",
+              "reason": "10/3公式告知は各15名・最少5名、市公式2026年度表は各15組・最少5組。紙飛行機は年間表が小学2以下保護者同伴参加可、最新本文が小学3以上。実際の定員単位/低学年参加条件が一致せず、受付の誤誘導を避け同じ11月source-family2件をHOLD。"
+            },
+            {
+              "title": "12/6 宇宙クリスマスイベントデー",
+              "disposition": "hold",
+              "reason": "公式年間表で13～19時、4歳以上、無料予約不要と確認。季節行事の荒天時措置・イルミネーション実施期間の最新告知は未確認。"
+            },
+            {
+              "title": "2027/1/16 金属コマ・2/14 楽しい科学教室・3/7 岡ちゃん先生",
+              "disposition": "hold",
+              "reason": "公式年間表に将来日程/料金は掲載。受付は開催前月1日9時からで、3件とも現在未受付。"
+            }
+          ]
+        },
+        {
+          "facility_id": 2197,
+          "disposition": "no_current_or_future_event",
+          "assessment": "県観光連盟公式と現行工房公式を内容評価。県ページは恒常3日前予約の木工/まゆ/オクトパス体験、現行工房サイトは木製グッズ制作・OEM・制作事例・採用を掲載。日付付きの特別催事・現在未来の期間限定募集はなく、通常体験をイベント化しない。既存current/future0件。"
+        },
+        {
+          "facility_id": 2198,
+          "disposition": "candidate_found_hold",
+          "assessment": "県観光連盟公式・市観光協会最新告知・工房公式ブログを実読。通常絵付けは常設サービス、ブログ最新の2026/1/2初挽きは終了。市観光協会最新ページの見出しと本文が異なる企画名/時期を混在させるため当該告知1件のみHOLD。既存current/future0件。",
+          "candidates": [
+            {
+              "title": "弥治郎の梅こけし展",
+              "disposition": "hold",
+              "source_family": "shiroishi.ne.jp/news/8042",
+              "reason": "10/26公開の市公式観光協会ページの見出しは『10/18ふれあい祭り』、本文は『梅こけし展10/10～12/27』と別企画/期間。運営者ブログに当該展の現在案内がなく、同一公式告知の取り違えを解消できないため、この1件をHOLD。"
+            }
+          ]
+        },
+        {
+          "facility_id": 2199,
+          "disposition": "source_unresolved",
+          "assessment": "登録済み県公式・市観光公式spotは取得、常設坑道/砂金/スライダーのみ。市の令和8年度ガイド告知URLは404、施設公式Facebookは2回取得しても投稿本文が空。secondaryなし、自治体・市観光fallbackも実施したが最新施設催事の確定はできずsource_unresolved。第三者の10/11スクーター会は過去日で新規候補にしない。既存current/future0件。",
+          "candidates": [],
+          "source_gap": "施設公式Facebook投稿本文を取得できず最新告知は未解決。HTTP200のみを催事なしの根拠にしない。"
+        },
+        {
+          "facility_id": 2200,
+          "disposition": "candidate_found_hold",
+          "assessment": "県公式・運営海の市の現在新着とシャークミュージアム詳細を実読。博物館自体は通常常設展示。親施設ホールの2催事を個別HOLDとし、隣接館IDに誤って紐付けない。亀山テラス開業は別施設信号で本partには追加しない。既存current/future0件。",
+          "candidates": [
+            {
+              "title": "第15回消防絵画コンクール作品展示",
+              "disposition": "hold",
+              "reason": "10/14～11/2、海の市2Fホールは公式で確認。展示会場の入場料金と館内博物館との受付区分が未明示。シャークミュージアムの通常入館料を流用しない。"
+            },
+            {
+              "title": "GIRLS LIVE",
+              "disposition": "hold",
+              "reason": "11/8 10時、海の市1Fホールは公式で確認。公演終了時刻・観覧料金・参加条件が本文で未確定。"
+            }
+          ],
+          "facility_candidate_signal": {
+            "name": "亀山テラス360°",
+            "reason": "運営者が2026/7/19開業の通年モノレール/展望/カフェ施設として公式案内。本partで施設追加せずFacilityOpsの既存候補確認へ。"
+          }
+        },
+        {
+          "facility_id": 2205,
+          "disposition": "no_current_or_future_event",
+          "assessment": "県公式・工房が所属する手しごとAKIU公式・関連主催者アキウルミナート2026を実読。工房の吹きガラスは通年予約制の通常サービス。工房会場のササキツトム作品展は主催者本文でAKIULUMINART2026が7/12終了と明示され、現在の期間限定企画とは扱わない。今回取得面に現在/未来の特別催事なし、既存current/future0件。",
+          "candidates": [
+            {
+              "title": "AKIULUMINART2026 ガラス工房元×ササキツトム",
+              "disposition": "ended_not_added",
+              "reason": "主催者の2026/7/15更新で7/12終了を確認。検索結果の会場紹介が残っていても秋開催に推測しない。"
             }
           ]
         }
