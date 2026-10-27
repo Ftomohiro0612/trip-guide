@@ -1599,7 +1599,8 @@
               "title": "中央部 / 西条",
               "source_url": "https://higashihiroshima-kanko.jp/event/sakematsuri/",
               "disposition": "stale_false",
-              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。",
+              "final_resolution": "展覧会本体は後続施設2011で本run取得の大学公式告知により無料・期間・公開曜日を確認し、evt-w41f5-2009-museum-powerとして追加済み。クイズラリーの参加手順不足のみ未解決。同一ラリーは2011でも遭遇したためHOLD件数は遭遇数であり固有イベント数ではない。"
             },
             {
               "title": "中央部 / 西条 第13回あかりの散歩道 西条酒蔵通りのライトアップや現地イベントを開催",
@@ -2408,7 +2409,8 @@
               "text_sha256": "b6b6853721088126a48aae4f8b3d15b246f33e1ba09dbdd582ce88026168ccf2",
               "text_length": 3480
             }
-          ]
+          ],
+          "reconciled_at": "2026-10-27T19:22:28.752415+00:00"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
@@ -2477,7 +2479,8 @@
               "text_sha256": "de809bd4be966760038e654194a55141ddae59b5a32041431aefd1e5427afbc3",
               "text_length": 131
             }
-          ]
+          ],
+          "reconciled_at": "2026-10-27T19:22:28.752438+00:00"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
@@ -3071,7 +3074,8 @@
               "text_sha256": "900e36e7eee18099388ce3bfc407a2db1584ec247e625e864efad35c499074b2",
               "text_length": 209
             }
-          ]
+          ],
+          "reconciled_at": "2026-10-27T19:22:28.752445+00:00"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
@@ -4135,7 +4139,8 @@
               "text_sha256": "dcb762eb1ddde1877287867075b77df227804bbfe458807c4cf39031dfa43c4c",
               "text_length": 853
             }
-          ]
+          ],
+          "reconciled_at": "2026-10-27T19:22:28.752455+00:00"
         },
         {
           "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
@@ -6075,5 +6080,19 @@
         "stale_false": 2
       }
     }
+  },
+  "post_validation_reconciliation": {
+    "executed_at": "2026-10-27T19:22:28.752463+00:00",
+    "event_freshness_omissions_corrected": [
+      "evt-f2-2019-ghost-20261027",
+      "evt-supp1-2023-20261010-39b2e769"
+    ],
+    "duplicate_addition_withdrawn": "evt-w41f5-2019-ghost-craft (existing evt-f2-2019-ghost-20261027 retained/refreshed)",
+    "pm_exception_approval_holds": [
+      "evt-w41f5-2017-shodo",
+      "evt-w41f5-6873-director",
+      "evt-w41f5-6873-oscar"
+    ],
+    "metadata_total_events": 7068
   }
 }
