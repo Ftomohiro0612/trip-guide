@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-6",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T20:59:55.307352+00:00",
+  "executed_at": "2026-10-27T21:07:11.698107+00:00",
   "due_facility_ids": [
     771,
     772,
@@ -3317,7 +3317,7 @@
         {
           "facility_id": 1005,
           "url": "https://l-tike.com/event/mevent/?mid=766403",
-          "status": "fetch_failed",
+          "status": "timeout",
           "checked_at": "2026-10-27T20:52:38.121843+00:00"
         },
         {
@@ -7914,7 +7914,7 @@
           "disposition": "candidate_found_added",
           "reason": "公式新着・月別カレンダー・横丁PDF・最新つうしん4頁を実際に画像で読み取り、既存6件を再確認。新規金曜会1件。",
           "judgments": {
-            "existing_refreshed": 6,
+            "existing_refreshed": 5,
             "added": [
               "金曜あそぼう会"
             ],
@@ -7933,7 +7933,7 @@
               },
               {
                 "title": "親子さつまいも会11/11（曜日表記）",
-                "reason": "本文では11/11火とあるが同じ号のカレンダーは11/11水欄に親子会。数字日付はカレンダーと既存で一致するため11/11を維持し、曜日はProductに持たない。正確な実施曜日のPM確認を残す。"
+                "reason": "同じ公式つうしん本文は「11/11(火)」、同号カレンダーは「11/11(水)」と不一致。別の公式Webカレンダーは10月号のみで11月の正確な実施曜日を解消できない。showakinen専用の曜日無視ルールを他施設へ拡張せず、既存イベント全体を変更保留。"
               }
             ],
             "excluded": "つくりつづける会は利用者懇談会、過去記事・コンクール相談は独立の新催事にしない。"
@@ -8894,7 +8894,7 @@
             {
               "facility_id": 1005,
               "url": "https://l-tike.com/event/mevent/?mid=766403",
-              "status": "fetch_failed",
+              "status": "timeout",
               "checked_at": "2026-10-27T20:52:38.121843+00:00"
             },
             {
@@ -9914,8 +9914,34 @@
               "checked_at": "2026-10-27T20:28:38.008374+00:00"
             }
           ]
+        },
+        {
+          "facility_id": 903,
+          "event_id": "evt-903-w40f4-parent",
+          "reason": "同じ公式つうしん本文は「11/11(火)」、同号カレンダーは「11/11(水)」と不一致。別の公式Webカレンダーは10月号のみで11月の正確な実施曜日を解消できない。showakinen専用の曜日無視ルールを他施設へ拡張せず、既存イベント全体を変更保留。",
+          "sources_checked": [
+            {
+              "facility_id": 903,
+              "url": "https://www.yumepark.net/231_papaer/no136_202610.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T20:42:39.362409+00:00"
+            },
+            {
+              "facility_id": 903,
+              "url": "https://www.yumepark.net/210_calendar/",
+              "status": 200,
+              "checked_at": "2026-10-27T20:42:49.839048+00:00"
+            }
+          ]
         }
       ]
     }
+  },
+  "event_changes": {
+    "added": 110,
+    "existing_modified": 148,
+    "ended": 45,
+    "cancelled_or_postponed": 0,
+    "deleted": 0
   }
 }
