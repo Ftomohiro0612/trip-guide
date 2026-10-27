@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-6",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T21:07:11.698107+00:00",
+  "executed_at": "2026-10-27T21:20:48.158647+00:00",
   "due_facility_ids": [
     771,
     772,
@@ -48,8 +48,8 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 3,
-    "candidate_found_added": 29,
-    "candidate_found_duplicate": 5,
+    "candidate_found_added": 28,
+    "candidate_found_duplicate": 6,
     "candidate_found_hold": 1,
     "source_unresolved": 2
   },
@@ -99,8 +99,8 @@
       ],
       "total": 40,
       "no_current_or_future_event": 3,
-      "candidate_found_added": 29,
-      "candidate_found_duplicate": 5,
+      "candidate_found_added": 28,
+      "candidate_found_duplicate": 6,
       "candidate_found_hold": 1,
       "source_unresolved": 2,
       "sources_checked": [
@@ -3845,11 +3845,6 @@
               "participability": "通常参加可能"
             },
             {
-              "title": "コウノトリまつり in ズーラシア（保全ブース・特別ガイド）",
-              "disposition": "added",
-              "participability": "通常参加可能"
-            },
-            {
               "title": "ズーラシア・キャンプ",
               "disposition": "HOLD",
               "reason": "10/14申込終了、当日受付なし。"
@@ -3893,6 +3888,11 @@
               "title": "SNS告知",
               "disposition": "not_event",
               "reason": "随時更新の案内。"
+            },
+            {
+              "title": "コウノトリまつり in ズーラシア",
+              "disposition": "HOLD",
+              "reason": "日時・大テント/展示場・通常入園は確認したが、イベントの雨天/荒天時運用と交通/公共交通案内を今回の取得資料から揃えて記録できない。祭り候補の残る必須4項目を推測せず保留。"
             }
           ],
           "sources_checked": [
@@ -4234,8 +4234,8 @@
         },
         {
           "facility_id": 773,
-          "disposition": "candidate_found_added",
-          "reason": "既存3件（展示再確認、2件終了）、新規保全学習イベント1件。",
+          "disposition": "candidate_found_duplicate",
+          "reason": "既存3件を2終了・1再確認。新規Zoo to Wild Fesは必須交通情報の根拠不足でHOLD、既存コアラ展示に重複確認。",
           "judgments": [
             {
               "event_id": "evt-773-w38-koala40-exhibit",
@@ -4248,11 +4248,6 @@
             {
               "event_id": "evt-f3-773-greeting",
               "disposition": "ended"
-            },
-            {
-              "title": "2026 Zoo to Wild Fes Autumn ～人と自然の共生～",
-              "disposition": "added",
-              "participability": "通常参加可能"
             },
             {
               "title": "絵本の動物に会いに行こう",
@@ -4288,6 +4283,11 @@
               "title": "開花・コアラ案内・展示休止",
               "disposition": "not_event",
               "reason": "植物季節情報や恒常的利用案内。施設データは触らない。"
+            },
+            {
+              "title": "2026 Zoo to Wild Fes Autumn",
+              "disposition": "HOLD",
+              "reason": "ステージ等の雨天中止と日時・参加経路は確認したが、イベントの交通/公共交通影響案内を今回の取得資料から揃えて記録できない。祭り候補の必須項目の欠落を推測せず保留。"
             }
           ],
           "sources_checked": [
@@ -4370,7 +4370,9 @@
               "checked_at": "2026-10-27T20:07:49.671234+00:00"
             }
           ],
-          "completed_at": "2026-10-27T20:08:18.014761+00:00"
+          "completed_at": "2026-10-27T20:08:18.014761+00:00",
+          "checkpoint_disposition": "candidate_found_added",
+          "qa_disposition_adjustment": "Final QA withheld the sole proposed addition before integration; existing confirmed exhibit remains a duplicate disposition."
         },
         {
           "facility_id": 776,
@@ -9938,7 +9940,7 @@
     }
   },
   "event_changes": {
-    "added": 110,
+    "added": 108,
     "existing_modified": 148,
     "ended": 45,
     "cancelled_or_postponed": 0,
