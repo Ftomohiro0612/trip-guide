@@ -49,9 +49,9 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 12,
-    "candidate_found_added": 15,
-    "candidate_found_duplicate": 3,
-    "candidate_found_hold": 10,
+    "candidate_found_added": 14,
+    "candidate_found_duplicate": 5,
+    "candidate_found_hold": 9,
     "source_unresolved": 0
   },
   "per_region": {
@@ -91,9 +91,9 @@
       ],
       "total": 31,
       "no_current_or_future_event": 7,
-      "candidate_found_added": 12,
-      "candidate_found_duplicate": 2,
-      "candidate_found_hold": 10,
+      "candidate_found_added": 11,
+      "candidate_found_duplicate": 4,
+      "candidate_found_hold": 9,
       "source_unresolved": 0,
       "sources_checked": [
         {
@@ -2149,7 +2149,7 @@
           "name": "ふくやま美術館",
           "region": "hiroshima",
           "disposition": "candidate_found_added",
-          "reason": "現行展示詳細・募集・10月/11月公式カレンダーを全頁確認。既存7件を再確認、開催中2件のstatusと11/3無料日を更新。参加経路のある展示・工作等11件を追加。成人専用・閉切済講座、未確定ワークショップはHOLD。",
+          "reason": "現行展示詳細・募集・10月/11月公式カレンダーを全頁確認。既存7件を再確認、開催中2件のstatusと11/3無料日を更新。参加経路のある展示・工作等11件を追加。成人専用・閉切済講座、未確定ワークショップはHOLD。 最終検証で朋邑書道会のみ同日URL衝突のPM承認例外待ちHOLDへ変更。",
           "candidates": [
             {
               "title": "千住 博展―静寂の光、水の鼓動",
@@ -2224,9 +2224,9 @@
             },
             {
               "title": "朋邑書道会 十周年記念作品展",
-              "disposition": "add",
+              "disposition": "hold",
               "event_id": "evt-w41f5-2017-shodo",
-              "participability": "通常参加可能"
+              "reason": "公式同一URL・同日開始の別企画として事実は確認できるが、通常Wave Playbook §5がapproved_exceptionsの追加をPMレビュー対象としているため、未承認の例外を自己追加せず候補単位で保留。既存企画と同一扱いにしたり日付・URLを偽装して回避しない。"
             },
             {
               "title": "ボランティア「くすのき」によるやさしいアートガイド",
@@ -2300,8 +2300,6 @@
           ],
           "existing_event_ids_updated": [
             "evt-supp1-2017-20261003-9afd8951",
-            "evt-supp1-2017-20261003-9afd8951",
-            "evt-supp1-2017-20260926-7ba35bde",
             "evt-supp1-2017-20260926-7ba35bde",
             "evt-supp1-2017-20261101-912c9170",
             "evt-supp1-2017-20261004-166a63b9",
@@ -2314,7 +2312,6 @@
             "evt-w41f5-2017-members",
             "evt-w41f5-2017-patchwork",
             "evt-w41f5-2017-bonsai",
-            "evt-w41f5-2017-shodo",
             "evt-w41f5-2017-guide",
             "evt-w41f5-2017-lobby",
             "evt-w41f5-2017-moon",
@@ -2420,14 +2417,14 @@
           "facility_id": 2019,
           "name": "ギザギザ葉っぱ 遊びの王国",
           "region": "hiroshima",
-          "disposition": "candidate_found_added",
-          "reason": "イベント専用ページは画像中心のため10月公式カレンダーを直接取得して目視評価。今後も参加できる工作を追加、ハロウィン当日企画は季節行事の必要情報不足をHOLD。",
+          "disposition": "candidate_found_duplicate",
+          "reason": "本run取得の公式10月画像と施設案内で工作を再確認。最終照合で既存evt-f2-2019-ghost-20261027との同一性を解決し新規追加を撤回、既存鮮度を更新。終了済み工作3件をendedへ。Halloween当日企画は必要情報不足でHOLD。",
           "candidates": [
             {
               "title": "ワークショップ「ぴょよ〜んオバケ」",
-              "disposition": "add",
-              "event_id": "evt-w41f5-2019-ghost-craft",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "event_id": "evt-f2-2019-ghost-20261027",
+              "reason": "施設・内容・期間が既存と一致。表記の揺れを同定し重複追加せず。"
             },
             {
               "title": "ハロウィンイベント",
@@ -2447,7 +2444,10 @@
             }
           ],
           "existing_event_ids_updated": [
-            "evt-w41f5-2019-ghost-craft"
+            "evt-supp1-2019-20260915-93cf5b96",
+            "evt-supp1-2019-20260929-390993ef",
+            "evt-f2-2019-stained-20261014",
+            "evt-f2-2019-ghost-20261027"
           ],
           "sources_checked": [
             {
@@ -2977,8 +2977,8 @@
           "facility_id": 2023,
           "name": "広島三次ワイナリー・トレッタみよし",
           "region": "hiroshima",
-          "disposition": "candidate_found_hold",
-          "reason": "公式ホーム・イベントカレンダー10月・11月・12月を確認。将来候補4件を各HOLD、12月は予定なし。過去5企画は追加しない。",
+          "disposition": "candidate_found_duplicate",
+          "reason": "本runの10〜12月公式カレンダーを個別精査。焼肉食べ放題11/29は既存evt-supp1-2023-20261010-39b2e769と一致し確認日更新。新規Cheers to Nouveauの3開催群は必要情報不足でHOLD。12月は予定なし。過去5企画は新規追加しない。",
           "candidates": [
             {
               "title": "Cheers to Nouveau 10/31〜11/1",
@@ -3000,8 +3000,10 @@
             },
             {
               "title": "食欲の秋 焼肉食べ放題11/29",
-              "disposition": "hold",
-              "reason": "限定の飲食プランで日時・子ども料金・電話予約は確認できるが、飲食以外の家族向け体験内容なし。季節企画として必要な悪天候対応・交通案内も不明。"
+              "disposition": "duplicate",
+              "reason": "既存の10/10・11/29の同一予約制プラン。料金・時間・電話予約を本runの公式11月カレンダーで再確認。",
+              "event_id": "evt-supp1-2023-20261010-39b2e769",
+              "source_url": "https://www.miyoshi-winery.co.jp/calendar.php?p=1&ecd=0"
             },
             {
               "title": "トレッタみよしの秋祭り",
@@ -3029,7 +3031,9 @@
               "reason": "公式10月カレンダー上の日程は10/25以前に終了。"
             }
           ],
-          "existing_event_ids_updated": [],
+          "existing_event_ids_updated": [
+            "evt-supp1-2023-20261010-39b2e769"
+          ],
           "sources_checked": [
             {
               "url": "https://www.miyoshi-winery.co.jp/",
@@ -3292,7 +3296,6 @@
             }
           ],
           "existing_event_ids_updated": [
-            "evt-supp1-2028-20261002-2cf38159",
             "evt-supp1-2028-20261002-2cf38159"
           ],
           "sources_checked": [
@@ -3445,7 +3448,6 @@
             }
           ],
           "existing_event_ids_updated": [
-            "evt-2030-kagura-2026",
             "evt-2030-kagura-2026",
             "evt-supp1-2030-20261018-bfddb248"
           ],
@@ -3982,7 +3984,7 @@
           "name": "広島もとまち水族館",
           "region": "hiroshima",
           "disposition": "candidate_found_added",
-          "reason": "ニュース全最新面・6詳細・プログラム・料金を精査。4新規、4既存を再確認しギャラリー無料を訂正。日常7プログラムは恒常営業で独立した期間なし。ホテル側の飲食企画および他県の関連展は施設対象外。",
+          "reason": "ニュース全最新面・6詳細・プログラム・料金を精査。4新規、4既存を再確認しギャラリー無料を訂正。日常7プログラムは恒常営業で独立した期間なし。ホテル側の飲食企画および他県の関連展は施設対象外。 最終検証で館長ツアーとオスカル就任式を同日URL衝突のPM承認例外待ちHOLDへ変更。公開身体測定・OCEAN WINGは追加。",
           "candidates": [
             {
               "title": "1周年記念 生きものたちの公開身体測定",
@@ -3993,17 +3995,17 @@
             },
             {
               "title": "館長プレミアムガイドツアー",
-              "disposition": "add",
+              "disposition": "hold",
               "event_id": "evt-w41f5-6873-director",
               "source_url": "https://aquarium-hiroshima.com/news/archive/2026/75.html",
-              "participability": "条件付き参加可能"
+              "reason": "公式同一URL・同日開始の別企画として事実は確認できるが、通常Wave Playbook §5がapproved_exceptionsの追加をPMレビュー対象としているため、未承認の例外を自己追加せず候補単位で保留。既存企画と同一扱いにしたり日付・URLを偽装して回避しない。"
             },
             {
               "title": "オスカル公式ナビゲーター就任式・対話型イベント",
-              "disposition": "add",
+              "disposition": "hold",
               "event_id": "evt-w41f5-6873-oscar",
               "source_url": "https://aquarium-hiroshima.com/news/archive/2026/75.html",
-              "participability": "通常参加可能"
+              "reason": "公式同一URL・同日開始の別企画として事実は確認できるが、通常Wave Playbook §5がapproved_exceptionsの追加をPMレビュー対象としているため、未承認の例外を自己追加せず候補単位で保留。既存企画と同一扱いにしたり日付・URLを偽装して回避しない。"
             },
             {
               "title": "石井竜也作品展 OCEAN WING",
@@ -4045,16 +4047,10 @@
           ],
           "existing_event_ids_updated": [
             "evt-supp1-6873-20261001-c264977e",
-            "evt-supp1-6873-20261001-c264977e",
-            "evt-supp1-6873-20261001-878a4721",
             "evt-supp1-6873-20261001-878a4721",
             "evt-supp1-6873-20260911-ccbf9c7c",
-            "evt-supp1-6873-20260911-ccbf9c7c",
-            "evt-supp1-6873-20260911-814c8b1f",
             "evt-supp1-6873-20260911-814c8b1f",
             "evt-w41f5-6873-measuring",
-            "evt-w41f5-6873-director",
-            "evt-w41f5-6873-oscar",
             "evt-w41f5-6873-ocean-wing"
           ],
           "sources_checked": [
@@ -4361,7 +4357,6 @@
             "evt-w41d6-8205-weatherday",
             "evt-w41d6-8205-building",
             "evt-w41d6-8205-nature",
-            "evt-w41d6-8205-nature",
             "evt-w41d6-8205-pinecone",
             "evt-w41f5-8205-disaster"
           ],
@@ -4423,7 +4418,13 @@
           ]
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_totals": {
+        "add": 23,
+        "hold": 88,
+        "duplicate": 37,
+        "stale_false": 70
+      }
     },
     "iwate": {
       "facility_ids": [
@@ -5122,7 +5123,6 @@
           ],
           "existing_event_ids_updated": [
             "evt-iwate-202609-01",
-            "evt-iwate-202609-01",
             "evt-w41f5-3935-challenge-11",
             "evt-w41f5-3935-challenge-12",
             "evt-w41f5-3935-challenge-1",
@@ -5738,7 +5738,13 @@
           ]
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_totals": {
+        "add": 22,
+        "hold": 15,
+        "duplicate": 2,
+        "stale_false": 4
+      }
     },
     "kagoshima": {
       "facility_ids": [
@@ -5904,7 +5910,6 @@
           ],
           "existing_event_ids_updated": [
             "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
-            "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
             "evt-w41f5-6918-sunsun"
           ],
           "sources_checked": [
@@ -6063,7 +6068,12 @@
           ]
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_totals": {
+        "add": 1,
+        "duplicate": 1,
+        "stale_false": 2
+      }
     }
   }
 }
