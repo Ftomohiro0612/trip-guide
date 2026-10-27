@@ -1,0 +1,1609 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-27T18:45:33.158751+00:00",
+  "process_started_at": "2026-10-27T18:36:33.7068461Z",
+  "due_facility_ids": [
+    2005,
+    2006,
+    2007,
+    2009,
+    2011,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2025,
+    2026,
+    2028,
+    2029,
+    2030,
+    2031,
+    2032,
+    2033,
+    2034,
+    2036,
+    2037,
+    2038,
+    6873,
+    6883,
+    8203,
+    8205,
+    3935,
+    3952,
+    6938,
+    6939,
+    6940,
+    8255,
+    6918,
+    6919,
+    8270
+  ],
+  "prior_run_numbers_reused_as_execution": false,
+  "aggregate": {
+    "total": 10,
+    "no_current_or_future_event": 3,
+    "candidate_found_added": 5,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 2,
+    "source_unresolved": 0
+  },
+  "per_region": {
+    "hiroshima": {
+      "facility_ids": [
+        2005,
+        2006,
+        2007,
+        2009,
+        2011,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2025,
+        2026,
+        2028,
+        2029,
+        2030,
+        2031,
+        2032,
+        2033,
+        2034,
+        2036,
+        2037,
+        2038,
+        6873,
+        6883,
+        8203,
+        8205
+      ],
+      "total": 31,
+      "no_current_or_future_event": 3,
+      "candidate_found_added": 5,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 2,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://kure-trip.jp/spots/10",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:29.452079+00:00",
+          "facility_id": 2005,
+          "final_url": "https://kure-trip.jp/spots/10",
+          "text_sha256": "748923546e0a276ad46bedfd6bfcf34c67b3a48b7d776fd19d574cf1c89c7607",
+          "text_length": 1703
+        },
+        {
+          "url": "http://www.norosan.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:34.356225+00:00",
+          "facility_id": 2005,
+          "final_url": "http://www.norosan.or.jp/",
+          "text_sha256": "8964d60fe0982bc469584abb470a589b6c8b33aa6b120c7464e9f69219586492",
+          "text_length": 897
+        },
+        {
+          "url": "http://www.norosan.or.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:38.807504+00:00",
+          "facility_id": 2005,
+          "final_url": "http://www.norosan.or.jp/event/index.html",
+          "text_sha256": "1c9a8e7b1de61b46b6f58bac5b62f845040a2c1f4e0332c7cd387de633504d66",
+          "text_length": 553
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/soshiki/67/m000200.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:45.192232+00:00",
+          "facility_id": 2006,
+          "final_url": "https://www.city.kure.lg.jp/soshiki/67/m000200.html",
+          "text_sha256": "8a780453b91fed69e2b6355a4141e20be159ca32d3d25a55b94af2b6a7b2cb64",
+          "text_length": 1007
+        },
+        {
+          "url": "https://kure-trip.jp/events",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:53.208925+00:00",
+          "facility_id": 2006,
+          "final_url": "https://kure-trip.jp/events",
+          "text_sha256": "fea5c61323538512ac5dace5b4f7b29db76837a22ab250fcf473e0467e581795",
+          "text_length": 2501
+        },
+        {
+          "url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:38:58.689734+00:00",
+          "facility_id": 2006,
+          "final_url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html",
+          "text_sha256": "0c6c42c5ba69fc987008532dd0542416c85388a2e0e0343773bd578673a7825b",
+          "text_length": 1210
+        },
+        {
+          "url": "https://shimokamagari.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:32.511534+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/",
+          "text_sha256": "7aece4038bc158e393403d6ec54c4a14b7578b1ca0fdce0bef5db804f742c5b3",
+          "text_length": 1041
+        },
+        {
+          "url": "https://shimokamagari.jp/facility/gochiso.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:39.569229+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/facility/gochiso.html",
+          "text_sha256": "e2e5611409cc27ce9a8fd20545b4bdb3ec843d1d96724d57d6f2394ffd236f13",
+          "text_length": 1263
+        },
+        {
+          "url": "https://shimokamagari.jp/facility/tojikikan.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:40.013493+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/facility/tojikikan.html",
+          "text_sha256": "33004fa5de05aeed0a47d4bb723cc10536aaec93ddc32b40b1ea0421a86aeadb",
+          "text_length": 1304
+        },
+        {
+          "url": "https://shimokamagari.jp/facility/exhibition.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:40.403606+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/facility/exhibition.pdf",
+          "text_sha256": "6ed72f7e6bc5bef3f3edfb4f41f0f149e1f14a65a4beaf6031dcd56cd5b91319",
+          "text_length": 1758
+        },
+        {
+          "url": "https://shimokamagari.jp/guidance/usage.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:41.578791+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/guidance/usage.html",
+          "text_sha256": "d231d42d3672ce737b9b188f6ff77c236c04ade9ab5eeb8a2df0bd3ba4ec8342",
+          "text_length": 1900
+        },
+        {
+          "url": "https://shimokamagari.jp/event/akicha.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:41.970807+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/event/akicha.html",
+          "text_sha256": "b10eff3fd1f2f40d3d0b96a79189e6fc3087f0563cf78c803e01a9303496c2c7",
+          "text_length": 789
+        },
+        {
+          "url": "https://shimokamagari.jp/event/gyouretsu.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:39:42.345088+00:00",
+          "facility_id": 2007,
+          "final_url": "https://shimokamagari.jp/event/gyouretsu.html",
+          "text_sha256": "7b0077c96907093b667f78c4b9add6007d0420869c67d5a5c9e927dd3a2cc9e5",
+          "text_length": 1396
+        },
+        {
+          "url": "https://hh-kanko.ne.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:40:16.396123+00:00",
+          "facility_id": 2009,
+          "final_url": "https://hh-kanko.ne.jp/",
+          "text_sha256": "55fb0d814c68c304c7371dc471e21d2198455fe6c9d3a5798762e718058d51c1",
+          "text_length": 1458
+        },
+        {
+          "url": "https://hh-kanko.ne.jp/news-info",
+          "status": 200,
+          "checked_at": "2026-10-27T18:40:33.929002+00:00",
+          "facility_id": 2009,
+          "final_url": "https://hh-kanko.ne.jp/news-info/",
+          "text_sha256": "1beb826e6611b3f927f1cd61d7fdc1e415d89e45bfced304a84e862cdacdd77e",
+          "text_length": 111
+        },
+        {
+          "url": "https://hh-kanko.jp/",
+          "status": "error",
+          "checked_at": "2026-10-27T18:40:35.216259+00:00",
+          "facility_id": 2009,
+          "error": "HTTPSConnectionPool(host='hh-kanko.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='hh-kanko.jp', port=443): Failed to resolve 'hh-kanko.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://higashihiroshima-kanko.jp/event/?list_type=event&scene=sake_brewery_street",
+          "status": 200,
+          "checked_at": "2026-10-27T18:40:46.211970+00:00",
+          "facility_id": 2009,
+          "final_url": "https://higashihiroshima-kanko.jp/event/?list_type=event&scene=sake_brewery_street",
+          "text_sha256": "62a8739d3bf0bca9822ae87fb383d1f02dfa7776728a987695070097b8d75f96",
+          "text_length": 7906
+        },
+        {
+          "url": "https://higashihiroshima-kanko.jp/event/hiroshima-uni-museum/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:40:55.058123+00:00",
+          "facility_id": 2009,
+          "final_url": "https://higashihiroshima-kanko.jp/event/hiroshima-uni-museum/",
+          "text_sha256": "c57f7acaf03d66379ad88f522b1b151e5be82e6335946cfbe6e4739d41ec3dd6",
+          "text_length": 4389
+        },
+        {
+          "url": "https://www.jr-odekake.net/navi/dw_hiking/course/12.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:40:56.596422+00:00",
+          "facility_id": 2009,
+          "final_url": "https://www.jr-odekake.net/navi/dw_hiking/course/12.html",
+          "text_sha256": "dcfe94eb40f7fd1ec5ee99fc70ecdeaa044899199b567ce7cda195e25b8f0e6e",
+          "text_length": 1060
+        },
+        {
+          "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/event.html#fn117",
+          "status": 503,
+          "checked_at": "2026-10-27T18:41:09.738887+00:00",
+          "facility_id": 2009,
+          "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/event.html#fn117",
+          "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+          "text_length": 414
+        },
+        {
+          "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+          "status": 503,
+          "checked_at": "2026-10-27T18:41:33.003610+00:00",
+          "facility_id": 2011,
+          "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+          "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+          "text_length": 414
+        },
+        {
+          "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+          "status": 503,
+          "checked_at": "2026-10-27T18:41:34.323029+00:00",
+          "facility_id": 2011,
+          "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+          "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+          "text_length": 414
+        },
+        {
+          "url": "https://www.hiroshima-u.ac.jp/research/news/100316",
+          "status": 200,
+          "checked_at": "2026-10-27T18:41:56.354130+00:00",
+          "facility_id": 2011,
+          "final_url": "https://www.hiroshima-u.ac.jp/research/news/100316",
+          "text_sha256": "4dd1b0b9a1167374d3908f455eeb6c8937afe99649034cdf60f437fcf321a9e8",
+          "text_length": 3417
+        },
+        {
+          "url": "https://www.hiroshima-u.ac.jp/research/news/100224",
+          "status": 200,
+          "checked_at": "2026-10-27T18:41:56.939341+00:00",
+          "facility_id": 2011,
+          "final_url": "https://www.hiroshima-u.ac.jp/research/news/100224",
+          "text_sha256": "3e13c3f66b3e40dd3804011cc7d8e277d728e24cfe61ef46634c7163d2e49376",
+          "text_length": 3719
+        },
+        {
+          "url": "https://www.hiroshima-u.ac.jp/notification/news/96403",
+          "status": 200,
+          "checked_at": "2026-10-27T18:41:57.809992+00:00",
+          "facility_id": 2011,
+          "final_url": "https://www.hiroshima-u.ac.jp/notification/news/96403",
+          "text_sha256": "cc210156e2f52d51ea4ce563db91e39f92eec727623003fcf5936b8c2ad8830f",
+          "text_length": 2469
+        },
+        {
+          "url": "https://www.shinmeinosato.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:42:30.417599+00:00",
+          "facility_id": 2013,
+          "final_url": "https://www.shinmeinosato.jp/",
+          "text_sha256": "5df4b35ea45132c42c52c0d414ec106309203ff1c0ee3a88afa8cc6fa5c70aa5",
+          "text_length": 1606
+        },
+        {
+          "url": "https://www.shinmeinosato.jp/news_top.cgi",
+          "status": 200,
+          "checked_at": "2026-10-27T18:42:42.364814+00:00",
+          "facility_id": 2013,
+          "final_url": "https://www.shinmeinosato.jp/news_top.cgi",
+          "text_sha256": "3327b3e827a60c7e3c4935802b6eee258adf73f3685d5319cb2a8f80fdee4a90",
+          "text_length": 1589
+        },
+        {
+          "url": "https://www.city.mihara.hiroshima.jp/site/kyouiku/tenmondaitop.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:42:51.670783+00:00",
+          "facility_id": 2014,
+          "final_url": "https://www.city.mihara.hiroshima.jp/site/kyouiku/tenmondaitop.html",
+          "text_sha256": "d40e89ccc44dbb0f3fae48646f2a28d0037e674bdf8df1bb7f8ad022b8a268be",
+          "text_length": 2281
+        },
+        {
+          "url": "https://www.outdoorpark-uneyama.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:02.684384+00:00",
+          "facility_id": 2014,
+          "final_url": "https://www.outdoorpark-uneyama.com/",
+          "text_sha256": "7075a54d19fa417737cbf38d9835b96a8f1866c98e52f5f17e874ca169c6c3cd",
+          "text_length": 942
+        },
+        {
+          "url": "https://www.outdoorpark-uneyama.com/astro",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:06.907493+00:00",
+          "facility_id": 2014,
+          "final_url": "https://www.outdoorpark-uneyama.com/astro",
+          "text_sha256": "af42b61898c647a8f156ae7c9e88f11427134171fce28a25e778f7d0265f83bf",
+          "text_length": 1012
+        },
+        {
+          "url": "https://www.city.onomichi.hiroshima.jp/soshiki/38/1042.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:17.585968+00:00",
+          "facility_id": 2015,
+          "final_url": "https://www.city.onomichi.hiroshima.jp/soshiki/38/1042.html",
+          "text_sha256": "34095b3b378f288c4b84e605617f66b26f1525b0cff12795ebe976f72033c84c",
+          "text_length": 1969
+        },
+        {
+          "url": "https://kanko-innoshima.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:27.301746+00:00",
+          "facility_id": 2015,
+          "final_url": "https://kanko-innoshima.jp/",
+          "text_sha256": "e498036ab2536e0318ce6e05d24051a784e88f6a3f59c9beb73691a1419e8e6c",
+          "text_length": 2044
+        },
+        {
+          "url": "https://kanko-innoshima.jp/archives/30539",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:33.814857+00:00",
+          "facility_id": 2015,
+          "final_url": "https://kanko-innoshima.jp/archives/30539",
+          "text_sha256": "806432fc03f8d21ef59320c11a9f5cd78095c978e95dd931fa8e72c18a885ce2",
+          "text_length": 1602
+        },
+        {
+          "url": "https://kanko-innoshima.jp/archives/30710",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:35.530490+00:00",
+          "facility_id": 2015,
+          "final_url": "https://kanko-innoshima.jp/archives/30710",
+          "text_sha256": "1ecd8fcf7322bd2d2eb7ffc1104bc04e0236c9b476f3f210a9ca1da7139b5236",
+          "text_length": 1473
+        },
+        {
+          "url": "https://www.kousanji.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:50.626022+00:00",
+          "facility_id": 2016,
+          "final_url": "https://www.kousanji.or.jp/",
+          "text_sha256": "32c16a5f7de2840c2ac9995fb5f00b859978b37cfc8ef9557d5e3d64fa6c6d74",
+          "text_length": 1286
+        },
+        {
+          "url": "https://www.kousanji.or.jp/museum_pickup/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:43:58.237227+00:00",
+          "facility_id": 2016,
+          "final_url": "https://www.kousanji.or.jp/museum_pickup/",
+          "text_sha256": "df7a0da449bd251da0b562790f1d6069a4b279d57b0015604465fca77b26df8e",
+          "text_length": 1647
+        },
+        {
+          "url": "https://www.kousanji.or.jp/temple.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:01.057490+00:00",
+          "facility_id": 2016,
+          "final_url": "https://www.kousanji.or.jp/temple.html",
+          "text_sha256": "82209c2054834cb85e32dd4e85725cfdeeb899b41c5b9bd309e74e9741539b1a",
+          "text_length": 4086
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:10.622050+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/",
+          "text_sha256": "6b47f2be37d9f58289387b7dfb17f0595a364fb9e3656cc3aeefc761ebfe1dab",
+          "text_length": 814
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/409130.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:17.633981+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/409130.html",
+          "text_sha256": "190a0a2a50d6e8be445c4e9269802a0a2fcb23821ce675d72e2f2ccc63d6f07b",
+          "text_length": 2940
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/412912.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:18.118993+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/412912.html",
+          "text_sha256": "e262a07efdeb20b9d956456756e9b1c73342b4afc6ed78fa9fb8bf3dcafb1c88",
+          "text_length": 2013
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/413803.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:18.569016+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/413803.html",
+          "text_sha256": "957559061d207e936b2aa1f7c83c1ae3549d3dbea4ee03dbf89fe67a306cc11f",
+          "text_length": 1593
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/165028.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:19.057379+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/165028.html",
+          "text_sha256": "8a260b7a9d5686950881de9495a623f5e7f66decec39d607efde5cfd3089097d",
+          "text_length": 1116
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/177140.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:28.920429+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/177140.html",
+          "text_sha256": "4cab8a2051200fb4d433165bf136edf9215577d73310917f45ec0fd1a9bb84ed",
+          "text_length": 2795
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/272583.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:30.374727+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/272583.html",
+          "text_sha256": "c4208601abf79b91852fecbe93b5f394b5c82a1719dfddcb4634233866155a96",
+          "text_length": 2063
+        },
+        {
+          "url": "https://www.pref.hiroshima.lg.jp/site/aiart/exhibition08.html",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:35.598127+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.pref.hiroshima.lg.jp/site/aiart/exhibition08.html",
+          "text_sha256": "1ad0fc50c6103bac9fefa681fc8410cf6aad1e095bf7d69a1ab8d4f93e539ac2",
+          "text_length": 3027
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347124.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:36.097020+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347124.pdf",
+          "text_sha256": "b7a01d39ed4ef75faa4dfe77bf6e5c7345682186f932bc88c5d40dd680650a16",
+          "text_length": 3347
+        },
+        {
+          "url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347123.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T18:44:36.931472+00:00",
+          "facility_id": 2017,
+          "final_url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347123.pdf",
+          "text_sha256": "b6b6853721088126a48aae4f8b3d15b246f33e1ba09dbdd582ce88026168ccf2",
+          "text_length": 3480
+        }
+      ],
+      "facilities": [
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:38:44.470388+00:00",
+          "facility_id": 2005,
+          "name": "野呂山",
+          "region": "hiroshima",
+          "disposition": "no_current_or_future_event",
+          "reason": "公式観光施設案内とリンク先運営者の最新案内・イベントページを確認。現行は宿泊料理プランと登山道通行止案内のみ。日付を伴う現在・今後の家族イベントなし。",
+          "candidates": [],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://kure-trip.jp/spots/10",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:29.452079+00:00",
+              "facility_id": 2005,
+              "final_url": "https://kure-trip.jp/spots/10",
+              "text_sha256": "748923546e0a276ad46bedfd6bfcf34c67b3a48b7d776fd19d574cf1c89c7607",
+              "text_length": 1703
+            },
+            {
+              "url": "http://www.norosan.or.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:34.356225+00:00",
+              "facility_id": 2005,
+              "final_url": "http://www.norosan.or.jp/",
+              "text_sha256": "8964d60fe0982bc469584abb470a589b6c8b33aa6b120c7464e9f69219586492",
+              "text_length": 897
+            },
+            {
+              "url": "http://www.norosan.or.jp/event/index.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:38.807504+00:00",
+              "facility_id": 2005,
+              "final_url": "http://www.norosan.or.jp/event/index.html",
+              "text_sha256": "1c9a8e7b1de61b46b6f58bac5b62f845040a2c1f4e0332c7cd387de633504d66",
+              "text_length": 553
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:39:30.767662+00:00",
+          "facility_id": 2006,
+          "name": "御手洗町並み保存地区",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "御手洗地区内の旧金子家住宅のお茶会を公式日程・料金・当日参加経路で確認し追加。関連歴史講演は子ども向け体験内容・対象を確認できず個別HOLD。観光一覧の他地域イベントはこの施設の対象外。",
+          "candidates": [
+            {
+              "title": "旧金子家住宅 秋のお茶会",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2006-kaneko-tea",
+              "participability": "条件付き参加可能",
+              "source_url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html"
+            },
+            {
+              "title": "河野一族の物語「予章記」を読む",
+              "disposition": "hold",
+              "reason": "専門歴史講演であり、子どもを含む家族向けの内容・対象年齢・参加条件の記載を確認できない。",
+              "source_url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-w41f5-2006-kaneko-tea"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.city.kure.lg.jp/soshiki/67/m000200.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:45.192232+00:00",
+              "facility_id": 2006,
+              "final_url": "https://www.city.kure.lg.jp/soshiki/67/m000200.html",
+              "text_sha256": "8a780453b91fed69e2b6355a4141e20be159ca32d3d25a55b94af2b6a7b2cb64",
+              "text_length": 1007
+            },
+            {
+              "url": "https://kure-trip.jp/events",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:53.208925+00:00",
+              "facility_id": 2006,
+              "final_url": "https://kure-trip.jp/events",
+              "text_sha256": "fea5c61323538512ac5dace5b4f7b29db76837a22ab250fcf473e0467e581795",
+              "text_length": 2501
+            },
+            {
+              "url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:38:58.689734+00:00",
+              "facility_id": 2006,
+              "final_url": "https://www.city.kure.lg.jp/soshiki/106/kyuukanekoketyakai.html",
+              "text_sha256": "0c6c42c5ba69fc987008532dd0542416c85388a2e0e0343773bd578673a7825b",
+              "text_length": 1210
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:40:15.364239+00:00",
+          "facility_id": 2007,
+          "name": "松濤園",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "現行展示2件と年度計画の将来展示2件を照合し確認日更新。終了した10/4ギャラリートークをendedに解決。松濤園内の秋の茶会を追加。財団の別館・美術館等は別施設のため対象外。",
+          "candidates": [
+            {
+              "title": "朝鮮通信使が見た日本",
+              "disposition": "duplicate",
+              "event_id": "evt-2007-korean-envoys-2026"
+            },
+            {
+              "title": "古伊万里の旅",
+              "disposition": "duplicate",
+              "event_id": "evt-2007-imari-2026"
+            },
+            {
+              "title": "松濤園 朝鮮通信使とおもてなし／大きなやきものたち",
+              "disposition": "duplicate",
+              "event_id": "evt-2007-hospitality-pottery-2026"
+            },
+            {
+              "title": "松濤園 KARAKO－唐子のいろいろ／萩焼と伊万里焼",
+              "disposition": "duplicate",
+              "event_id": "evt-2007-karako-hagi-2026"
+            },
+            {
+              "title": "松濤園 秋の茶会",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2007-tea",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "朝鮮通信使再現行列",
+              "disposition": "stale_false",
+              "reason": "公式日程10/18は既に終了。過去追加しない。"
+            },
+            {
+              "title": "学芸員によるギャラリートーク",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2007-20261004-763b8465",
+              "reason": "9/20・10/4開催はいずれも終了。"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-2007-korean-envoys-2026",
+            "evt-2007-imari-2026",
+            "evt-2007-hospitality-pottery-2026",
+            "evt-2007-karako-hagi-2026",
+            "evt-supp1-2007-20261004-763b8465",
+            "evt-w41f5-2007-tea"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://shimokamagari.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:32.511534+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/",
+              "text_sha256": "7aece4038bc158e393403d6ec54c4a14b7578b1ca0fdce0bef5db804f742c5b3",
+              "text_length": 1041
+            },
+            {
+              "url": "https://shimokamagari.jp/facility/gochiso.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:39.569229+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/facility/gochiso.html",
+              "text_sha256": "e2e5611409cc27ce9a8fd20545b4bdb3ec843d1d96724d57d6f2394ffd236f13",
+              "text_length": 1263
+            },
+            {
+              "url": "https://shimokamagari.jp/facility/tojikikan.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:40.013493+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/facility/tojikikan.html",
+              "text_sha256": "33004fa5de05aeed0a47d4bb723cc10536aaec93ddc32b40b1ea0421a86aeadb",
+              "text_length": 1304
+            },
+            {
+              "url": "https://shimokamagari.jp/facility/exhibition.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:40.403606+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/facility/exhibition.pdf",
+              "text_sha256": "6ed72f7e6bc5bef3f3edfb4f41f0f149e1f14a65a4beaf6031dcd56cd5b91319",
+              "text_length": 1758
+            },
+            {
+              "url": "https://shimokamagari.jp/guidance/usage.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:41.578791+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/guidance/usage.html",
+              "text_sha256": "d231d42d3672ce737b9b188f6ff77c236c04ade9ab5eeb8a2df0bd3ba4ec8342",
+              "text_length": 1900
+            },
+            {
+              "url": "https://shimokamagari.jp/event/akicha.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:41.970807+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/event/akicha.html",
+              "text_sha256": "b10eff3fd1f2f40d3d0b96a79189e6fc3087f0563cf78c803e01a9303496c2c7",
+              "text_length": 789
+            },
+            {
+              "url": "https://shimokamagari.jp/event/gyouretsu.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:39:42.345088+00:00",
+              "facility_id": 2007,
+              "final_url": "https://shimokamagari.jp/event/gyouretsu.html",
+              "text_sha256": "7b0077c96907093b667f78c4b9add6007d0420869c67d5a5c9e927dd3a2cc9e5",
+              "text_length": 1396
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:41:32.175130+00:00",
+          "facility_id": 2009,
+          "name": "西条酒蔵通り",
+          "region": "hiroshima",
+          "disposition": "candidate_found_hold",
+          "reason": "登録観光協会の現行お知らせ、新公式観光サイトの酒蔵通り絞込25件と現行案内を内容確認。掲載25件は過去開催。今後の企画展＋関連ラリー、酒蔵めぐりを個別HOLD。",
+          "candidates": [
+            {
+              "title": "中央部 / 西条",
+              "source_url": "https://higashihiroshima-kanko.jp/event/sakematsuri/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 第13回あかりの散歩道 西条酒蔵通りのライトアップや現地イベントを開催",
+              "source_url": "https://higashihiroshima-kanko.jp/event/akari-sanpomichi/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 ほろよい散歩クーポン 西条酒蔵通りの酒蔵やお店で使える！酒蔵散策がより楽しめるクーポン！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/horoyoi-sanpo-coupon/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 第8回全国千鳥足選手権大会 出演者が迫真の千鳥足を披露！出演者も募集中♪",
+              "source_url": "https://higashihiroshima-kanko.jp/event/chidoriashi-tournament/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 酒蔵見学&オリジナルラベルと王冠マグネット作り体験 賀茂鶴酒造の親子向け夏休み特別企画！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/chirdren-experience-kamotsuru/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 子どもガイドが案内する「酒蔵のまち てくてくガイド」＆杉玉飾り作り体験 子どもガイドが西条酒蔵通りの名所をご案内",
+              "source_url": "https://higashihiroshima-kanko.jp/event/children-guide/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 IWC2026「SAKE部門」開催記念｜IWC2026 HIROSHIMA SAKE Fes in東広島 〜 世界に挑戦したSAKEを呑む 〜",
+              "source_url": "https://higashihiroshima-kanko.jp/event/iwc2026-sakefes/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 IWC2026「SAKE部門」審査会特別公開ツアー 世界最高峰の舞台を間近で見学できるツアー",
+              "source_url": "https://higashihiroshima-kanko.jp/event/iwc2026-shinsakai-tour/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 SAKEKASU LABOー酒粕トースト体験会ー 酒粕でアレンジ！つくって食べる体験イベント",
+              "source_url": "https://higashihiroshima-kanko.jp/event/sakekasu-labo/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "複数エリア / 西条、安芸津… 東広島蔵開き2026 東広島で日本酒を造る10の酒蔵の蔵開き",
+              "source_url": "https://higashihiroshima-kanko.jp/event/kurabiraki/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 料理教室「おかみさんの簡単おつまみと美酒鍋」 つくって楽しい、食べておいしい。おかみさんの料理教室",
+              "source_url": "https://higashihiroshima-kanko.jp/event/cooking-classes-kamoziumi/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 くぐり門講座「美酒鍋を作ろう！」 東広島のご当地グルメ「美酒鍋」をつくる体験講座を開催！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/bishunabe-lecture/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 第35回東広島市生涯学習フェスティバル 子どもから大人まで学びを深め、高めるイベント",
+              "source_url": "https://higashihiroshima-kanko.jp/event/lifelong-learning-festival/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 西条酒蔵通り お花いっぱいプロジェクト 華やかなお花が飾られ、町並みが彩られる期間限定の企画！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/sakaguradori-ohana-project/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 第6回 賀茂鶴 お酒の成人式 東広島ならでは！酒蔵で新二十歳の思い出作り♪",
+              "source_url": "https://higashihiroshima-kanko.jp/event/kamotsuru-osake-seijinsiki/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 酒都・西条の酒蔵通り成人記念写真館 in くぐり門 成人の日限定、酒樽特設セットで記念撮影ができるフォトスタジオも登場！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/seijinnohi-event/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 Higashihiroshima トワイエ",
+              "source_url": "https://higashihiroshima-kanko.jp/event/towaie-illumination/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 【文化財×日本酒×トーク！】まちの個性を探る！ひがしひろしまの歴史まちづくりトーク 東広島の魅力を語り、歴史文化を生かしたまちづくりを考えるトークイベント",
+              "source_url": "https://higashihiroshima-kanko.jp/event/historic-development-talk/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 北海道フェア at 東広島2025 北海道の味覚を東広島で楽しもう！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/hokkaido-fair/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 東広島国際フェスタ2025 交流を通して世界の文化を知り、楽しめるお祭り♪",
+              "source_url": "https://higashihiroshima-kanko.jp/event/international-festa/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 『透明標本』と『ひかり』のマーケット 美術館とひとむすびのコラボマーケット",
+              "source_url": "https://higashihiroshima-kanko.jp/event/museum-hitomusubi-market/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 吟醸街道まつり 全13蔵の呑み比べと各地域の美味しいもの集めました！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/ginjo-kaido-fes/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 九州屋台飯パーク＠東広島・西条中央公園 福岡から東広島へ初上陸！九州のグルメが西条に大集合！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/kyushu-yataimeshi-park/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "中央部 / 西条 芸陽バスまつり 親子で楽しめるミニバスツアーや乗り方教室なども開催！",
+              "source_url": "https://higashihiroshima-kanko.jp/event/geiyobus-matsuri/",
+              "disposition": "stale_false",
+              "reason": "掲載の開催日・終了日はすべてMission開始より前。過去追加しない。"
+            },
+            {
+              "title": "広大博物館のチカラ～モノのかもす魅力～／酒蔵通りクイズラリー",
+              "disposition": "hold",
+              "source_url": "https://higashihiroshima-kanko.jp/event/hiroshima-uni-museum/",
+              "reason": "公式観光協会で10/31〜11/29・会場・時間を確認したが料金・ラリー参加詳細が未記載。案内先の主催博物館サイトは503メンテナンスで確認不能。"
+            },
+            {
+              "title": "時代薫る西条の酒蔵めぐりコース",
+              "disposition": "hold",
+              "source_url": "https://www.jr-odekake.net/navi/dw_hiking/course/12.html",
+              "reason": "継続ガイドコースは確認できるが酒の試飲を主体とする案内で、子ども同伴時の見学・参加内容を確認できない。家族向け特別企画として採用しない。"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://hh-kanko.ne.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:40:16.396123+00:00",
+              "facility_id": 2009,
+              "final_url": "https://hh-kanko.ne.jp/",
+              "text_sha256": "55fb0d814c68c304c7371dc471e21d2198455fe6c9d3a5798762e718058d51c1",
+              "text_length": 1458
+            },
+            {
+              "url": "https://hh-kanko.ne.jp/news-info",
+              "status": 200,
+              "checked_at": "2026-10-27T18:40:33.929002+00:00",
+              "facility_id": 2009,
+              "final_url": "https://hh-kanko.ne.jp/news-info/",
+              "text_sha256": "1beb826e6611b3f927f1cd61d7fdc1e415d89e45bfced304a84e862cdacdd77e",
+              "text_length": 111
+            },
+            {
+              "url": "https://hh-kanko.jp/",
+              "status": "error",
+              "checked_at": "2026-10-27T18:40:35.216259+00:00",
+              "facility_id": 2009,
+              "error": "HTTPSConnectionPool(host='hh-kanko.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='hh-kanko.jp', port=443): Failed to resolve 'hh-kanko.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://higashihiroshima-kanko.jp/event/?list_type=event&scene=sake_brewery_street",
+              "status": 200,
+              "checked_at": "2026-10-27T18:40:46.211970+00:00",
+              "facility_id": 2009,
+              "final_url": "https://higashihiroshima-kanko.jp/event/?list_type=event&scene=sake_brewery_street",
+              "text_sha256": "62a8739d3bf0bca9822ae87fb383d1f02dfa7776728a987695070097b8d75f96",
+              "text_length": 7906
+            },
+            {
+              "url": "https://higashihiroshima-kanko.jp/event/hiroshima-uni-museum/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:40:55.058123+00:00",
+              "facility_id": 2009,
+              "final_url": "https://higashihiroshima-kanko.jp/event/hiroshima-uni-museum/",
+              "text_sha256": "c57f7acaf03d66379ad88f522b1b151e5be82e6335946cfbe6e4739d41ec3dd6",
+              "text_length": 4389
+            },
+            {
+              "url": "https://www.jr-odekake.net/navi/dw_hiking/course/12.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:40:56.596422+00:00",
+              "facility_id": 2009,
+              "final_url": "https://www.jr-odekake.net/navi/dw_hiking/course/12.html",
+              "text_sha256": "dcfe94eb40f7fd1ec5ee99fc70ecdeaa044899199b567ce7cda195e25b8f0e6e",
+              "text_length": 1060
+            },
+            {
+              "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/event.html#fn117",
+              "status": 503,
+              "checked_at": "2026-10-27T18:41:09.738887+00:00",
+              "facility_id": 2009,
+              "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/event.html#fn117",
+              "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+              "text_length": 414
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:42:29.699003+00:00",
+          "facility_id": 2011,
+          "name": "広島大学総合博物館",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "登録博物館サイトは再試行も503。大学本部の公式記事3本を代替取得し内容評価。酒蔵通り会場の展覧会を2009に追加（同runの直前HOLDを解決）、その他候補を個別処理。失敗したregistry URLの確認日は進めない。",
+          "candidates": [
+            {
+              "title": "広大博物館のチカラ～モノのかもす魅力～／ひがしひろしま いきもの写真展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2009-museum-power",
+              "facility_id": 2009,
+              "participability": "通常参加可能",
+              "reason": "2011の主催者代替公式ページで2009の展示HOLDの料金・通常観覧経路が解決。会場は大学内でなく酒蔵通りのため2009に紐付け。"
+            },
+            {
+              "title": "酒蔵クイズラリー",
+              "disposition": "hold",
+              "reason": "スマホQR形式と実施日は確認。別掲参加詳細はメンテナンス中で、チェックポイント・参加手順を確認不能。"
+            },
+            {
+              "title": "20周年記念シンポジウム・交流会",
+              "disposition": "hold",
+              "reason": "申込締切10/23終了。当日参加経路なし。大学ページ間で12時/12時50分の終了時刻差もあるため採用しない。"
+            },
+            {
+              "title": "ホームカミングデー博物館関連企画",
+              "disposition": "hold",
+              "reason": "11/7・8の告知のみで博物館会場の実施時間・内容・参加条件未確認。"
+            },
+            {
+              "title": "総合博物館本館・埋蔵文化財調査部門臨時開館",
+              "disposition": "hold",
+              "reason": "11/1 14:30〜15:30の記載はあるが閉切済みシンポジウム参加者のみか一般来場可能かを確認できない。"
+            },
+            {
+              "title": "いのちのサバイバル展・関連ギャラリートーク",
+              "disposition": "stale_false",
+              "reason": "第一期6/13、第二期8/20で終了。過去追加しない。"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-w41f5-2009-museum-power"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+              "status": 503,
+              "checked_at": "2026-10-27T18:41:33.003610+00:00",
+              "facility_id": 2011,
+              "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+              "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+              "text_length": 414
+            },
+            {
+              "url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+              "status": 503,
+              "checked_at": "2026-10-27T18:41:34.323029+00:00",
+              "facility_id": 2011,
+              "final_url": "https://www.digital-museum.hiroshima-u.ac.jp/~humuseum/",
+              "text_sha256": "16ae23bf307990fdb7ca30f9f68780811ef2234bcf58cad52a3fd6b0aa371fd7",
+              "text_length": 414
+            },
+            {
+              "url": "https://www.hiroshima-u.ac.jp/research/news/100316",
+              "status": 200,
+              "checked_at": "2026-10-27T18:41:56.354130+00:00",
+              "facility_id": 2011,
+              "final_url": "https://www.hiroshima-u.ac.jp/research/news/100316",
+              "text_sha256": "4dd1b0b9a1167374d3908f455eeb6c8937afe99649034cdf60f437fcf321a9e8",
+              "text_length": 3417
+            },
+            {
+              "url": "https://www.hiroshima-u.ac.jp/research/news/100224",
+              "status": 200,
+              "checked_at": "2026-10-27T18:41:56.939341+00:00",
+              "facility_id": 2011,
+              "final_url": "https://www.hiroshima-u.ac.jp/research/news/100224",
+              "text_sha256": "3e13c3f66b3e40dd3804011cc7d8e277d728e24cfe61ef46634c7163d2e49376",
+              "text_length": 3719
+            },
+            {
+              "url": "https://www.hiroshima-u.ac.jp/notification/news/96403",
+              "status": 200,
+              "checked_at": "2026-10-27T18:41:57.809992+00:00",
+              "facility_id": 2011,
+              "final_url": "https://www.hiroshima-u.ac.jp/notification/news/96403",
+              "text_sha256": "cc210156e2f52d51ea4ce563db91e39f92eec727623003fcf5936b8c2ad8830f",
+              "text_length": 2469
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:42:50.750591+00:00",
+          "facility_id": 2013,
+          "name": "道の駅みはら神明の里",
+          "region": "hiroshima",
+          "disposition": "no_current_or_future_event",
+          "reason": "ホームと実際の新着配信CGIを取得。最新は11/17の休館・通常営業時間、4月抽選結果、2月のレシピ審査結果のみで今後の家族イベント告知なし。",
+          "candidates": [
+            {
+              "title": "大感謝祭おたのしみ抽選会",
+              "disposition": "stale_false",
+              "reason": "賞品引換4/30終了。"
+            },
+            {
+              "title": "米粉レシピコンテスト",
+              "disposition": "stale_false",
+              "reason": "2/19最終審査・結果報告。"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.shinmeinosato.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:42:30.417599+00:00",
+              "facility_id": 2013,
+              "final_url": "https://www.shinmeinosato.jp/",
+              "text_sha256": "5df4b35ea45132c42c52c0d414ec106309203ff1c0ee3a88afa8cc6fa5c70aa5",
+              "text_length": 1606
+            },
+            {
+              "url": "https://www.shinmeinosato.jp/news_top.cgi",
+              "status": 200,
+              "checked_at": "2026-10-27T18:42:42.364814+00:00",
+              "facility_id": 2013,
+              "final_url": "https://www.shinmeinosato.jp/news_top.cgi",
+              "text_sha256": "3327b3e827a60c7e3c4935802b6eee258adf73f3685d5319cb2a8f80fdee4a90",
+              "text_length": 1589
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:43:16.890391+00:00",
+          "facility_id": 2014,
+          "name": "宇根山天文台",
+          "region": "hiroshima",
+          "disposition": "no_current_or_future_event",
+          "reason": "市の施設案内・指定管理者トップ・天文台専用ページを確認。現在の観測は通常営業。募集中と表示された工作2件は8/22・8/30の過去開催で新規追加しない。管理者トップの給水不調・キャンプ新規予約停止は施設情報であり本Missionでは変更しない。",
+          "candidates": [
+            {
+              "title": "第2回天文工作教室 惑星儀を作ろう",
+              "disposition": "stale_false",
+              "reason": "8/22開催済み。"
+            },
+            {
+              "title": "出張プラネタリウム＆工作教室",
+              "disposition": "stale_false",
+              "reason": "8/30開催済み。"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.city.mihara.hiroshima.jp/site/kyouiku/tenmondaitop.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:42:51.670783+00:00",
+              "facility_id": 2014,
+              "final_url": "https://www.city.mihara.hiroshima.jp/site/kyouiku/tenmondaitop.html",
+              "text_sha256": "d40e89ccc44dbb0f3fae48646f2a28d0037e674bdf8df1bb7f8ad022b8a268be",
+              "text_length": 2281
+            },
+            {
+              "url": "https://www.outdoorpark-uneyama.com/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:02.684384+00:00",
+              "facility_id": 2014,
+              "final_url": "https://www.outdoorpark-uneyama.com/",
+              "text_sha256": "7075a54d19fa417737cbf38d9835b96a8f1866c98e52f5f17e874ca169c6c3cd",
+              "text_length": 942
+            },
+            {
+              "url": "https://www.outdoorpark-uneyama.com/astro",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:06.907493+00:00",
+              "facility_id": 2014,
+              "final_url": "https://www.outdoorpark-uneyama.com/astro",
+              "text_sha256": "af42b61898c647a8f156ae7c9e88f11427134171fce28a25e778f7d0265f83bf",
+              "text_length": 1012
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:43:49.739273+00:00",
+          "facility_id": 2015,
+          "name": "因島水軍城",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "市の施設ページが指定する管理者の最新お知らせと個別企画展を確認。11/25までの展示を追加。特別展料金500円は市の旧一般料金330円とは分けて記録。観光協会の他会場催しは対象外。",
+          "candidates": [
+            {
+              "title": "日本遺産村上海賊企画展「究める」―赤色立体地図から見た因島村上氏の海城",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2015-kiwameru",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "オープニングくじ引き",
+              "disposition": "stale_false",
+              "reason": "9/11〜13終了。"
+            },
+            {
+              "title": "シルバーウィークポストカード企画",
+              "disposition": "stale_false",
+              "reason": "9/19〜23終了。"
+            },
+            {
+              "title": "感謝プレゼント・はっさくん記念撮影",
+              "disposition": "stale_false",
+              "reason": "10/10〜12終了。"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-w41f5-2015-kiwameru"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.city.onomichi.hiroshima.jp/soshiki/38/1042.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:17.585968+00:00",
+              "facility_id": 2015,
+              "final_url": "https://www.city.onomichi.hiroshima.jp/soshiki/38/1042.html",
+              "text_sha256": "34095b3b378f288c4b84e605617f66b26f1525b0cff12795ebe976f72033c84c",
+              "text_length": 1969
+            },
+            {
+              "url": "https://kanko-innoshima.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:27.301746+00:00",
+              "facility_id": 2015,
+              "final_url": "https://kanko-innoshima.jp/",
+              "text_sha256": "e498036ab2536e0318ce6e05d24051a784e88f6a3f59c9beb73691a1419e8e6c",
+              "text_length": 2044
+            },
+            {
+              "url": "https://kanko-innoshima.jp/archives/30539",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:33.814857+00:00",
+              "facility_id": 2015,
+              "final_url": "https://kanko-innoshima.jp/archives/30539",
+              "text_sha256": "806432fc03f8d21ef59320c11a9f5cd78095c978e95dd931fa8e72c18a885ce2",
+              "text_length": 1602
+            },
+            {
+              "url": "https://kanko-innoshima.jp/archives/30710",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:35.530490+00:00",
+              "facility_id": 2015,
+              "final_url": "https://kanko-innoshima.jp/archives/30710",
+              "text_sha256": "1ecd8fcf7322bd2d2eb7ffc1104bc04e0236c9b476f3f210a9ca1da7139b5236",
+              "text_length": 1473
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:44:09.755988+00:00",
+          "facility_id": 2016,
+          "name": "耕三寺博物館（未来心の丘）",
+          "region": "hiroshima",
+          "disposition": "candidate_found_hold",
+          "reason": "公式トップ、現在の展示、開催中催しリンクを確認。展示3件は開催中と内容・通常料金を確認したが開始・終了日を特定できず、日付を創作せず個別HOLD。常設展示はイベント扱いしない。",
+          "candidates": [
+            {
+              "title": "開館73周年 館蔵茶道具展 床の間のしつらえ",
+              "disposition": "hold",
+              "reason": "現在開催中だが公式ページに数値の開催期間がなくイベント開始・終了日を確定できない。",
+              "source_url": "https://www.kousanji.or.jp/museum_pickup/"
+            },
+            {
+              "title": "館蔵品展 近代日本画",
+              "disposition": "hold",
+              "reason": "現在開催中だが公式ページに数値の開催期間がなくイベント開始・終了日を確定できない。",
+              "source_url": "https://www.kousanji.or.jp/museum_pickup/"
+            },
+            {
+              "title": "館蔵茶道具展 秋高佳風月",
+              "disposition": "hold",
+              "reason": "現在開催中だが公式ページに数値の開催期間がなくイベント開始・終了日を確定できない。",
+              "source_url": "https://www.kousanji.or.jp/museum_pickup/"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.kousanji.or.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:50.626022+00:00",
+              "facility_id": 2016,
+              "final_url": "https://www.kousanji.or.jp/",
+              "text_sha256": "32c16a5f7de2840c2ac9995fb5f00b859978b37cfc8ef9557d5e3d64fa6c6d74",
+              "text_length": 1286
+            },
+            {
+              "url": "https://www.kousanji.or.jp/museum_pickup/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:43:58.237227+00:00",
+              "facility_id": 2016,
+              "final_url": "https://www.kousanji.or.jp/museum_pickup/",
+              "text_sha256": "df7a0da449bd251da0b562790f1d6069a4b279d57b0015604465fca77b26df8e",
+              "text_length": 1647
+            },
+            {
+              "url": "https://www.kousanji.or.jp/temple.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:01.057490+00:00",
+              "facility_id": 2016,
+              "final_url": "https://www.kousanji.or.jp/temple.html",
+              "text_sha256": "82209c2054834cb85e32dd4e85725cfdeeb899b41c5b9bd309e74e9741539b1a",
+              "text_length": 4086
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T18:45:33.158720+00:00",
+          "facility_id": 2017,
+          "name": "ふくやま美術館",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "現行展示詳細・募集・10月/11月公式カレンダーを全頁確認。既存7件を再確認、開催中2件のstatusと11/3無料日を更新。参加経路のある展示・工作等11件を追加。成人専用・閉切済講座、未確定ワークショップはHOLD。",
+          "candidates": [
+            {
+              "title": "千住 博展―静寂の光、水の鼓動",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20261003-9afd8951"
+            },
+            {
+              "title": "絵本と芸術家 ―清水良雄を中心として",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20260926-7ba35bde"
+            },
+            {
+              "title": "記念講演会 水、光、大地――千住博の世界を日本の思想から捉え直す",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20261101-912c9170"
+            },
+            {
+              "title": "絵本と芸術家 学芸員によるギャラリートーク",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20261004-166a63b9"
+            },
+            {
+              "title": "ふくふくおはなし美術館 対話型鑑賞会",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20261012-c52986b1"
+            },
+            {
+              "title": "第65回ミュージアムコンサート 世界から日本へ―音の旅路",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-2017-20261128-26005fb3"
+            },
+            {
+              "title": "令和8年度 あいサポートアート展（福山会場）",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-2017-aiart-20261117"
+            },
+            {
+              "title": "追悼 松本コレクション―茶の湯の精華―",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-matsumoto",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "第17回福山日本画協会展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-nihonga",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "書道 径の会 第5回作品展「薫ることば」展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-kaoru",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "第77回福山美術協会会員展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-members",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "第21回成果展 織りとパッチワーク展―綿の詩・糸の詩・布の詩―",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-patchwork",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "第21回福山城之館同窓会 作品展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-bonsai",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "朋邑書道会 十周年記念作品展",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-shodo",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ボランティア「くすのき」によるやさしいアートガイド",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-guide",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "千住博展×音とアートな夜 ロビーコンサート",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-lobby",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "子ども造形教室「いろんな道具と技法で満月を描いてみよう！」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-moon",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "ふくやま美術館 第21回特別茶会",
+              "disposition": "add",
+              "event_id": "evt-w41f5-2017-tea",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "あいサポートアート展11/23ワークショップ",
+              "disposition": "hold",
+              "reason": "公式ページはワークショップ予定との記載のみで具体的内容・条件未確定。既存の展覧会本体は確認済み。"
+            },
+            {
+              "title": "油彩画・エッチング・水彩画・茶道A・茶道B長期実技講座",
+              "disposition": "hold",
+              "reason": "いずれも申込9/20終了。油彩・版画・水彩18歳以上、茶道15歳以上（中学生不可）。参加不能・年齢条件により追加しない。"
+            },
+            {
+              "title": "千住博スペシャル対談",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "オバケ展読み聞かせ会",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "レベルアップ1日絵画講座",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "松本コレクション呈茶茶会",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "わたしの習作展",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "第52回墨盈会書作展",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            },
+            {
+              "title": "第23回光彩ふくきた写真展",
+              "disposition": "stale_false",
+              "reason": "公式告知の日程は10/27以前に終了。過去追加しない。"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-supp1-2017-20261003-9afd8951",
+            "evt-supp1-2017-20261003-9afd8951",
+            "evt-supp1-2017-20260926-7ba35bde",
+            "evt-supp1-2017-20260926-7ba35bde",
+            "evt-supp1-2017-20261101-912c9170",
+            "evt-supp1-2017-20261004-166a63b9",
+            "evt-supp1-2017-20261012-c52986b1",
+            "evt-supp1-2017-20261128-26005fb3",
+            "evt-w41d6-2017-aiart-20261117",
+            "evt-w41f5-2017-matsumoto",
+            "evt-w41f5-2017-nihonga",
+            "evt-w41f5-2017-kaoru",
+            "evt-w41f5-2017-members",
+            "evt-w41f5-2017-patchwork",
+            "evt-w41f5-2017-bonsai",
+            "evt-w41f5-2017-shodo",
+            "evt-w41f5-2017-guide",
+            "evt-w41f5-2017-lobby",
+            "evt-w41f5-2017-moon",
+            "evt-w41f5-2017-tea"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:10.622050+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/",
+              "text_sha256": "6b47f2be37d9f58289387b7dfb17f0595a364fb9e3656cc3aeefc761ebfe1dab",
+              "text_length": 814
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/409130.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:17.633981+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/409130.html",
+              "text_sha256": "190a0a2a50d6e8be445c4e9269802a0a2fcb23821ce675d72e2f2ccc63d6f07b",
+              "text_length": 2940
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/412912.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:18.118993+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/412912.html",
+              "text_sha256": "e262a07efdeb20b9d956456756e9b1c73342b4afc6ed78fa9fb8bf3dcafb1c88",
+              "text_length": 2013
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/413803.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:18.569016+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/413803.html",
+              "text_sha256": "957559061d207e936b2aa1f7c83c1ae3549d3dbea4ee03dbf89fe67a306cc11f",
+              "text_length": 1593
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/165028.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:19.057379+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/165028.html",
+              "text_sha256": "8a260b7a9d5686950881de9495a623f5e7f66decec39d607efde5cfd3089097d",
+              "text_length": 1116
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/177140.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:28.920429+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/177140.html",
+              "text_sha256": "4cab8a2051200fb4d433165bf136edf9215577d73310917f45ec0fd1a9bb84ed",
+              "text_length": 2795
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/272583.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:30.374727+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/site/fukuyama-museum/272583.html",
+              "text_sha256": "c4208601abf79b91852fecbe93b5f394b5c82a1719dfddcb4634233866155a96",
+              "text_length": 2063
+            },
+            {
+              "url": "https://www.pref.hiroshima.lg.jp/site/aiart/exhibition08.html",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:35.598127+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.pref.hiroshima.lg.jp/site/aiart/exhibition08.html",
+              "text_sha256": "1ad0fc50c6103bac9fefa681fc8410cf6aad1e095bf7d69a1ab8d4f93e539ac2",
+              "text_length": 3027
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347124.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:36.097020+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347124.pdf",
+              "text_sha256": "b7a01d39ed4ef75faa4dfe77bf6e5c7345682186f932bc88c5d40dd680650a16",
+              "text_length": 3347
+            },
+            {
+              "url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347123.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T18:44:36.931472+00:00",
+              "facility_id": 2017,
+              "final_url": "https://www.city.fukuyama.hiroshima.jp/uploaded/attachment/347123.pdf",
+              "text_sha256": "b6b6853721088126a48aae4f8b3d15b246f33e1ba09dbdd582ce88026168ccf2",
+              "text_length": 3480
+            }
+          ]
+        }
+      ],
+      "existing_event_holds": []
+    },
+    "iwate": {
+      "facility_ids": [
+        3935,
+        3952,
+        6938,
+        6939,
+        6940,
+        8255
+      ],
+      "total": 6,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": [],
+      "existing_event_holds": []
+    },
+    "kagoshima": {
+      "facility_ids": [
+        6918,
+        6919,
+        8270
+      ],
+      "total": 3,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": [],
+      "existing_event_holds": []
+    }
+  }
+}
