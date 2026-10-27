@@ -59,7 +59,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
           "event_id": "evt-litpla-litpla-matsudo-halloween2026",
-          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合"
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "ハロウィン2026（リトルプラネット ららぽーとTOKYO-BAY）",
@@ -67,7 +68,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
           "event_id": "evt-litpla-lalaport-tokyo-bay-halloween2026",
-          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合"
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーアリオ蘇我）",
@@ -75,7 +77,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式日程・会場を現行の通常/Summer合算レコードと照合。同じ開催。",
           "event_id": "evt-litpla-toylo-soga-halloween2026",
-          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合"
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "第8回千葉生シェイク祭り2026",
@@ -106,7 +109,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "本runの地域観光surfaceで追加済み。同じ11月7日13時・館山市城山公園の開催を主催者全体日程で再照合。",
           "event_id": "evt-chiba-w41d8-tateyama-wrestling",
-          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合"
+          "rendered_set": "lib/events.ts通常+Summer合算;公開status/開催日/鮮度条件を照合",
+          "event_category": "municipal_regional"
         },
         {
           "title": "ACTIVE ADVANCE TOURNAMENT Aブロック二回戦",
@@ -188,7 +192,8 @@
           "event_category": "municipal_regional"
         }
       ],
-      "search_note": "既存通常/Summer合算のorganizer/source_notes/official_url、県公式観光8ページの主催者を参照。単館イベント一覧を主催者枠に流用せず、リトプラ横断企画・須藤牧場横断企画・2AW複数会場予定を実取得。2AWは2027年1月4日までの全1ページを確認し、東京1件はscope外として除外。"
+      "search_note": "既存通常/Summer合算のorganizer/source_notes/official_url、県公式観光8ページの主催者を参照。単館イベント一覧を主催者枠に流用せず、リトプラ横断企画・須藤牧場横断企画・2AW複数会場予定を実取得。2AWは2027年1月4日までの全1ページを確認し、東京1件はscope外として除外。",
+      "reporting_category_note": "既存の3区分で候補遭遇を報告。季節行事を優先し、地域回遊/街路等は自治体・地域、展示・館内講座・公演・教室は施設開催に分類。採否・既存Product分類は変更しない。"
     },
     "iwate": {
       "sources_checked": [
@@ -802,7 +807,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年7月8日(水)～11月19日(木)",
-          "venue": "盛岡市都南歴史民俗資料館"
+          "venue": "盛岡市都南歴史民俗資料館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "企画展「黄金を追う人々と大地」",
@@ -810,7 +816,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年7月25日（土）～11月23日（月・祝）",
-          "venue": "大船渡市立博物館"
+          "venue": "大船渡市立博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第2回企画展「民のために生涯を捧げた男たちー寿庵と長英、それぞれの道ー」",
@@ -818,7 +825,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年8月25日(火)～11月29日(日)",
-          "venue": "奥州市立高野長英記念館"
+          "venue": "奥州市立高野長英記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "ミニ企画展「記念館推しのイッピン２」",
@@ -826,7 +834,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月1日(火)～11月29日(日)",
-          "venue": "奥州市立斎藤實記念館"
+          "venue": "奥州市立斎藤實記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "宮沢賢治作品翻訳書籍展",
@@ -834,7 +843,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月2日(水)～2027年1月31日(日)",
-          "venue": "宮沢賢治イーハトーブ館"
+          "venue": "宮沢賢治イーハトーブ館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第71回企画展「原敬と司法省法学校の同窓たち」",
@@ -842,7 +852,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
           "event_id": "evt-iwate-w41d8-mori-1028525",
-          "listed_date": "2026年9月12日(土)～11月23日(月・祝)"
+          "listed_date": "2026年9月12日(土)～11月23日(月・祝)",
+          "event_category": "facility_hosted"
         },
         {
           "title": "菅沼綠 新作展",
@@ -850,7 +861,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月12日（土）～11月8日（日）",
-          "venue": "石神の丘美術館"
+          "venue": "石神の丘美術館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "秋の企画展「家臣録から先祖をたどる」（仮題）",
@@ -858,7 +870,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月15日(火)～11月15日(日)",
-          "venue": "奥州市武家住宅資料館"
+          "venue": "奥州市武家住宅資料館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第74回企画展　生誕200年記念「大島高任－日本近代製鉄の夜明け－」",
@@ -866,7 +879,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
           "event_id": "evt-iwate-w41d8-mori-1035073",
-          "listed_date": "2026年9月19日(土)～11月23日(月・祝)"
+          "listed_date": "2026年9月19日(土)～11月23日(月・祝)",
+          "event_category": "facility_hosted"
         },
         {
           "title": "企画展：地の下の挑戦者　金澤隆二展",
@@ -874,7 +888,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
           "event_id": "evt-iwate-w41d8-kanazawa-art",
-          "listed_date": "2026年9月19日(土)～11月29日(日)"
+          "listed_date": "2026年9月19日(土)～11月29日(日)",
+          "event_category": "facility_hosted"
         },
         {
           "title": "特別展「武家のみやび－初代一関藩主 田村建顕と和歌－",
@@ -882,7 +897,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月19日(土)～11月23日（月・祝）",
-          "venue": "一関市博物館"
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "テーマ展「化石のレプリカ展 -We are NOT fakes!-」",
@@ -890,7 +906,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年9月26日(土)～12月6日(日)",
-          "venue": "岩手県立博物館"
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "啄木生誕140周年・盛岡市玉山村合併20周年記念　第2企画展示「たまやまの指定文化財（仮）」",
@@ -898,7 +915,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月1日（木）～2027年9月末（予定）",
-          "venue": "盛岡市玉山歴史民俗資料館"
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "特別展「セロ弾きのはなし」",
@@ -906,7 +924,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月3日（土）～2027年2月14日（日）",
-          "venue": "宮沢賢治記念館"
+          "venue": "宮沢賢治記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "重要文化財の公開",
@@ -914,7 +933,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月6日（火）～11月8日（日）",
-          "venue": "奥州市立高野長英記念館"
+          "venue": "奥州市立高野長英記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第62回企画展",
@@ -922,7 +942,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月10日（土）～2027年1月24日（日）",
-          "venue": "二戸市シビックセンター"
+          "venue": "二戸市シビックセンター",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第78回企画展　高村光太郎没後70年「高村光太郎と岩手の人～手紙に見る交流～」",
@@ -930,7 +951,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月14日（水）～2027年2月8日（月）",
-          "venue": "盛岡てがみ館"
+          "venue": "盛岡てがみ館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "新渡戸フェスティバル",
@@ -938,7 +960,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月17日（土）",
-          "venue": "花巻新渡戸記念館"
+          "venue": "花巻新渡戸記念館",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "月山降臨-最古の月山紀年銘刀を追う-",
@@ -946,7 +969,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "主催公式の同一内容・会場・当該会期と、現在表示条件内の通常/Summer合算レコードを照合。",
           "event_id": "evt-iwate-w41d8-gassan-swords",
-          "listed_date": "2026年10月17日（土）～12月20日（日）"
+          "listed_date": "2026年10月17日（土）～12月20日（日）",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第18回田中舘愛橘ローマ字書道コンクール入賞作品展",
@@ -954,7 +978,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月17日（土）～11月8日（日）",
-          "venue": "二戸市シビックセンター"
+          "venue": "二戸市シビックセンター",
+          "event_category": "facility_hosted"
         },
         {
           "title": "令和８年度企画展「帰ってきたMAKUMAE」（仮）",
@@ -962,7 +987,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月17日(土）～11月29日（日）",
-          "venue": "御所野縄文博物館"
+          "venue": "御所野縄文博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "企画展「第37回啄木資料展」",
@@ -970,7 +996,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月24日(土)～2027年1月17日(日)",
-          "venue": "岩手県立図書館"
+          "venue": "岩手県立図書館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "まいぶんレキシ体験プログラム～歴史公園でつくろう！遊ぼう！～",
@@ -978,7 +1005,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月25日(日)",
-          "venue": "胆沢城跡歴史公園"
+          "venue": "胆沢城跡歴史公園",
+          "event_category": "facility_hosted"
         },
         {
           "title": "令和８年度久慈市民芸術文化祭",
@@ -986,7 +1014,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月31日（土）、11月1日（日）",
-          "venue": "久慈市文化会館（十文字チキンアンバーホール）"
+          "venue": "久慈市文化会館（十文字チキンアンバーホール）",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "常設展示　製鉄",
@@ -994,7 +1023,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "通年",
-          "venue": "釜石市郷土資料館"
+          "venue": "釜石市郷土資料館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第53回　大槌町民文化祭",
@@ -1002,7 +1032,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月31日(土）～11月3日（火・祝）",
-          "venue": "大槌文化交流センターおしゃっち／城山公園体育館"
+          "venue": "大槌文化交流センターおしゃっち／城山公園体育館",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "令和８年度大槌町文化財展「崎山弁天遺跡」（仮）",
@@ -1010,7 +1041,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月31日(土）～11月3日（火・祝）",
-          "venue": "大槌文化交流センターおしゃっち　エントランスホール"
+          "venue": "大槌文化交流センターおしゃっち　エントランスホール",
+          "event_category": "facility_hosted"
         },
         {
           "title": "秋の椿とガーデニングフェスタ",
@@ -1018,7 +1050,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年10月31日（土）",
-          "venue": "世界の椿館・碁石"
+          "venue": "世界の椿館・碁石",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "宮沢賢治生誕130年記念第５回国際研究大会",
@@ -1026,7 +1059,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月1日（日）～11月3日（火・祝）",
-          "venue": "なはんプラザ（花巻市定住交流センター）"
+          "venue": "なはんプラザ（花巻市定住交流センター）",
+          "event_category": "facility_hosted"
         },
         {
           "title": "講座「和歌に親しむ（仮）」",
@@ -1034,7 +1068,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月1日（日）",
-          "venue": "一関市博物館"
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "特別展　ギャラリートーク",
@@ -1042,7 +1077,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月1日（日）",
-          "venue": "一関市博物館"
+          "venue": "一関市博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "工作体験イベント　あそんでまなぼう！　うしはく探検隊2026",
@@ -1050,7 +1086,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月1日(日)",
-          "venue": "奥州市牛の博物館"
+          "venue": "奥州市牛の博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "ミニイベント「切手でしおりをつくろう！」",
@@ -1058,7 +1095,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）　開催時間①10:00～10:30　②14:00～14:30",
-          "venue": "盛岡てがみ館"
+          "venue": "盛岡てがみ館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "文化の日記念イベント",
@@ -1066,7 +1104,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "盛岡市先人記念館"
+          "venue": "盛岡市先人記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "啄木スタンプラリー",
@@ -1074,7 +1113,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "盛岡市玉山歴史民俗資料館"
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "レコード鑑賞会",
@@ -1082,7 +1122,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "盛岡市玉山歴史民俗資料館"
+          "venue": "盛岡市玉山歴史民俗資料館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "啄木スタンプラリー",
@@ -1090,7 +1131,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "石川啄木記念館"
+          "venue": "石川啄木記念館",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "レコード鑑賞会",
@@ -1098,7 +1140,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "石川啄木記念館"
+          "venue": "石川啄木記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "中高生による科学実験ショー",
@@ -1106,7 +1149,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日(火・祝)",
-          "venue": "東北ターボこども科学館"
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "文化講演会",
@@ -1114,7 +1158,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）",
-          "venue": "岩手県立博物館"
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "第２７回崎山貝塚縄文まつり",
@@ -1122,7 +1167,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日(火・祝)",
-          "venue": "宮古市崎山貝塚縄文の森ミュージアム"
+          "venue": "宮古市崎山貝塚縄文の森ミュージアム",
+          "event_category": "facility_hosted"
         },
         {
           "title": "冬の３館ウォーク",
@@ -1130,7 +1176,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日(火・祝)～2027年1月24日(日)",
-          "venue": "奥州市立後藤新平記念館"
+          "venue": "奥州市立後藤新平記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "冬の３館ウォーク",
@@ -1138,7 +1185,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火・祝）～2027年1月24日（日）",
-          "venue": "奥州市立斎藤實記念館"
+          "venue": "奥州市立斎藤實記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "冬の３館ウォーク",
@@ -1146,7 +1194,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月3日（火）～令和9年1月24日（日）",
-          "venue": "高野長英記念館、後藤新平記念館、斎藤實記念館"
+          "venue": "高野長英記念館、後藤新平記念館、斎藤實記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "原敬命日記念事業「命日記念茶会」",
@@ -1154,7 +1203,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月4日（水）",
-          "venue": "原敬記念館"
+          "venue": "原敬記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "原敬命日記念事業「大宮さんさ踊り記念演舞」",
@@ -1162,7 +1212,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月4日（水）",
-          "venue": "原敬記念館"
+          "venue": "原敬記念館",
+          "event_category": "fireworks_festival_seasonal"
         },
         {
           "title": "太陽を見る会",
@@ -1170,7 +1221,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月7日(土)、14日(土)",
-          "venue": "東北ターボこども科学館"
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "県博日曜講座",
@@ -1178,7 +1230,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月8日（日）",
-          "venue": "岩手県立博物館"
+          "venue": "岩手県立博物館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "崎山弁天遺跡講演会・シンポジウム（仮）",
@@ -1186,7 +1239,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月8日（日）",
-          "venue": "大槌町中央公民館　吉里吉里分館（きりきりぶんかん）"
+          "venue": "大槌町中央公民館　吉里吉里分館（きりきりぶんかん）",
+          "event_category": "facility_hosted"
         },
         {
           "title": "秋の武家屋敷お庭巡り",
@@ -1194,7 +1248,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月11日(水)～11月18日(水)",
-          "venue": "金ケ崎町城内諏訪小路重要伝統的建造物群保存地区"
+          "venue": "金ケ崎町城内諏訪小路重要伝統的建造物群保存地区",
+          "event_category": "facility_hosted"
         },
         {
           "title": "星を見る会",
@@ -1202,7 +1257,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月14日（土）",
-          "venue": "東北ターボこども科学館"
+          "venue": "東北ターボこども科学館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "俳句まつり",
@@ -1210,7 +1266,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月14日（土）",
-          "venue": "日本現代詩歌文学館"
+          "venue": "日本現代詩歌文学館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "詩人の集い2026―いまを生きる―",
@@ -1218,7 +1275,8 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年11月28日（土）",
-          "venue": "日本現代詩歌文学館"
+          "venue": "日本現代詩歌文学館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "啄木生誕140周年・盛岡市玉山村合併20周年記念\n第21回企画展「歌人　石川啄木の世界（仮）」",
@@ -1226,34 +1284,40 @@
           "disposition": "hold",
           "reason": "主催公式登録詳細は取得したが、料金・開始/終了時刻、当該回の対象/予約受付経路を確定できない。",
           "listed_date": "2026年12月12日（土）～2027年3月22日（月・祝）",
-          "venue": "石川啄木記念館"
+          "venue": "石川啄木記念館",
+          "event_category": "facility_hosted"
         },
         {
           "title": "全国神楽まつり 神楽公演（大迫体育館）",
           "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
           "disposition": "hold",
-          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。"
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
         },
         {
           "title": "全国神楽まつり パブリックビューイング（交流センター）",
           "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
           "disposition": "hold",
-          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。"
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
         },
         {
           "title": "全国神楽まつり にぎわい（交流センター駐車場）",
           "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
           "disposition": "hold",
-          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。"
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
         },
         {
           "title": "全国神楽まつり 御通り（仲町商店街）",
           "url": "https://www.city.hanamaki.iwate.jp/kanko/oshirase/1025876.html",
           "disposition": "hold",
-          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。"
+          "reason": "10月27日最新の主催公式で複数会場・日程を確認。屋外部分の荒天変更/交通規制・子連れ導線と各プログラムの参加条件の一式が不足。",
+          "event_category": "facility_hosted"
         }
       ],
-      "search_note": "通常/Summer合算organizer/source_notesの主催者と本runの県・観光掲載を照合。東北文化の日は岩手絞込全6ページ54詳細を取得。さらに50周年神楽事業の3会場4プログラムを主催市で確認。登録詳細に料金/時刻欄不足が多いsource familyを各候補HOLDとして維持。"
+      "search_note": "通常/Summer合算organizer/source_notesの主催者と本runの県・観光掲載を照合。東北文化の日は岩手絞込全6ページ54詳細を取得。さらに50周年神楽事業の3会場4プログラムを主催市で確認。登録詳細に料金/時刻欄不足が多いsource familyを各候補HOLDとして維持。",
+      "reporting_category_note": "既存の3区分で候補遭遇を報告。季節行事を優先し、地域回遊/街路等は自治体・地域、展示・館内講座・公演・教室は施設開催に分類。採否・既存Product分類は変更しない。"
     }
   },
   "verification_note": "18 sequential discovery receipts retain the counts at their completion time. Final candidate QA removed natural-view-only items, resolved later duplicates, and held one child-ineligible provisional item; per_region counts below are final encounter counts, not distinct-event totals."
