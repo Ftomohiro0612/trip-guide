@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T19:03:26.212264+00:00",
+  "executed_at": "2026-10-27T19:12:05.611046+00:00",
   "process_started_at": "2026-10-27T18:36:33.7068461Z",
   "due_facility_ids": [
     2005,
@@ -47,10 +47,10 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 30,
-    "no_current_or_future_event": 7,
-    "candidate_found_added": 11,
-    "candidate_found_duplicate": 2,
+    "total": 40,
+    "no_current_or_future_event": 12,
+    "candidate_found_added": 15,
+    "candidate_found_duplicate": 3,
     "candidate_found_hold": 10,
     "source_unresolved": 0
   },
@@ -91,7 +91,7 @@
       ],
       "total": 31,
       "no_current_or_future_event": 7,
-      "candidate_found_added": 11,
+      "candidate_found_added": 12,
       "candidate_found_duplicate": 2,
       "candidate_found_hold": 10,
       "source_unresolved": 0,
@@ -1308,6 +1308,60 @@
           "final_url": "https://www.water.city.hiroshima.lg.jp/site/koho/",
           "text_sha256": "d2c05328d95c00be97ee8e2682072df1c2a8ef86d6106a9c2edae09e9f5cc302",
           "text_length": 1479
+        },
+        {
+          "url": "https://www.ebayama.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:37.332483+00:00",
+          "facility_id": 8205,
+          "final_url": "https://www.ebayama.jp/",
+          "text_sha256": "466c203d572ad7d62f802d370d11edc7913d93b9f15f7a5c4bd12d4397f15c9c",
+          "text_length": 2171
+        },
+        {
+          "url": "https://www.ebayama.jp/eventlist",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:45.058876+00:00",
+          "facility_id": 8205,
+          "final_url": "https://www.ebayama.jp/eventlist",
+          "text_sha256": "d0fb7af63dc33c89075d2a3133dd40e4277bd69ed9ffaa7073d25a2757113848",
+          "text_length": 5073
+        },
+        {
+          "url": "https://www.ebayama.jp/?page_id=712",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:46.095500+00:00",
+          "facility_id": 8205,
+          "final_url": "https://www.ebayama.jp/?page_id=712",
+          "text_sha256": "88cd67c3b5405fe2a93334bf127667cef78deb5eb3fcd8f4976c4b14e233bc4d",
+          "text_length": 1739
+        },
+        {
+          "url": "https://www.ebayama.jp/?p=10431",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:46.796662+00:00",
+          "facility_id": 8205,
+          "final_url": "https://www.ebayama.jp/?p=10431",
+          "text_sha256": "d0fb7af63dc33c89075d2a3133dd40e4277bd69ed9ffaa7073d25a2757113848",
+          "text_length": 5073
+        },
+        {
+          "url": "https://www.ebayama.jp/?page_id=3121",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:55.090242+00:00",
+          "facility_id": 8205,
+          "final_url": "https://www.ebayama.jp/?p=11996",
+          "text_sha256": "bf4a79447aff91a9d3293f55dcbc7f6015ef89248852db0cddae6ad52c935d65",
+          "text_length": 3463
+        },
+        {
+          "url": "https://teket.jp/17936/79172",
+          "status": 200,
+          "checked_at": "2026-10-27T19:03:55.929289+00:00",
+          "facility_id": 8205,
+          "final_url": "https://teket.jp/17936/79172",
+          "text_sha256": "313edb417b1ecbf5afa933f6ce5a7f4f5c7fc7484e23a3505978a8e98ef05be1",
+          "text_length": 3845
         }
       ],
       "facilities": [
@@ -4218,6 +4272,155 @@
               "text_length": 1479
             }
           ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:04:20.180502+00:00",
+          "facility_id": 8205,
+          "name": "広島市江波山気象館",
+          "region": "hiroshima",
+          "disposition": "candidate_found_added",
+          "reason": "現行もよおし全11企画を個別照合。既存10件は日付・開催日・当日参加経路を確認し鮮度更新（自然観察は屋外、荒天時館内へ訂正）。新しい防災講座1件は公開主催者受付と郵送の応募経路を確認して追加。実験ひろばは見出しのみで開催予定本文なし。",
+          "candidates": [
+            {
+              "title": "江波山気象館サイエンスショー「風船でサイエンス」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-balloon",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "江波山気象館サイエンスショー「-196℃液体窒素の低温実験」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-nitrogen",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "江波山気象館サイエンスショー「ふしぎサイエンスマジック」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-magic",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "江波山気象館サイエンスショー「水と氷でふしぎ実験」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-waterice",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "江波山気象館サイエンスショー「パチパチ静電気」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-static",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "江波山気象館サイエンスショー「びっくり実験大集合！」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-collection",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "はれるん・マッピーくんと学ぼう！天気と地図のわくわくひろば",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-weatherday",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "旧広島地方気象台たてものガイド",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-building",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "秋の江波山み～つけた！",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-nature",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "サイエンスワークショップ「大きな松ぼっくりツリー」",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-8205-pinecone",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            },
+            {
+              "title": "かつまるきょうこの防災講座 やってみようや ひろしま防災",
+              "disposition": "add",
+              "event_id": "evt-w41f5-8205-disaster",
+              "participability": "条件付き参加可能",
+              "source_url": "https://www.ebayama.jp/eventlist"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-w41d6-8205-balloon",
+            "evt-w41d6-8205-nitrogen",
+            "evt-w41d6-8205-magic",
+            "evt-w41d6-8205-waterice",
+            "evt-w41d6-8205-static",
+            "evt-w41d6-8205-collection",
+            "evt-w41d6-8205-weatherday",
+            "evt-w41d6-8205-building",
+            "evt-w41d6-8205-nature",
+            "evt-w41d6-8205-nature",
+            "evt-w41d6-8205-pinecone",
+            "evt-w41f5-8205-disaster"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.ebayama.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:37.332483+00:00",
+              "facility_id": 8205,
+              "final_url": "https://www.ebayama.jp/",
+              "text_sha256": "466c203d572ad7d62f802d370d11edc7913d93b9f15f7a5c4bd12d4397f15c9c",
+              "text_length": 2171
+            },
+            {
+              "url": "https://www.ebayama.jp/eventlist",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:45.058876+00:00",
+              "facility_id": 8205,
+              "final_url": "https://www.ebayama.jp/eventlist",
+              "text_sha256": "d0fb7af63dc33c89075d2a3133dd40e4277bd69ed9ffaa7073d25a2757113848",
+              "text_length": 5073
+            },
+            {
+              "url": "https://www.ebayama.jp/?page_id=712",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:46.095500+00:00",
+              "facility_id": 8205,
+              "final_url": "https://www.ebayama.jp/?page_id=712",
+              "text_sha256": "88cd67c3b5405fe2a93334bf127667cef78deb5eb3fcd8f4976c4b14e233bc4d",
+              "text_length": 1739
+            },
+            {
+              "url": "https://www.ebayama.jp/?p=10431",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:46.796662+00:00",
+              "facility_id": 8205,
+              "final_url": "https://www.ebayama.jp/?p=10431",
+              "text_sha256": "d0fb7af63dc33c89075d2a3133dd40e4277bd69ed9ffaa7073d25a2757113848",
+              "text_length": 5073
+            },
+            {
+              "url": "https://www.ebayama.jp/?page_id=3121",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:55.090242+00:00",
+              "facility_id": 8205,
+              "final_url": "https://www.ebayama.jp/?p=11996",
+              "text_sha256": "bf4a79447aff91a9d3293f55dcbc7f6015ef89248852db0cddae6ad52c935d65",
+              "text_length": 3463
+            },
+            {
+              "url": "https://teket.jp/17936/79172",
+              "status": 200,
+              "checked_at": "2026-10-27T19:03:55.929289+00:00",
+              "facility_id": 8205,
+              "final_url": "https://teket.jp/17936/79172",
+              "text_sha256": "313edb417b1ecbf5afa933f6ce5a7f4f5c7fc7484e23a3505978a8e98ef05be1",
+              "text_length": 3845
+            }
+          ]
         }
       ],
       "existing_event_holds": []
@@ -4232,13 +4435,1309 @@
         8255
       ],
       "total": 6,
-      "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
-      "candidate_found_duplicate": 0,
+      "no_current_or_future_event": 3,
+      "candidate_found_added": 2,
+      "candidate_found_duplicate": 1,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": [],
+      "sources_checked": [
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/guide/index.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:24.409240+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/index.html",
+          "text_sha256": "b77dc792acee385b45f062971bec4c35fbdeef7f0bb82a3f1b62a0e24c1cbfbf",
+          "text_length": 541
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:31.334715+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/",
+          "text_sha256": "a0b491cfdc434f0f3002e7850696beb63f3a14cf9c4351693f061236dd07a9d0",
+          "text_length": 624
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/exhibition/index.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:31.747435+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/exhibition/index.html",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_length": 0
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/kids/index.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:32.146622+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/kids/index.html",
+          "text_sha256": "cf239c66b9b6eb34bc8a2962f5ed5fcc3916401d6bbaf9711c0cab371b294289",
+          "text_length": 535
+        },
+        {
+          "url": "http://iwapmus.jp/cgi-bin/sche_event.cgi",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:32.556021+00:00",
+          "facility_id": 3935,
+          "final_url": "http://iwapmus.jp/cgi-bin/sche_event.cgi",
+          "text_sha256": "fd24df878294b1d89010969f645d543d9b652dfb119f90bc3c6bbfc1e4c794f6",
+          "text_length": 243
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/event/leaflet.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:44.026897+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/event/leaflet.html",
+          "text_sha256": "35018429cd02ee19c45707c6b440822b959349b16e54f323d8da5a4d0c9cc811",
+          "text_length": 130
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:44.471694+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf",
+          "text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "text_length": 1
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:44.998167+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html",
+          "text_sha256": "16a1c2994290cb1b56aee1e253ea652d985bda0e3ef26da074772ee98c8ef882",
+          "text_length": 614
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:45.414461+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html",
+          "text_sha256": "fff0f9ac7609b8742bb684157b121cbb7dd38c3705a876d262d44be23d274374",
+          "text_length": 604
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:45.804094+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html",
+          "text_sha256": "1de515154b15a13d0f08a125feb99c69a0203eeabb623405febae41be02d3017",
+          "text_length": 728
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news_list.cgi",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:46.191248+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news_list.cgi",
+          "text_sha256": "62df0f2a859c7f12a824724b67efd7e97c7894ba47ca8770c0beda9fbbae7bda",
+          "text_length": 782
+        },
+        {
+          "url": "http://iwapmus.jp/cgi-bin/sche_event.cgi?year=2026&mon=11",
+          "status": 200,
+          "checked_at": "2026-10-27T19:04:46.731157+00:00",
+          "facility_id": 3935,
+          "final_url": "http://iwapmus.jp/cgi-bin/sche_event.cgi?year=2026&mon=11",
+          "text_sha256": "69050873878c9c9d30be10c88e8c8d5b7126676ec2c1a2f47c32e2de7b00493d",
+          "text_length": 343
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/them_list.cgi",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:02.584981+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/them_list.cgi",
+          "text_sha256": "3c43ace08798d4f4d1dedf506c8fb37cd4371711f6d61b35208c874c1dceb079",
+          "text_length": 448
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501193&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:03.090691+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501193&f2=staff",
+          "text_sha256": "316ed91e9cd4e95b5624aa1fc6fe6316c341d7ae7975a7979a63feaeba2d188c",
+          "text_length": 1027
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501252&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:03.642891+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501252&f2=staff",
+          "text_sha256": "6e668d73bf28494f07425956bdee0efd07afca42d16c331681b5ed9dc08aeb8d",
+          "text_length": 1035
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791032837&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:04.152941+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791032837&f2=staff",
+          "text_sha256": "d4a085fa2a62396d69ab573c617ff7181e33b7ef940be81d3e4930757264842e",
+          "text_length": 501
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791936950&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:04.623132+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791936950&f2=staff",
+          "text_sha256": "2d9cbbdbfd828ccfdaff8dac5c59149cb3ccaae4eb5eb497917709f8e54eff50",
+          "text_length": 228
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/them.cgi?f1=1775121496&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:19.366297+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/them.cgi?f1=1775121496&f2=staff",
+          "text_sha256": "631a2e9bf6ed446e6bf07f081cacf4ef39400094220778c8efb8b4b4a64501b4",
+          "text_length": 607
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/guide/fee.html",
+          "status": 404,
+          "checked_at": "2026-10-27T19:05:19.831206+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/fee.html",
+          "text_sha256": "8dcdd5cfe58f1d1393bfa59de3e3f04ee1ff8f4e76880e92d5b6129af1eede2f",
+          "text_length": 71
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/news/kuma.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:20.194348+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/news/kuma.html",
+          "text_sha256": "80d469c5d7fed528ed0bddf8c886abb623e8ad581bfbb50ce35c79fae9bcbd9f",
+          "text_length": 329
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791616034&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:20.610346+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791616034&f2=staff",
+          "text_sha256": "150712e51608bace9dcd7e44f8dd0fdbb6dac236b713a90e6b5a879e8ec48323",
+          "text_length": 97
+        },
+        {
+          "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1792818114&f2=staff",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:21.093569+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1792818114&f2=staff",
+          "text_sha256": "2f6d4d2fb7cfd4dc86018592a7a0deb02189506e148af364e4d44d95faa8608e",
+          "text_length": 122
+        },
+        {
+          "url": "https://www2.pref.iwate.jp/~hp0910/guide/guide.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:32.328627+00:00",
+          "facility_id": 3935,
+          "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/guide.html",
+          "text_sha256": "7aa44ff284251f326e57f4a318e530e263c4b017082396a69c8b4d5431586dd6",
+          "text_length": 571
+        },
+        {
+          "url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T19:05:32.768222+00:00",
+          "facility_id": 3935,
+          "final_url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf",
+          "text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+          "text_length": 1
+        },
+        {
+          "url": "https://www.iwate-safari.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:28.932707+00:00",
+          "facility_id": 3952,
+          "final_url": "https://www.iwate-safari.jp/",
+          "text_sha256": "c07e89e2cfc451b66f67c60045bf901f2e17afa2f5a7a15f732adbaae86e32ef",
+          "text_length": 1151
+        },
+        {
+          "url": "https://www.iwate-safari.jp/category/event",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:34.173658+00:00",
+          "facility_id": 3952,
+          "final_url": "https://www.iwate-safari.jp/category/event",
+          "text_sha256": "5d9c672cbe75b34b75e3af0a69274816ae9380d60e7e05df583f99da4e8d8c21",
+          "text_length": 448
+        },
+        {
+          "url": "https://www.iwate-safari.jp/category/news",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:34.728921+00:00",
+          "facility_id": 3952,
+          "final_url": "https://www.iwate-safari.jp/category/news",
+          "text_sha256": "d70d8a78e1689c4baea838542a31b37fe0f0bd9e0bdfdb1c42a61fa0beaca652",
+          "text_length": 3768
+        },
+        {
+          "url": "https://www.pref.iwate.jp/morioka/doboku/1012572/1012573.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:43.390472+00:00",
+          "facility_id": 6938,
+          "final_url": "https://www.pref.iwate.jp/morioka/doboku/1012572/1012573.html",
+          "text_sha256": "6a4f7cc18d48a135c1ae186f75480b2558850cf485a61ba8641f89e1e3dfb073",
+          "text_length": 2390
+        },
+        {
+          "url": "https://www5.pref.iwate.jp/~hp0359/asobiba/detail_18.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:43.971766+00:00",
+          "facility_id": 6938,
+          "final_url": "https://www5.pref.iwate.jp/~hp0359/asobiba/detail_18.html",
+          "text_sha256": "47cf79408af60d8b5f56782e0da3c35c91e28f5af8d018f9a0dad73935f7f4f2",
+          "text_length": 1302
+        },
+        {
+          "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:49.022573+00:00",
+          "facility_id": 6938,
+          "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html",
+          "text_sha256": "f21202a740a9d2e6bb1ed296b317d453d12ead2357defbdb0f2a39221f4c976d",
+          "text_length": 2024
+        },
+        {
+          "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:49.510186+00:00",
+          "facility_id": 6938,
+          "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/",
+          "text_sha256": "deda7b05330197f5e946b9b12b40e019b710fe5eade33021f897a97fed4b6f39",
+          "text_length": 2780
+        },
+        {
+          "url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T003E4DBC0",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:56.589492+00:00",
+          "facility_id": 6938,
+          "final_url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T003E4DBC0",
+          "text_sha256": "fbb7934211a509c148c76124c4d94ae4301abfa9933a625cdfd4814454ebbb86",
+          "text_length": 757
+        },
+        {
+          "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/annai.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:07:57.116594+00:00",
+          "facility_id": 6938,
+          "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/annai.html",
+          "text_sha256": "1b2a0e181e61625652c80e4d35403c0bbdc6c31d40a351955b1a3459bab215d1",
+          "text_length": 7963
+        },
+        {
+          "url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T0037250C7",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:03.079333+00:00",
+          "facility_id": 6938,
+          "final_url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T0037250C7",
+          "text_sha256": "a162e801d741b436dc79ee02c6d063574c5d335598869691feb11546eb60e868",
+          "text_length": 510
+        },
+        {
+          "url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:13.805632+00:00",
+          "facility_id": 6939,
+          "final_url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html",
+          "text_sha256": "c30bd166169b6f48cdc39b2da86f1fce8e76d4d1e47d0d52eddb79fff2eb3780",
+          "text_length": 2618
+        },
+        {
+          "url": "https://ofunato.jp/Summary/info/1000",
+          "status": "timeout",
+          "checked_at": "2026-10-27T19:08:23.248406+00:00",
+          "facility_id": 6939
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:45.292952+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/",
+          "text_sha256": "2556888a25426ccb48ffd20e2d1c358a3d847b171c366b81342c9e1bcf9516a6",
+          "text_length": 459
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/riyou.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:46.048616+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/riyou.html",
+          "text_sha256": "5dd5e5d00c5b2603fe8210cdb4507fb6c9d7e307d519f5ca08185b3e0a327e06",
+          "text_length": 751
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/kikakuten.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:57.214597+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/kikakuten.html",
+          "text_sha256": "8b893d8e9039d9d6a3a9116fd73ef6919a780114b9a90ae73250992203aa9dd1",
+          "text_length": 3594
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/2012737.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:57.659841+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2012737.html",
+          "text_sha256": "24fada04eaca280b6faa4a27f252c6cd80a25282c931bb1a40e5ade0ea2de36f",
+          "text_length": 423
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/2012705.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:08:57.988513+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2012705.html",
+          "text_sha256": "4fee4acd226953d8a3f03116fc30e4c5b13282b85ee9e17352d296925ce67f47",
+          "text_length": 1014
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/nouken/park/2013066.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:09:12.044466+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2013066.html",
+          "text_sha256": "70e3f680783f41438fab9d907521dd600fcf4185101a6725b46cc930964c3393",
+          "text_length": 447
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T19:09:12.453656+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th.pdf",
+          "text_sha256": "80e690c31a99c101ba95b54a3e93000cc7714fca59db9ad3081bc4acbb75d015",
+          "text_length": 1330
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/012/737/1.jpg",
+          "status": 200,
+          "checked_at": "2026-10-27T19:09:12.947915+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/012/737/1.jpg",
+          "text_sha256": "33a30ae5ae3b3aa239e7252d7850b4e09ef7a2ada822abf934d005ce8a45d4b3",
+          "text_length": 131
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/013/066/1.jpg",
+          "status": 200,
+          "checked_at": "2026-10-27T19:09:34.306922+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/013/066/1.jpg",
+          "text_sha256": "c3fcc5188c3fc5183d7573eae7b24b9b83c0f69902191f0fa19051d42d50e090",
+          "text_length": 131
+        },
+        {
+          "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th_press.pdf",
+          "status": 404,
+          "checked_at": "2026-10-27T19:09:34.696376+00:00",
+          "facility_id": 6940,
+          "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th_press.pdf",
+          "text_sha256": "6606c5d3fc4f9779a481cb2c1bddce61d6e6aad7cf605d8ffe9c8c8461b8e3be",
+          "text_length": 264
+        },
+        {
+          "url": "http://kimorinoyu.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:09:56.224425+00:00",
+          "facility_id": 8255,
+          "final_url": "http://kimorinoyu.com/",
+          "text_sha256": "e00c305ccf64ea9e97e37e529c16c1fcd8e21e5d4b643b89841274bc19d2b6ef",
+          "text_length": 337
+        },
+        {
+          "url": "http://kimorinoyu.com/news/info/782/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:03.192298+00:00",
+          "facility_id": 8255,
+          "final_url": "http://kimorinoyu.com/news/info/782/",
+          "text_sha256": "becd1295e15684db5a3a46a3c191b331e0487d5a1774239b3f063adf7e33104d",
+          "text_length": 727
+        },
+        {
+          "url": "http://kimorinoyu.com/news/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:03.883444+00:00",
+          "facility_id": 8255,
+          "final_url": "http://kimorinoyu.com/news/",
+          "text_sha256": "ddab6bc5c28ea6946e6f25215a5a74d19039a1d0283180dd34a6448e852d4dfe",
+          "text_length": 1061
+        },
+        {
+          "url": "http://kimorinoyu.com/news/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:08.604323+00:00",
+          "facility_id": 8255,
+          "final_url": "http://kimorinoyu.com/news/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/",
+          "text_sha256": "aedf5d42eb0fbfa9ec1ace104ad012c7d5c02551aef3009e620bb52b15bdf8f6",
+          "text_length": 761
+        }
+      ],
+      "facilities": [
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:07:10.067678+00:00",
+          "facility_id": 3935,
+          "name": "岩手県立博物館",
+          "region": "iwate",
+          "disposition": "candidate_found_added",
+          "reason": "施設案内・展示一覧の実転送先・ニュース・10/11月カレンダー・年間講座/上映/クイズ・工作PDF・展示チラシ両面を精査。展示本体はfacility_id:nullの既存掲載を同定し鮮度更新。21催事追加、11候補HOLD。終了済みの10/24成人ワークショップ等は採用せず。熊注意は公式対策案内を確認、閉館告知なし。",
+          "candidates": [
+            {
+              "title": "チャレンジ！はくぶつかん「衣」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-challenge-11",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html"
+            },
+            {
+              "title": "チャレンジ！はくぶつかん「冬」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-challenge-12",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html"
+            },
+            {
+              "title": "チャレンジ！はくぶつかん「新しい」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-challenge-1",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html"
+            },
+            {
+              "title": "チャレンジ！はくぶつかん「顔」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-challenge-2",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html"
+            },
+            {
+              "title": "チャレンジ！はくぶつかん「植物」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-challenge-3",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html"
+            },
+            {
+              "title": "県博日曜講座「レプリカとなった化石たち」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20261108",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「3次元復元で見えてきたアンモナイトの進化と古生態」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20261122",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「岩手の食文化（仮）」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20261213",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「世界の中の岩手（仮）」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20261227",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「収蔵地質標本の産地を巡ってⅢ」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270110",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「岩手の木炭史」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270124",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「土偶製作技法の変遷（仮）」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270214",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「異説：土偶の用途―41年の研究で言えること―」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270228",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「ロンドンにて岩手の歴史を考える―後三年合戦からコロナ禍まで―」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270314",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "県博日曜講座「気仙郡の歴史・文化とその継承／もしも山火事が起きたら？文化財をめぐる大船渡市の事例」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-lecture-20270328",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html"
+            },
+            {
+              "title": "ミュージアムシアター「泥棒と殿様／日暮硯」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-cinema-20261107",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html"
+            },
+            {
+              "title": "ミュージアムシアター「三十四丁目の軌跡」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-cinema-20261205",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html"
+            },
+            {
+              "title": "ミュージアムシアター「紅い襷」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-cinema-20270206",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html"
+            },
+            {
+              "title": "ミュージアムシアター「サクラサク」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-cinema-20270306",
+              "participability": "通常参加可能",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html"
+            },
+            {
+              "title": "化石のレプリカ展 展示解説会",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-replica-guide",
+              "participability": "通常参加可能",
+              "source_url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf"
+            },
+            {
+              "title": "文化講演会「ニセモノ化石の世界：その魅力と問題点」",
+              "disposition": "add",
+              "event_id": "evt-w41f5-3935-birds",
+              "participability": "通常参加可能",
+              "source_url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf"
+            },
+            {
+              "title": "たいけん教室 2026-11-01 スライムであそぼう",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2026-11-15 松ぼっくりのXmasツリー",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2026-12-06 かんたん門松",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2026-12-20 まゆで干支づくり（未）",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2026-12-27 まゆで干支づくり（未）",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2027-01-17 木のこまの絵つけ",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2027-02-07 ごんげんさまのカスタネット",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2027-02-21 化石のレプリカ",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2027-03-07 スライムであそぼう",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "たいけん教室 2027-03-21 天然石のフォトフレーム",
+              "disposition": "hold",
+              "reason": "抽選申込は開催1週間前の日曜〜火曜のみ。11月1日分は10月27日締切後、その他は受付開始前。定員未達・キャンセル補充の制度はあるが、この時点で具体的な追加募集を確認できない。",
+              "source_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf"
+            },
+            {
+              "title": "第92回地質観察会（洋野町沿岸部）",
+              "disposition": "hold",
+              "reason": "主催者が募集締切を明記し参加経路なし。施設外の観察会であり施設レコードも作成しない。",
+              "source_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791032837&f2=staff"
+            },
+            {
+              "title": "化石のレプリカ展",
+              "disposition": "duplicate",
+              "event_id": "evt-iwate-202609-01",
+              "source_url": "https://iwapmus.jp/cgi-bin/them.cgi?f1=1775121496&f2=staff"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-iwate-202609-01",
+            "evt-iwate-202609-01",
+            "evt-w41f5-3935-challenge-11",
+            "evt-w41f5-3935-challenge-12",
+            "evt-w41f5-3935-challenge-1",
+            "evt-w41f5-3935-challenge-2",
+            "evt-w41f5-3935-challenge-3",
+            "evt-w41f5-3935-lecture-20261108",
+            "evt-w41f5-3935-lecture-20261122",
+            "evt-w41f5-3935-lecture-20261213",
+            "evt-w41f5-3935-lecture-20261227",
+            "evt-w41f5-3935-lecture-20270110",
+            "evt-w41f5-3935-lecture-20270124",
+            "evt-w41f5-3935-lecture-20270214",
+            "evt-w41f5-3935-lecture-20270228",
+            "evt-w41f5-3935-lecture-20270314",
+            "evt-w41f5-3935-lecture-20270328",
+            "evt-w41f5-3935-cinema-20261107",
+            "evt-w41f5-3935-cinema-20261205",
+            "evt-w41f5-3935-cinema-20270206",
+            "evt-w41f5-3935-cinema-20270306",
+            "evt-w41f5-3935-replica-guide",
+            "evt-w41f5-3935-birds"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/guide/index.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:24.409240+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/index.html",
+              "text_sha256": "b77dc792acee385b45f062971bec4c35fbdeef7f0bb82a3f1b62a0e24c1cbfbf",
+              "text_length": 541
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:31.334715+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/",
+              "text_sha256": "a0b491cfdc434f0f3002e7850696beb63f3a14cf9c4351693f061236dd07a9d0",
+              "text_length": 624
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/exhibition/index.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:31.747435+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/exhibition/index.html",
+              "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text_length": 0
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/kids/index.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:32.146622+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/kids/index.html",
+              "text_sha256": "cf239c66b9b6eb34bc8a2962f5ed5fcc3916401d6bbaf9711c0cab371b294289",
+              "text_length": 535
+            },
+            {
+              "url": "http://iwapmus.jp/cgi-bin/sche_event.cgi",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:32.556021+00:00",
+              "facility_id": 3935,
+              "final_url": "http://iwapmus.jp/cgi-bin/sche_event.cgi",
+              "text_sha256": "fd24df878294b1d89010969f645d543d9b652dfb119f90bc3c6bbfc1e4c794f6",
+              "text_length": 243
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/event/leaflet.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:44.026897+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/event/leaflet.html",
+              "text_sha256": "35018429cd02ee19c45707c6b440822b959349b16e54f323d8da5a4d0c9cc811",
+              "text_length": 130
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:44.471694+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/event/data/taiken_schedule2026.pdf",
+              "text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+              "text_length": 1
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:44.998167+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/event/theate.html",
+              "text_sha256": "16a1c2994290cb1b56aee1e253ea652d985bda0e3ef26da074772ee98c8ef882",
+              "text_length": 614
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:45.414461+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/event/challe.html",
+              "text_sha256": "fff0f9ac7609b8742bb684157b121cbb7dd38c3705a876d262d44be23d274374",
+              "text_length": 604
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:45.804094+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/event/sunday.html",
+              "text_sha256": "1de515154b15a13d0f08a125feb99c69a0203eeabb623405febae41be02d3017",
+              "text_length": 728
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news_list.cgi",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:46.191248+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news_list.cgi",
+              "text_sha256": "62df0f2a859c7f12a824724b67efd7e97c7894ba47ca8770c0beda9fbbae7bda",
+              "text_length": 782
+            },
+            {
+              "url": "http://iwapmus.jp/cgi-bin/sche_event.cgi?year=2026&mon=11",
+              "status": 200,
+              "checked_at": "2026-10-27T19:04:46.731157+00:00",
+              "facility_id": 3935,
+              "final_url": "http://iwapmus.jp/cgi-bin/sche_event.cgi?year=2026&mon=11",
+              "text_sha256": "69050873878c9c9d30be10c88e8c8d5b7126676ec2c1a2f47c32e2de7b00493d",
+              "text_length": 343
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/them_list.cgi",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:02.584981+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/them_list.cgi",
+              "text_sha256": "3c43ace08798d4f4d1dedf506c8fb37cd4371711f6d61b35208c874c1dceb079",
+              "text_length": 448
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501193&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:03.090691+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501193&f2=staff",
+              "text_sha256": "316ed91e9cd4e95b5624aa1fc6fe6316c341d7ae7975a7979a63feaeba2d188c",
+              "text_length": 1027
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501252&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:03.642891+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1774501252&f2=staff",
+              "text_sha256": "6e668d73bf28494f07425956bdee0efd07afca42d16c331681b5ed9dc08aeb8d",
+              "text_length": 1035
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791032837&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:04.152941+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791032837&f2=staff",
+              "text_sha256": "d4a085fa2a62396d69ab573c617ff7181e33b7ef940be81d3e4930757264842e",
+              "text_length": 501
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791936950&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:04.623132+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791936950&f2=staff",
+              "text_sha256": "2d9cbbdbfd828ccfdaff8dac5c59149cb3ccaae4eb5eb497917709f8e54eff50",
+              "text_length": 228
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/them.cgi?f1=1775121496&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:19.366297+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/them.cgi?f1=1775121496&f2=staff",
+              "text_sha256": "631a2e9bf6ed446e6bf07f081cacf4ef39400094220778c8efb8b4b4a64501b4",
+              "text_length": 607
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/guide/fee.html",
+              "status": 404,
+              "checked_at": "2026-10-27T19:05:19.831206+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/fee.html",
+              "text_sha256": "8dcdd5cfe58f1d1393bfa59de3e3f04ee1ff8f4e76880e92d5b6129af1eede2f",
+              "text_length": 71
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/news/kuma.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:20.194348+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/news/kuma.html",
+              "text_sha256": "80d469c5d7fed528ed0bddf8c886abb623e8ad581bfbb50ce35c79fae9bcbd9f",
+              "text_length": 329
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791616034&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:20.610346+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1791616034&f2=staff",
+              "text_sha256": "150712e51608bace9dcd7e44f8dd0fdbb6dac236b713a90e6b5a879e8ec48323",
+              "text_length": 97
+            },
+            {
+              "url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1792818114&f2=staff",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:21.093569+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi-bin/news.cgi?f1=1792818114&f2=staff",
+              "text_sha256": "2f6d4d2fb7cfd4dc86018592a7a0deb02189506e148af364e4d44d95faa8608e",
+              "text_length": 122
+            },
+            {
+              "url": "https://www2.pref.iwate.jp/~hp0910/guide/guide.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:32.328627+00:00",
+              "facility_id": 3935,
+              "final_url": "https://www2.pref.iwate.jp/~hp0910/guide/guide.html",
+              "text_sha256": "7aa44ff284251f326e57f4a318e530e263c4b017082396a69c8b4d5431586dd6",
+              "text_length": 571
+            },
+            {
+              "url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T19:05:32.768222+00:00",
+              "facility_id": 3935,
+              "final_url": "https://iwapmus.jp/cgi_data/them/staff_1775121496_file1.pdf",
+              "text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+              "text_length": 1
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:07:43.168708+00:00",
+          "facility_id": 3952,
+          "name": "岩手サファリパーク",
+          "region": "iwate",
+          "disposition": "no_current_or_future_event",
+          "reason": "公式イベント面が予定なしと明記。ニュース全掲載を読み、最新はバス時刻・11月営業日・授乳室、期限付き催事は9月フェスタ・夏・4月周年祭で全て終了。通常の動物体験を期限付き催事に作り替えない。",
+          "candidates": [
+            {
+              "title": "わくわくアニマルフェスタ（9月19〜23日）",
+              "disposition": "stale_false",
+              "reason": "開催期間終了。ニュース掲載日だけで未来の開催としない。",
+              "source_url": "https://www.iwate-safari.jp/category/news"
+            },
+            {
+              "title": "夏こそ岩手サファリ2026（7月18日〜8月16日）",
+              "disposition": "stale_false",
+              "reason": "開催期間終了。ニュース掲載日だけで未来の開催としない。",
+              "source_url": "https://www.iwate-safari.jp/category/news"
+            },
+            {
+              "title": "18周年感謝祭（4月11〜12日）",
+              "disposition": "stale_false",
+              "reason": "開催期間終了。ニュース掲載日だけで未来の開催としない。",
+              "source_url": "https://www.iwate-safari.jp/category/news"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.iwate-safari.jp/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:28.932707+00:00",
+              "facility_id": 3952,
+              "final_url": "https://www.iwate-safari.jp/",
+              "text_sha256": "c07e89e2cfc451b66f67c60045bf901f2e17afa2f5a7a15f732adbaae86e32ef",
+              "text_length": 1151
+            },
+            {
+              "url": "https://www.iwate-safari.jp/category/event",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:34.173658+00:00",
+              "facility_id": 3952,
+              "final_url": "https://www.iwate-safari.jp/category/event",
+              "text_sha256": "5d9c672cbe75b34b75e3af0a69274816ae9380d60e7e05df583f99da4e8d8c21",
+              "text_length": 448
+            },
+            {
+              "url": "https://www.iwate-safari.jp/category/news",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:34.728921+00:00",
+              "facility_id": 3952,
+              "final_url": "https://www.iwate-safari.jp/category/news",
+              "text_sha256": "d70d8a78e1689c4baea838542a31b37fe0f0bd9e0bdfdb1c42a61fa0beaca652",
+              "text_length": 3768
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:08:13.541376+00:00",
+          "facility_id": 6938,
+          "name": "御所湖広域公園",
+          "region": "iwate",
+          "disposition": "candidate_found_duplicate",
+          "reason": "県2面・指定管理者トップ/催事/新着・実予約面を確認。紅葉観察会10/31は受付画面も2026日程で一致し更新。10/12テニスは終了。歴史探訪会のみ現年告知に前年予約がリンクされており保留し、他候補に波及させない。",
+          "candidates": [
+            {
+              "title": "紅葉観察会10月31日",
+              "disposition": "duplicate",
+              "event_id": "evt-6938-autumn-leaves-20261031",
+              "source_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html"
+            },
+            {
+              "title": "歴史探訪会「乗り物広場と森林鉄道のキセキ」",
+              "disposition": "hold",
+              "reason": "催事ページは2026年11月7日だがリンクされた主催者予約面は2025年11月15日・受付期間外。2026の参加経路を確認できず推測しない。",
+              "source_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html",
+              "conflicting_url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T0037250C7"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-6938-tennis-20261012",
+            "evt-6938-autumn-leaves-20261031"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.pref.iwate.jp/morioka/doboku/1012572/1012573.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:43.390472+00:00",
+              "facility_id": 6938,
+              "final_url": "https://www.pref.iwate.jp/morioka/doboku/1012572/1012573.html",
+              "text_sha256": "6a4f7cc18d48a135c1ae186f75480b2558850cf485a61ba8641f89e1e3dfb073",
+              "text_length": 2390
+            },
+            {
+              "url": "https://www5.pref.iwate.jp/~hp0359/asobiba/detail_18.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:43.971766+00:00",
+              "facility_id": 6938,
+              "final_url": "https://www5.pref.iwate.jp/~hp0359/asobiba/detail_18.html",
+              "text_sha256": "47cf79408af60d8b5f56782e0da3c35c91e28f5af8d018f9a0dad73935f7f4f2",
+              "text_length": 1302
+            },
+            {
+              "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:49.022573+00:00",
+              "facility_id": 6938,
+              "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/event.html",
+              "text_sha256": "f21202a740a9d2e6bb1ed296b317d453d12ead2357defbdb0f2a39221f4c976d",
+              "text_length": 2024
+            },
+            {
+              "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:49.510186+00:00",
+              "facility_id": 6938,
+              "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/",
+              "text_sha256": "deda7b05330197f5e946b9b12b40e019b710fe5eade33021f897a97fed4b6f39",
+              "text_length": 2780
+            },
+            {
+              "url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T003E4DBC0",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:56.589492+00:00",
+              "facility_id": 6938,
+              "final_url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T003E4DBC0",
+              "text_sha256": "fbb7934211a509c148c76124c4d94ae4301abfa9933a625cdfd4814454ebbb86",
+              "text_length": 757
+            },
+            {
+              "url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/annai.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:07:57.116594+00:00",
+              "facility_id": 6938,
+              "final_url": "https://www.koiwai.co.jp/shiteikanri/gosyo_park/annai.html",
+              "text_sha256": "1b2a0e181e61625652c80e4d35403c0bbdc6c31d40a351955b1a3459bab215d1",
+              "text_length": 7963
+            },
+            {
+              "url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T0037250C7",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:03.079333+00:00",
+              "facility_id": 6938,
+              "final_url": "https://airrsv.net/koiwaifarm/calendar/menuDetail/?schdlId=T0037250C7",
+              "text_sha256": "a162e801d741b436dc79ee02c6d063574c5d335598869691feb11546eb60e868",
+              "text_length": 510
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:08:44.858960+00:00",
+          "facility_id": 6939,
+          "name": "大窪山森林公園 もりの学び舎",
+          "region": "iwate",
+          "disposition": "no_current_or_future_event",
+          "reason": "県公式の2026定例予定・注意告知を確認。リンク先の市施設紹介はタイムアウトのため内容を確認できず、県の現行公式告知を判断根拠とした。散策会は熊警報・人身被害を受け当面中止。残る木工教室8/2、秋のめぐみ展9/26-27は終了。木育スペース・撮影サインは常設で催事化しない。",
+          "candidates": [
+            {
+              "title": "定例散策会",
+              "disposition": "hold",
+              "reason": "県公式が安全確保のため当面中止と明記。再開の公式告知が出るまで採用しない。",
+              "source_url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html"
+            },
+            {
+              "title": "木工教室8月2日／秋のめぐみ展9月26-27日",
+              "disposition": "stale_false",
+              "reason": "2026年公式開催日が終了。",
+              "source_url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:13.805632+00:00",
+              "facility_id": 6939,
+              "final_url": "https://www.pref.iwate.jp/engan/ofuna_nourin/1014229.html",
+              "text_sha256": "c30bd166169b6f48cdc39b2da86f1fce8e76d4d1e47d0d52eddb79fff2eb3780",
+              "text_length": 2618
+            },
+            {
+              "url": "https://ofunato.jp/Summary/info/1000",
+              "status": "timeout",
+              "checked_at": "2026-10-27T19:08:23.248406+00:00",
+              "facility_id": 6939
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:09:55.957591+00:00",
+          "facility_id": 6940,
+          "name": "農業科学博物館",
+          "region": "iwate",
+          "disposition": "candidate_found_added",
+          "reason": "県公式施設・利用・現行企画一覧・休館日・無料開放・体験の画像まで精査。11/3無料開放を追加。既存おかいこさんの従前9/30終了日は開始時点で過去、現行告知は6/5開始のみへ変更され終期が不明なため推測再掲せず候補HOLD。石ころアートは通年の水〜日祝サービスで限定日程なし。",
+          "candidates": [
+            {
+              "title": "東北文化の日 農業科学博物館無料開放",
+              "disposition": "add",
+              "event_id": "evt-w41f5-6940-culture-day",
+              "participability": "通常参加可能",
+              "source_url": "https://www.pref.iwate.jp/agri/nouken/park/2013066.html"
+            },
+            {
+              "title": "第97回企画展 おかいこさん",
+              "disposition": "hold",
+              "event_id": "evt-6940-202606-okaikosan",
+              "reason": "既存終了日は9/30でミッション開始時点ですでに過去。10/13更新一覧および現行チラシは6/5〜のみで具体的な新終了日なし。旧根拠97th_press.pdfは404。終期を発明せず既存日付・状態を据え置き、再掲に必要な日付確認を保留。",
+              "source_url": "https://www.pref.iwate.jp/agri/nouken/park/kikakuten.html"
+            },
+            {
+              "title": "石ころアート体験",
+              "disposition": "hold",
+              "reason": "水曜〜日曜祝日の通常体験で開催期の開始・終了日がない。通常サービスを任意の日付で期間限定イベントに変換しない。",
+              "source_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/012/737/1.jpg"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-w41f5-6940-culture-day"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:45.292952+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/",
+              "text_sha256": "2556888a25426ccb48ffd20e2d1c358a3d847b171c366b81342c9e1bcf9516a6",
+              "text_length": 459
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/riyou.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:46.048616+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/riyou.html",
+              "text_sha256": "5dd5e5d00c5b2603fe8210cdb4507fb6c9d7e307d519f5ca08185b3e0a327e06",
+              "text_length": 751
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/kikakuten.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:57.214597+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/kikakuten.html",
+              "text_sha256": "8b893d8e9039d9d6a3a9116fd73ef6919a780114b9a90ae73250992203aa9dd1",
+              "text_length": 3594
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/2012737.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:57.659841+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2012737.html",
+              "text_sha256": "24fada04eaca280b6faa4a27f252c6cd80a25282c931bb1a40e5ade0ea2de36f",
+              "text_length": 423
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/2012705.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:08:57.988513+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2012705.html",
+              "text_sha256": "4fee4acd226953d8a3f03116fc30e4c5b13282b85ee9e17352d296925ce67f47",
+              "text_length": 1014
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/nouken/park/2013066.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:09:12.044466+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/nouken/park/2013066.html",
+              "text_sha256": "70e3f680783f41438fab9d907521dd600fcf4185101a6725b46cc930964c3393",
+              "text_length": 447
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th.pdf",
+              "status": 200,
+              "checked_at": "2026-10-27T19:09:12.453656+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th.pdf",
+              "text_sha256": "80e690c31a99c101ba95b54a3e93000cc7714fca59db9ad3081bc4acbb75d015",
+              "text_length": 1330
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/012/737/1.jpg",
+              "status": 200,
+              "checked_at": "2026-10-27T19:09:12.947915+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/012/737/1.jpg",
+              "text_sha256": "33a30ae5ae3b3aa239e7252d7850b4e09ef7a2ada822abf934d005ce8a45d4b3",
+              "text_length": 131
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/013/066/1.jpg",
+              "status": 200,
+              "checked_at": "2026-10-27T19:09:34.306922+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/013/066/1.jpg",
+              "text_sha256": "c3fcc5188c3fc5183d7573eae7b24b9b83c0f69902191f0fa19051d42d50e090",
+              "text_length": 131
+            },
+            {
+              "url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th_press.pdf",
+              "status": 404,
+              "checked_at": "2026-10-27T19:09:34.696376+00:00",
+              "facility_id": 6940,
+              "final_url": "https://www.pref.iwate.jp/agri/_res/projects/project_agri/_page_/002/004/296/97th_press.pdf",
+              "text_sha256": "6606c5d3fc4f9779a481cb2c1bddce61d6e6aad7cf605d8ffe9c8c8461b8e3be",
+              "text_length": 264
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:10:18.136512+00:00",
+          "facility_id": 8255,
+          "name": "天然温泉 喜盛の湯",
+          "region": "iwate",
+          "disposition": "no_current_or_future_event",
+          "reason": "トップ・最新情報・イベント分類全記事・10/26休業詳細を確認。イベント欄は2024投票募集のみ、現年は営業告知で期限付き家族催事なし。11/9〜19機械室工事休業をPMの施設側信号とし、本任務では施設データを変更しない。",
+          "candidates": [],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "http://kimorinoyu.com/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:09:56.224425+00:00",
+              "facility_id": 8255,
+              "final_url": "http://kimorinoyu.com/",
+              "text_sha256": "e00c305ccf64ea9e97e37e529c16c1fcd8e21e5d4b643b89841274bc19d2b6ef",
+              "text_length": 337
+            },
+            {
+              "url": "http://kimorinoyu.com/news/info/782/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:03.192298+00:00",
+              "facility_id": 8255,
+              "final_url": "http://kimorinoyu.com/news/info/782/",
+              "text_sha256": "becd1295e15684db5a3a46a3c191b331e0487d5a1774239b3f063adf7e33104d",
+              "text_length": 727
+            },
+            {
+              "url": "http://kimorinoyu.com/news/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:03.883444+00:00",
+              "facility_id": 8255,
+              "final_url": "http://kimorinoyu.com/news/",
+              "text_sha256": "ddab6bc5c28ea6946e6f25215a5a74d19039a1d0283180dd34a6448e852d4dfe",
+              "text_length": 1061
+            },
+            {
+              "url": "http://kimorinoyu.com/news/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:08.604323+00:00",
+              "facility_id": 8255,
+              "final_url": "http://kimorinoyu.com/news/%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88/",
+              "text_sha256": "aedf5d42eb0fbfa9ec1ace104ad012c7d5c02551aef3009e620bb52b15bdf8f6",
+              "text_length": 761
+            }
+          ]
+        }
+      ],
       "existing_event_holds": []
     },
     "kagoshima": {
@@ -4248,13 +5747,322 @@
         8270
       ],
       "total": 3,
-      "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 1,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": [],
+      "sources_checked": [
+        {
+          "url": "https://www.litpla.com/space/litpla_aeonmall_kagoshima/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:18.337861+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/space/litpla_aeonmall_kagoshima/",
+          "text_sha256": "c8bc61cd60eb0bfc01777e0f38830cc4a23b24e1fdc6e5adea0deabf02955cda",
+          "text_length": 6743
+        },
+        {
+          "url": "https://www.litpla.com/news/space/litpla_aeonmall_kagoshima/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:25.124656+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/news/space/litpla_aeonmall_kagoshima/",
+          "text_sha256": "e7f58871887a3ba661204746736f2fed5a0bce96b32c9319fa8e907941c8945c",
+          "text_length": 773
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:26.472660+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "text_sha256": "c17f61719fe90bc3596fda4f38472a549d01f63071a6a90b4070ad6f5199feed",
+          "text_length": 1400
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-halloween-mission/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:27.839000+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/news/press/202610-halloween-mission/",
+          "text_sha256": "211ab88be6c93355496507fb132cb7418906e2a731d1aa05812a73a6c111c70a",
+          "text_length": 1153
+        },
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:29.351068+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "text_sha256": "1747323bae65b99486b94bcebececa9e957548f14bc58d5abf2e5135a1b762ac",
+          "text_length": 2023
+        },
+        {
+          "url": "https://www.litpla.com/event/halloween/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:10:30.757404+00:00",
+          "facility_id": 6918,
+          "final_url": "https://www.litpla.com/event/halloween/",
+          "text_sha256": "95f432efa9817d7f12bcc7be4da551aad73abf8d98c90c101abcb08edaa18f87",
+          "text_length": 5885
+        },
+        {
+          "url": "https://foret-aventure.jp/park/fa-fukiagehama/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:11:06.895003+00:00",
+          "facility_id": 6919,
+          "final_url": "https://foret-aventure.jp/park/fa-fukiagehama/",
+          "text_sha256": "d1d0057822a389aa64fe06878bf396e2a0d7adba31404283edac8f4faf426c8c",
+          "text_length": 7793
+        },
+        {
+          "url": "https://foret-aventure.jp/news/33051/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:11:17.696410+00:00",
+          "facility_id": 6919,
+          "final_url": "https://foret-aventure.jp/news/33051/",
+          "text_sha256": "e3f16a0a5e111aaeeb01f35792a2515a6d8fc7a0d25a752e21f5db3795f573f9",
+          "text_length": 1287
+        },
+        {
+          "url": "https://foret-aventure.jp/news/32201/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:11:21.928775+00:00",
+          "facility_id": 6919,
+          "final_url": "https://foret-aventure.jp/news/32201/",
+          "text_sha256": "9063832184d828af1d57f5e467f37d73c0a909e4136ce6ed04d15e4be252c98a",
+          "text_length": 1505
+        },
+        {
+          "url": "https://www.kagoshima-kankou.com/guide/53531",
+          "status": 503,
+          "checked_at": "2026-10-27T19:11:25.588949+00:00",
+          "facility_id": 8270,
+          "final_url": "https://www.kagoshima-kankou.com/guide/53531",
+          "text_sha256": "1f60f1783d518a242fd941a4257f1723b5a1f4e42b6cc728534cf100d5ca5265",
+          "text_length": 1004
+        },
+        {
+          "url": "https://www.kagoshima-kankou.com/guide/53531",
+          "status": 503,
+          "checked_at": "2026-10-27T19:11:34.891758+00:00",
+          "facility_id": 8270,
+          "final_url": "https://www.kagoshima-kankou.com/guide/53531",
+          "text_sha256": "1f60f1783d518a242fd941a4257f1723b5a1f4e42b6cc728534cf100d5ca5265",
+          "text_length": 1004
+        },
+        {
+          "url": "https://www.city.aira.lg.jp/chiiki-kajiki/gyosei/shisetsu/kanko/tatsumondakionsen.html",
+          "status": 200,
+          "checked_at": "2026-10-27T19:11:44.313573+00:00",
+          "facility_id": 8270,
+          "final_url": "https://www.city.aira.lg.jp/chiiki-kajiki/gyosei/shisetsu/kanko/tatsumondakionsen.html",
+          "text_sha256": "fe8a77acf05e867f1a738fca5dffd0b4c4f99fc96d10196a365a823ff1056eb1",
+          "text_length": 2424
+        },
+        {
+          "url": "https://ryumondaki-onsen.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T19:11:54.490576+00:00",
+          "facility_id": 8270,
+          "final_url": "https://ryumondaki-onsen.com/",
+          "text_sha256": "e6c96e0917ab4efc72641fadad4ef69533715ec09ed78aa4d47604fc8625eec6",
+          "text_length": 1851
+        }
+      ],
+      "facilities": [
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:11:06.599091+00:00",
+          "facility_id": 6918,
+          "name": "リトルプラネット イオンモールKAGOSHIMA BAY",
+          "region": "kagoshima",
+          "disposition": "candidate_found_added",
+          "reason": "店舗面・店舗別新着・主催者コラボ発表・Halloween発表/特設/追加記事を精査。通常入場経路のある11/9〜1/6コラボを追加。既存Halloweenは9/17〜11/1の数値日程と店頭参加を再確認。追加ミニミッションは既存全体企画の一部で重複追加しない。対象店舗に鹿児島がない3工作は対象外。",
+          "candidates": [
+            {
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ2026（鹿児島）",
+              "disposition": "add",
+              "event_id": "evt-w41f5-6918-sunsun",
+              "participability": "通常参加可能",
+              "source_url": "https://www.litpla.com/news/press/202610-sunsun-info/"
+            },
+            {
+              "title": "ハロウィン2026（お菓子ミニミッションを含む）",
+              "disposition": "duplicate",
+              "event_id": "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
+              "source_url": "https://www.litpla.com/news/press/halloween2026-info/"
+            },
+            {
+              "title": "秋のおでかけ応援キャンペーン",
+              "disposition": "stale_false",
+              "reason": "店舗別現行一覧は10/19終了と明記。10/15追加記事の末尾に11/19（月）という旧表記もあり割引延長とは扱わず、料金施策として追加しない。",
+              "source_url": "https://www.litpla.com/news/space/litpla_aeonmall_kagoshima/"
+            }
+          ],
+          "existing_event_ids_updated": [
+            "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
+            "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
+            "evt-w41f5-6918-sunsun"
+          ],
+          "sources_checked": [
+            {
+              "url": "https://www.litpla.com/space/litpla_aeonmall_kagoshima/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:18.337861+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/space/litpla_aeonmall_kagoshima/",
+              "text_sha256": "c8bc61cd60eb0bfc01777e0f38830cc4a23b24e1fdc6e5adea0deabf02955cda",
+              "text_length": 6743
+            },
+            {
+              "url": "https://www.litpla.com/news/space/litpla_aeonmall_kagoshima/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:25.124656+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/news/space/litpla_aeonmall_kagoshima/",
+              "text_sha256": "e7f58871887a3ba661204746736f2fed5a0bce96b32c9319fa8e907941c8945c",
+              "text_length": 773
+            },
+            {
+              "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:26.472660+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+              "text_sha256": "c17f61719fe90bc3596fda4f38472a549d01f63071a6a90b4070ad6f5199feed",
+              "text_length": 1400
+            },
+            {
+              "url": "https://www.litpla.com/news/press/202610-halloween-mission/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:27.839000+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/news/press/202610-halloween-mission/",
+              "text_sha256": "211ab88be6c93355496507fb132cb7418906e2a731d1aa05812a73a6c111c70a",
+              "text_length": 1153
+            },
+            {
+              "url": "https://www.litpla.com/news/press/halloween2026-info/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:29.351068+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/news/press/halloween2026-info/",
+              "text_sha256": "1747323bae65b99486b94bcebececa9e957548f14bc58d5abf2e5135a1b762ac",
+              "text_length": 2023
+            },
+            {
+              "url": "https://www.litpla.com/event/halloween/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:10:30.757404+00:00",
+              "facility_id": 6918,
+              "final_url": "https://www.litpla.com/event/halloween/",
+              "text_sha256": "95f432efa9817d7f12bcc7be4da551aad73abf8d98c90c101abcb08edaa18f87",
+              "text_length": 5885
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:11:25.185175+00:00",
+          "facility_id": 6919,
+          "name": "フォレストアドベンチャー・吹上浜",
+          "region": "kagoshima",
+          "disposition": "no_current_or_future_event",
+          "reason": "施設公式全コース・最新お知らせと営業カレンダー告知・9月記念施策を確認。10月は営業案内、9月木の日半額は終了。ネットコース4/25開業は恒常設備追加で、期間限定催事ではない。",
+          "candidates": [
+            {
+              "title": "20周年記念 木の日半額キャンペーン",
+              "disposition": "stale_false",
+              "reason": "2026年9月木曜日の料金キャンペーンで終了。",
+              "source_url": "https://foret-aventure.jp/news/32201/"
+            }
+          ],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://foret-aventure.jp/park/fa-fukiagehama/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:11:06.895003+00:00",
+              "facility_id": 6919,
+              "final_url": "https://foret-aventure.jp/park/fa-fukiagehama/",
+              "text_sha256": "d1d0057822a389aa64fe06878bf396e2a0d7adba31404283edac8f4faf426c8c",
+              "text_length": 7793
+            },
+            {
+              "url": "https://foret-aventure.jp/news/33051/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:11:17.696410+00:00",
+              "facility_id": 6919,
+              "final_url": "https://foret-aventure.jp/news/33051/",
+              "text_sha256": "e3f16a0a5e111aaeeb01f35792a2515a6d8fc7a0d25a752e21f5db3795f573f9",
+              "text_length": 1287
+            },
+            {
+              "url": "https://foret-aventure.jp/news/32201/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:11:21.928775+00:00",
+              "facility_id": 6919,
+              "final_url": "https://foret-aventure.jp/news/32201/",
+              "text_sha256": "9063832184d828af1d57f5e467f37d73c0a909e4136ce6ed04d15e4be252c98a",
+              "text_length": 1505
+            }
+          ]
+        },
+        {
+          "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-5",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-27T19:12:05.611011+00:00",
+          "facility_id": 8270,
+          "name": "姶良市温泉センター 龍門滝温泉",
+          "region": "kagoshima",
+          "disposition": "no_current_or_future_event",
+          "reason": "県観光の登録URLは2回503（サイト基盤の公式メンテナンス）。代わりに所有市と市からリンクされた指定管理者の最新告知を取得。両者とも豪雨被害による休館・復旧未定で一致。施設催事なし。休館情報は施設側へPM信号、施設データは不変更。登録取得先のみ実在の市公式へ修復。",
+          "candidates": [],
+          "existing_event_ids_updated": [],
+          "sources_checked": [
+            {
+              "url": "https://www.kagoshima-kankou.com/guide/53531",
+              "status": 503,
+              "checked_at": "2026-10-27T19:11:25.588949+00:00",
+              "facility_id": 8270,
+              "final_url": "https://www.kagoshima-kankou.com/guide/53531",
+              "text_sha256": "1f60f1783d518a242fd941a4257f1723b5a1f4e42b6cc728534cf100d5ca5265",
+              "text_length": 1004
+            },
+            {
+              "url": "https://www.kagoshima-kankou.com/guide/53531",
+              "status": 503,
+              "checked_at": "2026-10-27T19:11:34.891758+00:00",
+              "facility_id": 8270,
+              "final_url": "https://www.kagoshima-kankou.com/guide/53531",
+              "text_sha256": "1f60f1783d518a242fd941a4257f1723b5a1f4e42b6cc728534cf100d5ca5265",
+              "text_length": 1004
+            },
+            {
+              "url": "https://www.city.aira.lg.jp/chiiki-kajiki/gyosei/shisetsu/kanko/tatsumondakionsen.html",
+              "status": 200,
+              "checked_at": "2026-10-27T19:11:44.313573+00:00",
+              "facility_id": 8270,
+              "final_url": "https://www.city.aira.lg.jp/chiiki-kajiki/gyosei/shisetsu/kanko/tatsumondakionsen.html",
+              "text_sha256": "fe8a77acf05e867f1a738fca5dffd0b4c4f99fc96d10196a365a823ff1056eb1",
+              "text_length": 2424
+            },
+            {
+              "url": "https://ryumondaki-onsen.com/",
+              "status": 200,
+              "checked_at": "2026-10-27T19:11:54.490576+00:00",
+              "facility_id": 8270,
+              "final_url": "https://ryumondaki-onsen.com/",
+              "text_sha256": "e6c96e0917ab4efc72641fadad4ef69533715ec09ed78aa4d47604fc8625eec6",
+              "text_length": 1851
+            }
+          ]
+        }
+      ],
       "existing_event_holds": []
     }
   }
