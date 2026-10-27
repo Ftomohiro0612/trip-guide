@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-8",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T23:12:13.891710+00:00",
+  "executed_at": "2026-10-27T23:28:47.313506+00:00",
   "due_facility_ids": [
     2500,
     2501,
@@ -46,10 +46,10 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 20,
-    "no_current_or_future_event": 10,
-    "candidate_found_added": 1,
-    "candidate_found_duplicate": 0,
+    "total": 30,
+    "no_current_or_future_event": 12,
+    "candidate_found_added": 6,
+    "candidate_found_duplicate": 3,
     "candidate_found_hold": 7,
     "source_unresolved": 2
   },
@@ -75,12 +75,15 @@
         2536,
         2537,
         2538,
-        2539
+        2539,
+        2540,
+        6916,
+        6917
       ],
-      "total": 20,
-      "no_current_or_future_event": 10,
-      "candidate_found_added": 1,
-      "candidate_found_duplicate": 0,
+      "total": 23,
+      "no_current_or_future_event": 11,
+      "candidate_found_added": 2,
+      "candidate_found_duplicate": 1,
       "candidate_found_hold": 7,
       "source_unresolved": 2,
       "sources_checked": [
@@ -991,6 +994,141 @@
           "title": "『Sunset Month』🌇 いよいよ始まります！ | 熊本フェリー｜長崎(島原・雲仙)と熊本を最短時間で結ぶ高速カーフェリー『オーシャンアロー』",
           "text_sha256": "c1d64b495ee0c7b3d813b0d515683c8cb270acf69de347b2995b41b08f88b96e",
           "final_url": "https://www.kumamotoferry.co.jp/%E3%80%8Esunset-month%E3%80%8F%F0%9F%8C%87-%E3%81%84%E3%82%88%E3%81%84%E3%82%88%E5%A7%8B%E3%81%BE%E3%82%8A%E3%81%BE%E3%81%99%EF%BC%81/"
+        },
+        {
+          "url": "https://kumamoto.guide/spots/detail/11827",
+          "status": 200,
+          "checked_at": "2026-10-27T23:12:24.947574+00:00",
+          "facility_id": 2540,
+          "title": "サントリー九州熊本工場 | 観光スポット | 【公式】熊本県観光サイト もっと、もーっと！くまもっと。",
+          "text_sha256": "f58b39004d29aa860c8612d050b64191d95aff8c1740f56a04bf08be54475c47",
+          "final_url": "https://kumamoto.guide/spots/detail/11827"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/",
+          "status": 403,
+          "checked_at": "2026-10-27T23:12:30.414865+00:00",
+          "facility_id": 2540,
+          "title": "Access Denied",
+          "text_sha256": "05dc902f53a2807068f6549655385719f470b9ca177396c2cc2cc10bbff5c1d6",
+          "final_url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/",
+          "status": 403,
+          "checked_at": "2026-10-27T23:12:40.535048+00:00",
+          "facility_id": 2540,
+          "title": "Access Denied",
+          "text_sha256": "6872d94c9aafeb3bca7635559cb7682f839c59825cfe53e6146acd612c7c7355",
+          "final_url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/news/detail/2026729.html",
+          "status": 403,
+          "checked_at": "2026-10-27T23:12:45.956211+00:00",
+          "facility_id": 2540,
+          "title": "Access Denied",
+          "text_sha256": "e787a7e87aa7106dfb3a033912ba759f4f67673eb5606507dee74fa82dcb11f3",
+          "final_url": "https://www.suntory.co.jp/factory/kyushu-kumamoto/news/detail/2026729.html"
+        },
+        {
+          "url": "https://litpla.com/space/youmetown_hikarinomori/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:12:55.860274+00:00",
+          "facility_id": 6916,
+          "title": "リトルプラネット ゆめタウン光の森 | リトルプラネット / LittlePlanet",
+          "text_sha256": "4fc28f675e1dbbee56e935be937e1fc583c068160ab30bc8b7c5b26b30821f99",
+          "final_url": "https://litpla.com/space/youmetown_hikarinomori/"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:07.369319+00:00",
+          "facility_id": 6916,
+          "title": "9/17（木）からハロウィンイベントがスタート！秋のおでかけを楽しもう！ | リトルプラネット / LittlePlanet",
+          "text_sha256": "a55da768a1b82c9fb18f2d7284dae2a9b1a787bdc775fcb041938edd1c09ff27",
+          "final_url": "https://www.litpla.com/news/press/halloween2026-info/"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:09.166715+00:00",
+          "facility_id": 6916,
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "text_sha256": "82380e7f6261240b6018ed0774b650085663bf45ce3ff1a69c7807d9cb3dd207",
+          "final_url": "https://www.litpla.com/news/press/202610-sunsun-info/"
+        },
+        {
+          "url": "https://www.litpla.com/news/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:11.522801+00:00",
+          "facility_id": 6916,
+          "title": "ニュース | リトルプラネット / LittlePlanet",
+          "text_sha256": "8a943fd4102e063a43302a5b99d27fcd41a72308bbeb78811194c408f296f2c4",
+          "final_url": "https://www.litpla.com/news/"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-halloween-mission/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:18.348329+00:00",
+          "facility_id": 6916,
+          "title": "【11/1まで】ハロウィンイベント開催中！あいことばでお菓子をもらおう♪ | リトルプラネット / LittlePlanet",
+          "text_sha256": "968b75b17bd0554b4cca0f293bfa21e48bb18eb984b3dee76950cf5c0503b756",
+          "final_url": "https://www.litpla.com/news/press/202610-halloween-mission/"
+        },
+        {
+          "url": "https://www.litpla.com/news/publicity/28922/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:20.022578+00:00",
+          "facility_id": 6916,
+          "title": "【光の森】10月28日16時～デジタルボールプール清掃のお知らせ | リトルプラネット / LittlePlanet",
+          "text_sha256": "98ba0a2d28a1d17870b88666075d66ba771954bc54493040ae3f0aa77d270b3d",
+          "final_url": "https://www.litpla.com/news/publicity/28922/"
+        },
+        {
+          "url": "https://kumamon-urban-sports-park.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:13:48.693544+00:00",
+          "facility_id": 6917,
+          "title": "くまモンアーバンスポーツパーク |  KUMAMON URBAN SPORTS PARK | 熊本県菊陽町",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kumamon-urban-sports-park.com/"
+        },
+        {
+          "url": "https://kumamon-urban-sports-park.com/info/26102601",
+          "status": 200,
+          "checked_at": "2026-10-27T23:14:16.887155+00:00",
+          "facility_id": 6917,
+          "title": "第七回パークスタイル講習会 開催｜くまモンアーバンスポーツパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kumamon-urban-sports-park.com/info/26102601"
+        },
+        {
+          "url": "https://kumamon-urban-sports-park.com/info/20261019",
+          "status": 200,
+          "checked_at": "2026-10-27T23:14:18.079518+00:00",
+          "facility_id": 6917,
+          "title": "【11/21・22開催】豪華ゲストが集結！SPECIAL GUEST 2DAYS｜くまモンアーバンスポーツパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kumamon-urban-sports-park.com/info/20261019"
+        },
+        {
+          "url": "https://kumamon-urban-sports-park.com/info/26101501",
+          "status": 200,
+          "checked_at": "2026-10-27T23:14:19.077633+00:00",
+          "facility_id": 6917,
+          "title": "【菊陽町の小・中学生限定】スケートボード無料体験｜11月の開催日程｜くまモンアーバンスポーツパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kumamon-urban-sports-park.com/info/26101501"
+        },
+        {
+          "url": "https://kumamon-urban-sports-park.com/price",
+          "status": 200,
+          "checked_at": "2026-10-27T23:15:04.528345+00:00",
+          "facility_id": 6917,
+          "title": "利用料金・レンタル料金｜くまモンアーバンスポーツパーク",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kumamon-urban-sports-park.com/price"
         }
       ],
       "facilities": [
@@ -1574,6 +1712,2100 @@
               "title": "Sunset Month・雲仙みかどホテル日帰りプラン・買い物券付き往復切符",
               "disposition": "not_adopted",
               "reason": "通常航路/旅行商品割引の案内。日時限定の家族向け特別プログラムとしては追加しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 2540,
+          "disposition": "no_current_or_future_event",
+          "assessment": "公式観光連盟の個別案内が令和8年地震による現在休業中を明記。運営者トップ2試行と検索で得た7/29休業告知の直接取得は403。現在受け入れ可能な特別イベントは確認できず、閉鎖中として新規追加しない。既存の現在/今後0。",
+          "candidates": [],
+          "source_gap": "運営者の直接取得403。現行の観光連盟公式の休業表示に基づく。再開を推測しない。"
+        },
+        {
+          "facility_id": 6916,
+          "disposition": "candidate_found_duplicate",
+          "assessment": "店舗別公式、全体ニュース、新旧イベント発表、追加ミッションと当日清掃告知をこの施設のために新規取得。既存Halloweenとサンサンの numeric 日程/現行入場条件を再確認し確認日更新。追加ミッションは同一Halloweenの内包企画として既存行に情報追加。",
+          "updates": [
+            {
+              "id": "evt-litpla-youmetown-hikarinomori-halloween2026",
+              "source_checked_at": "2026-10-28",
+              "source_urls": [
+                "https://www.litpla.com/news/press/halloween2026-info/",
+                "https://www.litpla.com/event/halloween/",
+                "https://www.litpla.com/space/youmetown_hikarinomori/",
+                "https://www.litpla.com/news/press/202610-halloween-mission/",
+                "https://www.litpla.com/news/publicity/28922/"
+              ],
+              "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。9/10公式発表と各店の現在案内で確認。屋内企画として天候・気温にかかわらず楽しめる旨を公式明記。公共交通の目安：「光の森駅」から徒歩6分。小学生以下は保護者同伴、大人1名につき子ども3名まで。館内トイレはないため入場前に済ませ、一時退場も可能。混雑時は入場待ち・フリーパス販売休止の場合があります。各店で対象アトラクションは異なります。 2026-10-28に期間・通常入場・現行料金を再確認。10/16から11/1まで合言葉を集める追加ミッション（ラムネ進呈）あり。10/28は16時から閉場までボールプールのみ清掃休止、その他は通常利用可能。"
+            }
+          ],
+          "refresh": [
+            "evt-w41d6-kumamoto-litpla-sunsun"
+          ],
+          "candidates": [
+            {
+              "title": "ハロウィン2026/合言葉ミッション",
+              "disposition": "duplicate",
+              "event_id": "evt-litpla-youmetown-hikarinomori-halloween2026",
+              "reason": "9/17-11/1既存企画の追加内容。別行に重複追加しない。"
+            },
+            {
+              "title": "みんなで！あそびパーティ2026",
+              "disposition": "duplicate",
+              "event_id": "evt-w41d6-kumamoto-litpla-sunsun"
+            },
+            {
+              "title": "秋のおでかけ応援・パウパト恐竜・他店舗の貸切/こびとづかん等",
+              "disposition": "past_or_out_of_scope_not_added",
+              "reason": "前2件は店舗公式が終了表示。他店舗固有の企画は対象店舗へ横展開しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 6917,
+          "disposition": "candidate_found_added",
+          "assessment": "公式SPAのトップと今後3企画の詳細、料金をChromeで実表示確認。第七回講習会は申込前。ゲスト交流2日間は申込不要・料金/児童条件/雨天対応が明確で追加。地域限定体験は個別HOLD。現在/今後の既存0。",
+          "add": [
+            {
+              "id": "evt-6917-202611-01",
+              "facility_id": 6917,
+              "prefecture": "kumamoto",
+              "title": "SPECIAL GUEST 2DAYS（くまモンアーバンスポーツパーク）",
+              "summary": "ゲストスケーターのデモンストレーション、初心者向けミニレッスンや写真・サイン会を楽しむ2日間。未経験者も楽しめるコンテスト種目があります。",
+              "start_date": "2026-11-21",
+              "end_date": "2026-11-22",
+              "date_label": "2026年11月21日・22日",
+              "time_label": "21日10:00～／22日11:00～（各プログラムの時刻は公式詳細参照）",
+              "price_label": "イベント参加無料、別途入園料：2時間以内は一般500円・高校生以下250円、1日は一般1,000円・高校生以下500円。付き添いも必要",
+              "reservation_label": "事前申込不要。混雑時は待機の場合あり",
+              "age_label": "小学生以下は保護者付き添い。中学生以下はヘルメット必須",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "スケートボードや迫力のある技を親子で楽しみたい方に",
+              "recommended_for_note": "初心者向けミニレッスンや観覧、撮影会があり、未経験でも楽しめる種目が用意されています。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "スポーツ",
+                "体験"
+              ],
+              "official_url": "https://kumamon-urban-sports-park.com/info/20261019",
+              "source_urls": [
+                "https://kumamon-urban-sports-park.com/info/20261019",
+                "https://kumamon-urban-sports-park.com/price"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に施設公式の実ブラウザ表示で日程・プログラム・入園料金・参加方法を確認。通常参加可能（入園料別途）。21日は雨天中止、22日は雨天時に室内プログラムへ変更。小学生以下は保護者同伴、中学生以下はヘルメット必須。3歳以下はパーク設備を利用しない場合のみ入園無料。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "SPECIAL GUEST 2DAYS（くまモンアーバンスポーツパーク）",
+              "disposition": "added",
+              "event_id": "evt-6917-202611-01",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "第七回パークスタイル講習会（11/23）",
+              "disposition": "hold",
+              "reason": "小学生以上/ミニランプ滑走経験者、参加5000円、定員各4名。申込開始11/7 12:00で現時点は受付前。"
+            },
+            {
+              "title": "菊陽町小中学生限定スケートボード無料体験（11月）",
+              "disposition": "hold",
+              "reason": "対象学校在籍、配布参加券、1家族1回、事前予約必要。11/3,7,8,14,15,21,22,23の14/15時は公表されたが現時点の申込フォーム空席を確認できない。"
+            },
+            {
+              "title": "菊陽アーバンの日・第六回講習・大道芸カーニバル・初心者体験会・中山選手交流",
+              "disposition": "past_not_added",
+              "reason": "公式トップで10月前半/9月の既に過去の日程として表示。"
+            }
+          ]
+        }
+      ]
+    },
+    "kyoto": {
+      "facility_ids": [
+        1567,
+        1568,
+        1570,
+        1580,
+        1583,
+        1600,
+        1644
+      ],
+      "total": 7,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 4,
+      "candidate_found_duplicate": 2,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://www.kyoto-aquarium.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:15:29.764936+00:00",
+          "facility_id": 1567,
+          "title": "梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "3ef82a49d391df98dd5bf6cfc82ea30b1a9894cb810059dee83e67ebb1637cfa",
+          "final_url": "https://www.kyoto-aquarium.com/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/news/woxfc1m2c/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:15:55.742577+00:00",
+          "facility_id": 1567,
+          "title": "ミミクリーアイテムを通じオオサンショウウオの特徴を知る企画展 「オオサンミミクリー～「模倣」それはテクノロジーの始まり～」 | ニュース | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "0033688930016b7385bf2d6390211e9281a4a2d325781cec892fe6c5b00554ca",
+          "final_url": "https://www.kyoto-aquarium.com/news/woxfc1m2c/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/kyoto-event-watercurtain/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:15:57.052446+00:00",
+          "facility_id": 1567,
+          "title": "ウォーターカーテン | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "87fa03329b643aced77f1e415c7b41345c439f94f74feb801735e32076b801c7",
+          "final_url": "https://www.kyoto-aquarium.com/event/kyoto-event-watercurtain/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/6nxdcwpecavh/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:15:58.224611+00:00",
+          "facility_id": 1567,
+          "title": "オオサンショウウオになりきれ!「オオサンミミクリー・コレクション」 | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "aabd82f9de874b451996a4092ec358762f3a0020298fc16dc158d0b54380217e",
+          "final_url": "https://www.kyoto-aquarium.com/event/6nxdcwpecavh/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/news/wayn6oy5uhm/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:16:08.566743+00:00",
+          "facility_id": 1567,
+          "title": "海水魚の「スズキ」が主役の初企画展 「あっちもこっちもスズキさん」10月1日（木）スタート | ニュース | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "0452d4dcc1856980aac6af57000316cb56dfe7cc6ec75ecd3afd9726b95e875b",
+          "final_url": "https://www.kyoto-aquarium.com/news/wayn6oy5uhm/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/cs6ei2hk60/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:16:10.077850+00:00",
+          "facility_id": 1567,
+          "title": "飼育スタッフ考案！いきものメジャー | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "ba2e7517d30a0ab48e540125be6d31f0764c860889708563a791ebcd1585dc0e",
+          "final_url": "https://www.kyoto-aquarium.com/event/cs6ei2hk60/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/d8-62akt5e49/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:16:11.770272+00:00",
+          "facility_id": 1567,
+          "title": "飼育スタッフの偏愛ミニトーク「SUKI.LAB 〜◯◯しか勝たん〜」 | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "a12e461ac07949627fed494f28ab23915b18b561ca724a58a20aad2054b1247c",
+          "final_url": "https://www.kyoto-aquarium.com/event/d8-62akt5e49/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/uzloonn1gwt/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:16:13.811268+00:00",
+          "facility_id": 1567,
+          "title": "スズキさん探しビンゴゲーム | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "9cb0e60a6ecaf05584ff3102b342398475dbe0b203610cc2ca75aea33a0dbce8",
+          "final_url": "https://www.kyoto-aquarium.com/event/uzloonn1gwt/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/kyoto-gohan-oosanshouo/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:36.745140+00:00",
+          "facility_id": 1567,
+          "title": "オオサンショウウオのごはんの時間 | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "e3787f1928e099605261fdc75f35507e1e98d31ece4a86b7e75f38403d0a2226",
+          "final_url": "https://www.kyoto-aquarium.com/event/kyoto-gohan-oosanshouo/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/23lclwpxo/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:44.358251+00:00",
+          "facility_id": 1567,
+          "title": "11月1日は「全国すしの日」!イベント「探せ!見分けろ!おさかなさん～すし編～」開催 | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "33c5ee39846f9b1be22058b3f92e9fe21d638b1d296e2e49e5d18e548df3336c",
+          "final_url": "https://www.kyoto-aquarium.com/event/23lclwpxo/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/9k4zm0w0plww/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:46.161818+00:00",
+          "facility_id": 1567,
+          "title": "全国の「すずき」さん集まれ!開館前イベント「集まれ!スズキさん」 | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "bf5e47d7c194d0a49743728714ada2dd2488ef68bf4963da967f072685d4984d",
+          "final_url": "https://www.kyoto-aquarium.com/event/9k4zm0w0plww/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/news/8a25qt_vq4el/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:47.882830+00:00",
+          "facility_id": 1567,
+          "title": "年間パスポート会員限定の特別プログラム 「里山教室 お野菜部～冬野菜を一緒に作ろう!～」を開催 | ニュース | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "696843b6d1ed9bea57cb1300099f8dc06feb1d71787c79ae8e7d548dd65df3c1",
+          "final_url": "https://www.kyoto-aquarium.com/news/8a25qt_vq4el/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/news/k_20261021/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:49.674191+00:00",
+          "facility_id": 1567,
+          "title": "11月11日は「チンアナゴの日」「チンアナゴの日2026」11月1日から展示スタート | ニュース | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "e51ca92ae4e69c738f7539cfe8b76944b2081ad35c7bee55aa04fc39dedc00ca",
+          "final_url": "https://www.kyoto-aquarium.com/news/k_20261021/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/rxfljg67rle/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:51.614237+00:00",
+          "facility_id": 1567,
+          "title": "里山教室 ～しめ縄作り～ | イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "115ac2d7256a0f2ce07f9dd04d64e74ce775a566d65bc8bdbafe3c9b923b9a19",
+          "final_url": "https://www.kyoto-aquarium.com/event/rxfljg67rle/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/event/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:18:53.388115+00:00",
+          "facility_id": 1567,
+          "title": "イベント・体験 | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "90e7698700f646e80e6af4cee5216c245c19b67e1ac7d2cc36f3a971febbf2ea",
+          "final_url": "https://www.kyoto-aquarium.com/event/"
+        },
+        {
+          "url": "https://mdh.fm/e?kA7033BeAD",
+          "status": 200,
+          "checked_at": "2026-10-27T23:19:05.204722+00:00",
+          "facility_id": 1567,
+          "title": "",
+          "text_sha256": "11fefd2bff214683edd08fb4d0bbdc4bbef5fa6b1fc287b2a632bed4705297a3",
+          "final_url": "https://mdh.fm/BeUI/form/entry?redirect=1&ReqID=member&CustID=A7033B&MemberID=154393"
+        },
+        {
+          "url": "https://mdh.fm/e?kA7033Bdil",
+          "status": 200,
+          "checked_at": "2026-10-27T23:19:06.915091+00:00",
+          "facility_id": 1567,
+          "title": "",
+          "text_sha256": "fef41ba15dcaad3535c0e18eb27f49ebfab447facbf1c9258fd1c92ba7a70bb0",
+          "final_url": "https://mdh.fm/BeUI/form/entry?redirect=1&ReqID=member&CustID=A7033B&MemberID=152691"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/about/price/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:19:18.888449+00:00",
+          "facility_id": 1567,
+          "title": "ご利用料金・年間パスポート | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "62f91e105b8b13a0a7487b3454228f7daa7019a74a5a74ac3a3aa70c23a532bc",
+          "final_url": "https://www.kyoto-aquarium.com/about/price/"
+        },
+        {
+          "url": "https://www.kyoto-aquarium.com/about/access/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:19:20.426823+00:00",
+          "facility_id": 1567,
+          "title": "営業時間・アクセス | 梅小路京都西駅からすぐ「京都水族館」【公式サイト】",
+          "text_sha256": "86f4f20e3c539980fdf69a099666dbb316b1573c86cdc55b10a16c30bd9728c4",
+          "final_url": "https://www.kyoto-aquarium.com/about/access/"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:19:58.784607+00:00",
+          "facility_id": 1568,
+          "title": "",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://www.kyotorailwaymuseum.jp/"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:14.150170+00:00",
+          "facility_id": 1568,
+          "title": "",
+          "text_sha256": "a9574e3ea9a988aea497c15714227427f396e2a3ee980b17f59c2aebf91d4f8e",
+          "final_url": "https://www.kyotorailwaymuseum.jp/news/"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01916/link_9gxay.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:28.100301+00:00",
+          "facility_id": 1568,
+          "sha256": "95e586e59b66bbefdfa014777ca3231c1a88c0f43b505d9c1176b6820e0ce861"
+        },
+        {
+          "url": "https://www.jr-odekake.net/railroad/museum/kyotorailwaymuseum/",
+          "status": 404,
+          "checked_at": "2026-10-27T23:20:29.922592+00:00",
+          "facility_id": 1568,
+          "title": "404 Not Found | JRおでかけネット",
+          "text_sha256": "d356ec35bbb9a3b1128db063801b3da1f03e25c9cc464e19407150f08099e154",
+          "final_url": "https://www.jr-odekake.net/railroad/museum/kyotorailwaymuseum/"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01887/link_NDn9C.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:50.195427+00:00",
+          "facility_id": 1568,
+          "sha256": "263219989d66195f8a739dca6918ceb98c5ecdf250f9d030ca1a1d0e1dcbc66c"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01869/link_3eIht.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:51.150970+00:00",
+          "facility_id": 1568,
+          "sha256": "79d3fa1e9e4c92f5ca434dd0623420047d46c00e41380236eae1ecd1ee0c3457"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01828/link_wiEr8.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:52.754299+00:00",
+          "facility_id": 1568,
+          "sha256": "6f0f72a3d47ffcf560cfaa39fbdd5854704a960699b829498ab2e8402ee4db79"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01867/link_tFDcK.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:20:53.658444+00:00",
+          "facility_id": 1568,
+          "sha256": "d4ed70cc752ccbace88904badb0f630d3c882993ccd75e032e57af42c87966d3"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/pdf/10th.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:00.284168+00:00",
+          "facility_id": 1568,
+          "sha256": "5c18f387f95f8c025887f441421cfb9195782d02546ef8f78bca8d1daba2b607"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01904/link_F1oz0.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:01.503216+00:00",
+          "facility_id": 1568,
+          "sha256": "88a3044e4d2f161ec6047d35d4e624b1ea4c5a110f226df3a9a22611e9c813b4"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01889/link_L4niz.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:03.181984+00:00",
+          "facility_id": 1568,
+          "sha256": "c3186465981c356b7e6422409a7520147a18a22a37b2f9446694ec637e67976c"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01917/link_8bjoc.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:05.280320+00:00",
+          "facility_id": 1568,
+          "sha256": "942c44cd41cbcb7bcf31bda2158b92f8c4d391f434ed8f9a0dcb934bb84403e8"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01915/link_kfBwa.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:07.093647+00:00",
+          "facility_id": 1568,
+          "sha256": "6f369fa97aa4237c7ca3538b539a220265e263b3ffb283f24f4f6b4780a5b8cc"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/news/sysimg/01905/link_t6H8O.pdf",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:08.158684+00:00",
+          "facility_id": 1568,
+          "sha256": "10ff86d30e4362a5bf1002160f8a0262cbb0f788ee9cefc4d856a32497e8e856"
+        },
+        {
+          "url": "https://www.kyotorailwaymuseum.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:21:15.487984+00:00",
+          "facility_id": 1568,
+          "title": "",
+          "text_sha256": "564a11d224e4e079a4abe552a576e8f10503be634df1e9dfc3fe0af531e2bd17",
+          "final_url": "https://www.kyotorailwaymuseum.jp/event/"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:07.671681+00:00",
+          "facility_id": 1570,
+          "title": "イベント | 京都市動物園",
+          "text_sha256": "a756406db9776c69109d36be1205c3e20b2a53a959f77f20b9495510ccac0170",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260819-85261.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:16.956117+00:00",
+          "facility_id": 1570,
+          "title": "みんなでつくる「アンコ」写真展 | イベント | 京都市動物園",
+          "text_sha256": "3ab3d0aa9190325558e097c4438a074e20e8713ad26e9dc8ef79f7a5826eeeb2",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260819-85261.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260901-85393.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:19.226469+00:00",
+          "facility_id": 1570,
+          "title": "ごはんですよ～！ | イベント | 京都市動物園",
+          "text_sha256": "5c205ae34584e05e8841789bec8cff3e5400e1af9307704ec5fa4d830d5b23a8",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260901-85393.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260831-85445.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:20.974151+00:00",
+          "facility_id": 1570,
+          "title": "二ホンアマガエル　特別展示 | イベント | 京都市動物園",
+          "text_sha256": "b1eda19bcf1a4adadf7f3eb445598dfdd7944f3fd2396e1a503374f82b99147d",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260831-85445.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85636.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:22.846314+00:00",
+          "facility_id": 1570,
+          "title": "360°ドーム体験 | イベント | 京都市動物園",
+          "text_sha256": "c768ab10ebc1d380eff0f0b1270cc8eb3558a999c63f81ece6960aa57659da6a",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85636.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261009-85749.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:24.915131+00:00",
+          "facility_id": 1570,
+          "title": "第55回ウィンタースクールの開催 | イベント | 京都市動物園",
+          "text_sha256": "1adbefd6d384e1637561ca9d9004ec8be411a89c95feaca75ba08077b777f98c",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261009-85749.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85635.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:27.070224+00:00",
+          "facility_id": 1570,
+          "title": "研究者トークリレー「見えない境界：人と動物のあいだ」 | イベント | 京都市動物園",
+          "text_sha256": "9587ebecc453399e7a2549051f2779d6f28796a022d86ec0fb18dd3affc6c506",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85635.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85630.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:29.127822+00:00",
+          "facility_id": 1570,
+          "title": "体験型シンポジウム「360°映像で体験する動物の世界」の開催について | イベント | 京都市動物園",
+          "text_sha256": "72f12fbbd355517ceb5352f013f3a979c8a55d38e30d4d33ce343ab2dc71b25d",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261006-85630.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261013-85827.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:31.226455+00:00",
+          "facility_id": 1570,
+          "title": "どんぐりポスト　２０２６ | イベント | 京都市動物園",
+          "text_sha256": "cabb9d4c451dc1638b2b25d1050ab77a00771124aecb027720784e939d0c897a",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261013-85827.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260917-85546.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:33.116653+00:00",
+          "facility_id": 1570,
+          "title": "秋の夜間開園 | イベント | 京都市動物園",
+          "text_sha256": "a5f6f21711c38160b140ef6ab25bb9894201dcfd6c024117297faaca4a59737c",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260917-85546.html"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260925-85559.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:35.104668+00:00",
+          "facility_id": 1570,
+          "title": "サル舎フェス２０２６ | イベント | 京都市動物園",
+          "text_sha256": "fdd223e7f2690d164aaf12a625a45b03742f4e5fd52b4f5c8b76b73dd4d38994",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260925-85559.html"
+        },
+        {
+          "url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=zoowinterschool1",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:54.134534+00:00",
+          "facility_id": 1570,
+          "title": "令和8年度ウィンタースクール応募フォーム（12/5、小学校3～4年生）",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=zoowinterschool1"
+        },
+        {
+          "url": "https://kyotocity.form.kintoneapp.com/public/zoowinterschool2",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:56.012637+00:00",
+          "facility_id": 1570,
+          "title": "令和8年度ウィンタースクール応募フォーム（12/6、小学校3～4年生）",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=zoowinterschool2"
+        },
+        {
+          "url": "https://kyotocity.form.kintoneapp.com/public/zoowinterschool3",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:57.744089+00:00",
+          "facility_id": 1570,
+          "title": "令和8年度ウィンタースクール応募フォーム（1/16、小学校5～6年生）",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=zoowinterschool3"
+        },
+        {
+          "url": "https://kyotocity.form.kintoneapp.com/public/zoowinterschool4",
+          "status": 200,
+          "checked_at": "2026-10-27T23:22:59.384155+00:00",
+          "facility_id": 1570,
+          "title": "令和8年度ウィンタースクール応募フォーム（1/17、中学生）",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=zoowinterschool4"
+        },
+        {
+          "url": "https://kyotocity.form.kintoneapp.com/public/kyotocityzoo-sciencetalk",
+          "status": 200,
+          "checked_at": "2026-10-27T23:23:01.105305+00:00",
+          "facility_id": 1570,
+          "title": "動物園DEサイエンストーク参加申込フォーム",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "final_url": "https://kyotocity.form.kintoneapp.com/waiting/?_formCode=kyotocityzoo-sciencetalk"
+        },
+        {
+          "url": "https://zoo.city.kyoto.lg.jp/zoo/visitor/fee/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:23:02.987190+00:00",
+          "facility_id": 1570,
+          "title": "料金・年間パスポート | 総合案内 | 京都市動物園",
+          "text_sha256": "308db9ce84af867728c5991e9a6c35d8b7def26ff030af9a38d684f535acd1cb",
+          "final_url": "https://zoo.city.kyoto.lg.jp/zoo/visitor/passport/"
+        },
+        {
+          "url": "https://eigamura.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:23:51.683468+00:00",
+          "facility_id": 1580,
+          "title": "太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "0f838083b847b2b8554f59d7c8e0613c1b30c6e1f504a93b8f57f0938dc772f2",
+          "final_url": "https://eigamura.com/"
+        },
+        {
+          "url": "https://eigamura.com/feature/yokai2026/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:23:58.375522+00:00",
+          "facility_id": 1580,
+          "title": "怪々YOKAI祭 | 東映太秦映画村",
+          "text_sha256": "4547109f3a91f3839648d7976fdf0980271d5bc4d70994ce964b6f5a81098f00",
+          "final_url": "https://eigamura.com/feature/yokai2026/"
+        },
+        {
+          "url": "https://uzumasa-jidaigeki.com/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:23:59.959855+00:00",
+          "facility_id": 1580,
+          "title": "太秦撮影所創設記念 – 太秦時代劇100年撮影バックストーリー",
+          "text_sha256": "3e4476c1f054ff2b5573c60ab58cf521fb8277ed2675bcbcd64325ddfdd0128e",
+          "final_url": "https://uzumasa-jidaigeki.com/"
+        },
+        {
+          "url": "https://eigamura.com/show/yokai_myth/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:01.925122+00:00",
+          "facility_id": 1580,
+          "title": "妖怪VS仮面ライダーマイス｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "795512cc730a005c7dcfea81065a3b3fea9f0bed49245d1021ab68e28bdd7142",
+          "final_url": "https://eigamura.com/show/yokai_myth/"
+        },
+        {
+          "url": "https://www.eigamura.com/show/kitsunemen/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:03.439470+00:00",
+          "facility_id": 1580,
+          "title": "きつね面のお絵描き体験｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "453fbaa6e5f7bce11431f289230fa947c03b9e738e7e612c94d406275e979fd2",
+          "final_url": "https://www.eigamura.com/show/kitsunemen/"
+        },
+        {
+          "url": "https://www.eigamura.com/show/omegahorn-photo-session/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:05.085383+00:00",
+          "facility_id": 1580,
+          "title": "キャプテン・オメガホーン撮影会｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "d6f8cb677d73a3ea473f7a3641a751f4a87cc0207b78d22fe038a28abeaae7e9",
+          "final_url": "https://www.eigamura.com/show/omegahorn-photo-session/"
+        },
+        {
+          "url": "https://www.eigamura.com/show/precure-high-touch/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:06.732180+00:00",
+          "facility_id": 1580,
+          "title": "名探偵プリキュア！キュアアンサーキュアミスティックハイタッチ会｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "5032776521c4f89f5ee6c4d7d73c984f5e42f1a5e5f66cfdaf331263d7cb6496",
+          "final_url": "https://www.eigamura.com/show/precure-high-touch/"
+        },
+        {
+          "url": "https://eigamura.com/show/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:08.222499+00:00",
+          "facility_id": 1580,
+          "title": "イベント・ショー｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "d8cab15c9cbe06a402e1eeac46c92141c4a6206d245728ea5efd562cab9fad45",
+          "final_url": "https://eigamura.com/show/"
+        },
+        {
+          "url": "https://eigamura.com/news/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:09.996623+00:00",
+          "facility_id": 1580,
+          "title": "お知らせ｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "a35947dd7fa0e7796142a3b2b9e07e3d4d167a1ffb801f514bd024bbe956544f",
+          "final_url": "https://eigamura.com/news/"
+        },
+        {
+          "url": "https://eigamura.com/show/rarecase/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:23.534662+00:00",
+          "facility_id": 1580,
+          "title": "レアケース -Rare Case-｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "8d05f0975a6fee492e193ec2b52dcc0e84a8ca1e167db2fdc2ac496a1bd05423",
+          "final_url": "https://eigamura.com/show/rarecase/"
+        },
+        {
+          "url": "https://eigamura.com/show/nebuta_2026/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:25.121722+00:00",
+          "facility_id": 1580,
+          "title": "冬ねぶた祭り｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "02c66c4f07081db9271ac6755411420b7bc3681badbd3e9945056097e02bcac7",
+          "final_url": "https://eigamura.com/show/nebuta_2026/"
+        },
+        {
+          "url": "https://eigamura.com/show/edosakaba_2026winter/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:26.631640+00:00",
+          "facility_id": 1580,
+          "title": "太秦江戸酒場～雪夜の宴～｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "2d31a7c08e825e90c9bcfa360da510ea3292fa1192046a4353fe1fa7d460618c",
+          "final_url": "https://eigamura.com/show/edosakaba_2026winter/"
+        },
+        {
+          "url": "https://eigamura.com/hours-tickets/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:24:28.357046+00:00",
+          "facility_id": 1580,
+          "title": "営業時間・料金｜太秦映画村【公式】- UZUMASA KYOTO VILLAGE",
+          "text_sha256": "25c19ad1162da8a287f8fac46e3cca98311696bba0813a0fd4f4eaf985b5e0f9",
+          "final_url": "https://eigamura.com/hours-tickets/"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-27T23:24:50.816157+00:00",
+          "facility_id": 1583
+        },
+        {
+          "url": "http://www.edu.city.kyoto.jp/science/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-27T23:24:59.856287+00:00",
+          "facility_id": 1583
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:10.089341+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター",
+          "text_sha256": "07a1dacdfb62c161773144881cbe79ee283c3467535aa9c010e757294b0f19ff",
+          "final_url": "https://www.edu.city.kyoto.jp/science/"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/sp_plants2.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:20.709668+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "a5fbd6e8640fbad9be6f9db8357c1d86d1ba45171139b212d1ca3c24e9455246",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/sp_plants2.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/event-special.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:22.567706+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "44f3e96890cfb9b77f4f7bf81449f0964e612ec1c6c55bff6bdc4a7ae23ff336",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/event-special.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/science-talk.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:24.184631+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "ca661ecad42737674acd171066a61a27feb28cf94e335d1d9785f7f248e6853f",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/science-talk.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/saiten/saiten2.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:25.936054+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "青少年のための科学の祭典京都大会",
+          "text_sha256": "f5363da5a57dc5762d9d9e865e10e9de0a30250ed08d632d4cceb7b871b13f9c",
+          "final_url": "https://www.edu.city.kyoto.jp/science/saiten/saiten2.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/04_plane/planetarium-program.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:27.814002+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "e5ab1cc9102dddc177a77c4133bcf7ac7009ee57d5983122129be627d84b675a",
+          "final_url": "https://www.edu.city.kyoto.jp/science/04_plane/planetarium-program.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/04_plane/planetarium-schedule.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:29.608844+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "cb075af0239579cdc72e7a096be0279a5209fc40f7dcba7f07505fdf6efa8662",
+          "final_url": "https://www.edu.city.kyoto.jp/science/04_plane/planetarium-schedule.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/01_guide/hours-and-fees.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:37.836550+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "5e913f4ced9e41d7d0b4a322ced9058106eddb4e7640c30d455653c1fbd1e358",
+          "final_url": "https://www.edu.city.kyoto.jp/science/01_guide/hours-and-fees.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/news.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:45.469260+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター",
+          "text_sha256": "bb596be58a78e97cdd534e60bfedd2c268a4779b184d46b0f40723fa86821761",
+          "final_url": "https://www.edu.city.kyoto.jp/science/news.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/00_common/header.html",
+          "status": 404,
+          "checked_at": "2026-10-27T23:25:54.130252+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "404 Not Found",
+          "text_sha256": "7bac7417ee38440c6d2c2c2e4cea457afa89768b65fcc2acaf862666398d5ea9",
+          "final_url": "https://www.edu.city.kyoto.jp/science/00_common/header.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/header.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:25:59.590567+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター",
+          "text_sha256": "18456c9ca68c49d743eac1a0e6e44e0725f565f72ac1ee437c65a191e0b2288f",
+          "final_url": "https://www.edu.city.kyoto.jp/science/header.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/collaborative-event.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:05.484192+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "75200b0f2dcb0dc8703d7cda0b1b84c5f2b2aabca4a7fa5056d7cb684e006e67",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/collaborative-event.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/astronomy-observation.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:07.394991+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "d74baf2de55227d7d55465138a06a046ed8b261672f80265c8bfe30ad39a0166",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/astronomy-observation.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/nature-observation.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:09.660821+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "4160c9f57c6cba28adbb4e83606fdff0aacb276cd6f9a9d1b742173e8d0e3aa4",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/nature-observation.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/everyones-experiment.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:12.035122+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "5b66d697ce0e51f742ce9413781dfa366100bc261ae71c1366e34a8a7ffb6f1e",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/everyones-experiment.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/astronomy-craft.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:13.759659+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "23c25e4f5ff7a30e9052fa59e21e4d2adbefef45ed033faae4529dea022c5200",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/astronomy-craft.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/specimen-workshop.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:15.527088+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "b4da35aaf5c0038cba56407fdcab151c479f3fc3900202416dc9a71d29eb3023",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/specimen-workshop.html"
+        },
+        {
+          "url": "https://www.edu.city.kyoto.jp/science/03_event/science-festival.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:26:17.350454+00:00",
+          "facility_id": 1583,
+          "transport": "curl Schannel (certificate verification enabled)",
+          "title": "京都市青少年科学センター | Kyoto Municipal Science Center For Youth",
+          "text_sha256": "1fe7ac6da484c04eb3517b55b34a71cb87f8642f6206ab7975d09896175c4d16",
+          "final_url": "https://www.edu.city.kyoto.jp/science/03_event/science-festival.html"
+        },
+        {
+          "url": "https://ryuoh-kodomo.com/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-27T23:26:43.505332+00:00",
+          "facility_id": 1600
+        },
+        {
+          "url": "https://ryuoh-kodomo.com/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-27T23:26:49.606041+00:00",
+          "facility_id": 1600
+        },
+        {
+          "url": "https://www.city.kyotanabe.lg.jp/0000014358.html",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:02.968872+00:00",
+          "facility_id": 1600,
+          "title": "京田辺市野外活動センターは令和7年3月31日をもって閉所しました | 京田辺市ホームページ",
+          "text_sha256": "92bf458990b09c4b0094fc8ca13df877d59b46c5be292d48e614405e59fe3126",
+          "final_url": "https://www.city.kyotanabe.lg.jp/0000014358.html"
+        },
+        {
+          "url": "https://kyoto-aeonmall.com/news/event",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:06.660948+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜イオンモールKYOTO",
+          "text_sha256": "5ae4abd7db31c898f313a15a9244fa57b88c9e87e83a68963752a50a51f6eaa3",
+          "final_url": "https://kyoto.aeonmall.jp/event"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/a2bea3fc-16ec-4fab-b86b-5d631c9beedc",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:15.694279+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜ワンワンとハイポーズ ｜イオンモールKYOTO",
+          "text_sha256": "5c112e836fd383ebe7c3dad2ece72dd40df51a10b0c4a6ca7a5277354c818b22",
+          "final_url": "https://kyoto.aeonmall.jp/event/a2bea3fc-16ec-4fab-b86b-5d631c9beedc"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/8e1f32a3-1ece-4425-bd22-07ba62ea72f8",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:23.945364+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜微わかる展２＋小さいすぎるよ展｜イオンモールKYOTO",
+          "text_sha256": "7ef6fa778f3a7e5158f9c19ea3b1b79301cd28f1fffd5b67d5f44cb0fc3946eb",
+          "final_url": "https://kyoto.aeonmall.jp/event/8e1f32a3-1ece-4425-bd22-07ba62ea72f8"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/68b8d355-85b8-4644-aa13-e860ea46c89b",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:26.000057+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜HALLOWEEN ZOMBIE HOUSE（ハロウィン ゾンビ ハウス）｜イオンモールKYOTO",
+          "text_sha256": "b90c7fa500a7b132fc62474efb231b397822d5996fec7b066f40733dfabbeef6",
+          "final_url": "https://kyoto.aeonmall.jp/event/68b8d355-85b8-4644-aa13-e860ea46c89b"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/b063c7f9-86da-4a68-93ac-87b11a416052",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:27.789953+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜【10/30-31ハロウィンイベント参加者対象】ハロウィンタトゥーシール体験＆ハロウィンフォトスポット♪｜イオンモールKYOTO",
+          "text_sha256": "3784bdf662f65d69584237791d1a0dfc0193474ef6896fbddd1e4a0725d299c7",
+          "final_url": "https://kyoto.aeonmall.jp/event/b063c7f9-86da-4a68-93ac-87b11a416052"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/3ede85ee-6a21-4b8b-884b-a5179a3d1f42",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:29.748726+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜HALLOWEEN WONDER LAND（ハロウィン ワンダーランド）｜イオンモールKYOTO",
+          "text_sha256": "07648389ab29d6b37b0e9d1564c33236a7d712d04462110aba0092ec4eb961ba",
+          "final_url": "https://kyoto.aeonmall.jp/event/3ede85ee-6a21-4b8b-884b-a5179a3d1f42"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/33c5ee49-1928-4fea-88a8-887d3a1492b2",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:31.559211+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜ハロウィンのピカチュウ サンバイザープレゼント！｜イオンモールKYOTO",
+          "text_sha256": "55aa8c0782db260a50d32d278dc52e8aa1cf7e6e5331694c22115301e8ff29e5",
+          "final_url": "https://kyoto.aeonmall.jp/event/33c5ee49-1928-4fea-88a8-887d3a1492b2"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/b326db7d-7408-43a8-9762-e19427abb8fe",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:33.508304+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜きょうとプレコンDAYS  ～選択できる未来を増やそう～｜イオンモールKYOTO",
+          "text_sha256": "a7c1a81f748a882eb26a773858a86a5e6d5d73a3bba67406442279850586db6c",
+          "final_url": "https://kyoto.aeonmall.jp/event/b326db7d-7408-43a8-9762-e19427abb8fe"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/77e2423e-0454-4ce8-957c-a9b71684197f",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:35.487726+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜親子で遊ぼう♪わくわくえいごＰＡＲＫ｜イオンモールKYOTO",
+          "text_sha256": "9bbbbccb6961762d87426b4ba008c254712d420e3aa47ec4f2bc5951298d02f9",
+          "final_url": "https://kyoto.aeonmall.jp/event/77e2423e-0454-4ce8-957c-a9b71684197f"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/8c2f969f-eec2-470a-835e-461a8043b184",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:37.654767+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜南区元気いっぱいプロジェクト｜イオンモールKYOTO",
+          "text_sha256": "a623cf27559e72dd93ceee98cfd615cc35d1486757d3aa1290ca0849222b6e0a",
+          "final_url": "https://kyoto.aeonmall.jp/event/8c2f969f-eec2-470a-835e-461a8043b184"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/2a59fe54-56bd-4e25-8b82-48ae09c2dd05",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:39.614147+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜榎田一王 トークショー｜イオンモールKYOTO",
+          "text_sha256": "c2655c2458f18728f5de39582e188947ddd54561e693f6ee46994af4d090ca78",
+          "final_url": "https://kyoto.aeonmall.jp/event/2a59fe54-56bd-4e25-8b82-48ae09c2dd05"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/88ae95d6-07de-41de-8358-41e6999e726c",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:41.703269+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜表すみれ トークショー｜イオンモールKYOTO",
+          "text_sha256": "2480b75f6c145cc31a86d95681cbca4e43ca10515244f7fb8b6cf480162a8953",
+          "final_url": "https://kyoto.aeonmall.jp/event/88ae95d6-07de-41de-8358-41e6999e726c"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/a93d44a3-e7db-4df8-820d-bdb6b0bc0d4b",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:43.688966+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜ゲームから飛び出してきたにゃんこたちが！日本全国で大暴れ！『にゃんこ大パーティー！by VILLAGE VANGUARD』を開催！｜イオンモールKYOTO",
+          "text_sha256": "ac9c78aab28f10507366b568e11623cd5d77b4447a080b247d816e157f21f139",
+          "final_url": "https://kyoto.aeonmall.jp/event/a93d44a3-e7db-4df8-820d-bdb6b0bc0d4b"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/f48a66d9-5849-4505-8b5a-d1303aee50ed",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:45.628062+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜重ねて完成させよう！スタンプラリー｜イオンモールKYOTO",
+          "text_sha256": "a9777df719eed99cc1b4ccace752996bd1b505c2d0e0eac1c045608cba8e7620",
+          "final_url": "https://kyoto.aeonmall.jp/event/f48a66d9-5849-4505-8b5a-d1303aee50ed"
+        },
+        {
+          "url": "https://kyoto.aeonmall.jp/event/c3794e94-7721-40d1-9348-c2ad484594d3",
+          "status": 200,
+          "checked_at": "2026-10-27T23:27:47.815634+00:00",
+          "facility_id": 1644,
+          "title": "イベント｜【 SATURDAY MUSIC NIGHT by SLow Page 】｜イオンモールKYOTO",
+          "text_sha256": "2a5240ddc1fef87dc889c79d1a999699f0d945a9472f98f9be74592edd3005cf",
+          "final_url": "https://kyoto.aeonmall.jp/event/c3794e94-7721-40d1-9348-c2ad484594d3"
+        },
+        {
+          "url": "https://www.village-v.co.jp/popup/031531/",
+          "status": 200,
+          "checked_at": "2026-10-27T23:28:30.825857+00:00",
+          "facility_id": 1644,
+          "title": "ゲームから飛び出してきたにゃんこたちが！日本全国で大暴れ!『にゃんこ大パーティー！by VILLAGE VANGUARD』が開催決定！ | ポップアップイベント | ヴィレッジヴァンガード",
+          "text_sha256": "742fa9c6aa4fed74b39627dc74d500f7962055b2657bf883acef7995300d5636",
+          "final_url": "https://www.village-v.co.jp/popup/031531/"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1567,
+          "disposition": "candidate_found_added",
+          "assessment": "公式ニュース・全プログラム一覧・既存11件の各詳細を内容確認。11件再確認、ウォーターカーテンと給餌に12月日程を追記、出演/締切条件を更新。新規3件は統合イベントデータに未掲載。常設イルカ・ペンギン等の通常解説は新規期間限定催事と扱わず、10/12測定会は終了。",
+          "refresh": [
+            "evt-1567-w38-2026-01",
+            "evt-1567-w38-2026-05",
+            "evt-1567-w38-2026-06",
+            "evt-d8-kyoto-suzuki-2026",
+            "evt-1567-w40f4-measure",
+            "evt-1567-w40f4-suki",
+            "evt-1567-w40f4-bingo",
+            "evt-1567-w40f4-feeding",
+            "evt-1567-w40f4-sushi",
+            "evt-1567-w40f4-suzuki",
+            "evt-1567-w40f4-vegetable"
+          ],
+          "updates": [
+            {
+              "id": "evt-1567-w38-2026-05",
+              "source_checked_at": "2026-10-28",
+              "title": "ウォーターカーテン 秋・冬の上演",
+              "end_date": "2026-12-20",
+              "date_label": "10～12月の指定日",
+              "time_label": "10/24～11/29は17:30・18:00、12月は17:15（各約5分）",
+              "occurrence_dates": [
+                "2026-10-04",
+                "2026-10-12",
+                "2026-10-17",
+                "2026-10-18",
+                "2026-10-24",
+                "2026-10-25",
+                "2026-10-31",
+                "2026-11-01",
+                "2026-11-02",
+                "2026-11-03",
+                "2026-11-07",
+                "2026-11-08",
+                "2026-11-14",
+                "2026-11-15",
+                "2026-11-21",
+                "2026-11-22",
+                "2026-11-23",
+                "2026-11-28",
+                "2026-11-29",
+                "2026-12-05",
+                "2026-12-06",
+                "2026-12-12",
+                "2026-12-13",
+                "2026-12-19",
+                "2026-12-20"
+              ],
+              "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。イルカは出演しない。天候等により中止。9月12・13日の終了回を除外。 2026-10-16に本Missionで公式情報を再確認。 2026-10-28に公式詳細で12月6開催日と17:15上演の追加を確認。"
+            },
+            {
+              "id": "evt-1567-w40f4-feeding",
+              "source_checked_at": "2026-10-28",
+              "title": "オオサンショウウオのごはんの時間（10～12月）",
+              "end_date": "2026-12-28",
+              "date_label": "10～12月の指定日",
+              "occurrence_dates": [
+                "2026-10-04",
+                "2026-10-09",
+                "2026-10-14",
+                "2026-10-19",
+                "2026-10-24",
+                "2026-10-29",
+                "2026-11-03",
+                "2026-11-08",
+                "2026-11-13",
+                "2026-11-18",
+                "2026-11-23",
+                "2026-11-28",
+                "2026-12-03",
+                "2026-12-08",
+                "2026-12-13",
+                "2026-12-18",
+                "2026-12-23",
+                "2026-12-28"
+              ]
+            },
+            {
+              "id": "evt-1567-w38-2026-06",
+              "source_checked_at": "2026-10-28",
+              "reservation_label": "観覧予約不要。事前モデル応募は終了。当日はオオサンショウウオのアイテム持参で参加歓迎、貸出品は数に限りあり。"
+            },
+            {
+              "id": "evt-1567-w40f4-sushi",
+              "source_checked_at": "2026-10-28",
+              "reservation_label": "事前申込は10/25に終了。10/26当選者へ連絡。現在の一般向け追加受付案内なし。"
+            },
+            {
+              "id": "evt-1567-w40f4-vegetable",
+              "source_checked_at": "2026-10-28",
+              "reservation_label": "事前購入・先着15名、全3回参加・保護者同伴が条件。初回10/17は終了、継続参加者向け。"
+            }
+          ],
+          "add": [
+            {
+              "id": "evt-1567-f8-202611-chin",
+              "facility_id": 1567,
+              "prefecture": "kyoto",
+              "title": "チンアナゴの日2026",
+              "summary": "ぬいぐるみ222匹の階段フォトスポットや人気動画を展示。11/11は11:11から解説付きごはんの時間、お面は数量限定。",
+              "start_date": "2026-11-01",
+              "end_date": "2026-11-15",
+              "date_label": "2026-11-01～2026-11-15",
+              "time_label": "営業時間内。11/11のごはんの時間は11:11～",
+              "price_label": "無料（入館料別）",
+              "reservation_label": "通常入館で観覧、事前予約不要。入館料別。",
+              "age_label": "親子向け",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "ぬいぐるみ222匹の階段フォトスポットや人気動画を展示。11/11は11:11から解説付きごはんの時間、お面は数量限定。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kyoto-aquarium.com/news/k_20261021/",
+              "source_urls": [
+                "https://www.kyoto-aquarium.com/news/k_20261021/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に本Missionで公式詳細と参加経路を確認。通常参加可能。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-1567-f8-202611-reading",
+              "facility_id": 1567,
+              "prefecture": "kyoto",
+              "title": "チンアナゴの絵本の読み聞かせ会",
+              "summary": "ミテッテのワークショップスペースで未就学児向けのチンアナゴの絵本を楽しむ。",
+              "start_date": "2026-11-26",
+              "end_date": "2026-11-26",
+              "date_label": "2026-11-26",
+              "time_label": "15:45～",
+              "price_label": "無料（入館料別）",
+              "reservation_label": "予約不要、当日ミテッテへ。入館料別。",
+              "age_label": "未就学児と保護者",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "ミテッテのワークショップスペースで未就学児向けのチンアナゴの絵本を楽しむ。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kyoto-aquarium.com/news/k_20261021/",
+              "source_urls": [
+                "https://www.kyoto-aquarium.com/news/k_20261021/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に本Missionで公式詳細と参加経路を確認。通常参加可能。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            },
+            {
+              "id": "evt-1567-f8-202612-workshop",
+              "facility_id": 1567,
+              "prefecture": "kyoto",
+              "title": "あったらいいなオオサンショウウオ",
+              "summary": "京都大学の西川先生とオオサンミミクリーアイテムを考える。",
+              "start_date": "2026-12-05",
+              "end_date": "2026-12-05",
+              "date_label": "2026-12-05",
+              "time_label": "16:00～約1時間",
+              "price_label": "参加無料、別途京都水族館の年間パスポートが必要",
+              "reservation_label": "年パスが必要。11/15 23:59まで公式フォームで応募、12名、応募多数は抽選、当選連絡11/16。",
+              "age_label": "小学1年生以上（推奨4年生以上）",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "京都大学の西川先生とオオサンミミクリーアイテムを考える。",
+              "is_free": false,
+              "is_indoor": true,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://www.kyoto-aquarium.com/news/woxfc1m2c/",
+              "source_urls": [
+                "https://www.kyoto-aquarium.com/news/woxfc1m2c/",
+                "https://mdh.fm/e?kA7033BeAD"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に本Missionで公式詳細と参加経路を確認。条件付き参加可能。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "チンアナゴの日2026",
+              "disposition": "added",
+              "event_id": "evt-1567-f8-202611-chin",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "チンアナゴの絵本の読み聞かせ会",
+              "disposition": "added",
+              "event_id": "evt-1567-f8-202611-reading",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "あったらいいなオオサンショウウオ",
+              "disposition": "added",
+              "event_id": "evt-1567-f8-202612-workshop",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "オオサンミミクリー",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w38-2026-01"
+            },
+            {
+              "title": "ウォーターカーテン 秋の上演",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w38-2026-05"
+            },
+            {
+              "title": "オオサンミミクリー・コレクション 観覧",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w38-2026-06"
+            },
+            {
+              "title": "あっちもこっちもスズキさん",
+              "disposition": "duplicate",
+              "event_id": "evt-d8-kyoto-suzuki-2026"
+            },
+            {
+              "title": "飼育スタッフ考案！いきものメジャー",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-measure"
+            },
+            {
+              "title": "飼育スタッフの偏愛ミニトーク「SUKI.LAB」",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-suki"
+            },
+            {
+              "title": "スズキさん探しビンゴゲーム",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-bingo"
+            },
+            {
+              "title": "オオサンショウウオのごはんの時間（10・11月）",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-feeding"
+            },
+            {
+              "title": "探せ！見分けろ！おさかなさん～すし編～",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-sushi"
+            },
+            {
+              "title": "開館前イベント「集まれ！スズキさん」",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-suzuki"
+            },
+            {
+              "title": "里山教室 お野菜部～冬野菜を一緒に作ろう！～",
+              "disposition": "duplicate",
+              "event_id": "evt-1567-w40f4-vegetable"
+            },
+            {
+              "title": "里山教室 ～しめ縄作り～",
+              "disposition": "hold",
+              "reason": "12/12・10:15～11:30、小学生以上20名・年パス、11/29応募締切は公式フォームで確認。屋外里山テラスの正月季節行事で、雨天変更・中止の扱いが未確認。既存のお野菜部の雨天条件を転用しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 1568,
+          "disposition": "candidate_found_duplicate",
+          "assessment": "既存16件を今回取得した公式PDF11本の全文と表で再確認、全件鮮度更新。PDFの終了済み4～10月催事は新規追加せず。最新HTML群は複数試行とJR公式fallback後も読めず、そのsource-familyのみHOLD。既存内容は取得済み公式PDFと矛盾なし。",
+          "refresh": [
+            "evt-1568-w38-2026-02",
+            "evt-1568-w38-2026-03",
+            "evt-1568-w38-2026-04",
+            "evt-1568-w38-2026-05",
+            "evt-1568-w38-2026-06",
+            "evt-1568-w38-2026-08",
+            "evt-1568-w38-2026-10",
+            "evt-1568-w38-2026-11",
+            "evt-1568-w38-2026-16",
+            "evt-1568-w38-2026-17",
+            "evt-1568-w40f4-sketch",
+            "evt-1568-w40f4-ef65",
+            "evt-1568-w40f4-orone24",
+            "evt-1568-w40f4-crane",
+            "evt-1568-w40f4-eureka",
+            "evt-1568-w40f4-symposium"
+          ],
+          "candidates": [
+            {
+              "title": "京都駅開業150年記念展 鉄道と建築",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-02"
+            },
+            {
+              "title": "収蔵資料展 図面から生まれる鉄道",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-03"
+            },
+            {
+              "title": "収蔵写真展 特別展示車両たち",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-04"
+            },
+            {
+              "title": "写真でたどる京都鉄道博物館の軌跡",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-05"
+            },
+            {
+              "title": "ちかはく・メモリアル40 103系ラッピング展示",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-06"
+            },
+            {
+              "title": "トレイン・ジャーニー in 京都鉄道博物館",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-08"
+            },
+            {
+              "title": "クハネ581形35号車 特別公開",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-10"
+            },
+            {
+              "title": "プチ解説 まめちしき10！マルス",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-11"
+            },
+            {
+              "title": "京都鉄道らくご博物館",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-16"
+            },
+            {
+              "title": "ナイトミュージアム2026",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w38-2026-17"
+            },
+            {
+              "title": "ワークショップ「描いてみよう！たてものと蒸気機関車」",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-sketch"
+            },
+            {
+              "title": "プチ解説 まめちしき10！EF65形1号機",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-ef65"
+            },
+            {
+              "title": "特別な車両公開「オロネ24形4号車」",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-orone24"
+            },
+            {
+              "title": "鉄道クレーン車（KRC810N）特別展示",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-crane"
+            },
+            {
+              "title": "二十世紀電氣目録 大！三添洋輔祭り in 京都鉄道博物館",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-eureka"
+            },
+            {
+              "title": "京都駅からみた鉄道建築の美と機能",
+              "disposition": "duplicate",
+              "event_id": "evt-1568-w40f4-symposium"
+            },
+            {
+              "title": "12/19・20 ブロックトレイン",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/1/16・17 500系車両解説",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/2/20・21 展示品解説セミナー",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/3/6・7 車両解説セミナー",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "12月100系新幹線車内公開",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/1月EF52公開",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/2月500系公開",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/3月0系16形公開",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "12月151系プチ解説",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/1月ワット複動式蒸気機関プチ解説",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/2月101系プチ解説",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/3月回転変流器プチ解説",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "12/17 特別車両展示の10年",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/1/14 古代日本の交通史",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "2027/2/11 京都駅開業150年",
+              "disposition": "hold",
+              "reason": "公式下期予定表には掲載されるが予定・変更あり・詳細後日と明記。開催時刻や当日参加方法が個別に未確定。一般の11月要項を転用しない。"
+            },
+            {
+              "title": "11/19 おとなの学び講座「鉄道と建築」",
+              "disposition": "not_adopted",
+              "reason": "大人向け約60分の講座と明示されるため新規の強い家族イベントには採用しない。"
+            },
+            {
+              "title": "10周年記念硬券配布",
+              "disposition": "hold",
+              "reason": "4/29から15000枚・なくなり次第終了。現在の残数・配布継続を確認できない。"
+            },
+            {
+              "title": "10周年館内装飾・鉄道おしごとジオラマ特別版",
+              "disposition": "hold",
+              "reason": "開始日のみで終了日未公表。現在の実施時刻確認ページはセキュリティ画面で本文取得不可。"
+            },
+            {
+              "title": "10周年限定フォトサービス",
+              "disposition": "not_adopted",
+              "reason": "2027/3/31までの通常記念写真販売サービス。通常撮影サービスを単独の新規イベントにはしない。"
+            },
+            {
+              "title": "公式最新ニュース・日別カレンダーの未取得部分",
+              "disposition": "hold",
+              "source_family": "kyotorailwaymuseum.jp HTML",
+              "reason": "本Missionでトップ/ニュース/イベントHTMLを再試行し、ChromeでもImpervaのhCaptcha画面。CAPTCHAを操作せず、このHTML群でしか確認できない追加・変更候補は一括HOLD。直接取得できた公式PDF11本の内容は独立して判断。"
+            }
+          ]
+        },
+        {
+          "facility_id": 1570,
+          "disposition": "candidate_found_added",
+          "assessment": "一覧と既存4件の詳細、新規の冬スクール・研究者トーク・シンポジウム・どんぐり・夜間・サル舎企画を個別評価。既存4件再確認、ごはんガイドを11/28まで延長、新規2件採用。一覧の10/25以前の単発企画は終了、11/8一日体験は募集終了。",
+          "refresh": [
+            "evt-1570-w38-2026-09",
+            "evt-1570-w38-2026-10",
+            "evt-1570-w38-2026-11",
+            "evt-1570-w40f4-dome"
+          ],
+          "updates": [
+            {
+              "id": "evt-1570-w38-2026-10",
+              "end_date": "2026-11-28",
+              "date_label": "9～11月の指定土曜日",
+              "occurrence_dates": [
+                "2026-09-19",
+                "2026-09-26",
+                "2026-10-03",
+                "2026-10-10",
+                "2026-10-17",
+                "2026-10-24",
+                "2026-10-31",
+                "2026-11-07",
+                "2026-11-14",
+                "2026-11-21",
+                "2026-11-28"
+              ],
+              "source_checked_at": "2026-10-28"
+            }
+          ],
+          "add": [
+            {
+              "id": "evt-1570-f8-winter",
+              "facility_id": 1570,
+              "prefecture": "kyoto",
+              "title": "第55回ウィンタースクール",
+              "summary": "動物舎の清掃やエサの準備、観察など飼育管理を体験。市外在住も参加できる。",
+              "start_date": "2026-12-05",
+              "end_date": "2027-01-17",
+              "date_label": "2026-12-05・2026-12-06・2027-01-16・2027-01-17",
+              "time_label": "8:40～12:00",
+              "price_label": "1人1,000円（当日持参）",
+              "reservation_label": "10/27～11/10に公式フォームで応募。各日15名、応募多数は抽選。1人1回。保護者は体験に同行不可。",
+              "age_label": "12/5・6は小学3・4年生、1/16は小学5・6年生、1/17は中学生",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "動物舎の清掃やエサの準備、観察など飼育管理を体験。市外在住も参加できる。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20261009-85749.html",
+              "source_urls": [
+                "https://zoo.city.kyoto.lg.jp/zoo/event/20261009-85749.html",
+                "https://kyotocity.form.kintoneapp.com/public/zoowinterschool2"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・参加経路を確認。条件付き参加可能。 12/6のフォームで入力欄と確認ボタンが表示され、受付終了表示がないことをブラウザーで確認。小雨決行・荒天中止。長靴、帽子、軍手、水筒等と防寒・汚れてもよい長ズボンが必要。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-12-05",
+                "2026-12-06",
+                "2027-01-16",
+                "2027-01-17"
+              ]
+            },
+            {
+              "id": "evt-1570-f8-saru",
+              "facility_id": 1570,
+              "prefecture": "kyoto",
+              "title": "サル舎デジタルクイズラリー（ワオキツネザル）",
+              "summary": "サル舎前の二次元コードからワオキツネザルの3問に挑戦。全問正解者への缶バッジは10/31に先着50名。",
+              "start_date": "2026-10-27",
+              "end_date": "2026-10-31",
+              "date_label": "2026-10-27～2026-10-31",
+              "time_label": "開園時間内。景品交換は10/31 13:30～14:00、サル舎南側",
+              "price_label": "通常入園料：一般750円、中学生以下無料",
+              "reservation_label": "通常入園で参加、スマートフォンのGoogleフォームを利用。景品は数量限定。",
+              "age_label": "親子向け",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "サル舎前の二次元コードからワオキツネザルの3問に挑戦。全問正解者への缶バッジは10/31に先着50名。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://zoo.city.kyoto.lg.jp/zoo/event/20260925-85559.html",
+              "source_urls": [
+                "https://zoo.city.kyoto.lg.jp/zoo/event/20260925-85559.html",
+                "https://zoo.city.kyoto.lg.jp/zoo/visitor/fee/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式詳細・参加経路を確認。通常参加可能。",
+              "status": "ongoing",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "みんなでつくる「アンコ」写真展",
+              "disposition": "duplicate",
+              "event_id": "evt-1570-w38-2026-09"
+            },
+            {
+              "title": "ごはんですよ～！秋の飼育員ガイド",
+              "disposition": "duplicate",
+              "event_id": "evt-1570-w38-2026-10"
+            },
+            {
+              "title": "ニホンアマガエル 特別展示",
+              "disposition": "duplicate",
+              "event_id": "evt-1570-w38-2026-11"
+            },
+            {
+              "title": "360°ドーム体験",
+              "disposition": "duplicate",
+              "event_id": "evt-1570-w40f4-dome"
+            },
+            {
+              "title": "第55回ウィンタースクール",
+              "disposition": "added",
+              "event_id": "evt-1570-f8-winter",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "サル舎デジタルクイズラリー（ワオキツネザル）",
+              "disposition": "added",
+              "event_id": "evt-1570-f8-saru",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "研究者トークリレー",
+              "disposition": "hold",
+              "reason": "11/1 13:30～16:00、50名先着・10/30締切。公式フォームはJS待機画面のため現在残席を確認できず、幼児向けとは明示されない2時間半の専門講演。"
+            },
+            {
+              "title": "360°映像で体験する動物の世界",
+              "disposition": "duplicate",
+              "event_id": "evt-1570-w40f4-dome",
+              "reason": "自由参加ドーム部分は既存、研究者トークは別候補としてHOLD。"
+            },
+            {
+              "title": "どんぐりポスト2026",
+              "disposition": "hold",
+              "reason": "10/14開始で150kg到達次第終了。終了日・現在の受付継続未確認。園外野生どんぐり採集を勧めない。"
+            },
+            {
+              "title": "秋の夜間開園",
+              "disposition": "hold",
+              "reason": "10/31・11/7も実施し19時上映の雨天中止は明示。ただし夜間開園そのものの閉園時刻・荒天時扱いを詳細本文で確定できない。一般昼間時刻を流用しない。"
+            },
+            {
+              "title": "11/8 一日動物園体験",
+              "disposition": "hold",
+              "reason": "公式一覧で募集終了と明示。新規参加経路なし。"
+            }
+          ]
+        },
+        {
+          "facility_id": 1580,
+          "disposition": "candidate_found_duplicate",
+          "assessment": "トップ・特設・既存6詳細・料金・動的全ショー一覧を確認。既存6件再確認。恒常忍者/侍/ガイド等は新規期間限定イベントにしない。妖怪サミットは既存YOKAI祭内の11/23構成企画。バス/嵐電ウォークは他地域を巡るツアー商品として施設催事とは別。",
+          "refresh": [
+            "evt-1580-w38-2026-01",
+            "evt-1580-w38-2026-02",
+            "evt-f5-1580-myth-2026",
+            "evt-f5-1580-kitsunemen-2026",
+            "evt-f5-1580-omegahorn-photo-session-2026",
+            "evt-f5-1580-precure-high-touch-2026"
+          ],
+          "updates": [
+            {
+              "id": "evt-1580-w38-2026-01",
+              "source_checked_at": "2026-10-28",
+              "reservation_label": "観覧・ダンスは通常入村で参加可能。仮装パレードの事前申込は全開催分終了、当日受付なし。"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "怪々YOKAI祭2026",
+              "disposition": "duplicate",
+              "event_id": "evt-1580-w38-2026-01"
+            },
+            {
+              "title": "太秦時代劇100年 撮影バックストーリー",
+              "disposition": "duplicate",
+              "event_id": "evt-1580-w38-2026-02"
+            },
+            {
+              "title": "妖怪VS仮面ライダーマイス",
+              "disposition": "duplicate",
+              "event_id": "evt-f5-1580-myth-2026"
+            },
+            {
+              "title": "きつね面のお絵描き体験",
+              "disposition": "duplicate",
+              "event_id": "evt-f5-1580-kitsunemen-2026"
+            },
+            {
+              "title": "キャプテン・オメガホーン撮影会",
+              "disposition": "duplicate",
+              "event_id": "evt-f5-1580-omegahorn-photo-session-2026"
+            },
+            {
+              "title": "名探偵プリキュア！ キュアアンサー・キュアミスティック ハイタッチ会",
+              "disposition": "duplicate",
+              "event_id": "evt-f5-1580-precure-high-touch-2026"
+            },
+            {
+              "title": "冬ねぶた祭り",
+              "disposition": "hold",
+              "reason": "12/19～2027/2/28は公式確認。行列の実施日/時刻、天候中止、幼児観覧の具体条件は未公表。秋YOKAIの条件を転用しない。"
+            },
+            {
+              "title": "レアケース",
+              "disposition": "not_adopted",
+              "reason": "公式で中学生未満入場不可、夜の怪談80分。幼児家族イベントには採用しない。"
+            },
+            {
+              "title": "太秦江戸酒場～雪夜の宴～",
+              "disposition": "not_adopted",
+              "reason": "公式で乳幼児を含む20歳未満入場不可。"
+            },
+            {
+              "title": "YOKAI仮装パレード行進",
+              "disposition": "hold",
+              "reason": "11月分の申込も10/23正午で終了、当日受付なし。一般観覧は既存に保持。"
+            },
+            {
+              "title": "妖怪サミット2026",
+              "disposition": "duplicate",
+              "event_id": "evt-1580-w38-2026-01",
+              "reason": "既存YOKAI祭の構成企画。地域資源活用の3時間専門トークを独立した幼児向け催事として追加しない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 1583,
+          "disposition": "candidate_found_added",
+          "assessment": "TLS検証は維持しWindows Schannelによる公式本文取得で復旧。企画展・特別イベント・サイエンストーク・祭典・投映番組/時刻/料金・新着・共催/観望/自然観察/実験/工作/標本/フェス全メニューを内容評価。既存7件を再確認、本日受付開始の観望会1件追加。共催・自然・工作・標本・過年度フェスはいずれも終了。",
+          "refresh": [
+            "evt-1583-w38-2026-01",
+            "evt-1583-w38-2026-03",
+            "evt-1583-w38-2026-04",
+            "evt-1583-w38-2026-05",
+            "evt-1583-w38-2026-06",
+            "evt-1583-w38-2026-08",
+            "evt-1583-w38-2026-09"
+          ],
+          "updates": [
+            {
+              "id": "evt-1583-w38-2026-09",
+              "source_checked_at": "2026-10-28",
+              "reservation_label": "通常投映は当日券（満席時不可）。11/15字幕付き投映の事前募集は終了、予約席以外は当日通常販売。",
+              "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。原則木曜休館、年末年始休館。11/11～12全投映休止。やさしいは9～11月秋・12～2月冬。楽しいは9月月のうさぎ、10月てんにのぼったしょうねん、11月ペルセウス、12/1～25オーロラ、12/26・27と1月おうし座。じっくりは10/21まで航海術、10/23～1/27銀河。11/15は11:30と13:00・16:00に字幕付き特別投映、一般当日販売席あり。聞こえに困りのある方の予約は10/1～15受付予定。遅刻入場不可。楽しい投映は2月ほしになったふたご、3月てんごくのばしゃひき。やさしいは3月から春の星。3/9～11全投映休止、3/14の16時は休止。1/29以降のじっくり新番組の詳細は未発表のため本案内の対象外。 2026-10-17再確認：企画展・特別イベント・博士トーク・科学の祭典・プラネタリウム各公式と入館料を取得して再確認。11/15字幕付き投映は10/17〜24に予約対象者の二次募集、通常当日販売席もあり。1/29以降の新番組は制作中として既存案内から除外を維持。 2026-10-28公式再確認：11/15の二次募集も10/24で終了、通常当日販売席あり。"
+            }
+          ],
+          "add": [
+            {
+              "id": "evt-1583-f8-202611-moon",
+              "facility_id": 1583,
+              "prefecture": "kyoto",
+              "title": "市民天体観望会「満月とすばる食」",
+              "summary": "プラネタリウムで天体解説を聞いた後、天文台の大型望遠鏡などで満月とすばる食を観望する。",
+              "start_date": "2026-11-24",
+              "end_date": "2026-11-24",
+              "date_label": "2026-11-24",
+              "time_label": "18:30～20:30（受付18:00～）",
+              "price_label": "大人500円、中高生200円、小学生100円。現金のみ、割引不可",
+              "reservation_label": "10/28～11/4に京都いつでもコールから申込。100名、応募多数は抽選。1申込5名まで。",
+              "age_label": "小学生以上。小中学生は保護者同伴、幼児は同伴不可",
+              "recommended_for_tags": [
+                "experience",
+                "science"
+              ],
+              "recommended_for_label": "体験を通して学びたい子に",
+              "recommended_for_note": "幼児の同伴はできません。悪天候時は屋内投映へ変更。",
+              "is_free": false,
+              "is_indoor": false,
+              "reservation": "required",
+              "tags": [
+                "体験",
+                "学び"
+              ],
+              "official_url": "https://www.edu.city.kyoto.jp/science/03_event/astronomy-observation.html",
+              "source_urls": [
+                "https://www.edu.city.kyoto.jp/science/03_event/astronomy-observation.html"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式年間要項で日程・料金・本日開始の申込期間と電話/FAX等の参加経路を確認。条件付き参加可能。悪天候時はプラネタリウムの解説・星座探しに変更し返金なし。",
+              "status": "scheduled",
+              "display_priority": 65,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "ゆびでたどる進化のえほん展",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-01"
+            },
+            {
+              "title": "かっとばせ！超巨大空気砲を打とう！！",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-03"
+            },
+            {
+              "title": "トレジャーハンターティララ！お宝を探し出せ！",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-04"
+            },
+            {
+              "title": "遠くまで飛ばせ！かさぶくロケット！",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-05"
+            },
+            {
+              "title": "瀬戸口博士のサイエンストーク 恐竜ってどんな動物？",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-06"
+            },
+            {
+              "title": "第31回 青少年のための科学の祭典 京都大会",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-08"
+            },
+            {
+              "title": "秋冬から春のプラネタリウム 親子で星空を楽しもう",
+              "disposition": "duplicate",
+              "event_id": "evt-1583-w38-2026-09"
+            },
+            {
+              "title": "市民天体観望会「満月とすばる食」",
+              "disposition": "added",
+              "event_id": "evt-1583-f8-202611-moon",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "12/13・20 LEDクリスマスオーナメント",
+              "disposition": "hold",
+              "reason": "申込は11/5～12に開始予定、現時点で参加経路未開放。"
+            },
+            {
+              "title": "2027/1/11 石庭",
+              "disposition": "hold",
+              "reason": "申込は12/1～8、現在未開放。"
+            },
+            {
+              "title": "2027/1/16 ゴムの科学",
+              "disposition": "hold",
+              "reason": "申込は12/8～15、現在未開放。"
+            },
+            {
+              "title": "2027/1/23 虫たちの作戦",
+              "disposition": "hold",
+              "reason": "申込は12/15～22、現在未開放。"
+            },
+            {
+              "title": "2027/1/29 星雲と星団",
+              "disposition": "hold",
+              "reason": "申込は1/5～12、現在未開放。"
+            },
+            {
+              "title": "2027/3/5 惑星と冬の星空",
+              "disposition": "hold",
+              "reason": "申込は1/26～2/2、現在未開放。"
+            },
+            {
+              "title": "1/29以降じっくり新番組「星空と音楽」",
+              "disposition": "hold",
+              "reason": "公式が鋭意制作中と明記。内容未確定。"
+            },
+            {
+              "title": "トワイライト12/18・19、3/19・20",
+              "disposition": "not_adopted",
+              "reason": "中学生以下入場不可の大人向け投映。12月申込も11/17開始前。"
+            }
+          ]
+        },
+        {
+          "facility_id": 1600,
+          "disposition": "no_current_or_future_event",
+          "assessment": "旧運営ドメインDNS失敗を2回確認。公式市fallback本文で旧・竜王こどもの王国は2025/3/31閉所、4月から民間運営へ移行しリニューアル予定と確認。旧施設の現在/将来催事はない。新運営施設への同一性・名称更新はFacilityOps判断へ信号、施設データには触れない。",
+          "facility_candidate_signal": {
+            "name": "旧竜王こどもの王国の民間運営移行",
+            "reason": "市公式が2025/3閉所とウッドデザインパークへの移行を明示。施設レコードと公式URLの同一性整理が必要。"
+          }
+        },
+        {
+          "facility_id": 1644,
+          "disposition": "candidate_found_added",
+          "assessment": "現行公式一覧の全掲載を確認し、体験/展示/公演候補14件を各詳細へ進んで判断。主催者の無料参加条件も追跡し、新規英語体験とクイズラリーの2件追加、未受付/季節必要情報/料金や在庫未確認は個別HOLD、単なる物販/割引/施設運営案内は除外。既存のcurrent/futureイベントは0件。",
+          "registry_url": "https://kyoto.aeonmall.jp/event",
+          "add": [
+            {
+              "id": "evt-1644-f8-english",
+              "facility_id": 1644,
+              "prefecture": "kyoto",
+              "title": "親子で遊ぼう♪わくわくえいごＰＡＲＫ",
+              "summary": "小さな子ども向けに、映像の英語ショーやトイストーリーのフォトブース、巨大絵本を楽しむ。",
+              "start_date": "2026-11-25",
+              "end_date": "2026-11-26",
+              "date_label": "2026-11-25・2026-11-26",
+              "time_label": "10:00～17:00。映像英語ショーは11:00・13:30・15:30（各約20分）",
+              "price_label": "参加無料",
+              "reservation_label": "予約不要。Sakura館1階センターコートへ。",
+              "age_label": "小さな子どもと保護者",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "映像のショーです。小さなお子さま向け。",
+              "is_free": true,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://kyoto.aeonmall.jp/event/77e2423e-0454-4ce8-957c-a9b71684197f",
+              "source_urls": [
+                "https://kyoto.aeonmall.jp/event/77e2423e-0454-4ce8-957c-a9b71684197f"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28に公式の10/27更新案内で日程・会場・無料・予約不要を確認。通常参加可能。ワールド・ファミリー提供、ショーは映像。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null,
+              "occurrence_dates": [
+                "2026-11-25",
+                "2026-11-26"
+              ]
+            },
+            {
+              "id": "evt-1644-f8-nyanko",
+              "facility_id": 1644,
+              "prefecture": "kyoto",
+              "title": "にゃんこ大パーティー！館内クイズラリー",
+              "summary": "館内4か所のクイズパネルを探して、にゃんこ大戦争の問題に挑戦。参加者には限定ペーパークラフト。バルーンや顔はめパネルも登場。",
+              "start_date": "2026-11-06",
+              "end_date": "2026-11-23",
+              "date_label": "2026-11-06～2026-11-23",
+              "time_label": "10:00～18:00",
+              "price_label": "参加無料",
+              "reservation_label": "クイズラリーは参加無料。Sakura館4階フードフォレスト前の会場で案内。カード工作は台紙購入が必要。",
+              "age_label": "子どもから大人まで",
+              "recommended_for_tags": [
+                "experience"
+              ],
+              "recommended_for_label": "親子で体験を楽しみたい方に",
+              "recommended_for_note": "クイズラリーは無料。カード工作や物販は別料金。",
+              "is_free": true,
+              "is_indoor": true,
+              "reservation": "not_required",
+              "tags": [
+                "体験"
+              ],
+              "official_url": "https://kyoto.aeonmall.jp/event/a93d44a3-e7db-4df8-820d-bdb6b0bc0d4b",
+              "source_urls": [
+                "https://kyoto.aeonmall.jp/event/a93d44a3-e7db-4df8-820d-bdb6b0bc0d4b",
+                "https://www.village-v.co.jp/popup/031531/"
+              ],
+              "source_checked_at": "2026-10-28",
+              "source_notes": "2026-10-28にモールと主催者公式で会場・日程・クイズラリー無料参加を確認。通常参加可能。有料のオリジナルカード工作と物販は無料ラリーの条件に混同しない。",
+              "status": "scheduled",
+              "display_priority": 60,
+              "image": null
+            }
+          ],
+          "candidates": [
+            {
+              "title": "親子で遊ぼう♪わくわくえいごＰＡＲＫ",
+              "disposition": "added",
+              "event_id": "evt-1644-f8-english",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ワンワンとハイポーズ",
+              "disposition": "hold",
+              "reason": "11/23開催、無料抽選。応募11/1～9で現在未受付。"
+            },
+            {
+              "title": "HALLOWEEN ZOMBIE HOUSE",
+              "disposition": "hold",
+              "reason": "10/30無料当日参加だが恐怖・大音響・暗所演出を明示。季節行事の荒天中止扱いも未確認。"
+            },
+            {
+              "title": "HALLOWEEN WONDER LAND",
+              "disposition": "hold",
+              "reason": "10/31無料・整理券なし・ゾンビなしは確認。季節行事の荒天時扱いを公式本文で確認できない。"
+            },
+            {
+              "title": "ハロウィンタトゥーシール＆フォト",
+              "disposition": "hold",
+              "reason": "上記2イベント参加者限定（シールは3歳未満/肌の弱い人不可）。同じ季節行事の荒天時扱い未確認のため関連企画をまとめてHOLD。"
+            },
+            {
+              "title": "ピカチュウサンバイザー",
+              "disposition": "hold",
+              "reason": "10/31先着400枚は確認。季節キャンペーンで荒天時扱い・変更告知確認先が不明。"
+            },
+            {
+              "title": "微わかる展２＋小さいすぎるよ展",
+              "disposition": "hold",
+              "reason": "9/13～11/15・平日1800/休日2100円は確認、10/28休業。チケット予約と子ども料金/入場制限の現況未確認。"
+            },
+            {
+              "title": "にゃんこ大パーティー オリジナルキャラカード工作",
+              "disposition": "hold",
+              "reason": "主催者公式で台紙購入が必要と確認。台紙価格が未掲載のため工作部分のみHOLD。無料クイズラリーは別途採用。"
+            },
+            {
+              "title": "重ねて完成スタンプラリー",
+              "disposition": "hold",
+              "reason": "3/1から台紙なくなり次第終了。終了日と現在の台紙有無を確定できない。"
+            },
+            {
+              "title": "きょうとプレコンDAYS",
+              "disposition": "hold",
+              "reason": "11/1予約不要のぬり絵/紙芝居11:30～13:00は確認。家族体験の参加料金が本文で明示されず、トークの抽選申込は10/12終了。"
+            },
+            {
+              "title": "榎田一王・表すみれトーク",
+              "disposition": "not_adopted",
+              "reason": "Z世代向け芸能トークで、幼児が参加できるだけでは強い家族体験と判断しない。"
+            },
+            {
+              "title": "南区元気いっぱいプロジェクト",
+              "disposition": "not_adopted",
+              "reason": "健康長寿の一般向け体操で、子どもの参加対象・家族内容が未提示。"
+            },
+            {
+              "title": "SATURDAY MUSIC NIGHT",
+              "disposition": "not_adopted",
+              "reason": "カフェの恒常土曜夜音楽サービス。施設の通常営業と区別して新規期間限定催事にしない。"
+            },
+            {
+              "title": "にゃんこ以外の物販・抽選・割引類",
+              "disposition": "not_adopted",
+              "reason": "ゴジラストア/POP MART/ベネッセ抽選/しなこ抽選/イオンドリーム/カメレオン/アプリ/ポイント/無印/BlackFriday/MyAutumn/HAPPYHOURは販売促進、出入口や臨時営業/朝食/学生募集/モルナビは運営案内。来場型家族体験とは扱わない。"
+            },
+            {
+              "title": "にゃんこ大パーティー！館内クイズラリー",
+              "disposition": "added",
+              "event_id": "evt-1644-f8-nyanko",
+              "participability": "通常参加可能"
             }
           ]
         }
