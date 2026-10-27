@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-D-PART-11",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-27T11:09:07.217567+00:00",
+  "executed_at": "2026-10-27T11:18:16.656045+00:00",
   "horizon_end_date": "2026-12-22",
   "per_region": {
     "niigata": {
@@ -4669,7 +4669,7 @@
           "reason": "merged base+Summerの同一会場・同一会期の既存レコード。",
           "event_id": "evt-639-w38-train-photo",
           "report_category": "facility_event",
-          "visibility_resolution": "Current-run official recheck persisted as source_checked_at=2026-10-27; requires final rendered Preview/Production verification."
+          "visibility_resolution": "Current-run primary recheck persisted as 2026-10-27. Actual rendered Preview verified 2026-10-27T11:16:41.964326+00:00; Production result is recorded in the terminal handoff."
         },
         {
           "title": "2026年の越後妻有",
@@ -6501,13 +6501,27 @@
           "status": 200,
           "checked_at": "2026-10-27T10:40:17.227204+00:00",
           "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://koyo.walkerplus.com/detail/ar1044e154797/",
+          "status": 200,
+          "checked_at": "2026-10-27T11:14:54.800509+00:00",
+          "qa_followup": "Resolve the dated light-up mentioned inside the already-surfaced Yabakei foliage listing.",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://www.city-nakatsu.jp/doc/2026101500100",
+          "status": 200,
+          "checked_at": "2026-10-27T11:15:15.478508+00:00",
+          "qa_followup": "Official resolution of dated light-up within already-surfaced foliage candidate.",
+          "source_type": "area_event_calendar"
         }
       ],
-      "candidates_found": 261,
+      "candidates_found": 262,
       "added": 18,
       "duplicate_or_already_present": 7,
-      "hold": 90,
-      "stale_false": 146,
+      "hold": 92,
+      "stale_false": 145,
       "candidates": [
         {
           "title": "2 宝泉寺温泉郷　冬花火",
@@ -7300,7 +7314,7 @@
           "event_id": "evt-oita-harmonyland-halloween-20260918",
           "official_url": "https://www.harmonyland.jp/sp/halloween2026/index.html",
           "report_category": "fireworks_festival_seasonal",
-          "visibility_resolution": "Current-run official recheck persisted as source_checked_at=2026-10-27; requires final rendered Preview/Production verification."
+          "visibility_resolution": "Current-run primary recheck persisted as 2026-10-27. Actual rendered Preview verified 2026-10-27T11:16:41.964326+00:00; Production result is recorded in the terminal handoff."
         },
         {
           "title": "くじゅう＆ユネスコエコパーク体感スタンプラリー",
@@ -7689,12 +7703,24 @@
           "report_category": "municipal_regional"
         },
         {
-          "title": "耶馬渓の紅葉",
+          "title": "溪石園ライトアップ2026",
           "url": "https://www.walkerplus.com/event/ar1044e154797/",
           "source_type": "area_event_calendar",
-          "disposition": "stale_false",
-          "reason": "自然の紅葉見頃の概数案内で、確定した日程の開催イベントとして採用しない。個別のライトアップ/祭りは別候補として確認。",
-          "report_category": "fireworks_festival_seasonal"
+          "disposition": "hold",
+          "reason": "市の2026/10/20一次告知で11/6～12/6・17～21時・無料を確認。夜間季節行事の悪天候/延期対応と交通影響・安全導線の必須事項が揃わない。",
+          "official_url": "https://www.city-nakatsu.jp/doc/2026101500100",
+          "report_category": "fireworks_festival_seasonal",
+          "qa_followup": "Dated light-up resolved separately from natural foliage estimates."
+        },
+        {
+          "title": "ひさしもみじライトアップ2026",
+          "url": "https://www.walkerplus.com/event/ar1044e154797/",
+          "source_type": "area_event_calendar",
+          "disposition": "hold",
+          "reason": "市の2026/10/20一次告知で11/6～12/6・17～21時・無料を確認。夜間季節行事の悪天候/延期対応と交通影響・安全導線の必須事項が揃わない。",
+          "official_url": "https://www.city-nakatsu.jp/doc/2026101500100",
+          "report_category": "fireworks_festival_seasonal",
+          "qa_followup": "Dated light-up resolved separately from natural foliage estimates."
         },
         {
           "title": "ことといの里の紅葉",
@@ -8198,7 +8224,7 @@
           "event_id": "evt-oita-harmonyland-halloween-20260918",
           "official_url": "https://www.harmonyland.jp/sp/halloween2026/index.html",
           "report_category": "municipal_regional",
-          "visibility_resolution": "Current-run official recheck persisted as source_checked_at=2026-10-27; requires final rendered Preview/Production verification."
+          "visibility_resolution": "Current-run primary recheck persisted as 2026-10-27. Actual rendered Preview verified 2026-10-27T11:16:41.964326+00:00; Production result is recorded in the terminal handoff."
         },
         {
           "title": "Oちゃん、キミはだあれ？　松永真のデザインと大分市美術館のこれから",
@@ -8733,7 +8759,7 @@
           "report_category": "municipal_regional"
         }
       ],
-      "pages_fetched": 244,
+      "pages_fetched": 246,
       "paging_stop_reason": "listing_exhausted"
     }
   }
