@@ -1,0 +1,1818 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-15",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-28T11:00:21.338Z",
+  "process_started_at": "2026-10-28T10:47:56.2907406Z",
+  "prior_run_numbers_reused_as_execution": false,
+  "due_facility_ids": [
+    10,
+    12,
+    13,
+    14,
+    15,
+    17,
+    18,
+    19,
+    20,
+    21,
+    23,
+    24,
+    25,
+    33,
+    38,
+    39,
+    40,
+    41,
+    42,
+    152,
+    153,
+    189,
+    208,
+    210,
+    211,
+    213,
+    214,
+    941,
+    944,
+    945,
+    2039,
+    2042,
+    2045,
+    2047,
+    2048,
+    2049,
+    2052,
+    2055,
+    2056,
+    2059
+  ],
+  "aggregate": {
+    "total": 10,
+    "no_current_or_future_event": 1,
+    "candidate_found_added": 4,
+    "candidate_found_duplicate": 2,
+    "candidate_found_hold": 1,
+    "source_unresolved": 2
+  },
+  "per_region": {
+    "shizuoka": {
+      "facility_ids": [
+        10,
+        12,
+        13,
+        14,
+        15,
+        17,
+        18,
+        19,
+        20,
+        21,
+        23,
+        24,
+        25,
+        33,
+        38,
+        39,
+        40,
+        41,
+        42,
+        152,
+        153,
+        189,
+        208,
+        210,
+        211,
+        213,
+        214,
+        941,
+        944,
+        945,
+        2039,
+        2042,
+        2045,
+        2047,
+        2048,
+        2049,
+        2052,
+        2055,
+        2056,
+        2059
+      ],
+      "total": 40,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 4,
+      "candidate_found_duplicate": 2,
+      "candidate_found_hold": 1,
+      "source_unresolved": 2,
+      "sources_checked": [
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:50:53.625Z",
+          "final_url": "https://www.nhdzoo.jp/event/",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "dc08727a137631e514e67dc88db34cd8803ed2f275af6b633daf14e7bd306df4"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/naka.php?id=632&y=2026&m=10&p=2",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.325Z",
+          "final_url": "https://www.nhdzoo.jp/event/naka.php?id=632&y=2026&m=10&p=2",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "f4733e459af35d1f230ce1a3c16256b2aca4594fda058d16465722e1593263b1"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/naka.php?id=609&y=2026&m=10&p=3",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.500Z",
+          "final_url": "https://www.nhdzoo.jp/event/naka.php?id=609&y=2026&m=10&p=3",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "d6ea2411d8d5a75de72a8caac92932d3d80c74efeae42af5719b3a85bdc96f03"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.631Z",
+          "final_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "bf6234d275031880125e0e2ef7f3ee41725fc94fdbca241afbacbfb756242bb4"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/naka.php?id=629&y=2026&m=10&p=1",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.670Z",
+          "final_url": "https://www.nhdzoo.jp/event/naka.php?id=629&y=2026&m=10&p=1",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "a204e5ca571c9f5998f85cfe749c59f0639955ea5f011b6031d4cd835e3716eb"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/event/index.php?y=2026&m=11",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.702Z",
+          "final_url": "https://www.nhdzoo.jp/event/index.php?y=2026&m=11",
+          "title": "静岡市立 日本平動物園｜イベント情報",
+          "text_sha256": "41fcb20c6453e1ed70a72ee10f93c21d2fb1b508ff6488b2dc9f0b287b7a44af"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/info/index.php",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:02.756Z",
+          "final_url": "https://www.nhdzoo.jp/info/index.php",
+          "title": "静岡市立 日本平動物園｜総合案内",
+          "text_sha256": "df36e38a9c0c03ea9ff8178f2e3b45adeb4184e60e3fc6a83182621144757ac8"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/news/naka.php?id=1669",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:09.841Z",
+          "final_url": "https://www.nhdzoo.jp/news/naka.php?id=1669",
+          "title": "静岡市立 日本平動物園｜お知らせ",
+          "text_sha256": "ff25d90e568c69460c475be14d9d3a18880bc518bfe4ce3223e0b8198e487ed8"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:09.991Z",
+          "final_url": "https://www.nhdzoo.jp/news/",
+          "title": "静岡市立 日本平動物園｜お知らせ",
+          "text_sha256": "15d562ae52104d4091ff5c40439f612e3f1898aef9806630f834bfd074c47306"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/news/naka.php?id=2198&p=4",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:25.251Z",
+          "final_url": "https://www.nhdzoo.jp/news/naka.php?id=2198&p=4",
+          "title": "静岡市立 日本平動物園｜お知らせ",
+          "text_sha256": "71c77fd1bc3bee9ff280fdb9c4791042a6d44f708811f661ff6944afc92b0ae3"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://www.nhdzoo.jp/news/naka.php?id=2191&p=2",
+          "status": 200,
+          "checked_at": "2026-10-28T10:51:25.404Z",
+          "final_url": "https://www.nhdzoo.jp/news/naka.php?id=2191&p=2",
+          "title": "静岡市立 日本平動物園｜お知らせ",
+          "text_sha256": "a7a6e54e2943c6d37dd0eaaec5782763593ce09e02f1e9319c537242b7490e59"
+        },
+        {
+          "facility_id": 10,
+          "url": "https://logoform.jp/form/79j2/1802192",
+          "status": 403,
+          "checked_at": "2026-10-28T10:51:29.836Z",
+          "final_url": "https://logoform.jp/form/79j2/1802192",
+          "title": "Just a moment...",
+          "text_sha256": "05f8bdf19ca64ec98ac31c13061fb810966197580390f0688c67e092c21b5a3f"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:00.788Z",
+          "final_url": "https://k-hana-tori.com/event/",
+          "title": "通常イベント案内",
+          "text_sha256": "913b37ecd1001e47051604cbaeb88f34e6d9db12bb255928c2588eff1fabf5e8"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/new/special-events/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:15.255Z",
+          "final_url": "https://k-hana-tori.com/special-events/",
+          "title": "特別イベント",
+          "text_sha256": "7042dfc0c6b959715f36f4828454f343343cab24e2e799ca1c8052d8befbc526"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/new/information",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:15.833Z",
+          "final_url": "https://k-hana-tori.com/information/",
+          "title": "総合案内",
+          "text_sha256": "aad371814d08c9537df778204f7246b42846505cd15ce7c5ef8da14033f94c64"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/2026/07/01/23thphoto/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:16.123Z",
+          "final_url": "https://k-hana-tori.com/2026/07/01/23thphoto/",
+          "title": "第23回 掛川花鳥園写真コンテスト 開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+          "text_sha256": "05108640c4d56fa9990fcb52518cc3e4cf3086f673dc5f92371f00b2bbcb0a8c"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/2026/10/19/cactus2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:24.134Z",
+          "final_url": "https://k-hana-tori.com/2026/10/19/cactus2026/",
+          "title": "サボテン・多肉植物展2026 ～サボテン・多肉植物の魅力～ 開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+          "text_sha256": "a8add7902e591dcd8bf50bb8a9860720efeddc48079d358452c735deb9432e71"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/new/wp-content/uploads/2026/10/10譛医・POP-scaled.jpg",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:24.438Z",
+          "final_url": "https://k-hana-tori.com/new/wp-content/uploads/2026/10/10%E8%AD%9B%E5%8C%BB%E3%83%BBPOP-scaled.jpg",
+          "title": "",
+          "text_sha256": "e6fb24ce9f02f377d801757701dbf0cc91c6814dc2fd7d8cc9ee18887311f501"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/new/wp-content/uploads/2026/08/9月完成-scaled.jpg",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:32.424Z",
+          "final_url": "https://k-hana-tori.com/new/wp-content/uploads/2026/08/9%E6%9C%88%E5%AE%8C%E6%88%90-scaled.jpg",
+          "title": "",
+          "text_sha256": "a8978af5ee7363a3ac786e282c30edb37d5d77a1f496064ee4f232e119725247"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/2026/10/15/bonsaiten13th/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:32.667Z",
+          "final_url": "https://k-hana-tori.com/2026/10/15/bonsaiten13th/",
+          "title": "第13回目「盆栽展」開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+          "text_sha256": "001fefa10f5afd706dafcc173d175bed60cfba9f36a4dbfd729094a1fd24ba36"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/2026/10/26/felling2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:32.899Z",
+          "final_url": "https://k-hana-tori.com/2026/10/26/felling2026/",
+          "title": "園内作業に伴うエミュー牧場の一時閉鎖のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+          "text_sha256": "3c67f5c365590254586d695ddddc59478dbfb8aa25a3e0e4666069b513ad0780"
+        },
+        {
+          "facility_id": 12,
+          "url": "https://k-hana-tori.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:52:33.070Z",
+          "final_url": "https://k-hana-tori.com/",
+          "title": "[掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+          "text_sha256": "bf333848a3cad8c3d0a18309074a502b29c67c3fa14f4735ad8798a5840a695e"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/news/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:05.124Z",
+          "final_url": "https://www.fujisafari.co.jp/news/event/",
+          "title": "イベント - 富士サファリパーク 公式サイト",
+          "text_sha256": "b03a6012280e4258e4491b6e0e8bffc1ccf9323ab21d6849e9d4cff3ee65c9cd"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/tour-safari/adventure/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:43.960Z",
+          "final_url": "https://www.fujisafari.co.jp/tour-safari/adventure/",
+          "title": "アドベンチャーツアー - 富士サファリパーク 公式サイト",
+          "text_sha256": "bf7fb42a9fd2ffc70a4abf449a7ee8f1da3e73a8d4af52a4add1621f5a59ba41"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/news/event/485775/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:44.988Z",
+          "final_url": "https://www.fujisafari.co.jp/news/event/485775/",
+          "title": "「バイソンの日」ジャングルバス特別ツアー！（10月31日〜11月8日） - 富士サファリパーク 公式サイト",
+          "text_sha256": "d62936ccce7a124757e89b62650eedb778b2863d363071a8d313f156ef13f199"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/news/event/485801/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:45.860Z",
+          "final_url": "https://www.fujisafari.co.jp/news/event/485801/",
+          "title": "「世界キツネザルの日・特別イベント」開催！（10月24日～31日） - 富士サファリパーク 公式サイト",
+          "text_sha256": "5f9c77a8f9496b04263d7622eedaca1e14a75663066734a769002c6c910ec331"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/news/event/485821/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:46.855Z",
+          "final_url": "https://www.fujisafari.co.jp/news/event/485821/",
+          "title": "体験型図鑑アプリ「Earth Saver Quest」サービス開始！（10月31日から） - 富士サファリパーク 公式サイト",
+          "text_sha256": "fb7a4d5c189c8491e278c18cd8352e68785765c1cfbfadd54b829c9b2f94610e"
+        },
+        {
+          "facility_id": 13,
+          "url": "https://www.fujisafari.co.jp/news/event/485287/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:53:48.492Z",
+          "final_url": "https://www.fujisafari.co.jp/news/event/485287/",
+          "title": "第24回・富士山ぐるりんコンテスト開催中！ - 富士サファリパーク 公式サイト",
+          "text_sha256": "1daf583d86050f5aa0bdb51f155a86a64cb8fa5f596cfb7854c1f4d8b3f5acaf"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:54:21.075Z",
+          "final_url": "https://izushaboten.com/",
+          "title": "",
+          "text_sha256": "31025f453066b6828143010b22ae616d8e14ce5102f66eaf1f9dac15b1ed3a3a"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-28T10:54:30.080Z",
+          "final_url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+          "title": "",
+          "text_sha256": "4f432eb4559412e4b82dd416e9a063c573b439d738c9a590dc998c4a7177742c"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-28T10:54:30.330Z",
+          "final_url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+          "title": "",
+          "text_sha256": "baaf6a8f980454d05dea142ee766269a5ee184ba5b0835608bc414e9fe364fd6"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:54:30.462Z",
+          "final_url": "https://izushaboten.com/news/",
+          "title": "",
+          "text_sha256": "2adf8573c1932c5ffcc3f6c78d5914041e14807fb68a752558d28772a6a53477"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:54:42.703Z",
+          "final_url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+          "title": "",
+          "text_sha256": "62f3e5133a34c506ad9b3abf0782031ba671001efd78367a95efa813a7448ca8"
+        },
+        {
+          "facility_id": 14,
+          "url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:54:42.884Z",
+          "final_url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+          "title": "",
+          "text_sha256": "940e78702119eaee21728fb0f02bc35a8fcc0564fb3e2df68d06cdffc7836a46"
+        },
+        {
+          "facility_id": 15,
+          "url": "https://anitouch.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:54:53.614Z",
+          "final_url": "https://www.anitouch.jp/",
+          "title": "",
+          "text_sha256": "4cd5d17e09dc912353d38b38375bbcff4d33874704220fd5fbf7732574704810"
+        },
+        {
+          "facility_id": 15,
+          "url": "https://shizuoka.anitouch.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:55:02.005Z",
+          "final_url": "https://www.shizuoka.anitouch.com/",
+          "title": "",
+          "text_sha256": "46ac1488d7c632f0139661167799c4eaaa3e8ffb1a36b7635d6bea03e36bd124"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:55:23.803Z",
+          "final_url": "https://shimoda-aquarium.com/",
+          "title": "",
+          "text_sha256": "cc6ae91ec4592473d0e4aa0ab8870742d589904523786eb3f5e0b09d46321379"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/2026-event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:55:30.180Z",
+          "final_url": "https://shimoda-aquarium.com/2026-event/",
+          "title": "",
+          "text_sha256": "96ccf661745da12fcc119e1425e376951300b992467a668c336f73c6fa9f63b8"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/information/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:56:14.091Z",
+          "final_url": "https://shimoda-aquarium.com/information/",
+          "title": "",
+          "text_sha256": "14bd622e6b172aae6d258d14f30b9a05f9f0ff78dd240fc231eef8c94188e065"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/information/fee-business-hours/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:56:31.784Z",
+          "final_url": "https://shimoda-aquarium.com/information/fee-business-hours/",
+          "title": "",
+          "text_sha256": "e0ca78b59d4db0c197e20d17bbd672fe9dc2355e18d1f5b1535f6f6fde98f8d6"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/information/access/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:56:32.431Z",
+          "final_url": "https://shimoda-aquarium.com/information/access/",
+          "title": "",
+          "text_sha256": "d96571c33b54d7261b592eb9b8f4635ef5c3df7d6a7ae4284b1db1dfb03e3464"
+        },
+        {
+          "facility_id": 17,
+          "url": "https://shimoda-aquarium.com/information/information-2/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:56:32.721Z",
+          "final_url": "https://shimoda-aquarium.com/information/information-2/",
+          "title": "",
+          "text_sha256": "04804b085d09622d6c0dc0e510d2905bee9a0005895e38627593066888b64988"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:03.301Z",
+          "final_url": "https://www.mitosea.com/",
+          "title": "",
+          "text_sha256": "164139f1db5dc50acc58ba83631f3ddd1e2d02cad2046f2e1c47d446aefad044"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1826",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:09.846Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1826",
+          "title": "",
+          "text_sha256": "736bc10c17a08c35f945f5183c4e51bf0d75ec69134603ccf639976ed15cde9d"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1870",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:10.122Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1870",
+          "title": "",
+          "text_sha256": "f52dd04bfc4138058d8d691f994f56d43cb7c4fa5accd087f0a5dc77c86136e3"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1839",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:10.257Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1839",
+          "title": "",
+          "text_sha256": "7ae04b78bd199cbfe8303082b5d120df57d4a9256eee0288a9cb2df11c5b4e40"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1656",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:10.422Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1656",
+          "title": "",
+          "text_sha256": "f7872b97d35b16377364b0fb3c7f290891a316aabc7d600d345e4eec2e8271b9"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1640",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:10.566Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1640",
+          "title": "",
+          "text_sha256": "3720908575fd067212683ce898190e7c46ab0f0b108167b2a79a98d190bdd2fc"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/page.jsp?id=1864",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:10.695Z",
+          "final_url": "https://www.mitosea.com/page.jsp?id=1864",
+          "title": "",
+          "text_sha256": "e360b8ceefc75ff5e5c487dd866c0794caa8618cd444459f28a881e1d7111290"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/file.jsp?id=1845",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:24.776Z",
+          "final_url": "https://www.mitosea.com/file.jsp?id=1845",
+          "title": "",
+          "text_sha256": "9860a6a6fc4ee7f8b33e83eba7dbdb3388f1ab2111b044206cef4d4bf9e4604c"
+        },
+        {
+          "facility_id": 18,
+          "url": "https://www.mitosea.com/file.jsp?id=1865",
+          "status": 200,
+          "checked_at": "2026-10-28T10:57:25.008Z",
+          "final_url": "https://www.mitosea.com/file.jsp?id=1865",
+          "title": "",
+          "text_sha256": "c7a4e7b64fd3e82059d035be680d169a3c6fc59f625014a42903b81af9228d59"
+        },
+        {
+          "facility_id": 19,
+          "url": "http://www.marinepark.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:58:30.295Z",
+          "final_url": "https://www.marinepark.jp/",
+          "title": "",
+          "text_sha256": "37b1e942c97f98f91c7216265e3ade8e9c8d36f499a4a8006541cdd0fdd6bc0b"
+        },
+        {
+          "facility_id": 19,
+          "url": "https://www.marinepark.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:58:37.337Z",
+          "final_url": "https://www.marinepark.jp/event/",
+          "title": "",
+          "text_sha256": "8a217e3f02b171cbe75f584e5b03ecae8f13c8c38e226258c20700e1f0a411cd"
+        },
+        {
+          "facility_id": 19,
+          "url": "https://www.marinepark.jp/enjoy/information/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:58:37.494Z",
+          "final_url": "https://www.marinepark.jp/enjoy/information/",
+          "title": "",
+          "text_sha256": "5a4d0afbef0792ab1c2f18806e7d818b92beb8e2a1ab664aa7f40e23ec041347"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://ulotto.entetsuassist-dms.com/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:58:56.098Z",
+          "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+          "title": "",
+          "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://ulotto.entetsuassist-dms.com/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:59:15.673Z",
+          "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+          "title": "",
+          "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://ulotto.entetsuassist-dms.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:59:16.958Z",
+          "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+          "title": "",
+          "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://www.city.hamamatsu.shizuoka.jp/nousei/ulotto.html",
+          "status": 404,
+          "checked_at": "2026-10-28T10:59:17.809Z",
+          "final_url": "https://www.city.hamamatsu.shizuoka.jp/nousei/ulotto.html",
+          "title": "ご指定のページは見つかりませんでした／浜松市",
+          "text_sha256": "2ff4c5e88ef04a2c45ec8bda2d1cc59d809f8f519089b77e1b5be41de47f3bc9"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://www.manabi.pref.shizuoka.jp/info/32269?from=list&keyword=0",
+          "status": 503,
+          "checked_at": "2026-10-28T10:59:35.099Z",
+          "final_url": "https://www.manabi.pref.shizuoka.jp/info/32269?from=list&keyword=0",
+          "title": "旧サイトから新サイトへの切替えについて｜まなぼっと - 静岡県生涯学習情報発信システム",
+          "text_sha256": "8c123461d66287f75887a75e1c4ce29486cb993ba42fb256dca5719bb5d31345"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://www.manabi.pref.shizuoka.jp/info/32270?courseCategories%5B0%5D=child&from=list&user_id=42B9B49AE13A3C1A63AD",
+          "status": 503,
+          "checked_at": "2026-10-28T10:59:35.309Z",
+          "final_url": "https://www.manabi.pref.shizuoka.jp/info/32270?courseCategories%5B0%5D=child&from=list&user_id=42B9B49AE13A3C1A63AD",
+          "title": "旧サイトから新サイトへの切替えについて｜まなぼっと - 静岡県生涯学習情報発信システム",
+          "text_sha256": "8c123461d66287f75887a75e1c4ce29486cb993ba42fb256dca5719bb5d31345"
+        },
+        {
+          "facility_id": 20,
+          "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/",
+          "status": 200,
+          "checked_at": "2026-10-28T10:59:35.372Z",
+          "final_url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/",
+          "title": "浜名湖体験学習施設ウォット -  浜松市子育て情報サイト　ぴっぴ",
+          "text_sha256": "d8d248335a6299bc227aee95ee2539b6e88192214eeda4327e5f3fb3cbe71b9e"
+        },
+        {
+          "facility_id": 21,
+          "url": "https://smartaqua-sz.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T11:00:01.418Z",
+          "final_url": "https://smartaqua-sz.jp/news/",
+          "title": "",
+          "text_sha256": "0786bbbe4c06bcbc3ecfaf242f1648a0d1ecfde28c6af3005dcb3eed4dae7c56"
+        },
+        {
+          "facility_id": 21,
+          "url": "https://smartaqua-sz.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T11:00:11.061Z",
+          "final_url": "https://smartaqua-sz.jp/",
+          "title": "",
+          "text_sha256": "5cc96798780d34a5638a07912effa2aa526bb50e9c78f0f374e622929fe308d2"
+        },
+        {
+          "facility_id": 21,
+          "url": "https://smartaqua-sz.jp/news/detail/2026/116.html",
+          "status": 200,
+          "checked_at": "2026-10-28T11:00:11.324Z",
+          "final_url": "https://smartaqua-sz.jp/news/detail/2026/116.html",
+          "title": "",
+          "text_sha256": "488541ee38832ff3b4af129f2527d391f1f72400bec76228ffe603a6c248d8d9"
+        }
+      ],
+      "facility_dispositions": [
+        {
+          "facility_id": 10,
+          "name": "日本平動物園",
+          "disposition": "candidate_found_duplicate",
+          "reason": "10・11月公式一覧と個別・毎日のイベント・最新お知らせを内容確認。既存8件継続、過去5件はended維持。新規3候補は下記の個別理由で採用保留。通常運営告知・動物異動はイベント対象外。",
+          "candidates": [
+            {
+              "title": "ZOOスポットガイド2026",
+              "event_id": "evt-10-w38-zoo-spot-guide",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "レッサーパンダのお食事タイム",
+              "event_id": "evt-10-w38-daily-redpanda",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "シロサイのガイド",
+              "event_id": "evt-10-w38-daily-rhino",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "ゾウのトレーニング",
+              "event_id": "evt-10-w38-daily-elephant",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "ペンギンのガイド",
+              "event_id": "evt-10-w38-daily-penguin",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "小動物とのふれあい",
+              "event_id": "evt-10-w38-small-animal-contact",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "ポニーに乗馬体験",
+              "event_id": "evt-10-w38-pony-ride",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "秋の動物園まつり2026",
+              "event_id": "evt-10-202610-f10-01",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "日本平動物園オータムスクール",
+              "disposition": "hold",
+              "reason": "公式が申込締切10月9日16:30・申し込みは締め切りましたと明記。当日枠記載なし",
+              "url": "https://www.nhdzoo.jp/event/naka.php?id=629&y=2026&m=10&p=1"
+            },
+            {
+              "title": "秋の自然観察会",
+              "disposition": "hold",
+              "reason": "11月1日13時、先着4組の事前フォーム。公式フォームが403で残枠・現在受付を確認できないため参加可能性未確定",
+              "url": "https://www.nhdzoo.jp/news/naka.php?id=2198&p=4"
+            },
+            {
+              "title": "幼児動物教室（令和9年度前期）",
+              "disposition": "hold",
+              "reason": "一般家庭向け参加でなく参加園募集・事前講習済み引率者必須。各開催日未確定、2027年4～7月の団体事業",
+              "url": "https://www.nhdzoo.jp/news/naka.php?id=2191&p=2"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-10-w38-zoo-spot-guide",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=609&y=2026&m=10&p=3"
+            },
+            {
+              "event_id": "evt-10-w38-daily-redpanda",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-w38-daily-rhino",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-w38-daily-elephant",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-w38-daily-penguin",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-w38-small-animal-contact",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-w38-pony-ride",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4"
+            },
+            {
+              "event_id": "evt-10-202610-f10-01",
+              "disposition": "reconfirmed",
+              "reason": "今回取得した公式個別案内で日程・内容・参加条件を再確認",
+              "source_url": "https://www.nhdzoo.jp/event/naka.php?id=632&y=2026&m=10&p=2"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:50:53.625Z",
+              "final_url": "https://www.nhdzoo.jp/event/",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "dc08727a137631e514e67dc88db34cd8803ed2f275af6b633daf14e7bd306df4"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/naka.php?id=632&y=2026&m=10&p=2",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.325Z",
+              "final_url": "https://www.nhdzoo.jp/event/naka.php?id=632&y=2026&m=10&p=2",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "f4733e459af35d1f230ce1a3c16256b2aca4594fda058d16465722e1593263b1"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/naka.php?id=609&y=2026&m=10&p=3",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.500Z",
+              "final_url": "https://www.nhdzoo.jp/event/naka.php?id=609&y=2026&m=10&p=3",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "d6ea2411d8d5a75de72a8caac92932d3d80c74efeae42af5719b3a85bdc96f03"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.631Z",
+              "final_url": "https://www.nhdzoo.jp/event/naka.php?id=1&y=2026&m=10&p=4",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "bf6234d275031880125e0e2ef7f3ee41725fc94fdbca241afbacbfb756242bb4"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/naka.php?id=629&y=2026&m=10&p=1",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.670Z",
+              "final_url": "https://www.nhdzoo.jp/event/naka.php?id=629&y=2026&m=10&p=1",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "a204e5ca571c9f5998f85cfe749c59f0639955ea5f011b6031d4cd835e3716eb"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/event/index.php?y=2026&m=11",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.702Z",
+              "final_url": "https://www.nhdzoo.jp/event/index.php?y=2026&m=11",
+              "title": "静岡市立 日本平動物園｜イベント情報",
+              "text_sha256": "41fcb20c6453e1ed70a72ee10f93c21d2fb1b508ff6488b2dc9f0b287b7a44af"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/info/index.php",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:02.756Z",
+              "final_url": "https://www.nhdzoo.jp/info/index.php",
+              "title": "静岡市立 日本平動物園｜総合案内",
+              "text_sha256": "df36e38a9c0c03ea9ff8178f2e3b45adeb4184e60e3fc6a83182621144757ac8"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/news/naka.php?id=1669",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:09.841Z",
+              "final_url": "https://www.nhdzoo.jp/news/naka.php?id=1669",
+              "title": "静岡市立 日本平動物園｜お知らせ",
+              "text_sha256": "ff25d90e568c69460c475be14d9d3a18880bc518bfe4ce3223e0b8198e487ed8"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:09.991Z",
+              "final_url": "https://www.nhdzoo.jp/news/",
+              "title": "静岡市立 日本平動物園｜お知らせ",
+              "text_sha256": "15d562ae52104d4091ff5c40439f612e3f1898aef9806630f834bfd074c47306"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/news/naka.php?id=2198&p=4",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:25.251Z",
+              "final_url": "https://www.nhdzoo.jp/news/naka.php?id=2198&p=4",
+              "title": "静岡市立 日本平動物園｜お知らせ",
+              "text_sha256": "71c77fd1bc3bee9ff280fdb9c4791042a6d44f708811f661ff6944afc92b0ae3"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://www.nhdzoo.jp/news/naka.php?id=2191&p=2",
+              "status": 200,
+              "checked_at": "2026-10-28T10:51:25.404Z",
+              "final_url": "https://www.nhdzoo.jp/news/naka.php?id=2191&p=2",
+              "title": "静岡市立 日本平動物園｜お知らせ",
+              "text_sha256": "a7a6e54e2943c6d37dd0eaaec5782763593ce09e02f1e9319c537242b7490e59"
+            },
+            {
+              "facility_id": 10,
+              "url": "https://logoform.jp/form/79j2/1802192",
+              "status": 403,
+              "checked_at": "2026-10-28T10:51:29.836Z",
+              "final_url": "https://logoform.jp/form/79j2/1802192",
+              "title": "Just a moment...",
+              "text_sha256": "05f8bdf19ca64ec98ac31c13061fb810966197580390f0688c67e092c21b5a3f"
+            }
+          ]
+        },
+        {
+          "facility_id": 12,
+          "name": "掛川花鳥園",
+          "disposition": "candidate_found_hold",
+          "reason": "公式特別イベント一覧・ホーム新着・10月原寸チラシと個別ページを確認。既存4件継続、盆栽展10/25終了を解決。通常常設イベント・物販・飲食は新規追加対象外。",
+          "candidates": [
+            {
+              "title": "柊くんのホークフライト",
+              "event_id": "evt-12-w38-hawk-flight",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "第23回 掛川花鳥園写真コンテスト",
+              "event_id": "evt-12-w38-photo-contest",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "ピスタチオのうらない",
+              "event_id": "evt-12-202610-f10-02",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "ペンギンガイド",
+              "event_id": "evt-12-202610-f10-03",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "サボテン・多肉植物展2026（関連展示・実演・即売会を含む）",
+              "disposition": "hold",
+              "reason": "同じ公式詳細の導入は10月10日（日）、インフォメーションは2026年10月10日（土）と記載が不一致。numeric期間は10/10～11/1で一致するが曜日解釈のshowakinen専用例外を拡張せず、単一企画として保留。",
+              "url": "https://k-hana-tori.com/2026/10/19/cactus2026/"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-12-w38-hawk-flight",
+              "disposition": "reconfirmed",
+              "reason": "10月公式チラシでホークフライト・占い・ペンギンガイド、写真コンテスト公式本文で12/15締切を再確認"
+            },
+            {
+              "event_id": "evt-12-w38-photo-contest",
+              "disposition": "reconfirmed",
+              "reason": "10月公式チラシでホークフライト・占い・ペンギンガイド、写真コンテスト公式本文で12/15締切を再確認"
+            },
+            {
+              "event_id": "evt-12-202610-f10-02",
+              "disposition": "reconfirmed",
+              "reason": "10月公式チラシでホークフライト・占い・ペンギンガイド、写真コンテスト公式本文で12/15締切を再確認"
+            },
+            {
+              "event_id": "evt-12-202610-f10-03",
+              "disposition": "reconfirmed",
+              "reason": "10月公式チラシでホークフライト・占い・ペンギンガイド、写真コンテスト公式本文で12/15締切を再確認"
+            },
+            {
+              "event_id": "evt-12-202610-f10-01",
+              "disposition": "ended",
+              "reason": "公式個別案内が10月23～25日と明記"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:00.788Z",
+              "final_url": "https://k-hana-tori.com/event/",
+              "title": "通常イベント案内",
+              "text_sha256": "913b37ecd1001e47051604cbaeb88f34e6d9db12bb255928c2588eff1fabf5e8"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/new/special-events/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:15.255Z",
+              "final_url": "https://k-hana-tori.com/special-events/",
+              "title": "特別イベント",
+              "text_sha256": "7042dfc0c6b959715f36f4828454f343343cab24e2e799ca1c8052d8befbc526"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/new/information",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:15.833Z",
+              "final_url": "https://k-hana-tori.com/information/",
+              "title": "総合案内",
+              "text_sha256": "aad371814d08c9537df778204f7246b42846505cd15ce7c5ef8da14033f94c64"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/2026/07/01/23thphoto/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:16.123Z",
+              "final_url": "https://k-hana-tori.com/2026/07/01/23thphoto/",
+              "title": "第23回 掛川花鳥園写真コンテスト 開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+              "text_sha256": "05108640c4d56fa9990fcb52518cc3e4cf3086f673dc5f92371f00b2bbcb0a8c"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/2026/10/19/cactus2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:24.134Z",
+              "final_url": "https://k-hana-tori.com/2026/10/19/cactus2026/",
+              "title": "サボテン・多肉植物展2026 ～サボテン・多肉植物の魅力～ 開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+              "text_sha256": "a8add7902e591dcd8bf50bb8a9860720efeddc48079d358452c735deb9432e71"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/new/wp-content/uploads/2026/10/10譛医・POP-scaled.jpg",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:24.438Z",
+              "final_url": "https://k-hana-tori.com/new/wp-content/uploads/2026/10/10%E8%AD%9B%E5%8C%BB%E3%83%BBPOP-scaled.jpg",
+              "title": "",
+              "text_sha256": "e6fb24ce9f02f377d801757701dbf0cc91c6814dc2fd7d8cc9ee18887311f501"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/new/wp-content/uploads/2026/08/9月完成-scaled.jpg",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:32.424Z",
+              "final_url": "https://k-hana-tori.com/new/wp-content/uploads/2026/08/9%E6%9C%88%E5%AE%8C%E6%88%90-scaled.jpg",
+              "title": "",
+              "text_sha256": "a8978af5ee7363a3ac786e282c30edb37d5d77a1f496064ee4f232e119725247"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/2026/10/15/bonsaiten13th/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:32.667Z",
+              "final_url": "https://k-hana-tori.com/2026/10/15/bonsaiten13th/",
+              "title": "第13回目「盆栽展」開催のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+              "text_sha256": "001fefa10f5afd706dafcc173d175bed60cfba9f36a4dbfd729094a1fd24ba36"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/2026/10/26/felling2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:32.899Z",
+              "final_url": "https://k-hana-tori.com/2026/10/26/felling2026/",
+              "title": "園内作業に伴うエミュー牧場の一時閉鎖のお知らせ - [掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+              "text_sha256": "3c67f5c365590254586d695ddddc59478dbfb8aa25a3e0e4666069b513ad0780"
+            },
+            {
+              "facility_id": 12,
+              "url": "https://k-hana-tori.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:52:33.070Z",
+              "final_url": "https://k-hana-tori.com/",
+              "title": "[掛川花鳥園]花と鳥とのふれあいが楽しめるテーマパーク",
+              "text_sha256": "bf333848a3cad8c3d0a18309074a502b29c67c3fa14f4735ad8798a5840a695e"
+            }
+          ]
+        },
+        {
+          "facility_id": 13,
+          "name": "富士サファリパーク",
+          "disposition": "candidate_found_added",
+          "reason": "公式イベント一覧・現行ツアー・新着詳細5ページを内容確認。既存アドベンチャー継続。期限内の参加可能な限定企画2件を追加。終了済み夏企画・8/31締切ぐるりんは不採用。料金割引のみのキャンペーンはイベント対象外。",
+          "candidates": [
+            {
+              "title": "「バイソンの日」ジャングルバス特別ツアー",
+              "event_id": "evt-13-202610-f15-bison",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "当日整理券または現在販売中の日時指定券による参加経路を公式が案内"
+            },
+            {
+              "title": "世界キツネザルの日・特別イベント",
+              "event_id": "evt-13-202610-f15-lemur",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "当日整理券または現在販売中の日時指定券による参加経路を公式が案内"
+            },
+            {
+              "title": "アドベンチャーツアー",
+              "event_id": "evt-13-w38-adventure",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "Earth Saver Quest",
+              "disposition": "hold",
+              "reason": "10/31開始の継続的アプリサービス。期間限定イベントの終了日なし、アプリの会員登録利用の案内で日時付きイベントとして確定不可",
+              "url": "https://www.fujisafari.co.jp/news/event/485821/"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-13-w38-adventure",
+              "disposition": "reconfirmed",
+              "reason": "公式が11月分販売中、土日祝、10・11月時刻と空席時当日参加を明記"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/news/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:05.124Z",
+              "final_url": "https://www.fujisafari.co.jp/news/event/",
+              "title": "イベント - 富士サファリパーク 公式サイト",
+              "text_sha256": "b03a6012280e4258e4491b6e0e8bffc1ccf9323ab21d6849e9d4cff3ee65c9cd"
+            },
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/tour-safari/adventure/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:43.960Z",
+              "final_url": "https://www.fujisafari.co.jp/tour-safari/adventure/",
+              "title": "アドベンチャーツアー - 富士サファリパーク 公式サイト",
+              "text_sha256": "bf7fb42a9fd2ffc70a4abf449a7ee8f1da3e73a8d4af52a4add1621f5a59ba41"
+            },
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/news/event/485775/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:44.988Z",
+              "final_url": "https://www.fujisafari.co.jp/news/event/485775/",
+              "title": "「バイソンの日」ジャングルバス特別ツアー！（10月31日〜11月8日） - 富士サファリパーク 公式サイト",
+              "text_sha256": "d62936ccce7a124757e89b62650eedb778b2863d363071a8d313f156ef13f199"
+            },
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/news/event/485801/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:45.860Z",
+              "final_url": "https://www.fujisafari.co.jp/news/event/485801/",
+              "title": "「世界キツネザルの日・特別イベント」開催！（10月24日～31日） - 富士サファリパーク 公式サイト",
+              "text_sha256": "5f9c77a8f9496b04263d7622eedaca1e14a75663066734a769002c6c910ec331"
+            },
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/news/event/485821/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:46.855Z",
+              "final_url": "https://www.fujisafari.co.jp/news/event/485821/",
+              "title": "体験型図鑑アプリ「Earth Saver Quest」サービス開始！（10月31日から） - 富士サファリパーク 公式サイト",
+              "text_sha256": "fb7a4d5c189c8491e278c18cd8352e68785765c1cfbfadd54b829c9b2f94610e"
+            },
+            {
+              "facility_id": 13,
+              "url": "https://www.fujisafari.co.jp/news/event/485287/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:53:48.492Z",
+              "final_url": "https://www.fujisafari.co.jp/news/event/485287/",
+              "title": "第24回・富士山ぐるりんコンテスト開催中！ - 富士サファリパーク 公式サイト",
+              "text_sha256": "1daf583d86050f5aa0bdb51f155a86a64cb8fa5f596cfb7854c1f4d8b3f5acaf"
+            }
+          ]
+        },
+        {
+          "facility_id": 14,
+          "name": "伊豆シャボテン動物公園",
+          "disposition": "candidate_found_duplicate",
+          "reason": "公式ホーム・新着一覧・個別案内で2件を再確認。ゆず湯・変わり湯は既存露天風呂の下位プログラムで別登録しない。吉祥寺/大阪新店舗はこの施設・県の対象外、過去9月行事は終了。",
+          "candidates": [
+            {
+              "title": "元祖カピバラの露天風呂",
+              "event_id": "evt-14-w38-capybara-bath",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "第13回 おもしろサボテン品評会",
+              "event_id": "evt-14-202610-f10-01",
+              "disposition": "duplicate"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-14-w38-capybara-bath",
+              "disposition": "reconfirmed",
+              "reason": "公式の現行期間・観覧/参加方法と会場が一致",
+              "source_url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/"
+            },
+            {
+              "event_id": "evt-14-202610-f10-01",
+              "disposition": "reconfirmed",
+              "reason": "公式の現行期間・観覧/参加方法と会場が一致",
+              "source_url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:54:21.075Z",
+              "final_url": "https://izushaboten.com/",
+              "title": "",
+              "text_sha256": "31025f453066b6828143010b22ae616d8e14ce5102f66eaf1f9dac15b1ed3a3a"
+            },
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-28T10:54:30.080Z",
+              "final_url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+              "title": "",
+              "text_sha256": "4f432eb4559412e4b82dd416e9a063c573b439d738c9a590dc998c4a7177742c"
+            },
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-28T10:54:30.330Z",
+              "final_url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+              "title": "",
+              "text_sha256": "baaf6a8f980454d05dea142ee766269a5ee184ba5b0835608bc414e9fe364fd6"
+            },
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:54:30.462Z",
+              "final_url": "https://izushaboten.com/news/",
+              "title": "",
+              "text_sha256": "2adf8573c1932c5ffcc3f6c78d5914041e14807fb68a752558d28772a6a53477"
+            },
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:54:42.703Z",
+              "final_url": "https://izushaboten.com/news/%e4%bc%8a%e8%b1%86%e3%81%ae%e5%86%ac%e3%81%ae%e9%a2%a8%e7%89%a9%e8%a9%a9%e3%80%8c%e5%85%83%e7%a5%96%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e9%9c%b2%e5%a4%a9%e9%a2%a8%e5%91%82-2/",
+              "title": "",
+              "text_sha256": "62f3e5133a34c506ad9b3abf0782031ba671001efd78367a95efa813a7448ca8"
+            },
+            {
+              "facility_id": 14,
+              "url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:54:42.884Z",
+              "final_url": "https://izushaboten.com/news/%e3%80%8c%e7%ac%ac13%e5%9b%9e-%e3%81%8a%e3%82%82%e3%81%97%e3%82%8d%e3%82%b5%e3%83%9c%e3%83%86%e3%83%b3%e5%93%81%e8%a9%95%e4%bc%9a%e3%80%8d2026%e5%b9%b410%e6%9c%8810%e6%97%a5%ef%bc%88%e5%9c%9f%ef%bc%89/",
+              "title": "",
+              "text_sha256": "940e78702119eaee21728fb0f02bc35a8fcc0564fb3e2df68d06cdffc7836a46"
+            }
+          ]
+        },
+        {
+          "facility_id": 15,
+          "name": "屋内型ふれあい動物園 アニタッチ",
+          "disposition": "source_unresolved",
+          "reason": "登録公式URL anitouch.jp は神奈川みなとみらい店に転送。県内公式MARK IS静岡店も確認したがProduct施設15の会場は伊東市で対応が一致せず、別店舗イベントを付けられない。両公式の最新トピックは改装・新店・終了済9月行事と通常営業のみ。施設データは変更しない。PM/FacilityOpsへ会場/取得先対応の確認依頼。",
+          "candidates": [],
+          "existing_event_judgments": [],
+          "sources_checked": [
+            {
+              "facility_id": 15,
+              "url": "https://anitouch.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:54:53.614Z",
+              "final_url": "https://www.anitouch.jp/",
+              "title": "",
+              "text_sha256": "4cd5d17e09dc912353d38b38375bbcff4d33874704220fd5fbf7732574704810"
+            },
+            {
+              "facility_id": 15,
+              "url": "https://shizuoka.anitouch.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:55:02.005Z",
+              "final_url": "https://www.shizuoka.anitouch.com/",
+              "title": "",
+              "text_sha256": "46ac1488d7c632f0139661167799c4eaaa3e8ffb1a36b7635d6bea03e36bd124"
+            }
+          ]
+        },
+        {
+          "facility_id": 17,
+          "name": "下田海中水族館",
+          "disposition": "candidate_found_added",
+          "reason": "公式ホーム新着・期間限定一覧全体と料金/交通/バリアフリーを内容確認。既存定置網展は2027/1/31まで継続。期限と参加経路が確認できた2件を追加。終了済み春夏行事は不採用、常設体験再開は新規期間イベントとしない。",
+          "candidates": [
+            {
+              "title": "計量記念日 オウサマペンギンの公開体重測定",
+              "event_id": "evt-17-202610-f15-penguin-weight",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "アロマウィーク 伊豆白浜の香りと水族館",
+              "event_id": "evt-17-202610-f15-aroma-week",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "まるっと定置網展（サメのトピックス含む）",
+              "disposition": "duplicate",
+              "event_id": "evt-17-w38-fixed-net"
+            },
+            {
+              "title": "ごまの日 ゴマフアザラシのふれあい",
+              "disposition": "hold",
+              "reason": "公式同一本文に11月5日（月）と実施日時2026年11月5日（木）が併存。showakinen専用曜日例外を他ドメインに拡張せず保留",
+              "url": "https://shimoda-aquarium.com/2026-event/"
+            },
+            {
+              "title": "11月21日 廃漁網リサイクルプロジェクト",
+              "disposition": "hold",
+              "reason": "次回日程は11/21予定のみ。時間・受付・参加条件は7/5の実績が別途掲載され、次回へ流用できない",
+              "url": "https://shimoda-aquarium.com/2026-event/"
+            },
+            {
+              "title": "ハロウィーン仮装ダイバー",
+              "disposition": "hold",
+              "reason": "日程9/26～10/31、会場・時間は確認。季節行事の雨天/荒天時の実施・延期方針がこの企画について確認できず保留",
+              "url": "https://shimoda-aquarium.com/2026-event/"
+            },
+            {
+              "title": "海のハロウィーンパーティー展示",
+              "disposition": "hold",
+              "reason": "9/19～10/31の企画展水槽。季節行事の雨天/荒天条件を公式が明記せず、通常入館条件だけから推定しない",
+              "url": "https://shimoda-aquarium.com/2026-event/"
+            },
+            {
+              "title": "メオニノツノガイ・フカミトラザメ特別展示",
+              "disposition": "hold",
+              "reason": "生体の新規展示開始で期間の終了日未定。予告なく変更する継続展示を仮の終了日で登録しない",
+              "url": "https://shimoda-aquarium.com/2026-event/"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-17-w38-fixed-net",
+              "disposition": "reconfirmed",
+              "reason": "公式が6/27～2027/1/31と海中水族船内の展示を明記"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:55:23.803Z",
+              "final_url": "https://shimoda-aquarium.com/",
+              "title": "",
+              "text_sha256": "cc6ae91ec4592473d0e4aa0ab8870742d589904523786eb3f5e0b09d46321379"
+            },
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/2026-event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:55:30.180Z",
+              "final_url": "https://shimoda-aquarium.com/2026-event/",
+              "title": "",
+              "text_sha256": "96ccf661745da12fcc119e1425e376951300b992467a668c336f73c6fa9f63b8"
+            },
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/information/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:56:14.091Z",
+              "final_url": "https://shimoda-aquarium.com/information/",
+              "title": "",
+              "text_sha256": "14bd622e6b172aae6d258d14f30b9a05f9f0ff78dd240fc231eef8c94188e065"
+            },
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/information/fee-business-hours/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:56:31.784Z",
+              "final_url": "https://shimoda-aquarium.com/information/fee-business-hours/",
+              "title": "",
+              "text_sha256": "e0ca78b59d4db0c197e20d17bbd672fe9dc2355e18d1f5b1535f6f6fde98f8d6"
+            },
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/information/access/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:56:32.431Z",
+              "final_url": "https://shimoda-aquarium.com/information/access/",
+              "title": "",
+              "text_sha256": "d96571c33b54d7261b592eb9b8f4635ef5c3df7d6a7ae4284b1db1dfb03e3464"
+            },
+            {
+              "facility_id": 17,
+              "url": "https://shimoda-aquarium.com/information/information-2/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:56:32.721Z",
+              "final_url": "https://shimoda-aquarium.com/information/information-2/",
+              "title": "",
+              "text_sha256": "04804b085d09622d6c0dc0e510d2905bee9a0005895e38627593066888b64988"
+            }
+          ]
+        },
+        {
+          "facility_id": 18,
+          "name": "伊豆・三津シーパラダイス",
+          "disposition": "candidate_found_added",
+          "reason": "ホーム新着・10/11月個別イベント・コラボ・新規釣り・犬同伴とPDF条件を確認。既存6件再確認、2件終了。11月釣り日程を公式の11/1・7・8に訂正、プリキュア配布終了を反映。通常割引や他施設のパッケージプランは別イベントとして登録しない。",
+          "candidates": [
+            {
+              "title": "釣りを学ぼう！ 10月",
+              "event_id": "evt-18-w38-fishing-10",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "トレーナーのお仕事を知ろう 10月",
+              "event_id": "evt-18-w38-trainer-10",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "飼育係の仕事を学ぼう！ 給餌",
+              "event_id": "evt-18-202611-f10-01",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "釣りを学ぼう！ 11月",
+              "event_id": "evt-18-202611-f10-02",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "トドを知ろう",
+              "event_id": "evt-18-202611-f10-03",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "映画名探偵プリキュア！ コラボ企画",
+              "event_id": "evt-18-202609-f10-04",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "水族館で魚釣り！？初めての魚釣りに挑戦",
+              "event_id": "evt-18-202610-f15-ishiguro",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "みとしーわんわん水族館",
+              "event_id": "evt-18-202610-f15-dog",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "みとしーハロウィン2026",
+              "disposition": "hold",
+              "reason": "10/1～31のおめん作り・展示・ショー。公式個別案内には生体状態による変更のみあり、季節行事の悪天候中止/延期方針が未確認のため保留",
+              "url": "https://www.mitosea.com/page.jsp?id=1864"
+            }
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-18-w38-fishing-10",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "公式個別案内で開催日・当日参加条件が一致"
+            },
+            {
+              "event_id": "evt-18-w38-trainer-10",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "公式個別案内で開催日・当日参加条件が一致"
+            },
+            {
+              "event_id": "evt-18-202611-f10-01",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "公式個別案内で開催日・当日参加条件が一致"
+            },
+            {
+              "event_id": "evt-18-202611-f10-02",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "11月の通常釣り日程は1・7・8。3日は別企画"
+            },
+            {
+              "event_id": "evt-18-202611-f10-03",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "公式個別案内で開催日・当日参加条件が一致"
+            },
+            {
+              "event_id": "evt-18-202609-f10-04",
+              "disposition": "reconfirmed_or_corrected",
+              "reason": "配布終了を反映、フォトスポット継続"
+            },
+            {
+              "event_id": "evt-18-w38-bone",
+              "disposition": "ended",
+              "reason": "10月個別ページで最終10/17・10/18を確認"
+            },
+            {
+              "event_id": "evt-18-w38-feed-prep",
+              "disposition": "ended",
+              "reason": "10月個別ページで最終10/17・10/18を確認"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:03.301Z",
+              "final_url": "https://www.mitosea.com/",
+              "title": "",
+              "text_sha256": "164139f1db5dc50acc58ba83631f3ddd1e2d02cad2046f2e1c47d446aefad044"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1826",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:09.846Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1826",
+              "title": "",
+              "text_sha256": "736bc10c17a08c35f945f5183c4e51bf0d75ec69134603ccf639976ed15cde9d"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1870",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:10.122Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1870",
+              "title": "",
+              "text_sha256": "f52dd04bfc4138058d8d691f994f56d43cb7c4fa5accd087f0a5dc77c86136e3"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1839",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:10.257Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1839",
+              "title": "",
+              "text_sha256": "7ae04b78bd199cbfe8303082b5d120df57d4a9256eee0288a9cb2df11c5b4e40"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1656",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:10.422Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1656",
+              "title": "",
+              "text_sha256": "f7872b97d35b16377364b0fb3c7f290891a316aabc7d600d345e4eec2e8271b9"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1640",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:10.566Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1640",
+              "title": "",
+              "text_sha256": "3720908575fd067212683ce898190e7c46ab0f0b108167b2a79a98d190bdd2fc"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/page.jsp?id=1864",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:10.695Z",
+              "final_url": "https://www.mitosea.com/page.jsp?id=1864",
+              "title": "",
+              "text_sha256": "e360b8ceefc75ff5e5c487dd866c0794caa8618cd444459f28a881e1d7111290"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/file.jsp?id=1845",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:24.776Z",
+              "final_url": "https://www.mitosea.com/file.jsp?id=1845",
+              "title": "",
+              "text_sha256": "9860a6a6fc4ee7f8b33e83eba7dbdb3388f1ab2111b044206cef4d4bf9e4604c"
+            },
+            {
+              "facility_id": 18,
+              "url": "https://www.mitosea.com/file.jsp?id=1865",
+              "status": 200,
+              "checked_at": "2026-10-28T10:57:25.008Z",
+              "final_url": "https://www.mitosea.com/file.jsp?id=1865",
+              "title": "",
+              "text_sha256": "c7a4e7b64fd3e82059d035be680d169a3c6fc59f625014a42903b81af9228d59"
+            }
+          ]
+        },
+        {
+          "facility_id": 19,
+          "name": "あわしまマリンパーク",
+          "disposition": "candidate_found_added",
+          "reason": "ホーム全トピックス・イベント案内・料金営業時間を確認。既存7月クラゲ講演は終了維持。現行カエル展示を追加、11月バースデーは続報待ち。常設ショーは新規の期間限定行事にしない。",
+          "candidates": [
+            {
+              "title": "ケロケロナイトフィーバー",
+              "event_id": "evt-19-202610-f15-frog-night",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ましろバースデー／小山百代トークショー",
+              "disposition": "hold",
+              "reason": "11/21～23、トークは11/22と公式が予告するが、詳細は後日と明記。時刻・参加/受付条件が未確定",
+              "url": "http://www.marinepark.jp/"
+            }
+          ],
+          "existing_event_judgments": [],
+          "sources_checked": [
+            {
+              "facility_id": 19,
+              "url": "http://www.marinepark.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:58:30.295Z",
+              "final_url": "https://www.marinepark.jp/",
+              "title": "",
+              "text_sha256": "37b1e942c97f98f91c7216265e3ade8e9c8d36f499a4a8006541cdd0fdd6bc0b"
+            },
+            {
+              "facility_id": 19,
+              "url": "https://www.marinepark.jp/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:58:37.337Z",
+              "final_url": "https://www.marinepark.jp/event/",
+              "title": "",
+              "text_sha256": "8a217e3f02b171cbe75f584e5b03ecae8f13c8c38e226258c20700e1f0a411cd"
+            },
+            {
+              "facility_id": 19,
+              "url": "https://www.marinepark.jp/enjoy/information/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:58:37.494Z",
+              "final_url": "https://www.marinepark.jp/enjoy/information/",
+              "title": "",
+              "text_sha256": "5a4d0afbef0792ab1c2f18806e7d818b92beb8e2a1ab664aa7f40e23ec041347"
+            }
+          ]
+        },
+        {
+          "facility_id": 20,
+          "name": "浜名湖体験学習施設ウォット",
+          "disposition": "source_unresolved",
+          "reason": "公式イベントURL再試行と公式トップはいずれもHTTP200のメンテナンス画面。県まなぼっと旧詳細2件も503の移転案内。市子育てサイトぴっぴを公式代替調査入口として確認したが、主催者の現在の参加受付・条件を検証できない。公式自体の「通常開館」「11/7・8駐車場不可」は確認。過去4件はend_date全て8月で期限切れ、今回未再確認のため変更せず。",
+          "candidates": [
+            {
+              "title": "エサやり体験ツアー（うなぎ池）10/31",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "ウォットキッズクラブ2026（10/3～2027/3/13）",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "エサやり体験ツアー（バックヤード水槽）11/14",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "浜名湖サイエンス（熱帯魚ver.）11/21",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "昆虫館＆水族館の飼育員が推す「No.1な生き物展」（10/3～12/6）",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "エサやり体験ツアー（うなぎ池）11/28",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "ウォットラボ 透明骨格標本づくり11/29",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "浜名湖サイエンス（カキver.）12/5",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "エサやり体験ツアー（バックヤード水槽）12/19",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "浜名湖サイエンス（深海ver.）12/26",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            },
+            {
+              "title": "ウォットファクトリー 貝殻クラフト工作12/27",
+              "disposition": "hold",
+              "source_family": "ウォット公式イベントサイト",
+              "reason": "共通HOLD：主催者公式がメンテナンス中、再試行・トップ・県公式代替も確認不能。ぴっぴの掲載だけで参加条件を採用せず、主催者ページ復旧後の一次情報確認が必要",
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/"
+            }
+          ],
+          "existing_event_judgments": [],
+          "sources_checked": [
+            {
+              "facility_id": 20,
+              "url": "https://ulotto.entetsuassist-dms.com/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:58:56.098Z",
+              "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+              "title": "",
+              "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://ulotto.entetsuassist-dms.com/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:59:15.673Z",
+              "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+              "title": "",
+              "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://ulotto.entetsuassist-dms.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:59:16.958Z",
+              "final_url": "https://ulotto.entetsuassist-dms.com/maintenance.html",
+              "title": "",
+              "text_sha256": "c76ce85fb9f37c90bcb76fb473ba7fd0399d5e622a294d50dcc5706664148692"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://www.city.hamamatsu.shizuoka.jp/nousei/ulotto.html",
+              "status": 404,
+              "checked_at": "2026-10-28T10:59:17.809Z",
+              "final_url": "https://www.city.hamamatsu.shizuoka.jp/nousei/ulotto.html",
+              "title": "ご指定のページは見つかりませんでした／浜松市",
+              "text_sha256": "2ff4c5e88ef04a2c45ec8bda2d1cc59d809f8f519089b77e1b5be41de47f3bc9"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://www.manabi.pref.shizuoka.jp/info/32269?from=list&keyword=0",
+              "status": 503,
+              "checked_at": "2026-10-28T10:59:35.099Z",
+              "final_url": "https://www.manabi.pref.shizuoka.jp/info/32269?from=list&keyword=0",
+              "title": "旧サイトから新サイトへの切替えについて｜まなぼっと - 静岡県生涯学習情報発信システム",
+              "text_sha256": "8c123461d66287f75887a75e1c4ce29486cb993ba42fb256dca5719bb5d31345"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://www.manabi.pref.shizuoka.jp/info/32270?courseCategories%5B0%5D=child&from=list&user_id=42B9B49AE13A3C1A63AD",
+              "status": 503,
+              "checked_at": "2026-10-28T10:59:35.309Z",
+              "final_url": "https://www.manabi.pref.shizuoka.jp/info/32270?courseCategories%5B0%5D=child&from=list&user_id=42B9B49AE13A3C1A63AD",
+              "title": "旧サイトから新サイトへの切替えについて｜まなぼっと - 静岡県生涯学習情報発信システム",
+              "text_sha256": "8c123461d66287f75887a75e1c4ce29486cb993ba42fb256dca5719bb5d31345"
+            },
+            {
+              "facility_id": 20,
+              "url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/",
+              "status": 200,
+              "checked_at": "2026-10-28T10:59:35.372Z",
+              "final_url": "https://www.hamamatsu-pippi.net/event/shisetsutokubetsuver/fa_ulotto/",
+              "title": "浜名湖体験学習施設ウォット -  浜松市子育て情報サイト　ぴっぴ",
+              "text_sha256": "d8d248335a6299bc227aee95ee2539b6e88192214eeda4327e5f3fb3cbe71b9e"
+            }
+          ]
+        },
+        {
+          "facility_id": 21,
+          "name": "スマートアクアリウム静岡",
+          "disposition": "no_current_or_future_event",
+          "reason": "公式NEWS全8件・ホームの全プログラム・夏企画詳細を確認。期間限定昆虫展は8/31終了。飼育員体験は現在開催せず、給餌等は常設プログラム。10月新着は貸切休館と既存料金制度運用で期間イベントの新規候補なし。",
+          "candidates": [],
+          "existing_event_judgments": [],
+          "sources_checked": [
+            {
+              "facility_id": 21,
+              "url": "https://smartaqua-sz.jp/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T11:00:01.418Z",
+              "final_url": "https://smartaqua-sz.jp/news/",
+              "title": "",
+              "text_sha256": "0786bbbe4c06bcbc3ecfaf242f1648a0d1ecfde28c6af3005dcb3eed4dae7c56"
+            },
+            {
+              "facility_id": 21,
+              "url": "https://smartaqua-sz.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T11:00:11.061Z",
+              "final_url": "https://smartaqua-sz.jp/",
+              "title": "",
+              "text_sha256": "5cc96798780d34a5638a07912effa2aa526bb50e9c78f0f374e622929fe308d2"
+            },
+            {
+              "facility_id": 21,
+              "url": "https://smartaqua-sz.jp/news/detail/2026/116.html",
+              "status": 200,
+              "checked_at": "2026-10-28T11:00:11.324Z",
+              "final_url": "https://smartaqua-sz.jp/news/detail/2026/116.html",
+              "title": "",
+              "text_sha256": "488541ee38832ff3b4af129f2527d391f1f72400bec76228ffe603a6c248d8d9"
+            }
+          ]
+        }
+      ],
+      "existing_event_holds": []
+    }
+  }
+}
