@@ -1,0 +1,643 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-D-PART-2",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-28T18:29:38.280107+00:00",
+  "horizon_end_date": "2026-12-25",
+  "per_region": {
+    "hokkaido": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.hokkaido.lg.jp/hf/kms/253628.html",
+          "status": 200,
+          "checked_at": "2026-10-28T18:29:37.472544+00:00",
+          "organizer_name": "北海道（親子イベント主催・共催）",
+          "multi_venue_basis": "北海道主催共催の親子企画を石狩市あいぽーと・当別町ゆとろ・釧路芸術館等の複数会場で公表。既存eventsのsource_notesにも同局あり",
+          "content_sha256": "9f46cee7dca055ba78cd80f6cefffd2b9a52a91621e68ad2312815539cb0b2c1"
+        },
+        {
+          "url": "https://www.s-artstage.com/2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T18:29:39.750238+00:00",
+          "organizer_name": "さっぽろアートステージ実行委員会",
+          "multi_venue_basis": "市内劇場・地下歩行空間・学校音楽祭など複数会場で構成する市公式年次芸術文化月間",
+          "content_sha256": "71ba07aaca0f883a6999341b8b1546e708dd6bbc0eae56861dd56e583d974813"
+        },
+        {
+          "url": "https://www.s-artstage.com/2026/kidsartfes/",
+          "status": 200,
+          "checked_at": "2026-10-28T18:29:52.886831+00:00",
+          "organizer_name": "さっぽろアートステージ実行委員会",
+          "multi_venue_basis": "札幌市民交流プラザほか複数会場を持つアートステージの子ども部門",
+          "content_sha256": "3a10e452f20a1134cb9cecd703cb307ce1c8dbae265a658a1f04e69c11589112"
+        },
+        {
+          "url": "https://www.s-artstage.com/2026/artstreet/",
+          "status": 200,
+          "checked_at": "2026-10-28T18:29:54.659293+00:00",
+          "organizer_name": "さっぽろアートステージ実行委員会",
+          "multi_venue_basis": "地下歩行空間・都心ビル等複数会場に展開する同一シリーズ",
+          "content_sha256": "21418136139ccd24d4711f873b743568b952642b8dd72d9a7149f23a122c9691"
+        },
+        {
+          "url": "https://www.s-artstage.com/2026/sal/",
+          "status": 200,
+          "checked_at": "2026-10-28T18:29:56.390182+00:00",
+          "organizer_name": "さっぽろアートステージ実行委員会",
+          "multi_venue_basis": "市内各所で構成されるアートステージ公式音楽部門",
+          "content_sha256": "0462069ed7a4f3ad950989993f915312068cd537d6a060ff34fe94ed6139c0e5"
+        }
+      ],
+      "candidates_found": 17,
+      "added": 1,
+      "duplicate_or_already_present": 3,
+      "hold": 13,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "source_unit": "organizer_event_series",
+          "title": "親子ふれあい運動遊び りとるきっず",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-hokkaido-20261107-parent",
+          "reason": "同一主催/会場/11月7日、この実行で追加済み",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "親子ふれあい運動遊び 当別町",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-hokkaido-20261113-parent",
+          "reason": "同一主催/会場/11月13日、この実行で追加済み",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "冬のキッズアトリエ",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-hokkaido-20270105-atelier",
+          "reason": "同一会場/2027年1月5-11日、この実行で追加済み",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "クレヨンスクラッチで触れる好太郎の表現（仮）",
+          "disposition": "hold",
+          "reason": "仮題・開催時刻・参加方法未確定のHOLD継続",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "木育・森づくりフェア2026",
+          "disposition": "hold",
+          "reason": "予定内容だけ、時刻・最新実施案内未確認のHOLD継続",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "キッズアートフェス作品展示（青写真/ポスター/お面の3展示を含む）",
+          "disposition": "hold",
+          "reason": "11/7-23 SCARTSモールB/C、10-19時最終17時。展示の料金条件が明示されず、作る体験と見る展示の参加経路を混同しない",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "青写真で記憶のかたちをつかまえよう ワークショップ",
+          "disposition": "hold",
+          "reason": "11/7,8,14,15の全体日程のみ、個別回時刻・対象・申込現況未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "手作りの大きなポスターを作ってみよう ワークショップ",
+          "disposition": "hold",
+          "reason": "4日間延べ60名、個別時刻・対象・申込方法と残枠未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "山の精、オバケや妖怪、鳥やけものお面を作ろう ワークショップ",
+          "disposition": "hold",
+          "reason": "SCARTS実施回の個別時刻・対象・申込経路未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "キッズアートフェス in無印良品札幌パルコ お面づくり",
+          "disposition": "hold",
+          "reason": "11/21 13-14:30,15-16:30、各回先着予約8名後は当日受付あり。ただし料金・対象・受付の連絡先を公式本文で確認できない",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "Think School 制作コース卒業生受賞者選抜展",
+          "disposition": "added",
+          "event_id": "evt-hokkaido-20261107-thinkschool",
+          "participability": "通常参加可能",
+          "reason": "11/7-23憩いの空間E、9-21最終17、入場無料が明記",
+          "event_category": "municipal_regional"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "ボーダレスアート作品展",
+          "disposition": "hold",
+          "reason": "11/7-23憩いの空間西。料金/参加方法が独立して明示されない",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "University Student ART Competition作品展示",
+          "disposition": "hold",
+          "reason": "11/7-23 SCARTSモールA、料金条件未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "SCHOOL ART LIVE",
+          "disposition": "hold",
+          "reason": "制作11/7-8 10-17、展示11/9-23。制作参加は指定学校であり一般家族の制作参加を認める案内ではない。観覧の独立条件未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "札幌劇場祭TGR",
+          "disposition": "hold",
+          "reason": "公式トップで部門名が提示されるが家族で参加できる個別演目/券種/日程未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "北海道中学演劇発表大会",
+          "disposition": "hold",
+          "reason": "公式トップ部門名のみ、一般入場と時刻・受付未確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "SAPPORO MUSIC SHOWCASE",
+          "disposition": "hold",
+          "reason": "公式トップ部門名のみ、年齢制限・個別公演条件未確認",
+          "event_category": "facility_hosted"
+        }
+      ],
+      "organizer_note": "既存北海道eventsのsource_notes/official_urlにある道庁主催共催親子一覧と、今回市カレンダーで発見した複数会場アートステージを確認。大人向けアートワーカーレクチャーは家族向け対象外。未登録会場の施設追加は行わない。",
+      "category_counts": {
+        "fireworks_festivals_seasonal": {
+          "candidates_found": 0,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 0,
+          "stale_false": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 1,
+          "added": 1,
+          "duplicate_or_already_present": 0,
+          "hold": 0,
+          "stale_false": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 16,
+          "added": 0,
+          "duplicate_or_already_present": 3,
+          "hold": 13,
+          "stale_false": 0
+        }
+      }
+    },
+    "shizuoka": {
+      "sources_checked": [
+        {
+          "url": "https://splawars.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T19:00:42.920688+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "公式主催の複数公園・川の駅を巡る水鉄砲シリーズ。富士川クラフトパーク・伊豆ゲートウェイ函南・浜名湖ガーデンパーク等",
+          "content_sha256": "799dff0eea8b6391f142ca9bbd66f033e5c9a013a358d2fac9efc52c4b4bd7ab"
+        },
+        {
+          "url": "https://spac.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T19:00:44.825748+00:00",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "静岡芸術劇場と静岡県舞台芸術公園など複数の劇場・会場を運営する主催者",
+          "content_sha256": "8db477a67b8d56144dadc2a4551d3370c3f52dc5083ca384c09e7790637207c5"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T19:00:46.065334+00:00",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "浜松市浜北文化センター、グランシップ、清水マリナート等複数会場で主催する催し一覧",
+          "content_sha256": "9d0bb4976b79a6da0cc2e5f4923d37a0191e4178956d1b3ed4c261ea312e6c12"
+        },
+        {
+          "url": "https://spac.or.jp/26_autumn/izu_no_odoriko2026",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.345500+00:00",
+          "content_sha256": "1ab194a58f6295e5ba544d79b377aff96014994f41d916f050fa63bb26ca0d42",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://spac.or.jp/26_autumn/nihonjin2026",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.346093+00:00",
+          "content_sha256": "e472dfb1f754c5f5c315f114075e622e67cae139852cac1dac7e70cac398e594",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://spac.or.jp/26_autumn/the_little_prince2027",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.346429+00:00",
+          "content_sha256": "d1393e1060fa6d5c378fbe6b423e7e709d4d2c23371f5be921dffbbc506de4d2",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://spac.or.jp/2026/scot_cyrano2026",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.346790+00:00",
+          "content_sha256": "7bc67e92cd2b8749153a64b84231078c912e86f3621aca34b14606465d5bec5b",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://spac.or.jp/news/?cat=30",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.347090+00:00",
+          "content_sha256": "dd65ea2f1f4becf852e17175615ae469bad7785a40582428c827064f061d1b7a",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://spac.or.jp/news/?cat=35",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:14.347307+00:00",
+          "content_sha256": "671f0a9201342506770c927659d951bcacbf0ba538f6c2badb44ea3daa77a55f",
+          "organizer_name": "SPAC",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=833",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.116958+00:00",
+          "content_sha256": "4b959c6132fb3e4b03b3ac83e7ffc42332743f020d35abe47f805ec6814a95bf",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=842",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.127850+00:00",
+          "content_sha256": "962d43f21314457cef900e547fe217086f949ed326237f6a79fe330ceaadf3c5",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=836",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.159282+00:00",
+          "content_sha256": "383560e009fad714c8d53613fb9f4a4bb00dcecfdac2ee76c0627df7583a9fe3",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=829",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.169087+00:00",
+          "content_sha256": "3f2a21e9b6d7edea69854bc7d8af57616394d83998ef2dc5c3c7cfe15d221c76",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=830",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.764041+00:00",
+          "content_sha256": "48407e6b9dae0500edac751457078e09f4d6f94ab2a1759a8f5f1ecaef864d8a",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=827",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.768797+00:00",
+          "content_sha256": "77caf966ea38feb3381ae62c29c810cf63e0cb05638904abee9cef21e595a247",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=824",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.771607+00:00",
+          "content_sha256": "4f9571311933604cb558214db3e03f3dae96c305de979788a9c5f5b2c77c7aa8",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=834",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:15.777706+00:00",
+          "content_sha256": "7659f267ca070824c418e0793f34a1162c24f706211f5c91e0c4f3bb995e3ab3",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=818",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.542754+00:00",
+          "content_sha256": "f4e4309a70f1700ede4c0a3a3673f00db08f3cc8f4414fcdea89eef0fc24191a",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=809",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.607344+00:00",
+          "content_sha256": "83386775e2f728363e952987952d50c5bc1c7142c48a28ad54b9f78f33713cef",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=808",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.611714+00:00",
+          "content_sha256": "b9c0be62985b9a9663a3da1a2c404603cd507e98424085122d78d65ac0e66e94",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=839",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.700049+00:00",
+          "content_sha256": "0c65818847780032165062ec1a836982189b4f1e224bc992361614d91add2c7f",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=826",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.704722+00:00",
+          "content_sha256": "fa80861f06b565e78fe9ed94629ab47c4e95930df41323ea63294fc6407401d1",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=805",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:16.710848+00:00",
+          "content_sha256": "aa199194ea88f0c5114393ece61ebf3184f1895642fc8013f245bca6de0dd12b",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=828",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:17.116018+00:00",
+          "content_sha256": "2e679c2bedd679affb821085d274db8e98718b3647b2e341c35f3792a287e4b8",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=794",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:17.361005+00:00",
+          "content_sha256": "827a692cecc987ea93990fe352822e11b5e1d2c4aac918851afbbabc4f373e13",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        },
+        {
+          "url": "https://www.tv-sdt.co.jp/event/?seq=784",
+          "status": 200,
+          "checked_at": "2026-10-28T19:01:17.364997+00:00",
+          "content_sha256": "e5bc9c3df7f0ebfce2f8c309b0184a1c7b6c4a1b709a5b1ab93aeba4a7c2cce9",
+          "organizer_name": "Daiichi-TV",
+          "multi_venue_basis": "主催公式総合一覧が静岡県内の複数劇場・文化会館・公園での主催回を掲載する。個別公演も同一主催者のシリーズ照合対象"
+        }
+      ],
+      "candidates_found": 23,
+      "added": 4,
+      "duplicate_or_already_present": 2,
+      "hold": 17,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "source_unit": "organizer_event_series",
+          "title": "伊豆の踊子 静岡",
+          "official_source_url": "https://spac.or.jp/26_autumn/izu_no_odoriko2026",
+          "disposition": "added",
+          "reason": "主催一次で開催回・料金・対象・現在の前売経路を確認",
+          "event_id": "evt-shizuoka-20261031-odoriko",
+          "participability": "条件付き参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "ニホンジン 静岡",
+          "official_source_url": "https://spac.or.jp/26_autumn/nihonjin2026",
+          "disposition": "added",
+          "reason": "主催一次で開催回・料金・対象・現在の前売経路を確認",
+          "event_id": "evt-shizuoka-20261128-nihonjin",
+          "participability": "条件付き参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "星の王子さま",
+          "official_source_url": "https://spac.or.jp/26_autumn/the_little_prince2027",
+          "disposition": "hold",
+          "reason": "一般前売り11/8開始、現在10/29には通常参加経路未開始。おおらか鑑賞会の未就学入場可も発売後に再確認",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "シラノ・ド・ベルジュラック",
+          "official_source_url": "https://spac.or.jp/2026/scot_cyrano2026",
+          "disposition": "hold",
+          "reason": "11/8一般発売（会員も11/1開始）で現在参加経路未開始",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "アイ工務店presents 第2回 静岡リレーマラソン エントリー受付中",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=833",
+          "disposition": "hold",
+          "reason": "ファミリーランは未就学可だが申込現況と参加種別・チーム料金/募集期限を一式確認できない",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "放送30周年記念 TVアニメ「名探偵コナン」展 静岡会場",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=842",
+          "disposition": "hold",
+          "reason": "2027/1/16開始の沼津展。11/14の一般発売前で現時点参加経路未開始。既存コナンプラネタリウムとは別物",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "エドワード・ゴーリー 秘密のメッセージ 優雅な でもちょっと 恐ろしい、 大人のおとぎ話 Edward Gorey’s Mysterious Messages",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=836",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一主催・会場・会期で公開マージ対象の既存IDと照合。トーマスは今回のtourism単位で追加済み",
+          "event_id": "evt-d2-shizuoka-06c3a963",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "野村萬斎＆ オーケストラ・アンサンブル金沢 「真夏の夜の夢」 石川県立音楽堂芸術監督　野村萬斎＆オーケストラ・アンサンブル金沢（OEK）によるシェイクスピア×メンデルスゾーン「真夏の夜の夢」が三島初登場！！ 狂言と琉球舞踊、OEKサウンドが織りなす幻想と夢の世界へ……",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=829",
+          "disposition": "hold",
+          "reason": "未就学児入場不可。小学生に向けた内容/鑑賞条件と販売枠の適合判断を保留",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "サンリオキャラクターズ ファミリーミュージカル Song of Life",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=830",
+          "disposition": "added",
+          "reason": "主催一次で開催回・料金・対象・現在の前売経路を確認",
+          "event_id": "evt-shizuoka-20270131-sanrio",
+          "participability": "条件付き参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "きかんしゃトーマス ファミリーミュージカル ソドー島の１ばんはだれだ 60万人動員の大人気ミュージカルがリニューアル！ トーマス、パーシー、カナがトップハム・ハット卿たちと一緒にステージをげんきにかけまわる！",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=827",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一主催・会場・会期で公開マージ対象の既存IDと照合。トーマスは今回のtourism単位で追加済み",
+          "event_id": "evt-shizuoka-20261213-thomas",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "Honda Cars 静岡 presents 伝説の球場 草薙対決 読売ジャイアンツOB VS 横浜DeNAベイスターズOB 当日先着4,000名様に『応援マフラータオル』プレゼント！！",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=824",
+          "disposition": "hold",
+          "reason": "野球観戦の席種料金・子供料金/参加経路の一式確認が必要",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "大和証券グループ presents 辻󠄀井伸行 日本ツアー2027 《展覧会の絵》",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=834",
+          "disposition": "hold",
+          "reason": "ピアノ公演。小学生の入場/料金・販売経路の適合判断を保留",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "山内惠介　コンサートツアー　2026 ～明鏡止水、この世は祭り～ 惠ちゃんが浜北で魅せます、聴かせます！",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=818",
+          "disposition": "hold",
+          "reason": "未就学児入場不可。家族のおでかけとしての子供向け適合を保留",
+          "event_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "稲垣潤一コンサート2026",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=809",
+          "disposition": "hold",
+          "reason": "未就学児入場不可。家族のおでかけとしての子供向け適合を保留",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "ゴスペラーズ坂ツアー2026 “UNIVER5OUL”",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=808",
+          "disposition": "hold",
+          "reason": "膝上鑑賞とU18制度は確認。幼児の夜間公演・音量/終了時刻の参加適合を保留",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "五木ひろし・由紀さおり レジェンドコンサート",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=839",
+          "disposition": "hold",
+          "reason": "子供の入場可能年齢/料金条件が確認できない",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "～清水ミチコ 40th BEST～ 「SHOW MUST GOING MY WAY」",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=826",
+          "disposition": "hold",
+          "reason": "未就学児入場不可。家族のおでかけとしての子供向け適合を保留",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "完売 ディズニー・オン・クラシック まほうの夜の音楽会 2026　（浜松公演） 「Let It Go 〜扉をひらけ」をテーマに、アニメーション映画『アナと雪の女王』をフィーチャー！",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=805",
+          "disposition": "hold",
+          "reason": "主催公式に完売明示。参加経路なし",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "松原健之 クリスマスディナーショー2026 静岡県袋井市出身。”奇跡のクリスタルボイス”を持つ、松原健之が贈るクリスマスディナーショーで冬の特別な1日をお過ごしください。",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=828",
+          "disposition": "hold",
+          "reason": "未就学児入場不可。高額ディナーショーの子供利用/料金条件が未確定",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "完売 らくごＤＥ全国ツアーvol.14 春風亭一之輔のドッサりまわるぜ2026（浜松公演） 古典落語をベースにしつつも、現代的な感覚を取り入れたテンポの良い語り口が特徴で、ユーモアと鋭い観察眼を活かした語りが魅力の落語界のニュースター！進化し続ける一之輔らくごをお楽しみに！",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=794",
+          "disposition": "hold",
+          "reason": "主催公式に完売明示。参加経路なし",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "キーウ・クラシック・バレエ くるみ割り人形 全幕",
+          "official_source_url": "https://www.tv-sdt.co.jp/event/?seq=784",
+          "disposition": "added",
+          "reason": "主催一次で開催回・料金・対象・現在の前売経路を確認",
+          "event_id": "evt-shizuoka-20261215-kyiv",
+          "participability": "条件付き参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "ニホンジン 沼津/浜松公演",
+          "disposition": "hold",
+          "reason": "2027/1/30沼津、2/7浜松は静岡公演と別会場。一般発売11/8前で現時点の通常参加経路未開始",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_unit": "organizer_event_series",
+          "title": "SPAC てあとろんデーvol.17/里山の時間",
+          "disposition": "hold",
+          "reason": "主催は複数劇場・公園の運営。館案内に2027/3の里山中学生以上の回等はあるが、家族向けvol17の一次詳細・受付状況を確定できない",
+          "event_category": "facility_hosted"
+        }
+      ],
+      "search_basis": "既存eventsのsource_notes/主催名と観光掲載主催を探索。SPLAWARSは複数公園/川の駅の全日程が9月までで終了/中止、現在/未来の候補0。SPACは3都市の劇場と舞台芸術公園、Daiichi-TVは複数文化会館の主催/共催/後援の一次一覧を確認。単一登録施設ページを主催系列と偽って数えない。",
+      "category_counts": {
+        "fireworks_festivals_seasonal": {
+          "candidates_found": 1,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 1,
+          "stale_false": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 0,
+          "added": 0,
+          "duplicate_or_already_present": 0,
+          "hold": 0,
+          "stale_false": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 22,
+          "added": 4,
+          "duplicate_or_already_present": 2,
+          "hold": 16,
+          "stale_false": 0
+        }
+      }
+    }
+  },
+  "prior_run_numbers_reused_as_execution": false
+}
