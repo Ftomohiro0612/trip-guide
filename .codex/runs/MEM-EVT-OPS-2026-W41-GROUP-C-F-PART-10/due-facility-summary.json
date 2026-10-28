@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-10",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T01:40:41.694625+00:00",
+  "executed_at": "2026-10-28T01:47:16.012963+00:00",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
     2265,
@@ -46,12 +46,12 @@
     573
   ],
   "aggregate": {
-    "total": 10,
-    "no_current_or_future_event": 4,
-    "candidate_found_added": 3,
-    "candidate_found_duplicate": 0,
-    "candidate_found_hold": 3,
-    "source_unresolved": 0
+    "total": 20,
+    "no_current_or_future_event": 6,
+    "candidate_found_added": 7,
+    "candidate_found_duplicate": 1,
+    "candidate_found_hold": 5,
+    "source_unresolved": 1
   },
   "per_region": {
     "miyagi": {
@@ -65,14 +65,24 @@
         2278,
         2284,
         2286,
-        2288
+        2288,
+        2290,
+        2294,
+        2296,
+        2297,
+        2298,
+        2299,
+        2301,
+        2302,
+        2303,
+        2304
       ],
-      "total": 10,
-      "no_current_or_future_event": 4,
-      "candidate_found_added": 3,
-      "candidate_found_duplicate": 0,
-      "candidate_found_hold": 3,
-      "source_unresolved": 0,
+      "total": 20,
+      "no_current_or_future_event": 6,
+      "candidate_found_added": 7,
+      "candidate_found_duplicate": 1,
+      "candidate_found_hold": 5,
+      "source_unresolved": 1,
       "sources_checked": [
         {
           "facility_id": 2265,
@@ -318,6 +328,356 @@
           "status": 200,
           "checked_at": "2026-10-28T01:40:19.001101+00:00",
           "text_sha256": "210d84397abf6fd130f315a321cb912d13e29538485a7c324a49ddb9e0e7edfe"
+        },
+        {
+          "facility_id": 2290,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11309",
+          "status": 200,
+          "checked_at": "2026-10-28T01:40:55.713747+00:00",
+          "text_sha256": "e84e1754fbb30263011dbe62c076526ad977339c29ed253f53fcced48beaeae4"
+        },
+        {
+          "facility_id": 2290,
+          "url": "https://www.benyland.com/info/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:41:04.120761+00:00",
+          "text_sha256": "19c0211ca452156ef0a3359e4a5053797df9a561abbce23b026d7ca51c75a21f"
+        },
+        {
+          "facility_id": 2290,
+          "url": "https://www.benyland.com/faq/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:41:12.915804+00:00",
+          "text_sha256": "2669a59c767bcd657a557dda005a61b080343b1782ed770164c3d84d9ca9ca66"
+        },
+        {
+          "facility_id": 2294,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15657",
+          "status": 200,
+          "checked_at": "2026-10-28T01:41:36.348440+00:00",
+          "text_sha256": "a157acfa85ff3cf14f4b05274746924a947b84f18b94093cb8e5dc9330696ff1"
+        },
+        {
+          "facility_id": 2294,
+          "url": "https://www.igunalfarm.com/strawberry/",
+          "status": 401,
+          "checked_at": "2026-10-28T01:41:43.420368+00:00",
+          "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+        },
+        {
+          "facility_id": 2294,
+          "url": "https://www.igunalfarm.com/strawberry/",
+          "status": 401,
+          "checked_at": "2026-10-28T01:41:49.852119+00:00",
+          "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+        },
+        {
+          "facility_id": 2294,
+          "url": "https://www.igunalfarm.com/",
+          "status": 401,
+          "checked_at": "2026-10-28T01:41:50.871137+00:00",
+          "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+        },
+        {
+          "facility_id": 2294,
+          "url": "https://www.pref.miyagi.jp/soshiki/et-sgsin-n/cyokubaijyo-i-igunaruhuxa-mu.html",
+          "status": 200,
+          "checked_at": "2026-10-28T01:41:51.674778+00:00",
+          "text_sha256": "9529c53e5bb280f313233d9dd74d831ffc4bedcbfc0089b5d03c9eb4c9747492"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11848",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:03.316624+00:00",
+          "text_sha256": "bcdea9814eb236fb51727cfd294f5dd8e2781db5350cac37cd58f9fc4b51e33d"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://hikoro.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:10.582038+00:00",
+          "text_sha256": "1eca8a240c07e38f100df730946fffd5fe23adea31dff143fd975cc243ebc6b8"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://hikoro.jp/%e7%ac%ac%ef%bc%95%e5%9b%9e%e3%80%80%e3%81%b2%e3%81%93%e3%82%8d%e3%82%b0%e3%83%a9%e3%83%b3%e3%83%89%e3%82%b4%e3%83%ab%e3%83%95%e6%9d%af%e3%80%80%e9%96%8b%e5%82%ac%e4%b8%ad%e3%81%a7%e3%81%99/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:18.035856+00:00",
+          "text_sha256": "c41882ff494d49711e9c509a2c4e8d16975e61c80f597f118ae7af399507c7c6"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://hikoro.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:19.426105+00:00",
+          "text_sha256": "1924779fadc200f9755aa03221c4f8ea28d510bf7c8e10dcb845b6e75a87e241"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://www.m-kankou.jp/events/2026-10-09/?em_month=10&em_year=2026&limit=&mo=11&yr=2026",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:31.821899+00:00",
+          "text_sha256": "fa39ac98271beb2974beeb76795d936d2a198ccd3c3bf52c69ee2f3736b059f8"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://www.m-kankou.jp/events/271622/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:49.037202+00:00",
+          "text_sha256": "e13d3209e39f1297ebb379de7727f6c7d5f1e4ac7b9c0f2d3d61a0e10998d8ee"
+        },
+        {
+          "facility_id": 2296,
+          "url": "https://www.m-kankou.jp/events/270729/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:42:50.430308+00:00",
+          "text_sha256": "f38e5886cc6a712679a7ee5f3aae15a82c966bd9a286b937b350bccf23af7de7"
+        },
+        {
+          "facility_id": 2297,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15901",
+          "status": 200,
+          "checked_at": "2026-10-28T01:43:26.284713+00:00",
+          "text_sha256": "43c81de62e6cc4649093da7902da668440eef3ffd89756e0dae518f2cb0ebded"
+        },
+        {
+          "facility_id": 2297,
+          "url": "https://www.mct-natori-tc.jp/event",
+          "status": 200,
+          "checked_at": "2026-10-28T01:43:35.837346+00:00",
+          "text_sha256": "e80bee560fd44dffcdef03d0015103bc7c93ecfd05ef02bc551e4a7b8c61c89c"
+        },
+        {
+          "facility_id": 2297,
+          "url": "https://www.city.natori.miyagi.jp/page/45226.html",
+          "status": 200,
+          "checked_at": "2026-10-28T01:43:36.704352+00:00",
+          "text_sha256": "712a9e8f48d6307b16180057babacf65529d03330fbfd9f0cce1f172e8530939"
+        },
+        {
+          "facility_id": 2297,
+          "url": "https://www.mct-natori-tc.jp/event/natori/?date=202611",
+          "status": 200,
+          "checked_at": "2026-10-28T01:43:56.171126+00:00",
+          "text_sha256": "ffcacb813b20ce6d2a8dd7302be6637c24f8c69740f37d352ac8cc3e6425a7be"
+        },
+        {
+          "facility_id": 2298,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11296",
+          "status": 200,
+          "checked_at": "2026-10-28T01:43:58.641121+00:00",
+          "text_sha256": "fe80fe7e227fcf7f5a3b3ed7b7904e98d77efe7f420f0a5b4575680db41bdd98"
+        },
+        {
+          "facility_id": 2298,
+          "url": "https://www.shichigahama.com/aquarena/info/index.html",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:07.508144+00:00",
+          "text_sha256": "a8d910a9c6b50692737a18debd8ee0a01315254b245734b3a43517b29025d81b"
+        },
+        {
+          "facility_id": 2298,
+          "url": "https://www.shichigahama.com/aquarena/facility01.html",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:08.564929+00:00",
+          "text_sha256": "177c79cd7e7d8c25fd84f48e91c725b7336d5b10ad74c5ca5b2aed6f4abd8226"
+        },
+        {
+          "facility_id": 2299,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11254",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:17.184311+00:00",
+          "text_sha256": "aa8840532f16dc23938030e0ea5d3a0ac3aac64007b1c30aecb19cef0eb94315"
+        },
+        {
+          "facility_id": 2299,
+          "url": "https://www.central.co.jp/club/p-miyagikennan/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:25.622720+00:00",
+          "text_sha256": "00c27ad0995733ebb9405671daaf43dc62b1994b7945de64cf25dc977225e9f5"
+        },
+        {
+          "facility_id": 2301,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16568",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:35.803951+00:00",
+          "text_sha256": "418117aef45519cc5b0a49d8d4b246266df33dbf1771da34e952d4d2eab74656"
+        },
+        {
+          "facility_id": 2301,
+          "url": "https://www.shizenfureaikan.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:46.729463+00:00",
+          "text_sha256": "d61b4bd0dd36f6b05026c3dc2968e116e9d292e7057b4fc6d0433d966915ddfc"
+        },
+        {
+          "facility_id": 2301,
+          "url": "https://www.shizenfureaikan.jp/facility/?p=3",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:55.570496+00:00",
+          "text_sha256": "4985e37a75e9992d1664c3aec5ac7b64de0cd470b8a9d9683c2600628ba53b43"
+        },
+        {
+          "facility_id": 2301,
+          "url": "https://www.shizenfureaikan.jp/facility/?p=1",
+          "status": 200,
+          "checked_at": "2026-10-28T01:44:56.729459+00:00",
+          "text_sha256": "fd8df00843bbe9af2f5ca507a2b4e983ecac216b38f3989fcbe68bb21abe6dc8"
+        },
+        {
+          "facility_id": 2302,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=18745",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:10.751225+00:00",
+          "text_sha256": "90e67a15b65bb08a73d683aff1f3a15342046a1d4a676825538ed826d0af5de7"
+        },
+        {
+          "facility_id": 2302,
+          "url": "https://www.mct-natori-tc.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:11.587244+00:00",
+          "text_sha256": "4edbf442a6350f3f31f0c3d2465ca1ad0bfc04415d066c1fe054b7796104beec"
+        },
+        {
+          "facility_id": 2302,
+          "url": "https://www.city.natori.miyagi.jp/page/45226.html",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:21.023221+00:00",
+          "text_sha256": "712a9e8f48d6307b16180057babacf65529d03330fbfd9f0cce1f172e8530939"
+        },
+        {
+          "facility_id": 2302,
+          "url": "https://m-tc.org/blog/facilityintroduction/4906/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:21.978305+00:00",
+          "text_sha256": "28854407de68feb7a25e9ffeb727149469e85808524bd013c643b71c4e7cdc36"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11312",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:38.537205+00:00",
+          "text_sha256": "f5b79c89eb36c53135a16faa47eed23a5a4e23982cbdb6e533521ec7b847ad47"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://www.spf-sendai.jp/shellcom/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:49.029492+00:00",
+          "text_sha256": "2c116cd9f096abba000ad4ba29e50ae4c62c7cc580ce1ca33fefa8224c7ba3a0"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:57.005702+00:00",
+          "text_sha256": "b6f342b30abda3560cc3af5654d9d619fe6b4e4045a813389655c15d920e4f0d"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/archives/1608/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:45:58.232093+00:00",
+          "text_sha256": "80e0c400c295b4f3ea46e4b7ec7839d5e04d6cd75d2e0f59a1719fdb9438a6d2"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/eagles2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:11.863490+00:00",
+          "text_sha256": "50d545ba1e7a9e22eb8cf9b0ef44114a9e28471db8dd8eb35db0c492d1f826c0"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/kidssp2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:12.183439+00:00",
+          "text_sha256": "2858bf0da1c93dd65970015062af9d00fce5e885c183e4471bdc6541ae312c19"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/famispo2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:12.376745+00:00",
+          "text_sha256": "ed0467740914a74e9bc5b5fa987f1436811c1aec86990f911ec0bfb9883d3b5f"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/newmix2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:12.625741+00:00",
+          "text_sha256": "c9f7a8316eb5f882b83ab7afc6b7bd3303987e2bf368989907c5b9e40afc1c79"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/gljhss2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:12.845858+00:00",
+          "text_sha256": "4b46fb9c0ebb81fb5028da76e7375886dea453440112491100db40b9e756fd25"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/molkky-trialandpractice/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:13.064496+00:00",
+          "text_sha256": "63c924634552fa266a4f71eb33df6d7b08a15bb646c64e05c596f1faeaf5718c"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/jr-tennis2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:13.301883+00:00",
+          "text_sha256": "fb59b984a313549a55c87583ced519ec5567ab44d2efbcc9338cade0a1610c21"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/jr-race2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:13.527463+00:00",
+          "text_sha256": "05a9502eb2a326174814460063f0857d19b73dc466a89a4f17237606d1e90f6c"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/kids-dance2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:13.735486+00:00",
+          "text_sha256": "8065e90279c09836886a4afdaa2ccb822831d75136faff247b36fa1bfe7e5371"
+        },
+        {
+          "facility_id": 2303,
+          "url": "https://shellcom.spf-sendai.com/class2026/skateboard-startup2026/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:13.935850+00:00",
+          "text_sha256": "0437924fcbcb5e2bee620f33c4aeb8cfb57de8d29808a3627b6467f2e93d048a"
+        },
+        {
+          "facility_id": 2304,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15656",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:48.087985+00:00",
+          "text_sha256": "3452235476e538d2a1b2ba081ad121df1c957fd593afcde75537acbacba2d183"
+        },
+        {
+          "facility_id": 2304,
+          "url": "https://www.lafraise-ichigo.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:46:56.991026+00:00",
+          "text_sha256": "cb92ef5e35ed1d02ee6fe4c2e50c659abceb794ebede8bb9e474d5e9ecfb6e42"
+        },
+        {
+          "facility_id": 2304,
+          "url": "https://www.lafraise-ichigo.com/grape/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:47:04.561758+00:00",
+          "text_sha256": "59a685b4a16a658903760a8c068decaffcbbfd1a832ec269a0c0f40725d2a966"
+        },
+        {
+          "facility_id": 2304,
+          "url": "https://www.lafraise-ichigo.com/sweet-potato/",
+          "status": 200,
+          "checked_at": "2026-10-28T01:47:04.931256+00:00",
+          "text_sha256": "054ccf73454ec7ac0f1ef4e2dfcb3ca9d64dee5abe3c3df1579fb0d6089cafee"
         }
       ],
       "facilities": [
@@ -810,6 +1170,627 @@
               "status": 200,
               "checked_at": "2026-10-28T01:40:19.001101+00:00",
               "text_sha256": "210d84397abf6fd130f315a321cb912d13e29538485a7c324a49ddb9e0e7edfe"
+            }
+          ]
+        },
+        {
+          "facility_id": 2290,
+          "name": "仙台八木山ベニーランド",
+          "disposition": "candidate_found_added",
+          "reason": "現在参加できる学校ステージ1件を追加。秋フェスタとハロウィン、ペット企画は不足条件付きHOLD。",
+          "candidates": [
+            {
+              "title": "聖和学園高等学校 秋のパフォーマンス・ステージ",
+              "event_id": "evt-2290-202611-01",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "秋の八木山フェスタ",
+              "disposition": "hold",
+              "reason": "11/3無料入園と地下鉄推奨は確認。施設別の詳細プログラム画像、荒天時条件は未検証。"
+            },
+            {
+              "title": "ハッピーハロウィンinベニーランド",
+              "disposition": "hold",
+              "reason": "10/31・11/1の内容・仮装条件・時間は確認。季節企画全体の荒天時中止又は変更条件が本文にない。"
+            },
+            {
+              "title": "11/8 ワンコと遊べる遊園地",
+              "disposition": "hold",
+              "reason": "公式は犬の運動会中止を明示。その他の同伴条件は画像部分未検証で通常のペット入園禁止との適用範囲を確定できない。"
+            },
+            {
+              "title": "いも煮会",
+              "disposition": "standing_offer",
+              "reason": "通常の団体食事利用プランで開催日付き企画でない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2290,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11309",
+              "status": 200,
+              "checked_at": "2026-10-28T01:40:55.713747+00:00",
+              "text_sha256": "e84e1754fbb30263011dbe62c076526ad977339c29ed253f53fcced48beaeae4"
+            },
+            {
+              "facility_id": 2290,
+              "url": "https://www.benyland.com/info/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:41:04.120761+00:00",
+              "text_sha256": "19c0211ca452156ef0a3359e4a5053797df9a561abbce23b026d7ca51c75a21f"
+            },
+            {
+              "facility_id": 2290,
+              "url": "https://www.benyland.com/faq/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:41:12.915804+00:00",
+              "text_sha256": "2669a59c767bcd657a557dda005a61b080343b1782ed770164c3d84d9ca9ca66"
+            }
+          ]
+        },
+        {
+          "facility_id": 2294,
+          "name": "イグナルファーム",
+          "disposition": "source_unresolved",
+          "reason": "登録観光ページ・県農産物直売所案内は成功、2～5月の通常いちご狩り情報のみ。運営者いちごページは401を再試行しても取得不可、公式トップも401。secondary登録なし。翌季の開催企画・受付を確定できないためsource_unresolved。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 2294,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15657",
+              "status": 200,
+              "checked_at": "2026-10-28T01:41:36.348440+00:00",
+              "text_sha256": "a157acfa85ff3cf14f4b05274746924a947b84f18b94093cb8e5dc9330696ff1"
+            },
+            {
+              "facility_id": 2294,
+              "url": "https://www.igunalfarm.com/strawberry/",
+              "status": 401,
+              "checked_at": "2026-10-28T01:41:43.420368+00:00",
+              "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+            },
+            {
+              "facility_id": 2294,
+              "url": "https://www.igunalfarm.com/strawberry/",
+              "status": 401,
+              "checked_at": "2026-10-28T01:41:49.852119+00:00",
+              "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+            },
+            {
+              "facility_id": 2294,
+              "url": "https://www.igunalfarm.com/",
+              "status": 401,
+              "checked_at": "2026-10-28T01:41:50.871137+00:00",
+              "text_sha256": "418644dfe95e9a4724f3147c0f8ad6cf1e8f77bcff9e8f1503efa7d5dce7e258"
+            },
+            {
+              "facility_id": 2294,
+              "url": "https://www.pref.miyagi.jp/soshiki/et-sgsin-n/cyokubaijyo-i-igunaruhuxa-mu.html",
+              "status": 200,
+              "checked_at": "2026-10-28T01:41:51.674778+00:00",
+              "text_sha256": "9529c53e5bb280f313233d9dd74d831ffc4bedcbfc0089b5d03c9eb4c9747492"
+            }
+          ]
+        },
+        {
+          "facility_id": 2296,
+          "name": "ひころの里",
+          "disposition": "candidate_found_added",
+          "reason": "公式観光協会で詳細・参加経路を確認した2企画追加。グランドゴルフは期間・参加条件不明でHOLD。",
+          "candidates": [
+            {
+              "title": "ひころマルシェ2026",
+              "event_id": "evt-2296-202611-01",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ひころヨガ（11月）",
+              "event_id": "evt-2296-202611-02",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "第5回ひころグランドゴルフ杯",
+              "disposition": "hold",
+              "reason": "公式10/19開催中記事は本文が題名のみ。今後の開催日・新規受付・対象を確定できない。"
+            },
+            {
+              "title": "ひころの里秋まつり・本×食",
+              "disposition": "past",
+              "reason": "10/11開催済み又は9/21中止。"
+            },
+            {
+              "title": "まゆ細工・機織り",
+              "disposition": "standing_offer",
+              "reason": "常設の随時体験で特定企画でない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2296,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11848",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:03.316624+00:00",
+              "text_sha256": "bcdea9814eb236fb51727cfd294f5dd8e2781db5350cac37cd58f9fc4b51e33d"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://hikoro.jp/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:10.582038+00:00",
+              "text_sha256": "1eca8a240c07e38f100df730946fffd5fe23adea31dff143fd975cc243ebc6b8"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://hikoro.jp/%e7%ac%ac%ef%bc%95%e5%9b%9e%e3%80%80%e3%81%b2%e3%81%93%e3%82%8d%e3%82%b0%e3%83%a9%e3%83%b3%e3%83%89%e3%82%b4%e3%83%ab%e3%83%95%e6%9d%af%e3%80%80%e9%96%8b%e5%82%ac%e4%b8%ad%e3%81%a7%e3%81%99/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:18.035856+00:00",
+              "text_sha256": "c41882ff494d49711e9c509a2c4e8d16975e61c80f597f118ae7af399507c7c6"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://hikoro.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:19.426105+00:00",
+              "text_sha256": "1924779fadc200f9755aa03221c4f8ea28d510bf7c8e10dcb845b6e75a87e241"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://www.m-kankou.jp/events/2026-10-09/?em_month=10&em_year=2026&limit=&mo=11&yr=2026",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:31.821899+00:00",
+              "text_sha256": "fa39ac98271beb2974beeb76795d936d2a198ccd3c3bf52c69ee2f3736b059f8"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://www.m-kankou.jp/events/271622/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:49.037202+00:00",
+              "text_sha256": "e13d3209e39f1297ebb379de7727f6c7d5f1e4ac7b9c0f2d3d61a0e10998d8ee"
+            },
+            {
+              "facility_id": 2296,
+              "url": "https://www.m-kankou.jp/events/270729/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:42:50.430308+00:00",
+              "text_sha256": "f38e5886cc6a712679a7ee5f3aae15a82c966bd9a286b937b350bccf23af7de7"
+            }
+          ]
+        },
+        {
+          "facility_id": 2297,
+          "name": "みちのく潮風トレイル 名取トレイルセンター",
+          "disposition": "candidate_found_added",
+          "reason": "主催市の公式から予約不要企画を含む環境フェアを1件追加。満員の2体験は別途HOLD。",
+          "candidates": [
+            {
+              "title": "環境フェアin名取トレイルセンター",
+              "event_id": "evt-2297-202611-01",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "寿司にぎり体験",
+              "disposition": "hold",
+              "reason": "全3回満員を公式明示。"
+            },
+            {
+              "title": "親子で野外活動体験会",
+              "disposition": "hold",
+              "reason": "全2回満員を公式明示。"
+            },
+            {
+              "title": "SDGsクイズ・野鳥観察会・歩き旅講演",
+              "disposition": "included",
+              "reason": "環境フェア内の企画として案内。要申込だが空きがある場合の当日参加あり。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2297,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15901",
+              "status": 200,
+              "checked_at": "2026-10-28T01:43:26.284713+00:00",
+              "text_sha256": "43c81de62e6cc4649093da7902da668440eef3ffd89756e0dae518f2cb0ebded"
+            },
+            {
+              "facility_id": 2297,
+              "url": "https://www.mct-natori-tc.jp/event",
+              "status": 200,
+              "checked_at": "2026-10-28T01:43:35.837346+00:00",
+              "text_sha256": "e80bee560fd44dffcdef03d0015103bc7c93ecfd05ef02bc551e4a7b8c61c89c"
+            },
+            {
+              "facility_id": 2297,
+              "url": "https://www.city.natori.miyagi.jp/page/45226.html",
+              "status": 200,
+              "checked_at": "2026-10-28T01:43:36.704352+00:00",
+              "text_sha256": "712a9e8f48d6307b16180057babacf65529d03330fbfd9f0cce1f172e8530939"
+            },
+            {
+              "facility_id": 2297,
+              "url": "https://www.mct-natori-tc.jp/event/natori/?date=202611",
+              "status": 200,
+              "checked_at": "2026-10-28T01:43:56.171126+00:00",
+              "text_sha256": "ffcacb813b20ce6d2a8dd7302be6637c24f8c69740f37d352ac8cc3e6425a7be"
+            }
+          ]
+        },
+        {
+          "facility_id": 2298,
+          "name": "七ヶ浜健康スポーツセンター・アクアリーナ",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光連盟、町公式施設案内・お知らせ一覧を確認。通常の浴場・運動施設利用、料金改定と施設マップ案内のみ。特定開催日を持つ当施設の特別企画はなし。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 2298,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11296",
+              "status": 200,
+              "checked_at": "2026-10-28T01:43:58.641121+00:00",
+              "text_sha256": "fe80fe7e227fcf7f5a3b3ed7b7904e98d77efe7f420f0a5b4575680db41bdd98"
+            },
+            {
+              "facility_id": 2298,
+              "url": "https://www.shichigahama.com/aquarena/info/index.html",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:07.508144+00:00",
+              "text_sha256": "a8d910a9c6b50692737a18debd8ee0a01315254b245734b3a43517b29025d81b"
+            },
+            {
+              "facility_id": 2298,
+              "url": "https://www.shichigahama.com/aquarena/facility01.html",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:08.564929+00:00",
+              "text_sha256": "177c79cd7e7d8c25fd84f48e91c725b7336d5b10ad74c5ca5b2aed6f4abd8226"
+            }
+          ]
+        },
+        {
+          "facility_id": 2299,
+          "name": "宮城県仙南総合プール・トレーニングセンター",
+          "disposition": "no_current_or_future_event",
+          "reason": "登録観光ページと指定管理者公式の施設新着を確認。10～12月通常スタジオ・キッズスクールカレンダー、一般利用料金のみ。期間限定の特別家族企画なし。",
+          "candidates": [],
+          "sources_checked": [
+            {
+              "facility_id": 2299,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11254",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:17.184311+00:00",
+              "text_sha256": "aa8840532f16dc23938030e0ea5d3a0ac3aac64007b1c30aecb19cef0eb94315"
+            },
+            {
+              "facility_id": 2299,
+              "url": "https://www.central.co.jp/club/p-miyagikennan/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:25.622720+00:00",
+              "text_sha256": "00c27ad0995733ebb9405671daaf43dc62b1994b7945de64cf25dc977225e9f5"
+            }
+          ]
+        },
+        {
+          "facility_id": 2301,
+          "name": "オーエンス泉岳自然ふれあい館",
+          "disposition": "candidate_found_hold",
+          "reason": "運営者のトップ、新着1・3ページを確認。11/7野鳥観察は10/18申込期限経過でHOLD。自然ふれあい塾・各キャンプ等は終了、利用団体説明会は一般家族の企画外。",
+          "candidates": [
+            {
+              "title": "バードウォッチング～初冬野鳥を見つけよう～",
+              "disposition": "hold",
+              "reason": "11/7開催、小学生以上20人、10/18必着の抽選申込期限が終了。当日受付又は追加募集なし。"
+            },
+            {
+              "title": "第3回泉ケ岳自然ふれあい塾・どきどき体験広場秋・幼児キャンプ秋・過去事業報告",
+              "disposition": "past",
+              "reason": "10/25以前の開催又は終了事業報告で未来候補でない。"
+            },
+            {
+              "title": "冬季利用団体説明会・引率者研修・ボランティア研修",
+              "disposition": "out_of_scope",
+              "reason": "団体利用担当者・支援者向けで家族のおでかけ企画でない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2301,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16568",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:35.803951+00:00",
+              "text_sha256": "418117aef45519cc5b0a49d8d4b246266df33dbf1771da34e952d4d2eab74656"
+            },
+            {
+              "facility_id": 2301,
+              "url": "https://www.shizenfureaikan.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:46.729463+00:00",
+              "text_sha256": "d61b4bd0dd36f6b05026c3dc2968e116e9d292e7057b4fc6d0433d966915ddfc"
+            },
+            {
+              "facility_id": 2301,
+              "url": "https://www.shizenfureaikan.jp/facility/?p=3",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:55.570496+00:00",
+              "text_sha256": "4985e37a75e9992d1664c3aec5ac7b64de0cd470b8a9d9683c2600628ba53b43"
+            },
+            {
+              "facility_id": 2301,
+              "url": "https://www.shizenfureaikan.jp/facility/?p=1",
+              "status": 200,
+              "checked_at": "2026-10-28T01:44:56.729459+00:00",
+              "text_sha256": "fd8df00843bbe9af2f5ca507a2b4e983ecac216b38f3989fcbe68bb21abe6dc8"
+            }
+          ]
+        },
+        {
+          "facility_id": 2302,
+          "name": "みちのく潮風トレイル 名取トレイルセンター野営場",
+          "disposition": "candidate_found_duplicate",
+          "reason": "野営場公式利用案内と市の環境フェアを新たに取得。野営場独自の期間企画なし。センター全体の環境フェアは同一住所・同一公式告知で施設2297に追加済みの同一企画。",
+          "candidates": [
+            {
+              "title": "環境フェアin名取トレイルセンター",
+              "disposition": "duplicate",
+              "event_id": "evt-2297-202611-01",
+              "reason": "同じ住所・11/8・公式45226ページの同一企画。野営場の別イベントとして重複登録しない。"
+            },
+            {
+              "title": "寿司にぎり体験・親子野外活動",
+              "disposition": "hold",
+              "reason": "新たに再取得した公式告知でも全回満員。2297と同じ2企画のHOLD再遭遇。"
+            },
+            {
+              "title": "フリー・焚き火・オートキャンプ",
+              "disposition": "standing_offer",
+              "reason": "通常営業プランで特定日イベントでない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2302,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=18745",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:10.751225+00:00",
+              "text_sha256": "90e67a15b65bb08a73d683aff1f3a15342046a1d4a676825538ed826d0af5de7"
+            },
+            {
+              "facility_id": 2302,
+              "url": "https://www.mct-natori-tc.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:11.587244+00:00",
+              "text_sha256": "4edbf442a6350f3f31f0c3d2465ca1ad0bfc04415d066c1fe054b7796104beec"
+            },
+            {
+              "facility_id": 2302,
+              "url": "https://www.city.natori.miyagi.jp/page/45226.html",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:21.023221+00:00",
+              "text_sha256": "712a9e8f48d6307b16180057babacf65529d03330fbfd9f0cce1f172e8530939"
+            },
+            {
+              "facility_id": 2302,
+              "url": "https://m-tc.org/blog/facilityintroduction/4906/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:21.978305+00:00",
+              "text_sha256": "28854407de68feb7a25e9ffeb727149469e85808524bd013c643b71c4e7cdc36"
+            }
+          ]
+        },
+        {
+          "facility_id": 2303,
+          "name": "シェルコムせんだい",
+          "disposition": "candidate_found_added",
+          "reason": "子ども・家族向け10詳細を全て確認。申込不要の4企画を未来回のみ追加。閉じた又は開始前の教室3件と中止トレッキングはHOLD。",
+          "candidates": [
+            {
+              "title": "キッズスポーツデー",
+              "event_id": "evt-2303-202611-01",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ファミリースポーツデー",
+              "event_id": "evt-2303-202611-02",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ニューミックステニス",
+              "event_id": "evt-2303-202611-03",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "中学生支援ソフトテニス",
+              "event_id": "evt-2303-202611-04",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ジュニアテニスIII・IV期",
+              "disposition": "hold",
+              "reason": "III期は9/15締切済、IV期は11/23募集開始前。現在申込できる経路なし。"
+            },
+            {
+              "title": "キッズダンスIII・IV期",
+              "disposition": "hold",
+              "reason": "III期は9/15締切済、IV期は11/23募集開始前。現在申込できる経路なし。"
+            },
+            {
+              "title": "小学生かけっこ教室II期",
+              "disposition": "hold",
+              "reason": "8/19抽選申込締切済。途中参加の根拠なし。"
+            },
+            {
+              "title": "トレッキング",
+              "disposition": "hold",
+              "reason": "公式最新のお知らせで令和8年度中止、一覧にも熊出没で検討中。新規参加候補にしない。"
+            },
+            {
+              "title": "親子野球教室・モルック・スケートボード・30mダッシュ",
+              "disposition": "past",
+              "reason": "個別詳細の最終開催はそれぞれ10/18・7/25・8/2・10/12。"
+            },
+            {
+              "title": "成人・シニア向け12教室",
+              "disposition": "out_of_scope",
+              "reason": "公式が一般成人向けに分類する継続教室。家族向け新規企画でない。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2303,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11312",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:38.537205+00:00",
+              "text_sha256": "f5b79c89eb36c53135a16faa47eed23a5a4e23982cbdb6e533521ec7b847ad47"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://www.spf-sendai.jp/shellcom/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:49.029492+00:00",
+              "text_sha256": "2c116cd9f096abba000ad4ba29e50ae4c62c7cc580ce1ca33fefa8224c7ba3a0"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:57.005702+00:00",
+              "text_sha256": "b6f342b30abda3560cc3af5654d9d619fe6b4e4045a813389655c15d920e4f0d"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/archives/1608/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:45:58.232093+00:00",
+              "text_sha256": "80e0c400c295b4f3ea46e4b7ec7839d5e04d6cd75d2e0f59a1719fdb9438a6d2"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/eagles2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:11.863490+00:00",
+              "text_sha256": "50d545ba1e7a9e22eb8cf9b0ef44114a9e28471db8dd8eb35db0c492d1f826c0"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/kidssp2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:12.183439+00:00",
+              "text_sha256": "2858bf0da1c93dd65970015062af9d00fce5e885c183e4471bdc6541ae312c19"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/famispo2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:12.376745+00:00",
+              "text_sha256": "ed0467740914a74e9bc5b5fa987f1436811c1aec86990f911ec0bfb9883d3b5f"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/newmix2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:12.625741+00:00",
+              "text_sha256": "c9f7a8316eb5f882b83ab7afc6b7bd3303987e2bf368989907c5b9e40afc1c79"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/gljhss2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:12.845858+00:00",
+              "text_sha256": "4b46fb9c0ebb81fb5028da76e7375886dea453440112491100db40b9e756fd25"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/molkky-trialandpractice/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:13.064496+00:00",
+              "text_sha256": "63c924634552fa266a4f71eb33df6d7b08a15bb646c64e05c596f1faeaf5718c"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/jr-tennis2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:13.301883+00:00",
+              "text_sha256": "fb59b984a313549a55c87583ced519ec5567ab44d2efbcc9338cade0a1610c21"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/jr-race2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:13.527463+00:00",
+              "text_sha256": "05a9502eb2a326174814460063f0857d19b73dc466a89a4f17237606d1e90f6c"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/kids-dance2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:13.735486+00:00",
+              "text_sha256": "8065e90279c09836886a4afdaa2ccb822831d75136faff247b36fa1bfe7e5371"
+            },
+            {
+              "facility_id": 2303,
+              "url": "https://shellcom.spf-sendai.com/class2026/skateboard-startup2026/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:13.935850+00:00",
+              "text_sha256": "0437924fcbcb5e2bee620f33c4aeb8cfb57de8d29808a3627b6467f2e93d048a"
+            }
+          ]
+        },
+        {
+          "facility_id": 2304,
+          "name": "ラ・フレーズ",
+          "disposition": "candidate_found_hold",
+          "reason": "公式トップ・ぶどう・さつまいも詳細確認。いちごは終了、ぶどう狩りと焼き芋企画は現在の日時・受付の公式確定情報なし。通常販売・動物ふれあいは特別イベント化しない。",
+          "candidates": [
+            {
+              "title": "ぶどう狩り",
+              "disposition": "hold",
+              "reason": "公式個別案内は2025年8月開始予定のまま、トップSNS見出しは告知のみ。2026年現在の開催期間・予約経路を確定できない。"
+            },
+            {
+              "title": "焼き芋・さつまいもイベント",
+              "disposition": "hold",
+              "reason": "公式はシーズン時の予定とするのみで、日時・参加方法未発表。"
+            },
+            {
+              "title": "いちご狩り",
+              "disposition": "past",
+              "reason": "公式トップの今シーズン終了と観光連盟の6/7終了会期を確認。"
+            }
+          ],
+          "sources_checked": [
+            {
+              "facility_id": 2304,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15656",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:48.087985+00:00",
+              "text_sha256": "3452235476e538d2a1b2ba081ad121df1c957fd593afcde75537acbacba2d183"
+            },
+            {
+              "facility_id": 2304,
+              "url": "https://www.lafraise-ichigo.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:46:56.991026+00:00",
+              "text_sha256": "cb92ef5e35ed1d02ee6fe4c2e50c659abceb794ebede8bb9e474d5e9ecfb6e42"
+            },
+            {
+              "facility_id": 2304,
+              "url": "https://www.lafraise-ichigo.com/grape/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:47:04.561758+00:00",
+              "text_sha256": "59a685b4a16a658903760a8c068decaffcbbfd1a832ec269a0c0f40725d2a966"
+            },
+            {
+              "facility_id": 2304,
+              "url": "https://www.lafraise-ichigo.com/sweet-potato/",
+              "status": 200,
+              "checked_at": "2026-10-28T01:47:04.931256+00:00",
+              "text_sha256": "054ccf73454ec7ac0f1ef4e2dfcb3ca9d64dee5abe3c3df1579fb0d6089cafee"
             }
           ]
         }
