@@ -1,0 +1,1843 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-9",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-28T00:21:42.935059+00:00",
+  "due_facility_ids": [
+    2207,
+    2208,
+    2209,
+    2210,
+    2212,
+    2217,
+    2218,
+    2219,
+    2220,
+    2221,
+    2222,
+    2223,
+    2226,
+    2231,
+    2232,
+    2235,
+    2236,
+    2237,
+    2238,
+    2241,
+    2243,
+    2244,
+    2245,
+    2246,
+    2247,
+    2248,
+    2249,
+    2250,
+    2251,
+    2252,
+    2253,
+    2254,
+    2256,
+    2257,
+    2258,
+    2259,
+    2260,
+    2261,
+    2263,
+    2264
+  ],
+  "prior_run_numbers_reused_as_execution": false,
+  "aggregate": {
+    "total": 40,
+    "completed": 10,
+    "no_current_or_future_event": 4,
+    "candidate_found_added": 3,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 2,
+    "source_unresolved": 1
+  },
+  "per_region": {
+    "miyagi": {
+      "facility_ids": [
+        2207,
+        2208,
+        2209,
+        2210,
+        2212,
+        2217,
+        2218,
+        2219,
+        2220,
+        2221,
+        2222,
+        2223,
+        2226,
+        2231,
+        2232,
+        2235,
+        2236,
+        2237,
+        2238,
+        2241,
+        2243,
+        2244,
+        2245,
+        2246,
+        2247,
+        2248,
+        2249,
+        2250,
+        2251,
+        2252,
+        2253,
+        2254,
+        2256,
+        2257,
+        2258,
+        2259,
+        2260,
+        2261,
+        2263,
+        2264
+      ],
+      "total": 40,
+      "sources_checked": [
+        {
+          "facility_id": 2207,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11828",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:42.935085+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11828",
+          "title": "奥松島縄文村歴史資料館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "05722332b4b776eef25f2f03a2de5aa9ca4771f91caeb5f6034ba961df55b628",
+          "content_bytes": 22226
+        },
+        {
+          "facility_id": 2207,
+          "url": "https://www.satohama-jomon.jp/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-28T00:21:43.330328+00:00",
+          "error": "HTTPSConnectionPool(host='www.satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:47.556027+00:00",
+          "final_url": "http://www.satohama-jomon.jp/",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "955501224ead976afad314702a311ce81d6bc7ae45a3390a431de5dacbcf29d3",
+          "content_bytes": 9946
+        },
+        {
+          "facility_id": 2207,
+          "url": "https://satohama-jomon.jp/",
+          "status": "fetch_error",
+          "checked_at": "2026-10-28T00:21:47.681432+00:00",
+          "error": "HTTPSConnectionPool(host='satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:54.353917+00:00",
+          "final_url": "http://www.satohama-jomon.jp/event/index.html",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "f7b87205d588d042ed694fa7173f713201aecd88d53c2bf625d6e8baa22f1a01",
+          "content_bytes": 28327
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-tsuru.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:54.492545+00:00",
+          "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-tsuru.html",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "c2e773ff50f116c495955ddbd177d9253d024bbeb9fb68a7c6b742ad7886fff2",
+          "content_bytes": 5457
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-doki_kenkyuu.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:54.561919+00:00",
+          "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-doki_kenkyuu.html",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "987beb6e2788de30ed1b9b8a2251b89ea987c3b6d94d7b595f1c3af96ec3fbe1",
+          "content_bytes": 4914
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/kikaku/index.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:21:54.630179+00:00",
+          "final_url": "http://www.satohama-jomon.jp/kikaku/index.html",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "cea2fd63916a7ef2c50f190c799de8e3a9c28415054d8da034cd18dd99e85fa3",
+          "content_bytes": 3875
+        },
+        {
+          "facility_id": 2207,
+          "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-matsuri.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:00.469620+00:00",
+          "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-matsuri.html",
+          "title": "奥松島縄文村歴史資料館",
+          "text_sha256": "c68ae5548f86da39fcb8e47b09f032c864564410eadecff84edc7ad28a656bbf",
+          "content_bytes": 5009
+        },
+        {
+          "facility_id": 2208,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11821",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:21.044796+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11821",
+          "title": "地底の森ミュージアム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "c5cbbb829636f5eed9689dd0d0972772a3a3b3f89be586b4adda288dc01bac12",
+          "content_bytes": 21694
+        },
+        {
+          "facility_id": 2208,
+          "url": "https://www.sendai-chiteinomori.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:30.147739+00:00",
+          "final_url": "https://www.sendai-chiteinomori.jp/",
+          "title": "地底の森ミュージアム　～ちていのもりみゅーじあむ～",
+          "text_sha256": "79583f3bedbe3a110499bed651f575c0eb51f50d02a313c72013e6eee0d5b2e7",
+          "content_bytes": 6125
+        },
+        {
+          "facility_id": 2208,
+          "url": "https://www.sendai-chiteinomori.jp/guidemap/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:36.084300+00:00",
+          "final_url": "https://www.sendai-chiteinomori.jp/guidemap/event/",
+          "title": "イベント｜地底の森ミュージアム",
+          "text_sha256": "96c52d700a750db29a6631a255b05a22bf871c11bdfc4f2dc1452cfac161d2cd",
+          "content_bytes": 4540
+        },
+        {
+          "facility_id": 2208,
+          "url": "https://www.sendai-chiteinomori.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:36.416781+00:00",
+          "final_url": "https://www.sendai-chiteinomori.jp/news/",
+          "title": "過去のお知らせ｜地底の森ミュージアム",
+          "text_sha256": "ff10e78d2afb4a7d0d98151bff57e7576c6220ed9b217454712605a68b17ac3c",
+          "content_bytes": 3407
+        },
+        {
+          "facility_id": 2209,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11782",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:38.100814+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11782",
+          "title": "日本こけし館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "2ee58d08aea46170042a25d452c907f8f4425bfb4926de729dffa70f3e962426",
+          "content_bytes": 21514
+        },
+        {
+          "facility_id": 2209,
+          "url": "http://www.kokesikan.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:43.452366+00:00",
+          "final_url": "http://www.kokesikan.com/",
+          "title": "日本こけし館/宮城県鳴子温泉",
+          "text_sha256": "434fdc9b6b1eeecb4561f7294c90d82f9eadcfc12cfc7f77a2b367504d93a94e",
+          "content_bytes": 20581
+        },
+        {
+          "facility_id": 2209,
+          "url": "http://www.kokesikan.com/zituenkouzinhtml.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:51.178136+00:00",
+          "final_url": "http://www.kokesikan.com/zituenkouzinhtml.html",
+          "title": "",
+          "text_sha256": "48701475ec10292e4ca257608daed0bcb0c9039f38ed06a96c522eae958acd50",
+          "content_bytes": 20137
+        },
+        {
+          "facility_id": 2209,
+          "url": "http://www.kokesikan.com/etuketaiken.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:51.297963+00:00",
+          "final_url": "http://www.kokesikan.com/etuketaiken.html",
+          "title": "",
+          "text_sha256": "d61d557c9117b7ec01493a618e51333ed2d735afba9498206296ecdc4d3880ed",
+          "content_bytes": 2050
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11574",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:52.873511+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11574",
+          "title": "秋保・里センター | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "e9a88665e9685f0351fef3ee8825cebdd2879591f37984b558cac8bc5831f214",
+          "content_bytes": 24209
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:22:57.474549+00:00",
+          "final_url": "https://akiusato.jp/",
+          "title": "秋保・里センター - 秋保の観光拠点施設（入館無料）",
+          "text_sha256": "42a99f2d3211e947eda13cb421091e69aca234dd8160b6c550448248dbb8c7d8",
+          "content_bytes": 25597
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event.aspx",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:11.631275+00:00",
+          "final_url": "https://akiusato.jp/event/event.aspx",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "4dfc0ab477e0c8e62892744d51462a0ad8b64365c68acb9b2effe44079b4e26a",
+          "content_bytes": 13800
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade_mokuji.aspx",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:12.002205+00:00",
+          "final_url": "https://akiusato.jp/event/handmade_mokuji.aspx",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "02fb90d0a55df3ba001d58abdce55729f29c449b8aab83f759b92b8a3fd92565",
+          "content_bytes": 15072
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:12.357792+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "97dc1676eed0ddbd12885cb4760c9907190bc57e51e5e687fc80b5e8c0f3ba8f",
+          "content_bytes": 14398
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:12.676012+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "e137010d5e29de37ffa4a330681610e3cbdaeeebbba29fa6e2f6da245acedeff",
+          "content_bytes": 12914
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:12.972073+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "9a5c5a8898de96228444705e8a5e32502e2c181e9b982b31f91d778e8fecab6d",
+          "content_bytes": 14728
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:13.266729+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "930296b8ebda81753ee16d498f6d686a4658f3c8226666212d9c8550f2c4bdf6",
+          "content_bytes": 13191
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:13.618727+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "926f50cb835e79fed93e1336abbe773caa946db21a7f3102d22dc473447e71e8",
+          "content_bytes": 12755
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:13.922200+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "01956650474bdd89fef7564ff4ac0aa26fd279d83418a5e393c5faa8b9180fa5",
+          "content_bytes": 12668
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:14.286258+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "b248b1f20db920cf4ba067fb3c78932beafc8c4ffdc431788a3e9a1a1ab35b13",
+          "content_bytes": 14631
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:14.771697+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "9744c1a1b5636b68b29f68b05ca95f10d2e6a9e5fc0fe388ade85a3a1cb2f8aa",
+          "content_bytes": 15046
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:15.150739+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "d3b53e082361c8a9ea93fb460253cd7a0bf28424c4ef5337af6396759dc7b6d4",
+          "content_bytes": 14525
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:15.695276+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "62db09bc962bccf62843075687c09ccf743330b3807340cc54c005690fbbbd68",
+          "content_bytes": 14376
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=6",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:16.184818+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=6",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "629cce7c12ec61a70e56610b44d35f413988b9766bb0d6106ada34e64b765740",
+          "content_bytes": 14649
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:16.692776+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "2704e53a4cd46175ff7fee57a4d092f179a097bb8440d66739dac94ca15582c7",
+          "content_bytes": 14387
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=72",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:17.155400+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=72",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "6ed6abf9c18abb057951e294c906ac8d485c4f7bc30253208ccb24f2c805671b",
+          "content_bytes": 14699
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:59.600567+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "97dc1676eed0ddbd12885cb4760c9907190bc57e51e5e687fc80b5e8c0f3ba8f",
+          "content_bytes": 14398
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+          "status": 200,
+          "checked_at": "2026-10-28T00:23:59.917268+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "e137010d5e29de37ffa4a330681610e3cbdaeeebbba29fa6e2f6da245acedeff",
+          "content_bytes": 12914
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:00.220124+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "9a5c5a8898de96228444705e8a5e32502e2c181e9b982b31f91d778e8fecab6d",
+          "content_bytes": 14728
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:00.563190+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "930296b8ebda81753ee16d498f6d686a4658f3c8226666212d9c8550f2c4bdf6",
+          "content_bytes": 13191
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:00.881064+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "926f50cb835e79fed93e1336abbe773caa946db21a7f3102d22dc473447e71e8",
+          "content_bytes": 12755
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:01.187078+00:00",
+          "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "01956650474bdd89fef7564ff4ac0aa26fd279d83418a5e393c5faa8b9180fa5",
+          "content_bytes": 12668
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:01.508173+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "b248b1f20db920cf4ba067fb3c78932beafc8c4ffdc431788a3e9a1a1ab35b13",
+          "content_bytes": 14631
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:01.827090+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "9744c1a1b5636b68b29f68b05ca95f10d2e6a9e5fc0fe388ade85a3a1cb2f8aa",
+          "content_bytes": 15046
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:02.134479+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "d3b53e082361c8a9ea93fb460253cd7a0bf28424c4ef5337af6396759dc7b6d4",
+          "content_bytes": 14525
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:02.512107+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "62db09bc962bccf62843075687c09ccf743330b3807340cc54c005690fbbbd68",
+          "content_bytes": 14376
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=6",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:03.063664+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=6",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "629cce7c12ec61a70e56610b44d35f413988b9766bb0d6106ada34e64b765740",
+          "content_bytes": 14649
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:03.696907+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "2704e53a4cd46175ff7fee57a4d092f179a097bb8440d66739dac94ca15582c7",
+          "content_bytes": 14387
+        },
+        {
+          "facility_id": 2210,
+          "url": "https://akiusato.jp/event/handmade.aspx?id=72",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:04.196354+00:00",
+          "final_url": "https://akiusato.jp/event/handmade.aspx?id=72",
+          "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+          "text_sha256": "6ed6abf9c18abb057951e294c906ac8d485c4f7bc30253208ccb24f2c805671b",
+          "content_bytes": 14699
+        },
+        {
+          "facility_id": 2212,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20956",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:34.594796+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20956",
+          "title": "東北工芸製作所 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "c1e177c58efff33c8a5faa4cfa25baec6d7acb87025787cb65575a4b02b6f065",
+          "content_bytes": 22106
+        },
+        {
+          "facility_id": 2212,
+          "url": "https://www.t-kogei.co.jp/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:42.754729+00:00",
+          "final_url": "https://www.t-kogei.co.jp/",
+          "title": "東北工芸製作所 「玉虫塗総本舗」",
+          "text_sha256": "b8f238eb3ad702089354540076467752b132b623c86b0316d0ca89f30089d380",
+          "content_bytes": 36613
+        },
+        {
+          "facility_id": 2212,
+          "url": "https://www.t-kogei.co.jp/category/news/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:48.244721+00:00",
+          "final_url": "https://www.t-kogei.co.jp/category/news/",
+          "title": "新着情報 | 東北工芸製作所 「玉虫塗総本舗」",
+          "text_sha256": "d881080eebfcb9c0486a7a8c08dd1cc3b27e198b13f86a04470334d4313bf914",
+          "content_bytes": 40092
+        },
+        {
+          "facility_id": 2217,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15654",
+          "status": 200,
+          "checked_at": "2026-10-28T00:24:50.778431+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15654",
+          "title": "MIGAKI FARM | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "2cfd2d378f5e133df90e0e5806d3b251efdae08153852a35f30d82a286438d5f",
+          "content_bytes": 24316
+        },
+        {
+          "facility_id": 2217,
+          "url": "https://ichigo-world.jp/",
+          "status": 429,
+          "checked_at": "2026-10-28T00:24:54.576669+00:00",
+          "final_url": "https://migaki-farm.jp/",
+          "title": "",
+          "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "content_bytes": 18
+        },
+        {
+          "facility_id": 2217,
+          "url": "http://ichigo-world.jp/",
+          "status": 429,
+          "checked_at": "2026-10-28T00:25:00.284302+00:00",
+          "final_url": "https://migaki-farm.jp/",
+          "title": "",
+          "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "content_bytes": 18
+        },
+        {
+          "facility_id": 2217,
+          "url": "https://migaki-farm.jp/",
+          "status": 429,
+          "checked_at": "2026-10-28T00:25:01.115462+00:00",
+          "final_url": "https://migaki-farm.jp/",
+          "title": "",
+          "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "content_bytes": 18
+        },
+        {
+          "facility_id": 2217,
+          "url": "https://migaki-farm.jp/news/",
+          "status": 429,
+          "checked_at": "2026-10-28T00:25:01.497779+00:00",
+          "final_url": "https://migaki-farm.jp/blogs/news",
+          "title": "",
+          "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+          "content_bytes": 18
+        },
+        {
+          "facility_id": 2218,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11853",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:08.742678+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11853",
+          "title": "感覚ミュージアム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "929c6c86ee50adc53b6850349ccf8f3204eff32e5534aa1848730740e8d23f49",
+          "content_bytes": 22302
+        },
+        {
+          "facility_id": 2218,
+          "url": "https://www.kankaku.org/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:13.194422+00:00",
+          "final_url": "https://www.kankaku.org/",
+          "title": "感覚ミュージアム｜五感をテーマとする体験型ミュージアム｜宮城県大崎市",
+          "text_sha256": "b3f0703df3d4a266ddac2f2e369312319195c96239d22507c446f8aa11e84776",
+          "content_bytes": 63733
+        },
+        {
+          "facility_id": 2218,
+          "url": "https://www.kankaku.org/event/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:20.381394+00:00",
+          "final_url": "https://www.kankaku.org/event/",
+          "title": "イベント - 感覚ミュージアム",
+          "text_sha256": "6960ed7fb2507dcc37fb33fbe423bc44697624e6fecaf49253e3daddc7170951",
+          "content_bytes": 53387
+        },
+        {
+          "facility_id": 2218,
+          "url": "https://www.kankaku.org/event/post-2705/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:20.964102+00:00",
+          "final_url": "https://www.kankaku.org/event/post-2705/",
+          "title": "羊毛でつくるクリスマスオーナメント －冬を迎える小さな手仕事－ - 感覚ミュージアム",
+          "text_sha256": "b0ac45aeafb147957893710e9721828c258c898600debf2811de92584b1f1e47",
+          "content_bytes": 54854
+        },
+        {
+          "facility_id": 2218,
+          "url": "https://www.kankaku.org/workshop/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:21.426806+00:00",
+          "final_url": "https://www.kankaku.org/workshop/",
+          "title": "予約制ワークショップ - 感覚ミュージアム",
+          "text_sha256": "f523d36fc7d17fdf18e81a076590021de97ecca192559ecdf516f43f2c9dfd14",
+          "content_bytes": 45450
+        },
+        {
+          "facility_id": 2219,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16562",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:31.429043+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16562",
+          "title": "さとうみファーム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "1e7d649f8f2db69ca0c3e8fdcb366b264e07e2635d88aa1de0b2c74ce39a7ed6",
+          "content_bytes": 21350
+        },
+        {
+          "facility_id": 2219,
+          "url": "https://satoumifarm.org/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:38.508883+00:00",
+          "final_url": "https://satoumifarm.org/",
+          "title": "さとうみファーム",
+          "text_sha256": "f75a253a656c55181b794aaa7bc57fdcbf8497039fb2c2aed33b25d80bbc6ccf",
+          "content_bytes": 63832
+        },
+        {
+          "facility_id": 2219,
+          "url": "https://www.satoumifarm.org/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:40.733586+00:00",
+          "final_url": "https://satoumifarm.org/",
+          "title": "さとうみファーム",
+          "text_sha256": "f75a253a656c55181b794aaa7bc57fdcbf8497039fb2c2aed33b25d80bbc6ccf",
+          "content_bytes": 63832
+        },
+        {
+          "facility_id": 2219,
+          "url": "https://satoumifarm.org/sea-kayak/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:25:54.145028+00:00",
+          "final_url": "https://satoumifarm.org/sea-kayak/",
+          "title": "シーカヤックツアー | さとうみファーム",
+          "text_sha256": "3f011c01d2d5762042a5588ef81ff0b501479d53e63f9f7380a7d54a53a47ae7",
+          "content_bytes": 37529
+        },
+        {
+          "facility_id": 2220,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16485",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:03.442646+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16485",
+          "title": "氷の水族館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "3095be79736694f6c1828f71884135acbe3c224ed5cd300ec2367b8f97ac2aa0",
+          "content_bytes": 21230
+        },
+        {
+          "facility_id": 2220,
+          "url": "https://www.uminoichi.com/iceaquarium",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:16.133330+00:00",
+          "final_url": "https://www.uminoichi.com/iceaquarium",
+          "title": "氷の水族館 │ 気仙沼「海の市」/シャークミュージアム",
+          "text_sha256": "e790dad8aa8ea768d0236e7a4296b805c3da0a35791cdb620d8a3488c46354c3",
+          "content_bytes": 62144
+        },
+        {
+          "facility_id": 2220,
+          "url": "https://www.uminoichi.com/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:16.572144+00:00",
+          "final_url": "https://www.uminoichi.com/",
+          "title": "気仙沼「海の市」/シャークミュージアム",
+          "text_sha256": "b90a8ba39132733390b12730f589cfedcc594c52c0260f9cc08b3aa81ac429cf",
+          "content_bytes": 51755
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15938",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:26.907080+00:00",
+          "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15938",
+          "title": "栗駒山麓ジオパークビジターセンター | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+          "text_sha256": "28044e3ab49611c41f23b564579ae803fb921a9ea74d0268e0c2b2fa9656b8ce",
+          "content_bytes": 22894
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.kuriharacity.jp/geopark/",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:30.752930+00:00",
+          "final_url": "https://www.kuriharacity.jp/geopark/",
+          "title": "栗駒山麓ジオパークトップページ",
+          "text_sha256": "ea4a8cc96e1120a20d5e9b80233747a7aa3734e0b70e5d32e069e75026111de0",
+          "content_bytes": 12006
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.kuriharacity.jp/geopark/030/010/090/PAGE000000000000015823.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:35.019633+00:00",
+          "final_url": "https://www.kuriharacity.jp/geopark/030/010/090/PAGE000000000000015823.html",
+          "title": "2026栗駒山麓ジオパーク講座",
+          "text_sha256": "eac7fbed3566a03cc4b19f02fd325f557d39656d4a4af9b598673b57aa32b15b",
+          "content_bytes": 8440
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.kuriharacity.jp/geopark/030/010/index.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:35.370351+00:00",
+          "final_url": "https://www.kuriharacity.jp/geopark/030/010/index.html",
+          "title": "ツアー・イベント",
+          "text_sha256": "0bde794bbbd771fa2931366758e0e9bc950b636cfcf9cbe78f69b88fb4ffac55",
+          "content_bytes": 7194
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSe6J9BQ-NzsUgr56F7QoIPkpu0avAGX-zFNM-pkEUySiREqpw/viewform",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:43.191520+00:00",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSe6J9BQ-NzsUgr56F7QoIPkpu0avAGX-zFNM-pkEUySiREqpw/viewform",
+          "title": "2026栗駒山麓ジオパーク講座 申込フォーム",
+          "text_sha256": "0cb360f73417700d300271501be34bd245808ce23d7787731a7ffb26ba6155fc",
+          "content_bytes": 110701
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.kuriharacity.jp/geopark/030/010/250/PAGE000000000000015949.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:44.002792+00:00",
+          "final_url": "https://www.kuriharacity.jp/geopark/030/010/250/PAGE000000000000015949.html",
+          "title": "細倉マインパークナイトウォークイベントのお知らせ",
+          "text_sha256": "02378a4e0c03ff8a7e1be1925d656735c637a88c7cd8fd687d8cbc3491b1be2e",
+          "content_bytes": 7989
+        },
+        {
+          "facility_id": 2221,
+          "url": "https://www.kuriharacity.jp/geopark/030/010/220/PAGE000000000000008112.html",
+          "status": 200,
+          "checked_at": "2026-10-28T00:26:44.337137+00:00",
+          "final_url": "https://www.kuriharacity.jp/geopark/030/010/220/PAGE000000000000008112.html",
+          "title": "栗駒山麓ジオパーク特産商品 栗駒山麓のめぐみマルシェ開催！",
+          "text_sha256": "c29b083372a53f1accd142e5c0f5f02f50cff5933b0a6d5e4a295ec5b77a107a",
+          "content_bytes": 8239
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 2207,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2207,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11828",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:42.935085+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11828",
+              "title": "奥松島縄文村歴史資料館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "05722332b4b776eef25f2f03a2de5aa9ca4771f91caeb5f6034ba961df55b628",
+              "content_bytes": 22226
+            },
+            {
+              "facility_id": 2207,
+              "url": "https://www.satohama-jomon.jp/",
+              "status": "fetch_error",
+              "checked_at": "2026-10-28T00:21:43.330328+00:00",
+              "error": "HTTPSConnectionPool(host='www.satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:47.556027+00:00",
+              "final_url": "http://www.satohama-jomon.jp/",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "955501224ead976afad314702a311ce81d6bc7ae45a3390a431de5dacbcf29d3",
+              "content_bytes": 9946
+            },
+            {
+              "facility_id": 2207,
+              "url": "https://satohama-jomon.jp/",
+              "status": "fetch_error",
+              "checked_at": "2026-10-28T00:21:47.681432+00:00",
+              "error": "HTTPSConnectionPool(host='satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/event/index.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:54.353917+00:00",
+              "final_url": "http://www.satohama-jomon.jp/event/index.html",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "f7b87205d588d042ed694fa7173f713201aecd88d53c2bf625d6e8baa22f1a01",
+              "content_bytes": 28327
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-tsuru.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:54.492545+00:00",
+              "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-tsuru.html",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "c2e773ff50f116c495955ddbd177d9253d024bbeb9fb68a7c6b742ad7886fff2",
+              "content_bytes": 5457
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-doki_kenkyuu.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:54.561919+00:00",
+              "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-doki_kenkyuu.html",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "987beb6e2788de30ed1b9b8a2251b89ea987c3b6d94d7b595f1c3af96ec3fbe1",
+              "content_bytes": 4914
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/kikaku/index.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:21:54.630179+00:00",
+              "final_url": "http://www.satohama-jomon.jp/kikaku/index.html",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "cea2fd63916a7ef2c50f190c799de8e3a9c28415054d8da034cd18dd99e85fa3",
+              "content_bytes": 3875
+            },
+            {
+              "facility_id": 2207,
+              "url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-matsuri.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:00.469620+00:00",
+              "final_url": "http://www.satohama-jomon.jp/event/info26/event_link/2026-matsuri.html",
+              "title": "奥松島縄文村歴史資料館",
+              "text_sha256": "c68ae5548f86da39fcb8e47b09f032c864564410eadecff84edc7ad28a656bbf",
+              "content_bytes": 5009
+            }
+          ],
+          "candidates": [
+            {
+              "title": "縄文土器を研究しよう！",
+              "disposition": "added",
+              "event_id": "evt-2207-f9-2ec27654"
+            },
+            {
+              "title": "縄文のつる編み",
+              "disposition": "hold",
+              "reason": "11/28-29は公式一覧でキャンセル待ち。確実な参加経路なし。"
+            },
+            {
+              "title": "奥松島縄文村まつり",
+              "disposition": "hold",
+              "reason": "11/8開催・家族向け体験は確認、荒天対応と交通影響の公式記載がなく季節行事の必須条件未充足。"
+            },
+            {
+              "title": "GW縄文体験・体感WEEK",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "歴史探訪バスツアー",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "縄文の漁り",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "縄文の塩作り",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "縄文教室",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "おいでよ縄文村へ",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            },
+            {
+              "title": "貝塚の骨を研究しよう",
+              "disposition": "excluded_past",
+              "reason": "公式一覧で終了済、過去日程のため追加しない"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "公式年間イベント一覧・個別詳細・企画展示を確認。1件追加、2件HOLD、終了済7企画を除外。",
+          "completed_at": "2026-10-28T00:22:20.914474+00:00"
+        },
+        {
+          "facility_id": 2208,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2208,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11821",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:21.044796+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11821",
+              "title": "地底の森ミュージアム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "c5cbbb829636f5eed9689dd0d0972772a3a3b3f89be586b4adda288dc01bac12",
+              "content_bytes": 21694
+            },
+            {
+              "facility_id": 2208,
+              "url": "https://www.sendai-chiteinomori.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:30.147739+00:00",
+              "final_url": "https://www.sendai-chiteinomori.jp/",
+              "title": "地底の森ミュージアム　～ちていのもりみゅーじあむ～",
+              "text_sha256": "79583f3bedbe3a110499bed651f575c0eb51f50d02a313c72013e6eee0d5b2e7",
+              "content_bytes": 6125
+            },
+            {
+              "facility_id": 2208,
+              "url": "https://www.sendai-chiteinomori.jp/guidemap/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:36.084300+00:00",
+              "final_url": "https://www.sendai-chiteinomori.jp/guidemap/event/",
+              "title": "イベント｜地底の森ミュージアム",
+              "text_sha256": "96c52d700a750db29a6631a255b05a22bf871c11bdfc4f2dc1452cfac161d2cd",
+              "content_bytes": 4540
+            },
+            {
+              "facility_id": 2208,
+              "url": "https://www.sendai-chiteinomori.jp/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:36.416781+00:00",
+              "final_url": "https://www.sendai-chiteinomori.jp/news/",
+              "title": "過去のお知らせ｜地底の森ミュージアム",
+              "text_sha256": "ff10e78d2afb4a7d0d98151bff57e7576c6220ed9b217454712605a68b17ac3c",
+              "content_bytes": 3407
+            }
+          ],
+          "candidates": [],
+          "disposition": "no_current_or_future_event",
+          "reason": "公式トップとイベント・新着を確認。2026/8/31から2029/4予定まで長期休館、野外展示の平日見学のみで期間限定イベントなし。",
+          "completed_at": "2026-10-28T00:22:37.426561+00:00"
+        },
+        {
+          "facility_id": 2209,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2209,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11782",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:38.100814+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11782",
+              "title": "日本こけし館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "2ee58d08aea46170042a25d452c907f8f4425bfb4926de729dffa70f3e962426",
+              "content_bytes": 21514
+            },
+            {
+              "facility_id": 2209,
+              "url": "http://www.kokesikan.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:43.452366+00:00",
+              "final_url": "http://www.kokesikan.com/",
+              "title": "日本こけし館/宮城県鳴子温泉",
+              "text_sha256": "434fdc9b6b1eeecb4561f7294c90d82f9eadcfc12cfc7f77a2b367504d93a94e",
+              "content_bytes": 20581
+            },
+            {
+              "facility_id": 2209,
+              "url": "http://www.kokesikan.com/zituenkouzinhtml.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:51.178136+00:00",
+              "final_url": "http://www.kokesikan.com/zituenkouzinhtml.html",
+              "title": "",
+              "text_sha256": "48701475ec10292e4ca257608daed0bcb0c9039f38ed06a96c522eae958acd50",
+              "content_bytes": 20137
+            },
+            {
+              "facility_id": 2209,
+              "url": "http://www.kokesikan.com/etuketaiken.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:51.297963+00:00",
+              "final_url": "http://www.kokesikan.com/etuketaiken.html",
+              "title": "",
+              "text_sha256": "d61d557c9117b7ec01493a618e51333ed2d735afba9498206296ecdc4d3880ed",
+              "content_bytes": 2050
+            }
+          ],
+          "candidates": [],
+          "disposition": "no_current_or_future_event",
+          "reason": "公式トップ・実演日程・絵付体験を内容確認。7/18-11/29の日替わり工人ロクロ実演は通常営業の担当表、絵付も常設体験であり、別建ての限定企画なし。",
+          "completed_at": "2026-10-28T00:22:52.241484+00:00"
+        },
+        {
+          "facility_id": 2210,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2210,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11574",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:52.873511+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11574",
+              "title": "秋保・里センター | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "e9a88665e9685f0351fef3ee8825cebdd2879591f37984b558cac8bc5831f214",
+              "content_bytes": 24209
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:22:57.474549+00:00",
+              "final_url": "https://akiusato.jp/",
+              "title": "秋保・里センター - 秋保の観光拠点施設（入館無料）",
+              "text_sha256": "42a99f2d3211e947eda13cb421091e69aca234dd8160b6c550448248dbb8c7d8",
+              "content_bytes": 25597
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event.aspx",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:11.631275+00:00",
+              "final_url": "https://akiusato.jp/event/event.aspx",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "4dfc0ab477e0c8e62892744d51462a0ad8b64365c68acb9b2effe44079b4e26a",
+              "content_bytes": 13800
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade_mokuji.aspx",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:12.002205+00:00",
+              "final_url": "https://akiusato.jp/event/handmade_mokuji.aspx",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "02fb90d0a55df3ba001d58abdce55729f29c449b8aab83f759b92b8a3fd92565",
+              "content_bytes": 15072
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:12.357792+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "97dc1676eed0ddbd12885cb4760c9907190bc57e51e5e687fc80b5e8c0f3ba8f",
+              "content_bytes": 14398
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:12.676012+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "e137010d5e29de37ffa4a330681610e3cbdaeeebbba29fa6e2f6da245acedeff",
+              "content_bytes": 12914
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:12.972073+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "9a5c5a8898de96228444705e8a5e32502e2c181e9b982b31f91d778e8fecab6d",
+              "content_bytes": 14728
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:13.266729+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "930296b8ebda81753ee16d498f6d686a4658f3c8226666212d9c8550f2c4bdf6",
+              "content_bytes": 13191
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:13.618727+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "926f50cb835e79fed93e1336abbe773caa946db21a7f3102d22dc473447e71e8",
+              "content_bytes": 12755
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:13.922200+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "01956650474bdd89fef7564ff4ac0aa26fd279d83418a5e393c5faa8b9180fa5",
+              "content_bytes": 12668
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:14.286258+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "b248b1f20db920cf4ba067fb3c78932beafc8c4ffdc431788a3e9a1a1ab35b13",
+              "content_bytes": 14631
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:14.771697+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "9744c1a1b5636b68b29f68b05ca95f10d2e6a9e5fc0fe388ade85a3a1cb2f8aa",
+              "content_bytes": 15046
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:15.150739+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "d3b53e082361c8a9ea93fb460253cd7a0bf28424c4ef5337af6396759dc7b6d4",
+              "content_bytes": 14525
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:15.695276+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "62db09bc962bccf62843075687c09ccf743330b3807340cc54c005690fbbbd68",
+              "content_bytes": 14376
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=6",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:16.184818+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=6",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "629cce7c12ec61a70e56610b44d35f413988b9766bb0d6106ada34e64b765740",
+              "content_bytes": 14649
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:16.692776+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "2704e53a4cd46175ff7fee57a4d092f179a097bb8440d66739dac94ca15582c7",
+              "content_bytes": 14387
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=72",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:17.155400+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=72",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "6ed6abf9c18abb057951e294c906ac8d485c4f7bc30253208ccb24f2c805671b",
+              "content_bytes": 14699
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:59.600567+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1268",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "97dc1676eed0ddbd12885cb4760c9907190bc57e51e5e687fc80b5e8c0f3ba8f",
+              "content_bytes": 14398
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+              "status": 200,
+              "checked_at": "2026-10-28T00:23:59.917268+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "e137010d5e29de37ffa4a330681610e3cbdaeeebbba29fa6e2f6da245acedeff",
+              "content_bytes": 12914
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:00.220124+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=71",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "9a5c5a8898de96228444705e8a5e32502e2c181e9b982b31f91d778e8fecab6d",
+              "content_bytes": 14728
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:00.563190+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1295",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "930296b8ebda81753ee16d498f6d686a4658f3c8226666212d9c8550f2c4bdf6",
+              "content_bytes": 13191
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:00.881064+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=1305",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "926f50cb835e79fed93e1336abbe773caa946db21a7f3102d22dc473447e71e8",
+              "content_bytes": 12755
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:01.187078+00:00",
+              "final_url": "https://akiusato.jp/event/event_meisai.aspx?id=23",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "01956650474bdd89fef7564ff4ac0aa26fd279d83418a5e393c5faa8b9180fa5",
+              "content_bytes": 12668
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:01.508173+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1292",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "b248b1f20db920cf4ba067fb3c78932beafc8c4ffdc431788a3e9a1a1ab35b13",
+              "content_bytes": 14631
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:01.827090+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1294",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "9744c1a1b5636b68b29f68b05ca95f10d2e6a9e5fc0fe388ade85a3a1cb2f8aa",
+              "content_bytes": 15046
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:02.134479+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1282",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "d3b53e082361c8a9ea93fb460253cd7a0bf28424c4ef5337af6396759dc7b6d4",
+              "content_bytes": 14525
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:02.512107+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "62db09bc962bccf62843075687c09ccf743330b3807340cc54c005690fbbbd68",
+              "content_bytes": 14376
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=6",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:03.063664+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=6",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "629cce7c12ec61a70e56610b44d35f413988b9766bb0d6106ada34e64b765740",
+              "content_bytes": 14649
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:03.696907+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "2704e53a4cd46175ff7fee57a4d092f179a097bb8440d66739dac94ca15582c7",
+              "content_bytes": 14387
+            },
+            {
+              "facility_id": 2210,
+              "url": "https://akiusato.jp/event/handmade.aspx?id=72",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:04.196354+00:00",
+              "final_url": "https://akiusato.jp/event/handmade.aspx?id=72",
+              "title": "秋保・里センター｜秋保の観光拠点施設（入館無料）",
+              "text_sha256": "6ed6abf9c18abb057951e294c906ac8d485c4f7bc30253208ccb24f2c805671b",
+              "content_bytes": 14699
+            }
+          ],
+          "candidates": [
+            {
+              "title": "秋保の里 池坊いけばな展",
+              "disposition": "duplicate",
+              "event_id": "evt-miyagi-d1-20261026-fbb1f5fd",
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=67",
+              "reason": "開始時点で通常データに掲載済み。公式再確認により既存レコードのsource_checked_atを更新。"
+            },
+            {
+              "title": "しの笛たいむ（篠笛の演奏会）",
+              "disposition": "added",
+              "event_id": "evt-2210-f9-fc258108",
+              "url": "https://akiusato.jp/event/event_meisai.aspx?id=1305"
+            },
+            {
+              "title": "えっぐクラフト教室",
+              "disposition": "duplicate",
+              "event_id": "evt-miyagi-d1-20261026-d32d60f1",
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1303",
+              "reason": "開始時点で通常データに掲載済み。公式再確認により既存レコードのsource_checked_atを更新。"
+            },
+            {
+              "title": "手形・足形アートでつくる クリスマス色紙や干支カレンダー",
+              "disposition": "duplicate",
+              "event_id": "evt-miyagi-d1-20261026-6a8c2572",
+              "url": "https://akiusato.jp/event/handmade.aspx?id=1300",
+              "reason": "開始時点で通常データに掲載済み。公式再確認により既存レコードのsource_checked_atを更新。"
+            },
+            {
+              "title": "磊々峡もみじのこみち ライトアップ",
+              "disposition": "hold",
+              "reason": "荒天中止は確認。夜間の峡谷散策について幼児参加判断に必要な安全・アクセス条件と最新変更情報の確認が不足。"
+            },
+            {
+              "title": "秋保の里の収穫祭",
+              "disposition": "hold",
+              "reason": "11/8・交通案内あり。荒天時の開催/延期条件は未記載で季節行事必須条件未充足。"
+            },
+            {
+              "title": "AKIU ROCK 知覚動考 共鳴共創編",
+              "disposition": "hold",
+              "reason": "無料・11/15・2会場は確認。家族向け参加条件と会場ごとの内容を詳細チラシ未確認のため確定できない。"
+            },
+            {
+              "title": "トルコモザイクガラスでミニランタンをつくろう",
+              "disposition": "hold",
+              "reason": "午前午後とも定員到達。参加経路なし。"
+            },
+            {
+              "title": "春まで楽しめるミニハンギングバスケットをつくろう",
+              "disposition": "hold",
+              "reason": "申込開始11/6で本日10/28は受付前。"
+            },
+            {
+              "title": "つまみ細工でクリスマスツリーのブローチをつくろう",
+              "disposition": "hold",
+              "reason": "申込開始11/6で本日10/28は受付前。"
+            },
+            {
+              "title": "消しゴムはんこで縁起物のポチ袋をつくろう",
+              "disposition": "hold",
+              "reason": "申込開始11/6で本日10/28は受付前。"
+            },
+            {
+              "title": "自然素材でお正月のしめ縄飾りをつくろう",
+              "disposition": "hold",
+              "reason": "申込開始11/6で本日10/28は受付前。"
+            },
+            {
+              "title": "秋保の民話語り",
+              "disposition": "standing_program",
+              "reason": "毎月第2・4日曜日の常設催事で今回限定の開催期間なし。通常営業をイベント化しない。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "13企画詳細を全評価。1追加、3既存重複を鮮度更新、8HOLD、1常設除外。dispatchの既存0という件数は現行Productと不一致。",
+          "completed_at": "2026-10-28T00:24:34.491915+00:00"
+        },
+        {
+          "facility_id": 2212,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2212,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20956",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:34.594796+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=20956",
+              "title": "東北工芸製作所 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "c1e177c58efff33c8a5faa4cfa25baec6d7acb87025787cb65575a4b02b6f065",
+              "content_bytes": 22106
+            },
+            {
+              "facility_id": 2212,
+              "url": "https://www.t-kogei.co.jp/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:42.754729+00:00",
+              "final_url": "https://www.t-kogei.co.jp/",
+              "title": "東北工芸製作所 「玉虫塗総本舗」",
+              "text_sha256": "b8f238eb3ad702089354540076467752b132b623c86b0316d0ca89f30089d380",
+              "content_bytes": 36613
+            },
+            {
+              "facility_id": 2212,
+              "url": "https://www.t-kogei.co.jp/category/news/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:48.244721+00:00",
+              "final_url": "https://www.t-kogei.co.jp/category/news/",
+              "title": "新着情報 | 東北工芸製作所 「玉虫塗総本舗」",
+              "text_sha256": "d881080eebfcb9c0486a7a8c08dd1cc3b27e198b13f86a04470334d4313bf914",
+              "content_bytes": 40092
+            }
+          ],
+          "candidates": [],
+          "disposition": "no_current_or_future_event",
+          "reason": "公式トップと新着一覧を確認。直近は夏季休業・商品発売・予約制店舗営業の案内。玉虫塗の通常制作体験のみで現在/未来の期間限定催事はなし。",
+          "completed_at": "2026-10-28T00:24:50.010636+00:00"
+        },
+        {
+          "facility_id": 2217,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2217,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15654",
+              "status": 200,
+              "checked_at": "2026-10-28T00:24:50.778431+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15654",
+              "title": "MIGAKI FARM | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "2cfd2d378f5e133df90e0e5806d3b251efdae08153852a35f30d82a286438d5f",
+              "content_bytes": 24316
+            },
+            {
+              "facility_id": 2217,
+              "url": "https://ichigo-world.jp/",
+              "status": 429,
+              "checked_at": "2026-10-28T00:24:54.576669+00:00",
+              "final_url": "https://migaki-farm.jp/",
+              "title": "",
+              "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+              "content_bytes": 18
+            },
+            {
+              "facility_id": 2217,
+              "url": "http://ichigo-world.jp/",
+              "status": 429,
+              "checked_at": "2026-10-28T00:25:00.284302+00:00",
+              "final_url": "https://migaki-farm.jp/",
+              "title": "",
+              "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+              "content_bytes": 18
+            },
+            {
+              "facility_id": 2217,
+              "url": "https://migaki-farm.jp/",
+              "status": 429,
+              "checked_at": "2026-10-28T00:25:01.115462+00:00",
+              "final_url": "https://migaki-farm.jp/",
+              "title": "",
+              "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+              "content_bytes": 18
+            },
+            {
+              "facility_id": 2217,
+              "url": "https://migaki-farm.jp/news/",
+              "status": 429,
+              "checked_at": "2026-10-28T00:25:01.497779+00:00",
+              "final_url": "https://migaki-farm.jp/blogs/news",
+              "title": "",
+              "text_sha256": "fa2dd01ed96d38758e89e354653c39f366bc7a34e485772c8aa2174b53a465d3",
+              "content_bytes": 18
+            }
+          ],
+          "candidates": [],
+          "disposition": "source_unresolved",
+          "reason": "観光連盟の情報は2026/1/2-5/31の終了済いちご狩り。公式運営サイトは旧URL再試行・現行ドメイン・新着の全て429。次季の開催/企画を確認できず、推測で追加しない。",
+          "completed_at": "2026-10-28T00:25:07.944897+00:00"
+        },
+        {
+          "facility_id": 2218,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2218,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11853",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:08.742678+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11853",
+              "title": "感覚ミュージアム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "929c6c86ee50adc53b6850349ccf8f3204eff32e5534aa1848730740e8d23f49",
+              "content_bytes": 22302
+            },
+            {
+              "facility_id": 2218,
+              "url": "https://www.kankaku.org/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:13.194422+00:00",
+              "final_url": "https://www.kankaku.org/",
+              "title": "感覚ミュージアム｜五感をテーマとする体験型ミュージアム｜宮城県大崎市",
+              "text_sha256": "b3f0703df3d4a266ddac2f2e369312319195c96239d22507c446f8aa11e84776",
+              "content_bytes": 63733
+            },
+            {
+              "facility_id": 2218,
+              "url": "https://www.kankaku.org/event/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:20.381394+00:00",
+              "final_url": "https://www.kankaku.org/event/",
+              "title": "イベント - 感覚ミュージアム",
+              "text_sha256": "6960ed7fb2507dcc37fb33fbe423bc44697624e6fecaf49253e3daddc7170951",
+              "content_bytes": 53387
+            },
+            {
+              "facility_id": 2218,
+              "url": "https://www.kankaku.org/event/post-2705/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:20.964102+00:00",
+              "final_url": "https://www.kankaku.org/event/post-2705/",
+              "title": "羊毛でつくるクリスマスオーナメント －冬を迎える小さな手仕事－ - 感覚ミュージアム",
+              "text_sha256": "b0ac45aeafb147957893710e9721828c258c898600debf2811de92584b1f1e47",
+              "content_bytes": 54854
+            },
+            {
+              "facility_id": 2218,
+              "url": "https://www.kankaku.org/workshop/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:21.426806+00:00",
+              "final_url": "https://www.kankaku.org/workshop/",
+              "title": "予約制ワークショップ - 感覚ミュージアム",
+              "text_sha256": "f523d36fc7d17fdf18e81a076590021de97ecca192559ecdf516f43f2c9dfd14",
+              "content_bytes": 45450
+            }
+          ],
+          "candidates": [
+            {
+              "title": "羊毛でつくるクリスマスオーナメント",
+              "disposition": "added",
+              "event_id": "evt-2218-f9-52d8e797"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "公式新着・イベント全件先頭とワークショップ一覧確認。1件募集中企画を追加。コンサート・ナイトミュージアム・マルシェ・カレー等は終了/レポート。常設予約体験はイベント化しない。",
+          "completed_at": "2026-10-28T00:25:31.315171+00:00"
+        },
+        {
+          "facility_id": 2219,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2219,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16562",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:31.429043+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16562",
+              "title": "さとうみファーム | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "1e7d649f8f2db69ca0c3e8fdcb366b264e07e2635d88aa1de0b2c74ce39a7ed6",
+              "content_bytes": 21350
+            },
+            {
+              "facility_id": 2219,
+              "url": "https://satoumifarm.org/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:38.508883+00:00",
+              "final_url": "https://satoumifarm.org/",
+              "title": "さとうみファーム",
+              "text_sha256": "f75a253a656c55181b794aaa7bc57fdcbf8497039fb2c2aed33b25d80bbc6ccf",
+              "content_bytes": 63832
+            },
+            {
+              "facility_id": 2219,
+              "url": "https://www.satoumifarm.org/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:40.733586+00:00",
+              "final_url": "https://satoumifarm.org/",
+              "title": "さとうみファーム",
+              "text_sha256": "f75a253a656c55181b794aaa7bc57fdcbf8497039fb2c2aed33b25d80bbc6ccf",
+              "content_bytes": 63832
+            },
+            {
+              "facility_id": 2219,
+              "url": "https://satoumifarm.org/sea-kayak/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:25:54.145028+00:00",
+              "final_url": "https://satoumifarm.org/sea-kayak/",
+              "title": "シーカヤックツアー | さとうみファーム",
+              "text_sha256": "3f011c01d2d5762042a5588ef81ff0b501479d53e63f9f7380a7d54a53a47ae7",
+              "content_bytes": 37529
+            }
+          ],
+          "candidates": [],
+          "disposition": "no_current_or_future_event",
+          "reason": "牧場公式トップ・体験ページを確認。小学生以上の通常カヤックツアー、予約BBQ・宿泊の営業案内で、期間限定の現在/未来イベント告知なし。",
+          "completed_at": "2026-10-28T00:26:02.569242+00:00"
+        },
+        {
+          "facility_id": 2220,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2220,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16485",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:03.442646+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=16485",
+              "title": "氷の水族館 | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "3095be79736694f6c1828f71884135acbe3c224ed5cd300ec2367b8f97ac2aa0",
+              "content_bytes": 21230
+            },
+            {
+              "facility_id": 2220,
+              "url": "https://www.uminoichi.com/iceaquarium",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:16.133330+00:00",
+              "final_url": "https://www.uminoichi.com/iceaquarium",
+              "title": "氷の水族館 │ 気仙沼「海の市」/シャークミュージアム",
+              "text_sha256": "e790dad8aa8ea768d0236e7a4296b805c3da0a35791cdb620d8a3488c46354c3",
+              "content_bytes": 62144
+            },
+            {
+              "facility_id": 2220,
+              "url": "https://www.uminoichi.com/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:16.572144+00:00",
+              "final_url": "https://www.uminoichi.com/",
+              "title": "気仙沼「海の市」/シャークミュージアム",
+              "text_sha256": "b90a8ba39132733390b12730f589cfedcc594c52c0260f9cc08b3aa81ac429cf",
+              "content_bytes": 51755
+            }
+          ],
+          "candidates": [
+            {
+              "title": "GIRLS LIVE 11/8",
+              "disposition": "hold",
+              "reason": "1階ホール開催で水族館とは別会場。終了時刻・料金/参加条件を本文から確定できない。"
+            },
+            {
+              "title": "第15回消防絵画コンクール作品展示 10/14-11/2",
+              "disposition": "hold",
+              "reason": "2階ホール開催で水族館とは別会場。今回施設IDへの誤紐付けを避け、共用ホールの会場/閲覧条件を要確認。"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "水族館固有の限定企画なし。運営元の新着に2候補、どちらも水族館内ではなく海の市共用ホールのため会場紐付け/参加条件を保留。",
+          "completed_at": "2026-10-28T00:26:26.835530+00:00"
+        },
+        {
+          "facility_id": 2221,
+          "completed": true,
+          "sources_checked": [
+            {
+              "facility_id": 2221,
+              "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15938",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:26.907080+00:00",
+              "final_url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=15938",
+              "title": "栗駒山麓ジオパークビジターセンター | 特選スポット｜観光・旅行情報サイト 宮城まるごと探訪",
+              "text_sha256": "28044e3ab49611c41f23b564579ae803fb921a9ea74d0268e0c2b2fa9656b8ce",
+              "content_bytes": 22894
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://www.kuriharacity.jp/geopark/",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:30.752930+00:00",
+              "final_url": "https://www.kuriharacity.jp/geopark/",
+              "title": "栗駒山麓ジオパークトップページ",
+              "text_sha256": "ea4a8cc96e1120a20d5e9b80233747a7aa3734e0b70e5d32e069e75026111de0",
+              "content_bytes": 12006
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://www.kuriharacity.jp/geopark/030/010/090/PAGE000000000000015823.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:35.019633+00:00",
+              "final_url": "https://www.kuriharacity.jp/geopark/030/010/090/PAGE000000000000015823.html",
+              "title": "2026栗駒山麓ジオパーク講座",
+              "text_sha256": "eac7fbed3566a03cc4b19f02fd325f557d39656d4a4af9b598673b57aa32b15b",
+              "content_bytes": 8440
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://www.kuriharacity.jp/geopark/030/010/index.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:35.370351+00:00",
+              "final_url": "https://www.kuriharacity.jp/geopark/030/010/index.html",
+              "title": "ツアー・イベント",
+              "text_sha256": "0bde794bbbd771fa2931366758e0e9bc950b636cfcf9cbe78f69b88fb4ffac55",
+              "content_bytes": 7194
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSe6J9BQ-NzsUgr56F7QoIPkpu0avAGX-zFNM-pkEUySiREqpw/viewform",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:43.191520+00:00",
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSe6J9BQ-NzsUgr56F7QoIPkpu0avAGX-zFNM-pkEUySiREqpw/viewform",
+              "title": "2026栗駒山麓ジオパーク講座 申込フォーム",
+              "text_sha256": "0cb360f73417700d300271501be34bd245808ce23d7787731a7ffb26ba6155fc",
+              "content_bytes": 110701
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://www.kuriharacity.jp/geopark/030/010/250/PAGE000000000000015949.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:44.002792+00:00",
+              "final_url": "https://www.kuriharacity.jp/geopark/030/010/250/PAGE000000000000015949.html",
+              "title": "細倉マインパークナイトウォークイベントのお知らせ",
+              "text_sha256": "02378a4e0c03ff8a7e1be1925d656735c637a88c7cd8fd687d8cbc3491b1be2e",
+              "content_bytes": 7989
+            },
+            {
+              "facility_id": 2221,
+              "url": "https://www.kuriharacity.jp/geopark/030/010/220/PAGE000000000000008112.html",
+              "status": 200,
+              "checked_at": "2026-10-28T00:26:44.337137+00:00",
+              "final_url": "https://www.kuriharacity.jp/geopark/030/010/220/PAGE000000000000008112.html",
+              "title": "栗駒山麓ジオパーク特産商品 栗駒山麓のめぐみマルシェ開催！",
+              "text_sha256": "c29b083372a53f1accd142e5c0f5f02f50cff5933b0a6d5e4a295ec5b77a107a",
+              "content_bytes": 8239
+            }
+          ],
+          "candidates": [
+            {
+              "title": "2026栗駒山麓ジオパーク講座 11/15",
+              "disposition": "hold",
+              "reason": "募集中のフォームは開いているが各回の実施時刻・具体ジオサイト/会場が本文・フォームにない。"
+            },
+            {
+              "title": "2026栗駒山麓ジオパーク講座 12/6",
+              "disposition": "hold",
+              "reason": "募集中だが各回の実施時刻・具体会場は本文・フォームから確定できない。"
+            },
+            {
+              "title": "細倉マインパークナイトウォーク12/5",
+              "disposition": "hold",
+              "reason": "別施設の細倉マインパーク開催。F-9のビジターセンターに誤紐付けせず、対象施設レーンへ会場確認を引き継ぐ。"
+            },
+            {
+              "title": "栗駒山麓のめぐみマルシェ",
+              "disposition": "excluded_past",
+              "reason": "2026/2/9で終了済み。"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "公式ツアー一覧・2026講座・申込フォーム・個別2企画を確認。未来の講座2回は具体会場・時間未確定、細倉企画は別施設。",
+          "completed_at": "2026-10-28T00:26:54.333521+00:00"
+        }
+      ],
+      "no_current_or_future_event": 4,
+      "candidate_found_added": 3,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 2,
+      "source_unresolved": 1
+    }
+  }
+}
