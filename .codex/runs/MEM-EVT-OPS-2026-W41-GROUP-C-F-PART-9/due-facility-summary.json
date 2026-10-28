@@ -113,7 +113,7 @@
         {
           "facility_id": 2207,
           "url": "https://www.satohama-jomon.jp/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:21:43.330328+00:00",
           "error": "HTTPSConnectionPool(host='www.satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
         },
@@ -130,7 +130,7 @@
         {
           "facility_id": 2207,
           "url": "https://satohama-jomon.jp/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:21:47.681432+00:00",
           "error": "HTTPSConnectionPool(host='satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
         },
@@ -1792,7 +1792,7 @@
         {
           "facility_id": 2250,
           "url": "https://blog.livedoor.jp/shiromati/archives/cat_145394.html",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:36:37.337455+00:00",
           "error": "HTTPSConnectionPool(host='blog.livedoor.jp', port=443): Max retries exceeded with url: /shiromati/archives/cat_145394.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
         },
@@ -1818,13 +1818,14 @@
         },
         {
           "facility_id": 2250,
-          "url": "https://shiroishi.info/佐藤慶子絵画展　/",
+          "url": "https://shiroishi.info/%E4%BD%90%E8%97%A4%E6%85%B6%E5%AD%90%E7%B5%B5%E7%94%BB%E5%B1%95%E3%80%80/",
           "status": 200,
           "checked_at": "2026-10-28T00:36:44.318428+00:00",
           "final_url": "https://shiroishi.info/%E4%BD%90%E8%97%A4%E6%85%B6%E5%AD%90%E7%B5%B5%E7%94%BB%E5%B1%95%E3%80%80/",
           "title": "佐藤慶子絵画展　 – 白石まちづくり(株)",
           "text_sha256": "1673c301f2bd9f2b9b9a4b5a6acd22d50c2aeff32d8a7a9f662dd03d19580e2e",
-          "content_bytes": 104768
+          "content_bytes": 104768,
+          "request_url": "https://shiroishi.info/佐藤慶子絵画展　/"
         },
         {
           "facility_id": 2250,
@@ -2159,21 +2160,21 @@
         {
           "facility_id": 2257,
           "url": "https://www.sendai-c.ed.jp/~bunkazai/~jyoumon/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:42:38.538545+00:00",
           "error": "HTTPSConnectionPool(host='www.sendai-c.ed.jp', port=443): Max retries exceeded with url: /~bunkazai/~jyoumon/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sendai-c.ed.jp', port=443) at 0x1e4bc0d6660>, 'Connection to www.sendai-c.ed.jp timed out. (connect timeout=35)'))"
         },
         {
           "facility_id": 2257,
           "url": "http://www.sendai-c.ed.jp/~bunkazai/~jyoumon/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:43:04.323687+00:00",
           "error": "HTTPConnectionPool(host='www.sendai-c.ed.jp', port=80): Max retries exceeded with url: /~bunkazai/~jyoumon/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sendai-c.ed.jp', port=80) at 0x20d91976900>, 'Connection to www.sendai-c.ed.jp timed out. (connect timeout=35)'))"
         },
         {
           "facility_id": 2257,
           "url": "https://www.sendai-joumon.jp/",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T00:43:25.366509+00:00",
           "error": "HTTPSConnectionPool(host='www.sendai-joumon.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.sendai-joumon.jp', port=443): Failed to resolve 'www.sendai-joumon.jp' ([Errno 11001] getaddrinfo failed)\"))"
         },
@@ -2536,7 +2537,7 @@
             {
               "facility_id": 2207,
               "url": "https://www.satohama-jomon.jp/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:21:43.330328+00:00",
               "error": "HTTPSConnectionPool(host='www.satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
             },
@@ -2553,7 +2554,7 @@
             {
               "facility_id": 2207,
               "url": "https://satohama-jomon.jp/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:21:47.681432+00:00",
               "error": "HTTPSConnectionPool(host='satohama-jomon.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
             },
@@ -4946,7 +4947,7 @@
             {
               "facility_id": 2250,
               "url": "https://blog.livedoor.jp/shiromati/archives/cat_145394.html",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:36:37.337455+00:00",
               "error": "HTTPSConnectionPool(host='blog.livedoor.jp', port=443): Max retries exceeded with url: /shiromati/archives/cat_145394.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: self-signed certificate (_ssl.c:1081)')))"
             },
@@ -4972,13 +4973,14 @@
             },
             {
               "facility_id": 2250,
-              "url": "https://shiroishi.info/佐藤慶子絵画展　/",
+              "url": "https://shiroishi.info/%E4%BD%90%E8%97%A4%E6%85%B6%E5%AD%90%E7%B5%B5%E7%94%BB%E5%B1%95%E3%80%80/",
               "status": 200,
               "checked_at": "2026-10-28T00:36:44.318428+00:00",
               "final_url": "https://shiroishi.info/%E4%BD%90%E8%97%A4%E6%85%B6%E5%AD%90%E7%B5%B5%E7%94%BB%E5%B1%95%E3%80%80/",
               "title": "佐藤慶子絵画展　 – 白石まちづくり(株)",
               "text_sha256": "1673c301f2bd9f2b9b9a4b5a6acd22d50c2aeff32d8a7a9f662dd03d19580e2e",
-              "content_bytes": 104768
+              "content_bytes": 104768,
+              "request_url": "https://shiroishi.info/佐藤慶子絵画展　/"
             },
             {
               "facility_id": 2250,
@@ -5475,21 +5477,21 @@
             {
               "facility_id": 2257,
               "url": "https://www.sendai-c.ed.jp/~bunkazai/~jyoumon/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:42:38.538545+00:00",
               "error": "HTTPSConnectionPool(host='www.sendai-c.ed.jp', port=443): Max retries exceeded with url: /~bunkazai/~jyoumon/ (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.sendai-c.ed.jp', port=443) at 0x1e4bc0d6660>, 'Connection to www.sendai-c.ed.jp timed out. (connect timeout=35)'))"
             },
             {
               "facility_id": 2257,
               "url": "http://www.sendai-c.ed.jp/~bunkazai/~jyoumon/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:43:04.323687+00:00",
               "error": "HTTPConnectionPool(host='www.sendai-c.ed.jp', port=80): Max retries exceeded with url: /~bunkazai/~jyoumon/ (Caused by ConnectTimeoutError(<HTTPConnection(host='www.sendai-c.ed.jp', port=80) at 0x20d91976900>, 'Connection to www.sendai-c.ed.jp timed out. (connect timeout=35)'))"
             },
             {
               "facility_id": 2257,
               "url": "https://www.sendai-joumon.jp/",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T00:43:25.366509+00:00",
               "error": "HTTPSConnectionPool(host='www.sendai-joumon.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.sendai-joumon.jp', port=443): Failed to resolve 'www.sendai-joumon.jp' ([Errno 11001] getaddrinfo failed)\"))"
             },
