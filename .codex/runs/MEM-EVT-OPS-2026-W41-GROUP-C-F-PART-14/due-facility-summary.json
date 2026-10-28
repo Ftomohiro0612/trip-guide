@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-14",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T10:17:26.424984+00:00",
+  "executed_at": "2026-10-28T10:18:57.869390+00:00",
   "due_facility_ids": [
     1417,
     1423,
@@ -48,9 +48,9 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 5,
-    "candidate_found_added": 25,
-    "candidate_found_duplicate": 1,
-    "candidate_found_hold": 7,
+    "candidate_found_added": 23,
+    "candidate_found_duplicate": 2,
+    "candidate_found_hold": 8,
     "source_unresolved": 2
   },
   "per_region": {
@@ -82,9 +82,9 @@
       ],
       "total": 23,
       "no_current_or_future_event": 2,
-      "candidate_found_added": 16,
-      "candidate_found_duplicate": 1,
-      "candidate_found_hold": 2,
+      "candidate_found_added": 14,
+      "candidate_found_duplicate": 2,
+      "candidate_found_hold": 3,
       "source_unresolved": 2,
       "sources_checked": [
         {
@@ -1712,9 +1712,8 @@
             },
             {
               "title": "記念講座「堺の農業のいま」",
-              "disposition": "added",
-              "event_id": "evt-1428-202610-f14-10",
-              "participability": "条件付き参加可能"
+              "disposition": "hold",
+              "reason": "shared-source-shape HOLD: 12/5農業講座は同じ公式URL・同日で包丁体験と検証衝突。別催事という根拠はあるがPM承認例外を自己追加せず、今回は保留。"
             },
             {
               "title": "しめ縄作り12/12",
@@ -2550,8 +2549,8 @@
         },
         {
           "facility_id": 1435,
-          "disposition": "candidate_found_added",
-          "reason": "施設主URL再試行・詳細URL503。大阪府教育庁の施設別2公式告知で既存3件を再確認し、公式代替URLをsecondary登録。展示解説追加。",
+          "disposition": "candidate_found_duplicate",
+          "reason": "施設主URL再試行・詳細URL503。大阪府教育庁の施設別2公式告知で既存3件を再確認し、公式代替URLをsecondary登録。展示解説追加。 新規ギャラリートークは既存講座と共有URL・同日衝突のためHOLD。",
           "candidates": [
             {
               "title": "秋季特別展ヒト・戦い",
@@ -2580,9 +2579,8 @@
             },
             {
               "title": "ヒト・戦い展示解説",
-              "disposition": "added",
-              "event_id": "evt-1435-202610-f14-01",
-              "participability": "通常参加可能"
+              "disposition": "hold",
+              "reason": "shared-source-shape HOLD: 土曜ギャラリートークは既存の連続講座と同じ公式URL・5開催日で検証衝突。PM承認例外を自己追加せず今回保留。"
             }
           ],
           "sources_checked": [
@@ -3008,6 +3006,11 @@
               "title": "ちょこっと堺区ラリー・オープンナガヤ",
               "disposition": "hold",
               "reason": "公式埋込みの紹介のみで個別参加条件・在庫・当館内容が確定できない。"
+            },
+            {
+              "title": "高麗茶碗展（鉄砲鍛冶屋敷7/15～12/7）",
+              "disposition": "hold",
+              "reason": "山口家巡回中に市公式旧新着で発見、会場は既に順序完了した8191。8192への誤採用はしない。個別条件未完で、8191を再巡回せず次回PM通常cadenceに回す。"
             }
           ],
           "sources_checked": [
@@ -3195,14 +3198,13 @@
         },
         {
           "facility_id": 8252,
-          "disposition": "candidate_found_added",
+          "disposition": "candidate_found_hold",
           "reason": "公式主ページ2回でメンテナンス。指定公式代替の店舗一覧・茨木店画像を実取得して目視、5コラボ主催公式を全件照合。サンリオのみ確定追加。",
           "candidates": [
             {
               "title": "サンリオコラボ茨木店",
-              "disposition": "added",
-              "event_id": "evt-8252-202610-f14-01",
-              "participability": "条件付き参加可能"
+              "disposition": "hold",
+              "reason": "shared-source-shape HOLD: 茨木参加は公式確認済みだが、他施設8241の同コラボと同じ公式総合URL・日付でvalidator衝突。別会場として妥当でもPM承認例外を自己追加せず保留。"
             },
             {
               "title": "にじさんじコラボ11/12開始",
@@ -3282,7 +3284,14 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_totals": {
+        "added": 64,
+        "hold": 70,
+        "out_of_scope": 26,
+        "duplicate": 6,
+        "past": 1
+      }
     },
     "saga": {
       "facility_ids": [
@@ -3480,7 +3489,13 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_totals": {
+        "added": 2,
+        "hold": 4,
+        "out_of_scope": 2,
+        "past": 1
+      }
     },
     "shiga": {
       "facility_ids": [
@@ -4373,13 +4388,13 @@
         {
           "facility_id": 6081,
           "disposition": "candidate_found_added",
-          "reason": "10/26更新の公式トップと両展示の公式画像を実読。日程・入館料金・休館例外を確認。",
+          "reason": "10/26更新の公式トップと両展示の公式画像を実読。日程・入館料金・休館例外を確認。 野鳥展は既存ID evt-6081-202608-lane3-22と一致、重複追加せず同ID確認日を更新。",
           "candidates": [
             {
               "title": "湖北の野鳥展2026",
-              "disposition": "added",
-              "event_id": "evt-6081-202610-f14-01",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "event_id": "evt-6081-202608-lane3-22",
+              "reason": "既存IDを今回公式で再確認・鮮度更新。"
             },
             {
               "title": "復刻開催 湖北で見られたホオジロ類",
@@ -4686,7 +4701,14 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_totals": {
+        "added": 13,
+        "hold": 30,
+        "past": 5,
+        "out_of_scope": 5,
+        "duplicate": 1
+      }
     },
     "shizuoka": {
       "facility_ids": [
@@ -5487,12 +5509,12 @@
         {
           "facility_id": 8,
           "disposition": "candidate_found_hold",
-          "reason": "公式トップ・できること・利用案内を確認。ふれあい・ゾウガメ給餌・カメレースは常設、有限期間の特別催事は本文にないが、公式が最新情報と位置付けるXは取得403で評価できず。",
+          "reason": "公式トップ・できること・利用案内を確認。ふれあい・ゾウガメ給餌・カメレースは常設、有限期間の特別催事は本文にないが、公式が最新情報と位置付けるXはHTTP200でも投稿本文が表示されず評価できない。",
           "candidates": [
             {
               "title": "iZoo公式X掲載の最新催事候補群",
               "disposition": "hold",
-              "reason": "公式トップのイベント・最新情報はX埋込のみで、リンク先403。個別の期間付き催事の有無を断定せずsource-family HOLD。"
+              "reason": "公式トップのイベント・最新情報はX埋込のみ。今回XはHTTP200だがログイン案内とプロフィールだけで投稿本文が非表示。個別の期間付き催事を判定できずsource-family HOLD。"
             },
             {
               "title": "ふれあい・餌やり・カメレース",
@@ -5564,7 +5586,15 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_totals": {
+        "hold": 10,
+        "out_of_scope": 6,
+        "added": 3,
+        "ended": 5,
+        "duplicate": 9,
+        "past": 2
+      }
     }
   }
 }
