@@ -943,7 +943,7 @@
           "executed_at": "2026-10-28T12:22:43.641380+00:00",
           "facility_id": 2062,
           "disposition": "candidate_found_added",
-          "reason": "イベント一覧3企画と期間限定映画2作品を個別確認。全5候補は既存mergedデータに重複なし。",
+          "reason": "イベント一覧3企画と期間限定映画2作品を個別確認。全5候補は既存mergedデータに重複なし。 検証時に同一期間の劇場上映2作品を1プログラムへ統合（追加4件）。",
           "candidates": [
             {
               "title": "11月ミニイベント クイズラリー",
@@ -969,6 +969,12 @@
               "title": "しまじろうとたんじょうびのおほしさま",
               "disposition": "added",
               "participability": "条件付き参加可能"
+            },
+            {
+              "title": "ユウユウシアター「しまじろうとたんじょうびのおほしさま」",
+              "disposition": "duplicate",
+              "event_id": "evt-2062-202610-f16-candleman",
+              "reason": "同一期間・同一劇場の公式上映プログラム1レコードに両作品をまとめた。"
             }
           ],
           "sources_checked": [
@@ -1073,8 +1079,7 @@
             "evt-2062-202611-f16-quiz",
             "evt-2062-202611-f16-donguri",
             "evt-2062-202610-f16-nurie",
-            "evt-2062-202610-f16-candleman",
-            "evt-2062-202610-f16-shimajiro"
+            "evt-2062-202610-f16-candleman"
           ]
         },
         {
@@ -3475,12 +3480,13 @@
         },
         {
           "facility_id": 280,
-          "url": "https://ikesunpark.jp/news/『イケサンクッキング』　開催！/",
+          "url": "https://ikesunpark.jp/news/%E3%80%8E%E3%82%A4%E3%82%B1%E3%82%B5%E3%83%B3%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%80%8F%E3%80%80%E9%96%8B%E5%82%AC%EF%BC%81/",
           "checked_at": "2026-10-28T12:51:32.392773+00:00",
           "status": 200,
           "final_url": "https://ikesunpark.jp/news/%E3%80%8E%E3%82%A4%E3%82%B1%E3%82%B5%E3%83%B3%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%80%8F%E3%80%80%E9%96%8B%E5%82%AC%EF%BC%81/",
           "title": "11月20日(金)開催!　イケサンクッキング – IKE・SUNPARK／イケ・サンパーク",
-          "content_sha256": "115d9bac638b7f0f2bdfd6254f070b883129b8bec59ecbc6367bfb6e59bd76f2"
+          "content_sha256": "115d9bac638b7f0f2bdfd6254f070b883129b8bec59ecbc6367bfb6e59bd76f2",
+          "requested_url": "https://ikesunpark.jp/news/『イケサンクッキング』　開催！/"
         },
         {
           "facility_id": 280,
@@ -5391,12 +5397,13 @@
             },
             {
               "facility_id": 280,
-              "url": "https://ikesunpark.jp/news/『イケサンクッキング』　開催！/",
+              "url": "https://ikesunpark.jp/news/%E3%80%8E%E3%82%A4%E3%82%B1%E3%82%B5%E3%83%B3%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%80%8F%E3%80%80%E9%96%8B%E5%82%AC%EF%BC%81/",
               "checked_at": "2026-10-28T12:51:32.392773+00:00",
               "status": 200,
               "final_url": "https://ikesunpark.jp/news/%E3%80%8E%E3%82%A4%E3%82%B1%E3%82%B5%E3%83%B3%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%E3%80%8F%E3%80%80%E9%96%8B%E5%82%AC%EF%BC%81/",
               "title": "11月20日(金)開催!　イケサンクッキング – IKE・SUNPARK／イケ・サンパーク",
-              "content_sha256": "115d9bac638b7f0f2bdfd6254f070b883129b8bec59ecbc6367bfb6e59bd76f2"
+              "content_sha256": "115d9bac638b7f0f2bdfd6254f070b883129b8bec59ecbc6367bfb6e59bd76f2",
+              "requested_url": "https://ikesunpark.jp/news/『イケサンクッキング』　開催！/"
             },
             {
               "facility_id": 280,
