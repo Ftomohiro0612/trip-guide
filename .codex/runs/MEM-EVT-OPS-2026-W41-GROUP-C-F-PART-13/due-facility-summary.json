@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-13",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T08:37:17.797977+00:00",
+  "executed_at": "2026-10-28T08:45:08.189279+00:00",
   "process_started_at": "2026-10-28T07:30:12.6453539Z",
   "due_facility_ids": [
     8249,
@@ -52,7 +52,19 @@
     "candidate_found_added": 18,
     "candidate_found_duplicate": 3,
     "candidate_found_hold": 12,
-    "source_unresolved": 1
+    "source_unresolved": 1,
+    "candidates": {
+      "hold": 202,
+      "added": 62,
+      "duplicate": 92,
+      "not_event": 30,
+      "stale_false": 19,
+      "out_of_scope": 18
+    },
+    "events_added": 62,
+    "existing_current_future_refreshed": 82,
+    "existing_past_ended": 1,
+    "registry_refreshed": 39
   },
   "per_region": {
     "niigata": {
@@ -224,7 +236,11 @@
           "registry_refreshed": true
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_counts": {
+        "hold": 9
+      },
+      "candidate_count_basis": "施設で遭遇した候補単位。既存イベント・内包企画との重複遭遇を含み、ユニーク追加イベント数とは区別。"
     },
     "oita": {
       "facility_ids": [
@@ -2314,7 +2330,14 @@
           "registry_refreshed": true
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_counts": {
+        "added": 2,
+        "duplicate": 1,
+        "hold": 14,
+        "not_event": 2
+      },
+      "candidate_count_basis": "施設で遭遇した候補単位。既存イベント・内包企画との重複遭遇を含み、ユニーク追加イベント数とは区別。"
     },
     "osaka": {
       "facility_ids": [
@@ -12492,9 +12515,22 @@
               "reason": "今年度は新規受付なし、登録済みのみ。10/31までだが本館は同日休館。"
             },
             {
-              "name": "コスモス・コキアフェスタ本体・むしくいの園路・限定メニュー",
+              "name": "コスモス・コキアフェスタ本体",
               "disposition": "hold",
-              "reason": "10/30まで。季節行事の本体としての荒天時判断が取得した詳細に明記されない。内包展示・食事を独立催事として分割しない。"
+              "reason": "10/30まで。季節行事の本体としての荒天時判断が取得した詳細に明記されない。内包展示・食事を独立催事として分割しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "むしくいの園路",
+              "disposition": "hold",
+              "reason": "10/30まで。季節行事の本体としての荒天時判断が取得した詳細に明記されない。内包展示・食事を独立催事として分割しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "コスモス・コキアフェスタ限定メニュー",
+              "disposition": "hold",
+              "reason": "10/30まで。季節行事の本体としての荒天時判断が取得した詳細に明記されない。内包展示・食事を独立催事として分割しない。",
+              "source_family_hold": true
             },
             {
               "name": "秋のローズフェスタ本体",
@@ -12502,9 +12538,46 @@
               "reason": "本体の荒天時対応は不明。確認済みのマーチング・ガイド・パンは既存、かぼちゃは変更後条件を確認し別途採用。"
             },
             {
-              "name": "紅葉まつり本体・汎庵万里庵千里庵特別公開・呈茶・パークタクシー・盆栽展",
+              "name": "紅葉まつり本体",
               "disposition": "hold",
-              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。"
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "汎庵特別公開",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "万里庵特別公開",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "千里庵特別公開",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "呈茶",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "パークタクシー",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
+            },
+            {
+              "name": "盆栽展",
+              "disposition": "hold",
+              "reason": "季節行事群の全体荒天時対応が未確認。タクシーのみ雨天運休で全体に拡張しない。",
+              "source_family_hold": true
             },
             {
               "name": "モーニングヨガ11/29",
@@ -12512,9 +12585,58 @@
               "reason": "予約開始が11/4に変更され現在申込前。"
             },
             {
-              "name": "日本庭園人力車・cafe千里庵・紅葉撮影会・秋のプチマルシェ・着物レンタル・フォトウォーク・盆栽工作・自由すぎるおえかき・廃材アート",
+              "name": "日本庭園人力車",
               "disposition": "hold",
-              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。"
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "cafe千里庵",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "紅葉撮影会",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "秋のプチマルシェ",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "着物レンタル",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "フォトウォーク",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "盆栽工作",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "自由すぎるおえかき",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "廃材アート",
+              "disposition": "hold",
+              "reason": "公式一覧で日時・会場は判明するが個々の料金・枠・条件は主催者の特設案内に委ねられ、取得面では未確定。候補群全件HOLD。",
+              "source_family_hold": true
             },
             {
               "name": "OUTDOOR PARK",
@@ -12537,9 +12659,22 @@
               "reason": "雨天・荒天時対応を公園公式詳細から確認できない。"
             },
             {
-              "name": "イルミナイト万博・I’m万博We are万博・ラーメンEXPO",
+              "name": "イルミナイト万博",
               "disposition": "hold",
-              "reason": "日程・時間は掲載されるが詳細決定後随時更新とし、荒天時対応・混雑時条件は未確認。関連群をまとめてHOLD。"
+              "reason": "日程・時間は掲載されるが詳細決定後随時更新とし、荒天時対応・混雑時条件は未確認。関連群をまとめてHOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "I’m万博We are万博",
+              "disposition": "hold",
+              "reason": "日程・時間は掲載されるが詳細決定後随時更新とし、荒天時対応・混雑時条件は未確認。関連群をまとめてHOLD。",
+              "source_family_hold": true
+            },
+            {
+              "name": "ラーメンEXPO",
+              "disposition": "hold",
+              "reason": "日程・時間は掲載されるが詳細決定後随時更新とし、荒天時対応・混雑時条件は未確認。関連群をまとめてHOLD。",
+              "source_family_hold": true
             },
             {
               "name": "万博鉄道まつり2026",
@@ -13533,7 +13668,12 @@
               "reason": "10/31日時・無料・子ども同伴可だが18歳以上購入検討者が対象。家族のおでかけ向け掲載適合性保留。"
             },
             {
-              "name": "ぴったりコンロの選び方／乾太くん体験会",
+              "name": "ぴったりコンロの選び方",
+              "disposition": "hold",
+              "reason": "公式年間PDFを確認。機器購入検討・興味のある方向け販売説明会。通常家族体験イベントとしての適合性保留。"
+            },
+            {
+              "name": "乾太くん体験会",
               "disposition": "hold",
               "reason": "公式年間PDFを確認。機器購入検討・興味のある方向け販売説明会。通常家族体験イベントとしての適合性保留。"
             },
@@ -14023,7 +14163,16 @@
           "registry_refreshed": true
         }
       ],
-      "existing_event_holds": []
+      "existing_event_holds": [],
+      "candidate_counts": {
+        "duplicate": 91,
+        "hold": 179,
+        "stale_false": 19,
+        "not_event": 28,
+        "added": 60,
+        "out_of_scope": 18
+      },
+      "candidate_count_basis": "施設で遭遇した候補単位。既存イベント・内包企画との重複遭遇を含み、ユニーク追加イベント数とは区別。"
     }
   }
 }
