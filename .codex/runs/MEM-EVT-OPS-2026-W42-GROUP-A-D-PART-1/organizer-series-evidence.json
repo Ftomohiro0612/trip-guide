@@ -252,42 +252,6 @@
           "source_type": "organizer_event_series",
           "content_sha256": "4c501014fc55ec07ae306831114b3633e8a006655394ffac5c094c9a44206909",
           "fetched_url": "https://www.i-step.org/tour/staff_guide/form.php"
-        },
-        {
-          "url": "https://www.gsj.jp/Muse/event/archives/20261027_event.html",
-          "status": 200,
-          "checked_at": "2026-10-28T16:27:56.324159+00:00",
-          "organizer_name": "つくばサイエンスツアー関連一次確認：産総研地質標本館",
-          "multi_venue_basis": "i-stepの複数研究施設横断イベント面から発見した企画展の関連一次確認。単独施設ページ自体をorganizer coverageとは数えない。",
-          "host_shared_with_registry_reason": "i-stepの複数研究施設横断イベント面から発見した企画展の関連一次確認。単独施設ページ自体をorganizer coverageとは数えない。",
-          "evidence_role": "linked_primary_confirmation",
-          "source_type": "organizer_event_series",
-          "content_sha256": "13397786799abe3365db5adc286b3d11f057965e863224dbc6cebd95cadffa9d",
-          "fetched_url": "https://www.gsj.jp/Muse/event/archives/20261027_event.html"
-        },
-        {
-          "url": "https://www.gsj.jp/Muse/event/archives/20261107_event.html",
-          "status": 200,
-          "checked_at": "2026-10-28T16:27:56.906760+00:00",
-          "organizer_name": "つくばサイエンスツアー関連一次確認：産総研地質標本館",
-          "multi_venue_basis": "i-stepの複数研究施設横断イベント面から発見した鉱物体験の関連一次確認。単独施設ページ自体をorganizer coverageとは数えない。",
-          "host_shared_with_registry_reason": "i-stepの複数研究施設横断イベント面から発見した鉱物体験の関連一次確認。単独施設ページ自体をorganizer coverageとは数えない。",
-          "evidence_role": "linked_primary_confirmation",
-          "source_type": "organizer_event_series",
-          "content_sha256": "bc3308b1174b109e88da36514374442fa4011fb2d72d113e5e0015ee49b06758",
-          "fetched_url": "https://www.gsj.jp/Muse/event/archives/20261107_event.html"
-        },
-        {
-          "url": "https://tbg.kahaku.go.jp/tenji-event/nid00004121.html",
-          "status": 200,
-          "checked_at": "2026-10-28T16:27:57.264389+00:00",
-          "organizer_name": "つくばサイエンスツアー関連一次確認：国立科学博物館",
-          "multi_venue_basis": "複数研究施設横断i-stepの企画展案内を一次確認する関連ページ。organizer coverageはi-stepであり本単独施設URLではない。",
-          "host_shared_with_registry_reason": "複数研究施設横断i-stepの企画展案内を一次確認する関連ページ。organizer coverageはi-stepであり本単独施設URLではない。",
-          "evidence_role": "linked_primary_confirmation",
-          "source_type": "organizer_event_series",
-          "content_sha256": "688e0a103f846ca1de76dc4d5611f8f99527689a0490cfb5f80c68d0d0311b93",
-          "fetched_url": "https://tbg.kahaku.go.jp/tenji-event/nid00004121.html"
         }
       ],
       "candidates_found": 29,
@@ -542,7 +506,8 @@
           "category": "facility_hosted",
           "rendered_verification": "Full paginated Cloudflare Preview 2026-10-29; live confirmation required after deploy."
         }
-      ]
+      ],
+      "linked_primary_provenance_note": "The3 single-facility GSJ/kahaku confirmation URLs are freshly fetched and recorded in this same run secondary-recall-evidence.json. They are not organizer coverage; organizer coverage is the genuine multi-venue i-step/organizer source set."
     },
     "tokyo": {
       "sources_checked": [
