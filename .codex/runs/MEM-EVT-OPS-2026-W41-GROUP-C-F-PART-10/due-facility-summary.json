@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-10",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T02:08:29.796710+00:00",
+  "executed_at": "2026-10-28T02:09:43.094650+00:00",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
     2265,
@@ -818,7 +818,7 @@
         {
           "facility_id": 2309,
           "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11315",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T01:50:00.876896+00:00",
           "text_sha256": "c5d7613262515ce3d5136cc52e281023858f6f7e601e00d106daf7aca50975a0"
         },
@@ -853,7 +853,7 @@
         {
           "facility_id": 2310,
           "url": "https://www.city.ishinomaki.miyagi.jp/kosodate/001/2800/20230801114110.html",
-          "status": "fetch_error",
+          "status": "error",
           "checked_at": "2026-10-28T01:51:47.588178+00:00",
           "text_sha256": "5b0385c69247e419c5b81851354c4a95bc1654541dccedecddedc5a09d873282"
         },
@@ -2328,7 +2328,7 @@
             {
               "facility_id": 2309,
               "url": "https://www.miyagi-kankou.or.jp/theme/detail.php?id=11315",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T01:50:00.876896+00:00",
               "text_sha256": "c5d7613262515ce3d5136cc52e281023858f6f7e601e00d106daf7aca50975a0"
             },
@@ -2424,7 +2424,7 @@
             {
               "facility_id": 2310,
               "url": "https://www.city.ishinomaki.miyagi.jp/kosodate/001/2800/20230801114110.html",
-              "status": "fetch_error",
+              "status": "error",
               "checked_at": "2026-10-28T01:51:47.588178+00:00",
               "text_sha256": "5b0385c69247e419c5b81851354c4a95bc1654541dccedecddedc5a09d873282"
             },
@@ -4337,13 +4337,13 @@
           "facility_id": 572,
           "name": "新潟県立自然科学館",
           "disposition": "candidate_found_added",
-          "reason": "一覧の全特別企画・関連する既存詳細を個別確認。10件追加、5件HOLD。謎解きは現在開催中の公式事実に合わせ未公表終了日をnullへ訂正、夏展は終了解消。",
+          "reason": "公式各詳細・受付状況を確認。10件追加、候補HOLD6件。謎解きは公式開催中だが終了日未公表で現行検証が日付必須のため既存値を変更せずHOLD。夏展は9/6終了を確認してendedへ。",
           "candidates": [
             {
               "title": "ニイガタナゾトキミュージアム",
-              "disposition": "duplicate",
+              "disposition": "hold",
               "event_id": "evt-572-202608-01",
-              "reason": "公式で継続開催確認。未公表終了日をnull訂正、確認日更新"
+              "reason": "現在取得した公式一覧・詳細724は好評開催中、終了日は未公表。既存9/5という値の根拠は確認不能。現行バリデータはend_date必須のため推測日付にせずレコードを変更せずHOLD。PMに終了日未公表企画の扱い判断を依頼。"
             },
             {
               "title": "パパ・ママ プラネタリウム（水曜特別上映）",
