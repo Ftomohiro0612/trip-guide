@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-9",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T00:50:30.552324+00:00",
+  "executed_at": "2026-10-28T01:02:48.387160+00:00",
   "due_facility_ids": [
     2207,
     2208,
@@ -49,26 +49,10 @@
     "total": 40,
     "completed": 40,
     "no_current_or_future_event": 13,
-    "candidate_found_added": 10,
+    "candidate_found_added": 11,
     "candidate_found_duplicate": 0,
-    "candidate_found_hold": 15,
-    "source_unresolved": 2,
-    "candidate_totals": {
-      "added": 21,
-      "hold": 69,
-      "excluded_past": 14,
-      "duplicate": 3,
-      "standing_program": 2,
-      "excluded_not_family": 1,
-      "excluded_not_outing": 1
-    },
-    "event_changes": {
-      "added": 21,
-      "updated": 3,
-      "ended": 0,
-      "cancelled_or_postponed": 0,
-      "deleted": 0
-    }
+    "candidate_found_hold": 14,
+    "source_unresolved": 2
   },
   "per_region": {
     "miyagi": {
@@ -5168,8 +5152,9 @@
             },
             {
               "title": "遠藤正明アニソンミニライブ 2026-11-28",
-              "disposition": "hold",
-              "reason": "会場はイオンモール石巻1F緑の広場。無料14時開演・当日整理券／立見参加経路は確認したが、このF施設範囲の萬画館に紐付けできない。館外会場の通常イベント取込への引継ぎ判断。"
+              "disposition": "added",
+              "event_id": "evt-2251-f9-161b59ae",
+              "participability": "通常参加可能"
             },
             {
               "title": "マンガロードスタンプラリー2026／トランプラリー",
@@ -5177,9 +5162,10 @@
               "reason": "休館中はMANGA lab.ヒトコマへ受付移転。対象経路・受付場所の別施設紐付けと全参加条件をこの施設の公式休館告知だけでは確定できない。"
             }
           ],
-          "disposition": "candidate_found_hold",
-          "reason": "公式に2026-10-19～2027-01-08全館休館。館内ワークショップは休止、過去の周年企画は開催済。館外へ移転した企画は対象施設へ誤紐付けせずHOLD。物販のみの仮面ライダーストアとマンホールカード配布は体験イベント対象外。",
-          "completed_at": "2026-10-28T00:40:32.334651+00:00"
+          "disposition": "candidate_found_added",
+          "reason": "全館休館中の館内体験は休止。取得済み主催公式29914の館外ミニライブは無料・当日参加経路が揃い、会場名指定で1件追加。未確定のパン博覧会・移転ラリーはHOLD。物販店・カード配布は対象外。",
+          "completed_at": "2026-10-28T00:40:32.334651+00:00",
+          "final_qa_correction_at": "2026-10-28T01:02:48.387160+00:00"
         },
         {
           "facility_id": 2252,
@@ -5975,13 +5961,13 @@
         }
       ],
       "no_current_or_future_event": 13,
-      "candidate_found_added": 10,
+      "candidate_found_added": 11,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 15,
+      "candidate_found_hold": 14,
       "source_unresolved": 2,
       "candidate_totals": {
-        "added": 21,
-        "hold": 69,
+        "added": 22,
+        "hold": 68,
         "excluded_past": 14,
         "duplicate": 3,
         "standing_program": 2,
@@ -5989,12 +5975,12 @@
         "excluded_not_outing": 1
       },
       "added_participability": {
-        "通常参加可能": 8,
+        "通常参加可能": 9,
         "条件付き参加可能": 13,
         "受付終了・参加不能": 0
       },
       "event_changes": {
-        "added": 21,
+        "added": 22,
         "updated": 3,
         "ended": 0,
         "cancelled_or_postponed": 0,
@@ -6002,7 +5988,7 @@
       },
       "candidate_categories": {
         "facility_hosted": {
-          "added": 21
+          "added": 22
         },
         "municipal_regional": {
           "added": 0
@@ -6018,6 +6004,11 @@
       "facility_id": 2246,
       "reason": "施設分類ページのレスポンス確認前にunresolvedで進捗を書いたため、次施設2247の初回取得後、同runの追加一次情報で判定を訂正。順次処理の局所的手順逸脱として開示。",
       "corrected_at": "2026-10-28T00:35:26.350854+00:00"
+    },
+    {
+      "facility_id": 2251,
+      "reason": "施設完了時に館外開催のみを理由に保留したミニライブを、全40施設完了後の最終QAで取得済みの本run公式本文から再評価。新規fetchはせず、既存schemaのfacility_id:null＋venue_nameで追加へ訂正。施設別の編集完了順からの追加逸脱として開示。",
+      "corrected_at": "2026-10-28T01:02:48.387160+00:00"
     }
   ]
 }
