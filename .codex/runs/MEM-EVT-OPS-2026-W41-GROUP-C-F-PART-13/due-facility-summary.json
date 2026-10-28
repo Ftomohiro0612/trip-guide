@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W41-GROUP-C-F-PART-13",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-28T06:37:09.813957+00:00",
+  "executed_at": "2026-10-28T06:47:47.771125+00:00",
   "process_started_at": "2026-10-28T06:08:50.1883042Z",
   "due_facility_ids": [
     8249,
@@ -47,11 +47,11 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 20,
-    "no_current_or_future_event": 1,
-    "candidate_found_added": 10,
+    "total": 30,
+    "no_current_or_future_event": 3,
+    "candidate_found_added": 15,
     "candidate_found_duplicate": 3,
-    "candidate_found_hold": 6,
+    "candidate_found_hold": 9,
     "source_unresolved": 0
   },
   "per_region": {
@@ -875,11 +875,11 @@
         1408,
         1414
       ],
-      "total": 15,
-      "no_current_or_future_event": 0,
-      "candidate_found_added": 7,
+      "total": 25,
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 12,
       "candidate_found_duplicate": 3,
-      "candidate_found_hold": 5,
+      "candidate_found_hold": 8,
       "source_unresolved": 0,
       "sources_checked": [
         {
@@ -2562,6 +2562,823 @@
           "content_type": "image/jpeg",
           "body_sha256": "a6920a9bd6e7ae1b0b2236d23118eb7b7bd27d3b9f344eb696f904ccbe588f2e",
           "bytes": 207971
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://omnh.jp/",
+          "checked_at": "2026-10-28T06:37:22.516208+00:00",
+          "status": 200,
+          "final_url": "https://omnh.jp/",
+          "title": "OMNH | 大阪市立自然史博物館",
+          "text_sha256": "500f6b59e96b85f29c64e914d2ce5e44f15202f31eb08a4fb4089235f9c3b7d5",
+          "text_chars": 1694,
+          "links_count": 51
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://omnh.jp/archives/14250",
+          "checked_at": "2026-10-28T06:37:28.784991+00:00",
+          "status": 200,
+          "final_url": "https://omnh.jp/archives/14250",
+          "title": "テーマ展示「化石を楽しむ2026」を開催します | OMNH",
+          "text_sha256": "f1b980319bd61065e9d4665e64a681cdb860b2febed95b5a2d23611d3c06b618",
+          "text_chars": 1862,
+          "links_count": 10
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://omnh.jp/ongoing_special_exhibition",
+          "checked_at": "2026-10-28T06:37:35.801691+00:00",
+          "status": 200,
+          "final_url": "https://omnh.jp/ongoing_special_exhibition",
+          "title": "現在開催中の特別展・テーマ展示・ミニ展示 | OMNH",
+          "text_sha256": "5ddc4314bd27602f6613d9e11b956d3ae2f75e86228f4cad5c73ca51fdb387fa",
+          "text_chars": 6080,
+          "links_count": 64
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://omnh.jp/ws/",
+          "checked_at": "2026-10-28T06:37:36.669126+00:00",
+          "status": 200,
+          "final_url": "https://omnh.jp/ws/",
+          "title": "ワークショップにおいでよ",
+          "text_sha256": "c7c781f434a33036714ecd2857b5d768fedd64ab417a666ef6b3736cdde02d41",
+          "text_chars": 2974,
+          "links_count": 14
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe",
+          "checked_at": "2026-10-28T06:37:37.866017+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "de0a445363ffb9a902721e279562911fa0a53502e200eed1c4e206456f1f02b3",
+          "text_chars": 2228,
+          "links_count": 13
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://omnh.jp/ws/archives/740",
+          "checked_at": "2026-10-28T06:37:54.100409+00:00",
+          "status": 200,
+          "final_url": "https://omnh.jp/ws/archives/740",
+          "title": "10月31日（土）、11月1日（日）、11月28日（土）、11月29日（日）、子どもワークショップ「き・の・こ」 – ワークショップにおいでよ",
+          "text_sha256": "9fd47b8909f98fcd608f2cec659cb8a4099dd7dca9ba29a8e8ed351f0b179363",
+          "text_chars": 3127,
+          "links_count": 16
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=2",
+          "checked_at": "2026-10-28T06:37:54.626382+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "e93a253f9c666a2e3cf8c39c856724da1d100502f52c9f77b3239f9c0d413ce7",
+          "text_chars": 2606,
+          "links_count": 26
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8E%71%82%C7%82%E0%83%8F%81%5B%83%4E%83%56%83%87%83%62%83%76&T=%8E%71%82%C7%82%E0%83%8F%81%5B%83%4E%83%56%83%87%83%62%83%76%81%6910%81%4511%8C%8E%81%6A%81%75%82%AB%81%45%82%CC%81%45%82%B1%81%76&D=2026%2F10%2F31&M=1",
+          "checked_at": "2026-10-28T06:38:04.670944+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8Eq%82%C7%82%E0%83%8F%81%5B%83N%83V%83%87%83b%83v&T=%8Eq%82%C7%82%E0%83%8F%81%5B%83N%83V%83%87%83b%83v%81i10%81E11%8C%8E%81j%81u%82%AB%81E%82%CC%81E%82%B1%81v&D=2026%2F10%2F31&M=1",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "da90eda5b69a8cda45a1e5b310cb3cf3de22fbb43e761117d733dc5b3434c11b",
+          "text_chars": 1245,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF&T=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF%81%75%97%84%90%EC%82%CC%90%85%82%C6%95%E9%82%E7%82%B5%81%7C%96%BE%8E%A1%82%CC%91%E5%8D%5E%90%85%82%A9%82%E7%8A%77%82%D4%81%7C%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F10%2F31&M=1",
+          "checked_at": "2026-10-28T06:38:05.095274+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83e%81%5B%83%7D%95%CA%8E%A9%91R%8A%CF%8E%40%89%EF&T=%83e%81%5B%83%7D%95%CA%8E%A9%91R%8A%CF%8E%40%89%EF%81u%97%84%90%EC%82%CC%90%85%82%C6%95%E9%82%E7%82%B5%81%7C%96%BE%8E%A1%82%CC%91%E5%8D%5E%90%85%82%A9%82%E7%8Aw%82%D4%81%7C%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89J%93V%92%86%8E~%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F10%2F31&M=1",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "b7496f50d07634a55bf3969dd67180ca7802772d9bde9b29778ab29e2e99005d",
+          "text_chars": 1357,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8E%71%82%C7%82%E0%83%8F%81%5B%83%4E%83%56%83%87%83%62%83%76&T=%8E%71%82%C7%82%E0%83%8F%81%5B%83%4E%83%56%83%87%83%62%83%76%81%6910%81%4511%8C%8E%81%6A%81%75%82%AB%81%45%82%CC%81%45%82%B1%81%76&D=2026%2F10%2F31&M=2",
+          "checked_at": "2026-10-28T06:38:05.493253+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8Eq%82%C7%82%E0%83%8F%81%5B%83N%83V%83%87%83b%83v&T=%8Eq%82%C7%82%E0%83%8F%81%5B%83N%83V%83%87%83b%83v%81i10%81E11%8C%8E%81j%81u%82%AB%81E%82%CC%81E%82%B1%81v&D=2026%2F10%2F31&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "da90eda5b69a8cda45a1e5b310cb3cf3de22fbb43e761117d733dc5b3434c11b",
+          "text_chars": 1245,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90%41%95%A8%89%80%88%C4%93%E0&T=%92%B7%8B%8F%90%41%95%A8%89%80%88%C4%93%E0%81%6911%8C%8E%81%6A&D=2026%2F11%2F07&M=2",
+          "checked_at": "2026-10-28T06:38:05.895877+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90A%95%A8%89%80%88%C4%93%E0&T=%92%B7%8B%8F%90A%95%A8%89%80%88%C4%93%E0%81i11%8C%8E%81j&D=2026%2F11%2F07&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "eec43d21a9d327e9f0493328d3bc365f6eddb31b24454da2e614da806abb23ae",
+          "text_chars": 1106,
+          "links_count": 13
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF&T=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF%81%75%90%EC%8C%B4%82%CC%90%CE%82%B1%82%EB%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F08&M=2",
+          "checked_at": "2026-10-28T06:38:06.303945+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83e%81%5B%83%7D%95%CA%8E%A9%91R%8A%CF%8E%40%89%EF&T=%83e%81%5B%83%7D%95%CA%8E%A9%91R%8A%CF%8E%40%89%EF%81u%90%EC%8C%B4%82%CC%90%CE%82%B1%82%EB%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89J%93V%92%86%8E~%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F08&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "a2ec0356889881e52ccdd8a70457b8a59bda4ac9d224baf619efc19fad8f2bc9",
+          "text_chars": 1221,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8D%75%89%89%89%EF%81%45%83%56%83%93%83%7C%83%57%83%45%83%80&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%40%8D%75%89%89%89%EF%81%75%82%E0%82%C1%82%C6%8B%43%8C%79%82%C9%90%41%95%A8%89%80%81%49%81%60%90%41%95%A8%89%80%82%CC%8A%79%82%B5%82%DD%95%FB%81%60%81%76&D=2026%2F11%2F14&M=2",
+          "checked_at": "2026-10-28T06:38:06.699033+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8Du%89%89%89%EF%81E%83V%83%93%83%7C%83W%83E%83%80&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81%40%8Du%89%89%89%EF%81u%82%E0%82%C1%82%C6%8BC%8Cy%82%C9%90A%95%A8%89%80%81I%81%60%90A%95%A8%89%80%82%CC%8Ay%82%B5%82%DD%95%FB%81%60%81v&D=2026%2F11%2F14&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "c2bbe82f3ad1ea751ade8a4bce03411f8923397d449adcea8f5e9d14c55e055e",
+          "text_chars": 1474,
+          "links_count": 12
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%92%4A%8C%FB%8D%82%8E%69%92%B9%8A%47%8D%48%96%5B%81%77%92%4A%8C%FB%8D%82%8E%69%82%CC%83%5E%83%7D%83%53%8E%AE%92%B9%8A%47%8F%6D%81%78%81%76&D=2026%2F11%2F14&M=2",
+          "checked_at": "2026-10-28T06:38:07.184098+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81u%92J%8C%FB%8D%82%8Ei%92%B9%8AG%8DH%96%5B%81w%92J%8C%FB%8D%82%8Ei%82%CC%83%5E%83%7D%83S%8E%AE%92%B9%8AG%8Fm%81x%81v&D=2026%2F11%2F14&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "b9d3c3f616c197bcb186e6dfa1ad8236b240d13165a405b071de68a036b0dc7e",
+          "text_chars": 1229,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%82%CD%82%B6%82%DF%82%C4%82%CC%92%B9%82%DD%82%BD%82%A2%81%69%91%E0%81%6A%81%49%81%69%92%54%92%B9%89%EF%81%6A%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2",
+          "checked_at": "2026-10-28T06:38:07.969967+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81u%82%CD%82%B6%82%DF%82%C4%82%CC%92%B9%82%DD%82%BD%82%A2%81i%91%E0%81j%81I%81i%92T%92%B9%89%EF%81j%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89J%93V%92%86%8E~%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "fe196c30d0269d6851e3d0f957611313fca893e35cb1b739d6165028bb4d2a0b",
+          "text_chars": 995,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%91%E5%8D%E3%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B2026&D=2026%2F11%2F14&M=2",
+          "checked_at": "2026-10-28T06:38:08.473294+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%91%E5%8D%E3%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B2026&D=2026%2F11%2F14&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "69922fdda4b6a8d0f8d8d5d2ced681050913bedd343534821caec090ac4c17f5",
+          "text_chars": 1393,
+          "links_count": 12
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%92%B7%8B%8F%8C%F6%89%80%82%CC%90%B6%82%AB%82%E0%82%CC%82%F0%92%54%82%BB%82%A4%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%8F%AC%89%4A%8C%88%8D%73%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2",
+          "checked_at": "2026-10-28T06:38:09.090593+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81u%92%B7%8B%8F%8C%F6%89%80%82%CC%90%B6%82%AB%82%E0%82%CC%82%F0%92T%82%BB%82%A4%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%8F%AC%89J%8C%88%8Ds%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "79cd5f3773ceafa6cab9b25143f961074d8f3dca77c70e6f8fbb3ff1e2f77f47",
+          "text_chars": 1022,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8D%75%89%89%89%EF%81%45%83%56%83%93%83%7C%83%57%83%45%83%80&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%40%0D%0A%96%EC%92%B9%82%CC%89%EF%8D%75%89%89%89%EF%0D%0A%81%75%82%C7%82%A4%82%C8%82%E9%83%52%83%41%83%57%83%54%83%56%82%C6%83%5A%83%43%83%5E%83%4A%83%56%83%4D%82%CC%96%A2%97%88%84%9F%91%E5%8D%E3%98%70%8A%DD%82%C5%82%CC%90%B6%91%A7%92%6E%82%CC%95%DB%91%53%82%E2%91%6E%8F%6F%82%C9%8C%FC%82%AF%82%C4%84%9F%81%76&D=2026%2F11%2F15&M=2",
+          "checked_at": "2026-10-28T06:38:09.629154+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8Du%89%89%89%EF%81E%83V%83%93%83%7C%83W%83E%83%80&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81%40%0D%0A%96%EC%92%B9%82%CC%89%EF%8Du%89%89%89%EF%0D%0A%81u%82%C7%82%A4%82%C8%82%E9%83R%83A%83W%83T%83V%82%C6%83Z%83C%83%5E%83J%83V%83M%82%CC%96%A2%97%88%84%9F%91%E5%8D%E3%98p%8A%DD%82%C5%82%CC%90%B6%91%A7%92n%82%CC%95%DB%91S%82%E2%91n%8Fo%82%C9%8C%FC%82%AF%82%C4%84%9F%81v&D=2026%2F11%2F15&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "fc102e6bfa843eaeece4db815314efc01cbc5f1cd2c5d4a7bc46d5fc62dbaefa",
+          "text_chars": 1898,
+          "links_count": 12
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8D%75%89%89%89%EF%81%45%83%56%83%93%83%7C%83%57%83%45%83%80&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%40%0D%0A%96%EC%92%B9%82%CC%89%EF%8D%75%89%89%89%EF%81%75%83%84%83%43%83%8D%83%60%83%87%83%45%81%40%81%77%8C%B6%82%CC%92%B9%81%78%82%A9%82%E7%81%77%96%A2%97%88%82%F0%82%C2%82%C8%82%AE%92%B9%81%78%82%D6%81%76&D=2026%2F11%2F15&M=2",
+          "checked_at": "2026-10-28T06:38:10.293656+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8Du%89%89%89%EF%81E%83V%83%93%83%7C%83W%83E%83%80&T=%8E%A9%91R%8Ej%83t%83F%83X%83e%83B%83o%83%8B%8A%D6%98A%8Ds%8E%96%81%40%0D%0A%96%EC%92%B9%82%CC%89%EF%8Du%89%89%89%EF%81u%83%84%83C%83%8D%83%60%83%87%83E%81%40%81w%8C%B6%82%CC%92%B9%81x%82%A9%82%E7%81w%96%A2%97%88%82%F0%82%C2%82%C8%82%AE%92%B9%81x%82%D6%81v&D=2026%2F11%2F15&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "0893bfb66d8705e2ef9a583d81467f6891810e51af56e79c9eb47f3686f46323",
+          "text_chars": 1865,
+          "links_count": 12
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83%57%83%49%83%89%83%7B&T=%83%57%83%49%83%89%83%7B%81%6911%8C%8E%81%6A%81%75%8A%43%82%CC%8D%BB%82%F0%8C%A9%82%C4%82%DD%82%E6%82%A4%81%76&D=2026%2F11%2F21&M=2",
+          "checked_at": "2026-10-28T06:38:10.831690+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83W%83I%83%89%83%7B&T=%83W%83I%83%89%83%7B%81i11%8C%8E%81j%81u%8AC%82%CC%8D%BB%82%F0%8C%A9%82%C4%82%DD%82%E6%82%A4%81v&D=2026%2F11%2F21&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "fcfd2f6fcd6d420a81bfd2b3caa1d433027931493d3c1299435768d757a9990f",
+          "text_chars": 1224,
+          "links_count": 12
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8C%8E%97%E1%83%6E%83%43%83%4C%83%93%83%4F&T=%97%46%82%CC%89%EF%8C%8E%97%E1%83%6E%83%43%83%4C%83%93%83%4F%81%6911%8C%8E%81%6A%81%75%96%BE%90%5F%8E%52%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F22&M=2",
+          "checked_at": "2026-10-28T06:38:11.399425+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8C%8E%97%E1%83n%83C%83L%83%93%83O&T=%97F%82%CC%89%EF%8C%8E%97%E1%83n%83C%83L%83%93%83O%81i11%8C%8E%81j%81u%96%BE%90_%8ER%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89J%93V%92%86%8E~%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F22&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "effee7da01633d93ba575668b41abff362414457d4e819a6c2fcf0a2be7a4df4",
+          "text_chars": 1394,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%91%E5%8D%E3%95%7B%8D%82%93%99%8A%77%8D%5A%90%B6%93%6B%90%B6%95%A8%8C%A4%8B%86%94%AD%95%5C%89%EF&D=2026%2F11%2F23&M=2",
+          "checked_at": "2026-10-28T06:38:11.849303+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%91%E5%8D%E3%95%7B%8D%82%93%99%8Aw%8DZ%90%B6%93k%90%B6%95%A8%8C%A4%8B%86%94%AD%95%5C%89%EF&D=2026%2F11%2F23&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "df05d8490899566e284c8ff29cb77d28aa4eba72ca9888935d0d1eee31a0eb84",
+          "text_chars": 2060,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1337,
+          "url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90%41%95%A8%89%80%88%C4%93%E0+%93%AE%95%A8%81%45%8D%A9%92%8E%95%D2&T=%92%B7%8B%8F%90%41%95%A8%89%80%88%C4%93%E0%81%45%93%AE%95%A8%95%D2%81%75%8F%89%93%7E%82%CC%8C%F6%89%80%82%CC%92%B9%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F28&M=2",
+          "checked_at": "2026-10-28T06:38:12.459340+00:00",
+          "status": 200,
+          "final_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90A%95%A8%89%80%88%C4%93%E0+%93%AE%95%A8%81E%8D%A9%92%8E%95%D2&T=%92%B7%8B%8F%90A%95%A8%89%80%88%C4%93%E0%81E%93%AE%95%A8%95%D2%81u%8F%89%93~%82%CC%8C%F6%89%80%82%CC%92%B9%81v%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89J%93V%92%86%8E~%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F28&M=2",
+          "title": "博物館と友の会の行事",
+          "text_sha256": "7f1488662e67fe9d434d8d118062f27567d992bac95114fe227fc6d2142f1cd5",
+          "text_chars": 1162,
+          "links_count": 13
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/",
+          "checked_at": "2026-10-28T06:39:40.338937+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/",
+          "title": "ようこそ！大阪歴史博物館へ",
+          "text_sha256": "bd39c7381e1cdd49cadb01a9950878ff9d814d6ee79542dd68f972144a609c71",
+          "text_chars": 2959,
+          "links_count": 117
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/news/2026/naniwakoko2026.html",
+          "checked_at": "2026-10-28T06:39:51.313876+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/news/2026/naniwakoko2026.html",
+          "title": "大阪歴史博物館：特集展示「新発見！なにわの考古学2026」",
+          "text_sha256": "92c304bd42f16cf4ac8604cd008245b9c9ce87361c1a48f76892a80f821c60f4",
+          "text_chars": 3633,
+          "links_count": 65
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/news/2026/okudabennjiro.html",
+          "checked_at": "2026-10-28T06:39:51.732370+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/news/2026/okudabennjiro.html",
+          "title": "大阪歴史博物館：特集展示「千日前の興行師・奥田辨次郎」",
+          "text_sha256": "190cbe3e98d61bdc674d5eb51fe460e7ba7c6b30270dfcdc07160e34a84267f8",
+          "text_chars": 2625,
+          "links_count": 61
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/news/2026/kodaiishigumi202611.html",
+          "checked_at": "2026-10-28T06:39:52.101344+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/news/2026/kodaiishigumi202611.html",
+          "title": "大阪歴史博物館：古代の石組み水路　特別公開",
+          "text_sha256": "d133e6c21e52422faf896d8f3886d1b2abb4edeb5ec3300fa6522d8f7fe8e6a1",
+          "text_chars": 1071,
+          "links_count": 56
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/news/2026/kantyo_kouenkai_3.html",
+          "checked_at": "2026-10-28T06:39:52.453638+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/news/2026/kantyo_kouenkai_3.html",
+          "title": "開館25周年記念座談会「―歴代館長が語る― 大阪歴史博物館のあゆみ、そして未来へ」",
+          "text_sha256": "810e368a5d17d44f423eeaa337fd4e27616fe9514ba3748f1e90ba26d4c6e2b5",
+          "text_chars": 2792,
+          "links_count": 60
+        },
+        {
+          "facility_id": 1338,
+          "url": "https://www.osakamushis.jp/news/2026/rekihakukoza2026_4.html",
+          "checked_at": "2026-10-28T06:39:52.800496+00:00",
+          "status": 200,
+          "final_url": "https://www.osakamushis.jp/news/2026/rekihakukoza2026_4.html",
+          "title": "令和8年度なにわ歴博講座 「“民俗”はどこから来て、どこへ行くのか　―伝承の創造と変容―」",
+          "text_sha256": "8cf770e200fd4cb8f451ab1c10af7b2c8b4e8a7717d66e01a4e697428b528145",
+          "text_chars": 2221,
+          "links_count": 59
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/",
+          "checked_at": "2026-10-28T06:40:22.651937+00:00",
+          "status": 200,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/",
+          "title": "TOPページ | 大阪くらしの今昔館",
+          "text_sha256": "89aa99e2996bc489128f6ead45631a2b6a5d4f1093e4c243e546179801eafb7c",
+          "text_chars": 2212,
+          "links_count": 66
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/event/ange-635",
+          "checked_at": "2026-10-28T06:40:30.219196+00:00",
+          "status": 429,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/event?post_id=ange-635",
+          "title": "429 Too Many Requests",
+          "text_sha256": "7bc4b64f68d7512ade26cabdab5971c62f6faef5cb067fe27052a2b71ba175c8",
+          "text_chars": 34,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/event/ange-634",
+          "checked_at": "2026-10-28T06:40:30.686718+00:00",
+          "status": 429,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/event?post_id=ange-634",
+          "title": "429 Too Many Requests",
+          "text_sha256": "7bc4b64f68d7512ade26cabdab5971c62f6faef5cb067fe27052a2b71ba175c8",
+          "text_chars": 34,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/event/ange-645",
+          "checked_at": "2026-10-28T06:40:31.140075+00:00",
+          "status": 429,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/event?post_id=ange-645",
+          "title": "429 Too Many Requests",
+          "text_sha256": "7bc4b64f68d7512ade26cabdab5971c62f6faef5cb067fe27052a2b71ba175c8",
+          "text_chars": 34,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/event",
+          "checked_at": "2026-10-28T06:40:38.425849+00:00",
+          "status": 200,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/event",
+          "title": "催し物案内 | 大阪くらしの今昔館",
+          "text_sha256": "789caaeec43c1f4ae533fa98815b451396af8df2ec84c5db05141562baae37a3",
+          "text_chars": 4204,
+          "links_count": 53
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/event/ange-635",
+          "checked_at": "2026-10-28T06:40:39.062449+00:00",
+          "status": 429,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/event?post_id=ange-635",
+          "title": "429 Too Many Requests",
+          "text_sha256": "7bc4b64f68d7512ade26cabdab5971c62f6faef5cb067fe27052a2b71ba175c8",
+          "text_chars": 34,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1339,
+          "url": "https://www.osaka-angenet.jp/konjyakukan/topic/260001173",
+          "checked_at": "2026-10-28T06:40:39.506613+00:00",
+          "status": 200,
+          "final_url": "https://www.osaka-angenet.jp/konjyakukan/topic/260001173",
+          "title": "お知らせ 個別 | 大阪くらしの今昔館",
+          "text_sha256": "c164f78c65a6ef225f19f69326db93cedfd2241036774fc61ae76e1da574ef70",
+          "text_chars": 1787,
+          "links_count": 49
+        },
+        {
+          "facility_id": 1341,
+          "url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/",
+          "checked_at": "2026-10-28T06:41:02.449375+00:00",
+          "status": 200,
+          "final_url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/",
+          "title": "カップヌードルミュージアム 大阪池田",
+          "text_sha256": "8799cccf542517a08c40dcd045ff9ad264cb326886058ea30f5f0164dfad3a3d",
+          "text_chars": 2146,
+          "links_count": 28
+        },
+        {
+          "facility_id": 1341,
+          "url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/news/",
+          "checked_at": "2026-10-28T06:41:08.861579+00:00",
+          "status": 200,
+          "final_url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/news/",
+          "title": "ニュース | カップヌードルミュージアム 大阪池田",
+          "text_sha256": "0c5bde6be1023b4cd437e57608902f1a5f849317c61210830ee9a503e215c806",
+          "text_chars": 2294,
+          "links_count": 10
+        },
+        {
+          "facility_id": 1341,
+          "url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/news/18164/",
+          "checked_at": "2026-10-28T06:41:09.397396+00:00",
+          "status": 200,
+          "final_url": "https://www.cupnoodles-museum.jp/ja/osaka_ikeda/news/18164/",
+          "title": "「ハート形チキンラーメン」 手作り体験を 2027年1月30日(土)から2月28日(日)まで開催 | カップヌードルミュージアム 大阪池田",
+          "text_sha256": "d80cc176adb651b762a426f8bb4f2609fd9fd61ab1751a9d8d3899fe418a100f",
+          "text_chars": 1147,
+          "links_count": 36
+        },
+        {
+          "facility_id": 1342,
+          "url": "https://www.duskin-museum.jp/",
+          "checked_at": "2026-10-28T06:41:35.024685+00:00",
+          "status": 200,
+          "final_url": "https://www.duskin-museum.jp/",
+          "title": "ダスキンミュージアム「キレイ」と「おいしい」のむかし・いま・みらい",
+          "text_sha256": "d9772a9025c9f6e00f453b01959f9d6d69e366d143ebd8e75570dd7098477ee4",
+          "text_chars": 1900,
+          "links_count": 8
+        },
+        {
+          "facility_id": 1342,
+          "url": "https://www.duskin-museum.jp/news/",
+          "checked_at": "2026-10-28T06:41:40.973583+00:00",
+          "status": 200,
+          "final_url": "https://www.duskin-museum.jp/news/",
+          "title": "お知らせ | ダスキンミュージアム「キレイ」と「おいしい」のむかし・いま・みらい",
+          "text_sha256": "47207d39ee738483bb1c7bc3bce605982663ebc86dc4969dc2061893f8735f01",
+          "text_chars": 614,
+          "links_count": 22,
+          "dynamic_official_feed_checked_at": "2026-10-28T06:42:12.081513+00:00",
+          "dynamic_feed_sha256": "bac7ebbf0cee2beb4b0c9250358eb609bd8371c182d914f52ffbecb45d867d70",
+          "dynamic_feed_rows": 991
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/",
+          "checked_at": "2026-10-28T06:42:40.591939+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/",
+          "title": "屋内遊び場 堺市立ビッグバン",
+          "text_sha256": "3145f70e438db3f8210777d38ad03ee95708198b0509ec3eb9a73bb3476d01cf",
+          "text_chars": 17497,
+          "links_count": 89
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/event/",
+          "checked_at": "2026-10-28T06:42:55.822926+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/event/",
+          "title": "投稿 | 堺市立ビッグバン",
+          "text_sha256": "f8c3107e25406f8058c957468bed0d97609d0e8e53c7386b225754835193a744",
+          "text_chars": 1503,
+          "links_count": 75
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5553/",
+          "checked_at": "2026-10-28T06:43:20.159597+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5553/",
+          "title": "全館企画展2026年11月23日まで！「Oh!ばけとOh!ともだちにならない怪？」 | 堺市立ビッグバン",
+          "text_sha256": "dac7e882f0116b9d979ab206d11a187e54c88d97d35741b7717cf9f78b7ce417",
+          "text_chars": 32,
+          "links_count": 1
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5606/",
+          "checked_at": "2026-10-28T06:43:20.924508+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5606/",
+          "title": "開催中！館内回遊型の謎解き「BIGBANG MYSTERY」 | 堺市立ビッグバン",
+          "text_sha256": "1db3b4665fb76f503416c76643dd0870904684b6fb0faa35df6a9b9faba3cf16",
+          "text_chars": 75,
+          "links_count": 1
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5541/",
+          "checked_at": "2026-10-28T06:43:21.696651+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5541/",
+          "title": "工作ワークショップ｜【11月23日まで】フェルトバッグ | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5550/",
+          "checked_at": "2026-10-28T06:43:22.566213+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5550/",
+          "title": "スペースキッチン｜2026年11月1日(日)・8日(日)昔懐かしい飴細工体験 | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5674/",
+          "checked_at": "2026-10-28T06:43:23.498777+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5674/",
+          "title": "劇場ワークショップ｜2026年11月1日(日)「演劇：ロボットのゆめ」 | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5690/",
+          "checked_at": "2026-10-28T06:43:24.453553+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5690/",
+          "title": "劇場ワークショップ｜2026年11月3日(火・祝) 「ちょっと夢工房」 | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5694/",
+          "checked_at": "2026-10-28T06:43:25.404884+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5694/",
+          "title": "劇場ワークショップ｜2026年11月8日(日) 「宇宙体験工作ワークショップ」 | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5547/",
+          "checked_at": "2026-10-28T06:43:26.293487+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5547/",
+          "title": "スペースキッチン｜2026年11月15日(日)「日々のパン 出張！パン教室」 | 堺市立ビッグバン",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text_chars": 0,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1344,
+          "url": "https://www.bigbang-sakai.jp/5652/",
+          "checked_at": "2026-10-28T06:43:27.334467+00:00",
+          "status": 200,
+          "final_url": "https://www.bigbang-sakai.jp/5652/",
+          "title": "劇場ワークショップ｜2026年11月22日(日)・23日(月・祝) 「あつまれ！親子でWAKU WAKU運動あそび」 | 堺市立ビッグバン",
+          "text_sha256": "1d404d6ddeb41641608fb9c8c3c526ee9ac3c8a07c9a72d982b9ff7c155abc83",
+          "text_chars": 21,
+          "links_count": 0
+        },
+        {
+          "facility_id": 1345,
+          "url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/",
+          "checked_at": "2026-10-28T06:44:09.112506+00:00",
+          "status": 200,
+          "final_url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/",
+          "title": "京阪電車を体感できるミュージアム SANZEN-HIROBA | 京阪ホールディングス株式会社 京阪電気鉄道オフィシャルサイト",
+          "text_sha256": "6a1151f969d076a406edf6740592134cc3d4e44bfedbb22b94f53e6e35cd3cea",
+          "text_chars": 905,
+          "links_count": 14
+        },
+        {
+          "facility_id": 1345,
+          "url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/event/exhibition-euphonium.html",
+          "checked_at": "2026-10-28T06:44:15.849277+00:00",
+          "status": 200,
+          "final_url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/event/exhibition-euphonium.html",
+          "title": "京阪電車×響け！響け！ユーフォニアムコラボの歴史展示 | 京阪ホールディングス株式会社 京阪電気鉄道オフィシャルサイト",
+          "text_sha256": "d442c2390de28ea3f8af095ca39a2b77f7b2eb51d05d53e8410b18acea422538",
+          "text_chars": 2062,
+          "links_count": 126
+        },
+        {
+          "facility_id": 1345,
+          "url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/event/buttonbadge.html",
+          "checked_at": "2026-10-28T06:44:16.323347+00:00",
+          "status": 200,
+          "final_url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/event/buttonbadge.html",
+          "title": "オリジナル缶バッジ | 京阪ホールディングス株式会社 京阪電気鉄道オフィシャルサイト",
+          "text_sha256": "1857879aca48c8eedc98f39749b15d478953dca0a567f7f423ebcdab08292b6a",
+          "text_chars": 2073,
+          "links_count": 126
+        },
+        {
+          "facility_id": 1345,
+          "url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/facility.html",
+          "checked_at": "2026-10-28T06:44:22.960525+00:00",
+          "status": 200,
+          "final_url": "https://www.keihan.co.jp/traffic/sanzen-hiroba/facility.html",
+          "title": "施設案内・アクセス ｜ SANZEN-HIROBA | 京阪ホールディングス株式会社 京阪電気鉄道オフィシャルサイト",
+          "text_sha256": "0c354c06164453a9842254f4a67c55cddee5d2b8c393c1529c444eaedb294225",
+          "text_chars": 1395,
+          "links_count": 8
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://minka.or.jp/",
+          "checked_at": "2026-10-28T06:44:48.700546+00:00",
+          "status": 200,
+          "final_url": "https://minka.or.jp/",
+          "title": "トップページ - 日本民家再生協会",
+          "text_sha256": "dc9806da0a77c40d2a03f05f6f23a08259518ede881daae4ee277f01a41c57b0",
+          "text_chars": 2528,
+          "links_count": 73
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/",
+          "checked_at": "2026-10-28T06:45:02.181685+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/",
+          "title": "HOME - 日本民家集落博物館",
+          "text_sha256": "acb1b3bc32eb73115cd8f8625b221c577c61201d8cc24faeb8d7e702ea738767",
+          "text_chars": 704,
+          "links_count": 18
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/news/",
+          "checked_at": "2026-10-28T06:45:09.802130+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/news/",
+          "title": "お知らせ - 日本民家集落博物館",
+          "text_sha256": "840538bc55068c0578ed2c067c38692f45222b3e2316e3b17523b22d4d562dfe",
+          "text_chars": 586,
+          "links_count": 32
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/2026/10/27/%E9%82%A6%E6%A5%BD%E3%81%AE%E3%81%A4%E3%81%A9%E3%81%84%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "checked_at": "2026-10-28T06:45:20.021402+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/2026/10/27/%E9%82%A6%E6%A5%BD%E3%81%AE%E3%81%A4%E3%81%A9%E3%81%84%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "title": "邦楽のつどいを開催します - 日本民家集落博物館",
+          "text_sha256": "8de7e77a6a28dd0525c7fce8e864b3b0e6ea5ef2552f7d88f0ab69daa5694f62",
+          "text_chars": 1139,
+          "links_count": 46
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/2026/10/27/%E7%B4%99%E8%8A%9D%E5%B1%85%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "checked_at": "2026-10-28T06:45:20.781360+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/2026/10/27/%E7%B4%99%E8%8A%9D%E5%B1%85%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "title": "紙芝居を開催します - 日本民家集落博物館",
+          "text_sha256": "cea0280e75d82429b03ba4c57e87cb9981f519e493e202c8f3b7dad9bf96ffec",
+          "text_chars": 1136,
+          "links_count": 46
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/2026/10/27/11%E6%9C%88%E3%81%AE%E5%AE%9A%E6%9C%9F%E4%BD%93%E9%A8%93%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "checked_at": "2026-10-28T06:45:21.463043+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/2026/10/27/11%E6%9C%88%E3%81%AE%E5%AE%9A%E6%9C%9F%E4%BD%93%E9%A8%93%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "title": "11月の定期体験のご案内 - 日本民家集落博物館",
+          "text_sha256": "3f0bcdb007d54d0a04930decfb528623e668651b4181218b761c1ecfe44bd7ff",
+          "text_chars": 1139,
+          "links_count": 46
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/2026/10/27/11%E6%9C%88%E3%81%AE%E5%82%AC%E3%81%97%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "checked_at": "2026-10-28T06:45:22.562874+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/2026/10/27/11%E6%9C%88%E3%81%AE%E5%82%AC%E3%81%97%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "title": "11月の催しのご案内 - 日本民家集落博物館",
+          "text_sha256": "032900b42ce1310b1b9c3eaa50117d932ec573adf08a85359fb1402a446703aa",
+          "text_chars": 1137,
+          "links_count": 46
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.minshuhaku.jp/2026/10/23/%E6%A9%9F%E7%B9%94%E3%82%8A%E4%BD%93%E9%A8%93%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "checked_at": "2026-10-28T06:45:23.491284+00:00",
+          "status": 200,
+          "final_url": "https://www.minshuhaku.jp/2026/10/23/%E6%A9%9F%E7%B9%94%E3%82%8A%E4%BD%93%E9%A8%93%E3%82%92%E9%96%8B%E5%82%AC%E3%81%97%E3%81%BE%E3%81%99/",
+          "title": "機織り体験を開催します - 日本民家集落博物館",
+          "text_sha256": "e9fbbe8cb13858d6147447692b97f6135a0fc448f6e54878606b51d53fc929cd",
+          "text_chars": 1138,
+          "links_count": 46
+        },
+        {
+          "facility_id": 1346,
+          "url": "https://www.pref.osaka.lg.jp/o180150/bunkazaihogo/jouhou/minshu-akinominkamatsuri2026.html",
+          "checked_at": "2026-10-28T06:45:48.683942+00:00",
+          "status": 200,
+          "final_url": "https://www.pref.osaka.lg.jp/o180150/bunkazaihogo/jouhou/minshu-akinominkamatsuri2026.html",
+          "title": "日本民家集落博物館　「秋の民家まつり」を開催します！／大阪府（おおさかふ）ホームページ [Osaka Prefectural Government]",
+          "text_sha256": "2f51359bbef566976e7d883b0ec57aeacd0140f226e57c76217c1110d58f043f",
+          "text_chars": 1663,
+          "links_count": 26
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://aquapia-akutagawa.blog.jp/",
+          "checked_at": "2026-10-28T06:45:57.374537+00:00",
+          "status": 200,
+          "final_url": "https://aquapia-akutagawa.blog.jp/",
+          "title": "あくあぴあブログ",
+          "text_sha256": "b869e5192774f60e67eb4e97758a81f883f93c4f1a86d22297d1dbab4a8932b1",
+          "text_chars": 4915,
+          "links_count": 70
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://aquapia-akutagawa.blog.jp/archives/31591603.html",
+          "checked_at": "2026-10-28T06:46:28.418866+00:00",
+          "status": 200,
+          "final_url": "https://aquapia-akutagawa.blog.jp/archives/31591603.html",
+          "title": "企画展　「自然とかたちの表現　書と墨の“かたち”」を開催します : あくあぴあブログ",
+          "text_sha256": "1e5306667642c4fcaee09083913c204eb98456a170409cf437d731c95f202c62",
+          "text_chars": 604,
+          "links_count": 10
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://www.city.takatsuki.osaka.jp/event/183313.html",
+          "checked_at": "2026-10-28T06:46:29.159298+00:00",
+          "status": 200,
+          "final_url": "https://www.city.takatsuki.osaka.jp/event/183313.html",
+          "title": "自然をアートで楽しもう「昆虫のひっかき版画」 - 高槻市ホームページ（公園課）",
+          "text_sha256": "a8495b751070f29add285bbc6d1443c8b419cdd527ddfd0c0719b4ae74dbf4c9",
+          "text_chars": 624,
+          "links_count": 4
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://www.city.takatsuki.osaka.jp/event/181522.html",
+          "checked_at": "2026-10-28T06:46:29.777550+00:00",
+          "status": 200,
+          "final_url": "https://www.city.takatsuki.osaka.jp/event/181522.html",
+          "title": "みんなのワークショップ「どんぐり　いろいろ」 - 高槻市ホームページ（公園課）",
+          "text_sha256": "c79386d0ebb36fc94b78acd1340e9b6d7472dce0d45797dedc7d3742e02dc073",
+          "text_chars": 557,
+          "links_count": 3
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://www.city.takatsuki.osaka.jp/event/181536.html",
+          "checked_at": "2026-10-28T06:46:30.256891+00:00",
+          "status": 404,
+          "final_url": "https://www.city.takatsuki.osaka.jp/event/181536.html",
+          "title": "お探しのページを見つけることができませんでした。- 高槻市ホームページ",
+          "text_sha256": "3a5d9175df5c4f1211cc3fd879ce2beeac8c697b6f0c6626716f1dbaee9478ab",
+          "text_chars": 2072,
+          "links_count": 156
+        },
+        {
+          "facility_id": 1347,
+          "url": "https://www.city.takatsuki.osaka.jp/soshiki/54/4905.html",
+          "checked_at": "2026-10-28T06:46:46.190216+00:00",
+          "status": 200,
+          "final_url": "https://www.city.takatsuki.osaka.jp/soshiki/54/4905.html",
+          "title": "高槻市立自然博物館（あくあぴあ芥川）利用案内 - 高槻市ホームページ（公園課）",
+          "text_sha256": "4e062a20a2ce9023c609026880783bfa3544c389c40b0bff6f685303c4c458b8",
+          "text_chars": 930,
+          "links_count": 9
+        },
+        {
+          "facility_id": 1348,
+          "url": "https://kishibura.jp/danjiri/",
+          "checked_at": "2026-10-28T06:47:24.799560+00:00",
+          "status": 200,
+          "final_url": "https://kishibura.jp/danjiri/",
+          "title": "だんじり会館 | 一年中だんじり祭 体感空間",
+          "text_sha256": "18db69979fe53b35d12e8e93ad48f242b66c960aa4ee0bdbb78ff2983143a588",
+          "text_chars": 916,
+          "links_count": 41
+        },
+        {
+          "facility_id": 1348,
+          "url": "https://kishibura.jp/danjiri/news",
+          "checked_at": "2026-10-28T06:47:33.049254+00:00",
+          "status": 200,
+          "final_url": "https://kishibura.jp/danjiri/news",
+          "title": "新着情報 | だんじり会館",
+          "text_sha256": "c0eda088e9108ebbbfce43406f495b21be4cd59eb8646a28f6cf9dd233a8682d",
+          "text_chars": 2325,
+          "links_count": 11
+        },
+        {
+          "facility_id": 1348,
+          "url": "https://kishibura.jp/danjiri/danjirimatsuri.html",
+          "checked_at": "2026-10-28T06:47:33.502579+00:00",
+          "status": 200,
+          "final_url": "https://kishibura.jp/danjiri/danjirimatsuri.html",
+          "title": "岸和田だんじり祭とは | だんじり会館",
+          "text_sha256": "d32d82fce17745400a0f23442b5a0a1b3266cce0b93340028069bac6496bbe70",
+          "text_chars": 1791,
+          "links_count": 24
         }
       ],
       "facilities": [
@@ -3936,6 +4753,482 @@
           "source_fetches": 5,
           "registry_refreshed": true,
           "completed_at": "2026-10-28T06:37:09.813879+00:00"
+        },
+        {
+          "facility_id": 1337,
+          "name": "大阪市立自然史博物館",
+          "disposition": "candidate_found_added",
+          "judgment": "公式トップ・現行展・子どもワークショップ・10月11月カレンダーと全新規現行候補の個別詳細を取得。館内4企画を追加、フェスティバル関係は一括理由を各候補に付してHOLD。",
+          "candidates": [
+            {
+              "title": "化石を楽しむ2026",
+              "event_id": "evt-1337-f13-fossils",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "通常入館、月曜休館"
+            },
+            {
+              "title": "子どもワークショップ き・の・こ",
+              "event_id": "evt-1337-f13-mushrooms",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "各回10分前受付、先着10名、事前申込不要・途中参加不可"
+            },
+            {
+              "title": "ジオラボ 海の砂を見てみよう",
+              "event_id": "evt-1337-f13-seasand",
+              "disposition": "added",
+              "participability": "条件付き参加可能",
+              "reason": "公式申込みから11/9まで、20名・応募多数抽選"
+            },
+            {
+              "title": "大阪府高等学校生徒生物研究発表会",
+              "event_id": "evt-1337-f13-studentbiology",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "申込不要、直接講堂へ"
+            },
+            {
+              "title": "テーマ別自然観察会「淀川の水と暮らし−明治の大洪水から学ぶ−」",
+              "disposition": "hold",
+              "reason": "公式で応募締切済み。当日経路なし。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF&T=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF%81%75%97%84%90%EC%82%CC%90%85%82%C6%95%E9%82%E7%82%B5%81%7C%96%BE%8E%A1%82%CC%91%E5%8D%5E%90%85%82%A9%82%E7%8A%77%82%D4%81%7C%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F10%2F31&M=1"
+            },
+            {
+              "title": "長居植物園案内（11月）",
+              "disposition": "out_of_scope_venue",
+              "reason": "会場は長居植物園/奈良–柏原の野外行程で当該博物館の開催ではない。別施設に誤結合しない。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90%41%95%A8%89%80%88%C4%93%E0&T=%92%B7%8B%8F%90%41%95%A8%89%80%88%C4%93%E0%81%6911%8C%8E%81%6A&D=2026%2F11%2F07&M=2"
+            },
+            {
+              "title": "テーマ別自然観察会「川原の石ころ」",
+              "disposition": "hold",
+              "reason": "公式で応募締切済み。当日経路なし。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF&T=%83%65%81%5B%83%7D%95%CA%8E%A9%91%52%8A%CF%8E%40%89%EF%81%75%90%EC%8C%B4%82%CC%90%CE%82%B1%82%EB%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F08&M=2"
+            },
+            {
+              "title": "自然史フェスティバル関連行事　講演会「もっと気軽に植物園！〜植物園の楽しみ方〜」",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8D%75%89%89%89%EF%81%45%83%56%83%93%83%7C%83%57%83%45%83%80&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%40%8D%75%89%89%89%EF%81%75%82%E0%82%C1%82%C6%8B%43%8C%79%82%C9%90%41%95%A8%89%80%81%49%81%60%90%41%95%A8%89%80%82%CC%8A%79%82%B5%82%DD%95%FB%81%60%81%76&D=2026%2F11%2F14&M=2"
+            },
+            {
+              "title": "自然史フェスティバル関連行事「谷口高司鳥絵工房『谷口高司のタマゴ式鳥絵塾』」",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%92%4A%8C%FB%8D%82%8E%69%92%B9%8A%47%8D%48%96%5B%81%77%92%4A%8C%FB%8D%82%8E%69%82%CC%83%5E%83%7D%83%53%8E%AE%92%B9%8A%47%8F%6D%81%78%81%76&D=2026%2F11%2F14&M=2"
+            },
+            {
+              "title": "自然史フェスティバル関連行事「はじめての鳥みたい（隊）！（探鳥会）」",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%82%CD%82%B6%82%DF%82%C4%82%CC%92%B9%82%DD%82%BD%82%A2%81%69%91%E0%81%6A%81%49%81%69%92%54%92%B9%89%EF%81%6A%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2"
+            },
+            {
+              "title": "大阪自然史フェスティバル2026",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%91%E5%8D%E3%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B2026&D=2026%2F11%2F14&M=2"
+            },
+            {
+              "title": "自然史フェスティバル関連行事「長居公園の生きものを探そう」",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%82%BB%82%CC%91%BC&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%75%92%B7%8B%8F%8C%F6%89%80%82%CC%90%B6%82%AB%82%E0%82%CC%82%F0%92%54%82%BB%82%A4%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%8F%AC%89%4A%8C%88%8D%73%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F14&M=2"
+            },
+            {
+              "title": "野鳥の会講演会「どうなるコアジサシとセイタカシギの未来」及び「ヤイロチョウ」",
+              "disposition": "hold",
+              "reason": "11/14–15自然史フェスティバル関連一式。個別開催内容は取得済みだが、季節・祭り類として必要な全体の雨天取扱い・最新変更・交通案内をこの源群で確定できず、包括企画と付帯行事を保留。 両講演詳細を本実行で取得。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8D%75%89%89%89%EF%81%45%83%56%83%93%83%7C%83%57%83%45%83%80&T=%8E%A9%91%52%8E%6A%83%74%83%46%83%58%83%65%83%42%83%6F%83%8B%8A%D6%98%41%8D%73%8E%96%81%40%0D%0A%96%EC%92%B9%82%CC%89%EF%8D%75%89%89%89%EF%0D%0A%81%75%82%C7%82%A4%82%C8%82%E9%83%52%83%41%83%57%83%54%83%56%82%C6%83%5A%83%43%83%5E%83%4A%83%56%83%4D%82%CC%96%A2%97%88%84%9F%91%E5%8D%E3%98%70%8A%DD%82%C5%82%CC%90%B6%91%A7%92%6E%82%CC%95%DB%91%53%82%E2%91%6E%8F%6F%82%C9%8C%FC%82%AF%82%C4%84%9F%81%76&D=2026%2F11%2F15&M=2"
+            },
+            {
+              "title": "友の会月例ハイキング（11月）「明神山」",
+              "disposition": "out_of_scope_venue",
+              "reason": "会場は長居植物園/奈良–柏原の野外行程で当該博物館の開催ではない。別施設に誤結合しない。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%8C%8E%97%E1%83%6E%83%43%83%4C%83%93%83%4F&T=%97%46%82%CC%89%EF%8C%8E%97%E1%83%6E%83%43%83%4C%83%93%83%4F%81%6911%8C%8E%81%6A%81%75%96%BE%90%5F%8E%52%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F22&M=2"
+            },
+            {
+              "title": "長居植物園案内・動物編「初冬の公園の鳥」",
+              "disposition": "out_of_scope_venue",
+              "reason": "会場は長居植物園/奈良–柏原の野外行程で当該博物館の開催ではない。別施設に誤結合しない。",
+              "source_url": "https://www2.omnh.jp/scripts/event.exe?C=0&G=%90%41%95%A8%89%80%88%C4%93%E0+%93%AE%95%A8%81%45%8D%A9%92%8E%95%D2&T=%92%B7%8B%8F%90%41%95%A8%89%80%88%C4%93%E0%81%45%93%AE%95%A8%95%D2%81%75%8F%89%93%7E%82%CC%8C%F6%89%80%82%CC%92%B9%81%76%3Cspan+style%3D%22font-weight%3Abold%22%3E%3Cspan+style%3D%22color%3A%23ff0000%22%3E%89%4A%93%56%92%86%8E%7E%3C%2Fspan%3E%3C%2Fspan%3E&D=2026%2F11%2F28&M=2"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [
+            "evt-1337-f13-fossils",
+            "evt-1337-f13-mushrooms",
+            "evt-1337-f13-seasand",
+            "evt-1337-f13-studentbiology"
+          ],
+          "source_fetches": 23,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:39:17.324913+00:00"
+        },
+        {
+          "facility_id": 1338,
+          "name": "大阪歴史博物館",
+          "disposition": "candidate_found_added",
+          "judgment": "トップ新着と現行/予告特集展・3催事の全詳細を個別確認。通常観覧2展、当日参加の水路公開を追加。常設展示の資料替えは独立催事としない。",
+          "candidates": [
+            {
+              "title": "新発見！なにわの考古学2026",
+              "event_id": "evt-1338-f13-archaeology",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "通常入館、火曜休館。11/3開館・11/4休館"
+            },
+            {
+              "title": "千日前の興行師・奥田辨次郎",
+              "event_id": "evt-1338-f13-okuda",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "通常入館。火曜及び12/28～1/5休館"
+            },
+            {
+              "title": "古代の石組み水路 特別公開",
+              "event_id": "evt-1338-f13-stonecanal",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "当日13時から全回の参加証配布、各回先着20名"
+            },
+            {
+              "title": "体験なにわの考古学11/15",
+              "disposition": "hold",
+              "reason": "公式で定員到達・販売終了と明示。"
+            },
+            {
+              "title": "25周年座談会11/3",
+              "disposition": "hold",
+              "reason": "先着予約250名、teketの残席状況は未確認。子ども向け内容も明示なし。"
+            },
+            {
+              "title": "なにわ歴博講座 民俗12/5",
+              "disposition": "hold",
+              "reason": "予約先着250名。講座の残席/家族向け適合を確認できず保留（当日は残席時のみ）。"
+            },
+            {
+              "title": "常設展示更新：片岡安/私室の調度品/ルナパーク/大阪薩摩/石製垂飾/百済土器/秋墨書土器/暦広告",
+              "disposition": "regular_exhibit_rotation",
+              "reason": "常設階の資料替えであり独立の催事として追加しない。"
+            },
+            {
+              "title": "金箔瓦工作・近世大坂蔵屋敷講座・大阪の歴史を掘る講演",
+              "disposition": "past",
+              "reason": "10/18・24・25終了。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [
+            "evt-1338-f13-archaeology",
+            "evt-1338-f13-okuda",
+            "evt-1338-f13-stonecanal"
+          ],
+          "source_fetches": 6,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:40:16.020711+00:00"
+        },
+        {
+          "facility_id": 1339,
+          "name": "大阪くらしの今昔館",
+          "disposition": "candidate_found_hold",
+          "judgment": "公式トップ、催し物一覧、休館告知、候補詳細を取得。9/1～1/5改修休館を明示確認。詳細リダイレクト先は429、再試行と公式一覧へのフォールバック実施。過去の町家催事を現行と誤認しない。",
+          "candidates": [
+            {
+              "title": "再オープン記念イベント",
+              "disposition": "hold",
+              "reason": "詳細429、再試行も429。閉館告知は1/5まで休館であり、再開催事の日付・参加条件を推測しない。"
+            },
+            {
+              "title": "ミニ出張展示in大阪市役所本庁舎",
+              "disposition": "hold",
+              "reason": "一覧に候補名はあるが詳細429、会期・時間が確認できない。博物館への誤結合もしない。"
+            },
+            {
+              "title": "第7回お出かけ今昔館 空堀路地と長屋",
+              "disposition": "hold",
+              "reason": "一覧に候補名はあるが詳細429。日程・参加経路・現地会場の具体情報を確認できない。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [],
+          "source_fetches": 7,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:40:51.677838+00:00"
+        },
+        {
+          "facility_id": 1341,
+          "name": "カップヌードルミュージアム 大阪池田",
+          "disposition": "candidate_found_hold",
+          "judgment": "大阪池田の公式トップ・全ニュース・限定体験詳細を内容評価。常設ファクトリーや具材追加は期間限定催事ではない。",
+          "candidates": [
+            {
+              "title": "ハート形チキンラーメン手作り体験",
+              "disposition": "hold",
+              "reason": "2027/1/30～2/28。公式は体験3か月前同日10時予約開始と明示しており、最も早い1/30回も10/30開始。10/28現在は予約開始前で参加経路未開通。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [],
+          "source_fetches": 3,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:41:28.605616+00:00"
+        },
+        {
+          "facility_id": 1342,
+          "name": "ダスキンミュージアム",
+          "disposition": "no_current_or_future_event",
+          "judgment": "公式トップと新着を確認。空の一覧HTMLだけで判断せず、同ページが公開取得する動的ニュースの全11非空項目を取得・内容評価。価格改定/グッズ/常設チャレンジクイズ/投稿更新/休館案内で、今後の一般向け期間限定催事なし。11/7貸切は一般臨時休館であり追加しない。常設ドーナツ作りはイベント化しない。",
+          "candidates": [],
+          "existing_events": [],
+          "changed_event_ids": [],
+          "source_fetches": 2,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:42:31.254155+00:00"
+        },
+        {
+          "facility_id": 1344,
+          "name": "堺市立ビッグバン",
+          "disposition": "candidate_found_added",
+          "judgment": "公式トップ新着・SNS掲載全文・イベント一覧の現行9企画すべて個別ページを取得。本文型情報が十分なフェルトバッグを追加。他8件は画像主体の参加要項未検証として候補別HOLD。過去マジック/食品サンプル/パンは日付終了。",
+          "candidates": [
+            {
+              "title": "フェルトバッグ 工作ワークショップ",
+              "event_id": "evt-1344-f13-feltbag",
+              "disposition": "added",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着チケットの参加経路"
+            },
+            {
+              "title": "全館企画展2026年11月23日まで！「Oh!ばけとOh!ともだちにならない怪？」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5553/"
+            },
+            {
+              "title": "開催中！館内回遊型の謎解き「BIGBANG MYSTERY」",
+              "disposition": "hold",
+              "reason": "8/6～3/31、1/13～2/14休止は本文確認。謎解きの料金・受付経路・対象年齢は本文に無く画像/別主催ページ未確認。",
+              "source_url": "https://www.bigbang-sakai.jp/5606/"
+            },
+            {
+              "title": "スペースキッチン｜2026年11月1日(日)・8日(日)昔懐かしい飴細工体験",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5550/"
+            },
+            {
+              "title": "劇場ワークショップ｜2026年11月1日(日)「演劇：ロボットのゆめ」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5674/"
+            },
+            {
+              "title": "劇場ワークショップ｜2026年11月3日(火・祝) 「ちょっと夢工房」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5690/"
+            },
+            {
+              "title": "劇場ワークショップ｜2026年11月8日(日) 「宇宙体験工作ワークショップ」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5694/"
+            },
+            {
+              "title": "スペースキッチン｜2026年11月15日(日)「日々のパン 出張！パン教室」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5547/"
+            },
+            {
+              "title": "劇場ワークショップ｜2026年11月22日(日)・23日(月・祝) 「あつまれ！親子でWAKU WAKU運動あそび」",
+              "disposition": "hold",
+              "reason": "公式個別ページの開催要項は画像中心（HTML抽出本文が空又はごく短い）。日付は見出し等で確認したが全参加条件を検証できず、同一の画像型源のbounded HOLD。",
+              "source_url": "https://www.bigbang-sakai.jp/5652/"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [
+            "evt-1344-f13-feltbag"
+          ],
+          "source_fetches": 11,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:44:00.392679+00:00"
+        },
+        {
+          "facility_id": 1345,
+          "name": "SANZEN-HIROBA",
+          "disposition": "candidate_found_added",
+          "judgment": "公式一覧、限定展示、限定缶バッジ、施設利用情報を内容確認。2期間限定企画を追加。スタンプ/通常運転体験は常設サービス。",
+          "candidates": [
+            {
+              "title": "京阪電車×響け！ユーフォニアム コラボの歴史展示",
+              "event_id": "evt-1345-f13-euphonium",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "通常入場、他イベント開催時は展示縮小の場合あり"
+            },
+            {
+              "title": "引退記念ヘッドマーク 缶バッジワークショップ",
+              "event_id": "evt-1345-f13-retirementbadge",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "期間中の平日のみ。他イベント開催時を除く、会場で参加"
+            },
+            {
+              "title": "くずはマルシェ",
+              "disposition": "hold",
+              "reason": "毎月最終土日10–18時の一般案内のみ。個別今後回の変更・具体会場と出店内容を未検証。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [
+            "evt-1345-f13-euphonium",
+            "evt-1345-f13-retirementbadge"
+          ],
+          "source_fetches": 4,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:44:42.734456+00:00"
+        },
+        {
+          "facility_id": 1346,
+          "name": "日本民家集落博物館",
+          "disposition": "candidate_found_hold",
+          "judgment": "登録minka.or.jpは別組織の日本民家再生協会であり、当館公式minshuhaku.jpを新規に確認。豊中市服部緑地1-2の所在地と運営府文化財センターを照合しregistryのみ修正。正しい公式トップ・最新一覧・現行個別5記事、府の秋まつり告知を取得。",
+          "candidates": [
+            {
+              "title": "邦楽のつどい",
+              "disposition": "hold",
+              "reason": "新しい正規公式の当該案内は画像主体で、HTMLには題名のみ。日程・開始時刻・参加条件を本文で評価できず、画像型源全体のbounded HOLD。"
+            },
+            {
+              "title": "紙芝居",
+              "disposition": "hold",
+              "reason": "新しい正規公式の当該案内は画像主体で、HTMLには題名のみ。日程・開始時刻・参加条件を本文で評価できず、画像型源全体のbounded HOLD。"
+            },
+            {
+              "title": "11月定期体験一式",
+              "disposition": "hold",
+              "reason": "新しい正規公式の当該案内は画像主体で、HTMLには題名のみ。日程・開始時刻・参加条件を本文で評価できず、画像型源全体のbounded HOLD。"
+            },
+            {
+              "title": "11月催し一式",
+              "disposition": "hold",
+              "reason": "新しい正規公式の当該案内は画像主体で、HTMLには題名のみ。日程・開始時刻・参加条件を本文で評価できず、画像型源全体のbounded HOLD。"
+            },
+            {
+              "title": "機織り体験",
+              "disposition": "hold",
+              "reason": "新しい正規公式の当該案内は画像主体で、HTMLには題名のみ。日程・開始時刻・参加条件を本文で評価できず、画像型源全体のbounded HOLD。"
+            },
+            {
+              "title": "游心会書道展",
+              "disposition": "hold",
+              "reason": "公式一覧に題名を確認、会期・参加条件を確認できず保留。"
+            },
+            {
+              "title": "秋の民家まつり",
+              "disposition": "past",
+              "reason": "大阪府の2026公式告知で10/25開催、すでに終了。"
+            },
+            {
+              "title": "民家再生協会の岐阜フォーラム/埼玉かまど/神奈川表具/東京朗読/京都ツクル森/鎌倉路地サミット",
+              "disposition": "out_of_scope_source",
+              "reason": "誤登録先の別組織・別会場/地域の候補。豊中の当施設へ採用しない。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [],
+          "source_fetches": 9,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:45:50.310989+00:00"
+        },
+        {
+          "facility_id": 1347,
+          "name": "高槻市立自然博物館 あくあぴあ芥川",
+          "disposition": "candidate_found_added",
+          "judgment": "指定管理者ブログの現行・次月記事全文と市の公式詳細、利用案内を照合。どんぐり観察を追加。今朝のおはなし会は11:40終了の報告で追加しない。",
+          "candidates": [
+            {
+              "title": "みんなのワークショップ どんぐり いろいろ",
+              "event_id": "evt-1347-f13-acorns",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "当日先着経路あり"
+            },
+            {
+              "title": "自然とかたちの表現 書と墨のかたち",
+              "disposition": "hold",
+              "reason": "10/3～1/17は明示。企画展詳細は料金記載なし、市利用案内は特別展を無料対象から除外しており当企画の観覧料金・扱いを確定できない。"
+            },
+            {
+              "title": "昆虫のひっかき版画",
+              "disposition": "hold",
+              "reason": "11/21開催、申込11/6～9。10/28現在は申込開始前。"
+            },
+            {
+              "title": "自然工作教室10/31及び11月",
+              "disposition": "hold",
+              "reason": "定例案内は毎週土曜と第2日曜、11月明示日程は11/15（第3日曜）と食い違う。時刻・参加要項のリンクも404。"
+            },
+            {
+              "title": "川原の石ころ",
+              "disposition": "hold",
+              "reason": "公式が受付終了を明示。11/8土曜という曜日不整合もあり新規採用しない。"
+            },
+            {
+              "title": "芥川おそうじ隊11/1・ナガエツルノゲイトウバスターズ11/4",
+              "disposition": "hold",
+              "reason": "報告末尾に次回開始場所のみ。終了時刻・持ち物・対象/子どもの参加条件を確定できない。"
+            },
+            {
+              "title": "10/28あくあぴあのおはなし会・10/24木の実観察・10/15公園博物館",
+              "disposition": "past",
+              "reason": "おはなし会は本日11:40終了、木の実観察は中止、他は過去報告。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [
+            "evt-1347-f13-acorns"
+          ],
+          "source_fetches": 6,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:47:16.718683+00:00"
+        },
+        {
+          "facility_id": 1348,
+          "name": "岸和田だんじり会館",
+          "disposition": "no_current_or_future_event",
+          "judgment": "公式トップ・新着全5記事・最新祭礼日程を内容確認。2026年祭礼は9/19–20及び10/10–11で終了、感謝祭3/14・冊子抽選7/14–8/16も終了。ポスター販売は物販、館内鳴物体験は常設。今後の期間限定一般催事なし。",
+          "candidates": [
+            {
+              "title": "2026岸和田だんじり祭 九月/十月",
+              "disposition": "past",
+              "reason": "公式開催日9/19–20・10/10–11終了。"
+            },
+            {
+              "title": "だんじり文化を楽しむ感謝祭（まとい/缶バッジ/ばち）",
+              "disposition": "past",
+              "reason": "3/14終了。"
+            },
+            {
+              "title": "年番冊子抽選配布",
+              "disposition": "past",
+              "reason": "8/16受付終了。"
+            },
+            {
+              "title": "地車小屋めぐりウォーク",
+              "disposition": "past",
+              "reason": "2025年8–9月のアーカイブ。"
+            }
+          ],
+          "existing_events": [],
+          "changed_event_ids": [],
+          "source_fetches": 3,
+          "registry_refreshed": true,
+          "completed_at": "2026-10-28T06:47:47.771080+00:00"
         }
       ],
       "existing_event_holds": []
