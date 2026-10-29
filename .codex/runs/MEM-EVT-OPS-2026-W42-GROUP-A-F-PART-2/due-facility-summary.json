@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T18:06:56.944560+00:00",
+  "executed_at": "2026-10-29T18:17:08.381063+00:00",
   "process_started_at": "2026-10-29T17:35:30.4847994Z",
   "due_facility_ids": [
     1851,
@@ -48,10 +48,10 @@
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
     "total": 40,
-    "no_current_or_future_event": 6,
-    "candidate_found_added": 16,
+    "no_current_or_future_event": 8,
+    "candidate_found_added": 21,
     "candidate_found_duplicate": 0,
-    "candidate_found_hold": 7,
+    "candidate_found_hold": 10,
     "source_unresolved": 1
   },
   "per_region": {
@@ -1737,6 +1737,654 @@
           "final_url": "https://www.city.ogori.fukuoka.jp/204/1039/ogori",
           "title": "スポーツフェスタ in OGORI :: 小郡市役所",
           "sha256": "5229aa2d6b2991bc23bc3ed5b57f7d2a36a5ae3146bcb92efc37ab8780485fcf"
+        },
+        {
+          "url": "https://www.city.kasuga.fukuoka.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:07:08.820474+00:00",
+          "facility_id": 1902,
+          "final_url": "https://www.city.kasuga.fukuoka.jp/",
+          "title": "春日市",
+          "sha256": "281ba62d51e838fe1e797d3a4e3c5e2bdafd8685e19e93f49e83d6b690731dc7"
+        },
+        {
+          "url": "https://www.city.ogori.fukuoka.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:07:15.705524+00:00",
+          "facility_id": 1902,
+          "final_url": "https://www.city.ogori.fukuoka.jp/",
+          "title": "ホーム :: 小郡市役所",
+          "sha256": "d77bf859f3aeae98aed447176ea9a475073695f1e38d2dbf5b820347ecfc8e77"
+        },
+        {
+          "url": "http://www.kodaitaiken-ogori.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:07:24.718970+00:00",
+          "facility_id": 1902,
+          "final_url": "https://kodaitaiken-ogori.jp/",
+          "title": "古代体験館おごおり［小郡市埋蔵文化財調査センター］",
+          "sha256": "67a87500d31db64caed47ef4a355b7e534ed5d14b12b1918d920503963d0743d"
+        },
+        {
+          "url": "https://kodaitaiken-ogori.jp/calendar.php?pg=1",
+          "status": 200,
+          "checked_at": "2026-10-29T18:07:36.637286+00:00",
+          "facility_id": 1902,
+          "final_url": "https://kodaitaiken-ogori.jp/calendar.php?pg=1",
+          "title": "古代体験館おごおり［小郡市埋蔵文化財調査センター］｜資料室カレンダー",
+          "sha256": "c8c4898a240bdc56212bb1827b12865e359281272d471b0779b3c1b42fd56ed3"
+        },
+        {
+          "url": "https://okawa-terrzza.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:07:51.073840+00:00",
+          "facility_id": 1903,
+          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://okawa-terrzza.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:07:52.183711+00:00",
+          "facility_id": 1903,
+          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://okawa-kk.com/tag/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:07:58.665256+00:00",
+          "facility_id": 1903,
+          "final_url": "https://okawa-kk.com/tag/event/",
+          "title": "イベント | 一般社団法人大川観光協会",
+          "sha256": "0e21591be87ca5365e641fd5947f96cf4743b3d02c4e1c054779a155d481d82d"
+        },
+        {
+          "url": "https://www.city.okawa.lg.jp/s006/chiikisyousika/oyakoibento/20260828191656.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:00.232873+00:00",
+          "facility_id": 1903,
+          "final_url": "https://www.city.okawa.lg.jp/s006/chiikisyousika/oyakoibento/20260828191656.html",
+          "title": "【お知らせ】11月親子イベント　大好評につき参加枠拡大＆受付期間延長決定！（親子クッキング以外のメニュー） - 大川市",
+          "sha256": "bfac1ddf8f97bea7a008e6c5fd020819ec8451407b5636cffc6b6d713d2ad45e"
+        },
+        {
+          "url": "https://reserva.be/okawaterrazza",
+          "status": 403,
+          "checked_at": "2026-10-29T18:08:01.654656+00:00",
+          "facility_id": 1903,
+          "final_url": "https://reserva.be/okawaterrazza",
+          "title": "Just a moment...",
+          "sha256": "ffc243f45002cd6d18bb71f6bfcd06074724022a5280b0349c9fb2ce881eff40"
+        },
+        {
+          "url": "https://okawa-kk.com/notice/dfc2027/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:08.304205+00:00",
+          "facility_id": 1903,
+          "final_url": "https://okawa-kk.com/notice/dfc2027/",
+          "title": "【募集開始】ドリームファニチャーコンテスト2026！君の描いた「夢の家具」が本物になる！？ | 一般社団法人大川観光協会",
+          "sha256": "49377c8c06ef149b5820b6ac705479973fb4fdc9aaadd4b0abc2a332347e95a8"
+        },
+        {
+          "url": "https://okawa-kk.com/experience/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:09.680393+00:00",
+          "facility_id": 1903,
+          "final_url": "https://okawa-kk.com/experience/",
+          "title": "体験・ワークショップ | 一般社団法人大川観光協会",
+          "sha256": "5411518b14e71af2667fd4d627bb7e6716a2f6ca34ffbc968c8e606d808c7e5c"
+        },
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:37.194396+00:00",
+          "facility_id": 1905,
+          "final_url": "https://www.town.hirokawa.fukuoka.jp/",
+          "title": "ホーム／広川町",
+          "sha256": "73c1bc8ead2c12349156a27a28e4fbc62445b4078d6fbc1772c0f8f826f68f4d"
+        },
+        {
+          "url": "https://www.hirokankou.org/kofun-fes/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:44.597838+00:00",
+          "facility_id": 1905,
+          "final_url": "https://www.hirokankou.org/kofun-fes/",
+          "title": "古墳まつり | 広川町観光協会",
+          "sha256": "9713dde570b2a6ce92dc8e25df775a7db78f5e4a6965612115d9a873530ca03d"
+        },
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/calendar.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:46.201687+00:00",
+          "facility_id": 1905,
+          "final_url": "https://www.town.hirokawa.fukuoka.jp/calendar.html",
+          "title": "イベントカレンダー／広川町",
+          "sha256": "4bd62225d4110a72075d84951994eec10960ff8d886ee18798a078eb0a07acff"
+        },
+        {
+          "url": "https://www.town.hirokawa.fukuoka.jp/soshiki/sangyo/1/1/nanakokusutanpu.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:08:59.405473+00:00",
+          "facility_id": 1905,
+          "final_url": "https://www.town.hirokawa.fukuoka.jp/soshiki/sangyo/1/1/nanakokusutanpu.html",
+          "title": "筑後七国スタンプラリー開催中！！／広川町",
+          "sha256": "09309e6e683178a2b7632b3cf7fd9e37f9be5ddb5644c100e04b5c344b864d75"
+        },
+        {
+          "url": "https://www.hirokankou.org/kankou/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:09:00.920656+00:00",
+          "facility_id": 1905,
+          "final_url": "https://www.hirokankou.org/kankou/",
+          "title": "観る・体験する | 広川町観光協会",
+          "sha256": "01722ba169a6e97909498f951caecd6ed011df180f05b5e2f0a095f747038ef8"
+        },
+        {
+          "url": "https://mooovi.jp/ashiya/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:09:32.246697+00:00",
+          "facility_id": 1907,
+          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://mooovi.jp/ashiya/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:09:36.528872+00:00",
+          "facility_id": 1907,
+          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://www.boatrace-ashiya.com/mooovi/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:09:42.660233+00:00",
+          "facility_id": 1907,
+          "final_url": "https://www.boatrace-ashiya.com/mooovi/",
+          "title": "BOAT KIDS PARK モーヴィ芦屋",
+          "sha256": "0e1262b015a3398a0e880294d8b94ee1396d0538f3891a413649cbccfa2c2887"
+        },
+        {
+          "url": "https://sanryai.info/event/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:09:57.573353+00:00",
+          "facility_id": 1909,
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+        },
+        {
+          "url": "https://sanryai.info/event/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:10:05.585339+00:00",
+          "facility_id": 1909,
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+        },
+        {
+          "url": "https://www.sanryai.info/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:10:07.166786+00:00",
+          "facility_id": 1909,
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+        },
+        {
+          "url": "http://sanryai.info/event/",
+          "status": 404,
+          "checked_at": "2026-10-29T18:10:18.249755+00:00",
+          "facility_id": 1909,
+          "final_url": "http://sanryai.info/event/",
+          "title": "404 Not Found",
+          "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e"
+        },
+        {
+          "url": "https://www.town.okagaki.lg.jp/s035/20250909183807.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:27.353638+00:00",
+          "facility_id": 1909,
+          "final_url": "https://www.town.okagaki.lg.jp/s035/20250909183807.html",
+          "title": "令和8年度岡垣町町民文化祭 - 岡垣町",
+          "sha256": "513eb80560e6b1058a22c6504150319b2694a755f3edc209cdf51a3a01cca154"
+        },
+        {
+          "url": "https://www.town.okagaki.lg.jp/s034/200/20251022162624.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:28.854164+00:00",
+          "facility_id": 1909,
+          "final_url": "https://www.town.okagaki.lg.jp/s034/200/20251022162624.html",
+          "title": "岡垣サンリーアイ　ウエーブアリーナの利用制限について - 岡垣町",
+          "sha256": "9227f17a4101aec53d40a629110400fa6bbfa955feef7db2a44bc9d4a7169cc2"
+        },
+        {
+          "url": "https://www.town.okagaki.lg.jp/s035/20251217095347.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:30.235236+00:00",
+          "facility_id": 1909,
+          "final_url": "https://www.town.okagaki.lg.jp/s035/20251217095347.html",
+          "title": "福岡ギラソールのホームゲームが開催されます！ - 岡垣町",
+          "sha256": "0c6b6d243a204d47e1b3ddfaffe8d7efe903acbeb7ac363e0da8f0b8d59c8be3"
+        },
+        {
+          "url": "https://www.town.okagaki.lg.jp/s034/20261001163247.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:36.985237+00:00",
+          "facility_id": 1909,
+          "final_url": "https://www.town.okagaki.lg.jp/s034/20261001163247.html",
+          "title": "令和8年度岡垣町人権講演会 - 岡垣町",
+          "sha256": "ab31e56af56ec0495e800178bdfadb9e0231b2e72b236c7304d7e5c0597538c7"
+        },
+        {
+          "url": "https://okagakimuse.jimdofree.com/演奏会情報/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:38.623422+00:00",
+          "facility_id": 1909,
+          "final_url": "https://okagakimuse.jimdofree.com/%E6%BC%94%E5%A5%8F%E4%BC%9A%E6%83%85%E5%A0%B1/",
+          "title": "演奏会情報 - 岡垣ミューズオーケストラ",
+          "sha256": "7dc1b11dea87502941d6970124ca41d27781f9511a03ca92a4634a9f540a2832"
+        },
+        {
+          "url": "https://www.wel-tobata.jp/2026/09/12172/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:10:42.465354+00:00",
+          "facility_id": 1909,
+          "final_url": "https://www.wel-tobata.jp/2026/09/12172/",
+          "title": "第2回・おんがつながる音楽祭♪　明清楽演奏会・九州公演 - 新着情報 | 北九州市ウェルとばた",
+          "sha256": "3f5c7a06422fa2c04cd42c1452c729cca9950aeaa7788ae39e2183f2c9f971fc"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:11:11.061711+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.miyako.lg.jp/",
+          "title": "トップページ - みやこ町役場",
+          "sha256": "849f1adafd8360ee33ebd3952f63a0ddcceea68db297b65d6a907724869c527b"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/genre/0010/0021/0008-5.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:11:20.980938+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.miyako.lg.jp/genre/0010/0021/0008-5.html",
+          "title": "歴史民俗博物館 - みやこ町役場",
+          "sha256": "fea55cfdb3dc52c3dbd70d5276677bf0bcd1b133eff7a5116bc739ea520b4601"
+        },
+        {
+          "url": "http://www.miyako-museum.jp/",
+          "status": 503,
+          "checked_at": "2026-10-29T18:11:22.263221+00:00",
+          "facility_id": 1912,
+          "final_url": "http://www.miyako-museum.jp/",
+          "title": "みやこ町デジタルミュージアム",
+          "sha256": "7090f898ec276317b9268c0eaf48551400ca8d29fbefc7e9ed3bdaa3e5ee02bb"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum261006.html",
+          "status": 404,
+          "checked_at": "2026-10-29T18:11:29.636629+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum261006.html",
+          "title": "お探しのページはみつかりませんでした - みやこ町役場",
+          "sha256": "c71a9819feff510fa1fe7fb1f29ee8c95e5c45f68c52bb9dab6b5a2fcf229c98"
+        },
+        {
+          "url": "http://www.miyako-museum.jp/",
+          "status": 503,
+          "checked_at": "2026-10-29T18:11:31.046482+00:00",
+          "facility_id": 1912,
+          "final_url": "http://www.miyako-museum.jp/",
+          "title": "みやこ町デジタルミュージアム",
+          "sha256": "7090f898ec276317b9268c0eaf48551400ca8d29fbefc7e9ed3bdaa3e5ee02bb"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/genre/0010/newslist.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:11:36.977303+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.miyako.lg.jp/genre/0010/newslist.html",
+          "title": "新着情報　一覧 - みやこ町役場",
+          "sha256": "af887041aea18b4b2f1fcbb5c07f9b26e0b0029d5cfa2a2aa7cf0784c6194909"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/page/18850.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:11:38.483376+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.kanda.lg.jp/page/18850.html",
+          "title": "第31回まちの歴史講座 「博物館のお宝で学ぶみやこ町の歴史～彦山六峰・蔵持山の歴史と文化～」 - 苅田町（生涯学習課）",
+          "sha256": "c75745e5c6c33600e0a48bf750d882e7bb781947e66dbfcba24230aca6d33875"
+        },
+        {
+          "url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum-spp.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:11:48.975206+00:00",
+          "facility_id": 1912,
+          "final_url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum-spp.html",
+          "title": "【10月18日から】企画展　よみがえる「みやこの曼荼羅」開催 - みやこ町役場",
+          "sha256": "ddcd75aa0b1e60a15a56400010f1f6c57e7562b8099754f3547b77fbcf52dbf9"
+        },
+        {
+          "url": "https://www.michinoeki-metasenomori.com/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:12:16.883984+00:00",
+          "facility_id": 1913,
+          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://www.michinoeki-metasenomori.com/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T18:12:17.996082+00:00",
+          "facility_id": 1913,
+          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://metase.net/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:12:24.676597+00:00",
+          "facility_id": 1913,
+          "final_url": "https://metase.net/",
+          "title": "メタセの杜",
+          "sha256": "3e78b469b6cc88061105865ccfc93199d49d190bc967d43688d35ac067af5b9d"
+        },
+        {
+          "url": "https://metase.net/about/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:12:27.476438+00:00",
+          "facility_id": 1913,
+          "final_url": "https://metase.net/about/event/",
+          "title": "年間イベント情報 ｜ メタセの杜",
+          "sha256": "b21687b7d56f75454efe44fb731208a22f2dfdeae4c4e4067d58cc71dab02f04"
+        },
+        {
+          "url": "https://metase.net/news-list/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:12:29.039640+00:00",
+          "facility_id": 1913,
+          "final_url": "https://metase.net/news-list/",
+          "title": "NEWS一覧 ｜ メタセの杜",
+          "sha256": "5c1b2eda555c6dc7dd73a1b0631b1ba3a0216f12407644ae93cb839f6a38dc3b"
+        },
+        {
+          "url": "https://www.city.buzen.lg.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:12:49.000446+00:00",
+          "facility_id": 1914,
+          "final_url": "https://www.city.buzen.lg.jp/",
+          "title": "豊前市公式ホームページ／トップ",
+          "sha256": "2965f65f1f8f21340cadab2979d7875dc59ee51edf627e762afaa19220203b4e"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/page/18879.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:12:58.374294+00:00",
+          "facility_id": 1914,
+          "final_url": "https://www.town.kanda.lg.jp/page/18879.html",
+          "title": "求菩提資料館特別展に町内出土品を出陳いたします - 苅田町（生涯学習課）",
+          "sha256": "c3ab618b9dec038a8567bb1f3bce596fddb0f47221a6f722789e5be8c2263eda"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/uploaded/attachment/11473.pdf",
+          "status": 200,
+          "checked_at": "2026-10-29T18:13:04.423974+00:00",
+          "facility_id": 1914,
+          "final_url": "https://www.town.kanda.lg.jp/uploaded/attachment/11473.pdf",
+          "title": "Official PDF",
+          "sha256": "a89be64562274779319fbd61fbc5ccdcecea98f3f740964b6b6de54fca7acd8b"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/spot/14793",
+          "status": 200,
+          "checked_at": "2026-10-29T18:13:26.396255+00:00",
+          "facility_id": 1914,
+          "final_url": "https://www.crossroadfukuoka.jp/spot/14793",
+          "title": "求菩提資料館 | 観光スポット | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+          "sha256": "06409e48996f1d510e45a391639e1ca94608cdd732511f6de000eb7a9c23ac9b"
+        },
+        {
+          "url": "http://kubote-historical-museum.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:13:39.825516+00:00",
+          "facility_id": 1914,
+          "final_url": "http://kubote-historical-museum.com/",
+          "title": "",
+          "sha256": "0f92c4e305c3a56efb27aa139ec7cc1ff09c5e5f2e25dec108cb37a336f8e626"
+        },
+        {
+          "url": "http://kubote-historical-museum.com/sub2.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:13:53.225272+00:00",
+          "facility_id": 1914,
+          "final_url": "http://kubote-historical-museum.com/sub2.html",
+          "title": "",
+          "sha256": "a86f74422456e76956c4539282f846ec0503d328952fbc89bd170010a0a53f30"
+        },
+        {
+          "url": "http://kubote-historical-museum.com/sub5.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:13:54.289311+00:00",
+          "facility_id": 1914,
+          "final_url": "http://kubote-historical-museum.com/sub5.html",
+          "title": "",
+          "sha256": "0f2c862cfe41b9b8ee129b85755489f94de62fdd417291d7edefff8e872494ab"
+        },
+        {
+          "url": "https://toho-info.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:14.697587+00:00",
+          "facility_id": 1915,
+          "final_url": "https://toho-info.com/",
+          "title": "福岡県東峰村観光情報サイト",
+          "sha256": "b0eb508f34b97de56ca87d2bc25103608c31e1f2ca573f813236f86203344d36"
+        },
+        {
+          "url": "https://toho-info.com/spots/detail/fb860498-4979-4123-820a-15329a4ac478",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:20.806352+00:00",
+          "facility_id": 1915,
+          "final_url": "https://toho-info.com/spots/detail/fb860498-4979-4123-820a-15329a4ac478",
+          "title": "小石原焼伝統産業会館 | 観光スポット | 福岡県東峰村観光情報サイト",
+          "sha256": "c5a049ac1522901300499f7d286189df080c405ba198ed7a3fb0f996b7628aed"
+        },
+        {
+          "url": "https://toho-info.com/events/detail/8ac63480-ed79-4a04-b054-a05203bc4f27",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:22.441736+00:00",
+          "facility_id": 1915,
+          "final_url": "https://toho-info.com/events/detail/8ac63480-ed79-4a04-b054-a05203bc4f27",
+          "title": "東峰村秋まつり | イベント | 福岡県東峰村観光情報サイト",
+          "sha256": "92c521646be93214c09fd7a52256681adec1ee7a3b91719a827112ea3b9033c2"
+        },
+        {
+          "url": "https://densan2266part1.jimdofree.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:34.966529+00:00",
+          "facility_id": 1915,
+          "final_url": "https://densan2266part1.jimdofree.com/",
+          "title": "福岡県 観光 陶器 体験 小石原焼伝統産業会館 - 福岡観光・体験　小石原焼伝統産業会館",
+          "sha256": "e1b489396e570a9b8974b37a3cd9ea5a03189440245bfc7bf9554cb2af4b76b0"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:51.815809+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/event/",
+          "title": "イベント｜福岡おもちゃ美術館 - NPO法人 芸術と遊び創造協会",
+          "sha256": "2d48d242138e7ad7cf5c57a10eb36d529d0acc11bd2bd0e65f757dbcbf13240d"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:14:53.609223+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/",
+          "title": "\nお知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "d7bb32da93816e9ae36935bfb96c77cc93bae08f3067054eec7be6082d03aa5b"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-5070/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:02.496888+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-5070/",
+          "title": "\n【チケット販売中】九州おもちゃまつり(2026)｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "f36c434d7933c71924ab88901186d2bc8f8f885c01ff7880b185c8ed2681b8a9"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-5057/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:04.614786+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-5057/",
+          "title": "\n【0.1.2歳が無料】赤ちゃんWeek開催！｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "c94fd3225fd662ec20d1d5553930cb25b66131d6f72553a9460210d09b54a60d"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-2924/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:06.249101+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-2924/",
+          "title": "\n館内ワークショップ＆イベント情報｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "44afd21eafcdca8434a2138a9964da08af1daeffc2680783509b5fac3ea9c602"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-5153/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:14.921420+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-5153/",
+          "title": "\n【受講生募集】木育実践講座「教えて  樹木の先生」｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "4da576e39e9eee28c1c6c0c44d87d60188e2a79ed7b8ff6d6b5dd3786e39d3f9"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-5148/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:16.591145+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-5148/",
+          "title": "\n【受講生募集】木育インストラクター2026年度｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "962221216a462fb2347fbac7552aadaf6ff9079ca18208c76d1166097535ddba"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-4451/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:18.313105+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-4451/",
+          "title": "\nことのはの杜（もり）｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "768904b6257c0beefdb1125dd4777c60e4bf1bf5e14a729f10d0d3fdde40538c"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-4627/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:20.109082+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-4627/",
+          "title": "\n【参加無料！うれしい特典付き】親子でエンジョイしあわせ時間勉強室｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "f920a9b1d9baf99b959236c39a4bdba739a5b4cb0edd4a4f1e412fc4e6e5ee4d"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSdhr9ILxP59V28PrJ_0GCJhjLgwgzef6f89N64nFNsnc3eDLQ/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:41.323662+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSdhr9ILxP59V28PrJ_0GCJhjLgwgzef6f89N64nFNsnc3eDLQ/viewform?usp=dialog",
+          "title": "【福岡県森林つくり活動事業】11月1日（日）カスタネット",
+          "sha256": "4fbcbe48693369b8a2c38fcafb66c76e729710cff3094fea3441967595c65665"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfZ0a4tnRUshD2yw3XvpyY_LQQBTNPMMSxLA-lQ7pOfspv_5A/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:43.260248+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSfZ0a4tnRUshD2yw3XvpyY_LQQBTNPMMSxLA-lQ7pOfspv_5A/viewform?usp=dialog",
+          "title": "11月3日（火・祝）初級向けけん玉教室",
+          "sha256": "2829e484c9db5a5e8385777f30c474ef3cf82651b59d068d32228db01354b0a3"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSc5kZUOKTK93Og4BiLw4sxm4ZI2J_sp-h5wG951_5lVBZVrzg/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:45.358899+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSc5kZUOKTK93Og4BiLw4sxm4ZI2J_sp-h5wG951_5lVBZVrzg/viewform?usp=dialog",
+          "title": "【福岡県森林づくり活動公募事業】11月21日（土）いとのこ体験",
+          "sha256": "d9af7524dce3c752df7fcebdb6817514ed249901652925812784fb8f7e5171f2"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-aM04v9GXuuCwwrHoFqPRRLstlW-qWNsp91c2j9d9GQj7EQ/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:47.255437+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSd-aM04v9GXuuCwwrHoFqPRRLstlW-qWNsp91c2j9d9GQj7EQ/viewform?usp=dialog",
+          "title": "おはしづくりワークショップ～つくって学ぶ、日本の食文化～",
+          "sha256": "6daaa66b712140a1caca0e1ef4e9bf652e4e21ed342a4acd4513f8f292592a08"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSfgl6WZoQCsoXmh9gv--LmOFUaDpSBcmfptnpa4p0JFJikhMA/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:48.967815+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSfgl6WZoQCsoXmh9gv--LmOFUaDpSBcmfptnpa4p0JFJikhMA/closedform",
+          "title": "講座申込フォーム ",
+          "sha256": "adc089a3c56afa60aa5cf153b2aea2a921265b4b10c0caf335a7ad8746e4f5ce"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0QBUFzCe_FPugK5Phse988fTqZVDSpagiYyN0o-EOB_pvTw/viewform?usp=dialog",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:50.964670+00:00",
+          "facility_id": 6895,
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf0QBUFzCe_FPugK5Phse988fTqZVDSpagiYyN0o-EOB_pvTw/viewform?usp=dialog",
+          "title": "猿面 今宿人形 絵付け体験",
+          "sha256": "5ed6c4cd6ed841d0f7604e9c352562a729df9227c3853be61d5b140f1ec06c68"
+        },
+        {
+          "url": "https://www.e-tix.jp/ftm/event.html",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:56.718207+00:00",
+          "facility_id": 6895,
+          "final_url": "https://www.e-tix.jp/ftm/event.html",
+          "title": "福岡おもちゃ美術館（九州おもちゃまつり）｜公式オンラインチケット（予約）",
+          "sha256": "5dd4fadff4177472cba09f96d53d28b93c297a60ac77f1f049c3230a2eb5c1a5"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-5044/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:15:58.292137+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-5044/",
+          "title": "\n【募集中】保育木育フェアを開催します🌳｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "e912d9704f4664593e3898d0bd630ac20f038e540cc83303371e7951e107c399"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/news/news-4806/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:16:00.038118+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/news/news-4806/",
+          "title": "\nおもちゃコンサルタント養成講座 予約受付開始｜お知らせ｜福岡おもちゃ美術館\n",
+          "sha256": "dd0e82857167a0cb885ad9b9798cbd78040870a5fa5f845dc29860257e216e4c"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/event/omochahospital/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:16:21.179972+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/event/omochahospital/",
+          "title": "おもちゃ病院｜福岡おもちゃ美術館",
+          "sha256": "b241c471aae38d1c431e7595e09951cfe6714fee2f16484926600ee197e05cbe"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/event/akamokuclub/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:16:23.033429+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/event/akamokuclub/",
+          "title": "赤ちゃん木育クラブ｜福岡おもちゃ美術館",
+          "sha256": "fc12f1e33dc8d1d1350f32e19a86617171e9e924bdb17c5d11d2ba5b9e46fa2c"
+        },
+        {
+          "url": "https://art-play.or.jp/ftm/guide/",
+          "status": 200,
+          "checked_at": "2026-10-29T18:16:24.798530+00:00",
+          "facility_id": 6895,
+          "final_url": "https://art-play.or.jp/ftm/guide/",
+          "title": "フロアガイド・楽しみ方｜福岡おもちゃ美術館 - 認定NPO法人 芸術と遊び創造協会",
+          "sha256": "b8a12705a105bb5d7a8d4645d00cd09b224ada9c34810776af4d0247f21e14ff"
         }
       ],
       "facilities": [
@@ -4493,12 +5141,1137 @@
             "Product名の県営筑後小郡運動公園に対し公式は小郡市運動公園。施設データは変更せずPMへ同一性確認を返す。"
           ],
           "completed_at": "2026-10-29T18:06:56.944507+00:00"
+        },
+        {
+          "facility_id": 1902,
+          "name": "小郡市埋蔵文化財調査センター",
+          "sources_checked": [
+            {
+              "url": "https://www.city.kasuga.fukuoka.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:07:08.820474+00:00",
+              "facility_id": 1902,
+              "final_url": "https://www.city.kasuga.fukuoka.jp/",
+              "title": "春日市",
+              "sha256": "281ba62d51e838fe1e797d3a4e3c5e2bdafd8685e19e93f49e83d6b690731dc7"
+            },
+            {
+              "url": "https://www.city.ogori.fukuoka.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:07:15.705524+00:00",
+              "facility_id": 1902,
+              "final_url": "https://www.city.ogori.fukuoka.jp/",
+              "title": "ホーム :: 小郡市役所",
+              "sha256": "d77bf859f3aeae98aed447176ea9a475073695f1e38d2dbf5b820347ecfc8e77"
+            },
+            {
+              "url": "http://www.kodaitaiken-ogori.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:07:24.718970+00:00",
+              "facility_id": 1902,
+              "final_url": "https://kodaitaiken-ogori.jp/",
+              "title": "古代体験館おごおり［小郡市埋蔵文化財調査センター］",
+              "sha256": "67a87500d31db64caed47ef4a355b7e534ed5d14b12b1918d920503963d0743d"
+            },
+            {
+              "url": "https://kodaitaiken-ogori.jp/calendar.php?pg=1",
+              "status": 200,
+              "checked_at": "2026-10-29T18:07:36.637286+00:00",
+              "facility_id": 1902,
+              "final_url": "https://kodaitaiken-ogori.jp/calendar.php?pg=1",
+              "title": "古代体験館おごおり［小郡市埋蔵文化財調査センター］｜資料室カレンダー",
+              "sha256": "c8c4898a240bdc56212bb1827b12865e359281272d471b0779b3c1b42fd56ed3"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "花立山と御原郡",
+              "disposition": "excluded_past",
+              "reason": "2025年度の企画。終了と最終日休館のお詫びが公式にある。"
+            },
+            {
+              "title": "ジュニア歴史博士・2026夏季講座",
+              "disposition": "excluded_past",
+              "reason": "受賞発表または夏季終了分。将来の募集根拠なし。"
+            }
+          ],
+          "disposition": "no_current_or_future_event",
+          "reason": "市公式から施設専用現行サイトと11月カレンダーを確認。将来企画欄は空、最新通知は運営案内。2025特別展を今年と誤認しない。",
+          "completed_at": "2026-10-29T18:07:45.361837+00:00"
+        },
+        {
+          "facility_id": 1903,
+          "name": "大川テラッツァ",
+          "sources_checked": [
+            {
+              "url": "https://okawa-terrzza.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:07:51.073840+00:00",
+              "facility_id": 1903,
+              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://okawa-terrzza.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:07:52.183711+00:00",
+              "facility_id": 1903,
+              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://okawa-kk.com/tag/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:07:58.665256+00:00",
+              "facility_id": 1903,
+              "final_url": "https://okawa-kk.com/tag/event/",
+              "title": "イベント | 一般社団法人大川観光協会",
+              "sha256": "0e21591be87ca5365e641fd5947f96cf4743b3d02c4e1c054779a155d481d82d"
+            },
+            {
+              "url": "https://www.city.okawa.lg.jp/s006/chiikisyousika/oyakoibento/20260828191656.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:00.232873+00:00",
+              "facility_id": 1903,
+              "final_url": "https://www.city.okawa.lg.jp/s006/chiikisyousika/oyakoibento/20260828191656.html",
+              "title": "【お知らせ】11月親子イベント　大好評につき参加枠拡大＆受付期間延長決定！（親子クッキング以外のメニュー） - 大川市",
+              "sha256": "bfac1ddf8f97bea7a008e6c5fd020819ec8451407b5636cffc6b6d713d2ad45e"
+            },
+            {
+              "url": "https://reserva.be/okawaterrazza",
+              "status": 403,
+              "checked_at": "2026-10-29T18:08:01.654656+00:00",
+              "facility_id": 1903,
+              "final_url": "https://reserva.be/okawaterrazza",
+              "title": "Just a moment...",
+              "sha256": "ffc243f45002cd6d18bb71f6bfcd06074724022a5280b0349c9fb2ce881eff40"
+            },
+            {
+              "url": "https://okawa-kk.com/notice/dfc2027/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:08.304205+00:00",
+              "facility_id": 1903,
+              "final_url": "https://okawa-kk.com/notice/dfc2027/",
+              "title": "【募集開始】ドリームファニチャーコンテスト2026！君の描いた「夢の家具」が本物になる！？ | 一般社団法人大川観光協会",
+              "sha256": "49377c8c06ef149b5820b6ac705479973fb4fdc9aaadd4b0abc2a332347e95a8"
+            },
+            {
+              "url": "https://okawa-kk.com/experience/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:09.680393+00:00",
+              "facility_id": 1903,
+              "final_url": "https://okawa-kk.com/experience/",
+              "title": "体験・ワークショップ | 一般社団法人大川観光協会",
+              "sha256": "5411518b14e71af2667fd4d627bb7e6716a2f6ca34ffbc968c8e606d808c7e5c"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "スプーンづくり",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "タマゴのコースター",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "ネコのコースター",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "麻の葉組子",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "角麻の葉組子",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "イスづくり",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "貯金箱づくり",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "キーホルダー",
+              "disposition": "hold",
+              "reason": "現行通常体験の料金と時間あり、開催期間未公表。予約サイト403で個別枠も確認不可。"
+            },
+            {
+              "title": "11/1・29スマイルDAY各プログラム",
+              "disposition": "hold",
+              "reason": "会場はモッカランド。テラッツァは申込窓口であり1893等へ誤紐付けしない。別施設の通常発見レーンへ信号。"
+            },
+            {
+              "title": "ドリームファニチャー2026・木工まつり・えつ祭・夏工作",
+              "disposition": "excluded_past",
+              "reason": "募集10/12まで、祭りや夏季は終了"
+            },
+            {
+              "title": "薫窯陶芸教室",
+              "disposition": "excluded",
+              "reason": "別の常設窯元、1903ではない"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "観光協会の現行告知と体験案内を確認。継続体験の期間未公表、11月スマイルDAYは別会場。",
+          "completed_at": "2026-10-29T18:08:25.241987+00:00"
+        },
+        {
+          "facility_id": 1905,
+          "name": "広川町古墳公園資料館",
+          "sources_checked": [
+            {
+              "url": "https://www.town.hirokawa.fukuoka.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:37.194396+00:00",
+              "facility_id": 1905,
+              "final_url": "https://www.town.hirokawa.fukuoka.jp/",
+              "title": "ホーム／広川町",
+              "sha256": "73c1bc8ead2c12349156a27a28e4fbc62445b4078d6fbc1772c0f8f826f68f4d"
+            },
+            {
+              "url": "https://www.hirokankou.org/kofun-fes/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:44.597838+00:00",
+              "facility_id": 1905,
+              "final_url": "https://www.hirokankou.org/kofun-fes/",
+              "title": "古墳まつり | 広川町観光協会",
+              "sha256": "9713dde570b2a6ce92dc8e25df775a7db78f5e4a6965612115d9a873530ca03d"
+            },
+            {
+              "url": "https://www.town.hirokawa.fukuoka.jp/calendar.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:46.201687+00:00",
+              "facility_id": 1905,
+              "final_url": "https://www.town.hirokawa.fukuoka.jp/calendar.html",
+              "title": "イベントカレンダー／広川町",
+              "sha256": "4bd62225d4110a72075d84951994eec10960ff8d886ee18798a078eb0a07acff"
+            },
+            {
+              "url": "https://www.town.hirokawa.fukuoka.jp/soshiki/sangyo/1/1/nanakokusutanpu.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:08:59.405473+00:00",
+              "facility_id": 1905,
+              "final_url": "https://www.town.hirokawa.fukuoka.jp/soshiki/sangyo/1/1/nanakokusutanpu.html",
+              "title": "筑後七国スタンプラリー開催中！！／広川町",
+              "sha256": "09309e6e683178a2b7632b3cf7fd9e37f9be5ddb5644c100e04b5c344b864d75"
+            },
+            {
+              "url": "https://www.hirokankou.org/kankou/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:09:00.920656+00:00",
+              "facility_id": 1905,
+              "final_url": "https://www.hirokankou.org/kankou/",
+              "title": "観る・体験する | 広川町観光協会",
+              "sha256": "01722ba169a6e97909498f951caecd6ed011df180f05b5e2f0a095f747038ef8"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "筑後七国スタンプラリー",
+              "disposition": "added"
+            },
+            {
+              "title": "ひろかわ古墳まつり",
+              "disposition": "hold",
+              "reason": "毎年11月第2日曜のみの常設案内。2026確定日・時間・雨天・交通の一次情報未公表。"
+            },
+            {
+              "title": "銅鏡ミニチュア製作",
+              "disposition": "hold",
+              "reason": "体験の説明のみで開催日・価格・予約条件未確認。"
+            },
+            {
+              "title": "太原イチョウ・染織・そば・茶・いちご等",
+              "disposition": "excluded",
+              "reason": "別会場の関連リンク。この施設範囲を拡張しない。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "公式町の現行ラリー案内に資料館を押印スポットとして明記、期限と参加方法を確認。",
+          "added_event_ids": [
+            "evt-f2-20261030-1905-609755f2"
+          ],
+          "completed_at": "2026-10-29T18:09:26.084461+00:00"
+        },
+        {
+          "facility_id": 1907,
+          "name": "BOAT KIDS PARK Mooovi芦屋",
+          "sources_checked": [
+            {
+              "url": "https://mooovi.jp/ashiya/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:09:32.246697+00:00",
+              "facility_id": 1907,
+              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://mooovi.jp/ashiya/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:09:36.528872+00:00",
+              "facility_id": 1907,
+              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://www.boatrace-ashiya.com/mooovi/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:09:42.660233+00:00",
+              "facility_id": 1907,
+              "final_url": "https://www.boatrace-ashiya.com/mooovi/",
+              "title": "BOAT KIDS PARK モーヴィ芦屋",
+              "sha256": "0e1262b015a3398a0e880294d8b94ee1396d0538f3891a413649cbccfa2c2887"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "1日あそび放題・団体利用",
+              "disposition": "excluded",
+              "reason": "9/9からの通常営業・予約方式変更。単独イベント化しない。"
+            }
+          ],
+          "disposition": "no_current_or_future_event",
+          "reason": "現行施設公式の最新告知と翌月以降カレンダーを確認。営業時間変更と団体受付案内のみで、特別な期間イベントは掲載なし。",
+          "completed_at": "2026-10-29T18:09:50.942137+00:00"
+        },
+        {
+          "facility_id": 1909,
+          "name": "岡垣サンリーアイ",
+          "sources_checked": [
+            {
+              "url": "https://sanryai.info/event/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:09:57.573353+00:00",
+              "facility_id": 1909,
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+            },
+            {
+              "url": "https://sanryai.info/event/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:10:05.585339+00:00",
+              "facility_id": 1909,
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+            },
+            {
+              "url": "https://www.sanryai.info/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:10:07.166786+00:00",
+              "facility_id": 1909,
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+            },
+            {
+              "url": "http://sanryai.info/event/",
+              "status": 404,
+              "checked_at": "2026-10-29T18:10:18.249755+00:00",
+              "facility_id": 1909,
+              "final_url": "http://sanryai.info/event/",
+              "title": "404 Not Found",
+              "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e"
+            },
+            {
+              "url": "https://www.town.okagaki.lg.jp/s035/20250909183807.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:27.353638+00:00",
+              "facility_id": 1909,
+              "final_url": "https://www.town.okagaki.lg.jp/s035/20250909183807.html",
+              "title": "令和8年度岡垣町町民文化祭 - 岡垣町",
+              "sha256": "513eb80560e6b1058a22c6504150319b2694a755f3edc209cdf51a3a01cca154"
+            },
+            {
+              "url": "https://www.town.okagaki.lg.jp/s034/200/20251022162624.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:28.854164+00:00",
+              "facility_id": 1909,
+              "final_url": "https://www.town.okagaki.lg.jp/s034/200/20251022162624.html",
+              "title": "岡垣サンリーアイ　ウエーブアリーナの利用制限について - 岡垣町",
+              "sha256": "9227f17a4101aec53d40a629110400fa6bbfa955feef7db2a44bc9d4a7169cc2"
+            },
+            {
+              "url": "https://www.town.okagaki.lg.jp/s035/20251217095347.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:30.235236+00:00",
+              "facility_id": 1909,
+              "final_url": "https://www.town.okagaki.lg.jp/s035/20251217095347.html",
+              "title": "福岡ギラソールのホームゲームが開催されます！ - 岡垣町",
+              "sha256": "0c6b6d243a204d47e1b3ddfaffe8d7efe903acbeb7ac363e0da8f0b8d59c8be3"
+            },
+            {
+              "url": "https://www.town.okagaki.lg.jp/s034/20261001163247.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:36.985237+00:00",
+              "facility_id": 1909,
+              "final_url": "https://www.town.okagaki.lg.jp/s034/20261001163247.html",
+              "title": "令和8年度岡垣町人権講演会 - 岡垣町",
+              "sha256": "ab31e56af56ec0495e800178bdfadb9e0231b2e72b236c7304d7e5c0597538c7"
+            },
+            {
+              "url": "https://okagakimuse.jimdofree.com/演奏会情報/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:38.623422+00:00",
+              "facility_id": 1909,
+              "final_url": "https://okagakimuse.jimdofree.com/%E6%BC%94%E5%A5%8F%E4%BC%9A%E6%83%85%E5%A0%B1/",
+              "title": "演奏会情報 - 岡垣ミューズオーケストラ",
+              "sha256": "7dc1b11dea87502941d6970124ca41d27781f9511a03ca92a4634a9f540a2832"
+            },
+            {
+              "url": "https://www.wel-tobata.jp/2026/09/12172/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:10:42.465354+00:00",
+              "facility_id": 1909,
+              "final_url": "https://www.wel-tobata.jp/2026/09/12172/",
+              "title": "第2回・おんがつながる音楽祭♪　明清楽演奏会・九州公演 - 新着情報 | 北九州市ウェルとばた",
+              "sha256": "3f5c7a06422fa2c04cd42c1452c729cca9950aeaa7788ae39e2183f2c9f971fc"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "町民文化祭（作品・歌唱・歌謡・芸能）",
+              "disposition": "hold",
+              "reason": "11月からアリーナ催事不可との新案内と11/1まで全面展示の案内が矛盾。分割開催の継続判断も推測しない。"
+            },
+            {
+              "title": "福岡ギラソール11/7・8ホームゲーム",
+              "disposition": "hold",
+              "reason": "11月からアリーナ催事不可の10/27案内と開催の10/15案内が矛盾。"
+            },
+            {
+              "title": "岡垣ミューズ第8回定期演奏会",
+              "disposition": "added"
+            },
+            {
+              "title": "おんがつながる音楽祭11/7",
+              "disposition": "added"
+            },
+            {
+              "title": "12/5人権講演会",
+              "disposition": "hold",
+              "reason": "料金・予約経路未記載。"
+            },
+            {
+              "title": "12/3〜10児童生徒人権作品展",
+              "disposition": "hold",
+              "reason": "展示コーナーの開場時間や観覧条件未記載。"
+            },
+            {
+              "title": "11/14青少年の主張大会",
+              "disposition": "hold",
+              "reason": "行事一覧のみで時間・観覧条件未確定。"
+            },
+            {
+              "title": "10/24ウェルカムコンサート・10/18まつり岡垣",
+              "disposition": "excluded_past",
+              "reason": "終了"
+            },
+            {
+              "title": "定期楽団練習・団員募集",
+              "disposition": "excluded",
+              "reason": "一般観覧イベントではない"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "アリーナ催事と11月工事の内部矛盾は対象のみHOLD。工事対象外ハミングホールの公式出演・販売案内で2公演追加。",
+          "source_family_holds": [
+            {
+              "source_family": "岡垣サンリーアイ・ウエーブアリーナ",
+              "reason": "町10/27工事案内は11月からイベント利用不可、町9/16文化祭案内は11/1まで全面展示、10/15ホーム戦案内は11/7・8開催としており両立不明。"
+            }
+          ],
+          "added_event_ids": [
+            "evt-f2-20261030-1909-15cedba5",
+            "evt-f2-20261030-1909-40a5f73d"
+          ],
+          "completed_at": "2026-10-29T18:11:04.938846+00:00"
+        },
+        {
+          "facility_id": 1912,
+          "name": "みやこ町歴史民俗博物館",
+          "sources_checked": [
+            {
+              "url": "https://www.town.miyako.lg.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:11:11.061711+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.miyako.lg.jp/",
+              "title": "トップページ - みやこ町役場",
+              "sha256": "849f1adafd8360ee33ebd3952f63a0ddcceea68db297b65d6a907724869c527b"
+            },
+            {
+              "url": "https://www.town.miyako.lg.jp/genre/0010/0021/0008-5.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:11:20.980938+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.miyako.lg.jp/genre/0010/0021/0008-5.html",
+              "title": "歴史民俗博物館 - みやこ町役場",
+              "sha256": "fea55cfdb3dc52c3dbd70d5276677bf0bcd1b133eff7a5116bc739ea520b4601"
+            },
+            {
+              "url": "http://www.miyako-museum.jp/",
+              "status": 503,
+              "checked_at": "2026-10-29T18:11:22.263221+00:00",
+              "facility_id": 1912,
+              "final_url": "http://www.miyako-museum.jp/",
+              "title": "みやこ町デジタルミュージアム",
+              "sha256": "7090f898ec276317b9268c0eaf48551400ca8d29fbefc7e9ed3bdaa3e5ee02bb"
+            },
+            {
+              "url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum261006.html",
+              "status": 404,
+              "checked_at": "2026-10-29T18:11:29.636629+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum261006.html",
+              "title": "お探しのページはみつかりませんでした - みやこ町役場",
+              "sha256": "c71a9819feff510fa1fe7fb1f29ee8c95e5c45f68c52bb9dab6b5a2fcf229c98"
+            },
+            {
+              "url": "http://www.miyako-museum.jp/",
+              "status": 503,
+              "checked_at": "2026-10-29T18:11:31.046482+00:00",
+              "facility_id": 1912,
+              "final_url": "http://www.miyako-museum.jp/",
+              "title": "みやこ町デジタルミュージアム",
+              "sha256": "7090f898ec276317b9268c0eaf48551400ca8d29fbefc7e9ed3bdaa3e5ee02bb"
+            },
+            {
+              "url": "https://www.town.miyako.lg.jp/genre/0010/newslist.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:11:36.977303+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.miyako.lg.jp/genre/0010/newslist.html",
+              "title": "新着情報　一覧 - みやこ町役場",
+              "sha256": "af887041aea18b4b2f1fcbb5c07f9b26e0b0029d5cfa2a2aa7cf0784c6194909"
+            },
+            {
+              "url": "https://www.town.kanda.lg.jp/page/18850.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:11:38.483376+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.kanda.lg.jp/page/18850.html",
+              "title": "第31回まちの歴史講座 「博物館のお宝で学ぶみやこ町の歴史～彦山六峰・蔵持山の歴史と文化～」 - 苅田町（生涯学習課）",
+              "sha256": "c75745e5c6c33600e0a48bf750d882e7bb781947e66dbfcba24230aca6d33875"
+            },
+            {
+              "url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum-spp.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:11:48.975206+00:00",
+              "facility_id": 1912,
+              "final_url": "https://www.town.miyako.lg.jp/rekisiminnzoku/museum-spp.html",
+              "title": "【10月18日から】企画展　よみがえる「みやこの曼荼羅」開催 - みやこ町役場",
+              "sha256": "ddcd75aa0b1e60a15a56400010f1f6c57e7562b8099754f3547b77fbcf52dbf9"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "博物館のお宝で学ぶみやこ町の歴史",
+              "disposition": "added"
+            },
+            {
+              "title": "よみがえるみやこの曼荼羅",
+              "disposition": "hold",
+              "reason": "同一公式ページの冒頭11/29(土)と期間欄11/29(日)が不一致。showakinen以外のため限定曜日免除を適用しない。会期確認をPMに返す。"
+            },
+            {
+              "title": "10/18ふるさと遺産フェスタ・10/17漢詩紀行・昭和100周年展",
+              "disposition": "excluded_past",
+              "reason": "終了分"
+            },
+            {
+              "title": "町トップの産業祭・ひまわり・マラソン・映画",
+              "disposition": "excluded",
+              "reason": "博物館ではない別会場、地域ディスカバリーの対象範囲を増やさない"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "11/28共同歴史講座は現在電話受付中。企画展は曜日表記が内部不一致のため候補HOLD。",
+          "source_family_holds": [
+            {
+              "source_family": "miyako-museum.jp",
+              "reason": "デジタル館503メンテ中。町公式現行案内を代替に利用。"
+            }
+          ],
+          "added_event_ids": [
+            "evt-f2-20261030-1912-d88ae892"
+          ],
+          "completed_at": "2026-10-29T18:12:09.031939+00:00"
+        },
+        {
+          "facility_id": 1913,
+          "name": "メタセの杜",
+          "sources_checked": [
+            {
+              "url": "https://www.michinoeki-metasenomori.com/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:12:16.883984+00:00",
+              "facility_id": 1913,
+              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://www.michinoeki-metasenomori.com/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T18:12:17.996082+00:00",
+              "facility_id": 1913,
+              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://metase.net/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:12:24.676597+00:00",
+              "facility_id": 1913,
+              "final_url": "https://metase.net/",
+              "title": "メタセの杜",
+              "sha256": "3e78b469b6cc88061105865ccfc93199d49d190bc967d43688d35ac067af5b9d"
+            },
+            {
+              "url": "https://metase.net/about/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:12:27.476438+00:00",
+              "facility_id": 1913,
+              "final_url": "https://metase.net/about/event/",
+              "title": "年間イベント情報 ｜ メタセの杜",
+              "sha256": "b21687b7d56f75454efe44fb731208a22f2dfdeae4c4e4067d58cc71dab02f04"
+            },
+            {
+              "url": "https://metase.net/news-list/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:12:29.039640+00:00",
+              "facility_id": 1913,
+              "final_url": "https://metase.net/news-list/",
+              "title": "NEWS一覧 ｜ メタセの杜",
+              "sha256": "5c1b2eda555c6dc7dd73a1b0631b1ba3a0216f12407644ae93cb839f6a38dc3b"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "ハロウィンパーティーinメタセ",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "美夜古ロック村",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "11月焼き芋販売・野菜詰め放題",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "12月周年祭",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "春秋フリーマーケット",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "1月七草がゆ",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "2月白玉ぜんざい・みかん詰め放題",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "3月豚汁ふるまい",
+              "disposition": "hold",
+              "reason": "年次月だけで具体日・時間・参加条件がない。天候等で変更と明記。"
+            },
+            {
+              "title": "通常販売・メタセコイア紅葉",
+              "disposition": "excluded",
+              "reason": "通常物販と自然の見ごろ、独立した開催イベントではない"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "現行公式の年次予定と新着欄を内容確認。各年次催事の2026/27確定日時・参加条件は未公表。",
+          "completed_at": "2026-10-29T18:12:43.502623+00:00"
+        },
+        {
+          "facility_id": 1914,
+          "name": "求菩提資料館",
+          "sources_checked": [
+            {
+              "url": "https://www.city.buzen.lg.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:12:49.000446+00:00",
+              "facility_id": 1914,
+              "final_url": "https://www.city.buzen.lg.jp/",
+              "title": "豊前市公式ホームページ／トップ",
+              "sha256": "2965f65f1f8f21340cadab2979d7875dc59ee51edf627e762afaa19220203b4e"
+            },
+            {
+              "url": "https://www.town.kanda.lg.jp/page/18879.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:12:58.374294+00:00",
+              "facility_id": 1914,
+              "final_url": "https://www.town.kanda.lg.jp/page/18879.html",
+              "title": "求菩提資料館特別展に町内出土品を出陳いたします - 苅田町（生涯学習課）",
+              "sha256": "c3ab618b9dec038a8567bb1f3bce596fddb0f47221a6f722789e5be8c2263eda"
+            },
+            {
+              "url": "https://www.town.kanda.lg.jp/uploaded/attachment/11473.pdf",
+              "status": 200,
+              "checked_at": "2026-10-29T18:13:04.423974+00:00",
+              "facility_id": 1914,
+              "final_url": "https://www.town.kanda.lg.jp/uploaded/attachment/11473.pdf",
+              "title": "Official PDF",
+              "sha256": "a89be64562274779319fbd61fbc5ccdcecea98f3f740964b6b6de54fca7acd8b"
+            },
+            {
+              "url": "https://www.crossroadfukuoka.jp/spot/14793",
+              "status": 200,
+              "checked_at": "2026-10-29T18:13:26.396255+00:00",
+              "facility_id": 1914,
+              "final_url": "https://www.crossroadfukuoka.jp/spot/14793",
+              "title": "求菩提資料館 | 観光スポット | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+              "sha256": "06409e48996f1d510e45a391639e1ca94608cdd732511f6de000eb7a9c23ac9b"
+            },
+            {
+              "url": "http://kubote-historical-museum.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:13:39.825516+00:00",
+              "facility_id": 1914,
+              "final_url": "http://kubote-historical-museum.com/",
+              "title": "",
+              "sha256": "0f92c4e305c3a56efb27aa139ec7cc1ff09c5e5f2e25dec108cb37a336f8e626"
+            },
+            {
+              "url": "http://kubote-historical-museum.com/sub2.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:13:53.225272+00:00",
+              "facility_id": 1914,
+              "final_url": "http://kubote-historical-museum.com/sub2.html",
+              "title": "",
+              "sha256": "a86f74422456e76956c4539282f846ec0503d328952fbc89bd170010a0a53f30"
+            },
+            {
+              "url": "http://kubote-historical-museum.com/sub5.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:13:54.289311+00:00",
+              "facility_id": 1914,
+              "final_url": "http://kubote-historical-museum.com/sub5.html",
+              "title": "",
+              "sha256": "0f2c862cfe41b9b8ee129b85755489f94de62fdd417291d7edefff8e872494ab"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "縁起と開山〜彦山六峰の山々〜",
+              "disposition": "added"
+            },
+            {
+              "title": "求菩提山史跡指定25周年記念パネル展",
+              "disposition": "included",
+              "reason": "特別展パンフに同時開催明記。同じ来館の展示として統合。"
+            },
+            {
+              "title": "第19回おひなまつり・抹茶・ひなコンサート・写真募集と春展",
+              "disposition": "excluded_past",
+              "reason": "2026の1〜5月企画で終了済"
+            },
+            {
+              "title": "史跡ガイド",
+              "disposition": "hold",
+              "reason": "継続申込サービスで具体的将来開催日がない"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "出品者の町公式と資料館発行PDF4ページを視認し、現行特別展と同時パネル展を確認。旧館Webは春の終了企画のみ。",
+          "added_event_ids": [
+            "evt-f2-20261030-1914-fe31962d"
+          ],
+          "completed_at": "2026-10-29T18:14:07.649908+00:00"
+        },
+        {
+          "facility_id": 1915,
+          "name": "小石原焼伝統産業会館",
+          "sources_checked": [
+            {
+              "url": "https://toho-info.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:14.697587+00:00",
+              "facility_id": 1915,
+              "final_url": "https://toho-info.com/",
+              "title": "福岡県東峰村観光情報サイト",
+              "sha256": "b0eb508f34b97de56ca87d2bc25103608c31e1f2ca573f813236f86203344d36"
+            },
+            {
+              "url": "https://toho-info.com/spots/detail/fb860498-4979-4123-820a-15329a4ac478",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:20.806352+00:00",
+              "facility_id": 1915,
+              "final_url": "https://toho-info.com/spots/detail/fb860498-4979-4123-820a-15329a4ac478",
+              "title": "小石原焼伝統産業会館 | 観光スポット | 福岡県東峰村観光情報サイト",
+              "sha256": "c5a049ac1522901300499f7d286189df080c405ba198ed7a3fb0f996b7628aed"
+            },
+            {
+              "url": "https://toho-info.com/events/detail/8ac63480-ed79-4a04-b054-a05203bc4f27",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:22.441736+00:00",
+              "facility_id": 1915,
+              "final_url": "https://toho-info.com/events/detail/8ac63480-ed79-4a04-b054-a05203bc4f27",
+              "title": "東峰村秋まつり | イベント | 福岡県東峰村観光情報サイト",
+              "sha256": "92c521646be93214c09fd7a52256681adec1ee7a3b91719a827112ea3b9033c2"
+            },
+            {
+              "url": "https://densan2266part1.jimdofree.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:34.966529+00:00",
+              "facility_id": 1915,
+              "final_url": "https://densan2266part1.jimdofree.com/",
+              "title": "福岡県 観光 陶器 体験 小石原焼伝統産業会館 - 福岡観光・体験　小石原焼伝統産業会館",
+              "sha256": "e1b489396e570a9b8974b37a3cd9ea5a03189440245bfc7bf9554cb2af4b76b0"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "ロクロ体験",
+              "disposition": "hold",
+              "reason": "通常予約体験で確定したイベント開始終了期間なし。"
+            },
+            {
+              "title": "絵付け体験",
+              "disposition": "hold",
+              "reason": "通常予約体験で確定したイベント開始終了期間なし。"
+            },
+            {
+              "title": "飛びかんな体験",
+              "disposition": "hold",
+              "reason": "通常予約体験で確定したイベント開始終了期間なし。"
+            },
+            {
+              "title": "秋の民陶むら祭と館内関連催事",
+              "disposition": "excluded_past",
+              "reason": "10/10〜12終了"
+            },
+            {
+              "title": "11/1東峰村秋まつり",
+              "disposition": "hold",
+              "reason": "宝珠山グラウンドで別会場。1915へ紐付けせず通常発見レーンへの信号。雨天・交通等も未確認。"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "観光公式と施設運営者の現行サイトを確認。秋祭りは終了、通常陶芸体験に将来開催期間なし。",
+          "completed_at": "2026-10-29T18:14:44.315918+00:00"
+        },
+        {
+          "facility_id": 6895,
+          "name": "福岡おもちゃ美術館",
+          "sources_checked": [
+            {
+              "url": "https://art-play.or.jp/ftm/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:51.815809+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/event/",
+              "title": "イベント｜福岡おもちゃ美術館 - NPO法人 芸術と遊び創造協会",
+              "sha256": "2d48d242138e7ad7cf5c57a10eb36d529d0acc11bd2bd0e65f757dbcbf13240d"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:14:53.609223+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/",
+              "title": "\nお知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "d7bb32da93816e9ae36935bfb96c77cc93bae08f3067054eec7be6082d03aa5b"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-5070/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:02.496888+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-5070/",
+              "title": "\n【チケット販売中】九州おもちゃまつり(2026)｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "f36c434d7933c71924ab88901186d2bc8f8f885c01ff7880b185c8ed2681b8a9"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-5057/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:04.614786+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-5057/",
+              "title": "\n【0.1.2歳が無料】赤ちゃんWeek開催！｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "c94fd3225fd662ec20d1d5553930cb25b66131d6f72553a9460210d09b54a60d"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-2924/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:06.249101+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-2924/",
+              "title": "\n館内ワークショップ＆イベント情報｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "44afd21eafcdca8434a2138a9964da08af1daeffc2680783509b5fac3ea9c602"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-5153/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:14.921420+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-5153/",
+              "title": "\n【受講生募集】木育実践講座「教えて  樹木の先生」｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "4da576e39e9eee28c1c6c0c44d87d60188e2a79ed7b8ff6d6b5dd3786e39d3f9"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-5148/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:16.591145+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-5148/",
+              "title": "\n【受講生募集】木育インストラクター2026年度｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "962221216a462fb2347fbac7552aadaf6ff9079ca18208c76d1166097535ddba"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-4451/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:18.313105+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-4451/",
+              "title": "\nことのはの杜（もり）｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "768904b6257c0beefdb1125dd4777c60e4bf1bf5e14a729f10d0d3fdde40538c"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-4627/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:20.109082+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-4627/",
+              "title": "\n【参加無料！うれしい特典付き】親子でエンジョイしあわせ時間勉強室｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "f920a9b1d9baf99b959236c39a4bdba739a5b4cb0edd4a4f1e412fc4e6e5ee4d"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSdhr9ILxP59V28PrJ_0GCJhjLgwgzef6f89N64nFNsnc3eDLQ/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:41.323662+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSdhr9ILxP59V28PrJ_0GCJhjLgwgzef6f89N64nFNsnc3eDLQ/viewform?usp=dialog",
+              "title": "【福岡県森林つくり活動事業】11月1日（日）カスタネット",
+              "sha256": "4fbcbe48693369b8a2c38fcafb66c76e729710cff3094fea3441967595c65665"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSfZ0a4tnRUshD2yw3XvpyY_LQQBTNPMMSxLA-lQ7pOfspv_5A/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:43.260248+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSfZ0a4tnRUshD2yw3XvpyY_LQQBTNPMMSxLA-lQ7pOfspv_5A/viewform?usp=dialog",
+              "title": "11月3日（火・祝）初級向けけん玉教室",
+              "sha256": "2829e484c9db5a5e8385777f30c474ef3cf82651b59d068d32228db01354b0a3"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSc5kZUOKTK93Og4BiLw4sxm4ZI2J_sp-h5wG951_5lVBZVrzg/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:45.358899+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSc5kZUOKTK93Og4BiLw4sxm4ZI2J_sp-h5wG951_5lVBZVrzg/viewform?usp=dialog",
+              "title": "【福岡県森林づくり活動公募事業】11月21日（土）いとのこ体験",
+              "sha256": "d9af7524dce3c752df7fcebdb6817514ed249901652925812784fb8f7e5171f2"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSd-aM04v9GXuuCwwrHoFqPRRLstlW-qWNsp91c2j9d9GQj7EQ/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:47.255437+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSd-aM04v9GXuuCwwrHoFqPRRLstlW-qWNsp91c2j9d9GQj7EQ/viewform?usp=dialog",
+              "title": "おはしづくりワークショップ～つくって学ぶ、日本の食文化～",
+              "sha256": "6daaa66b712140a1caca0e1ef4e9bf652e4e21ed342a4acd4513f8f292592a08"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSfgl6WZoQCsoXmh9gv--LmOFUaDpSBcmfptnpa4p0JFJikhMA/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:48.967815+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSfgl6WZoQCsoXmh9gv--LmOFUaDpSBcmfptnpa4p0JFJikhMA/closedform",
+              "title": "講座申込フォーム ",
+              "sha256": "adc089a3c56afa60aa5cf153b2aea2a921265b4b10c0caf335a7ad8746e4f5ce"
+            },
+            {
+              "url": "https://docs.google.com/forms/d/e/1FAIpQLSf0QBUFzCe_FPugK5Phse988fTqZVDSpagiYyN0o-EOB_pvTw/viewform?usp=dialog",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:50.964670+00:00",
+              "facility_id": 6895,
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf0QBUFzCe_FPugK5Phse988fTqZVDSpagiYyN0o-EOB_pvTw/viewform?usp=dialog",
+              "title": "猿面 今宿人形 絵付け体験",
+              "sha256": "5ed6c4cd6ed841d0f7604e9c352562a729df9227c3853be61d5b140f1ec06c68"
+            },
+            {
+              "url": "https://www.e-tix.jp/ftm/event.html",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:56.718207+00:00",
+              "facility_id": 6895,
+              "final_url": "https://www.e-tix.jp/ftm/event.html",
+              "title": "福岡おもちゃ美術館（九州おもちゃまつり）｜公式オンラインチケット（予約）",
+              "sha256": "5dd4fadff4177472cba09f96d53d28b93c297a60ac77f1f049c3230a2eb5c1a5"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-5044/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:15:58.292137+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-5044/",
+              "title": "\n【募集中】保育木育フェアを開催します🌳｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "e912d9704f4664593e3898d0bd630ac20f038e540cc83303371e7951e107c399"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/news/news-4806/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:16:00.038118+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/news/news-4806/",
+              "title": "\nおもちゃコンサルタント養成講座 予約受付開始｜お知らせ｜福岡おもちゃ美術館\n",
+              "sha256": "dd0e82857167a0cb885ad9b9798cbd78040870a5fa5f845dc29860257e216e4c"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/event/omochahospital/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:16:21.179972+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/event/omochahospital/",
+              "title": "おもちゃ病院｜福岡おもちゃ美術館",
+              "sha256": "b241c471aae38d1c431e7595e09951cfe6714fee2f16484926600ee197e05cbe"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/event/akamokuclub/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:16:23.033429+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/event/akamokuclub/",
+              "title": "赤ちゃん木育クラブ｜福岡おもちゃ美術館",
+              "sha256": "fc12f1e33dc8d1d1350f32e19a86617171e9e924bdb17c5d11d2ba5b9e46fa2c"
+            },
+            {
+              "url": "https://art-play.or.jp/ftm/guide/",
+              "status": 200,
+              "checked_at": "2026-10-29T18:16:24.798530+00:00",
+              "facility_id": 6895,
+              "final_url": "https://art-play.or.jp/ftm/guide/",
+              "title": "フロアガイド・楽しみ方｜福岡おもちゃ美術館 - 認定NPO法人 芸術と遊び創造協会",
+              "sha256": "b8a12705a105bb5d7a8d4645d00cd09b224ada9c34810776af4d0247f21e14ff"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "カスタネットをつくろう",
+              "disposition": "added"
+            },
+            {
+              "title": "初級向けけん玉教室",
+              "disposition": "added"
+            },
+            {
+              "title": "自分だけのミニごまを作ろう",
+              "disposition": "added"
+            },
+            {
+              "title": "100万人のクラシックライブ",
+              "disposition": "added"
+            },
+            {
+              "title": "スノードームづくり",
+              "disposition": "added"
+            },
+            {
+              "title": "いとのこ体験",
+              "disposition": "added"
+            },
+            {
+              "title": "九州おもちゃまつり（13ブースと木育キャラバン）",
+              "disposition": "hold",
+              "reason": "会場は同商業施設1階メディアパーク。雨天・予約販売・子供条件は確認したが公共交通影響の公式根拠を本巡回では確認できず、祭り必須条件不足でHOLD。"
+            },
+            {
+              "title": "11/3おはしづくり",
+              "disposition": "hold",
+              "reason": "申込フォームの午後時間説明14:40と選択肢・本文14:30が内部矛盾。"
+            },
+            {
+              "title": "11/7からくりトンボ",
+              "disposition": "hold",
+              "reason": "共通公式フォームが満員受付終了。"
+            },
+            {
+              "title": "11/8猿面絵付け",
+              "disposition": "hold",
+              "reason": "公式本文各回30組と申込フォーム各回15組で定員矛盾。"
+            },
+            {
+              "title": "12/5イライラ迷路",
+              "disposition": "hold",
+              "reason": "共通公式フォームが満員受付終了。"
+            },
+            {
+              "title": "2027/1/16おままごとキッチン",
+              "disposition": "hold",
+              "reason": "共通公式フォームが満員受付終了。"
+            },
+            {
+              "title": "11/14クリスマスリース",
+              "disposition": "hold",
+              "reason": "公式に満員表示。"
+            },
+            {
+              "title": "11/14はじめてアート・12/12積み木・1/18絵本・2/7ラッピング・2/20身体遊び",
+              "disposition": "hold",
+              "reason": "各講座の日時と対象はあるが、このページに申込経路なし。空きと参加経路を未確認。"
+            },
+            {
+              "title": "11/18おもちゃ病院",
+              "disposition": "hold",
+              "reason": "日付・先着20個の案内はあるが料金条件未記載。"
+            },
+            {
+              "title": "ママとベビーの教室",
+              "disposition": "hold",
+              "reason": "画像日程と外部予約先だけで各回条件を未取得。"
+            },
+            {
+              "title": "木育実践講座・インストラクター",
+              "disposition": "excluded",
+              "reason": "成人の指導者養成・資格講座で家族のおでかけ参加とは異なる。"
+            },
+            {
+              "title": "2027/2/5コロコロ引き車",
+              "disposition": "excluded",
+              "reason": "大人のみ対象の木工講座。"
+            },
+            {
+              "title": "毎月手作り・キーホルダー・カプラ・通常赤ちゃん木育クラブ・いとのこ定例",
+              "disposition": "excluded",
+              "reason": "registry noteに従い通常工作・常設プログラムは期間イベント化しない。"
+            },
+            {
+              "title": "赤ちゃんWeek・体験会・保育木育フェア・コンサルタント養成",
+              "disposition": "excluded",
+              "reason": "10/29以前の終了分。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "現在申込可能な公式フォームと当日参加経路を確認した6企画を追加。満員と内部矛盾は個別HOLD。",
+          "added_event_ids": [
+            "evt-f2-20261030-6895-878349c7",
+            "evt-f2-20261030-6895-5f6ca9de",
+            "evt-f2-20261030-6895-2bd0ebef",
+            "evt-f2-20261030-6895-b299e6a9",
+            "evt-f2-20261030-6895-d4b97cd9",
+            "evt-f2-20261030-6895-a490940c"
+          ],
+          "completed_at": "2026-10-29T18:17:08.380973+00:00"
         }
       ],
-      "no_current_or_future_event": 6,
-      "candidate_found_added": 16,
+      "no_current_or_future_event": 8,
+      "candidate_found_added": 21,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 7,
+      "candidate_found_hold": 10,
       "source_unresolved": 1
     }
   }
