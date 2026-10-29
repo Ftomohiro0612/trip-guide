@@ -1,0 +1,533 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-D-PART-5",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T00:25:35.416122+00:00",
+  "process_started_at": "2026-10-29T00:23:09.4994283Z",
+  "horizon_end_date": "2026-12-24",
+  "prior_run_numbers_reused_as_execution": false,
+  "per_region": {
+    "nara": {
+      "sources_checked": [
+        {
+          "url": "https://kintetsu-tetsudo-matsuri.jp/2026/autumn/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:33:41.371686+00:00",
+          "content_sha256": "b9cb15043493dbe589e8e8561e9c0f39e508a48f5265cf2831fd98e359f70b61",
+          "organizer_name": "近畿日本鉄道",
+          "multi_venue_basis": "五位堂検修車庫（奈良県香芝市）と高安車庫（大阪府八尾市）の二会場を同一公式企画で案内。"
+        },
+        {
+          "url": "https://www.city.nara.lg.jp/site/naramachi/174929.html",
+          "status": 200,
+          "checked_at": "2026-10-29T00:33:41.787411+00:00",
+          "content_sha256": "447860bf9efecaeda4d03fd81af208d327ace305702f575846b4b3763aadd58e",
+          "organizer_name": "奈良町見知ル実行委員会・奈良市",
+          "multi_venue_basis": "旧細田家、五劫院、元興寺塔跡、今西家書院、志賀直哉旧居など複数会場で11/2～8に公開・体験・まちあるきを行う主催公式共催ページ。",
+          "host_shared_with_registry_reason": "市の単独施設ページではなく、市・実行委員会のならまち見知ル2026総合告知。旧細田家・五劫院・今西家書院等8公開会場と22の知ル／巡ル企画を横断案内しているため、施設レジストリと共通市ホストでも複数会場主催者ソースに該当。"
+        },
+        {
+          "url": "https://naramachimishiru.jimdofree.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:33:49.981311+00:00",
+          "content_sha256": "169a66c6479e46388ef5034a5c4ad3e76b193b7e263f0cee66da643fdb79fc5b",
+          "organizer_name": "奈良町見知ル実行委員会",
+          "multi_venue_basis": "ならまち・きたまち・高畑・京終の多会場公開を主催。共催奈良市からリンクされた公式シリーズサイト。"
+        },
+        {
+          "url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:34:00.061193+00:00",
+          "content_sha256": "8a5f86407f2cbd07b05b9ffe4001d11df6e01df2d575ca79f470e19177c6e532",
+          "organizer_name": "奈良町見知ル実行委員会",
+          "multi_venue_basis": "同一主催が奈良町の複数社寺・旧宅・産業遺産会場で公開とまちあるき企画を実施する2026年公式プログラム。"
+        },
+        {
+          "url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:34:01.238128+00:00",
+          "content_sha256": "2c8a965e7bdceba641de8ed7111d913dd3acf0f6030c8d994cb9335a6dc481f3",
+          "organizer_name": "奈良町見知ル実行委員会",
+          "multi_venue_basis": "同一主催が奈良町の複数社寺・旧宅・産業遺産会場で公開とまちあるき企画を実施する2026年公式プログラム。"
+        }
+      ],
+      "candidates_found": 31,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 31,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "key": "organizer_event_series|mishiru|旧細田家住宅",
+          "unit": "organizer_event_series",
+          "title": "旧細田家住宅",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|五劫院",
+          "unit": "organizer_event_series",
+          "title": "五劫院",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|旧長壽會細菌研究所（工場跡）",
+          "unit": "organizer_event_series",
+          "title": "旧長壽會細菌研究所（工場跡）",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|佐埜家住宅坪庭",
+          "unit": "organizer_event_series",
+          "title": "佐埜家住宅坪庭",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|今西家書院",
+          "unit": "organizer_event_series",
+          "title": "今西家書院",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|庚申堂",
+          "unit": "organizer_event_series",
+          "title": "庚申堂",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|華厳宗元興寺（史跡元興寺塔跡）",
+          "unit": "organizer_event_series",
+          "title": "華厳宗元興寺（史跡元興寺塔跡）",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|志賀直哉旧居",
+          "unit": "organizer_event_series",
+          "title": "志賀直哉旧居",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/見ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|工場跡・二階堂氏産業遺産ガイド",
+          "unit": "organizer_event_series",
+          "title": "工場跡・二階堂氏産業遺産ガイド",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|工場跡・主宰者ガイド（ブランチ）",
+          "unit": "organizer_event_series",
+          "title": "工場跡・主宰者ガイド（ブランチ）",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|工場跡・主宰者ガイド（ドリンク）",
+          "unit": "organizer_event_series",
+          "title": "工場跡・主宰者ガイド（ドリンク）",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|古民家で学ぶ奈良漬",
+          "unit": "organizer_event_series",
+          "title": "古民家で学ぶ奈良漬",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|記念講演会「松永久秀が築いた多聞城」",
+          "unit": "organizer_event_series",
+          "title": "記念講演会「松永久秀が築いた多聞城」",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|野村家の歳時記",
+          "unit": "organizer_event_series",
+          "title": "野村家の歳時記",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|林神社の和菓子文化体験",
+          "unit": "organizer_event_series",
+          "title": "林神社の和菓子文化体験",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|旅籠長谷川ランチ",
+          "unit": "organizer_event_series",
+          "title": "旅籠長谷川ランチ",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|奈良町のお酒を愉しもう",
+          "unit": "organizer_event_series",
+          "title": "奈良町のお酒を愉しもう",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。 酒類中心で子ども向け参加経路も不明。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|レンガ造りのしょうゆ蔵見学",
+          "unit": "organizer_event_series",
+          "title": "レンガ造りのしょうゆ蔵見学",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。 さらに公式で定員到達・締切を確認。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|きたまち木造近代建築巡り",
+          "unit": "organizer_event_series",
+          "title": "きたまち木造近代建築巡り",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。 さらに公式で定員到達・締切を確認。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|きたまち風土記めぐり",
+          "unit": "organizer_event_series",
+          "title": "きたまち風土記めぐり",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|奈良監獄＆きたまち発見ツアー",
+          "unit": "organizer_event_series",
+          "title": "奈良監獄＆きたまち発見ツアー",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|町名由来板を巡ル",
+          "unit": "organizer_event_series",
+          "title": "町名由来板を巡ル",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|中将姫ゆかりの寺院をたずねる",
+          "unit": "organizer_event_series",
+          "title": "中将姫ゆかりの寺院をたずねる",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|まちかど博物館ツアーならまち編",
+          "unit": "organizer_event_series",
+          "title": "まちかど博物館ツアーならまち編",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "facility_hosted"
+        },
+        {
+          "key": "organizer_event_series|mishiru|礎石で学ぶ元興寺とならまちの歴史",
+          "unit": "organizer_event_series",
+          "title": "礎石で学ぶ元興寺とならまちの歴史",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|奈良町家巡り",
+          "unit": "organizer_event_series",
+          "title": "奈良町家巡り",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|歴史ウォークならまち神社めぐり",
+          "unit": "organizer_event_series",
+          "title": "歴史ウォークならまち神社めぐり",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|夜さんぽ春日大社禰宜道と高畑",
+          "unit": "organizer_event_series",
+          "title": "夜さんぽ春日大社禰宜道と高畑",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|鏡神社参拝と精進カレー",
+          "unit": "organizer_event_series",
+          "title": "鏡神社参拝と精進カレー",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|mishiru|駅長さんと京終さんぽ",
+          "unit": "organizer_event_series",
+          "title": "駅長さんと京終さんぽ",
+          "candidate_url": "https://naramachimishiru.jimdofree.com/知ル-巡ル奈良町2026/",
+          "disposition": "hold",
+          "source_family": "naramachimishiru.jimdofree.com",
+          "reason": "奈良町見知ル2026公式プログラム内で11/5(水)・11/8(土)など2026年暦と一致しない日付曜日表記が複数ある。showakinen以外には曜日無視の特例なし。シリーズ源泉の年度整合性を主催者が訂正するまで当該シリーズ候補をsource-family HOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer_event_series|kintetsu-goido",
+          "unit": "organizer_event_series",
+          "title": "きんてつ鉄道まつり2026 五位堂",
+          "candidate_url": "https://kintetsu-tetsudo-matsuri.jp/2026/autumn/",
+          "disposition": "hold",
+          "reason": "複数会場主催者の公式特設を独立取得。事前体験・楽ツアー受付終了。一般来場の荒天対応・幼児条件は本文だけで確定できずHOLD。",
+          "discovery_reporting_category": "fireworks_festivals_seasonal"
+        }
+      ],
+      "discovery_basis": "既存奈良source_notesと公式観光・市カレンダーの主催者を確認。単館イベントページはorganizerに数えず、近鉄二車庫と奈良町多会場シリーズを実取得。",
+      "facility_candidate_signals": [
+        {
+          "venue_name": "旧細田家住宅",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "五劫院",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "旧長壽會細菌研究所（工場跡）",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "佐埜家住宅坪庭",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "今西家書院",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "庚申堂",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "華厳宗元興寺（史跡元興寺塔跡）",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        },
+        {
+          "venue_name": "志賀直哉旧居",
+          "reason": "文化財・歴史建築として継続的な公開価値があり得る。現Product施設には同一名称候補なし。常時一般公開と家族向け継続価値はFacilityOpsで検証し、EventOpsでは施設追加しない。"
+        }
+      ],
+      "reporting_category_basis": "Discovery-stage grouping by the named event/surface; additions are individually classified by their verified event/venue. Candidate totals are encounter counts across required source types, not unique additions."
+    },
+    "osaka": {
+      "sources_checked": [
+        {
+          "url": "https://kintetsu-tetsudo-matsuri.jp/2026/autumn/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:23.351948+00:00",
+          "content_sha256": "b9cb15043493dbe589e8e8561e9c0f39e508a48f5265cf2831fd98e359f70b61",
+          "organizer_name": "近畿日本鉄道・きんてつ鉄道まつり2026秋",
+          "multi_venue_basis": "五位堂（奈良県）と高安（大阪府）の2検修車庫で10/31・11/1の複数日開催を同じ公式ページが発表。"
+        },
+        {
+          "url": "https://www.nazonoshiro.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:23.783112+00:00",
+          "content_sha256": "62a67b6aefdd23c661a43975f117ffae5895d47d18eac000fd468676368396c2",
+          "organizer_name": "株式会社マッシュ・歴史リアル謎解きゲーム「謎の城」",
+          "multi_venue_basis": "同じ公式主催者が大阪城、高槻・島本、奈良郡山城など複数の城・まち歩き会場の開催予定を掲載。"
+        },
+        {
+          "url": "https://rekishirealnazo.com/event/kansai/osaka/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:43.894319+00:00",
+          "content_sha256": "bb9f148f180be8b1849593009ff0a429b4b7048db5403b6be6d545c8f5e58a81",
+          "organizer_name": "株式会社マッシュ・歴史リアル謎解きゲーム「謎の城」",
+          "multi_venue_basis": "主催者の公式イベントシリーズで大阪城と高槻・島本を含む複数の城・歴史地区の開催を発表。"
+        },
+        {
+          "url": "https://rekishirealnazo.com/event/219/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:44.319958+00:00",
+          "content_sha256": "8c18759ba8ee8a3041ad7721140e95b9f1168dc4aad64f1e473952e51d179729",
+          "organizer_name": "株式会社マッシュ・歴史リアル謎解きゲーム「謎の城」",
+          "multi_venue_basis": "主催者の公式イベントシリーズで大阪城と高槻・島本を含む複数の城・歴史地区の開催を発表。"
+        },
+        {
+          "url": "https://rekishirealnazo.com/event/232/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:44.719836+00:00",
+          "content_sha256": "9269a66600888e8e01be7b76b649f86135eab40a696d5e5c7d0074fd5ec0df3a",
+          "organizer_name": "株式会社マッシュ・歴史リアル謎解きゲーム「謎の城」",
+          "multi_venue_basis": "主催者の公式イベントシリーズで大阪城と高槻・島本を含む複数の城・歴史地区の開催を発表。"
+        },
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-29T00:58:45.103936+00:00",
+          "content_sha256": "a1bb104649242caa338da57dfb212eb0affbe97ea2d9fe1714d2d59db2d7be12",
+          "organizer_name": "株式会社リトルプラネット",
+          "multi_venue_basis": "公式共通キャンペーンが大阪ららぽーと和泉・TOYLO PARKあべのを含む全国複数店舗で開催。",
+          "host_shared_with_registry_reason": "施設単店のページではなく、同主催者の全国複数店舗共通イベント発表。"
+        },
+        {
+          "url": "https://eplus.jp/sf/detail/4623760001-P0030001",
+          "status": 200,
+          "checked_at": "2026-10-29T00:59:14.275315+00:00",
+          "content_sha256": "f629a8f77ac74d9f1e89c464d7415b36f1c47847ded80dbe089c21a5dee53f8d",
+          "organizer_name": "株式会社マッシュ・歴史リアル謎解きゲーム「謎の城」",
+          "multi_venue_basis": "同一主催シリーズが大阪城と高槻・島本の複数会場を公式案内し、その公式指定販売先を確認。"
+        }
+      ],
+      "candidates_found": 5,
+      "added": 1,
+      "duplicate_or_already_present": 2,
+      "hold": 2,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "key": "organizer|nazoshiro219",
+          "unit": "organizer_event_series",
+          "title": "謎の城in大阪城「豊臣秀吉と黄金の城」",
+          "candidate_url": "https://rekishirealnazo.com/event/219/",
+          "disposition": "added",
+          "event_id": "evt-d5-osaka-nazoshiro-20261002",
+          "participability": "通常参加可能",
+          "reason": "主催者の現地キット購入経路・日時・料金・休催日と対象を確認。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer|nazoshiro232",
+          "unit": "organizer_event_series",
+          "title": "謎の城in高槻・島本「山崎の戦いを突破せよ！」",
+          "candidate_url": "https://rekishirealnazo.com/event/232/",
+          "disposition": "hold",
+          "reason": "主催制作公式詳細の受付9:00開始と、主催者の指定販売ページの10:00開始が一致しない。現地での現金払い不可の企画につき、受付時刻を推測せず当該候補のみHOLD。",
+          "discovery_reporting_category": "municipal_regional"
+        },
+        {
+          "key": "organizer|kintetsu",
+          "unit": "organizer_event_series",
+          "title": "きんてつ鉄道まつり2026in高安",
+          "candidate_url": "https://kintetsu-tetsudo-matsuri.jp/2026/autumn/",
+          "disposition": "hold",
+          "reason": "個別予約企画と楽乗車ツアーは受付終了。一般来場について荒天対応・会場アクセス・幼児同行条件の一次情報が揃わずHOLD。",
+          "discovery_reporting_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "key": "organizer|evt-litpla-litpla-izumi-halloween2026",
+          "unit": "organizer_event_series",
+          "title": "ハロウィン2026（ららぽーと和泉）",
+          "candidate_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "existing_event_id": "evt-litpla-litpla-izumi-halloween2026",
+          "reason": "同じIDの現行カードを本runのCloudflare Previewで実描画確認。追加済み催事／再確認した既存催事と同一なので、重複して追加しない。Productionでも同一カードを最終確認する。",
+          "event_id": "evt-litpla-litpla-izumi-halloween2026",
+          "discovery_reporting_category": "fireworks_festivals_seasonal",
+          "previous_hold_reason": "後続secondaryレーンで各店舗公式も取得し既存レコードの確認日を更新済み。最終描画確認で解消予定（当時の共通告知のみの情報不足HOLDは履歴として開示）。",
+          "hold_resolved_at": "2026-10-29T01:37:58.140468+00:00",
+          "initial_inference_correction": "ローカル元データの日付から非表示と推測した初期説明を撤回。本runの初回Productionブラウザ取得は両IDを確認日10/16で表示していた。Previewで新たな10/29一次確認を表示し、既存カード差分はこの2件だけと確認。"
+        },
+        {
+          "key": "organizer|evt-litpla-toylo-abeno-halloween2026",
+          "unit": "organizer_event_series",
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）",
+          "candidate_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "existing_event_id": "evt-litpla-toylo-abeno-halloween2026",
+          "reason": "同じIDの現行カードを本runのCloudflare Previewで実描画確認。追加済み催事／再確認した既存催事と同一なので、重複して追加しない。Productionでも同一カードを最終確認する。",
+          "event_id": "evt-litpla-toylo-abeno-halloween2026",
+          "discovery_reporting_category": "fireworks_festivals_seasonal",
+          "previous_hold_reason": "後続secondaryレーンで各店舗公式も取得し既存レコードの確認日を更新済み。最終描画確認で解消予定（当時の共通告知のみの情報不足HOLDは履歴として開示）。",
+          "hold_resolved_at": "2026-10-29T01:37:58.140493+00:00",
+          "initial_inference_correction": "ローカル元データの日付から非表示と推測した初期説明を撤回。本runの初回Productionブラウザ取得は両IDを確認日10/16で表示していた。Previewで新たな10/29一次確認を表示し、既存カード差分はこの2件だけと確認。"
+        }
+      ],
+      "reporting_category_basis": "Discovery-stage grouping by the named event/surface; additions are individually classified by their verified event/venue. Candidate totals are encounter counts across required source types, not unique additions."
+    }
+  }
+}
