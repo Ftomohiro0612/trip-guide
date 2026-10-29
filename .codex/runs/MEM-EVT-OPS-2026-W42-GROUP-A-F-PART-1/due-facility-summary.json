@@ -57,6 +57,10 @@
       "hold": 182,
       "added": 155,
       "duplicate": 9
+    },
+    "added_participability": {
+      "通常参加可能": 85,
+      "条件付き参加可能": 70
     }
   },
   "per_region": {
@@ -3569,19 +3573,25 @@
           "reason": "ニュース・トップ新着・全4企画詳細と共催者公式を実取得。現在/将来の施設開催企画3件追加（各サブ企画は主企画に統合）。体験満了2件とビンゴ詳細不足1件HOLD。雇用・混雑・物販・常設展示は非イベント。既存全イベントは終了済み、変更なし。",
           "candidates": [
             {
-              "title": "パウっとドキワク水族館レスキュー！",
+              "title": "パウっとドキワク水族館レスキュー！in マリンワールド海の中道",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1792-517d66c4",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "マリンでハロウィン／ハロウィンナイト",
+              "title": "マリンワールド ハロウィンナイト",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1792-1d9968fc",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "秋の感謝祭（仕事道具体験・バルーン・ライブを含む）",
+              "title": "マリンワールド 秋の感謝祭",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1792-fbe51905",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
               "title": "洗おう笑おう 飼育体験",
@@ -3650,24 +3660,32 @@
           "reason": "動的イベント一覧を公式公開events.jsonまで取得して全15行を内容評価。季節限定3企画群と単日コンサート1件を追加。SLマン/ポッポちゃん・関連工作は同一運行企画、ハロウィンのステージ/工作/ラリー、クリスマスのステージ/工作は各季節企画に統合。常設の体操・グリーティング・朝のお迎え・人形劇・紙芝居・パネルシアターと11月からの終了日なしグリーティングは通常演目としてイベント化しない。既存イベントなし。",
           "candidates": [
             {
-              "title": "ハロウィーン（ステージ・工作・シールラリー）",
+              "title": "アンパンマンミュージアム ハロウィーンイベント",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1794-e4fa3328",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "ロードトレイン SLマン/ポッポちゃん（関連お面工作含む）",
+              "title": "ロードトレイン SLマンとポッポちゃん",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1794-49f45d20",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "クリスマス（ステージ・お面工作）",
+              "title": "アンパンマンミュージアム クリスマスイベント",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1794-f4e24486",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "ドリーミングの元気100倍!!コンサート",
+              "title": "ドリーミングの元気100倍!! コンサート",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1794-90eb26c0",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             }
           ],
           "facility_id": 1794,
@@ -3738,7 +3756,9 @@
             {
               "title": "ハロー！会計 with キッザニア福岡",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1795-f9054bc4",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             }
           ],
           "facility_id": 1795,
@@ -3767,49 +3787,67 @@
           "reason": "公式一覧全42件を内容評価し、期間限定の体験・展示・観覧候補11件を全件詳細取得。9件追加、2件HOLD。営業割引・ポイント・物販セール・食物販売だけのキッチンカー、常設噴水/ガンダム/定常ミニトレイン・施設貸出はイベント化せず。既存イベントなし。",
           "candidates": [
             {
-              "title": "なかフェス2026",
+              "title": "なかフェス2026〜音色あふれる街へ〜",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-c0474cdb",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "GO!GO!スパフル フリーライブ",
+              "title": "GO!GO!スパフル フリーライブ全国行脚 福岡",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-90b88638",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "うるわしの宵の月 衣装展",
+              "title": "映画「うるわしの宵の月」劇中登場衣装展",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-66f179cf",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "ディノグランプリ",
+              "title": "体験型デジタルアトラクション ディノグランプリ",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1796-a9878c3b",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "前橋ウィッチーズ ミニライブ",
+              "title": "前橋ウィッチーズ ミニアルバムリリースイベント",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-282c14fc",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "ぱん食い競走",
+              "title": "ぱん食い競走 in ららぽーと福岡",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1796-de9d939e",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "LaLa文化祭 アートの散歩道",
+              "title": "LaLa文化祭2026 アートの散歩道",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-a5d199d0",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "SPEED STAR",
+              "title": "SPEED STAR 30m Dash Challenge",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-fdbe488e",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "STU48 ミニライブ",
+              "title": "STU48「冬服に着替えたら」発売記念イベント",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1796-f718af0f",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
               "title": "乃木坂46・6期生ツアー前夜祭",
@@ -3915,22 +3953,30 @@
             {
               "title": "あかり絵の世界展",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1798-2caa69fa",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
               "title": "町家で聴こう 耳なし芳一",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1798-f00eb30b",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "歌舞伎を彩る 三味線",
+              "title": "「歌舞伎を彩る」三味線を楽しみましょう",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1798-fdf16d93",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "令和8年度収蔵品展",
+              "title": "令和8年度 収蔵品展",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1798-cd49fdde",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
               "title": "和食のマナー講座（高校生以下保護者同伴可）",
@@ -3989,34 +4035,46 @@
           "reason": "10月・11月全カレンダーと現行全限定企画詳細を確認。12月URLは当月へ転送され未公開。6企画追加、Mission in Zooの6つの週別URLは同一内容・期間の11開催日として統合。動物誕生日は非催事、通常スポットガイドは定常運営として新規登録なし。既存掲載は全て終了済み。",
           "candidates": [
             {
-              "title": "10/30ヤマネコクイズラリー",
+              "title": "知ってるかにゃ？ヤマネコクイズラリー（10月30日）",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1799-623cd2ef",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "ツシマヤマネコ パネル展",
+              "title": "パネル展「もっとしりたい！ツシマヤマネコ」",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1799-6850ed65",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "10/31ボードゲーム",
+              "title": "ボードゲーム「ツシマヤマネコの子だくさん大作戦」（10月31日）",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1799-b3b30702",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "10/31特別ガイド",
+              "title": "ツシマヤマネコ飼育30周年記念 特別ガイド",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1799-f03f55ee",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "動物画コンクール作品展",
+              "title": "第51回 児童および幼児動物画コンクール作品展",
               "disposition": "added",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1799-c5985dc6",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             },
             {
-              "title": "復刻！ミッションin Zoo（6週別URL統合）",
+              "title": "復刻！ミッションin Zoo",
               "disposition": "added",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1799-671d9cdc",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認"
             }
           ],
           "facility_id": 1799,
@@ -4100,52 +4158,88 @@
           "reason": "公式活動トップ/一覧の全掲載を内容評価し、有限日程・参加可能12件追加、既存5件を再確認して鮮度更新、24件HOLD。neo縄文の館内土曜クイズは既存展に統合。終期のない通常演目（大地/風/冷たい世界/天気/空気/錯視/表面張力/リング紙飛行機/キャストタイム/常設ワークシート）、成人向け健康/工作講座は対象外。科学館外のフィールドワーク5件（大濠公園、愛宕山、生コン工場、葉っぱ探検、舞鶴公園）は指定施設外会場につき本F-1で追加しない。",
           "candidates": [
             {
-              "title": "YOKAロボまつり86観覧",
-              "disposition": "added"
+              "title": "YOKAロボまつり86・バトル大会 観覧",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-4bf354c1",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
-              "title": "デジタル工作コースター",
-              "disposition": "added"
+              "title": "プログラミングでデジタル工作 コースターづくり",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-0e0ae368",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "親子プログラミング11/14",
-              "disposition": "added"
+              "title": "親子でプログラミングロボット体験教室（11月14日）",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-8d493ec7",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "AIでプログラミング10/31",
-              "disposition": "added"
+              "title": "科学実験「AIでプログラミング」（10月31日）",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-af86be52",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "雲のひみつ",
-              "disposition": "added"
+              "title": "テーブルサイエンス「雲のひみつ」",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-7eddbdd1",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
-              "title": "アルソミトラ",
-              "disposition": "added"
+              "title": "アルソミトラのタネの模型をつくろう",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-f84a648b",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "ロボコンへの道11/23",
-              "disposition": "added"
+              "title": "めざせ！福岡市科学館ロボコンへの道！（11月23日）",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-65226ad0",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "苔テラリウム",
-              "disposition": "added"
+              "title": "苔テラリウムワークショップ「かくれんぼ名人をさがせ！」",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-118d73b1",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
-              "title": "子どもの権利WS",
-              "disposition": "added"
+              "title": "子どもの権利ワークショップ×対話型サイエンス体験",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-6983ab4e",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "科学おもちゃ10/31",
-              "disposition": "added"
+              "title": "科学おもちゃであそぼう（10月31日）",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-c7286b62",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "ピンホールカメラ",
-              "disposition": "added"
+              "title": "科学実験「ピンホールカメラをつくろう」",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-905c99bb",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
-              "title": "おはなし会",
-              "disposition": "added"
+              "title": "福岡市科学館 おはなし会",
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1800-70e9fe8c",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "neo縄文",
@@ -4455,67 +4549,115 @@
           "candidates": [
             {
               "title": "インド更紗 世界をめぐる物語",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-546d3558",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "松永耳庵 冬の茶事",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-0f3b6619",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "生誕150年 詩と絵の旅人―吉田博",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-a13a1cbe",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "カンボジアの染織 描かれた祈り",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-fd6f8a31",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "没後90年 冨田溪仙",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-4cf8eef7",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "茶道具と銘",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-3716a2af",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "やまと絵の世界",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-1f55abd4",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "「時をかける少女」20周年記念 細田守の原点/展",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-aae5f157",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "第58回 福岡市美術展",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-31a0b4db",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "ファミリーDAY2026 予約なしプログラム",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-3b70d015",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "親子で楽しむクリスマスコンサート",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-3f6904bd",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "講演「インド更紗―グローバルなデザイン、ローカルなプロダクト」",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-1e42b201",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "つきなみ講座「福岡市美術館の古美術名品解剖」",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-2bcac1c7",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "つきなみ講座「カンボジアの絹織物―絣・織・絞り」",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-4b8662a1",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "おしゃべりとてざわりのツアー",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-ee69823f",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "聴覚障がい者のためのおしゃべり鑑賞ツアー",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1802-ab4c585d",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "山内光枝 潮ノ記",
@@ -4721,19 +4863,31 @@
           "candidates": [
             {
               "title": "黒田家の名宝4",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1807-9be5f238",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "古文書と記録で見る福岡藩政史8",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1807-f6c61004",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "総館長の歴史講座「楽史の集い」豊臣兄弟と九州",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1807-3a77caad",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "条件付き参加可能"
             },
             {
               "title": "国宝 金印「漢委奴国王」ギャラリートーク",
-              "disposition": "added"
+              "disposition": "added",
+              "event_id": "evt-f1-20261030-1807-05495b68",
+              "reason": "本Missionで公式日時・会場・料金・現時点の参加経路を個別確認",
+              "participability": "通常参加可能"
             },
             {
               "title": "1999展",
@@ -4895,43 +5049,50 @@
               "title": "海辺のカモメ市 2026 Autumn 門司港レトロ",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-2e8e756b"
             },
             {
               "title": "門司港グランマーケット",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-2c5aed90"
             },
             {
               "title": "門司港蚤の市 第65回",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-f4939d0c"
             },
             {
               "title": "水墨画の巨匠たち―雪舟から鉄斎まで",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-4e489f5b"
             },
             {
               "title": "神々のすがた―縁起絵巻から仙画まで",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-f7b44574"
             },
             {
               "title": "陶工 河井寬次郎の息吹",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認。最終照合で画像の人名を市公式本文の表記と一致させた"
+              "reason": "公式2026案内に日程・会場・参加条件確認。最終照合で画像の人名を市公式本文の表記と一致させた",
+              "event_id": "evt-f1-20261030-1811-a1a515da"
             },
             {
               "title": "関門海峡キャンドルナイト2026",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認",
+              "event_id": "evt-f1-20261030-1811-eb36fc6c"
             },
             {
               "title": "イルミネーション2026 門司港レトロ浪漫灯彩",
@@ -5048,7 +5209,8 @@
               "title": "貨物列車の企画展",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "日程・無料追加料金・通常入館確認"
+              "reason": "日程・無料追加料金・通常入館確認",
+              "event_id": "evt-f1-20261030-1812-1856c899"
             }
           ],
           "facility_id": 1812,
@@ -5095,13 +5257,15 @@
               "title": "到津サル巡り",
               "disposition": "added",
               "reason": "当日参加経路を公式確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1813-23fdb0cb"
             },
             {
               "title": "飼育員のおはなし「林床ワオキツネザル編」",
               "disposition": "added",
               "reason": "当日参加経路を公式確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1813-c373f5d9"
             },
             {
               "title": "クラフト紐かご11/21",
@@ -5218,13 +5382,15 @@
               "title": "山田紗子展 parallel tunes",
               "disposition": "added",
               "reason": "通常の無料自由見学",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1815-40b1231f"
             },
             {
               "title": "～人々の暮らしに豊かな潤いを～ 技と美の水栓金具展",
               "disposition": "added",
               "reason": "通常の無料自由見学",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1815-31c825af"
             },
             {
               "title": "AQUA HUMANIA原画展示",
@@ -5281,13 +5447,15 @@
               "title": "平尾台 第20回野草写真展",
               "disposition": "added",
               "reason": "現在の通常観覧・受付中経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1816-3b4f1119"
             },
             {
               "title": "桶ヶ辻展望登山（中級）",
               "disposition": "added",
               "reason": "現在の通常観覧・受付中経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1816-8b3e4992"
             },
             {
               "title": "草もみじ観賞ハイキング11/8",
@@ -5420,73 +5588,85 @@
               "title": "後藤みどり特別講演会 ～バラをもっと好きになる物語～",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-8f7efbfd"
             },
             {
               "title": "バッテリーカー大集合",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-b961db36"
             },
             {
               "title": "このカンガルーを探してみよう！",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-3dbe94b1"
             },
             {
               "title": "秋のバラフェア バラの人気投票",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-844ff2fe"
             },
             {
               "title": "花と緑の探偵団 vol.21",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-a8632dce"
             },
             {
               "title": "秋のバラフェア バラの挿し木苗プレゼント",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-a06e6bc8"
             },
             {
               "title": "第4回 子ども薬剤師体験教室",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-a66f83ad"
             },
             {
               "title": "パンパークピクニック",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-71b43ddd"
             },
             {
               "title": "秋のバラフェア ストリートピアノライブ",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-9738e76b"
             },
             {
               "title": "秋のバラフェア 花すくい",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-be64bc5e"
             },
             {
               "title": "ヘビと記念撮影",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1818-40f71545"
             },
             {
               "title": "秋のおさがり交換会",
               "disposition": "added",
               "reason": "公式個別ページで現在の参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1818-32e85093"
             },
             {
               "title": "カピバラのえさやり体験",
@@ -5749,67 +5929,78 @@
               "title": "ポケットサイエンス「消える！？フシギな絵をかこう」",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1820-64e5ab98"
             },
             {
               "title": "かたらせて宇宙講座 はやぶさ2 小惑星トリフネにいどむ！",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-431d7191"
             },
             {
               "title": "昼間の星を見てみよう！",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1820-dc970f07"
             },
             {
               "title": "川村館長スペシャルサイエンスショー",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-e3d54ad7"
             },
             {
               "title": "バーチャル宇宙体験フェス",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-de98b5ca"
             },
             {
               "title": "星兄の爆笑プラネタリウムショー ～上を向いて笑おう～",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-531f1cd2"
             },
             {
               "title": "親子deプラネタリウム",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-d1192ebd"
             },
             {
               "title": "プラネタリウム おまえ うまそうだな",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-944c09c1"
             },
             {
               "title": "化学者なりきりフォトスポット",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1820-03316db4"
             },
             {
               "title": "木のおもちゃ広場",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1820-050de41c"
             },
             {
               "title": "星の観望の夕べ 季節の星と二重星",
               "disposition": "added",
               "reason": "公式の当日参加または受付中の経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1820-d40f76fb"
             },
             {
               "title": "KAGAYA銀河鉄道の夜パネル展11/10〜12/28",
@@ -5976,121 +6167,141 @@
               "title": "おばけをやっつけろ！ハロウィンストラックアウト大会",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-ab2ca160"
             },
             {
               "title": "おやつキーホルダー作り",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-c9cf2795"
             },
             {
               "title": "ミニ縁日",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-41773f1b"
             },
             {
               "title": "子どもの館 開館25周年記念イベント",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-c93a3a07"
             },
             {
               "title": "赤ちゃんとママのふれあい体操",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-dc0bcd06"
             },
             {
               "title": "秋の収穫祭vol.2「芋ほり合戦」",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-ff8190e5"
             },
             {
               "title": "食事チェック！SATシステムを使って",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-0d2d8b29"
             },
             {
               "title": "親子リズム体操",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-1fe9b65f"
             },
             {
               "title": "楽しく挑戦！皿回し！",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-6a3cdf1f"
             },
             {
               "title": "カズ山本館長の「どっちがほんと！？」クイズ",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-ac4d8aa0"
             },
             {
               "title": "選べるクリスマス工作",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-776b98d5"
             },
             {
               "title": "列車体験JR in 子どもの館",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-64dc4835"
             },
             {
               "title": "サムくんとメロンちゃんのゆかいなピエロショー",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-7a8a9aaf"
             },
             {
               "title": "ベビーマッサージ",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-ccfd2cd1"
             },
             {
               "title": "サンタクロースin子どもの館",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-4b3880f9"
             },
             {
               "title": "クリスマスミュージックコンサート",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1823-43269229"
             },
             {
               "title": "プレゼント運びレース",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-5f04f127"
             },
             {
               "title": "Xmasプレゼントバランスリレー",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-3beffb58"
             },
             {
               "title": "選べる干支工作～ひつじ年～",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-a5db5a60"
             },
             {
               "title": "陣取り合戦冬の陣～雪城ver.～",
               "disposition": "added",
               "reason": "公式カレンダーで日時・料金・当日または受付中経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1823-4916ccf0"
             },
             {
               "title": "黒崎こども商店街11/3",
@@ -6217,19 +6428,22 @@
               "title": "因幡・伯耆と伊都国―青谷弥生人と新町弥生人―",
               "disposition": "added",
               "reason": "通常観覧または当日/現受付経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1825-c48fd1d4"
             },
             {
               "title": "特別講演会 北部九州から見た弥生時代後期の環日本海交流",
               "disposition": "added",
               "reason": "通常観覧または当日/現受付経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1825-4994c897"
             },
             {
               "title": "勾玉づくり教室",
               "disposition": "added",
               "reason": "通常観覧または当日/現受付経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1825-61916cf1"
             },
             {
               "title": "勾玉教室2027年1月回",
@@ -6296,7 +6510,8 @@
               "title": "秋の団子作り体験会",
               "disposition": "added",
               "reason": "延期後の公式予約受付経路が現在公開",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1826-c414babb"
             },
             {
               "title": "天文専門家の星空観察会11/14・12/16・1/16・2/13",
@@ -6368,49 +6583,57 @@
               "title": "ここふるワークショップ トントンずもうを作ろう！",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1829-7d4dcf4d"
             },
             {
               "title": "金色のお経 国宝銅板法華経と聖地四王寺山の経筒",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1829-74fdc403"
             },
             {
               "title": "文香ワークショップ",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1829-44b6c68b"
             },
             {
               "title": "金色のお経 ギャラリートーク",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1829-4e4df3c4"
             },
             {
               "title": "ここふるサイエンスカフェ 将来の気候はどうなる？",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1829-d0b49452"
             },
             {
               "title": "ここふるハロウィン2026 呪符木簡おばけのトリック・オア・トリート！",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1829-497b1182"
             },
             {
               "title": "裕虹書道教室5周年記念作品展～私と大野城～",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1829-f691f71e"
             },
             {
               "title": "ほっこりお写ん保撮影フォトブース",
               "disposition": "added",
               "reason": "通常観覧・当日体験または受付期間内",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1829-5e74e19b"
             },
             {
               "title": "カリグラフィー11/28・29",
@@ -6522,55 +6745,64 @@
               "title": "卑弥呼の鏡―三角縁神獣鏡がヤマト王権をつくった―",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1831-3fde0b7b"
             },
             {
               "title": "きゅーはくの琉球コレクション",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1831-d640eaad"
             },
             {
               "title": "秋のきゅーはくツアー 滋味延年―味わいの物語―",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1831-2686b94a"
             },
             {
               "title": "開幕記念講演会 三角縁神獣鏡の製作地に迫る",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1831-9e04e8f2"
             },
             {
               "title": "特別講演会 ここまでわかった三角縁神獣鏡の作り方",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1831-16dbd765"
             },
             {
               "title": "卑弥呼の鏡 リレー講座",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1831-7c356e3f"
             },
             {
               "title": "きゅーはく☆とっておき講座 琉球文化と向き合う博物館",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1831-2ac6db6d"
             },
             {
               "title": "琉球コレクション ミュージアム・トーク",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1831-d2b86aab"
             },
             {
               "title": "九博に舞う―能楽、鏡の世界―",
               "disposition": "added",
               "reason": "現公式詳細と2026秋パンフで参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1831-5288d4d8"
             },
             {
               "title": "弘法大師空海2027/4/24〜6/20",
@@ -6672,13 +6904,15 @@
               "title": "インゲン収穫体験",
               "disposition": "added",
               "reason": "受付期間内/当日撮影経路あり",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1833-9ae7da96"
             },
             {
               "title": "パトカーと白バイがやってくる！",
               "disposition": "added",
               "reason": "受付期間内/当日撮影経路あり",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1833-9e7096b8"
             },
             {
               "title": "モルモットふれあい11/14・28",
@@ -6736,7 +6970,8 @@
               "title": "渡来人、宗像へ―古墳時代の宗像と韓半島―",
               "disposition": "added",
               "reason": "通常無料観覧",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1834-933e2b6a"
             },
             {
               "title": "長屋王講演11/7",
@@ -6953,37 +7188,43 @@
               "title": "こちらあやかし探偵局",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1835-eb92ece4"
             },
             {
               "title": "ドロップ「きたかぜとたいよう」",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1835-76afb52d"
             },
             {
               "title": "第28回むなかたこども芸術祭",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1835-827592e2"
             },
             {
               "title": "わくわく子どもリズム体操",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1835-84f79652"
             },
             {
               "title": "ほしぞらクレヨン★ とかげ座のお話",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1835-55799c28"
             },
             {
               "title": "ほしぞらクレヨン★ 夜空のクリスマスツリー",
               "disposition": "added",
               "reason": "現公式参加経路確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1835-8f5ce2b9"
             },
             {
               "title": "ほしぞらウォッチング10/31",
@@ -7292,49 +7533,57 @@
               "title": "オーロラ写真展 ～オーロラが語る太陽と地球のつながり～",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1847-4571ffdd"
             },
             {
               "title": "サイエンスキッズ研究発表会作品展",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1847-bbbc83a5"
             },
             {
               "title": "どんぐりでトトロを作ろう",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1847-7af79a86"
             },
             {
               "title": "サイエンスおはなし会",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1847-961e00d7"
             },
             {
               "title": "星のお兄さん 爆笑プラネタリウムショー",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1847-6c26dde2"
             },
             {
               "title": "おもしろサイエンスフェア2026（工作・クイズ・科学体験）",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1847-cee699ce"
             },
             {
               "title": "オーロラ講演会",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1847-bedc9cc6"
             },
             {
               "title": "まつぼっくりでクリスマスツリーを作ろう",
               "disposition": "added",
               "reason": "公式詳細・料金・参加経路を実取得で確認",
-              "participability": "通常参加可能"
+              "participability": "通常参加可能",
+              "event_id": "evt-f1-20261030-1847-9c76354f"
             },
             {
               "title": "プログラミングⅡ10/31・11/1",
@@ -7506,7 +7755,8 @@
               "title": "クジャクの羽根飾りづくり",
               "disposition": "added",
               "reason": "公式開催案内に電話申込経路。定員・入場料別を明記",
-              "participability": "条件付き参加可能"
+              "participability": "条件付き参加可能",
+              "event_id": "evt-f1-20261030-1848-9fb8ea11"
             }
           ],
           "facility_id": 1848,
