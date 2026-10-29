@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T18:17:08.381063+00:00",
+  "executed_at": "2026-10-29T18:22:32.437437+00:00",
   "process_started_at": "2026-10-29T17:35:30.4847994Z",
   "due_facility_ids": [
     1851,
@@ -49,8 +49,8 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 8,
-    "candidate_found_added": 21,
-    "candidate_found_duplicate": 0,
+    "candidate_found_added": 20,
+    "candidate_found_duplicate": 1,
     "candidate_found_hold": 10,
     "source_unresolved": 1
   },
@@ -102,17 +102,19 @@
       "sources_checked": [
         {
           "url": "https://kurume-cfp.com/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T17:36:57.197080+00:00",
           "facility_id": 1851,
-          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://kurume-cfp.com/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T17:37:03.532692+00:00",
           "facility_id": 1851,
-          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
@@ -376,27 +378,20 @@
           "sha256": "682288842a54b5c7a2fa66cbe63da3953f1ba2759156c3218a57de8353678e0c"
         },
         {
-          "url": "https://www.hoshinofurusato.jp/tea/",
-          "status": 200,
-          "checked_at": "2026-10-29T17:42:04.202359+00:00",
-          "facility_id": 1858,
-          "final_url": "https://www.hoshinofurusato.jp/tea/",
-          "title": "茶の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
-          "sha256": "69949fb50b05f3f5b6192c083d0b8e84f815b00afd1ed2f3c3136bd01838f4c9"
-        },
-        {
           "url": "https://chikugokoen.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T17:42:14.456063+00:00",
           "facility_id": 1858,
-          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://chikugokoen.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T17:42:24.831840+00:00",
           "facility_id": 1858,
-          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.ajpark.jp/",
@@ -571,31 +566,35 @@
         },
         {
           "url": "https://tachiarai-heiwa.jp/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T17:44:45.197485+00:00",
           "facility_id": 1862,
-          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://tachiarai-heiwa.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T17:44:46.579685+00:00",
           "facility_id": 1862,
-          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://tachiarai-heiwa.jp/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T17:44:55.016511+00:00",
           "facility_id": 1862,
-          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.tachiarai-heiwa.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T17:44:56.250335+00:00",
           "facility_id": 1862,
-          "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+          "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.crossroadfukuoka.jp/event/17354",
@@ -1335,10 +1334,11 @@
         },
         {
           "url": "https://www.city.nogata.fukuoka.jp/kyoikubunka/_1213/_4977.html",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T17:58:01.773354+00:00",
           "facility_id": 1890,
-          "error": "HTTPSConnectionPool(host='www.city.nogata.fukuoka.jp', port=443): Max retries exceeded with url: /kyoikubunka/_1213/_4977.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+          "error": "HTTPSConnectionPool(host='www.city.nogata.fukuoka.jp', port=443): Max retries exceeded with url: /kyoikubunka/_1213/_4977.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://nogata-kankoh.com/hangout/856.html",
@@ -1513,24 +1513,27 @@
         },
         {
           "url": "https://www.aganoyaki.or.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:03:37.669752+00:00",
           "facility_id": 1895,
-          "error": "None"
+          "error": "None",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.aganoyaki.or.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:03:46.094663+00:00",
           "facility_id": 1895,
-          "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n"
+          "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://aganoyaki.or.jp/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:03:47.428459+00:00",
           "facility_id": 1895,
-          "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n"
+          "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.aganoyaki-fukuchi.com/",
@@ -1552,17 +1555,19 @@
         },
         {
           "url": "https://kurumeus.jp/event/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:04:13.681810+00:00",
           "facility_id": 1897,
-          "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://kurumeus.jp/event/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:04:20.701818+00:00",
           "facility_id": 1897,
-          "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "http://kurumeus.net/",
@@ -1699,17 +1704,19 @@
         },
         {
           "url": "https://chikugo-ogori.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:06:17.378604+00:00",
           "facility_id": 1901,
-          "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://chikugo-ogori.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:06:22.277522+00:00",
           "facility_id": 1901,
-          "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.city.ogori.fukuoka.jp/204/1039/1799",
@@ -1737,15 +1744,6 @@
           "final_url": "https://www.city.ogori.fukuoka.jp/204/1039/ogori",
           "title": "スポーツフェスタ in OGORI :: 小郡市役所",
           "sha256": "5229aa2d6b2991bc23bc3ed5b57f7d2a36a5ae3146bcb92efc37ab8780485fcf"
-        },
-        {
-          "url": "https://www.city.kasuga.fukuoka.jp/",
-          "status": 200,
-          "checked_at": "2026-10-29T18:07:08.820474+00:00",
-          "facility_id": 1902,
-          "final_url": "https://www.city.kasuga.fukuoka.jp/",
-          "title": "春日市",
-          "sha256": "281ba62d51e838fe1e797d3a4e3c5e2bdafd8685e19e93f49e83d6b690731dc7"
         },
         {
           "url": "https://www.city.ogori.fukuoka.jp/",
@@ -1776,17 +1774,19 @@
         },
         {
           "url": "https://okawa-terrzza.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:07:51.073840+00:00",
           "facility_id": 1903,
-          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://okawa-terrzza.jp/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:07:52.183711+00:00",
           "facility_id": 1903,
-          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://okawa-kk.com/tag/event/",
@@ -1880,17 +1880,19 @@
         },
         {
           "url": "https://mooovi.jp/ashiya/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:09:32.246697+00:00",
           "facility_id": 1907,
-          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://mooovi.jp/ashiya/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:09:36.528872+00:00",
           "facility_id": 1907,
-          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.boatrace-ashiya.com/mooovi/",
@@ -1903,24 +1905,27 @@
         },
         {
           "url": "https://sanryai.info/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:09:57.573353+00:00",
           "facility_id": 1909,
-          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://sanryai.info/event/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:10:05.585339+00:00",
           "facility_id": 1909,
-          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.sanryai.info/",
-          "status": "fetch_failed",
+          "status": "error",
           "checked_at": "2026-10-29T18:10:07.166786+00:00",
           "facility_id": 1909,
-          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+          "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+          "original_status": "fetch_failed"
         },
         {
           "url": "http://sanryai.info/event/",
@@ -2059,17 +2064,19 @@
         },
         {
           "url": "https://www.michinoeki-metasenomori.com/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:12:16.883984+00:00",
           "facility_id": 1913,
-          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://www.michinoeki-metasenomori.com/",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "checked_at": "2026-10-29T18:12:17.996082+00:00",
           "facility_id": 1913,
-          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+          "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))",
+          "original_status": "fetch_failed"
         },
         {
           "url": "https://metase.net/",
@@ -2394,17 +2401,19 @@
           "sources_checked": [
             {
               "url": "https://kurume-cfp.com/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T17:36:57.197080+00:00",
               "facility_id": 1851,
-              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://kurume-cfp.com/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T17:37:03.532692+00:00",
               "facility_id": 1851,
-              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
@@ -2441,7 +2450,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1851-06ec87e1"
           ],
-          "completed_at": "2026-10-29T17:37:48.366053+00:00"
+          "completed_at": "2026-10-29T17:37:48.366053+00:00",
+          "registry_url_repair": {
+            "from": "https://kurume-cfp.com/",
+            "to": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957"
+          }
         },
         {
           "facility_id": 1852,
@@ -2577,7 +2590,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1852-19402b36"
           ],
-          "completed_at": "2026-10-29T17:39:00.107666+00:00"
+          "completed_at": "2026-10-29T17:39:00.107666+00:00",
+          "registry_url_repair": {
+            "from": "https://omutacityzoo.org/event",
+            "to": "https://omutacityzoo.org/announce/event-special"
+          }
         },
         {
           "facility_id": 1853,
@@ -2666,7 +2683,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1853-e74b84da"
           ],
-          "completed_at": "2026-10-29T17:40:00.440548+00:00"
+          "completed_at": "2026-10-29T17:40:00.440548+00:00",
+          "registry_url_repair": {
+            "from": "https://www.sekitan-omuta.jp/",
+            "to": "https://sekitankan.com/event"
+          }
         },
         {
           "facility_id": 1855,
@@ -2910,27 +2931,20 @@
           "name": "筑後広域公園",
           "sources_checked": [
             {
-              "url": "https://www.hoshinofurusato.jp/tea/",
-              "status": 200,
-              "checked_at": "2026-10-29T17:42:04.202359+00:00",
-              "facility_id": 1858,
-              "final_url": "https://www.hoshinofurusato.jp/tea/",
-              "title": "茶の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
-              "sha256": "69949fb50b05f3f5b6192c083d0b8e84f815b00afd1ed2f3c3136bd01838f4c9"
-            },
-            {
               "url": "https://chikugokoen.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T17:42:14.456063+00:00",
               "facility_id": 1858,
-              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://chikugokoen.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T17:42:24.831840+00:00",
               "facility_id": 1858,
-              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.ajpark.jp/",
@@ -3092,7 +3106,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1858-ba311f31"
           ],
-          "completed_at": "2026-10-29T17:43:53.837160+00:00"
+          "completed_at": "2026-10-29T17:43:53.837160+00:00",
+          "registry_url_repair": {
+            "from": "https://chikugokoen.jp/",
+            "to": "https://www.ajpark.jp/"
+          }
         },
         {
           "facility_id": 1859,
@@ -3186,7 +3204,11 @@
           ],
           "disposition": "no_current_or_future_event",
           "reason": "旧URL404を再試行後、現行公式トップ・年間予定・直近2催事詳細を確認。最新催事は10/11で終了。ウォーターパレットは通常季節営業案内でイベント追加しない。",
-          "completed_at": "2026-10-29T17:44:39.461428+00:00"
+          "completed_at": "2026-10-29T17:44:39.461428+00:00",
+          "registry_url_repair": {
+            "from": "https://www.water.go.jp/chikugo/amagimizu/",
+            "to": "https://mizunobunkamura.jp/"
+          }
         },
         {
           "facility_id": 1862,
@@ -3194,31 +3216,35 @@
           "sources_checked": [
             {
               "url": "https://tachiarai-heiwa.jp/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T17:44:45.197485+00:00",
               "facility_id": 1862,
-              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://tachiarai-heiwa.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T17:44:46.579685+00:00",
               "facility_id": 1862,
-              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://tachiarai-heiwa.jp/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T17:44:55.016511+00:00",
               "facility_id": 1862,
-              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.tachiarai-heiwa.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T17:44:56.250335+00:00",
               "facility_id": 1862,
-              "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+              "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.crossroadfukuoka.jp/event/17354",
@@ -3256,7 +3282,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1862-0c63d8db"
           ],
-          "completed_at": "2026-10-29T17:45:18.883900+00:00"
+          "completed_at": "2026-10-29T17:45:18.883900+00:00",
+          "registry_url_repair": {
+            "from": "https://tachiarai-heiwa.jp/event/",
+            "to": "https://www.crossroadfukuoka.jp/event/17354"
+          }
         },
         {
           "facility_id": 1866,
@@ -3628,14 +3658,20 @@
           ],
           "added_event_ids": [
             "evt-f2-20261030-1867-3a583f30",
-            "evt-f2-20261030-1867-9a97c736",
             "evt-f2-20261030-1867-3bc3575a",
             "evt-f2-20261030-1867-9a5347ed",
             "evt-f2-20261030-1867-966bb78d",
             "evt-f2-20261030-1867-83ca33b3",
             "evt-f2-20261030-1867-926b729e"
           ],
-          "completed_at": "2026-10-29T17:48:43.938999+00:00"
+          "completed_at": "2026-10-29T17:48:43.938999+00:00",
+          "duplicate_event_ids": [
+            "evt-fukuoka-20261029-d9-71152c12"
+          ],
+          "registry_url_repair": {
+            "from": "https://e-zofukuoka.com/event/",
+            "to": "https://e-zofukuoka.com/news/event/"
+          }
         },
         {
           "facility_id": 1870,
@@ -3746,7 +3782,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1870-34bd2f7c"
           ],
-          "completed_at": "2026-10-29T17:49:44.897265+00:00"
+          "completed_at": "2026-10-29T17:49:44.897265+00:00",
+          "registry_url_repair": {
+            "from": "https://www.midorimachi.jp/maiduru/odokoen/",
+            "to": "https://www.kankyo-k.co.jp/odopark/"
+          }
         },
         {
           "facility_id": 1873,
@@ -3808,7 +3848,11 @@
           ],
           "disposition": "no_current_or_future_event",
           "reason": "旧404を再試行後、公式の現行人道案内と新着キャンペーンを実読。人道自体の期間限定開催はなし。",
-          "completed_at": "2026-10-29T17:50:35.613221+00:00"
+          "completed_at": "2026-10-29T17:50:35.613221+00:00",
+          "registry_url_repair": {
+            "from": "https://www.kanmon.gr.jp/areamap/detail.php?id=6",
+            "to": "https://kanmon.gr.jp/areamap/%E9%96%A2%E9%96%80%E3%83%88%E3%83%B3%E3%83%8D%E3%83%AB%E4%BA%BA%E9%81%93%E9%96%80%E5%8F%B8%E5%81%B4/"
+          }
         },
         {
           "facility_id": 1874,
@@ -3840,12 +3884,13 @@
               "participability": "通常参加可能"
             }
           ],
-          "disposition": "candidate_found_added",
-          "reason": "公式トップの会期と観覧無料、専用イベントページの申込規則を確認。",
-          "added_event_ids": [
-            "evt-f2-20261030-1874-3b4f1119"
-          ],
-          "completed_at": "2026-10-29T17:51:00.950211+00:00"
+          "disposition": "candidate_found_duplicate",
+          "reason": "既存facility1816掲載と同一の野草写真展。重複追加を除外。",
+          "added_event_ids": [],
+          "completed_at": "2026-10-29T17:51:00.950211+00:00",
+          "duplicate_event_ids": [
+            "evt-f1-20261030-1816-3b4f1119"
+          ]
         },
         {
           "facility_id": 1876,
@@ -4074,7 +4119,11 @@
             "evt-f2-20261030-1879-0e39a164",
             "evt-f2-20261030-1879-b6a54ef9"
           ],
-          "completed_at": "2026-10-29T17:53:47.800664+00:00"
+          "completed_at": "2026-10-29T17:53:47.800664+00:00",
+          "registry_url_repair": {
+            "from": "https://joypolis-sports.com/kitakyushu/news/",
+            "to": "https://joypolis-sports-kitakyushu.jp/news"
+          }
         },
         {
           "facility_id": 1880,
@@ -4136,7 +4185,11 @@
           ],
           "disposition": "candidate_found_hold",
           "reason": "旧URL再試行後、現行市公式公園と大会詳細を確認。",
-          "completed_at": "2026-10-29T17:54:21.854961+00:00"
+          "completed_at": "2026-10-29T17:54:21.854961+00:00",
+          "registry_url_repair": {
+            "from": "https://www.city.kasuga.fukuoka.jp/miryoku/kouen/1002199.html",
+            "to": "https://www.city.kasuga.fukuoka.jp/shisetsu/park/kasugapark/1002132.html"
+          }
         },
         {
           "facility_id": 1881,
@@ -4320,7 +4373,11 @@
           ],
           "disposition": "candidate_found_hold",
           "reason": "旧案内404を再試行し、公式保存協会と観光イベント一覧で当該会場を内容評価。",
-          "completed_at": "2026-10-29T17:56:22.073555+00:00"
+          "completed_at": "2026-10-29T17:56:22.073555+00:00",
+          "registry_url_repair": {
+            "from": "https://www.dazaifu.org/map/tanbo/tourismmap/spot_01.html",
+            "to": "https://www.kotodazaifu.net/"
+          }
         },
         {
           "facility_id": 1885,
@@ -4427,10 +4484,11 @@
             },
             {
               "url": "https://www.city.nogata.fukuoka.jp/kyoikubunka/_1213/_4977.html",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T17:58:01.773354+00:00",
               "facility_id": 1890,
-              "error": "HTTPSConnectionPool(host='www.city.nogata.fukuoka.jp', port=443): Max retries exceeded with url: /kyoikubunka/_1213/_4977.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+              "error": "HTTPSConnectionPool(host='www.city.nogata.fukuoka.jp', port=443): Max retries exceeded with url: /kyoikubunka/_1213/_4977.html (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://nogata-kankoh.com/hangout/856.html",
@@ -4563,7 +4621,11 @@
           "added_event_ids": [
             "evt-f2-20261030-1891-854ab7f4"
           ],
-          "completed_at": "2026-10-29T18:01:59.959846+00:00"
+          "completed_at": "2026-10-29T18:01:59.959846+00:00",
+          "registry_url_repair": {
+            "from": "https://www.city.iizuka.lg.jp/rekishi/",
+            "to": "https://www.city.iizuka.lg.jp/site/rekishi/"
+          }
         },
         {
           "facility_id": 1893,
@@ -4678,7 +4740,11 @@
             "evt-f2-20261030-1893-eec57c93",
             "evt-f2-20261030-1893-d00ea3af"
           ],
-          "completed_at": "2026-10-29T18:03:02.581061+00:00"
+          "completed_at": "2026-10-29T18:03:02.581061+00:00",
+          "registry_url_repair": {
+            "from": "https://litpla.com/space/litpla_iizuka/",
+            "to": "https://litpla.com/space/youmetown_iizuka/"
+          }
         },
         {
           "facility_id": 1894,
@@ -4750,24 +4816,27 @@
           "sources_checked": [
             {
               "url": "https://www.aganoyaki.or.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:03:37.669752+00:00",
               "facility_id": 1895,
-              "error": "None"
+              "error": "None",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.aganoyaki.or.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:03:46.094663+00:00",
               "facility_id": 1895,
-              "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n"
+              "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://aganoyaki.or.jp/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:03:47.428459+00:00",
               "facility_id": 1895,
-              "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n"
+              "error": "curl: (35) schannel: next InitializeSecurityContext failed: SEC_E_INTERNAL_ERROR (0x80090304) - ���[�J�� �Z�L�����e�B�@�ւɃA�N�Z�X�ł��܂���\n",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.aganoyaki-fukuchi.com/",
@@ -4802,7 +4871,11 @@
           ],
           "disposition": "candidate_found_hold",
           "reason": "秋の窯開きは10/25終了。11/1茶会は8〜9月陶芸とのセットで新規参加条件が未確認。",
-          "completed_at": "2026-10-29T18:04:08.784630+00:00"
+          "completed_at": "2026-10-29T18:04:08.784630+00:00",
+          "registry_url_repair": {
+            "from": "https://www.aganoyaki.or.jp/",
+            "to": "https://www.aganoyaki-fukuchi.com/"
+          }
         },
         {
           "facility_id": 1897,
@@ -4810,17 +4883,19 @@
           "sources_checked": [
             {
               "url": "https://kurumeus.jp/event/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:04:13.681810+00:00",
               "facility_id": 1897,
-              "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://kurumeus.jp/event/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:04:20.701818+00:00",
               "facility_id": 1897,
-              "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='kurumeus.jp', port=443): Max retries exceeded with url: /event/ (Caused by NameResolutionError(\"HTTPSConnection(host='kurumeus.jp', port=443): Failed to resolve 'kurumeus.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "http://kurumeus.net/",
@@ -4885,7 +4960,11 @@
           ],
           "disposition": "no_current_or_future_event",
           "reason": "現行公式サイト・月間通信の画像と募集欄を内容確認。10月通信は9/27実績と防災常設紹介、九電10/17企画も終了。将来日付の一般参加企画なし。",
-          "completed_at": "2026-10-29T18:05:01.249278+00:00"
+          "completed_at": "2026-10-29T18:05:01.249278+00:00",
+          "registry_url_repair": {
+            "from": "https://kurumeus.jp/event/",
+            "to": "http://kurumeus.net/"
+          }
         },
         {
           "facility_id": 1899,
@@ -5083,17 +5162,19 @@
           "sources_checked": [
             {
               "url": "https://chikugo-ogori.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:06:17.378604+00:00",
               "facility_id": 1901,
-              "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://chikugo-ogori.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:06:22.277522+00:00",
               "facility_id": 1901,
-              "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='chikugo-ogori.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugo-ogori.jp', port=443): Failed to resolve 'chikugo-ogori.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.city.ogori.fukuoka.jp/204/1039/1799",
@@ -5140,21 +5221,13 @@
           "pm_signals": [
             "Product名の県営筑後小郡運動公園に対し公式は小郡市運動公園。施設データは変更せずPMへ同一性確認を返す。"
           ],
-          "completed_at": "2026-10-29T18:06:56.944507+00:00"
+          "completed_at": "2026-10-29T18:06:56.944507+00:00",
+          "registry_secondary_added": "https://www.city.ogori.fukuoka.jp/204/1039/1799"
         },
         {
           "facility_id": 1902,
           "name": "小郡市埋蔵文化財調査センター",
           "sources_checked": [
-            {
-              "url": "https://www.city.kasuga.fukuoka.jp/",
-              "status": 200,
-              "checked_at": "2026-10-29T18:07:08.820474+00:00",
-              "facility_id": 1902,
-              "final_url": "https://www.city.kasuga.fukuoka.jp/",
-              "title": "春日市",
-              "sha256": "281ba62d51e838fe1e797d3a4e3c5e2bdafd8685e19e93f49e83d6b690731dc7"
-            },
             {
               "url": "https://www.city.ogori.fukuoka.jp/",
               "status": 200,
@@ -5205,17 +5278,19 @@
           "sources_checked": [
             {
               "url": "https://okawa-terrzza.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:07:51.073840+00:00",
               "facility_id": 1903,
-              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://okawa-terrzza.jp/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:07:52.183711+00:00",
               "facility_id": 1903,
-              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='okawa-terrzza.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='okawa-terrzza.jp', port=443): Failed to resolve 'okawa-terrzza.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://okawa-kk.com/tag/event/",
@@ -5307,7 +5382,7 @@
             {
               "title": "11/1・29スマイルDAY各プログラム",
               "disposition": "hold",
-              "reason": "会場はモッカランド。テラッツァは申込窓口であり1893等へ誤紐付けしない。別施設の通常発見レーンへ信号。"
+              "reason": "会場はモッカランド。テラッツァは申込窓口であり1903へ誤紐付けしない。別施設の通常発見レーンへ信号。"
             },
             {
               "title": "ドリームファニチャー2026・木工まつり・えつ祭・夏工作",
@@ -5322,7 +5397,11 @@
           ],
           "disposition": "candidate_found_hold",
           "reason": "観光協会の現行告知と体験案内を確認。継続体験の期間未公表、11月スマイルDAYは別会場。",
-          "completed_at": "2026-10-29T18:08:25.241987+00:00"
+          "completed_at": "2026-10-29T18:08:25.241987+00:00",
+          "registry_url_repair": {
+            "from": "https://okawa-terrzza.jp/",
+            "to": "https://okawa-kk.com/tag/event/"
+          }
         },
         {
           "facility_id": 1905,
@@ -5408,17 +5487,19 @@
           "sources_checked": [
             {
               "url": "https://mooovi.jp/ashiya/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:09:32.246697+00:00",
               "facility_id": 1907,
-              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://mooovi.jp/ashiya/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:09:36.528872+00:00",
               "facility_id": 1907,
-              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='mooovi.jp', port=443): Max retries exceeded with url: /ashiya/ (Caused by NameResolutionError(\"HTTPSConnection(host='mooovi.jp', port=443): Failed to resolve 'mooovi.jp' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.boatrace-ashiya.com/mooovi/",
@@ -5439,7 +5520,11 @@
           ],
           "disposition": "no_current_or_future_event",
           "reason": "現行施設公式の最新告知と翌月以降カレンダーを確認。営業時間変更と団体受付案内のみで、特別な期間イベントは掲載なし。",
-          "completed_at": "2026-10-29T18:09:50.942137+00:00"
+          "completed_at": "2026-10-29T18:09:50.942137+00:00",
+          "registry_url_repair": {
+            "from": "https://mooovi.jp/ashiya/",
+            "to": "https://www.boatrace-ashiya.com/mooovi/"
+          }
         },
         {
           "facility_id": 1909,
@@ -5447,24 +5532,27 @@
           "sources_checked": [
             {
               "url": "https://sanryai.info/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:09:57.573353+00:00",
               "facility_id": 1909,
-              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://sanryai.info/event/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:10:05.585339+00:00",
               "facility_id": 1909,
-              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.sanryai.info/",
-              "status": "fetch_failed",
+              "status": "error",
               "checked_at": "2026-10-29T18:10:07.166786+00:00",
               "facility_id": 1909,
-              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n"
+              "error": "curl: (60) schannel: SNI or certificate check failed: SEC_E_WRONG_PRINCIPAL (0x80090322) - �Ώۂ̃v�����V�p�������Ԉ���Ă��܂��B\nMore details here: https://curl.se/docs/sslcerts.html\n\ncurl failed to verify the legitimacy of the server and therefore could not\nestablish a secure connection to it. To learn more about this situation and\nhow to fix it, please visit the webpage mentioned above.\n",
+              "original_status": "fetch_failed"
             },
             {
               "url": "http://sanryai.info/event/",
@@ -5587,7 +5675,11 @@
             "evt-f2-20261030-1909-15cedba5",
             "evt-f2-20261030-1909-40a5f73d"
           ],
-          "completed_at": "2026-10-29T18:11:04.938846+00:00"
+          "completed_at": "2026-10-29T18:11:04.938846+00:00",
+          "registry_url_repair": {
+            "from": "https://sanryai.info/event/",
+            "to": "https://www.town.okagaki.lg.jp/s034/200/20251022162624.html"
+          }
         },
         {
           "facility_id": 1912,
@@ -5706,17 +5798,19 @@
           "sources_checked": [
             {
               "url": "https://www.michinoeki-metasenomori.com/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:12:16.883984+00:00",
               "facility_id": 1913,
-              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://www.michinoeki-metasenomori.com/",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "checked_at": "2026-10-29T18:12:17.996082+00:00",
               "facility_id": 1913,
-              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))"
+              "error": "HTTPSConnectionPool(host='www.michinoeki-metasenomori.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.michinoeki-metasenomori.com', port=443): Failed to resolve 'www.michinoeki-metasenomori.com' ([Errno 11001] getaddrinfo failed)\"))",
+              "original_status": "fetch_failed"
             },
             {
               "url": "https://metase.net/",
@@ -5795,7 +5889,11 @@
           ],
           "disposition": "candidate_found_hold",
           "reason": "現行公式の年次予定と新着欄を内容確認。各年次催事の2026/27確定日時・参加条件は未公表。",
-          "completed_at": "2026-10-29T18:12:43.502623+00:00"
+          "completed_at": "2026-10-29T18:12:43.502623+00:00",
+          "registry_url_repair": {
+            "from": "https://www.michinoeki-metasenomori.com/",
+            "to": "https://metase.net/"
+          }
         },
         {
           "facility_id": 1914,
@@ -6269,10 +6367,71 @@
         }
       ],
       "no_current_or_future_event": 8,
-      "candidate_found_added": 21,
-      "candidate_found_duplicate": 0,
+      "candidate_found_added": 20,
+      "candidate_found_duplicate": 1,
       "candidate_found_hold": 10,
-      "source_unresolved": 1
+      "source_unresolved": 1,
+      "candidate_encounter_counts": {
+        "add": 20,
+        "hold": 102,
+        "past": 17,
+        "excluded": 31,
+        "included": 4,
+        "added": 16,
+        "excluded_past": 16
+      },
+      "added_events": 34,
+      "existing_events_updated": 4,
+      "existing_events_ended": 4,
+      "deleted_events": 0,
+      "participability_added": {
+        "通常参加可能": 27,
+        "条件付き参加可能": 7,
+        "受付終了・参加不能": 0
+      }
     }
+  },
+  "excluded_fetches": [
+    {
+      "url": "https://www.hoshinofurusato.jp/tea/",
+      "status": 200,
+      "checked_at": "2026-10-29T17:42:04.202359+00:00",
+      "facility_id": 1858,
+      "final_url": "https://www.hoshinofurusato.jp/tea/",
+      "title": "茶の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+      "sha256": "69949fb50b05f3f5b6192c083d0b8e84f815b00afd1ed2f3c3136bd01838f4c9",
+      "exclusion_reason": "誤って取得した別施設のページ。対象施設の確認・freshness根拠には不使用。"
+    },
+    {
+      "url": "https://www.city.kasuga.fukuoka.jp/",
+      "status": 200,
+      "checked_at": "2026-10-29T18:07:08.820474+00:00",
+      "facility_id": 1902,
+      "final_url": "https://www.city.kasuga.fukuoka.jp/",
+      "title": "春日市",
+      "sha256": "281ba62d51e838fe1e797d3a4e3c5e2bdafd8685e19e93f49e83d6b690731dc7",
+      "exclusion_reason": "誤って取得した別施設のページ。対象施設の確認・freshness根拠には不使用。"
+    }
+  ],
+  "verification": {
+    "ordered_facilities": 40,
+    "ordered_progress_lines": 40,
+    "product_added": 34,
+    "product_existing_updated": 4,
+    "product_deleted": 0,
+    "added_product_urls_all_traceable": true,
+    "facility_data_unchanged": true,
+    "source_dates": "2026-10-30 JST",
+    "raw_log": "codex.err.log in this Mission runtime directory",
+    "genuinely_successful_due_facilities": 39,
+    "source_unresolved_facility_ids": [
+      1889
+    ],
+    "registry_rows_advanced": 39,
+    "official_primary_url_repairs": 20,
+    "official_secondary_url_added": 1,
+    "duplicate_removed_from_new_proposal": 2,
+    "shared_registry_url_alias": "facility1874 source also belongs to baseline1816; existing record already checked 2026-10-30; no out-of-scope Product edits",
+    "navigation_fetch_errors_disclosed": 2
   }
 }
