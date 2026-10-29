@@ -1,0 +1,1569 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-2",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T17:45:46.571442+00:00",
+  "process_started_at": "2026-10-29T17:35:30.4847994Z",
+  "due_facility_ids": [
+    1851,
+    1852,
+    1853,
+    1855,
+    1856,
+    1857,
+    1858,
+    1859,
+    1862,
+    1866,
+    1867,
+    1870,
+    1873,
+    1874,
+    1876,
+    1879,
+    1880,
+    1881,
+    1882,
+    1885,
+    1889,
+    1890,
+    1891,
+    1893,
+    1894,
+    1895,
+    1897,
+    1899,
+    1900,
+    1901,
+    1902,
+    1903,
+    1905,
+    1907,
+    1909,
+    1912,
+    1913,
+    1914,
+    1915,
+    6895
+  ],
+  "prior_run_numbers_reused_as_execution": false,
+  "aggregate": {
+    "total": 40,
+    "no_current_or_future_event": 2,
+    "candidate_found_added": 6,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 2,
+    "source_unresolved": 0
+  },
+  "per_region": {
+    "fukuoka": {
+      "facility_ids": [
+        1851,
+        1852,
+        1853,
+        1855,
+        1856,
+        1857,
+        1858,
+        1859,
+        1862,
+        1866,
+        1867,
+        1870,
+        1873,
+        1874,
+        1876,
+        1879,
+        1880,
+        1881,
+        1882,
+        1885,
+        1889,
+        1890,
+        1891,
+        1893,
+        1894,
+        1895,
+        1897,
+        1899,
+        1900,
+        1901,
+        1902,
+        1903,
+        1905,
+        1907,
+        1909,
+        1912,
+        1913,
+        1914,
+        1915,
+        6895
+      ],
+      "total": 40,
+      "sources_checked": [
+        {
+          "url": "https://kurume-cfp.com/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:36:57.197080+00:00",
+          "facility_id": 1851,
+          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://kurume-cfp.com/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:37:03.532692+00:00",
+          "facility_id": 1851,
+          "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
+          "status": 200,
+          "checked_at": "2026-10-29T17:37:14.646506+00:00",
+          "facility_id": 1851,
+          "final_url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
+          "title": "サイクルファミリーパークフェスタ2026 | 久留米のイベント | 久留米公式観光サイト ほとめきの街",
+          "sha256": "f9216c190a4e6e48525c534e03ed2c475897772730fde52127e5cf663241ad46"
+        },
+        {
+          "url": "https://www.city.kurume.fukuoka.jp/1050kurashi/2070machi/3036cycle/information.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:37:16.130798+00:00",
+          "facility_id": 1851,
+          "final_url": "https://www.city.kurume.fukuoka.jp/1050kurashi/2070machi/3036cycle/information.html",
+          "title": "久留米市：自転車のイベント・施設情報や各団体の取組",
+          "sha256": "fe3c25f1e26bac7badfafa83b3f9be48ba2e52bbb66ed18967d3a2a7303125c4"
+        },
+        {
+          "url": "https://omutacityzoo.org/event",
+          "status": 404,
+          "checked_at": "2026-10-29T17:38:00.702980+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/event",
+          "title": "ページが見つかりませんでした  |  大牟田市動物園 Omuta City Zoo",
+          "sha256": "505bb7a1c0253dc8aff1acf451425a8917b192d803f9602ab2b26805a6e359c5"
+        },
+        {
+          "url": "https://omutacityzoo.org/announce/event-special",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:07.015241+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/announce/event-special",
+          "title": "これからのイベント - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "f37ca382aedef3a7f29cbf4db75c8c83487126863ca6f0d051d19a4f2e1208a4"
+        },
+        {
+          "url": "https://omutacityzoo.org/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:09.736045+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/",
+          "title": "大牟田市動物園 Omuta City Zoo",
+          "sha256": "c3a351ee497e38a3b32088b90504ad945084deedefb86f9a91c5e72b216cae59"
+        },
+        {
+          "url": "https://omutacityzoo.org/announce/?p=7087",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:22.876973+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/announce/?p=7087",
+          "title": "10月31日 もるもっとーくinハロウィン - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "f5cbf9af7a5993570df80cd76fee3bc77f6ae41616e3dd9437384bf4cada9374"
+        },
+        {
+          "url": "https://omutacityzoo.org/announce/event-regularly",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:25.372378+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/announce/event-regularly",
+          "title": "定期イベント - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "eaa73cbf0f4fd01c5385fcb5b462e6252269917c968be03c7ce92b89a628dd39"
+        },
+        {
+          "url": "https://omutacityzoo.org/announce/?p=7099",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:34.446166+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/announce/?p=7099",
+          "title": "11月1日 レッサーパンダのワンポイントガイド - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "0e3ae46c5e63f689d3fe9b6b6c45308ab23ba13bbf5b7292385fa204694b7fae"
+        },
+        {
+          "url": "https://omutacityzoo.org/news/?p=7079",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:38.183820+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/news/?p=7079",
+          "title": "モルモルハウスにハロウィンがやって来る！ - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "98efa9246bfa3486da41c1666577e6471fcc8d7bf03d79b7774e7da9b0c36094"
+        },
+        {
+          "url": "https://omutacityzoo.org/guide",
+          "status": 200,
+          "checked_at": "2026-10-29T17:38:40.749937+00:00",
+          "facility_id": 1852,
+          "final_url": "https://omutacityzoo.org/guide",
+          "title": "ご利用案内 - 大牟田市動物園 Omuta City Zoo",
+          "sha256": "97830d3ab168395536cedf3948bdb8366bfb687d9c15fe93d6a1888f98e65ce5"
+        },
+        {
+          "url": "https://www.sekitan-omuta.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:08.302003+00:00",
+          "facility_id": 1853,
+          "final_url": "https://www.sekitan-omuta.jp/",
+          "title": "お知らせ | 大牟田市石炭産業科学館",
+          "sha256": "33e7df202c3fb2628681d0d577a7241dfaecc8741eed46f36f76a364c829c8bc"
+        },
+        {
+          "url": "https://www.sekitan-omuta.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:14.298636+00:00",
+          "facility_id": 1853,
+          "final_url": "https://www.sekitan-omuta.jp/event/index.html",
+          "title": "イベントガイド | 大牟田市石炭産業科学館",
+          "sha256": "5c6e2e9c3cefdc54d6b598f9926bbd8449b2f2d57516ea33c9641994a3afc8e0"
+        },
+        {
+          "url": "https://sekitankan.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:22.117066+00:00",
+          "facility_id": 1853,
+          "final_url": "https://sekitankan.com/",
+          "title": "ＭＰＬＣ石炭館（大牟田市石炭産業科学館） | 福岡県大牟田市にあるエネルギーの歴史と未来を学べる施設です。",
+          "sha256": "1b4c8656bd63c9e885364bead16745ac2fb517b461ac391afbb249f0843b6bb6"
+        },
+        {
+          "url": "https://www.city.omuta.lg.jp/kiji00321888/index.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:24.059369+00:00",
+          "facility_id": 1853,
+          "final_url": "https://www.city.omuta.lg.jp/kiji00321888/index.html",
+          "title": "\r\n\tMPLC石炭館 文化の日 無料公開 / 大牟田市\r\n",
+          "sha256": "301b22ab350a6fbed997fb5e09c663682837d9ebf6d31c24d5485b564d17be79"
+        },
+        {
+          "url": "https://sekitankan.com/event/r8tantokokusaikouryugeijyutusai/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:36.635015+00:00",
+          "facility_id": 1853,
+          "final_url": "https://sekitankan.com/event/r8tantokokusaikouryugeijyutusai/",
+          "title": "第14回　炭都国際交流芸術祭 in 大牟田 | ＭＰＬＣ石炭館（大牟田市石炭産業科学館）",
+          "sha256": "bdb0e092433ad24b601eae15401cda4640c824a4bcc985ac530ee1c6278de7bf"
+        },
+        {
+          "url": "https://sekitankan.com/event",
+          "status": 200,
+          "checked_at": "2026-10-29T17:39:38.644355+00:00",
+          "facility_id": 1853,
+          "final_url": "https://sekitankan.com/event/",
+          "title": "イベント | ＭＰＬＣ石炭館（大牟田市石炭産業科学館）",
+          "sha256": "b5c3ede662f263fa6b28abedda77c0966def221e1bf7f0a412fd3e6d423a3bad"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:09.574314+00:00",
+          "facility_id": 1855,
+          "final_url": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+          "title": "ふるさとわらべ館／八女市ホームページ",
+          "sha256": "b984bde2f7e66447c462e8de0fa2c69bdff06890c69f518ea7c7dda39ef64cbb"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/constellation/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:39.315217+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/constellation/",
+          "title": "星の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "527e68b09cf3ea75b6a3c1b2794efa97a7c31a5486ee0a2c20890fe1049ac2b6"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/constellation/hoshibun_event",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:44.378020+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/constellation/hoshibun_event",
+          "title": "イベントと天文現象｜星の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "4b9ae5c7825704d04b078b0762b5df99c46290efbe41452b6907d2f7a3524e15"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/urgent_news/archives/108",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:46.102002+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/urgent_news/archives/108",
+          "title": "※緊急【星の文化館】の営業について｜緊急のお知らせ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "f39742dfe15e52018472271e25c0ea7c7261f6a296777ccc7c51f3a26dfdb14b"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:51.222133+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/",
+          "title": "星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "df7d7f7c3bfdb0c3a4a530b6dc1914582392f07ad5c803fa1ccf7ae75dce7dcf"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:40:53.266133+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/event/",
+          "title": "イベント情報｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "120c9dac7643e8203fed0f7321f1247e7f140dedcaf35e6fb9dfc2de1e67828e"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/pickup/archives/370",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:04.919780+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/pickup/archives/370",
+          "title": "2026年11月　イベントと天文現象｜体験する｜ピックアップ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "581c1d77ac2ce275f1265e0303c99b47a59cddb0a51ac9298eccfc4991b67db6"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/pickup/archives/366",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:06.593727+00:00",
+          "facility_id": 1856,
+          "final_url": "https://www.hoshinofurusato.jp/pickup/archives/366",
+          "title": "令和8年度星のソムリエ講座｜ピックアップ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "f3483a30555ccaaa14ba004df3ebb7170607fccc2faf56ea8e544339b6c14637"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:30.062274+00:00",
+          "facility_id": 1857,
+          "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+          "title": "岩戸山歴史文化交流館／八女市ホームページ",
+          "sha256": "04485c6d18c1c97598b06f52445c387c27d1f8ed57171569685fe9f29519da3e"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:37.991023+00:00",
+          "facility_id": 1857,
+          "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/index.html",
+          "title": "新着情報・イベント／八女市ホームページ",
+          "sha256": "4b2e814231e38b2f5dbe4c41d7ce0c48164669f2e4c157133db23f81a559ab34"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/12654.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:43.437822+00:00",
+          "facility_id": 1857,
+          "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/12654.html",
+          "title": "【11/28開催】いわいの郷歴史講座特別企画展記念講演会「三毛（みけ）の古墳群」／八女市ホームページ",
+          "sha256": "bdb5b0108df7366f21aba48cc4fbbe645ba25d724ac15a56ddae58a519c54d82"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/13897.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:44.784809+00:00",
+          "facility_id": 1857,
+          "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/13897.html",
+          "title": "「いわいの郷歴史講座」年間スケジュールのお知らせ／八女市ホームページ",
+          "sha256": "0c30e01b868d95e9f060f63624f87abb89a908c76c4c0b0664d0f8e34c4c8361"
+        },
+        {
+          "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/14388.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:41:46.192289+00:00",
+          "facility_id": 1857,
+          "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/14388.html",
+          "title": "「筑紫君磐井」をテーマにした山笠を期間限定展示します！【磐井の戦い1500年】／八女市ホームページ",
+          "sha256": "682288842a54b5c7a2fa66cbe63da3953f1ba2759156c3218a57de8353678e0c"
+        },
+        {
+          "url": "https://www.hoshinofurusato.jp/tea/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:04.202359+00:00",
+          "facility_id": 1858,
+          "final_url": "https://www.hoshinofurusato.jp/tea/",
+          "title": "茶の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+          "sha256": "69949fb50b05f3f5b6192c083d0b8e84f815b00afd1ed2f3c3136bd01838f4c9"
+        },
+        {
+          "url": "https://chikugokoen.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:42:14.456063+00:00",
+          "facility_id": 1858,
+          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://chikugokoen.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:42:24.831840+00:00",
+          "facility_id": 1858,
+          "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://www.ajpark.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:32.682407+00:00",
+          "facility_id": 1858,
+          "final_url": "https://www.ajpark.jp/",
+          "title": "筑後広域公園 – 豊かさを体験できる公園",
+          "sha256": "6989e8368d483e6d069214f3f4edef74a326eeb038e2a6916aefc600daa4ef79"
+        },
+        {
+          "url": "https://tansu-gen.co.jp/info/7435/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:35.247875+00:00",
+          "facility_id": 1858,
+          "final_url": "https://tansu-gen.co.jp/info/7435/",
+          "title": "■＜リリース＞11/28『筑後スポーツフェスタ』開催 |  タンスのゲン コーポレートサイト",
+          "sha256": "c97126e19b2e9760e3cb3ac1c8d98852a80cc3a7fb690c1458bbe6ebd54d68fc"
+        },
+        {
+          "url": "https://fukuokaekiden.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:38.337577+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fukuokaekiden.com/",
+          "title": "アクセス・ジャパンプレゼンツ 第13回 市町村対抗 福岡駅伝｜令和8年11月15日 筑後広域公園",
+          "sha256": "0e39d3312ed7ff2e086336edad129d20bcaa69977398a282750d9ab372c72090"
+        },
+        {
+          "url": "https://www.ajpark.jp/news/cms-e5e455f2-3183-465b-bac0-de4cb05bc60f",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:45.311249+00:00",
+          "facility_id": 1858,
+          "final_url": "https://www.ajpark.jp/news/cms-e5e455f2-3183-465b-bac0-de4cb05bc60f",
+          "title": "そば打ち体験会　2026年11月1日",
+          "sha256": "3ea138d8cedc71c7df191b460d60f5e8a276d6b0a03c127c6d366153c9d3f111"
+        },
+        {
+          "url": "https://www.ajpark.jp/news/cms-28cd53a8-c2db-42f1-be98-af3684641cb9",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:47.886003+00:00",
+          "facility_id": 1858,
+          "final_url": "https://www.ajpark.jp/news/cms-28cd53a8-c2db-42f1-be98-af3684641cb9",
+          "title": "秋の公園まつりの最新情報をInstagramで発信中！",
+          "sha256": "75303c92b6958ee0038baef45b7e34ea0cdb4457ef3dfb80779b2f46754d7a2b"
+        },
+        {
+          "url": "https://fmfukuoka.co.jp/lp/chikugo/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:42:50.225617+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fmfukuoka.co.jp/lp/chikugo/",
+          "title": "筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+          "sha256": "4155a71ad1a093c64138d062d0bd2905b039c32c9ed96ff14667df765c1a65b1"
+        },
+        {
+          "url": "https://fmfukuoka.co.jp/lp/chikugo/about/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:13.617512+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fmfukuoka.co.jp/lp/chikugo/about/",
+          "title": "大会概要 | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+          "sha256": "febf87b493d70291ea929764c900201a6eca40068538e1517c4c7badfad271f1"
+        },
+        {
+          "url": "https://fmfukuoka.co.jp/lp/chikugo/access/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:15.046620+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fmfukuoka.co.jp/lp/chikugo/access/",
+          "title": "アクセス | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+          "sha256": "e9c3d593892f8ab77253a9eba9fab9a0f5973ea466c45b7b2c4f4c5316f7f38f"
+        },
+        {
+          "url": "https://fmfukuoka.co.jp/lp/chikugo/lesson/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:16.488596+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fmfukuoka.co.jp/lp/chikugo/lesson/",
+          "title": "わくわくキッズランニング教室 | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+          "sha256": "608dc2fbb4e888a96378a9c1ee7b61478ec6963b5d7fcb95407bf5745e8c4a0c"
+        },
+        {
+          "url": "https://fmfukuoka.co.jp/lp/chikugo/playarea/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:17.891227+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fmfukuoka.co.jp/lp/chikugo/playarea/",
+          "title": "キッズアスレチックエリア | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+          "sha256": "4d3ab64d6f9cffaa7f666040a5bc453eaa4f081cf072daffb36962b3a5849aed"
+        },
+        {
+          "url": "https://www.instagram.com/chikugo_park_events/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:49.716254+00:00",
+          "facility_id": 1858,
+          "final_url": "https://www.instagram.com/chikugo_park_events/",
+          "title": "筑後広域公園｜イベント情報 (@chikugo_park_events) • Instagram photos and videos",
+          "sha256": "fbded1ed5df11cf6bb627d9062825d21be914cf49958ce724bd12ab63f43a353"
+        },
+        {
+          "url": "https://fukuokasports.org/events/detail/fukuokaekiden2026",
+          "status": 200,
+          "checked_at": "2026-10-29T17:43:51.739390+00:00",
+          "facility_id": 1858,
+          "final_url": "https://fukuokasports.org/events/detail/fukuokaekiden2026",
+          "title": "スポーツの総合祭典「第13回市町村対抗福岡駅伝」 | イベント | FUKUOKA SPORTS｜公益財団法人福岡県スポーツ推進基金",
+          "sha256": "3c6b39f65055d677f2b7b182598593074f787213b58fde40df9eea897c5bae20"
+        },
+        {
+          "url": "https://www.water.go.jp/chikugo/amagimizu/",
+          "status": 404,
+          "checked_at": "2026-10-29T17:43:59.805607+00:00",
+          "facility_id": 1859,
+          "final_url": "https://www.water.go.jp/chikugo/amagimizu/",
+          "title": "404 Not Found",
+          "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+        },
+        {
+          "url": "https://www.water.go.jp/chikugo/amagimizu/",
+          "status": 404,
+          "checked_at": "2026-10-29T17:44:04.940756+00:00",
+          "facility_id": 1859,
+          "final_url": "https://www.water.go.jp/chikugo/amagimizu/",
+          "title": "404 Not Found",
+          "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+        },
+        {
+          "url": "https://mizunobunkamura.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:44:12.621630+00:00",
+          "facility_id": 1859,
+          "final_url": "https://mizunobunkamura.jp/",
+          "title": "あまぎ水の文化村 | 福岡県朝倉市で子供と遊べる公園",
+          "sha256": "986fe78695d85f7eaf4d187814311d393d37165942b9672e82ada74313c2e4e7"
+        },
+        {
+          "url": "https://mizunobunkamura.jp/schedule/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:44:16.526552+00:00",
+          "facility_id": 1859,
+          "final_url": "https://mizunobunkamura.jp/schedule/",
+          "title": "年間イベントカレンダー | あまぎ水の文化村 | 朝倉市",
+          "sha256": "799f5b0df664c543a5894e68e13ddc58411be1281823ee660495653e429676f5"
+        },
+        {
+          "url": "https://mizunobunkamura.jp/event/4149/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:44:22.233244+00:00",
+          "facility_id": 1859,
+          "final_url": "https://mizunobunkamura.jp/event/4149/",
+          "title": "火おこし体験と竹パン作り | あまぎ水の文化村 | 朝倉市",
+          "sha256": "7fa114922228cb623cf58522db1dd16a37e84b9082cf5e850f90d4e51b6d8378"
+        },
+        {
+          "url": "https://mizunobunkamura.jp/event/4143/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:44:23.714160+00:00",
+          "facility_id": 1859,
+          "final_url": "https://mizunobunkamura.jp/event/4143/",
+          "title": "秋色コンサート | あまぎ水の文化村 | 朝倉市",
+          "sha256": "238b5f633a61aba94e0a2a0d6046b1640b9ba862b3349f1bf2d7de263602ecca"
+        },
+        {
+          "url": "https://mizunobunkamura.jp/event/3974/",
+          "status": 200,
+          "checked_at": "2026-10-29T17:44:25.256529+00:00",
+          "facility_id": 1859,
+          "final_url": "https://mizunobunkamura.jp/event/3974/",
+          "title": "2026年度 ウォーターパレット開放日カレンダー | あまぎ水の文化村 | 朝倉市",
+          "sha256": "83166f24b633e69c7cfa4f84fbad67d6c33d34d309b7311adfa56ba6bc2c25a4"
+        },
+        {
+          "url": "https://tachiarai-heiwa.jp/event/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:44:45.197485+00:00",
+          "facility_id": 1862,
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+        },
+        {
+          "url": "https://tachiarai-heiwa.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:44:46.579685+00:00",
+          "facility_id": 1862,
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+        },
+        {
+          "url": "https://tachiarai-heiwa.jp/event/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:44:55.016511+00:00",
+          "facility_id": 1862,
+          "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+        },
+        {
+          "url": "https://www.tachiarai-heiwa.jp/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T17:44:56.250335+00:00",
+          "facility_id": 1862,
+          "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/event/17354",
+          "status": 200,
+          "checked_at": "2026-10-29T17:45:06.651910+00:00",
+          "facility_id": 1862,
+          "final_url": "https://www.crossroadfukuoka.jp/event/17354",
+          "title": "企画展「第四回戦時下のくらし展」 | イベント | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+          "sha256": "7c06a35c2e46c225073d1a520bea9ddbdd2f14ae4a8fc25dabe405e72c4a48fb"
+        },
+        {
+          "url": "https://www.town.chikuzen.fukuoka.jp/S055/20250303153930.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:45:08.326602+00:00",
+          "facility_id": 1862,
+          "final_url": "https://www.town.chikuzen.fukuoka.jp/S055/20250303153930.html",
+          "title": "筑前町立大刀洗平和記念館（たちあらいへいわきねんかん）｜福岡県筑前町",
+          "sha256": "87aa0db5cf534e9765e3f98c4c261eae811bbb0dddd3a856f1bab779ded5cbc8"
+        },
+        {
+          "url": "https://www.crossroadfukuoka.jp/spot/14907",
+          "status": 200,
+          "checked_at": "2026-10-29T17:45:26.458670+00:00",
+          "facility_id": 1866,
+          "final_url": "https://www.crossroadfukuoka.jp/spot/14907",
+          "title": "苅田歴史資料館 | 観光スポット | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+          "sha256": "1abddbb0db7314507f41f95798175f38de88e665e935651baf95e86b624ca4fb"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/page/12072.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:45:43.684163+00:00",
+          "facility_id": 1866,
+          "final_url": "https://www.town.kanda.lg.jp/page/12072.html",
+          "title": "【重要】苅田町歴史資料館の休館について（お知らせ） - 苅田町（生涯学習課）",
+          "sha256": "0117995a2d07a57ffe396d9354c2e1b7a7e8f3d06cf458c19c242b9fcaccf342"
+        },
+        {
+          "url": "https://www.town.kanda.lg.jp/page/1883.html",
+          "status": 200,
+          "checked_at": "2026-10-29T17:45:45.208568+00:00",
+          "facility_id": 1866,
+          "final_url": "https://www.town.kanda.lg.jp/page/1883.html",
+          "title": "苅田町歴史資料館(再整備による長期休館中) - 苅田町（生涯学習課）",
+          "sha256": "f3030676545bb18ea93e8e8f1fc27a2f663c75644339399cbebc02c237283382"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1851,
+          "name": "久留米サイクルファミリーパーク",
+          "sources_checked": [
+            {
+              "url": "https://kurume-cfp.com/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:36:57.197080+00:00",
+              "facility_id": 1851,
+              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://kurume-cfp.com/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:37:03.532692+00:00",
+              "facility_id": 1851,
+              "error": "HTTPSConnectionPool(host='kurume-cfp.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kurume-cfp.com', port=443): Failed to resolve 'kurume-cfp.com' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
+              "status": 200,
+              "checked_at": "2026-10-29T17:37:14.646506+00:00",
+              "facility_id": 1851,
+              "final_url": "https://welcome-kurume.com/events/detail/a5646e34-a59e-4044-8174-c0608113a957",
+              "title": "サイクルファミリーパークフェスタ2026 | 久留米のイベント | 久留米公式観光サイト ほとめきの街",
+              "sha256": "f9216c190a4e6e48525c534e03ed2c475897772730fde52127e5cf663241ad46"
+            },
+            {
+              "url": "https://www.city.kurume.fukuoka.jp/1050kurashi/2070machi/3036cycle/information.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:37:16.130798+00:00",
+              "facility_id": 1851,
+              "final_url": "https://www.city.kurume.fukuoka.jp/1050kurashi/2070machi/3036cycle/information.html",
+              "title": "久留米市：自転車のイベント・施設情報や各団体の取組",
+              "sha256": "fe3c25f1e26bac7badfafa83b3f9be48ba2e52bbb66ed18967d3a2a7303125c4"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "サイクルファミリーパークフェスタ2026",
+              "disposition": "add",
+              "participability": "通常参加可能",
+              "rain": "雨天決行",
+              "traffic": "西鉄バス矢取から徒歩約10分",
+              "latest_change": "今回取得した当年公式詳細に変更・中止告知なし",
+              "child_assessment": "昼間開催、子ども向け無料競技あり。先着枠は個別制限。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "公式観光協会の当年詳細で11/15・会場・入園条件・雨天決行・バス徒歩導線と子ども向け種目を確認。市の4月更新ページは古い一般案内。",
+          "added_event_ids": [
+            "evt-f2-20261030-1851-06ec87e1"
+          ],
+          "completed_at": "2026-10-29T17:37:48.366053+00:00"
+        },
+        {
+          "facility_id": 1852,
+          "name": "大牟田市動物園",
+          "sources_checked": [
+            {
+              "url": "https://omutacityzoo.org/event",
+              "status": 404,
+              "checked_at": "2026-10-29T17:38:00.702980+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/event",
+              "title": "ページが見つかりませんでした  |  大牟田市動物園 Omuta City Zoo",
+              "sha256": "505bb7a1c0253dc8aff1acf451425a8917b192d803f9602ab2b26805a6e359c5"
+            },
+            {
+              "url": "https://omutacityzoo.org/announce/event-special",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:07.015241+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/announce/event-special",
+              "title": "これからのイベント - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "f37ca382aedef3a7f29cbf4db75c8c83487126863ca6f0d051d19a4f2e1208a4"
+            },
+            {
+              "url": "https://omutacityzoo.org/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:09.736045+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/",
+              "title": "大牟田市動物園 Omuta City Zoo",
+              "sha256": "c3a351ee497e38a3b32088b90504ad945084deedefb86f9a91c5e72b216cae59"
+            },
+            {
+              "url": "https://omutacityzoo.org/announce/?p=7087",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:22.876973+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/announce/?p=7087",
+              "title": "10月31日 もるもっとーくinハロウィン - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "f5cbf9af7a5993570df80cd76fee3bc77f6ae41616e3dd9437384bf4cada9374"
+            },
+            {
+              "url": "https://omutacityzoo.org/announce/event-regularly",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:25.372378+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/announce/event-regularly",
+              "title": "定期イベント - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "eaa73cbf0f4fd01c5385fcb5b462e6252269917c968be03c7ce92b89a628dd39"
+            },
+            {
+              "url": "https://omutacityzoo.org/announce/?p=7099",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:34.446166+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/announce/?p=7099",
+              "title": "11月1日 レッサーパンダのワンポイントガイド - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "0e3ae46c5e63f689d3fe9b6b6c45308ab23ba13bbf5b7292385fa204694b7fae"
+            },
+            {
+              "url": "https://omutacityzoo.org/news/?p=7079",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:38.183820+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/news/?p=7079",
+              "title": "モルモルハウスにハロウィンがやって来る！ - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "98efa9246bfa3486da41c1666577e6471fcc8d7bf03d79b7774e7da9b0c36094"
+            },
+            {
+              "url": "https://omutacityzoo.org/guide",
+              "status": 200,
+              "checked_at": "2026-10-29T17:38:40.749937+00:00",
+              "facility_id": 1852,
+              "final_url": "https://omutacityzoo.org/guide",
+              "title": "ご利用案内 - 大牟田市動物園 Omuta City Zoo",
+              "sha256": "97830d3ab168395536cedf3948bdb8366bfb687d9c15fe93d6a1888f98e65ce5"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "レッサーパンダのワンポイントガイド",
+              "disposition": "add",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "もるもっとーくinハロウィン（10/31）",
+              "disposition": "hold",
+              "reason": "季節行事の雨天時実施条件が取得公式案内にない。"
+            },
+            {
+              "title": "モルモルハウスにハロウィンがやって来る（10/9〜11/3）",
+              "disposition": "hold",
+              "reason": "季節行事の雨天時実施条件が取得公式案内にない。"
+            },
+            {
+              "title": "みんなの一日飼育員体験10/31・11/14・11/28",
+              "disposition": "hold",
+              "reason": "全日満員・受付終了で実参加経路なし。"
+            },
+            {
+              "title": "毎週土日祝日 対州馬のお散歩",
+              "disposition": "hold",
+              "reason": "継続定期プログラムで終了日未公表。期間を創作しない。"
+            },
+            {
+              "title": "モルモットとわたしの時間",
+              "disposition": "hold",
+              "reason": "日常定期プログラム、終了日未公表。"
+            },
+            {
+              "title": "平日ハズバンダリートレーニングガイド",
+              "disposition": "hold",
+              "reason": "日常定期プログラム、終了日未公表。"
+            },
+            {
+              "title": "土日祝イベントスケジュール（リスザル・ライオン・ナマケモノ・ツキノワグマ）",
+              "disposition": "hold",
+              "reason": "期間未定の通常プログラム群。全項目を同一理由で保留。"
+            },
+            {
+              "title": "モルモットの日替わり4プログラム（もるもっとーく・もぐもっと・もっとぐっとゲーム・もっとルーツ）",
+              "disposition": "hold",
+              "reason": "期間未定の通常プログラム群。全4種を同一理由で保留。"
+            },
+            {
+              "title": "10/17ライオン・10/18ナマケモノ・10/10飼育員・過年度定期カテゴリ日付企画",
+              "disposition": "past",
+              "reason": "実行開始時点で終了。過去開催の遡及追加なし。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "11/1ガイドを追加。満員体験と季節催事の未確定条件、期間未定の常設定期プログラムは個別HOLD。終了済み企画は追加しない。",
+          "added_event_ids": [
+            "evt-f2-20261030-1852-19402b36"
+          ],
+          "completed_at": "2026-10-29T17:39:00.107666+00:00"
+        },
+        {
+          "facility_id": 1853,
+          "name": "大牟田市石炭産業科学館",
+          "sources_checked": [
+            {
+              "url": "https://www.sekitan-omuta.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:08.302003+00:00",
+              "facility_id": 1853,
+              "final_url": "https://www.sekitan-omuta.jp/",
+              "title": "お知らせ | 大牟田市石炭産業科学館",
+              "sha256": "33e7df202c3fb2628681d0d577a7241dfaecc8741eed46f36f76a364c829c8bc"
+            },
+            {
+              "url": "https://www.sekitan-omuta.jp/event/index.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:14.298636+00:00",
+              "facility_id": 1853,
+              "final_url": "https://www.sekitan-omuta.jp/event/index.html",
+              "title": "イベントガイド | 大牟田市石炭産業科学館",
+              "sha256": "5c6e2e9c3cefdc54d6b598f9926bbd8449b2f2d57516ea33c9641994a3afc8e0"
+            },
+            {
+              "url": "https://sekitankan.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:22.117066+00:00",
+              "facility_id": 1853,
+              "final_url": "https://sekitankan.com/",
+              "title": "ＭＰＬＣ石炭館（大牟田市石炭産業科学館） | 福岡県大牟田市にあるエネルギーの歴史と未来を学べる施設です。",
+              "sha256": "1b4c8656bd63c9e885364bead16745ac2fb517b461ac391afbb249f0843b6bb6"
+            },
+            {
+              "url": "https://www.city.omuta.lg.jp/kiji00321888/index.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:24.059369+00:00",
+              "facility_id": 1853,
+              "final_url": "https://www.city.omuta.lg.jp/kiji00321888/index.html",
+              "title": "\r\n\tMPLC石炭館 文化の日 無料公開 / 大牟田市\r\n",
+              "sha256": "301b22ab350a6fbed997fb5e09c663682837d9ebf6d31c24d5485b564d17be79"
+            },
+            {
+              "url": "https://sekitankan.com/event/r8tantokokusaikouryugeijyutusai/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:36.635015+00:00",
+              "facility_id": 1853,
+              "final_url": "https://sekitankan.com/event/r8tantokokusaikouryugeijyutusai/",
+              "title": "第14回　炭都国際交流芸術祭 in 大牟田 | ＭＰＬＣ石炭館（大牟田市石炭産業科学館）",
+              "sha256": "bdb0e092433ad24b601eae15401cda4640c824a4bcc985ac530ee1c6278de7bf"
+            },
+            {
+              "url": "https://sekitankan.com/event",
+              "status": 200,
+              "checked_at": "2026-10-29T17:39:38.644355+00:00",
+              "facility_id": 1853,
+              "final_url": "https://sekitankan.com/event/",
+              "title": "イベント | ＭＰＬＣ石炭館（大牟田市石炭産業科学館）",
+              "sha256": "b5c3ede662f263fa6b28abedda77c0966def221e1bf7f0a412fd3e6d423a3bad"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "第14回炭都国際交流芸術祭in大牟田（展覧会と11/1関連公演）",
+              "disposition": "hold",
+              "reason": "雨天の公演室内代替は確認できたが、祭の交通・公共交通案内が取得した企画ページ群にない。既存通常展示と混同しない。"
+            },
+            {
+              "title": "MPLC石炭館 文化の日 無料公開",
+              "disposition": "add",
+              "participability": "通常参加可能",
+              "category": "施設開催イベント"
+            },
+            {
+              "title": "10/18・9/20・8/16ファミリーコンサート、10/24掘り出し物語、自由研究展、9/26たんこう語り、カードラリー、9/6クリーンコールデー、旧2019年催事",
+              "disposition": "past",
+              "reason": "全件終了日が実行開始日より前。遡及追加しない。"
+            },
+            {
+              "title": "石炭館館内ガイドツアー・石炭実物・炭鉱事故と保安",
+              "disposition": "hold",
+              "reason": "旧サイトの常設情報で現行の日付付き催事としての期間未確認。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "旧館サイトは2019年固定。市公式から現行サイトを確認し当年展示・無料公開を判定。",
+          "added_event_ids": [
+            "evt-f2-20261030-1853-e74b84da"
+          ],
+          "completed_at": "2026-10-29T17:40:00.440548+00:00"
+        },
+        {
+          "facility_id": 1855,
+          "name": "八女市ふるさとわらべ館",
+          "sources_checked": [
+            {
+              "url": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:09.574314+00:00",
+              "facility_id": 1855,
+              "final_url": "https://www.city.yame.fukuoka.jp/soshiki/9/j1/4/11965.html",
+              "title": "ふるさとわらべ館／八女市ホームページ",
+              "sha256": "b984bde2f7e66447c462e8de0fa2c69bdff06890c69f518ea7c7dda39ef64cbb"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "ハロウィン工作",
+              "disposition": "add",
+              "participability": "通常参加可能",
+              "rain": "公式に室内遊具・工作で雨の日も楽しめる施設と記載",
+              "traffic": "県道798号から狭い市道への誤誘導注意を記録",
+              "latest_change": "今回取得公式の10月案内に別途変更告知なし",
+              "child_assessment": "親子の工作、受付で依頼。休憩室と飲食物持参可。"
+            },
+            {
+              "title": "9・10月週末限定体験（箸・藍染め・スムージー・スライム・玄米茶・サイエンスショー・八女茶育・山下塾）",
+              "disposition": "hold",
+              "reason": "全8種が当日素材とスタッフ次第で開催しない場合あり。特定種目の日程が確定しない。"
+            },
+            {
+              "title": "11/7・11/28 Goesetime出店",
+              "disposition": "excluded",
+              "reason": "ハンバーガー等の物販のみ。家族向け体験催事としては追加しない。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "市公式の10月特別イベントを内容評価。ハロウィン工作は随時受付。週末おまかせ企画は開催しない場合もあり日付・種目固定できず保留。",
+          "added_event_ids": [
+            "evt-f2-20261030-1855-2827b6e4"
+          ],
+          "completed_at": "2026-10-29T17:40:33.744945+00:00"
+        },
+        {
+          "facility_id": 1856,
+          "name": "星の文化館",
+          "sources_checked": [
+            {
+              "url": "https://www.hoshinofurusato.jp/constellation/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:39.315217+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/constellation/",
+              "title": "星の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "527e68b09cf3ea75b6a3c1b2794efa97a7c31a5486ee0a2c20890fe1049ac2b6"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/constellation/hoshibun_event",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:44.378020+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/constellation/hoshibun_event",
+              "title": "イベントと天文現象｜星の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "4b9ae5c7825704d04b078b0762b5df99c46290efbe41452b6907d2f7a3524e15"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/urgent_news/archives/108",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:46.102002+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/urgent_news/archives/108",
+              "title": "※緊急【星の文化館】の営業について｜緊急のお知らせ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "f39742dfe15e52018472271e25c0ea7c7261f6a296777ccc7c51f3a26dfdb14b"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:51.222133+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/",
+              "title": "星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "df7d7f7c3bfdb0c3a4a530b6dc1914582392f07ad5c803fa1ccf7ae75dce7dcf"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:40:53.266133+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/event/",
+              "title": "イベント情報｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "120c9dac7643e8203fed0f7321f1247e7f140dedcaf35e6fb9dfc2de1e67828e"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/pickup/archives/370",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:04.919780+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/pickup/archives/370",
+              "title": "2026年11月　イベントと天文現象｜体験する｜ピックアップ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "581c1d77ac2ce275f1265e0303c99b47a59cddb0a51ac9298eccfc4991b67db6"
+            },
+            {
+              "url": "https://www.hoshinofurusato.jp/pickup/archives/366",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:06.593727+00:00",
+              "facility_id": 1856,
+              "final_url": "https://www.hoshinofurusato.jp/pickup/archives/366",
+              "title": "令和8年度星のソムリエ講座｜ピックアップ｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "f3483a30555ccaaa14ba004df3ebb7170607fccc2faf56ea8e544339b6c14637"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "土星の観察（〜12月中旬）",
+              "disposition": "hold",
+              "reason": "開始日と終了日が数値日付で確定していない。大型望遠鏡は中止で小型代替。"
+            },
+            {
+              "title": "ふくおか天文台めぐり（〜2027/3/31）",
+              "disposition": "hold",
+              "reason": "開始日と景品残数未確認。開始期間を創作しない。"
+            },
+            {
+              "title": "令和8年度星のソムリエ講座",
+              "disposition": "hold",
+              "reason": "実際の講座会場はそよかぜ・おりなす八女で当該施設とは異なる。今回施設scope内の追加として誤結合しない。"
+            },
+            {
+              "title": "11/16火星・木星の接近",
+              "disposition": "excluded",
+              "reason": "自然天文現象の説明で、施設催事の開催案内ではない。見出しも火星と月と本文火星木星が不一致。"
+            },
+            {
+              "title": "10月満月観望会・十三夜",
+              "disposition": "past",
+              "reason": "10/26・10/23で終了。"
+            },
+            {
+              "title": "天文カレンダー予約・通常プラネタリウム・通常観望・宿泊者観望",
+              "disposition": "excluded",
+              "reason": "商品販売または期間限定でない通常サービス。"
+            },
+            {
+              "title": "星のまつり・いもほり収穫祭・茶道教室・特別茶会",
+              "disposition": "hold",
+              "reason": "共通法人トップの別会場催事。星の文化館の開催と確認できず、当該施設へ誤結合しない。"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "11月公式月報と緊急営業案内を実読。大型望遠鏡は中止、小型望遠鏡代替。期間不足・会場相違は推測しない。",
+          "completed_at": "2026-10-29T17:41:22.257927+00:00"
+        },
+        {
+          "facility_id": 1857,
+          "name": "岩戸山歴史文化交流館 いわいの郷",
+          "sources_checked": [
+            {
+              "url": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:30.062274+00:00",
+              "facility_id": 1857,
+              "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/",
+              "title": "岩戸山歴史文化交流館／八女市ホームページ",
+              "sha256": "04485c6d18c1c97598b06f52445c387c27d1f8ed57171569685fe9f29519da3e"
+            },
+            {
+              "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/index.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:37.991023+00:00",
+              "facility_id": 1857,
+              "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/index.html",
+              "title": "新着情報・イベント／八女市ホームページ",
+              "sha256": "4b2e814231e38b2f5dbe4c41d7ce0c48164669f2e4c157133db23f81a559ab34"
+            },
+            {
+              "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/12654.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:43.437822+00:00",
+              "facility_id": 1857,
+              "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/12654.html",
+              "title": "【11/28開催】いわいの郷歴史講座特別企画展記念講演会「三毛（みけ）の古墳群」／八女市ホームページ",
+              "sha256": "bdb5b0108df7366f21aba48cc4fbbe645ba25d724ac15a56ddae58a519c54d82"
+            },
+            {
+              "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/13897.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:44.784809+00:00",
+              "facility_id": 1857,
+              "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/13897.html",
+              "title": "「いわいの郷歴史講座」年間スケジュールのお知らせ／八女市ホームページ",
+              "sha256": "0c30e01b868d95e9f060f63624f87abb89a908c76c4c0b0664d0f8e34c4c8361"
+            },
+            {
+              "url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/14388.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:41:46.192289+00:00",
+              "facility_id": 1857,
+              "final_url": "https://www.city.yame.fukuoka.jp/iwatoyama/event/14388.html",
+              "title": "「筑紫君磐井」をテーマにした山笠を期間限定展示します！【磐井の戦い1500年】／八女市ホームページ",
+              "sha256": "682288842a54b5c7a2fa66cbe63da3953f1ba2759156c3218a57de8353678e0c"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "11/28 三毛の古墳群 記念講演会",
+              "disposition": "hold",
+              "reason": "11/1受付開始で実行時10/30は参加申込前。年間計画の演題と最新案内の演題も異なる。"
+            },
+            {
+              "title": "12/19・2027/1/23・2/27・3/20いわいの郷歴史講座",
+              "disposition": "hold",
+              "reason": "全4回は各月初の受付前。時間・個別料金等も年間表に未記載。"
+            },
+            {
+              "title": "令和8年度特別企画展",
+              "disposition": "hold",
+              "reason": "記念講演の本文に存在は記載されるが展示自体の期間・詳細未掲載。"
+            },
+            {
+              "title": "筑紫君磐井 山笠期間限定展示",
+              "disposition": "hold",
+              "reason": "会場は八女市役所・八女民俗資料館で当該施設ではない。scope外の施設へ誤結合しない。"
+            },
+            {
+              "title": "5月〜10月歴史講座",
+              "disposition": "past",
+              "reason": "全5回は実行開始前に終了。"
+            },
+            {
+              "title": "古墳カード・おうち石人・いわい体操・出張レクチャー・物販",
+              "disposition": "excluded",
+              "reason": "配布・自宅教材・日常サービスまたは商品で、今回追加する日付付き来館催事ではない。"
+            }
+          ],
+          "disposition": "candidate_found_hold",
+          "reason": "新着・当年講座・特別展示を個別確認。受付前と会場違いを区別。",
+          "completed_at": "2026-10-29T17:42:02.175270+00:00"
+        },
+        {
+          "facility_id": 1858,
+          "name": "筑後広域公園",
+          "sources_checked": [
+            {
+              "url": "https://www.hoshinofurusato.jp/tea/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:04.202359+00:00",
+              "facility_id": 1858,
+              "final_url": "https://www.hoshinofurusato.jp/tea/",
+              "title": "茶の文化館｜星野村観光ナビ｜一般財団法人 星のふるさと",
+              "sha256": "69949fb50b05f3f5b6192c083d0b8e84f815b00afd1ed2f3c3136bd01838f4c9"
+            },
+            {
+              "url": "https://chikugokoen.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:42:14.456063+00:00",
+              "facility_id": 1858,
+              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://chikugokoen.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:42:24.831840+00:00",
+              "facility_id": 1858,
+              "error": "HTTPSConnectionPool(host='chikugokoen.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='chikugokoen.jp', port=443): Failed to resolve 'chikugokoen.jp' ([Errno 11001] getaddrinfo failed)\"))"
+            },
+            {
+              "url": "https://www.ajpark.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:32.682407+00:00",
+              "facility_id": 1858,
+              "final_url": "https://www.ajpark.jp/",
+              "title": "筑後広域公園 – 豊かさを体験できる公園",
+              "sha256": "6989e8368d483e6d069214f3f4edef74a326eeb038e2a6916aefc600daa4ef79"
+            },
+            {
+              "url": "https://tansu-gen.co.jp/info/7435/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:35.247875+00:00",
+              "facility_id": 1858,
+              "final_url": "https://tansu-gen.co.jp/info/7435/",
+              "title": "■＜リリース＞11/28『筑後スポーツフェスタ』開催 |  タンスのゲン コーポレートサイト",
+              "sha256": "c97126e19b2e9760e3cb3ac1c8d98852a80cc3a7fb690c1458bbe6ebd54d68fc"
+            },
+            {
+              "url": "https://fukuokaekiden.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:38.337577+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fukuokaekiden.com/",
+              "title": "アクセス・ジャパンプレゼンツ 第13回 市町村対抗 福岡駅伝｜令和8年11月15日 筑後広域公園",
+              "sha256": "0e39d3312ed7ff2e086336edad129d20bcaa69977398a282750d9ab372c72090"
+            },
+            {
+              "url": "https://www.ajpark.jp/news/cms-e5e455f2-3183-465b-bac0-de4cb05bc60f",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:45.311249+00:00",
+              "facility_id": 1858,
+              "final_url": "https://www.ajpark.jp/news/cms-e5e455f2-3183-465b-bac0-de4cb05bc60f",
+              "title": "そば打ち体験会　2026年11月1日",
+              "sha256": "3ea138d8cedc71c7df191b460d60f5e8a276d6b0a03c127c6d366153c9d3f111"
+            },
+            {
+              "url": "https://www.ajpark.jp/news/cms-28cd53a8-c2db-42f1-be98-af3684641cb9",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:47.886003+00:00",
+              "facility_id": 1858,
+              "final_url": "https://www.ajpark.jp/news/cms-28cd53a8-c2db-42f1-be98-af3684641cb9",
+              "title": "秋の公園まつりの最新情報をInstagramで発信中！",
+              "sha256": "75303c92b6958ee0038baef45b7e34ea0cdb4457ef3dfb80779b2f46754d7a2b"
+            },
+            {
+              "url": "https://fmfukuoka.co.jp/lp/chikugo/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:42:50.225617+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fmfukuoka.co.jp/lp/chikugo/",
+              "title": "筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+              "sha256": "4155a71ad1a093c64138d062d0bd2905b039c32c9ed96ff14667df765c1a65b1"
+            },
+            {
+              "url": "https://fmfukuoka.co.jp/lp/chikugo/about/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:13.617512+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fmfukuoka.co.jp/lp/chikugo/about/",
+              "title": "大会概要 | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+              "sha256": "febf87b493d70291ea929764c900201a6eca40068538e1517c4c7badfad271f1"
+            },
+            {
+              "url": "https://fmfukuoka.co.jp/lp/chikugo/access/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:15.046620+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fmfukuoka.co.jp/lp/chikugo/access/",
+              "title": "アクセス | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+              "sha256": "e9c3d593892f8ab77253a9eba9fab9a0f5973ea466c45b7b2c4f4c5316f7f38f"
+            },
+            {
+              "url": "https://fmfukuoka.co.jp/lp/chikugo/lesson/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:16.488596+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fmfukuoka.co.jp/lp/chikugo/lesson/",
+              "title": "わくわくキッズランニング教室 | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+              "sha256": "608dc2fbb4e888a96378a9c1ee7b61478ec6963b5d7fcb95407bf5745e8c4a0c"
+            },
+            {
+              "url": "https://fmfukuoka.co.jp/lp/chikugo/playarea/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:17.891227+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fmfukuoka.co.jp/lp/chikugo/playarea/",
+              "title": "キッズアスレチックエリア | 筑後スポーツフェスタ タンスのゲン presents FM福岡 第9回 筑後船小屋リレーマラソン | FM FUKUOKA (エフエム福岡)",
+              "sha256": "4d3ab64d6f9cffaa7f666040a5bc453eaa4f081cf072daffb36962b3a5849aed"
+            },
+            {
+              "url": "https://www.instagram.com/chikugo_park_events/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:49.716254+00:00",
+              "facility_id": 1858,
+              "final_url": "https://www.instagram.com/chikugo_park_events/",
+              "title": "筑後広域公園｜イベント情報 (@chikugo_park_events) • Instagram photos and videos",
+              "sha256": "fbded1ed5df11cf6bb627d9062825d21be914cf49958ce724bd12ab63f43a353"
+            },
+            {
+              "url": "https://fukuokasports.org/events/detail/fukuokaekiden2026",
+              "status": 200,
+              "checked_at": "2026-10-29T17:43:51.739390+00:00",
+              "facility_id": 1858,
+              "final_url": "https://fukuokasports.org/events/detail/fukuokaekiden2026",
+              "title": "スポーツの総合祭典「第13回市町村対抗福岡駅伝」 | イベント | FUKUOKA SPORTS｜公益財団法人福岡県スポーツ推進基金",
+              "sha256": "3c6b39f65055d677f2b7b182598593074f787213b58fde40df9eea897c5bae20"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "11/28わくわくキッズランニング教室",
+              "disposition": "add",
+              "participability": "条件付き参加可能",
+              "rain": "大会小雨決行・荒天中止",
+              "traffic": "筑後船小屋駅利用・北側さくらの森駐車場。臨時駐車場未定",
+              "latest_change": "主催10/26延長告知等を確認、教室は11/20締切の受付中表示",
+              "child_assessment": "小学1〜6年対象、保護者申込。飲料・運動靴持参。"
+            },
+            {
+              "title": "筑後スポーツフェスタ／リレーマラソン／パーソナリティプラン",
+              "disposition": "hold",
+              "reason": "共催8/18告知は競技10:00・閉会14:00、主催概要は10:20・競技終了14:20。時間を推測せず本体を保留。プランは主催で11/2延長を確認。"
+            },
+            {
+              "title": "キッズアスレチックエリア（3遊具）・ステージ・キッチンカー",
+              "disposition": "hold",
+              "reason": "独立利用時間が未記載。本体の時間相違を流用しない。全3遊具・ステージ・出店を同じ理由で保留。"
+            },
+            {
+              "title": "11/1そば打ち体験会",
+              "disposition": "hold",
+              "reason": "申込締切10/25経過、当日受付の記載なし。"
+            },
+            {
+              "title": "みんなおいでよ！秋の公園まつり",
+              "disposition": "hold",
+              "reason": "公園告知は11月とのみ記載、詳細はInstagramへ誘導。取得可能な本文で具体日・雨天・参加条件が確定しない。"
+            },
+            {
+              "title": "11/15市町村対抗福岡駅伝と体験エリア",
+              "disposition": "hold",
+              "reason": "公式トップ本文はタイトルのみで内容評価不能。公的スポーツ案内も参加条件・体験の時刻を確認できない。"
+            },
+            {
+              "title": "赤そば開花・フラワーゾーン・遊具新設",
+              "disposition": "excluded",
+              "reason": "通常の花・施設利用情報。開催期間確定のイベントではない。"
+            },
+            {
+              "title": "2/14そば打ち・2025催事",
+              "disposition": "past",
+              "reason": "終了済み。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "現行公園・主催共催サイトを確認。時間の相違はマラソン本体だけHOLD。独立して時刻と申込が明示される子ども教室を追加。",
+          "added_event_ids": [
+            "evt-f2-20261030-1858-ba311f31"
+          ],
+          "completed_at": "2026-10-29T17:43:53.837160+00:00"
+        },
+        {
+          "facility_id": 1859,
+          "name": "あまぎ水の文化村",
+          "sources_checked": [
+            {
+              "url": "https://www.water.go.jp/chikugo/amagimizu/",
+              "status": 404,
+              "checked_at": "2026-10-29T17:43:59.805607+00:00",
+              "facility_id": 1859,
+              "final_url": "https://www.water.go.jp/chikugo/amagimizu/",
+              "title": "404 Not Found",
+              "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+            },
+            {
+              "url": "https://www.water.go.jp/chikugo/amagimizu/",
+              "status": 404,
+              "checked_at": "2026-10-29T17:44:04.940756+00:00",
+              "facility_id": 1859,
+              "final_url": "https://www.water.go.jp/chikugo/amagimizu/",
+              "title": "404 Not Found",
+              "sha256": "80c3fe2ae1062abf56456f52518bd670f9ec3917b7f85e152b347ac6b6faf880"
+            },
+            {
+              "url": "https://mizunobunkamura.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:44:12.621630+00:00",
+              "facility_id": 1859,
+              "final_url": "https://mizunobunkamura.jp/",
+              "title": "あまぎ水の文化村 | 福岡県朝倉市で子供と遊べる公園",
+              "sha256": "986fe78695d85f7eaf4d187814311d393d37165942b9672e82ada74313c2e4e7"
+            },
+            {
+              "url": "https://mizunobunkamura.jp/schedule/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:44:16.526552+00:00",
+              "facility_id": 1859,
+              "final_url": "https://mizunobunkamura.jp/schedule/",
+              "title": "年間イベントカレンダー | あまぎ水の文化村 | 朝倉市",
+              "sha256": "799f5b0df664c543a5894e68e13ddc58411be1281823ee660495653e429676f5"
+            },
+            {
+              "url": "https://mizunobunkamura.jp/event/4149/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:44:22.233244+00:00",
+              "facility_id": 1859,
+              "final_url": "https://mizunobunkamura.jp/event/4149/",
+              "title": "火おこし体験と竹パン作り | あまぎ水の文化村 | 朝倉市",
+              "sha256": "7fa114922228cb623cf58522db1dd16a37e84b9082cf5e850f90d4e51b6d8378"
+            },
+            {
+              "url": "https://mizunobunkamura.jp/event/4143/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:44:23.714160+00:00",
+              "facility_id": 1859,
+              "final_url": "https://mizunobunkamura.jp/event/4143/",
+              "title": "秋色コンサート | あまぎ水の文化村 | 朝倉市",
+              "sha256": "238b5f633a61aba94e0a2a0d6046b1640b9ba862b3349f1bf2d7de263602ecca"
+            },
+            {
+              "url": "https://mizunobunkamura.jp/event/3974/",
+              "status": 200,
+              "checked_at": "2026-10-29T17:44:25.256529+00:00",
+              "facility_id": 1859,
+              "final_url": "https://mizunobunkamura.jp/event/3974/",
+              "title": "2026年度 ウォーターパレット開放日カレンダー | あまぎ水の文化村 | 朝倉市",
+              "sha256": "83166f24b633e69c7cfa4f84fbad67d6c33d34d309b7311adfa56ba6bc2c25a4"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "火おこし体験と竹パン作り",
+              "disposition": "past",
+              "reason": "開催10/11、終了済み。"
+            },
+            {
+              "title": "秋色コンサート",
+              "disposition": "past",
+              "reason": "開催10/4、終了済み。"
+            },
+            {
+              "title": "鮎つかみ取り・ネイチャークラフト・ウォーターフェスティバル",
+              "disposition": "past",
+              "reason": "8/23・8/16・7/20の終了済み催事。"
+            },
+            {
+              "title": "ウォーターパレット開放日カレンダー",
+              "disposition": "excluded",
+              "reason": "通常の水遊び営業案内。日付付き特別イベントとは区別。"
+            }
+          ],
+          "disposition": "no_current_or_future_event",
+          "reason": "旧URL404を再試行後、現行公式トップ・年間予定・直近2催事詳細を確認。最新催事は10/11で終了。ウォーターパレットは通常季節営業案内でイベント追加しない。",
+          "completed_at": "2026-10-29T17:44:39.461428+00:00"
+        },
+        {
+          "facility_id": 1862,
+          "name": "筑前町立大刀洗平和記念館",
+          "sources_checked": [
+            {
+              "url": "https://tachiarai-heiwa.jp/event/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:44:45.197485+00:00",
+              "facility_id": 1862,
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+            },
+            {
+              "url": "https://tachiarai-heiwa.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:44:46.579685+00:00",
+              "facility_id": 1862,
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+            },
+            {
+              "url": "https://tachiarai-heiwa.jp/event/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:44:55.016511+00:00",
+              "facility_id": 1862,
+              "error": "HTTPSConnectionPool(host='tachiarai-heiwa.jp', port=443): Max retries exceeded with url: /event/ (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+            },
+            {
+              "url": "https://www.tachiarai-heiwa.jp/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T17:44:56.250335+00:00",
+              "facility_id": 1862,
+              "error": "HTTPSConnectionPool(host='www.tachiarai-heiwa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, \"[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: Hostname mismatch, certificate is not valid for 'www.tachiarai-heiwa.jp'. (_ssl.c:1081)\")))"
+            },
+            {
+              "url": "https://www.crossroadfukuoka.jp/event/17354",
+              "status": 200,
+              "checked_at": "2026-10-29T17:45:06.651910+00:00",
+              "facility_id": 1862,
+              "final_url": "https://www.crossroadfukuoka.jp/event/17354",
+              "title": "企画展「第四回戦時下のくらし展」 | イベント | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+              "sha256": "7c06a35c2e46c225073d1a520bea9ddbdd2f14ae4a8fc25dabe405e72c4a48fb"
+            },
+            {
+              "url": "https://www.town.chikuzen.fukuoka.jp/S055/20250303153930.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:45:08.326602+00:00",
+              "facility_id": 1862,
+              "final_url": "https://www.town.chikuzen.fukuoka.jp/S055/20250303153930.html",
+              "title": "筑前町立大刀洗平和記念館（たちあらいへいわきねんかん）｜福岡県筑前町",
+              "sha256": "87aa0db5cf534e9765e3f98c4c261eae811bbb0dddd3a856f1bab779ded5cbc8"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "第四回戦時下のくらし展",
+              "disposition": "add",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "菅野泰紀 鉛筆艦船画展",
+              "disposition": "past",
+              "reason": "8/30終了の旧企画。"
+            }
+          ],
+          "disposition": "candidate_found_added",
+          "reason": "館ドメイン証明書不一致の再試行後、公的観光公式と設置町公式で企画展・通常入館経路を確認。",
+          "added_event_ids": [
+            "evt-f2-20261030-1862-0c63d8db"
+          ],
+          "completed_at": "2026-10-29T17:45:18.883900+00:00"
+        },
+        {
+          "facility_id": 1866,
+          "name": "苅田町歴史資料館",
+          "sources_checked": [
+            {
+              "url": "https://www.crossroadfukuoka.jp/spot/14907",
+              "status": 200,
+              "checked_at": "2026-10-29T17:45:26.458670+00:00",
+              "facility_id": 1866,
+              "final_url": "https://www.crossroadfukuoka.jp/spot/14907",
+              "title": "苅田歴史資料館 | 観光スポット | 【公式】福岡県の観光/旅行情報サイト「クロスロードふくおか」",
+              "sha256": "1abddbb0db7314507f41f95798175f38de88e665e935651baf95e86b624ca4fb"
+            },
+            {
+              "url": "https://www.town.kanda.lg.jp/page/12072.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:45:43.684163+00:00",
+              "facility_id": 1866,
+              "final_url": "https://www.town.kanda.lg.jp/page/12072.html",
+              "title": "【重要】苅田町歴史資料館の休館について（お知らせ） - 苅田町（生涯学習課）",
+              "sha256": "0117995a2d07a57ffe396d9354c2e1b7a7e8f3d06cf458c19c242b9fcaccf342"
+            },
+            {
+              "url": "https://www.town.kanda.lg.jp/page/1883.html",
+              "status": 200,
+              "checked_at": "2026-10-29T17:45:45.208568+00:00",
+              "facility_id": 1866,
+              "final_url": "https://www.town.kanda.lg.jp/page/1883.html",
+              "title": "苅田町歴史資料館(再整備による長期休館中) - 苅田町（生涯学習課）",
+              "sha256": "f3030676545bb18ea93e8e8f1fc27a2f663c75644339399cbebc02c237283382"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "第31・32回まちの歴史講座、求菩提資料館特別展への出陳",
+              "disposition": "hold",
+              "reason": "休館資料館の開催ではなく別館・別会場事業。今回当該施設へ結合せずPMへscope外信号。"
+            }
+          ],
+          "disposition": "no_current_or_future_event",
+          "reason": "町の休館告知と現行館案内で2025/4/1〜新施設開館まで長期休館を確認。観光スポットの営業記載は古い。施設データ自体はscope外で変更しない。",
+          "pm_signal": "施設1866は再整備で長期休館。FacilityOpsでの公式確認対象。",
+          "completed_at": "2026-10-29T17:45:46.571387+00:00"
+        }
+      ],
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 6,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 2,
+      "source_unresolved": 0
+    }
+  }
+}
