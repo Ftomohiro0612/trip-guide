@@ -1,0 +1,699 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-D-PART-6",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T03:33:46.147352+00:00",
+  "horizon_end_date": "2026-12-24",
+  "per_region": {
+    "chiba": {
+      "sources_checked": [
+        {
+          "url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:33:44.532141+00:00",
+          "organizer_name": "リトルプラネット",
+          "multi_venue_basis": "Official operating company publishes the same campaign for Matsudo, LaLaport TOKYO-BAY and TOYLO Soga, three distinct Chiba venues.",
+          "host_shared_with_registry_reason": "This is the national multi-park operator campaign/press schedule, not the event page of one registry facility."
+        },
+        {
+          "url": "https://www.litpla.com/news/press/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:33:46.149832+00:00",
+          "organizer_name": "リトルプラネット",
+          "multi_venue_basis": "Official operating company publishes the same campaign for Matsudo, LaLaport TOKYO-BAY and TOYLO Soga, three distinct Chiba venues.",
+          "host_shared_with_registry_reason": "This is the national multi-park operator campaign/press schedule, not the event page of one registry facility."
+        },
+        {
+          "url": "https://www.sudo-farm.com/stamp-rally/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:33:47.464312+00:00",
+          "organizer_name": "須藤牧場 生シェイク祭り",
+          "multi_venue_basis": "Official organizer campaign spans separate participating shops throughout Chiba, with linked multi-shop stamp book.",
+          "host_shared_with_registry_reason": "This campaign aggregates participating shops, rather than only Sudo Farm as one registered facility."
+        },
+        {
+          "url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:34:07.494431+00:00",
+          "organizer_name": "リトルプラネット",
+          "multi_venue_basis": "Official campaign covers distinct national park venues, including Chiba parks.",
+          "host_shared_with_registry_reason": "National multi-park campaign announcement, not a single facility calendar."
+        }
+      ],
+      "candidates_found": 7,
+      "added": 3,
+      "duplicate_or_already_present": 3,
+      "hold": 1,
+      "stale_false": 0,
+      "candidate_dispositions": [
+        {
+          "source_type": "organizer_event_series",
+          "title": "ハロウィン2026（KITE MITE MATSUDO (キテミテマツド)）",
+          "source_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Fresh multi-venue official campaign corroborates 2026-09-17 through 11-01 and the same three venues.",
+          "event_id": "evt-litpla-litpla-matsudo-halloween2026",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ハロウィン2026（リトルプラネット ららぽーとTOKYO-BAY）",
+          "source_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Fresh multi-venue official campaign corroborates 2026-09-17 through 11-01 and the same three venues.",
+          "event_id": "evt-litpla-lalaport-tokyo-bay-halloween2026",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーアリオ蘇我）",
+          "source_url": "https://www.litpla.com/news/press/halloween2026-info/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Fresh multi-venue official campaign corroborates 2026-09-17 through 11-01 and the same three venues.",
+          "event_id": "evt-litpla-toylo-soga-halloween2026",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "第8回 千葉 生シェイク祭り2026",
+          "source_url": "https://www.sudo-farm.com/stamp-rally/",
+          "disposition": "hold",
+          "reason": "Organizer currently describes Bosō/Awajishima multi-shop stamp-book participation but does not reconfirm numeric 2026 campaign dates from the tourism listing; hold the series until occurrence identity is confirmed.",
+          "source_family": "sudo-farm.com stamp rally",
+          "event_category": "fireworks_festival_seasonal"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "サンサンキッズTV みんなで！あそびパーティ2026（KITE MITE MATSUDO (キテミテマツド)）",
+          "source_url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "disposition": "added",
+          "reason": "Official national campaign and three current park notices corroborate exact dates and currently available November/ordinary admission path.",
+          "event_id": "evt-chiba-w42d6-sunsun-litpla_matsudo",
+          "participability": "通常参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "サンサンキッズTV みんなで！あそびパーティ2026（リトルプラネット ららぽーとTOKYO-BAY）",
+          "source_url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "disposition": "added",
+          "reason": "Official national campaign and three current park notices corroborate exact dates and currently available November/ordinary admission path.",
+          "event_id": "evt-chiba-w42d6-sunsun-lalaport_tokyo-bay",
+          "participability": "通常参加可能",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "サンサンキッズTV みんなで！あそびパーティ2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーアリオ蘇我）",
+          "source_url": "https://www.litpla.com/news/press/202610-sunsun-info/",
+          "disposition": "added",
+          "reason": "Official national campaign and three current park notices corroborate exact dates and currently available November/ordinary admission path.",
+          "event_id": "evt-chiba-w42d6-sunsun-toylo_soga",
+          "participability": "通常参加可能",
+          "event_category": "facility_hosted"
+        }
+      ],
+      "supplemental_venue_verification": "Three venue operating-information pages were fetched to verify this multi-park campaign; they are not claimed as independent organizer-series coverage. Only the genuine multi-venue campaign/press sources are cited in Product."
+    },
+    "ishikawa": {
+      "sources_checked": [
+        {
+          "url": "https://gemba-project.jp/expo/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:59:48.469218+00:00",
+          "organizer_name": "GEMBAモノヅクリエキスポ",
+          "multi_venue_basis": "小松市内の事業所・工場・博物館など複数会場の体験を共通会期に掲載。"
+        },
+        {
+          "url": "https://notokidsadventure.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T03:59:48.935390+00:00",
+          "organizer_name": "のとキッズアドベンチャー",
+          "multi_venue_basis": "能登全域の18か所以上の体験・施設を横断する公式フィールドミッションとラリー。"
+        },
+        {
+          "url": "https://gemba-project.jp/expo/experiences/",
+          "status": 200,
+          "checked_at": "2026-10-29T04:00:09.989225+00:00",
+          "organizer_name": "GEMBAモノヅクリエキスポ",
+          "multi_venue_basis": "小松市内の複数工場・工房・博物館の2026公式体験一覧。"
+        }
+      ],
+      "candidates_found": 55,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 55,
+      "stale_false": 0,
+      "candidate_dispositions": [
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,500/人 60min 日本遺産の石蔵で仕込む、小松の老舗酒造「神泉」を五感で体験 東酒造 / 酒 高堂・野田",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/shinsen01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 60min 来たれミシンの腕試しに！トートバックづくり 小松縫製 / 繊維 蓮代寺・松東",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/komatsu-hosei01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,500/組 180min ペンとスマホはこの子にお任せ！木のアームロボットをつくろう まるや工房 （ヤマウチ産業） / 木工 今江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/maruya01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥500/人 30min 雨ニモ風ニモ負けない！次世代農業を体感しよう！ 本田農園 / 農業 今江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/honda01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 満席 ¥20,000/人 120min やれるものならやってみろ！世界に一つのフライパン作り IRON WORKS KORU / 鉄工 白江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が満席を明記し、参加経路なし。",
+          "program_url": "https://gemba-project.jp/expo/program/koru01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 無料 90min 乗り物好きにはたまらない！わたしたちの移動を支えるバス工場を見学 ジェイ・バス / 乗りもの 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/jbus01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/組 90min 間仕切り生産設備で生まれる、鉄製オリジナルスマホスタンド作り コマニー / その他 空港周辺",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/comany01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 ¥3,500/人 30min 日本遺産 滝ケ原石でアロマストーンづくり グリーンジョブ / 石材 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/green-job01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,500/人 120min 平均年齢オーバー 70 ！世界のメゾンからオファーが来る、絶滅寸前の職人技 小倉織物 / 繊維 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/ogura01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥2,500/人 120min 音・空気・匂いを浴びる！五感で巡る石切場ツアー 石材 荒谷商店 / 石材 里山（滝ヶ原・那谷）",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/sekizaiaraya01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥2,000/人 30min 縁起物を彩る！九谷焼マジック絵付け体験 宮創製陶所 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/miyasou02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥4,000/人 60min 世界にひとつだけの招き猫をつくる。伝統の「型起こし」体験 宮創製陶所 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/miyasou01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 ¥2,200/人 90min 浅蔵一華と巡る五十吉窯工房ツアー 五十吉深香陶窯 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/isokichi01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 満席 ¥1,800/人 60min 全国シェア70％以上を誇る真田紐で作る犬の首輪作りと工場見学！ 織元すみや / 繊維 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が満席を明記し、参加経路なし。",
+          "program_url": "https://gemba-project.jp/expo/program/orimotosumiya01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 150min 油圧シリンダメーカーの製造工程体験！その技術でつくる高級ペン立てづくり！ 光精工 / 鉄工 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/hikari-seiko01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,500/人 90min 鉄の板で折り紙！？ 曲げてつくるオリジナルペンスタンド ダイエー / 鉄工 空港周辺",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/daiei01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 45min 型おこしでつくろう！手のひらサイズの九谷焼小物 木田製陶 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/kidaseitou02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥500/人 90min 機械部品の物流センターでのお菓子の出庫＆検査と組立体験‼ 森康 / 鉄工 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/moriyasu01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 ¥1,800/人 30min 九谷焼の「白九谷」ならおまかせあれ！九谷焼窯元を見学 宮吉製陶 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/miyayoshi01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 ¥3,500/人 120min 福鬼さんを描いてみよう！ ― 九谷幸窯 絵付け体験 創作陶房 九谷幸窯 / 九谷焼 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/sachigama01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥2,000/人 60min あらゆる箱を制作してきたマイスター達に教わる、オリジナル木箱づくり 北村木箱 / 木工 高堂・野田",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/kitamurakibako01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 無料 30min 織ネームの世界へ潜入！一貫生産工場見学ツアー 中川産業 / 繊維 国府・中海",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/nakagawa01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 無料 30min ものづくりなんでも相談スポット GEMBA / その他 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/consultation/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 30min 鋼材現場で！？ナイト工場見学 小松鋼機 / 鉄工 白江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/komatsukoki03/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 満席 ¥500/人 120min みんなが知っている“あの”調味料ができるところを見学 桃宝食品 / 食品 高堂・野田",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が満席を明記し、参加経路なし。",
+          "program_url": "https://gemba-project.jp/expo/program/toho01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥2,000/組 120min 鉄を削って、回して遊ぶ！本格ハンドスピナーづくり 武田工業所 / 鉄工 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/takeda01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 ¥1,000/人 30min お気に入りのはちみつを見つけて、自分だけの石鹸づくり！ 金澤やまぎし養蜂場 / 食品 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧は要予約。現在の具体的な開催回・予約残枠・子どもの参加条件の確認が不足。",
+          "program_url": "https://gemba-project.jp/expo/program/yamagishi02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥3,000/人 180min GEMBA限定！九谷焼をまるごと体験。素地選びから絵付けまで 木田製陶 / 九谷焼 宇喜多窯 / 九谷焼 八幡・若杉 蓮代寺・松東",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/ukita01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 満席 ¥3,000/人 150min 地元に伝わる民芸品『我谷盆』を、自分でつくってみませんか 堀川材木店 / 木工 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が満席を明記し、参加経路なし。",
+          "program_url": "https://gemba-project.jp/expo/program/horikawazaimoku01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥2,000/人 120min 「鉄」のモノヅクリを応援する鋼材屋さん、小松鋼機を見学！ 小松鋼機 / 鉄工 白江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/komatsukoki01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 60min おとなもこどもも、みんな集まれ！こまつの鉄あそびパーク 小松鋼機 / 鉄工 白江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/komatsukoki02-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥1,000/人 60min お正月の定番占い菓子、“辻占（つじうら）”のウラの世界を体験！ 長池彩華堂 / 食品 今江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/nagaike-saikado01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 ¥10,000/人 240min 弟子求む！古九谷風図案を用いた九谷の伝統をとことん学ぶ絵付け体験 山中國盛工房 / 九谷焼 国府・中海",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/yamanakakunimori01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "要予約 予約期間終了 無料 90min 圧倒的スケールのものづくりを体感！建設機械のコマツ粟津工場を見学 コマツ粟津工場 / 乗りもの 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "公式一覧が予約期間終了を明記し、当日枠を示さない。",
+          "program_url": "https://gemba-project.jp/expo/program/komatsu-awazu01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "のとキッズアドベンチャー・デジタルスタンプラリー",
+          "source_url": "https://notokidsadventure.jp/",
+          "disposition": "hold",
+          "reason": "各会場の要予約有料体験と復旧休館が併存。現在の回・料金・休館を個別に確定できない。",
+          "source_family": "のとキッズアドベンチャー",
+          "event_category": "municipal_regional"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥700/人 30min 小松唯一のクラフトビールでつくる、自分だけの一杯 KOMATSU BREWING / 酒 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/komatsu-brewing02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 予約なしでふらっと新発見！小松産はちみつの魅力 金澤やまぎし養蜂場 / 食品 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/yamagishi01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 カタチいろいろ！窯元直営 無垢のギャラリーで白九谷をお買いモノ 宮吉製陶 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/miyayoshi02-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 超大型の「ダンプトラック」と「油圧ショベル」に 乗れる！ こまつの杜 / 乗りもの 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/komatsunomori03-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥1,000/人 30min 九谷焼のかたち作りならお任せあれ！置物系九谷焼窯元の工房見学 宮創製陶所 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/miyasou03/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 醸造の舞台裏へ ― 小松唯一のクラフトビール店見学 KOMATSU BREWING / 酒 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/komatsu-brewing01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥500/人 30min GEMBA限定！できたてほやほや”生”辻占と工場見学 長池彩華堂 / 食品 今江",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/nagaikesaikado02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 里山で九谷焼を楽しむカフェと宇喜多窯アトリエ見学 宇喜多窯 / 九谷焼 蓮代寺・松東",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/ukita02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 ミニショベル操作体験 こまつの杜 / 乗りもの 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/komatsunomori01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 GEMBA総合案内所（謎解きプレゼント引換えもこちら） GEMBA / その他 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/informationcenter/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 シミュレーションゲーム 『ここほれ！PC4000』 こまつの杜 / 乗りもの 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/komatsunomori02-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 60min 県内唯一の木桶職人の工房見学 U-Flat工房 / 木工 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/uflat01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥600/人 自然を満喫しながら古民家で100種類以上の伝統工芸を体験 ゆのくにの森 / その他 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/yunokuninomori01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥800/人 30min 九谷焼が生まれる「こまつ町家」でアトリエ見学（呈茶付） とら屋陶器店 / 九谷焼 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/toraya01-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 絵付けの”一歩手前”を知る、九谷焼の工場探訪 木田製陶 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/kidaseitou01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥1,200/人 レトロカーがずらりと並ぶ！日本最大級を誇る自動車博物館 日本自動車博物館 / 乗りもの 粟津",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/jidoshamuseum01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥500/人 繊維工場の秘伝の蔵でデッドストックシルクを販売 小倉織物 / 繊維 市内中央",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/ogura02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 60min 工場まるごと魅せますday 〜知らなかった靴の奥深い世界が見えてくる〜 NOSAKA / その他 国府・中海",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/nosaka01/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 ¥1,000/人 30min オリジナルワッペンでつくる！アイロンプレス体験 中川産業 / 繊維 国府・中海",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/nakagawa02/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        },
+        {
+          "source_type": "organizer_event_series",
+          "title": "予約不要 無料 作り手を身近に感じる！窯元カフェで九谷焼を堪能 五十吉深香陶窯 / 九谷焼 八幡・若杉",
+          "source_url": "https://gemba-project.jp/expo/experiences/",
+          "disposition": "hold",
+          "reason": "予約不要とは確認したが、個別事業所の当該体験の実施日・開始時刻・年齢条件を確定できない。会期4日を全会場の開催日に流用しない。",
+          "program_url": "https://gemba-project.jp/expo/event/isokichi02-2/",
+          "source_family": "GEMBA",
+          "event_category": "facility_hosted"
+        }
+      ]
+    }
+  }
+}
