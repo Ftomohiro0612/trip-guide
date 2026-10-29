@@ -1,0 +1,3370 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-D-PART-8",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T08:21:45.202441+00:00",
+  "process_started_at": "2026-10-29T07:28:34.6569118Z",
+  "horizon_end_date": "2026-12-31",
+  "prior_run_numbers_reused_as_execution": false,
+  "per_region": {
+    "gunma": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.gunma.jp/calendar/index.php",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:17.149209+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "1ca7a4a77f47e58bd3bbea48b3021ba784e7409ac630a5214a46691fbc392c8e"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/calendar/index.php?dsp=1&y=2026&m=11&d=1",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:28.422565+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "37f0dd94c46e474d1354942609145483a4b25e4f0f16ae09e856364475f133cd"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/calendar/index.php?dsp=1&y=2026&m=12&d=1",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:30.267364+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e30c084ce14c4dc054ed9491981ee37069f6a06cad60b88c2dd6811382f26569"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/602995.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:47.957144+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "728b70812bb1c63ff292fe9ebfc0f2384b6f3d9edf38330851e65319d254c481"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/724806.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:51.378900+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "6797ed2e6bf0c448aa79909ab24b8f432882a4650d04c5675004c243d3ebb75d"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/777455.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:49.063517+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "fd6174e59dbc901716184bf6b0ba38e078c62d6f44dec567ad613d9346773e1d"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/774144.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:27.319661+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "52abe0d262c87348c77d4f010cc69ae22808b86619f87f289e03f291b94fb7f0"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/755649.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:28.617717+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "a4ca8a1b7cf8084c1f6be1e4dd3bef25ad2ee12dcab19625a9dfa93d87299620"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:42.660573+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "168fc34170f07beabdfe9e5839791d7d3026db0800c50fec7b907a237d1380c7"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/763747.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:47.044141+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "8c64f4848a45793d4edded8bf956190751fe0727e48af8c75be7d954eff6c1a0"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/767095.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:48.340369+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "653c72227aad737a97ac5eba026169bec86604a37be823e9187b40c43e4f13bf"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/777585.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:50.207600+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "1c30d6d97fb80842488fa9c5e5445bc9cbed5c459295459b05857cf7afa9ba44"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/767466.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:45.585911+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "34b3d2efa37095cdaa93680572ba43382936aa5e51383765b32af6f6dbef2f86"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/763996.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:32:41.848705+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "bc9ef87af24ee1ab39ed30c16a1c2cc8bf0bef3e5d1a1a9fa032f7acd5d3ee76"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/724469.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:30:50.104221+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "55369f8767c4d4f841887af6da10048cde19f29bf3075fadf52eceaedc8f7d25"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/603086.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:26.199059+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "b00dc70b0756cdad04486e15680d704bcc8f641250db48dbd738f29ebdd4aded"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/670219.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:24.755971+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "7921465a9bc42420e28d0eadb812da889a63af0dbbbb69ede9c24edffb958b4a"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/page/780569.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:32:42.983465+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "f63d0e3fdfdc185bcbfbacb814e2d5dbb5bc41b89cd1e96d85ba989ce4ec73e6"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/778983.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:44.003414+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "46310132c84ba36f3166feebfeca1b3e2221395d17df0fcfdfdc058f7468661b"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/777342.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:51.257989+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "304259dd1204c91e784c216f1b13201d43d4b64e9765af4106d1ff46353d5686"
+        },
+        {
+          "url": "https://www.pref.gunma.jp/site/houdou/776208.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:31:52.583365+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "eb7dfecd8b01e7af26c468688f256dea8d203ae94fc4232126c682a03f502063"
+        },
+        {
+          "url": "https://logoform.jp/form/9cfD/1434200",
+          "status": 200,
+          "checked_at": "2026-10-29T07:32:03.193372+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e219f5bf1fccb393c85853b3ac94025d1ceab8696ebb215dfe9f567b004074ea"
+        },
+        {
+          "url": "https://logoform.jp/form/9cfD/1434208",
+          "status": 200,
+          "checked_at": "2026-10-29T07:32:04.179571+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e219f5bf1fccb393c85853b3ac94025d1ceab8696ebb215dfe9f567b004074ea"
+        },
+        {
+          "url": "https://logoform.jp/form/9cfD/1825952",
+          "status": 200,
+          "checked_at": "2026-10-29T07:32:05.141191+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e219f5bf1fccb393c85853b3ac94025d1ceab8696ebb215dfe9f567b004074ea"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/calendar/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:33:54.340642+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "9eb6e702bb7cc6da926750bbdc6212b0eab1ff24864e85575a6086601a486d7b"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/calendar/index.php?dsp=1&y=2026&m=11&d=1",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:03.439270+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "0f479b1d30a24f23bf5cc4fa680dc93a8068f9b904c39712ac7a63d098807482"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/calendar/index.php?dsp=1&y=2026&m=12&d=1",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:05.036577+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "f09cf5dc19451feb114bf7d28d6abd879e9d08aea19e3ea7a7b6d4288197b452"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/95973.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:22.787979+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "ce1a82c846d647a296219c3fa9a691deba2527070475aaa4079b492a4cdbbc8d"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/94699.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:43.502402+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "af12c0215e69094bf520962c9b52f99d5a7b9735bd77eff37e2722b09e8d0d70"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/91269.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:44.609569+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "68d115e33f8a7e7e580171dce0fcc702c24cf2b20792a146eb3bfe1e28b52247"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:26.379162+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "7959d976ef26c5d86f2747b3774ad2912bd859ef966a0fd9a6c0721f48d83649"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:24.111461+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "f3cf2d4d6e51288436b65bb995bb585747de8770ea22af36d7f5a4a2a94f0d21"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/4995.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:46.825680+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "6cc05cb4778160a7be8522e853d51013b534f4a8df19a56852f2a939d3220ad9"
+        },
+        {
+          "url": "https://www.takasaki-foundation.or.jp/t-kagakukan/show-detail.php?&id=36",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:04.957876+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "4b6c9dd162a699075c0883cf2e485b698bd46fb125d2086e0639b1b042b811e5"
+        },
+        {
+          "url": "https://www.takasaki-foundation.or.jp/t-kagakukan/show-detail.php?&id=45",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:06.047784+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "c01b03db9e09c60e11be96aa711992d0677fae6056b2e8e9824845945e29a96a"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/68150.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:47.913998+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "08a3b67a784c652c31f44f21d7055ab2578e2dbd2cac9c28fb2628c1f00e1cfd"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/74197.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:50.458704+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "72cd848c22e625023facea0083d3aa3feee9841257e27dc25c91b3dd21d8ac30"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/96438.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:03.888360+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "ecb85b30428172262b912ee6317f46eec5130e37730b59b84fb30121bd9fab31"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/84555.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:42.052192+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "b5d3701f04aee190a83c6f61f772d236370d7150d900ee739fe4db6752be62fe"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/33424.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:45.741663+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "83a1a2531bc7086c708941991469dad6f5c2594a452b2dd09f189c816a68a433"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/sightseeing/96053.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:41.418477+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "74bde9244a969454ef5471c16a624825d31a9afc16d72bc874268288c98727a4"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/98307.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:07.051725+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8294725117cca18e42fb698752fbae39a2e07edf33543fe410cabbcd5542c759"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/50686.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:08.291045+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "1024d7ca4791b5fb272a6af857748ef35356fbb39bf34bf8b051d8e6b3a1c21e"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/49927.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:01.418104+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "410bd2c76c08837c5d10944886172f6431eb002878a94c95b879ed00efff80e3"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/4806.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:02.836529+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "682710c1e008f3b767035eb1445efb5aa11aca70a8ec603d042adab051eb8b96"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/97085.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:39.303256+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "ca72e2ec4dcd056f0e357ff364dd7a3ca992c115a8185953a0ae86eae03cfc1b"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/93770.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:38.883735+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "ad8696943ebd497d85587c03041177de96fd9a859195726019c3743990f5cf32"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/96434.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:39.871817+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "71eaa34d5cbc45b104f5fa6371416d007f8e8f88c037ee4333634d0642100537"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/6463.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:40.311485+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "ecbf8c8e41ed544899bba7eb920ba77b231e19fa009ee372bee45e22f2532c61"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/2529.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:40.920208+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "45b048748987d49dd34231b299cb9b233c396fb2878d4cb2c9d016a824e54675"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/63482.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:21.597366+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "212a86eb125901aa46aa570f425234b13015aa906351eb306e2d4e94d69ff799"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/60678.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:34:49.051899+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "523775a14f03579480a91996c0f2d17f9668d988573e824b221129474ed627bd"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/93411.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:36.843671+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8358a9cfa96bb46290498dc7b4c8abe27284c10de4ab3f5167f1d0d076e63d0f"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/95781.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:37.268406+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "d0e5bfa4c0d8d993bf4fd3dbaf4a197242035a598f2d6e9957e506a5b9679e2d"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/95782.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:37.623275+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "d5cb9d755c8c235c2667a6cddc169b11b4a6e40cc66c32660089625b1cbbb0ef"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/95785.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:37.968173+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "841b17dec38faafb54753fbdb76b0b812fb1fa884babe2d84e290efcc68c8164"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/senryou/95783.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:38.347853+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "881ebd2a163d5375c4c98965284a6bcb27a588ac590dc9d4a6358a859574ec48"
+        },
+        {
+          "url": "https://www.takasaki-foundation.or.jp/t-kagakukan/planet.php",
+          "status": 200,
+          "checked_at": "2026-10-29T07:35:41.973655+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "520abe463ba2dbcced6300ed00f4b5a6fff2beee28c7774de0afe4ef5efea6a8"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:30.731893+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "72b574fc53f8a8eeb1f1e76c0d4fb7e529daa8d451999e9fcf1e907e036a7992"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/352",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:42.403131+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "6b2024b291689f737aa51fd23fb2710763548e17ae999cd4d4f2b869654fa648"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/351",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:44.179332+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "181b55e60e91d46acb0797c0c700151cca750a6c86f74733eee6ac055ff9148c"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/350",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:45.829701+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "123b7e23e75fbcf78f1add82ddc74d7c60659d3843e62b8c21bffb240e4ae7f9"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/346",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:46.830874+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8b2d35d236a66617c10491ca9f5bc9f6c3a83b91c6649a9b0cf05675b4c2865d"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/345",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:47.907734+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "cbaba68951e381551ef263804c8a713a7d5310bb3b3ae7f2fc5a2047472b205b"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/344",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:16.496034+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "754bc0fc398a3b1debdd49b4d3d59893401db7dae974e8254237a97debb75e28"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/342",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:49.571090+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "c8a54bee363ab07c698f7d3d9ba78777d87fa6ef9c137046587f03766c77afb5"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/341",
+          "status": 200,
+          "checked_at": "2026-10-29T07:38:50.454510+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8ae93bc8e09b3af71ebeaaf534f2c8be76d8408c8295e118a30c0d023fb91f93"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/318",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:08.989457+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b3e83fb4242f2a252176462386cd1b7f3d0997394a4f07424896ec6c65dabed3"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/310",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:09.474768+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e88bfc39e3a794fb43f0db046e4ed2003585524bdfab98877216eea45c8dea43"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/161",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:10.331589+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4e33b2defc628a6480b8c5dbe264353e7c6a6e1a5f3dc553b8cb28e8dc1fab9b"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/298",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:12.089919+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "f0b577e720ce5f75ec1ccaf3c808743c4ebe41a35a6ea693adfad6cdb2004bac"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/269",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:13.565852+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "3e5870c3d1fe37655943a296e6b7c139810c2ddceb4d91e0fadd4c63ae76bf18"
+        },
+        {
+          "url": "https://gunma-kanko.jp/events/249",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:14.558191+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "d6e124f84ca26724fbeeb86ecf7019557a158af338f1c08798ca3ee5b68e9c2d"
+        },
+        {
+          "url": "https://pavilitas.co.jp/oktoberfest",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:35.878252+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4f6ff072e93c04cd4273ece63bb985d4a4e1a78ef008069f7ace980132fa9c6b"
+        },
+        {
+          "url": "https://tsunacom.or.jp/event_form/arukunbe_in_kawarayu_2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:36.569599+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b041e3680c1b99603caeb81a069e4ecd8da9aa9a0410beb261e7044b4de28997"
+        },
+        {
+          "url": "https://www.tama-miryoku.com/news/post-4808.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:37.381181+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "78efc248fa2ed50a34a91f3ef5870e1948f4ef5f0d826a7401d4566f910e7052"
+        },
+        {
+          "url": "https://agakanren.com/news/3564/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:38.116110+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "04b1e902ace28c548c585c78660d757c4576460d984e8ee0f35a866396bba001"
+        },
+        {
+          "url": "https://agakanren.com/news/3562/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:38.766809+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "7d6d7c644f1ad884286bf81a9c959d0f63b85b6bb26b0cfe9b1fb4e333eedae8"
+        },
+        {
+          "url": "https://maebashi-biennale.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:39.316762+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "273683e72cf8627eaf7d7b2f23c8b24e104874444266c3253e1ba64deda179ec"
+        },
+        {
+          "url": "https://maebashi-biennale.com/ticket",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:39.931433+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "ba5f02d91a2278f832287f358c0885b0d3bd20a2603227bce7956113a6171040"
+        },
+        {
+          "url": "https://www.machi5.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:40.433453+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "583340cb13ed694464f70a97a7ba21b1a7e37f3addccb52396bf609c96e863dc"
+        },
+        {
+          "url": "https://www.oizumimachi-kankoukyoukai.jp/event/416/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:39:41.032970+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "3dfdfc2e2ad6aee87f8482d729a8cbd5f84e82354d760b1395f591de8850f679"
+        },
+        {
+          "url": "https://www.instagram.com/kuraganomatsuichi/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:40:19.467730+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://www.tomioka-silk.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:40:20.351120+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8a52b3a064daca72f55d0c9cfc565042cc6664bd73024b40730e56f17b50e12c"
+        },
+        {
+          "url": "https://agakanren.com/news/3111/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:40:20.754690+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "22acb54129c6655171805f94f4710d81c082b63bee8b64e324189d53cb2eb235"
+        },
+        {
+          "url": "https://natureinblue.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:01.884343+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "7a0780e1fef2fcd6e2475478b79e146d481bbf5aa7b4ce23cf31001c95677cf6"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:23.780693+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "b324d564e0cb425fd7799dd6eb937d9b6a5c3617ece7cfed4ba85a50d2821970"
+        },
+        {
+          "url": "https://www.maebashi-cvb.com/feature/event_calendar/top",
+          "status": 503,
+          "checked_at": "2026-10-29T07:41:15.155946+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "1f60f1783d518a242fd941a4257f1723b5a1f4e42b6cc728534cf100d5ca5265"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/page/6469.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:45.557544+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "99bca2fb2bc19de0bb84039406c8bab14d692ccb11938c32a420099dc7dc07a8"
+        },
+        {
+          "url": "https://www.city.takasaki.gunma.jp/site/digital/98327.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:46.010152+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "ac949834f27edb2413532b9007bc077fa33f97f5f47cb7e90d400eedc8e95858"
+        },
+        {
+          "url": "https://takasaki-otomachi.com/haikeiboowysama/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:46.369488+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "7a6b7bfff9b851f1042fbb5db80a1cd6c029fdc5586fe44ab354ed853c93e1cd"
+        },
+        {
+          "url": "http://www.shinmachi.or.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:46.760857+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "b561a8bbb3e2d98419865165f4956658b51cd80202d952a0c5c689f2d82ec87a"
+        },
+        {
+          "url": "https://kouzuke-kokubnji.sakura.ne.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T07:41:46.983324+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "0b5355bb18dd378f0f58fd7c810c466d360d789e754f2d0248eb6cd42b43826e"
+        },
+        {
+          "url": "https://gunma-kanko.jp/features/189",
+          "status": 200,
+          "checked_at": "2026-10-29T07:42:39.285444+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "65cdfc96208ec1d1938aeb2d79bc3059b6cb1163d7efaef12c591aa982fb81b5"
+        },
+        {
+          "url": "https://www.city.ota.gunma.jp/site/kankou/1061685.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:42:40.862142+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "71b4b7afe7421a96e105cafad687937228a58e431f3cd66b4b297677c8857bee"
+        },
+        {
+          "url": "https://www.city.ota.gunma.jp/page/1039430.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:43:07.415942+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "79fb7c8b80144dc8550a172e8c531e290cff2d30bc519afcc0b6c26624f18767"
+        },
+        {
+          "url": "https://www.town.oizumi.gunma.jp/s020/kanko/010/070/010/20250722132824.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:42:42.083524+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "3ca818bae1254b8f30ae53012d8ca4f6f14d4908ee90b418e51b263aa417917f"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000102.000142628.html",
+          "status": 200,
+          "checked_at": "2026-10-29T07:43:07.904604+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "70d043bb911455d48732e9b3eac974b769cebceb74965a833073201fb774a969"
+        },
+        {
+          "url": "https://gunma-kanko.jp/features/72",
+          "status": 200,
+          "checked_at": "2026-10-29T07:42:43.258149+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "3cffed2a14ee9ac379eb4d6c39e91d9ccba265ae0715ad1a252ed414c3a82ec9"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "北毛ふれあい塾1「ダッチオーブンピザ」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/602995.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-001",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "北毛ふれあい塾3「餅つきと昔遊び」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/724806.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-002",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "群馬県産花苗を使った寄せ植え教室",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/777455.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-003",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "第115回企画展「現代によみがえる能装束 ―縫の精緻 箔の輝き―」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/774144.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-004",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "特別展示「孤高の彫刻家 村山琴泉」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/755649.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-005",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "第130回企画展「三島由紀夫のアオハル 中島飛行機からの出発」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-006",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "ぐるっとね！旬のminoriスタンプラリー",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/763747.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-007",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "桐生市・みどり市デジタルスタンプラリー",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/767095.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-008",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "八ッ場全力スタンプラリー",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; absent from base and Summer merged set.",
+          "official_url": "https://www.pref.gunma.jp/page/777585.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-009",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "かんな・かぶら∞ぐるぶらの旅スタンプラリー2026",
+          "disposition": "hold",
+          "reason": "Numeric year conflict: calendar ends 2026-11-30, detail says 2026-07-04 to 2025-11-30; no precedence authorized.",
+          "official_url": "https://www.pref.gunma.jp/page/767466.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "ぐんま道の駅スタンプラリー大冒険",
+          "disposition": "hold",
+          "reason": "Calendar end 2026-10-31 conflicts with detailed activity end 2026-10-19; prize deadline 10/31 is not proof activity continues.",
+          "official_url": "https://www.pref.gunma.jp/page/763996.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "北毛ふれあい塾2 ミニ門松と昔遊び",
+          "disposition": "hold",
+          "reason": "Application interval states 2026-10-03 to 2025-11-07; numeric year conflict prevents confirming open participation.",
+          "official_url": "https://www.pref.gunma.jp/page/724469.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "親と子の星空の夕べ",
+          "disposition": "hold",
+          "reason": "Calendar end time 09:00 conflicts with detail 09:15; live application acceptance not confirmed.",
+          "official_url": "https://www.pref.gunma.jp/page/603086.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "焼まんじゅうづくり",
+          "disposition": "hold",
+          "reason": "Application closed 10/02; no walk-in route stated.",
+          "official_url": "https://www.pref.gunma.jp/page/670219.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "おもしろ科学教室 さおばかりを作ろう",
+          "disposition": "hold",
+          "reason": "Official 10/26 update explicitly says recruitment ended; no participation path.",
+          "official_url": "https://www.pref.gunma.jp/page/780569.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "ぐんまオーガニックマルシェ",
+          "disposition": "hold",
+          "reason": "Calendar claims 10/28 to 2027/01/31; official detail says only 10/28, already past. Numeric conflict held.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/778983.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "AUTUMN BLOOM FAIR",
+          "disposition": "hold",
+          "reason": "Official press release confirms dates and shuttle, but bad-weather/change and child-attendability detail incomplete for seasonal adoption.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "Night Bloom",
+          "disposition": "hold",
+          "reason": "Official press release gives dates/17:00 lighting and shuttle; bad-weather cancellation and young-child conditions not established.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/777342.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "ぶんぶん文学、だんだんダンス（11月29日）",
+          "disposition": "hold",
+          "reason": "Press release names date/program but not application path, time, fees or age conditions.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "展示解説2 三島由紀夫のアオハル（11/23）",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Ordinary exhibition tour is included in newly added parent exhibition; no separate mandatory booking.",
+          "official_url": "https://www.pref.gunma.jp/site/houdou/774229.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-006",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "秋季企画展「東山道駅路沿いにあるムラの風景」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/95973.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-010",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "収蔵拓本コレクション展2「三国・晋・南北朝の時代」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/94699.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-011",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "収蔵品展「草木染の美・秋」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/senryou/91269.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-012",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "収蔵作品展「Human Figure 人を見つめ、かたちづくる」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-013",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "日本画の窓―旅する風景",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-014",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "村上鬼城記念館 特別企画展「鬼城と子規・虚子」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/4995.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-015",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "名探偵コナン 閃光の宇宙船（ペイロード）",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/show-detail.php?&id=36",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-016",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "COSMIC CRUISE 大宇宙と私たち",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.takasaki-foundation.or.jp/t-kagakukan/show-detail.php?&id=45",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-017",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "ファミリーコンサート（2026年）",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/68150.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-018",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "染色ワークショップ「干支の絵馬ハンカチを作ろう」",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/senryou/74197.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-019",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "歴史探検ウォーク～八幡台地めぐり～",
+          "disposition": "added",
+          "reason": "Official date/venue/participation confirmed; genuinely absent from merged base/Summer inventory.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/96438.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-020",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "忘れ去られてゆくむかしの農具展",
+          "disposition": "hold",
+          "reason": "Calendar ends 2026-10-31 but detail says 2027-03-28; numeric official-source conflict.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/84555.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "21階展望ロビーアートワーク展（駒井伸子作品）",
+          "disposition": "added",
+          "reason": "Official detail plus official calendar confirms actual participation; age/access limitations are stated in Product rather than assuming all-ages access.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/33424.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-022",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "榛名湖ステージ 10/31",
+          "disposition": "hold",
+          "reason": "Calendar time 11:00-15:15 conflicts with detail 11:00-14:30; no authorized precedence.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/sightseeing/96053.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "2026吉井秋まつり",
+          "disposition": "hold",
+          "reason": "Date, cancellation, rail access verified; child programme/attendability basis remains in unverified flyer.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/98307.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "旧下田邸庭園の紅葉ライトアップ",
+          "disposition": "hold",
+          "reason": "Dates/time confirmed; rain-out rule, transport/access and child conditions not confirmed on this source.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/50686.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "たかさき食育・健康フェスタ2026",
+          "disposition": "added",
+          "reason": "Official detail plus official calendar confirms actual participation; age/access limitations are stated in Product rather than assuming all-ages access.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/49927.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-023",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "生涯学習フェスティバル",
+          "disposition": "hold",
+          "reason": "Outline date/venue only; programme and participation conditions on linked site not yet confirmed.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/4806.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "第5回シネマ＆トークin新町",
+          "disposition": "hold",
+          "reason": "Tickets do not go on sale until 11/12, so no current participation path; preschool admission prohibited.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/97085.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "高崎寄席in箕郷",
+          "disposition": "hold",
+          "reason": "Ticket-sale plan exists but current remaining ticket stock and child suitability not established; preschool prohibited.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/93770.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "2026人権を考える市民の集い",
+          "disposition": "hold",
+          "reason": "Application link exists; fees/quota/acceptance state not established on the page.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/96434.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "明るい選挙啓発ポスター作品展",
+          "disposition": "hold",
+          "reason": "Date/venue verified; city-hall weekend access conditions not established for 12/12-13.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/6463.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "牛伏山秋のハイキング",
+          "disposition": "added",
+          "reason": "Official detail plus official calendar confirms actual participation; age/access limitations are stated in Product rather than assuming all-ages access.",
+          "official_url": "https://www.city.takasaki.gunma.jp/page/2529.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-021",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "ワークショップ 人を描く（10/31）",
+          "disposition": "hold",
+          "reason": "Distinct-booking workshop overlaps parent exhibition under same canonical URL; needs reviewed distinct-program validator exception, not a guessed duplicate.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "日本画の絵の具で描いてみよう（11/8）",
+          "disposition": "hold",
+          "reason": "Distinct-booking workshop overlaps parent exhibition under same URL; needs reviewed distinct-program validator exception.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "東山道展 展示解説11/7",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Ordinary no-booking gallery interpretation explicitly covered by newly added parent exhibition; no separate admission.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/cultural-assets/95973.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-010",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "日本画の窓 学芸員解説",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Ordinary no-booking gallery interpretation explicitly covered by newly added parent exhibition; no separate admission.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/tower/95791.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-014",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "Human Figure ギャラリートーク12/6",
+          "disposition": "duplicate_or_already_present",
+          "reason": "Ordinary no-booking gallery interpretation explicitly covered by newly added parent exhibition; no separate admission.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/art-museum/93842.html",
+          "category": "facility_hosted",
+          "event_id": "evt-gunma-20261029-d8-013",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "たまむらマルシェ",
+          "disposition": "added",
+          "reason": "Organizing town tourism body confirms date, indoor hall, free entry and programme.",
+          "official_url": "https://www.tama-miryoku.com/news/post-4808.html",
+          "category": "municipal_regional",
+          "event_id": "evt-gunma-20261029-d8-024",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "第4回 Kuragano松市",
+          "disposition": "hold",
+          "reason": "Organizer Instagram fetched but no readable event body; seasonal weather/access/child conditions not established.",
+          "official_url": "https://gunma-kanko.jp/events/352",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "オクトーバーフェスト高崎2026",
+          "disposition": "hold",
+          "reason": "Organizer page fetched but image-only event details; rain, latest change and child programme not primary-text-verified.",
+          "official_url": "https://gunma-kanko.jp/events/351",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "【つなカンふるさと再発見企画】「～歩いてめぐる川原湯温泉～　なっから歩くんべぇ 2026」のご案内",
+          "disposition": "hold",
+          "reason": "Organizer application form currently open, but detailed age/route conditions remain unconfirmed at primary source.",
+          "official_url": "https://gunma-kanko.jp/events/350",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "倉賀野城十六騎、いざ出陣！　武者行列を見に行こう",
+          "disposition": "hold",
+          "reason": "Festival parade: rain rule known, traffic/public-transit impact and child crowd/access assessment not established.",
+          "official_url": "https://gunma-kanko.jp/events/346",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "【学生駅ハイ】長野原町の隠れた魅力を一緒に満喫しよう！",
+          "disposition": "hold",
+          "reason": "Tourism sources agree but JR primary route/operating exceptions not verified; no secondary-only adoption.",
+          "official_url": "https://gunma-kanko.jp/events/342",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "駅からハイキング「秋の八ッ場あがつま周遊湖コース」",
+          "disposition": "hold",
+          "reason": "Tourism sources agree but JR primary route/operating exceptions not verified; no secondary-only adoption.",
+          "official_url": "https://gunma-kanko.jp/events/341",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "第一回 前橋国際芸術祭2026",
+          "disposition": "hold",
+          "reason": "Multi-venue festival: ticket access exists; latest important notice and weather/access conditions require separate evaluation before festival adoption.",
+          "official_url": "https://gunma-kanko.jp/events/318",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "〈ご予約受付中！〉NATURE in BLUE―ECHOES OF SHIMA―（中之条町）【8月8日（土）～11月30日（月）】",
+          "disposition": "hold",
+          "reason": "Dedicated official site fetched; actual reservation availability, weather and child attendance requirements not established.",
+          "official_url": "https://gunma-kanko.jp/events/310",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "妙義クエストリアルRPG",
+          "disposition": "hold",
+          "reason": "Year-round attraction lacks finite current event period; no invented end date.",
+          "official_url": "https://gunma-kanko.jp/events/161",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "中之条まちなか５時間リレーマラソン　先行エントリー受付中！【6月19日（金）～7月31日（金）】",
+          "disposition": "hold",
+          "reason": "Official event is 2026-12-06 but entry explicitly full/closed; no stated walk-in participation.",
+          "official_url": "https://gunma-kanko.jp/events/298",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "ラムサール条約登録地を歩く！ 芳ヶ平湿原とチャツボミゴケ公園散策ツアー受付中！（中之条町）【3月30日（月）～10月31日（土）】",
+          "disposition": "hold",
+          "reason": "Official tourism warns road closure and modified route; exact current route, age/booking availability unconfirmed.",
+          "official_url": "https://gunma-kanko.jp/events/269",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "【2026年】活きな世界のグルメ横丁",
+          "disposition": "hold",
+          "reason": "11/22 occurrence listed; organiser page currently focuses 10/25, remaining seasonal rain/traffic/child conditions not confirmed.",
+          "official_url": "https://gunma-kanko.jp/events/249",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "オペラ タング（玉村 11/8）",
+          "disposition": "hold",
+          "reason": "Organiser tourism page links to ticket portal but performance time, price, age and actual ticket availability not verified.",
+          "official_url": "https://www.tama-miryoku.com/news/post-4808.html",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "富岡製糸場フランスウィーク2026",
+          "disposition": "hold",
+          "reason": "Home feature surfaced, detail date and participation not verified.",
+          "official_url": "https://www.tomioka-silk.jp/",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "妙義クエスト 第3弾",
+          "disposition": "hold",
+          "reason": "Year-round RPG; no confirmed finite end date in current schema.",
+          "official_url": "https://www.tomioka-silk.jp/",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "富岡クレープマップ2026-2027",
+          "disposition": "hold",
+          "reason": "Purchase coupon promotion; finite event period and family programme not established.",
+          "official_url": "https://www.tomioka-silk.jp/",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "鳴沢湖ワカサギ釣り 2026-27",
+          "disposition": "hold",
+          "reason": "Season/date/fees/traffic restriction confirmed; child water-safety/attendance and bad-weather suspension conditions not published on checked source.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "榛名湖ステージ 10/31",
+          "disposition": "hold",
+          "reason": "Official calendar gives 15:15 end, detail and seasonal feature give14:30; unresolved time conflict.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "拝啓ボウイ様",
+          "disposition": "hold",
+          "reason": "Seasonal feature says13:00 start10/31; official calendar and organizer say12:30. No general detail-precedence rule; HOLD.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "TAKASAKI COFFEE FESTIVAL 珈琲愉時",
+          "disposition": "hold",
+          "reason": "Seasonal feature gives dates/fees but rain-out, traffic/transit impact and young-child conditions remain unconfirmed.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "しんまち商工会・大道芸まつり 神流川合戦",
+          "disposition": "hold",
+          "reason": "Family performance confirmed; rain/postponement and traffic/transit-impact rules not confirmed on fetched sources.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "第15回上野国分寺まつり",
+          "disposition": "hold",
+          "reason": "Date/program/shuttle confirmed; rain/postponement and latest changes beyond initial notice not established.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "吉井福祉センターまつり",
+          "disposition": "hold",
+          "reason": "Child workshops and date/venue confirmed; rain/access and individual workshop participation conditions not established.",
+          "official_url": "https://www.city.takasaki.gunma.jp/site/digital/99032.html",
+          "category": "festival_seasonal"
+        },
+        {
+          "name": "刀水橋花火大会2026",
+          "disposition": "added",
+          "reason": "Official dates/rain cancellation/traffic and shuttle, latest10/22 issuer release, child seating and rough-access warnings verified; free viewing provides real participation path.",
+          "official_url": "https://www.city.ota.gunma.jp/site/kankou/1061685.html",
+          "category": "festival_seasonal",
+          "event_id": "evt-gunma-20261029-d8-025",
+          "participability": "通常参加可能"
+        }
+      ],
+      "candidates_found": 73,
+      "added": 25,
+      "duplicate_or_already_present": 4,
+      "hold": 44,
+      "stale_false": 0,
+      "scope_exclusions": "Professional agriculture/health/abduction lectures, exhibitor recruitment, restaurant menu/SNS purchase promotion and dog-travel campaign are not distinct child/family outing programmes. Museum reopening and past anniversary 10/10-12 are not future events. Related adult literature lectures excluded; exhibition tour included in parent.",
+      "horizon_note": "October active listings, full November and December calendars inspected through 2026-12-31; later running exhibitions/rallies also evaluated.",
+      "municipal_scope": "Takasaki: largest city in Gunma; distinct municipal official calendar, October remaining plus full November/December.",
+      "municipal_exclusions": "Traditional-culture programme is age15-39 (summer parent-child programme ended); six dye/nature courses are high-school+; adult university/business/job/housing/care/poetry lectures and waste collection not family outing candidates. Adult artist talks remain outside child programme scope; ordinary gallery talks included in parents.",
+      "municipal_horizon": "2026-12-31",
+      "tourism_horizon": "Unfiltered future-events index explicitly reports all14/14 entries, including December20 and December31; no next page.",
+      "tourism_exclusions": "Dog lodging/app campaign and permanently offered rental/guide services, permanent Hokusai display and 10/10-18 already-ended notices not finite new family events.",
+      "seasonal_scope": "Dated municipal autumn new-arrival guide (10/15) plus10/28 fishing-season update; future season extends to2027-02-28. Earlier10/17-25 events individually checked as past, excluded without backfill.",
+      "seasonal_source_gap": "Maebashi tourism seasonal calendar HTTP503 emergency-maintenance notice; successful Takasaki official seasonal guide used as alternative.",
+      "festival_scope": "2026 prefecture official fireworks feature inspected in full: only Tosuibashi is current/future; all17 other named fireworks/festivals ended before mission. Winter official feature72 is explicitly2025-26, all18 entries past, never rolled forward.",
+      "festival_horizon": "Current2026 full annual fireworks feature plus winter feature inspected; no later2026 fireworks listed after10/31. December seasonal entries continue to be sought in organiser/recall units."
+    },
+    "nagano": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.nagano.lg.jp/event/",
+          "status": 404,
+          "checked_at": "2026-10-29T08:10:31.620680+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "b5f91bda3009dbf50bdf1f504c842b11c80589bb93d92df664af4449a9559775"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:40.519798+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e0a0af90b33f4fc4bf038873d0bbd643dc3dd55058c63d6e96b5d1760cf4fd19"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2243/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.033532+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "328f6e35bb8ca62514b39f167ee7ff233508183caaa6b31980b8b96b51038c85"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2448/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.034324+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "b0a45a6fb8b1c027a6583d0fdfadfb6aeb12268cee5d981ea586b859d7277469"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1359/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.035097+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "68e5d6eb6f211a291e655a0bcc5c76d83242446da93aa14f389a9ac9d3c9756d"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2436/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.035347+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "e5409d0940c26d9ea6a7f60245e4eb1a2b6727469de27033777c775c7f5120a2"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2403/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.035530+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "7ea92eea3ccda71e89a82d154c4072966d121f18c0fc3cef9b09b2da5d92fa61"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2463/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.036010+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "5cf5b470f700f63b77521bdd775cce28aef6c44f5c563872c9dda45046d85c75"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2326/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.937312+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "5056c46bf38b484418fbc8626c5f89213310a52b0c1b4f1d2dc1e39aa9415368"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1829/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.940669+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "98efafc1d5ac7fccdff3633dea2e8e9290421b5ab4a00e6fcb4a89b8b7ed2245"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2207/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.942563+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "4b5a2471fa7f33151482c7faf408eb6e13b8e087bf618818806333c124bfad05"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1936/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.945105+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "0bf5e818e3af45b47f2c3396d31dff8cbe0e51d5863aa142a2f2fb0ef1db6200"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1945/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.948688+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "850d8979b475835827d7df7a4a65da344f9af9603cb94b7cb15dcf5b4e04b12d"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2293/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:57.950075+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "f001cd2bf19b10ed766fb773506be40674baa1b29bee555c8b3df3a82f9881cd"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2471/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.680512+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "7c129a253cda3afddc9e13256818a0c0eecfeb7e9d52196ec15fe943b61059bd"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2202/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.703090+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "7b4602c77c0f5779bd5655090cf30a5dd5e10041f58f8b7cbfe731e03f66abec"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1897/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.704927+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "0d2b5e1923ba14e8c1ed9209f3429f16a704571b1625db9977d4be6a5b4d558f"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2153/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.708851+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "fdd00a6bd2b6ad5500794db08cd808cb1215e1b0bd8fe4616579378282dbac39"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1849/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.712589+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "616c222a6973dec3f3c026157dbda3f43bfc6d3075e35a553633e402eba64a17"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1976/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:58.719558+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "3bc401fd3bdad2c3e786ef65b42e8021184652f8e52c9b64860f87837a724eab"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/2159/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:59.482693+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "8e84396d506cbd56c65c920a498558d8121fe8c8d2ea1127dce4536fd99d263e"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/306/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:59.487022+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "0cecda9c186e7535720dd3aea88afc069baf6107ac45a3ef5ebbbfd312678788"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/1395/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:59.488650+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "4dd2dc957fddfb1588fa518e0fbe1902bf8eab15f5ee34d6a6b82b9fff5fd8a1"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/605/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:59.490099+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "1a7148c0c6de9c89223e5c9616881341f69ace88fe318125e120a92ffbe6b51c"
+        },
+        {
+          "url": "https://150th.pref.nagano.lg.jp/event/678/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:10:59.492941+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "c555f4cfcc4982d239508ef9c3413717b993dfb697b28d98d61017ed4ef9599c"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLScgglNfXBF0onKLqU-YlA806HKU4dP7r_uj417Ls_jiXnFQTQ/viewform",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.173939+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "fd0992f8930fb019a352809395cdf7e613027f18451bfef74cb002dec224b380"
+        },
+        {
+          "url": "https://www.kantan-kitsuke.jp/event/kimono-event/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.174569+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "29075aa459a738cf79e816134589f426cab45c62a8cab860889c6c3e1643af3d"
+        },
+        {
+          "url": "https://www.ueda-trenavi.jp/news/2046/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.174998+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "73c4da45c376ac00aa344851473aa8955877a571067c43801897545fc9a89c6b"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/kenshihensan/shinpojiumu.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.175453+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "adeecb8d36f5f98db262af85cb06668480ad85c6ecbf66801ab326c138b92c13"
+        },
+        {
+          "url": "https://www.npmh.net/exhibition/2026/03/150150.php",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.175803+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "55bda1e075a5df2b14a729b2d62330fde1377fdd95ba983bfa97b33130ae8a19"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000002.000185464.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.762032+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "78ed568e085fc8675d40fc0ab08eb0bf7443341430fd6e503d8966b08c909455"
+        },
+        {
+          "url": "https://www.greenproject.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.852753+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "7d30bb9907e510d6c5dcf488d9612cd6cc6874a3aa4789ff8f47d46c46432e78"
+        },
+        {
+          "url": "https://www.knowledge.pref.nagano.lg.jp/now/news/singing-nurseryrhyme.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:19.984645+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "a0e1bdd2357a6c072c7dad3d32d9840d0ca2f2079a0d5ab14dfde2686d38025e"
+        },
+        {
+          "url": "https://livepocket.jp/e/nagano_molkky",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.050367+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "b38a3ebe65ea1e51423d94a276572d8cc0879218cdb68ff2da3feca8282cfcb1"
+        },
+        {
+          "url": "https://www.azumino-koen.jp/oomachi_matsukawa/index.php",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.384045+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "d4debea79e06a079e88a6dcfdf436c316d26ef5e27c7dc3ac58bc840af5f60ec"
+        },
+        {
+          "url": "https://www.wakita-museum.com/event/event/newhope/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.386676+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "225e8c29f2984a541998a53a3a5a51f56d1e39d0597a6225ccce4668bbcd0c45"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/gijukan/happyou/261009press.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.393152+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "fe1585f73a8f9d44a527a813172981cee4e8456ace685a7eaa68df4235bb3265"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/gijukan/happyou/261023press.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.558878+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "236fc5898baecf1e819fd342c0b574e323f7c0ea47a0ea85692c000cc658c7a5"
+        },
+        {
+          "url": "https://www.town.obuse.nagano.jp/docs/340629.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.641034+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "09195a563da045a7acea26a6cf3897b9235b988aa83fcc0b72b5031dab1c803a"
+        },
+        {
+          "url": "https://www.art-inclusive.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:20.876072+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "d332dfdbaee2997813631a42c0222cec199ed318d8d245bb2ea098d98bea9b50"
+        },
+        {
+          "url": "https://www.82bunka.or.jp/event/2026/11/post-416.php",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.014914+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "65fa2fe1182381fc76874cd5ed0663dcbf1f0d53bb7f18bd323f4eea37ad1447"
+        },
+        {
+          "url": "https://www.82bunka.or.jp/gallery/2026/10/150.php",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.093785+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "65fa2fe1182381fc76874cd5ed0663dcbf1f0d53bb7f18bd323f4eea37ad1447"
+        },
+        {
+          "url": "https://www.82bunka.or.jp/event/2026/12/post-424.php",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.141210+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "65fa2fe1182381fc76874cd5ed0663dcbf1f0d53bb7f18bd323f4eea37ad1447"
+        },
+        {
+          "url": "https://www.nakayama-takano-kinenkan.com/20250506141428",
+          "status": 403,
+          "checked_at": "2026-10-29T08:11:21.382209+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "dfd7d63c69c21b54a5b94224c2adf0bf7c28349f3f0088a838a3c8afe7e71b87"
+        },
+        {
+          "url": "https://www.knowledge.pref.nagano.lg.jp/now/news/naganoken150th_byt.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.623370+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "ec14e86cfa5367ecc08f95d64e221f403bafcb97831b22dd7b982ee07cbe5e19"
+        },
+        {
+          "url": "https://www.kyowa-corp.co.jp/news/info/2026/07/30/1626",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.626000+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "70dea5aecdc0269df929f107090e9591a5571a569430fa510e9fc8dd5805ebb0"
+        },
+        {
+          "url": "https://shinshu-taiken.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.635725+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "de96cefb9c2563d761e87595e09ea3d0baf375cf325d5d384bb9fb47551ac1b0"
+        },
+        {
+          "url": "https://www.qkamura.or.jp/norikura/free1/?p=262&v=on",
+          "status": 200,
+          "checked_at": "2026-10-29T08:11:21.770162+00:00",
+          "source_type": "prefecture_official",
+          "content_sha256": "d6ebcccba60e385f80ab321553e7156de0cf5f51509b66cd1c8440a4182006e0"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/cgi-bin/event_cal_multi/calendar.cgi?year=2026&month=10&type=2",
+          "status": 200,
+          "checked_at": "2026-10-29T08:12:58.794492+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "b62fb471750c8e19b5f81a9ecc441d48770645a44f6df5efcdbd3b71557a9baf"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/cgi-bin/event_cal_multi/calendar.cgi?year=2026&month=11&type=2",
+          "status": 200,
+          "checked_at": "2026-10-29T08:12:59.475515+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "b56ffe58fbb3fdbf47b8d743134f3c647fcc921a8e40f635237555df6e9413eb"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/cgi-bin/event_cal_multi/calendar.cgi?year=2026&month=12&type=2",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:00.039479+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "c52f5ae513927649133355573e191792c54cf37f40e42f9da8bdddc6f9fbdf30"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n155400/event/p006245.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.157187+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "0c9444929836278d22cfb8c9338a8aef2336f9080c81c6bf2b406fb10f5f3c13"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n023500/event/p000001.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.157633+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "17edbe815076a9b9133ceb8cd82f31f1918c3d90513ccca49512ab448dde0c10"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n155400/event/p006244.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.157898+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "61854e43f4a2a766c28e79d539c3aa135374f2115df48c1e10583c621a2e8383"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n155400/event/p006246.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.158140+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8ec25c8feba1e3fdab735b2f2b8e6ab484a5041071fd20ffb0bd4e0b102fdfe1"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n023500/event/p000002.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.158362+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "9fc93f401ba4c1389462feceef1a60db5d53ec23f56dedbff0e2ab5854cf429a"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n101200/event/p000016.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:20.158616+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "5225bddd17f931890cbdeada88a6657ca2251ef53f235f8b66aaa344cf71b560"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n155400/event/p006247.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.185539+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8e7072543d09c66e4d982f9855c04e34260245040858e3cfaeb0289d2c1844d4"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000113.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.188474+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "db635cb5fa63f5cb01c3f81dae89fb2d2b88cf0873928a63eaacc35e7e9fbdb4"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n155400/event/p006250.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.193525+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "30816329dc6780d2514785207d8e7581fa7303b9e36fe86ae94ac45606515dcc"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n042000/event/p000001.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.198756+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "e5f7d6640e68dcfbab794ee6469b75fdbb07a1b879f9dd9c16c74642ecbcbddc"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n106500/event/p000020.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.202487+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "b4020388595c3adb82f3b6527df6bebea65d546403fb3f577993a894649a8c18"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n205100/event/p000005.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.209737+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "36530e2cfc26c287838fd3a28706f19236f25b35221fd1e65600580e87b78e4a"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n101200/event/p000028.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.985203+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "4433f9968c2fa3641a8c54b46ca46e3d7d80703df4aa839833d5904b7452e655"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n107000/event/p000001.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.987816+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "b4ef26fb77013f51ca60704b4a359e0655bf90822f03cf310992d8b1371b93b8"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n107000/event/p000002.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.990154+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "94f27ac80e80b68b8b6284b34ec8ae362ef3a9dd9e1dbcbe8c93ccb76b43200f"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000116.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.991639+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8ac3b7c345c388c99cedc578981e51563e9902b93b898f5baa6ef8a40c3b0221"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000117.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.993265+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "578815c5e630e825e0c28dd9073f982cf637a866fba69677dd759bcd28d56a0a"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000111.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:21.996363+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "251c98af2c13598919b4b6a2ca7f39a565f8c729a2e02abbb5d894b4eb8c965d"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n150500/event/p000080.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.697672+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "8617380308b25a4000bc197eca7878cd9819376f0b09446e7cf52b153fd1f267"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000108.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.704704+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "25cbeff5a5f1bf8d8738126fb1157692f72111e10fa9baf32d9c415658fbdceb"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000110.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.708377+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "0febcb8bffc77dadb0023c53807f4c9e98680ff11ce590e1d1810bca474b6b7c"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n107000/event/p000007.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.713225+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "4c0ad8551c60ff90c412a06e0b90d8c8a10ceb5441212c125361b0c244d595d7"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n086500/event/p000114.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.716722+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "0aa26b6c8123c678a10566641e15ebebd0d17b2bd48a7727d9ec58d034c5f96d"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n107000/event/p000018.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:22.720175+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "6262e2b1f04bddb548a4fb38d4d08a81dd65693f998ce7b9cd8bacc109ddf972"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n101200/event/p000027.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:23.591743+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "6dc25eb5769367fdc68b9fa60150f80185459d29fc71671e798c44ae3c10eb44"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n042000/n042005/contents/p016166.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:13:54.695988+00:00",
+          "source_type": "municipal_official",
+          "content_sha256": "49f6f6d9e9e2908a245dffdbefa7615a39044aad7bf6d0c609412f240f570143"
+        },
+        {
+          "url": "https://db.go-nagano.net/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:14:39.287100+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "a833cfe8131537a3f07a536dc8355df93f1cebf006817783d6bd18573eb4094a"
+        },
+        {
+          "url": "https://db.go-nagano.net/event/tab_month=2026-11&topics_ext_options_search=1&scope_search_ext_04_from=2026-11-01&scope_search_ext_02_to=2026-11-30",
+          "status": 200,
+          "checked_at": "2026-10-29T08:14:53.653197+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "95f3d87805a0e383e8f46d1bb27f9127cd6cf27e96e1d3c41971ef79e220a859"
+        },
+        {
+          "url": "https://db.go-nagano.net/event/tab_month=2026-12&topics_ext_options_search=1&scope_search_ext_04_from=2026-12-01&scope_search_ext_02_to=2026-12-31",
+          "status": 200,
+          "checked_at": "2026-10-29T08:14:54.357190+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e53815274320bab780853865a421d28613fee6112d9ca2a477bee490540fcb56"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23138",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.165748+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b19d333b15b17bd027ad00ef04bfe11ca405f04a43fa2231fbac1fef2af1642e"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23137",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.166254+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8dbe05e83b6405d8860b09f93e831ad7e0c360714d03e25179a65a31eda7f722"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23105",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.166981+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "67f9f2237d9f476b08b48496563a531c5bb3dc2132262f671b3fff1fc63615a2"
+        },
+        {
+          "url": "https://www.chikumagawa.net/news/news-4487/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:40.380289+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "9f25f960ab04a720ca6503a7a61e53ec80145b59d434e253f208b12bf193cbd5"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23097",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.167276+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "36bc8ebd1da5c1b56d7a3b01ec6589dabfd849e56a8f567cffd65fdce721f8a6"
+        },
+        {
+          "url": "https://nagano-no-foodloss.jp/pc/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:40.380963+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "63525049e224ece5f7c25353116906d4a241165aad8d8e8b26e94aaec7204678"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23096",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.167507+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "a895a31fe4c99332e0f48436c2054dad89b474510767c737f766fdcd0b896192"
+        },
+        {
+          "url": "https://www.ningyoukan.net/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:40.381490+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "02f6395ecfd88fba19203943f0704f1ba14991b8a75e564015b9cbcdca78c0bf"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23095",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:10.167823+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "2d476d72ba1bd0d825626d6c1fededa97665e7ccdffe33318cf8d31771d7f921"
+        },
+        {
+          "url": "https://www.iiyama-ouendan.net/2026/09/20577/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:40.381840+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "abc25c55feb750bda99ca65dba1d7b6b7dc2ecbb974123762a5395484cb67813"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23094",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.827454+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4f3b2482e394639ef2b8efd8def2aac0a4a35c247ebd4530eb873fa007ad4c2c"
+        },
+        {
+          "url": "https://www.suzaka-kankokyokai.jp/event/sweets_suzaka2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:40.382111+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8d5d5b5ce0b652b50ae6b7da444f9c6526273bc4dfb34a98e8384d0990aae9a2"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23092",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.829935+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "d245a018c34fa695af69025b7a2a5ac3773e0d45147eabff5e6180600b339370"
+        },
+        {
+          "url": "https://www.morimiya-kanko.com/kayanodaira/",
+          "status": 403,
+          "checked_at": "2026-10-29T08:15:40.382366+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "067217bb276a71d33ea0fd99b6a8ea1d541e6ed13e1fa572cdf852b0190b8a40"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23079",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.833347+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "939b34591477c8351d7b4ac289c8486592f580c5e6e18400049bf27254e0cdf2"
+        },
+        {
+          "url": "https://tourdesk.matsushiro-walkers.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.069811+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "803b8b42feebc7e014daeadef5dbc19b04045ec2d3a18af780d61a3b64301792"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23073",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.835954+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "80f62489d75df634ec06248635a70e67447b0fde9f5948a9d553993a8c439a22"
+        },
+        {
+          "url": "https://f5p5nllhcszosh75x42v.stores.jp/reserve/shinetsu-shizenkyo/2270166#pageContent",
+          "status": 403,
+          "checked_at": "2026-10-29T08:15:41.197797+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e7913fda7d40855942f07855a59a22a76d7943311632897272ca827ea4eacb9c"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23070",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.840095+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "19af90bb83a329200b55b2397c8c21fefe0b18d32ec3275b98f58f50ecd23759"
+        },
+        {
+          "url": "https://sobamatsuri.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.407403+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "677e520055a1f37fd8358e569ce6e0d42abae9b4035664189211a7484c3e489c"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23067",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:11.843190+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "d6d6e66322e81a4f2e35371b5c1c017dc79882680c654216dc0858bc12035104"
+        },
+        {
+          "url": "https://www.monomiyusan.jp/news-details/139",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.538670+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "44aadf7e04262f9bf78298f6f667566fccd1cd333d3b14f7dc28109dda961c7b"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23041",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.318485+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "cbabdbdd5f4c3b3b1e2877a5b2e72674d4fa2dbb6ecabce201de75d3e88ef92c"
+        },
+        {
+          "url": "https://shinetsu-activity.jp/play/cycling/15237/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.606845+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e1a7ed756b7ba1b4feca793b2d3bad1a4bbd1c8f679f4d9dcf0ba2835f1a077c"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23034",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.390869+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "17027ddb5fd845743bab88ea9f510d5b7fe8bf96ed3ba7f9475a2c55e0487839"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/news/page/257",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.712380+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "ecd7c9d9d4d929ef09a80b55acdfc86bd0ba73303606a355ad2c1c932ed20779"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23006",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.470031+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "f7a622437c0fd219c7d1122b0b838b8702a3bf7e3ca36f451792859d00361d83"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22868",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.471270+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b2a94b234fff5931c54dda3aaed1d83b5bace44fc6187db922b9265182b0e531"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22865",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.473214+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b966faedba838a8dc74cc07bfc4d6b7ca16b2e377deef9b95c066b9885f6c02d"
+        },
+        {
+          "url": "https://www.iiyama-ouendan.net/2026/04/18754/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.730841+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "16ccc3ef01aef4907e2ef3ccb381d7e6da4a6a87d4e1e6c3a1346fce667792c2"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22834",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:13.699247+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "077f52b9d19b2a5799cc3c18d3fb877d63c4908f4ae1cae1350c08d11f0672fd"
+        },
+        {
+          "url": "https://kiso-hinoki.jp/colibri-wp/tourist/赤沢森林鉄道/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.014721+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "c9f479a19d7298359af21d9ab4703f58dfa3c9a3375a711bccc4ab2e8db3d630"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22820",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:14.708721+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "0b1a7979578817b51fe71e11d21b98740fba7f8fb62f6bac695d46c6a0812023"
+        },
+        {
+          "url": "https://shinetsu-activity.jp/play/cycling/13319/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.091529+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "cc253e2a4e04bf9eb435ad450a93086d9540702b4713b7d88b0c2d931d4f9c69"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=21993",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.014857+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "d2e3f79f1b0a2e09226910db465fca74e1e82fb987a84bb1b77e8c99d7ac6e94"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/events/sekibutuburasanpo2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.118256+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "08937220a88613783a49569a761dec1e5582378be47fd7a04088dadc5f768ad1"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=21869",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.028288+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b2724f91c1f6893faffdbebecc5aa68ad99e4ef1ef5d501c44ee9e0d8e61bc0c"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/events/sobamonthly-2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.251492+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "be30b8e6969b8673bc53e3649d18d7634532a44fb58259412ed2c53b99f84ddd"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=21674",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.077655+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "3867dcb29ab8bcee1bf8b318866a20f3d1510aaaf81cf372e221580106bf24a3"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/spot/spot-06/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.482860+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "38b9514ebb368799dbe519efcdd5ade0933a48b0ab8ed939f56cac399f29b073"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=21388",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.232344+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "fd99038bffea89ad92b68ecfd5dc2d14ea77d9faae1e84926799a533fb1d1214"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/events/sobarary-2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:42.780565+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "a5dea38ceb35079a2975859284d78dbaaa911b6098ea7599632f5fa9bfb5adff"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=21370",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.253708+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "28ab0ba0ed58c250e58af0bd62e138bf5fcd6305230789b2a69a868d8632331e"
+        },
+        {
+          "url": "https://www.kozenji.or.jp/",
+          "status": "error",
+          "checked_at": "2026-10-29T08:15:42.910360+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=11814",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:15.715510+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "da076a33800fca9e53c87a4c3608bd6309839ca85c6beb9c8ff8981a933bbc54"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:43.162155+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "7fb93ce416ffe4713914dccf7110e5e757abf53db7a8ce3e42cd578f52502c11"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=11813",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.268870+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "c69c0b720418e0c8876a6ef3ce8140c5d934d25559904368137524217e892882"
+        },
+        {
+          "url": "https://inashi-kankoukyoukai.jp/events/takato_momijimaturi/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:43.442758+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b04554ed4e18002390e9f5c9101e94061dc5b1ee6f116ebe9db34ef7f73ffe2d"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23126",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.547085+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "a4a007601f2d95865fba3997654c52c3a964adbbef7599735454222d8d94ba34"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/gijukan/happyou/261023press.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:43.731503+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "236fc5898baecf1e819fd342c0b574e323f7c0ea47a0ea85692c000cc658c7a5"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22977",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.549190+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b5141803235847ce5e133a16839fc0c59145719ad8f364cd41386a97b6d71c5b"
+        },
+        {
+          "url": "https://reserve.489ban.net/client/hotaka-view/0/detail/1294577",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:44.152671+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "dbefe12dc819ebb7ae739275a3e93cb4edf03f6c4f72b7a0de42a36bfae68799"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23028",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.571750+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "9e1f039aad96d91c491f300a40897901d973fd802b998ce57b36163899fe498c"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:44.265659+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "9ec691362fd35415bdda18b0380f9442ac4b7fd5e142397852df7af3e219a6e1"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23119",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.595798+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "b6b591121854524b6b90e72fa0fa1c1bb57ee7b1753f6e5e9bca938f53461e89"
+        },
+        {
+          "url": "https://www.pref.nagano.lg.jp/gijukan/happyou/261009press.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:44.420785+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "fe1585f73a8f9d44a527a813172981cee4e8456ace685a7eaa68df4235bb3265"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23125",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.839442+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "876408e469d21b45cc8e0f906e9a4e0f0eacc5476fbd6747fec3aee9ed2338da"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n150800/kanko/p006155.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:44.839294+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4210370fb8979bad362def248ad0d66bb122ea59ae0dd704a927bb79cd1a75d4"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23101",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:16.994854+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "5c9002ad6c1c2a32b808e064eafdca1195321d3043b6306622db45386c482c1b"
+        },
+        {
+          "url": "https://nagano-ticket.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.028031+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "5ca9ec37170c1e8922134e1b6520c6b9fc1328df9592d178a57a834de77525ea"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22978",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.620441+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "813dab3b66e1bf7124a8846c2a9e62e2f28a23a59639ccda70c0e8c9dee785bd"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n160500/event/p000008.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.107052+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "566aa9dab2421dea40fd7ae4dffd13e5625df6a54557ab16fec21aab54b3434e"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23123",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.693499+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "742beb33f91fcde3dee860c80af0f1b1b67879ed66b11be179aac99a104b1405"
+        },
+        {
+          "url": "https://f5p5nllhcszosh75x42v.stores.jp/reserve/shinetsu-shizenkyo/1374830",
+          "status": 403,
+          "checked_at": "2026-10-29T08:15:45.227615+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "8fa4188b2ede9f12df4968c0f4a12033d2d91d9e700a56a3d3bb3dac4425ee8a"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22630",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.760074+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "ce15461d56aedcee27e136948531dd93ca20d5d0ddcd8ca6dbbebaf083634677"
+        },
+        {
+          "url": "https://nabekura.net/tekufes2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.229609+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "9adc7e4df6341ea830a38bfb64caf6581c4dd9eb34ef18f61a87e68f3cae152d"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=19632",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.840377+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "ed412cffd067e67f64924f477bc3b5fe985ae0f758320832414a3f6c6f56aa01"
+        },
+        {
+          "url": "https://ueda-kanko.or.jp/special/kouyoumatsuri2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.560179+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4b8ada3a952476d43bee946c1879e786de731ccc02b4fa429a39e3dd7a4d6c4f"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23133",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.940155+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "ba2a93d8714803f64e93d51d6f3b350fc7436007f240ba5a56feb4ffce515873"
+        },
+        {
+          "url": "https://jinbagata.jp/%E9%85%92%E3%81%A8%E3%82%A2%E3%83%AB%E3%83%97%E3%82%B92026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.620323+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "e5239b21eda68a14b51a41353d43d5b6cbf5a39058d68e72daf481bd1dace66a"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=11724",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:17.976790+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "a036fcf1b458e6ef4a1dbc5778f079e3dbabda6c622a84716ebbe4c580175cbb"
+        },
+        {
+          "url": "http://namikichan.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.710467+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "4b763c413b651527d2779bf62cd3681564fdcab9c570b4df267e75092db574b1"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23106",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:18.259778+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "36fbbef5793a283f8f1c8623248dc4d0e04bc731210c938da1b102d8ab970029"
+        },
+        {
+          "url": "https://www.chikumagawa.net/news/news-4471/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.828789+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "357ee8e265fb51c49a3b95de0acb0306b9cbdbaa7d3379a795b60f2da7ce97b0"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=19238",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:18.631956+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "165320abb99132ea4a3638da67f3f52858eddb729360b85140c7f442ff51bc07"
+        },
+        {
+          "url": "https://ueda-kanko.or.jp/special/uedasanadamatsuri2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:45.992147+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "15644daf52971e9f23d55381e6ee92ca881dd12b23429cbf1656b236d22af604"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23118",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:19.065866+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "75c89d0a280f6ad28588e779cd55172a651530fd0356922605ffd1c556229aea"
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=22508",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:19.222585+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "db33c64213e80a980d4352114edb65b09d81d0b7d5808ba73e283385ab6446db"
+        },
+        {
+          "url": "https://www.suzaka-kankokyokai.jp/event/sansakusweets20261101/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:46.051388+00:00",
+          "source_type": "tourism_board",
+          "content_sha256": "762a6c6e1e2d256c9816ebff55e8b4bd313ddddf6b19e04a4741185e9f6082ba"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/news/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:18:36.332697+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "79c50bba964a52165ceb508750ce981f9721d8c5d0fe626b78118c74051b9d14"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/news/index?perpage=20&start=20",
+          "status": 200,
+          "checked_at": "2026-10-29T08:18:48.941271+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "81262a6794a9f74eab94a5317df5ab6c234084f28e8676c1a6fb33618f4d19f9"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/event/?month=11",
+          "status": 200,
+          "checked_at": "2026-10-29T08:19:34.186963+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "aaa6e25b3ec7faf2b1ca9bde381c1c9986ab241a5612efe55ec59b1fdfcf66b2"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/event/?month=12",
+          "status": 200,
+          "checked_at": "2026-10-29T08:18:49.922409+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "aaa6e25b3ec7faf2b1ca9bde381c1c9986ab241a5612efe55ec59b1fdfcf66b2"
+        },
+        {
+          "url": "https://photo-shinshu.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:18:50.391353+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "3b2b4f981d61ef200469bab3ebb53c3a4c3c4247c3fa436d82159de51ea8c72c"
+        },
+        {
+          "url": "https://nagano-christmas.com/index.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:20:03.747412+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "4b2d83f652738807ffd76f0fbcad048b9c381a73baa8550f4ce558bf37dd5061"
+        },
+        {
+          "url": "https://monzen-guide.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:20:04.428432+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "73b683c947385c924b6a708ebbf50e1af6c45861b85715bed00ba3ce663472dd"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/news/page/3",
+          "status": 200,
+          "checked_at": "2026-10-29T08:18:50.958902+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "eee0987389a04fbd6f7fb5d89007293020c1dfe8e61f9b767d2761332140770a"
+        },
+        {
+          "url": "https://www.city.nagano.nagano.jp/n150800/kanko/p006155.html",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:44.839294+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "4210370fb8979bad362def248ad0d66bb122ea59ae0dd704a927bb79cd1a75d4"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/news/page/257",
+          "status": 200,
+          "checked_at": "2026-10-29T08:15:41.712380+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "ecd7c9d9d4d929ef09a80b55acdfc86bd0ba73303606a355ad2c1c932ed20779"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/event/page/411",
+          "status": 200,
+          "checked_at": "2026-10-29T08:19:34.666726+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "6d1ee4cea25f1635f14bb37e35683d8b55c579baa3e00f6d24d68b40d5a37ef3"
+        },
+        {
+          "url": "https://www.nagano-cvb.or.jp/modules/event/page/441",
+          "status": 200,
+          "checked_at": "2026-10-29T08:19:34.668804+00:00",
+          "source_type": "seasonal_new_arrival",
+          "content_sha256": "d6165065fc06203a8e2918e246f5ef0a729c93c94b4517ae57c892a63ac1bba6"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:20:56.777447+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "9ec691362fd35415bdda18b0380f9442ac4b7fd5e142397852df7af3e219a6e1"
+        },
+        {
+          "url": "https://ueda-kanko.or.jp/special/uedasanadamatsuri2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:20:57.390659+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "15644daf52971e9f23d55381e6ee92ca881dd12b23429cbf1656b236d22af604"
+        },
+        {
+          "url": "https://ueda-kanko.or.jp/special/kouyoumatsuri2026/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:20:58.091864+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "4b8ada3a952476d43bee946c1879e786de731ccc02b4fa429a39e3dd7a4d6c4f"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/about/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:21:15.785777+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "0ed03e5dae5533f4ebb8a2aae0bc76fc3ad7e647ef730c41578aa997158922cb"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/access/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:21:16.332840+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "21ee23f1d761b63db41c785c8d561f5208e8ce783561a2bfd1dbfe1f76fc4695"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/paid-viewing-seats/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:21:16.854087+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "7030ecddf1587ce82f39c01721ad8834f3c2d576fa64c2a9b8e14d25c34c7364"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/news",
+          "status": 404,
+          "checked_at": "2026-10-29T08:21:17.414093+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "913c552f1a3c3ccc8ac53d2b7af0684487dc9e83c15f15249e6e9200dede1ca4"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/2026/10/29/%e8%8a%b1%e7%81%ab%e6%ae%bb%e6%8b%be%e3%81%84%e3%81%b8%e3%81%ae%e5%8f%82%e5%8a%a0%e5%8d%94%e5%8a%9b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:21:17.892316+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "11204ea4f4a97757d0a27c1afebb4a12c6e6b8fe157be6323567590f83aa75d9"
+        },
+        {
+          "url": "https://www.nagano-ebisukou.jp/2026/09/18/important-notes-for-paid-viewing-area/",
+          "status": 200,
+          "checked_at": "2026-10-29T08:21:18.386737+00:00",
+          "source_type": "festival_fireworks",
+          "content_sha256": "4d48bd4ef29f30f7986d116a34b3bdeee92e8bf8d15e07be8e235719c75ccbfd"
+        }
+      ],
+      "candidates": [
+        {
+          "name": "イベント 講演会・セミナー 2026.11.07 参加者募集！ 長野県史キックオフイベント【申込締切10/26（月）】 長野市",
+          "disposition": "hold",
+          "reason": "申込フォームは終了。締切後相談経路はあるが参加可を確定しない。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2243/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "イベント 2026.11.11 2026きものパレード 長野市",
+          "disposition": "hold",
+          "reason": "主催対象は18歳以上女性先着10名。家族観覧・子供同伴経路が示されずHOLD。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2448/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "キャンペーン 2026.07.17〜10.31 信州うえだ地域道の駅＆ソフトクリームデジタルスタンプラリー2026 長和町, 東御市, 上田市, 青木村",
+          "disposition": "hold",
+          "reason": "ラリー期間は確認。参加店舗・スマホ取得手順がPDFへ分離し、参加条件の照合未完。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1359/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "講演会・セミナー 2026.11.01 県史編さんシンポジウム「これからの県史 何に期待し、どう残すか」 千曲市",
+          "disposition": "added",
+          "reason": "公式詳細で日付・会場・参加経路確認。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2436/",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-002",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "講演会・セミナー 展示・展覧会 2026.10.03〜11.08 長野県150年のあゆみ －県民の“お宝”公文書の世界－ 千曲市",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式会場・期日・主題で既存IDへ照合。今回再取得の詳細で再確認、Preview描画確認対象。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2403/",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-history",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "イベント 2026.11.08 雨中の縁日 南小谷駅前一日かぎりの歩行者天国マルシェ 小谷村",
+          "disposition": "hold",
+          "reason": "歩行者天国の子供縁日は確認。雨天・交通規制・鉄道体験の募集条件未確認。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2463/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "展示・展覧会 2026.09.26〜12.24 音がつなぐ心のふるさと－長野県ゆかりの唱歌・童謡再発見－ 長野市",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式会場・期日・主題で既存IDへ照合。今回再取得の詳細で再確認、Preview描画確認対象。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2326/",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-singing",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "講演会・セミナー 2026.11.14 【聴講者募集！】第14回佐久間象山塾 長野市",
+          "disposition": "hold",
+          "reason": "講師と日付はあるが会場・時刻・現行聴講募集条件が本文にない。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1829/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "スポーツ 2026.11.21 長野県モルック大会 長野市",
+          "disposition": "hold",
+          "reason": "主催LivePocketを取得したがチーム構成・現在の申込可能枠の確認未完。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2207/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "イベント 2026.09.12〜11.23 国営アルプスあづみの公園 大町・松川地区　秋の森チャレンジ＆紅葉フェスタ 大町市",
+          "disposition": "hold",
+          "reason": "季節公園フェスタの個別体験日・交通・悪天対応の必須確認未完。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1936/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "展示・展覧会 2026.10.01〜11.24 Journey to New Hope ニューホープへ　─ 脇田美術館 ─ 軽井沢町",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式会場・期日・主題で既存IDへ照合。今回再取得の詳細で再確認、Preview描画確認対象。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1945/",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-newhope",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "イベント 体験・ワークショップ 2026.11.14 土木の魅力を体感！ 親子ふれあい見学会（北信） 中野市, 長野市",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式会場・期日・主題で既存IDへ照合。今回再取得の詳細で再確認、Preview描画確認対象。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2293/",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-civil-tour",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "イベント 体験・ワークショップ 2026.11.28 土木の魅力を体感！ 親子ふれあい見学会（東信地域） 南牧村, 佐久穂町, 佐久市",
+          "disposition": "added",
+          "reason": "公式詳細で日付・会場・参加経路確認。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2471/",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-001",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "イベント 2026.10.14〜12.20 映画「おーい、応為」上映会・対談会（チケット発売中） 小布施町",
+          "disposition": "hold",
+          "reason": "一覧の10月14日〜12月20日は複数上映・対談。開催回ごとの現在チケット・年齢条件の確認未完。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2202/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "展示・展覧会 2026.11.19〜11.23 現代アート「inclusive展」2026 愛のかたち-愛の賛歌、星を継ぐ者たち- 長野市",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式会場・期日・主題で既存IDへ照合。今回再取得の詳細で再確認、Preview描画確認対象。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1897/",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-inclusive",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "体験・ワークショップ 講演会・セミナー 2026.11.21 「信州ふるさとのことば」フォーラム 長野市",
+          "disposition": "hold",
+          "reason": "八十二文化財団が一時停止メンテナンス表示（HTTP200）。フォーラムの本文検証不能、source family HOLD。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2153/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "講演会・セミナー 展示・展覧会 2026.12.01〜12.13 長野県150周年記念特別展＆特別講座　稀代の実業家・五島慶太ー信州の未来を拓いた鉄道王ー 長野市",
+          "disposition": "hold",
+          "reason": "県紹介は展示日・無料あり。主催詳細は一時停止表示で開場時刻・休館日・特別講座申込条件が検証不能。既存ID evt-nagano-w40-d9-goto は改変せずHOLD。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1849/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "コンサート 2026.12.06 中山晋平記念館 CHlRlSTMAS Concert（要電話申込） 中野市",
+          "disposition": "hold",
+          "reason": "記念館公式403で電話申込の受付時期・残枠・時間を検証できず。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1976/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "コンサート 2026.12.13 kisoウインドアンサンブル　第20回演奏会　―音楽でめぐる、信州。― 上松町",
+          "disposition": "hold",
+          "reason": "曲目と日付はあるが開演時刻・会場・入場条件が本文にない。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/2159/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "体験・ワークショップ 2026.01.15〜12.15 月イチ書庫ツアー　長野県150周年スペシャルバージョン 長野市",
+          "disposition": "hold",
+          "reason": "11月15日分申込は11月8日12時開始。現在の参加経路は未開放。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/306/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "イベント 2026.07.30〜12.31 長野県150周年を「遊び」で盛り上げる！アピナ限定「信州お宝キ ャッチャー」 塩尻市, 佐久市, 上田市, 伊那市, 飯田市, 諏訪市, 長野市, 松本市",
+          "disposition": "hold",
+          "reason": "10店舗の期間限定景品企画。景品なくなり次第終了のため店舗別の現行参加可能性未確認。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/1395/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "キャンペーン 2026.03.23〜12.25 長野県150周年記念「もっと知りたい！信州体験割」 長野県全域",
+          "disposition": "hold",
+          "reason": "体験割の総合販売キャンペーンで会場・日付・参加条件は各プラン別。単一イベント記録へ集約しない。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/605/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "キャンペーン 2026.04.20〜12.18 長野県産ワイン飲み比べ　テイスティングフライト 松本市",
+          "disposition": "hold",
+          "reason": "アルコール飲み比べのみで子供向け参加プログラムなし。年齢制限を広げて採用しない。",
+          "official_url": "https://150th.pref.nagano.lg.jp/event/678/",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "歴史館11月7日講座",
+          "disposition": "hold",
+          "reason": "当該講座の現行予約枠未確認。",
+          "official_url": "https://www.npmh.net/exhibition/2026/03/150150.php",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "歴史館10月31日寒天版印刷",
+          "disposition": "hold",
+          "reason": "当日申込経路は確認。既存親展示と同URLの別体験登録は重複表現を整理するまでHOLD。",
+          "official_url": "https://www.npmh.net/exhibition/2026/03/150150.php",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "ギャラリー82特別講座",
+          "disposition": "hold",
+          "reason": "主催サイト全体の一時停止で個別募集条件未確認。",
+          "official_url": "https://www.82bunka.or.jp/event/2026/12/post-424.php",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "【10月〜11月】姿勢改善＆体幹トレーニング教室",
+          "disposition": "hold",
+          "reason": "公式申込9月24日締切で途中参加経路なし。",
+          "official_url": "https://www.city.nagano.nagano.jp/n155400/event/p006245.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "シニアパソコン無料相談会",
+          "disposition": "hold",
+          "reason": "シニアのパソコン相談で子供・家族向け体験の対象と異なる。",
+          "official_url": "https://www.city.nagano.nagano.jp/n023500/event/p000001.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "【9月〜11月】ピラティス教室",
+          "disposition": "hold",
+          "reason": "公式申込9月23日締切。",
+          "official_url": "https://www.city.nagano.nagano.jp/n155400/event/p006244.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "【10月〜12月】骨盤メンテナンス教室",
+          "disposition": "hold",
+          "reason": "公式申込9月29日締切。",
+          "official_url": "https://www.city.nagano.nagano.jp/n155400/event/p006246.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "パソコンの病院ながの",
+          "disposition": "hold",
+          "reason": "パソコン修理・相談業務で家族おでかけ企画の参加プログラムと異なる。",
+          "official_url": "https://www.city.nagano.nagano.jp/n023500/event/p000002.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "気軽にちょこっと「ふらっとフレイル予防体験」",
+          "disposition": "hold",
+          "reason": "公式開催10月23日は終了済み、過去回を追加しない。",
+          "official_url": "https://www.city.nagano.nagano.jp/n101200/event/p000016.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "【10月30日】ポールウォーキングで野外彫刻めぐりin南長野運動公園　参加者募集",
+          "disposition": "hold",
+          "reason": "公式10月21日締切。",
+          "official_url": "https://www.city.nagano.nagano.jp/n155400/event/p006247.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "上映会「私は男女平等を憲法に書いた」",
+          "disposition": "hold",
+          "reason": "映画日時・無料は確認。定員30名の申込要否と残枠を確定できず。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000113.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "ピラティス教室",
+          "disposition": "hold",
+          "reason": "市在住在勤対象の連続健康教室で子供参加条件未確認。",
+          "official_url": "https://www.city.nagano.nagano.jp/n155400/event/p006250.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "FEEL NAGANO DAYを開催します",
+          "disposition": "hold",
+          "reason": "市詳細も日時・会場中心。家族向け内容・雨天対応・交通等の必須確認未完。",
+          "official_url": "https://www.city.nagano.nagano.jp/n042000/event/p000001.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "ゲートキーパー講座",
+          "disposition": "hold",
+          "reason": "市民向け精神保健研修。子供参加や家族体験の経路が未確認。",
+          "official_url": "https://www.city.nagano.nagano.jp/n106500/event/p000020.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "令和8年度屋外広告物講習会の開催",
+          "disposition": "hold",
+          "reason": "屋外広告事業者の資格講習、10月13日申込終了。",
+          "official_url": "https://www.city.nagano.nagano.jp/n205100/event/p000005.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "気軽にちょこっと「ふらっとフレイル予防体験",
+          "disposition": "hold",
+          "reason": "フレイル予防の保健指導で子供向け企画の確認なし。",
+          "official_url": "https://www.city.nagano.nagano.jp/n101200/event/p000028.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "令和8年度愛犬の正しい飼い方しつけ方教室",
+          "disposition": "hold",
+          "reason": "公式11月9日受付開始前。",
+          "official_url": "https://www.city.nagano.nagano.jp/n107000/event/p000001.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "令和8年度犬と猫の休日譲渡会",
+          "disposition": "hold",
+          "reason": "動物譲渡で譲渡対象確認・飼養審査等が必要。通常家族体験として登録しない。",
+          "official_url": "https://www.city.nagano.nagano.jp/n107000/event/p000002.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "パープルリボン講演会「なぜ、女性アーティストは自画像を創るのか？」",
+          "disposition": "hold",
+          "reason": "市民向け講演は先着受付。子供同伴・参加条件の確認未完。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000116.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "善光寺本堂パープルライトアップ",
+          "disposition": "hold",
+          "reason": "啓発点灯の日時は確認。夜間行事の雨天・交通・子連れ条件が不足。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000117.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "パープルリボンハートフルコンサート",
+          "disposition": "duplicate_or_already_present",
+          "reason": "既存の同一公式URL・会場・会期のIDへ照合し、新規仮追加を統合前に撤回。既存記録の一次確認日を更新。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000111.html",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-w40-d9-purple-concert",
+          "participability": "条件付き参加可能",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "わが街ながのゆかりの作家展～長野市風景画展審査員展",
+          "disposition": "duplicate_or_already_present",
+          "reason": "既存の同一公式URL・会場・会期のIDへ照合し、新規仮追加を統合前に撤回。既存記録の一次確認日を更新。",
+          "official_url": "https://www.city.nagano.nagano.jp/n150500/event/p000080.html",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-w40-d9-city-art",
+          "participability": "通常参加可能",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "長野市人権動画視聴会1犯罪被害者等の人権",
+          "disposition": "hold",
+          "reason": "人権学習動画は予約制。子供参加と現行定員条件の確認未完。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000108.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "長野市人権動画視聴会2ハンセン病問題",
+          "disposition": "hold",
+          "reason": "人権学習動画の子供参加・現在の受付定員確認が未完。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000110.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "市民公開講座「THEペット防災～平時だからできる対策検討編～」",
+          "disposition": "hold",
+          "reason": "公式11月9日受付開始前。",
+          "official_url": "https://www.city.nagano.nagano.jp/n107000/event/p000007.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "【若者の人権・性教育ワークショップ】見過ごされがちな「暴力」とわたしたちができること",
+          "disposition": "added",
+          "reason": "市公式で日程・会場・公開観覧／現行申込経路を確認。",
+          "official_url": "https://www.city.nagano.nagano.jp/n086500/event/p000114.html",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-005",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "シニアのための動物ふれあい広場",
+          "disposition": "hold",
+          "reason": "65歳以上対象、11月9日受付開始前。",
+          "official_url": "https://www.city.nagano.nagano.jp/n107000/event/p000018.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "気軽にちょこっと「ふらっとフレイル予防体験」",
+          "disposition": "hold",
+          "reason": "保健指導のフレイル予防で子供向けプログラム確認なし。",
+          "official_url": "https://www.city.nagano.nagano.jp/n101200/event/p000027.html",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "一本木公園　秋のバラまつり",
+          "disposition": "hold",
+          "reason": "季節バラ祭りの雨天・交通・幼児向け条件が不足。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23138",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "土人形絵付けコンテスト",
+          "disposition": "hold",
+          "reason": "2体験施設でのコンテストだが各館の予約方法・実施時刻が問い合わせ扱いで未確定。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23137",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "多肉植物販売会＆寄せ植えワークショップ",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一会場・日付・公式詳細で既存IDに照合。通常観覧／当日空きの明示あり。Previewで描画確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23105",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-succulent",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "信州食べきりキャンペーン デジタルスタンプラリー　食べきって、撮って、当てよう",
+          "disposition": "hold",
+          "reason": "観光一覧の期日と主催ページの締切表示の対応を確定できず。購入・写真投稿・抽選各期間の照合が必要。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23097",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "高橋まゆみ人形館・秋のテーマ展 「冬の日の足跡」",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一会場・日付・公式詳細で既存IDに照合。通常観覧／当日空きの明示あり。Previewで描画確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23096",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-winter-dolls",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "【10/24・11/14】なべくら高原キノコ観察会",
+          "disposition": "hold",
+          "reason": "観察会15名要予約。現行残枠・荒天時の実施条件確認が未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23095",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "すざかスイーツめぐり2026",
+          "disposition": "added",
+          "reason": "主催公式で23店・対象購入額・期間・抽選参加手順を確認。",
+          "official_url": "https://www.suzaka-kankokyokai.jp/event/sweets_suzaka2026/",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-006",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "【10/11.11/3.11/7】カヤの平高原から秋山郷へ 50㎞絶景紅葉ドライブ",
+          "disposition": "hold",
+          "reason": "主催旅行会社403。現行募集枠・参加条件検証不能。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23092",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "真田家ゆかりの史跡を巡るプレミアムな日帰りバスツアー",
+          "disposition": "hold",
+          "reason": "11月回は既存evt-nagano-w41-d4-sanada-tourあり。主催一覧に予約条件・残枠の照合未完で既存をHOLD。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23079",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "おらほのいいとこみてくらし",
+          "disposition": "hold",
+          "reason": "公式予約先403で11月15日回の料金・現行枠検証不能。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23073",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "第57 回戸隠そば祭り",
+          "disposition": "hold",
+          "reason": "そば祭りは複数の別日程・献納行事。雨天・交通と現時点参加条件の照合未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23070",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "物味湯産手形「温泉＆サウナ旅」キャンペーン",
+          "disposition": "hold",
+          "reason": "デジタル割引手形で各施設利用条件が別。単一日程イベントにまとめない。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23067",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "飯山線サイクルクエスト",
+          "disposition": "hold",
+          "reason": "自転車周遊は県境をまたぐ飯山線沿線。長野県範囲のチェックポイント・子供自転車条件を確定できず。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23041",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "戸隠・飯綱　まるごと体験！スタンプラリー",
+          "disposition": "hold",
+          "reason": "ラリーに必要な各体験の開催日・予約受付確認が未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23034",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "高橋まゆみ人形館・ことばのおくりもの展",
+          "disposition": "hold",
+          "reason": "募集9月23日終了、展示は12月15日まで。主催トップに当該展示の現行期日本文を確認できず。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23006",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "テラマチマルシェ＠高橋まゆみ人形館",
+          "disposition": "hold",
+          "reason": "屋外マルシェ11月1日最終回。雨天・交通・最新出店／子供体験条件が不足。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22868",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "【正受庵】坐禅体験会",
+          "disposition": "hold",
+          "reason": "坐禅体験は予約不要・500円。子供対象・同伴や姿勢補助条件の個別確認未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22865",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "赤沢森林鉄道運行",
+          "disposition": "hold",
+          "reason": "森林鉄道の通常季節運行。運休・秋ダイヤと小児乗車条件の全体確認が未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22834",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "GO!GO! 千曲川 飯山線サイクルトレインプラン2026",
+          "disposition": "hold",
+          "reason": "県境をまたぐサイクルトレイン。列車利用制限と子供のレンタル条件を未確定。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22820",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "秋の高遠 石仏ぶら散歩2026",
+          "disposition": "hold",
+          "reason": "石仏散歩の期間・交通注意はある。季節企画の荒天・幼児の歩行条件確認が不足。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=21993",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "信州そば発祥の地 伊那  秋のそば巡り",
+          "disposition": "hold",
+          "reason": "複数そば祭りの総合案内で1件中止。各開催地の現行日・条件を分ける照合が必要。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=21869",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "分杭峠行きバス「分杭気の里ライン」運行中",
+          "disposition": "hold",
+          "reason": "通常路線バス運行・観光スポット案内でイベントとしての特定開催が未確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=21674",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "そばまつり満喫チェックインラリー",
+          "disposition": "hold",
+          "reason": "4そばイベントを巡るラリー。中止回除外と現行開催地の雨天条件・参加条件未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=21388",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "信州駒ヶ根高原　光前寺　もみじまつりライトアップ",
+          "disposition": "hold",
+          "reason": "寺公式取得エラー。季節夜間点灯の雨天・交通・子供条件を一次検証できず。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=21370",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "「高遠そば」新そばまつり",
+          "disposition": "hold",
+          "reason": "市観光協会トップのみリンク。新そば会場・天候・交通・子供条件詳細未確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=11814",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "高遠城址もみじ祭り",
+          "disposition": "hold",
+          "reason": "紅葉祭りは主催ページに複数企画。天候等中止・時刻変更の現行範囲と子供動線確認未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=11813",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "親子ふれあい見学会（東信）",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一会場・日付・公式詳細で既存IDに照合。通常観覧／当日空きの明示あり。Previewで描画確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23126",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-20261029-d8-001",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "【安曇野穂高ビューホテルプレミアム企画】長野ワイン・レセプション2026",
+          "disposition": "hold",
+          "reason": "ワイン宿泊企画で大人販売主体。子供の非飲酒参加プログラム・販売枠を確定できず。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22977",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "第120回長野えびす講煙火大会",
+          "disposition": "hold",
+          "reason": "公式11月23日花火あり。悪天時・交通・子連れ夜間参加の詳細を揃えるまでHOLD。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23028",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "親子ふれあい見学会（北信）",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同一会場・日付・公式詳細で既存IDに照合。通常観覧／当日空きの明示あり。Previewで描画確認。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23119",
+          "category": "facility_hosted",
+          "event_id": "evt-nagano-w40-d9-civil-tour",
+          "rendered_set_verified_at": "2026-10-29T09:13:25.424Z",
+          "rendered_set_verification": "Local Cloudflare Preview; actual merged ordinary event pages; exact event_id visible."
+        },
+        {
+          "name": "善光寺表参道イルミネーション",
+          "disposition": "hold",
+          "reason": "市公式は関連点灯式等11月決定予定と明記。悪天・交通・夜間子供条件未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23125",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "「雪の日」GoNAGANOスマートパス大抽選会",
+          "disposition": "hold",
+          "reason": "大阪・東京等県外会場のキャンペーン。長野県内の開催として誤登録しない。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23101",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "長野市「農×食」体験ツアー　【りんごコース】　参加者募集！",
+          "disposition": "hold",
+          "reason": "宿泊農食ツアーは成人価格中心。小児の料金・現行枠と学校年齢参加条件未確定。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22978",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "ふるさと案内人とめぐる 坐禅体験と寺町散策",
+          "disposition": "hold",
+          "reason": "公式予約先403。各日予約枠・子供条件未確定。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23123",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "なべくらてくてくフェスタ2026＠なべくら高原・森の家",
+          "disposition": "hold",
+          "reason": "雨天縮小／夜間中止は確認。送迎・駐車・子供向け体験の各募集条件確認が未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22630",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "第20回 上田城紅葉まつり",
+          "disposition": "hold",
+          "reason": "秋祭りの交通規制案内あり。雨天時・最新変更・幼児動線条件の確認未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=19632",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "酒とアルプス2026",
+          "disposition": "hold",
+          "reason": "小学生以下無料は明記。アルコール主体の山上企画の雨天・安全動線・子供参加内容を確定できず。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23133",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "飯田丘のまちフェスティバル",
+          "disposition": "hold",
+          "reason": "公式交通規制と公共交通利用あり。雨天・直近変更・幼児の混雑動線確認未完。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=11724",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "原種チューリップとビオラで楽しむ基本の寄せ植え＠道の駅「花の駅 千曲川」",
+          "disposition": "hold",
+          "reason": "既存evt-nagano-w40-d9-bulbsあり。要電話予約20名の現行空きは未確認でHOLD。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23106",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "第44回 上田真田まつり",
+          "disposition": "hold",
+          "reason": "道路規制は確認。雨天時の開催範囲・直近変更・幼児参加条件の確認不足。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=19238",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "⾧野まちなか川釣り講習会  ～市街地の裾花川で、秋の自然を楽しむ半日～",
+          "disposition": "hold",
+          "reason": "同一観光詳細内に11月1日と11月3日の数値日付不一致。既存evt-nagano-w40-d9-fishing含めHOLD。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=23118",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "11/1(日）信州須坂町並み散策とスイーツ食べ歩き参加者募集中",
+          "disposition": "hold",
+          "reason": "主催に10月11日追記の満員御礼・受付締切。参加不能。",
+          "official_url": "https://db.go-nagano.net/topics_detail11/id=22508",
+          "category": "facility_hosted"
+        },
+        {
+          "name": "１１月３日ガイドの日(無料ガイド）「大勧進発大勧進・大本願と宿坊ご本尊めぐり」",
+          "disposition": "added",
+          "reason": "10月27日公式新着で参加者募集中、公式詳細で現在の予約参加経路を確認。",
+          "official_url": "https://www.nagano-cvb.or.jp/modules/event/page/411",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-007",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "善光寺僧侶とめぐる善光寺本堂参拝とまち歩きガイドと歩く善光寺ゆかりの寺社めぐり",
+          "disposition": "added",
+          "reason": "10月27日公式新着で参加者募集中、公式詳細で現在の予約参加経路を確認。",
+          "official_url": "https://www.nagano-cvb.or.jp/modules/event/page/441",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-008",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "name": "善光寺表参道食べ歩きチケット",
+          "disposition": "added",
+          "reason": "公式の現行販売期間・価格・利用方法を確認。",
+          "official_url": "https://www.nagano-cvb.or.jp/modules/news/page/3",
+          "category": "municipal_regional",
+          "event_id": "evt-nagano-20261029-d8-009",
+          "participability": "通常参加可能"
+        },
+        {
+          "name": "しあわせ信州フォトコンテスト",
+          "disposition": "hold",
+          "reason": "当該公式はタイトルのみ取得。応募条件・期日・子供参加経路を検証できず。",
+          "official_url": "https://photo-shinshu.com/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "善光寺表参道イルミネーション",
+          "disposition": "hold",
+          "reason": "関連催し未定、雨天・交通・夜間子供条件の必須確認未完。",
+          "official_url": "https://www.city.nagano.nagano.jp/n150800/kanko/p006155.html",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "戸隠・飯綱まるごと体験スタンプラリー",
+          "disposition": "hold",
+          "reason": "体験施設ごとの当日参加・予約条件の照合が未完。",
+          "official_url": "https://www.nagano-cvb.or.jp/modules/news/page/257",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "長野クリスマスマーケット2026",
+          "disposition": "hold",
+          "reason": "12月日程・無料入場確認。雨天・交通規制・直近変更・子供夜間参加条件が不足。",
+          "official_url": "https://nagano-christmas.com/index.html",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "第120回長野えびす講煙火大会",
+          "disposition": "hold",
+          "reason": "日程・無料観覧・混雑・無料区域トイレなし・駅から徒歩30分・規制／シャトル・10月29日最新お知らせは確認。悪天時中止／延期条件が取得した公式本文にないため採用保留。",
+          "official_url": "https://www.nagano-ebisukou.jp/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "第44回上田真田まつり",
+          "disposition": "hold",
+          "reason": "公式で11月1日、時刻・規制・公共交通は確認。雨天対応と幼児の混雑／安全動線の確認が不足。",
+          "official_url": "https://ueda-kanko.or.jp/special/uedasanadamatsuri2026/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "第20回上田城紅葉まつり",
+          "disposition": "hold",
+          "reason": "公式で11月7〜8日各演目・駐車場案内あり。雨天対応・直近変更と幼児動線の必須確認不足。",
+          "official_url": "https://ueda-kanko.or.jp/special/kouyoumatsuri2026/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "長野えびす講 花火殻拾い",
+          "disposition": "hold",
+          "reason": "11月24日7:45集合、11月6日申込締切を確認。河川敷清掃の子供同伴条件・参加費の確認未完。",
+          "official_url": "https://www.nagano-ebisukou.jp/2026/10/29/%e8%8a%b1%e7%81%ab%e6%ae%bb%e6%8b%be%e3%81%84%e3%81%b8%e3%81%ae%e5%8f%82%e5%8a%a0%e5%8d%94%e5%8a%9b%e3%81%ab%e3%81%a4%e3%81%84%e3%81%a6/",
+          "category": "municipal_regional"
+        },
+        {
+          "name": "西宮神社えびす講祭礼",
+          "disposition": "hold",
+          "reason": "11月18〜20日祭礼を公式が紹介。個別時刻・悪天・交通・子供参加条件の詳細未確認。",
+          "official_url": "https://www.nagano-ebisukou.jp/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "name": "えびす講ドローンショー",
+          "disposition": "hold",
+          "reason": "海外向け公式注意は17:30開始だが販売日10月1日など別記あり、親花火同様悪天条件・現行変更照合が未完。",
+          "official_url": "https://www.nagano-ebisukou.jp/2026/09/18/important-notes-for-paid-viewing-area/",
+          "category": "fireworks_festival_seasonal"
+        }
+      ],
+      "candidates_found": 106,
+      "added": 7,
+      "duplicate_or_already_present": 11,
+      "hold": 88,
+      "stale_false": 0,
+      "listing_stop_reason": "Single official page contains all months through December 2026; 23 current/future records followed, ended entries not backfilled.",
+      "municipality_basis": "Nagano City, prefectural capital and largest population municipality; distinct from prefectural source.",
+      "municipal_paging_stop_reason": "October, November and December 2026 calendars fetched through horizon; statutory meetings, service counters and explicitly past events screened out by listing date/title.",
+      "tourism_stop_reason": "Full October list plus November and December month lists exhausted (46/41/8 rows, 42 unique current/future candidates); no next-page links published.",
+      "seasonal_stop_reason": "New-arrival page 2 reaches May 2026; annual calendar returned all 12 months in one HTML for both requested month URLs, all three future entries evaluated through Dec31. Facility/access notices and ended events excluded from candidates."
+    }
+  },
+  "verification": {
+    "preview_checked_at": "2026-10-29T09:13:25.424Z",
+    "duplicate_rendered_set_verified": true,
+    "evidence_gate": "PASSED with installed launcher VerifyEvidence in supported Windows PowerShell5.1; PowerShell7 JSON integer type differs."
+  }
+}
