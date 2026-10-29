@@ -1,0 +1,1201 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-1",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T16:25:18.917559+00:00",
+  "process_started_at": "2026-10-29T16:13:09.0081595Z",
+  "due_facility_ids": [
+    740,
+    6915,
+    8265,
+    3432,
+    6884,
+    8250,
+    1792,
+    1794,
+    1795,
+    1796,
+    1798,
+    1799,
+    1800,
+    1802,
+    1804,
+    1807,
+    1809,
+    1810,
+    1811,
+    1812,
+    1813,
+    1814,
+    1815,
+    1816,
+    1817,
+    1818,
+    1819,
+    1820,
+    1823,
+    1825,
+    1826,
+    1829,
+    1831,
+    1833,
+    1834,
+    1835,
+    1840,
+    1842,
+    1847,
+    1848
+  ],
+  "prior_run_numbers_reused_as_execution": false,
+  "aggregate": {
+    "total": 10,
+    "no_current_or_future_event": 1,
+    "candidate_found_added": 4,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 2,
+    "source_unresolved": 3
+  },
+  "per_region": {
+    "chiba": {
+      "facility_ids": [
+        740
+      ],
+      "total": 1,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "facility_id": 740,
+          "url": "https://kodomo-koryukan.jp/event/",
+          "status": 503,
+          "checked_at": "2026-10-29T16:15:01.785638+00:00"
+        },
+        {
+          "facility_id": 740,
+          "url": "https://kodomo-koryukan.jp/event/",
+          "status": 503,
+          "checked_at": "2026-10-29T16:15:17.831453+00:00"
+        },
+        {
+          "facility_id": 740,
+          "url": "https://kodomo-koryukan.jp/",
+          "status": 503,
+          "checked_at": "2026-10-29T16:15:18.788125+00:00"
+        },
+        {
+          "facility_id": 740,
+          "url": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kikaku/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:15:42.545909+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "公式イベントページは2回とも503、公式トップも503。市こども企画課公式で10月22日からセキュリティ対策メンテナンス・復旧未定と11月全面再開案内は確認できたが、講座別開催日・受付状況は取得できない。既存7件は全て終了済み。施設情報の変更なし。",
+          "candidates": [],
+          "facility_id": 740,
+          "name": "千葉市子ども交流館",
+          "completed_at": "2026-10-29T16:16:30.791091+00:00",
+          "sources_checked": [
+            {
+              "url": "https://kodomo-koryukan.jp/event/",
+              "status": 503,
+              "checked_at": "2026-10-29T16:15:01.785638+00:00"
+            },
+            {
+              "url": "https://kodomo-koryukan.jp/event/",
+              "status": 503,
+              "checked_at": "2026-10-29T16:15:17.831453+00:00"
+            },
+            {
+              "url": "https://kodomo-koryukan.jp/",
+              "status": 503,
+              "checked_at": "2026-10-29T16:15:18.788125+00:00"
+            },
+            {
+              "url": "https://www.city.chiba.jp/kodomomirai/kodomomirai/kikaku/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:15:42.545909+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "ehime": {
+      "facility_ids": [
+        6915,
+        8265
+      ],
+      "total": 2,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 1,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "facility_id": 6915,
+          "url": "https://foret-aventure.jp/park/fa-saijo/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:16:35.245163+00:00",
+          "title": "フォレストアドベンチャー・西条 | フォレストアドベンチャー",
+          "content_sha256": "cc6fe783a5d22ce58dbf9fb42881c3371087f585c2937494517aefdd9892922b"
+        },
+        {
+          "facility_id": 6915,
+          "url": "https://saijo.gogo-adventure.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:16:46.023108+00:00",
+          "title": "愛媛・西条のジップライン＆アスレチック｜フォレストアドベンチャー西条",
+          "content_sha256": "eeffe7daafcb64adb378fe6e274de24c06b30756f8fcabaddb50ff294af6b8a1"
+        },
+        {
+          "facility_id": 8265,
+          "url": "http://www.teiregi.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:02.498783+00:00",
+          "title": "松山市で日帰り温泉・サウナなら | 南道後温泉　ていれぎの湯 – 松山市で日帰り温泉・サウナなら南道後温泉ていれぎの湯へ。希少で成分豊かな自噴源泉と療養泉「黄金湯」をはじめ、10種類以上の温泉をお楽しみいただけます。",
+          "content_sha256": "f4d09d5550447632925ef6e83e3c7ecfa8c32e2700654106387fd7c26f36d16e",
+          "final_url": "https://teiregi.jp/"
+        },
+        {
+          "facility_id": 8265,
+          "url": "https://teiregi.jp/onsen/11%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:17.675618+00:00",
+          "title": "11月カレンダー – 松山市で日帰り温泉・サウナなら南道後温泉ていれぎの湯",
+          "content_sha256": "d863233f8bed9dab1f20d9fa06b7797aa29488af70ba9382f0ed21db2e3d87db",
+          "final_url": "https://teiregi.jp/onsen/11%E6%9C%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC-2/"
+        },
+        {
+          "facility_id": 8265,
+          "url": "https://teiregi.jp/onsen/10%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:20.812907+00:00",
+          "title": "10月カレンダー – 松山市で日帰り温泉・サウナなら南道後温泉ていれぎの湯",
+          "content_sha256": "c00f6dc4d70410b501be36f767e23c1b059cb325e9092250c6384d44d8567054",
+          "final_url": "https://teiregi.jp/onsen/10%E6%9C%88%E3%82%AB%E3%83%AC%E3%83%B3%E3%83%80%E3%83%BC-2/"
+        },
+        {
+          "facility_id": 8265,
+          "url": "https://teiregi.jp/onsen/%e7%84%9a%e3%81%8d%e7%81%ab%e4%bd%93%e9%a8%93%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:23.921504+00:00",
+          "title": "焚き火体験スタート – 松山市で日帰り温泉・サウナなら南道後温泉ていれぎの湯",
+          "content_sha256": "a64339a54b7810ec3e8d7cca8b3a01a5edaeb8b45eceb7ca6c50a31ee4718c84",
+          "final_url": "https://teiregi.jp/onsen/%E7%84%9A%E3%81%8D%E7%81%AB%E4%BD%93%E9%A8%93%E3%82%B9%E3%82%BF%E3%83%BC%E3%83%88/"
+        },
+        {
+          "facility_id": 8265,
+          "url": "https://teiregi.jp/wp-content/uploads/2026/10/795d48b0786fd9b796fed8d3aaedda0a.png",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:42.635446+00:00",
+          "content_sha256": "2a16e6bb94a9197e859cc713fc73cca890f11e8a7c9d384b9a0e1b9e4328b92d"
+        },
+        {
+          "facility_id": 8265,
+          "url": "https://teiregi.jp/wp-content/uploads/2026/09/103a61bead9ec76ea82c3309ba5a4593.png",
+          "status": 200,
+          "checked_at": "2026-10-29T16:17:45.909426+00:00",
+          "content_sha256": "6a6db35a307c847c5115330c693516ee927c22aa89dc824d88472c671f875ce8"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "no_current_or_future_event",
+          "reason": "本部施設紹介と施設専用公式の新着・埋込公式投稿を確認。10月22日秋の紅葉紹介、11月営業予定、設備・コース通常営業のみ。特定開催日の一般参加特別企画なし。夏季シャワークライミングは9月終了、学校遠足は開催報告。既存イベントなし。",
+          "candidates": [],
+          "facility_id": 6915,
+          "name": "フォレストアドベンチャー・西条",
+          "completed_at": "2026-10-29T16:16:58.317014+00:00",
+          "sources_checked": [
+            {
+              "url": "https://foret-aventure.jp/park/fa-saijo/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:16:35.245163+00:00"
+            },
+            {
+              "url": "https://saijo.gogo-adventure.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:16:46.023108+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_hold",
+          "reason": "公式トップ・10/11月カレンダー本文と原画像・焚き火案内を確認。物販、割引、整体、占いは家族向け特別企画対象外。新候補2件は以下の不足を個別HOLD。既存イベントなし。",
+          "candidates": [
+            {
+              "title": "10/31ハロウィンイベント",
+              "disposition": "hold",
+              "reason": "公式10月カレンダーに10月31日と名称のみ。内容・開催時間・子どもの参加条件を確定できない。"
+            },
+            {
+              "title": "焚き火体験",
+              "disposition": "hold",
+              "reason": "1月16日案内は無料・フロント申出と記載するが、実施日程・終了日・実施時間および現在の継続実施を確定できない。日付を推測しない。"
+            }
+          ],
+          "facility_id": 8265,
+          "name": "南道後温泉 ていれぎの湯",
+          "completed_at": "2026-10-29T16:18:08.377457+00:00",
+          "sources_checked": [
+            {
+              "url": "http://www.teiregi.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:02.498783+00:00"
+            },
+            {
+              "url": "https://teiregi.jp/onsen/11%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:17.675618+00:00"
+            },
+            {
+              "url": "https://teiregi.jp/onsen/10%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:20.812907+00:00"
+            },
+            {
+              "url": "https://teiregi.jp/onsen/%e7%84%9a%e3%81%8d%e7%81%ab%e4%bd%93%e9%a8%93%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:23.921504+00:00"
+            },
+            {
+              "url": "https://teiregi.jp/wp-content/uploads/2026/10/795d48b0786fd9b796fed8d3aaedda0a.png",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:42.635446+00:00"
+            },
+            {
+              "url": "https://teiregi.jp/wp-content/uploads/2026/09/103a61bead9ec76ea82c3309ba5a4593.png",
+              "status": 200,
+              "checked_at": "2026-10-29T16:17:45.909426+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "fukui": {
+      "facility_ids": [
+        3432,
+        6884,
+        8250
+      ],
+      "total": 3,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 1,
+      "source_unresolved": 2,
+      "sources_checked": [
+        {
+          "facility_id": 3432,
+          "url": "https://www.fuku-e.com/spot/detail_1331.html",
+          "status": 503,
+          "checked_at": "2026-10-29T16:18:13.478182+00:00",
+          "title": "【重要】当サイトの一時閲覧停止について",
+          "content_sha256": "578b2e1ea7955a88c4ba8a370ed23d63b5927dd1918f5ed19c63a644d316ca51"
+        },
+        {
+          "facility_id": 3432,
+          "url": "https://www.fuku-e.com/spot/detail_1331.html",
+          "status": 503,
+          "checked_at": "2026-10-29T16:18:26.628910+00:00",
+          "title": "【重要】当サイトの一時閲覧停止について",
+          "content_sha256": "578b2e1ea7955a88c4ba8a370ed23d63b5927dd1918f5ed19c63a644d316ca51"
+        },
+        {
+          "facility_id": 3432,
+          "url": "https://www.kepco.co.jp/corporate/profile/community/pr/eldoland/",
+          "status": 403,
+          "checked_at": "2026-10-29T16:18:35.338457+00:00",
+          "title": "Access Denied",
+          "content_sha256": "b4913ba530decf76ccc9805db7366d4630caef5e07b228eac4ae4e64e8eaa798"
+        },
+        {
+          "facility_id": 6884,
+          "url": "https://www1.city.obama.fukui.jp/obm/kosodate/kidsplaypark-nanairo",
+          "status": 404,
+          "checked_at": "2026-10-29T16:18:49.061618+00:00",
+          "title": "404 - ファイルまたはディレクトリが見つかりません。",
+          "content_sha256": "dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac"
+        },
+        {
+          "facility_id": 6884,
+          "url": "https://www1.city.obama.fukui.jp/obm/kosodate/kidsplaypark-nanairo",
+          "status": 404,
+          "checked_at": "2026-10-29T16:19:07.692030+00:00",
+          "title": "404 - ファイルまたはディレクトリが見つかりません。",
+          "content_sha256": "dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac"
+        },
+        {
+          "facility_id": 6884,
+          "url": "https://www.pref.fukui.lg.jp/doc/tokei/kouen/koen1-07.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:19:09.199904+00:00",
+          "title": "若狭総合公園  | 福井県ホームページ",
+          "content_sha256": "9824eadab320a8a68a8fd77aa5c7b41e9a09cf6420a5e603540e0197abfc4460"
+        },
+        {
+          "facility_id": 6884,
+          "url": "https://www1.city.obama.fukui.jp/obm/kosodate/news_list/nanairo",
+          "status": 404,
+          "checked_at": "2026-10-29T16:19:14.805199+00:00",
+          "title": "404 - ファイルまたはディレクトリが見つかりません。",
+          "content_sha256": "dd97137d218a6b1016d75f3956c825a01fc0c140bdc942734a3be8c639c264ac"
+        },
+        {
+          "facility_id": 8250,
+          "url": "https://www.gokurakuyu.ne.jp/tempo/fukui/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:19:24.982683+00:00",
+          "title": "メンテナンス中です",
+          "content_sha256": "fdfed217b3191ac98dd2343f33379a092db0e2a642a3fc87669cdb3f0a92765a",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html"
+        },
+        {
+          "facility_id": 8250,
+          "url": "https://www.gokurakuyu.ne.jp/tempo/fukui/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:19:30.300966+00:00",
+          "title": "メンテナンス中です",
+          "content_sha256": "fdfed217b3191ac98dd2343f33379a092db0e2a642a3fc87669cdb3f0a92765a",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html"
+        },
+        {
+          "facility_id": 8250,
+          "url": "https://rakuspa.com/tsurumi/news/15322/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:19:31.530044+00:00",
+          "title": "極楽湯　店舗一覧・情報（簡易ページ）｜RAKU SPA 鶴見",
+          "content_sha256": "63b8580d973bcef668a8e6a4c906648fccf58b2303e16e0950812817b035e15e"
+        },
+        {
+          "facility_id": 8250,
+          "url": "https://rakuspa.com/cms/wp-content/uploads/2026/10/screencapture-gokurakuyu-ne-jp-tempo-fukui-2026-10-23-23_24_03.png",
+          "status": 200,
+          "checked_at": "2026-10-29T16:19:39.212252+00:00",
+          "content_sha256": "e1e8961f466fdd51f6dd28f11ac067b5ecb66b1c3698e7a10312808f3f7f7db7"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "登録公式観光施設ページは再試行含め2回503（基盤PHP脆弱性対策で閲覧停止・再開未定）。代替として施設運営者関西電力の公式エルどらんどページを取得したが403 Access Denied。登録副URLなし。イベント内容を評価できず、鮮度スタンプを更新しない。既存イベントなし。",
+          "candidates": [],
+          "facility_id": 3432,
+          "name": "若狭たかはま エルどらんど",
+          "completed_at": "2026-10-29T16:18:46.389646+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.fuku-e.com/spot/detail_1331.html",
+              "status": 503,
+              "checked_at": "2026-10-29T16:18:13.478182+00:00"
+            },
+            {
+              "url": "https://www.fuku-e.com/spot/detail_1331.html",
+              "status": 503,
+              "checked_at": "2026-10-29T16:18:26.628910+00:00"
+            },
+            {
+              "url": "https://www.kepco.co.jp/corporate/profile/community/pr/eldoland/",
+              "status": 403,
+              "checked_at": "2026-10-29T16:18:35.338457+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "source_unresolved",
+          "reason": "市公式利用案内は2回404、市公式なないろ新着カテゴリ代替も404。登録副URLの県公式公園紹介は200で常設施設案内のみ（2025年6月更新）、市の同じ死リンクを案内しており現行イベント・申込状況を評価できない。副URLの実確認分のみregistry鮮度更新。既存イベントなし。",
+          "candidates": [],
+          "facility_id": 6884,
+          "name": "キッズプレイパーク なないろ",
+          "completed_at": "2026-10-29T16:19:23.418663+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www1.city.obama.fukui.jp/obm/kosodate/kidsplaypark-nanairo",
+              "status": 404,
+              "checked_at": "2026-10-29T16:18:49.061618+00:00"
+            },
+            {
+              "url": "https://www1.city.obama.fukui.jp/obm/kosodate/kidsplaypark-nanairo",
+              "status": 404,
+              "checked_at": "2026-10-29T16:19:07.692030+00:00"
+            },
+            {
+              "url": "https://www.pref.fukui.lg.jp/doc/tokei/kouen/koen1-07.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:19:09.199904+00:00"
+            },
+            {
+              "url": "https://www1.city.obama.fukui.jp/obm/kosodate/news_list/nanairo",
+              "status": 404,
+              "checked_at": "2026-10-29T16:19:14.805199+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_hold",
+          "reason": "店舗URLは2回とも200だが緊急メンテナンス案内へ転送。公式が指定したRAKU SPA代替ページと福井店原画像を実確認。画像の催事は女性料金優待・カレー・2025年夏宴会で現行の家族向け特別企画なし。代替一覧にある6キャンペーンは福井店実施可否・店別日程/条件を確定できず、同一ソース障害として個別にHOLD。既存イベントなし。",
+          "candidates": [
+            {
+              "title": "WeatherPlanet＆海月雲ろあ×極楽湯・RAKU SPA",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店参加・店別開催日/条件が不明"
+            },
+            {
+              "title": "銀魂×極楽湯RAKUSPA",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店参加・店別開催日/条件が不明"
+            },
+            {
+              "title": "サンリオキャラクターズ×極楽湯 RAKU SPA",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店参加・店別開催日/条件が不明"
+            },
+            {
+              "title": "ファイナルファンタジー レゾナンス×極楽湯 RAKU SPA",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店参加・店別開催日/条件が不明"
+            },
+            {
+              "title": "極楽熱波王",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店開催・子どもの参加条件が不明"
+            },
+            {
+              "title": "にじさんじ×極楽湯 RAKUSPA（11月12日開始）",
+              "disposition": "hold",
+              "reason": "公式店舗ページ停止のため福井店参加・店別開催日/条件が不明"
+            }
+          ],
+          "facility_id": 8250,
+          "name": "極楽湯 福井店",
+          "completed_at": "2026-10-29T16:20:01.025262+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.gokurakuyu.ne.jp/tempo/fukui/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:19:24.982683+00:00"
+            },
+            {
+              "url": "https://www.gokurakuyu.ne.jp/tempo/fukui/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:19:30.300966+00:00"
+            },
+            {
+              "url": "https://rakuspa.com/tsurumi/news/15322/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:19:31.530044+00:00"
+            },
+            {
+              "url": "https://rakuspa.com/cms/wp-content/uploads/2026/10/screencapture-gokurakuyu-ne-jp-tempo-fukui-2026-10-23-23_24_03.png",
+              "status": 200,
+              "checked_at": "2026-10-29T16:19:39.212252+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "fukuoka": {
+      "facility_ids": [
+        1792,
+        1794,
+        1795,
+        1796,
+        1798,
+        1799,
+        1800,
+        1802,
+        1804,
+        1807,
+        1809,
+        1810,
+        1811,
+        1812,
+        1813,
+        1814,
+        1815,
+        1816,
+        1817,
+        1818,
+        1819,
+        1820,
+        1823,
+        1825,
+        1826,
+        1829,
+        1831,
+        1833,
+        1834,
+        1835,
+        1840,
+        1842,
+        1847,
+        1848
+      ],
+      "total": 4,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 4,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:02.503713+00:00",
+          "title": "ニュース｜マリンワールド海の中道",
+          "content_sha256": "b5773038d3e7fbcac76a8bbc1f248f6e788923c6f2953901ec81226349d36b3c"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/news/post-9129/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:09.914733+00:00",
+          "title": "【お得なセット券販売】パウ・パトロール×マリンワールド海の中道　パウっとドキワク水族館レスキュー！｜マリンワールド海の中道",
+          "content_sha256": "e62f96796bc1a78b50ec692a46ebfb4320141da46c2d080e9e6ba610e9c4de29"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/news/post-9038/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:11.059756+00:00",
+          "title": "【タイアップイベント】みずのなかまといっしょに「洗おう 笑おう」開催｜マリンワールド海の中道",
+          "content_sha256": "65c9d559f4f73e545e5ad5aa9f71d86ec502af98bac9b7f7b55193b716c51412"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:12.343236+00:00",
+          "title": "マリンワールド海の中道",
+          "content_sha256": "aef87c6293f6e49b936e4baeb827e30df6536c759e5e8f82499c2cced4af10ad"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/special/marine-world_pawpatrol/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:23.185658+00:00",
+          "title": "パウっとドキワク 水族館レスキュー！｜マリンワールド海の中道",
+          "content_sha256": "428a9481b9dc9321b0db363968596d770b9fa2503b2490d9841cd218a9cfe570"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/pick_up/11%e6%9c%888%e6%97%a5%e3%83%bb9%e6%97%a5%e3%81%af%e7%a7%8b%e3%81%ae%e6%84%9f%e8%ac%9d%e7%a5%ad-2/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:24.199195+00:00",
+          "title": "11月14日・15日は秋の感謝祭｜マリンワールド海の中道",
+          "content_sha256": "15046784bc5259584f4f73143c9bb44aadabd1136c03ea4fe150dd1e5e43b845",
+          "final_url": "https://marine-world.jp/pick_up/11%E6%9C%888%E6%97%A5%E3%83%BB9%E6%97%A5%E3%81%AF%E7%A7%8B%E3%81%AE%E6%84%9F%E8%AC%9D%E7%A5%AD-2/"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://marine-world.jp/pick_up/%e7%a7%8b%e3%81%ae%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e6%83%85%e5%a0%b1%e3%80%80%ef%bc%83%e3%83%9e%e3%83%aa%e3%83%b3%e3%81%a7%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b310%e6%9c%88%ef%bc%89/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:25.356766+00:00",
+          "title": "秋のイベント情報　＃マリンでハロウィン(10月）｜マリンワールド海の中道",
+          "content_sha256": "bdc0a287610a1669317166194330185a7618a9f80c3c6bd89570a9593fe2bfe0",
+          "final_url": "https://marine-world.jp/pick_up/%E7%A7%8B%E3%81%AE%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E6%83%85%E5%A0%B1%E3%80%80%EF%BC%83%E3%83%9E%E3%83%AA%E3%83%B3%E3%81%A7%E3%83%8F%E3%83%AD%E3%82%A6%E3%82%A3%E3%83%B310%E6%9C%88%EF%BC%89/"
+        },
+        {
+          "facility_id": 1792,
+          "url": "https://shabon.com/marine-world/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:20:26.458711+00:00",
+          "title": "【親子で体験】マリンワールド×シャボン玉石けん“みずのなかまといっしょに「洗おう 笑おう」”開催！石けん作り・バックヤードツアーも｜福岡市",
+          "content_sha256": "393b5e4a94503778e1a01751b2b085214904a40efc4c326f5fc571cc00f372a5"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:26.133798+00:00",
+          "title": "イベント｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "fb690378e804d803a2ef48e48bcd14f8b1f97ef1ee8a79edd3f52a6ea9556650"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:34.574645+00:00",
+          "title": "福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "7df7fc1d4802da4cc7346312ef78953505d9d81e54ac6850bac91a336d0c23b6"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/news/article/rmuzp5x4mr3knzbd.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:42.198977+00:00",
+          "title": "11月1日からクリスマスイベント開催！｜お知らせ｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "21526db9bc0d21f49d776c924090f592aefc89405635830a5ae4aff4e490287d"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/news/article/1u9xmv0h803vg204.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:43.219203+00:00",
+          "title": "9月18日（金）～10月31日（土）ハロウィーンシールラリー開催！｜お知らせ｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "72120505c4caff5b9cf018cff08c254bf6524804fb20a419cd341b81dc238336"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/event/detail/qpq8k403it573mbe.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:44.405799+00:00",
+          "title": "ドリーミングの元気100倍!! コンサート｜イベント｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "c7764644c5c3c6da545a82375763b8979602670fc4783253b57e5f03e138afa5"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/plan/detail/s0uvq9uh5p0102k3.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:45.494933+00:00",
+          "title": "ハロウィーンを楽しもう♪｜たのしみかた｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "1e0853c90352a6adc9392099d03c434b61191b530efb552546cd3d90815190df"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/guide/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:53.977475+00:00",
+          "title": "チケット・営業時間｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "15f811d3355dc143361dd11bfe6c3cdee22b8e3ff91baa79abd9e257ce567d76"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/event/detail/evjw84nyw6j6il57.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:55.012068+00:00",
+          "title": "ロードトレイン SLマン｜イベント｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "6658676bfd713e5d1383ff22a77328ecd53764fe599fc1429ad3e199adca2922"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/event/detail/n7ased8ovxa26t9o.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:21:56.004518+00:00",
+          "title": "ロードトレイン ポッポちゃん｜イベント｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "8f2cff2ae742e8b20dda3934249580defb6d4c3ecdd24c6e25bd588d33595e40"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/plan/detail/yw7vdav5p3amlsfg.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:22:04.972117+00:00",
+          "title": "走る！乗れる！ロードトレイン「SLマン」と「ポッポちゃん」｜たのしみかた｜福岡アンパンマンこどもミュージアムinモール",
+          "content_sha256": "dab9bafbf664f036c0c06415807126d14566ec995f6389f74e4ce5780304edec"
+        },
+        {
+          "facility_id": 1794,
+          "url": "https://www.fukuoka-anpanman.jp/json/events.json",
+          "status": 200,
+          "checked_at": "2026-10-29T16:22:13.183129+00:00",
+          "title": "",
+          "content_sha256": "d50294ba3cce07c4d86a2004d336f245515ff90fd9e1d7bf79da3bf3cd461a38"
+        },
+        {
+          "facility_id": 1795,
+          "url": "https://www.kidzania.jp/fukuoka/news/event",
+          "status": 200,
+          "checked_at": "2026-10-29T16:22:48.700748+00:00",
+          "title": "イベント | キッザニア",
+          "content_sha256": "a313a8bcd64f889812ad00c0aecd105dba603ebe015a238d9a0d5fbd5d75575c"
+        },
+        {
+          "facility_id": 1795,
+          "url": "https://www.kidzania.jp/fukuoka/news/18670",
+          "status": 200,
+          "checked_at": "2026-10-29T16:22:59.119167+00:00",
+          "title": "キッザニア福岡 ターミナルBで「ハロー！会計 with キッザニア福岡」開催 | キッザニア",
+          "content_sha256": "3c303c4867ea0376b20f2b5de61f14e835da43ebff17fd90c994386121014a8e"
+        },
+        {
+          "facility_id": 1795,
+          "url": "https://www.kidzania.jp/fukuoka/news/event?page=1",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:01.350060+00:00",
+          "title": "イベント | キッザニア",
+          "content_sha256": "e172872d3919df261a3f8a5b3f4d0549203b0f8cc8a5154030106f60299d0d65"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:28.202832+00:00",
+          "title": "イベント・キャンペーン | ららぽーと福岡",
+          "content_sha256": "be8d4f046d9f7b50938c7f634fb5d1115d51a1e7ee85fd5402236b0a02e073e5"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3673999.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:39.384356+00:00",
+          "title": "『なかフェス2026〜音色あふれる街へ〜』開催！ | ららぽーと福岡",
+          "content_sha256": "e2490ab299ba2aa5b9c1c0fcde4b6ba0cb668e2e9727d27e092e1bcf920d8700"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666882.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:40.941427+00:00",
+          "title": "「GO!GO!スパフル47都道府県フリーライブ全国行脚 – Road to 両国国技館 –」 開催！! | ららぽーと福岡",
+          "content_sha256": "57f29c7ea1a8af94cc4aac8eccac4fa3cae59ef40b25dd54a99e91019e615f5f"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666858.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:42.380493+00:00",
+          "title": "乃木坂46・6期生全国ツアー2026前夜祭の詳細決定！ | ららぽーと福岡",
+          "content_sha256": "adb1cf1f7196218c74a22df8a95007e0971ff64f52ed41e53407ba8a8d813a2a"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3663823.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:44.618528+00:00",
+          "title": "映画『うるわしの宵の月』公開記念「劇中登場衣装展」を開催！ | ららぽーと福岡",
+          "content_sha256": "045d02f8185fd4a5e67871a6e22b25775365225e1d14b4290d8f28a5853bf2b8"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666858.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:56.860945+00:00",
+          "title": "乃木坂46・6期生全国ツアー2026前夜祭の詳細決定！ | ららぽーと福岡",
+          "content_sha256": "adb1cf1f7196218c74a22df8a95007e0971ff64f52ed41e53407ba8a8d813a2a"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3646667.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:58.034768+00:00",
+          "title": "体験型デジタルアトラクション　ディノグランプリ！ | ららぽーと福岡",
+          "content_sha256": "a85b6bc0231e9412c96bd137e0d93e2af434dbc6fc5579a96b41de19228c8d7b"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3655043.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:23:59.562373+00:00",
+          "title": "前橋ウィッチーズ ミニアルバムリリースイベント | ららぽーと福岡",
+          "content_sha256": "66584bb352e0a6eeedaa44d9e13df97643b50c191c78fc9b31b14af9d9bba06e"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632301.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:01.760680+00:00",
+          "title": "「ぱん食い競走 in ららぽーと福岡」開催！ | ららぽーと福岡",
+          "content_sha256": "3f9272a7eec3fb7164ae0e3f63fd673aee645a7a48222d03f1511e8fc63e8b2b"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632277.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:03.333673+00:00",
+          "title": "今年も開催！『みんなでつくろう！LaLa文化祭2026』 | ららぽーと福岡",
+          "content_sha256": "feed250b5f21b260511517f742d031b2ca45b39fd5ea8f15f203877154a07cee"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3641596.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:10.110296+00:00",
+          "title": "ららぽーとでダッシュしよう！『SPEED STAR 30m Dash Challenge』開催！ | ららぽーと福岡",
+          "content_sha256": "a469e561f3f8209f045a1e360f6be7470d8903f93568aaeaff18694c21fb53df"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3638952.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:12.185181+00:00",
+          "title": "STU48　14thシングル「冬服に着替えたら」発売記念イベント | ららぽーと福岡",
+          "content_sha256": "740e15f80223d9d1b18bb9515a33ae3ca669a5b395d0923262c1c018bd3e74ab"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3623775.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:13.786782+00:00",
+          "title": "Mrs. GREEN APPLE OFFICIAL FAN CLUB 「Ringo Jam」10周年記念 キッチンカー期間限定開催 | ららぽーと福岡",
+          "content_sha256": "9e949168a716fe6558328fc0991d471e8911b3a7ee6512bdc97b87d1ca206123"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3412383.html",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:15.981872+00:00",
+          "title": "『名探偵コナンランド2026』が開催決定！ | ららぽーと福岡",
+          "content_sha256": "9a15204a32c31ff1ec209707665c20bf57c77868289e6cec1bcc6a5e2966fb18"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://www.nogizaka46.com/s/n46/news/detail/102329?ima=4016&pri1=202610",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:30.060542+00:00",
+          "title": "11月30日(月)福岡会場「6期生全国ツアー2026」前夜祭の詳細決定！",
+          "content_sha256": "f656f2bfdb31715cc5bccae93c184778bc668e61864ea8653c150cea0b118066"
+        },
+        {
+          "facility_id": 1796,
+          "url": "https://conan-land.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T16:24:31.228177+00:00",
+          "title": "名探偵コナンランド",
+          "content_sha256": "8d4229e8e56f2b12be0ff276444143942a201992e990b40429e4c5cc1a7c1dd5"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "candidate_found_added",
+          "reason": "ニュース・トップ新着・全4企画詳細と共催者公式を実取得。現在/将来の施設開催企画3件追加（各サブ企画は主企画に統合）。体験満了2件とビンゴ詳細不足1件HOLD。雇用・混雑・物販・常設展示は非イベント。既存全イベントは終了済み、変更なし。",
+          "candidates": [
+            {
+              "title": "パウっとドキワク水族館レスキュー！",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "マリンでハロウィン／ハロウィンナイト",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "秋の感謝祭（仕事道具体験・バルーン・ライブを含む）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "洗おう笑おう 飼育体験",
+              "disposition": "hold",
+              "reason": "館公式に定員満了と明記、現在の参加経路なし"
+            },
+            {
+              "title": "洗おう笑おう オリジナル石けん作り",
+              "disposition": "hold",
+              "reason": "館公式に体験イベント定員満了と明記、現在の参加経路なし"
+            },
+            {
+              "title": "洗おう笑おう ビンゴラリー",
+              "disposition": "hold",
+              "reason": "会期は10/22〜11/1だが共催者専用ページ200は本文/リンク空、ビンゴの受付時間・料金・参加条件を確認できない"
+            }
+          ],
+          "facility_id": 1792,
+          "name": "マリンワールド海の中道",
+          "completed_at": "2026-10-29T16:21:24.779780+00:00",
+          "sources_checked": [
+            {
+              "url": "https://marine-world.jp/news/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:02.503713+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/news/post-9129/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:09.914733+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/news/post-9038/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:11.059756+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:12.343236+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/special/marine-world_pawpatrol/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:23.185658+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/pick_up/11%e6%9c%888%e6%97%a5%e3%83%bb9%e6%97%a5%e3%81%af%e7%a7%8b%e3%81%ae%e6%84%9f%e8%ac%9d%e7%a5%ad-2/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:24.199195+00:00"
+            },
+            {
+              "url": "https://marine-world.jp/pick_up/%e7%a7%8b%e3%81%ae%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e6%83%85%e5%a0%b1%e3%80%80%ef%bc%83%e3%83%9e%e3%83%aa%e3%83%b3%e3%81%a7%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b310%e6%9c%88%ef%bc%89/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:25.356766+00:00"
+            },
+            {
+              "url": "https://shabon.com/marine-world/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:20:26.458711+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "動的イベント一覧を公式公開events.jsonまで取得して全15行を内容評価。季節限定3企画群と単日コンサート1件を追加。SLマン/ポッポちゃん・関連工作は同一運行企画、ハロウィンのステージ/工作/ラリー、クリスマスのステージ/工作は各季節企画に統合。常設の体操・グリーティング・朝のお迎え・人形劇・紙芝居・パネルシアターと11月からの終了日なしグリーティングは通常演目としてイベント化しない。既存イベントなし。",
+          "candidates": [
+            {
+              "title": "ハロウィーン（ステージ・工作・シールラリー）",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "ロードトレイン SLマン/ポッポちゃん（関連お面工作含む）",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "クリスマス（ステージ・お面工作）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ドリーミングの元気100倍!!コンサート",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 1794,
+          "name": "福岡アンパンマンこどもミュージアムinモール",
+          "completed_at": "2026-10-29T16:22:47.003022+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.fukuoka-anpanman.jp/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:26.133798+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:34.574645+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/news/article/rmuzp5x4mr3knzbd.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:42.198977+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/news/article/1u9xmv0h803vg204.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:43.219203+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/event/detail/qpq8k403it573mbe.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:44.405799+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/plan/detail/s0uvq9uh5p0102k3.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:45.494933+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/guide/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:53.977475+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/event/detail/evjw84nyw6j6il57.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:55.012068+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/event/detail/n7ased8ovxa26t9o.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:21:56.004518+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/plan/detail/yw7vdav5p3amlsfg.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:22:04.972117+00:00"
+            },
+            {
+              "url": "https://www.fukuoka-anpanman.jp/json/events.json",
+              "status": 200,
+              "checked_at": "2026-10-29T16:22:13.183129+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式イベント一覧の1・2ページと対象詳細を確認。福岡会場の現行候補はハロー会計のみ、予約不要の参加経路あり。9月限定ショップ・発掘企画と10月Exciting Weekは終了、他県Out of KidZaniaは当施設/本パート範囲外。既存イベントなし。",
+          "candidates": [
+            {
+              "title": "ハロー！会計 with キッザニア福岡",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 1795,
+          "name": "キッザニア福岡",
+          "completed_at": "2026-10-29T16:23:26.642812+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.kidzania.jp/fukuoka/news/event",
+              "status": 200,
+              "checked_at": "2026-10-29T16:22:48.700748+00:00"
+            },
+            {
+              "url": "https://www.kidzania.jp/fukuoka/news/18670",
+              "status": 200,
+              "checked_at": "2026-10-29T16:22:59.119167+00:00"
+            },
+            {
+              "url": "https://www.kidzania.jp/fukuoka/news/event?page=1",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:01.350060+00:00"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式一覧全42件を内容評価し、期間限定の体験・展示・観覧候補11件を全件詳細取得。9件追加、2件HOLD。営業割引・ポイント・物販セール・食物販売だけのキッチンカー、常設噴水/ガンダム/定常ミニトレイン・施設貸出はイベント化せず。既存イベントなし。",
+          "candidates": [
+            {
+              "title": "なかフェス2026",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "GO!GO!スパフル フリーライブ",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "うるわしの宵の月 衣装展",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ディノグランプリ",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "前橋ウィッチーズ ミニライブ",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ぱん食い競走",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "LaLa文化祭 アートの散歩道",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "SPEED STAR",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "STU48 ミニライブ",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "乃木坂46・6期生ツアー前夜祭",
+              "disposition": "hold",
+              "reason": "主催公式詳細102329では無料観覧を設けない可能性が明記。確実な有料優先観覧は11/12〜15のCD購入抽選受付前で、現在申込可能な参加経路を確定できない。親子席もリストバンドが必要。"
+            },
+            {
+              "title": "名探偵コナンランド2026 福岡",
+              "disposition": "hold",
+              "reason": "施設/主催公式で11/13〜23開催は確認。主催現行サイトは大阪会場詳細を表示し、福岡会場の詳細リンク未公開。福岡の会場位置・時間・撮影会/ラリーの参加条件を確定できない。"
+            }
+          ],
+          "facility_id": 1796,
+          "name": "三井ショッピングパーク ららぽーと福岡",
+          "completed_at": "2026-10-29T16:25:18.917516+00:00",
+          "sources_checked": [
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:28.202832+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3673999.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:39.384356+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666882.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:40.941427+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666858.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:42.380493+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3663823.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:44.618528+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666858.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:56.860945+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3646667.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:58.034768+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3655043.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:23:59.562373+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632301.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:01.760680+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632277.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:03.333673+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3641596.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:10.110296+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3638952.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:12.185181+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3623775.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:13.786782+00:00"
+            },
+            {
+              "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3412383.html",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:15.981872+00:00"
+            },
+            {
+              "url": "https://www.nogizaka46.com/s/n46/news/detail/102329?ima=4016&pri1=202610",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:30.060542+00:00"
+            },
+            {
+              "url": "https://conan-land.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T16:24:31.228177+00:00"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}
