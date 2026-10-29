@@ -1,0 +1,1035 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-29T23:48:19.809119+00:00",
+  "due_facility_ids": [
+    1653,
+    6885,
+    6978,
+    8269,
+    92,
+    6894,
+    6968,
+    8262,
+    6920,
+    1425,
+    1427,
+    941,
+    245,
+    247,
+    873,
+    8183,
+    6914,
+    121,
+    194,
+    2118
+  ],
+  "aggregate": {
+    "total": 10,
+    "no_current_or_future_event": 6,
+    "candidate_found_added": 0,
+    "candidate_found_duplicate": 0,
+    "candidate_found_hold": 4,
+    "source_unresolved": 0
+  },
+  "per_region": {
+    "kyoto": {
+      "facility_ids": [
+        1653
+      ],
+      "total": 1,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/",
+          "checked_at": "2026-10-29T23:42:11.058088+00:00",
+          "status": 403
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/",
+          "checked_at": "2026-10-29T23:42:22.758793+00:00",
+          "status": 403
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/news/",
+          "checked_at": "2026-10-29T23:42:31.413812+00:00",
+          "status": 403
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:42:20+00:00",
+          "transport": "web.open"
+        },
+        {
+          "url": "https://www.suntory.co.jp/factory/kyoto/news/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:42:25+00:00",
+          "transport": "web.click"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1653,
+          "disposition": "no_current_or_future_event",
+          "reason": "Official home shows ordinary factory tours, shop and standing recommendations only; no dated family event identified. News list loads dynamically and has no readable entries. Direct requests returned 403 twice and official news fallback also 403; web.open returned readable home and news navigation.",
+          "candidates": [],
+          "execution_note": "First progress write failed due to stdin encoding; facility 6885 primary fetch occurred before this corrected completion write. No assessment or mutation for 6885 preceded this write.",
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:43:05.737851+00:00",
+          "region": "kyoto",
+          "sources_checked": [
+            {
+              "url": "https://www.suntory.co.jp/factory/kyoto/",
+              "checked_at": "2026-10-29T23:42:11.058088+00:00",
+              "status": 403
+            },
+            {
+              "url": "https://www.suntory.co.jp/factory/kyoto/",
+              "checked_at": "2026-10-29T23:42:22.758793+00:00",
+              "status": 403
+            },
+            {
+              "url": "https://www.suntory.co.jp/factory/kyoto/news/",
+              "checked_at": "2026-10-29T23:42:31.413812+00:00",
+              "status": 403
+            },
+            {
+              "url": "https://www.suntory.co.jp/factory/kyoto/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:42:20+00:00",
+              "transport": "web.open"
+            },
+            {
+              "url": "https://www.suntory.co.jp/factory/kyoto/news/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:42:25+00:00",
+              "transport": "web.click"
+            }
+          ]
+        }
+      ]
+    },
+    "miyazaki": {
+      "facility_ids": [
+        6885,
+        6978,
+        8269
+      ],
+      "total": 3,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 2,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://seagaia.co.jp/activity/1123/",
+          "checked_at": "2026-10-29T23:42:55.008364+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://seagaia.co.jp/event/",
+          "checked_at": "2026-10-29T23:43:06.365107+00:00",
+          "status": 404
+        },
+        {
+          "url": "https://seagaia.co.jp/special/calendar/",
+          "checked_at": "2026-10-29T23:43:14.883571+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://seagaia.co.jp/lp/autumn/",
+          "checked_at": "2026-10-29T23:43:19.429163+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://seagaia.co.jp/facilities/1094/",
+          "checked_at": "2026-10-29T23:43:20.409461+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://www.city.miyazaki.miyazaki.jp/education/support/facility/401969.html",
+          "checked_at": "2026-10-29T23:43:32.039313+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://sakaemachipark.com/",
+          "checked_at": "2026-10-29T23:43:35.706073+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://sakaemachipark.com/news-post/20260910otayori/",
+          "checked_at": "2026-10-29T23:43:38.897112+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://sakaemachipark.com/news-post/20261112otayori/",
+          "checked_at": "2026-10-29T23:43:43.908877+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://sakaemachipark.com/wp-content/uploads/2026/10/令和８年度11・12月号-1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-29T23:44:02.894829+00:00"
+        },
+        {
+          "url": "http://service.kijo.jp/~yurara/index.html",
+          "checked_at": "2026-10-29T23:44:34.171426+00:00",
+          "status": 200
+        },
+        {
+          "url": "http://service.kijo.jp/~yurara/event.html",
+          "checked_at": "2026-10-29T23:44:39.761562+00:00",
+          "status": 200
+        },
+        {
+          "url": "http://service.kijo.jp/~yurara/calendar.html",
+          "checked_at": "2026-10-29T23:44:40.644747+00:00",
+          "status": 200
+        },
+        {
+          "url": "http://service.kijo.jp/~yurara/R0810o.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:44:54.869751+00:00"
+        },
+        {
+          "url": "http://service.kijo.jp/~yurara/R0810u.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:44:55.053327+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 6885,
+          "disposition": "no_current_or_future_event",
+          "reason": "KIDS OASIS activity/detail pages publish standing hotel-guest-only play access, not a dated special program. Current resort calendar and autumn feature were read; no event is stated to occur in KIDS OASIS.",
+          "candidates": [],
+          "outside_facility_scope": [
+            "11/12 Saitobaru bus tour: excursion elsewhere",
+            "Seagaia special rakugo: no KIDS OASIS venue",
+            "Dunlop Phoenix: golf venue",
+            "Winter feature: resort grounds, no KIDS OASIS venue",
+            "Moon path: natural viewing guide",
+            "10/30-11/3 fireworks: resort garden/guestrooms",
+            "Autumn Halloween Garden and costume loan: THE LIVING GARDEN/Pine Terrace",
+            "10/24-31 Trick or Treat: hotel-wide, not confirmed in KIDS OASIS",
+            "Hokkaido fair/Halloween meals, cakes, drinks and stay plans: restaurant/retail offers",
+            "Florante autumn festival, Halloween, market, dog day: different facility"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:43:31.415380+00:00",
+          "region": "miyazaki",
+          "sources_checked": [
+            {
+              "url": "https://seagaia.co.jp/activity/1123/",
+              "checked_at": "2026-10-29T23:42:55.008364+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://seagaia.co.jp/event/",
+              "checked_at": "2026-10-29T23:43:06.365107+00:00",
+              "status": 404
+            },
+            {
+              "url": "https://seagaia.co.jp/special/calendar/",
+              "checked_at": "2026-10-29T23:43:14.883571+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://seagaia.co.jp/lp/autumn/",
+              "checked_at": "2026-10-29T23:43:19.429163+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://seagaia.co.jp/facilities/1094/",
+              "checked_at": "2026-10-29T23:43:20.409461+00:00",
+              "status": 200
+            }
+          ]
+        },
+        {
+          "facility_id": 6978,
+          "disposition": "candidate_found_hold",
+          "reason": "11/12 newsletter PDF visually read. Dated programs found; no guesses about holiday closure, prices or current reservation availability.",
+          "candidates": [
+            {
+              "title": "ふれあいまつり・プラバン",
+              "dates": [
+                "2026-11-14"
+              ],
+              "disposition": "hold",
+              "reason": "10:00-13:00 and venue confirmed; price/material-charge and participation conditions for craft not stated."
+            },
+            {
+              "title": "クリスマスガーランド制作",
+              "dates": [
+                "2026-12-01"
+              ],
+              "disposition": "hold",
+              "reason": "Elementary pupils, after school-16:00 and registration form confirmed; fee/materials and start time not stated."
+            },
+            {
+              "title": "おともだちの輪",
+              "disposition": "hold",
+              "reason": "Newsletter includes 11/3 holiday among Tuesday dates while same page and city page say public holidays closed. Hold this series rather than infer special opening."
+            },
+            {
+              "title": "絵本とあそびのひろば",
+              "dates": [
+                "2026-11-04",
+                "2026-11-11",
+                "2026-11-18",
+                "2026-11-25",
+                "2026-12-02",
+                "2026-12-09",
+                "2026-12-16"
+              ],
+              "disposition": "hold",
+              "reason": "11:00 start confirmed; end time and fee/current participation path beyond general user registration unstated."
+            },
+            {
+              "title": "いもほりごっこ遊び",
+              "dates": [
+                "2026-11-05",
+                "2026-11-19"
+              ],
+              "disposition": "hold",
+              "reason": "11:00 start confirmed; end time and fee/current entry conditions unstated."
+            },
+            {
+              "title": "交通安全教室",
+              "dates": [
+                "2026-11-12"
+              ],
+              "disposition": "hold",
+              "reason": "Reservation for 10 parent-child groups stated, but no application window or current availability/acceptance route confirmed."
+            },
+            {
+              "title": "ママのためのセルフケアー＆ストレッチ",
+              "dates": [
+                "2026-11-26"
+              ],
+              "disposition": "hold",
+              "reason": "Reservation for 10 parent-child groups, yoga mat/towel and water required; no application window or current availability confirmed."
+            },
+            {
+              "title": "絵合わせゲーム",
+              "dates": [
+                "2026-12-03",
+                "2026-12-10"
+              ],
+              "disposition": "hold",
+              "reason": "11:00 start confirmed; end time and fee/current entry conditions unstated."
+            },
+            {
+              "title": "バイオリン",
+              "dates": [
+                "2026-12-17"
+              ],
+              "disposition": "hold",
+              "reason": "11:00 and lecturer stated; end time, fee and participation conditions unstated."
+            }
+          ],
+          "excluded": [
+            "12/28 year-end cleanup: facility housekeeping, no outing program",
+            "Friday middle/high-school time: standing access, not special event",
+            "9/20 Switch2, 8/29-30 summer festival and 2025 thanks week: past"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:44:33.530513+00:00",
+          "region": "miyazaki",
+          "sources_checked": [
+            {
+              "url": "https://www.city.miyazaki.miyazaki.jp/education/support/facility/401969.html",
+              "checked_at": "2026-10-29T23:43:32.039313+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://sakaemachipark.com/",
+              "checked_at": "2026-10-29T23:43:35.706073+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://sakaemachipark.com/news-post/20260910otayori/",
+              "checked_at": "2026-10-29T23:43:38.897112+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://sakaemachipark.com/news-post/20261112otayori/",
+              "checked_at": "2026-10-29T23:43:43.908877+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://sakaemachipark.com/wp-content/uploads/2026/10/令和８年度11・12月号-1.pdf",
+              "status": 200,
+              "checked_at": "2026-10-29T23:44:02.894829+00:00"
+            }
+          ]
+        },
+        {
+          "facility_id": 8269,
+          "disposition": "candidate_found_hold",
+          "reason": "Home news, event and bath calendar checked; both October-issued November flyers visually read. Most entries are prices/retail offers or past.",
+          "candidates": [
+            {
+              "title": "菜っ葉屋収穫祭",
+              "dates": [
+                "2026-11-22"
+              ],
+              "disposition": "hold",
+              "reason": "Official flyer says 10:00, produce/processed-food sale at Nappaya roofed parking. No end time or festival rain/postponement, transport guidance and young-child conditions stated; no assumption from roofed venue."
+            }
+          ],
+          "excluded": [
+            "11/14 bath gift-ticket sale, 10/30 and 11/27 premium Friday,11/12-13 residents free admission: commerce/price campaigns",
+            "11/1 mini4WD class: PinoQ Park, different venue",
+            "11/26 health consultation: health service, not family outing",
+            "10/17 hometown festival,10/18 Cub meeting,5/10 bike exhibition,4/12 dinosaur race: officially ended",
+            "Bath rotation,points,meat-day sale: ordinary operations"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:45:11.127157+00:00",
+          "region": "miyazaki",
+          "sources_checked": [
+            {
+              "url": "http://service.kijo.jp/~yurara/index.html",
+              "checked_at": "2026-10-29T23:44:34.171426+00:00",
+              "status": 200
+            },
+            {
+              "url": "http://service.kijo.jp/~yurara/event.html",
+              "checked_at": "2026-10-29T23:44:39.761562+00:00",
+              "status": 200
+            },
+            {
+              "url": "http://service.kijo.jp/~yurara/calendar.html",
+              "checked_at": "2026-10-29T23:44:40.644747+00:00",
+              "status": 200
+            },
+            {
+              "url": "http://service.kijo.jp/~yurara/R0810o.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:44:54.869751+00:00"
+            },
+            {
+              "url": "http://service.kijo.jp/~yurara/R0810u.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:44:55.053327+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "nagano": {
+      "facility_ids": [
+        92
+      ],
+      "total": 1,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://scratchnois.base.shop/",
+          "checked_at": "2026-10-29T23:45:22.511999+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://scratchnois.base.shop/about",
+          "checked_at": "2026-10-29T23:45:25.440801+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://db.go-nagano.net/topics_detail6/id%3D11472",
+          "checked_at": "2026-10-29T23:45:26.779268+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://scratchnois.base.shop/blog",
+          "checked_at": "2026-10-29T23:45:31.103649+00:00",
+          "status": 200
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 92,
+          "disposition": "no_current_or_future_event",
+          "reason": "Registry had no URL. Genuine studio store/home/about and empty official news/blog checked; official Nagano tourism corroborates identity and standing glass workshop. No dated special event at this facility. Newly confirmed official news source registered; prefecture coverage status untouched.",
+          "candidates": [],
+          "excluded": [
+            "Standing glass experience and retail objects: ordinary operations",
+            "Iwata GLASS WORKSHOP guest-artist notice: different prefecture/venue, not facility92"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:45:41.449904+00:00",
+          "region": "nagano",
+          "sources_checked": [
+            {
+              "url": "https://scratchnois.base.shop/",
+              "checked_at": "2026-10-29T23:45:22.511999+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://scratchnois.base.shop/about",
+              "checked_at": "2026-10-29T23:45:25.440801+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://db.go-nagano.net/topics_detail6/id%3D11472",
+              "checked_at": "2026-10-29T23:45:26.779268+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://scratchnois.base.shop/blog",
+              "checked_at": "2026-10-29T23:45:31.103649+00:00",
+              "status": 200
+            }
+          ]
+        }
+      ]
+    },
+    "nara": {
+      "facility_ids": [
+        6894,
+        6968,
+        8262
+      ],
+      "total": 3,
+      "no_current_or_future_event": 2,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 1,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/event/",
+          "checked_at": "2026-10-29T23:45:42.028874+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/",
+          "checked_at": "2026-10-29T23:45:43.044343+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/topics/742/",
+          "checked_at": "2026-10-29T23:45:47.736250+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/topics/719/",
+          "checked_at": "2026-10-29T23:45:49.199153+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/info/",
+          "checked_at": "2026-10-29T23:45:50.702483+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://cdn.getshifter.co/e20e471c0b395ed7ead80cf3ecbecd07ef5fec14/uploads/2026/10/0828-5-1-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:46:05.478312+00:00"
+        },
+        {
+          "url": "https://cdn.getshifter.co/e20e471c0b395ed7ead80cf3ecbecd07ef5fec14/uploads/2026/10/0828-4-724x1024.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:46:06.767665+00:00"
+        },
+        {
+          "url": "https://toymuseum.lemonkai.or.jp/qa/",
+          "checked_at": "2026-10-29T23:46:19.490385+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://www.city.nara.lg.jp/site/shisetsu/3368.html",
+          "checked_at": "2026-10-29T23:46:35.762134+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://kashipoka.com/",
+          "checked_at": "2026-10-29T23:46:47.877922+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://kashipoka.com/?p=1439",
+          "checked_at": "2026-10-29T23:46:57.397055+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://kashipoka.com/?p=1423",
+          "checked_at": "2026-10-29T23:46:58.391187+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://kashipoka.com/blog/wp-content/uploads/2026/10/95e6cd0fac7ecfefb90a51329b13a4ce-819x1024.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:47:08.924935+00:00"
+        },
+        {
+          "url": "https://kashipoka.com/blog/wp-content/uploads/2026/10/cedabc01a08001d9ca4c0d177bb64262-819x1024.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:47:09.299307+00:00"
+        },
+        {
+          "url": "https://kashipoka.com/blog/wp-content/uploads/2026/09/6247fbbbd8aed3384a70e9e3dd94dba3-819x1024.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:47:09.694137+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 6894,
+          "disposition": "candidate_found_hold",
+          "reason": "October/November details, both November flyers, admission guide and FAQ read. Source-family participation gap: admission guide explicitly requires advance admission booking and says unbooked visitors cannot enter, while fetched official pages expose no working individual admission-ticket purchase link. Day-of workshop coupons alone do not prove admission path. Hold each affected program pending an official current admission-purchase route; no event assumed free from workshop fee alone.",
+          "candidates": [
+            {
+              "title": "ちいさいおうち ハロウィンバージョン",
+              "dates": [
+                "2026-10-31"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,800yen craft otherwise confirmed."
+            },
+            {
+              "title": "ハロウィンおはなし会＆仮装ワークショップ＆パレード",
+              "dates": [
+                "2026-10-31"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,16 groups, workshop free otherwise confirmed."
+            },
+            {
+              "title": "お絵描きモクトレイン",
+              "dates": [
+                "2026-11-01"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15,2000yen,10 units confirmed."
+            },
+            {
+              "title": "木製コマお絵描き",
+              "dates": [
+                "2026-11-01"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;14:15,500yen,10 units confirmed."
+            },
+            {
+              "title": "バランス積木",
+              "dates": [
+                "2026-11-03",
+                "2026-11-15"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,500yen,16 units confirmed."
+            },
+            {
+              "title": "木の実のペンダントワークショップ",
+              "dates": [
+                "2026-11-07",
+                "2026-11-22"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,500yen,16 units confirmed."
+            },
+            {
+              "title": "木製フォトフレームワークショップ",
+              "dates": [
+                "2026-11-08",
+                "2026-11-23"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,500yen,16 units confirmed."
+            },
+            {
+              "title": "木のくるまづくり",
+              "dates": [
+                "2026-11-21",
+                "2026-11-29"
+              ],
+              "disposition": "hold",
+              "reason": "Admission path gap above;11:15/14:15,500yen,16 units confirmed."
+            },
+            {
+              "title": "木育インストラクターによるワークショップ",
+              "dates": [
+                "2026-11-14",
+                "2026-11-28"
+              ],
+              "disposition": "hold",
+              "reason": "Official flyer explicitly says details will be announced later. Time,content,price and participation details unpublished."
+            }
+          ],
+          "excluded": [
+            "Other October workshops and September/August notices: past",
+            "Museum/cafe normal play and opening notices: standing operations"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:46:35.194601+00:00",
+          "region": "nara",
+          "sources_checked": [
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/event/",
+              "checked_at": "2026-10-29T23:45:42.028874+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/",
+              "checked_at": "2026-10-29T23:45:43.044343+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/topics/742/",
+              "checked_at": "2026-10-29T23:45:47.736250+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/topics/719/",
+              "checked_at": "2026-10-29T23:45:49.199153+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/info/",
+              "checked_at": "2026-10-29T23:45:50.702483+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://cdn.getshifter.co/e20e471c0b395ed7ead80cf3ecbecd07ef5fec14/uploads/2026/10/0828-5-1-724x1024.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:46:05.478312+00:00"
+            },
+            {
+              "url": "https://cdn.getshifter.co/e20e471c0b395ed7ead80cf3ecbecd07ef5fec14/uploads/2026/10/0828-4-724x1024.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:46:06.767665+00:00"
+            },
+            {
+              "url": "https://toymuseum.lemonkai.or.jp/qa/",
+              "checked_at": "2026-10-29T23:46:19.490385+00:00",
+              "status": 200
+            }
+          ]
+        },
+        {
+          "facility_id": 6968,
+          "disposition": "no_current_or_future_event",
+          "reason": "City official facility page is a permanent park/location/access guide with no dated program or event links. Targeted current official-city search also returned no corroborated future event for this park.",
+          "candidates": [],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:46:47.197908+00:00",
+          "region": "nara",
+          "sources_checked": [
+            {
+              "url": "https://www.city.nara.lg.jp/site/shisetsu/3368.html",
+              "checked_at": "2026-10-29T23:46:35.762134+00:00",
+              "status": 200
+            }
+          ]
+        },
+        {
+          "facility_id": 8262,
+          "disposition": "no_current_or_future_event",
+          "reason": "October and November calendars and autumn sale flyer visually read. All current notices concern bath operations, sales,points,food discounts or sauna service; no qualifying family outing event established.",
+          "candidates": [],
+          "excluded": [
+            "10/31 Halloween sweets for first100 children: admission-linked giveaway/retail promotion",
+            "11/21-29 Autumn Thanksgiving: bath ticket sale7300yen; other events explicitly unpublished",
+            "11/8 MAKO heat wave: sex-segregated sauna service, not child/family program",
+            "Wednesday children free, morning bath,stamp multipliers,dice-day,beer-day,Instagram coupon,body care day: pricing/promotions",
+            "10/19-23 maintenance closure: past operational notice"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:47:23.242491+00:00",
+          "region": "nara",
+          "sources_checked": [
+            {
+              "url": "https://kashipoka.com/",
+              "checked_at": "2026-10-29T23:46:47.877922+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://kashipoka.com/?p=1439",
+              "checked_at": "2026-10-29T23:46:57.397055+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://kashipoka.com/?p=1423",
+              "checked_at": "2026-10-29T23:46:58.391187+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://kashipoka.com/blog/wp-content/uploads/2026/10/95e6cd0fac7ecfefb90a51329b13a4ce-819x1024.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:47:08.924935+00:00"
+            },
+            {
+              "url": "https://kashipoka.com/blog/wp-content/uploads/2026/10/cedabc01a08001d9ca4c0d177bb64262-819x1024.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:47:09.299307+00:00"
+            },
+            {
+              "url": "https://kashipoka.com/blog/wp-content/uploads/2026/09/6247fbbbd8aed3384a70e9e3dd94dba3-819x1024.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:47:09.694137+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "okinawa": {
+      "facility_ids": [
+        6920
+      ],
+      "total": 1,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://www.fantasy.co.jp/shoplist/shop2622/",
+          "checked_at": "2026-10-29T23:47:23.923660+00:00",
+          "status": 404
+        },
+        {
+          "url": "https://www.fantasy.co.jp/info/",
+          "checked_at": "2026-10-29T23:47:25.137382+00:00",
+          "status": 404
+        },
+        {
+          "url": "https://www.fantasy.co.jp/shoplist/shop2622/",
+          "checked_at": "2026-10-29T23:47:32.104863+00:00",
+          "status": 404
+        },
+        {
+          "url": "https://www.fantasy.co.jp/",
+          "checked_at": "2026-10-29T23:47:33.234778+00:00",
+          "status": 404
+        },
+        {
+          "url": "https://www.fantasy.co.jp/nobicco/jumbo/shops/haebaru/",
+          "checked_at": "2026-10-29T23:47:39.591433+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://www.aeon-ryukyu.jp/event/?storeid=411",
+          "checked_at": "2026-10-29T23:47:40.651335+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://www.fantasy.co.jp/nobicco/jumbo/news/",
+          "checked_at": "2026-10-29T23:47:46.596895+00:00",
+          "status": 200
+        },
+        {
+          "url": "https://www.fantasy.co.jp/nobicco/jumbo/news/20260918_00/",
+          "checked_at": "2026-10-29T23:47:50.836517+00:00",
+          "status": 200
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 6920,
+          "disposition": "no_current_or_future_event",
+          "reason": "Old primary retried plus secondary/root returned404 maintenance notice. Genuine new official store and brand news paths succeeded and were fully evaluated; store current items are ordinary play, opening and hours changes. Source URLs repaired, no prefecture status change.",
+          "candidates": [],
+          "excluded": [
+            "Brand Halloween party/photo spot: source explicitly limits to Izumifuchu,Oyama,Kasugai,Nabari, excludes Haebaru",
+            "Mall Halloween parade:1F plaza,not2F facility; registration full",
+            "Pippi concert,Shuri restoration exhibition/talk/wood workshop,weighing day:1F mall event plaza,not target facility",
+            "Kyoto goods market and used-car carnival: retail venues elsewhere",
+            "Kumamoto refund and Seto renewal: other stores; summer sweets:past"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:47:59.532727+00:00",
+          "region": "okinawa",
+          "sources_checked": [
+            {
+              "url": "https://www.fantasy.co.jp/shoplist/shop2622/",
+              "checked_at": "2026-10-29T23:47:23.923660+00:00",
+              "status": 404
+            },
+            {
+              "url": "https://www.fantasy.co.jp/info/",
+              "checked_at": "2026-10-29T23:47:25.137382+00:00",
+              "status": 404
+            },
+            {
+              "url": "https://www.fantasy.co.jp/shoplist/shop2622/",
+              "checked_at": "2026-10-29T23:47:32.104863+00:00",
+              "status": 404
+            },
+            {
+              "url": "https://www.fantasy.co.jp/",
+              "checked_at": "2026-10-29T23:47:33.234778+00:00",
+              "status": 404
+            },
+            {
+              "url": "https://www.fantasy.co.jp/nobicco/jumbo/shops/haebaru/",
+              "checked_at": "2026-10-29T23:47:39.591433+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://www.aeon-ryukyu.jp/event/?storeid=411",
+              "checked_at": "2026-10-29T23:47:40.651335+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://www.fantasy.co.jp/nobicco/jumbo/news/",
+              "checked_at": "2026-10-29T23:47:46.596895+00:00",
+              "status": 200
+            },
+            {
+              "url": "https://www.fantasy.co.jp/nobicco/jumbo/news/20260918_00/",
+              "checked_at": "2026-10-29T23:47:50.836517+00:00",
+              "status": 200
+            }
+          ]
+        }
+      ]
+    },
+    "osaka": {
+      "facility_ids": [
+        1425
+      ],
+      "total": 1,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 1,
+      "source_unresolved": 0,
+      "sources_checked": [
+        {
+          "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+          "checked_at": "2026-10-29T23:48:00.243356+00:00",
+          "status": 403
+        },
+        {
+          "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+          "checked_at": "2026-10-29T23:48:06.405315+00:00",
+          "status": 403
+        },
+        {
+          "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:48:05+00:00",
+          "transport": "web.open"
+        },
+        {
+          "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum/konosuke-museum/corporate_ad.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:48:11+00:00",
+          "transport": "web.click"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1425,
+          "disposition": "candidate_found_hold",
+          "reason": "Direct main request403 twice; web transport successfully read main and linked exhibition detail. No new news posted; ongoing exhibition lacks a defined event period.",
+          "candidates": [
+            {
+              "title": "松下幸之助 紙面に託したメッセージ―企業広告の変遷―",
+              "disposition": "hold",
+              "reason": "Main calls it current, dates its notice2026-07-08, detail describes19 ads but gives no explicit start/end period. Do not manufacture bounded event dates from a publication date."
+            }
+          ],
+          "excluded": [
+            "11/5 13:00 late opening: maintenance notice,not event"
+          ],
+          "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
+          "executed_in_this_mission": true,
+          "executed_at": "2026-10-29T23:48:19.808606+00:00",
+          "region": "osaka",
+          "sources_checked": [
+            {
+              "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+              "checked_at": "2026-10-29T23:48:00.243356+00:00",
+              "status": 403
+            },
+            {
+              "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+              "checked_at": "2026-10-29T23:48:06.405315+00:00",
+              "status": 403
+            },
+            {
+              "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:48:05+00:00",
+              "transport": "web.open"
+            },
+            {
+              "url": "https://holdings.panasonic/jp/corporate/about/history/panasonic-museum/konosuke-museum/corporate_ad.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:48:11+00:00",
+              "transport": "web.click"
+            }
+          ]
+        }
+      ]
+    },
+    "shizuoka": {
+      "facility_ids": [],
+      "total": 0,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": []
+    },
+    "tokyo": {
+      "facility_ids": [],
+      "total": 0,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": []
+    },
+    "yamaguchi": {
+      "facility_ids": [],
+      "total": 0,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": []
+    },
+    "yamanashi": {
+      "facility_ids": [],
+      "total": 0,
+      "no_current_or_future_event": 0,
+      "candidate_found_added": 0,
+      "candidate_found_duplicate": 0,
+      "candidate_found_hold": 0,
+      "source_unresolved": 0,
+      "sources_checked": [],
+      "facilities": []
+    }
+  },
+  "prior_run_numbers_reused_as_execution": false
+}
