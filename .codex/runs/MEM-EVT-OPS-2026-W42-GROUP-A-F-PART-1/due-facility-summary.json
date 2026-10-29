@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T17:09:18.416450+00:00",
+  "executed_at": "2026-10-29T17:14:40.320146+00:00",
   "process_started_at": "2026-10-29T16:13:09.0081595Z",
   "due_facility_ids": [
     740,
@@ -52,7 +52,12 @@
     "candidate_found_added": 26,
     "candidate_found_duplicate": 0,
     "candidate_found_hold": 6,
-    "source_unresolved": 7
+    "source_unresolved": 7,
+    "candidate_counts": {
+      "hold": 182,
+      "added": 155,
+      "duplicate": 9
+    }
   },
   "per_region": {
     "chiba": {
@@ -122,6 +127,12 @@
             }
           ]
         }
+      ],
+      "candidate_counts": {},
+      "official_surfaces_checked": [
+        "https://kodomo-koryukan.jp/event/",
+        "https://kodomo-koryukan.jp/",
+        "https://www.city.chiba.jp/kodomomirai/kodomomirai/kikaku/"
       ]
     },
     "ehime": {
@@ -275,6 +286,19 @@
             }
           ]
         }
+      ],
+      "candidate_counts": {
+        "hold": 2
+      },
+      "official_surfaces_checked": [
+        "https://foret-aventure.jp/park/fa-saijo/",
+        "https://saijo.gogo-adventure.com/",
+        "http://www.teiregi.jp/",
+        "https://teiregi.jp/onsen/11%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+        "https://teiregi.jp/onsen/10%e6%9c%88%e3%82%ab%e3%83%ac%e3%83%b3%e3%83%80%e3%83%bc-2/",
+        "https://teiregi.jp/onsen/%e7%84%9a%e3%81%8d%e7%81%ab%e4%bd%93%e9%a8%93%e3%82%b9%e3%82%bf%e3%83%bc%e3%83%88/",
+        "https://teiregi.jp/wp-content/uploads/2026/10/795d48b0786fd9b796fed8d3aaedda0a.png",
+        "https://teiregi.jp/wp-content/uploads/2026/09/103a61bead9ec76ea82c3309ba5a4593.png"
       ]
     },
     "fukui": {
@@ -497,6 +521,19 @@
             }
           ]
         }
+      ],
+      "candidate_counts": {
+        "hold": 6
+      },
+      "official_surfaces_checked": [
+        "https://www.fuku-e.com/spot/detail_1331.html",
+        "https://www.kepco.co.jp/corporate/profile/community/pr/eldoland/",
+        "https://www1.city.obama.fukui.jp/obm/kosodate/kidsplaypark-nanairo",
+        "https://www.pref.fukui.lg.jp/doc/tokei/kouen/koen1-07.html",
+        "https://www1.city.obama.fukui.jp/obm/kosodate/news_list/nanairo",
+        "https://www.gokurakuyu.ne.jp/tempo/fukui/",
+        "https://rakuspa.com/tsurumi/news/15322/",
+        "https://rakuspa.com/cms/wp-content/uploads/2026/10/screencapture-gokurakuyu-ne-jp-tempo-fukui-2026-10-23-23_24_03.png"
       ]
     },
     "fukuoka": {
@@ -4885,10 +4922,10 @@
               "reason": "公式2026案内に日程・会場・参加条件確認"
             },
             {
-              "title": "陶一河 覚次郎の息吹",
+              "title": "陶工 河井寬次郎の息吹",
               "disposition": "added",
               "participability": "通常参加可能",
-              "reason": "公式2026案内に日程・会場・参加条件確認"
+              "reason": "公式2026案内に日程・会場・参加条件確認。最終照合で画像の人名を市公式本文の表記と一致させた"
             },
             {
               "title": "関門海峡キャンドルナイト2026",
@@ -6687,12 +6724,12 @@
         },
         {
           "disposition": "candidate_found_added",
-          "reason": "公式新着7詳細とアクセスを評価。期間まつりと無料特別展を2追加、まつり内28企画は親レコード内で分類し重複登録せず、3HOLD。地域学芸員養成はボランティア職務研修で家族レジャー対象外。",
+          "reason": "公式新着7詳細とアクセスを評価。期間まつりと無料特別展を2追加、まつり内28企画は親レコード内で分類し重複登録せず、3HOLD。地域学芸員養成はボランティア職務研修で家族レジャー対象外。。最終照合で祭り親企画・関連28プログラムを交通根拠未確認のsource-family HOLDへ変更。渡来人展示のみ採用。",
           "candidates": [
             {
               "title": "海の道むなかた館いいいさんまつり",
-              "disposition": "added",
-              "reason": "当日謎解きと工作等の現在参加経路あり",
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。当日謎解きと工作等の現在参加経路あり",
               "participability": "条件付き参加可能"
             },
             {
@@ -6703,143 +6740,143 @@
             },
             {
               "title": "長屋王講演11/7",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "カラフルまが玉11/7",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "藍染ハンカチ11/7",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "沖ノ島ちぎり絵11/8",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "ずんだ餅11/8",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "印かん11/14",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "苔玉11/14",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "沖ノ島プラネタリウム11/15",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "カラリズムリサ11/15",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんおきあがりこぼし",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんアクリルキーホルダー",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんジャラジャラキーホルダー",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんふわふわキーホルダー",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんはんこトート",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんちぎり絵",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんレザークラフト",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "テンちゃんカードゲーム",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "古代鏡11/21",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "みあれ祭船11/21",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "二胡×揚琴コンサート11/21",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "三角灯ろう11/22",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "黒色まが玉11/22",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "土器11/23",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "コースター11/23",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "貫頭衣11/28",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "馬鈴11/28",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "網代編み11/29",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "干支置物11/29",
-              "disposition": "duplicate",
-              "reason": "同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
+              "disposition": "hold",
+              "reason": "いいいさんまつり source-family HOLD：雨天案内は確認できたが、取得済みアクセス一覧は交通案内本文が空で、祭り候補に必要な公共交通・交通影響の一次根拠が未確認。親企画および全関連プログラムを未公開で保持。同じ公式まつりの一企画として新規親レコードに包含。個別二重登録せず。"
             },
             {
               "title": "むなかた歴史クラブ12/13・1/17・2/14",
@@ -7503,7 +7540,362 @@
             }
           ]
         }
+      ],
+      "candidate_counts": {
+        "added": 155,
+        "hold": 174,
+        "duplicate": 9
+      },
+      "official_surfaces_checked": [
+        "https://marine-world.jp/news/",
+        "https://marine-world.jp/news/post-9129/",
+        "https://marine-world.jp/news/post-9038/",
+        "https://marine-world.jp/",
+        "https://marine-world.jp/special/marine-world_pawpatrol/",
+        "https://marine-world.jp/pick_up/11%e6%9c%888%e6%97%a5%e3%83%bb9%e6%97%a5%e3%81%af%e7%a7%8b%e3%81%ae%e6%84%9f%e8%ac%9d%e7%a5%ad-2/",
+        "https://marine-world.jp/pick_up/%e7%a7%8b%e3%81%ae%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e6%83%85%e5%a0%b1%e3%80%80%ef%bc%83%e3%83%9e%e3%83%aa%e3%83%b3%e3%81%a7%e3%83%8f%e3%83%ad%e3%82%a6%e3%82%a3%e3%83%b310%e6%9c%88%ef%bc%89/",
+        "https://shabon.com/marine-world/",
+        "https://www.fukuoka-anpanman.jp/event/",
+        "https://www.fukuoka-anpanman.jp/",
+        "https://www.fukuoka-anpanman.jp/news/article/rmuzp5x4mr3knzbd.html",
+        "https://www.fukuoka-anpanman.jp/news/article/1u9xmv0h803vg204.html",
+        "https://www.fukuoka-anpanman.jp/event/detail/qpq8k403it573mbe.html",
+        "https://www.fukuoka-anpanman.jp/plan/detail/s0uvq9uh5p0102k3.html",
+        "https://www.fukuoka-anpanman.jp/guide/",
+        "https://www.fukuoka-anpanman.jp/event/detail/evjw84nyw6j6il57.html",
+        "https://www.fukuoka-anpanman.jp/event/detail/n7ased8ovxa26t9o.html",
+        "https://www.fukuoka-anpanman.jp/plan/detail/yw7vdav5p3amlsfg.html",
+        "https://www.fukuoka-anpanman.jp/json/events.json",
+        "https://www.kidzania.jp/fukuoka/news/event",
+        "https://www.kidzania.jp/fukuoka/news/18670",
+        "https://www.kidzania.jp/fukuoka/news/event?page=1",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3673999.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666882.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3666858.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3663823.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3646667.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3655043.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632301.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632277.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3641596.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3638952.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3623775.html",
+        "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3412383.html",
+        "https://www.nogizaka46.com/s/n46/news/detail/102329?ima=4016&pri1=202610",
+        "https://conan-land.jp/",
+        "https://www.hakatamachiya.com/event/",
+        "https://hakatamachiya.com/event/202610232/",
+        "https://hakatamachiya.com/event/202610231/",
+        "https://hakatamachiya.com/event/20261022/",
+        "https://hakatamachiya.com/event/261011/",
+        "https://hakatamachiya.com/event/20261016/",
+        "https://hakatamachiya.com/event/20261015/",
+        "https://hakatamachiya.com/event/20260913/",
+        "https://zoo.city.fukuoka.lg.jp/events/",
+        "https://zoo.city.fukuoka.lg.jp/events/index/year:2026/month:11",
+        "https://zoo.city.fukuoka.lg.jp/events/index/year:2026/month:12",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2660",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2664",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2650",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2669",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2665",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2675",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2674",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2670",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2671",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2672",
+        "https://zoo.city.fukuoka.lg.jp/events/detail/2673",
+        "https://www.fukuokacity-kagakukan.jp/activity/",
+        "https://www.fukuokacity-kagakukan.jp/sp_exhibition/2026/08/neojomon.html",
+        "https://www.fukuokacity-kagakukan.jp/dome_theater/2026/07/acidman.html",
+        "https://www.fukuokacity-kagakukan.jp/dome_theater/2026/07/myth.html",
+        "https://www.fukuokacity-kagakukan.jp/dome_theater/2026/07/voyage.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/06/scavenger.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/inSession.html?target=1",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/04/programmingcar.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/06/yokarobo.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/04/p-digital.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/03/programmingPC.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/sky202701.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/sky202612.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/07/sky202611.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/09/ai-1.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2020/10/post-124.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2019/02/post-64.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/125-x-sc.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/robocon2026.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/09/112122.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/robocup202611.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/10/113-6.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/09/1031-3.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/03/science-toy.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2023/02/pinholecamera.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/03/toyhospital.html",
+        "https://www.fukuokacity-kagakukan.jp/activity/2026/03/storytelling2026.html",
+        "https://www.fukuoka-art-museum.jp/event/",
+        "https://www.fukuoka-art-museum.jp/exhibition/yamauchi_terue/",
+        "https://www.fukuoka-art-museum.jp/exhibition/",
+        "https://www.fukuoka-art-museum.jp/event/242798/",
+        "https://www.fukuoka-art-museum.jp/event/244643/",
+        "https://www.fukuoka-art-museum.jp/exhibition/chintz_a_global_story_the_karunthakar_collection/",
+        "https://www.fukuoka-art-museum.jp/collection/?q=premodern&type=now",
+        "https://www.fukuoka-art-museum.jp/collection/?q=modern&type=now",
+        "https://www.fukuoka-art-museum.jp/exhibition/the_textikle_of_cambodia2026/",
+        "https://www.fukuoka-art-museum.jp/exhibition/mamoruhosoda_genten/",
+        "https://www.fukuoka-art-museum.jp/event/248706/",
+        "https://www.fukuoka-art-museum.jp/event/237179/",
+        "https://www.fukuoka-art-museum.jp/event/242922/",
+        "https://www.fukuoka-art-museum.jp/event/247080/",
+        "https://www.fukuoka-art-museum.jp/event/247129/",
+        "https://www.fukuoka-art-museum.jp/event/246239/",
+        "https://www.fukuoka-art-museum.jp/event/244774/",
+        "https://www.fukuoka-art-museum.jp/collection/?q=modern",
+        "https://www.fukuoka-art-museum.jp/collection/?q=premodern",
+        "https://www.fukuoka-art-museum.jp/exhibition/%e7%ac%ac58%e5%9b%9e%ef%bc%88%e4%bb%a4%e5%92%8c8%e5%b9%b4%e5%ba%a6%ef%bc%89%e7%a6%8f%e5%b2%a1%e5%b8%82%e7%be%8e%e8%a1%93%e5%b1%95/",
+        "https://www.teamlab.art/jp/e/forest/",
+        "https://e-zofukuoka.com/teamlabforest/",
+        "https://museum.city.fukuoka.jp/exhibition/",
+        "https://museum.city.fukuoka.jp/exhibition/kikaku.html",
+        "https://museum.city.fukuoka.jp/archives/exhibition/",
+        "https://museum.city.fukuoka.jp/about/news.html",
+        "https://museum.city.fukuoka.jp/",
+        "https://museum.city.fukuoka.jp/exhibition/630/",
+        "https://museum.city.fukuoka.jp/exhibition/632/",
+        "https://museum.city.fukuoka.jp/about/notice_oshirase.html",
+        "https://museum.city.fukuoka.jp/topics/gallerytalk/",
+        "https://1999-kioku.jp/fukuoka/",
+        "https://shosoin-the-show.jp/",
+        "https://shosoin-the-show.jp/fukuoka/",
+        "https://museum.city.fukuoka.jp/about/information.html",
+        "https://robosquare.city.fukuoka.lg.jp/",
+        "http://robosquare.city.fukuoka.lg.jp/",
+        "https://www.fukuokacity-kagakukan.jp/floorguide/5f.html",
+        "https://nokonoshima.com/event/",
+        "https://nokonoshima.com/",
+        "https://www.mojiko.info/event/",
+        "https://www.mojiko.info/event/puev3.html",
+        "https://www.mojiko.info/event/puev2.html",
+        "https://www.mojiko.info/event/puev1.html",
+        "https://www.mojiko.info/",
+        "http://www.mojiko.info/kamome/",
+        "http://www.mojiko.info/kottou/",
+        "https://mojiko.info/illumination/index.html",
+        "https://www.mojiko.info/images/tabi/v55.pdf",
+        "https://mojiko.info/illumination/illumi2026_flyer.pdf",
+        "https://www.k-rhm.jp/event/",
+        "https://www.k-rhm.jp/",
+        "https://www.k-rhm.jp/news/detail.php?id=351",
+        "https://www.k-rhm.jp/news/",
+        "https://www.k-rhm.jp/guide/",
+        "https://www.itozu-zoo.jp/event/",
+        "https://www.itozu-zoo.jp/event/2026/10/15117.php",
+        "https://www.itozu-zoo.jp/event/2026/10/15112.php",
+        "https://www.itozu-zoo.jp/event/2026/10/15128.php",
+        "https://www.itozu-zoo.jp/event/2026/10/15127.php",
+        "https://www.itozu-zoo.jp/event/2026/10/15004.php",
+        "https://www.itozu-zoo.jp/event/2026/10/15108.php",
+        "https://www.itozu-zoo.jp/event/2026/09/15003.php",
+        "https://www.kokura-castle.jp/event/",
+        "https://kokura-castle.jp/",
+        "https://kokura-castle.jp/news/?type=EVENT",
+        "https://jp.toto.com/knowledge/visit/museum/",
+        "https://jp.toto.com/information/museum/135/",
+        "https://jp.toto.com/information/museum/127/",
+        "https://jp.toto.com/information/museum/112/",
+        "https://jp.toto.com/information/museum/133/",
+        "https://jp.toto.com/company/press/2026_08_25/",
+        "https://www.hiraodai.jp/",
+        "https://hiraodai.jp/",
+        "https://sites.google.com/view/hiraodai/",
+        "https://www.city.kitakyushu.lg.jp/kokuraminami/vw3100127.html",
+        "https://houjuji.or.jp/archives/1402",
+        "https://www.crossroadfukuoka.jp/spot/13139",
+        "https://ssl.city.kitakyushu.lg.jp/page/dayori/261015/infostation/goout.html",
+        "https://www.hiraodai.jp/sato/event/",
+        "https://cocokite-yokatta.jp/",
+        "https://cocokite-yokatta.jp/2026/09/26/10-31%e3%83%bb11-1%e3%80%80%e3%82%8f%e3%82%93%e3%81%93%e3%81%a8%e4%b8%80%e7%b7%92%e3%81%ab%e5%b9%b3%e5%b0%be%e5%8f%b0%e3%81%ae%e7%a7%8b%e3%82%92%e6%ba%80%e5%96%ab%e3%81%97%e3%82%88%e3%81%86%ef%bc%81/",
+        "https://cocokite-yokatta.jp/2026/09/07/%e5%8c%97%e4%b9%9d%e5%b7%9e%e5%b8%82%e6%9c%89%e6%96%99%e5%85%ac%e5%9c%92%e5%88%9d%e3%80%80%e3%83%af%e3%83%b3%e3%81%a1%e3%82%83%e3%82%93%e5%85%a5%e5%9c%92%e7%a4%be%e4%bc%9a%e5%ae%9f%e8%a8%bc%e5%ae%9f/",
+        "https://cocokite-yokatta.jp/news/teamukyo%e3%83%81%e3%83%a3%e3%83%ac%e3%83%b3%e3%82%b8%e3%82%b9%e3%82%af%e3%83%bc%e3%83%ab2025-%e5%b9%b3%e5%b0%be%e5%8f%b0%e3%83%ad%e3%82%b2%e3%82%a4%e3%83%8b%e3%83%b3%e3%82%b0/",
+        "https://cocokite-yokatta.jp/plan/",
+        "https://www.hibikinadagp.org/event/",
+        "https://hibikinadagp.org/events/event/aromafes1103/",
+        "https://hibikinadagp.org/events/event/gotomidori/",
+        "https://hibikinadagp.org/events/event/aroma-kanpo-tea/",
+        "https://hibikinadagp.org/events/event/aroma-rose/",
+        "https://hibikinadagp.org/events/event/%e3%81%be%e3%82%8b%e3%82%8f%e3%81%8b%e3%82%8a%e3%83%84%e3%82%a2%e3%83%bc/",
+        "https://hibikinadagp.org/events/event/%e8%8b%a5%e6%9d%be%e5%8c%97%e6%b5%b7%e5%b2%b8%e3%82%b5%e3%82%a4%e3%82%af%e3%83%ab/",
+        "https://hibikinadagp.org/events/event/buggycar/",
+        "https://hibikinadagp.org/events/event/%e3%83%90%e3%83%83%e3%83%86%e3%83%aa%e3%83%bc%e3%82%ab%e3%83%bc%e5%a4%a7%e9%9b%86%e5%90%88/",
+        "https://hibikinadagp.org/events/event/%f0%9f%a6%98%e6%96%b0%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%90%e3%81%93%e3%81%ae%e3%82%ab%e3%83%b3%e3%82%ac%e3%83%ab%e3%83%bc%e3%82%92%e6%8e%a2%e3%81%97%e3%81%a6%e3%81%bf%e3%82%88%e3%81%86/",
+        "https://hibikinadagp.org/events/event/favoriterosevote/",
+        "https://hibikinadagp.org/events/event/autumn-rose-fair-2026-plant-detective/",
+        "https://hibikinadagp.org/events/event/rose-plants-and-fertilizer-sale-2026/",
+        "https://hibikinadagp.org/events/event/rose-cutting-giveaway-2026/",
+        "https://hibikinadagp.org/events/event/rose-fair-goods/",
+        "https://hibikinadagp.org/events/event/kangaru-ki/",
+        "https://hibikinadagp.org/events/event/%e3%81%bf%e3%81%a4%e3%81%b0%e3%81%a1%e3%83%95%e3%83%aa%e3%83%9e-30/",
+        "https://hibikinadagp.org/events/event/%e5%85%83%e6%b0%97%e3%81%a7%e3%82%8f%e3%81%8f%e3%82%8f%e3%81%8f%ef%bc%81%e7%ac%ac4%e5%9b%9e-%e5%ad%90%e3%81%a9%e3%82%82%e8%96%ac%e5%89%a4%e5%b8%ab%e4%bd%93%e9%a8%93%e6%95%99%e5%ae%a4/",
+        "https://hibikinadagp.org/events/event/%e3%82%ab%e3%83%94%e3%83%90%e3%83%a9%e3%81%ae%e3%81%88%e3%81%95%e3%82%84%e3%82%8a%e4%bd%93%e9%a8%93/",
+        "https://hibikinadagp.org/events/event/panpark3/",
+        "https://hibikinadagp.org/events/event/streetpianoperformance/",
+        "https://hibikinadagp.org/events/event/%e3%80%90%e7%a7%8b%e3%81%ae%e3%83%90%e3%83%a9%e3%83%95%e3%82%a7%e3%82%a22026%e3%80%91%e8%8a%b1%e3%81%99%e3%81%8f%e3%81%84/",
+        "https://hibikinadagp.org/events/event/morukku10/",
+        "https://hibikinadagp.org/events/event/%e3%83%98%e3%83%93%e3%81%a8%e8%a8%98%e5%bf%b5%e6%92%ae%e5%bd%b1/",
+        "https://hibikinadagp.org/events/event/dogrose1110/",
+        "https://hibikinadagp.org/events/event/akiosagari/",
+        "https://hibikinadagp.org/events/event/arbansports/",
+        "https://hibikinadagp.org/events/event/hurima_31/",
+        "https://hibikinadagp.org/events/event/%e3%81%bf%e3%81%a4%e3%81%b0%e3%81%a1%e3%83%95%e3%83%aa%e3%83%9e-32/",
+        "https://www.kmnh.jp/event/",
+        "https://www.kmnh.jp/",
+        "https://www.kmnh.jp/event/1583/",
+        "https://kitakyushuspacelabo.jp/event/",
+        "https://kitakyushuspacelabo.jp/",
+        "https://kitakyushuspacelabo.jp/events/10630/",
+        "https://kitakyushuspacelabo.jp/events/493/",
+        "https://kitakyushuspacelabo.jp/astronomical-event/4777/",
+        "https://kitakyushuspacelabo.jp/events/7259/",
+        "https://kitakyushuspacelabo.jp/information/10784/",
+        "https://kitakyushuspacelabo.jp/events/10568/",
+        "https://kitakyushuspacelabo.jp/category/events/",
+        "https://kitakyushuspacelabo.jp/events/10781/",
+        "https://kitakyushuspacelabo.jp/events/7058/",
+        "https://kitakyushuspacelabo.jp/events/10700/",
+        "https://kitakyushuspacelabo.jp/events/8013/",
+        "https://kitakyushuspacelabo.jp/events/10594/",
+        "https://kitakyushuspacelabo.jp/information/10574/",
+        "https://kitakyushuspacelabo.jp/events/10241/",
+        "https://kitakyushuspacelabo.jp/category/events/page/2/",
+        "https://kitakyushuspacelabo.jp/events/10323/",
+        "https://kitakyushuspacelabo.jp/astronomical-event/7362/",
+        "https://kitakyushuspacelabo.jp/information/10189/",
+        "https://kitakyushuspacelabo.jp/guide/",
+        "https://www.kitakyushuspacelabo-yoyaku.jp/",
+        "https://kitakyushuspacelabo.jp/hours-of-operation-and-fees",
+        "https://www.kodomo-how.com/event/",
+        "https://www.kodomo-how.com/event/2026/11",
+        "https://www.kodomo-how.com/childcare/",
+        "https://www.kodomo-how.com/event/2026/12",
+        "https://www.kitaqshinsyo.com/p66_n1208",
+        "https://kurosaki.kodomo-shotengai.com/",
+        "https://www.city.itoshima.lg.jp/m043/",
+        "https://www.city.itoshima.lg.jp/",
+        "https://www.city.itoshima.lg.jp/m043/010/",
+        "https://www.city.itoshima.lg.jp/m043/010/040/020/082/inaba-hoki2026.html",
+        "https://www.city.itoshima.lg.jp/s033/010/020/bunkazai_ivent/20260917155550.html",
+        "https://www.city.itoshima.lg.jp/m043/010/040/010/090/508/itohaku-magatama2026.html",
+        "https://www.city.itoshima.lg.jp/m043/010/040/010/030/508/R8itogaku.html",
+        "https://nakagawa-gokayama.com/",
+        "http://nakagawa-gokayama.com/",
+        "https://www.city.nakagawa.lg.jp/site/gokayama/",
+        "https://gkymbase.com/",
+        "https://event.montbell.jp/plan/disp_data.php?event_no=G40J12",
+        "https://gkymbase.com/news/%e3%80%90%e9%96%8b%e5%82%ac%e6%97%a5%e5%a4%89%e6%9b%b4%e3%80%91%e7%a7%8b%e3%81%ae%e5%9b%a3%e5%ad%90%e4%bd%9c%e3%82%8a%e4%bd%93%e9%a8%93%e4%bc%9a%e3%81%af11-3%ef%bc%88%e7%81%ab%e3%83%bb%e6%96%87",
+        "https://gkymbase.com/news/%e4%ba%94%e3%82%b1%e5%b1%b1%e3%82%af%e3%83%ad%e3%82%b9%e3%83%99%e3%83%bc%e3%82%b9%e3%82%ad%e3%83%a3%e3%83%b3%e3%83%97%e4%bd%93%e9%a8%93%e7%ac%ac%e4%b8%89%e5%bc%be%f0%9f%8d%94%f0%9f%94%a5",
+        "https://gkymbase.com/news/%e5%bb%83%e3%83%97%e3%83%a9%e3%83%aa%e3%82%b5%e3%82%a4%e3%82%af%e3%83%ab%e4%bd%93%e9%a8%93",
+        "https://event.montbell.jp/plan/disp_order.php?event_no=G40J12",
+        "https://www.onojo-occm.jp/li/020/",
+        "https://www.onojo-occm.jp/",
+        "https://www.onojo-occm.jp/kiji0037769/index.html",
+        "https://www.onojo-occm.jp/kiji0039030/index.html",
+        "https://www.onojo-occm.jp/kiji0037768/index.html",
+        "https://www.onojo-occm.jp/kiji0037676/index.html",
+        "https://www.onojo-occm.jp/kiji0038735/index.html",
+        "https://www.onojo-occm.jp/kiji0038118/index.html",
+        "https://www.onojo-occm.jp/kiji0039079/index.html",
+        "https://www.onojo-occm.jp/kiji0038846/index.html",
+        "https://www.onojo-occm.jp/kiji0037797/index.html",
+        "https://www.onojo-occm.jp/kiji0037767/index.html",
+        "https://www.onojo-occm.jp/kiji0037766/index.html",
+        "https://www.kyuhaku.jp/event/",
+        "https://www.kyuhaku.jp/",
+        "https://www.kyuhaku.jp/visit/989cal/",
+        "https://www.kyuhaku.jp/exhibition/exhibition_schedule.html",
+        "https://www.kyuhaku.jp/exhibition/exhibition_s78.html",
+        "https://www.kyuhaku.jp/exhibition/exhibition_pre203.html",
+        "https://www.kyuhaku.jp/exhibition/exhibition_t08.html",
+        "https://www.kyuhaku.jp/visit/visit_top.html",
+        "https://www.kyuhaku.jp/news/news_top.html",
+        "https://www.kyuhaku.jp/event/event-260702.html",
+        "https://www.kyuhaku.jp/exhibition/exhibition_info_m.html",
+        "https://www.kyuhaku.jp/visit/img/event_p/event_new.pdf",
+        "https://www.dazaifuyuuenchi.com/",
+        "https://www.dazaifuyuuenchi.com/news/625.html",
+        "https://www.dazaifuyuuenchi.com/news/626.html",
+        "https://www.dazaifuyuuenchi.com/news/623.html",
+        "https://www.dazaifuyuuenchi.com/news/624.html",
+        "https://www.dazaifuyuuenchi.com/news/",
+        "https://www.city.munakata.lg.jp/searoad/",
+        "https://www.city.munakata.lg.jp/searoad/kiji0038970/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji0039398/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji0038281/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji0037766/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji00310198/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji0038856/index.html",
+        "https://www.city.munakata.lg.jp/searoad/kiji00310367/index.html",
+        "https://www.city.munakata.lg.jp/searoad/list00965.html",
+        "https://yurix.munakata.com/event/",
+        "https://yurix.munakata.com/",
+        "https://yurix-planetarium.jp/star-watching/",
+        "https://yurix.munakata.com/event-lineup.html",
+        "https://yurix.munakata.com/event/culture/261031.html",
+        "https://yurix.munakata.com/event/music/261103.html",
+        "https://yurix.munakata.com/newsDetail.php?SEQ=764",
+        "https://yurix-planetarium.jp/program/kids/",
+        "https://yurix.munakata.com/newsDetail.php?SEQ=728",
+        "https://yurix.munakata.com/event/culture/261115.html",
+        "https://yurix.munakata.com/event/culture/261121.html",
+        "https://yurix.munakata.com/event/music/261220.html",
+        "https://yurix.munakata.com/event/culture/yose-100yen.html",
+        "https://yyk1.ka-ruku.com/yurix-s/sameShowList?en=227",
+        "https://yurix.munakata.com/newsDetail.php?SEQ=387",
+        "https://yyk1.ka-ruku.com/yurix-s/sameShowList?en=243",
+        "https://yyk1.ka-ruku.com/yurix-s/seatSelect?en=26110301",
+        "https://yyk1.ka-ruku.com/yurix-s/seatSelect?en=26122002",
+        "https://yurix.munakata.com/UPLOAD/NEWR4000387.pdf",
+        "https://yumenity.jp/sekitan/",
+        "https://yumenity.com/sekitan/",
+        "https://www.city.nogata.fukuoka.jp/shisei/_1242/_2795/_2693.html",
+        "https://yumenity.com/pages/52",
+        "https://yumenity.com/nogata-sekitan-kinenkan/b335_date=2026-11/",
+        "https://yumenity.com/publics/index/52/detail=1/b_id=335/p335=1/#block335-1798",
+        "https://www.joho.tagawa.fukuoka.jp/sekitan/",
+        "https://www.joho.tagawa.fukuoka.jp/",
+        "https://www.joho.tagawa.fukuoka.jp/list00841.html",
+        "https://www.joho.tagawa.fukuoka.jp/kiji00390/",
+        "https://www.joho.tagawa.fukuoka.jp/list01005.html",
+        "https://www.joho.tagawa.fukuoka.jp/list01107.html",
+        "https://www.joho.tagawa.fukuoka.jp/list00784.html",
+        "https://www.joho.tagawa.fukuoka.jp/kiji0037039/index.html",
+        "https://www.joho.tagawa.fukuoka.jp/kiji00311810/index.html",
+        "https://www.joho.tagawa.fukuoka.jp/kiji0037038/index.html",
+        "https://www.joho.tagawa.fukuoka.jp/kiji00311934/index.html",
+        "https://www.science.pref.fukuoka.jp/event/",
+        "https://science.pref.fukuoka.jp/",
+        "https://science.pref.fukuoka.jp/events/",
+        "https://science.pref.fukuoka.jp/schedule/?ym=2026-11",
+        "https://science.pref.fukuoka.jp/events/fsm-1989/",
+        "https://science.pref.fukuoka.jp/events/fsm-1963/",
+        "https://science.pref.fukuoka.jp/events/fsm-1453/",
+        "https://science.pref.fukuoka.jp/events/fsm-1385/",
+        "https://science.pref.fukuoka.jp/events/fsm-1967/",
+        "https://science.pref.fukuoka.jp/events/fsm-1442/",
+        "https://science.pref.fukuoka.jp/events/fsm-1403/",
+        "https://science.pref.fukuoka.jp/events/fsm-1465/",
+        "https://science.pref.fukuoka.jp/events/fsm-1599/",
+        "https://science.pref.fukuoka.jp/events/fsm-1395/",
+        "https://science.pref.fukuoka.jp/events/fsm-1390/",
+        "https://science.pref.fukuoka.jp/schedule/?date=20261101",
+        "https://science.pref.fukuoka.jp/schedule/?date=20261129",
+        "https://science.pref.fukuoka.jp/hours/",
+        "https://kurumekoen.org/birdc/",
+        "https://kurumekoen.org/birdc/birdc_event/",
+        "https://kurumekoen.org/birdc/center_news/",
+        "https://kurumekoen.org/birdc/birdc_new/",
+        "https://kurumekoen.org/2026/10/06/%E9%B3%A5%E9%A1%9E%E3%82%BB%E3%83%B3%E3%82%BF%E3%83%BC%E3%80%80%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B/"
       ]
     }
-  }
+  },
+  "verification_notes": "Exact 40 due facility IDs processed sequentially in this process; no discovery-part evidence used. 155 new events, 8 existing refreshed, no existing deletion; 35 successfully fetched registry rows stamped. 7 source-unresolved dispositions (2 have HTTP-successful but non-evaluable pages). Festival traffic evidence gap retains the entire Munakata source family as HOLD. Prior-run numbers reused as execution: false."
 }
