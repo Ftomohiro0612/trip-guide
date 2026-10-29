@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-7",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T23:03:31.971Z",
+  "executed_at": "2026-10-29T23:09:53.222Z",
   "due_facility_ids": [
     2380,
     2382,
@@ -46,12 +46,12 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 30,
-    "no_current_or_future_event": 22,
-    "candidate_found_added": 1,
+    "total": 40,
+    "no_current_or_future_event": 28,
+    "candidate_found_added": 3,
     "candidate_found_duplicate": 0,
-    "candidate_found_hold": 7,
-    "source_unresolved": 0
+    "candidate_found_hold": 8,
+    "source_unresolved": 1
   },
   "per_region": {
     "kagawa": {
@@ -85,7 +85,16 @@
         2410,
         2414,
         2416,
-        2417
+        2417,
+        2419,
+        2420,
+        2421,
+        2422,
+        2424,
+        6888,
+        6955,
+        6956,
+        8264
       ],
       "sources_checked": [
         {
@@ -938,6 +947,370 @@
           "final_url": "https://www.bgf.or.jp/center/center0068/",
           "title": "小豆島町内海B&G海洋センター | 公益財団法人B&G財団",
           "text_sha256": "6e8a600fedcae150df5bd9ef615632de6345f1d93d8b9504779b940fdf3ddc9e"
+        },
+        {
+          "facility_id": 2419,
+          "url": "https://www.my-kagawa.jp/point/26",
+          "status": 200,
+          "checked_at": "2026-10-29T23:03:46.613Z",
+          "final_url": "https://www.my-kagawa.jp/point/26",
+          "title": "しろとり動物園｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+          "text_sha256": "b6434e27469595621ef721aced26d633a46030e8c71b2e22e43de4112760003c"
+        },
+        {
+          "facility_id": 2419,
+          "url": "https://shirotorizoo.com/",
+          "status": "fetch_failed",
+          "checked_at": "2026-10-29T23:03:51.739Z",
+          "error": "Hostname/IP does not match certificate's altnames: Host: shirotorizoo.com. is not in the cert's altnames: DNS:*.sakura.ne.jp, DNS:*.180r.com, DNS:*.2-d.jp, DNS:*.achoo.jp, DNS:*.amaretto.jp, DNS:*.bona.jp, DNS:*.chew.jp, DNS:*.crap.jp, DNS:*.daynight.jp, DNS:*.deko8.jp, DNS:*.dojin.com, DNS:*.eek.jp, DNS:*.flop.jp, DNS:*.from.tv, DNS:*.fubuki.info, DNS:*.gokujou.biz, DNS:*.grats.jp, DNS:*.grrr.jp, DNS:*.halfmoon.jp, DNS:*.ivory.ne.jp, DNS:*.jeez.jp, DNS:*.jpn.org, DNS:*.kirara.st, DNS:*.kokage.cc, DNS:*.mail-box.ne.jp, DNS:*.matrix.jp, DNS:*.mimoza.jp, DNS:*.mints.ne.jp, DNS:*.mokuren.ne.jp, DNS:*.nazo.cc, DNS:*.netgamers.jp, DNS:*.noob.jp, DNS:*.nyanta.jp, DNS:*.o0o0.jp, DNS:*.opal.ne.jp, DNS:*.rash.jp, DNS:*.razor.jp, DNS:*.rdy.jp, DNS:*.rgr.jp, DNS:*.rojo.jp, DNS:*.rossa.cc, DNS:*.rulez.jp, DNS:*.rusk.to, DNS:*.saikyou.biz, DNS:*.sakura.tv, DNS:*.sakuratan.com, DNS:*.sakuraweb.com, DNS:*.saloon.jp, DNS:*.sblo.jp, DNS:*.silk.to, DNS:*.skr.jp, DNS:*.spawn.jp, DNS:*.squares.net, DNS:*.sumomo.ne.jp, DNS:*.tank.jp, DNS:*.thyme.jp, DNS:*.topaz.ne.jp, DNS:*.uh-oh.jp, DNS:*.undo.jp, DNS:*.websozai.jp, DNS:*.whoa.jp, DNS:*.x0.com, DNS:*.x0.to, DNS:*.xii.jp",
+          "title": "",
+          "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "facility_id": 2419,
+          "url": "http://shirotorizoo.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:03:56.188Z",
+          "final_url": "http://shirotorizoo.com/",
+          "title": "しろとり動物園｜自由すぎる動物たちに会える動物園",
+          "text_sha256": "0396a131d8ef05e6fed50bd14ab6fe8519ab4fffad6a490ef6fbc0555c6e3fc3"
+        },
+        {
+          "facility_id": 2419,
+          "url": "http://shirotorizoo.com/event-schedule/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:00.997Z",
+          "final_url": "http://shirotorizoo.com/event-schedule/",
+          "title": "イベント | しろとり動物園",
+          "text_sha256": "38a3c35cf83bb499902d8480075dc42d084da698f9bb2ffa2915d577f79b3727"
+        },
+        {
+          "facility_id": 2420,
+          "url": "https://www.my-kagawa.jp/point/76",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:08.730Z",
+          "final_url": "https://www.my-kagawa.jp/point/76",
+          "title": "金刀比羅宮・書院｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+          "text_sha256": "c47af059a4ab4c68d4797766c0caaac355bcc4b112bfbecdd9078b0a49452f6e"
+        },
+        {
+          "facility_id": 2420,
+          "url": "https://www.konpira.or.jp/articles/20200703_drawing-room/article.htm",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:13.630Z",
+          "final_url": "https://www.konpira.or.jp/articles/20200703_drawing-room/article.htm",
+          "title": "金刀比羅宮 | 表書院《通常展》",
+          "text_sha256": "604112117fb018625e5ed969dac6d948cb6065455f60c81c77fc45b316fe7a84"
+        },
+        {
+          "facility_id": 2420,
+          "url": "https://www.konpira.or.jp/index.htm?stageID=hp_museum&language=JAPANESE",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:13.914Z",
+          "final_url": "https://www.konpira.or.jp/index.htm?stageID=hp_museum&language=JAPANESE",
+          "title": "金刀比羅宮",
+          "text_sha256": "7b8421e8820e4b341179f50643f0fc42882c33e6c155ef00b16e36d7c635dcf1"
+        },
+        {
+          "facility_id": 2421,
+          "url": "https://www.my-kagawa.jp/point/334",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:30.069Z",
+          "final_url": "https://www.my-kagawa.jp/point/334",
+          "title": "旧善通寺偕行社｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+          "text_sha256": "15953b8936ac6886bd88670e3992cc55989740772ca467e2b8a1c44bb48bc04b"
+        },
+        {
+          "facility_id": 2421,
+          "url": "https://www.city.zentsuji.kagawa.jp/soshiki/50/kaikousya.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:35.360Z",
+          "final_url": "https://www.city.zentsuji.kagawa.jp/soshiki/50/kaikousya.html",
+          "title": "旧善通寺偕行社 - 善通寺市",
+          "text_sha256": "91404fab84679f963318fcbe80a670bcbc913ba57bdbc5a36aec296b7e192ca7"
+        },
+        {
+          "facility_id": 2422,
+          "url": "https://www.my-kagawa.jp/point/3552",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:43.845Z",
+          "final_url": "https://www.my-kagawa.jp/point/3552",
+          "title": "【ものづくり体験】フラワーガーデン花崎　ヒーリングボトルガーデン（苔テラリウム）作り｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+          "text_sha256": "5cdade23aff089eb2296a29a8cabd59436a5850a932e7a4da0b6d583d446dc68"
+        },
+        {
+          "facility_id": 2424,
+          "url": "https://www.my-kagawa.jp/point/206",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:51.327Z",
+          "final_url": "https://www.my-kagawa.jp/point/206",
+          "title": "平賀源内旧邸｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+          "text_sha256": "b66dc609299fff3df7ed224e9f296ad6145e318ed4cb39556d4a3b812939109e"
+        },
+        {
+          "facility_id": 2424,
+          "url": "https://hiragagennai.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:55.465Z",
+          "final_url": "https://hiragagennai.com/",
+          "title": "平賀源内記念館 Hiraga Gennai Memorial Museum",
+          "text_sha256": "5727700560a16bc802f710ccf8866d9de2b8195141f071f2a808644503da40af"
+        },
+        {
+          "facility_id": 2424,
+          "url": "https://hiragagennai.blogspot.jp/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:04:59.595Z",
+          "final_url": "https://hiragagennai.blogspot.com/",
+          "title": "平賀源内記念館　イベント情報",
+          "text_sha256": "43d23e19545343e7779a792a9875de41582276dde687405100eb9388ffd0dd70"
+        },
+        {
+          "facility_id": 2424,
+          "url": "https://hiragagennai.com/event2025jyuku.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:06.498Z",
+          "final_url": "https://hiragagennai.com/event2025jyuku.html",
+          "title": "平賀源内記念館 | まんでがん源内塾専用ページ",
+          "text_sha256": "e4463e6e6868b53d9c18c1afad8890479f9aeba7be1d4e67f410cc02fd4eda08"
+        },
+        {
+          "facility_id": 2424,
+          "url": "https://hiragagennai.com/event2025hatsumei.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:06.767Z",
+          "final_url": "https://hiragagennai.com/event2025hatsumei.html",
+          "title": "平賀源内記念館 | 平賀源内発明くふう展専用ページ",
+          "text_sha256": "606fabf8a772467b56dbc50af9c589b14b2f637c76915b26da00a9bd1c05771d"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:16.978Z",
+          "final_url": "https://www.mizupark.com/",
+          "title": "香川用水記念公園公式サイト - 公益財団法人かがわ水と緑の財団",
+          "text_sha256": "0c9ff04edcf7c8a4708b128eb7b986dbde4d77c7f2c7dfef2c382120314232ef"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=65",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:23.086Z",
+          "final_url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=65",
+          "title": "香川用水記念公園公式サイト - 香川用水ウオーキング　親子体験できる",
+          "text_sha256": "7a2f4c900dd3479587b3ec144ea8423acd033152936254c88672c95437314d9e"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=64",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:23.609Z",
+          "final_url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=64",
+          "title": "香川用水記念公園公式サイト - 紅葉狩り　秋のライトアップ　キッチンカー",
+          "text_sha256": "d24ce969c2d24a781d4d28db00365159e4718cbc7ced406c77f22024d617c88d"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/uploads/fckeditor/uid000002_20261011091202fbebc912.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:28.935Z",
+          "bytes": 449875
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/uploads/fckeditor/uid000002_20260929122937d7956f07.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:29.272Z",
+          "bytes": 738543
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/modules/mizu/index.php?content_id=10",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:52.640Z",
+          "final_url": "https://www.mizupark.com/modules/mizu/index.php?content_id=10",
+          "title": "香川用水記念公園公式サイト - アクセス",
+          "text_sha256": "9a67c86be1a3589009d5f2fdcde754071f381c4eba9256a0d902a6d811abd0c9"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/modules/mizu/index.php?content_id=22",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:53.091Z",
+          "final_url": "https://www.mizupark.com/modules/mizu/index.php?content_id=22",
+          "title": "香川用水記念公園公式サイト - ご利用案内",
+          "text_sha256": "827053a4c0702a753ff436db81c2ca71082d8fffdebf235caf16d5a614812bb9"
+        },
+        {
+          "facility_id": 6888,
+          "url": "https://www.mizupark.com/modules/info/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:05:53.558Z",
+          "final_url": "https://www.mizupark.com/modules/info/",
+          "title": "香川用水記念公園公式サイト - お知らせ",
+          "text_sha256": "d884ec5afb32b12bb5ae3ac04f5361ccaa20ef905bc49e0a2461267cc9542ed0"
+        },
+        {
+          "facility_id": 6955,
+          "url": "https://www.pref.kagawa.lg.jp/toshikei/urbanpark/location/l07.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:06:26.244Z",
+          "final_url": "https://www.pref.kagawa.lg.jp/toshikei/urbanpark/location/l07.html",
+          "title": "東かがわ市の公園｜香川県",
+          "text_sha256": "1500a757392434404e0ed51c728840699b8cf0367aa97af9712f0a3a27e72548"
+        },
+        {
+          "facility_id": 6955,
+          "url": "https://hksz.or.jp/pages/76",
+          "status": 200,
+          "checked_at": "2026-10-29T23:06:40.775Z",
+          "final_url": "https://hksz.or.jp/pages/76",
+          "title": " とらまる公園利用案内 ",
+          "text_sha256": "d857a0f770ecc92d65bea1d44bd22e0389802fc2799508762ca4c84881539070"
+        },
+        {
+          "facility_id": 6955,
+          "url": "https://toramaru.jp/11event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:06:41.691Z",
+          "final_url": "https://toramaru.jp/11event/index.html",
+          "title": "ふしぎ・おどろき・だいはっけん!!とらまるパペットランド：イベント案内",
+          "text_sha256": "fe0c285bdf2d9b34e499bba5b1457138a970530319c4ce93fad17468a466eec8"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://www.pref.kagawa.lg.jp/rinsei/moridukuri/donguri/mannnou.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:05.419Z",
+          "final_url": "https://www.pref.kagawa.lg.jp/rinsei/moridukuri/donguri/mannnou.html",
+          "title": "満濃池森林公園｜香川県",
+          "text_sha256": "4ed3b1f204cd744554562808febf2cc98037f9e0bf293687422bf4e98f4af521"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:10.082Z",
+          "final_url": "https://mannou-mori.com/",
+          "title": "満濃池森林公園",
+          "text_sha256": "3a48a5458adbd40adb03d033c99251a851e2e51c017fc9285d63844582ddd631"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1195",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:16.433Z",
+          "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1195",
+          "title": "10/31(土)満濃池わくわくフェスティバル・大型遊具オープニングセレモニー開催！",
+          "text_sha256": "32405c3baf251fbf5c030d1089db55c27530cdc8273dab3945bd3d27d98c4de3"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1194",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:16.851Z",
+          "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1194",
+          "title": "11月のイベントご紹介！【竹細工体験教室、もしもの時のホッとするご飯、剪定体験教室】",
+          "text_sha256": "38cd581fedbd79d377dcfb6274ab7e523362c995cf5f75a2432ce88856e9de44"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1196",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:17.418Z",
+          "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1196",
+          "title": "『令和8年度どんぐり銀行常設支店』開設のお知らせ",
+          "text_sha256": "b7ff56db63aa7cf32dca852de7af8f95ef6cc440eaae7f550106ac72ffc8d1f9"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://www.pref.kagawa.lg.jp/rinsei/park/r8_mannno_opening.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:26.134Z",
+          "final_url": "https://www.pref.kagawa.lg.jp/rinsei/park/r8_mannno_opening.html",
+          "title": "満濃池森林公園大型遊具オープニングセレモニー及び満濃池わくわくフェスティバルを開催します！｜香川県",
+          "text_sha256": "8f295e00bb3d3cb0649d7a5356bda2a795c4c219e7883921f58a0250b9a78a83"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/files/libs/4058/202610020947454851.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:26.632Z",
+          "bytes": 610447
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/files/libs/4059/20261002094809631.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:26.977Z",
+          "bytes": 433250
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/files/libs/4060/202610020948202855.png",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:27.369Z",
+          "bytes": 920421
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/files/libs/4061/202610051333336436.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:51.919Z",
+          "bytes": 936998
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/files/libs/4062/202610051333403820.jpg",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:52.248Z",
+          "bytes": 849644
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mureweb02.sakura.ne.jp/lp/mannou_event_2026.html",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:52.355Z",
+          "final_url": "https://mureweb02.sakura.ne.jp/lp/mannou_event_2026.html",
+          "title": "満濃池わくわくフェスティバル｜自然を満喫！<br class=\"mobile-break\">満濃池周遊イベント",
+          "text_sha256": "8a3b8cc80bffc8bd388b27d94d1de55a2431e8a7fca58ebfd3b0111ae031973d"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1169",
+          "status": 200,
+          "checked_at": "2026-10-29T23:07:53.152Z",
+          "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1169",
+          "title": "倒木発生のお知らせ（林間広場・野鳥の森一部通行止め中）",
+          "text_sha256": "b399eca273427bf10130f3f561de9f2ef667a9b3a154e1253b554ca7df71a7bd"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://forms.gle/aeifdxsiQR7jJUbt9",
+          "status": 200,
+          "checked_at": "2026-10-29T23:08:15.597Z",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf1RVJfk0kw4ENVLTscZLD9TxWEF3Hi5pCYGmBYqIHNYYYL5A/viewform?usp=send_form",
+          "title": "満濃池わくわくフェスティバル 　満濃池わくわくジオ探検ツアー　参加者受付フォーム  ",
+          "text_sha256": "aa86327ad16035f03fafb599eecdb5a7925066e5c12e9281ac1db6b30e728478"
+        },
+        {
+          "facility_id": 6956,
+          "url": "https://forms.gle/ws4o5CkmRTGhbeYYA",
+          "status": 200,
+          "checked_at": "2026-10-29T23:08:16.690Z",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLScLAnwxCruHMIQuBsqvFVFaODQgfhvRiaLOTgmAp4HB_VIcVw/viewform?usp=send_form",
+          "title": "満濃池わくわくフェスティバル 　満濃池森林公園自然散策ツアー 　参加者受付フォーム　",
+          "text_sha256": "925d01694dc7ea8b9e505191210998fa40f6335fba3c28ac060d75c21bf32d77"
+        },
+        {
+          "facility_id": 8264,
+          "url": "http://www.souyu.co.jp/takase/",
+          "status": 200,
+          "checked_at": "2026-10-29T23:09:03.503Z",
+          "final_url": "https://www.souyu.co.jp/shisetsu/takase",
+          "title": "たかせ天然温泉 | 創裕",
+          "text_sha256": "815f48a3172c7dc4436dc60f9d5a3a3971ce08e1bfb6d927e37c862c89a10788"
         }
       ],
       "facilities": [
@@ -2277,13 +2650,593 @@
               "text_sha256": "6e8a600fedcae150df5bd9ef615632de6345f1d93d8b9504779b940fdf3ddc9e"
             }
           ]
+        },
+        {
+          "facility_id": 2419,
+          "name": "しろとり動物園",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光協会・動物園公式新着とイベント一覧を実読。カワウソ・ヘビ・モモは常時プログラム、期間限定赤ちゃんタイガー撮影は現在開催せず。日付指定の未来特別企画なし。HTTPS証明書不一致は公式リンク通りHTTPで成功。",
+          "candidates": [
+            {
+              "title": "赤ちゃんタイガー記念撮影会",
+              "disposition": "not_currently_held",
+              "reason": "公式イベント一覧に現在は開催していませんと明示"
+            },
+            {
+              "title": "カワウソ握手会・ヘビ撮影・モモタイム",
+              "disposition": "not_event",
+              "reason": "公式が常時とする常設プログラム"
+            },
+            {
+              "title": "猛禽類撮影",
+              "disposition": "not_currently_held",
+              "reason": "暫くの間お休みと明示"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 2419,
+              "url": "https://www.my-kagawa.jp/point/26",
+              "status": 200,
+              "checked_at": "2026-10-29T23:03:46.613Z",
+              "final_url": "https://www.my-kagawa.jp/point/26",
+              "title": "しろとり動物園｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+              "text_sha256": "b6434e27469595621ef721aced26d633a46030e8c71b2e22e43de4112760003c"
+            },
+            {
+              "facility_id": 2419,
+              "url": "https://shirotorizoo.com/",
+              "status": "fetch_failed",
+              "checked_at": "2026-10-29T23:03:51.739Z",
+              "error": "Hostname/IP does not match certificate's altnames: Host: shirotorizoo.com. is not in the cert's altnames: DNS:*.sakura.ne.jp, DNS:*.180r.com, DNS:*.2-d.jp, DNS:*.achoo.jp, DNS:*.amaretto.jp, DNS:*.bona.jp, DNS:*.chew.jp, DNS:*.crap.jp, DNS:*.daynight.jp, DNS:*.deko8.jp, DNS:*.dojin.com, DNS:*.eek.jp, DNS:*.flop.jp, DNS:*.from.tv, DNS:*.fubuki.info, DNS:*.gokujou.biz, DNS:*.grats.jp, DNS:*.grrr.jp, DNS:*.halfmoon.jp, DNS:*.ivory.ne.jp, DNS:*.jeez.jp, DNS:*.jpn.org, DNS:*.kirara.st, DNS:*.kokage.cc, DNS:*.mail-box.ne.jp, DNS:*.matrix.jp, DNS:*.mimoza.jp, DNS:*.mints.ne.jp, DNS:*.mokuren.ne.jp, DNS:*.nazo.cc, DNS:*.netgamers.jp, DNS:*.noob.jp, DNS:*.nyanta.jp, DNS:*.o0o0.jp, DNS:*.opal.ne.jp, DNS:*.rash.jp, DNS:*.razor.jp, DNS:*.rdy.jp, DNS:*.rgr.jp, DNS:*.rojo.jp, DNS:*.rossa.cc, DNS:*.rulez.jp, DNS:*.rusk.to, DNS:*.saikyou.biz, DNS:*.sakura.tv, DNS:*.sakuratan.com, DNS:*.sakuraweb.com, DNS:*.saloon.jp, DNS:*.sblo.jp, DNS:*.silk.to, DNS:*.skr.jp, DNS:*.spawn.jp, DNS:*.squares.net, DNS:*.sumomo.ne.jp, DNS:*.tank.jp, DNS:*.thyme.jp, DNS:*.topaz.ne.jp, DNS:*.uh-oh.jp, DNS:*.undo.jp, DNS:*.websozai.jp, DNS:*.whoa.jp, DNS:*.x0.com, DNS:*.x0.to, DNS:*.xii.jp",
+              "title": "",
+              "text_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+            },
+            {
+              "facility_id": 2419,
+              "url": "http://shirotorizoo.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:03:56.188Z",
+              "final_url": "http://shirotorizoo.com/",
+              "title": "しろとり動物園｜自由すぎる動物たちに会える動物園",
+              "text_sha256": "0396a131d8ef05e6fed50bd14ab6fe8519ab4fffad6a490ef6fbc0555c6e3fc3"
+            },
+            {
+              "facility_id": 2419,
+              "url": "http://shirotorizoo.com/event-schedule/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:00.997Z",
+              "final_url": "http://shirotorizoo.com/event-schedule/",
+              "title": "イベント | しろとり動物園",
+              "text_sha256": "38a3c35cf83bb499902d8480075dc42d084da698f9bb2ffa2915d577f79b3727"
+            }
+          ]
+        },
+        {
+          "facility_id": 2420,
+          "name": "金刀比羅宮・書院",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光協会と書院公式展示詳細・博物館スケジュールを確認。表書院は当分の間の通常展、奥書院は現在特別公開予定なしと明記。新しい期間限定展示なし。宮全体の祭典を別施設の書院イベントとして重複計上しない。",
+          "candidates": [],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 2420,
+              "url": "https://www.my-kagawa.jp/point/76",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:08.730Z",
+              "final_url": "https://www.my-kagawa.jp/point/76",
+              "title": "金刀比羅宮・書院｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+              "text_sha256": "c47af059a4ab4c68d4797766c0caaac355bcc4b112bfbecdd9078b0a49452f6e"
+            },
+            {
+              "facility_id": 2420,
+              "url": "https://www.konpira.or.jp/articles/20200703_drawing-room/article.htm",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:13.630Z",
+              "final_url": "https://www.konpira.or.jp/articles/20200703_drawing-room/article.htm",
+              "title": "金刀比羅宮 | 表書院《通常展》",
+              "text_sha256": "604112117fb018625e5ed969dac6d948cb6065455f60c81c77fc45b316fe7a84"
+            },
+            {
+              "facility_id": 2420,
+              "url": "https://www.konpira.or.jp/index.htm?stageID=hp_museum&language=JAPANESE",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:13.914Z",
+              "final_url": "https://www.konpira.or.jp/index.htm?stageID=hp_museum&language=JAPANESE",
+              "title": "金刀比羅宮",
+              "text_sha256": "7b8421e8820e4b341179f50643f0fc42882c33e6c155ef00b16e36d7c635dcf1"
+            }
+          ]
+        },
+        {
+          "facility_id": 2421,
+          "name": "旧善通寺偕行社",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光協会と善通寺市の施設公式ページ（2026/4/1更新）を確認。歴史・保存修理・常設見学と隣接カフェの案内で、日時を伴う特別企画告知なし。",
+          "candidates": [],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 2421,
+              "url": "https://www.my-kagawa.jp/point/334",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:30.069Z",
+              "final_url": "https://www.my-kagawa.jp/point/334",
+              "title": "旧善通寺偕行社｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+              "text_sha256": "15953b8936ac6886bd88670e3992cc55989740772ca467e2b8a1c44bb48bc04b"
+            },
+            {
+              "facility_id": 2421,
+              "url": "https://www.city.zentsuji.kagawa.jp/soshiki/50/kaikousya.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:35.360Z",
+              "final_url": "https://www.city.zentsuji.kagawa.jp/soshiki/50/kaikousya.html",
+              "title": "旧善通寺偕行社 - 善通寺市",
+              "text_sha256": "91404fab84679f963318fcbe80a670bcbc913ba57bdbc5a36aec296b7e192ca7"
+            }
+          ]
+        },
+        {
+          "facility_id": 2422,
+          "name": "フラワーガーデン花崎 ヒーリングボトルガーデン（苔テラリウム）作り",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光協会の公式体験詳細を全文確認。毎月第1火曜・金曜または相談日時の常設予約制テラリウム体験のみで、特別な開催日指定企画なし。運営者リンクは掲載されていない。",
+          "candidates": [],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 2422,
+              "url": "https://www.my-kagawa.jp/point/3552",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:43.845Z",
+              "final_url": "https://www.my-kagawa.jp/point/3552",
+              "title": "【ものづくり体験】フラワーガーデン花崎　ヒーリングボトルガーデン（苔テラリウム）作り｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+              "text_sha256": "5cdade23aff089eb2296a29a8cabd59436a5850a932e7a4da0b6d583d446dc68"
+            }
+          ]
+        },
+        {
+          "facility_id": 2424,
+          "name": "平賀源内旧邸",
+          "disposition": "no_current_or_future_event",
+          "reason": "観光協会・顕彰会公式トップ・公式イベントブログ・直接案内の企画2ページを確認。発明くふう展は令和7年度（2025年）の展示で終了、源内塾も2026年2月まで。2026年秋の新告知なし。",
+          "candidates": [
+            {
+              "title": "第42回平賀源内発明くふう展",
+              "disposition": "past_not_added",
+              "reason": "旧邸の全作品展示は2025/9/30～11/3、入賞展11/18～12/7。市役所展も2026/2で終了"
+            },
+            {
+              "title": "第10期まんでがん源内塾",
+              "disposition": "past_not_added",
+              "reason": "2025/7～2026/2の旧年度企画。11月という月名だけで現年に変換しない"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 2424,
+              "url": "https://www.my-kagawa.jp/point/206",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:51.327Z",
+              "final_url": "https://www.my-kagawa.jp/point/206",
+              "title": "平賀源内旧邸｜スポット・体験｜香川県観光協会公式サイト - うどん県旅ネット",
+              "text_sha256": "b66dc609299fff3df7ed224e9f296ad6145e318ed4cb39556d4a3b812939109e"
+            },
+            {
+              "facility_id": 2424,
+              "url": "https://hiragagennai.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:55.465Z",
+              "final_url": "https://hiragagennai.com/",
+              "title": "平賀源内記念館 Hiraga Gennai Memorial Museum",
+              "text_sha256": "5727700560a16bc802f710ccf8866d9de2b8195141f071f2a808644503da40af"
+            },
+            {
+              "facility_id": 2424,
+              "url": "https://hiragagennai.blogspot.jp/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:04:59.595Z",
+              "final_url": "https://hiragagennai.blogspot.com/",
+              "title": "平賀源内記念館　イベント情報",
+              "text_sha256": "43d23e19545343e7779a792a9875de41582276dde687405100eb9388ffd0dd70"
+            },
+            {
+              "facility_id": 2424,
+              "url": "https://hiragagennai.com/event2025jyuku.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:06.498Z",
+              "final_url": "https://hiragagennai.com/event2025jyuku.html",
+              "title": "平賀源内記念館 | まんでがん源内塾専用ページ",
+              "text_sha256": "e4463e6e6868b53d9c18c1afad8890479f9aeba7be1d4e67f410cc02fd4eda08"
+            },
+            {
+              "facility_id": 2424,
+              "url": "https://hiragagennai.com/event2025hatsumei.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:06.767Z",
+              "final_url": "https://hiragagennai.com/event2025hatsumei.html",
+              "title": "平賀源内記念館 | 平賀源内発明くふう展専用ページ",
+              "text_sha256": "606fabf8a772467b56dbc50af9c589b14b2f637c76915b26da00a9bd1c05771d"
+            }
+          ]
+        },
+        {
+          "facility_id": 6888,
+          "name": "香川用水記念公園",
+          "disposition": "candidate_found_added",
+          "reason": "公式新着、未来2企画のチラシ、利用案内とアクセスを確認し、参加経路と条件が確定した2件を追加。",
+          "candidates": [
+            {
+              "title": "香川用水ウオーキング",
+              "date": "2026-11-14",
+              "disposition": "added",
+              "event_id": "evt-6888-20261114-water-walk",
+              "participability": "条件付き参加可能",
+              "reason": "11/6必着募集、先着30名、無料、小学生以上・保護者同伴、約4.5km。少雨決行、中止連絡方法確認"
+            },
+            {
+              "title": "秋のライトアップ",
+              "disposition": "added",
+              "event_id": "evt-6888-202611-autumn-lightup",
+              "participability": "通常参加可能",
+              "reason": "11/13～15・20～23、17～20:30、少雨決行、入園無料。駐車場・出入口・暗い園路/川沿い安全注意・トイレを公式図面確認"
+            },
+            {
+              "title": "夏休み親子体験・納涼祭・水口祭・春のマルシェ等",
+              "disposition": "past_not_added",
+              "reason": "2026年7月以前の季節見出しで終了。一般水遊び開放はイベント化しない"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:16.978Z",
+              "final_url": "https://www.mizupark.com/",
+              "title": "香川用水記念公園公式サイト - 公益財団法人かがわ水と緑の財団",
+              "text_sha256": "0c9ff04edcf7c8a4708b128eb7b986dbde4d77c7f2c7dfef2c382120314232ef"
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=65",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:23.086Z",
+              "final_url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=65",
+              "title": "香川用水記念公園公式サイト - 香川用水ウオーキング　親子体験できる",
+              "text_sha256": "7a2f4c900dd3479587b3ec144ea8423acd033152936254c88672c95437314d9e"
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=64",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:23.609Z",
+              "final_url": "https://www.mizupark.com/modules/event/index.php?page=article&storyid=64",
+              "title": "香川用水記念公園公式サイト - 紅葉狩り　秋のライトアップ　キッチンカー",
+              "text_sha256": "d24ce969c2d24a781d4d28db00365159e4718cbc7ced406c77f22024d617c88d"
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/uploads/fckeditor/uid000002_20261011091202fbebc912.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:28.935Z",
+              "bytes": 449875
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/uploads/fckeditor/uid000002_20260929122937d7956f07.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:29.272Z",
+              "bytes": 738543
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/modules/mizu/index.php?content_id=10",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:52.640Z",
+              "final_url": "https://www.mizupark.com/modules/mizu/index.php?content_id=10",
+              "title": "香川用水記念公園公式サイト - アクセス",
+              "text_sha256": "9a67c86be1a3589009d5f2fdcde754071f381c4eba9256a0d902a6d811abd0c9"
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/modules/mizu/index.php?content_id=22",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:53.091Z",
+              "final_url": "https://www.mizupark.com/modules/mizu/index.php?content_id=22",
+              "title": "香川用水記念公園公式サイト - ご利用案内",
+              "text_sha256": "827053a4c0702a753ff436db81c2ca71082d8fffdebf235caf16d5a614812bb9"
+            },
+            {
+              "facility_id": 6888,
+              "url": "https://www.mizupark.com/modules/info/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:05:53.558Z",
+              "final_url": "https://www.mizupark.com/modules/info/",
+              "title": "香川用水記念公園公式サイト - お知らせ",
+              "text_sha256": "d884ec5afb32b12bb5ae3ac04f5361ccaa20ef905bc49e0a2461267cc9542ed0"
+            }
+          ]
+        },
+        {
+          "facility_id": 6955,
+          "name": "とらまる公園",
+          "disposition": "candidate_found_hold",
+          "reason": "県公式・公園指定管理者・パペットランド公式一覧を確認。人形劇祭は終了。検索で現れた11/22トラック催事は主催者の一次情報へ到達できず採用保留。",
+          "candidates": [
+            {
+              "title": "とらまる人形劇カーニバル2026",
+              "disposition": "past_not_added",
+              "reason": "公式は10/23～25で終了"
+            },
+            {
+              "title": "トライアルプログラム2026出演者募集",
+              "disposition": "not_visitor_event",
+              "reason": "8月～翌3月の出演団体募集で一般家族向け開催日・鑑賞枠の確定告知ではない"
+            },
+            {
+              "title": "さくら重機工業 繋がる力 in香川～能登へ届ける支援の輪～",
+              "date": "2026-11-22",
+              "disposition": "hold",
+              "reason": "検索で現れた二次掲載のみ。主催者URLなし、再検索も二次情報だけ。県・指定管理者公式で当該催事確認できず一次根拠未取得。二次情報の主張はProductに採用しない"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 6955,
+              "url": "https://www.pref.kagawa.lg.jp/toshikei/urbanpark/location/l07.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:06:26.244Z",
+              "final_url": "https://www.pref.kagawa.lg.jp/toshikei/urbanpark/location/l07.html",
+              "title": "東かがわ市の公園｜香川県",
+              "text_sha256": "1500a757392434404e0ed51c728840699b8cf0367aa97af9712f0a3a27e72548"
+            },
+            {
+              "facility_id": 6955,
+              "url": "https://hksz.or.jp/pages/76",
+              "status": 200,
+              "checked_at": "2026-10-29T23:06:40.775Z",
+              "final_url": "https://hksz.or.jp/pages/76",
+              "title": " とらまる公園利用案内 ",
+              "text_sha256": "d857a0f770ecc92d65bea1d44bd22e0389802fc2799508762ca4c84881539070"
+            },
+            {
+              "facility_id": 6955,
+              "url": "https://toramaru.jp/11event/index.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:06:41.691Z",
+              "final_url": "https://toramaru.jp/11event/index.html",
+              "title": "ふしぎ・おどろき・だいはっけん!!とらまるパペットランド：イベント案内",
+              "text_sha256": "fe0c285bdf2d9b34e499bba5b1457138a970530319c4ce93fad17468a466eec8"
+            }
+          ]
+        },
+        {
+          "facility_id": 6956,
+          "name": "満濃池森林公園",
+          "disposition": "candidate_found_added",
+          "reason": "県主催と公園公式・チラシ・申込先を突合し10/31祭典の一般参加枠を追加。3教室は受付開始前。10kmウォークだけ昼食場所に公式間差異がありHOLD。",
+          "candidates": [
+            {
+              "title": "満濃池わくわくフェスティバル2026・大型遊具オープニング",
+              "disposition": "added",
+              "event_id": "evt-6956-20261031-wakuwaku",
+              "participability": "通常参加可能",
+              "reason": "10/31 10～15時、一般入場・観覧無料、一部工作500円。小雨決行/荒天中止、臨時駐車場・無料シャトル、遊具整理券・混雑制限確認"
+            },
+            {
+              "title": "満濃池わくわくジオ探検ツアー",
+              "disposition": "duplicate_within_broader_listing",
+              "event_id": "evt-6956-20261031-wakuwaku",
+              "participability": "条件付き参加可能",
+              "reason": "同祭典の申込制プログラム。公式フォーム受付中、10/30 17時締切。小学生以下同伴、約4km"
+            },
+            {
+              "title": "満濃池森林公園自然散策ツアー",
+              "disposition": "duplicate_within_broader_listing",
+              "event_id": "evt-6956-20261031-wakuwaku",
+              "participability": "条件付き参加可能",
+              "reason": "同祭典内、公式フォーム受付中、10/30 17時締切。小学生以下同伴、約1.5km"
+            },
+            {
+              "title": "満濃池ぐるっと周遊ウォーク",
+              "disposition": "hold",
+              "reason": "県公式本文は昼食かりん会館、主催者の申込案内はほたる見公園。約10km行程の昼食地点が一致せず推測しない。他の祭典プログラムは独立して採用"
+            },
+            {
+              "title": "公園の竹を宝に変えて 竹細工体験教室",
+              "date": "2026-11-15",
+              "disposition": "hold",
+              "reason": "500円20名、12歳以下保護者同伴。電話受付11/3～9で実行時点では申込開始前"
+            },
+            {
+              "title": "もしもの時のホッとするご飯",
+              "date": "2026-11-18",
+              "disposition": "hold",
+              "reason": "1000円10名、12歳以下同伴。電話受付11/8～14で申込開始前"
+            },
+            {
+              "title": "基本がワカル やってみる剪定体験教室①",
+              "date": "2026-11-22",
+              "disposition": "hold",
+              "reason": "無料15名、電話受付11/16～19で申込開始前。家族向け年齢条件も明示なし"
+            },
+            {
+              "title": "どんぐり銀行常設支店",
+              "disposition": "not_event",
+              "reason": "10～11月土曜の常設支店受付サービスで独立した体験催事に転用しない"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 6956,
+              "url": "https://www.pref.kagawa.lg.jp/rinsei/moridukuri/donguri/mannnou.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:05.419Z",
+              "final_url": "https://www.pref.kagawa.lg.jp/rinsei/moridukuri/donguri/mannnou.html",
+              "title": "満濃池森林公園｜香川県",
+              "text_sha256": "4ed3b1f204cd744554562808febf2cc98037f9e0bf293687422bf4e98f4af521"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:10.082Z",
+              "final_url": "https://mannou-mori.com/",
+              "title": "満濃池森林公園",
+              "text_sha256": "3a48a5458adbd40adb03d033c99251a851e2e51c017fc9285d63844582ddd631"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1195",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:16.433Z",
+              "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1195",
+              "title": "10/31(土)満濃池わくわくフェスティバル・大型遊具オープニングセレモニー開催！",
+              "text_sha256": "32405c3baf251fbf5c030d1089db55c27530cdc8273dab3945bd3d27d98c4de3"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1194",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:16.851Z",
+              "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1194",
+              "title": "11月のイベントご紹介！【竹細工体験教室、もしもの時のホッとするご飯、剪定体験教室】",
+              "text_sha256": "38cd581fedbd79d377dcfb6274ab7e523362c995cf5f75a2432ce88856e9de44"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1196",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:17.418Z",
+              "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1196",
+              "title": "『令和8年度どんぐり銀行常設支店』開設のお知らせ",
+              "text_sha256": "b7ff56db63aa7cf32dca852de7af8f95ef6cc440eaae7f550106ac72ffc8d1f9"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://www.pref.kagawa.lg.jp/rinsei/park/r8_mannno_opening.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:26.134Z",
+              "final_url": "https://www.pref.kagawa.lg.jp/rinsei/park/r8_mannno_opening.html",
+              "title": "満濃池森林公園大型遊具オープニングセレモニー及び満濃池わくわくフェスティバルを開催します！｜香川県",
+              "text_sha256": "8f295e00bb3d3cb0649d7a5356bda2a795c4c219e7883921f58a0250b9a78a83"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/files/libs/4058/202610020947454851.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:26.632Z",
+              "bytes": 610447
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/files/libs/4059/20261002094809631.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:26.977Z",
+              "bytes": 433250
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/files/libs/4060/202610020948202855.png",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:27.369Z",
+              "bytes": 920421
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/files/libs/4061/202610051333336436.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:51.919Z",
+              "bytes": 936998
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/files/libs/4062/202610051333403820.jpg",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:52.248Z",
+              "bytes": 849644
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mureweb02.sakura.ne.jp/lp/mannou_event_2026.html",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:52.355Z",
+              "final_url": "https://mureweb02.sakura.ne.jp/lp/mannou_event_2026.html",
+              "title": "満濃池わくわくフェスティバル｜自然を満喫！<br class=\"mobile-break\">満濃池周遊イベント",
+              "text_sha256": "8a3b8cc80bffc8bd388b27d94d1de55a2431e8a7fca58ebfd3b0111ae031973d"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1169",
+              "status": 200,
+              "checked_at": "2026-10-29T23:07:53.152Z",
+              "final_url": "https://mannou-mori.com/publics/index/1/detail=1/b_id=8/r_id=1169",
+              "title": "倒木発生のお知らせ（林間広場・野鳥の森一部通行止め中）",
+              "text_sha256": "b399eca273427bf10130f3f561de9f2ef667a9b3a154e1253b554ca7df71a7bd"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://forms.gle/aeifdxsiQR7jJUbt9",
+              "status": 200,
+              "checked_at": "2026-10-29T23:08:15.597Z",
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSf1RVJfk0kw4ENVLTscZLD9TxWEF3Hi5pCYGmBYqIHNYYYL5A/viewform?usp=send_form",
+              "title": "満濃池わくわくフェスティバル 　満濃池わくわくジオ探検ツアー　参加者受付フォーム  ",
+              "text_sha256": "aa86327ad16035f03fafb599eecdb5a7925066e5c12e9281ac1db6b30e728478"
+            },
+            {
+              "facility_id": 6956,
+              "url": "https://forms.gle/ws4o5CkmRTGhbeYYA",
+              "status": 200,
+              "checked_at": "2026-10-29T23:08:16.690Z",
+              "final_url": "https://docs.google.com/forms/d/e/1FAIpQLScLAnwxCruHMIQuBsqvFVFaODQgfhvRiaLOTgmAp4HB_VIcVw/viewform?usp=send_form",
+              "title": "満濃池わくわくフェスティバル 　満濃池森林公園自然散策ツアー 　参加者受付フォーム　",
+              "text_sha256": "925d01694dc7ea8b9e505191210998fa40f6335fba3c28ac060d75c21bf32d77"
+            }
+          ]
+        },
+        {
+          "facility_id": 8264,
+          "name": "たかせ天然温泉",
+          "disposition": "no_current_or_future_event",
+          "reason": "登録公式URLを新URLへ自動転送して新着・施設案内を内容確認。最新の10/26お茶風呂、10/12ジャスミン湯、9月回数券セール等は終了。現在未来の日付指定企画なし。",
+          "candidates": [
+            {
+              "title": "高瀬のお茶風呂・ジャスミンの湯",
+              "disposition": "past_not_added",
+              "reason": "最新告知は2026/10/26と10/12で実行前に終了。毎月実施を推測して11月に延長しない"
+            },
+            {
+              "title": "秋の回数券得々セール",
+              "disposition": "not_event",
+              "reason": "9月の販売割引で終了、家族体験催事ではない"
+            }
+          ],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 8264,
+              "url": "http://www.souyu.co.jp/takase/",
+              "status": 200,
+              "checked_at": "2026-10-29T23:09:03.503Z",
+              "final_url": "https://www.souyu.co.jp/shisetsu/takase",
+              "title": "たかせ天然温泉 | 創裕",
+              "text_sha256": "815f48a3172c7dc4436dc60f9d5a3a3971ce08e1bfb6d927e37c862c89a10788"
+            }
+          ]
         }
       ],
-      "total": 30,
-      "no_current_or_future_event": 22,
-      "candidate_found_added": 1,
+      "total": 39,
+      "no_current_or_future_event": 28,
+      "candidate_found_added": 3,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 7,
+      "candidate_found_hold": 8,
       "source_unresolved": 0,
       "existing_event_holds": [
         {
@@ -2529,15 +3482,101 @@
       ]
     },
     "kanagawa": {
-      "facility_ids": [],
-      "sources_checked": [],
-      "facilities": [],
-      "total": 0,
+      "facility_ids": [
+        8275
+      ],
+      "sources_checked": [
+        {
+          "facility_id": 8275,
+          "url": "https://www.hakoneyuryo.jp/",
+          "status": 503,
+          "checked_at": "2026-10-29T23:09:16.265Z",
+          "final_url": "https://www.hakoneyuryo.jp/",
+          "title": "メンテナンス中です｜箱根湯寮",
+          "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+        },
+        {
+          "facility_id": 8275,
+          "url": "https://www.hakoneyuryo.jp/",
+          "status": 503,
+          "checked_at": "2026-10-29T23:09:26.984Z",
+          "final_url": "https://www.hakoneyuryo.jp/",
+          "title": "メンテナンス中です｜箱根湯寮",
+          "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+        },
+        {
+          "facility_id": 8275,
+          "url": "https://www.hakoneyuryo.jp/news/",
+          "status": 503,
+          "checked_at": "2026-10-29T23:09:27.189Z",
+          "final_url": "https://www.hakoneyuryo.jp/news/",
+          "title": "メンテナンス中です｜箱根湯寮",
+          "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+        },
+        {
+          "facility_id": 8275,
+          "url": "https://www.odakyu-hotel.co.jp/business/spa/",
+          "status": 503,
+          "checked_at": "2026-10-29T23:09:44.045Z",
+          "final_url": "https://www.odakyu-hotel.co.jp/business/spa/",
+          "title": "メンテナンス中です｜小田急リゾーツ",
+          "text_sha256": "7e68a1f7c75bf2a566a9471062fdd30e3078eaded0bf73253509e5f24ea99b3c"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 8275,
+          "name": "箱根湯寮",
+          "disposition": "source_unresolved",
+          "reason": "登録公式トップを2回取得、ニュース経路と運営会社公式温浴ページへfallback。すべて503メンテナンス告知でイベント本文を評価できない。registry secondaryは未登録。通常営業紹介だけから未来企画なしとは断定せず、registry鮮度も進めない。",
+          "candidates": [],
+          "existing_events": [],
+          "sources_checked": [
+            {
+              "facility_id": 8275,
+              "url": "https://www.hakoneyuryo.jp/",
+              "status": 503,
+              "checked_at": "2026-10-29T23:09:16.265Z",
+              "final_url": "https://www.hakoneyuryo.jp/",
+              "title": "メンテナンス中です｜箱根湯寮",
+              "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+            },
+            {
+              "facility_id": 8275,
+              "url": "https://www.hakoneyuryo.jp/",
+              "status": 503,
+              "checked_at": "2026-10-29T23:09:26.984Z",
+              "final_url": "https://www.hakoneyuryo.jp/",
+              "title": "メンテナンス中です｜箱根湯寮",
+              "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+            },
+            {
+              "facility_id": 8275,
+              "url": "https://www.hakoneyuryo.jp/news/",
+              "status": 503,
+              "checked_at": "2026-10-29T23:09:27.189Z",
+              "final_url": "https://www.hakoneyuryo.jp/news/",
+              "title": "メンテナンス中です｜箱根湯寮",
+              "text_sha256": "88361c200b2f74932eb0a34ea1c79efeaafa58083442cc6971c4b5e8eb985462"
+            },
+            {
+              "facility_id": 8275,
+              "url": "https://www.odakyu-hotel.co.jp/business/spa/",
+              "status": 503,
+              "checked_at": "2026-10-29T23:09:44.045Z",
+              "final_url": "https://www.odakyu-hotel.co.jp/business/spa/",
+              "title": "メンテナンス中です｜小田急リゾーツ",
+              "text_sha256": "7e68a1f7c75bf2a566a9471062fdd30e3078eaded0bf73253509e5f24ea99b3c"
+            }
+          ]
+        }
+      ],
+      "total": 1,
       "no_current_or_future_event": 0,
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0
+      "source_unresolved": 1
     }
   }
 }
