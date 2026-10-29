@@ -1691,12 +1691,61 @@
           "status": 200,
           "checked_at": "2026-10-29T04:08:09.684157+00:00",
           "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/691",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.538004+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/688",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.536220+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/628",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.535800+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/674",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.537467+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/679",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.536977+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/690",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.537767+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
+        },
+        {
+          "url": "https://www.library.pref.ishikawa.lg.jp/eventUser/main/view/689",
+          "status": "timeout",
+          "checked_at": "2026-10-29T04:35:34.537222+00:00",
+          "source_type": "area_event_calendar",
+          "verification_purpose": "pre-deploy participation check"
         }
       ],
       "candidates_found": 125,
-      "added": 19,
+      "added": 13,
       "duplicate_or_already_present": 2,
-      "hold": 102,
+      "hold": 108,
       "stale_false": 2,
       "candidate_dispositions": [
         {
@@ -2136,12 +2185,12 @@
           "source_type": "area_event_calendar",
           "title": "11/7(土) ビブリオバウムdeビブリオバトル 石川県・金沢市 石川県立図書館 だんだん広場 学び・見学",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-library-bibliobattle-2026-1107/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/7804.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-bibliobattle",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-bibliobattle"
         },
         {
           "source_type": "area_event_calendar",
@@ -2479,12 +2528,12 @@
           "source_type": "area_event_calendar",
           "title": "12/5(土) 絵本作家によるワークショップ「ゆめみる ちょうちょ～いろいろピッタン あれこれペッタン～」 石川県・金沢市 石川県立図書館 食文化体験スペース アート・クラフト",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-butterfly-picturebook-workshop-2026-1205/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/8351.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-butterfly-picture",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-butterfly-picture"
         },
         {
           "source_type": "area_event_calendar",
@@ -2512,12 +2561,12 @@
           "source_type": "area_event_calendar",
           "title": "12/6(日) ビブリオ自然のふしぎ研究室「私たちの手を通して見る微生物の世界と良い手洗いとは？」 石川県・金沢市 石川県立図書館 食文化体験スペース 学び・見学",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-handwashing-science-2026-1206/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/8293.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-handwashing-science",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-handwashing-science"
         },
         {
           "source_type": "area_event_calendar",
@@ -2570,23 +2619,23 @@
           "source_type": "area_event_calendar",
           "title": "12/12(土) 絵本作家によるワークショップ「つきの みちかけ なににみえる？」 石川県・金沢市 石川県立図書館 食文化体験スペース アート・クラフト",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-moon-picturebook-workshop-2026-1212/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/8357.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-moon-picturebook",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-moon-picturebook"
         },
         {
           "source_type": "area_event_calendar",
           "title": "12/13(日) 日本から海外へ飛び出す絵本作家たち 石川県・金沢市 石川県立図書館 だんだん広場 学び・見学",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-kaigai-ehon-talk-2026-1213/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/8251.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-overseas-picturebooks",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-overseas-picturebooks"
         },
         {
           "source_type": "area_event_calendar",
@@ -2684,12 +2733,12 @@
           "source_type": "area_event_calendar",
           "title": "2/27(土) 絵本を修理しよう 石川県・金沢市 石川県立図書館1階 食文化体験スペース 学び・見学",
           "source_url": "https://machievent.com/events/ishikawa/kanazawa-ehon-repair-2027-0227/",
-          "disposition": "added",
-          "reason": "当該公式一次ページで日時・会場・現在の参加経路を確認。",
+          "disposition": "hold",
+          "reason": "公式告知は事前申込のみ。今回の公開前確認で公式申込システムの当該画面が35秒タイムアウトし、同系統は通常ブラウザー45秒再試行でも応答せず。現時点の受付開始・残枠と利用可能な申込経路を確定できない。",
           "official_primary_url": "https://www.library.pref.ishikawa.lg.jp/category/event2026/8360.html",
           "event_category": "facility_hosted",
-          "event_id": "evt-ishikawa-w42d6-repair-picturebooks",
-          "participability": "条件付き参加可能"
+          "participability": "受付経路未確認",
+          "candidate_id": "evt-ishikawa-w42d6-repair-picturebooks"
         },
         {
           "source_type": "area_event_calendar",
@@ -2824,7 +2873,8 @@
       ],
       "pages_fetched": 221,
       "paging_stop_reason": "no_further_pages",
-      "paging_note": "全対象一覧のページを取得済み。石川地域85件は翌年8月、祭り32件は翌年9月まで。家族一覧は全5件・1/1ページで尽き、12月24日を越える発見範囲は前二一覧で確認。"
+      "paging_note": "全対象一覧のページを取得済み。石川地域85件は翌年8月、祭り32件は翌年9月まで。家族一覧は全5件・1/1ページで尽き、12月24日を越える発見範囲は前二一覧で確認。",
+      "participability_qa_at": "2026-10-29T04:38:43.928765+00:00"
     }
   }
 }
