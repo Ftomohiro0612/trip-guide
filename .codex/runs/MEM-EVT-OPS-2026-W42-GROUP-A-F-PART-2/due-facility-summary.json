@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T18:22:32.437437+00:00",
+  "executed_at": "2026-10-29T18:33:53.472812+00:00",
   "process_started_at": "2026-10-29T17:35:30.4847994Z",
   "due_facility_ids": [
     1851,
@@ -2437,7 +2437,7 @@
           "candidates": [
             {
               "title": "サイクルファミリーパークフェスタ2026",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能",
               "rain": "雨天決行",
               "traffic": "西鉄バス矢取から徒歩約10分",
@@ -2536,7 +2536,7 @@
           "candidates": [
             {
               "title": "レッサーパンダのワンポイントガイド",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
@@ -2581,7 +2581,7 @@
             },
             {
               "title": "10/17ライオン・10/18ナマケモノ・10/10飼育員・過年度定期カテゴリ日付企画",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "実行開始時点で終了。過去開催の遡及追加なし。"
             }
           ],
@@ -2663,13 +2663,13 @@
             },
             {
               "title": "MPLC石炭館 文化の日 無料公開",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能",
               "category": "施設開催イベント"
             },
             {
               "title": "10/18・9/20・8/16ファミリーコンサート、10/24掘り出し物語、自由研究展、9/26たんこう語り、カードラリー、9/6クリーンコールデー、旧2019年催事",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "全件終了日が実行開始日より前。遡及追加しない。"
             },
             {
@@ -2706,7 +2706,7 @@
           "candidates": [
             {
               "title": "ハロウィン工作",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能",
               "rain": "公式に室内遊具・工作で雨の日も楽しめる施設と記載",
               "traffic": "県道798号から狭い市道への誤誘導注意を記録",
@@ -2822,7 +2822,7 @@
             },
             {
               "title": "10月満月観望会・十三夜",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "10/26・10/23で終了。"
             },
             {
@@ -2913,7 +2913,7 @@
             },
             {
               "title": "5月〜10月歴史講座",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "全5回は実行開始前に終了。"
             },
             {
@@ -3058,7 +3058,7 @@
           "candidates": [
             {
               "title": "11/28わくわくキッズランニング教室",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "条件付き参加可能",
               "rain": "大会小雨決行・荒天中止",
               "traffic": "筑後船小屋駅利用・北側さくらの森駐車場。臨時駐車場未定",
@@ -3097,7 +3097,7 @@
             },
             {
               "title": "2/14そば打ち・2025催事",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "終了済み。"
             }
           ],
@@ -3183,17 +3183,17 @@
           "candidates": [
             {
               "title": "火おこし体験と竹パン作り",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "開催10/11、終了済み。"
             },
             {
               "title": "秋色コンサート",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "開催10/4、終了済み。"
             },
             {
               "title": "鮎つかみ取り・ネイチャークラフト・ウォーターフェスティバル",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "8/23・8/16・7/20の終了済み催事。"
             },
             {
@@ -3268,12 +3268,12 @@
           "candidates": [
             {
               "title": "第四回戦時下のくらし展",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "菅野泰紀 鉛筆艦船画展",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "8/30終了の旧企画。"
             }
           ],
@@ -3565,37 +3565,40 @@
           "candidates": [
             {
               "title": "ダイナソーミッション！",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "もふもふ ふれあいワールド",
-              "disposition": "add",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "participability": "通常参加可能",
+              "existing_event_id": "evt-fukuoka-20261029-d9-71152c12",
+              "reason": "同一会場・公式URL・期間・内容の既存掲載へ照合。独立追加案は除外。",
+              "rendered_set_confirmation": "本runの実ブラウザPreview全12ページで既存IDのカード表示を確認。events_data+summerを統合した実描画。"
             },
             {
               "title": "サンリオプレイスクール 10月・11月",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "鷹のLEFTY SNIPER 中村晃 特別展示",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "元プロ野球選手と一緒に野球を楽しもう！ 10月31日",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "元プロ野球選手と一緒に野球を楽しもう！ 11月29日",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "恐怖心展",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
@@ -3640,12 +3643,12 @@
             },
             {
               "title": "魔法の美術館・カブトクワガタ・9月サンリオ・いきものタッチプール・10/27抽選・10/13来場ニュース・過年度催事",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "当該会期・日付は終了。既存2件をendedに解決、旧開催を再追加しない。"
             }
           ],
           "disposition": "candidate_found_added",
-          "reason": "新着・季節特集・個別詳細を評価。7件追加、既存2件は会期終了として解決。",
+          "reason": "新着・季節特集・個別詳細を評価。6件追加・1件既存重複、既存2件は会期終了として解決。",
           "existing_event_resolutions": [
             {
               "event_id": "evt-1867-202607-01",
@@ -3744,7 +3747,7 @@
           "candidates": [
             {
               "title": "オドフェス2026",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能",
               "rain": "雨天決行・荒天中止",
               "traffic": "混雑予想、姪浜駅からクルットバスを推奨。公共交通利用",
@@ -3773,7 +3776,7 @@
             },
             {
               "title": "2025以前オドフェス・働く車・宝探し",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "当年ではない過去開催。"
             }
           ],
@@ -3880,8 +3883,11 @@
           "candidates": [
             {
               "title": "平尾台 第20回野草写真展",
-              "disposition": "add",
-              "participability": "通常参加可能"
+              "disposition": "duplicate",
+              "participability": "通常参加可能",
+              "existing_event_id": "evt-f1-20261030-1816-3b4f1119",
+              "reason": "同じ観察センターの野草写真展が既存施設別ID1816で掲載済。新規追加案を除外。",
+              "rendered_set_confirmation": "本runの実ブラウザPreview全12ページで既存IDのカード表示を確認。events_data+summerを統合した実描画。"
             }
           ],
           "disposition": "candidate_found_duplicate",
@@ -3963,12 +3969,12 @@
           "candidates": [
             {
               "title": "THE 新版画 版元・渡邊庄三郎の挑戦",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "コレクション展Ⅱ 特集 フォトグラフ",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
@@ -3998,7 +4004,7 @@
             },
             {
               "title": "8/9探検・10/3ツアー・10/18カメラ・9月各関連講演とトーク・10/24落語",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "実行開始前に終了。既存探検1件をendedに解決。"
             }
           ],
@@ -4094,12 +4100,12 @@
           "candidates": [
             {
               "title": "土曜イベント サッカーボウリング",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
               "title": "11月土曜イベント フリースローチャレンジ",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
@@ -4109,7 +4115,7 @@
             },
             {
               "title": "10/11・12スタンプラリー、8/30HADO、7〜9月土曜、夏抽選会、過年度催事",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "全て実行開始前に終了。既存7月はendedで追加変更不要。"
             }
           ],
@@ -4174,7 +4180,7 @@
             },
             {
               "title": "9/23フットボールフェスタ・令和7年度野鳥観察会",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "実行時点より前の開催。"
             },
             {
@@ -4262,7 +4268,7 @@
           "candidates": [
             {
               "title": "史跡指定50周年記念 日拝塚古墳展",
-              "disposition": "add",
+              "disposition": "added",
               "participability": "通常参加可能"
             },
             {
@@ -4277,7 +4283,7 @@
             },
             {
               "title": "9/26フェスタ・10/24散歩・10/11講演・10/3石室公開・春夏事業",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "全て実行開始前に終了。既存フェスタをendedに解決。"
             },
             {
@@ -4362,7 +4368,7 @@
             },
             {
               "title": "10/3政庁まつり・10/20秋思祭・10/17/18バスツアー・10/28クリーンデー",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "実行開始前に終了。別会場イベントや前年度を追加しない。"
             },
             {
@@ -4532,7 +4538,7 @@
             },
             {
               "title": "第24回九州川ワークショップ2025",
-              "disposition": "past",
+              "disposition": "excluded_past",
               "reason": "2025年開催で終了。"
             }
           ],
@@ -6372,13 +6378,12 @@
       "candidate_found_hold": 10,
       "source_unresolved": 1,
       "candidate_encounter_counts": {
-        "add": 20,
+        "added": 34,
         "hold": 102,
-        "past": 17,
+        "excluded_past": 33,
         "excluded": 31,
-        "included": 4,
-        "added": 16,
-        "excluded_past": 16
+        "duplicate": 2,
+        "included": 4
       },
       "added_events": 34,
       "existing_events_updated": 4,
@@ -6432,6 +6437,35 @@
     "official_secondary_url_added": 1,
     "duplicate_removed_from_new_proposal": 2,
     "shared_registry_url_alias": "facility1874 source also belongs to baseline1816; existing record already checked 2026-10-30; no out-of-scope Product edits",
-    "navigation_fetch_errors_disclosed": 2
+    "navigation_fetch_errors_disclosed": 2,
+    "events_validator_errors": 0,
+    "regular_events_validator_errors": 0,
+    "event_tests": {
+      "total": 89,
+      "passed": 86,
+      "failed": 3,
+      "baseline_reproduced": true,
+      "baseline_sha": "4d2a53a0e11fd9d6d6a8e325cb53474ad411d708",
+      "failures": [
+        "fixed 2026-07-21 crosslink snapshot:427 !=429",
+        "Summer fixed-date pagination:39 !=42",
+        "Summer later-page anchor fixture undefined"
+      ]
+    },
+    "installed_evidence_gate": "VERIFICATION_GATE_PASSED / genuinely patrolled39 / out-of-scope shared alias1816 excluded by installed scoped gate",
+    "cloudflare_build": "passed: Next validators, TypeScript,6181 pages, OpenNext bundle, direct HTML and runtime canon15 files, private-key rejection guard",
+    "preview": {
+      "checked_at": "2026-10-29T18:33:31.995Z",
+      "http": 200,
+      "pages": 12,
+      "cards": 227,
+      "added_verified": 34,
+      "ended_excluded": 4,
+      "duplicate_existing_cards_rendered": 2,
+      "page_errors": 0,
+      "mobile_overflow": false,
+      "nojs_visible_cards": 0,
+      "card_sha256": "ff53ff4f2695456e8773349e3bafc80da91025205eedc3bd9aecc4d00ec6fec5"
+    }
   }
 }
