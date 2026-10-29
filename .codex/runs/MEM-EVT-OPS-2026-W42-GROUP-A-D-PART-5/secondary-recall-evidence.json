@@ -16273,6 +16273,22 @@
           "checked_at": "2026-10-29T01:31:44.134319+00:00",
           "content_sha256": "bc81f1215f6aba8e5c3d71a2a14f523ccdd68ff58b90bba7132420d0fc8969ac",
           "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.litpla.com/news/publicity/202609_park_info/",
+          "status": 200,
+          "checked_at": "2026-10-29T01:49:50.228644+00:00",
+          "content_sha256": "b05a8db1c6fdc21a8cc58c2ce4275d894bd4b1010632a04aace0640da8f8ce75",
+          "source_type": "family_event_portal",
+          "purpose": "Preserved historical source reference verified during final provenance QA; its September/early-October closure period has already ended."
+        },
+        {
+          "url": "https://www.litpla.com/news/publicity/202609_abeno_info/",
+          "status": 200,
+          "checked_at": "2026-10-29T01:49:51.561087+00:00",
+          "content_sha256": "1cd18c4f8e1a400d834612fc8d11be52203a99a446daddf81890f793ee051674",
+          "source_type": "family_event_portal",
+          "purpose": "Preserved historical source reference verified during final provenance QA; its September/early-October closure period has already ended."
         }
       ],
       "candidates_found": 789,
@@ -24996,7 +25012,8 @@
       "paging_stop_reason": "listing_exhausted",
       "paging_notes": "花火Walker10月・11月・12月を取得。10月2件／11月1件・12月404で後続月なし。大阪のランキング掲載も重複除去して5件全て個別評価。 Benly10～12月の全表を確認し、月をまたぐ重複を除いた217件全ての二次詳細とリンク先公式を取得・評価。12月は後続ページなし。 家族ポータルは10/29～12/29の全41ページ（601掲載枠、重複除去567候補）を取得。最終ページ1件・次ページなし。全567個別詳細と直接参照公式を個別評価。先行page1は計上せず再取得した41ページのみ計上。",
       "execution_exception": "Family portal page1 was fetched at 01:05:05Z, four seconds before area unit completion at 01:05:09Z. That preliminary fetch is not credited; page1 and all pagination are freshly fetched after the area completion. All candidate evaluation follows that completed unit.",
-      "reporting_category_basis": "Discovery-stage grouping by the named event/surface; additions are individually classified by their verified event/venue. Candidate totals are encounter counts across required source types, not unique additions."
+      "reporting_category_basis": "Discovery-stage grouping by the named event/surface; additions are individually classified by their verified event/venue. Candidate totals are encounter counts across required source types, not unique additions.",
+      "final_provenance_reconciliation": "Post-deployment final gate required the two historical URLs retained in updated source_urls arrays to be fetched too. Both were freshly fetched HTTP200 in this process at01:49:50/51Z. They confirm ended September/early-October closures, do not change current event facts, and are not reused as the current participation basis. Current participation had already been verified from campaign/store official pages before deploy."
     }
   }
 }
