@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W42-GROUP-A-F-PART-8",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-29T23:58:27.111379+00:00",
+  "executed_at": "2026-10-30T00:01:45.079917+00:00",
   "due_facility_ids": [
     1653,
     6885,
@@ -111,7 +111,8 @@
               "checked_at": "2026-10-29T23:42:25+00:00",
               "transport": "web.click"
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -252,7 +253,8 @@
               "checked_at": "2026-10-29T23:43:20.409461+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         },
         {
           "facility_id": 6978,
@@ -372,7 +374,20 @@
               "status": 200,
               "checked_at": "2026-10-29T23:44:02.894829+00:00"
             }
-          ]
+          ],
+          "existing_event_judgments": [
+            {
+              "event_id": "evt-supp1-6978-20260929-dc65ad4",
+              "disposition": "ended",
+              "reason": "Existing dated instance ended before this run; current official surfaces considered separately."
+            },
+            {
+              "event_id": "evt-supp1-6978-20260930-7777481",
+              "disposition": "ended",
+              "reason": "Existing dated instance ended before this run; current official surfaces considered separately."
+            }
+          ],
+          "post_validation_note": "Two expired September/October recurring records were omitted from initial facility judgment; final consistency review resolved them as ended,after original facility completion. This late correction is disclosed,not represented as original sequential execution."
         },
         {
           "facility_id": 8269,
@@ -425,7 +440,8 @@
               "status": 200,
               "checked_at": "2026-10-29T23:44:55.053327+00:00"
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -496,7 +512,8 @@
               "checked_at": "2026-10-29T23:45:31.103649+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -722,7 +739,8 @@
               "checked_at": "2026-10-29T23:46:19.490385+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         },
         {
           "facility_id": 6968,
@@ -739,7 +757,8 @@
               "checked_at": "2026-10-29T23:46:35.762134+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         },
         {
           "facility_id": 8262,
@@ -788,7 +807,8 @@
               "status": 200,
               "checked_at": "2026-10-29T23:47:09.694137+00:00"
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -902,7 +922,8 @@
               "checked_at": "2026-10-29T23:47:50.836517+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -998,7 +1019,8 @@
               "checked_at": "2026-10-29T23:48:11+00:00",
               "transport": "web.click"
             }
-          ]
+          ],
+          "existing_event_judgments": []
         },
         {
           "facility_id": 1427,
@@ -1031,7 +1053,8 @@
               "checked_at": "2026-10-29T23:48:36.646382+00:00",
               "status": 503
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -1104,7 +1127,8 @@
               "checked_at": "2026-10-29T23:48:51.689135+00:00",
               "status": 503
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     },
@@ -2875,7 +2899,8 @@
               "checked_at": "2026-10-29T23:56:04+00:00",
               "transport": "web.click"
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ],
       "existing_event_holds": [
@@ -3106,19 +3131,19 @@
         {
           "url": "https://www.kaneharaen.com/",
           "checked_at": "2026-10-29T23:58:05.715058+00:00",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "error": "HTTPSConnectionPool(host='www.kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kaneharaen.com', port=443): Failed to resolve 'www.kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
           "url": "https://www.kaneharaen.com/",
           "checked_at": "2026-10-29T23:58:13.019498+00:00",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "error": "HTTPSConnectionPool(host='www.kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kaneharaen.com', port=443): Failed to resolve 'www.kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
           "url": "https://kaneharaen.com/",
           "checked_at": "2026-10-29T23:58:13.838735+00:00",
-          "status": "fetch_failed",
+          "status": "dns_error",
           "error": "HTTPSConnectionPool(host='kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kaneharaen.com', port=443): Failed to resolve 'kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
         },
         {
@@ -3164,7 +3189,8 @@
               "checked_at": "2026-10-29T23:57:13.738110+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         },
         {
           "facility_id": 194,
@@ -3248,19 +3274,19 @@
             {
               "url": "https://www.kaneharaen.com/",
               "checked_at": "2026-10-29T23:58:05.715058+00:00",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "error": "HTTPSConnectionPool(host='www.kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kaneharaen.com', port=443): Failed to resolve 'www.kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
               "url": "https://www.kaneharaen.com/",
               "checked_at": "2026-10-29T23:58:13.019498+00:00",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "error": "HTTPSConnectionPool(host='www.kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.kaneharaen.com', port=443): Failed to resolve 'www.kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
               "url": "https://kaneharaen.com/",
               "checked_at": "2026-10-29T23:58:13.838735+00:00",
-              "status": "fetch_failed",
+              "status": "dns_error",
               "error": "HTTPSConnectionPool(host='kaneharaen.com', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='kaneharaen.com', port=443): Failed to resolve 'kaneharaen.com' ([Errno 11001] getaddrinfo failed)\"))"
             },
             {
@@ -3268,7 +3294,8 @@
               "checked_at": "2026-10-29T23:58:18.669963+00:00",
               "status": 200
             }
-          ]
+          ],
+          "existing_event_judgments": []
         }
       ]
     }
