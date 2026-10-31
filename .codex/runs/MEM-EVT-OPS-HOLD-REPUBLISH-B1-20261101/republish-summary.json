@@ -1,18 +1,18 @@
 {
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B1-20261101",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-31T22:09:48.903870+00:00",
+  "executed_at": "2026-10-31T22:19:08.058963+00:00",
   "evidence_collection_started_at": "2026-10-31T21:40:32.151048+00:00",
   "prior_run_evidence_reused": false,
   "complete": false,
   "aggregate": {
-    "total": 300,
-    "added": 202,
-    "duplicate": 25,
+    "total": 400,
+    "added": 220,
+    "duplicate": 44,
     "past": 15,
-    "still_hold": 54,
-    "not_event": 4,
-    "new_events": 203
+    "still_hold": 69,
+    "not_event": 52,
+    "new_events": 221
   },
   "candidates": [
     {
@@ -5962,6 +5962,23 @@
       ]
     },
     {
+      "index": 282,
+      "region": "okayama",
+      "title": "【2027年】岡山芸術創造劇場ハレノワ　初春狂言福来る。東西狂言会",
+      "disposition": "still_hold",
+      "reason": "公式が未就学児入場不可と明記。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_101595.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_101595.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:07:50.778583+00:00",
+          "sha256": "0332a7cf1b2aaf4acf756b214d8503d6a8a57d2a252cb6c7dd6c13b2d936d593"
+        }
+      ]
+    },
+    {
       "index": 283,
       "region": "okayama",
       "title": "【2027年】岡山後楽園　芝焼き",
@@ -6002,6 +6019,23 @@
       ]
     },
     {
+      "index": 285,
+      "region": "okayama",
+      "title": "【2027年】岡山後楽園　開園記念日",
+      "disposition": "still_hold",
+      "reason": "公式の2027年3月2日（月）は暦の火曜日と矛盾し、開催日を安全に確定できない。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12439.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12439.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:07:53.416926+00:00",
+          "sha256": "e85e0070f42532a701fdcd10adde3055191abf5405918e8f20c877dfbc510194"
+        }
+      ]
+    },
+    {
       "index": 286,
       "region": "okayama",
       "title": "【2027年】旧閑谷学校「閑谷の早春を愛でる会」",
@@ -6018,40 +6052,6 @@
           "http_status": 200,
           "checked_at": "2026-10-31T22:07:54.302850+00:00",
           "sha256": "85ed19650b4d4d89fbacbf46c2e12ac4f094bc90bf3f06dcfb4bc62ae71ec6f3"
-        }
-      ]
-    },
-    {
-      "index": 282,
-      "region": "okayama",
-      "title": "【2027年】岡山芸術創造劇場ハレノワ　初春狂言福来る。東西狂言会",
-      "disposition": "still_hold",
-      "reason": "公式が未就学児入場不可と明記。",
-      "reason_code": "NOT_FAMILY_SUITABLE",
-      "sources_checked": [
-        {
-          "url": "https://www.okayama-kanko.jp/event/detail_101595.html",
-          "final_url": "https://www.okayama-kanko.jp/event/detail_101595.html",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:07:50.778583+00:00",
-          "sha256": "0332a7cf1b2aaf4acf756b214d8503d6a8a57d2a252cb6c7dd6c13b2d936d593"
-        }
-      ]
-    },
-    {
-      "index": 285,
-      "region": "okayama",
-      "title": "【2027年】岡山後楽園　開園記念日",
-      "disposition": "still_hold",
-      "reason": "公式の2027年3月2日（月）は暦の火曜日と矛盾し、開催日を安全に確定できない。",
-      "reason_code": "OFFICIAL_DATE_CONFLICT",
-      "sources_checked": [
-        {
-          "url": "https://www.okayama-kanko.jp/event/detail_12439.html",
-          "final_url": "https://www.okayama-kanko.jp/event/detail_12439.html",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:07:53.416926+00:00",
-          "sha256": "e85e0070f42532a701fdcd10adde3055191abf5405918e8f20c877dfbc510194"
         }
       ]
     },
@@ -6075,6 +6075,43 @@
           "final_url": "https://www.okayama-kanko.jp/feature/Autumnleaves/top",
           "http_status": 200,
           "checked_at": "2026-10-31T22:07:54.949470+00:00",
+          "sha256": "c03c63ba3c74f6fe5c99c69bc988a2ee5758449aca91a8cb936d0870b005fe37"
+        }
+      ]
+    },
+    {
+      "index": 288,
+      "region": "okayama",
+      "title": "岡山県立森林公園 秋の自然観察会",
+      "disposition": "past",
+      "reason": "公園公式が令和8年10月25日の自然観察会を案内。実施予定日は今日より前で、中止告知も確認。",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.okayama.jp/page/1062396.html",
+          "final_url": "https://www.pref.okayama.jp/page/1062396.html",
+          "http_status": 404,
+          "checked_at": "2026-10-31T22:09:18.325724+00:00",
+          "sha256": "8e4191578506b060f6eb1d807fa07f8169a5f47535f9454c00925433909ee531"
+        },
+        {
+          "url": "https://www.ombara-kogen.com/sinrin/",
+          "final_url": "https://www.ombara-kogen.com/sinrin/",
+          "http_status": 404,
+          "checked_at": "2026-10-31T22:08:58.536856+00:00",
+          "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e"
+        },
+        {
+          "url": "https://www.ombara-kogen.com/shinrin/",
+          "final_url": "https://www.ombara-kogen.com/shinrin/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:09:26.212345+00:00",
+          "sha256": "afc38a8e00eda58b41e6154676ef7e046153477c5f38ab52e8459e50457f9dc0"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/feature/Autumnleaves/top",
+          "final_url": "https://www.okayama-kanko.jp/feature/Autumnleaves/top",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:07:55.948263+00:00",
           "sha256": "c03c63ba3c74f6fe5c99c69bc988a2ee5758449aca91a8cb936d0870b005fe37"
         }
       ]
@@ -6190,74 +6227,6 @@
       ]
     },
     {
-      "index": 295,
-      "region": "okayama",
-      "title": "くらしき きらめきのみち～あなたと奏でる光のみち～",
-      "disposition": "duplicate",
-      "reason": "再取得した公式日程・会場・内容が既に掲載した同一催しと一致。",
-      "matched_event_id": "evt-hold-b1-160",
-      "sources_checked": [
-        {
-          "url": "https://www.walkerplus.com/event/ar0833e87563/data.html",
-          "final_url": "https://www.walkerplus.com/event/ar0833e87563/data.html",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:08:29.981917+00:00",
-          "sha256": "31c0f3644c4fb33ebdae0a7eab181f48c810c7399a709764642d8cedf6fcdedc"
-        },
-        {
-          "url": "https://www.okayama-kanko.jp/event/detail_12721.html",
-          "final_url": "https://www.okayama-kanko.jp/event/detail_12721.html",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:08:57.558745+00:00",
-          "sha256": "cee50569854a58e120ea864b7883a882411088d06337362819d29cd454d5f350"
-        },
-        {
-          "url": "https://www.walkerplus.com/event/ar0833e87563/",
-          "final_url": "https://www.walkerplus.com/event/ar0833e87563/",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:08:01.689743+00:00",
-          "sha256": "58d2e179c87f90b9610baf5d096bb6a6c415005e0dc15d94bda5678d4458ea86"
-        }
-      ]
-    },
-    {
-      "index": 288,
-      "region": "okayama",
-      "title": "岡山県立森林公園 秋の自然観察会",
-      "disposition": "past",
-      "reason": "公園公式が令和8年10月25日の自然観察会を案内。実施予定日は今日より前で、中止告知も確認。",
-      "sources_checked": [
-        {
-          "url": "https://www.pref.okayama.jp/page/1062396.html",
-          "final_url": "https://www.pref.okayama.jp/page/1062396.html",
-          "http_status": 404,
-          "checked_at": "2026-10-31T22:09:18.325724+00:00",
-          "sha256": "8e4191578506b060f6eb1d807fa07f8169a5f47535f9454c00925433909ee531"
-        },
-        {
-          "url": "https://www.ombara-kogen.com/sinrin/",
-          "final_url": "https://www.ombara-kogen.com/sinrin/",
-          "http_status": 404,
-          "checked_at": "2026-10-31T22:08:58.536856+00:00",
-          "sha256": "9448f8a1159c9b14e3e1b9d8eab1a6ddf88d26e1f888a34cef430c756e4e6e1e"
-        },
-        {
-          "url": "https://www.ombara-kogen.com/shinrin/",
-          "final_url": "https://www.ombara-kogen.com/shinrin/",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:09:26.212345+00:00",
-          "sha256": "afc38a8e00eda58b41e6154676ef7e046153477c5f38ab52e8459e50457f9dc0"
-        },
-        {
-          "url": "https://www.okayama-kanko.jp/feature/Autumnleaves/top",
-          "final_url": "https://www.okayama-kanko.jp/feature/Autumnleaves/top",
-          "http_status": 200,
-          "checked_at": "2026-10-31T22:07:55.948263+00:00",
-          "sha256": "c03c63ba3c74f6fe5c99c69bc988a2ee5758449aca91a8cb936d0870b005fe37"
-        }
-      ]
-    },
-    {
       "index": 293,
       "region": "okayama",
       "title": "【花・見ごろ】おかやまフォレストパーク ドイツの森 160万本のコスモス",
@@ -6318,6 +6287,37 @@
           "http_status": 200,
           "checked_at": "2026-10-31T22:08:01.079439+00:00",
           "sha256": "bd00c0cb8772cfb096d359b83e93664d681c0f84aafeffb0629f6c917b5ea3d3"
+        }
+      ]
+    },
+    {
+      "index": 295,
+      "region": "okayama",
+      "title": "くらしき きらめきのみち～あなたと奏でる光のみち～",
+      "disposition": "duplicate",
+      "reason": "再取得した公式日程・会場・内容が既に掲載した同一催しと一致。",
+      "matched_event_id": "evt-hold-b1-160",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e87563/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e87563/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:08:29.981917+00:00",
+          "sha256": "31c0f3644c4fb33ebdae0a7eab181f48c810c7399a709764642d8cedf6fcdedc"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12721.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12721.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:08:57.558745+00:00",
+          "sha256": "cee50569854a58e120ea864b7883a882411088d06337362819d29cd454d5f350"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e87563/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e87563/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:08:01.689743+00:00",
+          "sha256": "58d2e179c87f90b9610baf5d096bb6a6c415005e0dc15d94bda5678d4458ea86"
         }
       ]
     },
@@ -6509,6 +6509,3378 @@
           "http_status": 200,
           "checked_at": "2026-10-31T22:08:05.672862+00:00",
           "sha256": "0d73fea32f82eb2278303470c806a18639dd98c0e50051db569cd5130abf5ebf"
+        }
+      ]
+    },
+    {
+      "index": 301,
+      "region": "okayama",
+      "title": "岡山の美術 特別展示「第十五回 I氏賞受賞作家展」",
+      "disposition": "added",
+      "reason": "美術館公式の2026年会期・普通観覧料金を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-301"
+      ],
+      "added_event_id": "evt-hold-b1-301",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e617246/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e617246/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:15.935170+00:00",
+          "sha256": "e6dff00fea8f191db87fe29690b735a6cfe61fe25ac0dac9b3e8778f0d3326a4"
+        },
+        {
+          "url": "https://www.okayama-kenbi.info/okabi-20261003-ishi15/",
+          "final_url": "https://www.okayama-kenbi.info/okabi-20261003-ishi15/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:16.652910+00:00",
+          "sha256": "7e05d851945b107370d98123f824709900abf188c72822c93bb8327974eb9097"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e617246/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e617246/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:00.120436+00:00",
+          "sha256": "04aaf58d2d2536dbb2fc581fef0e4f2f13ca723e87fe7c32081e6f9ab89efc12"
+        }
+      ]
+    },
+    {
+      "index": 302,
+      "region": "okayama",
+      "title": "由加山火渡り大祭",
+      "disposition": "added",
+      "reason": "神社公式の2026年日程と家族観覧案内を画像で確認。",
+      "added_event_ids": [
+        "evt-hold-b1-302"
+      ],
+      "added_event_id": "evt-hold-b1-302",
+      "sources_checked": [
+        {
+          "url": "https://yugasan.or.jp/post-71629/",
+          "final_url": "https://yugasan.or.jp/post-71629/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:24.658160+00:00",
+          "sha256": "5a28b12ae1aec0165da4c9158c3aa7d5343761284c90a5b181d55f3678e750c1"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616679/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616679/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:17.100805+00:00",
+          "sha256": "f48d04308682da0b4d6da921c5dc18c7a7d2301a65a759c7d90ca3de6f4c6e8d"
+        },
+        {
+          "url": "https://yugasan.or.jp/wp-content/uploads/令和8年火渡り大祭のお知らせ-scaled.jpg",
+          "final_url": "https://yugasan.or.jp/wp-content/uploads/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E7%81%AB%E6%B8%A1%E3%82%8A%E5%A4%A7%E7%A5%AD%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B-scaled.jpg",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:53.388628+00:00",
+          "sha256": "a5345e0f4f180454110483b0f5febb4366a76d29f9fbca3d2055c0cf2bb85e90"
+        },
+        {
+          "url": "https://yugasan.or.jp/",
+          "final_url": "https://yugasan.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:17.735731+00:00",
+          "sha256": "6c8f72ffcafa4b4c38ffb5e18938ce1b48e3f4662858ce161fd5b0ab3949fe20"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616679/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616679/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:00.589201+00:00",
+          "sha256": "03cd830cf7a83517cb89a4d96595343036d1131cfb6d9983f85fa8f2d3621f45"
+        }
+      ]
+    },
+    {
+      "index": 303,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】国立公園 蒜山",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612048/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612048/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:18.607204+00:00",
+          "sha256": "64e4b997f64c1eb35135c43695586364bd49001ebfe8c57e8f8e65f1be7daf3f"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3434",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3434",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:19.444827+00:00",
+          "sha256": "0ab3c227bbe9d9a1f3c4fb5477e57544bc07fcf40b08bcb393980361b5bd2dbc"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612048/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612048/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:00.980795+00:00",
+          "sha256": "d9933a26717a8a7f73d202f2dd99d489e4186ebaf754d151de39e30fd9fe8335"
+        }
+      ]
+    },
+    {
+      "index": 304,
+      "region": "okayama",
+      "title": "【おかやまアーツフェスティバル2026】みんなのアニソン・オーケストラ！",
+      "disposition": "still_hold",
+      "reason": "主催者が案内する公式販売先に未就学児童入場不可と明記。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://t.pia.jp/pia/event/event.do?eventCd=2626148",
+          "final_url": "https://t.pia.jp/pia/event/event.do?eventCd=2626148",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:44.393544+00:00",
+          "sha256": "95fc406e82c07742560146207129c1e52efdfa1f6c8e96132fb4186b156caaea"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e611848/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e611848/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:20.350404+00:00",
+          "sha256": "405eeaf2df5cf229448c198a37c99980955b9d05ac3dd244fab2fe71fbaf5fab"
+        },
+        {
+          "url": "https://www.ocac.jp/oarts/event/1436/",
+          "final_url": "https://www.ocac.jp/oarts/event/1436/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:21.279670+00:00",
+          "sha256": "b412b175e920730c2067b6e22e1188f562267e596152ffb195c656c591e1ec1b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e611848/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e611848/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:01.372301+00:00",
+          "sha256": "33c77d8d1cb96197406c60b8359c12d9df591f897338135315eb8b209fc02d07"
+        }
+      ]
+    },
+    {
+      "index": 305,
+      "region": "okayama",
+      "title": "JFE西日本フェスタinくらしき",
+      "disposition": "added",
+      "reason": "主催者公式が2026年11月3日の子ども向け企画と当日登録可能な入場経路を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-305"
+      ],
+      "added_event_id": "evt-hold-b1-305",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621102/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621102/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:22.338014+00:00",
+          "sha256": "617006a3453ab94fd88377d0f0031049d7d1011bc64e1f11b87c83814f4d24ef"
+        },
+        {
+          "url": "https://www.jfe-steel.co.jp/works/west/west_japan/kurashiki/festa2026.html",
+          "final_url": "https://www.jfe-steel.co.jp/works/west/west_japan/kurashiki/festa2026.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:23.221949+00:00",
+          "sha256": "ed36c1421f5fbdfd3a87c11ff6006fbcf7b84b227acb7626f6d9f638c7e1ccb8"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621102/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621102/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:01.732353+00:00",
+          "sha256": "77694b469563d0498d07ec41b249b83acdee024e2c0a9ab4ad30c72a86cd8e68"
+        }
+      ]
+    },
+    {
+      "index": 306,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】深谷の滝",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613930/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613930/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:24.103229+00:00",
+          "sha256": "7a62d54d5ae81a64ff6cb0033816cfe62619857194a2d381e95ab1f45626c3f9"
+        },
+        {
+          "url": "https://www.city.bizen.okayama.jp/site/koho/15809.html",
+          "final_url": "https://www.city.bizen.okayama.jp/site/koho/15809.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:24.948320+00:00",
+          "sha256": "b16ef1efb428dc13f2f7bd73791ec3f002374e557bb29e8a984e0112ec91465a"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613930/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613930/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:02.119942+00:00",
+          "sha256": "995e050101837e68b58a8cda67ea7309173a5f73d462b0a402e0da46256a1d84"
+        }
+      ]
+    },
+    {
+      "index": 307,
+      "region": "okayama",
+      "title": "第27回 旧閑谷学校ようこそ秋色づく閑谷へ",
+      "disposition": "duplicate",
+      "reason": "施設公式と既掲載の会期・会場が一致。ライトアップも同じ総合掲載に含む。",
+      "matched_event_id": "evt-hold-b1-213",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613933/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613933/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:25.599789+00:00",
+          "sha256": "4ef149c0499e8109bf2a1fd9142c93ca8ba1455b3509a12d58cc0549e84513e2"
+        },
+        {
+          "url": "https://shizutani.jp/",
+          "final_url": "https://shizutani.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:26.589157+00:00",
+          "sha256": "adf3f9cfc30c4acc8299998c161f351f00c9410516981c73fa1b2f5f9ce06a3d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613933/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613933/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:02.494588+00:00",
+          "sha256": "55eebe16c8ef30304fbab3780e074b64bc7e7534ab59479ee71c320cf3f90806"
+        }
+      ]
+    },
+    {
+      "index": 308,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】由加神社本宮",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616614/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616614/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:27.637822+00:00",
+          "sha256": "10712f5a661273a2f91d794c8cd72a60ec89a15a026be4f4ba3d7465ad8f39e8"
+        },
+        {
+          "url": "https://yugasan.or.jp/",
+          "final_url": "https://yugasan.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:28.981463+00:00",
+          "sha256": "6c8f72ffcafa4b4c38ffb5e18938ce1b48e3f4662858ce161fd5b0ab3949fe20"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616614/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616614/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:02.985181+00:00",
+          "sha256": "2bb8ceaf7c1cffdfb94cb6ecbdb20dd397bad09b5c6e0915a8cfcc5df6ff2e08"
+        }
+      ]
+    },
+    {
+      "index": 309,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】神代四季桜",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612046/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612046/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:29.901649+00:00",
+          "sha256": "4183b852ef6bcea6c5e058d0b94b6db66b7301e469181b06157279b838ca8625"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=40",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=40",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:30.774045+00:00",
+          "sha256": "e29c9aab8ceec8db5d6f8325bb3044aac890792251b15ad443418ef2b14aa6c8"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612046/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612046/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:03.612334+00:00",
+          "sha256": "29a3c5faae172e98d25c288bfa510dbf78adcf0804d0edac9a0540f0bbf23434"
+        }
+      ]
+    },
+    {
+      "index": 310,
+      "region": "okayama",
+      "title": "カレンダー企画展　茶道速水流と野崎家",
+      "disposition": "added",
+      "reason": "公式ポスターの令和8年10月22日〜令和9年1月24日・料金・開館時間を確認。満席茶会と展示を区別。",
+      "added_event_ids": [
+        "evt-hold-b1-310"
+      ],
+      "added_event_id": "evt-hold-b1-310",
+      "sources_checked": [
+        {
+          "url": "https://www.nozakike.or.jp/post/企画展-茶道速水流と野﨑家",
+          "final_url": "https://www.nozakike.or.jp/post/%E4%BC%81%E7%94%BB%E5%B1%95-%E8%8C%B6%E9%81%93%E9%80%9F%E6%B0%B4%E6%B5%81%E3%81%A8%E9%87%8E%EF%A8%91%E5%AE%B6",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:25.386147+00:00",
+          "sha256": "d9fa55915b402a3ca2d57ee51c1a11b725700f9a3894be1e938399decf4cc431"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612909/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612909/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:31.626767+00:00",
+          "sha256": "ba30446e07f1bb8c83f5cf64f96076a666d6287a2ae8796f4f5f8e57db723ca8"
+        },
+        {
+          "url": "https://static.wixstatic.com/media/6ba813_14905ccedacb4cfdb78966f49126dc27~mv2.jpg/v1/fill/w_980,h_1387,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6ba813_14905ccedacb4cfdb78966f49126dc27~mv2.jpg",
+          "final_url": "https://static.wixstatic.com/media/6ba813_14905ccedacb4cfdb78966f49126dc27~mv2.jpg/v1/fill/w_980,h_1387,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/6ba813_14905ccedacb4cfdb78966f49126dc27~mv2.jpg",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:53.951243+00:00",
+          "sha256": "29a9e50810b7d6597668146a362bf1a856934a251b2cf9bdb70e85202b0ae095"
+        },
+        {
+          "url": "https://www.nozakike.or.jp/",
+          "final_url": "https://www.nozakike.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:32.464401+00:00",
+          "sha256": "3a7086ce814c77b8ee76dc1472365764e75fe9ac2dd239663c9a06fa9478c23a"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612909/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612909/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:04.275389+00:00",
+          "sha256": "b4417931c422f3b6265c12dc0e1c9441db5301724485aa140b3fc0ef7d01cb44"
+        }
+      ]
+    },
+    {
+      "index": 311,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】近水園",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613750/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613750/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:34.894946+00:00",
+          "sha256": "2f0def4d1abbf4b447b1a04b410682eebd7b6480da4eac90028bbc7269ab66a7"
+        },
+        {
+          "url": "https://okayama-kanko.net/sightseeing/spot/537",
+          "final_url": "https://okayama-kanko.net/sightseeing/spot/537/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:36.013960+00:00",
+          "sha256": "06080f328af0aca970ba593b302a00c9abf9ebdd6e54f1184f5d9f3d9cc58713"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613750/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613750/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:04.840657+00:00",
+          "sha256": "969f084b5b721a03a3873a69f984c43cc3def3bd956acf6829196d45d5462013"
+        }
+      ]
+    },
+    {
+      "index": 312,
+      "region": "okayama",
+      "title": "奥津渓の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12714/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12714/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:37.402982+00:00",
+          "sha256": "409381de0e8f7e9c02c1eee722bea415dd69dc27341f8c003334c0d7cdb91edc"
+        },
+        {
+          "url": "https://www.kagamino.holiday/",
+          "final_url": "https://www.kagamino.holiday/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:38.484222+00:00",
+          "sha256": "74bb78fdd4203542b0b5c0affcd97c194d9a0448f6e9f8088db880a02e4afc93"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12714/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12714/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:05.397099+00:00",
+          "sha256": "e5b5c2090387c24c161b364debf8a2826021657858b471e02f2c8b203149ee90"
+        }
+      ]
+    },
+    {
+      "index": 313,
+      "region": "okayama",
+      "title": "女性作家の先駆者たち～韮崎大村美術館所蔵作品を中心に～",
+      "disposition": "added",
+      "reason": "公式トップの2026年会期と展示詳細の普通観覧経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-313"
+      ],
+      "added_event_id": "evt-hold-b1-313",
+      "sources_checked": [
+        {
+          "url": "https://niimi-museum.or.jp/2026/08/05/%e5%a5%b3%e6%80%a7%e4%bd%9c%e5%ae%b6%e3%81%ae%e5%85%88%e9%a7%86%e8%80%85%e3%81%9f%e3%81%a1/",
+          "final_url": "https://niimi-museum.or.jp/2026/08/05/%E5%A5%B3%E6%80%A7%E4%BD%9C%E5%AE%B6%E3%81%AE%E5%85%88%E9%A7%86%E8%80%85%E3%81%9F%E3%81%A1/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:25.819796+00:00",
+          "sha256": "7cf4636b1fe9386f0375d96b4f86154eea2521eb0eb0790936b48fa9e4bcc888"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612632/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612632/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:40.349597+00:00",
+          "sha256": "77a83f63ec3a0a79ed44eee291f2e69fd37021d75132adcf7991c2bd93c80abd"
+        },
+        {
+          "url": "https://niimi-museum.or.jp",
+          "final_url": "https://niimi-museum.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:41.385349+00:00",
+          "sha256": "5f21b742b98f9ce04984f37626283dab59acd3dad2d54dad27207ec3f1dc6dea"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612632/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612632/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:06.028198+00:00",
+          "sha256": "1d6292dc28737d30e3fa276240527cd2a619d1d5cab33f6f3fb83cb5cf9a8587"
+        }
+      ]
+    },
+    {
+      "index": 314,
+      "region": "okayama",
+      "title": "第61回　小さな街のカントリーパーティーin岡山",
+      "disposition": "still_hold",
+      "reason": "主催者公式の第61回ポスターに12月3日（木）とあるが開催年は未記載。記事の投稿日を開催年に転用しない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://chima-okayama.jugem.jp/?month=202610",
+          "final_url": "https://chima-okayama.jugem.jp/?month=202610",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:26.310078+00:00",
+          "sha256": "218dc7cb3744751b4e8925b40893ca710146d933b1c9930cf1f90590dd524976"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616291/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616291/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:42.483672+00:00",
+          "sha256": "a9e26d13ff09881c9b74a54bdbb77a09d77ddd1f98162ffd8e455b2235a07134"
+        },
+        {
+          "url": "https://img-cdn.jg.jugem.jp/cb3/1678453/20260804_2765891.jpg",
+          "final_url": "https://img-cdn.jg.jugem.jp/cb3/1678453/20260804_2765891.jpg",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:54.496192+00:00",
+          "sha256": "4156fdab092f7b1556fa97a76c3004ddc9a3879ac53b33af7deb9998c1d3f46c"
+        },
+        {
+          "url": "https://img-cdn.jg.jugem.jp/cb3/1678453/20261015_2776089.jpg",
+          "final_url": "https://img-cdn.jg.jugem.jp/cb3/1678453/20261015_2776089.jpg",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:12:08.875234+00:00",
+          "sha256": "8f3e28701fcb5b5bde97aaeca3883d0667053fef3684524e1807c7616d1bc47b"
+        },
+        {
+          "url": "https://chima-okayama.jugem.jp/",
+          "final_url": "https://chima-okayama.jugem.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:43.353876+00:00",
+          "sha256": "b439276b5924e076e65275f1db58d43a2e1e1eecaedf8e814fffc6210b2be333"
+        },
+        {
+          "url": "https://chima-okayama.jugem.jp/?month=202608",
+          "final_url": "https://chima-okayama.jugem.jp/?month=202608",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:12:18.703778+00:00",
+          "sha256": "dfe734685b158f5ba0424d3a22cfae1eee8cfb6373f33f0f8ae8eeb5f5db4faa"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616291/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616291/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:06.831336+00:00",
+          "sha256": "4b8bc2229b05eb11b800e5215b31557f47c5be9eb0dc34d4d30ff1af2351953d"
+        }
+      ]
+    },
+    {
+      "index": 315,
+      "region": "okayama",
+      "title": "御前酒まつり2026秋",
+      "disposition": "duplicate",
+      "reason": "公式県観光の2026年11月21〜22日、同じ酒蔵と子ども向け企画を再取得・照合。",
+      "matched_event_id": "evt-hold-b1-249",
+      "sources_checked": [
+        {
+          "url": "https://www.gozenshu.co.jp/",
+          "final_url": "https://www.gozenshu.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:26.852144+00:00",
+          "sha256": "8d347bdfd63eb73fc89d56505d2d57317355281b482a0d2d3b4cd2b121f3af02"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e614740/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e614740/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:44.026258+00:00",
+          "sha256": "855f56b5c227884b0ae96358b0433a878dda9a5e8337a4c5d7c3ab404dcecf32"
+        },
+        {
+          "url": "http://www.gozenshu.co.jp/",
+          "final_url": "https://www.gozenshu.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:44.980238+00:00",
+          "sha256": "8d347bdfd63eb73fc89d56505d2d57317355281b482a0d2d3b4cd2b121f3af02"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_101077.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_101077.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:55.212565+00:00",
+          "sha256": "0c8f46b1b9ba91a0c5dd379872bb3334380fdbb7c2e2d61b8bcd2afccf209e6b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e614740/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e614740/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:07.584897+00:00",
+          "sha256": "41deed8f00131e7ee2e12cb71422266ac67299cdd7899a0927eaef5673692558"
+        }
+      ]
+    },
+    {
+      "index": 316,
+      "region": "okayama",
+      "title": "ちびっこぷらねたりうむ",
+      "disposition": "added",
+      "reason": "博物館公式が令和8年度下半期・翌令和9年の日程、当日受付を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-316"
+      ],
+      "added_event_id": "evt-hold-b1-316",
+      "sources_checked": [
+        {
+          "url": "https://www.city.asakuchi.lg.jp/site/museum/12252.html",
+          "final_url": "https://www.city.asakuchi.lg.jp/site/museum/12252.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:27.147753+00:00",
+          "sha256": "813a9a90b19a602319ebeb9b3220f54dcb488f43a27ff85f1c4b5765ece983e9"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616020/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616020/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:45.609644+00:00",
+          "sha256": "170caf3b66add7978be13fddf77c3f3c1120bb84bd47f9f61ffa9381893b8378"
+        },
+        {
+          "url": "https://www.city.asakuchi.lg.jp/site/museum/",
+          "final_url": "https://www.city.asakuchi.lg.jp/site/museum/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:46.694057+00:00",
+          "sha256": "90370bbd1f99c9c6c256697cb2f41744e7b8cf24126f8fda07354296427f73de"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616020/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616020/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:08.192938+00:00",
+          "sha256": "9754fdafede418a3ecd019f2602d0b50f241d6ab27702ac4c57c0bf292b0095e"
+        }
+      ]
+    },
+    {
+      "index": 317,
+      "region": "okayama",
+      "title": "ふれあいフェスティバル in 東児（とうじ）2026",
+      "disposition": "duplicate",
+      "reason": "主催者公式の令和8年11月1日・上山坂公園・家族向けプログラムが一致。",
+      "matched_event_id": "evt-hold-b1-172",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e617588/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e617588/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:47.461949+00:00",
+          "sha256": "6e30c8a14bb9829cf6428c6eaf94af7f4109eea877474b2d2c6736d5ac445003"
+        },
+        {
+          "url": "https://frefes-intoji.jimdofree.com/",
+          "final_url": "https://frefes-intoji.jimdofree.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:48.360995+00:00",
+          "sha256": "cdea9a7f66f0ee1e7677dca19e1a7b6acbc507b2ea4a48669055de32c2cc3303"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e617588/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e617588/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:08.884895+00:00",
+          "sha256": "8b85a5e9e18596d61b45c89e5b947b3824e5ffabb71c6fc1a937c0241ac1f540"
+        }
+      ]
+    },
+    {
+      "index": 318,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】高清水トレイル",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619950/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619950/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:49.669233+00:00",
+          "sha256": "5fb2272eb078da4f47af1db724f056a4fc572fee79c46f43b39fc8acc2fe07f6"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:50.466946+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619950/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619950/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:09.480783+00:00",
+          "sha256": "07dcf36912edb7c9373ba83bc903beccf70df1f6f35ac379a8de724b8052997b"
+        }
+      ]
+    },
+    {
+      "index": 319,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】日本遺産「旧閑谷学校」",
+      "disposition": "not_event",
+      "reason": "公式施設・地域の紅葉や景観スポット紹介。見頃目安であり、候補自体は日付の定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613931/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613931/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:51.122572+00:00",
+          "sha256": "f8a274f2e9203d9095d5bc4afed4d4606438d9f7e9e13a8a8b27ea8523773430"
+        },
+        {
+          "url": "https://shizutani.jp/",
+          "final_url": "https://shizutani.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:52.016445+00:00",
+          "sha256": "4982efb84de10249429711665f9cf84ff72f3574ba20959d9a7e99db8a6a7000"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613931/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613931/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:10.171485+00:00",
+          "sha256": "92e7636ee05dfcf51bcdb428f0c1f763312b18e3986d42554ee91a2486afa080"
+        }
+      ]
+    },
+    {
+      "index": 320,
+      "region": "okayama",
+      "title": "企画展「古墳時代のエピローグ」",
+      "disposition": "duplicate",
+      "reason": "県公式の令和8年10月16日〜令和9年4月11日・吉備文化財センター展示が一致。",
+      "matched_event_id": "evt-w43d6-okayama-kofun-epilogue",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619562/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619562/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:52.912144+00:00",
+          "sha256": "b452dad9fcd8a94e2d1bf7a468fffb812a9248b3fdaf805f6f0013dcd338c0df"
+        },
+        {
+          "url": "https://www.pref.okayama.jp/site/kodai/815785.html",
+          "final_url": "https://www.pref.okayama.jp/site/kodai/815785.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:53.664657+00:00",
+          "sha256": "0593dfda7e6b32ffbab3cb41b40f9245cd9e6752ab159c007892f73165127024"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619562/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619562/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:10.848983+00:00",
+          "sha256": "1aaf29c8a13d444aab921f92c7d5d4bfbfe5bf1cdb9607a35c0a48dc558a0b61"
+        }
+      ]
+    },
+    {
+      "index": 321,
+      "region": "okayama",
+      "title": "めぐる、つながる発酵フェス",
+      "disposition": "still_hold",
+      "reason": "主催者Instagramは本文を読めず、会場公式の代替ページにも対象催しの開催日を確認できない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://greenable-hiruzen.co.jp/",
+          "final_url": "https://greenable-hiruzen.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:27.762640+00:00",
+          "sha256": "49f9ca1ea7ffc49e1720415655c97ac4e56d8dbfd222f282dd356302aabe1579"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616034/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616034/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:54.415903+00:00",
+          "sha256": "0e979c85528f4c18e1b19ab675777b8c513df9968cc4f38f61e0ad6a4971599b"
+        },
+        {
+          "url": "https://www.instagram.com/meguru_tsunagaru_hacco/",
+          "final_url": "https://www.instagram.com/meguru_tsunagaru_hacco/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:55.643709+00:00",
+          "sha256": "b01ce51f52771ed37dda53460f1d2617861538eb8cbf7ad96feebd4a4653604c"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616034/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616034/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:11.498175+00:00",
+          "sha256": "e11c1cfdfab0a1c0184b079885db0b198233d9476bf6a9f1542118b0b9e23c42"
+        }
+      ]
+    },
+    {
+      "index": 322,
+      "region": "okayama",
+      "title": "第3回 こころの日フェスタ",
+      "disposition": "added",
+      "reason": "主催者公式の2026年11月28日・会場・体験コーナーを確認。",
+      "added_event_ids": [
+        "evt-hold-b1-322"
+      ],
+      "added_event_id": "evt-hold-b1-322",
+      "sources_checked": [
+        {
+          "url": "https://sites.google.com/view/kokoronohifesta-okayaman720ns/各コーナーの紹介",
+          "final_url": "https://sites.google.com/view/kokoronohifesta-okayaman720ns/%E5%90%84%E3%82%B3%E3%83%BC%E3%83%8A%E3%83%BC%E3%81%AE%E7%B4%B9%E4%BB%8B",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:00.205851+00:00",
+          "sha256": "25e0b8d3c9994ec58039ec055bc64b7b44ce1d997299c8d33018952e2280f209"
+        },
+        {
+          "url": "https://x.com/nisseikan_okj",
+          "final_url": "https://x.com/nisseikan_okj",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:45.320345+00:00",
+          "sha256": "05fe6178efc3754354ad4bf265adbc53c832f0a239e735834ac84f4574e45850"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e602142/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e602142/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:56.714977+00:00",
+          "sha256": "a49f37d688ff0584721181f4a5129cbe958cc440bac5677ef750deb47835b7d0"
+        },
+        {
+          "url": "https://sites.google.com/view/kokoronohifesta-okayaman720ns/ホーム",
+          "final_url": "https://sites.google.com/view/kokoronohifesta-okayaman720ns/%E3%83%9B%E3%83%BC%E3%83%A0",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:12:19.473875+00:00",
+          "sha256": "0cd929a3d526c8c5b37006d630b6e68d19eb508ddb79ae23fb37f5721a34fa0a"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e602142/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e602142/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:12.402464+00:00",
+          "sha256": "9e147e0c55b35976339caa213b0eb042387aa6e5380bc3c94a4700bfd4eb1666"
+        }
+      ]
+    },
+    {
+      "index": 323,
+      "region": "okayama",
+      "title": "宇甘渓 ～彩りの紅葉と秋の味わい～",
+      "disposition": "duplicate",
+      "reason": "再取得した県公式の2026年11月土日祝・宇甘渓の食イベントが一致。",
+      "matched_event_id": "evt-hold-b1-187",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621207/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621207/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:57.688745+00:00",
+          "sha256": "c0ee59abb18e08159a6f3367e9ce819e35072312af11e073486d070329c964a6"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/event/9935/",
+          "final_url": "https://kibichuo-kanko.jp/event/9935/",
+          "http_status": 404,
+          "checked_at": "2026-10-31T22:10:58.499856+00:00",
+          "sha256": "0c72ed57a636d763148eeecc6a59c65b1bd961feeb59d718f8b56f2f394ce2c1"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_101129.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_101129.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:55.973636+00:00",
+          "sha256": "685fa00ec0d28d959482d1fa6e0dc9f07f608e40e59ee8f83d917e9c89c49b23"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621207/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621207/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:13.011851+00:00",
+          "sha256": "45d29384211644b3b900da7a32d63eb03d914859f989448f20bff6382b212f96"
+        }
+      ]
+    },
+    {
+      "index": 324,
+      "region": "okayama",
+      "title": "第40回芳井ふるさと祭り",
+      "disposition": "duplicate",
+      "reason": "市公式の令和8年11月1日、同じ会場・祭り内容が一致。",
+      "matched_event_id": "evt-hold-b1-174",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619796/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619796/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:00.295936+00:00",
+          "sha256": "190e6577fa07005041dbe17d332fcd80e27ed011ef19d2b4312626336fc034af"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/soshiki/14/3025.html",
+          "final_url": "https://www.city.ibara.okayama.jp/soshiki/14/3025.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:01.339182+00:00",
+          "sha256": "60313365b89ccc4bbfc0be4594922a4ec865ee2b82f7848c1227e365bdf39de9"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619796/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619796/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:13.572644+00:00",
+          "sha256": "f6d776c32920406c41418b51daedff4657b78c41f06d145dbca85e8f08f82faf"
+        }
+      ]
+    },
+    {
+      "index": 325,
+      "region": "okayama",
+      "title": "第19回 和気町ふるさとまつり",
+      "disposition": "duplicate",
+      "reason": "町公式・県観光公式の日程・和気ドーム・祭り内容が一致。",
+      "matched_event_id": "evt-hold-b1-259",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620034/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620034/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:01.991161+00:00",
+          "sha256": "66346123b8090d8ab4035ffd69cb5c44dc87da759022f216d7b72e9f8e0e7184"
+        },
+        {
+          "url": "https://www.town.wake.lg.jp/soshiki/sangyoshinko/gyomu/1/328.html",
+          "final_url": "https://www.town.wake.lg.jp/soshiki/sangyoshinko/gyomu/1/328.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:02.982218+00:00",
+          "sha256": "58d4c265d4c61f95f6c0fbfb4479ea17d1f5c37a0dd665ed73b5c2c8e3f5dc14"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_15003.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_15003.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:11:57.181208+00:00",
+          "sha256": "93e89943b6b00007830ead77041430556c1a345c6223f4b99162bc51497fc285"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620034/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620034/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:10:14.286423+00:00",
+          "sha256": "9c5530777890a60b139ba49262497974763c088da1a8ace0f65b6af02ac0f041"
+        }
+      ]
+    },
+    {
+      "index": 326,
+      "region": "okayama",
+      "title": "アロマプラネタリウム",
+      "disposition": "added",
+      "reason": "施設公式の2026年11月回は幼児入場可能・当日券あり。幼児入場不可の12月回は掲載日程から除外。",
+      "added_event_ids": [
+        "evt-hold-b1-326"
+      ],
+      "added_event_id": "evt-hold-b1-326",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619263/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619263/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:21.225896+00:00",
+          "sha256": "b327aab08af0ee3373052d674bd2367bfadbc58f01e7e8a66f8eeae5dc83764b"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19411",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19411",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:21.820397+00:00",
+          "sha256": "9a1d7c12ec125b291744351bd166c6a786553374042fff82df92c33d2582db1d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619263/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619263/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:07.073751+00:00",
+          "sha256": "9edc464ddfee6fd4f76c668498fe05c37d8412bc1faee78cf92a77ddf48fcd4a"
+        }
+      ]
+    },
+    {
+      "index": 327,
+      "region": "okayama",
+      "title": "勝央コスプレ撮影会2026",
+      "disposition": "added",
+      "reason": "主催者の受付フォームに開催年・日付・開催地が明記され、申込可能。二次ポータルの料金・時刻は流用しない。",
+      "added_event_ids": [
+        "evt-hold-b1-327"
+      ],
+      "added_event_id": "evt-hold-b1-327",
+      "sources_checked": [
+        {
+          "url": "https://cosp.jp/event_info.aspx?d=1&id=226112",
+          "final_url": "https://cosp.jp/event_info.aspx?d=1&id=226112",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:27.732701+00:00",
+          "sha256": "22fcb6c593e050e8f592c2b05d147384893e3d0e27f628fd6ac65acf09c530a3"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615728/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615728/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:22.305858+00:00",
+          "sha256": "5a2cb0010ed8a448a4ece2efc0e0c4890608035b64230f9b853105c1b2f59843"
+        },
+        {
+          "url": "https://forms.gle/mf5qWySVAAcBaEZu6",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLScUKAVPrqYuwfhqischL-XpB-x0NPCaE1fvR6aCxEMNo-F8oQ/viewform?usp=send_form",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:35.560219+00:00",
+          "sha256": "6c233de1847863f9e92e3ec535d0a2ad5857303b951d21ca862fc5d370898d74"
+        },
+        {
+          "url": "https://www.facebook.com/events/1632991165005578",
+          "final_url": "https://www.facebook.com/events/1632991165005578",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:22.877036+00:00",
+          "sha256": "d80facc34e8db550563a256de0cee7ad90131aef6ed8dd4282c789cc5261eea8"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615728/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615728/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:07.572531+00:00",
+          "sha256": "4a415f99a8af10f457ef96268b1cb57fedbca326646382cba551072b6a5c3026"
+        }
+      ]
+    },
+    {
+      "index": 328,
+      "region": "okayama",
+      "title": "秋の工房まつり",
+      "disposition": "still_hold",
+      "reason": "主催者公式Instagramのイベント本文を読み取れず、代替の酒蔵サイトも取得できない。",
+      "reason_code": "OFFICIAL_UNREADABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.yoikigen.co.jp/",
+          "final_url": "https://www.yoikigen.co.jp/",
+          "http_status": null,
+          "checked_at": "2026-10-31T22:14:28.254653+00:00",
+          "error": "HTTPSConnectionPool(host='www.yoikigen.co.jp', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='www.yoikigen.co.jp', port=443): Failed to resolve 'www.yoikigen.co.jp' ([Errno 11001] getaddrinfo failed)\"))"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620495/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620495/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:23.483638+00:00",
+          "sha256": "a0f3f078f8bef97b0db46847ad48f455dce509e8ec4e5f99d986d204bf35e430"
+        },
+        {
+          "url": "https://www.instagram.com/hoidacraft2025/",
+          "final_url": "https://www.instagram.com/hoidacraft2025/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:24.090285+00:00",
+          "sha256": "13048448439a1056733bef33d9d788a7b0f4f449bb16572eea6e8954c32f3478"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620495/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620495/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:07.891788+00:00",
+          "sha256": "6df4e7482e4ad83f67425798abb594ec71d94626e10b7e05df5613cb291c67c0"
+        }
+      ]
+    },
+    {
+      "index": 329,
+      "region": "okayama",
+      "title": "第70回水島港まつり（第8回水島よさこい）",
+      "disposition": "duplicate",
+      "reason": "主催者公式の令和8年11月21日・水島商店街のよさこい祭りが一致。出店受付終了は来場受付とは区別。",
+      "matched_event_id": "evt-hold-b1-247",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620575/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620575/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:25.762091+00:00",
+          "sha256": "97914fb6b7d3071bb5b22ead8a2d6320679d1ef4c74aa1b2228b1cd579b0092c"
+        },
+        {
+          "url": "https://www.mizushima-minato-matsuri.com/",
+          "final_url": "https://www.mizushima-minato-matsuri.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:26.503679+00:00",
+          "sha256": "5c552d7f430046d8eb9a761e9c1f8e8716e04eddbf6228ae28e519747941fd9d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620575/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620575/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:08.226602+00:00",
+          "sha256": "56f03144795485376b8464add61dc31d04a2c7d6ee00ce3df1e3707973eb54fa"
+        }
+      ]
+    },
+    {
+      "index": 330,
+      "region": "okayama",
+      "title": "田中苑 楷の木の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154727/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154727/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:27.358930+00:00",
+          "sha256": "dd197ab38e2f1fefc4d8ddae695bfa6846d404ce18404b67348e7e9ce9463f77"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/life/7/37/154/",
+          "final_url": "https://www.city.ibara.okayama.jp/life/7/37/154/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:28.125096+00:00",
+          "sha256": "146b50daa40b934c33d642a190b5412fc0d5b8170bc4acc0aaec214fe6bc507b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154727/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154727/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:08.593995+00:00",
+          "sha256": "742ea6806dd1fd978044e07095d13bd4eae31400fcf77a1a42206fa815697b6c"
+        }
+      ]
+    },
+    {
+      "index": 331,
+      "region": "okayama",
+      "title": "第3回備前産業みなとフェスティバル",
+      "disposition": "added",
+      "reason": "商工会議所の公式募集要項PDFに令和8年の日時・会場が明記。出展者募集期限を一般来場の締切と混同しない。",
+      "added_event_ids": [
+        "evt-hold-b1-331"
+      ],
+      "added_event_id": "evt-hold-b1-331",
+      "sources_checked": [
+        {
+          "url": "https://bizencci.or.jp/oshirase/23428/",
+          "final_url": "https://bizencci.or.jp/oshirase/23428/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:36.976117+00:00",
+          "sha256": "be273efc726e95d2c188ed33e947e31f1d352b1a9836cab87a2f50ded7390e1d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620146/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620146/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:28.915741+00:00",
+          "sha256": "d4ae28d3bb6035d2195548c80aff966f213523a746cd47d8b95317f2a79b2d58"
+        },
+        {
+          "url": "https://bizencci.or.jp/wp-content/uploads/2026/08/eb960c071e746e45851ac4f5c2497901.pdf",
+          "final_url": "https://bizencci.or.jp/wp-content/uploads/2026/08/eb960c071e746e45851ac4f5c2497901.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:54.830658+00:00",
+          "sha256": "02dbd3b74953ff857dc42c8f727a29b37de4f52b948c772860d684f0f201f81b"
+        },
+        {
+          "url": "https://www.instagram.com/bizenminatofestival?igsh=ZDg5eWsxeWM1bWtj",
+          "final_url": "https://www.instagram.com/bizenminatofestival?igsh=ZDg5eWsxeWM1bWtj",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:29.794765+00:00",
+          "sha256": "fe33ea83acf1264ffe691fb5eb34a5f273b179bcb2991ee5c0feaa44d6652b14"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620146/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620146/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:08.916306+00:00",
+          "sha256": "080d74d7c937699a1cdf1f46a080e974042b4c95255d5fe2a8f7b398e0ac4bb7"
+        }
+      ]
+    },
+    {
+      "index": 332,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】木山寺",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612049/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612049/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:30.563682+00:00",
+          "sha256": "9dfb62838870c8be3856b447886b13226c42a0f6c032c5ede14452a9bf6b44ff"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3058",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3058",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:31.290806+00:00",
+          "sha256": "66923eabba677c30a0a926f38415723d4f9fb6c2dd8e2a348ac4c39a12efc28d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612049/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612049/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:09.282223+00:00",
+          "sha256": "5cc5a451b0f6f4af23013b2075e491bbac2a1a4890006d2776b169f76809421f"
+        }
+      ]
+    },
+    {
+      "index": 333,
+      "region": "okayama",
+      "title": "DESIGN GOALs農福カルタ大会&マルシェ",
+      "disposition": "duplicate",
+      "reason": "再取得した主催者公式・県公式の同じ農福カルタ大会と一般来場可能なマルシェ。",
+      "matched_event_id": "evt-hold-b1-051",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616363/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616363/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:32.706692+00:00",
+          "sha256": "a334a6091fedd5122ac7f8cd1810e7edee3a8238939264e842e782ca17476ad0"
+        },
+        {
+          "url": "https://noufuku.design-goals.jp/",
+          "final_url": "https://noufuku.design-goals.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:33.616749+00:00",
+          "sha256": "c0695cf53b8564b92a81cc38b37ab639f22dea2ef3a349452794c0f61918632f"
+        },
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:38.032119+00:00",
+          "sha256": "3834ac19f0ea5de0df9bc99dcfcc0dc0424df8789b6df6c4ab189392a65a3a35"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e616363/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e616363/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:09.610774+00:00",
+          "sha256": "59a3a484112939136f6742a65e76af6ac9396736bfbdf37b4153cc6f8c3b56f9"
+        }
+      ]
+    },
+    {
+      "index": 334,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】徳山神社",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612045/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612045/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:35.031254+00:00",
+          "sha256": "d73ccd7ce5954de6291e8ee9752acb5ae2dda080acd52d8d11b1a5050f98bf65"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=28",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=28",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:35.957115+00:00",
+          "sha256": "9805ec2a54f6603290a6057b1c3bdf410640a15f30af3b4bdd47bb620af2a077"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612045/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612045/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:10.046240+00:00",
+          "sha256": "6fa1c06e374a3d49ee2387160434dc4c5b81781dca16244f731396d3e0021128"
+        }
+      ]
+    },
+    {
+      "index": 335,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】湯原温泉",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612053/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612053/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:36.965534+00:00",
+          "sha256": "49961b4c98c91448d1da09f5e7221c333aad5a1d384653003c6797dce6ffa32d"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=8",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=8",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:37.939171+00:00",
+          "sha256": "b492dddc1d008512c5e8cd36521bb865c647482978267515f5b1bd5db1b7f5b4"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612053/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612053/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:10.649276+00:00",
+          "sha256": "3b20eac43bf508f9eb8fe19e077c6ed9ff34658d3de513f5bee544cab5536a38"
+        }
+      ]
+    },
+    {
+      "index": 336,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】普門寺",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612044/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612044/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:39.052560+00:00",
+          "sha256": "9fcac9e159962291649b595b3156c1824ff1f8a5db43708610cdddd1db877820"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3067",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3067",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:40.032501+00:00",
+          "sha256": "6b46952eeed0c64ad37decf8e971c6a5fe058548ff7f5a31b76b25491d003624"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612044/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612044/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:11.316756+00:00",
+          "sha256": "790c05b8561ecea5ff28418e76d1da2b1f4b783b8b92614c740cb3312d87a44a"
+        }
+      ]
+    },
+    {
+      "index": 337,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】天の岩",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612670/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612670/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:40.977586+00:00",
+          "sha256": "270e597307bde9bd6a19465d9e394873ef1c82bb5507f198860c50cbcf479308"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/2646/",
+          "final_url": "https://kibichuo-kanko.jp/spot/2646/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:41.702552+00:00",
+          "sha256": "d88f69d23ac5ddaa993ff112c8a9364519221fe4297f69440b99df2e0e34d59b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612670/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612670/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:11.901937+00:00",
+          "sha256": "2a94b3e5245922808d388739bbbe28875ec9af3c590a3223108ce1f8587b1a73"
+        }
+      ]
+    },
+    {
+      "index": 338,
+      "region": "okayama",
+      "title": "おかやまマラソン2026",
+      "disposition": "still_hold",
+      "reason": "公式のランナー申込期間は優先枠4/15、一般枠5/18、ふるさと納税枠6/23まで。新規出走受付は閉じている。",
+      "reason_code": "PARTICIPATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.okayamamarathon.jp/runner/entry/",
+          "final_url": "https://www.okayamamarathon.jp/runner/entry/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:37.571032+00:00",
+          "sha256": "4dbbdba281ff62b0c4988d19f07e001160430bc1fcd5a74624ede22f5b3a6e66"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e597387/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e597387/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:42.287649+00:00",
+          "sha256": "52c64828fae3e0ec0e607c06eb51e6bf7fc4646e838fbb4316999d344be28f6d"
+        },
+        {
+          "url": "https://www.okayamamarathon.jp/",
+          "final_url": "https://www.okayamamarathon.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:43.181644+00:00",
+          "sha256": "8501c41416c718735ffd4e90ad02c7b3fd78a90a1b2a75b8c022091a3a7ccb66"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e597387/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e597387/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:12.400369+00:00",
+          "sha256": "412b831eef8351cb2fe650ab382c26ae5c47690215a109a0b91bdb64749fb4eb"
+        }
+      ]
+    },
+    {
+      "index": 339,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】吉備中央公園",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612667/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612667/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:43.901157+00:00",
+          "sha256": "36a3d262abbe8a1f74210266ffb6e77de6fc3ca3282dbd58449daf18c52d5de7"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/6392/",
+          "final_url": "https://kibichuo-kanko.jp/spot/6392/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:44.849548+00:00",
+          "sha256": "87e7af8b37bc03ec2b21c436b1d16b6f9de2ca675caee96798f8c91f670a242e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612667/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612667/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:13.033363+00:00",
+          "sha256": "4c9acfbe7d3755247995b1f70ff98576d566092b8b4d6ec29743a6b77470ed52"
+        }
+      ]
+    },
+    {
+      "index": 340,
+      "region": "okayama",
+      "title": "2026秋 児島フェス #せんいさい",
+      "disposition": "duplicate",
+      "reason": "商工会議所公式の2026年11月7〜8日、ボートレース児島での繊維祭が一致。",
+      "matched_event_id": "evt-hold-b1-210",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621349/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621349/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:45.416872+00:00",
+          "sha256": "07dae3fcec5c3895f4758595bfe61d6f6e6e519286f459a4d65f46604107c7f4"
+        },
+        {
+          "url": "https://www.kojima-cci.or.jp/event/kojimafes.html",
+          "final_url": "https://www.kojima-cci.or.jp/event/kojimafes.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:46.253720+00:00",
+          "sha256": "37df8ae8306306584c29ae93487d1810d50d2521f7ffae13468be116f5c2c95d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621349/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621349/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:13.686734+00:00",
+          "sha256": "4169f2134b7197f23eb2e34d7a3c8d8e2c2240fb8939abf01eb1615093c37492"
+        }
+      ]
+    },
+    {
+      "index": 341,
+      "region": "okayama",
+      "title": "蒜山高原の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12890/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12890/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:47.632979+00:00",
+          "sha256": "20075a64c612e4de644792d33d64e8a2640c710008d809f90a39f36a668b6eb0"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/hiruzen/",
+          "final_url": "https://www.maniwa.or.jp/hiruzen/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:48.517177+00:00",
+          "sha256": "fbf74f8849c728097fb3c3887d472b6a57093f17b7b39bc6c57f9be2168832c3"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12890/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12890/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:14.279469+00:00",
+          "sha256": "e8b60ef4673642c96c463993fc2b97b0ee486f9b2951663a9695c0a2c47687a4"
+        }
+      ]
+    },
+    {
+      "index": 342,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】鬼女台（きめんだい）",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e618564/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e618564/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:49.181358+00:00",
+          "sha256": "816e2ab100982b7e97ee2f976d48443a7f0de8be67ec698becf3b706fd22d2c9"
+        },
+        {
+          "url": "https://www.town-kofu.jp/kanko/12/2017/1/v162/p132/",
+          "final_url": "https://www.town-kofu.jp/kanko/12/2017/1/v162/p132/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:49.895410+00:00",
+          "sha256": "46bd2b2d3ea1b4502ecdb25b72ed32b482acf3cf75604db75012fcd27bb69768"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e618564/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e618564/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:14.902788+00:00",
+          "sha256": "4045213c4f7dcba22c9873cf0d9f47049592f233754de3634586cc62ba8ead7e"
+        }
+      ]
+    },
+    {
+      "index": 343,
+      "region": "okayama",
+      "title": "大典白菊 酒まつり 秋の燗酒と新酒販売会",
+      "disposition": "still_hold",
+      "reason": "蔵元公式は酒の紹介・試飲販売が中心。幼児・家族向け参加プログラムの公式根拠がない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e618634/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e618634/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:50.871672+00:00",
+          "sha256": "6ec10cb49c21b808c56b0ea1112dedb220e1fb9bcbe5af8197e70ff920ddc2bb"
+        },
+        {
+          "url": "http://www.shiragiku.com/",
+          "final_url": "https://www.shiragiku.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:51.617473+00:00",
+          "sha256": "e9dcf5a811f88a4ddcba4b3d9d5ab62e858a59c2f43db932057aa4d2d043d748"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e618634/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e618634/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:15.568420+00:00",
+          "sha256": "ab4a4c415574cb657c8d6a79d84dd98ef89eab4bace4e224fd36b00b9bf793ec"
+        }
+      ]
+    },
+    {
+      "index": 344,
+      "region": "okayama",
+      "title": "名勝奥津渓ライトアップ",
+      "disposition": "duplicate",
+      "reason": "観光局公式の2026年10月31日〜11月15日の奥津渓ライトアップ。既存のもみじ祭り掲載に含む。",
+      "matched_event_id": "evt-hold-b1-132",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619963/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619963/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:52.398556+00:00",
+          "sha256": "6411d95992f574f43912784fe1d709c5c2027ed1adc8528dc5588e1ca537946d"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:53.220808+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619963/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619963/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:16.100050+00:00",
+          "sha256": "fe2c987daf2bf53739cdd9417380b6316bb9ce837a41efe52f79229bb4f030fa"
+        }
+      ]
+    },
+    {
+      "index": 345,
+      "region": "okayama",
+      "title": "岡山後楽園の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154728/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154728/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:53.791477+00:00",
+          "sha256": "d103dd66bafa537ca87f892dd104dde959cf05d63df1b79fd9d6bfcfb1706c2f"
+        },
+        {
+          "url": "https://okayama-korakuen.jp/",
+          "final_url": "https://okayama-korakuen.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:54.655530+00:00",
+          "sha256": "3108ab582423b35801b92f1a856fbda41f5b23acf01728b8390dd782e328beda"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154728/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154728/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:16.759130+00:00",
+          "sha256": "b05cdddd215ff0fba52a60c1b3b11c26264dce80c37f91c09a549928af7fa42b"
+        }
+      ]
+    },
+    {
+      "index": 346,
+      "region": "okayama",
+      "title": "北欧のオーナメント作り",
+      "disposition": "still_hold",
+      "reason": "公式の開催期間欄は2026年11月3日（火）だが実施日欄は11月3日（日）と内部矛盾。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619258/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619258/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:55.390355+00:00",
+          "sha256": "abccc15dc9cfcb8eccc9d88447b7d518d305e315911217b36b2922cb7d494161"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19573",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19573",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:56.252417+00:00",
+          "sha256": "19bd4335548d53379b4a9452761414b0f0e500ccc0b4fffa67e51be1517d6fe1"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619258/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619258/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:17.438058+00:00",
+          "sha256": "be9da3a8155b6368891aa753e484f5bf21aef495e7abe97ba1c26dbaa9a16342"
+        }
+      ]
+    },
+    {
+      "index": 347,
+      "region": "okayama",
+      "title": "岡山県立森林公園の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・自治体・観光局を再取得し、候補は紅葉の見頃や常設景観の案内と確認。日付のある催し自体ではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154726/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154726/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:56.877246+00:00",
+          "sha256": "6a131552b535c3e1b47c7051207bfd1f4a796ff7f151e0b7093c9deeb879d5a4"
+        },
+        {
+          "url": "https://www.ombara-kogen.com/shinrin/",
+          "final_url": "https://www.ombara-kogen.com/shinrin/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:57.688998+00:00",
+          "sha256": "1ae5c4ba493aea2403cd974ec166c711c03d180e9755dc1e6e99acdfe90099c0"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154726/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154726/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:17.972592+00:00",
+          "sha256": "f197137e521e4f86c48df65e46d77dc49e76c3f28e974bd7227ba1533d652d99"
+        }
+      ]
+    },
+    {
+      "index": 348,
+      "region": "okayama",
+      "title": "奥津温泉 足踏み洗濯実演（11月）",
+      "disposition": "added",
+      "reason": "観光局公式の令和8年度実演予定で11月4回・時間・会場を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-348"
+      ],
+      "added_event_id": "evt-hold-b1-348",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e598920/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e598920/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:59.616682+00:00",
+          "sha256": "af0eba40a2313e7fcffb24dd4baa7222ed165bdf44a24e56a17d95597d7e1ef3"
+        },
+        {
+          "url": "https://www.kagamino.holiday/news/entry-1084.html",
+          "final_url": "https://www.kagamino.holiday/news/entry-1084.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:00.457155+00:00",
+          "sha256": "6e480a8df62a121cfd8cfc9d788bee5fc3045d31dc97582905005c1a690a45b1"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e598920/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e598920/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:18.531611+00:00",
+          "sha256": "65d66897294b062cbf679c715a6cd1def74cdad2d985c85a6ce00386ff456f7c"
+        }
+      ]
+    },
+    {
+      "index": 349,
+      "region": "okayama",
+      "title": "第72回 井原市文化祭",
+      "disposition": "still_hold",
+      "reason": "市公式本文・チラシとも10月31日と11月1日のみで開催年が明記されていない。投稿日から年を補わない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619799/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619799/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:01.068715+00:00",
+          "sha256": "d111ae64e2868cde5c4338390d9d686cfaf8eb04d18d8fa3778b8600228865b1"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/uploaded/life/21828_43545_misc.pdf",
+          "final_url": "https://www.city.ibara.okayama.jp/uploaded/life/21828_43545_misc.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:55.369309+00:00",
+          "sha256": "f4e3a49c8afb2a2b516a596ba6e3d185f3351a6ee5138c750a8fc0e60882ff29"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/soshiki/38/2026.html",
+          "final_url": "https://www.city.ibara.okayama.jp/soshiki/38/2026.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:01.859802+00:00",
+          "sha256": "b38f534625cd785a112d7f99cfe1da31d9749272f34abac3377074157cbbec98"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619799/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619799/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:19.165779+00:00",
+          "sha256": "5e5dd5ee97266caf76d02f31d2beb4e72b19512ffbc5a6c1f35fa5d57dfc9ce5"
+        }
+      ]
+    },
+    {
+      "index": 350,
+      "region": "okayama",
+      "title": "第27回作州津山なべまつり",
+      "disposition": "duplicate",
+      "reason": "公式の第27回案内と県公式の2026年11月1日〜2027年1月31日の参加飲食店企画を照合。",
+      "matched_event_id": "evt-hold-b1-192",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621752/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621752/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:02.460344+00:00",
+          "sha256": "97d30e474ad0f8956054cad4e63ca437f14a91fd0a49f7379d901aa4791babf5"
+        },
+        {
+          "url": "https://nabematsuri.e-tsuyama.com/",
+          "final_url": "https://nabematsuri.e-tsuyama.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:14:03.374827+00:00",
+          "sha256": "c21288a33935c5ee0b275d1b5d305928694aec8c5e5e7bef21717437f1e5a682"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_15537.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_15537.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:38.764717+00:00",
+          "sha256": "ef3fc12e480bd605235ce4bbda583f4fa00892e3152070191b97b6fd32925283"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621752/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621752/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:13:19.815246+00:00",
+          "sha256": "7aa31dc37796c327603bc966ebcc108c24f331d60cbf53337b31d509b5ef7ec1"
+        }
+      ]
+    },
+    {
+      "index": 351,
+      "region": "okayama",
+      "title": "田中苑 楷の木ライトアップ",
+      "disposition": "duplicate",
+      "reason": "県公式の2026年10月23日開始・同じ楷の木ライトアップと一致。終了未定の再確認期限は既掲載に記録済み。",
+      "matched_event_id": "evt-hold-b1-134",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619801/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619801/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:58.677351+00:00",
+          "sha256": "4201660c192f891015ffa01303b407bbf5c7902ab0b8f3ccfecbc17b15494fb0"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/site/denchu-museum/",
+          "final_url": "https://www.city.ibara.okayama.jp/site/denchu-museum/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:59.271463+00:00",
+          "sha256": "9865b0d03d431bbe01289938c28cf83d3bb62caf16c82cb6bd1601835262e9d1"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002965.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002965.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:45.505984+00:00",
+          "sha256": "1c4c7e7fef0e81f0a607ce4a69a214f73e916804999423b4678589e71d15cb79"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619801/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619801/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:43.813678+00:00",
+          "sha256": "bd960b4e2e72734babbdc17503182bf60f539d7eb7df785baae47a5c1b766238"
+        }
+      ]
+    },
+    {
+      "index": 352,
+      "region": "okayama",
+      "title": "田倉牛神社の大祭",
+      "disposition": "still_hold",
+      "reason": "市公式は毎年1月5日の大祭とのみ記載し、2027年開催の確定日を明記していない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613942/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613942/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:59.644475+00:00",
+          "sha256": "a87dee0328d1eafb3e27fd7187e65b649b3444e3b15da99c95170c045a837833"
+        },
+        {
+          "url": "https://www.city.bizen.okayama.jp/site/bizen/690.html",
+          "final_url": "https://www.city.bizen.okayama.jp/site/bizen/690.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:00.205439+00:00",
+          "sha256": "d61c28f4f04856bc0a20cfb4c3b4e8d9ff050054e6795cb7f6e5d7f6c7b55821"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e613942/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e613942/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:44.273250+00:00",
+          "sha256": "c38783c49f28f5cc92e67a7e9920c02dcd8ea5bff8e01e32cbdb7990842a5204"
+        }
+      ]
+    },
+    {
+      "index": 353,
+      "region": "okayama",
+      "title": "いっとんのサイエンスショー「ペットボトルであそぼう」",
+      "disposition": "still_hold",
+      "reason": "公式の開催期間欄は2026年11月3日（火）、実施日欄は11月3日（日）と内部矛盾。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619257/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619257/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:00.687806+00:00",
+          "sha256": "9a5c94efbe8e943e102418107be97cc91596ad6c5c2e501dc4ce1ddfe79b8505"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19571",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19571",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:01.249317+00:00",
+          "sha256": "990b606c22714d390f0b729742656db5e13134ea1f7c1dc175e61ef045206292"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619257/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619257/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:44.661633+00:00",
+          "sha256": "7604991eb380476345e1cfee360282d66852ae41a6a7254e79c10a9b0e86ae29"
+        }
+      ]
+    },
+    {
+      "index": 354,
+      "region": "okayama",
+      "title": "プチマルシェ　カタチのそばで、おさんぽ、ひとやすみ。 in 井原市立平櫛田中美術館",
+      "disposition": "duplicate",
+      "reason": "再取得した県公式の2026年11月3日・同じ美術館前のマルシェと一致。",
+      "matched_event_id": "evt-hold-b1-202",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620484/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620484/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:01.872063+00:00",
+          "sha256": "6748a90ea0938e978c322a21c8d66bf3909f19701b80bcb83b7e6f85639a2a8f"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/info/info_event/2026092126.html",
+          "final_url": "https://www.ibarakankou.jp/info/info_event/2026092126.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:02.607037+00:00",
+          "sha256": "935a83b64f97ba3d0ad262ad224cdcb92dbcd937c76860465efca329c4d3412e"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002966.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002966.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:46.266301+00:00",
+          "sha256": "e77b329b8783a78259653e3945198f3851b9ec7b8b1b50c425ecddefa6eaa7cd"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620484/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620484/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:44.992740+00:00",
+          "sha256": "230ab6b4fb05f04218c381d75c12f40cfd5d085c0a188b4892f38cf90078e20d"
+        }
+      ]
+    },
+    {
+      "index": 355,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】岩井滝",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619952/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619952/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:03.235586+00:00",
+          "sha256": "949851cfe395da3cc7a9f3a2b9b146e75c0cadce7715961e48b661b7256bb5ca"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:03.985580+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619952/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619952/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:45.302307+00:00",
+          "sha256": "c3329bd562f0f712df76a07a4ee64b22e17287d714d69418f192ebb04ebda6d1"
+        }
+      ]
+    },
+    {
+      "index": 356,
+      "region": "okayama",
+      "title": "旧閑谷学校の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12712/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12712/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:04.575133+00:00",
+          "sha256": "c7faec162bd7be9dcf5ec555743467f04c30fdb01a9a294b17e34e703c51439f"
+        },
+        {
+          "url": "https://shizutani.jp/",
+          "final_url": "https://shizutani.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:05.403616+00:00",
+          "sha256": "c07185be95b6ca0ec0faba485b65f7a5736af186e54672e8e16bf2611c8015e6"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12712/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12712/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:45.639671+00:00",
+          "sha256": "d1ab1fb37082063d620f708b582c2d7848196ee94a78b589a30a2dd7ee275a82"
+        }
+      ]
+    },
+    {
+      "index": 357,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】神庭の滝",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612055/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612055/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:06.214906+00:00",
+          "sha256": "5c4c70375047be62249c5c19db977406efd3e7d8c5f2516098e3eefe5f1c6acc"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=2",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=2",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:07.001866+00:00",
+          "sha256": "12734684df6f089f14c46ac7e7921efd69d287f4ae0d721c36afbfb5f0e1b5ac"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612055/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612055/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:45.992037+00:00",
+          "sha256": "52372b25e9b3805c72da6b392b8f558b14e828bca7f96eee5ae58c42f99849fe"
+        }
+      ]
+    },
+    {
+      "index": 358,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】鳴滝森林公園",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612671/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612671/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:07.860814+00:00",
+          "sha256": "0fcd8e20df414ee1ca47ee9d741cd5518beac6a44b3c2cc4d3a51eba7f8c503f"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/2813/",
+          "final_url": "https://kibichuo-kanko.jp/spot/2813/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:08.633964+00:00",
+          "sha256": "36f4a5dc799022684c7a5f11b62329e91bed1a0dc04837c6321a6ff34067a74f"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612671/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612671/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:46.385338+00:00",
+          "sha256": "196719aedd63cd061c529437938a715e45cc141a1bc5b776f9c7df04dd9b203c"
+        }
+      ]
+    },
+    {
+      "index": 359,
+      "region": "okayama",
+      "title": "箸置きとアクセサリーのワークショップ（11月）",
+      "disposition": "added",
+      "reason": "施設公式の2026年11月8日・料金・当日受付・どなたでも参加を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-359"
+      ],
+      "added_event_id": "evt-hold-b1-359",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619259/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619259/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:09.215264+00:00",
+          "sha256": "ff08a9a8d53e988c09f685294619ed8c35d2542978b4b4def50eb42619d9f703"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19574",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19574",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:10.021637+00:00",
+          "sha256": "f9bffbf028e87cd3502737bf0e198fe07054ce0a7046357ba532a380d870f6b8"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619259/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619259/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:46.967587+00:00",
+          "sha256": "e5595921a356aad3d01c4419e1f71e8fc4dadccb1529295ae1eb6a0c930e8474"
+        }
+      ]
+    },
+    {
+      "index": 360,
+      "region": "okayama",
+      "title": "菊花展",
+      "disposition": "added",
+      "reason": "観光協会公式の2026年会期・駅前広場・自由見学可能な菊花展を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-360"
+      ],
+      "added_event_id": "evt-hold-b1-360",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619792/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619792/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:10.581593+00:00",
+          "sha256": "8222256ceaf798fa15f8ad5e6d314781f328862171a115fb186b83a177f2a4d1"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/10october/DB007event5.html",
+          "final_url": "https://www.ibarakankou.jp/event/10october/DB007event5.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:11.268797+00:00",
+          "sha256": "b29061cff3938b6b6054e3091ae443b20654bb7e3a859d8632dbb848382b3b75"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619792/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619792/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:47.667287+00:00",
+          "sha256": "035b36a5a70770e20c2f1a65dc06817b7fe6c211e311b57d7925ca2e9ab8c4ed"
+        }
+      ]
+    },
+    {
+      "index": 361,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】福田神社",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612050/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612050/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:11.891445+00:00",
+          "sha256": "5ac49e958041c768cafc631865077f19a3d85485ad5875564d0feef00ca9f889"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=23",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=23",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:12.738699+00:00",
+          "sha256": "ccb1fb939e97a77374fd176b1d1cba4d3f18610bbed490d78946b9f3a081292b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612050/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612050/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:48.139998+00:00",
+          "sha256": "c18c6aa97b0e43094a62aabd4104d4c519d7d8311de2da9a35078a6ec5410e45"
+        }
+      ]
+    },
+    {
+      "index": 362,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】西身延 妙本寺",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612669/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612669/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:13.588752+00:00",
+          "sha256": "11056a53f76ada57a30a9c75ac4b7d2f20f731e2eb5594fc1649e5edaa332215"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/2685/",
+          "final_url": "https://kibichuo-kanko.jp/spot/2685/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:14.562567+00:00",
+          "sha256": "78f7b55f21706ff094d9f2bd62ad14b272b21cee20215c211a2b1e3538481bd3"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612669/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612669/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:48.694156+00:00",
+          "sha256": "125a17a040898ccd92e80e01e58fd2ed904ec5eab3c41ccda46667c555471610"
+        }
+      ]
+    },
+    {
+      "index": 363,
+      "region": "okayama",
+      "title": "石川さゆりプレミアムアコースティックコンサート",
+      "disposition": "still_hold",
+      "reason": "町公式が未就学児入場不可と明記。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619814/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619814/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:15.217790+00:00",
+          "sha256": "d001f2119c129ffcdcdd57104acbac9633370c8e5b36a42e2f9c29f4cfaf39ec"
+        },
+        {
+          "url": "https://www.town.kibichuo.lg.jp/site/kanko/20494.html",
+          "final_url": "https://www.town.kibichuo.lg.jp/site/kanko/20494.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:16.134101+00:00",
+          "sha256": "0cf04ff895f149edb1fd271bff53b5d1fe3a1bcd4adc8eca6c1128020d77c612"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619814/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619814/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:49.402066+00:00",
+          "sha256": "b80bc168fc2e1c670f8ff679cabb63d0e4de5b9981e00967b52cb68661c3d4e9"
+        }
+      ]
+    },
+    {
+      "index": 364,
+      "region": "okayama",
+      "title": "鬼女台展望休憩所の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154731/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154731/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:16.949782+00:00",
+          "sha256": "5dbd891e10841cddbc660b1b7cf19dd48b3e6ec650fc5fc73a8fbe3e13fe3bb2"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/",
+          "final_url": "https://www.maniwa.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:17.865180+00:00",
+          "sha256": "67061694cbf886ece1043e3db9d7500123ddae8c7c3193880eee87ab783c9ad4"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154731/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154731/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:50.059502+00:00",
+          "sha256": "6582319b7488a7d893967994ced8ae7b2629efb6c82d494fcd20aa48cdf809d6"
+        }
+      ]
+    },
+    {
+      "index": 365,
+      "region": "okayama",
+      "title": "恩原高原の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154724/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154724/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:18.604951+00:00",
+          "sha256": "b5edcf9b253cf983e474cb454e776b455fbefe0888a5b91f818fc9e858cdf7cd"
+        },
+        {
+          "url": "https://www.kagamino.holiday/",
+          "final_url": "https://www.kagamino.holiday/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:19.393135+00:00",
+          "sha256": "74bb78fdd4203542b0b5c0affcd97c194d9a0448f6e9f8088db880a02e4afc93"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154724/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154724/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:50.510719+00:00",
+          "sha256": "e47a6c1386aeba0ad1d7b649b4feabc49b15e2d8b9de45575558ca9dd148be0d"
+        }
+      ]
+    },
+    {
+      "index": 366,
+      "region": "okayama",
+      "title": "宇甘渓の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12713/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12713/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:20.267550+00:00",
+          "sha256": "42eceb9c3fa790a9ac58d113b1e31681f7801b7ee1395e427a27e045d23dd63a"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/2834/",
+          "final_url": "https://kibichuo-kanko.jp/spot/2834/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:21.027609+00:00",
+          "sha256": "83293c685dc921e79bacaf0478039c6977f00423727cb9e3cb4b1c8da7c9dacd"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e12713/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e12713/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:51.129604+00:00",
+          "sha256": "ef6dac09d6d2d1b59c8522f27fccb54856b6fefc279cdda7798495350c4ccaf8"
+        }
+      ]
+    },
+    {
+      "index": 367,
+      "region": "okayama",
+      "title": "近水園の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13220/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13220/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:21.661417+00:00",
+          "sha256": "5b98eccccad47e31b7d1dbd2917783db3e214660d09932b3c35858d1063cd92f"
+        },
+        {
+          "url": "https://www.city.okayama.jp/shisei/0000005100.html",
+          "final_url": "https://www.city.okayama.jp/shisei/0000005100.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:22.478161+00:00",
+          "sha256": "049e030ba9aff370ec05f1252aab31e77309a04d7aa27fe806f011d1e5c87d78"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13220/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13220/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:51.629727+00:00",
+          "sha256": "bc011568a90971399ee817f01cdd57ed97ad7f63072852edad974be6cfa831c3"
+        }
+      ]
+    },
+    {
+      "index": 368,
+      "region": "okayama",
+      "title": "荘村清志　武満徹へのオマージュ　没後30年に寄せて",
+      "disposition": "still_hold",
+      "reason": "主催者公式販売先が未就学児童入場不可と明記。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e611880/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e611880/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:23.166683+00:00",
+          "sha256": "a7c5a74414cacb98c7c65056f95e5a973aa94defad59c295cd4af8f469f0e3cf"
+        },
+        {
+          "url": "https://www.ocac.jp/oarts/event/1435/",
+          "final_url": "https://www.ocac.jp/oarts/event/1435/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:24.081784+00:00",
+          "sha256": "edb12d65045ee2be45151c305fabe42927316e5241bc57084802d96e08a27833"
+        },
+        {
+          "url": "https://t.pia.jp/pia/event/event.do?eventCd=2626147",
+          "final_url": "https://t.pia.jp/pia/event/event.do?eventCd=2626147",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:52.707358+00:00",
+          "sha256": "23e7b1f6c4e639aa27814e932a7b3929873a62ffdfcf43bc86579c21f6b6f13b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e611880/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e611880/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:52.319853+00:00",
+          "sha256": "ab21dff0204903d2b45f04f95025377029750080323d1aa7540b375e38fdfe89"
+        }
+      ]
+    },
+    {
+      "index": 369,
+      "region": "okayama",
+      "title": "星空ラジオinサイピア（11月）",
+      "disposition": "added",
+      "reason": "施設公式が2026年11月22日、どなたでも・未就学児無料、当日券を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-369"
+      ],
+      "added_event_id": "evt-hold-b1-369",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619280/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619280/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:25.142880+00:00",
+          "sha256": "3e5b4316efacfb0f910e82a33d5e2e3decab00244d82c9930a0e5c200fc99e20"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19622",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19622",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:25.972437+00:00",
+          "sha256": "510443f70d99b0a2e341c7e765f4fc223210103a54cfa5999b2234ec48ec0e9d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619280/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619280/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:52.754534+00:00",
+          "sha256": "307a32c8e085a1c127afd28dd90e39e3ac2886a1879c66db1a956dc19f644514"
+        }
+      ]
+    },
+    {
+      "index": 370,
+      "region": "okayama",
+      "title": "山乗渓谷の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154729/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154729/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:26.620887+00:00",
+          "sha256": "b7899b2e1928d6ba47b798f8917c6d46d260b8538b3ec343e4fc5a17cac28ef3"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/",
+          "final_url": "https://www.maniwa.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:27.482758+00:00",
+          "sha256": "67061694cbf886ece1043e3db9d7500123ddae8c7c3193880eee87ab783c9ad4"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154729/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154729/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:53.356194+00:00",
+          "sha256": "50c6e25b093e2346f77e7c2f2457d6dd96fc3f0617c9b886a0c14761f6f9db96"
+        }
+      ]
+    },
+    {
+      "index": 371,
+      "region": "okayama",
+      "title": "蒜山三座の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154732/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154732/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:28.263034+00:00",
+          "sha256": "fe3db6679af1b33541848191dd8824dd99bae06efefe96bcf6f7096b8eb0fa3b"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/",
+          "final_url": "https://www.maniwa.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:29.084760+00:00",
+          "sha256": "67061694cbf886ece1043e3db9d7500123ddae8c7c3193880eee87ab783c9ad4"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154732/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154732/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:54.090389+00:00",
+          "sha256": "84300c3219abad7c8710b456d129fefe58ae14c895fabbf52979bf2353243aa8"
+        }
+      ]
+    },
+    {
+      "index": 372,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】もみじ山",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620031/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620031/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:29.643899+00:00",
+          "sha256": "409774e7bf6d96a09692f7296f67ee319878ac7a08019051127b5db4595ed87c"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620031/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620031/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:54.744860+00:00",
+          "sha256": "327be07be5f8a597e08a3b4d4acedd2c92adc1d9a88f7d776bbbc77e2096d178"
+        }
+      ]
+    },
+    {
+      "index": 373,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】奥津渓",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619957/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619957/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:30.412569+00:00",
+          "sha256": "05dd9b06b44e365e85e49639784922e4b4e8850d0bb2c84b93650bf2c1ef631a"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:31.205954+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619957/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619957/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:55.177729+00:00",
+          "sha256": "1b095bb5ebb0f8b40d02da6e6f47b6ce9facc63dbeef0e34b7549b434f88b179"
+        }
+      ]
+    },
+    {
+      "index": 374,
+      "region": "okayama",
+      "title": "西崎仁美ピアノリサイタル〜幻想と色彩〜",
+      "disposition": "still_hold",
+      "reason": "演奏者公式の2026年チラシが未就学のお子様は入場不可と明記。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://pianist-hitomi.jimdofree.com/concert-information/",
+          "final_url": "https://pianist-hitomi.jimdofree.com/concert-information/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:53.742346+00:00",
+          "sha256": "ddb786c2a9113145bdde88ab2c108c6ab6253959491a106e70f98c66bbcb4a77"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615130/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615130/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:31.717015+00:00",
+          "sha256": "a56021a8968509c8c08c8b2410c78ec3be41e4b38d254f1b460ad6643e8bd351"
+        },
+        {
+          "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sb13489ad91bea892/image/iccb714e345e9eb22/version/1789797129/image.png",
+          "final_url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sb13489ad91bea892/image/iccb714e345e9eb22/version/1789797129/image.png",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:59.889904+00:00",
+          "sha256": "fa36235b78da6417709de1a30355345a47d630d80163ac6438f9890f2461bfa6"
+        },
+        {
+          "url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sb13489ad91bea892/image/ib42d81c998c319d6/version/1789796273/image.png",
+          "final_url": "https://image.jimcdn.com/app/cms/image/transf/none/path/sb13489ad91bea892/image/ib42d81c998c319d6/version/1789796273/image.png",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:07.203657+00:00",
+          "sha256": "fa1088cb9dbef9ef6d17d41873796b46bfa4ba6a11bfe6ad1b40f4e50f5258ca"
+        },
+        {
+          "url": "https://pianist-hitomi.jimdofree.com/",
+          "final_url": "https://pianist-hitomi.jimdofree.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:32.744680+00:00",
+          "sha256": "21e41384b8b71a9c7cabf02c8ebcd6ce37793731c4aece1573fbbf9c43668ff7"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615130/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615130/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:55.920806+00:00",
+          "sha256": "fa61cd588d525dade89ac8acbfa4a2433f89b8ffdbed54f3262a95950f457316"
+        }
+      ]
+    },
+    {
+      "index": 375,
+      "region": "okayama",
+      "title": "津山城(鶴山公園)の紅葉",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の内容は紅葉・景観の紹介。候補は見頃ガイドであり、日付が定まった催しではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13223/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13223/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:33.661468+00:00",
+          "sha256": "158857c3ad27833dffc94aa3067d02573aae4ab46c9f105a191ca80814e0942e"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12741.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12741.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:16:34.518726+00:00",
+          "sha256": "a4fa76d93a4cfcabe6064a6bc2c76f2549eb272a9f2a3b1071774c08c22d9744"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13223/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13223/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:15:56.395649+00:00",
+          "sha256": "5697177d5854a708c4ff79b4360236673b09fc4a0d091081f7ab9305772470fd"
+        }
+      ]
+    },
+    {
+      "index": 376,
+      "region": "okayama",
+      "title": "2026津山城もみじまつり",
+      "disposition": "duplicate",
+      "reason": "再取得した公式開催年・日付・会場と同じ催しの掲載を照合。",
+      "matched_event_id": "evt-hold-b1-232",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621753/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621753/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:44.064234+00:00",
+          "sha256": "0c7a5e358ed3d5a6d0fb6ed49f3badeed374f852c72881d4149f20ffc8f40fa4"
+        },
+        {
+          "url": "https://momijimatsuri.e-tsuyama.com/",
+          "final_url": "https://momijimatsuri.e-tsuyama.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:44.692712+00:00",
+          "sha256": "5ecd8b907e42b73a82fe5f70d3ce1a2481b7ce240323448307c1daf0c361e62d"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12741.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12741.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:03.394078+00:00",
+          "sha256": "a60b2a8defd2d86bb16e26daadca2c18a2ced9d3ee39cdce2e4defeb88686f8b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621753/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621753/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:29.506867+00:00",
+          "sha256": "da3b71f7ebd9b2a182dab6da5a2fce8825836c056f1da569bec03552113d3cc7"
+        }
+      ]
+    },
+    {
+      "index": 377,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】天神峡",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615418/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615418/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:45.303765+00:00",
+          "sha256": "1758664f9293baf73a3eee4a2025cf6c705be75d9568799ca4b49f062cc8b5e4"
+        },
+        {
+          "url": "https://ibarakankou.jp/sightseeing-information/nature/DJ005.html",
+          "final_url": "https://ibarakankou.jp/sightseeing-information/nature/DJ005.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:45.949946+00:00",
+          "sha256": "1b9b95f9dc13b46ef594dfb445c11df9bcc24b177a860825958ce43375cee082"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615418/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615418/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:29.967544+00:00",
+          "sha256": "9d24c843576840269679ac79bfba4d409e870e567fbf9be19fef4d4c61c03276"
+        }
+      ]
+    },
+    {
+      "index": 378,
+      "region": "okayama",
+      "title": "中世夢が原絵巻",
+      "disposition": "duplicate",
+      "reason": "再取得した公式開催年・日付・会場と同じ催しの掲載を照合。",
+      "matched_event_id": "evt-hold-b1-183",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621736/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621736/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:46.345602+00:00",
+          "sha256": "b9e61d1fb5327735d57681049672f5597767bbaea726f962130d961bc39a0712"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/11november/DH001event9.html",
+          "final_url": "https://www.ibarakankou.jp/event/11november/DH001event9.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:46.993311+00:00",
+          "sha256": "a2c70ef1cbf06d59ae88fc08d8886487c838d29a4e4272c7a028d2bb348ce47a"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100531.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100531.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:04.181804+00:00",
+          "sha256": "9ebec78782ed4d99b939dee2df3d9d1729e322201ed0f8d5e203d842360e1999"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621736/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621736/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:30.306368+00:00",
+          "sha256": "2722daca4a15877e42a4984d5b6655f14441f8962c2aa5ec529c72bebc71e8de"
+        }
+      ]
+    },
+    {
+      "index": 379,
+      "region": "okayama",
+      "title": "SOJAイルミネーション2026",
+      "disposition": "duplicate",
+      "reason": "再取得した公式開催年・日付・会場と同じ催しの掲載を照合。",
+      "matched_event_id": "evt-hold-b1-265",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619596/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619596/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:47.602176+00:00",
+          "sha256": "6e68b80109338eb3aa68476e746151c81dc26869ebd073bc5bc9e2dbfb18e79b"
+        },
+        {
+          "url": "https://www.city.soja.okayama.jp/",
+          "final_url": "https://www.city.soja.okayama.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:48.435303+00:00",
+          "sha256": "6ea48cb06a5bc33011de5762e09830f2707985e1f8ad1f8b7b751b4fe3decba2"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12763.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12763.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:04.885774+00:00",
+          "sha256": "a049e4497ae6156cf463a2780256497f4c23bca52976f766941a45d50573227f"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619596/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619596/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:30.620146+00:00",
+          "sha256": "adf512e88a52ca7f780309f0dd838bb647abf0bfc33aa0ad5c24c4439ad0575b"
+        }
+      ]
+    },
+    {
+      "index": 380,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】美甘渓谷",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612051/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612051/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:49.239741+00:00",
+          "sha256": "7cc025d93d869ee9cbec35dc36261c4f3919b780818852463eec6b98540bf25c"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3040",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=3040",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:50.115638+00:00",
+          "sha256": "6f1c38d3caab3575e486983cfb95bfb8f9f82661801f65338cebbf8af3f8ffb9"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e612051/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e612051/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:30.966614+00:00",
+          "sha256": "a61b7f3ecda2491cf6cee7901a79e2d500a332bbe1cc0a16c1033c06c8fd0214"
+        }
+      ]
+    },
+    {
+      "index": 381,
+      "region": "okayama",
+      "title": "赤和瀬渓谷の紅葉",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154725/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154725/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:51.009314+00:00",
+          "sha256": "3d5e04b54c86678370829e939aeda16c4baf522e7c40d91c8ad92531fad07ea7"
+        },
+        {
+          "url": "https://www.kagamino.holiday/",
+          "final_url": "https://www.kagamino.holiday/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:51.714503+00:00",
+          "sha256": "74bb78fdd4203542b0b5c0affcd97c194d9a0448f6e9f8088db880a02e4afc93"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154725/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154725/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:31.327119+00:00",
+          "sha256": "a2fd591f00ddc2ea609dfc62b4427472b0630a1a2213d46c6ddc88a3a723256f"
+        }
+      ]
+    },
+    {
+      "index": 382,
+      "region": "okayama",
+      "title": "越畑紅葉まつり",
+      "disposition": "duplicate",
+      "reason": "再取得した公式開催年・日付・会場と同じ催しの掲載を照合。",
+      "matched_event_id": "evt-hold-b1-199",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619964/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619964/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:52.565171+00:00",
+          "sha256": "8d34540ab234be2ed09febaca6d5385d01ec7963980a09e8ddfaba5175beb5c5"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:53.444331+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12719.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12719.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:05.606223+00:00",
+          "sha256": "38e57182cff5f55aaa1c232be8ca0a5abc2c08309527262ac85fe1cfa1b353c7"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619964/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619964/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:31.646531+00:00",
+          "sha256": "a73fc4a113485811a5db44086789719603cae8b9871ecfde8d3bd72393fe183b"
+        }
+      ]
+    },
+    {
+      "index": 383,
+      "region": "okayama",
+      "title": "道の駅奥津温泉 もみじ祭り",
+      "disposition": "still_hold",
+      "reason": "観光局の本文は11月の日付のみでイベントの開催年を明記せず、施設公式は503メンテナンス。投稿日から開催年を推定しない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://michinoeki-okutsuonsen.amebaownd.com",
+          "final_url": "https://michinoeki-okutsuonsen.amebaownd.com/",
+          "http_status": 503,
+          "checked_at": "2026-10-31T22:18:30.508376+00:00",
+          "sha256": "35f2ec1a804898dc14151d69636180ff4c089e9123805d3798e319476e21f9c3"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621992/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621992/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:54.004677+00:00",
+          "sha256": "ac0a5f68484fd7de5ebc94d7f6e0d24bb639013c712971c10ecdf1655d257ec2"
+        },
+        {
+          "url": "https://www.kagamino.holiday/news/entry-1120.html",
+          "final_url": "https://www.kagamino.holiday/news/entry-1120.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:54.906269+00:00",
+          "sha256": "252b361b30a5987131d0951fc429f843bb78c9e0e6298f719ddb170fb99738c7"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621992/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621992/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:31.959349+00:00",
+          "sha256": "769a233930d480170c0f77e441be50d69ee63e0e40f7c898c7e8776db6b248e8"
+        }
+      ]
+    },
+    {
+      "index": 384,
+      "region": "okayama",
+      "title": "菩提寺の大イチョウの紅葉",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e572419/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e572419/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:55.541730+00:00",
+          "sha256": "4bb51999b05a301d26e01bbf88d0caf1bc8d63aba68742b85c7c0cdf90e357d3"
+        },
+        {
+          "url": "https://www.town.nagi.okayama.jp/kankou/kankou_spot/shizen/bodaiji_ichou.html",
+          "final_url": "https://www.town.nagi.okayama.jp/kankou/kankou_spot/shizen/bodaiji_ichou.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:56.353329+00:00",
+          "sha256": "fe4871c94f08752df90bf9ddb0a90577e5c25f9d9aa7c52515c7f4f7d7074218"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e572419/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e572419/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:32.475572+00:00",
+          "sha256": "86ee62e590714ee00e5860a33f1590b7021a8b55040dda5f9c298bbc5968c535"
+        }
+      ]
+    },
+    {
+      "index": 385,
+      "region": "okayama",
+      "title": "吉備中央公園の紅葉",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e481454/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e481454/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:57.214402+00:00",
+          "sha256": "26eff005dd9834a38344cfc84f13f545eeba46010669a66223c4463d2896d360"
+        },
+        {
+          "url": "https://kibichuo-kanko.jp/spot/6392/",
+          "final_url": "https://kibichuo-kanko.jp/spot/6392/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:58.164649+00:00",
+          "sha256": "87e7af8b37bc03ec2b21c436b1d16b6f9de2ca675caee96798f8c91f670a242e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e481454/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e481454/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:33.097675+00:00",
+          "sha256": "26f242215e27db4ca5077ca5368a9462c09a6566732f6ad4f91791c2131f0d84"
+        }
+      ]
+    },
+    {
+      "index": 386,
+      "region": "okayama",
+      "title": "～香りと花の贈り物～ アロマワックスサシェ",
+      "disposition": "added",
+      "reason": "施設公式の開催年・日付・当日受付を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-386"
+      ],
+      "added_event_id": "evt-hold-b1-386",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619267/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619267/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:58.785531+00:00",
+          "sha256": "6ff828b27cbd8e4017115d50edf142cfc90d50674e49578bbf85608aba6bba44"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19579",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19579",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:59.681697+00:00",
+          "sha256": "94bb67673fc9b29fb6ad9a84a09caf47b051a030262d36f5f69bea620aecc964"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619267/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619267/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:33.680171+00:00",
+          "sha256": "3b4e1786a16706815b24e18afcf120c5b2e0b622429e0e355a201cbe95836a30"
+        }
+      ]
+    },
+    {
+      "index": 387,
+      "region": "okayama",
+      "title": "おもちゃの病院（11月）",
+      "disposition": "added",
+      "reason": "2026年11月22日に限定されたおもちゃ修理の催し。常設サービスではなく当日受付を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-387"
+      ],
+      "added_event_id": "evt-hold-b1-387",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619294/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619294/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:00.381393+00:00",
+          "sha256": "6b698b3cf9c2a1437192bbf1fdd9eb6d117876bffdbea8ebe3057cc67e8dd77c"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19580",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19580",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:01.306715+00:00",
+          "sha256": "c52cda13d7a52fd0702a6f0cc85aef5e54de6fcb255c67dfa848c58a547cd72c"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619294/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619294/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:34.137061+00:00",
+          "sha256": "fd53cbbe758f2c711bc517caa04a0635d7cc732eb7ec3632ecf582c971cf4bfd"
+        }
+      ]
+    },
+    {
+      "index": 388,
+      "region": "okayama",
+      "title": "心ときめく・シャカシャカキーホルダー",
+      "disposition": "added",
+      "reason": "施設公式の2026年11月23日・どなたでも・当日受付を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-388"
+      ],
+      "added_event_id": "evt-hold-b1-388",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619295/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619295/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:01.957711+00:00",
+          "sha256": "6a6626fe211063f9adbc9acab8b13be5932dcd88864aab486d326753c9e4431c"
+        },
+        {
+          "url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19581",
+          "final_url": "https://www.sci-pia.pref.okayama.jp/event/detail.aspx?servno=19581",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:02.959923+00:00",
+          "sha256": "d17dd48b1a4bfd81938413293503d94cf564ea8ad06cebd1cab011d0c3dbe585"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619295/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619295/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:34.720354+00:00",
+          "sha256": "25e571021418d793ea60d2982862f90703309f6d2e2967309237925976c721b6"
+        }
+      ]
+    },
+    {
+      "index": 389,
+      "region": "okayama",
+      "title": "井倉峡の紅葉",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154735/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154735/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:03.677205+00:00",
+          "sha256": "ffaf1dec8dd602806a10260fc1e24b48df53ac2b18d65a5d4610c1a6e09930ff"
+        },
+        {
+          "url": "https://www.ikurado.jp/",
+          "final_url": "https://www.ikurado.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:04.723665+00:00",
+          "sha256": "ac9635f2347a5ddaa602f6092a80c3ab89cc083735be1d300467e0a546971214"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e154735/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e154735/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:35.397348+00:00",
+          "sha256": "6d5245344f0791ea496140070f83dc3a022ad99b16bf31510b601428da8917a9"
+        }
+      ]
+    },
+    {
+      "index": 390,
+      "region": "okayama",
+      "title": "神庭の滝自然公園の紅葉",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13165/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13165/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:06.524510+00:00",
+          "sha256": "bbd5ad1d684e1ca30d1da98066fb993dc418f673f8d93796c4542a94f6ea6087"
+        },
+        {
+          "url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=2",
+          "final_url": "https://www.maniwa.or.jp/web/?c=spot-2&pk=2",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:07.368269+00:00",
+          "sha256": "12734684df6f089f14c46ac7e7921efd69d287f4ae0d721c36afbfb5f0e1b5ac"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e13165/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e13165/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:36.095992+00:00",
+          "sha256": "a3aaef43d05a147901c880d665fd213d7e49fdde71007c3d1068c6eeaaaf324f"
+        }
+      ]
+    },
+    {
+      "index": 391,
+      "region": "okayama",
+      "title": "和気駅前イルミネーション",
+      "disposition": "still_hold",
+      "reason": "町公式は毎年12月初旬〜1月初旬の一般案内のみ。2026年度の開始日を公式から確定できない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620032/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620032/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:08.428812+00:00",
+          "sha256": "8ad4fef2a4b9d00bffe0021d5753b832ed9f26a675dd77bc2df334d6f5b29de2"
+        },
+        {
+          "url": "https://www.town.wake.lg.jp/soshiki/sangyoshinko/gyomu/1/328.html",
+          "final_url": "https://www.town.wake.lg.jp/soshiki/sangyoshinko/gyomu/1/328.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:09.318927+00:00",
+          "sha256": "58d4c265d4c61f95f6c0fbfb4479ea17d1f5c37a0dd665ed73b5c2c8e3f5dc14"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e620032/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e620032/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:36.537125+00:00",
+          "sha256": "f0012624ba5e02776e3661dc038ce88df298c3ae5addafc1ac95f7dfad169f34"
+        }
+      ]
+    },
+    {
+      "index": 392,
+      "region": "okayama",
+      "title": "奥津温泉 足踏み洗濯実演（3月）",
+      "disposition": "added",
+      "reason": "観光局公式の令和8年度内3月実演予定を確認。11月掲載とは開催期間が重ならない3月分。",
+      "added_event_ids": [
+        "evt-hold-b1-392"
+      ],
+      "added_event_id": "evt-hold-b1-392",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e598921/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e598921/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:09.996064+00:00",
+          "sha256": "8b1f641fdc57149b6abd04e6148a2257223ae98af7b0ba1dcacfe546bb7b64d0"
+        },
+        {
+          "url": "https://www.kagamino.holiday/news/entry-1084.html",
+          "final_url": "https://www.kagamino.holiday/news/entry-1084.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:10.867355+00:00",
+          "sha256": "6e480a8df62a121cfd8cfc9d788bee5fc3045d31dc97582905005c1a690a45b1"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e598921/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e598921/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:37.135006+00:00",
+          "sha256": "53cc9c8fdf92487240c9eef714ad06d2b594ce75f738bf7cdd512e0ee25ead50"
+        }
+      ]
+    },
+    {
+      "index": 393,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】岡山県立森林公園",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619951/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619951/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:11.400535+00:00",
+          "sha256": "17ca39cc80dd6e854d94655a28bd7f5f5cf4277c772595fd59c442d5b7d4f54c"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:12.263545+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619951/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619951/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:37.705331+00:00",
+          "sha256": "da0f37544021b06842682712404deb6e68ddabebedc7aaebcbff43d817980854"
+        }
+      ]
+    },
+    {
+      "index": 394,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】恩原高原",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619953/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619953/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:12.902010+00:00",
+          "sha256": "7481e050a876968cf521d332131c61e31062de571250d47010bd3e04f76d30c7"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:13.868579+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619953/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619953/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:38.225030+00:00",
+          "sha256": "0880689352f1e4efd400845371bbc2161b7a25916d2ee8d574a7d111b1e39e87"
+        }
+      ]
+    },
+    {
+      "index": 395,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】泉源渓谷",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619955/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619955/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:14.439365+00:00",
+          "sha256": "90b9589d7169ec7e3f5c8a0da2b6b07d62aa64d04b4350a7e6addea9b42f3c78"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:15.251991+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619955/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619955/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:38.939535+00:00",
+          "sha256": "62d1e92e98deaf773c8f16057e8f87d7eb70ec292ea81ee3d780e6b2cc2a9f0e"
+        }
+      ]
+    },
+    {
+      "index": 396,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】越畑ふるさと村",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619956/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619956/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:15.925547+00:00",
+          "sha256": "c6d4692810cea400ada47096f8b1a0c2605fcbad0cc4b0713c00f6dde70c8515"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:16.757006+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619956/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619956/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:39.516327+00:00",
+          "sha256": "0722afc0ce02f62972a2fcb354020a298668c1e4fdac1c9e19898c19dc9111ba"
+        }
+      ]
+    },
+    {
+      "index": 397,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】のとろ原",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619958/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619958/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:17.422589+00:00",
+          "sha256": "4f0c1884db672583eb954cda6c0b3097e3a88a7cb5fdc45b5542c9310c5575a4"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:18.330038+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619958/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619958/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:40.012214+00:00",
+          "sha256": "164c6dfe534085eeda877811bb750298f7ad3af9697f840d0799c9af36b881d1"
+        }
+      ]
+    },
+    {
+      "index": 398,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】白賀渓谷",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619959/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619959/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:18.838427+00:00",
+          "sha256": "7e90ba3a1dee5487ffde23fa0fb91718b21646243cc5fbd5055a6cf4669f1911"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:19.655408+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619959/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619959/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:40.563566+00:00",
+          "sha256": "1df94f9c3b227388b58462e93356e355992e41f51c76efc44008900a96012429"
+        }
+      ]
+    },
+    {
+      "index": 399,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】奥津湖・苫田ダム",
+      "disposition": "not_event",
+      "reason": "公式観光・施設の内容を再取得。紅葉・景観の見頃ガイドで、日付の定まった候補イベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619961/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619961/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:20.357219+00:00",
+          "sha256": "354eb845f7dda9827609183b84193635f9bcdea563e79f2dd66243be788bc55b"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:21.236845+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619961/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619961/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:41.184362+00:00",
+          "sha256": "894cb89c1ff0d12efb6ef687e3de3f1db246d15013fb5e18ac18b5d99a153cf8"
+        }
+      ]
+    },
+    {
+      "index": 400,
+      "region": "okayama",
+      "title": "へそナリエ",
+      "disposition": "duplicate",
+      "reason": "再取得した公式開催年・日付・会場と同じ催しの掲載を照合。",
+      "matched_event_id": "evt-hold-b1-266",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621746/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621746/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:21.862247+00:00",
+          "sha256": "14c616a722b27b072329e7ab556782321e352480684d6b7f90ae4c78b66aa92a"
+        },
+        {
+          "url": "https://www.kibicity.ne.jp/topics/index.php?c=topics_1&pk=1792729516",
+          "final_url": "https://www.kibicity.ne.jp/topics/index.php?c=topics_1&pk=1792729516",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:18:22.651138+00:00",
+          "sha256": "e9176ee19341418a2d8a1b22e7338433c9166bb4b0c232225bdb332a6de4019e"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_15523.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_15523.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:06.318469+00:00",
+          "sha256": "a5a2a2030003d6e76c7dea661293a635f5515701fd40c81da6813f7cf7d5ea27"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621746/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621746/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:17:41.748278+00:00",
+          "sha256": "5dd4d632e2747d66ff01cdc641fce9e14fb2910e4a84a250e3b51439d0d3dc90"
         }
       ]
     }
