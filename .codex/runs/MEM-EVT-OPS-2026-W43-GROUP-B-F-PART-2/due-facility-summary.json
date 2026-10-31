@@ -49,11 +49,11 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 1,
-    "candidate_found_added": 15,
-    "candidate_found_duplicate": 1,
-    "candidate_found_hold": 2,
-    "source_unresolved": 1,
-    "completed_facilities": 20
+    "candidate_found_added": 22,
+    "candidate_found_duplicate": 2,
+    "candidate_found_hold": 3,
+    "source_unresolved": 2,
+    "completed_facilities": 30
   },
   "per_region": {
     "hyogo": {
@@ -2801,12 +2801,168 @@
       ],
       "total": 2,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "candidate_found_added": 2,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "facility_id": 6937,
+          "url": "https://yusuhara-kumonoue-kanko.jp/tarogawa/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:56:28.066494+00:00",
+          "final_url": "https://yusuhara-kumonoue-kanko.jp/tarogawa/",
+          "title": "太郎川公園 ｜ 【公式】ゆすはら雲の上観光協会",
+          "text_sha256": "fe243ad804fa856de785777722b78036f5f862a0b47a815e7ff9221eb7fa2d96"
+        },
+        {
+          "facility_id": 6937,
+          "url": "https://yusuhara-kumonoue-kanko.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:56:28.619746+00:00",
+          "final_url": "https://yusuhara-kumonoue-kanko.jp/news/",
+          "title": "お知らせ ｜ 【公式】ゆすはら雲の上観光協会",
+          "text_sha256": "151b28fe73ac83d4fd4d63ba6528e74cacdfe706448fa8c77877c2c3f011aa27"
+        },
+        {
+          "facility_id": 6937,
+          "url": "https://yusuhara-kumonoue-kanko.jp/news/forestfes26a/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:56:35.492713+00:00",
+          "final_url": "https://yusuhara-kumonoue-kanko.jp/news/forestfes26a/",
+          "title": "森林フェスティバル2026年秋🌰 ｜ 【公式】ゆすはら雲の上観光協会",
+          "text_sha256": "344c447ad6423b772af068ffcfccdc6edd75086b14490abc703e34eef45f986b"
+        },
+        {
+          "facility_id": 6937,
+          "url": "https://yusuhara-kumonoue-kanko.jp/news/%f0%9f%8e%ac-%e3%82%86%e3%81%99%e3%81%af%e3%82%89%e3%81%a7%e6%98%a0%e7%94%bb%e3%82%92%e3%81%bf%e3%82%88%e3%81%86%ef%bc%81%e5%b1%8b%e5%a4%96%e4%b8%8a%e6%98%a0%e4%bc%9a%e9%96%8b%e5%82%ac-%f0%9f%90%88/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:56:36.053703+00:00",
+          "final_url": "https://yusuhara-kumonoue-kanko.jp/news/%F0%9F%8E%AC-%E3%82%86%E3%81%99%E3%81%AF%E3%82%89%E3%81%A7%E6%98%A0%E7%94%BB%E3%82%92%E3%81%BF%E3%82%88%E3%81%86%EF%BC%81%E5%B1%8B%E5%A4%96%E4%B8%8A%E6%98%A0%E4%BC%9A%E9%96%8B%E5%82%AC-%F0%9F%90%88/",
+          "title": "🎬 ゆすはらで映画をみよう！屋外上映会開催 🐈✨ ｜ 【公式】ゆすはら雲の上観光協会",
+          "text_sha256": "cd3d57b449c2c25a23a19e101ea8acd82f8ae96cdb6c9edb62bea9a4a3af44d1"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://www.nakaokashintarokan.jp/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:56:58.831319+00:00",
+          "final_url": "http://www.nakaokashintarokan.jp/",
+          "title": "中岡慎太郎館公式サイト｜幕末の志士、中岡慎太郎の生きざまに触れる歴史資料館｜高知県安芸郡北川村",
+          "text_sha256": "fe45bccd710cdde0e54828e2a588165c5b299e8098e2a592c8777b92da2b9920"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://www.nakaokashintarokan.jp/news.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:06.397280+00:00",
+          "final_url": "http://www.nakaokashintarokan.jp/news.html",
+          "title": "中岡慎太郎館｜お知らせ一覧",
+          "text_sha256": "21676d89baa5a2700a5bfbf7ffc6264178ff912a3a7130cbb3e4d9e4aeb4c859"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://www.nakaokashintarokan.jp/exhivition.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:13.612074+00:00",
+          "final_url": "http://www.nakaokashintarokan.jp/exhivition.html",
+          "title": "中岡慎太郎館｜企画展一覧",
+          "text_sha256": "f4236121b65ebade526b01ddeabe6440d0ff6e0c517f64912a836cc09a5d6ad4"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://shintarokan.seesaa.net",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:13.760976+00:00",
+          "final_url": "https://shintarokan.seesaa.net/",
+          "title": "慎太郎館 ブログ",
+          "text_sha256": "0acf88281429ccac160b145ea5ad74bf045e1626d65d0f2ac77fef165b22d4c0"
+        },
+        {
+          "facility_id": 8161,
+          "url": "https://nakaokashintaro.4front.jp/event.json",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:27.243271+00:00",
+          "final_url": "https://nakaokashintaro.4front.jp/event.json",
+          "title": "",
+          "text_sha256": "b9100a5414f0085020474b4142940893e4bd34258ab117512437ca667fc842f9"
+        },
+        {
+          "facility_id": 8161,
+          "url": "https://nakaokashintaro.4front.jp/information.json",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:27.744119+00:00",
+          "final_url": "https://nakaokashintaro.4front.jp/information.json",
+          "title": "",
+          "text_sha256": "79b0eeab087b1f5fdf5d2f54af70c5209580e10d911411f681134d20bc808ccc"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://www.nakaokashintarokan.jp/event-detail.html?id=28",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:34.791874+00:00",
+          "final_url": "http://www.nakaokashintarokan.jp/event-detail.html?id=28",
+          "title": "中岡慎太郎館｜企画展",
+          "text_sha256": "87c74d48c0233fb494aaa1d5e930fadcd23a8e39f65d36d60d706d0d28b3333d"
+        },
+        {
+          "facility_id": 8161,
+          "url": "http://www.nakaokashintarokan.jp/guide-01.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:34.918320+00:00",
+          "final_url": "http://www.nakaokashintarokan.jp/guide-01.html",
+          "title": "中岡慎太郎館｜来館情報・アクセス",
+          "text_sha256": "d43b179b5bc148bd9c30fa3a50647438cd8f60009bfc99eaeda3d36fd48d7955"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 6937,
+          "completed_at": "2026-10-31T16:56:53.089255+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "森林フェスティバル2026年秋",
+              "disposition": "added"
+            }
+          ],
+          "reason": "施設ページと観光協会新着・該当詳細を内容確認。映画上映10/23は別会場かつ終了、通常ファンモック予約変更は常設サービス。",
+          "refreshed_event_ids": [],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": [
+            "evt-6937-202611-forestfestival"
+          ]
+        },
+        {
+          "facility_id": 8161,
+          "completed_at": "2026-10-31T16:57:51.940546+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "書画に現れる志士のこころ（11/17展示解説含む）",
+              "disposition": "added"
+            },
+            {
+              "title": "慎太郎学習会 11/15・1/17・3/21",
+              "disposition": "hold",
+              "reason": "幕末書簡の読解・政治史を90分学ぶ専門学習会で、公式内容に子ども・家族向けの参加内容を確認できない。"
+            },
+            {
+              "title": "中岡迂山記念全国書展",
+              "disposition": "hold",
+              "reason": "出品は高校生以上で締切済み。観覧の開催日・会場の記載がなく、CMS公開期間を開催日へ読み替えない。"
+            }
+          ],
+          "reason": "空の静的ページだけで判定せず、公式埋込JSONの現行全項目とブログ・来館案内を確認。過年度・春夏展は過去のため追加しない。",
+          "refreshed_event_ids": [],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": [
+            "evt-8161-202610-shishi"
+          ]
+        }
+      ]
     },
     "mie": {
       "facility_ids": [
@@ -2815,12 +2971,346 @@
       ],
       "total": 2,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "candidate_found_added": 1,
       "candidate_found_duplicate": 0,
-      "candidate_found_hold": 0,
+      "candidate_found_hold": 1,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:57:58.161902+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/",
+          "title": "鈴鹿市考古博物館｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "cdf4bb306535be142a156340f3edc803f5d60aff011f3aa643a420a2739c63fc"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:04.899807+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/index.html",
+          "title": "お知らせ・イベント情報｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "370a9e191adaa970f7d80012fd54ce8cf09063b8d8c54b834806c1e103fac54b"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/study/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:05.553173+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/study/index.html",
+          "title": "体験講座など｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "3282bb20a6e920e22e7a712b0fdf6130cca916d44504f72292f81d462624bb4b"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017804.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:06.206264+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017804.html",
+          "title": "体験特別講座「天平衣装を着てみよう」を開催します｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "658f1e6141ef743b64b52a10d76fcabe24433696e54bef47430eb16a965c5707"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017803.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:06.893858+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017803.html",
+          "title": "企画展関連講演会「瓦を焼く―日高山瓦窯から川原井瓦窯へ―」｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "0d2fa6a669212873fb3f39d974eef6da7823d0f6a9796305dc79dd7fd1ff6f5d"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017758.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:07.352207+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017758.html",
+          "title": "企画展「地域の歴史を学ぼう！―加佐登地区編―」｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "9e9abfd7385984430b82d5b1e8bee6718680e1dd4e7e27c71842b51401a44011"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017691.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:14.191291+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017691.html",
+          "title": "文化講演会「宣長が見た能褒野陵（白鳥塚）と山辺御井」の開催について｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "00c909c43d281328a47d6ed6d49def2acec4ea770a16089083d0d13064f1a3a6"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1018086.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:14.705843+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1018086.html",
+          "title": "今年の漢字「1字」募集｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "e7658a554f27bddddef8ab14e7c0441dca1e7d9ff5b1e341426ba8c9b699b6c7"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017690.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:15.162624+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017690.html",
+          "title": "（受付終了）バスで巡る遺跡の旅｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "630fd4550d67a681d20384f54c03501ac76211d691deeb7e2af0b029228c48ed"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017630.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:15.652738+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017630.html",
+          "title": "第5回　歴史の道を歩く（国分町編）｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "daa0ed88458a8646e74f4108f2db523399706b80ffecd2533b050f1cf37b3d2c"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1018020.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:16.081627+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1018020.html",
+          "title": "令和8年度（第9回）発掘体験を開催します。[申込期間を延長しました]｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "e848a299fcfe3c592625e23e6455218a45d5688c30ff6f07f22aa53731fe7583"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1016728.html",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:16.547979+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1016728.html",
+          "title": "令和8年度催し物案内｜鈴鹿市公式ウェブサイト",
+          "text_sha256": "1e9668e45f9609037ab04ed9a8177f544b47b87746837d2a24f5d8e28392c7a3"
+        },
+        {
+          "facility_id": 8143,
+          "url": "https://www.city.suzuka.lg.jp/_res/projects/default_project/_page_/001/016/728/2026.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T16:58:24.010742+00:00",
+          "final_url": "https://www.city.suzuka.lg.jp/_res/projects/default_project/_page_/001/016/728/2026.pdf",
+          "title": "Official PDF",
+          "text_sha256": "166facaa9c4325f2a6f2b56749cbfff51ef18d9aacb30d522e72ce3a24670344"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://www.gokurakuyu.ne.jp/tempo/tsu/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:30.687957+00:00",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html",
+          "title": "メンテナンス中です",
+          "text_sha256": "64a9d1a21dfe277072c6999dfbc8ae9c6b493aba12e2623c13863d581bd73132"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://www.gokurakuyu.ne.jp/tempo/tsu/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:38.366815+00:00",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html",
+          "title": "メンテナンス中です",
+          "text_sha256": "64a9d1a21dfe277072c6999dfbc8ae9c6b493aba12e2623c13863d581bd73132"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/tsurumi/news/15322/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:38.971452+00:00",
+          "final_url": "https://rakuspa.com/tsurumi/news/15322/",
+          "title": "極楽湯　店舗一覧・情報（簡易ページ）｜RAKU SPA 鶴見",
+          "text_sha256": "8f72f678cf22a0da27a4a9d88e53ef2f6e0e44ead654484a3b701c4d3a4e52fd"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/cms/wp-content/uploads/2026/10/screencapture-gokurakuyu-ne-jp-tempo-tsu-2026-10-23-23_18_35.png",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:48.638298+00:00",
+          "final_url": "https://rakuspa.com/cms/wp-content/uploads/2026/10/screencapture-gokurakuyu-ne-jp-tempo-tsu-2026-10-23-23_18_35.png",
+          "title": "Official image",
+          "content_sha256": "64cb5eecdac8be1af51dd0a973944a47b46bd333ec6c1ee2ea030ab571213ea5",
+          "inspection_path": "C:\\Users\\tomo-\\AppData\\Local\\Temp\\mem-f2-91a04dc3a28c.png"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/pukapukaofurotime/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:49.545818+00:00",
+          "final_url": "https://rakuspa.com/pukapukaofurotime/",
+          "title": "WeatherPlanet＆海月雲ろあ×極楽湯・RAKU SPA(らくスパ)コラボキャンペーン",
+          "text_sha256": "66d59ab468bae515f851bdb169b306de6ca694921374fcbfdee7ff890cd2cd83"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/gintama/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:49.986850+00:00",
+          "final_url": "https://rakuspa.com/gintama/",
+          "title": "銀魂×極楽湯・RAKU SPA(らくスパ)コラボキャンペーン",
+          "text_sha256": "a014ac880918fd30625858a5d9759c689e65a87475db6b0125ec753e2c1f05a5"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/sanrio2/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:50.353147+00:00",
+          "final_url": "https://rakuspa.com/sanrio2/",
+          "title": "サンリオキャラクターズ×極楽湯・RAKU SPA(らくスパ)コラボキャンペーン第2弾",
+          "text_sha256": "45192b78693be7042c1517b6351d78047e7efc03b31795104747e771e43fc54c"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/FFRS/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:50.766365+00:00",
+          "final_url": "https://rakuspa.com/FFRS/",
+          "title": "FFレゾナンス×極楽湯・RAKU SPA(らくスパ)コラボキャンペーン",
+          "text_sha256": "9d7382c487f37dc58ace2a34056d65e49fb4a756ad68b875b2760aa2dd4076e1"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://rakuspa.com/nijisanji4/",
+          "status": 200,
+          "checked_at": "2026-10-31T16:59:51.123119+00:00",
+          "final_url": "https://rakuspa.com/nijisanji4/",
+          "title": "にじさんじ×極楽湯・RAKU SPA(らくスパ)コラボキャンペーン第4弾",
+          "text_sha256": "d80d80ff162dc84f626b2d70696082082b875afeb2b7a51f8d716c7222bc9cb9"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://www.gokurakuyu.ne.jp/topics/page_698.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:00:30.663420+00:00",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html",
+          "title": "メンテナンス中です",
+          "text_sha256": "64a9d1a21dfe277072c6999dfbc8ae9c6b493aba12e2623c13863d581bd73132"
+        },
+        {
+          "facility_id": 8248,
+          "url": "https://www.gokurakuyu.ne.jp/tempo/tsu/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:00:31.252190+00:00",
+          "final_url": "https://www.gokurakuyu.ne.jp/maintenance.html",
+          "title": "メンテナンス中です",
+          "text_sha256": "64a9d1a21dfe277072c6999dfbc8ae9c6b493aba12e2623c13863d581bd73132"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 8143,
+          "completed_at": "2026-10-31T16:59:29.648428+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "天平衣装11/14",
+              "disposition": "added"
+            },
+            {
+              "title": "加佐登地区展",
+              "disposition": "added"
+            },
+            {
+              "title": "瓦を焼く講演11/28",
+              "disposition": "added"
+            },
+            {
+              "title": "宣長講演12/6",
+              "disposition": "added"
+            },
+            {
+              "title": "漢字展示12/1〜20",
+              "disposition": "added"
+            },
+            {
+              "title": "遺跡バス11/21",
+              "disposition": "hold",
+              "reason": "満員受付終了"
+            },
+            {
+              "title": "発掘体験11/15",
+              "disposition": "hold",
+              "reason": "延長後10/28締切済み、当日経路なし"
+            },
+            {
+              "title": "白鳥塚古墳1/24",
+              "disposition": "hold",
+              "reason": "事前申込制、募集は1月号公表予定で未開始"
+            },
+            {
+              "title": "とんぼ玉2/20・21",
+              "disposition": "hold",
+              "reason": "事前申込制、年間予告のみで募集未開始"
+            },
+            {
+              "title": "古代の台所講座2/23",
+              "disposition": "hold",
+              "reason": "年間予告の専門考古学講座、公式に子ども・家族向け内容なし"
+            },
+            {
+              "title": "速報展2027/3/13開始",
+              "disposition": "hold",
+              "reason": "年間予告のみ、会期終期・開催詳細未公表"
+            },
+            {
+              "title": "通年勾玉作り",
+              "disposition": "hold",
+              "reason": "常設体験、具体的な今回の開催日なし。休止日もあるため日付を生成しない"
+            }
+          ],
+          "reason": "公式新着・全現行詳細・体験ページ・年間PDF2頁を評価。歴史散策10/24など過去は追加せず。",
+          "refreshed_event_ids": [],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": [
+            "evt-8143-202611-tenpyo",
+            "evt-8143-202611-kasado",
+            "evt-8143-202611-tiles",
+            "evt-8143-202612-norinaga",
+            "evt-8143-202612-kanji"
+          ]
+        },
+        {
+          "facility_id": 8248,
+          "completed_at": "2026-10-31T17:00:32.737137+00:00",
+          "disposition": "candidate_found_hold",
+          "candidates": [
+            {
+              "title": "WeatherPlanet＆海月雲ろあコラボ",
+              "disposition": "hold",
+              "reason": "津店対象は確認。公式内容は成人ファン向けグッズ・飲食・コラボ風呂で、幼い子ども・家族向けプログラムを確認できない。"
+            },
+            {
+              "title": "にじさんじコラボ11/12開始",
+              "disposition": "hold",
+              "reason": "津店対象は確認。公式内容はファン向けグッズ・飲食・入浴装飾で子ども・家族向けプログラムを確認できない。"
+            },
+            {
+              "title": "怪獣レモン10/5〜11/3",
+              "disposition": "hold",
+              "reason": "公式代替掲載の津店画像で期間は確認できるが、開催詳細はメンテナンスへ転送。11/1以降に参加できる体験の具体的内容を確認できず、物販・季節メニューだけをイベント化しない。"
+            },
+            {
+              "title": "銀魂コラボ",
+              "disposition": "out_of_scope",
+              "reason": "公式対象店舗に津店なし"
+            },
+            {
+              "title": "サンリオコラボ",
+              "disposition": "out_of_scope",
+              "reason": "公式対象店舗に津店なし"
+            },
+            {
+              "title": "FFレゾナンスコラボ",
+              "disposition": "out_of_scope",
+              "reason": "公式対象店舗に津店なし"
+            }
+          ],
+          "reason": "原URL再試行後、公式が指定する代替RAKU SPAページ・津店代替画像・全現行コラボを個別評価。キャンドルナイト10/24〜25は過去。施設単位の営業制限ではなくサイト保守。",
+          "refreshed_event_ids": [],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": []
+        }
+      ]
     },
     "osaka": {
       "facility_ids": [
@@ -2831,9 +3321,58 @@
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "facility_id": 1427,
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-10-31T17:00:39.765623+00:00",
+          "final_url": "https://www.brh.co.jp/",
+          "title": "Webサイト一時休止のお知らせ",
+          "text_sha256": "c1cc52b7b53c75b68ed93d7b9025813168625c0ef90d6321a5a327fdd4486fdd"
+        },
+        {
+          "facility_id": 1427,
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-10-31T17:00:46.895494+00:00",
+          "final_url": "https://www.brh.co.jp/",
+          "title": "Webサイト一時休止のお知らせ",
+          "text_sha256": "c1cc52b7b53c75b68ed93d7b9025813168625c0ef90d6321a5a327fdd4486fdd"
+        },
+        {
+          "facility_id": 1427,
+          "url": "https://www.brh.co.jp/event/",
+          "status": 503,
+          "checked_at": "2026-10-31T17:00:47.260680+00:00",
+          "final_url": "https://www.brh.co.jp/event/",
+          "title": "Webサイト一時休止のお知らせ",
+          "text_sha256": "c1cc52b7b53c75b68ed93d7b9025813168625c0ef90d6321a5a327fdd4486fdd"
+        },
+        {
+          "facility_id": 1427,
+          "url": "http://www.brh.co.jp/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:00:47.599265+00:00",
+          "final_url": "https://www.brh.co.jp/maintenance/index.html",
+          "title": "Webサイト一時休止のお知らせ",
+          "text_sha256": "c1cc52b7b53c75b68ed93d7b9025813168625c0ef90d6321a5a327fdd4486fdd"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1427,
+          "completed_at": "2026-10-31T17:00:57.340381+00:00",
+          "disposition": "source_unresolved",
+          "candidates": [],
+          "reason": "公式トップ503で再試行同じ。イベント階層503、HTTPトップ公式転送先も保守ページ（200）。緊急保守で公開再開未定と明記され、イベント本文を読めない。既存対象イベントなし。",
+          "refreshed_event_ids": [],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": []
+        }
+      ]
     },
     "saitama": {
       "facility_ids": [
@@ -2855,12 +3394,1261 @@
       ],
       "total": 15,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
-      "candidate_found_duplicate": 0,
+      "candidate_found_added": 4,
+      "candidate_found_duplicate": 1,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:03.601258+00:00",
+          "final_url": "https://www.railway-museum.jp/event/index.html",
+          "title": "企画展・イベント｜鉄道博物館 - THE RAILWAY MUSEUM -",
+          "text_sha256": "0ad0f8a5fb6228d3d1ca8bb1af982e3bd14ad684e2ba71403b69a6cd645a41be"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:03.971849+00:00",
+          "final_url": "https://www.railway-museum.jp/news/",
+          "title": "お知らせ2026年度｜鉄道博物館 - THE RAILWAY MUSEUM -",
+          "text_sha256": "58e1ca54ee2f43c8f2c8f7034c771e07353c20e6d0fc716865e506a34b1e9817"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/event/exhibition.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:04.264272+00:00",
+          "final_url": "https://www.railway-museum.jp/event/exhibition.html",
+          "title": "企画展｜鉄道博物館 - THE RAILWAY MUSEUM -",
+          "text_sha256": "9c44a420ad72ecc19f989c0b4f3b0338cb4a6fd454c773e2bc4551708e312a65"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/js/insertnews.js",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:31.993702+00:00",
+          "final_url": "https://www.railway-museum.jp/js/insertnews.js",
+          "title": "",
+          "text_sha256": "4b3f1118b5e54d27ab27acfcad183160fc6172abef40800815946e4e4eb82a6b"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/js/xml_render.js",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:32.348792+00:00",
+          "final_url": "https://www.railway-museum.jp/js/xml_render.js",
+          "title": "",
+          "text_sha256": "80a8c8c0f7650e7f721cb97b76126b696aab78f1f8bebc9b8c241e1f2f66dbea"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/cgi-bin/rminfo/news/data.json",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:36.802256+00:00",
+          "final_url": "https://www.railway-museum.jp/cgi-bin/rminfo/news/data.json",
+          "title": "",
+          "text_sha256": "a77a2108cc60bf8870f3921c2414c817a6750e866b62a2ae2ed5535d184395ae"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/xml/event.xml",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:37.136973+00:00",
+          "final_url": "https://www.railway-museum.jp/xml/event.xml",
+          "title": "",
+          "text_sha256": "13785b5a68786e19881d3a7ee5b1ecb6652d23852394da1fc3301523951c5c40"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261030_2.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:01:59.364610+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261030_2.pdf",
+          "title": "Official PDF",
+          "text_sha256": "111d9c56d3b7087d851f3da59522a2f552522f02d2e033c0b321f2c82c0dc8a5"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261030_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:00.027250+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261030_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "e86c12e6d3ca695150dd4fb84ccb79cedaf66611e89cbcf2cb619ca50610666f"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261029_3.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:00.528217+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261029_3.pdf",
+          "title": "Official PDF",
+          "text_sha256": "57aba7a355cb85546b60d1e59b76998b650fb2198dc0a11afea5980901b57dbd"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261027_3.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:01.077166+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261027_3.pdf",
+          "title": "Official PDF",
+          "text_sha256": "d4f867caab293c343b6196f92633499a756792ec192861496315f15f13234933"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261027_2.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:01.556864+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261027_2.pdf",
+          "title": "Official PDF",
+          "text_sha256": "1fe35fe7aa18bfac658a176eed5c639fec76ca520e6ff178364aaa6efe15f0a7"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261026_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:02.161184+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261026_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "89445f2f6dad7332b824500cd2944061c08e2e5c372243a55e2c435b845f28e2"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261024_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:11.104430+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261024_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "754effae2a32dddc0973a90c83f8e63b2029910677085d3948b17105ce7a42f7"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261017_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:11.760078+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261017_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "f949503af0c02f767bf0806a644be067eecb47032bbc664a26f496c209a21a45"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261015_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:12.229439+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261015_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "54de8abaaa3bb9661705427b25c69d2902dd99555725bf722427c8a7ddd4102b"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261003_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:12.723347+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261003_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "4dce3051775bc3c2453430f5da9f3a1cf11d71b2f2a5665bac97290c4ed5e45d"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20260927_3.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:13.150286+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20260927_3.pdf",
+          "title": "Official PDF",
+          "text_sha256": "43c75e9421428cda0698ab9966b02bc7c2602696b5bd5fd5f06a34aa6b7f3aa1"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20260927_1.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:13.655423+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20260927_1.pdf",
+          "title": "Official PDF",
+          "text_sha256": "d755dca8887b62db7516b9e8b48eb20881819aae4a39f5c00d23d26002d6fbf6"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20261016_4.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:14.353626+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20261016_4.pdf",
+          "title": "Official PDF",
+          "text_sha256": "e048ad753d125dbcde73b5c73f725a209ceb50ea7c647e844d88aea4fa2bd510"
+        },
+        {
+          "facility_id": 471,
+          "url": "https://www.railway-museum.jp/news/pdf/20260925_2.pdf",
+          "status": 200,
+          "checked_at": "2026-10-31T17:02:15.073859+00:00",
+          "final_url": "https://www.railway-museum.jp/news/pdf/20260925_2.pdf",
+          "title": "Official PDF",
+          "text_sha256": "c159f644e0a3d249dcded73065dbc40195cbe4e51e6e39f84ba4c446006ea959"
+        },
+        {
+          "facility_id": 473,
+          "url": "https://www.parks.or.jp/omiyazoo/event/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:03:27.524315+00:00",
+          "final_url": "https://www.parks.or.jp/omiyazoo/event/",
+          "title": "イベント | 大宮公園小動物園 | 公益財団法人埼玉県公園緑地協会",
+          "text_sha256": "a3ed1f02a2ac801ae52537ea10b3844cbd1ae455504dae953ec3116ffa072b5f"
+        },
+        {
+          "facility_id": 473,
+          "url": "https://www.parks.or.jp/omiyazoo/news_special/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:03:27.915148+00:00",
+          "final_url": "https://www.parks.or.jp/omiyazoo/news_special/",
+          "title": "大宮公園小動物園 | 公益財団法人埼玉県公園緑地協会",
+          "text_sha256": "d97533c374ef8e7088751ee7d51faf3ac816996eb8e16ba8508c633d62622d9a"
+        },
+        {
+          "facility_id": 473,
+          "url": "https://www.parks.or.jp/omiyazoo/event/006/006479.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:03:28.219046+00:00",
+          "final_url": "https://www.parks.or.jp/omiyazoo/event/006/006479.html",
+          "title": "定例イベント | 大宮公園小動物園 | 公益財団法人埼玉県公園緑地協会",
+          "text_sha256": "933db73d429e19945810109b029ce7d53deeb7815f0ed303f5d1a7cf00ff8708"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:03:54.693323+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/index.html",
+          "title": "イベント",
+          "text_sha256": "109ad2f3dfe28ddfa14d482e5d3fb413ea7efb41fd9d7bf87c1de1205bebb6e2"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:03:55.223512+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/",
+          "title": "さいたま市青少年宇宙科学館",
+          "text_sha256": "a53245ded73c2763812ec79dab7f92dd4338727eb5c41637306b027cbffc2321"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p067171.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:03.459076+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067171.html",
+          "title": "サイエンスショー",
+          "text_sha256": "a7c1cc1334836bc940c9b19842f15152ebcc224fe72dbb53e422f30f4b78cef4"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p081433.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:04.647122+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081433.html",
+          "title": "ワークショップ",
+          "text_sha256": "40142480ef02909437d0909d29844f670e7d6bbc10aaa554106c8f2a521c9c0e"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p081697.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:05.941528+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p081697.html",
+          "title": "若田光一宇宙飛行士コーナー体験ツアー",
+          "text_sha256": "4bf6c6ed3b2ac77914184e3cfe24b59cc50507e00b16438f64fe0211a2e51ff8"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p089213.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:07.262467+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p089213.html",
+          "title": "太陽観察会",
+          "text_sha256": "e7db5713e9cc47975ea6623cfa9fd3e36cb36be739ce63bec4c9eb7c1d8b06e6"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p067924.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:08.405953+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p067924.html",
+          "title": "特別サイエンスショー （科学戦隊さいレンジャー）",
+          "text_sha256": "52a436fd050db2ff53616e82ae5cc7b8d13630458e52a677dd080355e6464efe"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p133558.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:09.636516+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p133558.html",
+          "title": "【体験満載】「宇宙のまち　さいたま」フォーラム開催！",
+          "text_sha256": "3796c71b5b68315fc10d3b86e925e3423456a872f7d572343f947f08331b33e0"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127725.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:10.859102+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127725.html",
+          "title": "プラネタリウム番組「パウ・パトロール」",
+          "text_sha256": "39f9ee9b3cab9d0027646541cf0ea3254dcdd432ea239ba4a6dfc087587be39c"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127618.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:11.993063+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127618.html",
+          "title": "プラネタリウム番組「クレヨンしんちゃん」",
+          "text_sha256": "64cec893b8366c9d30397ca490d28cb68e2d07a27a520d394da6e77aa6d19aed"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131703.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:13.214543+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131703.html",
+          "title": "プラネタリウム番組「ＭＭＸ　火星衛星探査計画」",
+          "text_sha256": "827b799848d78ec26da0147cdcc3adc97bd5a9590e50095bd0f218fad1b6e33c"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131705.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:14.418361+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131705.html",
+          "title": "プラネタリウム番組「ダイナソートラベラーズ」",
+          "text_sha256": "430d595c7634fe1c41fc1c3dcf5c6100f3a9a27663ed90c407084cafa5db9702"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p096661.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:15.601316+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p096661.html",
+          "title": "プラネタリウム番組「特別投影 ～はじめてのプラネタリウム～ 」",
+          "text_sha256": "4be8c8f1355bce42804e78ecbaf7f8f9136790af10a4c409765645504a66fb23"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p081537.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:16.854768+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p081537.html",
+          "title": "【特別投影】プラネタリウム番組「Challenge　to the UNIVERSE!～若田光一の宇宙～」",
+          "text_sha256": "24f8ed9db830a3479a9086b4be7a6a9d8c60134b6ba1bc2d250ba029687b3a10"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/news/p117361.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:18.132285+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/news/p117361.html",
+          "title": "11/23(月・祝)は「プラネタリウムの日」☆【投影スケジュールはこちら】",
+          "text_sha256": "4b722fc2899d71b62acac97d883d30bcb3dcd844f0814460ed76b07aba5e9298"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127617.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:28.707160+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127617.html",
+          "title": "★プラネタリウム投影計画★",
+          "text_sha256": "0c98e4e2586fd340527e5352dc7e92890e667f16fc366d5ed152d0990ddfe69c"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p091514.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:29.235331+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p091514.html",
+          "title": "11月の教室",
+          "text_sha256": "41c1d08a65452d7f0e86e5cf9fde8f99c36bc66f16d168688fbb3873629e7694"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p134438.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:29.617099+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p134438.html",
+          "title": "若田光一 宇宙飛行士 講演会開催！",
+          "text_sha256": "f236173b4100f18414abfdf26a968755cc45448d8aff3c504a623c1c8ac6074c"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p115983.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:30.035086+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/006/p115983.html",
+          "title": "【参加者募集中】高校生ロケット大会2026",
+          "text_sha256": "8e40693ae2dd79cfe90ea3244844a8abe2ba1477d70a96247ce4b702d696b9e0"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/event/p124646.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:30.412600+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/event/p124646.html",
+          "title": "チラシ",
+          "text_sha256": "4a679f1e420056c5d2ed4c40c632a9daccbf434fae33fe11a31f8d81966d2d60"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/003/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:38.628203+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/index.html",
+          "title": "教室",
+          "text_sha256": "bff5e779d87f9370c1ef742b7ee2fadb117cf615e46a851cf25773cf366b3fef"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:39.042853+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html",
+          "title": "12月の教室",
+          "text_sha256": "30e29c630d5a462d94356a0ef91b9e02e61942cea5fdd5018c7ed29ba37c8b2e"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:44.464372+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html",
+          "title": "1月の教室",
+          "text_sha256": "405abe0d00a7e044794b73b70705998f665aee69608845c2b9f10e1f1021f1a8"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131704.html",
+          "status": 404,
+          "checked_at": "2026-10-31T17:04:44.922991+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p131704.html",
+          "title": "さいたま市／お探しのページが見つかりません",
+          "text_sha256": "c8f6df46f46dfd4eaed444a04ad8b285db2a48b8d2e3ec7e7d14041a45d80a14"
+        },
+        {
+          "facility_id": 475,
+          "url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127624.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:04:58.104117+00:00",
+          "final_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127624.html",
+          "title": "プラネタリウム番組「イナズマデリバリー」",
+          "text_sha256": "84013489a5fe05a90e2176394823212bc3e3002613c8d477ef5e12a1739b9914"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/event/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:05:56.572982+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/event/",
+          "title": "イベント | 西武園ゆうえんち",
+          "text_sha256": "044d0cee8dc8b29df071df0b554e691bb0ecaf45c681457dc95500a490589f01"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/news/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:05:57.037463+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/news/index.html",
+          "title": "お知らせ一覧 | 西武園ゆうえんち",
+          "text_sha256": "788ed2725fffc36297bb19535cd59b4ef8c16451cce06b610255b8d1ad9741be"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/page.jsp?id=48353",
+          "status": 200,
+          "checked_at": "2026-10-31T17:05:58.930461+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/page.jsp?id=48353",
+          "title": "秋のバラフェスタ　2026 | 西武園ゆうえんち",
+          "text_sha256": "65164bc47634b9a1174f01a0aa46ddb9548181b373c88b20f14d791c0cdd2f7d"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/event/misatowatanabe2026/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:05:59.465425+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/event/misatowatanabe2026/index.html",
+          "title": "-渡辺美里 所沢凱旋記念イベント-　週明けの西武園ゆうえんち選んだ♪ | 西武園ゆうえんち",
+          "text_sha256": "58cfe4950b90a43c0092b29fa25a824a2e341c66868230245e1f76a5732ea24a"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/news/awaodori20261108/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:00.369177+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/news/awaodori20261108/index.html",
+          "title": "阿波おどり in 西武園ゆうえんち 〜2026秋〜 | 西武園ゆうえんち",
+          "text_sha256": "86b96d8ee266322348e96b86047b967ca3b9b80a0323b90a7c574318c589152e"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://atfes.com/contents/cho-retroseparty/rally",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:01.098623+00:00",
+          "final_url": "https://atfes.com/contents/cho-retroseparty/rally",
+          "title": "超!!レトローズパーティ - RALLY",
+          "text_sha256": "de327de7054fa2aa3d72130f168ffa482a395bc8c0886179a857ee680b4ceb95"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/attraction",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:15.152759+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/attraction/",
+          "title": "アトラクション | 西武園ゆうえんち",
+          "text_sha256": "71170413c6851ae1bb6095574dd973ea938500e62c23c2cfdc220f72084d1046"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://www.seibuen-amusement-park.jp/event/nazotoki/index.html",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:16.257212+00:00",
+          "final_url": "https://www.seibuen-amusement-park.jp/event/nazotoki/index.html",
+          "title": "夕日の丘商店街事件簿 | 西武園ゆうえんち",
+          "text_sha256": "a8e8cdf07cd149121f7ac70982d41baeb30488985cab633f130066b9d0e21dc2"
+        },
+        {
+          "facility_id": 485,
+          "url": "https://atfes.com/contents/cho-retroseparty",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:16.865107+00:00",
+          "final_url": "https://atfes.com/contents/cho-retroseparty",
+          "title": "超!!レトローズパーティ",
+          "text_sha256": "d95025b7af358a98db791591b747c61ed97b9013847125a6dbe26a0a2193bea6"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:48.315058+00:00",
+          "final_url": "https://metsa-hanno.com/event/",
+          "title": "【公式】イベント | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "7ec6e449d7208e609c8ae06a106d08c7423ca3196b8668826d713fcf01fcc0a5"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/news/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:48.944546+00:00",
+          "final_url": "https://metsa-hanno.com/news/",
+          "title": "【公式】お知らせ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "8abc02e2bf0c679dd30f78e17d15ad6ad28f242cfef8e5ed7bbd206fc036cc39"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:49.401664+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/",
+          "title": "【公式】ワークショップ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "f85a5e3dd1eeefb116c64fabec61c0f5e8713308171dc4a3e6acf6aa15cd2628"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/48495/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:57.053829+00:00",
+          "final_url": "https://metsa-hanno.com/feature/48489/",
+          "title": "【公式】【11月】イベント特集 2026 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "cb50901fe4f6aab259a67ab34be563553bda7525c8dbf363c3a6e70a7275e962"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/47204/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:57.721503+00:00",
+          "final_url": "https://metsa-hanno.com/event/47204/",
+          "title": "【公式】ムーミン谷のクリスマス 2026 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "2d9c6f80af9000181846dcc002b469021e3d808a18d7f211e2f24e75757c5497"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/48050/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:58.260697+00:00",
+          "final_url": "https://metsa-hanno.com/event/48050/",
+          "title": "【公式】メッツァ・難民支援ウィークエンド 2026 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "9abf7f1f28f1bfb632a94f9adbfe62f3156c307fd34d011c52809644c372a70a"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/45545/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:58.726893+00:00",
+          "final_url": "https://metsa-hanno.com/event/45545/",
+          "title": "【公式】ムーミン谷の湖上花火大会 2026 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "0684336c295c21d1617d1416a49122f5caa2b19599f0eaab419fd5fe04f89ff1"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/47804/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:59.237603+00:00",
+          "final_url": "https://metsa-hanno.com/event/47804/",
+          "title": "【公式】【11/11（水）】超ニョロニョロの日＆超ニョロニョロフェスタ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "d503735d4af22c949059c18cd5463fe48387dd7ccc5bdbe7f8e7f3512dcae7a8"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/48226/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:06:59.891086+00:00",
+          "final_url": "https://metsa-hanno.com/event/48226/",
+          "title": "【公式】【期間限定】ペアジップライン「ふたりでならんで⼤冒険 ～2本のジップラインで、⼆⼈同時にスタート～」 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "41069ac7ea08df4bdefe65ca1da5d0b7dca2157b6004da6e61583fc733dffb1d"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48339/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:07.326855+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48339/",
+          "title": "【公式】【体験】オリジナル缶バッジマグネットづくり「ムーミン谷のクリスマス柄」 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "fbf01539d665887afefc52e4e5623e1a25fbb696e3f227ad4749c32c71a495df"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48338/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:07.852587+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48338/",
+          "title": "【公式】【体験】ムーミン谷の仲間たちの絵付け | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "106837499311b3451851971755394fb487230d13dc083ee9d6cb0debe670bd95"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48331/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:08.359617+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48331/",
+          "title": "【公式】【体験】ガラスのワークショップ 〜こもれびツリーづくり/ガラスアクセサリーづくり〜 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "a9f035789ca995988c49d426a85d158d7bf042c2f52f02c8819866c3f8d056d4"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48326/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:08.848652+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48326/",
+          "title": "【公式】【体験】ムーミン谷のウッドバーニングボックス | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "32fe5ac5e27d6f27769a0ee4ed16949aea7676ec9534d4f2c38b1312076526e4"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48168/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:09.362834+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48168/",
+          "title": "【公式】【体験】ヒンメリづくり | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "9d56e00990fb272541c390212a3aab03e23ac1f9ad58f1d86032d9b9ecad312a"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/48158/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:09.857003+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/48158/",
+          "title": "【公式】【体験】水を入れると浮かび上がる！ふしぎなジオラマづくり | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "2298707ce566152e3ce2f6c86c29e963a9d5b576de39d6430b023e25bca2b1da"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/44382/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:10.624887+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/44382/",
+          "title": "【公式】【体験】じぶんでつくるぬいぐるみ（ポストカード付） | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "779d7736c3ce98456f764aa95f8348d29ae738a9b3e032bb81d42bc90eaee957"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/19463/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:26.367095+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/19463/",
+          "title": "moomin valley park 【公式】トーベ・ヤンソンのムーミン絵本『それからどうなるの？』読み聞かせ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "5fae86235164a0894423fef3e8a42db9092f11c37674c9c3de7769f293507891"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/41379/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:26.975719+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/41379/",
+          "title": "【公式】『ムーミン谷のクリスマス』読み聞かせ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "12ad1b68540122e54ccbd3b6c4e138a99af613871e316429ff981b80bc2af32e"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/workshop/41567/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:27.477031+00:00",
+          "final_url": "https://metsa-hanno.com/workshop/41567/",
+          "title": "【公式】絵本の世界へとびこもう！〜立体絵本の読み聞かせ〜 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "7369cf8b36b9cfe6bab337ff832671730984fc00ed72d74a3642a167dfaca613"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/news/information/48216/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:27.972025+00:00",
+          "final_url": "https://metsa-hanno.com/news/information/48216/",
+          "title": "【公式】【11月】登場キャラクター発表♪「MUIKKU！プレミアムグリーティング」2026 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "cfe264bce4c3402e128fe3fe7e47f6b22aa76cac608eae173f99dfe2b62eb598"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/42964/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:28.462509+00:00",
+          "final_url": "https://metsa-hanno.com/event/42964/",
+          "title": "【公式】【プレミアム年間パスポート】MUIKKU！プレミアムグリーティング | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "5b44238ed0c31d96e0424fc3ecb3e0ff7be7bce2294a4307e15e8f257baeb42e"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/news/information/48099/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:28.964722+00:00",
+          "final_url": "https://metsa-hanno.com/news/information/48099/",
+          "title": "【公式】【更新】『ヨクサル』の出演期間・出演休止のお知らせ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "41ef29cd92ddac25c9a84e0ff3ebeea17a1383abae16fef393bcd5c19c5064bb"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/news/information/48392/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:29.742625+00:00",
+          "final_url": "https://metsa-hanno.com/news/information/48392/",
+          "title": "【公式】2026年11月7日（土）8日（日）飯能まつり開催に伴う、路線バス運行一部変更のお知らせ | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "3e32868c469eaabff404197842fc1248a6af09c6854007175335d2cfb50f4d04"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/wp-content/uploads/2026/10/a4862d1b35cfbee5fa7f266a0761a511-1200x2604.png",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:44.481844+00:00",
+          "final_url": "https://metsa-hanno.com/wp-content/uploads/2026/10/a4862d1b35cfbee5fa7f266a0761a511-1200x2604.png",
+          "title": "Official image",
+          "content_sha256": "9c6bd8e00109b37fc155def8d90bcb145b8cdfcf1340fd93c83f34857cd39b10",
+          "inspection_path": "C:\\Users\\tomo-\\AppData\\Local\\Temp\\mem-f2-ec81371d12bd.png"
+        },
+        {
+          "facility_id": 493,
+          "url": "https://metsa-hanno.com/event/48174/",
+          "status": 200,
+          "checked_at": "2026-10-31T17:07:44.880808+00:00",
+          "final_url": "https://metsa-hanno.com/event/48174/",
+          "title": "【公式】【メッツァのクリスマスフォトコンテスト2026】オフィシャルホテルペア宿泊券など豪華景品が当たる！冬の合同フォトコンテスト開催 | ムーミンバレーパーク・メッツァビレッジ｜metsa（メッツァ）",
+          "text_sha256": "9179557eb51a4fcf8ccaa10692eb7e5a2b6ba4eadf6579ed0e3a2bc6860b49f3"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 471,
+          "completed_at": "2026-10-31T17:03:09.852469+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "恐竜博物館特別展示・福井県伝統工芸プラレール",
+              "disposition": "added"
+            },
+            {
+              "title": "キハ11形気動車 エンジン起動・車内公開",
+              "disposition": "added"
+            },
+            {
+              "title": "おなまえプレートづくり",
+              "disposition": "added"
+            },
+            {
+              "title": "トレインくじ",
+              "disposition": "added"
+            },
+            {
+              "title": "TRAIN SUITE 四季島 お手振りイベント",
+              "disposition": "added"
+            },
+            {
+              "title": "えほんのおはなし会イベント",
+              "disposition": "added"
+            },
+            {
+              "title": "てっぱく大学 みんな知ってる？踏切のあれやこれ",
+              "disposition": "added"
+            },
+            {
+              "title": "てっぱく大学 さいたまの地下鉄",
+              "disposition": "added"
+            },
+            {
+              "title": "てっぱく大学 顔認証技術による未来の改札の可能性",
+              "disposition": "added"
+            },
+            {
+              "title": "2026年度下半期 てっぱくスタンプラリー",
+              "disposition": "added"
+            },
+            {
+              "title": "エキタグ デジタルスタンプラリー",
+              "disposition": "added"
+            },
+            {
+              "title": "なつかしのポスター～あの日あの時の鉄道～",
+              "disposition": "added"
+            },
+            {
+              "title": "てっぱくお宝映像コレクション 下半期上映",
+              "disposition": "added"
+            },
+            {
+              "title": "クハ481運転室公開11月",
+              "disposition": "hold",
+              "reason": "公式XMLは11/1〜16、10/26告知PDFは11/1〜30。終了日が内部不一致でこの企画のみHOLD。"
+            },
+            {
+              "title": "てっぱく大学12/26 通勤輸送変遷史",
+              "disposition": "hold",
+              "reason": "公式が上級専門講座と分類。幼い子向け内容ではない。"
+            },
+            {
+              "title": "てっぱく川柳公開審査11/22",
+              "disposition": "hold",
+              "reason": "川柳の公開審査・専門家談話で、公式内容に幼い子どもの参加プログラムなし。"
+            },
+            {
+              "title": "顔認証改札機体験展示",
+              "disposition": "hold",
+              "reason": "常設展示としての開始告知で具体的な有期イベント会期なし。"
+            },
+            {
+              "title": "美園まなびリンク",
+              "disposition": "hold",
+              "reason": "外部Webアプリ実証で参加条件・公開プライバシー説明のイベント側情報が確認できず、家族向け参加経路の確認を保留。"
+            },
+            {
+              "title": "通常定時プログラム・バースデー特典",
+              "disposition": "not_event",
+              "reason": "ジオラマ・転車台等の常設サービス。新規有期イベントとして生成しない。"
+            },
+            {
+              "title": "埼玉県民の日優待券11/14",
+              "disposition": "not_event",
+              "reason": "入館特典で独立した体験企画ではない。"
+            },
+            {
+              "title": "鉄道ふれあいフェア11/21博物館ブース",
+              "disposition": "hold",
+              "reason": "会場は大宮総合車両ベースで当施設外。入場申込が必要なフェアの現時点での参加経路をこの施設告知だけでは確認できない。"
+            },
+            {
+              "event_id": "evt-f9-471-advertising-20260711",
+              "disposition": "duplicate",
+              "reason": "現行展とサテライト駅弁展示は既存親企画で包含"
+            }
+          ],
+          "reason": "公式企画展・新着公開JSON・カレンダーXML全現行行および対応PDFを個別評価。通常常設プログラムと過去企画は追加しない。内部日付不一致は当該企画のみ保留。",
+          "refreshed_event_ids": [
+            "evt-f9-471-advertising-20260711"
+          ],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": [
+            "evt-471-202611-dinosaur",
+            "evt-471-202611-kiha11",
+            "evt-471-202611-nameplate",
+            "evt-471-202611-trainlottery",
+            "evt-471-202611-wave",
+            "evt-471-202611-picturebook",
+            "evt-471-202611-crossing",
+            "evt-471-202611-subway",
+            "evt-471-202611-gate",
+            "evt-471-202611-rally",
+            "evt-471-202611-ekitag",
+            "evt-471-202611-nostalgicposters",
+            "evt-471-202611-treasurefilms"
+          ]
+        },
+        {
+          "facility_id": 473,
+          "completed_at": "2026-10-31T17:03:40.084223+00:00",
+          "disposition": "candidate_found_duplicate",
+          "candidates": [
+            {
+              "event_id": "evt-f9-473-contact-202610",
+              "title": "ドキドキコンタクト",
+              "disposition": "duplicate",
+              "reason": "公式現行定例は既存11月土日祝の同一プログラム"
+            }
+          ],
+          "reason": "公式イベント一覧・現行詳細・どうぶつニュース全4件を確認。新動物の展示開始や命名は常設ニュースで有期イベントなし。",
+          "refreshed_event_ids": [
+            "evt-f9-473-contact-202610"
+          ],
+          "ended_event_ids": [],
+          "updated_event_ids": [],
+          "added_event_ids": []
+        },
+        {
+          "facility_id": 475,
+          "completed_at": "2026-10-31T17:05:49.760311+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "くらりかサイエンス教室 リニアモーターをつくろう",
+              "disposition": "added"
+            },
+            {
+              "title": "天文宇宙教室 デジカメでの星空撮影",
+              "disposition": "added"
+            },
+            {
+              "title": "宇宙エレベーターロボットを作ろう",
+              "disposition": "added"
+            },
+            {
+              "title": "STEM教室 月面探査車を作ろう",
+              "disposition": "added"
+            },
+            {
+              "title": "科学工作教室 鳴らして遊べ！",
+              "disposition": "added"
+            },
+            {
+              "title": "第447回天体観望会 月と土星・しぶんぎ座流星群",
+              "disposition": "added"
+            },
+            {
+              "title": "科学実験教室 モーターが回る仕組みを学ぼう",
+              "disposition": "added"
+            },
+            {
+              "title": "親子でつくろう！インセクトロボット",
+              "disposition": "added"
+            },
+            {
+              "title": "第448回天体観望会 月と土星・すばる",
+              "disposition": "added"
+            },
+            {
+              "title": "顕微鏡教室 身近な昆虫の体のつくり",
+              "disposition": "added"
+            },
+            {
+              "title": "自然観察教室 見沼自然公園の冬の野鳥",
+              "disposition": "added"
+            },
+            {
+              "title": "イナズマデリバリー11月平日",
+              "disposition": "added"
+            },
+            {
+              "title": "ハートキッズ午前11/21",
+              "disposition": "hold",
+              "reason": "11月教室申込10/10締切済み。当日参加経路なし。"
+            },
+            {
+              "title": "ハートキッズ午後11/21",
+              "disposition": "hold",
+              "reason": "11月教室申込10/10締切済み。当日参加経路なし。"
+            },
+            {
+              "title": "第446回天体観望会11/21",
+              "disposition": "hold",
+              "reason": "11月教室申込10/10締切済み。当日参加経路なし。"
+            },
+            {
+              "title": "コズミックキッズ11/29（宇宙劇場）",
+              "disposition": "hold",
+              "reason": "11月教室申込10/10締切済み。当日参加経路なし。"
+            },
+            {
+              "title": "若田光一講演12/19",
+              "disposition": "hold",
+              "reason": "申込11/4開始で現時点未開始。"
+            },
+            {
+              "title": "高校生ロケット11/8",
+              "disposition": "hold",
+              "reason": "高校生限定かつ10/10受付終了。"
+            },
+            {
+              "title": "11月定例ワークショップ",
+              "disposition": "hold",
+              "reason": "カレンダーには11/7・21・28、活動詳細資料は10月までで11月固有の内容未公表。"
+            },
+            {
+              "title": "フォーラム講演11/14",
+              "disposition": "hold",
+              "reason": "10/27受付終了。親企画の展示・11/15体験には通常参加可能。"
+            },
+            {
+              "title": "サイエンスショー（10・11月）",
+              "event_id": "evt-f9-475-science-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "若田光一宇宙飛行士コーナー体験ツアー（10・11月）",
+              "event_id": "evt-f9-475-wakata-tour-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "太陽観察会（10・11月）",
+              "event_id": "evt-f9-475-sun-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "特別サイエンスショー 科学戦隊さいレンジャー",
+              "event_id": "evt-f9-475-sairanger-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "「宇宙のまち さいたま」記念フォーラム",
+              "event_id": "evt-f9-475-space-forum-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "プラネタリウム パウ・パトロール アルティメットレスキュー！てんもんだいをおいかけろ",
+              "event_id": "evt-f9-475-paw-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "プラネタリウム クレヨンしんちゃん 宇宙からの来訪者 カスカベ大パニック",
+              "event_id": "evt-f9-475-shinchan-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "プラネタリウム ＭＭＸ 火星衛星探査計画",
+              "event_id": "evt-f9-475-mmx-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "プラネタリウム ダイナソートラベラーズ 飛行の起源をさぐれ！",
+              "event_id": "evt-f9-475-dinosaur-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "特別投影 はじめてのプラネタリウム",
+              "event_id": "evt-f9-475-first-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "特別投影 Challenge to the UNIVERSE!～若田光一の宇宙～",
+              "event_id": "evt-f9-475-challenge-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "プラネタリウムの日 特別投影",
+              "event_id": "evt-f9-475-planet-day-2026",
+              "disposition": "duplicate"
+            }
+          ],
+          "reason": "公式11月カレンダー・全既存詳細・投影表・11〜1月教室・現行新着を個別確認。定例の具体的な11月開催と既存投影除外日を照合。フォーラムの10/15開始は作品展示、10/24開始は体験展であり親企画全体の期間は矛盾なし。",
+          "refreshed_event_ids": [
+            "evt-f9-475-science-2026",
+            "evt-f9-475-wakata-tour-2026",
+            "evt-f9-475-sun-2026",
+            "evt-f9-475-sairanger-2026",
+            "evt-f9-475-space-forum-2026",
+            "evt-f9-475-paw-2026",
+            "evt-f9-475-shinchan-2026",
+            "evt-f9-475-mmx-2026",
+            "evt-f9-475-dinosaur-2026",
+            "evt-f9-475-first-2026",
+            "evt-f9-475-challenge-2026",
+            "evt-f9-475-planet-day-2026"
+          ],
+          "ended_event_ids": [
+            "evt-f9-475-cocoon-2026"
+          ],
+          "updated_event_ids": [
+            "evt-f9-475-space-forum-2026"
+          ],
+          "added_event_ids": [
+            "evt-475-2026-linear",
+            "evt-475-2026-photo",
+            "evt-475-2026-elevator",
+            "evt-475-2026-rover",
+            "evt-475-2026-sound",
+            "evt-475-2026-stars447",
+            "evt-475-2026-motor",
+            "evt-475-2026-insectrobot",
+            "evt-475-2026-stars448",
+            "evt-475-2026-microscope",
+            "evt-475-2026-birds",
+            "evt-475-202611-inazma"
+          ]
+        },
+        {
+          "facility_id": 485,
+          "completed_at": "2026-10-31T17:06:42.038308+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "夕日の丘商店街事件簿",
+              "disposition": "added"
+            },
+            {
+              "title": "ウルトラマンウィーク／ゴジラウィーク",
+              "disposition": "hold",
+              "reason": "イベント一覧の10/26〜11/8は両企画の合計期間。リンク先本文で各作品の具体的な入替日と対象乗車条件を確認できず、この企画だけ保留。"
+            },
+            {
+              "event_id": "evt-f9-485-rose-2026",
+              "disposition": "duplicate",
+              "reason": "バラ恋文ラリー・摘み体験・ガイド等は既存親フェスタ内"
+            },
+            {
+              "event_id": "evt-f9-485-misato-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-485-awa-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-485-sidem-2026",
+              "disposition": "duplicate"
+            }
+          ],
+          "reason": "公式イベント全一覧・新着・現行4詳細と新候補2件を個別確認。過去4件終了。常設乗物はイベント化せず、有期の親子謎解き1件を追加。",
+          "refreshed_event_ids": [
+            "evt-f9-485-rose-2026",
+            "evt-f9-485-misato-2026",
+            "evt-f9-485-awa-2026",
+            "evt-f9-485-sidem-2026"
+          ],
+          "ended_event_ids": [
+            "evt-485-202607-01",
+            "evt-f9-485-dog-2026",
+            "evt-f9-485-halloween-2026",
+            "evt-f9-485-toshimaen-2026"
+          ],
+          "updated_event_ids": [],
+          "added_event_ids": [
+            "evt-485-202611-nazotoki"
+          ]
+        },
+        {
+          "facility_id": 493,
+          "completed_at": "2026-10-31T17:08:32.697727+00:00",
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "クリスマス柄 缶バッジマグネットづくり",
+              "disposition": "added"
+            },
+            {
+              "title": "ムーミン谷の仲間たちの絵付け",
+              "disposition": "added"
+            },
+            {
+              "title": "ガラスのワークショップ こもれびツリーとアクセサリー",
+              "disposition": "added"
+            },
+            {
+              "title": "ムーミン谷のウッドバーニングボックス",
+              "disposition": "added"
+            },
+            {
+              "title": "ヒンメリづくり",
+              "disposition": "added"
+            },
+            {
+              "title": "水を入れると浮かび上がる！ふしぎなジオラマづくり",
+              "disposition": "added"
+            },
+            {
+              "title": "じぶんでつくるぬいぐるみ（ポストカード付）",
+              "disposition": "added"
+            },
+            {
+              "title": "ムーミン谷のクリスマス 読み聞かせ",
+              "disposition": "added"
+            },
+            {
+              "title": "ペアジップライン",
+              "disposition": "added"
+            },
+            {
+              "event_id": "evt-f9-493-unhcr-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-493-christmas-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-493-fireworks-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-493-nyoro-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-493-reading-sat-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "event_id": "evt-f9-493-reading-3d-2026",
+              "disposition": "duplicate"
+            },
+            {
+              "title": "クリスマス雪遊び・ルミナスナイトショー",
+              "disposition": "duplicate",
+              "reason": "既存クリスマス親企画に包含、別レコード不要"
+            },
+            {
+              "title": "ムイック11/20・21、12/13・14、1/17・18",
+              "disposition": "hold",
+              "reason": "11月券11/10発売開始で未開始。12月・1月券の販売も未開始。"
+            },
+            {
+              "title": "クリスマスフォトコンテスト",
+              "disposition": "hold",
+              "reason": "公式応募手順は#メッツァクリスマスフォトコン2026、無効条件は#メッツァのクリスマス2026と記述が不一致。参加条件を推測しない。"
+            }
+          ],
+          "reason": "公式イベント・新着・11月特集・ワークショップ全現行詳細を個別確認。花火は当該公式カレンダー画像の10〜12月全日を視認し既存全日程と一致。11/7・8バス変更告知も確認。ヨクサルは10/30終了。隣接ビレッジ単独催事へ範囲拡張しない。",
+          "refreshed_event_ids": [
+            "evt-f9-493-unhcr-2026",
+            "evt-f9-493-christmas-2026",
+            "evt-f9-493-fireworks-2026",
+            "evt-f9-493-nyoro-2026",
+            "evt-f9-493-reading-sat-2026",
+            "evt-f9-493-reading-3d-2026"
+          ],
+          "ended_event_ids": [
+            "evt-f9-493-honey-2026",
+            "evt-f9-493-lantern-2026",
+            "evt-f9-493-silver-2026",
+            "evt-f9-493-badge-2026",
+            "evt-f9-493-reading-sun-2026"
+          ],
+          "updated_event_ids": [
+            "evt-f9-493-reading-sat-2026",
+            "evt-f9-493-reading-3d-2026",
+            "evt-f9-493-nyoro-2026"
+          ],
+          "added_event_ids": [
+            "evt-493-202611-xmasbadge",
+            "evt-493-202611-paint",
+            "evt-493-202611-glass",
+            "evt-493-202611-wood",
+            "evt-493-202611-himmeli",
+            "evt-493-202611-diorama",
+            "evt-493-202611-plush",
+            "evt-493-202611-xmasreading",
+            "evt-493-202610-pairzip"
+          ]
+        }
+      ]
     }
   }
 }
