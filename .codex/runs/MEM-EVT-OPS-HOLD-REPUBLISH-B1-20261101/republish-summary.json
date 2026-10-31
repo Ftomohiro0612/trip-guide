@@ -1,0 +1,2447 @@
+{
+  "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B1-20261101",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-31T21:53:15.713606+00:00",
+  "evidence_collection_started_at": "2026-10-31T21:40:32.151048+00:00",
+  "prior_run_evidence_reused": false,
+  "complete": false,
+  "aggregate": {
+    "total": 100,
+    "added": 60,
+    "duplicate": 15,
+    "past": 2,
+    "still_hold": 22,
+    "not_event": 1,
+    "new_events": 61
+  },
+  "candidates": [
+    {
+      "index": 1,
+      "region": "fukushima",
+      "title": "ロボット・航空宇宙フェスタ2026／第5回ドローンサミット",
+      "disposition": "added",
+      "reason": "公式県ページで令和8年11月28日一般公開・会場確認。案内未掲載はHOLDにしない。",
+      "added_event_ids": [
+        "evt-hold-b1-001"
+      ],
+      "added_event_id": "evt-hold-b1-001",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.fukushima.lg.jp/sec/32021f/festa2026.html",
+          "final_url": "https://www.pref.fukushima.lg.jp/sec/32021f/festa2026.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:18.357873+00:00",
+          "sha256": "f1ad5aa6ad49dca8b30145c2e53251ff53b1c29f7f2bb2016f00022c46000f52"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "region": "fukushima",
+      "title": "ふくしまエコマルシェ2026",
+      "disposition": "past",
+      "reason": "公式開催日2026-10-31、今日2026-11-01より前に全日程終了。",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.fukushima.lg.jp/sec/36021d/kannkyou-hozenngatanougyou-taikai-marche.html",
+          "final_url": "https://www.pref.fukushima.lg.jp/sec/36021d/kannkyou-hozenngatanougyou-taikai-marche.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:18.760920+00:00",
+          "sha256": "3ebd1bca8f2983d22083899e9b0c87de59023c873de40c29dadeea87065e4c20"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "region": "fukushima",
+      "title": "2026ふくしま環境フェスタ・水素まつり",
+      "disposition": "duplicate",
+      "reason": "市公式と会場公式が同日・同会場の同一催事を確認。",
+      "matched_event_id": "evt-w43f1-8122-environment",
+      "sources_checked": [
+        {
+          "url": "https://www.f-shinkoukousha.or.jp/comcom/events/7663/",
+          "final_url": "https://www.f-shinkoukousha.or.jp/comcom/events/7663/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:09.332008+00:00",
+          "sha256": "582ca70ee0e36a459e5c476b431bcf0ace69268a7354d743a06b4ed6a127d2b5"
+        },
+        {
+          "url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/3/20583.html",
+          "final_url": "https://www.city.fukushima.fukushima.jp/soshiki/8/1034/1/3/20583.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:19.113133+00:00",
+          "sha256": "7057ec2eb3d1f7302dd46ea1d4e5625ef427d4cfcc88d640d0516a381726fc5e"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "region": "fukushima",
+      "title": "八槻市　※開催日は予定日",
+      "disposition": "added",
+      "reason": "公式観光協会に2026-11-23予定日と会場明記。予定日であることを保持。",
+      "added_event_ids": [
+        "evt-hold-b1-004"
+      ],
+      "added_event_id": "evt-hold-b1-004",
+      "sources_checked": [
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7503",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7503",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:19.605032+00:00",
+          "sha256": "cea161b0bf9f1a0a1d3fe0b96cdd9c4f72d611cc00b2e786c1d1ee0353115927"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "region": "fukushima",
+      "title": "まほろん秋まつり",
+      "disposition": "added",
+      "reason": "公式観光協会で2026-10-31〜11-01、家族向け体験と会場を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-005"
+      ],
+      "added_event_id": "evt-hold-b1-005",
+      "sources_checked": [
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7545",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7545",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:20.067750+00:00",
+          "sha256": "23ced76899dc66579fd685b512bdb0dcdcebdcbae9564c553ef6aaea2af0a9f8"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "region": "fukushima",
+      "title": "ふくしまスマイルプロジェクト in 郡山・白河【土日のみ開催】",
+      "disposition": "added",
+      "reason": "主催者原典を再取得し2つの撮影教室を追加。出張写真館は既存2件。",
+      "matched_event_id": [
+        "evt-w43d7-fukushima-smile-nishigo",
+        "evt-w43d7-fukushima-smile-koriyama"
+      ],
+      "added_event_ids": [
+        "evt-hold-b1-006-shirakawa",
+        "evt-hold-b1-006-koriyama"
+      ],
+      "added_event_id": "evt-hold-b1-006-shirakawa",
+      "sources_checked": [
+        {
+          "url": "https://www.fukushima-smile.site/",
+          "final_url": "https://www.fukushima-smile.site/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:10.304397+00:00",
+          "sha256": "606866c7b92462c681ee8ea30ed3839322e2e24fe385a74ee176a4a639c043dd"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7607",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7607",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:20.500719+00:00",
+          "sha256": "ce9ad5db3d34c5d0f338238249b8005f4a3e218220f524c25515d7a3dfd161b1"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "region": "fukushima",
+      "title": "お城山ルシェ【毎月第4土曜日・日曜日】",
+      "disposition": "added",
+      "reason": "公式に2026年度毎月第4土日開催を確認。日付範囲と実施条件を保持。",
+      "added_event_ids": [
+        "evt-hold-b1-007"
+      ],
+      "added_event_id": "evt-hold-b1-007",
+      "sources_checked": [
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=6433",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=6433",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:20.915817+00:00",
+          "sha256": "d4eca15552d9226f7313a14bfe351925c5de17ebe94f9b8337e84fde0469d3bb"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "region": "fukushima",
+      "title": "ジュピアランドひらた2026紅葉ウォーキング",
+      "disposition": "still_hold",
+      "reason": "公式村ページで参加申込は2026-10-16締切。参加証が必須で当日受付経路なし。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.vill.hirata.fukushima.jp/site/jupialand/3942.html",
+          "final_url": "https://www.vill.hirata.fukushima.jp/site/jupialand/3942.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:11.074843+00:00",
+          "sha256": "72b468ec0c0be58aa62b694c17d03db24fe136a629f431785759f4376b41371c"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7499",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7499",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:21.622235+00:00",
+          "sha256": "3a2fa481a34409ac62de3f5acb80447b83633048d5a6d11f022493b03d6efe5c"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "region": "fukushima",
+      "title": "しらかわ郷里マラソン",
+      "disposition": "still_hold",
+      "reason": "市公式のエントリー先RUNNETは2026-08-18まででエントリー終了。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://runnet.jp/entry/runtes/smp/racedetail.do?raceId=391476",
+          "final_url": "https://runnet.jp/entry/runtes/smp/racedetail.do?raceId=391476",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:49.246605+00:00",
+          "sha256": "dc7ccdac42bbd9624f7cf590936f2b7e79788b4235685b892101cfcc248a0205"
+        },
+        {
+          "url": "https://www.city.shirakawa.fukushima.jp/page/page010675.html",
+          "final_url": "https://www.city.shirakawa.fukushima.jp/page/page010675.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:11.766469+00:00",
+          "sha256": "5b1414f5d37eeafa23790e3f6801ffc250019f65539c6ec1d190e03f62f14dda"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=6576",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=6576",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:22.281884+00:00",
+          "sha256": "0a2f6f245238976c00a23f624e281cc65c141329781a4cde9754de8c854cba1e"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "region": "fukushima",
+      "title": "茶室麟閣　月釜【４・５・７・９・11月の７日】",
+      "disposition": "added",
+      "reason": "公式観光ビューローが2026年度日程、11-07、料金・時刻を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-010"
+      ],
+      "added_event_id": "evt-hold-b1-010",
+      "sources_checked": [
+        {
+          "url": "https://www.aizukanko.com/event/60",
+          "final_url": "https://www.aizukanko.com/event/60",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:12.298781+00:00",
+          "sha256": "47f7ad5c1105cefbf93f6746cd61b95a2d0481eaf7f136c3bb2805dbd548df28"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=6608",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=6608",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:22.878242+00:00",
+          "sha256": "bc216f1bdb1ca17e79705e11336242ed2e54d775e052d1047d04403cdb852a1d"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "region": "fukushima",
+      "title": "鶴ヶ城　和船体験【土日祝日を中心とする指定日】",
+      "disposition": "added",
+      "reason": "県公式観光協会の年付き日程と会津公式の11月運行日・料金を照合。",
+      "added_event_ids": [
+        "evt-hold-b1-011"
+      ],
+      "added_event_id": "evt-hold-b1-011",
+      "sources_checked": [
+        {
+          "url": "https://www.aizukanko.com/event/953",
+          "final_url": "https://www.aizukanko.com/event/953",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:13.339756+00:00",
+          "sha256": "1cdeb0c26074b1a90faf7b945c23e2a32f9567986d9347054b7ed5bf888f40e9"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7369",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7369",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:23.539577+00:00",
+          "sha256": "909492f1472a454aa92c3b94ca48cfd7bc361a46353cf85515fba7182a4baf17"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "region": "fukushima",
+      "title": "グランフォンド奥久慈街道",
+      "disposition": "still_hold",
+      "reason": "公式観光告知の会場は「鮫川村スタート予定」のみ。主催者サイトも取得したが具体の集合会場を確認できない。",
+      "reason_code": "VENUE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.okukujicycleroute.com/",
+          "final_url": "https://www.okukujicycleroute.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:14.116900+00:00",
+          "sha256": "b2c5c32a690a63ce68a6cbc6b35432469ecfe12da0e8838d009eb341131e33ef"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7456",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7456",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:24.192979+00:00",
+          "sha256": "de28c50831792a6de418905b9129f389ac20c4df5e8d74d14aec08faa4c02729"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "region": "fukushima",
+      "title": "第50回田村市ビートル駅伝",
+      "disposition": "still_hold",
+      "reason": "市公式募集でエントリー2026-09-23締切。現在参加できる申込経路なし。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tamura.lg.jp/soshiki/30/entry_2_1.html",
+          "final_url": "https://www.city.tamura.lg.jp/soshiki/30/entry_2_1.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:49.890881+00:00",
+          "sha256": "9bc9a96d970ed517f62d090a4d93e1b6dae4667a4cace2709bef265b619aefe2"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7170",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7170",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:24.812325+00:00",
+          "sha256": "ce3ea722fd51ef193a363a2fb3cd2b35c0fa58b0765460950180eb60eec7fa6d"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "region": "fukushima",
+      "title": "只見町ウォーク2026",
+      "disposition": "still_hold",
+      "reason": "共催ウォーキング協会公式が事前申込終了・10月25日締切を明示。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://jwalking.jp/zenkoku/tadami2026/",
+          "final_url": "https://jwalking.jp/zenkoku/tadami2026/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:50.528809+00:00",
+          "sha256": "4e99178e5ab3d99b9a440b0b857b028e4da459fd316a933006308699ea49a370"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=6742",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=6742",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:25.500069+00:00",
+          "sha256": "b6665692c74ec808dac1e9db8fe86152996adca53b0c3021e4a2f88fc14b250a"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "region": "fukushima",
+      "title": "秋の坂下ダムウォーキング",
+      "disposition": "added",
+      "reason": "主催公社の現行20261122ページで日付・会場・受付中の申込を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-015"
+      ],
+      "added_event_id": "evt-hold-b1-015",
+      "sources_checked": [
+        {
+          "url": "https://www.okuma-machizukuri.or.jp/20261122",
+          "final_url": "https://www.okuma-machizukuri.or.jp/20261122",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:50.974226+00:00",
+          "sha256": "d482a2cae9693c4d0b41670a23a0faa9b427bace725990a4a186d4c6fc0817fe"
+        },
+        {
+          "url": "https://www.okuma-machizukuri.or.jp/1122",
+          "final_url": "https://www.okuma-machizukuri.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:15.377681+00:00",
+          "sha256": "e13bacb6a3d204c4b63320c2431ee1eaaf095d9a6fc29b3ab9c2dae3cde9d885"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7462",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7462",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:26.001895+00:00",
+          "sha256": "62f107a165f5cae6fadf0134c4a307a21bcf9bffc9ee6910c6628147a78f9d23"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "region": "fukushima",
+      "title": "第70回　二本松の菊人形",
+      "disposition": "added",
+      "reason": "二本松観光連盟の2026年開催告知で会期・料金・時刻を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-016"
+      ],
+      "added_event_id": "evt-hold-b1-016",
+      "sources_checked": [
+        {
+          "url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "final_url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:16.175580+00:00",
+          "sha256": "307f4dc331eb7d39e66b24ea09a826d131af69edcbb1c7f50eb3e8fee0c2d1f4"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=6978",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=6978",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:26.597846+00:00",
+          "sha256": "37e13cfad0775b4e947035024f27696bc765546577cabf98ad3d347c84f0ed37"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "region": "fukushima",
+      "title": "あいづ食の陣・秋「会津米・酒」",
+      "disposition": "not_event",
+      "reason": "参加飲食店の季節メニュー提供・販売キャンペーン。会場を持つ催事ではなく通常の飲食サービスの季節案内。",
+      "sources_checked": [
+        {
+          "url": "https://aizu-shokuno-jin.jp/",
+          "final_url": "https://aizu-shokuno-jin.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:51.499944+00:00",
+          "sha256": "1c0cf822288f739cf4e1d6c30a34b1c499b7bb169b164420c53050d9cc64b465"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7104",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7104",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:27.150996+00:00",
+          "sha256": "cc0634b94ac5a258cc09f08a1cfec003f1899297ea1339fc9d22c7570af47574"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "region": "fukushima",
+      "title": "地域と鉱物に出会う探求のキッズツアー1泊2日",
+      "disposition": "added",
+      "reason": "町公式観光告知と実施旅行会社の受付中ツアーを照合。",
+      "added_event_ids": [
+        "evt-hold-b1-018"
+      ],
+      "added_event_id": "evt-hold-b1-018",
+      "sources_checked": [
+        {
+          "url": "https://nomoto-kankou.com/tour/956/",
+          "final_url": "https://nomoto-kankou.com/tour/956/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:17.108762+00:00",
+          "sha256": "ceaf982e2cc594c7e30f6a7998e378a8b6f0c5c57c2c6fa958b905f585b09a33"
+        },
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?news=18055",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?news=18055",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:27.764809+00:00",
+          "sha256": "74035ae40068abee545f1e18b6c3e99954e783d6b95a1e75d0c6c1b31c01fa9b"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "region": "fukushima",
+      "title": "花火の里あさかわ刈上げ豊秋花火2026",
+      "disposition": "added",
+      "reason": "商工会の主催者最新告知で令和8年11月3日18時と滝輪地内会場確認。町の通年ページより具体の現行主催者告知を使用。",
+      "added_event_ids": [
+        "evt-hold-b1-019"
+      ],
+      "added_event_id": "evt-hold-b1-019",
+      "sources_checked": [
+        {
+          "url": "https://www.tif.ne.jp/jp/entry/article.html?event=7468",
+          "final_url": "https://www.tif.ne.jp/jp/entry/article.html?event=7468",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:52.640336+00:00",
+          "sha256": "1d62841c98f229bbd34bf2c7f674a0a5ac63385eb97d92ffb0106eaf1923161b"
+        },
+        {
+          "url": "https://asakawa-sci.com/news/秋の夜空を彩る、浅川の豊秋花火/",
+          "final_url": "https://asakawa-sci.com/news/%E7%A7%8B%E3%81%AE%E5%A4%9C%E7%A9%BA%E3%82%92%E5%BD%A9%E3%82%8B%E3%80%81%E6%B5%85%E5%B7%9D%E3%81%AE%E8%B1%8A%E7%A7%8B%E8%8A%B1%E7%81%AB/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:43:07.332052+00:00",
+          "sha256": "d31f1540bb86a83a395eb6226b879b70cb647aec693f24bae04c4c05b2aa94f1"
+        },
+        {
+          "url": "https://www.town.asakawa.fukushima.jp/event/000714.html",
+          "final_url": "https://www.town.asakawa.fukushima.jp/event/000714.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:28.355687+00:00",
+          "sha256": "a055b44061287b75d5069e313120d91b7b628934b51f230214e725dbf687adf1"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "region": "fukushima",
+      "title": "Roots 猪苗代 秋の大絨毯展2026",
+      "disposition": "added",
+      "reason": "主催者が2026-10-31〜11-15会期と会場を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-020"
+      ],
+      "added_event_id": "evt-hold-b1-020",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e618871/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e618871/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:18.514890+00:00",
+          "sha256": "f584e9aced60ca482c72d57af0fa30820364040b75c519088ae76efb4a8ec0f2"
+        },
+        {
+          "url": "https://jikuu-inawashiro.com/news/autumn-carpet2026/",
+          "final_url": "https://jikuu-inawashiro.com/news/autumn-carpet2026/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:53.244911+00:00",
+          "sha256": "4061daefcfa08d796e557e1738d8b031a4a57af17733c781c4d5579f6fe0774e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e618871/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e618871/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:29.023166+00:00",
+          "sha256": "dc4c1bf9ebbf4c8f17183405c6fb8f3f40539215a7ce229c5c9d6c6defdf6fa5"
+        }
+      ]
+    },
+    {
+      "index": 21,
+      "region": "fukushima",
+      "title": "SUSURUラーメンフェス福島",
+      "disposition": "added",
+      "reason": "主催KFBの45周年ページで年付き開催日、トップページで会場・時刻を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-021"
+      ],
+      "added_event_id": "evt-hold-b1-021",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617668/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617668/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:19.758089+00:00",
+          "sha256": "45b11fc7b10065d11521a206e40c63e7bb57fabfb3adc7f3fc91e44a239a5cfc"
+        },
+        {
+          "url": "https://susuru-fes.jp/fukushima",
+          "final_url": "https://susuru-fes.jp/fukushima",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:54.575552+00:00",
+          "sha256": "6244a985bb161bfc68e0f303c948973c463e851a21a646af4d11d9f8aeb37d1a"
+        },
+        {
+          "url": "https://www.kfb.co.jp/",
+          "final_url": "https://www.kfb.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:43:37.688334+00:00",
+          "sha256": "3fe14b9b4820ceb09e972ccd118d59df156499492a8924d24ed3229f570e6229"
+        },
+        {
+          "url": "https://www.kfb.co.jp/special/45th/",
+          "final_url": "https://www.kfb.co.jp/special/45th/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:43:37.237596+00:00",
+          "sha256": "6435899fdc208f223997d0ed504e4f83f4e41ab0f9a787a0357cdb65b7199996"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617668/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617668/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:30.072048+00:00",
+          "sha256": "c0cf2ef9e1ced2dcd7f0bfc3ebf3f77f8980848f813939ed611e9a88e43d3050"
+        }
+      ]
+    },
+    {
+      "index": 22,
+      "region": "fukushima",
+      "title": "はなわのダリア祭り",
+      "disposition": "past",
+      "reason": "公式観光協会の令和8年ダリア祭り主日程8月1日〜10月31日を再取得、全日程終了。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e562408/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e562408/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:20.334817+00:00",
+          "sha256": "bc1516f2a868d8470dbf4a9c35b0fbd454ab8feabbec7d3367b5b73dc887d5c9"
+        },
+        {
+          "url": "https://www.kanko-hanawa.com/dahlia",
+          "final_url": "https://www.kanko-hanawa.com/dahlia",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:55.275668+00:00",
+          "sha256": "8a39382298fe45469d7203c0708726f0188980cde8c3e5172437c563aa400ea6"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e562408/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e562408/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:30.682835+00:00",
+          "sha256": "cca4630aecb372c313c1ed1ebc713a921bb1b9f6e688cdb55e30f4b894941a0a"
+        }
+      ]
+    },
+    {
+      "index": 23,
+      "region": "fukushima",
+      "title": "第5回陽林寺マルシェ",
+      "disposition": "added",
+      "reason": "寺公式個別告知に2026年11月1日開催・ブース内容・会場・送迎を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-023"
+      ],
+      "added_event_id": "evt-hold-b1-023",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e613862/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e613862/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:21.374082+00:00",
+          "sha256": "aee65ebf8e34ce3717eb1bff5ba2d084d9b34389e773353073ab9ea708dbddf3"
+        },
+        {
+          "url": "https://isakusan-yourinji.com/",
+          "final_url": "https://isakusan-yourinji.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:55.878549+00:00",
+          "sha256": "274d9a78ccaa00e651944a0644a2595f8c36f06851ad24dcbf3840985fbb6192"
+        },
+        {
+          "url": "https://isakusan-yourinji.com/2026/09/30/第5回陽林寺マルシェのご案内/",
+          "final_url": "https://isakusan-yourinji.com/2026/09/30/%E7%AC%AC5%E5%9B%9E%E9%99%BD%E6%9E%97%E5%AF%BA%E3%83%9E%E3%83%AB%E3%82%B7%E3%82%A7%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:43:38.035907+00:00",
+          "sha256": "2d7eb07e48e0abdfd38269e7c2cd483331ef331a174821a2f4ccd7adb9681107"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e613862/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e613862/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:31.538132+00:00",
+          "sha256": "2c8f905803b6329ca58018b5adcda3d149bf72fa181baeb742dd217423929f2f"
+        }
+      ]
+    },
+    {
+      "index": 24,
+      "region": "fukushima",
+      "title": "大堀相馬焼クラフトアカデミー2026",
+      "disposition": "still_hold",
+      "reason": "主催公式Instagramを実取得したが本文を読めず、2026年の実施内容・日程を一次情報で確定できない。",
+      "reason_code": "OFFICIAL_UNREADABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e611758/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e611758/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:22.475892+00:00",
+          "sha256": "5b66d1771c632e64f59b199067470e295b501532d49de0604db8d27121729757"
+        },
+        {
+          "url": "https://www.instagram.com/somayaki_craftacademy/",
+          "final_url": "https://www.instagram.com/somayaki_craftacademy/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:43:08.680448+00:00",
+          "sha256": "a45c3444d6752c388bab1ba595f7f348d32f6463c87a13ca3356bd5e98ce4314"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e611758/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e611758/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:32.447125+00:00",
+          "sha256": "8935cf706f210ecd53fd215e7f6877731d87392662e73ef78ce827f2978221f6"
+        }
+      ]
+    },
+    {
+      "index": 25,
+      "region": "fukushima",
+      "title": "西会津ふるさとまつり",
+      "disposition": "added",
+      "reason": "町公式で令和8年10月31日・11月1日会場・内容・時刻を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-025"
+      ],
+      "added_event_id": "evt-hold-b1-025",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617891/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617891/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:23.285793+00:00",
+          "sha256": "3748e7b1a6fd852d56a38a1bd19e304ec1025147a8b9add71b02f5916e6ed861"
+        },
+        {
+          "url": "https://www.town.nishiaizu.fukushima.jp/site/kanko/6112.html",
+          "final_url": "https://www.town.nishiaizu.fukushima.jp/site/kanko/6112.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:42:56.872058+00:00",
+          "sha256": "0d897180afcad37e91b734a2dabbcd759f419ca7a8687a451d23a55b0239c31e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617891/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617891/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:41:33.320490+00:00",
+          "sha256": "88a2a4290b75db9ac86512babef1e0677e685208296a7c230e16fd1a59a58d58"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "region": "fukushima",
+      "title": "猪苗代新そば祭り",
+      "disposition": "added",
+      "reason": "公式観光ビューローに2026年11月7日・8日とカメリーナを明記。",
+      "added_event_ids": [
+        "evt-hold-b1-026"
+      ],
+      "added_event_id": "evt-hold-b1-026",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e620153/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e620153/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:28.689609+00:00",
+          "sha256": "58240ec1f00f21b3e06625d8bc09377167a74ab37739089290a8b68af9f5996b"
+        },
+        {
+          "url": "https://www.aizukanko.com/feature/sobafes2024/sobafes2024",
+          "final_url": "https://www.aizukanko.com/feature/sobafes2024/sobafes2024",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:30.145612+00:00",
+          "sha256": "f2d195f169861a210c25cc1e8a4352dd39951190125ca0f69a3cc8a908afdb86"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e620153/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e620153/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:10.838575+00:00",
+          "sha256": "5e0c99b11efa50ffada19083ce0e8b5e0663893d80238d221cbbd56a929b581d"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "region": "fukushima",
+      "title": "0歳からの親子映画鑑賞会「それゆけ！アンパンマン　パンタンと約束の星」（福島会場）",
+      "disposition": "added",
+      "reason": "主催者販売ページで2026-11-03上映日と会場・当日まで販売期間を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-027"
+      ],
+      "added_event_id": "evt-hold-b1-027",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e613924/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e613924/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:29.373531+00:00",
+          "sha256": "18f0914e7f5adf2e0208c600377d948af0578a56003c1f78df7d732074d152a4"
+        },
+        {
+          "url": "https://teket.jp/13648/77147",
+          "final_url": "https://teket.jp/13648/77147",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:30.039580+00:00",
+          "sha256": "297030c152e08ddb4c287aedea6f00c2e2962ee901f6d60d809cd3b0902c522e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e613924/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e613924/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:11.806441+00:00",
+          "sha256": "95c5298c123d1c6991959e4967ddaeaef1d48755e22cdd25075315db97fcc360"
+        }
+      ]
+    },
+    {
+      "index": 28,
+      "region": "fukushima",
+      "title": "名峰霊山　紅葉まつり",
+      "disposition": "added",
+      "reason": "霊山公式の2026年祭り告知を再取得、日付・会場・物産展時間確認。",
+      "added_event_ids": [
+        "evt-hold-b1-028"
+      ],
+      "added_event_id": "evt-hold-b1-028",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e620965/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e620965/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:31.366994+00:00",
+          "sha256": "5ad478c45c207c35ef38d7e134504a9bffb4f0f1e9d4afce01440ca499f1b851"
+        },
+        {
+          "url": "https://mt-ryozen.jp/",
+          "final_url": "https://mt-ryozen.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:32.261185+00:00",
+          "sha256": "fa169e6c20771fd969921b83b0a3807a42889ae26134f188d557a3ef15acb095"
+        },
+        {
+          "url": "https://mt-ryozen.jp/2026/10/10/2026%e7%b4%85%e8%91%89%e3%81%be%e3%81%a4%e3%82%8a10%e6%9c%8831%e6%97%a5%ef%bd%9e11%e6%9c%883%e6%97%a5%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%94%e6%a1%88%e5%86%85/",
+          "final_url": "https://mt-ryozen.jp/2026/10/10/2026%E7%B4%85%E8%91%89%E3%81%BE%E3%81%A4%E3%82%8A10%E6%9C%8831%E6%97%A5%EF%BD%9E11%E6%9C%883%E6%97%A5%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%94%E6%A1%88%E5%86%85/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:30.792624+00:00",
+          "sha256": "ba08908cd11e38c9d48aa90b3994b3dafe467a05d125af66e98de8ddd38c46eb"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e620965/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e620965/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:13.164237+00:00",
+          "sha256": "ed3f73fb5155aa48cb621d60cf6d78602213d4e5431d8f098a4868feaed6b2aa"
+        }
+      ]
+    },
+    {
+      "index": 29,
+      "region": "fukushima",
+      "title": "霞ヶ城公園紅葉まつり",
+      "disposition": "duplicate",
+      "reason": "市公式記者会見で紅葉まつりを菊人形会場内の付帯イベントとして確認。既存の広い菊人形レコードに含まれる催し。",
+      "matched_event_id": "evt-hold-b1-016",
+      "sources_checked": [
+        {
+          "url": "https://www.city.nihonmatsu.lg.jp/kouhou_koucyo/houdou/kisya/r8/page014421.html",
+          "final_url": "https://www.city.nihonmatsu.lg.jp/kouhou_koucyo/houdou/kisya/r8/page014421.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:48:27.548773+00:00",
+          "sha256": "1ed089bb31a39b585b501bfd72e85e4a33580b66848c6dc57da6e9e2ee6eac22"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e621092/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e621092/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:33.870522+00:00",
+          "sha256": "b808a53cc01b7d2b06cda98867d33a85cb3ffeaaac14aea5a1c3305b5cd35e0a"
+        },
+        {
+          "url": "https://www.nihonmatsu-dmo.jp/",
+          "final_url": "https://www.nihonmatsu-dmo.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:07.455137+00:00",
+          "sha256": "0e31ff7ea9925e76665d089c6c9a6841e5603999b47208a397132243c6ffbce8"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e621092/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e621092/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:14.177523+00:00",
+          "sha256": "44522d9666d1768b9d4c595b6c9c22d46a16fc0e9e8cda20b21a5f8806f325df"
+        }
+      ]
+    },
+    {
+      "index": 30,
+      "region": "fukushima",
+      "title": "第26回そうま市民まつり",
+      "disposition": "still_hold",
+      "reason": "主催観光協会の同一ページで本文は令和8年11月1日、開催期間欄は2025-11-1。公式内部の年矛盾。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e615606/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e615606/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:34.683209+00:00",
+          "sha256": "ce9359a11fc9b44719eceb84fc3fe2f9a39dd2d260d67a3d49cd8bbd44f6488d"
+        },
+        {
+          "url": "https://soma-kanko.jp",
+          "final_url": "https://soma-kanko.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:35.264962+00:00",
+          "sha256": "884f1652c6df34d0762c97191e9d8876d105ecf5a255c98ccc53cc22d94002bf"
+        },
+        {
+          "url": "https://soma-kanko.jp/event/2026-11-1shimin/",
+          "final_url": "https://soma-kanko.jp/event/2026-11-1shimin/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:32.502248+00:00",
+          "sha256": "c28546279961925a679eaac1ad898accba591f63236f1d1c0e017fc9a0641e12"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e615606/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e615606/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:15.339833+00:00",
+          "sha256": "0ac82a8d433fb136cf08a1c25738f485f77c16c2f4587a10744be64291c1ceaf"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "region": "fukushima",
+      "title": "会津若松市地産地消まつり",
+      "disposition": "added",
+      "reason": "会津若松市公式で令和8年11月14・15日と会場、時間確認。",
+      "added_event_ids": [
+        "evt-hold-b1-031"
+      ],
+      "added_event_id": "evt-hold-b1-031",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617094/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617094/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:36.581082+00:00",
+          "sha256": "2a387754cc4f97ca7f7202a71e4b667982ad41be9162dc0bf7617d0529740fd1"
+        },
+        {
+          "url": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2026082100016/",
+          "final_url": "https://www.city.aizuwakamatsu.fukushima.jp/docs/2026082100016/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:37.488241+00:00",
+          "sha256": "f65f5f876c63caac1f6f5eabe7d08388925305e371a469b1099de36ea4da0924"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e617094/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e617094/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:15.912734+00:00",
+          "sha256": "03b450afefe0014617d8cd44daea51ecc0c7d4ae763c94c475ca19d7ad37a7ca"
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "region": "fukushima",
+      "title": "松明あかし",
+      "disposition": "added",
+      "reason": "市公式の現行URLで令和8年11月14日、昼の子ども体験から夜の点火まで確認。",
+      "added_event_ids": [
+        "evt-hold-b1-032"
+      ],
+      "added_event_id": "evt-hold-b1-032",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e612838/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e612838/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:38.160453+00:00",
+          "sha256": "c074043da78418ae27f3cc0c8137128b78a709af5d5ebd8c9d3fb60a57da3eb4"
+        },
+        {
+          "url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/event/taimatsu_akashi/1015028.html",
+          "final_url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/event/taimatsu_akashi/1015028.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:07.941927+00:00",
+          "sha256": "15df01a3ee9e6a11b5815dacae02985a141d242327ddb84a3934dd75d92186eb"
+        },
+        {
+          "url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/kanko_event/taimatsu_akashi/1015028.html",
+          "final_url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/kanko_event/taimatsu_akashi/1015028.html",
+          "http_status": 404,
+          "checked_at": "2026-10-31T21:45:39.317377+00:00",
+          "sha256": "0de9bed384aabad73bbdbf7518b1bb3d088579ab3d7c349619cd5adcd8ccd8e3"
+        },
+        {
+          "url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/event/taimatsu_akashi/",
+          "final_url": "https://www.city.sukagawa.fukushima.jp/kanko_sukagawa/event/taimatsu_akashi/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:33.736452+00:00",
+          "sha256": "7408f5fef8640e826da9ed44c6a056baf27a0e1847223240ffc1cb4ad4ae15ed"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e612838/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e612838/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:16.803444+00:00",
+          "sha256": "a5f1445bda5d9162a8000bdcb905d23869df015688a136f1413760d0d18975b4"
+        }
+      ]
+    },
+    {
+      "index": 33,
+      "region": "fukushima",
+      "title": "あかりのファンタジーイルミネーション in おだか",
+      "disposition": "added",
+      "reason": "主催観光協会公式に2026-11-14〜2027-01-11、各会場・点灯時間確認。",
+      "added_event_ids": [
+        "evt-hold-b1-033"
+      ],
+      "added_event_id": "evt-hold-b1-033",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e209299/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e209299/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:40.200549+00:00",
+          "sha256": "c7c45cd34c9298b3783d100486d59529269840c7af4d5a5e844f285cf2bc5c37"
+        },
+        {
+          "url": "https://odaka6014.jp/illumination/",
+          "final_url": "https://odaka6014.jp/illumination/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:41.186281+00:00",
+          "sha256": "803a30b791804a9248963f6bc942c9b15b56577dd0019d6663838813a113deea"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e209299/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e209299/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:17.731822+00:00",
+          "sha256": "c30a8b3b12e3060a07e113014af60abf0b0c51dae6ce1d96acc42124ea5ff15b"
+        }
+      ]
+    },
+    {
+      "index": 34,
+      "region": "fukushima",
+      "title": "KFB福島放送開局45周年記念 SUSURUラーメンフェス福島",
+      "disposition": "duplicate",
+      "reason": "主催者の年付き日程と開成山会場を今回再取得、先の候補21と同じ。",
+      "matched_event_id": "evt-hold-b1-021",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e618324/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e618324/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:42.127138+00:00",
+          "sha256": "13f6f529c9566f9cfaad938924c00a81a3e0ae9f3fa15537504c9767f97b662e"
+        },
+        {
+          "url": "https://susuru-fes.jp/fukushima",
+          "final_url": "https://susuru-fes.jp/fukushima",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:42.627800+00:00",
+          "sha256": "6244a985bb161bfc68e0f303c948973c463e851a21a646af4d11d9f8aeb37d1a"
+        },
+        {
+          "url": "https://www.kfb.co.jp/special/45th/",
+          "final_url": "https://www.kfb.co.jp/special/45th/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:17.961655+00:00",
+          "sha256": "6435899fdc208f223997d0ed504e4f83f4e41ab0f9a787a0357cdb65b7199996"
+        },
+        {
+          "url": "https://www.kfb.co.jp/",
+          "final_url": "https://www.kfb.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:18.702038+00:00",
+          "sha256": "3fe14b9b4820ceb09e972ccd118d59df156499492a8924d24ed3229f570e6229"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e618324/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e618324/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:19.471203+00:00",
+          "sha256": "9bd04e00c70748a93387d0c2b74fc5c51a217042240f2e7f2e5775b5200eecdc"
+        }
+      ]
+    },
+    {
+      "index": 35,
+      "region": "fukushima",
+      "title": "第70回二本松の菊人形",
+      "disposition": "duplicate",
+      "reason": "観光連盟公式を今回再取得、2026-10-10開始・霞ヶ城の同一イベント。",
+      "matched_event_id": "evt-hold-b1-016",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e621091/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0207e621091/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:43.366344+00:00",
+          "sha256": "6259905e1be339cb3591bf1fe5b5e3ba5b1dd64677454b4b98fc140e37f25e71"
+        },
+        {
+          "url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "final_url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:44.215511+00:00",
+          "sha256": "1e9aac06167dbdba92f73b1d14f557de011517bf15ba4c871da74abe6ea5d80f"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0207e621091/",
+          "final_url": "https://www.walkerplus.com/event/ar0207e621091/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:20.406171+00:00",
+          "sha256": "8e5e2dbc1e1e3459bcc2f6c023c2a43e4a3e184858abf0fc3a1028cfe59647e0"
+        }
+      ]
+    },
+    {
+      "index": 36,
+      "region": "fukushima",
+      "title": "それいけ!アンパンマン パンタンと約束の星　福島会場",
+      "disposition": "duplicate",
+      "reason": "主催者のteketページを今回再取得。2026-11-03・福島県文化センターの同一上映会。",
+      "matched_event_id": "evt-hold-b1-027",
+      "sources_checked": [
+        {
+          "url": "https://teket.jp/13648/77147",
+          "final_url": "https://teket.jp/13648/77147",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:34.576644+00:00",
+          "sha256": "a98ed64792a1640937ac009b464664460fa345e7e2b858844e747e526b866f52"
+        },
+        {
+          "url": "https://iko-yo.net/events/599267",
+          "final_url": "https://iko-yo.net/events/599267",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:21.522878+00:00",
+          "sha256": "aff48c2ece78a9505717c2f7597aa26316337efadf84a8221fdb5230b300e725"
+        }
+      ]
+    },
+    {
+      "index": 37,
+      "region": "fukushima",
+      "title": "福島県環境創造シンポジウム「ふくしまミライchat」",
+      "disposition": "added",
+      "reason": "主催公式のSVG aria-labelが2026-11-14 9〜17時・参加無料を明記。工作等の一般参加と整理券条件確認。",
+      "added_event_ids": [
+        "evt-hold-b1-037"
+      ],
+      "added_event_id": "evt-hold-b1-037",
+      "sources_checked": [
+        {
+          "url": "https://fukushima-env-symposium.org/assets/img-vector14.svg",
+          "final_url": "https://fukushima-env-symposium.org/assets/img-vector14.svg",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:48:05.248229+00:00",
+          "sha256": "b580a3c4db1d5ef246f9f53281809e4a289dd48781744b4ea714be5deb8e677b"
+        },
+        {
+          "url": "https://fukushima-env-symposium.org/assets/img47.png",
+          "final_url": "https://fukushima-env-symposium.org/assets/img47.png",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:42.002244+00:00",
+          "sha256": "fccc33c9ca7ea9ec4d33ae86b0ba0706baa326ca13c3df1aff4f1cb0a90a0fc2"
+        },
+        {
+          "url": "https://fukushima-env-symposium.org/assets/img49.png",
+          "final_url": "https://fukushima-env-symposium.org/assets/img49.png",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:42.346382+00:00",
+          "sha256": "98f267dd22132323322a0e00fadf2c1a0d10d0e39a6c9b42296b40a564cde072"
+        },
+        {
+          "url": "https://fukushima-env-symposium.org/",
+          "final_url": "https://fukushima-env-symposium.org/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:36.720308+00:00",
+          "sha256": "0dddf969170e6599715fad972639f4d8a7759de3056eefdd33b083c7c55eafbc"
+        },
+        {
+          "url": "https://iko-yo.net/events/606369",
+          "final_url": "https://iko-yo.net/events/606369",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:22.352505+00:00",
+          "sha256": "3a1ee3aa60cb1a7b41388f24b6125f4c2d86a541f844a43dfad6e64770ae0ccd"
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "region": "fukushima",
+      "title": "ブリティッシュヒルズの「ハロウィンイベント」",
+      "disposition": "still_hold",
+      "reason": "公式個別ページは緊急メンテナンス503。案内された臨時公式も取得したが当該ハロウィンの日付・内容が読めず確認不能。",
+      "reason_code": "OFFICIAL_UNREADABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.british-hills.co.jp/temporary/",
+          "final_url": "https://www.british-hills.co.jp/temporary/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:08.332100+00:00",
+          "sha256": "a1cba086a53184eb4338fc1a15eb7199ec291834a43035ed88ebac8d90690f83"
+        },
+        {
+          "url": "https://www.british-hills.co.jp/hw/day-event.html",
+          "final_url": "https://www.british-hills.co.jp/hw/day-event.html",
+          "http_status": 503,
+          "checked_at": "2026-10-31T21:46:37.582435+00:00",
+          "sha256": "32cb689c52920be70f66c3120002595b22ff727b0aa7ea760601bc8c10a6c631"
+        },
+        {
+          "url": "https://iko-yo.net/events/605626",
+          "final_url": "https://iko-yo.net/events/605626",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:23.168148+00:00",
+          "sha256": "087e154869035fd7e4d33890a104de8493920ea4dfb723c8920243448823a3be"
+        }
+      ]
+    },
+    {
+      "index": 39,
+      "region": "fukushima",
+      "title": "福島県石川町｜地域と鉱物に出会う探究のキッズツアー（１泊２日）",
+      "disposition": "duplicate",
+      "reason": "旅行会社公式を候補39として再取得、2026-11-21・ひとくらすの同じツアー。",
+      "matched_event_id": "evt-hold-b1-018",
+      "sources_checked": [
+        {
+          "url": "https://nomoto-kankou.com/tour/956/",
+          "final_url": "https://nomoto-kankou.com/tour/956/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:38.160297+00:00",
+          "sha256": "70eaae21c44dd224933478386f71cf7b8bc0a5d09add3b6d60cf2d7b6c091233"
+        },
+        {
+          "url": "https://iko-yo.net/events/610788",
+          "final_url": "https://iko-yo.net/events/610788",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:23.884654+00:00",
+          "sha256": "c1a8214bb5e44bfc78649301b87e6ac6c121e462f8172508bc46ee0c58c4a5db"
+        }
+      ]
+    },
+    {
+      "index": 40,
+      "region": "fukushima",
+      "title": "あかりのファンタジーイルミネーション in おだか 2026",
+      "disposition": "duplicate",
+      "reason": "主催者イルミネーション公式を再取得し同じ開始日と会場確認。",
+      "matched_event_id": "evt-hold-b1-033",
+      "sources_checked": [
+        {
+          "url": "https://odaka6014.jp/illumination/",
+          "final_url": "https://odaka6014.jp/illumination/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:39.529257+00:00",
+          "sha256": "803a30b791804a9248963f6bc942c9b15b56577dd0019d6663838813a113deea"
+        },
+        {
+          "url": "https://iko-yo.net/events/607062",
+          "final_url": "https://iko-yo.net/events/607062",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:24.609959+00:00",
+          "sha256": "011414b376562c45154e13f7a979cfbec6d40530868e19a588aee129c74fd506"
+        }
+      ]
+    },
+    {
+      "index": 41,
+      "region": "fukushima",
+      "title": "中テレ祭り2026",
+      "disposition": "added",
+      "reason": "主催福島中央テレビの開催概要が2026-12-04〜06・会場・料金と販売期間を明示。",
+      "added_event_ids": [
+        "evt-hold-b1-041"
+      ],
+      "added_event_id": "evt-hold-b1-041",
+      "sources_checked": [
+        {
+          "url": "https://www.fct.co.jp/chutele_matsuri/outline.html",
+          "final_url": "https://www.fct.co.jp/chutele_matsuri/outline.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:47:08.608925+00:00",
+          "sha256": "e7b74fe218a38207d91bdd05c275d4e467cf57c9305fd6c8d864fc7045b06d47"
+        },
+        {
+          "url": "https://www.fct.co.jp/chutele_matsuri/",
+          "final_url": "https://www.fct.co.jp/chutele_matsuri/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:40.495925+00:00",
+          "sha256": "f9368deaf1a02efe606f59a5e927c8ef2b8ce006bce001b714c89aecf0f0f6b0"
+        },
+        {
+          "url": "https://iko-yo.net/events/597093",
+          "final_url": "https://iko-yo.net/events/597093",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:25.432113+00:00",
+          "sha256": "56ce067981247f667db81b2a9236421f898d27bd859b542ebd9b61b5742d505c"
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "region": "fukushima",
+      "title": "スマートリンクタウンいわき中央台 まちびらき",
+      "disposition": "added",
+      "reason": "公式画像altに2026年と4開催日が明記。会場・子ども縁日等を公式本文で確認。",
+      "added_event_ids": [
+        "evt-hold-b1-042"
+      ],
+      "added_event_id": "evt-hold-b1-042",
+      "sources_checked": [
+        {
+          "url": "https://slt-iwaki.jp/machibiraki/",
+          "final_url": "https://slt-iwaki.jp/machibiraki/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:26.141955+00:00",
+          "sha256": "93a4b0e7cb9276a3a7bc5c6be483f648911e3f34226462a2d08dbc1452fd8faf"
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "region": "fukushima",
+      "title": "福島中央子ども劇場 第38回地域公演",
+      "disposition": "still_hold",
+      "reason": "候補は「第38回星空観察会」だが指定の主催者URLは現在「第38回地域公演 パントマイム」。候補の開催日・公式根拠を確定できないため別企画を代用しない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://teket.jp/18663/78325",
+          "final_url": "https://teket.jp/18663/78325",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:26.775816+00:00",
+          "sha256": "b91ef05c830c8e1e019769c7bbb0afd4b8601a7978594b12fc7d18d875ba90b8"
+        }
+      ]
+    },
+    {
+      "index": 44,
+      "region": "fukushima",
+      "title": "第70回 二本松の菊人形",
+      "disposition": "duplicate",
+      "reason": "観光連盟公式で同一第70回菊人形を再取得確認。",
+      "matched_event_id": "evt-hold-b1-016",
+      "sources_checked": [
+        {
+          "url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "final_url": "https://www.nihonmatsu-kanko.jp/?p=4879",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:46:41.171757+00:00",
+          "sha256": "2e1cc5643cf7f2d6d53d8a84ad7e05adc024ea7744b013bb2a8f6d0716ea180a"
+        },
+        {
+          "url": "https://iko-yo.net/events?prefecture_ids%5B%5D=7",
+          "final_url": "https://iko-yo.net/events?prefecture_ids%5B%5D=7",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:28.174120+00:00",
+          "sha256": "750c97c410c3a17fa49aca8f8a3132a3ddd5869c1b826d0d6470f447a55d4b13"
+        }
+      ]
+    },
+    {
+      "index": 45,
+      "region": "fukushima",
+      "title": "福島スマイルプロジェクト 撮影ワークショップ 11/14 白河市立図書館",
+      "disposition": "duplicate",
+      "reason": "主催者公式を再取得、11月14日のりぶらん教室と一致。",
+      "matched_event_id": "evt-hold-b1-006-shirakawa",
+      "sources_checked": [
+        {
+          "url": "https://www.fukushima-smile.site/",
+          "final_url": "https://www.fukushima-smile.site/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:29.190501+00:00",
+          "sha256": "606866c7b92462c681ee8ea30ed3839322e2e24fe385a74ee176a4a639c043dd"
+        }
+      ]
+    },
+    {
+      "index": 46,
+      "region": "fukushima",
+      "title": "福島スマイルプロジェクト 撮影ワークショップ 11/21 開成山公園",
+      "disposition": "duplicate",
+      "reason": "主催者公式を再取得、11月21日の開成山教室と一致。",
+      "matched_event_id": "evt-hold-b1-006-koriyama",
+      "sources_checked": [
+        {
+          "url": "https://www.fukushima-smile.site/",
+          "final_url": "https://www.fukushima-smile.site/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:29.729223+00:00",
+          "sha256": "606866c7b92462c681ee8ea30ed3839322e2e24fe385a74ee176a4a639c043dd"
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "region": "okayama",
+      "title": "企画展「さかいひろこの縄文漫遊記」～縄文まんが家のみたJOMON WORLD～(9/6～11/29)猪風来美術館",
+      "disposition": "added",
+      "reason": "県公式本文に令和8年9月6日〜11月29日、会場・観覧料明記。",
+      "added_event_ids": [
+        "evt-hold-b1-047"
+      ],
+      "added_event_id": "evt-hold-b1-047",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.okayama.jp/site/art/1050159.html",
+          "final_url": "https://www.pref.okayama.jp/site/art/1050159.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:30.220540+00:00",
+          "sha256": "b949e95059190b0d7ffdc46466869b982ac62a2618c285db5c6f26f5475e4f19"
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "region": "okayama",
+      "title": "わくわくこどもまつりin岡山ドーム",
+      "disposition": "added",
+      "reason": "市公式に令和8年11月1日、2会場・実施内容を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-048"
+      ],
+      "added_event_id": "evt-hold-b1-048",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kankou/0000012755.html",
+          "final_url": "https://www.city.okayama.jp/kankou/0000012755.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:30.885633+00:00",
+          "sha256": "23a35248f188954fdc55d62b1d293833a0f7c3c71bfc77934a1c11c7e82372f4"
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "region": "okayama",
+      "title": "わくわくこどもまつりin岡山ドーム【岡山ドーム・北長瀬未来ふれあい総合公園】",
+      "disposition": "duplicate",
+      "reason": "市の個別告知と年度付き本体告知を新規取得して照合、同じ11月1日と2会場の催事。",
+      "matched_event_id": "evt-hold-b1-048",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kankou/0000012755.html",
+          "final_url": "https://www.city.okayama.jp/kankou/0000012755.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:19.341623+00:00",
+          "sha256": "23a35248f188954fdc55d62b1d293833a0f7c3c71bfc77934a1c11c7e82372f4"
+        },
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085676.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085676.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:31.517879+00:00",
+          "sha256": "e87f4582fd927e15e5b4c27c25f44eddfd5933bf99d4bc4142c15b0216843c2c"
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "region": "okayama",
+      "title": "読書週間おはなしの会【幸町図書館】",
+      "disposition": "added",
+      "reason": "市公式に令和8年11月1日・時刻・料金・幼児対象・参加自由を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-050"
+      ],
+      "added_event_id": "evt-hold-b1-050",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085778.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085778.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:45:32.096692+00:00",
+          "sha256": "ed7784d42856c120a56da7f8429378b3d6dab679dbf3201423ada963cc095f0c"
+        }
+      ]
+    },
+    {
+      "index": 51,
+      "region": "okayama",
+      "title": "DESIGN GOALs農福カルタ大会&マルシェ【北長瀬未来ふれあい総合公園】",
+      "disposition": "added",
+      "reason": "年付き市公式で一般入場のマルシェ確認。申込締切済みカルタ大会への新規参加とは区別。",
+      "added_event_ids": [
+        "evt-hold-b1-051"
+      ],
+      "added_event_id": "evt-hold-b1-051",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:27.049562+00:00",
+          "sha256": "3834ac19f0ea5de0df9bc99dcfcc0dc0424df8789b6df6c4ab189392a65a3a35"
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "region": "okayama",
+      "title": "令和8年度わくわくこどもまつりin岡山ドーム【岡山ドーム】",
+      "disposition": "duplicate",
+      "reason": "令和8年11月1日岡山ドームの同じ催事。本告知の2会場案内を含む既存IDに照合。",
+      "matched_event_id": "evt-hold-b1-048",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086116.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086116.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:27.476268+00:00",
+          "sha256": "861b3425bd92bc17d6ba163d842369707098affd98b9739a5d235ec4a6f52c7c"
+        }
+      ]
+    },
+    {
+      "index": 53,
+      "region": "okayama",
+      "title": "保育のしごと 実習体験研修会【岡山市今認定こども園・岡山市興除認定こども園】",
+      "disposition": "still_hold",
+      "reason": "保育士資格を持つ方向けの就業実習研修。家族で参加する催しではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086053.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086053.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:27.867625+00:00",
+          "sha256": "3227bda38a24b68223b9a3e27a638cca0008411c3a86a520c7ce2f19cf52b265"
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "region": "okayama",
+      "title": "子どもアンテナ図鑑【操山公園里山センター】",
+      "disposition": "still_hold",
+      "reason": "市公式は11月3日のみで開催年を記載せず。検索でも別の年付き公式開催根拠を確定できない。更新日を開催年に流用しない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085688.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085688.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:28.252762+00:00",
+          "sha256": "171d70996e9e645fec78067f01ce9d6bd78dfc0d8351eeb209680125ef004761"
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "region": "okayama",
+      "title": "【2026年11月3日】半田山秋の花まつり〈無料開園日〉【岡山市半田山植物園】",
+      "disposition": "added",
+      "reason": "市公式の年付き見出しと11月3日の本文・植物園会場を照合。",
+      "added_event_ids": [
+        "evt-hold-b1-055"
+      ],
+      "added_event_id": "evt-hold-b1-055",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000085828.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085828.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:28.739100+00:00",
+          "sha256": "0bfacfa81d9a03f7e69cc4ed29c3313ee398d2dc61005983f1a1a0e372d19f34"
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "region": "okayama",
+      "title": "令和8年度「ヨムヨム赤ちゃんおはなし会」 【岡山県立図書館】",
+      "disposition": "added",
+      "reason": "市公式の令和8年度見出しと毎月の列挙日を確認。今後の11月〜3月を掲載。",
+      "added_event_ids": [
+        "evt-hold-b1-056"
+      ],
+      "added_event_id": "evt-hold-b1-056",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000079905.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000079905.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:29.181300+00:00",
+          "sha256": "e755c5682e554b44c38ac39a3d25761096146242cf709e4d27902ceedb3049b9"
+        }
+      ]
+    },
+    {
+      "index": 57,
+      "region": "okayama",
+      "title": "出前児童館(2)【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-057"
+      ],
+      "added_event_id": "evt-hold-b1-057",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085117.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085117.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:29.621348+00:00",
+          "sha256": "3c908a92930dd8db732bdf8a71b4c8afbf5acee20bba4d49655fdfed3d716671"
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "region": "okayama",
+      "title": "【2026年5月7日、6月4日、7月2日、9月3日、10月1日、11月5日、12月3日、2027年1月7日、2月4日】 親子であそぼう（連続講座・全9回） 【芳田公民館】",
+      "disposition": "added",
+      "reason": "市公式が令和8年〜9年の各日を明記。現行申込経路も記載。",
+      "added_event_ids": [
+        "evt-hold-b1-058"
+      ],
+      "added_event_id": "evt-hold-b1-058",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000081317.html",
+          "final_url": "https://www.city.okayama.jp/life/0000081317.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:30.272183+00:00",
+          "sha256": "1d147721b5c073f60583e67a8fb7eed6dafabb6f1d4cfc507d1a94cffa636cf5"
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "region": "okayama",
+      "title": "【2026年11月7日から】秋の釣り大会（中級者向け）【犬島自然の家】",
+      "disposition": "still_hold",
+      "reason": "公式が10月7日までの申込を指定。現在は締切後で当日参加経路なし。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000085019.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085019.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:30.975801+00:00",
+          "sha256": "80f1d574bf69665cc90e53f8f8dc180f4d750be3beb6c6382c0d6d2149e378e6"
+        }
+      ]
+    },
+    {
+      "index": 60,
+      "region": "okayama",
+      "title": "【2026年11月7日、8日】第54回 高松文化まつり【高松公民館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-060"
+      ],
+      "added_event_id": "evt-hold-b1-060",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000085582.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085582.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:31.477497+00:00",
+          "sha256": "000361ce29f6d1e539e1c96d01a7a2256108cadc612aa2dc5f24ba071b18b22a"
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "region": "okayama",
+      "title": "西川アイプラザ合同事業「あつまれ！芝生で絵本ピクニック」【下石井公園】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-061"
+      ],
+      "added_event_id": "evt-hold-b1-061",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "final_url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:04.838715+00:00",
+          "sha256": "5ff3ca679553061a3748e7d25f4a1cdc95ab222057a61dab61af46f518952014"
+        },
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085677.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085677.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:31.916539+00:00",
+          "sha256": "5d795b3bc01a1ae2e31923e5fde413697ce84ce5f1ac4fd5bbc3e092364746f5"
+        }
+      ]
+    },
+    {
+      "index": 62,
+      "region": "okayama",
+      "title": "【2026年11月7日】西川アイプラザ合同事業 「あつまれ！芝生で絵本ピクニック」【下石井公園】",
+      "disposition": "duplicate",
+      "reason": "年度付き市の同事業告知を再取得、2026-11-07・下石井公園の同じ催事。",
+      "matched_event_id": "evt-hold-b1-061",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "final_url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:05.335034+00:00",
+          "sha256": "5ff3ca679553061a3748e7d25f4a1cdc95ab222057a61dab61af46f518952014"
+        },
+        {
+          "url": "https://www.city.okayama.jp/life/0000085775.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085775.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:32.592243+00:00",
+          "sha256": "2075384a23e7d26498f9b08ccb698ffabedb5474cc1a39608830e0f8c8c10d69"
+        }
+      ]
+    },
+    {
+      "index": 63,
+      "region": "okayama",
+      "title": "西川アイプラザ合同事業「あつまれ！芝生で絵本ピクニック」",
+      "disposition": "duplicate",
+      "reason": "令和8年11月7日・下石井公園の同じ絵本ピクニック。",
+      "matched_event_id": "evt-hold-b1-061",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "final_url": "https://www.city.okayama.jp/kyoudou/0000086156.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:33.148874+00:00",
+          "sha256": "5ff3ca679553061a3748e7d25f4a1cdc95ab222057a61dab61af46f518952014"
+        }
+      ]
+    },
+    {
+      "index": 64,
+      "region": "okayama",
+      "title": "紅葉の里山歩き、竹細工、焼き芋【めだかの学校】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-064"
+      ],
+      "added_event_id": "evt-hold-b1-064",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000084116.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000084116.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:33.718760+00:00",
+          "sha256": "c17fe40b02b26aa8ef9eb19a2c5caff9ff1c45ccf33147b730be7d47b35cfd48"
+        }
+      ]
+    },
+    {
+      "index": 65,
+      "region": "okayama",
+      "title": "リトミック(遊戯室)【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-065"
+      ],
+      "added_event_id": "evt-hold-b1-065",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085120.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085120.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:34.364974+00:00",
+          "sha256": "195d039717677fd9e5faad5479cd9f119b1ca0b3c0ede95ac4d34621ad329731"
+        }
+      ]
+    },
+    {
+      "index": 66,
+      "region": "okayama",
+      "title": "赤ちゃん絵本読み聞かせ体験【西大寺緑花公園緑の図書室】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-066"
+      ],
+      "added_event_id": "evt-hold-b1-066",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085802.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085802.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:34.984191+00:00",
+          "sha256": "775b685e77547ffd2edf19a11c5477f29f7e1b238d106d1e05f20aba1e7b2dc7"
+        }
+      ]
+    },
+    {
+      "index": 67,
+      "region": "okayama",
+      "title": "スマイルクラブ「リトミック」【植松児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-067"
+      ],
+      "added_event_id": "evt-hold-b1-067",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086115.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086115.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:35.519042+00:00",
+          "sha256": "d231a3cefa2637ffc126ee2b48bd3c8e01f14fc42a6120b8e013bd4e3124c386"
+        }
+      ]
+    },
+    {
+      "index": 68,
+      "region": "okayama",
+      "title": "幼児クラブ子育て講座「交通安全教室」【岡山市西ふれあい児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-068"
+      ],
+      "added_event_id": "evt-hold-b1-068",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086441.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086441.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:36.145452+00:00",
+          "sha256": "7b7db5905a946034620734f6c0443a158cacb0145f5561461ba7981482e263b9"
+        }
+      ]
+    },
+    {
+      "index": 69,
+      "region": "okayama",
+      "title": "おやこおたのしみ会【幸町図書館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-069"
+      ],
+      "added_event_id": "evt-hold-b1-069",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085779.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085779.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:36.814499+00:00",
+          "sha256": "2e51431ed2651cd1878667789d19f04da4c89df7e3070f9f8f3935fe752085cb"
+        }
+      ]
+    },
+    {
+      "index": 70,
+      "region": "okayama",
+      "title": "電一郎先生のかわいい電気工作教室【中央図書館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-070"
+      ],
+      "added_event_id": "evt-hold-b1-070",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085772.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085772.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:37.333746+00:00",
+          "sha256": "650fbfd5d90c555e7cad4a24a4a6abb6679d8550e9c2a095e95444ff898af952"
+        }
+      ]
+    },
+    {
+      "index": 71,
+      "region": "okayama",
+      "title": "おもしろクラブ【葉っぱでしおりを作ろう！】【岡山市ふれあい児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-071"
+      ],
+      "added_event_id": "evt-hold-b1-071",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086313.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086313.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:37.828931+00:00",
+          "sha256": "ee3fba755f6d6cd832a954b88dd7e60b9427acc64a81864f1f08c90fc704680c"
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "region": "okayama",
+      "title": "家族で楽しむボードゲーム会　ふぁみぼど！【岡山県立図書館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-072"
+      ],
+      "added_event_id": "evt-hold-b1-072",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000084362.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000084362.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:38.369460+00:00",
+          "sha256": "b48ff4581f0296f879c784593ca9ec32eb93852fc5002dddfaf3a7a3230a9456"
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "region": "okayama",
+      "title": "おたのしみかい【伊島図書館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-073"
+      ],
+      "added_event_id": "evt-hold-b1-073",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085793.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085793.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:38.855471+00:00",
+          "sha256": "58b773a8b7c8d1ede8a145a477156cf054b75f7ae319b76666580ac25f78f9c4"
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "region": "okayama",
+      "title": "秋を楽しむ笑顔あふれる　南ふれあいまつり【南ふれあいセンター】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-074"
+      ],
+      "added_event_id": "evt-hold-b1-074",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086183.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086183.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:39.403124+00:00",
+          "sha256": "3867c839b06a5e6c569a729935593f8f3f612f4a0cfa8dcb3efd38ac35242adb"
+        }
+      ]
+    },
+    {
+      "index": 75,
+      "region": "okayama",
+      "title": "木のおもちゃで遊ぼう(遊戯室)【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した市公式本文の日付・会場・参加条件を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-075"
+      ],
+      "added_event_id": "evt-hold-b1-075",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085121.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085121.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:49:39.926938+00:00",
+          "sha256": "174d991238066bb53728a3468aa07ff50b9bf7e785111c5b0556d18822313d59"
+        }
+      ]
+    },
+    {
+      "index": 76,
+      "region": "okayama",
+      "title": "こぶたクラブ（幼児の会）「木のおもちゃで遊ぼう」【富原児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-076"
+      ],
+      "added_event_id": "evt-hold-b1-076",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086060.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086060.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:15.123934+00:00",
+          "sha256": "a0c4aeb66d140cdf211393f7367e91fc6ffcbf1753135e5fac99423a1b3a2c6e"
+        }
+      ]
+    },
+    {
+      "index": 77,
+      "region": "okayama",
+      "title": "子ども自然教室 秋のかんさつ会【浦安総合公園西地区】",
+      "disposition": "still_hold",
+      "reason": "申込は11月4日以降。確認日11月1日時点で申込開始前。",
+      "reason_code": "APPLICATION_NOT_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086475.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086475.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:15.576191+00:00",
+          "sha256": "7e712b9efe26bfa829a556a9af35695ccfd9f39dfa7847c11122a80bdc47f9e2"
+        }
+      ]
+    },
+    {
+      "index": 78,
+      "region": "okayama",
+      "title": "西ふれあいまつり2026【西ふれあいセンター】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-078"
+      ],
+      "added_event_id": "evt-hold-b1-078",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086497.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086497.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:15.964481+00:00",
+          "sha256": "4c5878d0b3c15b891b58bd42967915ca8319f3d20b28fc18cba3b13955e3101e"
+        }
+      ]
+    },
+    {
+      "index": 79,
+      "region": "okayama",
+      "title": "カンパニーデラシネラ「シンデレラ」【岡山芸術創造劇場 ハレノワ】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-079"
+      ],
+      "added_event_id": "evt-hold-b1-079",
+      "sources_checked": [
+        {
+          "url": "https://okayama-pat.jp/event_info/derashinera_cinderella/",
+          "final_url": "https://okayama-pat.jp/event_info/derashinera_cinderella/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:52:45.816573+00:00",
+          "sha256": "1402e3c3d5790ca70388a5bbdb939ed9ceeaa55ce6a1fdfee2e32006b59967f1"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002896.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002896.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:52:35.709818+00:00",
+          "sha256": "2e2f6c3a10ec586ec891724bda72f4a7a4c30de6af6211a4510cf7c1ee3655b4"
+        },
+        {
+          "url": "https://okayama-pat.jp/event_info/page/2/?sponsor=1",
+          "final_url": "https://okayama-pat.jp/event_info/page/2/?sponsor=1",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:52:16.472875+00:00",
+          "sha256": "41d9e1e82de0bb06d91c1cfebfa76ba79874909cad2e183e95e296d2d655d9cd"
+        },
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085706.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085706.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:16.428937+00:00",
+          "sha256": "1f82a2fa44d5a239ee6a2be8fce29353f79f9557cb4b7a6e4b2536f85895a350"
+        }
+      ]
+    },
+    {
+      "index": 80,
+      "region": "okayama",
+      "title": "司書のお仕事体験【中央図書館】",
+      "disposition": "still_hold",
+      "reason": "公式申込期間は11月7日から。確認日時点は開始前。",
+      "reason_code": "APPLICATION_NOT_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085773.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085773.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:16.810341+00:00",
+          "sha256": "f8c37cd27c10e23078fddd0efe532a2f258c2239efeb6f88e58c601b171e0037"
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "region": "okayama",
+      "title": "療育まつり 【岡山ふれあいセンター・岡山市ふれあい児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-081"
+      ],
+      "added_event_id": "evt-hold-b1-081",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086314.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086314.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:17.224137+00:00",
+          "sha256": "16c385d2b3d4218e8e813b11e73e5a697dcdfecf6a43b491392b50b6c48f7206"
+        }
+      ]
+    },
+    {
+      "index": 82,
+      "region": "okayama",
+      "title": "自由遊び(井戸端会議)（集会室）【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-082"
+      ],
+      "added_event_id": "evt-hold-b1-082",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085122.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085122.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:17.614820+00:00",
+          "sha256": "8438b9795383eacaaf538997bbae7c8fbe978772818d34d3b8ea0ea058d02a24"
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "region": "okayama",
+      "title": "おやこおたのしみ会【中央図書館】",
+      "disposition": "still_hold",
+      "reason": "公式申込期間は11月10日から。確認日時点は開始前。",
+      "reason_code": "APPLICATION_NOT_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085776.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085776.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:18.202319+00:00",
+          "sha256": "c151b5424446fccfeb8eac71f3cf40ed008d32665aa343a083e313e4dd0c1bc4"
+        }
+      ]
+    },
+    {
+      "index": 84,
+      "region": "okayama",
+      "title": "【2026年11月27日】おとなのためのおはなし会【幸町図書館】",
+      "disposition": "still_hold",
+      "reason": "おとなのためのおはなし会で対象一般。子ども向けではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000085854.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085854.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:18.837299+00:00",
+          "sha256": "ff2d11b027e362e119ff5b3434235ef842ba472c58d4d9c9c59699316a21eaf9"
+        }
+      ]
+    },
+    {
+      "index": 85,
+      "region": "okayama",
+      "title": "親子ふれあいランド「クリスマスレジン」【岡山市北ふれあい児童館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-085"
+      ],
+      "added_event_id": "evt-hold-b1-085",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086244.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086244.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:19.501570+00:00",
+          "sha256": "d6c81c09634d0c6771661b0e36b49ae246dc88545892a99dd8180a05c42dba72"
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "region": "okayama",
+      "title": "スイッチON！えこらいふ ～SDGsを学ぼう～　第5回：子どもたちの『食』を守る　映画『希望の給食』鑑賞と講演【東公民館】",
+      "disposition": "still_hold",
+      "reason": "生活・食・エネルギーについて学ぶ市民教養講座、映画と専門家講演。子どもの参加プログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/sdgs-esd/0000086542.html",
+          "final_url": "https://www.city.okayama.jp/sdgs-esd/0000086542.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:20.107711+00:00",
+          "sha256": "135cb8fc1beb8a71c3290efc74341346044cf27d14c14d78f9a1ba1cb5245b08"
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "region": "okayama",
+      "title": "【2026年11月29日】教養講座『西大寺と北前船』【西大寺緑花公園緑の図書室】",
+      "disposition": "still_hold",
+      "reason": "公式申込期間は11月12日から。確認日時点は開始前。",
+      "reason_code": "APPLICATION_NOT_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000085856.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085856.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:20.657369+00:00",
+          "sha256": "ada704a5b20dc484545d3cb0cbda692db7b89b1ac37ed3c70c4f78ade42f5565"
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "region": "okayama",
+      "title": "落ち葉で遊ぼう（少林寺）【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-088"
+      ],
+      "added_event_id": "evt-hold-b1-088",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085123.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085123.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:21.296076+00:00",
+          "sha256": "2b2d2f4f0b050843d3b45b0cd302bf02c6f060675970ec4a646a4805b03319aa"
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "region": "okayama",
+      "title": "託児ボランティアグループ「りんごの会」親子講座 みんなでいっしょに楽しもう!",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-089"
+      ],
+      "added_event_id": "evt-hold-b1-089",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kyoudou/0000083609.html",
+          "final_url": "https://www.city.okayama.jp/kyoudou/0000083609.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:21.941650+00:00",
+          "sha256": "1f44fc9d39d943938aedb5d85578cb21ff48b560425a593b0feaba18f34403c4"
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "region": "okayama",
+      "title": "ママとベビーのためのピラティス【北ふれあいセンター】",
+      "disposition": "still_hold",
+      "reason": "市公式本文は12月4日開始のみ、開催年や全7回の日程を確認できない。更新日を開催年に転用しない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086478.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086478.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:22.612894+00:00",
+          "sha256": "d024fd24d80660f75dff576fb23b87d9b47306752c08c0fcf2e5a93505137382"
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "region": "okayama",
+      "title": "冬の星空観望【犬島自然の家】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-091"
+      ],
+      "added_event_id": "evt-hold-b1-091",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000082193.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000082193.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:23.168454+00:00",
+          "sha256": "b6ac8247fee07f1c3d35eda8504fe2c70436f9c242c60964ffae0f55676fa6d9"
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "region": "okayama",
+      "title": "【2026年12月5日から】冬の星空観望【犬島自然の家】",
+      "disposition": "duplicate",
+      "reason": "令和8年の公式本体告知を再取得。12月5日開始・犬島自然の家の同じ宿泊観望会。",
+      "matched_event_id": "evt-hold-b1-091",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000082193.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000082193.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:53:14.911845+00:00",
+          "sha256": "b6ac8247fee07f1c3d35eda8504fe2c70436f9c242c60964ffae0f55676fa6d9"
+        },
+        {
+          "url": "https://www.city.okayama.jp/life/0000085824.html",
+          "final_url": "https://www.city.okayama.jp/life/0000085824.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:23.669188+00:00",
+          "sha256": "3abce68c49b71fa555861635b90e6eff194deddc14e1cc69e57553fd63507b90"
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "region": "okayama",
+      "title": "【2026年12月5日】冬のおはなし会 --ままぽっと文庫--【高松公民館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-093"
+      ],
+      "added_event_id": "evt-hold-b1-093",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/life/0000086470.html",
+          "final_url": "https://www.city.okayama.jp/life/0000086470.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:24.201063+00:00",
+          "sha256": "131f9f09477a5c9426a3f75e389ae31a6733e78a754b324e22916a54a6799712"
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "region": "okayama",
+      "title": "ひよこんさ～と【北ふれあいセンター】",
+      "disposition": "still_hold",
+      "reason": "市公式は12月5日と記載するが開催年を記載しない。2026年開催の一次情報を確定できない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086480.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086480.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:24.805650+00:00",
+          "sha256": "50eb05b19167c76f8e8e3ed8ce3b375587b4d4016923bd6f9d7c5d5d8305efb9"
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "region": "okayama",
+      "title": "クリスマス会(集会室)【三勲子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-095"
+      ],
+      "added_event_id": "evt-hold-b1-095",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085125.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085125.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:25.362420+00:00",
+          "sha256": "b4b0d2eba81b3acbcbc71f8432270e1c1a38dc568b265e77e62c135b34a15d03"
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "region": "okayama",
+      "title": "クリスマス会【平島子育て広場】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-096"
+      ],
+      "added_event_id": "evt-hold-b1-096",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000084680.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000084680.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:26.007986+00:00",
+          "sha256": "576a6bc808073191bd497dfc78dbc614dad6b4c1034666dbfa4d2e7954d5246b"
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "region": "okayama",
+      "title": "クリスマス会【中央図書館】",
+      "disposition": "still_hold",
+      "reason": "公式申込期間は11月21日から。確認日時点は開始前。",
+      "reason_code": "APPLICATION_NOT_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086566.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086566.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:26.564623+00:00",
+          "sha256": "fcd33dd73822f9e98a3ca669cad99180282d5c223803dbd02667cb3ad3bef314"
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "region": "okayama",
+      "title": "クリスマスおたのしみ会【幸町図書館】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-098"
+      ],
+      "added_event_id": "evt-hold-b1-098",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086575.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086575.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:27.143280+00:00",
+          "sha256": "dea5e7a85bfdf2d7ecc2555ee9d8c8b6acfb01882ec20c488baa3fb180433252"
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "region": "okayama",
+      "title": "冬のこども会【西大寺緑花公園緑の図書室】",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の年付き日程・会場・現在利用できる参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-099"
+      ],
+      "added_event_id": "evt-hold-b1-099",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000086589.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000086589.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:27.701065+00:00",
+          "sha256": "e062e68d32f4d95c6b7d536e8e06b3f724814f0cde674bc35af042c11dbf5839"
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "region": "okayama",
+      "title": "親子で♪学ぶ♪ユニバーサル防災【福浜公民館】",
+      "disposition": "still_hold",
+      "reason": "公式申込締切は10月17日。確認日時点で締切済み。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/sdgs-esd/0000085680.html",
+          "final_url": "https://www.city.okayama.jp/sdgs-esd/0000085680.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:51:28.286831+00:00",
+          "sha256": "d57acc887d9b7ea7ccc50e46f79a9183865c51da21702c52f93ae13571ef7634"
+        }
+      ]
+    }
+  ]
+}
