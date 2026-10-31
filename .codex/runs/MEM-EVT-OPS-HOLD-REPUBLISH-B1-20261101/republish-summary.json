@@ -1,18 +1,18 @@
 {
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B1-20261101",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-31T21:58:53.148600+00:00",
+  "executed_at": "2026-10-31T22:01:06.170366+00:00",
   "evidence_collection_started_at": "2026-10-31T21:40:32.151048+00:00",
   "prior_run_evidence_reused": false,
   "complete": false,
   "aggregate": {
-    "total": 175,
-    "added": 113,
-    "duplicate": 17,
+    "total": 200,
+    "added": 131,
+    "duplicate": 18,
     "past": 12,
-    "still_hold": 31,
+    "still_hold": 37,
     "not_event": 2,
-    "new_events": 114
+    "new_events": 132
   },
   "candidates": [
     {
@@ -3884,6 +3884,492 @@
           "http_status": 200,
           "checked_at": "2026-10-31T21:57:36.325085+00:00",
           "sha256": "d4dfffc6e47465f8b605e97f454db4797ad6eded9a67cd3fd0b315eaac8a5e13"
+        }
+      ]
+    },
+    {
+      "index": 176,
+      "region": "okayama",
+      "title": "岡山芸術創造劇場ハレノワ",
+      "disposition": "still_hold",
+      "reason": "公式は未就学児入場不可の日本舞踊鑑賞公演。幼児向け参加プログラムなし。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002660.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002660.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:12.460529+00:00",
+          "sha256": "53359809d78b9848ba9ac033e48cab5a88491cc77886cd29211a6552fd6e297b"
+        }
+      ]
+    },
+    {
+      "index": 177,
+      "region": "okayama",
+      "title": "【2026年】源流の里 大佐ふるさとまつり",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-177"
+      ],
+      "added_event_id": "evt-hold-b1-177",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100548.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100548.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:13.267112+00:00",
+          "sha256": "4b9164d15e0a3c26ebf6bae750bc5adf6ca5c0d8e7b89c070177fcd928919319"
+        }
+      ]
+    },
+    {
+      "index": 178,
+      "region": "okayama",
+      "title": "DESIGN GOALs　おかやま農福カルタ大会＆マルシェ",
+      "disposition": "duplicate",
+      "reason": "2026-11-01・北長瀬公園とみはらしプラザ、同じカルタ＆マルシェを再取得した市公式で照合。",
+      "matched_event_id": "evt-hold-b1-051",
+      "sources_checked": [
+        {
+          "url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "final_url": "https://www.city.okayama.jp/kosodate/0000085829.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:00:42.025566+00:00",
+          "sha256": "3834ac19f0ea5de0df9bc99dcfcc0dc0424df8789b6df6c4ab189392a65a3a35"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100572.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100572.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:14.120590+00:00",
+          "sha256": "6ad06b8b4b0b948356bb0af1076601c318ff6f3e1322c105ed86ca2eed0c0065"
+        }
+      ]
+    },
+    {
+      "index": 179,
+      "region": "okayama",
+      "title": "古着Loveフェスティバル in 奉還町 #14",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-179"
+      ],
+      "added_event_id": "evt-hold-b1-179",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_101533.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_101533.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:14.928665+00:00",
+          "sha256": "3cc8f33f3228b299e15d253613bd556693d26da23136e2388a7231a1ea946796"
+        }
+      ]
+    },
+    {
+      "index": 180,
+      "region": "okayama",
+      "title": "2026 NAGI International Festival（那岐山麓 山の駅）",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-180"
+      ],
+      "added_event_id": "evt-hold-b1-180",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002961.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002961.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:15.889773+00:00",
+          "sha256": "781e4befcdb4dc45e499a5fe040eb95ef930157c9423663c7a74187cdba992e5"
+        }
+      ]
+    },
+    {
+      "index": 181,
+      "region": "okayama",
+      "title": "【2026年】奈義町産業まつり 〜奈義町農林業祭・東山工業祭〜",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-181"
+      ],
+      "added_event_id": "evt-hold-b1-181",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002976.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002976.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:16.869844+00:00",
+          "sha256": "4106fa027e3f10834721758d02c4b5c17407aad6a59a37b4ec80a1105f59580c"
+        }
+      ]
+    },
+    {
+      "index": 182,
+      "region": "okayama",
+      "title": "HOSHINOSATO EGG MARCHE in 美星町",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-182"
+      ],
+      "added_event_id": "evt-hold-b1-182",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100278.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100278.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:17.764396+00:00",
+          "sha256": "c83e994bc7274e3086c72cf1830df97ff592e141a829674bee37b33414e43e3a"
+        }
+      ]
+    },
+    {
+      "index": 183,
+      "region": "okayama",
+      "title": "【2026年】中世夢が原絵巻",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-183"
+      ],
+      "added_event_id": "evt-hold-b1-183",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100531.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100531.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:18.689987+00:00",
+          "sha256": "5519428e7bfaf535b03ed25d5b55cb95e235b491470f0087ad7bcc1f1a63a372"
+        }
+      ]
+    },
+    {
+      "index": 184,
+      "region": "okayama",
+      "title": "【2026年】ふなおワイナリー　ワインと音楽の秋まつり",
+      "disposition": "still_hold",
+      "reason": "公式はワインの試飲・販売が中心の成人飲酒の催事。幼児向け参加プログラムなし。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002960.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002960.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:19.695469+00:00",
+          "sha256": "fb48c7ab3562073d25d164eeb2a1f4dc718f66105a50440e9b1c5a1f657a6a1a"
+        }
+      ]
+    },
+    {
+      "index": 185,
+      "region": "okayama",
+      "title": "たけべの森公園　自然体験&紙飛行機大会",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-185"
+      ],
+      "added_event_id": "evt-hold-b1-185",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002980.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002980.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:20.694440+00:00",
+          "sha256": "ab0043b4d86e624071408af71f0938f582b33637262a2214f5e03afdc7b246a2"
+        }
+      ]
+    },
+    {
+      "index": 186,
+      "region": "okayama",
+      "title": "湯原温泉「砂湯」　アート・食・ゆばら ～More Art, More Eat～",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-186"
+      ],
+      "added_event_id": "evt-hold-b1-186",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_1002537.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_1002537.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:21.688589+00:00",
+          "sha256": "7b05cd8bf288ee6391092bd8c73f758c2ffbaf64ea0f5c44a753bfb9d4dff972"
+        }
+      ]
+    },
+    {
+      "index": 187,
+      "region": "okayama",
+      "title": "【2026年】宇甘渓 ～彩りの紅葉と秋の味わい～",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-187"
+      ],
+      "added_event_id": "evt-hold-b1-187",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_101129.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_101129.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:22.452782+00:00",
+          "sha256": "f9bb365f8c23aa41cc4acc7cd5e1a68ddc0b9a465b4199a75419b902a10896b8"
+        }
+      ]
+    },
+    {
+      "index": 188,
+      "region": "okayama",
+      "title": "井原線DE得得市（井原駅前）",
+      "disposition": "still_hold",
+      "reason": "公式は毎月・毎週の開催パターンのみで開催年を示さず。2026年のstart_dateを確定できない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12540.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12540.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:23.242498+00:00",
+          "sha256": "4a0ee18138272f4090078bb65566c5f02699d289a70ac88fb9e838bceb07bb4f"
+        }
+      ]
+    },
+    {
+      "index": 189,
+      "region": "okayama",
+      "title": "星街マルシェ",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-189"
+      ],
+      "added_event_id": "evt-hold-b1-189",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100242.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100242.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:24.082436+00:00",
+          "sha256": "ff3b817d2f9575d04f48c10c5d47d5ed0c10d15bd506bb13ab3d70a027efe56c"
+        }
+      ]
+    },
+    {
+      "index": 190,
+      "region": "okayama",
+      "title": "五味の市大感謝祭「ぎょぎょっと祭り！」",
+      "disposition": "still_hold",
+      "reason": "公式は毎月・毎週の開催パターンのみで開催年を示さず。2026年のstart_dateを確定できない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12758.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12758.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:24.801948+00:00",
+          "sha256": "7227f44cbd7f0947d6104ee1db8d7739ea004ccc650f63dd72d7565a034b96ac"
+        }
+      ]
+    },
+    {
+      "index": 191,
+      "region": "okayama",
+      "title": "真魚市",
+      "disposition": "still_hold",
+      "reason": "公式は毎月・毎週の開催パターンのみで開催年を示さず。2026年のstart_dateを確定できない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12749.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12749.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:25.714517+00:00",
+          "sha256": "38ba8f65325c1175e920fd5720ee708beb3b5c00adf745a11b62ccfcd036087a"
+        }
+      ]
+    },
+    {
+      "index": 192,
+      "region": "okayama",
+      "title": "【2026-2027年】第27回 作州津山なべまつり",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-192"
+      ],
+      "added_event_id": "evt-hold-b1-192",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_15537.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_15537.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:26.463685+00:00",
+          "sha256": "888a81e8ec183e7bad8b83867e191fa25e9856eb824b97f6ecfb40492f5e38f0"
+        }
+      ]
+    },
+    {
+      "index": 193,
+      "region": "okayama",
+      "title": "おかやまジビエフェア2026",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-193"
+      ],
+      "added_event_id": "evt-hold-b1-193",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100586.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100586.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:27.426887+00:00",
+          "sha256": "8f0c8b50d5875b4e340fd2bfd1fe9c09173fd984040252bbb9f0b19a023106a7"
+        }
+      ]
+    },
+    {
+      "index": 194,
+      "region": "okayama",
+      "title": "【2026-2027年】岡山後楽園　タンチョウの園内散策",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-194"
+      ],
+      "added_event_id": "evt-hold-b1-194",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12430.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12430.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:28.170576+00:00",
+          "sha256": "7fcc7af1276560c071e579841d759435af98d6f73ee99957315e9883d56a9933"
+        }
+      ]
+    },
+    {
+      "index": 195,
+      "region": "okayama",
+      "title": "備前岡山京橋朝市",
+      "disposition": "still_hold",
+      "reason": "公式は毎月・毎週の開催パターンのみで開催年を示さず。2026年のstart_dateを確定できない。",
+      "reason_code": "START_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12501.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12501.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:29.024397+00:00",
+          "sha256": "4dd9c2040d9183c4d4d3b00dc03d62a12d9b7d2e4f35d5d6539d10979bdbd292"
+        }
+      ]
+    },
+    {
+      "index": 196,
+      "region": "okayama",
+      "title": "【2026年】第56回 岡山後楽能",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-196"
+      ],
+      "added_event_id": "evt-hold-b1-196",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_16519.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_16519.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:29.907175+00:00",
+          "sha256": "9e0e31b166dc343d77937397a898fbc698c6711c20fa91e073838e608434a71d"
+        }
+      ]
+    },
+    {
+      "index": 197,
+      "region": "okayama",
+      "title": "おかやまミルクフェア2026",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-197"
+      ],
+      "added_event_id": "evt-hold-b1-197",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100563.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100563.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:30.738826+00:00",
+          "sha256": "fc498a1dcbf97b9883423533a6ae8ec980e6aa81ff415510a44027757a783d93"
+        }
+      ]
+    },
+    {
+      "index": 198,
+      "region": "okayama",
+      "title": "【2026年】第69回 里庄町産業文化祭",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-198"
+      ],
+      "added_event_id": "evt-hold-b1-198",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12715.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12715.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:31.601446+00:00",
+          "sha256": "07376efc258c861fcafb374b42ab0a7dc00b1b97dce73053cd18795c9eaa64ef"
+        }
+      ]
+    },
+    {
+      "index": 199,
+      "region": "okayama",
+      "title": "【2026年】越畑もみじまつり",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-199"
+      ],
+      "added_event_id": "evt-hold-b1-199",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12719.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12719.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:32.357611+00:00",
+          "sha256": "96262b7037cd2ce3fae02ea2d9cc20c462f6cade1b471555a609bdbd19029f38"
+        }
+      ]
+    },
+    {
+      "index": 200,
+      "region": "okayama",
+      "title": "【2026年】阿波八幡神社の花まつり",
+      "disposition": "added",
+      "reason": "本Missionで再取得した公式の2026年開催日・会場・内容を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-200"
+      ],
+      "added_event_id": "evt-hold-b1-200",
+      "sources_checked": [
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12714.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12714.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T21:59:33.137072+00:00",
+          "sha256": "225c29de66044c92b87e4b8f387a98e008cb8039e27b7d19af886d6c5dee3eac"
         }
       ]
     }
