@@ -1,0 +1,342 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W43-GROUP-B-D-PART-10",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-10-31T12:05:11.791132+00:00",
+  "horizon_end_date": "2026-12-26",
+  "per_region": {
+    "tokushima": {
+      "sources_checked": [
+        {
+          "url": "https://www.in-kamiyama.jp/art/diary/34604/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:05:11.100874+00:00",
+          "organizer_name": "NPOグリーンバレー KAIR",
+          "multi_venue_basis": "神山町内の劇場寄井座ほか複数作品展示会場を巡る公式アート事業"
+        },
+        {
+          "url": "https://japantopleague.jp/events/",
+          "status": 404,
+          "checked_at": "2026-10-31T12:05:12.350939+00:00",
+          "organizer_name": "日本トップリーグ連携機構",
+          "multi_venue_basis": "あそビバを徳島・他地域の複数体育館で開催する公式巡回事業"
+        },
+        {
+          "url": "https://japantopleague.jp/events/asoviva/261206_tokushima",
+          "status": 200,
+          "checked_at": "2026-10-31T12:05:30.974549+00:00",
+          "organizer_name": "日本トップリーグ連携機構",
+          "multi_venue_basis": "徳島など複数地域の体育館を巡回するあそビバ公式申込"
+        },
+        {
+          "url": "https://tokushima-ramen.com/posts/X2zUcG9A",
+          "status": 200,
+          "checked_at": "2026-10-31T12:05:43.062851+00:00",
+          "organizer_name": "徳島県ラーメン業協同組合",
+          "multi_venue_basis": "県内の認定ラーメン複数店舗を巡るデジタルスタンプラリー"
+        },
+        {
+          "url": "https://rindonavi.com/info.html?news_id=17902473099588",
+          "status": 200,
+          "checked_at": "2026-10-31T12:05:44.365427+00:00",
+          "organizer_name": "林道の魅力度アップ実行委員会",
+          "multi_venue_basis": "ファガスの森・山の家奥槍戸・岳人の森の3会場を同日に扱う林道事業"
+        },
+        {
+          "url": "https://r.goope.jp/ootaniyaki/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:05:45.527172+00:00",
+          "organizer_name": "大麻町商工会 大谷焼",
+          "multi_venue_basis": "地域の複数窯元を巡る大谷焼窯まつり公式事業"
+        },
+        {
+          "url": "https://puky.jp/3824",
+          "status": 200,
+          "checked_at": "2026-10-31T12:18:14.813289+00:00",
+          "organizer_name": "PUKY日本公式",
+          "multi_venue_basis": "同一公式ページが徳島DEPOT11/21、静岡百町森11/22、滋賀栗東11/3の試乗イベントを案内。販売店一覧だけでなく日付のある複数会場。",
+          "late_secondary_followup": "後続family portalから名前を発見し同じ実行で取得。候補HOLDはsecondaryに一度計上。"
+        }
+      ],
+      "candidates_found": 5,
+      "added": 0,
+      "duplicate_or_already_present": 1,
+      "hold": 4,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "KAIR2026 作品展覧会",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の4会場・10/26～11/3,7,8・無料と既存IDが一致。山間会場の徒歩1.5～2時間等も既存注意に記載。",
+          "official_url": "https://www.in-kamiyama.jp/art/diary/34604/",
+          "event_id": "evt-tokushima-kair-20261026",
+          "category": "facility_hosted"
+        },
+        {
+          "title": "あそビバ！in徳島",
+          "disposition": "hold",
+          "reason": "主催者の申込画面が定員到達・受付終了。",
+          "official_url": "https://japantopleague.jp/events/asoviva/261206_tokushima",
+          "category": "facility_hosted"
+        },
+        {
+          "title": "徳島ラーメン認定店デジタルスタンプラリー",
+          "disposition": "hold",
+          "reason": "公式主催ページはJS殻のみで本文が取得できず。購入特典の複数店企画を単一会場の体験イベントへ変換しない。",
+          "official_url": "https://tokushima-ramen.com/posts/X2zUcG9A",
+          "category": "facility_hosted"
+        },
+        {
+          "title": "剣山スーパー林道ミーティング2026",
+          "disposition": "hold",
+          "reason": "主催者はメイン風の広場・3サテライト、岳人の森は10/31前夜祭と明記し観光一覧の配置と相違。オフロード装備・事故自己責任、家族同行条件不足。source-family HOLD。",
+          "official_url": "https://rindonavi.com/info.html?news_id=17902473099588",
+          "category": "facility_hosted"
+        },
+        {
+          "title": "大谷焼窯まつり",
+          "disposition": "hold",
+          "reason": "主催団体の2026年告知を発見。個別荒天時条件・子ども同行案内未確認。",
+          "official_url": "https://r.goope.jp/ootaniyaki/",
+          "category": "fireworks_festival_seasonal"
+        }
+      ],
+      "candidate_counts_by_category": {
+        "fireworks_festival_seasonal": {
+          "candidates_found": 1,
+          "added": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 0,
+          "added": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 4,
+          "added": 0
+        }
+      },
+      "secondary_followup_note": "PUKY試乗会の個別時刻未確認HOLDはsecondaryの候補に計上、主催者発見へ同一runの証跡を還流。"
+    },
+    "yamanashi": {
+      "sources_checked": [
+        {
+          "url": "https://splawars.com/#schedule",
+          "status": 200,
+          "checked_at": "2026-10-31T12:31:13.635860+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "公式スケジュールが笛吹川フルーツ公園・富士川クラフトパークほか複数会場を掲載"
+        },
+        {
+          "url": "https://fujisan-artfes.jp/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:31:26.274053+00:00",
+          "organizer_name": "富士山芸術祭実行委員会",
+          "multi_venue_basis": "公式が山梨県内17会場の開催期間・休館日を一括案内"
+        },
+        {
+          "url": "https://fujisan-artfes.jp/venues/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:31:27.021377+00:00",
+          "organizer_name": "富士山芸術祭実行委員会",
+          "multi_venue_basis": "公式が山梨県内17会場の開催期間・休館日を一括案内"
+        },
+        {
+          "url": "https://www.c-nexco.co.jp/topics/2437.html",
+          "status": 200,
+          "checked_at": "2026-10-31T12:34:12.963193+00:00",
+          "organizer_name": "NEXCO中日本",
+          "multi_venue_basis": "公式が5都県12会場の体験ツアーを募集、山梨を含む",
+          "late_secondary_followup": "この実行のsecondary recallで初めて確認、同じ取得を主催者発見へ還流"
+        },
+        {
+          "url": "https://sudalpenfestival.com/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:34:01.309748+00:00",
+          "organizer_name": "ずーどあるぺん音楽祭",
+          "multi_venue_basis": "久成寺・伊奈ヶ湖・fumotto・安藤家住宅・山寺音楽館の5会場を一括案内",
+          "late_secondary_followup": "この実行のsecondary recallで初めて確認、同じ取得を主催者発見へ還流"
+        },
+        {
+          "url": "https://www.fujikyu.co.jp/wakuwakuproject/fujiwakuwork/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:36:40.456487+00:00",
+          "organizer_name": "富士急グループ",
+          "multi_venue_basis": "山梨本社・ハイランド・ホテル・富士山駅の4会場で共通日開催",
+          "late_secondary_followup": "この実行のsecondary recallで初めて確認、同じ取得を主催者発見へ還流"
+        },
+        {
+          "url": "https://studio-ciel.photo/special/haihairace/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:36:55.758674+00:00",
+          "organizer_name": "STUDIO CIEL",
+          "multi_venue_basis": "公式12月シリーズが川口・高槻・甲斐敷島・印西の4会場を案内",
+          "late_secondary_followup": "この実行のsecondary recallで初めて確認、同じ取得を主催者発見へ還流"
+        },
+        {
+          "url": "https://organic-yamanashi.net/",
+          "status": 200,
+          "checked_at": "2026-10-31T12:37:57.855041+00:00",
+          "organizer_name": "ツチツクリズムやまなし",
+          "multi_venue_basis": "笛吹みんなの広場フェスタとたまご村敷島店の月例マーケットを公式掲載",
+          "late_secondary_followup": "この実行のsecondary recallで初めて確認、同じ取得を主催者発見へ還流"
+        }
+      ],
+      "candidates_found": 19,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 13,
+      "stale_false": 6,
+      "candidates": [
+        {
+          "title": "SPLAWARS 山梨会場2026（農の駅7/5延期・7/26、フルーツ公園8/8-9・9/20-21、クラフトパーク8/22）",
+          "disposition": "stale_false",
+          "reason": "公式全日程は終了・中止済み。7/5延期を含め未来回なし、過去回を新規追加しない。",
+          "official_url": "https://splawars.com/#schedule",
+          "category": "municipal_regional"
+        },
+        {
+          "title": "富士山芸術祭2026：こうふ亀屋座",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：ART SPACE 夢",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：甲斐善光寺",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。11/7終日臨時休館の明記あり。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：富岡家住宅",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：海禅寺",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：根津記念館",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：明治天皇圓野御小休所",
+          "disposition": "stale_false",
+          "reason": "公式会場別日程が10/25または10/28までで終了済み。過去回を追加しない。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：韮崎大村記念公園 螢雪寮",
+          "disposition": "stale_false",
+          "reason": "公式会場別日程が10/25または10/28までで終了済み。過去回を追加しない。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：韮崎宿豪商の蔵座敷",
+          "disposition": "stale_false",
+          "reason": "公式会場別日程が10/25または10/28までで終了済み。過去回を追加しない。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：工藤耀日美術館",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：平山郁夫シルクロード美術館",
+          "disposition": "stale_false",
+          "reason": "公式会場別日程が10/25または10/28までで終了済み。過去回を追加しない。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：ポール・ラッシュ記念館",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：旧二葉屋酒造",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：スナンタ製作所",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：中富別棟",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：近藤浩一路記念南部町立美術館",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：岳麓翠苑",
+          "disposition": "stale_false",
+          "reason": "公式会場別日程が10/25または10/28までで終了済み。過去回を追加しない。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        },
+        {
+          "title": "富士山芸術祭2026：ハチワレホクト24時間営業展",
+          "disposition": "hold",
+          "reason": "主催公式の会場案内をweb読取で確認。複数会場の一括登録はしない。単独会場の安全な再利用座標と芸術祭の変更適用・子連れ現地条件を照合できていないため保留。",
+          "official_url": "https://fujisan-artfes.jp/venues/",
+          "category": "fireworks_festival_seasonal"
+        }
+      ],
+      "secondary_followup_note": "後続二次候補の主催者名を同じ実行の取得証跡で補完。各候補の終端判定と追加数はsecondary-recall-evidenceに一度だけ計上。",
+      "candidate_counts_by_category": {
+        "fireworks_festival_seasonal": {
+          "candidates_found": 18,
+          "added": 0
+        },
+        "municipal_regional": {
+          "candidates_found": 1,
+          "added": 0
+        },
+        "facility_hosted": {
+          "candidates_found": 0,
+          "added": 0
+        }
+      }
+    }
+  },
+  "prior_run_numbers_reused_as_execution": false,
+  "raw_capture_note": "全取得は本processで実行。stderr追記競合で失われた取得行は同processの応答キャッシュ（実URL・HTTP・元checked_at・本文）から同じraw logへ明示的に復元。過去run証跡は流用しない。"
+}
