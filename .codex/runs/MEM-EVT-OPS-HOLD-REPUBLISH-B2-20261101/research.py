@@ -14,13 +14,14 @@ SESSION.headers.update({'User-Agent': 'Mozilla/5.0 (compatible; Memorips officia
 def now():
     return datetime.datetime.now(datetime.timezone.utc).isoformat()
 
-def fetch(index, url, suffix='primary'):
+def fetch(index, url, suffix='primary', post_data=None):
     stamp = now()
     result = {'url': url, 'final_url': None, 'http_status': None, 'checked_at': stamp}
     prefix = FRESH / f'{index:03d}-{suffix}'
     text = ''
     try:
-        response = SESSION.get(url, timeout=(12, 35))
+        response = SESSION.post(url, data=post_data, timeout=(12, 35)) if post_data else SESSION.get(url, timeout=(12, 35))
+        if post_data: result.update(method='POST', read_only_form_initialization=True, request_data=post_data)
         result.update(final_url=response.url, http_status=response.status_code, content_type=response.headers.get('Content-Type', ''), sha256=hashlib.sha256(response.content).hexdigest())
         if response.content.startswith(b'%PDF'):
             prefix.with_suffix('.pdf').write_bytes(response.content)
@@ -37,7 +38,8 @@ def fetch(index, url, suffix='primary'):
             text = '\n'.join(x.strip() for x in main.get_text('\n').splitlines() if x.strip())
             links=[]
             for a in main.find_all('a',href=True):
-                href=urllib.parse.urljoin(response.url,a['href'])
+                try: href=urllib.parse.urljoin(response.url,a['href'])
+                except ValueError: continue
                 if href.startswith('http'):
                     links.append({'text':a.get_text(' ',strip=True),'url':href})
             prefix.with_suffix('.links.json').write_text(json.dumps(links,ensure_ascii=False,indent=2),encoding='utf-8')

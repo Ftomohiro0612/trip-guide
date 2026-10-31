@@ -11,6 +11,12 @@ def record(index, disposition, reason, event=None, matched=None, code=None, sour
     for p in sorted(FRESH.glob(f'{index:03d}-*.fetch.json')):
         s=json.loads(p.read_text(encoding='utf-8'))
         sources.append(s)
+    if event:
+        for url in event['source_urls']:
+            if not any(s['url']==url for s in sources):
+                candidates=[json.loads(p.read_text(encoding='utf-8')) for p in FRESH.glob('*.fetch.json')]
+                shared=next(s for s in candidates if s['url']==url and s.get('http_status')==200 and s['checked_at']>'2026-10-31T23:16:07.724Z')
+                sources.append({**shared,'reuse':'same_mission_shared_official_fetch; candidate primary independently re-fetched'})
     row={'index':index,'region':c['region'],'title':c['title'],'disposition':disposition,'event_id':event['id'] if event else matched,'reason_code':code,'reason':reason,'sources_checked':sources}
     if event:
         data=json.loads(DATA.read_text(encoding='utf-8'))
@@ -35,7 +41,7 @@ def add(index,start,end,venue,summary,time=None,price=None,reservation=None,age=
     if age is None: age='年齢・同伴条件は公式に記載なし'; missing.append('年齢・同伴条件')
     if weather is None: weather='雨天・荒天時の扱いは公式に記載なし。主催者・公式サイトで要確認'; missing.append('雨天・荒天時の扱い')
     urls=list(dict.fromkeys([source['url'],*extra_sources]))
-    checked_urls={json.loads(p.read_text(encoding='utf-8'))['url'] for p in FRESH.glob(f'{index:03d}-*.fetch.json')}
+    checked_urls={s['url'] for p in FRESH.glob('*.fetch.json') if (s:=json.loads(p.read_text(encoding='utf-8')))['checked_at']>'2026-10-31T23:16:07.724Z'}
     assert set(urls)<=checked_urls,(index,set(urls)-checked_urls)
     e={'id':f'evt-hold-b2-{index:03d}','facility_id':None,'venue_name':venue,'prefecture':c['region'],'title':title or c['title'],'summary':summary+' '+weather,'start_date':start,'end_date':end,'date_label':start if start==end else start+'〜'+end,'time_label':time,'price_label':price,'reservation_label':reservation,'age_label':age,'recommended_for_tags':['experience'],'recommended_for_label':'体験や地域の催しを楽しみたい家族に','recommended_for_note':'最新の開催状況と参加条件は公式サイトでご確認ください。','is_free':free,'is_indoor':None,'reservation':'required' if any(x in reservation for x in ['要申込','事前申込','要予約','先着','抽選']) else ('not_required' if '不要' in reservation else 'unknown'),'tags':['おでかけ'],'official_url':source['url'],'source_urls':urls,'source_checked_at':'2026-11-01','source_notes':'2026-11-01 本Missionで公式一次情報を再取得し、開催年・日付・会場・内容を確認。'+('公式に記載なし：'+ '、'.join(missing)+'。' if missing else '')+(traffic or '交通規制・アクセス案内は公式に記載なし。')+(latest or '直近の変更告知は公式に記載なし。')+notes,'status':'ongoing' if start<='2026-11-01' else 'scheduled','display_priority':65,'image':None}
     if occurrences: e['occurrence_dates']=occurrences
