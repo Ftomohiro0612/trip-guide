@@ -1,19 +1,340 @@
 {
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B1-20261101",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-31T22:19:08.058963+00:00",
+  "executed_at": "2026-10-31T22:30:58.546084+00:00",
   "evidence_collection_started_at": "2026-10-31T21:40:32.151048+00:00",
   "prior_run_evidence_reused": false,
-  "complete": false,
+  "complete": true,
   "aggregate": {
-    "total": 400,
-    "added": 220,
-    "duplicate": 44,
-    "past": 15,
-    "still_hold": 69,
-    "not_event": 52,
-    "new_events": 221
+    "total": 448,
+    "added": 246,
+    "duplicate": 51,
+    "past": 16,
+    "still_hold": 78,
+    "not_event": 57,
+    "candidate_new_events": 247,
+    "bounded_fix_A_changed": 4,
+    "bounded_fix_B_changed": 4,
+    "bounded_fix_C_added": 4,
+    "bounded_fix_C_still_hold": 2,
+    "bounded_fix_D_changed": 0,
+    "new_events_total": 251,
+    "existing_events_changed": 8,
+    "new_events_by_region": {
+      "fukushima": 26,
+      "okayama": 199,
+      "tokushima": 22,
+      "chiba": 1,
+      "hyogo": 2,
+      "saitama": 1
+    }
   },
+  "per_region": {
+    "fukushima": {
+      "added": 25,
+      "past": 2,
+      "duplicate": 10,
+      "still_hold": 9,
+      "not_event": 0
+    },
+    "okayama": {
+      "added": 199,
+      "duplicate": 37,
+      "still_hold": 61,
+      "past": 13,
+      "not_event": 57
+    },
+    "tokushima": {
+      "added": 22,
+      "duplicate": 4,
+      "still_hold": 8,
+      "past": 1,
+      "not_event": 0
+    }
+  },
+  "bounded_fixes": [
+    {
+      "fix": "A",
+      "outcome": "changed",
+      "event_ids": [
+        "evt-w43f1-6943-fureai",
+        "evt-w43f1-6943-forest",
+        "evt-w43f1-6943-daruma",
+        "evt-w43f1-6943-straw"
+      ],
+      "reason": "Fresh official November 2026 Azuma Sports Park PDF confirms all four Fukushima programmes; corrected facility_id and the identical incorrect facility number in source_notes.",
+      "sources_checked": [
+        {
+          "url": "https://www.azumapark.or.jp/wp_azumapark/wp-content/uploads/2026/10/11月2.pdf",
+          "final_url": "https://www.azumapark.or.jp/wp_azumapark/wp-content/uploads/2026/10/11%E6%9C%882.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:31.610762+00:00",
+          "sha256": "deb6be7a5ac94a84218593b60aa76584b938593eb6d76b1e10532c7846e791b9"
+        }
+      ]
+    },
+    {
+      "fix": "B",
+      "outcome": "changed",
+      "event_ids": [
+        "evt-yamanashi-toin-20261103",
+        "evt-tokyo-w42d1-camp-koyomi",
+        "evt-gunma-20261029-d8-045",
+        "evt-tokyo-w43d1-jaf-roadservice"
+      ],
+      "reason": "Each original and tracking-free URL freshly returned HTTP 200 with identical extracted official content.",
+      "sources_checked": [
+        {
+          "url": "https://www.wild1.co.jp/cms/events/95372",
+          "final_url": "https://www.wild1.co.jp/cms/events/95372",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:36.617256+00:00",
+          "sha256": "af9895acf0799ff923bbd3b43f57f92f11e60ce98e67adee7139bdc4d1a66dee"
+        },
+        {
+          "url": "https://www.wild1.co.jp/cms/events/95372?utm_source=iko-yo&utm_medium=referral&utm_campaign=event",
+          "final_url": "https://www.wild1.co.jp/cms/events/95372?utm_source=iko-yo&utm_medium=referral&utm_campaign=event",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:35.932337+00:00",
+          "sha256": "50eaf434907793a51322ac534865c9660b6819c6ab2b561acf6a61ca9212fd30"
+        },
+        {
+          "url": "https://www.camp-k.com/kodomo/261206",
+          "final_url": "https://www.camp-k.com/kodomo/261206",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:35.431754+00:00",
+          "sha256": "adb9a185e78a060c4806397763fd4e3f5fc151281750bee88125973c3baaa3d0"
+        },
+        {
+          "url": "https://www.camp-k.com/kodomo/261206&utm_source=eventbank&utm_campaign=261206",
+          "final_url": "https://www.camp-k.com/kodomo/261206&utm_source=eventbank&utm_campaign=261206",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:34.689951+00:00",
+          "sha256": "adb9a185e78a060c4806397763fd4e3f5fc151281750bee88125973c3baaa3d0"
+        },
+        {
+          "url": "https://area.jaf.or.jp/area/2026/09/kanto/tokyo/events/roadservice-competiotion2026",
+          "final_url": "https://area.jaf.or.jp/area/2026/09/kanto/tokyo/events/roadservice-competiotion2026",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:37.764955+00:00",
+          "sha256": "131cf46076bfe9de239994fc6360dfcad15a89cec837542b888e00ee346b5ad6"
+        },
+        {
+          "url": "https://area.jaf.or.jp/area/2026/09/kanto/tokyo/events/roadservice-competiotion2026?utm_campaign=71prtimes&utm_source=2026-003&utm_medium=referral",
+          "final_url": "https://area.jaf.or.jp/area/2026/09/kanto/tokyo/events/roadservice-competiotion2026?utm_campaign=71prtimes&utm_source=2026-003&utm_medium=referral",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:37.077373+00:00",
+          "sha256": "131cf46076bfe9de239994fc6360dfcad15a89cec837542b888e00ee346b5ad6"
+        },
+        {
+          "url": "https://www.nirasaki-bunka.jp/event/17108/",
+          "final_url": "https://www.nirasaki-bunka.jp/event/17108/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:33.566090+00:00",
+          "sha256": "fe6a350394fbd7fd2d5c80d849e129a7cf410b7582c5137ce856fb15f6cfc931"
+        },
+        {
+          "url": "https://www.nirasaki-bunka.jp/event/17108/?utm_source=chatgpt.com",
+          "final_url": "https://www.nirasaki-bunka.jp/event/17108/?utm_source=chatgpt.com",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:32.316742+00:00",
+          "sha256": "d1ce562b2c116e9a577f4ff2a0080b75ef5ac40db7392ab3b7ecc4471da1025c"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 767,
+      "outcome": "added",
+      "event_ids": [
+        "evt-hold-b1-fix-767"
+      ],
+      "reason": "Official start date confirmed; unpublished end date uses the authorized 30-day re-check horizon.",
+      "sources_checked": [
+        {
+          "url": "https://www.city.abiko.chiba.jp/bird-mus/gyoji/index.html",
+          "final_url": "https://www.city.abiko.chiba.jp/bird-mus/gyoji/index.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:40.287780+00:00",
+          "sha256": "5be338221226bcfeef86b75b44fc5bf6006f04a2b137d56d26de1c98f56c7b0d"
+        },
+        {
+          "url": "https://www.city.abiko.chiba.jp/bird-mus/info1/kikakuten.html",
+          "final_url": "https://www.city.abiko.chiba.jp/bird-mus/info1/kikakuten.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:30.100387+00:00",
+          "sha256": "e773a49d04b71e928ea563e51df9779dbd411b9374c1a807cedf9c6a6173082b"
+        },
+        {
+          "url": "https://www.city.abiko.chiba.jp/bird-mus/info1/index.html",
+          "final_url": "https://www.city.abiko.chiba.jp/bird-mus/info1/index.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:22.366159+00:00",
+          "sha256": "327a4a31b34c4b1d9edcea8e5a07de5747249fe7fbb3a0bd4eb3dff2ba39ed10"
+        },
+        {
+          "url": "https://www.city.abiko.chiba.jp/bird-mus/gyoji/index.files/gyoujiyotei2026re.pdf",
+          "final_url": "https://www.city.abiko.chiba.jp/bird-mus/gyoji/index.files/gyoujiyotei2026re.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:52.226713+00:00",
+          "sha256": "f8f6d40cc410a68e614730bb0c1ca6d9b731b5d0bc1c5f6512a08e788e3df80c"
+        },
+        {
+          "url": "https://www.city.abiko.chiba.jp/bird-mus/",
+          "final_url": "https://www.city.abiko.chiba.jp/bird-mus/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:38.488247+00:00",
+          "sha256": "3239fa72e8e3bb101308098a6a3d9a8bcb6d4c7f7886f8d34aa30f6b234ab8b2"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 1446,
+      "outcome": "added",
+      "event_ids": [
+        "evt-hold-b1-fix-1446"
+      ],
+      "reason": "Official start date confirmed; unpublished end date uses the authorized 30-day re-check horizon.",
+      "sources_checked": [
+        {
+          "url": "https://www.kobesuma-seaworld.jp/guide/event/10829/",
+          "final_url": "https://www.kobesuma-seaworld.jp/guide/event/10829/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:39.172290+00:00",
+          "sha256": "d1a63caefa34918aaa258f99bcd64ebc4efbdf0c3c4a9ba46475c8bad59d2c05"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 1486,
+      "outcome": "added",
+      "event_ids": [
+        "evt-hold-b1-fix-1486"
+      ],
+      "reason": "Official start date confirmed; unpublished end date uses the authorized 30-day re-check horizon.",
+      "sources_checked": [
+        {
+          "url": "https://www.omochaoukoku.com/tojoko/littlebit_dinosaur/",
+          "final_url": "https://www.omochaoukoku.com/tojoko/littlebit_dinosaur/",
+          "http_status": 404,
+          "checked_at": "2026-10-31T22:29:30.554151+00:00",
+          "sha256": "d7d29ae65f2dc05b4f9f0a5db62ce304be9c95a44288e8184be30476c6a42b95"
+        },
+        {
+          "url": "https://www.omochaoukoku.com/tojoko/event/littlebit_dinosaur/",
+          "final_url": "https://www.omochaoukoku.com/tojoko/event/littlebit_dinosaur/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:40.740773+00:00",
+          "sha256": "97a2d1b01669b64ceae8a05fa0517773498229bb2b487026b53607497955d69c"
+        },
+        {
+          "url": "https://www.omochaoukoku.com/tojoko/event/",
+          "final_url": "https://www.omochaoukoku.com/tojoko/event/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:40.041472+00:00",
+          "sha256": "e65c075155edcf89b2cbd069cedd190ed73d469d83c4eba1e9b756f4e3c1719d"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 547,
+      "outcome": "added",
+      "event_ids": [
+        "evt-hold-b1-fix-547"
+      ],
+      "reason": "Official start date confirmed; unpublished end date uses the authorized 30-day re-check horizon.",
+      "sources_checked": [
+        {
+          "url": "https://www.saitama-shizen.info/event/event.html",
+          "final_url": "https://www.saitama-shizen.info/event/event.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:41.788311+00:00",
+          "sha256": "ef26d6696156d57f4266bca73dc701fb9d54efb24f4306c3f9082dda1dec51cb"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 8175,
+      "outcome": "still_hold",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "reason": "Official display description states currently exhibited but does not confirm a start date; post date is not used as event start.",
+      "sources_checked": [
+        {
+          "url": "https://nango-hf.jp/793/",
+          "final_url": "https://nango-hf.jp/793/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:22.910314+00:00",
+          "sha256": "9e94d53a4f615aae693f67459bd67202174a03442006811620c5dba8f94b86b9"
+        },
+        {
+          "url": "https://nango-hf.jp/",
+          "final_url": "https://nango-hf.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:42.662391+00:00",
+          "sha256": "323621ef34d5ff8c286a89018650532edb67e5e657208d85d8211208fb099d1e"
+        }
+      ]
+    },
+    {
+      "fix": "C",
+      "facility_id": 8125,
+      "outcome": "still_hold",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "reason": "Official display description states currently exhibited but does not confirm a start date; post date is not used as event start.",
+      "sources_checked": [
+        {
+          "url": "https://www.fipo.or.jp/lore/archives/3700",
+          "final_url": "https://www.fipo.or.jp/lore/archives/3700",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:53.772397+00:00",
+          "sha256": "285355b1125cb657c098dc0e5ad3071ce0e375c8ff0ffc976fcf59a7a691c9df"
+        },
+        {
+          "url": "https://www.fipo.or.jp/lore/events",
+          "final_url": "https://www.fipo.or.jp/lore/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:29:41.150233+00:00",
+          "sha256": "ed1b9581f8e9f1be16c8a1852429c7e06b36db98340b5f8d78f3b06750b08a35"
+        },
+        {
+          "url": "https://www.fipo.or.jp/lore/archives/9123",
+          "final_url": "https://www.fipo.or.jp/lore/archives/9123",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:30:02.271332+00:00",
+          "sha256": "8a9918542928615e4bb8e4b6bc9ae35d4671886dbac9c9e9ea9179472665923e"
+        },
+        {
+          "url": "https://www.fipo.or.jp/lore/",
+          "final_url": "https://www.fipo.or.jp/lore/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:25:43.293844+00:00",
+          "sha256": "ed1b9581f8e9f1be16c8a1852429c7e06b36db98340b5f8d78f3b06750b08a35"
+        }
+      ]
+    },
+    {
+      "fix": "D",
+      "facility_id": 1445,
+      "outcome": "unchanged",
+      "event_ids": [
+        "evt-w43f1-1445-weight"
+      ],
+      "reason": "Zoo root still returns HTTP 503 maintenance. Existing Kobe City substitute official URL retained.",
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-ojizoo.jp/",
+          "final_url": "https://www.kobe-ojizoo.jp/",
+          "http_status": 503,
+          "checked_at": "2026-10-31T22:25:44.659016+00:00",
+          "sha256": "1ea2d717e5b78ed35a1f5dd7f27170b5889cf91949c99b9bc325703d24d04630"
+        }
+      ]
+    }
+  ],
   "candidates": [
     {
       "index": 1,
@@ -9883,6 +10204,1547 @@
           "sha256": "5dd4d632e2747d66ff01cdc641fce9e14fb2910e4a84a250e3b51439d0d3dc90"
         }
       ]
+    },
+    {
+      "index": 401,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】津山城（鶴山公園）",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の再取得内容は紅葉・景観紹介。候補は見頃ガイド。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621754/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621754/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:34.294585+00:00",
+          "sha256": "90bb5c0c989d02aaf02b942b27da93faec4215e6d6ecab56545a6575832d2cc0"
+        },
+        {
+          "url": "https://www.tsuyamakan.jp/rcCEUdxa/9Rqhbi-p",
+          "final_url": "https://www.tsuyamakan.jp/rcCEUdxa/9Rqhbi-p",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:34.980241+00:00",
+          "sha256": "ab7e1a86e09dcaed54b0e4d12148d9e0b9f6a6691ce884557761574dd020882b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621754/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621754/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:20.257409+00:00",
+          "sha256": "00ac4568f8d4a8444f4c257cbe7f3e310f3491ff2665649fff955aec8dde0f17"
+        }
+      ]
+    },
+    {
+      "index": 402,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】田中苑",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の再取得内容は紅葉・景観紹介。候補は見頃ガイド。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615417/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615417/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:35.675268+00:00",
+          "sha256": "d8ae1de6765f3b62fdbd473bf5fae10634a35af6d8a11e734e041767bb9257a4"
+        },
+        {
+          "url": "https://www.city.ibara.okayama.jp/site/denchu-museum/",
+          "final_url": "https://www.city.ibara.okayama.jp/site/denchu-museum/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:36.286666+00:00",
+          "sha256": "9865b0d03d431bbe01289938c28cf83d3bb62caf16c82cb6bd1601835262e9d1"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e615417/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e615417/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:20.762932+00:00",
+          "sha256": "83394d02a631356698e851bc5e50cb53f22a6c4da5079882ebd609b8a2a7ff22"
+        }
+      ]
+    },
+    {
+      "index": 403,
+      "region": "okayama",
+      "title": "第23回ミナクルネ",
+      "disposition": "duplicate",
+      "reason": "公式の開催年・日付・会場を照合し、同じ催しの掲載を確認。",
+      "matched_event_id": "evt-hold-b1-258",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621735/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621735/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:36.706863+00:00",
+          "sha256": "f1b068eb56665d5eb2ee5f042166ca5fd6055c7054590fda220254e1cd6055e6"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/11november/DB007event6.html",
+          "final_url": "https://www.ibarakankou.jp/event/11november/DB007event6.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:37.493935+00:00",
+          "sha256": "312380c40d6fbd5ce4e0bb6882c358c80564904350e9f09b29754e1443bbf008"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12755.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12755.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:26.605219+00:00",
+          "sha256": "2d5a71aaf1b51bdf005d9b8e5576e5ecf3baa9014977236f89ce1576b6ce44b3"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621735/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621735/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:21.154718+00:00",
+          "sha256": "4c0e7e6c3db3f96336fb434dccf876aac7101ab3e17300bf3d5cc36e31c80d4d"
+        }
+      ]
+    },
+    {
+      "index": 404,
+      "region": "okayama",
+      "title": "収穫感謝祭「あたごっち」",
+      "disposition": "duplicate",
+      "reason": "公式の開催年・日付・会場を照合し、同じ催しの掲載を確認。",
+      "matched_event_id": "evt-hold-b1-267",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621737/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621737/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:38.116028+00:00",
+          "sha256": "110f9c8f58048472418901adee7846fe51524146cca69dc9c38189631c73e16f"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/11november/DB034event3.html",
+          "final_url": "https://www.ibarakankou.jp/event/11november/DB034event3.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:38.792461+00:00",
+          "sha256": "b23ef9a926dab85b1226abb7f838d65ebc6bc486b6e17ecede4a75dc370af0dc"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_12751.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_12751.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:27.109389+00:00",
+          "sha256": "adc0a3835df598d4c427b5f99a88c03e6794e06cf494464e1209a33026037d2b"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621737/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621737/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:21.512361+00:00",
+          "sha256": "30fc5d34becc4af500f3c9cbe6003633cda0c41009d1ced8befc66350493ede6"
+        }
+      ]
+    },
+    {
+      "index": 405,
+      "region": "okayama",
+      "title": "糸崎八幡神社 三原渡り拍子",
+      "disposition": "added",
+      "reason": "観光協会公式の2026年度日程・会場・観覧できる秋祭りを確認。2社の開催日・会場は別。",
+      "added_event_ids": [
+        "evt-hold-b1-405"
+      ],
+      "added_event_id": "evt-hold-b1-405",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621738/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621738/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:39.451948+00:00",
+          "sha256": "a64846537426ffb22af3080ac0da1c216837320a781e88d7e858642f912cd099"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/11november/DJ022event1.html",
+          "final_url": "https://www.ibarakankou.jp/event/11november/DJ022event1.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:40.257435+00:00",
+          "sha256": "693f157fff88bd529050ed907839d7abb48bca7d025c44914429ca21519f8575"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621738/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621738/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:21.903809+00:00",
+          "sha256": "bb185b3099680fb7ed00aa4e4a572b883642c226e6257496e4f7a50b539f00c0"
+        }
+      ]
+    },
+    {
+      "index": 406,
+      "region": "okayama",
+      "title": "中山天神社 三原渡り拍子",
+      "disposition": "added",
+      "reason": "観光協会公式の2026年度日程・会場・観覧できる秋祭りを確認。2社の開催日・会場は別。",
+      "added_event_ids": [
+        "evt-hold-b1-406"
+      ],
+      "added_event_id": "evt-hold-b1-406",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621739/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621739/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:40.722137+00:00",
+          "sha256": "f1ee85db6f46ad4e0f9a99bbef29603fb30f034708b35599a539b2fbaf3866f0"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/event/11november/DJ023event1.html",
+          "final_url": "https://www.ibarakankou.jp/event/11november/DJ023event1.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:41.561252+00:00",
+          "sha256": "8e9c12e790c2b85bfbe836d1d42253fbf0ec6f70c5d438a9d1b871a4ee5c1e26"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621739/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621739/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:22.310209+00:00",
+          "sha256": "154488bf5687738eb75ff1048620aaa7b8faad8dac7263b71b693e6ebb0f3b73"
+        }
+      ]
+    },
+    {
+      "index": 407,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】鬼ヶ嶽",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の再取得内容は紅葉・景観紹介。候補は見頃ガイド。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621748/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621748/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:42.180771+00:00",
+          "sha256": "fb5c65df6e9bf45e093696ad3df1746d1acdd8380632090b9fe44fdce6b4c1c3"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/sightseeing-information/nature/DH005.html",
+          "final_url": "https://www.ibarakankou.jp/sightseeing-information/nature/DH005.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:43.013482+00:00",
+          "sha256": "25d203b3ead17105dbcccd273645a4fda69fc764c47c5fea2eb60fe351d37435"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621748/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621748/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:22.728061+00:00",
+          "sha256": "0ec7a1bbafa6c7ef6c7c32f19834fd002c351a00190e407489b247dcb62f2297"
+        }
+      ]
+    },
+    {
+      "index": 408,
+      "region": "okayama",
+      "title": "星空保護区認定5周年記念イベント「星降る美星に、美声を。」",
+      "disposition": "added",
+      "reason": "公式チラシの2026年日時・子ども料金・雨天会場と公式販売先の購入経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-408"
+      ],
+      "added_event_id": "evt-hold-b1-408",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621993/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621993/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:43.524362+00:00",
+          "sha256": "b47fe8df743d595b137f39c1d4cbe92bbd89d316968e136ef30099577f9eadd2"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/info/pdf/20261128_event.pdf",
+          "final_url": "https://www.ibarakankou.jp/info/pdf/20261128_event.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:53.797943+00:00",
+          "sha256": "c07c68badea382b45795e849cdb1cc0643141536c65959f9874b13e5f224382f"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/info/pdf/20261128_info.pdf",
+          "final_url": "https://www.ibarakankou.jp/info/pdf/20261128_info.pdf",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:44.499002+00:00",
+          "sha256": "fc54b7e6ddc57fa953bc094d0bf46aa2c3de4290b820a065c54ce830c57a5d42"
+        },
+        {
+          "url": "https://www.ibarakankou.jp/info/info_event/202611285.html",
+          "final_url": "https://www.ibarakankou.jp/info/info_event/202611285.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:44.274410+00:00",
+          "sha256": "8ef529aa4576e1ea67777ad65a0c3de5e60c3a81b6b55d4757e4c7925f45c908"
+        },
+        {
+          "url": "https://eplus.jp/sf/detail/4615500001-P0030001P021001?P1=1221",
+          "final_url": "https://eplus.jp/sf/detail/4615500001-P0030001P021001?P1=1221",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:24.572570+00:00",
+          "sha256": "abfd2db1b0cbd673f786963bebe18f53237f0057a3ada37ff1f7691a568bee98"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621993/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621993/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:23.333149+00:00",
+          "sha256": "4c9d78c7f4306e6ba1d7d69a0db60925d3357dcab18f2c81bb1be12834b58956"
+        }
+      ]
+    },
+    {
+      "index": 409,
+      "region": "okayama",
+      "title": "北房文化祭（11月）",
+      "disposition": "added",
+      "reason": "参加団体公式の2026年11月1日・会場・保護犬ふれあい企画を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-409"
+      ],
+      "added_event_id": "evt-hold-b1-409",
+      "sources_checked": [
+        {
+          "url": "https://wanko.peace-winds.org/event/52665",
+          "final_url": "https://wanko.peace-winds.org/event/52665",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:44.944834+00:00",
+          "sha256": "429eacf30e20e91627de3b8f160062ef16c1152bb79d5302efa7a9e4003434ec"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621355/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621355/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:44.753275+00:00",
+          "sha256": "08e24f96797f6b754b802d6ba721c5bd16813cdff48ac7c4ffa797a04285a321"
+        },
+        {
+          "url": "https://wanko.peace-winds.org/facility/okayama",
+          "final_url": "https://wanko.peace-winds.org/facility/okayama",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:45.531816+00:00",
+          "sha256": "0d8ae1cc50b2a4b4377edca1e67e2a02e44cd8a1a80b0becef84366a0a34479d"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621355/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621355/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:23.928233+00:00",
+          "sha256": "614e3df0e14266db76e37215d1bf4bd1a7a1d940ed06e873229d69b44a995cc5"
+        }
+      ]
+    },
+    {
+      "index": 410,
+      "region": "okayama",
+      "title": "平喜酒造 秋の蔵開き",
+      "disposition": "still_hold",
+      "reason": "酒蔵公式の内容は酒類試飲・販売で、幼児を含む家族向け参加企画の根拠がない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621697/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621697/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:46.880873+00:00",
+          "sha256": "f0029c7ecb10e01d30ceb78eef906c99dd80c96a7c9c1d45078b5cf5c400fd85"
+        },
+        {
+          "url": "http://www.hirakishuzo.co.jp/",
+          "final_url": "https://hirakishuzo.co.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:47.919655+00:00",
+          "sha256": "bfd83efd9f206437f01db2ccf48728c8dad77ceffc61ddedfc39f334992069fd"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621697/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621697/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:24.463845+00:00",
+          "sha256": "922c584c605097e2fedb957acf010dd9188f0dfb8922d67086ae92c5ec28040e"
+        }
+      ]
+    },
+    {
+      "index": 411,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】赤和瀬渓谷・うたたねの里",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の再取得内容は紅葉・景観紹介。候補は見頃ガイド。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619954/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619954/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:48.949390+00:00",
+          "sha256": "24f952957196e8ff780d4ef5b084e608af0bae7632c5c4676ad1daa838d33742"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:49.937887+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619954/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619954/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:24.880389+00:00",
+          "sha256": "79ab5e3d7b39c5bd1808d157e7fb981dc15522d04a3dc422aa2ba8d344a50694"
+        }
+      ]
+    },
+    {
+      "index": 412,
+      "region": "okayama",
+      "title": "【紅葉・見ごろ】西屋緑地",
+      "disposition": "not_event",
+      "reason": "公式施設・観光局の再取得内容は紅葉・景観紹介。候補は見頃ガイド。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619960/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619960/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:51.622370+00:00",
+          "sha256": "6f22b24167e9472987759253dda52afa6e09abed16b89ca0371ab2bdfe239145"
+        },
+        {
+          "url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "final_url": "https://www.kagamino.holiday/special/season/entry-1118.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:52.331692+00:00",
+          "sha256": "255002b4669597fb06c2329024d0e58fe9ada0f8b7b001b4ceea1f53fc30ec8e"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e619960/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e619960/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:25.395408+00:00",
+          "sha256": "e807e714be735d2f32e81d949282f39166237736435947af012769f5745245a5"
+        }
+      ]
+    },
+    {
+      "index": 413,
+      "region": "okayama",
+      "title": "第26回自然薯祭り",
+      "disposition": "duplicate",
+      "reason": "公式の開催年・日付・会場を照合し、同じ催しの掲載を確認。",
+      "matched_event_id": "evt-hold-b1-254",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621747/data.html",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621747/data.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:53.106917+00:00",
+          "sha256": "d3c85d75908cec176f914de7f626e2e096185387bddb3a14958035759b935f67"
+        },
+        {
+          "url": "https://www.kibicity.ne.jp/topics/index.php?c=topics_1&pk=1792112702",
+          "final_url": "https://www.kibicity.ne.jp/topics/index.php?c=topics_1&pk=1792112702",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:53.952964+00:00",
+          "sha256": "852743eafe9df2075e2c584c3650d12fdd4d853fd86be097bd7e4b99d29dbe32"
+        },
+        {
+          "url": "https://www.okayama-kanko.jp/event/detail_100520.html",
+          "final_url": "https://www.okayama-kanko.jp/event/detail_100520.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:27.852961+00:00",
+          "sha256": "d1cbd29317c1665d1e7c5a2001e0d71b01a41cc646aedd471cfb61ddcadfcf58"
+        },
+        {
+          "url": "https://www.walkerplus.com/event/ar0833e621747/",
+          "final_url": "https://www.walkerplus.com/event/ar0833e621747/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:25.857094+00:00",
+          "sha256": "f9cd21d9fcbd517bb7d69fc30fdd4e22c45b1376b971fcccd9a7eacc2101206f"
+        }
+      ]
+    },
+    {
+      "index": 414,
+      "region": "tokushima",
+      "title": "南阿波サンライン星空観察会（秋）",
+      "disposition": "added",
+      "reason": "県公式が令和8年11月7日・会場・誰でも参加可・申込不要を明記。",
+      "added_event_ids": [
+        "evt-hold-b1-414"
+      ],
+      "added_event_id": "evt-hold-b1-414",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7317400/",
+          "final_url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7317400/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:26.425651+00:00",
+          "sha256": "70aa1f4d56119a4236daa63bf0ac17e87cb74b88d0c5f23c1b4a8a1a4ea62592"
+        }
+      ]
+    },
+    {
+      "index": 415,
+      "region": "tokushima",
+      "title": "文化の森 秋祭り（こもれびマルシェ含む）",
+      "disposition": "added",
+      "reason": "県公式の令和8年日程・会場と子ども向け体験の一般参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-415"
+      ],
+      "added_event_id": "evt-hold-b1-415",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7317353/",
+          "final_url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7317353/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:27.380158+00:00",
+          "sha256": "e0e5cca037d9dc958519b4d39fe313fa566289fa40c97123cd4441d694f57c09"
+        }
+      ]
+    },
+    {
+      "index": 416,
+      "region": "tokushima",
+      "title": "沖洲海浜 ロマンティックスター",
+      "disposition": "duplicate",
+      "reason": "県公式の令和8年11月7日・マリンピア沖洲・同じ星空観察会と既存IDを照合。公式申込締切10月23日も確認したが、この候補から既存行の変更は行わない。",
+      "matched_event_id": "evt-tokushima-okinosu-stars-20261107",
+      "sources_checked": [
+        {
+          "url": "https://4epo.jp/information/events/38108.html",
+          "final_url": "https://4epo.jp/information/events/38108.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:25.242897+00:00",
+          "sha256": "6a5e731b57a08eccf75f6412ede32280c84d89fa05ccc9a0bc01af4e52b5e8e3"
+        },
+        {
+          "url": "https://www.pref.tokushima.lg.jp/ippannokata/kendozukuri/kowan/7316900/",
+          "final_url": "https://www.pref.tokushima.lg.jp/ippannokata/kendozukuri/kowan/7316900/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:28.538505+00:00",
+          "sha256": "edcdccd75e33899ae1a3054ad0fbca70c90ca1290ebf1b445fce00cc0c919c7b"
+        }
+      ]
+    },
+    {
+      "index": 417,
+      "region": "tokushima",
+      "title": "第42回貴重図書特別展示「蜂須賀家」",
+      "disposition": "added",
+      "reason": "市公式の令和8年10月7日〜12月31日・図書館展示ケースでの通常観覧を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-417"
+      ],
+      "added_event_id": "evt-hold-b1-417",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/tenji/20261007_tennji.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/tenji/20261007_tennji.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:28.401923+00:00",
+          "sha256": "c670338dcba262c989895de6ba2407d3b37cdf115b346f8579c6cdb58293098c"
+        }
+      ]
+    },
+    {
+      "index": 418,
+      "region": "tokushima",
+      "title": "おはなしで7日間世界一周",
+      "disposition": "added",
+      "reason": "市公式の令和8年開催日と3歳以上・申込不要を確認。終了済み10月回は日程に含めない。",
+      "added_event_ids": [
+        "evt-hold-b1-418"
+      ],
+      "added_event_id": "evt-hold-b1-418",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261029.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261029.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:28.971338+00:00",
+          "sha256": "8c10ec12ada6fda01886cd41b174df7a847229d07d5d13002f019e04fb14e7f1"
+        }
+      ]
+    },
+    {
+      "index": 419,
+      "region": "tokushima",
+      "title": "第20回図書館資料片手に街角散歩",
+      "disposition": "still_hold",
+      "reason": "一般向けの文学資料と朗読を伴う2時間の街歩き。公式内容が幼児向けの参加プログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/ippanmukeibento/ippan_20261123.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/ippanmukeibento/ippan_20261123.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:29.434227+00:00",
+          "sha256": "9bd311e6ef193033aa3e6298cad95231fb959c027e00f25c4c1c5967ca9922a4"
+        }
+      ]
+    },
+    {
+      "index": 420,
+      "region": "tokushima",
+      "title": "プチ・ブックトーク",
+      "disposition": "added",
+      "reason": "市公式の令和8年日程・会場・子ども向け申込不要の参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-420"
+      ],
+      "added_event_id": "evt-hold-b1-420",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261129.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261129.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:30.053302+00:00",
+          "sha256": "5a140639d5b8d2e70b04501bff5a5be0f29582e64639d2d7441c36805f72c0cd"
+        }
+      ]
+    },
+    {
+      "index": 421,
+      "region": "tokushima",
+      "title": "楽しい絵本のお話 このゆびとーまれ",
+      "disposition": "added",
+      "reason": "市公式の令和8年日程・会場・子ども向け申込不要の参加経路を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-421"
+      ],
+      "added_event_id": "evt-hold-b1-421",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261122.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/kodomomukeibento/kodomo_20261122.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:30.511962+00:00",
+          "sha256": "329d3bffc84fd2c0828947c8799d51a3fc9648f17f97f06a6e3b5f2f6f60da05"
+        }
+      ]
+    },
+    {
+      "index": 422,
+      "region": "tokushima",
+      "title": "第85回住友美代子の朗読会",
+      "disposition": "still_hold",
+      "reason": "公式は一般向けに森鴎外「山椒大夫」を90分朗読する会。幼児向け・家族向けの参加内容ではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/toshokan/event/ippanmukeibento/ippan_20261122.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/toshokan/event/ippanmukeibento/ippan_20261122.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:31.132504+00:00",
+          "sha256": "c1df40f7c9feea249403e06f34d228d89931839e62d0262a9e4f99f4e7dc52df"
+        }
+      ]
+    },
+    {
+      "index": 423,
+      "region": "tokushima",
+      "title": "渦ヨガ 【大鳴門橋遊歩道 渦の道】",
+      "disposition": "still_hold",
+      "reason": "主催者公式が対象を中学生以上、18歳未満は保護者と参加と明記。幼児は対象外。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://naruto-retreat.jp/info/news/847/",
+          "final_url": "https://naruto-retreat.jp/info/news/847/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:20:46.137207+00:00",
+          "sha256": "382685ae12a51c9027ce61692dc017015f8c2c7470ed4f1291ad74b6b4c7b49f"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/75305",
+          "final_url": "https://www.awanavi.jp/archives/event/75305",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:31.717942+00:00",
+          "sha256": "7c2efc0755913023986b4a8dd187d4d752d3acb5b2491867cc1cf716278189db"
+        }
+      ]
+    },
+    {
+      "index": 424,
+      "region": "tokushima",
+      "title": "Humanoise Project 八面神社農村舞台＋音楽ライブ",
+      "disposition": "added",
+      "reason": "県観光公式の2026年11月1日・農村舞台・音楽ライブの日程を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-424"
+      ],
+      "added_event_id": "evt-hold-b1-424",
+      "sources_checked": [
+        {
+          "url": "https://www.awanavi.jp/archives/event/68034",
+          "final_url": "https://www.awanavi.jp/archives/event/68034",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:32.904281+00:00",
+          "sha256": "a1c0ab5079c2031d09e9ad2f6edb20c2a0ab17942da31de79b9e864e1ef00085"
+        }
+      ]
+    },
+    {
+      "index": 425,
+      "region": "tokushima",
+      "title": "道の駅大歩危　妖怪と石の感謝祭",
+      "disposition": "added",
+      "reason": "県観光公式の2026年11月1日・会場・子ども料金を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-425"
+      ],
+      "added_event_id": "evt-hold-b1-425",
+      "sources_checked": [
+        {
+          "url": "https://www.awanavi.jp/archives/event/1721",
+          "final_url": "https://www.awanavi.jp/archives/event/1721",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:19:34.226577+00:00",
+          "sha256": "67dd93cf72da943aa397f70c7a4066a340ead6fdb2b7cf2658604fa490680bd2"
+        }
+      ]
+    },
+    {
+      "index": 426,
+      "region": "tokushima",
+      "title": "剣山スーパー林道ミーティング2026",
+      "disposition": "added",
+      "reason": "主催者実行委員会の公式案内で令和8年11月1日（日）を確認。県観光ページの（土）誤記と区別して主催者を採用。",
+      "added_event_ids": [
+        "evt-hold-b1-426"
+      ],
+      "added_event_id": "evt-hold-b1-426",
+      "sources_checked": [
+        {
+          "url": "https://rindonavi.com/info.html?news_id=17902473099588",
+          "final_url": "https://rindonavi.com/info.html?news_id=17902473099588",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:27.763408+00:00",
+          "sha256": "47f601a8dadf0f37db7438e9fa14191d56cc7ef87e59a3e8394702800483aceb"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/68444",
+          "final_url": "https://www.awanavi.jp/archives/event/68444",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:38.353693+00:00",
+          "sha256": "5d7d4b153e83d1e7441c8eb260428d815ba3a0512bd7d2e447af4581037bb887"
+        }
+      ]
+    },
+    {
+      "index": 427,
+      "region": "tokushima",
+      "title": "戦国三好一族ファンミーティング",
+      "disposition": "added",
+      "reason": "県観光公式に2026年11月8日・会場・無料参加の案内がある。",
+      "added_event_ids": [
+        "evt-hold-b1-427"
+      ],
+      "added_event_id": "evt-hold-b1-427",
+      "sources_checked": [
+        {
+          "url": "https://www.awanavi.jp/archives/event/75284",
+          "final_url": "https://www.awanavi.jp/archives/event/75284",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:39.869687+00:00",
+          "sha256": "0f28212f572223cfa2995c024e8c75af2e7c5a7ce50da18c9521a4f254a33374"
+        }
+      ]
+    },
+    {
+      "index": 428,
+      "region": "tokushima",
+      "title": "ブルーライト・ウオーキング",
+      "disposition": "added",
+      "reason": "県観光公式の2026年11月14日・集合場所・2.4kmコース・無料参加を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-428"
+      ],
+      "added_event_id": "evt-hold-b1-428",
+      "sources_checked": [
+        {
+          "url": "https://www.awanavi.jp/archives/event/68186",
+          "final_url": "https://www.awanavi.jp/archives/event/68186",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:41.143495+00:00",
+          "sha256": "5d533d0abc0d8371aca537c4573fa926e51641cb840efe05246f083becf0d562"
+        }
+      ]
+    },
+    {
+      "index": 429,
+      "region": "tokushima",
+      "title": "第5回　にし阿波の花火",
+      "disposition": "still_hold",
+      "reason": "主催者公式チケットページが観覧チケット・駐車場チケット完売と明記。全席有料のため新規参加経路がない。",
+      "reason_code": "SOLD_OUT",
+      "sources_checked": [
+        {
+          "url": "https://www.awahanabi.com/",
+          "final_url": "https://www.awahanabi.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:28.352018+00:00",
+          "sha256": "5d1e4897e8652d1ac553f9916e534e6057186ece1f92f3c108546875ea932c37"
+        },
+        {
+          "url": "https://www.awahanabi.com/ticket",
+          "final_url": "https://www.awahanabi.com/ticket",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:28.898346+00:00",
+          "sha256": "a52cbb5cfec0335b73884dd2964668eeda304671282ef928544eb0ac63457c4e"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/62618",
+          "final_url": "https://www.awanavi.jp/archives/event/62618",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:42.768736+00:00",
+          "sha256": "2403d12cc1dea46944448dd0ce269e346ffc88ecb3ffdc4bcb153478f48041b0"
+        }
+      ]
+    },
+    {
+      "index": 430,
+      "region": "tokushima",
+      "title": "高台整備現場ハイキングツアー",
+      "disposition": "added",
+      "reason": "町公式の令和8年11月21日・家族向け防災体験・無料事前申込不要を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-430"
+      ],
+      "added_event_id": "evt-hold-b1-430",
+      "sources_checked": [
+        {
+          "url": "https://www.town.minami.lg.jp/docs/6317499.html",
+          "final_url": "https://www.town.minami.lg.jp/docs/6317499.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:29.296882+00:00",
+          "sha256": "cb84054f0dde86a31e884e75c5bc217712018245e47d3de5c7d9340f5ab98c33"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/75445",
+          "final_url": "https://www.awanavi.jp/archives/event/75445",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:44.159051+00:00",
+          "sha256": "037b2918eb1b4f0b987e1d686bd809bf365f78757cff73019fc0d76084edaeda"
+        }
+      ]
+    },
+    {
+      "index": 431,
+      "region": "tokushima",
+      "title": "川口ダム自然エネルギーミュージアム リニューアルオープン&10周年記念イベント",
+      "disposition": "duplicate",
+      "reason": "県観光公式の2026年11月22日・川口ダムミュージアム・10周年記念催しが既存IDと一致。",
+      "matched_event_id": "evt-tokushima-kawaguchi-10th-20261122",
+      "sources_checked": [
+        {
+          "url": "https://www.awanavi.jp/archives/event/75396",
+          "final_url": "https://www.awanavi.jp/archives/event/75396",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:45.504656+00:00",
+          "sha256": "6f2a3b344d93b94415ad9c20f4329b602ef021a381754c6373d1eaac159e29d7"
+        }
+      ]
+    },
+    {
+      "index": 432,
+      "region": "tokushima",
+      "title": "こまつしま逆風マラソン",
+      "disposition": "still_hold",
+      "reason": "大会公式のハーフ・10km・エンジョイラン全種目でエントリー終了を確認。",
+      "reason_code": "PARTICIPATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://komatsushima-marathon.jp/",
+          "final_url": "https://komatsushima-marathon.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:46.736579+00:00",
+          "sha256": "3a242de8544633d254bda2aface42b0baa34ea3440bf1c14d0506e3bdfa6b973"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/71778",
+          "final_url": "https://www.awanavi.jp/archives/event/71778",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:46.594585+00:00",
+          "sha256": "c88ef8925d73118791187bbbfa45810c41ef437f994fb386160fcbd21091f2c1"
+        }
+      ]
+    },
+    {
+      "index": 433,
+      "region": "tokushima",
+      "title": "なるとアクティビティフェス",
+      "disposition": "past",
+      "reason": "主催者公式は2026年10月31日開催と明記。体験本体は今日より前に終了。",
+      "sources_checked": [
+        {
+          "url": "https://naruto-retreat.jp/info/news/864/",
+          "final_url": "https://naruto-retreat.jp/info/news/864/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:56.897509+00:00",
+          "sha256": "80bfb91881dc44c362fb7bc72dbe9e8efa553989c18027ebb8804af4a6ecd080"
+        }
+      ]
+    },
+    {
+      "index": 434,
+      "region": "tokushima",
+      "title": "パイロット松下園 みかん狩り",
+      "disposition": "added",
+      "reason": "県・町観光の公式2026年期間を確認。同一記事で紹介されるが農園・住所が異なる。",
+      "added_event_ids": [
+        "evt-hold-b1-434"
+      ],
+      "added_event_id": "evt-hold-b1-434",
+      "sources_checked": [
+        {
+          "url": "https://katsuura-tourism.jp/2504",
+          "final_url": "https://katsuura-tourism.jp/2504",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:45.001144+00:00",
+          "sha256": "fe64ac78a32dac5fe25961cb58b8293f17efe95b587c7cff04e2020286c20b6e"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/topics/63456",
+          "final_url": "https://www.awanavi.jp/archives/topics/63456",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:47.781186+00:00",
+          "sha256": "ced2696ec2eb2f2b949a4bf939ef7f9e9202f96641351ec2cf96f38272c6d344"
+        }
+      ]
+    },
+    {
+      "index": 435,
+      "region": "tokushima",
+      "title": "勝浦観光◯青園 みかん狩り",
+      "disposition": "added",
+      "reason": "県・町観光の公式2026年期間を確認。同一記事で紹介されるが農園・住所が異なる。",
+      "added_event_ids": [
+        "evt-hold-b1-435"
+      ],
+      "added_event_id": "evt-hold-b1-435",
+      "sources_checked": [
+        {
+          "url": "https://katsuura-tourism.jp/2504",
+          "final_url": "https://katsuura-tourism.jp/2504",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:46.209033+00:00",
+          "sha256": "fe64ac78a32dac5fe25961cb58b8293f17efe95b587c7cff04e2020286c20b6e"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/topics/63456",
+          "final_url": "https://www.awanavi.jp/archives/topics/63456",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:48.659331+00:00",
+          "sha256": "ced2696ec2eb2f2b949a4bf939ef7f9e9202f96641351ec2cf96f38272c6d344"
+        }
+      ]
+    },
+    {
+      "index": 436,
+      "region": "tokushima",
+      "title": "徳島おどりフェスタ2026",
+      "disposition": "added",
+      "reason": "県公式の2026年会期・家族向けパレードと無料観覧、交通・雨天・最新告知を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-436"
+      ],
+      "added_event_id": "evt-hold-b1-436",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7315687/",
+          "final_url": "https://www.pref.tokushima.lg.jp/ippannokata/kyoiku/kanko/7315687/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:57.428285+00:00",
+          "sha256": "6e5ff73c3b0253c99aee8ae411eeefafecdd3dbcf94feb4e00c20388711749f7"
+        }
+      ]
+    },
+    {
+      "index": 437,
+      "region": "tokushima",
+      "title": "第5回にし阿波の花火",
+      "disposition": "still_hold",
+      "reason": "主催者公式チケットページが観覧チケット・駐車場チケット完売と明記。全席有料のため新規参加経路がない。",
+      "reason_code": "SOLD_OUT",
+      "sources_checked": [
+        {
+          "url": "https://www.awahanabi.com/",
+          "final_url": "https://www.awahanabi.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:58.365672+00:00",
+          "sha256": "5d1e4897e8652d1ac553f9916e534e6057186ece1f92f3c108546875ea932c37"
+        },
+        {
+          "url": "https://www.awahanabi.com/ticket",
+          "final_url": "https://www.awahanabi.com/ticket",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:58.898880+00:00",
+          "sha256": "a52cbb5cfec0335b73884dd2964668eeda304671282ef928544eb0ac63457c4e"
+        }
+      ]
+    },
+    {
+      "index": 438,
+      "region": "tokushima",
+      "title": "第6回 こまつしま逆風マラソン",
+      "disposition": "still_hold",
+      "reason": "大会公式のハーフ・10km・エンジョイラン全種目でエントリー終了を確認。",
+      "reason_code": "PARTICIPATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://komatsushima-marathon.jp/",
+          "final_url": "https://komatsushima-marathon.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:59.323874+00:00",
+          "sha256": "3a242de8544633d254bda2aface42b0baa34ea3440bf1c14d0506e3bdfa6b973"
+        },
+        {
+          "url": "https://www.awanavi.jp/archives/event/71778",
+          "final_url": "https://www.awanavi.jp/archives/event/71778",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:50.063096+00:00",
+          "sha256": "c88ef8925d73118791187bbbfa45810c41ef437f994fb386160fcbd21091f2c1"
+        }
+      ]
+    },
+    {
+      "index": 439,
+      "region": "tokushima",
+      "title": "第5回 にし阿波の花火",
+      "disposition": "still_hold",
+      "reason": "主催者公式チケットページが観覧チケット・駐車場チケット完売と明記。全席有料のため新規参加経路がない。",
+      "reason_code": "SOLD_OUT",
+      "sources_checked": [
+        {
+          "url": "https://www.awahanabi.com/ticket",
+          "final_url": "https://www.awahanabi.com/ticket",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:59.891814+00:00",
+          "sha256": "a52cbb5cfec0335b73884dd2964668eeda304671282ef928544eb0ac63457c4e"
+        },
+        {
+          "url": "https://www.awahanabi.com/",
+          "final_url": "https://www.awahanabi.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:51.254041+00:00",
+          "sha256": "5d1e4897e8652d1ac553f9916e534e6057186ece1f92f3c108546875ea932c37"
+        }
+      ]
+    },
+    {
+      "index": 440,
+      "region": "tokushima",
+      "title": "気分はトム・ソーヤ、貸切の筏（イカダ）に乗ってBBQ＆フィッシング",
+      "disposition": "added",
+      "reason": "ホテル公式連携ページに2026年10月1日〜11月30日の限定企画・3歳以上の参加条件を明記。恒常サービスとは区別。",
+      "added_event_ids": [
+        "evt-hold-b1-440"
+      ],
+      "added_event_id": "evt-hold-b1-440",
+      "sources_checked": [
+        {
+          "url": "https://www.aoawo-naruto.com/pages/358/",
+          "final_url": "https://www.aoawo-naruto.com/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:29.746393+00:00",
+          "sha256": "dc0683575acffd34dd5ed1c9feb66901eefef6829df7e3f93112b6a89d253964"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/48/",
+          "final_url": "https://www.aoawo-naruto.com/pages/48/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:12.069658+00:00",
+          "sha256": "536a88df0f926f47e3c50a2743dc5ffab22d64bc23c60074c261509a9b7a4626"
+        },
+        {
+          "url": "https://sites.google.com/view/aoawouchinoumibbq/ホーム",
+          "final_url": "https://sites.google.com/view/aoawouchinoumibbq/%E3%83%9B%E3%83%BC%E3%83%A0",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:41.030808+00:00",
+          "sha256": "c378bb8e2203d286e991d1e944d0692aa2deab6669fed49cbf191951edc1b702"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/",
+          "final_url": "https://www.aoawo-naruto.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:52.166138+00:00",
+          "sha256": "ff835eff3f9858af47212318280afb952211f6abe627060931b75f32417b7b13"
+        }
+      ]
+    },
+    {
+      "index": 441,
+      "region": "tokushima",
+      "title": "日帰りプラン「なると金時芋掘り体験＆ランチ＆温泉」2026",
+      "disposition": "added",
+      "reason": "公式の2026年開始・終了日と体験単独／日帰りセットの同一芋掘りをまとめて掲載。",
+      "added_event_ids": [
+        "evt-hold-b1-441"
+      ],
+      "added_event_id": "evt-hold-b1-441",
+      "sources_checked": [
+        {
+          "url": "https://www.aoawo-naruto.com/pages/121/",
+          "final_url": "https://www.aoawo-naruto.com/pages/121/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:14.936796+00:00",
+          "sha256": "34f045679c549deda1fcf8d19c37e4a1483697db59f64bf164893b3353908da1"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/358/",
+          "final_url": "https://www.aoawo-naruto.com/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:13.713434+00:00",
+          "sha256": "119a7da0cab6db55e1c3c1c0b8ed8542a485e209a32b1db06f618185ad0d0dd8"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/",
+          "final_url": "https://www.aoawo-naruto.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:54.505620+00:00",
+          "sha256": "31b6478caf654e8df2d8a87cef944aa050c112d6a2fc2f786352c35989f4211d"
+        }
+      ]
+    },
+    {
+      "index": 442,
+      "region": "tokushima",
+      "title": "9～11月限定、鳴門の秋のご当地・収穫体験「なると金時芋掘り体験」",
+      "disposition": "duplicate",
+      "reason": "各候補でホテル公式を再取得。2026年9月1日〜11月30日・同じ芋掘り体験で、ランチ付きプランも既掲載に含めた。",
+      "matched_event_id": "evt-hold-b1-441",
+      "sources_checked": [
+        {
+          "url": "https://www.aoawo-naruto.com/pages/358/",
+          "final_url": "https://www.aoawo-naruto.com/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:16.523581+00:00",
+          "sha256": "e7c4efac4410d472f789f94379ae4d4970d7376cdecbcf5aa4f31b8deab745af"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/",
+          "final_url": "https://www.aoawo-naruto.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:57.448561+00:00",
+          "sha256": "d50bbdf72e11c4b80e0aedaa8f8afa2298b59e81bea780419db4f28829245dab"
+        }
+      ]
+    },
+    {
+      "index": 443,
+      "region": "tokushima",
+      "title": "【日帰り】9～11月のご当地体験「なると金時芋掘り」＆ランチ＆温泉",
+      "disposition": "duplicate",
+      "reason": "各候補でホテル公式を再取得。2026年9月1日〜11月30日・同じ芋掘り体験で、ランチ付きプランも既掲載に含めた。",
+      "matched_event_id": "evt-hold-b1-441",
+      "sources_checked": [
+        {
+          "url": "https://www.aoawo-naruto.com/pages/121/",
+          "final_url": "https://www.aoawo-naruto.com/pages/121/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:41.939864+00:00",
+          "sha256": "82d9dd53170532af723afd9a09c0fbbb364871ac8a6b2b3713e69e1d7ea0ee4e"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/358/",
+          "final_url": "https://www.aoawo-naruto.com/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:17.620882+00:00",
+          "sha256": "4d2ef04cba3d05902db54779d50ebcfe44ea8939b70ad97d2c7a9d7dd8d670cc"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/",
+          "final_url": "https://www.aoawo-naruto.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:21:59.889176+00:00",
+          "sha256": "6368cb4297fd3b5b57ea024bd33e06ae369f4c3cbcd9371cecb6a3c528b2d139"
+        }
+      ]
+    },
+    {
+      "index": 444,
+      "region": "tokushima",
+      "title": "第4回 徳島市SDGsこども未来チャレンジ",
+      "disposition": "added",
+      "reason": "市公式の令和8年11月1日・子ども向け無料体験・随時受付を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-444"
+      ],
+      "added_event_id": "evt-hold-b1-444",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/sdgs/r8sdgs_challenge.html",
+          "final_url": "https://www.city.tokushima.tokushima.jp/shisei/machi_keikaku/sdgs/r8sdgs_challenge.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:02.231216+00:00",
+          "sha256": "d5a4f31d2498005d2c01bc732f7824c12228161714b0b18a4cfb2fac17b582a1"
+        }
+      ]
+    },
+    {
+      "index": 445,
+      "region": "tokushima",
+      "title": "国の特別天然記念物、鳴門のコウノトリが来る畑で「レンコン掘り体験」",
+      "disposition": "added",
+      "reason": "ホテル公式の2026年11月3日と日帰り予約経路・幼児料金を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-445"
+      ],
+      "added_event_id": "evt-hold-b1-445",
+      "sources_checked": [
+        {
+          "url": "https://www.aoawo-naruto.com/pages/121/",
+          "final_url": "https://www.aoawo-naruto.com/pages/121/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:43.720798+00:00",
+          "sha256": "819e0e4d32a6b4bc1bf77b29bb6e51901d4aca1edf67c4d50200a80aecf2216b"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/91/",
+          "final_url": "https://www.aoawo-naruto.com/pages/91/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:18.565324+00:00",
+          "sha256": "7672c7ed3b5e2b83b16d1b20813972b7a54369d3b7014279fa23cf7b853179e7"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/515/",
+          "final_url": "https://www.aoawo-naruto.com/pages/515/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:24:04.058867+00:00",
+          "sha256": "e067456c4a19f54abcf4d92592de3d6fcb4413f7aad98946f82a34048f90c4c2"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/pages/87/",
+          "final_url": "https://www.aoawo-naruto.com/pages/87/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:24:04.848483+00:00",
+          "sha256": "f668a4795b06fcd90b4b6e8c2aec794badff7ee0bb0875460b70925947d94bb5"
+        },
+        {
+          "url": "https://www.aoawo-naruto.com/",
+          "final_url": "https://www.aoawo-naruto.com/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:02.917981+00:00",
+          "sha256": "f5551d5f000605298bfae9f58b6a1947ac90c053dd2af1dee970c7d72c35f7e2"
+        }
+      ]
+    },
+    {
+      "index": 446,
+      "region": "tokushima",
+      "title": "【１１月７日開催】キッズマネースクール☆おみせやさんごっこ【徳島市】",
+      "disposition": "added",
+      "reason": "主催するスクール公式の2026年11月7日・会場・4〜10歳・11月6日まで申込を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-446"
+      ],
+      "added_event_id": "evt-hold-b1-446",
+      "sources_checked": [
+        {
+          "url": "https://clover-tokushima.jp/event/",
+          "final_url": "https://clover-tokushima.jp/event/",
+          "http_status": 404,
+          "checked_at": "2026-10-31T22:22:30.679272+00:00",
+          "sha256": "9a25143e926e397b7ffca51f9f4074ffe3e26e79dc3d48d52c060ebe774ab4c6"
+        },
+        {
+          "url": "https://kids-money.com/schedule/60321.html",
+          "final_url": "https://kids-money.com/schedule/60321.html",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:23:00.517523+00:00",
+          "sha256": "734509e58071256d846febb1c25a98705da6386812008e92da0e2c145e4bd101"
+        },
+        {
+          "url": "https://clover-tokushima.jp/",
+          "final_url": "https://clover-tokushima.jp/",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:05.091938+00:00",
+          "sha256": "58caac0ddbe3b33281d0cda1a10d5165c5b197b3aae4a9e867a871e33aec15d8"
+        }
+      ]
+    },
+    {
+      "index": 447,
+      "region": "tokushima",
+      "title": "ケアベアが遊びにくるよ！",
+      "disposition": "added",
+      "reason": "公式店舗開店案内の2026年11月・撮影会日程・当日整列経路を確認。買物特典とは区別。",
+      "added_event_ids": [
+        "evt-hold-b1-447"
+      ],
+      "added_event_id": "evt-hold-b1-447",
+      "sources_checked": [
+        {
+          "url": "https://www.plazastyle.com/contents/topics/detail/591",
+          "final_url": "https://www.plazastyle.com/contents/topics/detail/591",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:06.069458+00:00",
+          "sha256": "15b5907a8a84525f61b52fc4f51073404b1d1b7d2f70c9742e968e47963bc7d6"
+        }
+      ]
+    },
+    {
+      "index": 448,
+      "region": "tokushima",
+      "title": "みんなで描く！光る！クリスマスアート",
+      "disposition": "added",
+      "reason": "施設公式の2026年10月31日〜11月1日・会場・親子のチョークアート体験を確認。",
+      "added_event_ids": [
+        "evt-hold-b1-448"
+      ],
+      "added_event_id": "evt-hold-b1-448",
+      "sources_checked": [
+        {
+          "url": "https://tokushima.aeonmall.jp/event/7bea7b1f-2019-4ccc-9d03-28cea5226633",
+          "final_url": "https://tokushima.aeonmall.jp/event/7bea7b1f-2019-4ccc-9d03-28cea5226633",
+          "http_status": 200,
+          "checked_at": "2026-10-31T22:22:06.869788+00:00",
+          "sha256": "547f9eb80d3bc8c2074a2590660a25189a7504e02d4f3cbb1bba6a53de4701f4"
+        }
+      ]
     }
-  ]
+  ],
+  "deviations": [
+    "Second visibility commit was made at 175 candidates after a helper error; corrected completion through 200 was committed and pushed immediately afterward.",
+    "Candidate 17 was corrected from not_event to added after official dated campaign review; progress is reconciled to the final disposition."
+  ],
+  "facility_prefecture_check": {
+    "checked_events": 10279,
+    "mismatch_count": 0,
+    "mismatches": []
+  },
+  "url_provenance_check": {
+    "changed_events": 259,
+    "unfetched_urls": []
+  },
+  "proposed_validator_exceptions": [
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-hold-b1-310",
+      "reason": "2026-11-01 本Missionで旧野﨑家住宅の公式企画展本文・チラシを新規取得。満席・受付終了は11月29日の関連記念茶会のみ。掲載対象は10月22日〜1月24日の通常入館で観覧する企画展示で、茶会への参加を含まない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b1-fix-1446:evt-w43f1-1446-talk:2026-11-07",
+      "reason": "2026-11-01 本Missionで神戸須磨シーワールド公式10829を新規取得。鍵井靖章の写真展示（アクアライブ2Fトロピカルライフ、11月7日開始・終了日未掲載）と、同日の抽選制トークイベントは会場・内容・参加条件の異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b1-434:evt-hold-b1-435:2026-10-17",
+      "reason": "2026-11-01 本Missionで徳島県観光公式記事と勝浦町観光公式案内を新規取得。同じ期間を紹介する共通記事だが、松下園（沼江萩の谷75）と○青園（沼江大屋敷39）は別の農園・別住所・別営業時間であり、同一会場の二重登録ではない。"
+    }
+  ],
+  "not_stated_phrase_counts": {
+    "time_label": 34,
+    "price_label": 64,
+    "reservation_label": 155,
+    "age_label": 187,
+    "weather": 199
+  },
+  "participability": {
+    "通常参加可能": 58,
+    "条件付き参加可能": 193,
+    "受付終了・参加不能": 0,
+    "classification_note": "Missing published reservation conditions are disclosed using fixed phrasing and included as conditional; closed/full/not-open candidates are held."
+  },
+  "validation": {
+    "event_validators": {
+      "errors": 0,
+      "regular_errors": 0,
+      "proposed_exact_exceptions": 3
+    },
+    "tests": {
+      "tests": 89,
+      "pass": 86,
+      "fail": 3,
+      "baseline": "7ff6a99204245b59ed7f3d0acf821b0550dcd0d9",
+      "baseline_reproduced_same_three_historical_fixtures": true
+    },
+    "diff_audit": {
+      "new_events": 251,
+      "existing_modified": 8,
+      "deleted": 0,
+      "facility_data_changed": false,
+      "schema_ui_registry_rotation_changed": false
+    },
+    "bounded_existing_field_changes": {
+      "evt-tokyo-w42d1-camp-koyomi": [
+        "official_url",
+        "source_urls"
+      ],
+      "evt-gunma-20261029-d8-045": [
+        "official_url",
+        "source_urls"
+      ],
+      "evt-tokyo-w43d1-jaf-roadservice": [
+        "official_url",
+        "source_urls"
+      ],
+      "evt-yamanashi-toin-20261103": [
+        "official_url",
+        "source_urls"
+      ],
+      "evt-w43f1-6943-fureai": [
+        "facility_id",
+        "source_notes"
+      ],
+      "evt-w43f1-6943-forest": [
+        "facility_id",
+        "source_notes"
+      ],
+      "evt-w43f1-6943-daruma": [
+        "facility_id",
+        "source_notes"
+      ],
+      "evt-w43f1-6943-straw": [
+        "facility_id",
+        "source_notes"
+      ]
+    },
+    "events_data_sha256": "a20e14699676487d6eef60b7373d8dc40efa0a01c1d4e7b2d5fcf0f891b8ef8f",
+    "cloudflare_build": {
+      "exit_code": 0,
+      "static_pages": 6181,
+      "runtime_canon_files": 15
+    },
+    "preview": {
+      "checked_at": "2026-10-31T23:02:43.210Z",
+      "targets": 259,
+      "access_date": "2026-11-01",
+      "pages": [
+        {
+          "region": "tokyo",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 42,
+          "visible_cards": 832
+        },
+        {
+          "region": "gunma",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 152
+        },
+        {
+          "region": "yamanashi",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 9,
+          "visible_cards": 165
+        },
+        {
+          "region": "fukushima",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 148
+        },
+        {
+          "region": "okayama",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 286
+        },
+        {
+          "region": "tokushima",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 5,
+          "visible_cards": 99
+        },
+        {
+          "region": "chiba",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 292
+        },
+        {
+          "region": "hyogo",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 157
+        },
+        {
+          "region": "saitama",
+          "width": 1280,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 288
+        },
+        {
+          "region": "tokyo",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 42,
+          "visible_cards": 832
+        },
+        {
+          "region": "gunma",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 152
+        },
+        {
+          "region": "yamanashi",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 9,
+          "visible_cards": 165
+        },
+        {
+          "region": "fukushima",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 148
+        },
+        {
+          "region": "okayama",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 286
+        },
+        {
+          "region": "tokushima",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 5,
+          "visible_cards": 99
+        },
+        {
+          "region": "chiba",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 292
+        },
+        {
+          "region": "hyogo",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 8,
+          "visible_cards": 157
+        },
+        {
+          "region": "saitama",
+          "width": 375,
+          "http_status": 200,
+          "pagination_pages": 15,
+          "visible_cards": 288
+        }
+      ],
+      "errors": [],
+      "missing": [],
+      "field_mismatches": [],
+      "ended_visible": [],
+      "overflow": [],
+      "blocking": 0
+    }
+  }
 }
