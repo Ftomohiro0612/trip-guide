@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W43-GROUP-B-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-10-31T17:29:05.478394+00:00",
+  "executed_at": "2026-10-31T17:36:48.974591+00:00",
   "process_started_at": "2026-10-31T16:28:01.2754484Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -53,7 +53,13 @@
     "candidate_found_duplicate": 2,
     "candidate_found_hold": 3,
     "source_unresolved": 2,
-    "completed_facilities": 40
+    "completed_facilities": 40,
+    "events_added": 152,
+    "events_updated": 157,
+    "events_ended": 55,
+    "events_deleted": 0,
+    "candidate_hold_encounters": 134,
+    "existing_event_holds": 5
   },
   "per_region": {
     "hyogo": {
@@ -287,6 +293,20 @@
           "added_event_ids": [
             "evt-8099-202702-vangogh",
             "evt-8099-202610-flood-history"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8099-202702-vangogh",
+              "title": "大ゴッホ展 アルルの跳ね橋",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ktv.jp/event/vangogh/"
+            },
+            {
+              "event_id": "evt-8099-202610-flood-history",
+              "title": "コレクション展示「大水害の時代―明治29年水害と神戸」",
+              "participability": "通常参加可能",
+              "official_url": "https://event.city.kobe.lg.jp/event/pqG4f6USc3uVnKJNfAnx"
+            }
           ]
         },
         {
@@ -333,6 +353,32 @@
             "evt-8100-202610-new-materials",
             "evt-8100-202608-kumamoto-support",
             "evt-8100-202611-design-talk"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8100-202611-design",
+              "title": "防災研究者とデザイナーの協同研究の30年「あまねく・うつくしく・わかりやすく」をめざして",
+              "participability": "通常参加可能",
+              "official_url": "https://www.dri.ne.jp/event/event-181329/"
+            },
+            {
+              "event_id": "evt-8100-202610-new-materials",
+              "title": "2026新着資料紹介",
+              "participability": "通常参加可能",
+              "official_url": "https://www.dri.ne.jp/event/event-180694/"
+            },
+            {
+              "event_id": "evt-8100-202608-kumamoto-support",
+              "title": "令和８年熊本地震現地支援報告：速報",
+              "participability": "通常参加可能",
+              "official_url": "https://www.dri.ne.jp/information/180901/"
+            },
+            {
+              "event_id": "evt-8100-202611-design-talk",
+              "title": "防災デザイン研究会30周年記念展 ギャラリートーク",
+              "participability": "通常参加可能",
+              "official_url": "https://add.or.jp/30th_Anniversary_Exhibition/gallery-talk.html"
+            }
           ]
         },
         {
@@ -368,6 +414,20 @@
           "added_event_ids": [
             "evt-8101-202611-monthly",
             "evt-8101-202610-halloween"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8101-202611-monthly",
+              "title": "オトビバ 11月の親子音あそびイベント",
+              "participability": "条件付き参加可能",
+              "official_url": "https://otoviva.shimamura.co.jp/news/2026/10/739/"
+            },
+            {
+              "event_id": "evt-8101-202610-halloween",
+              "title": "オトビバ ハロウィンイベント",
+              "participability": "通常参加可能",
+              "official_url": "https://otoviva.shimamura.co.jp/news/2026/10/688/"
+            }
           ]
         },
         {
@@ -390,9 +450,22 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 8,
+        "updated": 1,
+        "ended": 0,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 3,
+      "participability_counts": {
+        "通常参加可能": 6,
+        "条件付き参加可能": 2,
+        "受付終了・参加不能": 0
+      }
     },
     "kanagawa": {
       "facility_ids": [
@@ -1801,6 +1874,14 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-777-202611-gallery-talk"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-777-202611-gallery-talk",
+              "title": "企画展「1945 新聞裏面史」ギャラリートーク",
+              "participability": "通常参加可能",
+              "official_url": "https://newspark.jp/exhibition/ex000463.html"
+            }
           ]
         },
         {
@@ -1872,6 +1953,38 @@
             "evt-783-202611-autumn-path",
             "evt-783-202612-raku",
             "evt-783-202611-infinity"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-783-202611-tokeiji",
+              "title": "重要文化財「旧東慶寺仏殿」特別公開",
+              "participability": "通常参加可能",
+              "official_url": "https://www.sankeien.or.jp/event/10869/"
+            },
+            {
+              "event_id": "evt-783-202610-kikuka",
+              "title": "三溪園 菊花展",
+              "participability": "通常参加可能",
+              "official_url": "https://www.sankeien.or.jp/event/10849/"
+            },
+            {
+              "event_id": "evt-783-202611-autumn-path",
+              "title": "三溪園 紅葉の遊歩道開放",
+              "participability": "通常参加可能",
+              "official_url": "https://www.sankeien.or.jp/schedule/"
+            },
+            {
+              "event_id": "evt-783-202612-raku",
+              "title": "楽茶碗を作る・楽茶碗で点てる―作陶と点前体験―",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.sankeien.or.jp/event/10835/"
+            },
+            {
+              "event_id": "evt-783-202611-infinity",
+              "title": "待春軒 INFINITY ECHOES Live",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.sankeien.or.jp/event/10838/"
+            }
           ]
         },
         {
@@ -1969,6 +2082,56 @@
             "evt-792-202611-pilates",
             "evt-792-202611-chairyoga",
             "evt-792-202611-basicyoga"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-792-202611-marche",
+              "title": "生田緑地 森のマルシェ（11月）",
+              "participability": "通常参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/marche-7"
+            },
+            {
+              "event_id": "evt-792-202611-autumnmarche",
+              "title": "生田緑地 オータムマルシェ",
+              "participability": "通常参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/autumn-marche2"
+            },
+            {
+              "event_id": "evt-792-202611-foodfestival",
+              "title": "第11回「川崎北部」食の祭典in生田緑地",
+              "participability": "通常参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/shokunositen10-1"
+            },
+            {
+              "event_id": "evt-792-202612-openairart",
+              "title": "生田緑地 青空絵画展vol.5",
+              "participability": "通常参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/2026120506zoukeixshizen_ws"
+            },
+            {
+              "event_id": "evt-792-202611-relaxyoga",
+              "title": "生田緑地 リラックスヨガ",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/relax-3"
+            },
+            {
+              "event_id": "evt-792-202611-pilates",
+              "title": "生田緑地 はじめてのピラティス",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/pilates"
+            },
+            {
+              "event_id": "evt-792-202611-chairyoga",
+              "title": "生田緑地 優しい椅子ヨガ",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/isuyoga"
+            },
+            {
+              "event_id": "evt-792-202611-basicyoga",
+              "title": "生田緑地 ベーシックヨガ",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ikutaryokuti.jp/event/basic-2"
+            }
           ]
         },
         {
@@ -2055,6 +2218,32 @@
             "evt-794-202611-photowalk",
             "evt-794-202612-shimenawa",
             "evt-794-202611-sheep-exhibition"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-794-202610-stolefair",
+              "title": "伝統工芸館ミニ展示「ストールフェア」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.nihonminkaen.jp/event/stole-fair"
+            },
+            {
+              "event_id": "evt-794-202611-photowalk",
+              "title": "民家園フォト教室 秋－日本の色を、撮る－",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.nihonminkaen.jp/event/photowalk"
+            },
+            {
+              "event_id": "evt-794-202612-shimenawa",
+              "title": "体験講座 わら細工「しめ縄（たまかざり）」",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.nihonminkaen.jp/event/shimenawa"
+            },
+            {
+              "event_id": "evt-794-202611-sheep-exhibition",
+              "title": "伝統工芸館 干支の型染め講習会作品展示",
+              "participability": "通常参加可能",
+              "official_url": "https://www.nihonminkaen.jp/event/aizome-lecture-eto"
+            }
           ]
         },
         {
@@ -2084,6 +2273,14 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-804-202610-cosmos"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-804-202610-cosmos",
+              "title": "くりはま花の国 コスモスまつり",
+              "participability": "通常参加可能",
+              "official_url": "https://www.kanagawaparks.com/kurihama/news/2026102708571710610.html"
+            }
           ]
         },
         {
@@ -2142,6 +2339,20 @@
           "added_event_ids": [
             "evt-831-202611-enromarche",
             "evt-831-202611-clematis"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-831-202611-enromarche",
+              "title": "相模原麻溝公園 園路マルシェ",
+              "participability": "通常参加可能",
+              "official_url": "https://www.kanagawaparks.com/asamizo/event/202609141925486925.html"
+            },
+            {
+              "event_id": "evt-831-202611-clematis",
+              "title": "クレマチスのお手入れ教室～楽しく学ぶ育て方のコツ～",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.kanagawaparks.com/asamizo/event/202603311007496314.html"
+            }
           ]
         },
         {
@@ -2182,7 +2393,8 @@
           "updated_event_ids": [
             "evt-837-w40f4-tulip"
           ],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         },
         {
           "facility_id": 839,
@@ -2275,6 +2487,62 @@
             "evt-839-202611-kamishibai",
             "evt-839-202611-nature",
             "evt-839-202611-ukulele"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-839-202611-suisen",
+              "title": "スイセンの球根植えワークショップ",
+              "participability": "条件付き参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/113.html"
+            },
+            {
+              "event_id": "evt-839-202611-harvest",
+              "title": "HARVEST PARK 2026",
+              "participability": "通常参加可能",
+              "official_url": "https://www.harvestpark-chigasaki.com/about.html"
+            },
+            {
+              "event_id": "evt-839-202611-autumnfestival",
+              "title": "茅ケ崎里山公園 秋の里山公園まつり",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/1115.html"
+            },
+            {
+              "event_id": "evt-839-202611-solar",
+              "title": "晴れた日はソーラークッキング",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            },
+            {
+              "event_id": "evt-839-202611-yanagi",
+              "title": "柳谷自然観察会「秋色に染まる動植物」",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            },
+            {
+              "event_id": "evt-839-202611-hawaiian",
+              "title": "里山ココナッツ ハワイアンワークショップ",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            },
+            {
+              "event_id": "evt-839-202611-kamishibai",
+              "title": "紙芝居公演 谷の家",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            },
+            {
+              "event_id": "evt-839-202611-nature",
+              "title": "定例自然観察会「初冬の生きものを見よう」",
+              "participability": "通常参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            },
+            {
+              "event_id": "evt-839-202611-ukulele",
+              "title": "湘南ウクレレ倶楽部 ウクレレ練習会（11月）",
+              "participability": "条件付き参加可能",
+              "official_url": "https://chigasakisatoyama-eventinfo.blogspot.com/2026/10/11.html"
+            }
           ]
         },
         {
@@ -2334,6 +2602,20 @@
           "added_event_ids": [
             "evt-848-202611-seakayak",
             "evt-848-202611-lighthouseday"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-848-202611-seakayak",
+              "title": "日本丸シーカヤック ハーフデイスクール（11月土日）",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.nippon-maru.or.jp/seakayak/"
+            },
+            {
+              "event_id": "evt-848-202611-lighthouseday",
+              "title": "灯台記念日158周年×横浜北水堤灯台130周年記念イベント",
+              "participability": "通常参加可能",
+              "official_url": "https://www.nippon-maru.or.jp/20261024-18213/"
+            }
           ]
         },
         {
@@ -2412,6 +2694,80 @@
             "evt-851-202611-gallery",
             "evt-851-202612-ornament",
             "evt-851-202612-allstars"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-851-202611-ebisu",
+              "title": "学芸員が語る相模の家の暮らし「エビス講」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-robata",
+              "title": "ろばたばなし（11月）",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-kepler",
+              "title": "天文学入門講座「惑星の運行とケプラーの法則」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-genpei",
+              "title": "平塚郷土史入門講座「源平合戦の実像を探る」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-geotour",
+              "title": "相模川流域ジオツアー入門 湘南平",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202612-ruins",
+              "title": "真土・四之宮の遺跡を歩く",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202612-replica",
+              "title": "体験学習「銅鏃のレプリカをつくろう」",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-asuka",
+              "title": "プラネタリウム特別投影「飛鳥・藤原の天文学」",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/gyouji_annai/"
+            },
+            {
+              "event_id": "evt-851-202611-jomon",
+              "title": "記念講演会「縄文土器研究の魅力」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/news/ana/202611ana.pdf"
+            },
+            {
+              "event_id": "evt-851-202611-gallery",
+              "title": "秋期特別展 展示解説（11・12月）",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hirahaku.jp/news/ana/202611ana.pdf"
+            },
+            {
+              "event_id": "evt-851-202612-ornament",
+              "title": "お飾りをつくろう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/news/ana/202611ana.pdf"
+            },
+            {
+              "event_id": "evt-851-202612-allstars",
+              "title": "プラネタリウム特別投影「ひらはくオールスターズ 渡部義弥さん」",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.hirahaku.jp/news/ana/202611ana.pdf"
+            }
           ]
         },
         {
@@ -2514,7 +2870,8 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         },
         {
           "facility_id": 904,
@@ -2561,6 +2918,20 @@
           "added_event_ids": [
             "evt-904-202611-whalerides",
             "evt-904-202611-mamayoga"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-904-202611-whalerides",
+              "title": "くじらの海のりもの広場",
+              "participability": "通常参加可能",
+              "official_url": "https://tsujidouparkevent.blogspot.com/2026/10/blog-post.html"
+            },
+            {
+              "event_id": "evt-904-202611-mamayoga",
+              "title": "ママヨガ湘南（11月）",
+              "participability": "条件付き参加可能",
+              "official_url": "https://tsujidouparkevent.blogspot.com/2026/10/1162027.html"
+            }
           ]
         },
         {
@@ -2606,6 +2977,20 @@
           "added_event_ids": [
             "evt-905-202611-marche",
             "evt-905-202611-autumnwalk"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-905-202611-marche",
+              "title": "ENJOY LOCAL MARKET 実りの秋を楽しもう！",
+              "participability": "通常参加可能",
+              "official_url": "https://sikimoriibento.blogspot.com/2025/10/enjoy-local-market-in.html"
+            },
+            {
+              "event_id": "evt-905-202611-autumnwalk",
+              "title": "紅葉観察会（手話通訳付き参加も受付）",
+              "participability": "条件付き参加可能",
+              "official_url": "https://sikimoriibento.blogspot.com/2025/10/blog-post.html"
+            }
           ]
         },
         {
@@ -2628,7 +3013,8 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         },
         {
           "facility_id": 6909,
@@ -2639,7 +3025,8 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         },
         {
           "facility_id": 8275,
@@ -2657,6 +3044,14 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-8275-202611-irorilive"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8275-202611-irorilive",
+              "title": "囲炉裏ライブ クラシックギターデュオ",
+              "participability": "通常参加可能",
+              "official_url": "https://www.hakoneyuryo.jp/event/"
+            }
           ]
         }
       ],
@@ -2786,7 +3181,19 @@
           "event_id": "evt-851-w40f4-exploration",
           "reason": "同じ11/1講演の終了時刻が公式行事HTMLは16:45、最新11月号PDF本文は17:00と相違。双方とも当年同日で訂正告知がなく推測修正・再確認スタンプを避ける。"
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 49,
+        "updated": 63,
+        "ended": 19,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 48,
+      "participability_counts": {
+        "通常参加可能": 29,
+        "条件付き参加可能": 20,
+        "受付終了・参加不能": 0
+      }
     },
     "kochi": {
       "facility_ids": [
@@ -2926,6 +3333,14 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-6937-202611-forestfestival"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-6937-202611-forestfestival",
+              "title": "森林フェスティバル2026年秋",
+              "participability": "通常参加可能",
+              "official_url": "https://yusuhara-kumonoue-kanko.jp/news/forestfes26a/"
+            }
           ]
         },
         {
@@ -2954,9 +3369,29 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-8161-202610-shishi"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8161-202610-shishi",
+              "title": "秋期企画展 書画に現れる志士のこころ",
+              "participability": "通常参加可能",
+              "official_url": "http://www.nakaokashintarokan.jp/event-detail.html?id=28"
+            }
           ]
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 2,
+        "updated": 0,
+        "ended": 0,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 2,
+      "participability_counts": {
+        "通常参加可能": 2,
+        "条件付き参加可能": 0,
+        "受付終了・参加不能": 0
+      }
     },
     "mie": {
       "facility_ids": [
@@ -3259,6 +3694,38 @@
             "evt-8143-202611-tiles",
             "evt-8143-202612-norinaga",
             "evt-8143-202612-kanji"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8143-202611-tenpyo",
+              "title": "天平衣装を着てみよう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017804.html"
+            },
+            {
+              "event_id": "evt-8143-202611-kasado",
+              "title": "地域の歴史を学ぼう！ 加佐登地区編",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017758.html"
+            },
+            {
+              "event_id": "evt-8143-202611-tiles",
+              "title": "関連講演会 瓦を焼く―日高山瓦窯から川原井瓦窯へ―",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017803.html"
+            },
+            {
+              "event_id": "evt-8143-202612-norinaga",
+              "title": "文化講演会 宣長が見た能褒野陵（白鳥塚）と山辺御井",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1017691.html"
+            },
+            {
+              "event_id": "evt-8143-202612-kanji",
+              "title": "今年の漢字「1字」作品展示",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.suzuka.lg.jp/kouko/information/1016374/1018086.html"
+            }
           ]
         },
         {
@@ -3301,9 +3768,22 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 5,
+        "updated": 0,
+        "ended": 0,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 10,
+      "participability_counts": {
+        "通常参加可能": 2,
+        "条件付き参加可能": 3,
+        "受付終了・参加不能": 0
+      }
     },
     "osaka": {
       "facility_ids": [
@@ -3363,9 +3843,22 @@
           "refreshed_event_ids": [],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 0,
+        "updated": 0,
+        "ended": 0,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 0,
+      "participability_counts": {
+        "通常参加可能": 0,
+        "条件付き参加可能": 0,
+        "受付終了・参加不能": 0
+      }
     },
     "saitama": {
       "facility_ids": [
@@ -5866,6 +6359,98 @@
             "evt-471-202611-treasurefilms",
             "evt-471-202611-ar",
             "evt-471-202611-films"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-471-202611-dinosaur",
+              "title": "恐竜博物館特別展示・福井県伝統工芸プラレール",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261030_2.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-kiha11",
+              "title": "キハ11形気動車 エンジン起動・車内公開",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261030_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-nameplate",
+              "title": "おなまえプレートづくり",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261024_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-trainlottery",
+              "title": "トレインくじ",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261024_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-wave",
+              "title": "TRAIN SUITE 四季島 お手振りイベント",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20260927_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-picturebook",
+              "title": "えほんのおはなし会イベント",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20260925_2.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-crossing",
+              "title": "てっぱく大学 みんな知ってる？踏切のあれやこれ",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261016_4.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-subway",
+              "title": "てっぱく大学 さいたまの地下鉄",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261016_4.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-gate",
+              "title": "てっぱく大学 顔認証技術による未来の改札の可能性",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261016_4.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-rally",
+              "title": "2026年度下半期 てっぱくスタンプラリー",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261015_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-ekitag",
+              "title": "エキタグ デジタルスタンプラリー",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/xml/event.xml"
+            },
+            {
+              "event_id": "evt-471-202611-nostalgicposters",
+              "title": "なつかしのポスター～あの日あの時の鉄道～",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/xml/event.xml"
+            },
+            {
+              "event_id": "evt-471-202611-treasurefilms",
+              "title": "てっぱくお宝映像コレクション 下半期上映",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20260927_3.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-ar",
+              "title": "美園まなびリンク AR学習体験",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.railway-museum.jp/news/pdf/20261003_1.pdf"
+            },
+            {
+              "event_id": "evt-471-202611-films",
+              "title": "てっぱくホール「日本列島 列車大行進2026」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.railway-museum.jp/xml/event.xml"
+            }
           ]
         },
         {
@@ -5886,7 +6471,8 @@
           ],
           "ended_event_ids": [],
           "updated_event_ids": [],
-          "added_event_ids": []
+          "added_event_ids": [],
+          "added_events": []
         },
         {
           "facility_id": 475,
@@ -6076,6 +6662,80 @@
             "evt-475-2026-microscope",
             "evt-475-2026-birds",
             "evt-475-202611-inazma"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-475-2026-linear",
+              "title": "くらりかサイエンス教室 リニアモーターをつくろう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-photo",
+              "title": "天文宇宙教室 デジカメでの星空撮影",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-elevator",
+              "title": "宇宙エレベーターロボットを作ろう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-rover",
+              "title": "STEM教室 月面探査車を作ろう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-sound",
+              "title": "科学工作教室 鳴らして遊べ！",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-stars447",
+              "title": "第447回天体観望会 月と土星・しぶんぎ座流星群",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092097.html"
+            },
+            {
+              "event_id": "evt-475-2026-motor",
+              "title": "科学実験教室 モーターが回る仕組みを学ぼう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html"
+            },
+            {
+              "event_id": "evt-475-2026-insectrobot",
+              "title": "親子でつくろう！インセクトロボット",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html"
+            },
+            {
+              "event_id": "evt-475-2026-stars448",
+              "title": "第448回天体観望会 月と土星・すばる",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html"
+            },
+            {
+              "event_id": "evt-475-2026-microscope",
+              "title": "顕微鏡教室 身近な昆虫の体のつくり",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html"
+            },
+            {
+              "event_id": "evt-475-2026-birds",
+              "title": "自然観察教室 見沼自然公園の冬の野鳥",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/category/003/p092890.html"
+            },
+            {
+              "event_id": "evt-475-202611-inazma",
+              "title": "プラネタリウム イナズマデリバリー",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.saitama.lg.jp/kagakukan/planetarium/p127624.html"
+            }
           ]
         },
         {
@@ -6126,6 +6786,14 @@
           "updated_event_ids": [],
           "added_event_ids": [
             "evt-485-202611-nazotoki"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-485-202611-nazotoki",
+              "title": "夕日の丘商店街事件簿",
+              "participability": "通常参加可能",
+              "official_url": "https://www.seibuen-amusement-park.jp/event/nazotoki/index.html"
+            }
           ]
         },
         {
@@ -6240,6 +6908,62 @@
             "evt-493-202611-plush",
             "evt-493-202611-xmasreading",
             "evt-493-202610-pairzip"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-493-202611-xmasbadge",
+              "title": "クリスマス柄 缶バッジマグネットづくり",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48339/"
+            },
+            {
+              "event_id": "evt-493-202611-paint",
+              "title": "ムーミン谷の仲間たちの絵付け",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48338/"
+            },
+            {
+              "event_id": "evt-493-202611-glass",
+              "title": "ガラスのワークショップ こもれびツリーとアクセサリー",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48331/"
+            },
+            {
+              "event_id": "evt-493-202611-wood",
+              "title": "ムーミン谷のウッドバーニングボックス",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48326/"
+            },
+            {
+              "event_id": "evt-493-202611-himmeli",
+              "title": "ヒンメリづくり",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48168/"
+            },
+            {
+              "event_id": "evt-493-202611-diorama",
+              "title": "水を入れると浮かび上がる！ふしぎなジオラマづくり",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/48158/"
+            },
+            {
+              "event_id": "evt-493-202611-plush",
+              "title": "じぶんでつくるぬいぐるみ（ポストカード付）",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/44382/"
+            },
+            {
+              "event_id": "evt-493-202611-xmasreading",
+              "title": "ムーミン谷のクリスマス 読み聞かせ",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/workshop/41379/"
+            },
+            {
+              "event_id": "evt-493-202610-pairzip",
+              "title": "ペアジップライン ふたりでならんで大冒険",
+              "participability": "通常参加可能",
+              "official_url": "https://metsa-hanno.com/event/48226/"
+            }
           ]
         },
         {
@@ -6371,6 +7095,80 @@
             "evt-514-202611-kidswinter",
             "evt-514-202611-night",
             "evt-514-202611-kindplanet"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-514-202611-sciencefair",
+              "title": "秋期企画展 ぼくらの理科室 科学館！",
+              "participability": "通常参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_event/26sciencefes11.html"
+            },
+            {
+              "event_id": "evt-514-202611-prefday",
+              "title": "県民の日無料公開・わくわく屋台村",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/schedule/index202611-muryoukoukai.html"
+            },
+            {
+              "event_id": "evt-514-202611-aroma",
+              "title": "香りの科学 練り香水とアロマストーンづくり",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_event/26flatscience11.html"
+            },
+            {
+              "event_id": "evt-514-202611-spinner",
+              "title": "どきどきサイエンス サイエンス・スピナー",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_science/science202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-tvstone",
+              "title": "どきどきサイエンス テレビ石のなぞ",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_science/science202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-sound",
+              "title": "どきどきサイエンス 音をたのしもう♪",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_science/science202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-eraser",
+              "title": "どきどきサイエンス ガムからねり消し！？",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_science/science202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-kaleido",
+              "title": "どきどきサイエンス ビー玉万華鏡をつくろう",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_science/science202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-ev3",
+              "title": "にこにこ実験室 EV3でプログラミング",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/floor/archive_labo/labo202611.html"
+            },
+            {
+              "event_id": "evt-514-202611-kidswinter",
+              "title": "キッズアワー 冬の星座とプレアデス神話",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/planet/kids.html"
+            },
+            {
+              "event_id": "evt-514-202611-night",
+              "title": "夜間観測会 土星",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/astro/yakan.html"
+            },
+            {
+              "event_id": "evt-514-202611-kindplanet",
+              "title": "おもいやりプラネタリウム",
+              "participability": "条件付き参加可能",
+              "official_url": "http://www.kawaguchi.science.museum/planet/archive_special/special20260621.html"
+            }
           ]
         },
         {
@@ -6432,6 +7230,14 @@
           ],
           "added_event_ids": [
             "evt-519-202610-artfesta"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-519-202610-artfesta",
+              "title": "アートフェスタ2026 watch! Animal sign 作品展示",
+              "participability": "通常参加可能",
+              "official_url": "https://www.parks.or.jp/sczoo/event/009/009309.html"
+            }
           ]
         },
         {
@@ -6516,6 +7322,38 @@
             "evt-522-202611-show",
             "evt-522-202611-paper",
             "evt-522-202611-experiments"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-522-202611-drum",
+              "title": "県民の日特別企画 大気圧によるドラム缶つぶし",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.koshigaya.saitama.jp/gigakoshigaya/miracle/news/1114doramu2026.html"
+            },
+            {
+              "event_id": "evt-522-202611-longshow",
+              "title": "県民の日 ロングサイエンスショー",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.koshigaya.saitama.jp/gigakoshigaya/miracle/news/files/miraclenews11.pdf"
+            },
+            {
+              "event_id": "evt-522-202611-show",
+              "title": "ミラクル 11月のサイエンスショー",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.koshigaya.saitama.jp/gigakoshigaya/miracle/news/files/miraclenews11.pdf"
+            },
+            {
+              "event_id": "evt-522-202611-paper",
+              "title": "11月紙工作 SDGsリング飛行機・ひらひらリボン",
+              "participability": "通常参加可能",
+              "official_url": "https://www.city.koshigaya.saitama.jp/gigakoshigaya/miracle/news/files/miraclenews11.pdf"
+            },
+            {
+              "event_id": "evt-522-202611-experiments",
+              "title": "11月の科学実験・工作体験 音の科学と液晶",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.koshigaya.saitama.jp/gigakoshigaya/miracle/news/files/miraclenews11.pdf"
+            }
           ]
         },
         {
@@ -6572,6 +7410,20 @@
           "added_event_ids": [
             "evt-526-202610-illumination",
             "evt-526-202611-zoo"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-526-202610-illumination",
+              "title": "ウインターイルミネーション2026-2027",
+              "participability": "通常参加可能",
+              "official_url": "https://www.asoview.com/brand/tobuzoo/event-illumination.html"
+            },
+            {
+              "event_id": "evt-526-202611-zoo",
+              "title": "11月の動物園イベント（ガイド・エサやり体験）",
+              "participability": "通常参加可能",
+              "official_url": "https://www.asoview.com/brand/tobuzoo/event-zoo.html"
+            }
           ]
         },
         {
@@ -6659,6 +7511,32 @@
             "evt-547-202701-cityphoto",
             "evt-547-202702-birdday",
             "evt-547-202703-springday"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-547-202611-arakawa",
+              "title": "あらかわ探検隊〜秋編〜",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.saitama-shizen.info/event/event.html"
+            },
+            {
+              "event_id": "evt-547-202701-cityphoto",
+              "title": "写真展「北本自然観察公園・季節のうつろい」（北本市役所）",
+              "participability": "通常参加可能",
+              "official_url": "https://www.saitama-shizen.info/event/event.html"
+            },
+            {
+              "event_id": "evt-547-202702-birdday",
+              "title": "自然に親しむイベントデー「野鳥の日」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.saitama-shizen.info/event/event.html"
+            },
+            {
+              "event_id": "evt-547-202703-springday",
+              "title": "自然に親しむイベントデー「春さがしの日」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.saitama-shizen.info/event/event.html"
+            }
           ]
         },
         {
@@ -6747,6 +7625,38 @@
             "evt-558-202611-autumnfestival",
             "evt-558-202611-chichibucrossing",
             "evt-558-202611-komagawa"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-558-202611-kappa",
+              "title": "かっぱクエスト〜ルールを知ってもっと川をたのしもう〜",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.river-museum.jp/ev-post/16863/"
+            },
+            {
+              "event_id": "evt-558-202611-plants",
+              "title": "河原で植物ウォッチング",
+              "participability": "通常参加可能",
+              "official_url": "https://www.river-museum.jp/ev-post/%e6%b2%b3%e5%8e%9f%e3%81%a7%e6%a4%8d%e7%89%a9%e3%82%a6%e3%82%a9%e3%83%83%e3%83%81%e3%83%b3%e3%82%b0-2/"
+            },
+            {
+              "event_id": "evt-558-202611-autumnfestival",
+              "title": "かわはく秋まつり",
+              "participability": "通常参加可能",
+              "official_url": "https://www.river-museum.jp/ev-post/%e3%81%8b%e3%82%8f%e3%81%af%e3%81%8f%e7%a7%8b%e3%81%be%e3%81%a4%e3%82%8a-3/"
+            },
+            {
+              "event_id": "evt-558-202611-chichibucrossing",
+              "title": "蔵出しコーナー「秩父地方の渡河」",
+              "participability": "通常参加可能",
+              "official_url": "https://www.river-museum.jp/ex-post/%e7%a7%a9%e7%88%b6%e5%9c%b0%e6%96%b9%e3%81%ae%e6%b8%a1%e6%b2%b3/"
+            },
+            {
+              "event_id": "evt-558-202611-komagawa",
+              "title": "高麗川河川敷クリーン作戦・自然観察",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.river-museum.jp/ev-post/%e9%ab%98%e9%ba%97%e5%b7%9d%e3%82%af%e3%83%aa%e3%83%bc%e3%83%b3%e5%a4%a7%e4%bd%9c%e6%88%a6%ef%bc%88%e9%ab%98%e9%ba%97%e5%b7%9d%e3%81%94%e3%81%bf%e6%8b%be%e3%81%84%e6%b4%bb%e5%8b%95%ef%bc%89/"
+            }
           ]
         },
         {
@@ -6850,6 +7760,50 @@
             "evt-949-202611-imorin",
             "evt-949-202611-tone",
             "evt-949-202611-harvest"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-949-202611-udon",
+              "title": "むさしの村deうっどーん",
+              "participability": "通常参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/kazoudon/"
+            },
+            {
+              "event_id": "evt-949-202611-halloween",
+              "title": "むさしの村deハロウィン",
+              "participability": "通常参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/halloween/"
+            },
+            {
+              "event_id": "evt-949-202611-stamp",
+              "title": "東武動物公園×むさしの村×ぐるり森 コラボスタンプラリー",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/tobuzoo-musashinomura-gururi20262027/"
+            },
+            {
+              "event_id": "evt-949-202611-imoni",
+              "title": "芋煮作り体験",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/imoni/"
+            },
+            {
+              "event_id": "evt-949-202611-imorin",
+              "title": "いもりんに会おう！",
+              "participability": "通常参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/imorin/"
+            },
+            {
+              "event_id": "evt-949-202611-tone",
+              "title": "おいでよ！利根PRキャラバン なぞときイベント",
+              "participability": "通常参加可能",
+              "official_url": "https://www.musashinomura.co.jp/events/toneprevent/"
+            },
+            {
+              "event_id": "evt-949-202611-harvest",
+              "title": "11月1日の秋野菜収穫・さつまいも掘り",
+              "participability": "通常参加可能",
+              "official_url": "https://www.musashinomura.co.jp/farm-info/20261101/"
+            }
           ]
         },
         {
@@ -6944,6 +7898,26 @@
             "evt-950-202611-kaleido",
             "evt-950-202611-owl",
             "evt-950-202611-crawl"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-950-202611-kaleido",
+              "title": "キラキラ万華鏡づくり",
+              "participability": "通常参加可能",
+              "official_url": "https://museum.socialimpact.ed.jp/events/%e3%82%ad%e3%83%a9%e3%82%ad%e3%83%a9%e4%b8%87%e8%8f%af%e9%8f%a1%e3%81%a5%e3%81%8f%e3%82%8a/"
+            },
+            {
+              "event_id": "evt-950-202611-owl",
+              "title": "ホーホー笛をつくろう",
+              "participability": "通常参加可能",
+              "official_url": "https://museum.socialimpact.ed.jp/events/%e3%83%9b%e3%83%bc%e3%83%9b%e3%83%bc%e7%ac%9b%e3%82%92%e3%81%a4%e3%81%8f%e3%82%8d%e3%81%86/"
+            },
+            {
+              "event_id": "evt-950-202611-crawl",
+              "title": "木のゆか ハイハイレース",
+              "participability": "条件付き参加可能",
+              "official_url": "https://museum.socialimpact.ed.jp/events/%e3%80%9011%e6%9c%88%e3%80%91%e6%9c%a8%e3%81%ae%e3%82%86%e3%81%8b-%e3%83%8f%e3%82%a4%e3%83%8f%e3%82%a4%e3%83%ac%e3%83%bc%e3%82%b9/"
+            }
           ]
         },
         {
@@ -7028,6 +8002,56 @@
             "evt-8078-202611-highschool",
             "evt-8078-202611-sleep",
             "evt-8078-202611-baby"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8078-202611-sumikko",
+              "title": "すみっコぐらし ひろい宇宙とオーロラのひかり",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#program0230p"
+            },
+            {
+              "event_id": "evt-8078-202611-moomin",
+              "title": "ムーミン谷の物語〜星と花のセレナーデ〜",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#program0243p"
+            },
+            {
+              "event_id": "evt-8078-202611-uyuni",
+              "title": "UYUNI−天空の鏡・ウユニ塩湖−",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#program0231p"
+            },
+            {
+              "event_id": "evt-8078-202611-okinawa",
+              "title": "Star Light Healing 癒しの島 沖縄・屋久島",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#program0227p"
+            },
+            {
+              "event_id": "evt-8078-202611-saturn",
+              "title": "特別投映＋星をみる会「望遠鏡で土星をみよう！」",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#post858"
+            },
+            {
+              "event_id": "evt-8078-202611-highschool",
+              "title": "高校生プラネタリウム文化祭2026 君の星空",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#post893"
+            },
+            {
+              "event_id": "evt-8078-202611-sleep",
+              "title": "全国一斉熟睡プラ寝たリウム〜地球以外の生命たち〜",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#program0240p"
+            },
+            {
+              "event_id": "evt-8078-202611-baby",
+              "title": "はじめてのプラネタリウム ベビー＆キッズ劇場〜おつきさま〜",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.ucyugekijo.jp/#post825"
+            }
           ]
         },
         {
@@ -7144,9 +8168,47 @@
             "evt-8079-202611-insects",
             "evt-8079-202611-photo",
             "evt-8079-202611-planet"
+          ],
+          "added_events": [
+            {
+              "event_id": "evt-8079-202611-treasure",
+              "title": "親子で宝さがしオリエンテーリング",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.toda.saitama.jp/site/saiko/kyo-saiko-kouza17.html"
+            },
+            {
+              "event_id": "evt-8079-202611-insects",
+              "title": "外来種の昆虫について学ぼう",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.toda.saitama.jp/site/saiko/kyo-saiko-kouza19.html"
+            },
+            {
+              "event_id": "evt-8079-202611-photo",
+              "title": "彩湖の自然を撮ろう（初級編）",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.toda.saitama.jp/site/saiko/kyo-saiko-kouza20.html"
+            },
+            {
+              "event_id": "evt-8079-202611-planet",
+              "title": "ダンボールドームのプラネタリウム",
+              "participability": "条件付き参加可能",
+              "official_url": "https://www.city.toda.saitama.jp/site/saiko/kyo-saiko-kouza21.html"
+            }
           ]
         }
-      ]
+      ],
+      "event_changes": {
+        "added": 88,
+        "updated": 93,
+        "ended": 36,
+        "deleted": 0
+      },
+      "candidate_hold_encounter_count": 71,
+      "participability_counts": {
+        "通常参加可能": 42,
+        "条件付き参加可能": 46,
+        "受付終了・参加不能": 0
+      }
     }
   }
 }
