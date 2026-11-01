@@ -7131,8 +7131,8 @@
       ],
       "candidates_found": 902,
       "added": 39,
-      "duplicate_or_already_present": 111,
-      "hold": 717,
+      "duplicate_or_already_present": 112,
+      "hold": 716,
       "stale_false": 35,
       "candidates": [
         {
@@ -7448,7 +7448,8 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w44d3-yamato-mirai",
           "reason": "今回取得した主催者・運営者の公式本文で日付・会場・現在の参加経路を確認。",
-          "participability": "通常参加可能"
+          "participability": "通常参加可能",
+          "category": "fireworks_festival_seasonal"
         },
         {
           "title": "第5回「川崎夜市」",
@@ -7535,7 +7536,8 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w44d3-wonderia-halloween",
           "reason": "今回取得した主催者・運営者の公式本文で日付・会場・現在の参加経路を確認。",
-          "participability": "通常参加可能"
+          "participability": "通常参加可能",
+          "category": "fireworks_festival_seasonal"
         },
         {
           "title": "マリー・アントワネット・スタイル",
@@ -7658,7 +7660,8 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w44d3-yugawara-mikan",
           "reason": "今回取得した主催者・運営者の公式本文で日付・会場・現在の参加経路を確認。",
-          "participability": "通常参加可能"
+          "participability": "通常参加可能",
+          "category": "fireworks_festival_seasonal"
         },
         {
           "title": "箱根 駒ヶ岳ロープウェー「箱根宙旅2026～夜景ナイトツアー～」",
@@ -7713,7 +7716,8 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w44d3-akane-rally",
           "reason": "今回取得した主催者・運営者の公式本文で日付・会場・現在の参加経路を確認。",
-          "participability": "通常参加可能"
+          "participability": "通常参加可能",
+          "category": "municipal_regional"
         },
         {
           "title": "無料ミニ企画「ちょこっとTARO　太郎のかわいい」",
@@ -9569,8 +9573,9 @@
           "official_date_correspondence_confirmed": true,
           "official_venue_correspondence_confirmed": true,
           "official_program_correspondence_confirmed": true,
-          "disposition": "hold",
-          "reason": "公式本文を個別取得・内容照合したが、候補の開催回と一次本文の対応を安全に確定できない。要照合：現行参加経路。単なる時刻・料金等の未記載を理由にしたHOLDではない。"
+          "disposition": "duplicate_or_already_present",
+          "reason": "最終照合で別Walker IDだが同一公式URL・会場・2026年11月20日〜12月25日の同じ開催回と確認。同run採用済みのBALLPARK Xmasへ統合。現在の参加条件は採用済み記録に反映。",
+          "event_id": "evt-kanagawa-w44d3-ballpark-xmas"
         },
         {
           "title": "横浜港大さん橋マルシェ2026",
