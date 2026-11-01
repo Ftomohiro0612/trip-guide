@@ -1,0 +1,2179 @@
+{
+  "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B3-20261101",
+  "executed_in_this_mission": true,
+  "prior_run_numbers_reused_as_execution": false,
+  "executed_at": "2026-11-01T01:01:42.460209+00:00",
+  "evidence_process_started_at": "2026-11-01T00:51:54.580725+00:00",
+  "baseline": "31de5d6fceba60b2f4e4c8d7b6d116b518401891",
+  "status": "IN_PROGRESS",
+  "aggregate": {
+    "total": 100,
+    "added": 83,
+    "duplicate": 8,
+    "past": 0,
+    "still_hold": 8,
+    "not_event": 1,
+    "events_changed_by_bounded_fixes": 0,
+    "metadata_total_events_corrected": true
+  },
+  "per_region": {
+    "hyogo": {
+      "still_hold": 8,
+      "added": 83,
+      "duplicate": 8,
+      "not_event": 1
+    },
+    "saitama": {},
+    "shimane": {},
+    "yamagata": {}
+  },
+  "candidates": [
+    {
+      "index": 1,
+      "region": "hyogo",
+      "title": "AMAGASAKI CANAL SUP無料体験会11月8日",
+      "disposition": "still_hold",
+      "reason": "県の無料体験会は中学生以上と明記。主催者も保護者同伴・身長140cm以上の中学生からとするSUPで、幼児・小学生の参加経路がない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://amacanalsup.com/",
+          "final_url": "https://amacanalsup.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:58.293140+00:00",
+          "sha256": "366909433492971722d1b19d7859516c492a405a709e1cfccc79e4c538296690"
+        },
+        {
+          "url": "https://web.pref.hyogo.lg.jp/hsk08/event/canalsup2026.html",
+          "final_url": "https://web.pref.hyogo.lg.jp/hsk08/event/canalsup2026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:10.399064+00:00",
+          "sha256": "b128f8dae146b79431804a9b39b35fbd9ad07e06026bb31ce254ec14e971978d"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "region": "hyogo",
+      "title": "陶芸ワークショップ「過去」と「未来」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.mcart.jp/workshop/gendai_workshop/",
+          "final_url": "https://www.mcart.jp/workshop/gendai_workshop/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:56.785100+00:00",
+          "sha256": "5b393026643191a4b1fa59c787bb2c77ec5a74b66fa9fc71cbbea85b281bbbde"
+        },
+        {
+          "url": "https://www.mcart.jp/",
+          "final_url": "https://www.mcart.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:59.150455+00:00",
+          "sha256": "09a6763c408ea556c45f7925d01d952a86f310a39f16c0e7d316a996ff1ee1f2"
+        },
+        {
+          "url": "https://web.pref.hyogo.lg.jp/tg01/event/2026contemporary_ceramic_art_mini_chronicle_ceramics_is_art.html",
+          "final_url": "https://web.pref.hyogo.lg.jp/tg01/event/2026contemporary_ceramic_art_mini_chronicle_ceramics_is_art.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:10.892535+00:00",
+          "sha256": "c6b3a4696d9c732ffd329544107b816387559ea3babfa3d580e8c19b9cb1d6b7"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-002",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 3,
+      "region": "hyogo",
+      "title": "神戸六甲ミーツ・アート2026",
+      "disposition": "duplicate",
+      "reason": "主催者公式URL https://rokkomeetsart.jp/ を再取得。2026-08-29開始、六甲山上各所、同一芸術祭の既存IDに一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://rokkomeetsart.jp/",
+          "final_url": "https://rokkomeetsart.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:01.696689+00:00",
+          "sha256": "e8066ea9aa58d42db2b97eb03bf90f5a9ce65e624e7fd26d88f152914c83972d"
+        },
+        {
+          "url": "https://event.city.kobe.lg.jp/event/QQpo3fjKw7nOoJRntndD",
+          "final_url": "https://event.city.kobe.lg.jp/event/QQpo3fjKw7nOoJRntndD",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:11.411650+00:00",
+          "sha256": "690c23f930ac7204677e937c1dd720d5fa578eab207a2cfa25aa843d2a8f459c"
+        }
+      ],
+      "matched_event_id": "evt-w43-d11-hyogo-rokko-art"
+    },
+    {
+      "index": 4,
+      "region": "hyogo",
+      "title": "技能グランプリ＆フェスタ2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/oTvmvcXQZ8rr5Opm50HI",
+          "final_url": "https://event.city.kobe.lg.jp/event/oTvmvcXQZ8rr5Opm50HI",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:12.092128+00:00",
+          "sha256": "ff8c1d7b8119c6af0f26792c5ea14cbae0ed2221242a654d4c7dd62f4aa68ff2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-004",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 5,
+      "region": "hyogo",
+      "title": "交通フェスティバル2026in名谷車両基地",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/x2j5Vw6LR3TjmR9UeUXK",
+          "final_url": "https://event.city.kobe.lg.jp/event/x2j5Vw6LR3TjmR9UeUXK",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:12.729682+00:00",
+          "sha256": "a3d23e132002b6ba9c3811da2784db699687f6e6f329cc144df5eb65046c8e7b"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-005",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 6,
+      "region": "hyogo",
+      "title": "西区で柿狩り",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/fCXqPIygjdqSXzL1UFlg",
+          "final_url": "https://event.city.kobe.lg.jp/event/fCXqPIygjdqSXzL1UFlg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:24.135446+00:00",
+          "sha256": "6a820bdaa3cc04c6b99f6ba95fcab1d1f6b71d5ab951b85dfcec70a5c36af624"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-006",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 7,
+      "region": "hyogo",
+      "title": "須磨離宮公園もみじ観賞会＆ルミエール2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/uehx1kHoscTCseWXY1hb",
+          "final_url": "https://event.city.kobe.lg.jp/event/uehx1kHoscTCseWXY1hb",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:24.825912+00:00",
+          "sha256": "0d703257a35ec74bdfe1c29755806381551fbb9024191fc1aa5b4aa88aa0e153"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-007",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 8,
+      "region": "hyogo",
+      "title": "なだ星まつり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/zLxDsISZDWDPqt7A1La0",
+          "final_url": "https://event.city.kobe.lg.jp/event/zLxDsISZDWDPqt7A1La0",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:25.470509+00:00",
+          "sha256": "1c3d94134b5f7c7a66bef13c0262bf64a4011079d7e1c65dbfce389a7d661a48"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-008",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 9,
+      "region": "hyogo",
+      "title": "1日1組限定！但馬空港まるごと見せちゃいますツアー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kinosaki-info.com/tour/2723/",
+          "final_url": "https://kinosaki-info.com/tour/2723/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:33.848731+00:00",
+          "sha256": "6891a58a9d5ad3c4d86c1b56724a343e361b565382a00656249e623794ef5bfd"
+        },
+        {
+          "url": "https://kinosaki-info.com/",
+          "final_url": "https://kinosaki-info.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:02.475995+00:00",
+          "sha256": "ceef598da5ada2870c54ef4d747c6f8d8950f70d1e06e95b6af3ce9e2294887b"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6751.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6751.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:26.151481+00:00",
+          "sha256": "1a0fd6b6e30cea16b74cdbea10c53ae8fb68858f57a201fc8f06bfc8d7a306be"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-009",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 10,
+      "region": "hyogo",
+      "title": "出会える西宮の文化財2026（西宮市内指定等文化財公開2026）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://nishi-rekishisan.jp/",
+          "final_url": "https://nishi-rekishisan.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:03.703894+00:00",
+          "sha256": "4a7f93657d6a67d11adacbf4d6cce289c3b8edd998a3d606351a039cd9cfc5c9"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6813.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6813.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:26.718364+00:00",
+          "sha256": "b628a6cbfbfd504a97a05566f3191d7fc145166f6914c5b01fb03c7177692450"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-010",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 11,
+      "region": "hyogo",
+      "title": "リアル謎解きゲーム×阪神高速おでかけパス　謎めきロード2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://nazotoki-zepets.com/hanshin-exp2026/",
+          "final_url": "https://nazotoki-zepets.com/hanshin-exp2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:27.363743+00:00",
+          "sha256": "dea8fe1c3a307f210b61a4148ddadc0c0347e8cfbbe4faaccfa408dc6e127bae"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6727.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6727.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:27.353261+00:00",
+          "sha256": "90c4a2967c65186ee2664f109922d2a6536a68c153cf6392a69d977a24dcd4b4"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-011",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 12,
+      "region": "hyogo",
+      "title": "EXPOレガシー　HYOGOスタンプラリー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6554.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6554.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:27.917578+00:00",
+          "sha256": "0ce8427852c5c47d7e80f9bbb896a9ad1459f729381202736ef13867e929af8c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-012",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 13,
+      "region": "hyogo",
+      "title": "コウノトリを救う！餌場づくり体験と名湯城崎温泉ご宿泊",
+      "disposition": "still_hold",
+      "reason": "主催者詳細の残る設定日は2026/11/1。申込は出発5日前に終了すると明記され、11/1確認時には受付終了。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26424781BB",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26424781BB",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:34.955521+00:00",
+          "sha256": "47507827427a718b66e2d97eef7d242d47eedff3f53d0e0fc01dab77570e39a2"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT&tc3=4781",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT&tc3=4781",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:04.225206+00:00",
+          "sha256": "08c838fb55cece7f915329c2f9bd9cda9528ab11d139fae907d39530dd605971"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6757.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6757.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:28.605451+00:00",
+          "sha256": "8a003707671bdd2a98bcff88c1fe6de2edfb8028292d4936ccda0c4825a9897f"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "region": "hyogo",
+      "title": "神戸電鉄粟生線 サイクルトレイン実証実験",
+      "disposition": "still_hold",
+      "reason": "鉄道会社公式運行概要は12歳以上、自転車を自力で運搬できる人に限定し、12〜14歳は保護者同伴。幼児・低学年の参加対象ではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.shintetsu.co.jp/railway/info/unkou_gaiyou.pdf",
+          "final_url": "https://www.shintetsu.co.jp/railway/info/unkou_gaiyou.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:49.730281+00:00",
+          "sha256": "1bf77d24ff2210637262dc24abf24909221989f81fdfd5e36c9e90c6036159e9"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6743.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6743.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:29.237918+00:00",
+          "sha256": "8045ee6da75cf68a6a6a91d515f6f93074b09c86337e5de61ba609e455366283"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "region": "hyogo",
+      "title": "但馬の秘境シルク温泉でゆったりと過ごす休日",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434754AA",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434754AA",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:58.751575+00:00",
+          "sha256": "c3006fd9446d642b594f8fafcf80450ad9ea6fb672aebb4d6eb53343d6f22ef9"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434754DD",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434754DD",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:50.933622+00:00",
+          "sha256": "f02c0db462fa24c28731bc7cd3e7bbea05c8706e41178e27f3b50a5836d64364"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4754&_gl",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4754&_gl",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:58.406000+00:00",
+          "sha256": "8c11dab2987281008c205750d0f60c6343cefcec5ac2a2bc093bff9da68955f9"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6754.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6754.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:29.822649+00:00",
+          "sha256": "be0b89f2e93b04ea3a367abe0920eb842afde965155c95a78d5034d97931e715"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-015",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 16,
+      "region": "hyogo",
+      "title": "ガイドとめぐる「西宮酒蔵ミニツアー」",
+      "disposition": "still_hold",
+      "reason": "主催観光協会が「飲酒を伴いますので20歳以上の方のみ参加」と明記する酒蔵試飲ツアー。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://nishinomiya-kanko.jp/event/857/",
+          "final_url": "https://nishinomiya-kanko.jp/event/857/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:35.524210+00:00",
+          "sha256": "2d39b490c3dc30e32ce54c51fc931d05c523c7904c39638230e427a3ee4a365d"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6812.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6812.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:38.520754+00:00",
+          "sha256": "75d9adc531d8acbcc33464d6e6b9ec346c007a3105c94bb252bc53c370d00159"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "region": "hyogo",
+      "title": "須磨寺ゆかりの芸術祭2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BF26434751AA",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BF26434751AA",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:00.197607+00:00",
+          "sha256": "cdfcdc66879f87ffecc60976aefc9afeb23d6495d799dca0b2996dcd9911dcf5"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4751&_gl",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4751&_gl",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:59.348526+00:00",
+          "sha256": "443485fc52f9abaac1d9abe6246a66f9f1df35a1169d68f5f320abbb4ddd3f98"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6749.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6749.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:39.024217+00:00",
+          "sha256": "cfa65b60a806a6752af2162d5c3900d4db8863d308666e4c920c58526ed6d2ef"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-017",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 18,
+      "region": "hyogo",
+      "title": "「淡路島まつり花火大会観覧クルーズ」11月8日(日)開催",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.uzu-shio.com/event/15515",
+          "final_url": "https://www.uzu-shio.com/event/15515",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:36.460648+00:00",
+          "sha256": "27f3b281e7148a9efca5bcae546de4c750ae6015b2ad9d435e4e3565e549f2a5"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6799.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6799.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:39.412037+00:00",
+          "sha256": "b81cc3457245aba9e056f7f430048a35b1c921e51862dafa6f916d348990736f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-018",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 19,
+      "region": "hyogo",
+      "title": "生野銀山の坑道熟成酒「岳」を味わう 播磨の発酵文化を巡るバスツアー",
+      "disposition": "still_hold",
+      "reason": "坑道熟成酒の試飲を主目的とする酒文化ツアー。取得した公式案内は子ども向けプログラムではなく、幼児を伴う家族向け参加内容を確認できない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6783.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6783.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:39.821836+00:00",
+          "sha256": "3c2f6be48a6fdf6d19f8e06574c42a78f0a6226470d74aec95f237afb9a5b868"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "region": "hyogo",
+      "title": "淡路島のみかん狩り食べ放題と浮世離れのSHIMADOROBOで和牛炙り丼と漁師飯の2種食べ比べ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26333919CC",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26333919CC",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:01.766891+00:00",
+          "sha256": "d99c2a112b16e84ed11a83c56a25a4fa9a6b5688a57f4d623ac0ff136618cf11"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=3919",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=3919",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:01.136831+00:00",
+          "sha256": "306dbcbaae7923d9b4f08ebb1b9399292ac1f80465584f3d4c8427db7a9931d2"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6640.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6640.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:40.311021+00:00",
+          "sha256": "6393311c65c8aaf97ef418514fed871c4fe9dd3cf0daa367bd07132a02984b36"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-020",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 21,
+      "region": "hyogo",
+      "title": "☆グランドフィナーレ☆第20回伊丹を歩こうワンデーウォーキング",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6769.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6769.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:40.741843+00:00",
+          "sha256": "1df96b8c2313d514aa42ed5407d5cbb3dce5c1087e5c306f927444229361ccf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-021",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 22,
+      "region": "hyogo",
+      "title": "老松ダイニングで酒蔵直営の発酵ランチ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BF26434756AA",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BF26434756AA",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:03.255425+00:00",
+          "sha256": "c086cbc9394b4846eefa7027b9a0630e4f43e6029974985ad068d2d85a0df7c2"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4756&_gl",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4756&_gl",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:02.565893+00:00",
+          "sha256": "c3c40ce92c69c7d2a6e1b97fa3663d2150737481616a48e4c87855d01a783654"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6752.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6752.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:41.208301+00:00",
+          "sha256": "7f9b6faadc21b8d8aa3e49532b948db52b2b739e72d24123c3eaf21ad60ca25f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-022",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 23,
+      "region": "hyogo",
+      "title": "ホテルアナガで3年とらふぐの和洋折衷コースに舌鼓",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26414773AA",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26414773AA",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:04.837152+00:00",
+          "sha256": "cebe51c9864840bae94af2329fac30971bc23a7e1bf17b9198941f24039c5286"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4773&_gl",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4773&_gl",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:04.207097+00:00",
+          "sha256": "733cd1c2606109d1f41f4684e3abe7e6b6c8de48d1ee2927d738becf9496f5d1"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6755.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6755.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:41.694235+00:00",
+          "sha256": "ded921626a755b3f2b8b221ff45d3a067f812aa6752725cc1d194b678753d631"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-023",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 24,
+      "region": "hyogo",
+      "title": "しい茸狩りとぼたん鍋をご堪能",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434731AA",
+          "final_url": "https://www.shinki-tour.com/TourDetail.aspx?tc=BT26434731AA",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:06.498885+00:00",
+          "sha256": "36317e7aec9260a5bf8aebd9d2968332b7023fadf0faecc1210dccdcffe1f00e"
+        },
+        {
+          "url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4731&_gl",
+          "final_url": "https://www.shinki-tour.com/TOURLIST.ASPX?XCD=757883&bc=39&st=BT%2CBF&bft=&date=&ddy=&ddm=&ddd=&tf=&tt=&mc=&tc3=4731&_gl",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:54:05.693333+00:00",
+          "sha256": "1384b29c7330824902436ff60bc2e2d40e757225a00879dedb7c405a59be52a9"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6748.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6748.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:42.479766+00:00",
+          "sha256": "815c27b150d447d817ca322760816e3a00d090d60a58495e7713b5801e0c912d"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-024",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 25,
+      "region": "hyogo",
+      "title": "ひょうごフィールドパビリオン子ども体験ツアー",
+      "disposition": "still_hold",
+      "reason": "主催者の三宮2/14コースは行程が9:00発、集合地図説明が8:30発と内部矛盾。5回まとめの候補の時刻確定に主催者確認が必要。他候補には波及しない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://expo2025-hyogo-fieldpavilion.jp/childtour/",
+          "final_url": "https://expo2025-hyogo-fieldpavilion.jp/childtour/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:53:37.310945+00:00",
+          "sha256": "f63e3e96959db5e664b8e6cb7560e8897faa1c70f44b9f43ed6556d58f2fb11f"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_6806.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_6806.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:52:43.081064+00:00",
+          "sha256": "51c2e4bdd3242e581fc42bda48486362f1b801cd2a65766a7acbd6425fea3481"
+        }
+      ]
+    },
+    {
+      "index": 26,
+      "region": "hyogo",
+      "title": "西宮神社 十日えびす",
+      "disposition": "still_hold",
+      "reason": "県観光案内は例年1/9〜11のみ。神社特設サイトは新型コロナ対策期の曜日表記で開催年を明示せず、現行本社サイトにも当該開催年を確定する告知がない。年を推定しない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://nishinomiya-ebisu.com/",
+          "final_url": "https://nishinomiya-ebisu.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:37.981632+00:00",
+          "sha256": "8beda74d5313c8e9f845e1f4caaf5cd1a2f5ebe6a355e1fa7ca3a1303364bf08"
+        },
+        {
+          "url": "https://nishinomiya-ebisu.jp/index.html",
+          "final_url": "https://nishinomiya-ebisu.jp/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:57:18.935441+00:00",
+          "sha256": "86449a8c432b7c2000090f1e07cb867f8f7c1816623453de9fff53ba1eb59cdb"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_2049.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_2049.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:36.877817+00:00",
+          "sha256": "2113a18817ef2263f0ddace306499407e01f56e61cc2eeb3dba8071d3cee8547"
+        }
+      ]
+    },
+    {
+      "index": 27,
+      "region": "hyogo",
+      "title": "神戸六甲ミーツ・アート",
+      "disposition": "duplicate",
+      "reason": "主催者公式URLを再取得し、2026/8/29開始・六甲山上各所の同一芸術祭を既存IDと照合。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://rokkomeetsart.jp/",
+          "final_url": "https://rokkomeetsart.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:57:19.332194+00:00",
+          "sha256": "e8066ea9aa58d42db2b97eb03bf90f5a9ce65e624e7fd26d88f152914c83972d"
+        },
+        {
+          "url": "https://www.hyogo-tourism.jp/event/detail_2062.html",
+          "final_url": "https://www.hyogo-tourism.jp/event/detail_2062.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:37.356273+00:00",
+          "sha256": "b95d0bba8fd62825f6e3b6035f34e2312f75290c4c73e1e7514a1f808f6de723"
+        }
+      ],
+      "matched_event_id": "evt-w43-d11-hyogo-rokko-art"
+    },
+    {
+      "index": 28,
+      "region": "hyogo",
+      "title": "神戸メリケンクリスマス",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kobe-minatonoyoru.com/news/%e3%80%90%e9%96%8b%e5%82%ac%e6%b1%ba%e5%ae%9a%e3%80%91%e7%a5%9e%e6%88%b8%e9%96%8b%e6%b8%af160%e5%b9%b4%e3%83%97%e3%83%ac%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%80%8c%e7%a5%9e%e6%88%b8%e3%83%a1/",
+          "final_url": "https://kobe-minatonoyoru.com/news/%E3%80%90%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%E3%80%91%E7%A5%9E%E6%88%B8%E9%96%8B%E6%B8%AF160%E5%B9%B4%E3%83%97%E3%83%AC%E3%82%A4%E3%83%99%E3%83%B3%E3%83%88%E3%80%8C%E7%A5%9E%E6%88%B8%E3%83%A1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:57:17.947665+00:00",
+          "sha256": "961f63ebba52e91216c6f8985e8957883b7d1448e0a8aac0af0b5970c6dafb9b"
+        },
+        {
+          "url": "https://kobe-minatonoyoru.com/",
+          "final_url": "https://kobe-minatonoyoru.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:37.888820+00:00",
+          "sha256": "6a20089c7266144e627aae89a25f1fbf98d4fb295b2a2cedb4b4123861fa685e"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-028",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 29,
+      "region": "hyogo",
+      "title": "メリケンミュージックナイツ2026冬",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kobe-minatonoyoru.com/news/%e3%83%a1%e3%83%aa%e3%82%b1%e3%83%b3%e3%83%9f%e3%83%a5%e3%83%bc%e3%82%b8%e3%83%83%e3%82%af%e3%83%8a%e3%82%a4%e3%83%84%ef%bd%9e2026%e5%86%ac%ef%bd%9e%e9%96%8b%e5%82%ac%e6%b1%ba%e5%ae%9a%e3%83%bb/",
+          "final_url": "https://kobe-minatonoyoru.com/news/%E3%83%A1%E3%83%AA%E3%82%B1%E3%83%B3%E3%83%9F%E3%83%A5%E3%83%BC%E3%82%B8%E3%83%83%E3%82%AF%E3%83%8A%E3%82%A4%E3%83%84%EF%BD%9E2026%E5%86%AC%EF%BD%9E%E9%96%8B%E5%82%AC%E6%B1%BA%E5%AE%9A%E3%83%BB/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:57:18.473761+00:00",
+          "sha256": "1ff3109b2aa50ad4584e55b6341b7b6f78c97d8a477ba3ce402439e774039825"
+        },
+        {
+          "url": "https://kobe-minatonoyoru.com/",
+          "final_url": "https://kobe-minatonoyoru.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:38.910017+00:00",
+          "sha256": "6a20089c7266144e627aae89a25f1fbf98d4fb295b2a2cedb4b4123861fa685e"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-029",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 30,
+      "region": "hyogo",
+      "title": "オカリナフェスティバル in KOBE",
+      "disposition": "still_hold",
+      "reason": "主催者公式サイトは2026/9/30付で鑑賞チケット完売を明記。現時点で一般鑑賞の参加経路なし。",
+      "reason_code": "SOLD_OUT",
+      "sources_checked": [
+        {
+          "url": "https://ocarina-kobe.com/",
+          "final_url": "https://ocarina-kobe.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:09.880726+00:00",
+          "sha256": "80bbcb2a4e5a80c496f27197e6d1d0dbd698477d1e34125dded7e70d124d1d30"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:39.412735+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ]
+    },
+    {
+      "index": 31,
+      "region": "hyogo",
+      "title": "琴唱会55周年記念演奏会（菊枝陵純追悼）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:40.515557+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-031",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 32,
+      "region": "hyogo",
+      "title": "第1回　名曲コンサートinアメリカ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:41.431039+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-032",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 33,
+      "region": "hyogo",
+      "title": "ルートヴィヒ・チェンバー・プレイヤーズ・シュトゥットガルト日本ツアー2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:42.453318+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-033",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 34,
+      "region": "hyogo",
+      "title": "Lilas Trio　Concert",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:43.329701+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-034",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 35,
+      "region": "hyogo",
+      "title": "芦屋交響楽団　第１０３回定期演奏会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:44.374366+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-035",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 36,
+      "region": "hyogo",
+      "title": "★ふれあい文化の祭典2026ひょうご洋舞フェスティバル",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:45.386247+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-036",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 37,
+      "region": "hyogo",
+      "title": "２nd Generation Concert",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:46.322733+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-037",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 38,
+      "region": "hyogo",
+      "title": "目覚めよ　管楽器！～集まれ　元吹奏楽部員～",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:47.280127+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-038",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 39,
+      "region": "hyogo",
+      "title": "第23回邦楽コンサート　ゆほびか明石",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:48.307228+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-039",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 40,
+      "region": "hyogo",
+      "title": "第12回明石オカリナフェスティバル",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:49.334230+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-040",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 41,
+      "region": "hyogo",
+      "title": "２０２６COSMOコーラスフェスティバル",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:50.350553+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-041",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 42,
+      "region": "hyogo",
+      "title": "加西かっさいライブ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:51.600452+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-042",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 43,
+      "region": "hyogo",
+      "title": "第53回日本民謡姫路連合会発表会（第46回民謡コンクール併催）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:52.532917+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-043",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 44,
+      "region": "hyogo",
+      "title": "丹波の森国際音楽祭シューベルティアーデたんば２０２６",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:53.687231+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-044",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 45,
+      "region": "hyogo",
+      "title": "音で紡ぐ百年の響き",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:54.607045+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-045",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 46,
+      "region": "hyogo",
+      "title": "豊岡吹奏楽団 第43回定期演奏会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:55.627734+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-046",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 47,
+      "region": "hyogo",
+      "title": "TAJIMA Music A Live～音楽仲間の手づくりコンサート～",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:56.709255+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-047",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 48,
+      "region": "hyogo",
+      "title": "LadyBug　50周年記念アコースティックコンサート",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:57.742114+00:00",
+          "sha256": "edba78a01a430d62d4b8207b45b39b2c472781b5d1494a73809b9271e4c81bf0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-048",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 49,
+      "region": "hyogo",
+      "title": "★生誕120年三岸節子展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:58.660889+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-049",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 50,
+      "region": "hyogo",
+      "title": "★水木しげる　魂の漫画展",
+      "disposition": "duplicate",
+      "reason": "美術館公式URLを再取得。2026/9/12開始・神戸ファッション美術館の同じ漫画展で既存IDに一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.fashionmuseum.jp/special/mizuki-shigeru/",
+          "final_url": "https://www.fashionmuseum.jp/special/mizuki-shigeru/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:38.700255+00:00",
+          "sha256": "e18da87e43bc9f66bcd932a24cb95b6dbd400d08b06cb964ffc96222048e9d54"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:56:59.704945+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "matched_event_id": "evt-d8-hyogo-mizuki-2026"
+    },
+    {
+      "index": 51,
+      "region": "hyogo",
+      "title": "BBプラザ美術館２０２６年度企画展Ⅱ　「上前智祐の自画道」",
+      "disposition": "duplicate",
+      "reason": "既存の美術館公式URLを再取得し、同一展示の開始日・会場を確認。主催後援一覧の表記違い。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://bbpmuseum.jp/exhibition/%e4%b8%8a%e5%89%8d%e6%99%ba%e7%a5%90%e3%81%ae%e8%87%aa%e7%94%bb%e9%81%93-2",
+          "final_url": "https://bbpmuseum.jp/exhibition/%E4%B8%8A%E5%89%8D%E6%99%BA%E7%A5%90%E3%81%AE%E8%87%AA%E7%94%BB%E9%81%93-2",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:13.283710+00:00",
+          "sha256": "2fbcb94ffea6a91e404d5036b8cf967d2398379d14fac26e22234289fa8e1c4b"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:40.502413+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "matched_event_id": "evt-d8-hyogo-kamimae-2026"
+    },
+    {
+      "index": 52,
+      "region": "hyogo",
+      "title": "新進・若手アーティスト等の育成・支援事業「兵庫の工芸壁面を飾る」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:41.347002+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-052",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 53,
+      "region": "hyogo",
+      "title": "★\t松方幸次郎×山村德太郎　蒐集のパッションーロダンを日本へ、具体を世界へ",
+      "disposition": "duplicate",
+      "reason": "既存の美術館公式URLを再取得し、同一展示の開始日・会場を確認。主催後援一覧の表記違い。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.artm.pref.hyogo.jp/exhibition/t_2610/",
+          "final_url": "https://www.artm.pref.hyogo.jp/exhibition/t_2610/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:13.846718+00:00",
+          "sha256": "101a45709a02cc60fe2b74c6d9921ffc4af984ac9fb14829615e2cc75ed18992"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:42.090043+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "matched_event_id": "evt-d8-hyogo-matsukata-2026"
+    },
+    {
+      "index": 54,
+      "region": "hyogo",
+      "title": "★2026県展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:42.799450+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-054",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 55,
+      "region": "hyogo",
+      "title": "★2026兵庫県写真作家協会協会展　第59回兵庫県写真作家協会公募展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:43.490942+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-055",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 56,
+      "region": "hyogo",
+      "title": "兵庫県婦人手工芸協会 会員創作展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:44.485803+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-056",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 57,
+      "region": "hyogo",
+      "title": "―ふれあい文化の祭典―第38回全国手工芸美展inひょうご",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:45.498252+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-057",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 58,
+      "region": "hyogo",
+      "title": "２０２６神戸新世紀秋季展公募",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:46.517897+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-058",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 59,
+      "region": "hyogo",
+      "title": "第30回「國際現代」芸術展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:47.466079+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-059",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 60,
+      "region": "hyogo",
+      "title": "第16回神戸市シルバーカレッジ写真クラブＯＢ会作品展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:48.419486+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-060",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 61,
+      "region": "hyogo",
+      "title": "第46回兵庫県児童生徒彫塑展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:49.403865+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-061",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 62,
+      "region": "hyogo",
+      "title": "浮世絵の風景画を楽しむ　広重＋北斎　展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:50.498984+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-062",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 63,
+      "region": "hyogo",
+      "title": "第55回働美展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:51.557787+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-063",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 64,
+      "region": "hyogo",
+      "title": "Club SEI-G写真展２０２６",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:52.485005+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-064",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 65,
+      "region": "hyogo",
+      "title": "第98回明石公園菊花展覧会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:58:53.414021+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-065",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 66,
+      "region": "hyogo",
+      "title": "高砂菊花展覧会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:32.527436+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-066",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 67,
+      "region": "hyogo",
+      "title": "第59回稲美町菊花展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:33.331229+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-067",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 68,
+      "region": "hyogo",
+      "title": "第74回播磨町美術展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:34.067047+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-068",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 69,
+      "region": "hyogo",
+      "title": "第2２回手工芸巡回展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:34.812995+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-069",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 70,
+      "region": "hyogo",
+      "title": "高砂市・加西市交流美術展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:35.870619+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-070",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 71,
+      "region": "hyogo",
+      "title": "令和８年度　武蔵・伊織児童絵画 ・書道展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:36.924072+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-071",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 72,
+      "region": "hyogo",
+      "title": "第60回加西市文化祭　文芸展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:38.040335+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-072",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 73,
+      "region": "hyogo",
+      "title": "第60回加西市文化祭　美術公募展（募集）",
+      "disposition": "not_event",
+      "reason": "公式主催後援一覧では美術公募展の「募集」と明記。来場者が参加する展示会期の確定情報ではなく応募募集の案内。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:39.127345+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "region": "hyogo",
+      "title": "第49回兵庫県連合菊花展覧会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:40.218899+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-074",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 75,
+      "region": "hyogo",
+      "title": "第74回西脇市美術展覧会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T00:59:41.198143+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-075",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 76,
+      "region": "hyogo",
+      "title": "第74回西脇市美術協会会員展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:02.826617+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-076",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 77,
+      "region": "hyogo",
+      "title": "第５回姫路城ぬりえアートコンテスト",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:03.636602+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-077",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 78,
+      "region": "hyogo",
+      "title": "企画展　陶器『一楽、二萩、三●●？』 絵画『温度を感じる絵画たち』",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:04.408789+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-078",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 79,
+      "region": "hyogo",
+      "title": "特別展「やなせたかし展　人生はよろこばせごっこ」",
+      "disposition": "duplicate",
+      "reason": "当該主催者または自治体の既存公式URLを本候補として再取得。開始日・会場・企画が既存イベントと一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.himejibungakukan.jp/events/event/2026yanasetakashi/",
+          "final_url": "https://www.himejibungakukan.jp/events/event/2026yanasetakashi/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:01:11.875764+00:00",
+          "sha256": "e6771f4d7427b236c59264ef13a25ddc153f5583372e0cf3e0f7ccc4e9c93e9f"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:05.166540+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "matched_event_id": "evt-d8-hyogo-yanase-2026"
+    },
+    {
+      "index": 80,
+      "region": "hyogo",
+      "title": "令和８年度上郡町郷土資料館特別展　白旗城跡国史跡指定30周年記念「赤松氏調査研究最前線！」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:05.946729+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-080",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 81,
+      "region": "hyogo",
+      "title": "第22回宍粟市美術展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:06.935380+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-081",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 82,
+      "region": "hyogo",
+      "title": "第45回佐用郡美術展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:07.845147+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-082",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 83,
+      "region": "hyogo",
+      "title": "★ゲンダイトウゲイ＊ミニ＊クロニクルーやきものはアートだ！",
+      "disposition": "duplicate",
+      "reason": "当該主催者または自治体の既存公式URLを本候補として再取得。開始日・会場・企画が既存イベントと一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://web.pref.hyogo.lg.jp/tg01/event/2026contemporary_ceramic_art_mini_chronicle_ceramics_is_art.html",
+          "final_url": "https://web.pref.hyogo.lg.jp/tg01/event/2026contemporary_ceramic_art_mini_chronicle_ceramics_is_art.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:01:13.264177+00:00",
+          "sha256": "8529a7486dcd88f5a14adbcc982283f6adc0989e54dc5f94e4d566aed0789af2"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:08.799698+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "matched_event_id": "evt-d8-hyogo-ceramic-art-2026"
+    },
+    {
+      "index": 84,
+      "region": "hyogo",
+      "title": "令和8年度秋季特別展「太閤の世を生き抜いてー織田と京極・国替の軌跡ー」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:09.969302+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-084",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 85,
+      "region": "hyogo",
+      "title": "秋のアートフェスタ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:11.097076+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-085",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 86,
+      "region": "hyogo",
+      "title": "２０２６年度　丹波写友会写真展示会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:12.122548+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-086",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 87,
+      "region": "hyogo",
+      "title": "ひかみ司所50周年華展「紅花香風」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:13.164093+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-087",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 88,
+      "region": "hyogo",
+      "title": "日本画家　西田眞人展―風景の中の物語―",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:14.144057+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-088",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 89,
+      "region": "hyogo",
+      "title": "特別展「躍動する作家展」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:15.148687+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-089",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 90,
+      "region": "hyogo",
+      "title": "あさご・全国こども絵画展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:16.069600+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-090",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 91,
+      "region": "hyogo",
+      "title": "兵庫県彫刻家連盟　創立55周年記念　但馬巡回展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:17.127326+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-091",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 92,
+      "region": "hyogo",
+      "title": "特別企画展　故小林欣子先生とその弟子達の静物画展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:18.157952+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-092",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 93,
+      "region": "hyogo",
+      "title": "第16回新進作家交流展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:19.105928+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-093",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 94,
+      "region": "hyogo",
+      "title": "三木素真会水墨画展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:20.217966+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-094",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 95,
+      "region": "hyogo",
+      "title": "第77回　三田市菊花展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:21.259750+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-095",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 96,
+      "region": "hyogo",
+      "title": "三田市ガラス工芸館　第34回受講生作品展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:22.289386+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-096",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 97,
+      "region": "hyogo",
+      "title": "令和８年度「ＭＯＡ美術館児童作品展」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/art.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:23.210161+00:00",
+          "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-097",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 98,
+      "region": "hyogo",
+      "title": "技能グランプリ＆フェスタ２０２６",
+      "disposition": "duplicate",
+      "reason": "当該主催者または自治体の既存公式URLを本候補として再取得。開始日・会場・企画が既存イベントと一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://event.city.kobe.lg.jp/event/oTvmvcXQZ8rr5Opm50HI",
+          "final_url": "https://event.city.kobe.lg.jp/event/oTvmvcXQZ8rr5Opm50HI",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:01:13.795066+00:00",
+          "sha256": "daf6269bb79d5e49d0260c691ddcc014e5446bcbbad655349778dfc9fc5543fb"
+        },
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:24.261162+00:00",
+          "sha256": "2b49661e5f428909259b7d72cd0ba600e8fe7103206bd5d7aa3b75a27093119d"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-004"
+    },
+    {
+      "index": 99,
+      "region": "hyogo",
+      "title": "JUMP　FESTIVAL in KOBE２０２６",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:25.367675+00:00",
+          "sha256": "2b49661e5f428909259b7d72cd0ba600e8fe7103206bd5d7aa3b75a27093119d"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-099",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 100,
+      "region": "hyogo",
+      "title": "MUSE　WALKING＆FASHION SHOW",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "final_url": "https://www.kobe-np.co.jp/info/jigyo/event.shtml",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:00:26.378543+00:00",
+          "sha256": "2b49661e5f428909259b7d72cd0ba600e8fe7103206bd5d7aa3b75a27093119d"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-100",
+      "participability": "通常参加可能"
+    }
+  ]
+}
