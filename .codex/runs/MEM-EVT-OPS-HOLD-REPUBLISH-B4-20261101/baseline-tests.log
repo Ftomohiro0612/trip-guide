@@ -1,0 +1,166 @@
+(node:26848) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<mission-worktree>/lib/event-dates.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <mission-worktree>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Asia/Tokyo date does not depend on the runtime time zone (29.4591ms)
+✔ weekend means the coming weekend on weekdays and the current weekend on Saturday/Sunday (0.7203ms)
+✔ occurrence events use the last occurrence for discovery and the next occurrence for labels (1.4847ms)
+✔ multi-week events remain current through their end date and use today as the next date (0.2716ms)
+✔ discovery filtering drops ended and stale events without changing the freshness window (0.2299ms)
+✔ child picks prefer Tier A, avoid seasonal overlap, facilities, and themes (19.4893ms)
+✔ event type map and Japanese search normalization are deterministic (0.5807ms)
+✔ seasonal facilities require an access-month statement (1.6994ms)
+(node:27460) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<mission-worktree>/lib/distance.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <mission-worktree>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ event recommendations stay within 10km when three primary candidates exist (2.4554ms)
+✔ event recommendations extend to 15km only when fewer than three are within 10km (0.5563ms)
+✔ event recommendations exclude non-public, invalid, and venue facilities (0.2747ms)
+✔ event ranking uses tag matches, distance, then facility ID (0.2497ms)
+✔ rain-ready candidate is deterministically promoted into the initial three (0.5359ms)
+✔ hold and null-coordinate events never receive derived recommendations (1.9585ms)
+✔ facility recommendations enforce distance bands, 30 days, self exclusion, and limit (0.3752ms)
+✔ facility event ranking uses date, tag matches, distance, then event ID (9.6506ms)
+✔ analytics payloads expose only the approved non-personal contract (0.3779ms)
+✖ current canon at fixed 2026-07-21 date remains deterministic and clean (7390.1694ms)
+(node:24868) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<mission-worktree>/lib/event-filter.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <mission-worktree>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ date range includes both boundaries for single and continuous events (2.6398ms)
+✔ occurrence dates use actual dates instead of a continuous span (0.5448ms)
+✔ start-only and end-only ranges work for occurrences and event periods (1.122ms)
+✔ invalid reversed range reports an error and returns no results (1.1283ms)
+✔ weekend and month presets resolve as exclusive inclusive ranges (0.526ms)
+✔ normal nationwide events resolve weekend from click-time Asia/Tokyo date and keep AND filters (28.3767ms)
+✔ normal prefecture events resolve month from click-time Asia/Tokyo date and keep AND filters (0.6228ms)
+✔ reservation is single-value exact matching and unselected includes unknown (0.2444ms)
+✔ type and prefecture are OR within groups while all groups combine with AND (0.3965ms)
+✔ keyword search normalizes width and kana and supports partial festival matches (0.9021ms)
+✔ discovery event type filters the build-time classification (0.2362ms)
+✔ facility-backed event must reference an existing facility (5.5954ms)
+✔ regular event may use facility_id=null with a formal venue_name (0.5537ms)
+✔ venue_name does not replace an explicit facility_id=null (0.4099ms)
+✔ facility-backed event must not also supply venue_name (0.4753ms)
+✔ occurrence_dates participate in semantic duplicate detection (0.7203ms)
+✔ base and Summer are checked as one real-event population (0.4891ms)
+✔ approved exceptions and legacy violations remain separate (0.6611ms)
+✔ stale baseline entries fail instead of hiding resolved debt (0.3142ms)
+(node:19712) [MODULE_TYPELESS_PACKAGE_JSON] Warning: Module type of file:///<mission-worktree>/lib/event-filter.ts is not specified and it doesn't parse as CommonJS.
+Reparsing as ES module because module syntax was detected. This incurs a performance overhead.
+To eliminate this warning, add "type": "module" to <mission-worktree>\package.json.
+(Use `node --trace-warnings ...` to show where the warning was created)
+✔ Summer hero cards use event-date wording without changing date selection (1.2354ms)
+✔ Hero selection independently keeps four fireworks and four festivals across dates (8.849ms)
+✔ Hero selection falls back within each category as approved events end (1.3651ms)
+✔ Hero selection does not fill a short category from the other category (0.3449ms)
+✔ Hero events map to stable and unique detail-card anchors (0.3281ms)
+✔ Summer Hero title stays fixed when supported prefectures grow (0.2321ms)
+✔ Summer map keeps every safely mappable location without a major-event filter (4.3843ms)
+✔ Summer map overlay keeps coordinates separate and excludes hold rows (0.9457ms)
+✔ Nearby Summer map markers are spread without moving isolated markers (0.5689ms)
+✔ Summer map coverage derives listed, mapped, and unmapped counts together (0.6961ms)
+✔ non-contiguous occurrence dates become separate Event entries (0.3962ms)
+✔ continuous events retain their true start and end dates (0.1384ms)
+✔ feature hub hard-stops exactly at endsAt (0.1046ms)
+✔ Summer freshness accepts current evidence refresh without daily rechecks (1563.9462ms)
+✔ generic event type filters match the current candidate counts (0.838ms)
+✔ generic event types are OR while filter groups combine with AND (0.2827ms)
+✔ all 47 prefectures can be selected independently (0.6146ms)
+✔ unclassified legacy events remain only when no event type is selected (0.1103ms)
+✔ generic event pagination slices 562 items on first, second, and final pages (0.296ms)
+✔ 163 fireworks and 144 festivals paginate to their expected final pages (0.3251ms)
+✖ Summer Hub fixed-date list paginates all types together in groups of 20 (4.5868ms)
+✔ Summer Hub filters recalculate pages, clamp safely, and reset through every control (2.8856ms)
+✖ Summer event anchors resolve later pages and ignore invalid hashes safely (2.7538ms)
+✔ all Summer query entry anchors keep filters and clear the sticky header (0.5769ms)
+✔ cross-prefecture duplicate remains only as a canonicalization audit tombstone (0.2741ms)
+✔ Summer pagination only receives visible views and cannot revive excluded events (6.234ms)
+✔ Yamanashi regional wave keeps the accepted schema and source boundaries (0.5826ms)
+✔ Yamanashi catch-up adds only the two current Summer canonicals (1.0291ms)
+✔ Shizuoka and Nagano regional waves use only the accepted data model (0.4702ms)
+✔ Ibaraki, Tochigi, Gunma, and Niigata regional batch uses only the accepted data model (0.4225ms)
+✔ Aichi, Kyoto, Osaka, and Hyogo regional batch uses only the accepted data model (0.5549ms)
+✔ Hiroshima, Fukuoka, Okayama, and Kagawa regional batch uses only the accepted data model (0.5686ms)
+✔ Kumamoto, Nagasaki, Oita, and Kagoshima regional batch uses only the accepted data model (0.5042ms)
+✔ Saga, Miyazaki, Ehime, Tokushima, and Kochi milestone batch uses only the accepted data model (0.449ms)
+✔ Hokkaido, Aomori, Akita, and Miyagi expansion uses only the accepted data model (0.4151ms)
+✔ Iwate, Yamagata, and Fukushima expansion completes the combined northern batch (0.435ms)
+✔ Mie, Gifu, Toyama, Ishikawa, and Fukui expansion uses only the accepted data model (0.5553ms)
+✔ nationwide coverage wave reaches 300 accepted events across all 47 prefectures (0.7831ms)
+✔ high-demand regional gap wave adds only the 22 officially sourced rows (0.4627ms)
+✔ lightweight product analysis wave adds 16 demand-region events in the accepted model (0.5363ms)
+✔ 350-event milestone wave adds only 12 sourced rows to the three selected four-event prefectures (0.6634ms)
+✔ post-350 normal L2 wave adds nine official low-density regional events (0.363ms)
+✔ regional normal L2 continuation retains 15 canonical events after cross-prefecture deduplication (0.4145ms)
+✔ national density expansion retains all 50 sourced rows with valid location states (4.3243ms)
+✔ national density expansion reconciles the 464-event canonical checkpoint with 40 additional hold rows (1.037ms)
+✔ national density expansion keeps its final 35 hold rows after canonical deduplication (1.0287ms)
+✔ combined prefecture, type, condition, and preference filters keep correct pages (0.2782ms)
+ℹ tests 84
+ℹ suites 0
+ℹ pass 81
+ℹ fail 3
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 7682.4266
+
+✖ failing tests:
+
+test at scripts\test-event-facility-crosslinks.mjs:298:1
+✖ current canon at fixed 2026-07-21 date remains deterministic and clean (7390.1694ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  427 !== 429
+  
+      at TestContext.<anonymous> (file:///<mission-worktree>/scripts/test-event-facility-crosslinks.mjs:336:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 427,
+    expected: 429,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\test-summer-hub.mjs:731:1
+✖ Summer Hub fixed-date list paginates all types together in groups of 20 (4.5868ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  
+  38 !== 42
+  
+      at TestContext.<anonymous> (file:///<mission-worktree>/scripts/test-summer-hub.mjs:738:10)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: 38,
+    expected: 42,
+    operator: 'strictEqual',
+    diff: 'simple'
+  }
+
+test at scripts\test-summer-hub.mjs:811:1
+✖ Summer event anchors resolve later pages and ignore invalid hashes safely (2.7538ms)
+  TypeError: Cannot read properties of undefined (reading 'event')
+      at TestContext.<anonymous> (file:///<mission-worktree>/scripts/test-summer-hub.mjs:816:43)
+      at Test.runInAsyncScope (node:async_hooks:227:14)
+      at Test.run (node:internal/test_runner/test:1201:25)
+      at Test.processPendingSubtests (node:internal/test_runner/test:831:18)
+      at Test.postRun (node:internal/test_runner/test:1330:19)
+      at Test.run (node:internal/test_runner/test:1258:12)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:831:7)

@@ -1,15 +1,15 @@
 {
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B4-20261101",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-01T03:38:47.223731+00:00",
+  "executed_at": "2026-11-01T04:10:33.170024+00:00",
   "aggregate": {
-    "total": 300,
-    "added": 190,
-    "duplicate": 51,
-    "past": 12,
-    "still_hold": 47,
-    "not_event": 0,
-    "added_events": 238,
+    "total": 332,
+    "added": 210,
+    "duplicate": 56,
+    "past": 13,
+    "still_hold": 49,
+    "not_event": 4,
+    "added_events": 258,
     "bounded_fixes_events_changed": 0
   },
   "candidates": [
@@ -3307,27 +3307,6 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:10:11.621706+00:00",
           "sha256": "5b8c7d03fbbe4ab06c2e2fb166c0b45730181e72b92810d70d7591f2aea39929"
-        },
-        {
-          "url": "https://iko-yo.net/event_lites/detail/22364",
-          "final_url": "https://iko-yo.net/event_lites/detail/22364",
-          "http_status": 200,
-          "checked_at": "2026-11-01T03:21:40.237984+00:00",
-          "sha256": "50df7fb112284e4c270838ea09e9f984159ff2e2029b5748820f865c0c4a91ad"
-        },
-        {
-          "url": "https://culture-collection.jp/",
-          "final_url": "https://culture-collection.jp/",
-          "http_status": null,
-          "checked_at": "2026-11-01T03:22:17.219738+00:00",
-          "sha256": null
-        },
-        {
-          "url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
-          "final_url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
-          "http_status": 200,
-          "checked_at": "2026-11-01T03:23:05.710506+00:00",
-          "sha256": "5b8c7d03fbbe4ab06c2e2fb166c0b45730181e72b92810d70d7591f2aea39929"
         }
       ],
       "reason_code": "PARTICIPATION_CLOSED"
@@ -3456,13 +3435,6 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:12:21.320893+00:00",
           "sha256": "f564980d28090c3de64160225395cd04453efc05ca700ef3aa5746f4c3e540a1"
-        },
-        {
-          "url": "https://www.tosa-hojyosai.com/tosanosato.html",
-          "final_url": "https://www.tosa-hojyosai.com/tosanosato.html",
-          "http_status": 200,
-          "checked_at": "2026-11-01T03:18:31.575942+00:00",
-          "sha256": "05202f3553174338fc7557b119d0792350ab1cd05660349b78795620f37ec60a"
         }
       ],
       "added_event_id": "evt-hold-b4-131",
@@ -3569,13 +3541,6 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:12:23.216619+00:00",
           "sha256": "4353645d6baef15315cb4015611bb86137d35299d328218f69c9b1f72b458724"
-        },
-        {
-          "url": "https://www.tosa-hojyosai.com/koban.html",
-          "final_url": "https://www.tosa-hojyosai.com/koban.html",
-          "http_status": 200,
-          "checked_at": "2026-11-01T03:18:31.979278+00:00",
-          "sha256": "bab7736c86d427318e4b3d52c2094e39d68eec012f4a3da7342f7dbc6598500a"
         }
       ],
       "added_event_id": "evt-hold-b4-135",
@@ -3987,13 +3952,6 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:16:10.493298+00:00",
           "sha256": "c213a6f7899b8f6d685f60df80b378f0944ff47c0cd4733c5cfba7a13c26c56b"
-        },
-        {
-          "url": "https://www.tosa-hojyosai.com/niyodo.html",
-          "final_url": "https://www.tosa-hojyosai.com/niyodo.html",
-          "http_status": 200,
-          "checked_at": "2026-11-01T03:18:32.942266+00:00",
-          "sha256": "96dbc4d68a62437cc17ae0443202b1773ae0c620a274d4ed37eda4bf07bf88cc"
         }
       ],
       "added_event_id": "evt-hold-b4-153",
@@ -4421,6 +4379,13 @@
           "final_url": "https://immersive-museum-kochi.jp/",
           "http_status": 200,
           "checked_at": "2026-11-01T03:17:39.342815+00:00",
+          "sha256": "c2e0470695b8f9a015cd4a311c2abd9aef038d2e93ad49766167b99d73132983"
+        },
+        {
+          "url": "https://immersive-museum-kochi.jp/",
+          "final_url": "https://immersive-museum-kochi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:20:13.132588+00:00",
           "sha256": "c2e0470695b8f9a015cd4a311c2abd9aef038d2e93ad49766167b99d73132983"
         }
       ],
@@ -5968,7 +5933,7 @@
       "region": "aomori",
       "title": "第29回健康まつり",
       "disposition": "still_hold",
-      "reason": "県公式の健康まつり案内が再取得・再試行ともHTTP403。主催者サイトも補完確認したが開催日を評価できる当該本文を取得できない。",
+      "reason": "県公式の健康まつり案内は再取得・再試行ともHTTP403。主催者トップと2026年11月の機関紙4ページも確認したが、当該第29回健康まつりの開催日を補完できない。",
       "sources_checked": [
         {
           "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/R8_testmarketing_health.html",
@@ -5990,6 +5955,13 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:29:17.635848+00:00",
           "sha256": "0a65a023b6ff2993cef42cc3a648806b509a7aafbb1c91d487b4e4efba80d7e7"
+        },
+        {
+          "url": "https://www.aomori-h-coop.com/_userdata/img/organpaper/2611.pdf",
+          "final_url": "https://www.aomori-h-coop.com/_userdata/img/organpaper/2611.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:50:02.736465+00:00",
+          "sha256": "55a51f200901ff6cc96c77031f443ffa8e83941849a42b57f59b1b3c21ef4727"
         }
       ],
       "reason_code": "SOURCE_UNREADABLE"
@@ -7726,6 +7698,1068 @@
         "evt-hold-b4-300"
       ],
       "participability": "通常参加可能"
+    },
+    {
+      "index": 301,
+      "region": "aomori",
+      "title": "スティーヴ・ビショップ アーティストトーク 12/5",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/steve_bishop_talk/",
+          "final_url": "https://towadaartcenter.com/events/steve_bishop_talk/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:05.852630+00:00",
+          "sha256": "025d8d65112a66ec11e21cf0efc91edbf6bba02aac9235b3389cd2c6e72e32bd"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-301",
+      "added_event_ids": [
+        "evt-hold-b4-301"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 302,
+      "region": "aomori",
+      "title": "げんびオープンステージ インフィニート・コラルコ 12/19",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:06.558259+00:00",
+          "sha256": "3df687b1c8d40353e8f00d2dc8e15352223db6483b1599db6716c7283bf1011a"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/genbi-open-stage-2026-1/",
+          "final_url": "https://towadaartcenter.com/events/genbi-open-stage-2026-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:22.698141+00:00",
+          "sha256": "febf55beb5a245524bedce5a3a460983113bf2fe42d1e15c04453f9c1ae55c32"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-302",
+      "added_event_ids": [
+        "evt-hold-b4-302"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 303,
+      "region": "aomori",
+      "title": "げんびオープンステージ ポラリスフラ 12/19",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:07.416456+00:00",
+          "sha256": "3df687b1c8d40353e8f00d2dc8e15352223db6483b1599db6716c7283bf1011a"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/genbi-open-stage-2026-2/",
+          "final_url": "https://towadaartcenter.com/events/genbi-open-stage-2026-2/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:23.322087+00:00",
+          "sha256": "60ed62f06ab7ef74942721c480ce344a9ea7bcb0f92252af4dae93406e3a6827"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-303",
+      "added_event_ids": [
+        "evt-hold-b4-303"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 304,
+      "region": "aomori",
+      "title": "オールジャンル ハロウィン カーズ ミート",
+      "disposition": "still_hold",
+      "reason": "主催者の公式Instagramはログイン案内のみで当該投稿本文を取得できない。二次サイトの10/31日程だけでpastとは判定しない。",
+      "sources_checked": [
+        {
+          "url": "https://towakomyu.com/events/all-genre-halloween-cars-meet/",
+          "final_url": "https://towakomyu.com/events/all-genre-halloween-cars-meet/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:23.863284+00:00",
+          "sha256": "d5f84f5df4e56b87a0ae8bf8d8427a6946ca3d9d177be3e4245a91ff5f58c4e3"
+        },
+        {
+          "url": "https://www.instagram.com/towadacarsandcoffee/",
+          "final_url": "https://www.instagram.com/towadacarsandcoffee/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:51.003883+00:00",
+          "sha256": "78b9eafb4a4ef64355a7a2757e7513cb88cc06bec0ffba6f609b7dbae0996f4f"
+        }
+      ],
+      "reason_code": "SOURCE_UNREADABLE"
+    },
+    {
+      "index": 305,
+      "region": "aomori",
+      "title": "ひらかわトラックマーケット2026 11/8",
+      "disposition": "duplicate",
+      "reason": "同じ公式紅葉まつり案内に内包された11/8トラックマーケット。親イベントに日付・内容を反映済み。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:07.751114+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-274",
+      "matched_event_ids": [
+        "evt-hold-b4-274"
+      ]
+    },
+    {
+      "index": 306,
+      "region": "aomori",
+      "title": "ひらかわ紅葉めぐり",
+      "disposition": "not_event",
+      "reason": "複数の紅葉スポットを巡る観賞ガイド。独立した日時・会場を持つ催しではなく、内包する実イベントは猿賀公園紅葉まつり等として区別。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/",
+          "final_url": "https://hirakawa-kankou.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:08.501323+00:00",
+          "sha256": "5c1225e9d2a0d795eb911b35f429653316832e0a2b91a78f33881fe68ab49b85"
+        },
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/18/hirakawa-koyo-meguri-2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/18/hirakawa-koyo-meguri-2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:24.322375+00:00",
+          "sha256": "49f0b7770b875c0bf868004294c1ccc861174017b5d12a56fff2910dc4b7e35e"
+        }
+      ]
+    },
+    {
+      "index": 307,
+      "region": "aomori",
+      "title": "謎解きは公園の中で3 謎の園",
+      "disposition": "not_event",
+      "reason": "公式は例年4～11月末頃の常設販売型謎解きキットと散策サービスとして紹介。特定年の日付を定めたイベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/",
+          "final_url": "https://hirakawa-kankou.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:09.373354+00:00",
+          "sha256": "5c1225e9d2a0d795eb911b35f429653316832e0a2b91a78f33881fe68ab49b85"
+        },
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:51.942448+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ]
+    },
+    {
+      "index": 308,
+      "region": "aomori",
+      "title": "謎解きは公園の中で2 謎の桜",
+      "disposition": "not_event",
+      "reason": "公式は例年4～11月末頃の常設販売型謎解きキットと散策サービスとして紹介。特定年の日付を定めたイベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/",
+          "final_url": "https://hirakawa-kankou.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:10.427888+00:00",
+          "sha256": "5c1225e9d2a0d795eb911b35f429653316832e0a2b91a78f33881fe68ab49b85"
+        },
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:52.769934+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ]
+    },
+    {
+      "index": 309,
+      "region": "aomori",
+      "title": "謎解きは公園の中で",
+      "disposition": "not_event",
+      "reason": "公式は例年4～11月末頃の常設販売型謎解きキットと散策サービスとして紹介。特定年の日付を定めたイベントではない。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/",
+          "final_url": "https://hirakawa-kankou.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:11.325686+00:00",
+          "sha256": "5c1225e9d2a0d795eb911b35f429653316832e0a2b91a78f33881fe68ab49b85"
+        },
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:53.577538+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ]
+    },
+    {
+      "index": 310,
+      "region": "aomori",
+      "title": "青い海と森の音楽祭 サンロード青森 出前演奏会",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aoiumimori.jp/",
+          "final_url": "https://aoiumimori.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:25.068346+00:00",
+          "sha256": "8c87f3a14121ec267d50c3a2b2a85c84c63642ed46cad0af5a0cae7733785984"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-310",
+      "added_event_ids": [
+        "evt-hold-b4-310"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 311,
+      "region": "aomori",
+      "title": "あずましフェスタ",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000013.000183298.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000013.000183298.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:25.784301+00:00",
+          "sha256": "51f8d4349b4e5e03c5e5ab87c9127ab6ad71aa699f124fa9e52d3d279f190d1d"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-311",
+      "added_event_ids": [
+        "evt-hold-b4-311"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 312,
+      "region": "aomori",
+      "title": "コレクションラボ014　岡山良一　八戸モダンの風",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://hachinohe-art-museum.jp/",
+          "final_url": "https://hachinohe-art-museum.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:38.806207+00:00",
+          "sha256": "8c72fc0320c3c56357a2225eddeb7c4ce2690a411f99afdf88b293ccdefb41dd"
+        },
+        {
+          "url": "https://hachinohe-art-museum.jp/exhibition/7048",
+          "final_url": "https://hachinohe-art-museum.jp/exhibition/7048/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:54.447435+00:00",
+          "sha256": "4e34109635fe05d3db51499389f138cffa6693c9025914f1f240ad74f36a882a"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-312",
+      "added_event_ids": [
+        "evt-hold-b4-312"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 313,
+      "region": "aomori",
+      "title": "企画展「ただいま石斧展」",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.town.sotogahama.lg.jp/",
+          "final_url": "https://www.town.sotogahama.lg.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:39.409609+00:00",
+          "sha256": "985907f422cf2faaa70ac2d7fb8e945324c4292a4d5bacfea797ee5852690d85"
+        },
+        {
+          "url": "https://towakomyu.com/events/tadaima-sekifuten/",
+          "final_url": "https://towakomyu.com/events/tadaima-sekifuten/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:55.121061+00:00",
+          "sha256": "18fe92bfaa8fa9970c626770ab2630d38dc3a06740a64a39447280b0c42e5c88"
+        },
+        {
+          "url": "https://www.town.sotogahama.lg.jp/bunka/bunka/sekifuten.html",
+          "final_url": "https://www.town.sotogahama.lg.jp/bunka/bunka/sekifuten.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:18.308848+00:00",
+          "sha256": "ad5d2779f8b7bec37fa4dd9456ec9b3144f261f17aa6db8b989633d486d3f949"
+        },
+        {
+          "url": "https://www.town.sotogahama.lg.jp/bunka/bunka/files/R8sekihuten.pdf",
+          "final_url": "https://www.town.sotogahama.lg.jp/bunka/bunka/files/R8sekihuten.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:47.676367+00:00",
+          "sha256": "94083d4a2370d7269869e8ead7129cada13fa7506f9f420a366fae476f2ede2a"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-313",
+      "added_event_ids": [
+        "evt-hold-b4-313"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 314,
+      "region": "aomori",
+      "title": "津軽三味線音色頒布会",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.aomori-kanko.or.jp/aspam/event/063.html",
+          "final_url": "https://www.aomori-kanko.or.jp/aspam/event/063.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:39.972523+00:00",
+          "sha256": "3191b2cfb164a32e43fb90b528cf5c3ac9093885d58d1959d6a82f01ffc21ac0"
+        },
+        {
+          "url": "https://www.aomori-kanko.or.jp/aspam/event/shamisen-schedule/202611.pdf",
+          "final_url": "https://www.aomori-kanko.or.jp/aspam/event/shamisen-schedule/202611.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:55.691686+00:00",
+          "sha256": "b7e1b9b69e3aeb9472799d7d1d579f9977a991af0a8cdaee3fc327cc3418d8d1"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-314",
+      "added_event_ids": [
+        "evt-hold-b4-314"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 315,
+      "region": "aomori",
+      "title": "縄文土器作り講座",
+      "disposition": "still_hold",
+      "reason": "全3回参加必須の連続講座で初回2026/10/31が既に終了。今から全回参加できる経路がなく、途中参加可とも記載されない。",
+      "sources_checked": [
+        {
+          "url": "https://www.korekawa-jomon.jp/",
+          "final_url": "https://www.korekawa-jomon.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:40.432015+00:00",
+          "sha256": "d474b1f28b8885444ba6159104aa631b69d81499939fbdd380fda478f2487e83"
+        },
+        {
+          "url": "https://www.korekawa-jomon.jp/events/event/縄文土器作り講座-4/",
+          "final_url": "https://www.korekawa-jomon.jp/events/event/%E7%B8%84%E6%96%87%E5%9C%9F%E5%99%A8%E4%BD%9C%E3%82%8A%E8%AC%9B%E5%BA%A7-4/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:56.389170+00:00",
+          "sha256": "f79dd079935a4f3e0cdcc8c70be397750a02d6b6d02d60ed1462c27d786cb872"
+        }
+      ],
+      "reason_code": "PARTICIPATION_CLOSED"
+    },
+    {
+      "index": 316,
+      "region": "aomori",
+      "title": "講演会「新収蔵資料『屏風』と馬の絵について」",
+      "disposition": "past",
+      "reason": "公式の講演会開催日は2026/10/31。展覧会自体の11/29までの会期とは区別して終了済みと判定。",
+      "sources_checked": [
+        {
+          "url": "https://www.komakkoland.jp/",
+          "final_url": "https://www.komakkoland.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:40.868571+00:00",
+          "sha256": "74014464c13cc9d51a16bd09dcae3880d159e3b438f9374f849d0b0ffe1d6781"
+        },
+        {
+          "url": "https://www.komakkoland.jp/tokubetuten/r8_tokubetuten/byoubu.html",
+          "final_url": "https://www.komakkoland.jp/tokubetuten/r8_tokubetuten/byoubu.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:56.921891+00:00",
+          "sha256": "b0c36c4f0a25aef8abe590dfd930126a4b6e4cf32119b1798fbd29bfe7552a6e"
+        },
+        {
+          "url": "https://www.komakkoland.jp/images/tokubetutenn/r8/byoubu_2.jpg",
+          "final_url": "https://www.komakkoland.jp/images/tokubetutenn/r8/byoubu_2.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:18.808358+00:00",
+          "sha256": "fb53f031121f902ee718f4f85285e149ac18cf9e4e3f085136e69ddff02e0a46"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-12-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-12-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:18.363967+00:00",
+          "sha256": "06409d42d203ec81f4c25090c10440e86b50fc7b2053a9568e454fa8eb42897d"
+        }
+      ]
+    },
+    {
+      "index": 317,
+      "region": "aomori",
+      "title": "ミュージアムコレクション展",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.komakkoland.jp/",
+          "final_url": "https://www.komakkoland.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:41.285340+00:00",
+          "sha256": "74014464c13cc9d51a16bd09dcae3880d159e3b438f9374f849d0b0ffe1d6781"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-20-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-20-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:35.980648+00:00",
+          "sha256": "06ee2ee9a293579135180e5c57576664c7205f7bc640aad33694b379d416ed45"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-317",
+      "added_event_ids": [
+        "evt-hold-b4-317"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 318,
+      "region": "aomori",
+      "title": "しちのへ生涯学習フェスタ２０２６",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.town.shichinohe.lg.jp/gyosei/cultural-sports/gakusyu/2019-1.html",
+          "final_url": "https://www.town.shichinohe.lg.jp/gyosei/cultural-sports/gakusyu/2019-1.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:39:57.376457+00:00",
+          "sha256": "13ba6e840c69412d6cbd24818db607fd1dcc91c1db3ceceeae207a283c9332ed"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-318",
+      "added_event_ids": [
+        "evt-hold-b4-318"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 319,
+      "region": "aomori",
+      "title": "民話を楽しむ日",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.komakkoland.jp/",
+          "final_url": "https://www.komakkoland.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:19.217874+00:00",
+          "sha256": "74014464c13cc9d51a16bd09dcae3880d159e3b438f9374f849d0b0ffe1d6781"
+        },
+        {
+          "url": "https://www.komakkoland.jp/ibent/r8/minnwa2026.html",
+          "final_url": "https://www.komakkoland.jp/ibent/r8/minnwa2026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:37.442860+00:00",
+          "sha256": "ccf691c186ea153822ceee94c265a7d5ee81a5991517f39953362bd7b3063413"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-319",
+      "added_event_ids": [
+        "evt-hold-b4-319"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 320,
+      "region": "aomori",
+      "title": "第２５回佐井村郷土芸能発表大会",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "http://www.vill.sai.lg.jp/",
+          "final_url": "https://www.vill.sai.lg.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:19.553881+00:00",
+          "sha256": "60c9d6cf6c88b99c7b078014017e3065ef14399ea75aaf683ab1c65651eec6a4"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-23-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-23-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:36.531055+00:00",
+          "sha256": "3e214f695f19fb02ae18600d4a16a6dddbef92bd17a3c7e01e73e539c3e681ca"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-320",
+      "added_event_ids": [
+        "evt-hold-b4-320"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 321,
+      "region": "aomori",
+      "title": "平川市民文化祭",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.hirakawa.lg.jp/bunka/index.html",
+          "final_url": "https://www.city.hirakawa.lg.jp/bunka/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:21.577299+00:00",
+          "sha256": "dd273b696693001b0c4272f40af332d2898f47fee6b14be5acc2cea58f779ad8"
+        },
+        {
+          "url": "https://www.city.hirakawa.lg.jp/bunka/ibento/shiminbunkasai_2024.html",
+          "final_url": "https://www.city.hirakawa.lg.jp/bunka/ibento/shiminbunkasai_2024.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:36.985247+00:00",
+          "sha256": "60d5142bc1d58e92fa15dd6023691071649687331499f7e278d5c00439aa6e57"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-321",
+      "added_event_ids": [
+        "evt-hold-b4-321"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 322,
+      "region": "aomori",
+      "title": "あおもりこども民俗フェス！",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026/11/3・まほろば歴史館が同一のこども民俗フェス。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011568.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011568.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:22.459087+00:00",
+          "sha256": "b06d42ba292f06dd58f65d4e23351fbb6de961032799435d40224bcc314e1355"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-247",
+      "matched_event_ids": [
+        "evt-hold-b4-247"
+      ]
+    },
+    {
+      "index": 323,
+      "region": "aomori",
+      "title": "是川縄文の日",
+      "disposition": "duplicate",
+      "reason": "公式URL（www有無を正規化）・2026/11/3・是川縄文館の同一イベントが既存。",
+      "sources_checked": [
+        {
+          "url": "https://www.korekawa-jomon.jp/events/event/是川縄文の日-6/",
+          "final_url": "https://www.korekawa-jomon.jp/events/event/%E6%98%AF%E5%B7%9D%E7%B8%84%E6%96%87%E3%81%AE%E6%97%A5-6/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:23.054074+00:00",
+          "sha256": "d188ba2188d784064da77c03ca718e9e438e50f586aac334dd4d89f1c25250d2"
+        }
+      ],
+      "matched_event_id": "evt-w43f1-8176-jomonday",
+      "matched_event_ids": [
+        "evt-w43f1-8176-jomonday"
+      ]
+    },
+    {
+      "index": 324,
+      "region": "aomori",
+      "title": "イチョウWeeＫ！",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://hachinohe-city-museum.jp/",
+          "final_url": "https://hachinohe-city-museum.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:23.650797+00:00",
+          "sha256": "a38a92f27a43378bc37efe4278d8f50764d412a35a8acb62e84b2378c6bad896"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:05.963640+00:00",
+          "sha256": "f75fa051378b6dedbf64156ec5c97ff0bbdf2090fd7f383c056e399b36ab64cd"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-11-2/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-11-2/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:18.867941+00:00",
+          "sha256": "28d4beebc2914399eee720852261a6f382e66e75ebee29dc1c36e661dfcf5488"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-324",
+      "added_event_ids": [
+        "evt-hold-b4-324"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 325,
+      "region": "aomori",
+      "title": "鎧と小袖姿で記念撮影",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://hachinohe-city-museum.jp/",
+          "final_url": "https://hachinohe-city-museum.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:24.535000+00:00",
+          "sha256": "a38a92f27a43378bc37efe4278d8f50764d412a35a8acb62e84b2378c6bad896"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-11-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-11-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:04.336370+00:00",
+          "sha256": "926065833f353e4d99d5e08c26e1793aba946259e7fa4f670429974dfb191ab6"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-325",
+      "added_event_ids": [
+        "evt-hold-b4-325"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 326,
+      "region": "aomori",
+      "title": "階上町民文化祭",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-22-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-22-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:49.921130+00:00",
+          "sha256": "e5dcd7419d5002b5a6d1a54bc6b5ddbabe983b77f6f614c4c0e2f67332fd6ee2"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-326",
+      "added_event_ids": [
+        "evt-hold-b4-326"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 327,
+      "region": "aomori",
+      "title": "第51回六ヶ所村民文化祭",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.rokkasho.jp/index.cfm/11,2254,33,149,html",
+          "final_url": "https://www.rokkasho.jp/index.cfm/11,2254,33,149,html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:50.442997+00:00",
+          "sha256": "c8550d74326422ff2f77506a73ad60f0b7350a8ac1680cc6eb27a488a5497aa4"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-327",
+      "added_event_ids": [
+        "evt-hold-b4-327"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 328,
+      "region": "aomori",
+      "title": "展覧会“EAT”",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:06.580584+00:00",
+          "sha256": "f75fa051378b6dedbf64156ec5c97ff0bbdf2090fd7f383c056e399b36ab64cd"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-2-1/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-2-1/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:19.314524+00:00",
+          "sha256": "afc5b2e840bb470c9d1b65302814489abc8e8eb6c905154994c03d3e45d5c5d6"
+        },
+        {
+          "url": "https://acac-aomori.jp/program/archive/",
+          "final_url": "https://acac-aomori.jp/program/archive/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:33.845760+00:00",
+          "sha256": "80dcd426e503be365d2cd8c4bcd0617c72b8b0a6dc2eca8f1fcb1eb0f7fd615e"
+        },
+        {
+          "url": "https://acac-aomori.jp/program/air2026eat/",
+          "final_url": "https://acac-aomori.jp/program/air2026eat/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:41.757758+00:00",
+          "sha256": "1dea3332a3d83562c1d1a9c8ca1bdcb7920c682ed7114b16391aeaa7a642e1e0"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-328",
+      "added_event_ids": [
+        "evt-hold-b4-328"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 329,
+      "region": "aomori",
+      "title": "遺跡調査報告会",
+      "disposition": "duplicate",
+      "reason": "公式の2026/11/14・是川縄文館の同じ報告会が既存。www有無を正規化して照合。",
+      "sources_checked": [
+        {
+          "url": "https://www.korekawa-jomon.jp/events/event/令和8年度八戸市遺跡調査報告会/",
+          "final_url": "https://www.korekawa-jomon.jp/events/event/%E4%BB%A4%E5%92%8C8%E5%B9%B4%E5%BA%A6%E5%85%AB%E6%88%B8%E5%B8%82%E9%81%BA%E8%B7%A1%E8%AA%BF%E6%9F%BB%E5%A0%B1%E5%91%8A%E4%BC%9A/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:51.043167+00:00",
+          "sha256": "2b91f87a76dc0bd68695f6c90daaca5f98079abbced11a62fba658732cf9a482"
+        }
+      ],
+      "matched_event_id": "evt-w43f1-8176-excavation-report",
+      "matched_event_ids": [
+        "evt-w43f1-8176-excavation-report"
+      ]
+    },
+    {
+      "index": 330,
+      "region": "aomori",
+      "title": "木の実で縄文クッキング",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.korekawa-jomon.jp/",
+          "final_url": "https://www.korekawa-jomon.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:51.574228+00:00",
+          "sha256": "d474b1f28b8885444ba6159104aa631b69d81499939fbdd380fda478f2487e83"
+        },
+        {
+          "url": "https://www.korekawa-jomon.jp/events/",
+          "final_url": "https://www.korekawa-jomon.jp/events/",
+          "http_status": 404,
+          "checked_at": "2026-11-01T03:41:07.384263+00:00",
+          "sha256": "c8e4b8891a11cad4f35ff702f4a0d0a7a8c9586f737353fecf6e802fe8349a29"
+        },
+        {
+          "url": "https://tohokubunka.pref.miyagi.jp/events/aomori-8-5/",
+          "final_url": "https://tohokubunka.pref.miyagi.jp/events/aomori-8-5/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:19.743203+00:00",
+          "sha256": "3b6a3b55511a0bb091299bda909b1f5d5557010171dbff8b9b373fbbb70914ad"
+        },
+        {
+          "url": "https://www.korekawa-jomon.jp/?s=木の実",
+          "final_url": "https://www.korekawa-jomon.jp/?s=%E6%9C%A8%E3%81%AE%E5%AE%9F",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:33.323747+00:00",
+          "sha256": "5700c148c7e37f7cae1fee5b8969aeaad3d63793b29e37bea04214317a2af505"
+        },
+        {
+          "url": "https://www.korekawa-jomon.jp/events/event/%e6%9c%a8%e3%81%ae%e5%ae%9f%e3%81%a7%e7%b8%84%e6%96%87%e3%82%af%e3%83%83%e3%82%ad%e3%83%b3%e3%82%b0%ef%bc%81/",
+          "final_url": "https://www.korekawa-jomon.jp/events/event/%E6%9C%A8%E3%81%AE%E5%AE%9F%E3%81%A7%E7%B8%84%E6%96%87%E3%82%AF%E3%83%83%E3%82%AD%E3%83%B3%E3%82%B0%EF%BC%81/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:41.298157+00:00",
+          "sha256": "86cb50c8d8cd99f3ef67b79dc4d109e735ee6bf38c7d0a496b7220a9fe514898"
+        },
+        {
+          "url": "https://www.korekawa-jomon.jp/event_cal/",
+          "final_url": "https://www.korekawa-jomon.jp/event_cal/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:42:24.684936+00:00",
+          "sha256": "594d2a378fe6f00966217c2673a834d3f6963642576024e7c88787838690efdd"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-330",
+      "added_event_ids": [
+        "evt-hold-b4-330"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 331,
+      "region": "aomori",
+      "title": "ミニコレクション展「鉄(てつ)」",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026/11/28開始・南郷歴史民俗資料館が同一のミニコレクション展が既存。",
+      "sources_checked": [
+        {
+          "url": "https://nango-hf.jp/event/626",
+          "final_url": "https://nango-hf.jp/event/626/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:40:52.152313+00:00",
+          "sha256": "582d1ba0406ff04ea41f980591492fd0c8b2c5e595fe02f3b1c4cd8b0d51cf2f"
+        }
+      ],
+      "matched_event_id": "evt-w43f1-8175-iron",
+      "matched_event_ids": [
+        "evt-w43f1-8175-iron"
+      ]
+    },
+    {
+      "index": 332,
+      "region": "aomori",
+      "title": "かぜのうた 弘前会場",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.hirorosquare.jp/event_detail.html?eid=53578&ym=202611",
+          "final_url": "https://www.hirorosquare.jp/event_detail.html?eid=53578&ym=202611",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:05.105876+00:00",
+          "sha256": "9f600601a528295695074e9975a7f8a5e84f08e00e37dd5c6c554d0dd36a9b83"
+        },
+        {
+          "url": "https://spacedenega.blogspot.com/2026/10/blog-post.html",
+          "final_url": "https://spacedenega.blogspot.com/2026/10/blog-post.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:41:20.207240+00:00",
+          "sha256": "7200a911f8da9e6ba4d5240bab3765a1ae0bf469e786da578ef1375d51742cb3"
+        },
+        {
+          "url": "https://www.hirorosquare.jp/event_detail.html?eid=53578&ym=202611",
+          "final_url": "https://www.hirorosquare.jp/event_detail.html?eid=53578&ym=202611",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:42:25.146926+00:00",
+          "sha256": "9f600601a528295695074e9975a7f8a5e84f08e00e37dd5c6c554d0dd36a9b83"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-332",
+      "added_event_ids": [
+        "evt-hold-b4-332"
+      ],
+      "participability": "通常参加可能"
     }
-  ]
+  ],
+  "process_started_at": "2026-11-01T02:50:00.391Z",
+  "input_total": 332,
+  "input_sha256": "bf8407acd1043b79fc017c3e34f305d9958866c2c3e2cc76c34c3a8c2ab1364a",
+  "prior_run_evidence_reused": false,
+  "proposed_validator_exceptions": [
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-163:evt-kochi-w43-sword:2026-11-14",
+      "reason": "同じ公式企画展ページだが、既存の刀剣展示と、土日祝に模造刀の分解・組立や玉鋼に触れる予約不要体験は別の参加プログラム。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-002-4:evt-hold-b4-002-5:evt-hold-b4-002-6:2026-11-22",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：第80回記念栃木県芸術祭（謡曲）（栃木県総合文化センター）；第80回記念栃木県芸術祭（民謡・民舞）（城址公園ホール（壬生中央公民館））；第80回記念栃木県芸術祭（演劇）（アトリエほんまる）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-103-1:evt-hold-b4-103-6:2026-11-14",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：さのあかり 佐野厄よけ大師（佐野厄よけ大師）；さのあかり 朝日森天満宮（朝日森天満宮）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-01",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-08",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-15",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:2026-11-22",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:2026-11-29",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-02",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-03",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-04",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-06",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-07",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-08",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-10",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-11",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-12",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-14",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-15",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-16",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-184:evt-hold-b4-185:2026-11-03",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：山北みかん こもれびマルシェ（山北イベント広場）；マグロまつりin大月町産業祭（大月町総合グラウンド）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-186:evt-hold-b4-187:2026-11-07",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：第７回 おち・まち・そとあそび（宮の前公園（越知町越知丙734-1））；秋の四方竹まつりと餅つき大会（なめかわの郷（本山町下関122））。"
+    }
+  ],
+  "per_region": {
+    "tochigi": {
+      "added": 76,
+      "duplicate": 19,
+      "past": 0,
+      "still_hold": 20,
+      "not_event": 0
+    },
+    "kochi": {
+      "added": 68,
+      "duplicate": 30,
+      "past": 2,
+      "still_hold": 14,
+      "not_event": 0
+    },
+    "aomori": {
+      "added": 66,
+      "duplicate": 7,
+      "past": 11,
+      "still_hold": 15,
+      "not_event": 4
+    }
+  },
+  "not_stated_phrase_counts": {
+    "time": 39,
+    "fee": 123,
+    "reservation": 151,
+    "weather": 226,
+    "age": 208
+  },
+  "audit": {
+    "changed_baseline_events": 0,
+    "removed_events": 0,
+    "added_events": 258,
+    "metadata_total_events": 11155,
+    "all_changed_urls_have_fresh_sources_checked": true,
+    "all_fetch_times_after_process_start": true,
+    "all_332_disposed": true
+  },
+  "validation": {
+    "event_validators_errors": 0,
+    "tests_total": 84,
+    "tests_passed": 81,
+    "tests_failed": 3,
+    "baseline_sha": "598a258a07785e0781a1771e65f0f28fa5dd85cd",
+    "historical_fixture_failures_reproduced_identically": true,
+    "new_test_failures": 0,
+    "cf_build_exit": 0,
+    "preview_passed": true,
+    "preview_viewports": [
+      1280,
+      375
+    ],
+    "preview_regions": {
+      "tochigi-1280": {
+        "status": 200,
+        "pages": 12,
+        "visible_cards": 226,
+        "expected_added": 99,
+        "added_found": 99
+      },
+      "kochi-1280": {
+        "status": 200,
+        "pages": 7,
+        "visible_cards": 139,
+        "expected_added": 91,
+        "added_found": 91
+      },
+      "aomori-1280": {
+        "status": 200,
+        "pages": 6,
+        "visible_cards": 103,
+        "expected_added": 68,
+        "added_found": 68
+      },
+      "tochigi-375": {
+        "status": 200,
+        "pages": 12,
+        "visible_cards": 226,
+        "expected_added": 99,
+        "added_found": 99
+      },
+      "kochi-375": {
+        "status": 200,
+        "pages": 7,
+        "visible_cards": 139,
+        "expected_added": 91,
+        "added_found": 91
+      },
+      "aomori-375": {
+        "status": 200,
+        "pages": 6,
+        "visible_cards": 103,
+        "expected_added": 68,
+        "added_found": 68
+      }
+    },
+    "browser_errors": 0,
+    "console_errors": 0,
+    "missing_added_cards": 0,
+    "ended_cards": 0,
+    "mobile_overflow": 0
+  }
 }

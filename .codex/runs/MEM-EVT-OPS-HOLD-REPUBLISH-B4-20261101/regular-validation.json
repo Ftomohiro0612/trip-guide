@@ -1,16 +1,16 @@
 {
   "summary": {
-    "base_events": 10947,
+    "base_events": 11155,
     "summer_events": 484,
     "summer_classifications": 17,
     "facilities": 6013,
-    "findings": 367,
-    "approved_exceptions": 366,
+    "findings": 388,
+    "approved_exceptions": 388,
     "existing_violations": 0,
-    "unbaselined_violations": 1,
+    "unbaselined_violations": 0,
     "stale_approved_exceptions": 0,
     "stale_existing_violations": 0,
-    "errors": 1
+    "errors": 0
   },
   "approved_exceptions": [
     {
@@ -3216,6 +3216,16 @@
       "reason": "2026-10-29ガラシャweek公式日程で識別。神足ふれあい町家の有料甲冑着装（115～175cm・当日空き枠可）と、バンビオ2Fの無料さつき盆栽展示は別会場・別内容。"
     },
     {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-163:evt-kochi-w43-sword:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-163",
+        "evt-kochi-w43-sword"
+      ],
+      "detail": "2026-11-14",
+      "reason": "同じ公式企画展ページだが、既存の刀剣展示と、土日祝に模造刀の分解・組立や玉鋼に触れる予約不要体験は別の参加プログラム。"
+    },
+    {
       "fingerprint": "base.official_url_date_collision:evt-osaka-w43d4-kids-baseball:evt-osaka-w43d4-kids-teeball:2026-12-20",
       "rule": "base.official_url_date_collision",
       "event_ids": [
@@ -3950,6 +3960,220 @@
       "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：みちのおくの芸術祭 美術館会場（山形美術館2・3階）；みちのおくの芸術祭 THE LOCAL（THE LOCAL TUAD ART GALLERY（Q1 1-G））；みちのおくの芸術祭 famAA（famAA（Q1 1-H））。"
     },
     {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-002-4:evt-hold-b4-002-5:evt-hold-b4-002-6:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-002-4",
+        "evt-hold-b4-002-5",
+        "evt-hold-b4-002-6"
+      ],
+      "detail": "2026-11-22",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：第80回記念栃木県芸術祭（謡曲）（栃木県総合文化センター）；第80回記念栃木県芸術祭（民謡・民舞）（城址公園ホール（壬生中央公民館））；第80回記念栃木県芸術祭（演劇）（アトリエほんまる）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-103-1:evt-hold-b4-103-6:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-103-1",
+        "evt-hold-b4-103-6"
+      ],
+      "detail": "2026-11-14",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：さのあかり 佐野厄よけ大師（佐野厄よけ大師）；さのあかり 朝日森天満宮（朝日森天満宮）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-01",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-hold-b4-132-1",
+        "evt-hold-b4-132-2",
+        "evt-hold-b4-132-3"
+      ],
+      "detail": "2026-11-01",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-08",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-hold-b4-132-1",
+        "evt-hold-b4-132-2",
+        "evt-hold-b4-132-3"
+      ],
+      "detail": "2026-11-08",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:evt-hold-b4-132-3:2026-11-15",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-hold-b4-132-1",
+        "evt-hold-b4-132-2",
+        "evt-hold-b4-132-3"
+      ],
+      "detail": "2026-11-15",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）；よさこい高知文化祭ものべすと特別ガイド（絵金蔵）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:2026-11-22",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-hold-b4-132-1",
+        "evt-hold-b4-132-2"
+      ],
+      "detail": "2026-11-22",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-hold-b4-132-1:evt-hold-b4-132-2:2026-11-29",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-hold-b4-132-1",
+        "evt-hold-b4-132-2"
+      ],
+      "detail": "2026-11-29",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：よさこい高知文化祭ものべすと特別ガイド（香美市立やなせたかし記念館別館かみんか）；よさこい高知文化祭ものべすと特別ガイド（南国市観光案内所）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-02",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-02",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-03",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-04",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-06",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-06",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-07",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-08",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-10",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-11",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-11",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-12",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-14",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-15",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-176-1:evt-hold-b4-176-2:2026-11-16",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-176-1",
+        "evt-hold-b4-176-2"
+      ],
+      "detail": "2026-11-16",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：2026プロ野球秋季キャンプ 中日ドラゴンズ（高知県立春野総合運動公園野球場）；2026プロ野球秋季キャンプ 阪神タイガース（安芸タイガース球場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-184:evt-hold-b4-185:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-184",
+        "evt-hold-b4-185"
+      ],
+      "detail": "2026-11-03",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：山北みかん こもれびマルシェ（山北イベント広場）；マグロまつりin大月町産業祭（大月町総合グラウンド）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b4-186:evt-hold-b4-187:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b4-186",
+        "evt-hold-b4-187"
+      ],
+      "detail": "2026-11-07",
+      "reason": "本Missionで公式一次ページを新規取得。同じ公式一覧・同日掲載だが、次の別会場／別内容の独立企画であり二重登録ではない：第７回 おち・まち・そとあそび（宮の前公園（越知町越知丙734-1））；秋の四方竹まつりと餅つき大会（なめかわの郷（本山町下関122））。"
+    },
+    {
       "fingerprint": "base.venue_title_date_duplicate:evt-944-w38-program-265833:evt-944-w38-program-265834:2026-11-28",
       "rule": "base.venue_title_date_duplicate",
       "event_ids": [
@@ -3991,18 +4215,7 @@
     }
   ],
   "existing_violations": [],
-  "unbaselined_violations": [
-    {
-      "fingerprint": "base.official_url_date_collision:evt-hold-b4-002-4:evt-hold-b4-002-5:evt-hold-b4-002-6:2026-11-22",
-      "rule": "base.official_url_date_collision",
-      "event_ids": [
-        "evt-hold-b4-002-4",
-        "evt-hold-b4-002-5",
-        "evt-hold-b4-002-6"
-      ],
-      "detail": "2026-11-22"
-    }
-  ],
+  "unbaselined_violations": [],
   "stale_approved_exceptions": [],
   "stale_existing_violations": []
 }
