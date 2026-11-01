@@ -1,0 +1,683 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-D-PART-8",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-01T23:23:10.532440+00:00",
+  "horizon_end_date": "2026-12-28",
+  "per_region": {
+    "akita": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.akita.lg.jp/pages/archive/90606",
+          "status": 200,
+          "checked_at": "2026-11-01T23:01:57.321766+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "秋田県鹿角地域振興局・岩手県盛岡広域振興局",
+          "multi_venue_basis": "鹿角・小坂40、大館10、岩手40の90スポットを同一主催シリーズで公開",
+          "host_shared_with_registry_reason": "県公式hostはregistry施設と共通だが、本ページは特定単独施設ではなく上記複数会場を主催するシリーズ公式案内。"
+        },
+        {
+          "url": "https://www.pref.akita.lg.jp/pages/archive/98081",
+          "status": 200,
+          "checked_at": "2026-11-01T23:01:57.985644+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "秋田県こども健康会議",
+          "multi_venue_basis": "県内5か所ワークショップ、ABS秋田放送中間発表、イオンモール秋田最終発表の複数会場",
+          "host_shared_with_registry_reason": "県公式hostはregistry施設と共通だが、本ページは特定単独施設ではなく上記複数会場を主催するシリーズ公式案内。"
+        },
+        {
+          "url": "https://hanawasen-photomission.com",
+          "status": 200,
+          "checked_at": "2026-11-01T23:01:58.491053+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "地域DMOかづの観光物産公社",
+          "multi_venue_basis": "大館・鹿角・八幡平・滝沢・盛岡5市24ミッションを一つの公式企画で公開"
+        }
+      ],
+      "candidates_found": 3,
+      "added": 0,
+      "duplicate_or_already_present": 0,
+      "hold": 3,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "鹿角・盛岡広域エリア＆大館 観光デジタルスタンプラリー2026",
+          "source_url": "https://www.pref.akita.lg.jp/pages/archive/90606",
+          "disposition": "hold",
+          "reason": "2県90地点GPS周遊。単一会場を安全に設定できない。"
+        },
+        {
+          "title": "第3回こども健康会議",
+          "source_url": "https://www.pref.akita.lg.jp/pages/archive/98081",
+          "disposition": "hold",
+          "reason": "5会場ワークショップは過去。最終発表参加は10/12締切、一般来場経路なし。"
+        },
+        {
+          "title": "花輪線フォトミッション2026",
+          "source_url": "https://hanawasen-photomission.com",
+          "disposition": "hold",
+          "reason": "公式は2県5市24ミッション。単一代表会場を安全に設定できない。"
+        }
+      ],
+      "organizer_search": "既存80件のorganizer/source_notesを走査（専用organizer字段なし）。本runの県/観光連盟掲載主催者から県広域観光・県健康会議・かづの観光物産公社の複数会場シリーズへ到達。単独施設をseriesと数えない。"
+    },
+    "kyoto": {
+      "sources_checked": [
+        {
+          "url": "https://style.kyoto/page/20270111ujityatei",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:52.592027+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/rel-event",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.831806+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/kanade-program/yawata/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.832518+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/kanade-program/oto-iro-fusen/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.833898+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:31.120296+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/schedule",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:38.282294+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:23.934281+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "京都府・キッズお仕事体験",
+          "multi_venue_basis": "薬局・自動車店・飲食店等12の異なる会場と日付を一表で公表",
+          "host_shared_with_registry_reason": "県全域の複数事業所を横断する主催事業で単一施設のイベントページではない"
+        },
+        {
+          "url": "https://music-fusion.kyoto/chamber-concert/kyotango/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.833008+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://music-fusion.kyoto/chamber-concert/kyotanabe/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.833377+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://kanrekihanabi.com/locations/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:22.359068+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "還暦花火の日実行委員会",
+          "multi_venue_basis": "全国43超の会場を掲載、京都綾部と秋田大仙を同一公式が公表"
+        },
+        {
+          "url": "https://nagaokakyo-garasha.jp/week/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:23.451048+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "長岡京ガラシャ祭実行委員会",
+          "multi_venue_basis": "バンビオ・中央公民館・神足ふれあい町家ほか会場別の日程を掲載"
+        },
+        {
+          "url": "https://music-fusion.kyoto/chamber-concert/kizugawa/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:51.833680+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "Music Fusion in Kyoto音楽祭実行委員会",
+          "multi_venue_basis": "府内各地45公演を異なる会場で主催・連携する公式シリーズ（Style KYOTOは宇治共催回）"
+        },
+        {
+          "url": "https://kanrekihanabi.com/",
+          "status": 200,
+          "checked_at": "2026-11-01T23:21:22.996198+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "還暦花火の日実行委員会",
+          "multi_venue_basis": "全国43超の会場を掲載、京都綾部と秋田大仙を同一公式が公表"
+        }
+      ],
+      "candidates_found": 77,
+      "added": 17,
+      "duplicate_or_already_present": 23,
+      "hold": 5,
+      "stale_false": 32,
+      "candidates": [
+        {
+          "title": "還暦花火 京都綾部",
+          "source_url": "https://kanrekihanabi.com/locations/",
+          "disposition": "added",
+          "reason": "主催全国日程と公表された京都会場を照合",
+          "product_id": "evt-w44d8-kyoto-kanreki"
+        },
+        {
+          "title": "みんなで楽しむ金管五重奏コンサート",
+          "source_url": "https://music-fusion.kyoto/kanade-program/yawata/",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-yawata"
+        },
+        {
+          "title": "音と色の巨大ふ～せん遊び",
+          "source_url": "https://music-fusion.kyoto/kanade-program/oto-iro-fusen/",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-balloon"
+        },
+        {
+          "title": "海風とともに クラリネットと弦楽四重奏",
+          "source_url": "https://music-fusion.kyoto/chamber-concert/kyotango/",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-kyotango"
+        },
+        {
+          "title": "静寂に寄せて 和みの弦楽トリオ",
+          "source_url": "https://music-fusion.kyoto/chamber-concert/kyotanabe/",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-kyotanabe"
+        },
+        {
+          "title": "AI×クラシック 弦とピアノの饗宴",
+          "source_url": "https://music-fusion.kyoto/chamber-concert/kizugawa/",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-ai"
+        },
+        {
+          "title": "ウィーンからのいざない ヴァイオリンとピアノ",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1339"
+        },
+        {
+          "title": "宮津市民文化祭 音楽祭",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1127"
+        },
+        {
+          "title": "南インド古典音楽 京都公演",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1237"
+        },
+        {
+          "title": "ポップスコンサート",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1188"
+        },
+        {
+          "title": "中丹和太鼓フェスティバル",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1189"
+        },
+        {
+          "title": "吉田兄弟 47都道府県ツアー 極生",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1190"
+        },
+        {
+          "title": "槇島音楽祭",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1124"
+        },
+        {
+          "title": "第47回綾部市民合唱祭",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1123"
+        },
+        {
+          "title": "京都新祝祭管弦楽団 第6回特別演奏会",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1238"
+        },
+        {
+          "title": "中丹文化芸術祭 軽音楽フェスティバル",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1191"
+        },
+        {
+          "title": "ケロポンズ ファミリーコンサート",
+          "source_url": "https://music-fusion.kyoto/rel-event",
+          "disposition": "added",
+          "reason": "府の複数会場音楽祭の公式日程・本文確認",
+          "product_id": "evt-w44d8-kyoto-music-rel-1192"
+        },
+        {
+          "title": "5/3 長岡京芸術劇場\n長岡京駅前広場コンサート 連携事業 JR長岡京駅前西口「バンビオ広場公園」",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1134",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "5/5 「京都フレンドシップコンサート＆クリニック」　～小中高生のための吹奏楽コンサート＆クリニック～ 連携事業 京都府長岡京記念文化会館（京都府長岡京市天神4-1-1）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1227",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "6/20 吹奏楽団 音楽のとびら　サマーコンサート2026 ～昼の部～ 連携事業 京都市東部文化会館 ホール\n（京都市山科区椥辻西浦町1番地の8）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1194",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "6/27 髙木知寿子ワルシャワピアノトリオコンサート 連携事業 舞鶴市総合文化会館　大ホール",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1128",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "6/28 京都未来芸術祭 Music Jamboree in けいはんな 2026 連携事業 京都府立けいはんなホール",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1228",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "7/11 じょんのれん 連携事業 旧三上家住宅",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1126",
+          "disposition": "hold",
+          "reason": "旧三上家住宅のビアホール＆ライブハウス、18～21時・1ドリンク制で幼児を含む家族向けではない"
+        },
+        {
+          "title": "7/12 大阪フィルハーモニー交響楽団　舞鶴公演 連携事業 舞鶴市総合文化会館　大ホール",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1129",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "7/19 京都アルティ 声楽アンサンブルフェスティバル2026 〈演奏会〉 連携事業 京都府立府民ホール　アルティ（京都市上京区烏丸通一条下ル龍前町590-1）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1141",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "7/20 綾部市・未来へつなぐ文化のかおるまち推進事業　夏休みスペシャル　青島広志＋大阪交響楽団　ファミリーコンサート 連携事業 京都府中丹文化会館",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1185",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "7/26 天橋立Jazz Festival2026 連携事業 みやづ歴史の館文化ホールほか",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1125",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "8/1 ALTIサマーフェスタVol.2 ～魔法の国のひみつ～ 連携事業 京都府立府民ホール　アルティ（京都市上京区烏丸通一条下ル龍前町590-1）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1142",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "8/6 劇団四季ファミリーミュージカル「カモメに飛ぶことを教えた猫」 連携事業 舞鶴市総合文化会館　大ホール",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1130",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "8/11 京都新祝祭管弦楽団第11回定期演奏会　北村源三先生への感謝を込めて 連携事業 京都コンサートホール 大ホール（京都市左京区下鴨半木町1番地の26）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1229",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "9/6 令和8年度中丹文化芸術プロジェクト　第40回中丹文化芸術祭「コーラスフェア2026」 連携事業 福知山市厚生会館",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1186",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "9/12 第35回「名月の宴」 連携事業 勝竜寺城公園",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1135",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "9/19 「すごいジャズには理由ワケがある」 第2弾 発売記念コンサート すごいジャズには“やっぱり”理由ワケがある ～キースジャレットへのトリビュート～ 連携事業 京都府立府民ホール　アルティ（京都市上京区烏丸通一条下ル龍前町590-1）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1143",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "9/27（日） 舞鶴会場 赤れんがに響くバロックの調べ　〜オール バッハ プログラム〜 舞鶴赤れんがパーク 2号棟 市政ホール 開場 13:00 / 開演 14:00 全席自由　一般2,000円　学生1,000円",
+          "source_url": "https://music-fusion.kyoto/chamber-concert/maizuru/",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/4 松花堂庭園ガーデンサロンコンサート 連携事業 松花堂庭園内 美術館別館ギャラリー1",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1231",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/9 第64回「市民文化まつり」 連携事業 京都府長岡京記念文化会館・中央公民館",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1136",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/10（土） 宇治会場 ブラス・ジャンボリー in 京都2026Ⅱ 山城総合運動公園（太陽が丘）メインアリーナ 13:30～17:00（コンサート16:15開演） 演奏参加費：一般3,000円、高校生以下1,500円\n※１曲約250円の譜面購入費が別途必要。\n観覧：無料",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1162",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/12（月・祝） 南丹会場 ステンドグラスに響く 弦のハーモニー　〜弦楽四重奏〜 丹波新生教会 園部会堂 開場 13:00 / 開演 14:00 全席自由　一般1,500円　学生1,000円",
+          "source_url": "https://music-fusion.kyoto/chamber-concert/nantan/",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/17（土） 城陽会場 手作りパーカッションで遊ぼう！＆スティールパンバンドコンサート 開演 11:00〜15:30 事前申込要（別途昼食費が必要）　定員50名（保護者含む）",
+          "source_url": "https://music-fusion.kyoto/kanade-program/joyo/",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/17 綾部市・未来へつなぐ文化のかおるまち推進事業　京都市交響楽団　特別演奏会 連携事業 京都府中丹文化会館",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1187",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/18 全国都市緑化フェアin京都丹波記念～コンサートとともに緑化フェアも楽しんで～\n2026年 秋のかやぶきコンサート（第416回～第417回）\nヴァイオリン・チェロ・ピアノによるトリオコンサート\nウィーンからの珠玉の響き 連携事業 かやぶき音楽堂",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1338",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/19 国連合唱団日本国連加盟70周年記念平和コンサート 連携事業 ロームシアター京都サウスホール（京都市左京区岡崎最勝寺町13）",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1193",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "10/25 秋の音楽祭2026～アンサンブル・セリオーソ演奏会～ 連携事業 京都府立総合社会福祉会館ハートピア京都　3階　大会議室",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1337",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "11/1（日） 宮津会場 あつまれ！せかいのうた！コンサート 〜オペラ歌手と一緒に世界の歌をたのしもう！〜 丹後海と星の見える丘公園 セミナーハウス2階 開場 13:00 / 開演 14:00〜15:00 事前申込要　定員48名（保護者含む）",
+          "source_url": "https://music-fusion.kyoto/kanade-program/miyazu/",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "11/1 京田辺市民まつり「たなフェス2026ライブステージ」 連携事業 田辺中央体育館及び京田辺市役所周辺",
+          "source_url": "https://music-fusion.kyoto/rel-event#event-1140",
+          "disposition": "stale_false",
+          "reason": "11月1日以前の開催済み公演、過去回の追加なし"
+        },
+        {
+          "title": "1/11（月・祝） 共催事業 ニューイヤーコンサート　〜音の架け橋　茶と和洋の響き〜 福寿園 宇治茶亭 開場 13:00 / 開演 13:30 全席自由　2,800円　※お抹茶・菓子付き 主催：一般社団法人Style KYOTO",
+          "source_url": "https://style.kyoto/page/20270111ujityatei",
+          "disposition": "hold",
+          "reason": "主催リンクは表題のみの本文で、対象公演の数値日付・会場・参加経路の照合ができない"
+        },
+        {
+          "title": "キッズお仕事体験 お薬調剤体験（アイン薬局 桂店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-ain"
+        },
+        {
+          "title": "キッズお仕事体験 キッズメカニック体験（京都ダイハツ U-Car伏見）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-daihatsu"
+        },
+        {
+          "title": "キッズお仕事体験 お弁当盛り付け体験（京のお肉処 弘 総本店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-hiro"
+        },
+        {
+          "title": "キッズお仕事体験 みらいの交通安全リーダー体験（JAF 京都支部）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-jaf"
+        },
+        {
+          "title": "キッズお仕事体験 プロから学ぶ食のお仕事体験（ラ・キャリエールクッキングスクール）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-cooking"
+        },
+        {
+          "title": "キッズお仕事体験 お花屋さん体験（ちきりやガーデン本店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-flowers"
+        },
+        {
+          "title": "キッズお仕事体験 キッズ整備士体験（トヨタカローラ京都 城陽店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-toyota"
+        },
+        {
+          "title": "キッズお仕事体験 家族の健康リーダー体験（日本生命 京都支社）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-nissay"
+        },
+        {
+          "title": "キッズお仕事体験 こども店長体験（ファミリーマート京都川島店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-family-kawashima"
+        },
+        {
+          "title": "キッズお仕事体験 こども店長体験（ファミリーマート北白川店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-family-shirakawa"
+        },
+        {
+          "title": "キッズお仕事体験 こども店長体験（ファミリーマート山科三条通店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-family-yamashina"
+        },
+        {
+          "title": "キッズお仕事体験 お茶のブレンド体験（福寿園 京都本店）",
+          "source_url": "https://www.pref.kyoto.jp/kosodate/news/2026/kids_oshigoto_taikenn2026.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunで前の地域公式unitから反映済み",
+          "product_id": "evt-w44d8-kyoto-kids-fukujuen"
+        },
+        {
+          "title": "gara-making",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunの祭りunitで反映済み",
+          "product_id": "evt-w44d8-kyoto-gara-making"
+        },
+        {
+          "title": "gara-hanako",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunの祭りunitで反映済み",
+          "product_id": "evt-w44d8-kyoto-gara-hanako"
+        },
+        {
+          "title": "gara-screen",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "このrunの祭りunitで反映済み",
+          "product_id": "evt-w44d8-kyoto-gara-screen"
+        },
+        {
+          "title": "バンビオものづくり市（ガラシャウィーク）",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同Missionの先行地域祭り単位で追加済み、公式シリーズ再取得で照合",
+          "product_id": "evt-w44d8-kyoto-gara-making"
+        },
+        {
+          "title": "花子百貨店（ガラシャウィーク）",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同Missionの先行地域祭り単位で追加済み、公式シリーズ再取得で照合",
+          "product_id": "evt-w44d8-kyoto-gara-hanako"
+        },
+        {
+          "title": "ガラシャ屏風展示",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同Missionの先行地域祭り単位で追加済み、公式シリーズ再取得で照合",
+          "product_id": "evt-w44d8-kyoto-gara-screen"
+        },
+        {
+          "title": "市民オペラ合唱団・少年少女合唱団",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "会場・日付・内容が一致する既存ID",
+          "product_id": "evt-kyoto-w42d7-garasha-chorus"
+        },
+        {
+          "title": "甲冑着装体験",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "会場・日付・内容が一致する既存ID",
+          "product_id": "evt-kyoto-w42d7-garasha-armor"
+        },
+        {
+          "title": "さつき盆栽展",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "会場・日付・内容が一致する既存ID",
+          "product_id": "evt-kyoto-w42d7-garasha-bonsai"
+        },
+        {
+          "title": "平和の祈り展示",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "会場・日付・内容が一致する既存ID",
+          "product_id": "evt-kyoto-w42d7-garasha-peace"
+        },
+        {
+          "title": "公サ連オープンハウス",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "会場・日付・内容が一致する既存ID",
+          "product_id": "evt-kyoto-w43d8-garasha-openhouse"
+        },
+        {
+          "title": "ちびっこお玉＆忠興",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "hold",
+          "reason": "10月7日申込締切済み"
+        },
+        {
+          "title": "ガラシャデジタルスタンプラリー",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "hold",
+          "reason": "市内複数寺社の対象一覧・各対象の条件が当該本文では確定できない"
+        },
+        {
+          "title": "ガラシャロードレース",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "hold",
+          "reason": "当該記載はイベントサポーター募集10月15日終了。新規観覧・出走の参加経路未確認"
+        },
+        {
+          "title": "体験工房",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "stale_false",
+          "reason": "10月31日または11月1日の回は終了"
+        },
+        {
+          "title": "お客様感謝Day",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "stale_false",
+          "reason": "10月31日または11月1日の回は終了"
+        },
+        {
+          "title": "長岡京書作家協会展",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "stale_false",
+          "reason": "10月31日または11月1日の回は終了"
+        },
+        {
+          "title": "バンビオライブ缶",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "stale_false",
+          "reason": "10月31日または11月1日の回は終了"
+        },
+        {
+          "title": "おとくにフェスタ",
+          "source_url": "https://nagaokakyo-garasha.jp/week/",
+          "disposition": "stale_false",
+          "reason": "10月31日または11月1日の回は終了"
+        }
+      ]
+    }
+  },
+  "audit_at": "2026-11-01T23:36:09.068670+00:00"
+}
