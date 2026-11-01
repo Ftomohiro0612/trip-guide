@@ -3713,11 +3713,9 @@
           "official_urls": [
             "https://www.japan-monkeypark.jp/special/sumikko2026/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "event_ids": [
-            "evt-1695-w38-sumikko-park"
-          ],
-          "reason": "base+summer merged rendered candidate setで同名・同開催期間を照合。最終Preview/liveでID可視を確認する。"
+          "disposition": "hold",
+          "reason": "元データはあるが公式確認日がfreshness期限外のためPreviewでは非表示。同runで取得した公式本文は予約リンクのみで当該回の日付・会場の再確認に到達できない。掲載済みとは報告せず、開催条件を確認するまで復帰しない。",
+          "existing_nonvisible_event_id": "evt-1695-w38-sumikko-park"
         },
         {
           "title": "SAKAMOTO DAYS(サカモトデイズ)展 名古屋会場",
@@ -6074,8 +6072,8 @@
       "paging_stop_reason": "no_further_pages",
       "candidates_found": 368,
       "added": 13,
-      "duplicate_or_already_present": 45,
-      "hold": 117,
+      "duplicate_or_already_present": 44,
+      "hold": 118,
       "stale_false": 193
     },
     "kumamoto": {
