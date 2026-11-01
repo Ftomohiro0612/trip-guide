@@ -2,18 +2,18 @@
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B3-20261101",
   "executed_in_this_mission": true,
   "prior_run_numbers_reused_as_execution": false,
-  "executed_at": "2026-11-01T01:44:01.121369+00:00",
+  "executed_at": "2026-11-01T01:50:35.029830+00:00",
   "evidence_process_started_at": "2026-11-01T00:51:54.580725+00:00",
   "baseline": "31de5d6fceba60b2f4e4c8d7b6d116b518401891",
   "status": "IN_PROGRESS",
   "aggregate": {
-    "total": 400,
-    "added": 268,
-    "duplicate": 23,
-    "past": 7,
-    "still_hold": 76,
-    "not_event": 26,
-    "events_added": 270,
+    "total": 500,
+    "added": 319,
+    "duplicate": 30,
+    "past": 22,
+    "still_hold": 102,
+    "not_event": 27,
+    "events_added": 321,
     "events_changed_by_bounded_fixes": 0,
     "metadata_total_events_corrected": true
   },
@@ -32,12 +32,18 @@
     },
     "shimane": {
       "still_hold": 35,
-      "added": 68,
+      "added": 71,
       "not_event": 5,
       "past": 7,
       "duplicate": 6
     },
-    "yamagata": {}
+    "yamagata": {
+      "added": 48,
+      "still_hold": 26,
+      "past": 15,
+      "duplicate": 7,
+      "not_event": 1
+    }
   },
   "candidates": [
     {
@@ -9338,6 +9344,1871 @@
         }
       ],
       "matched_event_id": "evt-hold-b3-334"
+    },
+    {
+      "index": 401,
+      "region": "shimane",
+      "title": "道の駅　ゆうひパーク浜田（浜田市）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kankou-shimane.com/pickup/6770.html",
+          "final_url": "https://www.kankou-shimane.com/pickup/6770.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:16.363730+00:00",
+          "sha256": "3f2096e2a0342bb7635f10611813456ea385032f71396c614ddf2c61e8271f83"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-401",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 402,
+      "region": "shimane",
+      "title": "美又温泉会館（浜田市）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kankou-shimane.com/pickup/6770.html",
+          "final_url": "https://www.kankou-shimane.com/pickup/6770.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:17.036850+00:00",
+          "sha256": "79cd43c482c52efcdbb77e49278cc491bb5872f32516c4489d410e80221bf516"
+        },
+        {
+          "url": "https://www.kankou-shimane.com/kaguraarizuki/archives/1237",
+          "final_url": "https://www.kankou-shimane.com/kaguraarizuki/archives/1237",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:40:18.133055+00:00",
+          "sha256": "a009a0a915618d476b294964cb10e1326b4951b576aeb10233f2f6c3753d3c93"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-402",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 403,
+      "region": "shimane",
+      "title": "パレットごうつ 神楽まつり2027年3月14日",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://gotsu-kanko.jp/iwamikagura/palet",
+          "final_url": "https://gotsu-kanko.jp/iwamikagura/palet",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:17.655528+00:00",
+          "sha256": "e8e291136042da2e5659d3aa196607132b4692fc1e041fca263a4fa7a40dc231"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-403",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 404,
+      "region": "yamagata",
+      "title": "～ごみ減量・もったいないねット山形 設立20周年記念～もったいないアカデミーを開催します！",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/gomi/1006518/1006519/1015409.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/gomi/1006518/1006519/1015409.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:18.073861+00:00",
+          "sha256": "827b407fa2fd796729f8b0c9ea613717ea8e59de1d4720971782f19861a35aca"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-404",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 405,
+      "region": "yamagata",
+      "title": "～ごみ減量・もったいないねット山形設立20周年記念行事～　食品リサイクルを学ぶ施設研修会",
+      "disposition": "still_hold",
+      "reason": "公式に申込み終了と明記。締切2026年10月19日、別の当日参加経路なし。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/gomi/1006518/1006519/1019319.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/gomi/1006518/1006519/1019319.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:18.495637+00:00",
+          "sha256": "6c876bf8a17e8db684f68ed7ddb9f8c8df570f6b22d56bc1b951a0bab8255473"
+        }
+      ]
+    },
+    {
+      "index": 406,
+      "region": "yamagata",
+      "title": "消費者向け消費生活講座「その電話、大丈夫？ 騙されないための対策講座」を開催します！",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/soudan/1006569/1006572/1019799.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kurashi/soudan/1006569/1006572/1019799.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:18.841988+00:00",
+          "sha256": "7afc024ede64bc482a7d9218f53c262e12266e0322352b37471f3aee85fcd28a"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-406",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 407,
+      "region": "yamagata",
+      "title": "山形国際ドキュメンタリー映画祭（YIDFF）関連のイベント情報",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1006702/1017891.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1006702/1017891.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:19.221919+00:00",
+          "sha256": "eacbe8fe06f32a917c697d7405c46decc908af7527c0732e5ffcc4b79cfbddcc"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-407",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 408,
+      "region": "yamagata",
+      "title": "令和8年度第4回「山形市郷土館ナイトミュージアム」を開催します",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019521.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019521.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:19.795429+00:00",
+          "sha256": "50304fcf9acd7bc2f3cbe2760b45349fce77ebc3d2ba5c90a7c5debe668aca56"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-408",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 409,
+      "region": "yamagata",
+      "title": "令和8年度第3回「山形市郷土館ナイトミュージアム」を開催します",
+      "disposition": "past",
+      "reason": "公式開催日2026年10月31日で終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019249.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019249.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:20.382204+00:00",
+          "sha256": "0b73f645f668f685bc59a61cf012bfadc323a407581383dcdbd55aea2251a556"
+        }
+      ]
+    },
+    {
+      "index": 410,
+      "region": "yamagata",
+      "title": "11/25～27 パソコン講座「プレゼンテーション資料作成入門」(全3回)",
+      "disposition": "still_hold",
+      "reason": "公式対象が18歳以上で、子どもの参加不可のパソコン講座。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006719/1006720/1019593.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006719/1006720/1019593.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:20.931134+00:00",
+          "sha256": "a1b17820092705264da53f70ce281f2650f15310d31959a56cda62f94a1935e4"
+        }
+      ]
+    },
+    {
+      "index": 411,
+      "region": "yamagata",
+      "title": "気軽に挑戦！ お箏（こと）体験講座",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006719/1006720/1019554.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006719/1006720/1019554.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:21.476215+00:00",
+          "sha256": "e9e01c323e0c222618c1d9b89d3c22b8e3296b96432cf24aad8c89dc11a90c0e"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-411",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 412,
+      "region": "yamagata",
+      "title": "親子で楽しむ！クリスマスパンケーキ作り",
+      "disposition": "still_hold",
+      "reason": "申込開始は2026年11月20日9:00で、確認時点11月1日は受付前。",
+      "reason_code": "APPLICATION_NOT_YET_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006725/1006726/1019486.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006725/1006726/1019486.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:21.913902+00:00",
+          "sha256": "43900ce77c6440718698c9d9a705259bb9cc76bc42134b19b8402b1c5056add5"
+        }
+      ]
+    },
+    {
+      "index": 413,
+      "region": "yamagata",
+      "title": "上下水道部施設見学ツアー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006727/1006728/1019761.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006727/1006728/1019761.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:22.422244+00:00",
+          "sha256": "791d676a586ea40bafe943549ec49927e8345739cbf0f295f68fe9ed370634bc"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-413",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 414,
+      "region": "yamagata",
+      "title": "手軽に取り組む軽運動教室（ZUMBA®GOLD・ZUMBA®）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006727/1006728/1019754.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006727/1006728/1019754.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:22.900719+00:00",
+          "sha256": "59e1e974cc5679e1e1e1ab384cfe5537bcb428bcdc8e10bf86203fbcc8766f56"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-414",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 415,
+      "region": "yamagata",
+      "title": "健康ウォーキング講座",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006729/1006730/1019468.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006729/1006730/1019468.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:23.448352+00:00",
+          "sha256": "694cbac8aaf455950bce6cc937c3029edd0a17ba100fe05e5e69ddcd4dc175a4"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-415",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 416,
+      "region": "yamagata",
+      "title": "山形五堰を知ろう！",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006729/1006730/1014666.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006729/1006730/1014666.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:33.354825+00:00",
+          "sha256": "88a3724be01e9964e4beaf3c127e32ee8aee1c1179980834e91bbbcdbe45b421"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-416",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 417,
+      "region": "yamagata",
+      "title": "ベビーtoママ・パパdeヨガ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006731/1006732/1019343.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1006731/1006732/1019343.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:33.779033+00:00",
+          "sha256": "d23f9fccb04579cd15c0331d4c84bba2d0d82dfcf5500d826ea628b370aac4b9"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-417",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 418,
+      "region": "yamagata",
+      "title": "はじめての社交ダンス講座",
+      "disposition": "still_hold",
+      "reason": "公式対象が18歳以上の大人で、子どもの参加不可の社交ダンス講座。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1007986/1007987/1019348.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/kosodatekyoiku/shakaikyoiku/1008284/1007986/1007987/1019348.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:34.100953+00:00",
+          "sha256": "5d918bbdfaf553102d69efc47ba36ab4484d7f698f71bf9f278b469468de1391"
+        }
+      ]
+    },
+    {
+      "index": 419,
+      "region": "yamagata",
+      "title": "やまがた美味しいカーニバル2026を開催します！",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nougyo/1008294/1019356.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nougyo/1008294/1019356.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:34.472426+00:00",
+          "sha256": "3184ba75797423d00448060ce8e57c2fb10ca41caaa775c8871d7a418e895fe1"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-419",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 420,
+      "region": "yamagata",
+      "title": "観て、感じる山形の文化　第一弾「食」【やまがた秋の芸術祭】",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1016678/1019006.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1016678/1019006.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:34.901477+00:00",
+          "sha256": "a072cd314261cf6444d5e814097086998c3e70150cb789ccbdcf420b7dd6ed8f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-420",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 421,
+      "region": "yamagata",
+      "title": "ゼロから学ぶ韓国理解講座（初心者ハングル講座／土曜クラス）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1018006.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1018006.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:35.242971+00:00",
+          "sha256": "9d81b70153fe9bbc83bcbad36822287a89eb6e1f84eafcb1c9065ca1b0abc6fe"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-421",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 422,
+      "region": "yamagata",
+      "title": "歌で学ぶ韓国理解講座",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1019791.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1019791.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:35.630351+00:00",
+          "sha256": "6564ae81cb5d72e916d901bb803dbd6b36a9ccbae10a8dad3cb7f27d377bf4cb"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-422",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 423,
+      "region": "yamagata",
+      "title": "セリフから学ぶ韓国理解講座",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1018005.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1018000/1018005.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:36.036134+00:00",
+          "sha256": "403a5f5e6b5dd83bfc727e15cd1554accaeb647b4b9d0c231219a7a05ba9fc69"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-423",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 424,
+      "region": "yamagata",
+      "title": "英語の絵本の読み聞かせ（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1019383/1019384.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/shiseijoho/kokusai/1007043/1019383/1019384.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:36.505508+00:00",
+          "sha256": "b21d8f7b7bc2b14e18b906feadec6afed41e5a77078d0f0896cf2a5f02dafacf"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-424",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 425,
+      "region": "yamagata",
+      "title": "スノーキャンドルライトアップ【やまがた冬の芸術祭】",
+      "disposition": "duplicate",
+      "reason": "郷土館ナイトミュージアム公式本文に同時開催キャンドル展示を明記。公式URL・2027年2月10日開始・山形市郷土館が一致する一体の催し。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019555/1019562.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019555/1019562.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:44:37.222041+00:00",
+          "sha256": "de822ce7d54c0e507f79a61a99fe92775c281d8a6dae6b8ab67f682d146351db"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019521.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/bunkazai/1006705/1019521.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:40.783563+00:00",
+          "sha256": "50304fcf9acd7bc2f3cbe2760b45349fce77ebc3d2ba5c90a7c5debe668aca56"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-408"
+    },
+    {
+      "index": 426,
+      "region": "yamagata",
+      "title": "山形の新名所に妖気うずまく　Horror Night December－冬の怪談会in旧吉池医院－【やまがた冬の芸術祭】",
+      "disposition": "still_hold",
+      "reason": "公式申込受付は11月9日から。確認時点11月1日は受付前。",
+      "reason_code": "APPLICATION_NOT_YET_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019555/1019565.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019555/1019565.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:44.955822+00:00",
+          "sha256": "44b32c6b4792b3d80709299fad26f6b503d0680600f716361fffed25f7790959"
+        }
+      ]
+    },
+    {
+      "index": 427,
+      "region": "yamagata",
+      "title": "情報セキュリティ",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_419.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_419.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:45.437387+00:00",
+          "sha256": "dba88e57613240148a81d2174cf5f1d6907b1ac87952d5d9455ba3075792678a"
+        }
+      ]
+    },
+    {
+      "index": 428,
+      "region": "yamagata",
+      "title": "山形フィルハーモニー交響楽団　第65回記念定期演奏会　～千住×籾山/山フィルシリーズVol.9～第1999回トヨタコミュニティコンサート",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_411.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_411.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:45.800661+00:00",
+          "sha256": "86f373f4cd087a895e8df4391c478186c7215267fd9bbc3b0da78344b87d56cd"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-428",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 429,
+      "region": "yamagata",
+      "title": "過労死等防止対策推進シンポジウム",
+      "disposition": "still_hold",
+      "reason": "過重労働・ハラスメント・介護職場の労働環境対策を扱う専門シンポジウムで、子どもが楽しむ家族のおでかけ向け内容ではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_417.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_417.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:46.155457+00:00",
+          "sha256": "4eac7cf75ff5862d1fb0110a523f39a32bb1d0b9e3f699ee0b9d4b13a77b430c"
+        }
+      ]
+    },
+    {
+      "index": 430,
+      "region": "yamagata",
+      "title": "山形市民会館自主事業　ミュージカル 「ALICE ～不思議の国のアリスより～」 山形公演",
+      "disposition": "still_hold",
+      "reason": "公式に未就学児入場不可。18:45〜21:00の夜間公演で、幼い子の参加経路がない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_376.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_376.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:46.519091+00:00",
+          "sha256": "8ad0e2d180ff29bbf182f8936f202265f3f7d650528c928c867ee04a74f8ae07"
+        }
+      ]
+    },
+    {
+      "index": 431,
+      "region": "yamagata",
+      "title": "品質管理基礎（QC七つ道具）",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_413.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_413.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:46.886493+00:00",
+          "sha256": "264933a7feac34e2d1ae515a553ac821db5550193355c3a9e1887be43e8974aa"
+        }
+      ]
+    },
+    {
+      "index": 432,
+      "region": "yamagata",
+      "title": "令和8年度 中小企業診断士の日 記念事業　経営者に押さえていただきたい財務戦略＆ 銀行交渉術",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_412.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_412.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:47.237446+00:00",
+          "sha256": "3a20b9d78859424dea65a03398aa39543a8fc74854c9bc63e6fdd97623992efd"
+        }
+      ]
+    },
+    {
+      "index": 433,
+      "region": "yamagata",
+      "title": "山形大学医学部室内合奏団　第3回定期演奏会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_410.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_410.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:47.620964+00:00",
+          "sha256": "39e69b176e4c540623c63ace4e4d862c8438db8bcfc5bd1280503b4935792883"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-433",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 434,
+      "region": "yamagata",
+      "title": "歴史文化ゾーンを巡る講演会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_409.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_409.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:48.222424+00:00",
+          "sha256": "190b0492a652710360165bd932e0da0ef69664ee2e89aad0e479108be24891ed"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-434",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 435,
+      "region": "yamagata",
+      "title": "講演会「思春期の不登校が教えてくれること」",
+      "disposition": "still_hold",
+      "reason": "思春期の不登校について保護者・支援者が学ぶ講演会で、子どもの体験や家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_408.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_408.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:48.663375+00:00",
+          "sha256": "e8ea324912ad73bf67a745a57a6dc515f9a2e0685322ab9744858ab67961acdb"
+        }
+      ]
+    },
+    {
+      "index": 436,
+      "region": "yamagata",
+      "title": "第52回定期演奏会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_404.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_404.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:49.159381+00:00",
+          "sha256": "07516122d63f0070e5b6bd6647a80633271b66669afed7f0472743f72d418175"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-436",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 437,
+      "region": "yamagata",
+      "title": "リーダーシップ",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_405.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_405.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:49.557893+00:00",
+          "sha256": "c1aada0b8ab41521dd6c83babb9787199d1c191085101b5b6aacfad821f806e7"
+        }
+      ]
+    },
+    {
+      "index": 438,
+      "region": "yamagata",
+      "title": "ミドル・シニアいきいきキャリアプラン塾",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_400.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_400.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:50.033324+00:00",
+          "sha256": "fce87f83994da7a9d72b92928f35f59cd90e17c53deb5eef24c5effdc05aa065"
+        }
+      ]
+    },
+    {
+      "index": 439,
+      "region": "yamagata",
+      "title": "漬物講座",
+      "disposition": "still_hold",
+      "reason": "公式申込期間は11月2日〜9日。確認時点11月1日は受付前。",
+      "reason_code": "APPLICATION_NOT_YET_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_365.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_365.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:50.640228+00:00",
+          "sha256": "ea357533b5b79835915672fa020116302d6ab3db15068ffdb5b1178cf9ab0238"
+        }
+      ]
+    },
+    {
+      "index": 440,
+      "region": "yamagata",
+      "title": "手づくり味噌講座",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_367.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_367.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:45:51.169515+00:00",
+          "sha256": "bb019020866813db6474f178f0313dea61adba51791f406f311debde1cf4dd5a"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-440",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 441,
+      "region": "yamagata",
+      "title": "行政書士会・社労士会　合同相談会",
+      "disposition": "still_hold",
+      "reason": "相続・遺言・外国人雇用・労働問題・年金の個別相談会。子ども向けの参加プログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_398.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_398.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:10.862482+00:00",
+          "sha256": "543962b0f7f4ac05f3c5777b4c141899a1a3e0b130a3a0d89285e2e021e05cf9"
+        }
+      ]
+    },
+    {
+      "index": 442,
+      "region": "yamagata",
+      "title": "鋳物を体感しよう！",
+      "disposition": "past",
+      "reason": "主催組合公式に令和8年10月31日開催と明記。全日程終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_397.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_397.html",
+          "http_status": 404,
+          "checked_at": "2026-11-01T01:46:11.275406+00:00",
+          "sha256": "c804de3c09320c08f5e9d628ad6198dd8c8122b05be67891fdf3f16f8af21a91"
+        },
+        {
+          "url": "https://www.chuokai-yamagata.or.jp/imono/",
+          "final_url": "https://www.chuokai-yamagata.or.jp/imono/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:47.073978+00:00",
+          "sha256": "c85ee666288ecc57a07ce6cf1cec6f37298ec0cbc34cec32ab5cf8d519b4fd41"
+        }
+      ]
+    },
+    {
+      "index": 443,
+      "region": "yamagata",
+      "title": "障がい者のための職業訓練「サービス補助科」",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_388.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_388.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:11.588020+00:00",
+          "sha256": "e5961b307b4bc518c4ffa2894e26acbc14cc0281c36cee6c61e97bd56b2b9cb5"
+        }
+      ]
+    },
+    {
+      "index": 444,
+      "region": "yamagata",
+      "title": "ＲＰＡ基礎",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_385.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_385.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:11.964052+00:00",
+          "sha256": "094dd41f9b832b9a62a8570444d1ca74bdaee39f6b1a14572427c0935c43fa94"
+        }
+      ]
+    },
+    {
+      "index": 445,
+      "region": "yamagata",
+      "title": "AIツールの利活用",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_384.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_384.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:12.382773+00:00",
+          "sha256": "aa16bd081a18d2546c1f0f851e738ce2a6ddaaa684ed17940b8b1d145fd8dd2e"
+        }
+      ]
+    },
+    {
+      "index": 446,
+      "region": "yamagata",
+      "title": "女性のためのコミュニケーション",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_382.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_382.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:12.750873+00:00",
+          "sha256": "31804a40e99554692671bd5b91e7f5ba649052a580f13f3c4ff9bd1630361b75"
+        }
+      ]
+    },
+    {
+      "index": 447,
+      "region": "yamagata",
+      "title": "生産管理基礎（コストダウン）",
+      "disposition": "still_hold",
+      "reason": "公式対象が大人であり、就業・業務・経営やキャリアの専門研修。子ども・家族のおでかけ向けプログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_379.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_379.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:13.131125+00:00",
+          "sha256": "0417ae9c760386c8fe131d1d85da766fa5018e0bf73f847145a7d1ca19266007"
+        }
+      ]
+    },
+    {
+      "index": 448,
+      "region": "yamagata",
+      "title": "あつまろう！絵本の森へ　やまがた絵本マラソンと写真絵本作家のトーク",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_373.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_373.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:13.490528+00:00",
+          "sha256": "e3d5b34516ad398996d3c942ecc394de4225299a561733ecbc35f811ce7d379b"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-448",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 449,
+      "region": "yamagata",
+      "title": "Alte管弦楽団　第56回公演",
+      "disposition": "still_hold",
+      "reason": "公式に未就学児入場不可と明記。幼い子が入場できる経路がない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_369.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_369.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:14.013766+00:00",
+          "sha256": "ba50bde2c7a614eed8dd7ceb868c0b19b048f7b6744d2bf4953a4361e96439c9"
+        }
+      ]
+    },
+    {
+      "index": 450,
+      "region": "yamagata",
+      "title": "山形大学医学部 東日本重粒子センター 施設見学会 ＋ Well-Being研究所との共同講演会 ～ 先端医療にふれて、健康と幸せを考える ～",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_360.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_360.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:14.566379+00:00",
+          "sha256": "f1d5bd1f81859f4c1e5d2ba6c6a7b52821438a93d4022e50e1a506b264ff8d18"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-450",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 451,
+      "region": "yamagata",
+      "title": "からくり大発見2026 by 産技短",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_358.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_358.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:48.961217+00:00",
+          "sha256": "54d034484eacc2fb59c9a490a063d483ccb8f4888bff5fae2e0c1aae53e318f9"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-451",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 452,
+      "region": "yamagata",
+      "title": "就業支援講習会（パソコン講習会及び就職支援セミナー）",
+      "disposition": "still_hold",
+      "reason": "公式対象は大人で、ひとり親の就職スキルを習得する7日間の就業支援研修。子どものおでかけ向けではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_305.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_305.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:49.408487+00:00",
+          "sha256": "eed8cae6cc32ee5ccf4f9bcd05040e46b89777c157289dd787da804748e5bc70"
+        }
+      ]
+    },
+    {
+      "index": 453,
+      "region": "yamagata",
+      "title": "空き家相談士による空き家に関する無料相談会",
+      "disposition": "still_hold",
+      "reason": "市公式の候補詳細が404で本文を読めないため、開催日・会場・参加条件の一次根拠を確認できない。",
+      "reason_code": "OFFICIAL_PAGE_UNREADABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_348.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_348.html",
+          "http_status": 404,
+          "checked_at": "2026-11-01T01:46:49.802674+00:00",
+          "sha256": "c804de3c09320c08f5e9d628ad6198dd8c8122b05be67891fdf3f16f8af21a91"
+        }
+      ]
+    },
+    {
+      "index": 454,
+      "region": "yamagata",
+      "title": "わんわんふれあい会",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_191.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_191.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:50.143914+00:00",
+          "sha256": "80e9868dd543dcd83110598c13cd993d76c6099e14e6e16a7dd8247811f59016"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-454",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 455,
+      "region": "yamagata",
+      "title": "しょうない氣龍祭",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年8月11日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41791",
+          "final_url": "https://mokkedano.net/event/41791",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:50.549213+00:00",
+          "sha256": "ae78ce2d395902b806ad19d4c09bc685b903cb958144746e40b6e5921db22ea5"
+        }
+      ]
+    },
+    {
+      "index": 456,
+      "region": "yamagata",
+      "title": "荘内大祭 ",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年10月4・6日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30692",
+          "final_url": "https://mokkedano.net/event/30692",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:51.177538+00:00",
+          "sha256": "78d0accd4ad6fd2c63495ba62b8c4addf7593c6c07b40c80e24a0f16e98ea53e"
+        }
+      ]
+    },
+    {
+      "index": 457,
+      "region": "yamagata",
+      "title": "つるおか新そばまつり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41574",
+          "final_url": "https://mokkedano.net/event/41574",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:51.744969+00:00",
+          "sha256": "43a4465d8cddbf49608b7695d1ff5357a1aa098bba92147eb1b5922b8afacf26"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-457",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 458,
+      "region": "yamagata",
+      "title": "藤島イルミネーション",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41585",
+          "final_url": "https://mokkedano.net/event/41585",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:52.343741+00:00",
+          "sha256": "636fa31a1e117f6e448c329decb1d37439fcdd03d88c4af4887aa372d08688b1"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-458",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 459,
+      "region": "yamagata",
+      "title": "湯殿山",
+      "disposition": "not_event",
+      "reason": "湯殿山・神社の登山参拝スポット案内と季節営業期間。特定日付の催事ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30317",
+          "final_url": "https://mokkedano.net/event/30317",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:53.018730+00:00",
+          "sha256": "a09bf23f971945f91dda5d340774f9a7195786d6c97e5085fe7d7084fb5c64dc"
+        }
+      ]
+    },
+    {
+      "index": 460,
+      "region": "yamagata",
+      "title": "食の都庄内　天然ふぐキャンペーン",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41338",
+          "final_url": "https://mokkedano.net/event/41338",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:53.596179+00:00",
+          "sha256": "6d19dd893250c7b21ac15a801f5d6bd6750bf96e62f7d21aaab850e4894aa4c8"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-460",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 461,
+      "region": "yamagata",
+      "title": "食の都庄内　庄内北前ガニキャンペーン　",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41513",
+          "final_url": "https://mokkedano.net/event/41513",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:54.116110+00:00",
+          "sha256": "66cfbbbbac6fe4dd87d70619b3188809e64d425066f59499a112c367188ca5c9"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-461",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 462,
+      "region": "yamagata",
+      "title": "食の都庄内 庄内おばこサワラキャンペーン",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41514",
+          "final_url": "https://mokkedano.net/event/41514",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:54.824125+00:00",
+          "sha256": "7a697b797eb2d8f7d2b3907f9f81f2eb4e33370d814860015e32362bf676dec9"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-462",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 463,
+      "region": "yamagata",
+      "title": "酒田の花火",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年9月12日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30681",
+          "final_url": "https://mokkedano.net/event/30681",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:55.488640+00:00",
+          "sha256": "dc8f546b6597a561036d49de9bf05a466efa9e0201acbba0af639a1aeeb77327"
+        }
+      ]
+    },
+    {
+      "index": 464,
+      "region": "yamagata",
+      "title": "じろで庄内　Giro De Shonai",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年9月27日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41604",
+          "final_url": "https://mokkedano.net/event/41604",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:56.352922+00:00",
+          "sha256": "a9da10bc1597304ed8f53d3640ae50fed0c0248b173c964aab854e09e011804f"
+        }
+      ]
+    },
+    {
+      "index": 465,
+      "region": "yamagata",
+      "title": "さかた夏の縁日まつり",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年8月7・8日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30730",
+          "final_url": "https://mokkedano.net/event/30730",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:46:56.933685+00:00",
+          "sha256": "5dab96ac879e9bbf31d476e03af7dcff8426881ad4ed05e442823e7d1bbab85b"
+        }
+      ]
+    },
+    {
+      "index": 466,
+      "region": "yamagata",
+      "title": "鳥海山 SEA TO SUMMIT　2026年8月22日(土)、23日(日)",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年8月22・23日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41503",
+          "final_url": "https://mokkedano.net/event/41503",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:15.865807+00:00",
+          "sha256": "62cc036c67a52940e2b2d2f977e3c7d68547a8a582ef30465b146b0d876ead78"
+        }
+      ]
+    },
+    {
+      "index": 467,
+      "region": "yamagata",
+      "title": "玉簾の滝ライトアップ",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年4〜5月と8月。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30865",
+          "final_url": "https://mokkedano.net/event/30865",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:16.414644+00:00",
+          "sha256": "73b6673b9aae26bdbf812524e4cbf2bf1cec3c64f52df8e66fccd33dbfef11f5"
+        }
+      ]
+    },
+    {
+      "index": 468,
+      "region": "yamagata",
+      "title": "国宝「羽黒山五重塔」ライトアップ　2026年7月18日～9月23日",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年7月18日〜9月23日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30898",
+          "final_url": "https://mokkedano.net/event/30898",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:16.940115+00:00",
+          "sha256": "c02f5775c0d2e4660260487f469e1d38f1424ac5b046bc3615d42509cfda63c1"
+        }
+      ]
+    },
+    {
+      "index": 469,
+      "region": "yamagata",
+      "title": "鳥海山湯ノ台口山開き",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年6月27日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30750",
+          "final_url": "https://mokkedano.net/event/30750",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:17.538899+00:00",
+          "sha256": "1609062bb5cf480beae98180bf9af919852459dfa6cc850df32c327b275e1969"
+        }
+      ]
+    },
+    {
+      "index": 470,
+      "region": "yamagata",
+      "title": "酒田港クルーズ",
+      "disposition": "still_hold",
+      "reason": "公式に定期船とびしまの機関故障により2026年度は全て開催中止と明記。参加不可。",
+      "reason_code": "EVENT_CANCELLED",
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30691",
+          "final_url": "https://mokkedano.net/event/30691",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:18.062103+00:00",
+          "sha256": "71aebf69d23abb8d42a24fc94d109dac7cb3ad3e02b9bd7f5abe5ce7121bd516"
+        }
+      ]
+    },
+    {
+      "index": 471,
+      "region": "yamagata",
+      "title": "酒田まつり",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年5月19〜21日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30728",
+          "final_url": "https://mokkedano.net/event/30728",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:18.608453+00:00",
+          "sha256": "71d3c998039973985f7f2f9aa71d203c4a0acda26f951987dad8ad99fd0aab6c"
+        }
+      ]
+    },
+    {
+      "index": 472,
+      "region": "yamagata",
+      "title": "第５弾 庄内まちナビカード",
+      "disposition": "past",
+      "reason": "公式掲出期間は2025年7月1日〜2026年6月30日で終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/41761",
+          "final_url": "https://mokkedano.net/event/41761",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:19.471545+00:00",
+          "sha256": "4d341abc0ccea576b1b3bff936c65b0e88275489777b73740ea6a530746f9f71"
+        }
+      ]
+    },
+    {
+      "index": 473,
+      "region": "yamagata",
+      "title": "鶴岡天神祭(化けものまつり)　2026年5月23日～25日",
+      "disposition": "past",
+      "reason": "再取得した公式ページの日程は2026年5月23〜26日。全日程が2026年11月1日より前に終了。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://mokkedano.net/event/30693",
+          "final_url": "https://mokkedano.net/event/30693",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:20.174159+00:00",
+          "sha256": "34954739be6e5464fd326407d12b2df3f79eece317fc035511bcbf09057043c3"
+        }
+      ]
+    },
+    {
+      "index": 474,
+      "region": "yamagata",
+      "title": "宝珠山 秋のライトアップ",
+      "disposition": "past",
+      "reason": "公式の具体的な直近日程は2025年10月26日〜11月9日。終了済みで、2026年開催と推測して追加しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.yamaderakankou.com/",
+          "final_url": "https://www.yamaderakankou.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:20.748226+00:00",
+          "sha256": "3d3b1e8060a7fde7ee4ff06bbf25d4ff731fd33ffb6468bffeca95b0ae2c566d"
+        }
+      ]
+    },
+    {
+      "index": 475,
+      "region": "yamagata",
+      "title": "第45回みちのくこけしまつり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:21.458147+00:00",
+          "sha256": "acaa5af0dc3238cca8df84e54b5382ec4c2c063ce708b6d87d623af05614024d"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012612.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012612.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:18.234227+00:00",
+          "sha256": "f28106cefd7aa0be63288e3a31a0a9057ed48df2ea1ea34f6778c577744fd7fb"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-475",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 476,
+      "region": "yamagata",
+      "title": "似顔絵こけし",
+      "disposition": "duplicate",
+      "reason": "公式にこけしまつり内の似顔絵コーナーと明記。同じ2026年12月5日開始・ビッグウイング展示場の親催事に含める。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012612.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012612.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:18.234227+00:00",
+          "sha256": "f28106cefd7aa0be63288e3a31a0a9057ed48df2ea1ea34f6778c577744fd7fb"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:47:21.458147+00:00",
+          "sha256": "acaa5af0dc3238cca8df84e54b5382ec4c2c063ce708b6d87d623af05614024d"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-475"
+    },
+    {
+      "index": 477,
+      "region": "yamagata",
+      "title": "職人と学生のワークショップ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:18.783088+00:00",
+          "sha256": "24cf5922e57178a22fe5f46821b13629447bdede76664b6238b3dd910aa7c2db"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-477",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 478,
+      "region": "yamagata",
+      "title": "着物・帯のしおり制作",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026年12月5日開始・ビッグウイング展示場が一致。同じ親催事にしおり製作体験の時刻・料金を明記し重複追加しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:19.217309+00:00",
+          "sha256": "24cf5922e57178a22fe5f46821b13629447bdede76664b6238b3dd910aa7c2db"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-477"
+    },
+    {
+      "index": 479,
+      "region": "yamagata",
+      "title": "山形市初市2027",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.yamagata-cci.or.jp/user/eve/ev_hatu.html",
+          "final_url": "https://www.yamagata-cci.or.jp/user/eve/ev_hatu.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:19.549377+00:00",
+          "sha256": "6db22330fe0fa78978c40562c05ca9bed2aa3db73d23e72bddf21bbde1d6e3ab"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-479",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 480,
+      "region": "yamagata",
+      "title": "11月の十日市 稲藁箸置き作り",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://beninokura.com/14249",
+          "final_url": "https://beninokura.com/14249",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:19.930342+00:00",
+          "sha256": "7a64d854a48c1d59142181a5c7c9100f1deccdac70fe187c17e5a0f47e628283"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-480",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 481,
+      "region": "yamagata",
+      "title": "12.5-6 山形市伝統的工芸品まつり",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026年12月5日開始・ビッグウイング1階展示場が一致する同じ伝統的工芸品まつり。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012399.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:20.463787+00:00",
+          "sha256": "24cf5922e57178a22fe5f46821b13629447bdede76664b6238b3dd910aa7c2db"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-477"
+    },
+    {
+      "index": 482,
+      "region": "yamagata",
+      "title": "蔵王ロープウェイ「樹氷ライトアップ」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://zaoropeway.co.jp/winter/info_detail.php?q=4217",
+          "final_url": "https://zaoropeway.co.jp/winter/info_detail.php?q=4217",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:20.831880+00:00",
+          "sha256": "29382c6a1f8c3a5208c23ebdc4ac96a4e17bc9cffd3418670a9e97c592725034"
+        },
+        {
+          "url": "https://zaoropeway.co.jp/wp/wp-content/uploads/2024/12/20260918_141004_0001-rotated.jpg",
+          "final_url": "https://zaoropeway.co.jp/wp/wp-content/uploads/2024/12/20260918_141004_0001-rotated.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:49:30.751686+00:00",
+          "sha256": "f9ceabaaf9f5e3bc0bf7bc2093ed3f869e431e30469f29d7e691b8f34c586fe0"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-482",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 483,
+      "region": "yamagata",
+      "title": "蔵王ロープウェイ「樹氷幻想回廊ツアー」",
+      "disposition": "still_hold",
+      "reason": "完全予約制、利用日の7日前から受付。最初の開催は2026年12月26日で、11月1日時点は予約受付前。",
+      "reason_code": "APPLICATION_NOT_YET_OPEN",
+      "sources_checked": [
+        {
+          "url": "https://zaoropeway.co.jp/winter/info_detail.php?q=4503",
+          "final_url": "https://zaoropeway.co.jp/winter/info_detail.php?q=4503",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:21.396849+00:00",
+          "sha256": "182f727379831bba9285250c1b5545a084c8698726b6303d0c93e45d4ade9a16"
+        },
+        {
+          "url": "https://zaoropeway.co.jp/wp/wp-content/uploads/2024/12/20260918_141028_0002-rotated.jpg",
+          "final_url": "https://zaoropeway.co.jp/wp/wp-content/uploads/2024/12/20260918_141028_0002-rotated.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:49:31.733159+00:00",
+          "sha256": "faa7d077483cfc67ea0f66a2197a1fdd05ea9e2e60f617581b3eb41eda2efded"
+        }
+      ]
+    },
+    {
+      "index": 484,
+      "region": "yamagata",
+      "title": "9.25-11.21 やまがた文化財フェスタ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1016678/1019247.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1016678/1019247.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:22.056699+00:00",
+          "sha256": "c16a5a29c2b78648624e7b9526636b99e48846afb5483cd89403278ab5b3bff7"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-484",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 485,
+      "region": "yamagata",
+      "title": "12.5-6 みちのくこけしまつり",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026年12月5日開始・ビッグウイング1階展示場が一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:22.811030+00:00",
+          "sha256": "acaa5af0dc3238cca8df84e54b5382ec4c2c063ce708b6d87d623af05614024d"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-475"
+    },
+    {
+      "index": 486,
+      "region": "yamagata",
+      "title": "9.19-11.29 やまがた野菜・フルーツ 料理フェア2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamagata.jp/301041/sangyo/nourinsuisangyou/nogyo/nousambutsu/ryourifea.html",
+          "final_url": "https://www.pref.yamagata.jp/301041/sangyo/nourinsuisangyou/nogyo/nousambutsu/ryourifea.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:23.469124+00:00",
+          "sha256": "1e529f9d15b7759af2345b7dc2ddf01ae22303dd5ecaccfcb8e332af2d473d1c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-486",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 487,
+      "region": "yamagata",
+      "title": "9.19-11.8 鉄道でめぐる 秋のやまがた エキタグスタンプラリー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.notte-good-yamagata.jp/campaign/entry-946.html",
+          "final_url": "https://www.notte-good-yamagata.jp/campaign/entry-946.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:24.013729+00:00",
+          "sha256": "eee1cba088eb870c4518efef19771c061c87ca42c9fdb2060b48e725b2588d3d"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-487",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 488,
+      "region": "yamagata",
+      "title": "11.3 やまがた美味しいカーニバル",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026年11月3日開始・山形ビッグウイング国際交流広場が一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nougyo/1008294/1019356.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/nougyo/1008294/1019356.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:24.541968+00:00",
+          "sha256": "3184ba75797423d00448060ce8e57c2fb10ca41caaa775c8871d7a418e895fe1"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-419"
+    },
+    {
+      "index": 489,
+      "region": "yamagata",
+      "title": "サービスマナー講習会",
+      "disposition": "still_hold",
+      "reason": "公式観光協会会報の対象内容は企業のカスタマーハラスメント対策セミナー。子ども・家族のおでかけ向けではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.kankou.yamagata.yamagata.jp/monthlyinformation/data_file/monthlyinformation_202611.pdf",
+          "final_url": "https://www.kankou.yamagata.yamagata.jp/monthlyinformation/data_file/monthlyinformation_202611.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:25.132034+00:00",
+          "sha256": "463d9c0d72104f98ce995682fa54b97b7b789806b177607cd94cf436e4caee24"
+        }
+      ]
+    },
+    {
+      "index": 490,
+      "region": "yamagata",
+      "title": "蔵王温泉スキー場開き・安全祈願祭",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kankou.yamagata.yamagata.jp/monthlyinformation/data_file/monthlyinformation_202611.pdf",
+          "final_url": "https://www.kankou.yamagata.yamagata.jp/monthlyinformation/data_file/monthlyinformation_202611.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:25.846247+00:00",
+          "sha256": "463d9c0d72104f98ce995682fa54b97b7b789806b177607cd94cf436e4caee24"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-490",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 491,
+      "region": "yamagata",
+      "title": "みちのくこけしまつり",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026年12月5日開始・山形ビッグウイング展示場が一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/jigyosya/miryoku/kougei/1012360.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:35.754202+00:00",
+          "sha256": "acaa5af0dc3238cca8df84e54b5382ec4c2c063ce708b6d87d623af05614024d"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-475"
+    },
+    {
+      "index": 492,
+      "region": "yamagata",
+      "title": "第32回 天童冬の陣 令和鍋合戦",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://nabegassen.net/",
+          "final_url": "https://nabegassen.net/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:36.163427+00:00",
+          "sha256": "0e51092a9cbfb26c0c0c2e6f55093def524c2402a265ae1d2394a38ad94a8f38"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-492",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 493,
+      "region": "yamagata",
+      "title": "天童菊花展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "final_url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:37.236670+00:00",
+          "sha256": "fa6cd4c222f63e37ed2e302fba7d7295acc20dd524edeae7771ab9fc05cd6df3"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-493",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 494,
+      "region": "yamagata",
+      "title": "天童もみじ園ライトアップ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "final_url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:37.923801+00:00",
+          "sha256": "fa6cd4c222f63e37ed2e302fba7d7295acc20dd524edeae7771ab9fc05cd6df3"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-494",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 495,
+      "region": "yamagata",
+      "title": "天童高原新そばまつり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "final_url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_tendo.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:38.270500+00:00",
+          "sha256": "fa6cd4c222f63e37ed2e302fba7d7295acc20dd524edeae7771ab9fc05cd6df3"
+        },
+        {
+          "url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_shinsoba.html",
+          "final_url": "https://www.city.tendo.yamagata.jp/tourism/event/event-autumn_shinsoba.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:49:38.210339+00:00",
+          "sha256": "94779ed700722e4f2adb3bdd4e4f55eb505812f26bd77d56ad640a61317af3ad"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-495",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 496,
+      "region": "yamagata",
+      "title": "みちのおくの芸術祭 美術館会場",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:38.689199+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-496",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 497,
+      "region": "yamagata",
+      "title": "みちのおくの芸術祭 THE LOCAL",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:39.166296+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-497",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 498,
+      "region": "yamagata",
+      "title": "みちのおくの芸術祭 famAA",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:39.561540+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-498",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 499,
+      "region": "yamagata",
+      "title": "めぐるめく",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:39.949781+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-499",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 500,
+      "region": "yamagata",
+      "title": "みちのおくの市",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:48:40.470283+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-500",
+      "participability": "通常参加可能"
     }
   ]
 }
