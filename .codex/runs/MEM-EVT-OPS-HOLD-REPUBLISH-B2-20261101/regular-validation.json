@@ -1,0 +1,3715 @@
+{
+  "summary": {
+    "base_events": 10564,
+    "summer_events": 484,
+    "summer_classifications": 17,
+    "facilities": 6013,
+    "findings": 339,
+    "approved_exceptions": 339,
+    "existing_violations": 0,
+    "unbaselined_violations": 0,
+    "stale_approved_exceptions": 0,
+    "stale_existing_violations": 0,
+    "errors": 0
+  },
+  "approved_exceptions": [
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-202607-01",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-2040-202607-01"
+      ],
+      "detail": "",
+      "reason": "申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-326-202607-01",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-326-202607-01"
+      ],
+      "detail": "",
+      "reason": "複合イベント内の子供花火企画のみ受付終了で、全体の予約状態は企画別。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-202608-02",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-2040-202608-02"
+      ],
+      "detail": "",
+      "reason": "申込不要イベントの混雑時制限であり、イベント自体の受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1833-202607-89ab7c",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1833-202607-89ab7c"
+      ],
+      "detail": "",
+      "reason": "予約不可の時間制プールで「満員時は次の空き時間を案内」という混雑時案内であり、イベント自体の受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-245-tea-room-2026",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-245-tea-room-2026"
+      ],
+      "detail": "",
+      "reason": "WEB予約は満席だが、各回4名の当日先着枠があり予約不要で参加可能。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-w38-create-9",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-2040-w38-create-9"
+      ],
+      "detail": "",
+      "reason": "直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-w38-create-10",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-2040-w38-create-10"
+      ],
+      "detail": "",
+      "reason": "直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-2040-w38-create-11",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-2040-w38-create-11"
+      ],
+      "detail": "",
+      "reason": "直接会場へ参加できる自由制作で、特定技法(リトグラフ・シルクスクリーン)のみ別途要電話予約という条件。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-210-w38-fragment",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-210-w38-fragment"
+      ],
+      "detail": "",
+      "reason": "当日先着・材料終了時点で受付終了という在庫ベースの締切であり、事前予約制ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-210-w38-castanet",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-210-w38-castanet"
+      ],
+      "detail": "",
+      "reason": "当日先着・材料終了時点で受付終了という在庫ベースの締切であり、事前予約制ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-781-w38-moon-live",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-781-w38-moon-live"
+      ],
+      "detail": "",
+      "reason": "2026-10-16公式確認。事前申込は10/9締切済みだが、公式個別ページに当日券ありと明記。売切れ時を除き当日参加経路が残る。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-833-w38-shinchan-photo",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-833-w38-shinchan-photo"
+      ],
+      "detail": "",
+      "reason": "各回先着50組の定員制であり、事前予約制ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-None-w38-nagaoka-walk",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-None-w38-nagaoka-walk"
+      ],
+      "detail": "",
+      "reason": "事前受付は終了しているが、公式要項で当日受付が明記されている。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1705-w38-family-analogue",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1705-w38-family-analogue"
+      ],
+      "detail": "",
+      "reason": "当日会場で随時受付し、満席時は空席待ちとなるだけで受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-moon",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-moon"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-andromeda",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-andromeda"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-observatory",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-observatory"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-christmas-sky",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-christmas-sky"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-orion",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-orion"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-1671-w38-planet-mars",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-1671-w38-planet-mars"
+      ],
+      "detail": "",
+      "reason": "当日窓口で観覧券を購入して参加でき、事前予約制ではない(満席になった回のみ販売終了)。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-supp1-1944-20260926-de16d493",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-supp1-1944-20260926-de16d493"
+      ],
+      "detail": "",
+      "reason": "公式情報は当日受付・満席時空席待ちで、予約必須ではなく当日参加経路がある。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-supp1-hiroshima-20261003-53b8be45",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-supp1-hiroshima-20261003-53b8be45"
+      ],
+      "detail": "",
+      "reason": "展示本体は予約不要で参加可能で、受付終了は同日併設の別企画に限られる。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-f5-1610-kids-sports-2026",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-f5-1610-kids-sports-2026"
+      ],
+      "detail": "",
+      "reason": "2026-10-17公式確認。事前抽選競技の申込は終了したが、ボッチャ・フラッグフットボール等の当日直接参加と9:30配布の体験整理券を公式が明示。登録はこの当日参加経路。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-w41d6-family-mocamoca",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-w41d6-family-mocamoca"
+      ],
+      "detail": "",
+      "reason": "2026-10-26公式15737実取得確認。予約不要・随時受付の工作で、混雑時の早期受付終了は当日定員調整。事前受付終了・参加不能ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-f6-813-lantern",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-f6-813-lantern"
+      ],
+      "detail": "",
+      "reason": "2026-10-28本Missionの新江ノ島水族館公式実取得。平日は当日受付で、満席時は待機という定員調整。事前申込受付終了ではない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-w42-d10-yamaguchi-20261123-020582b",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-w42-d10-yamaguchi-20261123-020582b"
+      ],
+      "detail": "",
+      "reason": "2026-10-29 D-10で萩美術館公式event-3333を実取得。事前予約50席は満席だが当日先着50名の受付が明記されており、当日参加経路がある無料コンサート。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-toyama-w43d1-molkky-trial",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-toyama-w43d1-molkky-trial"
+      ],
+      "detail": "",
+      "reason": "2026-10-30 D-1で富山市公式1018872と公式チラシを取得。大会の事前申込は受付終了だが、本記録は同会場の申込不要・無料の当日体験コートのみ。大会の受付状態を併記しても体験の参加経路は開いている。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-hold-b1-310",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-hold-b1-310"
+      ],
+      "detail": "",
+      "reason": "2026-11-01 本Missionで旧野﨑家住宅の公式企画展本文・チラシを新規取得。満席・受付終了は11月29日の関連記念茶会のみ。掲載対象は10月22日〜1月24日の通常入館で観覧する企画展示で、茶会への参加を含まない。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-hold-b2-322",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-hold-b2-322"
+      ],
+      "detail": "",
+      "reason": "事前受付は終了しているが、公式の第21回大会案内がA/B/CおよびD/E/Fコースの当日受付を明記。締切済みの特別コースを含めず、当日参加できるコースを掲載。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-hold-b2-330",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-hold-b2-330"
+      ],
+      "detail": "",
+      "reason": "諸役の募集は満員だが、公式は流鏑馬祭とTADOマーケットの一般来場・観覧を案内。競技・諸役への応募と一般観覧を区別した記録。"
+    },
+    {
+      "fingerprint": "base.closed_label_requires_reservation:evt-hold-b2-461",
+      "rule": "base.closed_label_requires_reservation",
+      "event_ids": [
+        "evt-hold-b2-461"
+      ],
+      "detail": "",
+      "reason": "ランナーの受付終了は参加者向けの条件。公式が沿道応援を明示しており、本記録は沿道応援・観戦だけを掲載。ランナーの新規参加経路があるとは記載しない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1073-202606-01:evt-1073-202606-02:2026-06-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1073-202606-01",
+        "evt-1073-202606-02"
+      ],
+      "detail": "2026-06-01",
+      "reason": "同じ公式日程一覧に掲載された、タイトルと内容が異なる展示・工作。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1083-202606-01:evt-1083-202606-02:2026-06-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1083-202606-01",
+        "evt-1083-202606-02"
+      ],
+      "detail": "2026-06-27",
+      "reason": "同一公式ページ・同日だが、植え付け体験と外来植物学習の別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1101-202607-01:evt-1101-202607-02:2026-07-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1101-202607-01",
+        "evt-1101-202607-02"
+      ],
+      "detail": "2026-07-18",
+      "reason": "同一施設・同日だが、アイス作りと夏遊びフェスの別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1180-202607-1:evt-1180-202607-2:2026-07-11",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1180-202607-1",
+        "evt-1180-202607-2"
+      ],
+      "detail": "2026-07-11",
+      "reason": "同一公式ページ・同日開始だが、テーマが異なる2つの企画展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1461-202607-01:evt-1461-202607-02:2026-07-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1461-202607-01",
+        "evt-1461-202607-02"
+      ],
+      "detail": "2026-07-24",
+      "reason": "同一公式特集内の化石発掘と花火工房の別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1450-202607-01:evt-1450-202607-02:2026-07-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1450-202607-01",
+        "evt-1450-202607-02"
+      ],
+      "detail": "2026-07-19",
+      "reason": "同一公式一覧に掲載された星空観察と工作の別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1488-202607-01:evt-1488-202607-02:2026-07-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1488-202607-01",
+        "evt-1488-202607-02"
+      ],
+      "detail": "2026-07-25",
+      "reason": "同一施設・同日だが、時間と制作物が異なる工作企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1719-202607-01:evt-1719-202607-02:evt-1720-202607-01:2026-07-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1719-202607-01",
+        "evt-1719-202607-02",
+        "evt-1720-202607-01"
+      ],
+      "detail": "2026-07-05",
+      "reason": "同じ公式カレンダーを使う、会場・タイトル・内容が異なる3企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1726-202607-01:evt-1726-202607-02:2026-07-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1726-202607-01",
+        "evt-1726-202607-02"
+      ],
+      "detail": "2026-07-04",
+      "reason": "同一公式一覧の七夕工作と水遊び開放で、内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1935-202607-01:evt-1935-202607-02:2026-07-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1935-202607-01",
+        "evt-1935-202607-02"
+      ],
+      "detail": "2026-07-19",
+      "reason": "同一施設・同日だが、工作塾と昆虫教室の別講座。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1968-202608-01:evt-1968-202608-02:2026-08-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1968-202608-01",
+        "evt-1968-202608-02"
+      ],
+      "detail": "2026-08-01",
+      "reason": "同一公式年間案内内の、時間と内容が異なる藍染・お化け屋敷。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1974-202608-03:evt-1974-202608-04:2026-08-16",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1974-202608-03",
+        "evt-1974-202608-04"
+      ],
+      "detail": "2026-08-16",
+      "reason": "同一公式一覧の昼の科学工作と夜の星空観察。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-20-202608-01:evt-20-202608-03:2026-08-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-20-202608-01",
+        "evt-20-202608-03"
+      ],
+      "detail": "2026-08-29",
+      "reason": "同一施設・同日だが、時間と内容が異なる出前授業・夜間ツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-88-202607-02:evt-88-202607-03:2026-07-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-88-202607-02",
+        "evt-88-202607-03"
+      ],
+      "detail": "2026-07-18",
+      "reason": "信州新町化石博物館の工作と企画展。タイトル・時間・内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-387-202607-01:evt-387-202607-02:2026-07-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-387-202607-01",
+        "evt-387-202607-02"
+      ],
+      "detail": "2026-07-15",
+      "reason": "同一公式一覧の企画展とバックヤードツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-678-202607-01:evt-678-202607-02:2026-07-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-678-202607-01",
+        "evt-678-202607-02"
+      ],
+      "detail": "2026-07-24",
+      "reason": "同一施設・同日だが、鑑賞企画と似顔絵企画で内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1094-202607-02:evt-1094-202607-03:2026-07-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1094-202607-02",
+        "evt-1094-202607-03"
+      ],
+      "detail": "2026-07-18",
+      "reason": "同一公式特集内の、内容が異なる仕事体験と食育教室。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-miyazaki-202611-01:evt-w42-d11-miyazaki-20261101-daea130:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-miyazaki-202611-01",
+        "evt-w42-d11-miyazaki-20261101-daea130"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-30に県教育委員会の共同開催発表を実取得。総合博物館のこどもDAY（10:30～15:30・神楽衣装/切り絵）と、別会場の埋蔵文化財センター分館公開（10～16時・昔の道具/バックヤード）は明確に別の企画・会場。同一開催の重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1333-italy-space-2026:evt-osaka-kapla-exhibition-20260919:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1333-italy-space-2026",
+        "evt-osaka-kapla-exhibition-20260919"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページ(大阪市立科学館)に掲載された、内容が異なる複数企画: 企画展「イタリア宇宙開発展」／企画展「カプラ展」。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-6897-202607-01:evt-6897-202607-02:evt-6897-202607-03:2026-07-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-6897-202607-01",
+        "evt-6897-202607-02",
+        "evt-6897-202607-03"
+      ],
+      "detail": "2026-07-18",
+      "reason": "同一公式夏休み特集・同一会期だが、イルカタッチ、子どもトレーナー教室、ナイトドルフィンスイムの別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-tottori-science-craft-high-202609",
+        "evt-tottori-science-craft-low-202609"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-tottori-science-craft-high-202609",
+        "evt-tottori-science-craft-low-202609"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-tottori-science-craft-high-202609:evt-tottori-science-craft-low-202609:evt-tottori-science-sensor-202609:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-tottori-science-craft-high-202609",
+        "evt-tottori-science-craft-low-202609",
+        "evt-tottori-science-sensor-202609"
+      ],
+      "detail": "2026-11-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 第3土曜日は工作体験（中期・高学年）／第3土曜日は工作体験（中期・低学年）／プログラミングでつくる 気象センサー（後期）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-tottori-science-first-program-202609:evt-tottori-science-robot-202609:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-tottori-science-first-program-202609",
+        "evt-tottori-science-robot-202609"
+      ],
+      "detail": "2026-11-28",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: はじめてのプログラミング（3・4年生）／プログラミングでつくる コミュニケーションロボット（後期）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-lalaport-tachikawa-halloween2026:evt-litpla-lalaport-tokyo-bay-halloween2026:evt-litpla-lect-hiroshima-halloween2026:evt-litpla-litpla-aeonmall-kagoshima-halloween2026:evt-litpla-litpla-divercity-tokyo-halloween2026:evt-litpla-litpla-izumi-halloween2026:evt-litpla-litpla-matsudo-halloween2026:evt-litpla-litpla-mozo-halloween2026:evt-litpla-litpla-numazu-halloween2026:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-kitasuna-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-soga-halloween2026:evt-litpla-toylo-yamatotsuruma-halloween2026:evt-litpla-toylo-yokohama-halloween2026:evt-litpla-youmetown-hikarinomori-halloween2026:2026-09-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-lalaport-tachikawa-halloween2026",
+        "evt-litpla-lalaport-tokyo-bay-halloween2026",
+        "evt-litpla-lect-hiroshima-halloween2026",
+        "evt-litpla-litpla-aeonmall-kagoshima-halloween2026",
+        "evt-litpla-litpla-divercity-tokyo-halloween2026",
+        "evt-litpla-litpla-izumi-halloween2026",
+        "evt-litpla-litpla-matsudo-halloween2026",
+        "evt-litpla-litpla-mozo-halloween2026",
+        "evt-litpla-litpla-numazu-halloween2026",
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-kitasuna-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-soga-halloween2026",
+        "evt-litpla-toylo-yamatotsuruma-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026",
+        "evt-litpla-youmetown-hikarinomori-halloween2026"
+      ],
+      "detail": "2026-09-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（リトルプラネット ららぽーと立川立飛）／ハロウィン2026（リトルプラネット ららぽーとTOKYO-BAY）／ハロウィン2026（リトルプラネット LECT広島） など全16件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-22",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-23",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-24",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-25",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:2026-09-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026"
+      ],
+      "detail": "2026-09-28",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:2026-09-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026"
+      ],
+      "detail": "2026-09-29",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-03",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-04",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-05",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-06",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-06",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-07",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-08",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-09",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-10",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-11",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-11",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-12",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-13",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-13",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-14",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-15",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-16",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-16",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-22",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-23",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-24",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-25",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-28",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-29",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-30",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-30",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-10-31",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-litpla-toylo-abeno-halloween2026:evt-litpla-toylo-musashikosugi-halloween2026:evt-litpla-toylo-yokohama-halloween2026:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-litpla-toylo-abeno-halloween2026",
+        "evt-litpla-toylo-musashikosugi-halloween2026",
+        "evt-litpla-toylo-yokohama-halloween2026"
+      ],
+      "detail": "2026-11-01",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの）／ハロウィン2026（TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉）／ハロウィン2026（TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-236-spinning-202609:evt-supp1-236-20260927-fc402f4b:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-236-spinning-202609",
+        "evt-supp1-236-20260927-fc402f4b"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式日程ページの糸つむぎと複数地点の動物ガイドは、タイトル・内容・集合場所が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-22",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-23",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-gems-2026:evt-253-jump-2026:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-gems-2026",
+        "evt-253-jump-2026"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 宝石さがし体験 9月開催／ジャンプゾーン 9月開催。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-early-2026",
+        "evt-976-rose-guide-2026"
+      ],
+      "detail": "2026-10-10",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-early-2026",
+        "evt-976-rose-guide-2026"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-early-2026",
+        "evt-976-rose-guide-2026"
+      ],
+      "detail": "2026-10-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-early-2026",
+        "evt-976-rose-guide-2026"
+      ],
+      "detail": "2026-10-24",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋バラの早朝開園／ばら園ガイドツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-bubbles-2026:evt-976-rose-early-2026:evt-976-rose-guide-2026:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-bubbles-2026",
+        "evt-976-rose-early-2026",
+        "evt-976-rose-guide-2026"
+      ],
+      "detail": "2026-10-31",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ばら園シャボン玉の魔法／秋バラの早朝開園／ばら園ガイドツアー。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-bubbles-2026:evt-976-rose-early-2026:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-bubbles-2026",
+        "evt-976-rose-early-2026"
+      ],
+      "detail": "2026-11-01",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ばら園シャボン玉の魔法／秋バラの早朝開園。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-photo50-2026:evt-976-prints58-2026:2026-09-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-photo50-2026",
+        "evt-976-prints58-2026"
+      ],
+      "detail": "2026-09-15",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 花・鳥・風景写真展 ―亀っ子倶楽部第50回展―／第58回植物版画展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-bonsai-autumn-2026:evt-976-wildplants-autumn-2026:2026-10-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-bonsai-autumn-2026",
+        "evt-976-wildplants-autumn-2026"
+      ],
+      "detail": "2026-10-14",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋の盆栽展／秋の山草展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-rose-bonsai-2026:evt-976-rose-exhibit-2026:2026-10-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-rose-bonsai-2026",
+        "evt-976-rose-exhibit-2026"
+      ],
+      "detail": "2026-10-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 秋のミニバラ盆栽展／秋のバラ展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-green-art-2026:evt-976-iwahiba50-2026:2026-10-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-green-art-2026",
+        "evt-976-iwahiba50-2026"
+      ],
+      "detail": "2026-10-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 緑と花を描く展／第50回 彩のいわひば展。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-976-kanran-2026:evt-976-naturephotos-autumn-2026:2026-11-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-976-kanran-2026",
+        "evt-976-naturephotos-autumn-2026"
+      ],
+      "detail": "2026-11-10",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 日本寒蘭展／四季の自然写真展（秋）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-6945-pumpkins-2026:evt-6946-pumpkins-2026:2026-09-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-6945-pumpkins-2026",
+        "evt-6946-pumpkins-2026"
+      ],
+      "detail": "2026-09-25",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: お化けかぼちゃ展示（宇喜田公園）／お化けかぼちゃ展示（大島小松川公園）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-287-halloween-craft-2026:evt-287-paper-kendama-2026:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-287-halloween-craft-2026",
+        "evt-287-paper-kendama-2026"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 里山のキッズ工作 ハロウィン飾り／9月の工作 紙コップけん玉。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-287-felt-clock-2026:evt-287-paper-kendama-2026:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-287-felt-clock-2026",
+        "evt-287-paper-kendama-2026"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 親子を紡ぐ工作 フェルトの大きな時計／9月の工作 紙コップけん玉。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-287-animal-mask-2026:evt-287-ghost-rattle-2026:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-287-animal-mask-2026",
+        "evt-287-ghost-rattle-2026"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 10月の工作 動物お面／おばけのラトルを作ろう！。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1312-discover-time-2026:evt-1312-f8-a2-cars:2026-03-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1312-discover-time-2026",
+        "evt-1312-f8-a2-cars"
+      ],
+      "detail": "2026-03-04",
+      "reason": "2026-10-17 F8 attempt2の独立公式確認：USJ同じ25周年一覧の、音楽グリーティングと映画車両展示は内容・開催場所が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-09:evt-1568-w38-2026-10:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-09",
+        "evt-1568-w38-2026-10"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: クハ489形1号車 車両解説セミナー／クハネ581形35号車 特別公開。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-09:evt-1568-w38-2026-10:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-09",
+        "evt-1568-w38-2026-10"
+      ],
+      "detail": "2026-10-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: クハ489形1号車 車両解説セミナー／クハネ581形35号車 特別公開。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-10:evt-1568-w38-2026-11:2026-10-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-10",
+        "evt-1568-w38-2026-11"
+      ],
+      "detail": "2026-10-12",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: クハネ581形35号車 特別公開／プチ解説 まめちしき10！マルス。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-10:evt-1568-w38-2026-11:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-10",
+        "evt-1568-w38-2026-11"
+      ],
+      "detail": "2026-10-31",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: クハネ581形35号車 特別公開／プチ解説 まめちしき10！マルス。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-12:evt-1568-w38-2026-14:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-12",
+        "evt-1568-w38-2026-14"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 500系開発の記録 鉄道映像上映会／クハ489形1号車 特別公開。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-12:evt-1568-w38-2026-14:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-12",
+        "evt-1568-w38-2026-14"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 500系開発の記録 鉄道映像上映会／クハ489形1号車 特別公開。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w38-2026-13:evt-1568-w38-2026-14:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w38-2026-13",
+        "evt-1568-w38-2026-14"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: プチ解説 オハフ50形68号車／クハ489形1号車 特別公開。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-115-w38-2026-02:evt-115-w38-2026-03:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-115-w38-2026-02",
+        "evt-115-w38-2026-03"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 森の中の水族館 川魚を食べてみよう／西湖で魚釣り体験 9月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-2072-w38-bon:evt-2072-w38-lottery:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-2072-w38-bon",
+        "evt-2072-w38-lottery"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 第4回BONダンスプロジェクト 盆踊り大会／25周年感謝のスピードくじ抽選会。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-10-w38-daily-elephant:evt-10-w38-daily-penguin:evt-10-w38-daily-redpanda:evt-10-w38-daily-rhino:evt-10-w38-pony-ride:evt-10-w38-small-animal-contact:2023-05-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-10-w38-daily-elephant",
+        "evt-10-w38-daily-penguin",
+        "evt-10-w38-daily-redpanda",
+        "evt-10-w38-daily-rhino",
+        "evt-10-w38-pony-ride",
+        "evt-10-w38-small-animal-contact"
+      ],
+      "detail": "2023-05-09",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: ゾウのトレーニング／ペンギンのガイド／レッサーパンダのお食事タイム など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-hawk-flight:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-12-w38-giant-lily",
+        "evt-12-w38-hawk-flight"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／柊くんのホークフライト。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-ibis-flamingo-lunch:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-12-w38-giant-lily",
+        "evt-12-w38-ibis-flamingo-lunch"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／トキとフラミンゴのランチタイム。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-12-w38-giant-lily:evt-12-w38-ibis-flamingo-lunch:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-12-w38-giant-lily",
+        "evt-12-w38-ibis-flamingo-lunch"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: オオオニバスに乗ってみよう！／トキとフラミンゴのランチタイム。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-13-w38-redpanda-highfive:evt-13-w38-redpanda-quiz:2026-09-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-13-w38-redpanda-highfive",
+        "evt-13-w38-redpanda-quiz"
+      ],
+      "detail": "2026-09-14",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: レッサーパンダとガラス越しハイタッチ会／国際レッドパンダデー クイズパネル展示。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-w38-clean:evt-18-w38-fishing-09:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-w38-clean",
+        "evt-18-w38-fishing-09"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 掃除体験／釣りを学ぼう！ 9月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-w38-bone:evt-18-w38-fishing-10:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-w38-bone",
+        "evt-18-w38-fishing-10"
+      ],
+      "detail": "2026-10-03",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 獣医のお仕事を学ぼう！ 骨の観察／釣りを学ぼう！ 10月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-w38-bone:evt-18-w38-fishing-10:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-w38-bone",
+        "evt-18-w38-fishing-10"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 獣医のお仕事を学ぼう！ 骨の観察／釣りを学ぼう！ 10月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-w38-feed-prep:evt-18-w38-fishing-10:2026-10-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-w38-feed-prep",
+        "evt-18-w38-fishing-10"
+      ],
+      "detail": "2026-10-04",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 調餌／釣りを学ぼう！ 10月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-w38-feed-prep:evt-18-w38-fishing-10:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-w38-feed-prep",
+        "evt-18-w38-fishing-10"
+      ],
+      "detail": "2026-10-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 飼育係の仕事を学ぼう！ 調餌／釣りを学ぼう！ 10月。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-22-w38-art:evt-22-w38-gym:2026-10-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-22-w38-art",
+        "evt-22-w38-gym"
+      ],
+      "detail": "2026-10-25",
+      "reason": "2026-10-17 本Missionで公式年間日程を取得。アートなワークショップと体操教室は、会場・内容・対象年齢が異なる同日開催の別企画。アート日程を10/18から公式掲載の10/25へ訂正したため旧10/18の例外を置換。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-22-w38-art:evt-22-w38-disc:evt-22-w38-science:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-22-w38-art",
+        "evt-22-w38-disc",
+        "evt-22-w38-science"
+      ],
+      "detail": "2026-11-15",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: あしざわまさひと アートなワークショップ／ディスクゴルフ マンスリー講習会／科学工作教室。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-14",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-15",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-16",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-16",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-22",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sheep:2026-09-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-23",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全6件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-25",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-27",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-28",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-29",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-09-30",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-09-30",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-01",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-02",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-02",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-03",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-04",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-05",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-06",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-06",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-07",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-08",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-09",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-10",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-11",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-11",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-12",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-13",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-13",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-14",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-15",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-16",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-16",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-kids-farm:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-kids-farm",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-18",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全8件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-16-w38-butter:evt-16-w38-calf:evt-16-w38-cookie:evt-16-w38-ice:evt-16-w38-milking:evt-16-w38-sausage:evt-16-w38-sheep:2026-10-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-16-w38-butter",
+        "evt-16-w38-calf",
+        "evt-16-w38-cookie",
+        "evt-16-w38-ice",
+        "evt-16-w38-milking",
+        "evt-16-w38-sausage",
+        "evt-16-w38-sheep"
+      ],
+      "detail": "2026-10-20",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: バター作り（秋の体験）／仔牛のミルクやり（秋の体験）／クッキー作り（秋の体験） など全7件。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-945-w38-doraemon:evt-945-w38-star-castle:2026-07-04",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-945-w38-doraemon",
+        "evt-945-w38-star-castle"
+      ],
+      "detail": "2026-07-04",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: プラネタリウム ドラえもん 時間のひみつ／プラネタリウム 星の城 夏の夜空と流れ星。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-773-w38-kangaroo40-guide:evt-f3-773-greeting:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-773-w38-kangaroo40-guide",
+        "evt-f3-773-greeting"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-16 本Missionの公式確認：公式の同一40周年ページにある、カンガルー観察ガイドと別枠のマスコットあいさつ。内容・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-773-w38-kangaroo40-guide:evt-f3-773-greeting:2026-10-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-773-w38-kangaroo40-guide",
+        "evt-f3-773-greeting"
+      ],
+      "detail": "2026-10-25",
+      "reason": "2026-10-16 本Missionの公式確認：公式の同一40周年ページにある、カンガルー観察ガイドと別枠のマスコットあいさつ。内容・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-793-w38-comet:evt-793-w38-pluto:2026-09-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-793-w38-comet",
+        "evt-793-w38-pluto"
+      ],
+      "detail": "2026-09-05",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 子ども向けプラネタリウム「ほうき星とたいようけいたんけん」／一般向けプラネタリウム「忘れないでね、冥王星」。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-848-w38-full-dress:evt-848-w38-sail-unfurl:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-848-w38-full-dress",
+        "evt-848-w38-sail-unfurl"
+      ],
+      "detail": "2026-11-03",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 帆船日本丸 満船飾／帆船日本丸 総帆展帆（秋）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w38-madoka:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w38-madoka"
+      ],
+      "detail": "2026-09-19",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 幼児向けプラネタリウム「宇宙船レオの大冒険」／VTuber星見まどかと旅する 水金地火木土天海。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w38-madoka:2026-09-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w38-madoka"
+      ],
+      "detail": "2026-09-26",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: 幼児向けプラネタリウム「宇宙船レオの大冒険」／VTuber星見まどかと旅する 水金地火木土天海。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-10-03",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-10-10",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-10-17",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-11-14",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w38-leo:evt-851-w40f4-telescope:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w38-leo",
+        "evt-851-w40f4-telescope"
+      ],
+      "detail": "2026-11-28",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の同一公式投影表にある幼児向け「宇宙船レオ」と一般向け「望遠鏡を使いこなせ！」は対象・内容・投影回が異なる。"
+    },
+    {
+      "fingerprint": "base.title_url_date_duplicate:evt-735-w38-world-cleanup:evt-None-w38-kemigawa-world-cleanup:2026-09-19",
+      "rule": "base.title_url_date_duplicate",
+      "event_ids": [
+        "evt-735-w38-world-cleanup",
+        "evt-None-w38-kemigawa-world-cleanup"
+      ],
+      "detail": "2026-09-19",
+      "reason": "千葉市内の複数会場(千葉ポートパーク／検見川浜)で同時開催される清掃キャンペーンの別会場回。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-mojimushi:evt-1705-w38-word-hunting:2026-09-02",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-mojimushi",
+        "evt-1705-w38-word-hunting"
+      ],
+      "detail": "2026-09-02",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: もじむし／ハンティングワードトリプル。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-mask:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-10-10",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-mask:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-10-17",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-mask:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-ball:evt-1705-w41-mask:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-ball",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／チャレたま選手権／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-ball:evt-1705-w41-mask:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-ball",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／チャレたま選手権／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-ball:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-ball"
+      ],
+      "detail": "2026-11-14",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／チャレたま選手権）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w38-garden-volunteers:evt-1705-w41-ball:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w38-garden-volunteers",
+        "evt-1705-w41-ball"
+      ],
+      "detail": "2026-11-28",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（こどもボランティアプログラム／チャレたま選手権）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1695-w38-sumikko-greetings:evt-1695-w38-sumikko-stages:2027-02-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1695-w38-sumikko-greetings",
+        "evt-1695-w38-sumikko-stages"
+      ],
+      "detail": "2027-02-28",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: すみっコたちがやってくる！グリーティング／すみっコぐらしとあそぼう！ステージ。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1670-w38-badges:evt-1670-w38-staff-tours:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1670-w38-badges",
+        "evt-1670-w38-staff-tours"
+      ],
+      "detail": "2026-11-21",
+      "reason": "同一公式ページに掲載された、内容が異なる複数企画: オリジナル缶バッジをつくろう！／スタッフガイドツアー（企画展・館内入門）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-2358-20261010-1a634d7:evt-supp1-2358-20261010-1e1e014:evt-supp1-2358-20261010-982f12c:evt-supp1-2358-20261010-a7fea5c:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-2358-20261010-1a634d7",
+        "evt-supp1-2358-20261010-1e1e014",
+        "evt-supp1-2358-20261010-982f12c",
+        "evt-supp1-2358-20261010-a7fea5c"
+      ],
+      "detail": "2026-10-10",
+      "reason": "高松市美術館公式の共通案内に載る有料展覧会、無料工作、田中敦子映像、石の詩映像。内容・料金・会場区画が異なる関連企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-2358-20261010-1e1e014:evt-supp1-2358-20261010-a7fea5c:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-2358-20261010-1e1e014",
+        "evt-supp1-2358-20261010-a7fea5c"
+      ],
+      "detail": "2026-11-21",
+      "reason": "共通公式案内に載る14時の田中敦子（45分）と15時の石の詩（25分・解説付き）は別作品の上映。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1968-20260926-032afea2:evt-supp1-1968-20261009-860d6198:2026-10-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1968-20260926-032afea2",
+        "evt-supp1-1968-20261009-860d6198"
+      ],
+      "detail": "2026-10-09",
+      "reason": "同一公式案内の昼間謎解きと夜間開館は時間帯・演出・参加条件が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1968-20260926-032afea2:evt-supp1-1968-20261009-860d6198:2026-10-10",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1968-20260926-032afea2",
+        "evt-supp1-1968-20261009-860d6198"
+      ],
+      "detail": "2026-10-10",
+      "reason": "同一公式案内の昼間謎解きと夜間開館は時間帯・演出・参加条件が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1968-20260926-032afea2:evt-supp1-1968-20261009-860d6198:2026-11-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1968-20260926-032afea2",
+        "evt-supp1-1968-20261009-860d6198"
+      ],
+      "detail": "2026-11-20",
+      "reason": "同一公式案内の昼間謎解きと夜間開館は時間帯・演出・参加条件が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1968-20260926-032afea2:evt-supp1-1968-20261009-860d6198:2026-12-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1968-20260926-032afea2",
+        "evt-supp1-1968-20261009-860d6198"
+      ],
+      "detail": "2026-12-19",
+      "reason": "同一公式案内の昼間謎解きと夜間開館は時間帯・演出・参加条件が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1974-20261002-1175f677:evt-supp1-1974-20261002-21e26ec6:2026-10-02",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1974-20261002-1175f677",
+        "evt-supp1-1974-20261002-21e26ec6"
+      ],
+      "detail": "2026-10-02",
+      "reason": "同一公式一覧の古代体験プログラムと体験学習展は、内容・参加方法が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1972-20261012-a06d003e:evt-supp1-1972-20261012-a7f63658:2026-10-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1972-20261012-a06d003e",
+        "evt-supp1-1972-20261012-a7f63658"
+      ],
+      "detail": "2026-10-12",
+      "reason": "同一公式だよりの定例キッズダンスと祝日限定の乗り物無料デーは、内容と開催条件が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-1993-20261003-164b1472:evt-supp1-1993-20261003-76ae0aa5:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-1993-20261003-164b1472",
+        "evt-supp1-1993-20261003-76ae0aa5"
+      ],
+      "detail": "2026-10-03",
+      "reason": "同一公式特集ページの学芸員トークと展覧会は、講演と通常入館展示で内容・参加形態が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-2025-20261025-25283e90:evt-supp1-2025-20261025-bc5baa91:2026-10-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-2025-20261025-25283e90",
+        "evt-supp1-2025-20261025-bc5baa91"
+      ],
+      "detail": "2026-10-25",
+      "reason": "同一公式案内のもちまきと作家来館は、時間・内容が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-2025-20261025-25283e90:evt-supp1-2025-20261123-96ad7e4f:2026-11-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-2025-20261025-25283e90",
+        "evt-supp1-2025-20261123-96ad7e4f"
+      ],
+      "detail": "2026-11-23",
+      "reason": "同一公式案内の最終日おかたづけと、別日程のもちまきは内容が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-6873-20261001-878a4721:evt-supp1-6873-20261001-c264977e:2026-10-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-6873-20261001-878a4721",
+        "evt-supp1-6873-20261001-c264977e"
+      ],
+      "detail": "2026-10-01",
+      "reason": "同一公式告知の幼魚展示と来場者参加型の愛称募集は、内容・参加方法が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-supp1-236-20261017-961cb6d5:evt-supp1-236-20261017-c913c2b6:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-supp1-236-20261017-961cb6d5",
+        "evt-supp1-236-20261017-c913c2b6"
+      ],
+      "detail": "2026-10-17",
+      "reason": "同一公式告知のお絵描き教室と島のいきもの博は、対象・内容・参加方法が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-chiba-w42d6-sunsun-lalaport_tokyo-bay:evt-chiba-w42d6-sunsun-litpla_matsudo:evt-chiba-w42d6-sunsun-toylo_soga:evt-d2-shizuoka-69446a3f:evt-f2-20261030-1893-d00ea3af:evt-kanagawa-w40d4-sunsun-musashikosugi:evt-kanagawa-w40d4-sunsun-yamatotsuruma:evt-kanagawa-w40d4-sunsun-yokohama:evt-w41d6-kumamoto-litpla-sunsun:2026-11-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-chiba-w42d6-sunsun-lalaport_tokyo-bay",
+        "evt-chiba-w42d6-sunsun-litpla_matsudo",
+        "evt-chiba-w42d6-sunsun-toylo_soga",
+        "evt-d2-shizuoka-69446a3f",
+        "evt-f2-20261030-1893-d00ea3af",
+        "evt-kanagawa-w40d4-sunsun-musashikosugi",
+        "evt-kanagawa-w40d4-sunsun-yamatotsuruma",
+        "evt-kanagawa-w40d4-sunsun-yokohama",
+        "evt-w41d6-kumamoto-litpla-sunsun"
+      ],
+      "detail": "2026-11-09",
+      "reason": "2026-10-26本Missionの公式全国告知と光の森店舗を実取得して確認。同じサンサンキッズTV企画が沼津・横浜・武蔵小杉・大和鶴間・熊本光の森の5つの別パークで同日開始。会場と営業時間・料金が異なる会場別開催で重複ではない。 2026-10-29 D-6で公式全国告知と千葉3店舗の案内を実取得。松戸・TOKYO-BAY・蘇我の別会場3件を追加し、同日開始の計8会場の限定例外へ更新。一般の重複検出ルールは変更しない。 2026-10-30 F-2で飯塚店の公式現行ページと同全国告知を本runで実取得。対象店・営業時間・通常チケット参加経路を確認した9番目の別会場（ゆめタウン飯塚）を追加。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-d7-osaka-daiei-2026:evt-w41d7-osaka-daiei-lecture1:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-d7-osaka-daiei-2026",
+        "evt-w41d7-osaka-daiei-lecture1"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-27に大阪中之島美術館公式一次ページを取得して確認。同じ展覧会ページ・10/31開始だが、既存の4階展覧会（10/31～1/31、通常観覧券）と、新規1階ホール記念講演（10/31 14:00～15:30、先着150名・観覧券半券可）は会場・内容・参加方法が異なる別行事。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1352-f8-a2-bubble:evt-d7-osaka-snap-drink-2026:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1352-f8-a2-bubble",
+        "evt-d7-osaka-snap-drink-2026"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-17 F8 attempt2の独立公式確認：万博花の丘同じ関連催事一覧だが、バケツで遊ぶしゃぼん玉と撮影画像入りドリンク製作は料金・内容が異なる別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1352-f8-a2-forest-concert:evt-d7-osaka-herb-2026:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1352-f8-a2-forest-concert",
+        "evt-d7-osaka-herb-2026"
+      ],
+      "detail": "2026-10-18",
+      "reason": "2026-10-17 F8 attempt2の独立公式確認：共通のコスモス関連一覧に掲載された西大路広場の吹奏楽コンサートと花の丘のハーブティー工作は会場・参加方法の異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-d8-kyoto-android-future-2026:evt-kyoto-w42d7-avatar:evt-kyoto-w42d7-rd-fair:evt-kyoto-w42d7-science-festival:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-d8-kyoto-android-future-2026",
+        "evt-kyoto-w42d7-avatar",
+        "evt-kyoto-w42d7-rd-fair",
+        "evt-kyoto-w42d7-science-festival"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-29公式3会場連携サイトを実fetch。Aけいはんなプラザの研究展示、B歩道のアバター競技、C KICKのアンドロイド展、ナイルBのSSH校ポスター発表はそれぞれ別会場・別内容。抽選終了の工作は対象外。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-chiba-202610-f1-abiko-albatross:evt-chiba-202610-f1-abiko-bird-photo:evt-w43f1-767-jbf:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-chiba-202610-f1-abiko-albatross",
+        "evt-chiba-202610-f1-abiko-bird-photo",
+        "evt-w43f1-767-jbf"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-31 F1で公式の全体案内と博物館PDFを新規取得。水の館の写真展・アビスタのアホウドリ講演・鳥の博物館内の期間プログラムは場所と内容が異なる。既存2会場の例外を正確な3会場集合へ置換。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f2-1452-birthday-20261029:evt-f2-1452-friends-20261029:2026-10-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f2-1452-birthday-20261029",
+        "evt-f2-1452-friends-20261029"
+      ],
+      "detail": "2026-10-29",
+      "reason": "同じ公式周年案内の10/29誕生日会（2階・指定時刻のセレモニー）と10/29～11/8のお友達紹介パネル展示（3階・通常観覧）は内容・会場・期間が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f2-1452-chirimen-20261103:evt-f2-1452-fishart-20261103:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f2-1452-chirimen-20261103",
+        "evt-f2-1452-fishart-20261103"
+      ],
+      "detail": "2026-11-03",
+      "reason": "同じ公式案内の顕微鏡でチリメンを観察する有料体験と、廃棄包装シールを使う無料アート制作は内容・料金が異なる別ワークショップ。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f3-1474-mio-20261101:evt-f3-1474-moon-20260901:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f3-1474-mio-20261101",
+        "evt-f3-1474-moon-20260901"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-16 本Missionの公式確認：公式共通プラネタリウム日程表上の、通常月テーマ・キッズ季節投影・館長教室の別番組。対象・投影回・内容を個別確認。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f3-1474-director-20261024:evt-f3-1474-moon-20260901:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f3-1474-director-20261024",
+        "evt-f3-1474-moon-20260901"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-16 本Missionの公式確認：公式共通プラネタリウム日程表上の、通常月テーマ・キッズ季節投影・館長教室の別番組。対象・投影回・内容を個別確認。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f3-1474-christmas-20261111:evt-f3-1474-director-20261121:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f3-1474-christmas-20261111",
+        "evt-f3-1474-director-20261121"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-16 本Missionの公式確認：公式共通プラネタリウム日程表上の、通常月テーマ・キッズ季節投影・館長教室の別番組。対象・投影回・内容を個別確認。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f3-1537-halloween:evt-f3-1537-read:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f3-1537-halloween",
+        "evt-f3-1537-read"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-16 本Missionの公式確認：公式図書館10月案内に併記された、幼児読み聞かせとハロウィン企画の別時間・別内容。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f3-772-letter:evt-f3-772-post:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f3-772-letter",
+        "evt-f3-772-post"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-16 本Missionの公式確認：公式同一案内上の、11/3事前申込お絵かき教室と11/3〜29自由投函メッセージは別企画・別参加経路。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w40f4-archeology:evt-851-w40f4-earthmars:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w40f4-archeology",
+        "evt-851-w40f4-earthmars"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の共通案内にある秋期考古特別展と15:30の地球・火星講座は展示と講演の別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w40f4-kenji:evt-851-w40f4-ssh:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w40f4-kenji",
+        "evt-851-w40f4-ssh"
+      ],
+      "detail": "2026-10-03",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の共通案内にある宮澤賢治資料展示と平塚江南高校SSH成果展示は会期・内容が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-w40f4-history:evt-851-w40f4-robata:2026-10-18",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-w40f4-history",
+        "evt-851-w40f4-robata"
+      ],
+      "detail": "2026-10-18",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。平塚市博物館の共通案内にある10時の郷土史講座と15:15のろばたばなしは対象・内容・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w40f4-orone24:evt-1568-w40f4-sketch:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w40f4-orone24",
+        "evt-1568-w40f4-sketch"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。京都鉄道博物館の11月共通公式PDFに載る建物・蒸気機関車スケッチとオロネ24公開は場所・内容・受付方式が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w40f4-orone24:evt-1568-w40f4-sketch:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w40f4-orone24",
+        "evt-1568-w40f4-sketch"
+      ],
+      "detail": "2026-11-22",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。京都鉄道博物館の11月共通公式PDFに載る建物・蒸気機関車スケッチとオロネ24公開は場所・内容・受付方式が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w40f4-ef65:evt-1568-w40f4-orone24:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w40f4-ef65",
+        "evt-1568-w40f4-orone24"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。京都鉄道博物館の11月共通公式PDFに載るEF65プチ解説とオロネ24公開は車両・会場・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1568-w40f4-ef65:evt-1568-w40f4-orone24:2026-11-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1568-w40f4-ef65",
+        "evt-1568-w40f4-orone24"
+      ],
+      "detail": "2026-11-23",
+      "reason": "2026-10-16 本Missionで公式内容を個別確認。京都鉄道博物館の11月共通公式PDFに載るEF65プチ解説とオロネ24公開は車両・会場・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f5-1593-succulents-2026:evt-f5-1593-vegetables-2026:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f5-1593-succulents-2026",
+        "evt-f5-1593-vegetables-2026"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-17公式確認。同じ宇治市植物公園講習会一覧の、多肉植物・サボテン寄せ植え（1000円、各15人）と野菜作り（500円、各30人）は内容・定員・開催期間が異なる別講習。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1333-f8-a2-python:evt-1333-f8-multiwavelength:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1333-f8-a2-python",
+        "evt-1333-f8-multiwavelength"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-17 F8 attempt2の独立公式確認：同一科学館一覧の連続プログラミング工作と多波長宇宙の講演は内容・時間・申込フォームが異なる。Pythonの初回で講演聴講するが9回の展示製作全体を同じ講演と重複扱いしない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1333-f8-a2-python:evt-1333-f8-book-festa:2027-01-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1333-f8-a2-python",
+        "evt-1333-f8-book-festa"
+      ],
+      "detail": "2027-01-23",
+      "reason": "2026-10-17 F8 attempt2の独立公式確認：同じ科学館イベント一覧に掲載された、9回連続AI×Python展示製作の一回とサイエンスブックフェスタは内容・会場・参加経路の異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1352-f8-a2-bread:evt-1352-f8-marching:evt-1352-f8-rose-guide:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1352-f8-a2-bread",
+        "evt-1352-f8-marching",
+        "evt-1352-f8-rose-guide"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：京都橘高等学校マーチングパレード・中学校吹奏楽部演奏／ローズソムリエ小山内健のバラ園ガイドツアー／パン天国 ～2026 秋～。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-547-202701-f10-04:evt-547-202701-f10-06:2027-01-09",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-547-202701-f10-04",
+        "evt-547-202701-f10-06"
+      ],
+      "detail": "2027-01-09",
+      "reason": "2026-10-17に取得した公式イベントページに掲載の別企画。冬の自然観察オリエンテーリング（自由参加、9:30～15:30、園内探索）と写真展「北本自然観察公園・季節のうつろい」（9:00～17:00、センター2階）は内容・会場・参加形式が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-12-202610-f10-02:evt-12-202610-f10-03:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-12-202610-f10-02",
+        "evt-12-202610-f10-03"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-17 本Missionで取得・目視した公式10月チラシの別企画。ピスタチオのうらない（10:00、温室、700円）とペンギンガイド（12:30、ペンギンプール、観覧無料）は内容・会場・時間が異なり重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-12-202610-f10-02:evt-12-202610-f10-03:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-12-202610-f10-02",
+        "evt-12-202610-f10-03"
+      ],
+      "detail": "2026-11-01",
+      "reason": "同じ公式チラシに掲載された別企画。ピスタチオのうらないとペンギンガイドは会場・内容・時間・料金が異なる（本Missionで2026-10-17取得・確認）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-18-202611-f10-01:evt-18-202611-f10-02:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-18-202611-f10-01",
+        "evt-18-202611-f10-02"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-28本Missionで三津シーパラダイス公式11月案内1870を実取得して確認。給餌体験（11:55抽選）と釣り体験（10～15時）は別内容・参加条件の独立企画。釣り実施日訂正で11/8が重なるが重複登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-20261025-f15-01c61e9a:evt-253-20261025-f15-17284af6:2026-10-24",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-20261025-f15-01c61e9a",
+        "evt-253-20261025-f15-17284af6"
+      ],
+      "detail": "2026-10-24",
+      "reason": "2026-10-25公式 https://www.tokyo-dome.co.jp/feature/spot 実取得で確認。同日・同一特集だがスプラッシュガーデンのジャンプゾーン（3歳12kg～55kg、1,200円）とタワーゾーンの宝石さがし（600円、5分）は会場・体験・料金・年齢条件が異なる別催事。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-20261025-f15-01c61e9a:evt-253-20261025-f15-17284af6:2026-10-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-20261025-f15-01c61e9a",
+        "evt-253-20261025-f15-17284af6"
+      ],
+      "detail": "2026-10-25",
+      "reason": "2026-10-25公式 https://www.tokyo-dome.co.jp/feature/spot 実取得で確認。同日・同一特集だがスプラッシュガーデンのジャンプゾーン（3歳12kg～55kg、1,200円）とタワーゾーンの宝石さがし（600円、5分）は会場・体験・料金・年齢条件が異なる別催事。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-253-20261025-f15-01c61e9a:evt-253-20261025-f15-17284af6:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-253-20261025-f15-01c61e9a",
+        "evt-253-20261025-f15-17284af6"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-25公式 https://www.tokyo-dome.co.jp/feature/spot 実取得で確認。同日・同一特集だがスプラッシュガーデンのジャンプゾーン（3歳12kg～55kg、1,200円）とタワーゾーンの宝石さがし（600円、5分）は会場・体験・料金・年齢条件が異なる別催事。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-d2-shizuoka-699c5a89:evt-d2-shizuoka-ca565d3e:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-d2-shizuoka-699c5a89",
+        "evt-d2-shizuoka-ca565d3e"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-26公式町ページで確認。同じ文化会館だが、午前の太神楽体験会（保健研修室、11〜12時、500円）と午後の演芸祭（ホール、13:30開演、一般1000円）は内容・会場・申込が別。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-d2-shizuoka-77e9b39c:evt-d2-shizuoka-e6b115c0:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-d2-shizuoka-77e9b39c",
+        "evt-d2-shizuoka-e6b115c0"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-26公式主催日程で確認。同じ奏の森BBQサイトで行うが、星座早見傘（2500円、小5以上）と望遠鏡工作（6000円、原則中学生以下）は異なる道具・対象・料金の別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-w41d6-kumamoto-library-esports:evt-w41d6-kumamoto-library-water:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-w41d6-kumamoto-library-esports",
+        "evt-w41d6-kumamoto-library-water"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-26市立図書館公式PDFを実取得・目視。同じチラシだが2階集会室13～16時のぷよぷよ体験と正面入口横10～14時の水飲み比べは内容・場所・時刻が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-w41d6-kumamoto-guitar:evt-w41d6-kumamoto-pottery:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-w41d6-kumamoto-guitar",
+        "evt-w41d6-kumamoto-pottery"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-26主催2026スケジュール実取得。同じ陶磁器展公式URLだが体育館12～13:30無料ギターライブとエントランス10:30/13:30有料ろくろ絵付けは内容・会場・時刻・料金が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-w41d6-kumamoto-guitar:evt-w41d6-kumamoto-pottery:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-w41d6-kumamoto-guitar",
+        "evt-w41d6-kumamoto-pottery"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-26主催2026スケジュール実取得。同じURLの11/1無料ギターライブと有料陶芸体験は会場・時刻・内容が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-892-20261028-f3-sengoku:evt-chiba-w41d8-seki-quiz:2026-10-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-892-20261028-f3-sengoku",
+        "evt-chiba-w41d8-seki-quiz"
+      ],
+      "detail": "2026-10-03",
+      "reason": "2026-10-28今回取得の県立公式資料。戦国展示本体と既存展示クイズラリーは内容・参加方法の異なる関連企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-niigata-w41d11-aguri-milk:evt-niigata-w41d11-aguri-popcorn:evt-niigata-w41d11-aguri-potato:evt-niigata-w41d11-aguri-sheep:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-niigata-w41d11-aguri-milk",
+        "evt-niigata-w41d11-aguri-popcorn",
+        "evt-niigata-w41d11-aguri-potato",
+        "evt-niigata-w41d11-aguri-sheep"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-27本Missionで取得したアグリパーク公式11月体験案内。同じURLに掲載された搾乳・焼きいも・ポップコーン・羊飾り・ピザ・スイートポテトは内容、場所、時刻、参加料金/予約方法の異なる別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-niigata-w41d11-aguri-milk:evt-niigata-w41d11-aguri-pizza:evt-niigata-w41d11-aguri-sweetpotato:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-niigata-w41d11-aguri-milk",
+        "evt-niigata-w41d11-aguri-pizza",
+        "evt-niigata-w41d11-aguri-sweetpotato"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-27本Missionで取得したアグリパーク公式11月体験案内。同じURLに掲載された搾乳・焼きいも・ポップコーン・羊飾り・ピザ・スイートポテトは内容、場所、時刻、参加料金/予約方法の異なる別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-niigata-w41d11-aguri-milk:evt-niigata-w41d11-aguri-pizza:evt-niigata-w41d11-aguri-sweetpotato:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-niigata-w41d11-aguri-milk",
+        "evt-niigata-w41d11-aguri-pizza",
+        "evt-niigata-w41d11-aguri-sweetpotato"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-27本Missionで取得したアグリパーク公式11月体験案内。同じURLに掲載された搾乳・焼きいも・ポップコーン・羊飾り・ピザ・スイートポテトは内容、場所、時刻、参加料金/予約方法の異なる別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-niigata-w41d11-aguri-milk:evt-niigata-w41d11-aguri-pizza:evt-niigata-w41d11-aguri-sweetpotato:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-niigata-w41d11-aguri-milk",
+        "evt-niigata-w41d11-aguri-pizza",
+        "evt-niigata-w41d11-aguri-sweetpotato"
+      ],
+      "detail": "2026-11-15",
+      "reason": "2026-10-27本Missionで取得したアグリパーク公式11月体験案内。同じURLに掲載された搾乳・焼きいも・ポップコーン・羊飾り・ピザ・スイートポテトは内容、場所、時刻、参加料金/予約方法の異なる別体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-oita-w41d11-train-food:evt-oita-w41d11-train-music:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-oita-w41d11-train-food",
+        "evt-oita-w41d11-train-music"
+      ],
+      "detail": "2026-11-14",
+      "reason": "2026-10-27主催POART公式ページとチラシを実取得・目視。同じトレインジャックで、車内音楽ライブ（11:30/13:30）と掛け紙制作/食文化トーク（11:30～15時/13～14時）は内容・時刻の異なる企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-oita-w41d11-ochan-talk:evt-oita-w41d11-ochan-tour:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-oita-w41d11-ochan-talk",
+        "evt-oita-w41d11-ochan-tour"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-27大分市美術館公式Oちゃん展ページを取得。同じ日・URLだが13時の展示ギャラリートークと14時の建築・屋外彫刻ぐるっとツアーは内容・場所・時間が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-oita-w41d11-ochan-talk:evt-oita-w41d11-ochan-tour:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-oita-w41d11-ochan-talk",
+        "evt-oita-w41d11-ochan-tour"
+      ],
+      "detail": "2026-11-14",
+      "reason": "2026-10-27大分市美術館公式Oちゃん展ページを取得。同じ日・URLだが13時の展示ギャラリートークと14時の建築・屋外彫刻ぐるっとツアーは内容・場所・時間が異なる。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1688-w41-sheep:evt-1688-w41-sheepcraft:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1688-w41-sheep",
+        "evt-1688-w41-sheepcraft"
+      ],
+      "detail": "2026-10-31",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（ひつじとふれあい・糸紡ぎ体験／羊毛と木の実でつくる羊の飾り作り）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1688-w41-bionest:evt-1688-w41-pond:evt-1688-w41-rosebath:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1688-w41-bionest",
+        "evt-1688-w41-pond",
+        "evt-1688-w41-rosebath"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（バイオネストを作ろう／水辺の生き物調査と特定外来生物の捕獲体験／バラのバスボムを作ろう）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1689-w41-dinosaur:evt-1689-w41-sumikko:2026-09-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1689-w41-dinosaur",
+        "evt-1689-w41-sumikko"
+      ],
+      "detail": "2026-09-05",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（オーロラを見た恐竜たち／プラネタリウム すみっコぐらし ～ひろい宇宙とオーロラのひかり～）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w41-kishimen:evt-1705-w41-mask:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w41-kishimen",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（たべるあそぶプログラム「化ける？！」／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w41-ball:evt-1705-w41-mask:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w41-ball",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（チャレたま選手権／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w41-kishimen:evt-1705-w41-mask:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w41-kishimen",
+        "evt-1705-w41-mask"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（たべるあそぶプログラム「化ける？！」／なりたい自分にへんしんマスク）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1705-w41-ball:evt-1705-w41-kishimen:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1705-w41-ball",
+        "evt-1705-w41-kishimen"
+      ],
+      "detail": "2026-11-22",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（チャレたま選手権／たべるあそぶプログラム「化ける？！」）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1710-w41-mega:evt-1710-w41-trial:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1710-w41-mega",
+        "evt-1710-w41-trial"
+      ],
+      "detail": "2026-11-21",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（メガ盛りビンゴ大会／ふわふわタイムトライアル）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1710-w41-mega:evt-1710-w41-trial:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1710-w41-mega",
+        "evt-1710-w41-trial"
+      ],
+      "detail": "2026-11-22",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（メガ盛りビンゴ大会／ふわふわタイムトライアル）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1710-w41-mega:evt-1710-w41-trial:2026-11-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1710-w41-mega",
+        "evt-1710-w41-trial"
+      ],
+      "detail": "2026-11-23",
+      "reason": "2026-10-27 MEM-EVT-OPS W41 C F1の当該施設公式ページ・画像/PDFを本runで個別確認。同一総合案内URLに掲載された別企画（メガ盛りビンゴ大会／ふわふわタイムトライアル）で、体験内容・番組・会場内位置が異なる。同日開催のためURL一致で検出されるが同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-692-20261028-f3-kimono:evt-692-20261028-f3-mizuhiki:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-692-20261028-f3-kimono",
+        "evt-692-20261028-f3-mizuhiki"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-28施設公式を実取得。着物体験と水引工作は同じ公式案内だが制作内容・時間・申込枠の異なる独立体験。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-700-20261028-f3-exhibitions:evt-700-20261028-f3-rally:2026-09-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-700-20261028-f3-exhibitions",
+        "evt-700-20261028-f3-rally"
+      ],
+      "detail": "2026-09-19",
+      "reason": "2026-10-28松戸市公式と館チラシを実取得。企画展示本体とクイズラリーは同一会期/URLの内容・参加方法が異なる企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-8241-20261028-f3-sanrio2:evt-8244-202611-f3-sanrio:evt-w43f1-8237-sanrio:2026-10-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-8241-20261028-f3-sanrio2",
+        "evt-8244-202611-f3-sanrio",
+        "evt-w43f1-8237-sanrio"
+      ],
+      "detail": "2026-10-22",
+      "reason": "2026-11-01 本Missionの新規取得で確認。共通キャンペーン公式URLを使う別の実店舗（各facility_idが異なる）。今回対象店舗の店舗別告知・画像と企画公式の参加店舗を確認した。施設・会場が異なる同一キャンペーンの掲載であり同一会場イベントの重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-8239-202611-f3-niji:evt-8241-20261028-f3-nijisanji4:evt-8244-202611-f3-niji:evt-8245-202611-f3-niji:evt-f6-8247-nijisanji:evt-w43f1-8237-nijisanji:2026-11-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-8239-202611-f3-niji",
+        "evt-8241-20261028-f3-nijisanji4",
+        "evt-8244-202611-f3-niji",
+        "evt-8245-202611-f3-niji",
+        "evt-f6-8247-nijisanji",
+        "evt-w43f1-8237-nijisanji"
+      ],
+      "detail": "2026-11-12",
+      "reason": "2026-11-01 本Missionの新規取得で確認。共通キャンペーン公式URLを使う別の実店舗（各facility_idが異なる）。今回対象店舗の店舗別告知・画像と企画公式の参加店舗を確認した。施設・会場が異なる同一キャンペーンの掲載であり同一会場イベントの重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f6-793-eclipse-kids:evt-f6-793-probe-nov:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f6-793-eclipse-kids",
+        "evt-f6-793-probe-nov"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-28本Missionで川崎市自然館公式を実取得。一般向け探査機番組（12時/15時・45分）と子ども向け日食月食番組（13時30分・35分）は内容/投影枠の異なる番組。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f6-866-rose-cream:evt-f6-866-rose-mist:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f6-866-rose-cream",
+        "evt-f6-866-rose-mist"
+      ],
+      "detail": "2026-11-14",
+      "reason": "2026-10-28本Missionで小田原フラワーガーデン公式とチラシを実取得・確認。同じ特集URLだが、ROSEクリーム作り・ROSEミスト作りは内容・時刻・料金/定員の異なる独立企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f6-866-rose-bath:evt-f6-866-rose-potpourri:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f6-866-rose-bath",
+        "evt-f6-866-rose-potpourri"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-10-28本Missionで小田原フラワーガーデン公式とチラシを実取得・確認。同じ特集URLだが、ROSEバスボム作り・モイストポプリ作りは内容・時刻・料金/定員の異なる独立企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f6-866-rose-bath:evt-f6-866-rose-frame:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f6-866-rose-bath",
+        "evt-f6-866-rose-frame"
+      ],
+      "detail": "2026-11-15",
+      "reason": "2026-10-28本Missionで小田原フラワーガーデン公式とチラシを実取得・確認。同じ特集URLだが、ROSEバスボム作り・Roseフレーム作りは内容・時刻・料金/定員の異なる独立企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-f6-866-rose-guide:evt-f6-866-rose-wax:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-f6-866-rose-guide",
+        "evt-f6-866-rose-wax"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-10-28本Missionで小田原フラワーガーデン公式とチラシを実取得・確認。同じ特集URLだが、スタッフによるバラ園ガイドツアー・ROSEワックスバー作りは内容・時刻・料金/定員の異なる独立企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-8239-202611-f3-gintama:evt-f6-8247-gintama:2026-10-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-8239-202611-f3-gintama",
+        "evt-f6-8247-gintama"
+      ],
+      "detail": "2026-10-22",
+      "reason": "2026-11-01 本Missionの新規取得で確認。共通キャンペーン公式URLを使う別の実店舗（各facility_idが異なる）。今回対象店舗の店舗別告知・画像と企画公式の参加店舗を確認した。施設・会場が異なる同一キャンペーンの掲載であり同一会場イベントの重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1386-2026-resharpen:evt-1386-2026-sachet:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1386-2026-resharpen",
+        "evt-1386-2026-sachet"
+      ],
+      "detail": "2026-11-28",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：包丁研ぎ直しの実演／かほり袋づくり。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1387-202611-glass:evt-1387-202611-lamp:evt-1387-202611-pottery:evt-1387-202611-weave:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1387-202611-glass",
+        "evt-1387-202611-lamp",
+        "evt-1387-202611-pottery",
+        "evt-1387-202611-weave"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：秋の日曜体験 秋バッグを織ろう！／秋の日曜体験 てびねりの器をつくろう／秋の日曜体験 6角おやすみランプ／秋の日曜体験 吹きガラス体験。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1387-202611-glass:evt-1387-202611-lamp:evt-1387-202611-pottery:evt-1387-202611-weave:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1387-202611-glass",
+        "evt-1387-202611-lamp",
+        "evt-1387-202611-pottery",
+        "evt-1387-202611-weave"
+      ],
+      "detail": "2026-11-15",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：秋の日曜体験 秋バッグを織ろう！／秋の日曜体験 てびねりの器をつくろう／秋の日曜体験 6角おやすみランプ／秋の日曜体験 吹きガラス体験。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1387-202611-glass:evt-1387-202611-lamp:evt-1387-202611-mosaic:evt-1387-202611-pottery:evt-1387-202611-weave:2026-11-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1387-202611-glass",
+        "evt-1387-202611-lamp",
+        "evt-1387-202611-mosaic",
+        "evt-1387-202611-pottery",
+        "evt-1387-202611-weave"
+      ],
+      "detail": "2026-11-29",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：秋の日曜体験 秋バッグを織ろう！／秋の日曜体験 てびねりの器をつくろう／秋の日曜体験 ミクロモザイクのブローチorペンダントトップ／秋の日曜体験 6角おやすみランプ／秋の日曜体験 吹きガラス体験。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1387-202611-bead:evt-1387-202611-glass:evt-1387-202611-pottery:evt-1387-202611-sandblast:evt-1387-202611-silver:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1387-202611-bead",
+        "evt-1387-202611-glass",
+        "evt-1387-202611-pottery",
+        "evt-1387-202611-sandblast",
+        "evt-1387-202611-silver"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：秋の日曜体験 てびねりの器をつくろう／秋の日曜体験 銀の石留リングorペンダント／秋の日曜体験 吹きガラス体験／秋の日曜体験 秋色のとんぼ玉／秋の日曜体験 グラスに模様を彫ろう！。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-1387-202611-glass:evt-1387-202611-pottery:evt-1387-202611-sandblast:evt-1387-202611-silver:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-1387-202611-glass",
+        "evt-1387-202611-pottery",
+        "evt-1387-202611-sandblast",
+        "evt-1387-202611-silver"
+      ],
+      "detail": "2026-11-22",
+      "reason": "2026-10-28 MEM-EVT-OPS W41 C F13の当該施設公式詳細・チラシを本runで新規取得。同じ公式総合案内・同日だが、内容・実施時間・参加条件の異なる別企画：秋の日曜体験 てびねりの器をつくろう／秋の日曜体験 銀の石留リングorペンダント／秋の日曜体験 吹きガラス体験／秋の日曜体験 グラスに模様を彫ろう！。同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-kanagawa-d3-recall-171-2026:evt-kanagawa-d3-recall-194-2026:evt-kanagawa-d3-recall-288-2026:evt-kanagawa-d3-recall-341-2026:evt-kanagawa-d3-recall-342-2026:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-kanagawa-d3-recall-171-2026",
+        "evt-kanagawa-d3-recall-194-2026",
+        "evt-kanagawa-d3-recall-288-2026",
+        "evt-kanagawa-d3-recall-341-2026",
+        "evt-kanagawa-d3-recall-342-2026"
+      ],
+      "detail": "2026-11-07",
+      "reason": "藤野芸術の家の2026年冬限定メニューの共通公式ページ・同一期間。各IDは名称・制作物・料金が明記された別の工作で、同一企画の重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-kanagawa-d3-recall-177-2026:evt-kanagawa-d3-recall-257-2026:evt-kanagawa-d3-recall-289-2026:evt-kanagawa-d3-recall-290-2026:evt-kanagawa-d3-recall-311-2026:evt-kanagawa-d3-recall-380-2026:evt-kanagawa-d3-recall-381-2026:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-kanagawa-d3-recall-177-2026",
+        "evt-kanagawa-d3-recall-257-2026",
+        "evt-kanagawa-d3-recall-289-2026",
+        "evt-kanagawa-d3-recall-290-2026",
+        "evt-kanagawa-d3-recall-311-2026",
+        "evt-kanagawa-d3-recall-380-2026",
+        "evt-kanagawa-d3-recall-381-2026"
+      ],
+      "detail": "2026-11-07",
+      "reason": "藤野芸術の家の2026年冬限定メニューの共通公式ページ・同一期間。各IDは名称・制作物・料金が明記された別の工作で、同一企画の重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-ishikawa-w42d6-kutani-talk:evt-ishikawa-w42d6-kutani-tea:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-ishikawa-w42d6-kutani-talk",
+        "evt-ishikawa-w42d6-kutani-tea"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-29 D-6で錦窯展示館公式特別展を取得。同一ページのギャラリートーク（14:00〜14:50・申込不要）と工芸にしたしむ会（13:30/15:00・各6名電話予約・800円）は内容・参加経路が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-ishikawa-w42d6-kutani-talk:evt-ishikawa-w42d6-kutani-tea:2026-12-06",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-ishikawa-w42d6-kutani-talk",
+        "evt-ishikawa-w42d6-kutani-tea"
+      ],
+      "detail": "2026-12-06",
+      "reason": "2026-10-29 D-6で錦窯展示館公式特別展を取得。同一ページのギャラリートーク（14:00〜14:50・申込不要）と工芸にしたしむ会（13:30/15:00・各6名電話予約・800円）は内容・参加経路が異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-kyoto-w42d7-garasha-armor:evt-kyoto-w42d7-garasha-bonsai:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-kyoto-w42d7-garasha-armor",
+        "evt-kyoto-w42d7-garasha-bonsai"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-10-29ガラシャweek公式日程で識別。神足ふれあい町家の有料甲冑着装（115～175cm・当日空き枠可）と、バンビオ2Fの無料さつき盆栽展示は別会場・別内容。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-osaka-w43d4-kids-baseball:evt-osaka-w43d4-kids-teeball:2026-12-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-osaka-w43d4-kids-baseball",
+        "evt-osaka-w43d4-kids-teeball"
+      ],
+      "detail": "2026-12-20",
+      "reason": "2026-10-30本Missionで大阪市住之江区公式0000662198と運営者公式event/6040を実取得。小学1～3年生のティーボール（住吉商業高校体育館、9:15～11:15）と小学4～6年生の軟式野球（GOSANDO南港野球場、9:00～12:00）は、対象・内容・会場が異なる別企画。共通公式URLによる衝突であり二重掲載ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-w43f1-699-seeds:evt-w43f1-699-wreath:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-w43f1-699-seeds",
+        "evt-w43f1-699-wreath"
+      ],
+      "detail": "2026-11-28",
+      "reason": "2026-10-31 F1で松戸市公式11月講座表を取得。飛ぶタネの植物観察（10:30/13:30）と里山Qのリース工作（13:00/13:55/14:50）は別の講師・内容・実施枠を持つ独立企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-w43f1-8119-enichi:evt-w43f1-8119-totsu:2027-01-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-w43f1-8119-enichi",
+        "evt-w43f1-8119-totsu"
+      ],
+      "detail": "2027-01-26",
+      "reason": "2026-11-01 F1で県立博物館公式年度予定を新規取得。同じ年度案内・同じ開始日だが都々別神社と恵日寺の宝物を扱う別のポイント展示であり、同一展示の二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b1-fix-1446:evt-w43f1-1446-talk:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b1-fix-1446",
+        "evt-w43f1-1446-talk"
+      ],
+      "detail": "2026-11-07",
+      "reason": "2026-11-01 本Missionで神戸須磨シーワールド公式10829を新規取得。鍵井靖章の写真展示（アクアライブ2Fトロピカルライフ、11月7日開始・終了日未掲載）と、同日の抽選制トークイベントは会場・内容・参加条件の異なる別企画。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-839-202611-hawaiian:evt-839-202611-kamishibai:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-839-202611-hawaiian",
+        "evt-839-202611-kamishibai"
+      ],
+      "detail": "2026-11-08",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：里山ココナッツ ハワイアンワークショップ（14:00〜15:00）／紙芝居公演 谷の家（11:00〜11:40）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-202611-asuka:evt-851-202611-ebisu:evt-851-202611-robata:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-202611-asuka",
+        "evt-851-202611-ebisu",
+        "evt-851-202611-robata"
+      ],
+      "detail": "2026-11-15",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：プラネタリウム特別投影「飛鳥・藤原の天文学」（15:30〜16:20）／学芸員が語る相模の家の暮らし「エビス講」（13:15〜13:35、1階相模の家）／ろばたばなし（11月）（15:15〜15:45、1階相模の家）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-202611-genpei:evt-851-202611-geotour:2026-11-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-202611-genpei",
+        "evt-851-202611-geotour"
+      ],
+      "detail": "2026-11-29",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：平塚郷土史入門講座「源平合戦の実像を探る」（10:00〜11:30、講堂）／相模川流域ジオツアー入門 湘南平（9:30〜12:30）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-851-202611-gallery:evt-851-202611-jomon:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-851-202611-gallery",
+        "evt-851-202611-jomon"
+      ],
+      "detail": "2026-11-28",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：秋期特別展 展示解説（11・12月）（各日10:00から50分程度、特別展示室）／記念講演会「縄文土器研究の魅力」（14:00〜15:30、講堂）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-475-2026-linear:evt-475-2026-photo:2026-12-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-475-2026-linear",
+        "evt-475-2026-photo"
+      ],
+      "detail": "2026-12-05",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：くらりかサイエンス教室 リニアモーターをつくろう（10:00〜11:30）／天文宇宙教室 デジカメでの星空撮影（16:30〜18:00）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-522-202611-experiments:evt-522-202611-paper:evt-522-202611-show:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-522-202611-experiments",
+        "evt-522-202611-paper",
+        "evt-522-202611-show"
+      ],
+      "detail": "2026-11-01",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：11月の科学実験・工作体験 音の科学と液晶（実験：平日14:00、土日祝10:00／14:00。工作11:30／15:30）／11月紙工作 SDGsリング飛行機・ひらひらリボン（9:00〜11:15／12:30〜16:30）／ミラクル 11月のサイエンスショー（10:45〜11:15／14:45〜15:15）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-8078-202611-okinawa:evt-8078-202611-sleep:2026-11-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-8078-202611-okinawa",
+        "evt-8078-202611-sleep"
+      ],
+      "detail": "2026-11-23",
+      "reason": "2026-11-01 MEM-EVT-OPS W43 B F2で同施設の公式本文・日程を新規取得して確認。同一公式案内だが、内容・参加枠が異なる独立企画：Star Light Healing 癒しの島 沖縄・屋久島（13:30〜14:20）／全国一斉熟睡プラ寝たリウム〜地球以外の生命たち〜（12:00〜12:45）。共通URLによる衝突であり同一イベントの二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-247-202611-f3-dino:evt-247-202611-f3-voyager-film:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-247-202611-f3-dino",
+        "evt-247-202611-f3-voyager-film"
+      ],
+      "detail": "2026-11-03",
+      "reason": "2026-11-01 本Missionの新規取得で確認。11/3の恐竜新世界(11:50)とVOYAGER映画(14:30)は同じ公式当日番組表に掲載された別映像・別投影回であり重複ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b1-434:evt-hold-b1-435:2026-10-17",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b1-434",
+        "evt-hold-b1-435"
+      ],
+      "detail": "2026-10-17",
+      "reason": "2026-11-01 本Missionで徳島県観光公式記事と勝浦町観光公式案内を新規取得。同じ期間を紹介する共通記事だが、松下園（沼江萩の谷75）と○青園（沼江大屋敷39）は別の農園・別住所・別営業時間であり、同一会場の二重登録ではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-019:evt-hold-b2-020:2027-01-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-019",
+        "evt-hold-b2-020"
+      ],
+      "detail": "2027-01-01",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：天守閣初登閣1月1日（和歌山城天守閣）；新春つれもて歩こう走ろう会1月1日（和歌山城砂の丸広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-099:evt-hold-b2-100:evt-hold-b2-101:evt-hold-b2-102:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-099",
+        "evt-hold-b2-100",
+        "evt-hold-b2-101",
+        "evt-hold-b2-102"
+      ],
+      "detail": "2026-11-21",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：忍者手裏剣チャレンジ11月21日（和歌山城公園）；きらめくシャボン玉SHOW11月21日（和歌山城公園）；お堀クルーズ11月21日（和歌山城公園）；キッチンカーマルシェ11月21日（和歌山城公園）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-169:evt-hold-b2-170:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-169",
+        "evt-hold-b2-170"
+      ],
+      "detail": "2026-11-14",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：令和８年度熊野学パネル展　花の正倉院　ギャラリートーク（新宮市文化複合施設 丹鶴ホール 2階）；口熊野かみとんだウォーク＆つえ作り体験（稲葉根王子跡 駐車場（集合））。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-174:evt-hold-b2-175:2026-11-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-174",
+        "evt-hold-b2-175"
+      ],
+      "detail": "2026-11-29",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：市民スポーツレクリエーション祭 熊野古道ウォーク（和歌山県世界遺産センター（集合））；熊野古道紀伊路ウォーキングツアー　御坊・印南コース（JR御坊駅（集合）〜JR切目駅（解散））。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-178:evt-hold-b2-180:2026-12-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-178",
+        "evt-hold-b2-180"
+      ],
+      "detail": "2026-12-19",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：熊野古道紀伊路ウォーキングツアー　海からの熊野古道コース（JR御坊駅（集合）〜道成寺（解散））；大日山周遊ルートウォーク（世界遺産 熊野本宮館（集合・解散））。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-183:evt-hold-b2-184:evt-hold-b2-185:evt-hold-b2-186:evt-hold-b2-187:2026-12-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-183",
+        "evt-hold-b2-184",
+        "evt-hold-b2-185",
+        "evt-hold-b2-186",
+        "evt-hold-b2-187"
+      ],
+      "detail": "2026-12-03",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：わかやまオープンファクトリー 原田織物（原田織物株式会社（橋本市高野口町名古曽821））；わかやまオープンファクトリー 寿精密（株式会社寿精密（かつらぎ町東渋田651-23））；わかやまオープンファクトリー ワコン（ワコン株式会社（紀の川市中井阪361））；わかやまオープンファクトリー 阪和電子工業（阪和電子工業株式会社（和歌山市大垣内689-3））；わかやまオープンファクトリー インテリックス（株式会社インテリックス（和歌山市里174-1））。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-206:evt-hold-b2-207:evt-hold-b2-208:2026-10-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-206",
+        "evt-hold-b2-207",
+        "evt-hold-b2-208"
+      ],
+      "detail": "2026-10-31",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：Orange Soul Connection ゴスペルグループ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；大道芸人ひろと [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-206:evt-hold-b2-220:evt-hold-b2-255:evt-hold-b2-256:2026-12-19",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-206",
+        "evt-hold-b2-220",
+        "evt-hold-b2-255",
+        "evt-hold-b2-256"
+      ],
+      "detail": "2026-12-19",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：Orange Soul Connection ゴスペルグループ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ソースケ シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；東海南中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；海南中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-207:evt-hold-b2-234:evt-hold-b2-235:2026-11-22",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-207",
+        "evt-hold-b2-234",
+        "evt-hold-b2-235"
+      ],
+      "detail": "2026-11-22",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；RIZZ & BIRZ 合唱団 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；パフォーマーささまん [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-207:evt-hold-b2-208:evt-hold-b2-239:evt-hold-b2-240:evt-hold-b2-241:2026-11-28",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-207",
+        "evt-hold-b2-208",
+        "evt-hold-b2-239",
+        "evt-hold-b2-240",
+        "evt-hold-b2-241"
+      ],
+      "detail": "2026-11-28",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；大道芸人ひろと [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）；西和中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；和歌山高校総合音楽部 軽音楽班・チア班 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ランタンフェス（和歌山マリーナシティ フェスタ・ルーチェ会場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-207:evt-hold-b2-241:evt-hold-b2-250:evt-hold-b2-251:2026-12-12",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-207",
+        "evt-hold-b2-241",
+        "evt-hold-b2-250",
+        "evt-hold-b2-251"
+      ],
+      "detail": "2026-12-12",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；ランタンフェス（和歌山マリーナシティ フェスタ・ルーチェ会場）；県立和歌山商業高等学校 バトン部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；海南高校軽音部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-207:evt-hold-b2-241:evt-hold-b2-260:evt-hold-b2-261:2026-12-25",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-207",
+        "evt-hold-b2-241",
+        "evt-hold-b2-260",
+        "evt-hold-b2-261"
+      ],
+      "detail": "2026-12-25",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；ランタンフェス（和歌山マリーナシティ フェスタ・ルーチェ会場）；矢倉　愛 ソプラノシンガー [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；kumi×Yuhki ボーカルユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-207:evt-hold-b2-217:evt-hold-b2-261:2026-12-26",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-207",
+        "evt-hold-b2-217",
+        "evt-hold-b2-261"
+      ],
+      "detail": "2026-12-26",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ドローンショー（和歌山マリーナシティ フェスタ・ルーチェ会場）；singer SAYAKA シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；kumi×Yuhki ボーカルユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-209:evt-hold-b2-210:evt-hold-b2-211:2026-11-01",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-209",
+        "evt-hold-b2-210",
+        "evt-hold-b2-211"
+      ],
+      "detail": "2026-11-01",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：小久保愛 シンガー [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；こてつブラス 金管アンサンブル [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ちゃい [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-211:evt-hold-b2-212:evt-hold-b2-213:evt-hold-b2-214:2026-11-03",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-211",
+        "evt-hold-b2-212",
+        "evt-hold-b2-213",
+        "evt-hold-b2-214"
+      ],
+      "detail": "2026-11-03",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ちゃい [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）；PROGRESS×チア☆コパン ダンスチーム [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；和Cappellers アカペラグループ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；めぐり屋 アコースティックユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-215:evt-hold-b2-216:evt-hold-b2-217:evt-hold-b2-218:2026-11-07",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-215",
+        "evt-hold-b2-216",
+        "evt-hold-b2-217",
+        "evt-hold-b2-218"
+      ],
+      "detail": "2026-11-07",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：海南高校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；Himika ソプラノシンガー [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；singer SAYAKA シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；Performer Shunya [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-217:evt-hold-b2-223:evt-hold-b2-265:evt-hold-b2-266:2026-12-31",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-217",
+        "evt-hold-b2-223",
+        "evt-hold-b2-265",
+        "evt-hold-b2-266"
+      ],
+      "detail": "2026-12-31",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：singer SAYAKA シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；内川樺月 シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；mic-alone・井野利治 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；内川樺月・井野利治・singer SAYAKA [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-218:evt-hold-b2-219:evt-hold-b2-220:2026-11-08",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-218",
+        "evt-hold-b2-219",
+        "evt-hold-b2-220"
+      ],
+      "detail": "2026-11-08",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：Performer Shunya [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）；THE\"D\"SCHOOL ダンスチーム [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ソースケ シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-221:evt-hold-b2-222:evt-hold-b2-223:evt-hold-b2-224:evt-hold-b2-225:2026-11-14",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-221",
+        "evt-hold-b2-222",
+        "evt-hold-b2-223",
+        "evt-hold-b2-224",
+        "evt-hold-b2-225"
+      ],
+      "detail": "2026-11-14",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：紀の川中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；SWCサンディーズ 子供・大人のチアチーム [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；内川樺月 シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；オルケスタ・デ・タスケルオ ビッグバンド [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；大道芸人星丸 [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-226:evt-hold-b2-227:evt-hold-b2-228:2026-11-15",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-226",
+        "evt-hold-b2-227",
+        "evt-hold-b2-228"
+      ],
+      "detail": "2026-11-15",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：パピリオン フォルクローレバンド [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；円想 アコースティックユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；LEO [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-228:evt-hold-b2-242:2026-11-29",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-228",
+        "evt-hold-b2-242"
+      ],
+      "detail": "2026-11-29",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：LEO [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）；JET TONES ポップスバンド [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-229:evt-hold-b2-230:evt-hold-b2-231:evt-hold-b2-232:evt-hold-b2-233:2026-11-21",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-229",
+        "evt-hold-b2-230",
+        "evt-hold-b2-231",
+        "evt-hold-b2-232",
+        "evt-hold-b2-233"
+      ],
+      "detail": "2026-11-21",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：海南第三中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；Spielen Wind Orchestra 三中OB吹奏楽 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；Motoko with K アコースティックユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；浦部陽介 シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；Ren [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-235:evt-hold-b2-236:evt-hold-b2-237:evt-hold-b2-238:2026-11-23",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-235",
+        "evt-hold-b2-236",
+        "evt-hold-b2-237",
+        "evt-hold-b2-238"
+      ],
+      "detail": "2026-11-23",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：パフォーマーささまん [パフォーマンス広場]（和歌山マリーナシティ パフォーマンス広場）；ミノバディ インストユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；中井優月 シンガー [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；The Meer zee アコースティックユニット [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-243:evt-hold-b2-244:evt-hold-b2-245:evt-hold-b2-246:2026-12-05",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-243",
+        "evt-hold-b2-244",
+        "evt-hold-b2-245",
+        "evt-hold-b2-246"
+      ],
+      "detail": "2026-12-05",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：下津第二中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；フレンズアンサンブル [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；古家学 シンガーソングライター [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；津山理美 シンガー [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-247:evt-hold-b2-248:evt-hold-b2-249:2026-12-06",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-247",
+        "evt-hold-b2-248",
+        "evt-hold-b2-249"
+      ],
+      "detail": "2026-12-06",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：ダンスシャワーギャザリング クラシックバレエ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；和歌山バトンエンジェルチーム [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；おといろ ミュージカル [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-252:evt-hold-b2-253:evt-hold-b2-254:2026-12-13",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-252",
+        "evt-hold-b2-253",
+        "evt-hold-b2-254"
+      ],
+      "detail": "2026-12-13",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：Bijou Dance Arts ダンス [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ショークアンサンブル 吹奏楽 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；NDC ダンスグループ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-257:evt-hold-b2-258:evt-hold-b2-259:2026-12-20",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-257",
+        "evt-hold-b2-258",
+        "evt-hold-b2-259"
+      ],
+      "detail": "2026-12-20",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：智辯学園和歌山小学校 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ワナビースターズ 子供ミュージカル [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；和歌山コンチネンタルファミリー ゴスペルグループ [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b2-262:evt-hold-b2-263:evt-hold-b2-264:2026-12-27",
+      "rule": "base.official_url_date_collision",
+      "event_ids": [
+        "evt-hold-b2-262",
+        "evt-hold-b2-263",
+        "evt-hold-b2-264"
+      ],
+      "detail": "2026-12-27",
+      "reason": "本Missionで公式日程を再取得。同一公式ページ・同じ開催日だが、次の別企画／出演者／会場として個別に公表されている：楠見中学校 吹奏楽部 [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；ふうか ポップスバンド [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）；フェリーチェ金管 アンサンブル [ツリー前ステージ]（和歌山マリーナシティ ツリー前ステージ）。同一の実イベントを二重登録したものではない。"
+    },
+    {
+      "fingerprint": "base.venue_title_date_duplicate:evt-944-w38-program-265833:evt-944-w38-program-265834:2026-11-28",
+      "rule": "base.venue_title_date_duplicate",
+      "event_ids": [
+        "evt-944-w38-program-265833",
+        "evt-944-w38-program-265834"
+      ],
+      "detail": "2026-11-28",
+      "reason": "同一プログラム名だが対象年齢(1歳児／2～3歳児)と時間帯が異なる別回。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-miyazaki-001:evt-summer-2026-miyazaki-002:2026-07-18",
+      "rule": "summer.official_url_date_collision",
+      "event_ids": [
+        "evt-summer-2026-miyazaki-001",
+        "evt-summer-2026-miyazaki-002"
+      ],
+      "detail": "2026-07-18",
+      "reason": "県観光特集の共通URLを使う、会場が異なる2つの祭り。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-shimane-006:evt-summer-2026-shimane-007:2026-08-08",
+      "rule": "summer.official_url_date_collision",
+      "event_ids": [
+        "evt-summer-2026-shimane-006",
+        "evt-summer-2026-shimane-007"
+      ],
+      "detail": "2026-08-08",
+      "reason": "県観光特集の共通URLを使う、別市・別会場の祭り。"
+    },
+    {
+      "fingerprint": "summer.official_url_date_collision:evt-summer-2026-shimane-008:evt-summer-2026-shimane-009:2026-08-29",
+      "rule": "summer.official_url_date_collision",
+      "event_ids": [
+        "evt-summer-2026-shimane-008",
+        "evt-summer-2026-shimane-009"
+      ],
+      "detail": "2026-08-29",
+      "reason": "県観光特集の共通URLを使う、別市町・別会場の祭り。"
+    }
+  ],
+  "existing_violations": [],
+  "unbaselined_violations": [],
+  "stale_approved_exceptions": [],
+  "stale_existing_violations": []
+}
