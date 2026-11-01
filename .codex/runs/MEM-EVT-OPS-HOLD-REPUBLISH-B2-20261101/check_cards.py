@@ -1,5 +1,5 @@
 """Read-only browser verification of all affected event pages and added cards."""
-import argparse, datetime, json, pathlib, re
+import argparse, datetime, json, os, pathlib, re
 from playwright.sync_api import sync_playwright
 
 parser=argparse.ArgumentParser()
@@ -13,7 +13,7 @@ added={e['id']:e for e in events if e['id'].startswith('evt-hold-b2-')}
 def norm(s): return re.sub(r'\s+',' ',s).strip()
 result={'checked_at':datetime.datetime.now(datetime.timezone.utc).isoformat(),'base_url':args.base_url,'viewports':[],'page_errors':[],'console_errors':[],'failures':[]}
 with sync_playwright() as p:
-    browser=p.chromium.launch(headless=True)
+    browser=p.chromium.launch(headless=True, executable_path=os.environ.get('MEMORIPS_BROWSER_EXECUTABLE'))
     for width in [1280,375]:
         context=browser.new_context(viewport={'width':width,'height':900},timezone_id='Asia/Tokyo')
         page=context.new_page()
