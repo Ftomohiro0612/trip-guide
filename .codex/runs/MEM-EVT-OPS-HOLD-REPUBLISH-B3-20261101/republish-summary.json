@@ -2,31 +2,31 @@
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B3-20261101",
   "executed_in_this_mission": true,
   "prior_run_numbers_reused_as_execution": false,
-  "executed_at": "2026-11-01T01:50:35.029830+00:00",
+  "executed_at": "2026-11-01T02:34:13.140581+00:00",
   "evidence_process_started_at": "2026-11-01T00:51:54.580725+00:00",
   "baseline": "31de5d6fceba60b2f4e4c8d7b6d116b518401891",
-  "status": "IN_PROGRESS",
+  "status": "VALIDATED",
   "aggregate": {
-    "total": 500,
-    "added": 319,
-    "duplicate": 30,
+    "total": 519,
+    "added": 330,
+    "duplicate": 35,
     "past": 22,
-    "still_hold": 102,
+    "still_hold": 105,
     "not_event": 27,
-    "events_added": 321,
+    "events_added": 333,
     "events_changed_by_bounded_fixes": 0,
     "metadata_total_events_corrected": true
   },
   "per_region": {
     "hyogo": {
       "still_hold": 16,
-      "added": 121,
-      "duplicate": 10,
+      "added": 120,
+      "duplicate": 11,
       "not_event": 1
     },
     "saitama": {
-      "added": 79,
-      "still_hold": 25,
+      "added": 81,
+      "still_hold": 23,
       "duplicate": 7,
       "not_event": 20
     },
@@ -38,10 +38,10 @@
       "duplicate": 6
     },
     "yamagata": {
-      "added": 48,
-      "still_hold": 26,
+      "added": 58,
+      "still_hold": 31,
       "past": 15,
-      "duplicate": 7,
+      "duplicate": 11,
       "not_event": 1
     }
   },
@@ -1421,8 +1421,8 @@
       "index": 61,
       "region": "hyogo",
       "title": "第46回兵庫県児童生徒彫塑展",
-      "disposition": "added",
-      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "disposition": "duplicate",
+      "reason": "会場公式を再取得し11/28〜29・北館4階特別展示室・公式URLが既存evt-f2-1450-1883-20261128と一致。後援一覧の開始表記11/27との差を記録し、同じ展覧会を二重登録しない。",
       "reason_code": null,
       "sources_checked": [
         {
@@ -1431,10 +1431,16 @@
           "http_status": 200,
           "checked_at": "2026-11-01T00:58:49.403865+00:00",
           "sha256": "0ebb04d31eb49f414f007ce0d66ab7b980505899ee52bf1827b9a9c7d9b9591c"
+        },
+        {
+          "url": "https://www.kobe-kagakukan.jp/event/article/1883",
+          "final_url": "https://www.kobe-kagakukan.jp/event/article/1883",
+          "http_status": 200,
+          "checked_at": "2026-11-01T02:00:06.583191+00:00",
+          "sha256": "37f6bc62daee3d715c90634e8001d188773d7b06e5886c983b69748f7e5bdf11"
         }
       ],
-      "added_event_id": "evt-hold-b3-061",
-      "participability": "通常参加可能"
+      "matched_event_id": "evt-f2-1450-1883-20261128"
     },
     {
       "index": 62,
@@ -5655,9 +5661,9 @@
       "index": 254,
       "region": "saitama",
       "title": "パークゴルフ大会　開催日のお知らせ",
-      "disposition": "still_hold",
-      "reason": "公式本文は9/17〜3/31を開催日とするが添付の大会日程は9/15、10/20、12/15等で、どの実開催日を指すかが本文と一致しない。年間一覧の日付を開始日に流用しない。",
-      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
       "sources_checked": [
         {
           "url": "https://www.parks.or.jp/yoshimi/event/009/009312.html",
@@ -5673,7 +5679,9 @@
           "checked_at": "2026-11-01T01:26:50.861051+00:00",
           "sha256": "75cd8a16089b2bc06cfe3fcdb5a122ef2483aa2203a089f909ff3bd5a427c7fc"
         }
-      ]
+      ],
+      "added_event_id": "evt-hold-b3-254",
+      "participability": "条件付き参加可能"
     },
     {
       "index": 255,
@@ -5750,9 +5758,9 @@
       "index": 258,
       "region": "saitama",
       "title": "プレーパークinたかもとヘルスパーク",
-      "disposition": "still_hold",
-      "reason": "本文は毎月第2日曜とするが公式チラシは11月のみ11/22（第4週予定）と記載。11月開催日が矛盾し推測で選ばない。",
-      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
       "sources_checked": [
         {
           "url": "https://www.parks.or.jp/koshigaya/event/008/008975.html",
@@ -5768,7 +5776,9 @@
           "checked_at": "2026-11-01T01:26:52.479478+00:00",
           "sha256": "94f61a08b86c58f482c287b50d3c06855982098e81eb9f5d182fa76d35f6e0ca"
         }
-      ]
+      ],
+      "added_event_id": "evt-hold-b3-258",
+      "participability": "通常参加可能"
     },
     {
       "index": 259,
@@ -7684,9 +7694,9 @@
       "index": 336,
       "region": "shimane",
       "title": "石見のフルーツフェア",
-      "disposition": "added",
-      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
-      "reason_code": null,
+      "disposition": "still_hold",
+      "reason": "公式は石見地域の「参加店舗」とするのみで対象店舗の具体名・会場を特定できず、詳細を順次告知予定。日時だけで会場を推定しない。",
+      "reason_code": "VENUE_UNCONFIRMED",
       "sources_checked": [
         {
           "url": "https://iwami-tourism.net/2026/08/05/%ef%bc%bb%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%ef%bc%bd%e5%ad%a3%e7%af%80%e3%82%92%e3%82%81%e3%81%90%e3%82%8b%e3%80%82%e7%9f%b3%e8%a6%8b%e3%82%92%e5%91%b3%e3%82%8f%e3%81%86%e3%80%82%e3%80%8c%e7%9f%b3/",
@@ -7695,9 +7705,7 @@
           "checked_at": "2026-11-01T01:35:38.059948+00:00",
           "sha256": "352c8b801334d1abd491383345e7ecdb8eabb4f776c7097274f5089121cf3e3f"
         }
-      ],
-      "added_event_id": "evt-hold-b3-336",
-      "participability": "通常参加可能"
+      ]
     },
     {
       "index": 337,
@@ -8677,9 +8685,9 @@
       "index": 377,
       "region": "shimane",
       "title": "石見神楽 in 玉造温泉",
-      "disposition": "still_hold",
-      "reason": "主催者公式で一般販売は12月中旬頃よりと明記。現在は11月1日で通常販売未開始。電話予約の受付開始も確認できないため開始後再確認。",
-      "reason_code": "APPLICATION_NOT_YET_OPEN",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
       "sources_checked": [
         {
           "url": "https://www.walkerplus.com/event/ar0832e599264/",
@@ -8716,7 +8724,9 @@
           "checked_at": "2026-11-01T01:42:39.214899+00:00",
           "sha256": "40238a423eb7c3bb3f4d78bac2cb8fc2e263460d046f76dc86e7dffd546c5bcc"
         }
-      ]
+      ],
+      "added_event_id": "evt-hold-b3-377",
+      "participability": "条件付き参加可能"
     },
     {
       "index": 378,
@@ -9478,10 +9488,35 @@
           "http_status": 200,
           "checked_at": "2026-11-01T01:44:19.221919+00:00",
           "sha256": "eacbe8fe06f32a917c697d7405c46decc908af7527c0732e5ffcc4b79cfbddcc"
+        },
+        {
+          "url": "https://www.yidff.jp/news/26/260911.html",
+          "final_url": "https://www.yidff.jp/news/26/260911.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:51:00.898122+00:00",
+          "sha256": "254d6c9b6c590314ec264834860cf7f933e131226b4f51d2c95da05833e50ad1"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:59.136653+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://www.yidff.jp/news/26/260903.html",
+          "final_url": "https://www.yidff.jp/news/26/260903.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:17.799103+00:00",
+          "sha256": "4b5533bd8cb85b7348166c6c2cd4ff141a0d18b0a29f4a3e79a8eb2d23c5676c"
         }
       ],
       "added_event_id": "evt-hold-b3-407",
-      "participability": "条件付き参加可能"
+      "participability": "通常参加可能",
+      "added_event_ids": [
+        "evt-hold-b3-407",
+        "evt-hold-b3-407-2"
+      ]
     },
     {
       "index": 408,
@@ -9861,9 +9896,9 @@
       "index": 428,
       "region": "yamagata",
       "title": "山形フィルハーモニー交響楽団　第65回記念定期演奏会　～千住×籾山/山フィルシリーズVol.9～第1999回トヨタコミュニティコンサート",
-      "disposition": "added",
-      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
-      "reason_code": null,
+      "disposition": "still_hold",
+      "reason": "今回再取得した主催者ページは2026/11/7 20:10終演予定、市の11月公式ラインナップは20:20までと記載。終演時刻が食い違い、どちらも最新変更の明示がない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
       "sources_checked": [
         {
           "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_411.html",
@@ -9871,10 +9906,22 @@
           "http_status": 200,
           "checked_at": "2026-11-01T01:45:45.800661+00:00",
           "sha256": "86f373f4cd087a895e8df4391c478186c7215267fd9bbc3b0da78344b87d56cd"
+        },
+        {
+          "url": "https://yamaphil.github.io/next.html",
+          "final_url": "https://yamaphil.github.io/next.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:16.720606+00:00",
+          "sha256": "b760ba37b205c2694faa0ab1d888329ca0202885c861809f9efd2cea28cab391"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:57.662832+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
         }
-      ],
-      "added_event_id": "evt-hold-b3-428",
-      "participability": "条件付き参加可能"
+      ]
     },
     {
       "index": 429,
@@ -11209,6 +11256,665 @@
       ],
       "added_event_id": "evt-hold-b3-500",
       "participability": "通常参加可能"
+    },
+    {
+      "index": 501,
+      "region": "yamagata",
+      "title": "シシと視点",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:52.826017+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/82.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/82.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:54.441635+00:00",
+          "sha256": "e146318d6655c2c475b20f40c21a50a5aaeb0b96ff12f016d3cadd976725f7f3"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-501",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 502,
+      "region": "yamagata",
+      "title": "こねるダンス部＋砂連尾理",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:53.366963+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/84.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/84.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:54.960298+00:00",
+          "sha256": "e9fba97c209050ce3e719a44932b66c9f89ffa00619b6dfdaff032c4d3829434"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/news/630.html",
+          "final_url": "https://michigei.tuad.ac.jp/news/630.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:59.049436+00:00",
+          "sha256": "478793eff187f82917dc85bbd2885517be847442281c07cdc76646c34fa7f138"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-502",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 503,
+      "region": "yamagata",
+      "title": "戦争の歴史に接触してみる",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:53.907720+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/694.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/694.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:55.362919+00:00",
+          "sha256": "fedf91e58f8075830987bffefdfb2d2acc6ab7beea9966a49acad8b2804f0e61"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-503",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 504,
+      "region": "yamagata",
+      "title": "民話がたり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:54.250226+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/90.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/90.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:55.819612+00:00",
+          "sha256": "16fd0144eb32f48c370cacfa3a6e1ddbc3ab6654994d3e737f1ba43d3e79500c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-504",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 505,
+      "region": "yamagata",
+      "title": "山象のひかり",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:54.646348+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/96.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/96.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:56.177949+00:00",
+          "sha256": "b004646f6fd26420d5056f0129000e4950ad370e19e8b58d7c1ff60a1c35c00a"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-505",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 506,
+      "region": "yamagata",
+      "title": "ドラムサークル",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:54.986074+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/98.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/98.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:56.573066+00:00",
+          "sha256": "6405771ba302476da58516fac6777cbeefde834d4da42b5efc8048b6ea233300"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-506",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 507,
+      "region": "yamagata",
+      "title": "ディレクターズトーク",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:55.335408+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/100.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/100.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:56.994793+00:00",
+          "sha256": "020924f2a9db0ffda9758f24a86aec06cd899f3730c4fabdb4a0870976db0a94"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-507",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 508,
+      "region": "yamagata",
+      "title": "みんなの美術館",
+      "disposition": "still_hold",
+      "reason": "公式の日時は「Webサイトにてお知らせ」／トップは日時未定で、個別開催日を確定できない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:55.791652+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/517.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/517.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:57.498176+00:00",
+          "sha256": "f43c433ce45b2aacf03acb55647672056a1dad3318549262f9c6c100598840b6"
+        }
+      ]
+    },
+    {
+      "index": 509,
+      "region": "yamagata",
+      "title": "辺境という都市",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:56.299724+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/102.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/102.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:58.017989+00:00",
+          "sha256": "fe9b865691eb3f7ffe74e3a8ebdd0c503217ae3fba0490a37b68695cd088db3b"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-509",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 510,
+      "region": "yamagata",
+      "title": "みちくさ ART WALK",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:56.745631+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/event/104.html",
+          "final_url": "https://michigei.tuad.ac.jp/event/104.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:58.586692+00:00",
+          "sha256": "451147b605224324dfd57b497848abfd5e8ece5cae4f94138317266bf44ad2c5"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-510",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 511,
+      "region": "yamagata",
+      "title": "こねる日より",
+      "disposition": "duplicate",
+      "reason": "公式が「こねるダンス部＋砂連尾理」11/8の同一イベント全体・会場と明記。予約制ワークショップ部分を含む502に統合。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://michigei.tuad.ac.jp/",
+          "final_url": "https://michigei.tuad.ac.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:57.265931+00:00",
+          "sha256": "75a5d3e0651231c30780a31a427a0e3152937da72f0db2b0dda7c2451209dc78"
+        },
+        {
+          "url": "https://michigei.tuad.ac.jp/news/630.html",
+          "final_url": "https://michigei.tuad.ac.jp/news/630.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:54:59.049436+00:00",
+          "sha256": "478793eff187f82917dc85bbd2885517be847442281c07cdc76646c34fa7f138"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-502"
+    },
+    {
+      "index": 512,
+      "region": "yamagata",
+      "title": "酒宵ノ市",
+      "disposition": "still_hold",
+      "reason": "公式内容は地酒・ワイン・ウイスキー・ビールの飲酒中心の催し。子ども向けプログラムはなく家族向け参加内容として採用しない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:57.662832+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        }
+      ]
+    },
+    {
+      "index": 513,
+      "region": "yamagata",
+      "title": "劇団山形 アラカン！",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:58.340836+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/index.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:32.459188+00:00",
+          "sha256": "0396b66947421ebb3bbcb71333ec7c83015012caa95e7ae1abb0dd6c950330af"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-513",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 514,
+      "region": "yamagata",
+      "title": "山形大学医学部室内合奏団第3回",
+      "disposition": "duplicate",
+      "reason": "再取得した個別公式ページの2026/11/21・遊学館ホール・第3回定期演奏会が433と一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:58.740246+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_410.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/cgi-event-cafe/detail/event_410.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:17.239604+00:00",
+          "sha256": "39e69b176e4c540623c63ace4e4d862c8438db8bcfc5bd1280503b4935792883"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-433"
+    },
+    {
+      "index": 515,
+      "region": "yamagata",
+      "title": "山の恵みの映画たち2026",
+      "disposition": "duplicate",
+      "reason": "公式主催者の2026/11/21〜23・フォーラム山形上映企画を407の独立した第2イベントとして登録済み。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:59.136653+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://www.yidff.jp/news/26/260903.html",
+          "final_url": "https://www.yidff.jp/news/26/260903.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:17.799103+00:00",
+          "sha256": "4b5533bd8cb85b7348166c6c2cd4ff141a0d18b0a29f4a3e79a8eb2d23c5676c"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-407-2"
+    },
+    {
+      "index": 516,
+      "region": "yamagata",
+      "title": "竹の響",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:50:59.566287+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/index.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:32.459188+00:00",
+          "sha256": "0396b66947421ebb3bbcb71333ec7c83015012caa95e7ae1abb0dd6c950330af"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-516",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 517,
+      "region": "yamagata",
+      "title": "横山幸雄ピアノリサイタル",
+      "disposition": "still_hold",
+      "reason": "公式会場ページは未就学児入場不可・乳幼児同伴不可と明記。幼児が同伴参加できない公演。無料キッズルームは別途申込制度。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "final_url": "https://www.city.yamagata-yamagata.lg.jp/bunkasports/geijyutsu/1014237/1019007/1019239.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:51:00.000971+00:00",
+          "sha256": "81567753bdaccddabb821670b51a68445908699f40d8ecfddb63987893132625"
+        },
+        {
+          "url": "https://yamagataterrsa.or.jp/concerts/20261123/",
+          "final_url": "https://yamagataterrsa.or.jp/concerts/20261123/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:55:18.301504+00:00",
+          "sha256": "5faeacf9dfd9538796902024339fa0d7cf0786a760a55129fc53c4cc96241e5f"
+        }
+      ]
+    },
+    {
+      "index": 518,
+      "region": "yamagata",
+      "title": "金曜上映会1/22 小川紳介",
+      "disposition": "still_hold",
+      "reason": "公式本文は1/22（金）とのみ掲載し開催年がない。記事投稿日やURL、曜日から年を推定せず保留。",
+      "reason_code": "START_DATE_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.yidff.jp/news/26/261026.html",
+          "final_url": "https://www.yidff.jp/news/26/261026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:51:00.463675+00:00",
+          "sha256": "258b529646bebdf29d4ab96873c0102fbbb9149abe210ee1c79169f2ae3ea279"
+        }
+      ]
+    },
+    {
+      "index": 519,
+      "region": "yamagata",
+      "title": "金曜上映会11/13 旅・テラキス",
+      "disposition": "duplicate",
+      "reason": "公式URL・11/13・ライブラリー試写室が407と一致する同一の関連金曜上映会。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.yidff.jp/news/26/260911.html",
+          "final_url": "https://www.yidff.jp/news/26/260911.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:51:00.898122+00:00",
+          "sha256": "254d6c9b6c590314ec264834860cf7f933e131226b4f51d2c95da05833e50ad1"
+        }
+      ],
+      "matched_event_id": "evt-hold-b3-407"
     }
+  ],
+  "proposed_validator_exceptions": [
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-513:evt-yamagata-w43d8-women-art:2026-11-20",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：劇団山形 アラカン！（山形市中央公民館ホール）；第38回山形女流美術展（山形県芸文美術館 ギャラリー1）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-513:evt-yamagata-w43d8-folk-performing:2026-11-21",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：劇団山形 アラカン！（山形市中央公民館ホール）；第48回山形市民俗芸能公演会（高瀬コミュニティセンター）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-031:evt-hold-b3-034:2026-11-07",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：琴唱会55周年記念演奏会（菊枝陵純追悼）（神戸文化ホール中ホール）；Lilas Trio　Concert（兵庫県立尼崎青少年創造劇場ピッコロシアター小ホール）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-035:evt-hold-b3-042:2026-11-15",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：芦屋交響楽団　第１０３回定期演奏会（兵庫県立芸術文化センター KOBELCO大ホール）；加西かっさいライブ（加西市健康福祉会館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-036:evt-hold-b3-038:2026-11-23",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：ふれあい文化の祭典2026ひょうご洋舞フェスティバル（兵庫県立芸術文化センター）；目覚めよ　管楽器！～集まれ　元吹奏楽部員～（明石市民会館中ホール）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-039:evt-hold-b3-040:evt-hold-b3-047:evt-hold-b3-048:2026-11-29",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：第23回邦楽コンサート　ゆほびか明石（子午線ホール）；第12回明石オカリナフェスティバル（明石市立西部市民会館ホール）；TAJIMA Music A Live～音楽仲間の手づくりコンサート～（豊岡市民プラザ　ほっとステージ）；LadyBug　50周年記念アコースティックコンサート（三木市立市民活動センター大会議室）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-043:evt-hold-b3-046:2026-11-22",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：第53回日本民謡姫路連合会発表会（第46回民謡コンクール併催）（姫路市立図書館網干分館ホール）；豊岡吹奏楽団 第43回定期演奏会（豊岡市民プラザ「ほっとステージ」）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-054:evt-hold-b3-090:2026-10-31",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：2026県展（兵庫県立美術館）；あさご・全国こども絵画展（あさご芸術の森美術館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-056:evt-hold-b3-057:evt-hold-b3-076:2026-11-06",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：兵庫県婦人手工芸協会 会員創作展（原田の森ギャラリー本館２階　大展示室）；―ふれあい文化の祭典―第38回全国手工芸美展inひょうご（原田の森ギャラリー本館2階　大展示室）；第74回西脇市美術協会会員展（播磨内陸生活文化総合センタードウジアム市民ギャラリー）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-058:evt-hold-b3-086:evt-hold-b3-094:2026-11-18",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：２０２６神戸新世紀秋季展公募（原田の森ギャラリー（兵庫県立美術館王子分館））；２０２６年度　丹波写友会写真展示会（丹波市立植野記念美術館）；三木素真会水墨画展（三木市役所内みっきぃホール）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-062:evt-hold-b3-067:2026-10-22",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：浮世絵の風景画を楽しむ　広重＋北斎　展（芦屋市立美術博物館）；第59回稲美町菊花展（いなみ文化の森　南側駐車場）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-065:evt-hold-b3-089:2026-10-24",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：第98回明石公園菊花展覧会（県立明石公園）；特別展「躍動する作家展」（豊岡市立美術館―伊藤清永記念館―）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-066:evt-hold-b3-074:2026-10-18",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：高砂菊花展覧会（市ノ池公園）；第49回兵庫県連合菊花展覧会（兵庫県立フラワーセンター）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-069:evt-hold-b3-082:evt-hold-b3-093:2026-11-12",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：第2２回手工芸巡回展（加古川総合文化センター）；第45回佐用郡美術展（さよう文化情報センター）；第16回新進作家交流展（兵庫県立三木山森林公園森の風美術館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-091:evt-hold-b3-096:2026-11-22",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：兵庫県彫刻家連盟　創立55周年記念　但馬巡回展（兵庫県立円山川公苑美術館）；三田市ガラス工芸館　第34回受講生作品展（三田市ガラス工芸館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-099:evt-hold-b3-100:2026-11-03",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：JUMP　FESTIVAL in KOBE２０２６（神戸市長田区若松公園内　鉄人広場）；MUSE　WALKING＆FASHION SHOW（神戸酒心舘ホール）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-103:evt-hold-b3-104:evt-hold-b3-120:evt-hold-b3-121:evt-hold-b3-126:2026-11-21",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：神戸・東北・能登をつなぐ　水道筋さんま祭り（青谷川街園及び水道筋ひだまり商店街）；２０２６ひょうご専門学校フェスタ～しごと体験わくわくランド～（デュオ神戸イベントスペース「デュオドーム」）；縁日兵庫にしはりま2026（播磨科学公園都市）；あなたの手から生まれる、ひとつの灯り。―ペットボトルでオリジナルランタンを作ろう（姫路獨協大学　講義棟２０７B教室）；ひょうご五国スポーツキャラバン（丹波会場）（漢方の里総合運動公園）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-108:evt-hold-b3-113:2026-11-07",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：縁日兵庫さんだ2026（兵庫県立有馬富士公園）；第34回大中遺跡まつり（大中遺跡公園、播磨町郷土資料館、兵庫県立考古博物館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-109:evt-hold-b3-116:2026-11-08",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：歯と口の健康フェスタ　西宮２０２６（西宮市北口保健福祉センター）；ひょうご里山フェスタ２０２６（加東市地域交流センター及びその周辺）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-111:evt-hold-b3-118:evt-hold-b3-127:2026-11-22",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：アートパフォーマンスフェスタ　イン　あかし（あかし市民広場（パピオスあかし２階））；西脇市文芸まつり（西脇市総合市民センター）；アグリフェスタinおおじ（春日総合運動公園）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-112:evt-hold-b3-115:evt-hold-b3-124:2026-11-01",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：第40回「防災のつどい」記念大会（SHOWAグループ市民会館）；KATOつくるひとフェスティバル２０２６（加東市内各所（やしろ国際学習塾ほか））；丹波ＧＯＧＯフェスタ２０２６（兵庫県立丹波の森公苑）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-117:evt-hold-b3-128:evt-hold-b3-129:2026-11-15",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：にしわき産業フェスタ２０２６（西脇市市民交流施設オリナス駐車場およびオリナスホール）；YABUフードEXPO２０２６（やぶ市民交流広場および周辺）；あさご芸術の森アートマーケット（あさご芸術の森美術館）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-123:evt-hold-b3-132:2026-10-31",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：アート・クラフトフェスティバルinたんば２０２６（兵庫県立丹波年輪の里）；キッズフェスタin三田有馬富士公園～秋のおでかけレジャーランド（有馬富士公園）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-363:evt-hold-b3-367:2026-11-25",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：出雲大社 神等去出祭11/25（出雲大社拝殿）；万九千神社 神在祭・湯立神事（万九千神社（出雲市斐川町））。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-364:evt-hold-b3-365:2026-11-19",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：出雲大社 夜神楽祈祷11/19～24（出雲大社神楽殿）；日御碕神社 神在祭・龍神祭（日御碕神社（出雲市大社町日御碕））。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-395:evt-hold-b3-396:2026-12-08",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：石本正の視点vol.3 久遠の女性美（浜田市立石正美術館 石本正記念展示室）；光の回廊2026（浜田市立石正美術館 ギャラリー）。"
+    },
+    {
+      "fingerprint": "base.official_url_date_collision:evt-hold-b3-496:evt-hold-b3-497:evt-hold-b3-498:2026-11-05",
+      "reason": "本Missionで公式一次ページを再取得。同じ公式一覧URL・同じ日付に掲載される次の独立した企画／会場であり、同一イベントの二重登録ではない：みちのおくの芸術祭 美術館会場（山形美術館2・3階）；みちのおくの芸術祭 THE LOCAL（THE LOCAL TUAD ART GALLERY（Q1 1-G））；みちのおくの芸術祭 famAA（famAA（Q1 1-H））。"
+    }
+  ],
+  "final_reconciliation": {
+    "corrected_candidate_indices": [
+      254,
+      258,
+      336,
+      377,
+      407,
+      428,
+      61
+    ],
+    "reason": "個別日程表の明示的な例外・電話予約経路・会場未確定・終演時刻不一致・上映会の分離を最終照合で反映。progressは最終判定に整合。"
+  },
+  "not_stated_phrase_counts": {
+    "雨天・荒天時の扱いは公式に記載なし。主催者・公式サイトで要確認": 296,
+    "開催時刻は公式に記載なし": 138,
+    "料金は公式に記載なし": 184,
+    "申込・予約の条件は公式に記載なし": 213,
+    "対象年齢・同伴条件は公式に記載なし": 253,
+    "終了日未定(公式未掲載)": 0,
+    "交通規制・アクセス案内・最新変更告知は当該公式一覧行に記載なし": 96
+  },
+  "audit": {
+    "all_519_fetched_this_process": true,
+    "all_added_urls_in_sources_checked": true,
+    "baseline_event_objects_modified": 0,
+    "baseline_total_events": 10564,
+    "final_total_events": 10897,
+    "process_start_check": true
+  },
+  "added_event_records_by_region": {
+    "hyogo": 120,
+    "saitama": 83,
+    "shimane": 71,
+    "yamagata": 59
+  },
+  "validation": {
+    "events_validator_errors": 0,
+    "regular_events_validator_errors": 0,
+    "event_tests": {
+      "total": 84,
+      "passed": 81,
+      "failed": 3,
+      "all_failures_reproduced_on_exact_baseline": true,
+      "baseline": "31de5d6fceba60b2f4e4c8d7b6d116b518401891",
+      "failure_names": [
+        "current canon at fixed 2026-07-21 date remains deterministic and clean",
+        "Summer Hub fixed-date list paginates all types together in groups of 20",
+        "Summer event anchors resolve later pages and ignore invalid hashes safely"
+      ]
+    },
+    "cf_build": {
+      "exit_code": 0,
+      "static_pages": 6181,
+      "runtime_events_artifact_equals_source": true
+    },
+    "preview": {
+      "viewports": [
+        1280,
+        375
+      ],
+      "pagination_pages_per_viewport": 46,
+      "visible_cards_per_viewport": 890,
+      "visible_counts_by_region": {
+        "hyogo": 277,
+        "saitama": 371,
+        "shimane": 131,
+        "yamagata": 111
+      },
+      "all_333_added_cards_exact_required_fields_and_official_links": true,
+      "missing": 0,
+      "mismatched": 0,
+      "ended_cards": 0,
+      "browser_errors": 0,
+      "mobile_overflow": 0
+    },
+    "events_data_sha256": "d00c67e10ba364dd4ce6c8222c0c544653ff00b1fcd0825844db6af3ca8d4116"
+  },
+  "deviations": [
+    "Final audit reconciled previously checkpointed candidate decisions in progress.jsonl; the final file retains one record per index and is consistent with this summary.",
+    "A browser screenshot capture timed out and an oversized UI batch reset the browser session; desktop and mobile full checks were repeated to completion in a fresh tab. No screenshot claim is made."
   ]
 }
