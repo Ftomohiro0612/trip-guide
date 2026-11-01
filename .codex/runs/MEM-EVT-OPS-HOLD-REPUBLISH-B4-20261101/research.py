@@ -48,6 +48,8 @@ def fetch(index, url):
         s = BeautifulSoup(r.text, 'html.parser')
         for e in s(['script','style','nav','header','footer']): e.decompose()
         main = s.select_one('#tmp_contents, #contents, main, article, #main') or s
+        if len(main.get_text(' ', strip=True)) < 300:
+            main = s
         text = main.get_text(' ', strip=True)
         if 'ここから本文です。' in text: text = text.split('ここから本文です。',1)[1]
         if 'pref.tochigi.lg.jp' in r.url and 'お問い合わせ' in text: text = text.split('お問い合わせ',1)[0]

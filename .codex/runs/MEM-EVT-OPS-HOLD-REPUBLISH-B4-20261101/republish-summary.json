@@ -1,15 +1,15 @@
 {
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B4-20261101",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-01T03:20:51.245230+00:00",
+  "executed_at": "2026-11-01T03:38:47.223731+00:00",
   "aggregate": {
-    "total": 200,
-    "added": 133,
-    "duplicate": 38,
-    "past": 2,
-    "still_hold": 27,
+    "total": 300,
+    "added": 190,
+    "duplicate": 51,
+    "past": 12,
+    "still_hold": 47,
     "not_event": 0,
-    "added_events": 168,
+    "added_events": 238,
     "bounded_fixes_events_changed": 0
   },
   "candidates": [
@@ -3291,8 +3291,8 @@
       "index": 125,
       "region": "kochi",
       "title": "デジタルdeスタンプラリー「カレコレ」",
-      "disposition": "added",
-      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "disposition": "still_hold",
+      "reason": "公式カルコレは緊急メンテナンス中。デジタル参加経路が閉鎖され再開予定不明。初回の観光案内より最新の参加ページを優先して追加案を撤回。",
       "sources_checked": [
         {
           "url": "https://kochi-tabi.jp/search_event.html?id=18507",
@@ -3307,13 +3307,30 @@
           "http_status": 200,
           "checked_at": "2026-11-01T03:10:11.621706+00:00",
           "sha256": "5b8c7d03fbbe4ab06c2e2fb166c0b45730181e72b92810d70d7591f2aea39929"
+        },
+        {
+          "url": "https://iko-yo.net/event_lites/detail/22364",
+          "final_url": "https://iko-yo.net/event_lites/detail/22364",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:40.237984+00:00",
+          "sha256": "50df7fb112284e4c270838ea09e9f984159ff2e2029b5748820f865c0c4a91ad"
+        },
+        {
+          "url": "https://culture-collection.jp/",
+          "final_url": "https://culture-collection.jp/",
+          "http_status": null,
+          "checked_at": "2026-11-01T03:22:17.219738+00:00",
+          "sha256": null
+        },
+        {
+          "url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
+          "final_url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:05.710506+00:00",
+          "sha256": "5b8c7d03fbbe4ab06c2e2fb166c0b45730181e72b92810d70d7591f2aea39929"
         }
       ],
-      "added_event_id": "evt-hold-b4-125",
-      "added_event_ids": [
-        "evt-hold-b4-125"
-      ],
-      "participability": "通常参加可能"
+      "reason_code": "PARTICIPATION_CLOSED"
     },
     {
       "index": 126,
@@ -5035,6 +5052,2680 @@
       "matched_event_ids": [
         "evt-hold-b4-131"
       ]
+    },
+    {
+      "index": 201,
+      "region": "kochi",
+      "title": "とさこみち とさこいマルシェ だいだい月2回にちょうび開催。 月替わりでさまざまな手作り雑貨が楽しめるマルシェです！ 素敵な手作り雑貨をたっぷりとお楽しみください♪",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/tosakomichi/001896.html",
+          "final_url": "https://tosanosato.jp/event/tosakomichi/001896.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:06.794247+00:00",
+          "sha256": "9da117fdf4c8a438be2ad4e97620da0480e48235c693644a1953af1154dcaf45"
+        },
+        {
+          "url": "https://tosanosato.jp/event/assets_c/2026/08/c26fe58ecc4947fb5d8e939a5f2efab64bb6061a-thumb-2646x1865-3361.jpg",
+          "final_url": "https://tosanosato.jp/event/assets_c/2026/08/c26fe58ecc4947fb5d8e939a5f2efab64bb6061a-thumb-2646x1865-3361.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:56.506139+00:00",
+          "sha256": "b87c670fb2176e5e24b51187cbf0c97687cdb56ce3a56aabfcaa5c0bea7bac21"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-201-1",
+      "added_event_ids": [
+        "evt-hold-b4-201-1",
+        "evt-hold-b4-201-2",
+        "evt-hold-b4-201-3",
+        "evt-hold-b4-201-4"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 202,
+      "region": "kochi",
+      "title": "とさこみち Witchcraft Market 10月4日（日）、11月29日（日）とさこみちにて、 Witchcraft Marketを開催します！ ～魔女のハンドメイドマーケット～ 『ひとの手が作",
+      "disposition": "still_hold",
+      "reason": "公式本文・チラシは10/4・11/29のみで開催年を明示しない。投稿日や画像ファイル名から年を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/tosakomichi/001908.html",
+          "final_url": "https://tosanosato.jp/event/tosakomichi/001908.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:07.255088+00:00",
+          "sha256": "8e3cdc13f499a0c128048906fbdad4773e24390abeb865a47eb95799c0da1be5"
+        },
+        {
+          "url": "https://tosanosato.jp/blog/assets_c/2026/09/71d4d755c0030fa7444d1c1a8e39c59cf564a5bf-thumb-2480x3507-3395.jpg",
+          "final_url": "https://tosanosato.jp/blog/assets_c/2026/09/71d4d755c0030fa7444d1c1a8e39c59cf564a5bf-thumb-2480x3507-3395.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:56.944198+00:00",
+          "sha256": "af3edb9a04216b17fba84058c6c1041c69f7728f9d7644bcb7d57908fc85aaa7"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 203,
+      "region": "kochi",
+      "title": "とさこみち ハートフルフェスタ 11月14日（土）とさこみちとぽけっとぱーくにて、 ハートフルフェスタ～高知県障害者作品展～ を開催します。 絵画、写真、工芸などの作品展示、手芸品、農作物などの作品販",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/tosakomichi/001915.html",
+          "final_url": "https://tosanosato.jp/event/tosakomichi/001915.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:07.600482+00:00",
+          "sha256": "edbb2018e79e756d06bc37f97b781aed335f081e1c12f3ee94d885bc4822fb9e"
+        },
+        {
+          "url": "https://tosanosato.jp/blog/assets_c/2026/10/b7f33eea893ef0a22cdf52459e0ab3ada6523c42-thumb-2480x3507-3410.jpg",
+          "final_url": "https://tosanosato.jp/blog/assets_c/2026/10/b7f33eea893ef0a22cdf52459e0ab3ada6523c42-thumb-2480x3507-3410.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:57.332827+00:00",
+          "sha256": "4ae4f13e2cd5b1100b05d3322210687650af8364fec6f537952823480dc7feb8"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-203",
+      "added_event_ids": [
+        "evt-hold-b4-203"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 204,
+      "region": "kochi",
+      "title": "アグリコレット店内イベントスペース とさのだしフェス第6節 11月14日（土）、15日（日）、アグリコレットにて とさのだしフェス第6節 を開催します。 とさのだし業者が、アグリコレットに集結！ 旨味",
+      "disposition": "duplicate",
+      "reason": "同じとさのさと豊穣祭内の日程・同会場のプログラム。131に内包される。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/event/001923.html",
+          "final_url": "https://tosanosato.jp/event/event/001923.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:07.934199+00:00",
+          "sha256": "1a5c0882c9a480beb8670616842097d8d77110bbb9c3a51d289106b9b4564abe"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-131",
+      "matched_event_ids": [
+        "evt-hold-b4-131"
+      ]
+    },
+    {
+      "index": 205,
+      "region": "kochi",
+      "title": "とさこみち ふるさと・えいもん集マルシェ 11月8日（日）、とさこみちとアグリコレットにて ふるさと・えいもん集マルシェ を開催します。 県内各地の自慢の「えいもん」を持って、集落活動センターが大集合",
+      "disposition": "duplicate",
+      "reason": "同じとさのさと豊穣祭内の日程・同会場のプログラム。131に内包される。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/tosakomichi/001902.html",
+          "final_url": "https://tosanosato.jp/event/tosakomichi/001902.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:08.261785+00:00",
+          "sha256": "38d93e840b5f58273fc03c8c9a340f344a97477c1ae3bd07d3978e32c5528f3f"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-131",
+      "matched_event_ids": [
+        "evt-hold-b4-131"
+      ]
+    },
+    {
+      "index": 206,
+      "region": "kochi",
+      "title": "アグリコレット店内イベントスペース 中芸マルシェ2026 10月31日（土）、11月1日（日）、アグリコレットにて 中芸マルシェ2026 を開催します。 全国コンクール日本一のどぶろく、田野町特産のウ",
+      "disposition": "duplicate",
+      "reason": "同じとさのさと豊穣祭内の日程・同会場のプログラム。131に内包される。",
+      "sources_checked": [
+        {
+          "url": "https://tosanosato.jp/event/event/001919.html",
+          "final_url": "https://tosanosato.jp/event/event/001919.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:08.599530+00:00",
+          "sha256": "019f239b6e8dd8fa1c89914a0ccbc1a81109a3a1c0c8df8e46b5a1d580269639"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-131",
+      "matched_event_ids": [
+        "evt-hold-b4-131"
+      ]
+    },
+    {
+      "index": 207,
+      "region": "kochi",
+      "title": "土佐の豊穣祭2026 inとさのさと",
+      "disposition": "duplicate",
+      "reason": "同じとさのさと豊穣祭内の日程・同会場のプログラム。131に内包される。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e613972/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e613972/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:08.910294+00:00",
+          "sha256": "07e5e1f58757cf06cc70b02a1bf3060156f8435ca5d998ebf4a063ba7dff5b07"
+        },
+        {
+          "url": "https://www.tosa-hojyosai.com/tosanosato.html",
+          "final_url": "https://www.tosa-hojyosai.com/tosanosato.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:57.854006+00:00",
+          "sha256": "05202f3553174338fc7557b119d0792350ab1cd05660349b78795620f37ec60a"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-131",
+      "matched_event_ids": [
+        "evt-hold-b4-131"
+      ]
+    },
+    {
+      "index": 208,
+      "region": "kochi",
+      "title": "土佐の豊穣祭2026 土佐國美味集結(高知市会場)",
+      "disposition": "duplicate",
+      "reason": "同じ11/7～8・中央公園の土佐國美味集結。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e618989/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e618989/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:09.301871+00:00",
+          "sha256": "fb9df1cf775a26edca8b6eaf469a05a4c062f8fcaed28c23d8a8dbd9f69eb27b"
+        },
+        {
+          "url": "https://www.tosa-hojyosai.com/kochi.html",
+          "final_url": "https://www.tosa-hojyosai.com/kochi.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:58.248838+00:00",
+          "sha256": "5db05829fa0d1b97cef42be3486d5bdf625cc0f52028b7a179c06cf85a977818"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-120",
+      "matched_event_ids": [
+        "evt-hold-b4-120"
+      ]
+    },
+    {
+      "index": 209,
+      "region": "kochi",
+      "title": "「高知だいすきポケモン」ヌオーと巡る高知旅2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e573274/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e573274/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:11.030332+00:00",
+          "sha256": "fd73a4a7498dfb0f1340a5237ab243a012e94277a9bd047654aefae51eb307a9"
+        },
+        {
+          "url": "https://doppuri.kochi-tabi.jp/pokemon/",
+          "final_url": "https://doppuri.kochi-tabi.jp/pokemon/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:14.201066+00:00",
+          "sha256": "603d729b7b06c3929bdf777d705c5c40d237f5b854e91299ef0119f2d819e660"
+        },
+        {
+          "url": "https://doppuri.kochi-tabi.jp/pokemon/stamprally2026.html",
+          "final_url": "https://doppuri.kochi-tabi.jp/pokemon/stamprally2026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:50.583682+00:00",
+          "sha256": "bf8b424379952b1f982bad9529f519d715a5767308b776b06be19560c2eb2eb3"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-209",
+      "added_event_ids": [
+        "evt-hold-b4-209"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 210,
+      "region": "kochi",
+      "title": "土佐の豊穣祭2026 高知市会場 土佐國美味集結",
+      "disposition": "duplicate",
+      "reason": "同じ土佐國美味集結。本祭を120で掲載。夜の酒蔵前夜祭だけは別追加しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e617210/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e617210/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:11.650791+00:00",
+          "sha256": "d83912ee5be2f2b07b11fb8475f3ad5e270915957ae12ead060451c25cbed7be"
+        },
+        {
+          "url": "https://www.tosa-hojyosai.com/kochi.html",
+          "final_url": "https://www.tosa-hojyosai.com/kochi.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:58.631201+00:00",
+          "sha256": "5db05829fa0d1b97cef42be3486d5bdf625cc0f52028b7a179c06cf85a977818"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-120",
+      "matched_event_ids": [
+        "evt-hold-b4-120"
+      ]
+    },
+    {
+      "index": 211,
+      "region": "kochi",
+      "title": "企画展「長宗我部元親の城づくり－四国制覇に向けて－」",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e612729/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e612729/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:24.986902+00:00",
+          "sha256": "495d7d5341714d61bb97302ce26ac8431be72ee75ee8d7f809f85f85d2065e23"
+        },
+        {
+          "url": "https://kochi-rekimin.jp/exhibits/112.html",
+          "final_url": "https://kochi-rekimin.jp/exhibits/112.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:58.968444+00:00",
+          "sha256": "92a0eddb6a86c2e98dd9a7ccad6e0681bc145f62a6fbbbeeef27faad76d6b318"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-211",
+      "added_event_ids": [
+        "evt-hold-b4-211"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 212,
+      "region": "kochi",
+      "title": "高知県立のいち動物公園 開園35周年記念イベント",
+      "disposition": "duplicate",
+      "reason": "同じ10/31～11/3ののいち動物公園開園35周年イベント。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e620197/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e620197/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:27.124216+00:00",
+          "sha256": "0da838089f10bae3c4fcc2075ffad08347543d22e66bf41c705cdbc666a24e65"
+        },
+        {
+          "url": "https://noichizoo.or.jp/event/entry-1734.html",
+          "final_url": "https://noichizoo.or.jp/event/entry-1734.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:59.507825+00:00",
+          "sha256": "d28b9434d3d5d4bf672e1f56f6ab865da81d73c29cef2753c01b10b31fd8d2f9"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-130",
+      "matched_event_ids": [
+        "evt-hold-b4-130"
+      ]
+    },
+    {
+      "index": 213,
+      "region": "kochi",
+      "title": "夜の紙博－光る森と虹色の羊－",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e620917/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e620917/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:27.508187+00:00",
+          "sha256": "22417b6a05fdec8a5befe732edb191f4099975fa26ec827cb95e605b60ec11cc"
+        },
+        {
+          "url": "https://kamihaku.com/exhibition/8165",
+          "final_url": "https://kamihaku.com/exhibition/8165",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:00.093892+00:00",
+          "sha256": "584c2941b836fc5560e55a021329fa2a49c22ec5a5716ff0be9048039364e60c"
+        },
+        {
+          "url": "https://kamihaku.com/",
+          "final_url": "https://kamihaku.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:50.960202+00:00",
+          "sha256": "f54f665355b8e5e877cd31bf2ade7e0d6cd086b935072f81b8ac4923419658f4"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-213",
+      "added_event_ids": [
+        "evt-hold-b4-213"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 214,
+      "region": "kochi",
+      "title": "第22回こめフェスタ",
+      "disposition": "duplicate",
+      "reason": "名称の米が一字異なるが、同じ2026/11/1四万十緑林公園の米こめフェスタ。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e618102/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e618102/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:28.098385+00:00",
+          "sha256": "860b7f52577585f30c258bbf237629bc4ad7f538c4fb3a76ef83da169aa44907"
+        },
+        {
+          "url": "https://www.tosa-hojyosai.com/koban.html",
+          "final_url": "https://www.tosa-hojyosai.com/koban.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:01.261472+00:00",
+          "sha256": "bab7736c86d427318e4b3d52c2094e39d68eec012f4a3da7342f7dbc6598500a"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-135",
+      "matched_event_ids": [
+        "evt-hold-b4-135"
+      ]
+    },
+    {
+      "index": 215,
+      "region": "kochi",
+      "title": "松谷みよ子展 展示解説",
+      "disposition": "duplicate",
+      "reason": "同じ松谷みよ子展の会期中毎週土曜の内包展示解説。親展覧会に含め二重追加しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e616867/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e616867/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:28.668877+00:00",
+          "sha256": "78309d7e127ed32c2f00f9169341e5271929f9b4108eac4c65b0767cdd567a29"
+        },
+        {
+          "url": "https://www.kochi-bungaku.com/11584/",
+          "final_url": "https://www.kochi-bungaku.com/11584/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:01.683195+00:00",
+          "sha256": "13b9adcdfc2abc51c6dfdf803f2f04ef1dabba1160efea8aa7a4a0c8c29a6efe"
+        },
+        {
+          "url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "final_url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:51.865461+00:00",
+          "sha256": "60708cd1d4b2ce46788d503cf58052326ea4b940f2a1603feb408b2066c8bb48"
+        }
+      ],
+      "matched_event_id": "evt-kochi-w43-matsutani",
+      "matched_event_ids": [
+        "evt-kochi-w43-matsutani"
+      ]
+    },
+    {
+      "index": 216,
+      "region": "kochi",
+      "title": "土佐の「こじゃんと」能楽プロジェクト",
+      "disposition": "still_hold",
+      "reason": "公式注意事項は未就学児入場不可。小さな子ども連れの参加条件を満たさない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e616685/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e616685/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:30.644110+00:00",
+          "sha256": "bd81e798755dd721ef145e014c60c5934a01681309442d2a363a3aba3783772f"
+        },
+        {
+          "url": "https://www.nohgaku.or.jp/kojanto2026",
+          "final_url": "https://www.nohgaku.or.jp/kojanto2026",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:14.663167+00:00",
+          "sha256": "6031f9cf971b602c40d52003bc6b75b482cb97c0e492cf72c680eb07f8f661c9"
+        },
+        {
+          "url": "https://www.nohgaku.or.jp/kojanto2026",
+          "final_url": "https://www.nohgaku.or.jp/kojanto2026",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:43.996882+00:00",
+          "sha256": "6031f9cf971b602c40d52003bc6b75b482cb97c0e492cf72c680eb07f8f661c9"
+        }
+      ],
+      "reason_code": "NOT_FAMILY_SUITABLE"
+    },
+    {
+      "index": 217,
+      "region": "kochi",
+      "title": "松谷みよ子展 言葉集めスタンプラリー",
+      "disposition": "duplicate",
+      "reason": "同じ松谷みよ子展の会期中随時開催スタンプ企画。親イベントと同じ開催期間・会場。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e617068/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e617068/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:31.107497+00:00",
+          "sha256": "1bfb7691248eae888ffe990e76addcf138116162bb51cf6232d184de3d89d751"
+        },
+        {
+          "url": "https://www.kochi-bungaku.com/11584/",
+          "final_url": "https://www.kochi-bungaku.com/11584/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:02.381165+00:00",
+          "sha256": "13b9adcdfc2abc51c6dfdf803f2f04ef1dabba1160efea8aa7a4a0c8c29a6efe"
+        },
+        {
+          "url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "final_url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:52.294556+00:00",
+          "sha256": "60708cd1d4b2ce46788d503cf58052326ea4b940f2a1603feb408b2066c8bb48"
+        }
+      ],
+      "matched_event_id": "evt-kochi-w43-matsutani",
+      "matched_event_ids": [
+        "evt-kochi-w43-matsutani"
+      ]
+    },
+    {
+      "index": 218,
+      "region": "kochi",
+      "title": "企画展「長宗我部元親の城づくり－四国制覇に向けて－」関連講座",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e617837/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e617837/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:33.988804+00:00",
+          "sha256": "a20e20402f9e2eabea08a2ffff9cbcee7eb59aa0b1c9321bee2573898a39a534"
+        },
+        {
+          "url": "https://kochi-rekimin.jp/exhibits/112.html",
+          "final_url": "https://kochi-rekimin.jp/exhibits/112.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:03.090143+00:00",
+          "sha256": "92a0eddb6a86c2e98dd9a7ccad6e0681bc145f62a6fbbbeeef27faad76d6b318"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-218-1",
+      "added_event_ids": [
+        "evt-hold-b4-218-1",
+        "evt-hold-b4-218-2",
+        "evt-hold-b4-218-3",
+        "evt-hold-b4-218-4"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 219,
+      "region": "kochi",
+      "title": "第19回さかわ・酒蔵ロード劇場2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e621162/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e621162/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:34.605704+00:00",
+          "sha256": "aa421580f951b300120f97d78d20adfffbdb0419a5cdb7749f055defb5069af2"
+        },
+        {
+          "url": "https://sakawa-kankou.jp/event",
+          "final_url": "https://sakawa-kankou.jp/event",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:15.273018+00:00",
+          "sha256": "c2d72c44c696b5982d18af5137d68ad710e3312eb343e8ad44d2a3d45439029a"
+        },
+        {
+          "url": "https://sakawa-kankou.jp/event/104",
+          "final_url": "https://sakawa-kankou.jp/event/104",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:52.709249+00:00",
+          "sha256": "bae596a9cfdcb03d6dad92cf2a7a8f4cd7410eac67dba93676a8c116904746c1"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-219",
+      "added_event_ids": [
+        "evt-hold-b4-219"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 220,
+      "region": "kochi",
+      "title": "ツノトゥク定期周遊2026年11月「よしうの周遊コース」",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e621203/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e621203/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:35.750839+00:00",
+          "sha256": "6cfee8afc0f4f84640d2abcc94864b9f43ed068c223667a48c01c7dae1e938ea"
+        },
+        {
+          "url": "https://kochi-tabi.jp/search_event.html?id=18865",
+          "final_url": "https://kochi-tabi.jp/search_event.html?id=18865",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:15.751342+00:00",
+          "sha256": "d7144f75115344687fe313d236ec47f90d28918430ce7d8bab581537f01af8a9"
+        },
+        {
+          "url": "https://okushimanto.jp/archives/55629",
+          "final_url": "https://okushimanto.jp/archives/55629",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:04.753791+00:00",
+          "sha256": "f3c31ffed3e6fb89a6c97f815f374e29ed45097b4b10fef8ea6565c8b0bfb17d"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-220-1",
+      "added_event_ids": [
+        "evt-hold-b4-220-1",
+        "evt-hold-b4-220-2",
+        "evt-hold-b4-220-3",
+        "evt-hold-b4-220-4"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 221,
+      "region": "kochi",
+      "title": "水車亭イルミネーション",
+      "disposition": "still_hold",
+      "reason": "公式水車亭サイトを確認したが2026年のイルミネーション開始日が掲載されていない。二次サイトの日付を採用しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e486342/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e486342/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:36.328927+00:00",
+          "sha256": "69731aecb160def93dab0d8841334ba2072403a963fe353f5c60d6ae125e1c35"
+        },
+        {
+          "url": "https://nangokuseika.com/",
+          "final_url": "https://www.nangokuseika.com",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:16.131740+00:00",
+          "sha256": "944d27112399bd56fb202100ce625c152124a9190d30e36acdd1b13550f84cb7"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 222,
+      "region": "kochi",
+      "title": "スカイランタンプロジェクトwith日本の素材甲子園 in高知",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0939e607968/",
+          "final_url": "https://www.walkerplus.com/event/ar0939e607968/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:38.647084+00:00",
+          "sha256": "2f1c8dd2f0382145fa444ef34a8343fe6b735ffebac8c102b77cfb0da044769b"
+        },
+        {
+          "url": "https://eplus.jp/sf/detail/4545240001",
+          "final_url": "https://eplus.jp/sf/detail/4545240001",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:05.195159+00:00",
+          "sha256": "ffd163034fda9697144ac5a8c930351f307cac5d5502be10b554e55cd5526049"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000523.000032099.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000523.000032099.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:24:00.861512+00:00",
+          "sha256": "dc93b56ea8e9fd99772892fc2d961564b65ff7afae0f2d06a988582265f2e6f4"
+        },
+        {
+          "url": "https://skylantern-project.com/",
+          "final_url": "https://skylantern-project.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:24:01.462910+00:00",
+          "sha256": "797127bff44311ee2872ebee2c9c611c7e17a3d1516bb3e555cd91355d9b0dac"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-222",
+      "added_event_ids": [
+        "evt-hold-b4-222"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 223,
+      "region": "kochi",
+      "title": "6歳になったら机を作ろう！木こり&机作り体験 in高知",
+      "disposition": "still_hold",
+      "reason": "公式事業者の机づくり案内は確認できたが、2026年11月21日の開催日は公式ページ本文にない。予約先の二次ポータルの日付を根拠にしない。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/538912",
+          "final_url": "https://iko-yo.net/events/538912",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:39.264284+00:00",
+          "sha256": "e6af29c5ccab2e1cdc32b2300018504dfbd94c3e93d43c36070eb68aa15f7e18"
+        },
+        {
+          "url": "http://baum-llc.com",
+          "final_url": "http://baum-llc.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:53.076097+00:00",
+          "sha256": "cede0e5b8e8e99d75a13ef418144f1f12525691d3485dcc9ad24af048dc53c81"
+        },
+        {
+          "url": "https://baum-llc.com/item/learningdesk",
+          "final_url": "https://baum-llc.com/item/learningdesk",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:41.293376+00:00",
+          "sha256": "cd14e74f3980613d20cd0ebcbc374cf22eca1b602566cfa379c20ed57d1bf095"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 224,
+      "region": "kochi",
+      "title": "デジタルdeスタンプラリーカルコレ",
+      "disposition": "still_hold",
+      "reason": "公式カルコレは緊急メンテナンス中でデジタル参加経路が閉鎖され、再開予定も確認できない。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/event_lites/detail/22364",
+          "final_url": "https://iko-yo.net/event_lites/detail/22364",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:40.237984+00:00",
+          "sha256": "50df7fb112284e4c270838ea09e9f984159ff2e2029b5748820f865c0c4a91ad"
+        },
+        {
+          "url": "https://culture-collection.jp/",
+          "final_url": "https://culture-collection.jp/",
+          "http_status": null,
+          "checked_at": "2026-11-01T03:22:17.219738+00:00",
+          "sha256": null
+        },
+        {
+          "url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
+          "final_url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/culturecollection/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:05.710506+00:00",
+          "sha256": "5b8c7d03fbbe4ab06c2e2fb166c0b45730181e72b92810d70d7591f2aea39929"
+        }
+      ],
+      "reason_code": "PARTICIPATION_CLOSED"
+    },
+    {
+      "index": 225,
+      "region": "kochi",
+      "title": "第62回宇佐港まつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/609471",
+          "final_url": "https://iko-yo.net/events/609471",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:40.974105+00:00",
+          "sha256": "b3ca3405292bbbb041ec6c846746f40f81877da21eefc782eaed14f487dc2921"
+        },
+        {
+          "url": "https://tosacity-kankou.com/kankou/category04/minatofes/",
+          "final_url": "https://tosacity-kankou.com/kankou/category04/minatofes/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:06.008963+00:00",
+          "sha256": "a7a1d7a075f12f9a5cc10420c5de1598770e480d2e85984eacb57b5dfe24893c"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-225",
+      "added_event_ids": [
+        "evt-hold-b4-225"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 226,
+      "region": "kochi",
+      "title": "松谷みよ子展 クイズイベント",
+      "disposition": "duplicate",
+      "reason": "同じ松谷みよ子展の会期内クイズ。公式に各回日程も確認、親イベントに内包。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/604510",
+          "final_url": "https://iko-yo.net/events/604510",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:41.662059+00:00",
+          "sha256": "f2dc7462cb25b29ee1dcc8001fddd990f29e5d4d369b434864921d200ba1a6f9"
+        },
+        {
+          "url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "final_url": "https://www.kochi-bungaku.com/exhibition/11460/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:06.458660+00:00",
+          "sha256": "60708cd1d4b2ce46788d503cf58052326ea4b940f2a1603feb408b2066c8bb48"
+        }
+      ],
+      "matched_event_id": "evt-kochi-w43-matsutani",
+      "matched_event_ids": [
+        "evt-kochi-w43-matsutani"
+      ]
+    },
+    {
+      "index": 227,
+      "region": "kochi",
+      "title": "【DCM御座店】11月DIYイベント",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/604662",
+          "final_url": "https://iko-yo.net/events/604662",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:42.353449+00:00",
+          "sha256": "9e9b4ddad7df57ddeb5345440fa270bf97254b0e23c913f508e78ad5b39776ce"
+        },
+        {
+          "url": "https://dcm-diyclub.com/lesson/cls/15",
+          "final_url": "https://dcm-diyclub.com/lesson/cls/15",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:53.656468+00:00",
+          "sha256": "880d139a4206c8275ce395b27c6452839bdb82ca4cf6678bfe6148ca4e452c77"
+        },
+        {
+          "url": "https://dcm-diyclub.com/lesson/reserve/55765",
+          "final_url": "https://dcm-diyclub.com/lesson/reserve/55765",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:42.363137+00:00",
+          "sha256": "63e597d0ae233d4471a303992be63f0f9c042a933b460ec6e9edcc1c437f0c0a"
+        },
+        {
+          "url": "https://dcm-diyclub.com/lesson/reserve/55766",
+          "final_url": "https://dcm-diyclub.com/lesson/reserve/55766",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:42.766960+00:00",
+          "sha256": "5634ff73bdcc6cd78e9be6e3476a2da847abe77bd801a3454ea861f19554fd7b"
+        },
+        {
+          "url": "https://dcm-diyclub.com/lesson/reserve/55769",
+          "final_url": "https://dcm-diyclub.com/lesson/reserve/55769",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:43.113657+00:00",
+          "sha256": "0eccfba56451e721d0f83c982ccc932ae3b3cb8af74cc1393830a2a49344816c"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-227-1",
+      "added_event_ids": [
+        "evt-hold-b4-227-1",
+        "evt-hold-b4-227-2",
+        "evt-hold-b4-227-3"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 228,
+      "region": "kochi",
+      "title": "ものメッセKOCHI2026",
+      "disposition": "still_hold",
+      "reason": "公式トップ画像は2026/11/12～14の9:00～16:00、同じ公式サイトの展示会概要は9:30～16:00。開始時刻が公式内で矛盾するため個別保留。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/590207",
+          "final_url": "https://iko-yo.net/events/590207",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:43.027697+00:00",
+          "sha256": "70af16b450978f136c30c6f5fd1c884ceadca2f67cb3bb1e9ff9c26beea191de"
+        },
+        {
+          "url": "https://kochi-monodukuri.online",
+          "final_url": "https://kochi-monodukuri.online/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:17.293396+00:00",
+          "sha256": "b750cd9502807a7ce44cae523ddae8aff7d215aaac045873176adecc5dfda8e9"
+        },
+        {
+          "url": "https://kochi-monodukuri.online/base-event",
+          "final_url": "https://kochi-monodukuri.online/base-event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:54.724772+00:00",
+          "sha256": "6132ae0b11d2539322b256d2be049e3712de2feb2d46e0adf84b3ec0aaa96f06"
+        },
+        {
+          "url": "https://kochi-monodukuri.online/base-event",
+          "final_url": "https://kochi-monodukuri.online/base-event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:06.907230+00:00",
+          "sha256": "6132ae0b11d2539322b256d2be049e3712de2feb2d46e0adf84b3ec0aaa96f06"
+        },
+        {
+          "url": "https://kochi-monodukuri.online/exh-summary/",
+          "final_url": "https://kochi-monodukuri.online/exh-summary/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:23:43.517209+00:00",
+          "sha256": "e3f4ed3b3af37a73afff555fb9f0369c5dd9a77d90b6b6412ae0e3a20a3ad7a4"
+        }
+      ],
+      "reason_code": "OFFICIAL_TIME_CONFLICT"
+    },
+    {
+      "index": 229,
+      "region": "kochi",
+      "title": "人形劇フェスティバルin高知",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://iko-yo.net/events/611365",
+          "final_url": "https://iko-yo.net/events/611365",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:21:43.903846+00:00",
+          "sha256": "f2a2c4f3d192202e68b5c76fdb499ff84a2a9662a338007e1df3701db8b1e5dd"
+        },
+        {
+          "url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/event.html?id=122",
+          "final_url": "https://yosakoi-kochi-bunkasai2026.pref.kochi.lg.jp/event.html?id=122",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:22:18.228757+00:00",
+          "sha256": "6d7ed41cd80d336e210c00dab1b6989f41235e3b1ed9d2c7ddc2fa2a5ec2cb38"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-229",
+      "added_event_ids": [
+        "evt-hold-b4-229"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 230,
+      "region": "aomori",
+      "title": "ミライ☆あおチャレ",
+      "disposition": "still_hold",
+      "reason": "対象の県公式ページはHTTP403。学習案内PDFも確認したが対象の現行開催情報を読めない。",
+      "sources_checked": [
+        {
+          "url": "https://www.alis.pref.aomori.lg.jp/doc/gakusyu/gakusyu_tousei.pdf",
+          "final_url": "https://www.alis.pref.aomori.lg.jp/doc/gakusyu/gakusyu_tousei.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:25:27.665233+00:00",
+          "sha256": "477c299d1756267f8becb58939c82b04cb9ddfa57032b0e1191e888dfa0f6d07"
+        },
+        {
+          "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/mirai_aochalle.html",
+          "final_url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/richi/mirai_aochalle.html",
+          "http_status": 403,
+          "checked_at": "2026-11-01T03:25:44.233981+00:00",
+          "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5"
+        }
+      ],
+      "reason_code": "SOURCE_UNREADABLE"
+    },
+    {
+      "index": 231,
+      "region": "aomori",
+      "title": "第29回健康まつり",
+      "disposition": "still_hold",
+      "reason": "県公式の健康まつり案内が再取得・再試行ともHTTP403。主催者サイトも補完確認したが開催日を評価できる当該本文を取得できない。",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/R8_testmarketing_health.html",
+          "final_url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/R8_testmarketing_health.html",
+          "http_status": 403,
+          "checked_at": "2026-11-01T03:25:29.785349+00:00",
+          "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5"
+        },
+        {
+          "url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/R8_testmarketing_health.html",
+          "final_url": "https://www.pref.aomori.lg.jp/soshiki/sangyo/innovation/R8_testmarketing_health.html",
+          "http_status": 403,
+          "checked_at": "2026-11-01T03:25:44.516343+00:00",
+          "sha256": "1f2e1251b1d5fab2f47bbfe3e09b149064e61571f98a5e02c6ace5f86bacb1d5"
+        },
+        {
+          "url": "https://www.aomori-h-coop.com/",
+          "final_url": "https://www.aomori-h-coop.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:17.635848+00:00",
+          "sha256": "0a65a023b6ff2993cef42cc3a648806b509a7aafbb1c91d487b4e4efba80d7e7"
+        }
+      ],
+      "reason_code": "SOURCE_UNREADABLE"
+    },
+    {
+      "index": 232,
+      "region": "aomori",
+      "title": "第16回青少年健全育成地域研修会",
+      "disposition": "still_hold",
+      "reason": "対象のむつ市公式研修会URLは404。市の協議会活動ページは過年度の説明のみで、第16回の開催日を確定できない。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1008108.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1008108.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:06.074860+00:00",
+          "sha256": "d22605e1222686923fc0d93e99ebb089b9365a5e475c705ed02665e2ae192fb7"
+        },
+        {
+          "url": "https://www.city.mutsu.lg.jp/kurashi/seishounen/ikusei/mutsushi-seishounenkenzenikusei.html",
+          "final_url": "https://www.city.mutsu.lg.jp/kurashi/seishounen/ikusei/mutsushi-seishounenkenzenikusei.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:48.071357+00:00",
+          "sha256": "fb78445c5d9e6721ce30827e931cf22cc2dde9250b79dd8d0005d2d8fd6e6f1a"
+        },
+        {
+          "url": "https://www.city.mutsu.lg.jp/topics/boshu/16seisyounentiikikensyukai.html",
+          "final_url": "https://www.city.mutsu.lg.jp/topics/boshu/16seisyounentiikikensyukai.html",
+          "http_status": 404,
+          "checked_at": "2026-11-01T03:28:00.003497+00:00",
+          "sha256": "44ecb768bc5aaebdd6ce9e74787e6de8a32adf84ca0623cd1adb7166f7ab9295"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 233,
+      "region": "aomori",
+      "title": "さいむらづくりアクションスタンプイベント",
+      "disposition": "still_hold",
+      "reason": "公式村サイトのアクションスタンプの紹介・投稿導線はあるが、当該候補の開催日を確定できない。",
+      "sources_checked": [
+        {
+          "url": "https://www.vill.sai.lg.jp/",
+          "final_url": "https://www.vill.sai.lg.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:25:44.812333+00:00",
+          "sha256": "60c9d6cf6c88b99c7b078014017e3065ef14399ea75aaf683ab1c65651eec6a4"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 234,
+      "region": "aomori",
+      "title": "佐井村デジタルスタンプラリー2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.vill.sai.lg.jp/news/2025-0801-senryaku-sutannpurari/",
+          "final_url": "https://www.vill.sai.lg.jp/news/2025-0801-senryaku-sutannpurari-2/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:25:46.396790+00:00",
+          "sha256": "0b9da971666196382ccf91ad9b8546bc074240ffa746e624ebbf387df49ae85c"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-234",
+      "added_event_ids": [
+        "evt-hold-b4-234"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 235,
+      "region": "aomori",
+      "title": "中野もみじ山ライトアップ",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://kuroishi.or.jp/archives/category/news",
+          "final_url": "https://kuroishi.or.jp/archives/category/news",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:03.158298+00:00",
+          "sha256": "9dcdbcce6e115a28f7b0983d91d3e7afb9eb7f7764132682a7a5a233ca55d169"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-235",
+      "added_event_ids": [
+        "evt-hold-b4-235"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 236,
+      "region": "aomori",
+      "title": "弘前城菊と紅葉まつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_1732.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_1732.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:19.994932+00:00",
+          "sha256": "2c5011187454e6852e056394321e0cb975df0b8db978dbbc62715c83e6380cd9"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-236",
+      "added_event_ids": [
+        "evt-hold-b4-236"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 237,
+      "region": "aomori",
+      "title": "第24回津軽の食と産業まつり2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://syoku-san.jp/",
+          "final_url": "https://syoku-san.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:48.637979+00:00",
+          "sha256": "bed0391ad839cce281a7115b6cb26fb0f42cebf35b6cac628c015e51e1b12f59"
+        },
+        {
+          "url": "https://syoku-san.jp/wp-content/uploads/2026/07/260709_top_eyecatch_mob-01.webp",
+          "final_url": "https://syoku-san.jp/wp-content/uploads/2026/07/260709_top_eyecatch_mob-01.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:46.196510+00:00",
+          "sha256": "56888b42a58579f7611b217c6ef36b3f3a32e29a21d996d06fa7958cd51ac25a"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-237",
+      "added_event_ids": [
+        "evt-hold-b4-237"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 238,
+      "region": "aomori",
+      "title": "鶴の舞橋ライトアップ",
+      "disposition": "still_hold",
+      "reason": "公式最新案内で10/30～11/1は橋のライトアップを実施しないと明示。11/2以降は改めて案内のため、橋の催しの再開を確認できない。園内照明だけを橋のライトアップとして登録しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.medetai-tsuruta.jp/",
+          "final_url": "https://www.medetai-tsuruta.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:21.206736+00:00",
+          "sha256": "272bb71806acc650f0f202ebd880aeb126fb041ca8c6fc8ffdc89229bc48e68f"
+        },
+        {
+          "url": "https://www.medetai-tsuruta.jp/21118.html",
+          "final_url": "https://www.medetai-tsuruta.jp/21118.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:32.242564+00:00",
+          "sha256": "1ba0bea30a733202a6894d7c325c6176a45f529063c7a2eb1f5e5411e7f20b31"
+        },
+        {
+          "url": "https://www.medetai-tsuruta.jp/21106.html",
+          "final_url": "https://www.medetai-tsuruta.jp/21106.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:33.172512+00:00",
+          "sha256": "fde229ab5f9d00567187b2cb1500e3bbd76b45515baebcf8d450826bbec6db7b"
+        }
+      ],
+      "reason_code": "PARTICIPATION_CLOSED"
+    },
+    {
+      "index": 239,
+      "region": "aomori",
+      "title": "中泊大集合市",
+      "disposition": "past",
+      "reason": "主催側が公開した当該回の2026/9/5開催を本文・チラシで確認。将来4回予定との記述から未発表の個別日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://t-ate.com/archives/26323.html",
+          "final_url": "https://t-ate.com/archives/26323.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:33.886426+00:00",
+          "sha256": "5510616cf3ac9f613bc5d3feea68d0f5865006a8e91dead5396a2a77857bceac"
+        },
+        {
+          "url": "https://t-ate.com/tsugaru/wp-content/uploads/2026/08/400d4d3931c54631b323e48aee20a7c6-690x488.jpg",
+          "final_url": "https://t-ate.com/tsugaru/wp-content/uploads/2026/08/400d4d3931c54631b323e48aee20a7c6-690x488.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:28:31.220740+00:00",
+          "sha256": "01ee7d693c4fff902bfe5afea452d84d6363e432f613015350f18dd3c5da5bc3"
+        }
+      ]
+    },
+    {
+      "index": 240,
+      "region": "aomori",
+      "title": "ORISO FESTIVAL",
+      "disposition": "still_hold",
+      "reason": "公式Instagram投稿へ到達したが本文が取得できず、二次ポータルの開催日・条件を公式根拠として採用できない。",
+      "sources_checked": [
+        {
+          "url": "https://towakomyu.com/events/oriso-fes-fukaura/",
+          "final_url": "https://towakomyu.com/events/oriso-fes-fukaura/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:49.814748+00:00",
+          "sha256": "a9d271669c7d4f0f7c4945be32d3eac089b44773b95c41bc8eeb5013ad90c230"
+        },
+        {
+          "url": "https://www.instagram.com/p/DennTGDAWFz/",
+          "final_url": "https://www.instagram.com/p/DennTGDAWFz/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:05.396446+00:00",
+          "sha256": "9bff851d6143d0affbefa99f714be9ff7fcfcd9cb13822c0321f75b04a3b586c"
+        }
+      ],
+      "reason_code": "SOURCE_UNREADABLE"
+    },
+    {
+      "index": 241,
+      "region": "aomori",
+      "title": "つがる市 食と産業まつり2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.tsugaru.aomori.jp/soshiki/keizai/shoukourousei/shoukou/semina_ibento/7658.html",
+          "final_url": "https://www.city.tsugaru.aomori.jp/soshiki/keizai/shoukourousei/shoukou/semina_ibento/7658.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:50.294901+00:00",
+          "sha256": "b35d7b44fa380224dba03f429de227162f5e82885ceb924fa9e9fa9e05a5ddbd"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-241",
+      "added_event_ids": [
+        "evt-hold-b4-241"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 242,
+      "region": "aomori",
+      "title": "ビッグイエロー2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_619.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_619.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:03.604896+00:00",
+          "sha256": "7ed9f7e96e359dbd729bdd5f2ae222f593863977724fbc79d6f92b445e1a346a"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-242",
+      "added_event_ids": [
+        "evt-hold-b4-242"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 243,
+      "region": "aomori",
+      "title": "太宰治 旅の中で～その旅と作品～",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://kanagi-gc.net/",
+          "final_url": "https://kanagi-gc.net/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:26:50.779825+00:00",
+          "sha256": "befafb77f630c0cd8378feb7de723dbf84b22a537d787009b7d978e74f751878"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-243",
+      "added_event_ids": [
+        "evt-hold-b4-243"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 244,
+      "region": "aomori",
+      "title": "ぴよぴよおはなし会",
+      "disposition": "still_hold",
+      "reason": "公式おはなし会表は11月の金曜6・13・20・27日だが開催年を明示しない。更新年だけから2026年と推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.library.city.aomori.aomori.jp/acl/",
+          "final_url": "https://www.library.city.aomori.aomori.jp/acl/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:04.495201+00:00",
+          "sha256": "7529b683d604360572e5d7f4ddaa1d57d40537f1e9d9143b6f88e0283c9a2612"
+        },
+        {
+          "url": "https://www.library.city.aomori.aomori.jp/acl/ohanashi/ohanashi.html",
+          "final_url": "https://www.library.city.aomori.aomori.jp/acl/ohanashi/ohanashi.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:18.880005+00:00",
+          "sha256": "0fb1311144b55234a32e79feacef2dbccfb4fa26ea01c8dc802a291ae433a7c5"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 245,
+      "region": "aomori",
+      "title": "にこにこおはなし会",
+      "disposition": "still_hold",
+      "reason": "公式おはなし会表は11月の土曜7・14・21・28日だが開催年を明示しない。更新日から開催年を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.library.city.aomori.aomori.jp/acl/",
+          "final_url": "https://www.library.city.aomori.aomori.jp/acl/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:04.988003+00:00",
+          "sha256": "7529b683d604360572e5d7f4ddaa1d57d40537f1e9d9143b6f88e0283c9a2612"
+        },
+        {
+          "url": "https://www.library.city.aomori.aomori.jp/acl/ohanashi/ohanashi.html",
+          "final_url": "https://www.library.city.aomori.aomori.jp/acl/ohanashi/ohanashi.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:19.405828+00:00",
+          "sha256": "0fb1311144b55234a32e79feacef2dbccfb4fa26ea01c8dc802a291ae433a7c5"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 246,
+      "region": "aomori",
+      "title": "青森市子ども会議フォーラム2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/newslist.html",
+          "final_url": "https://www.city.aomori.aomori.jp/newslist.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:19.834749+00:00",
+          "sha256": "1b275a5b430dafa73ad54889bf46dddec676b3d3fb9b288cdab45ac64b38c7fc"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/kodomonokenri/1003607/1009855.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/kodomonokenri/1003607/1009855.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:44.007224+00:00",
+          "sha256": "79ff7c76296f4cd6ad0662bc72148210ab4b56912e121282af2c2bb339c1e55c"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-246",
+      "added_event_ids": [
+        "evt-hold-b4-246"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 247,
+      "region": "aomori",
+      "title": "第8回あおもりこども民俗フェス",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://kitanomahoroba.jp/",
+          "final_url": "https://kitanomahoroba.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:45.347308+00:00",
+          "sha256": "5f6a4492b1fe6af4e92a7055c55f490adf57b6bb5d2ab221114cafbea67adf0f"
+        },
+        {
+          "url": "https://kitanomahoroba.jp/notice.html",
+          "final_url": "https://kitanomahoroba.jp/notice.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:28:00.622653+00:00",
+          "sha256": "33c1538dd78d3daeedb3f44becb078f4e5d60839df2200b2c8b9a854394aeff5"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011568.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011568.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:28:18.383326+00:00",
+          "sha256": "b06d42ba292f06dd58f65d4e23351fbb6de961032799435d40224bcc314e1355"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-247",
+      "added_event_ids": [
+        "evt-hold-b4-247"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 248,
+      "region": "aomori",
+      "title": "中央市民センターまつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1009521.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1009521.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:20.283771+00:00",
+          "sha256": "54740dd260f03239f2ad473d8773dd5fb24b126155de4978f33e1e02a22ff8e7"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-248",
+      "added_event_ids": [
+        "evt-hold-b4-248"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 249,
+      "region": "aomori",
+      "title": "第29回荒川まつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1009520.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1009520.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:20.661164+00:00",
+          "sha256": "638a982b760f5ba965d042c080f37a7e0e3bfb99dc28f40794d6a779c04b6451"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-249",
+      "added_event_ids": [
+        "evt-hold-b4-249"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 250,
+      "region": "aomori",
+      "title": "カラフルリボンイベント2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/index.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:21.085237+00:00",
+          "sha256": "d97eaf7b2eee7a60a41bba7b5bf52265c76d1205696e156a1312a8c35c31f5d5"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1008317.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1008317.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:44.486060+00:00",
+          "sha256": "78e54a7c06afc35947d7111f823fc5ec5c5aa586c408f2fa7168d5ca19199211"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-250",
+      "added_event_ids": [
+        "evt-hold-b4-250"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 251,
+      "region": "aomori",
+      "title": "戸山市民センターまつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/index.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:21.495011+00:00",
+          "sha256": "cd640171dc91deda4f851dbe8f327b64f6a91e7cd283a6663d87098e18b2f53d"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1011493.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/1011493.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:44.931811+00:00",
+          "sha256": "c2be486a1cc6c49f43dd2fa3c7484a5cb497b29a8e10b793fa3c2726e750afcd"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-251",
+      "added_event_ids": [
+        "evt-hold-b4-251"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 252,
+      "region": "aomori",
+      "title": "第49回浪岡公民館まつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/index.html",
+          "final_url": "https://www.city.aomori.aomori.jp/kodomo_kyoiku/shimincenter/1004125/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:21.964217+00:00",
+          "sha256": "cd640171dc91deda4f851dbe8f327b64f6a91e7cd283a6663d87098e18b2f53d"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011464.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/bunka_geijutsu/events/1011464.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:27:45.758483+00:00",
+          "sha256": "d725a0ad258d705ec688994e98cd0a160415b743c231d1bfd24066731b88a158"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-252",
+      "added_event_ids": [
+        "evt-hold-b4-252"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 253,
+      "region": "aomori",
+      "title": "市場開放デー",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/sangyo_koyou/nourinsuisangyou/1004237/1008618.html",
+          "final_url": "https://www.city.aomori.aomori.jp/sangyo_koyou/nourinsuisangyou/1004237/1008618.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:34.503073+00:00",
+          "sha256": "32ba468da3c627750beb0906ca29bf1169161affc94cac68626efcc4a52fd157"
+        },
+        {
+          "url": "https://www.city.aomori.aomori.jp/_res/projects/default_project/_page_/001/010/079/bunkyo-080421-01-02.pdf",
+          "final_url": "https://www.city.aomori.aomori.jp/_res/projects/default_project/_page_/001/010/079/bunkyo-080421-01-02.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:33.362484+00:00",
+          "sha256": "0a31a366b4416944211b8413d29675d0a0921c7ab3fad59f5edbf77bff3beeb9"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-253",
+      "added_event_ids": [
+        "evt-hold-b4-253"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 254,
+      "region": "aomori",
+      "title": "八甲田丸カウントダウンイベント",
+      "disposition": "still_hold",
+      "reason": "八甲田丸の公式トップ・イベント案内は2026年秋冬の別催しを案内するが、今後のカウントダウンの開催日を明示していない。12/31と推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-hakkoudamaru.com/",
+          "final_url": "https://aomori-hakkoudamaru.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:34.955076+00:00",
+          "sha256": "69bc5b00ce94cdd8ab7e05adbf3dd6b7b04c9599f75f33d74fc3684396b56f5b"
+        },
+        {
+          "url": "https://aomori-hakkoudamaru.com/event.html",
+          "final_url": "https://aomori-hakkoudamaru.com/event.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:34:32.510600+00:00",
+          "sha256": "91bcb7aeac94fabd3e8f6481cbeaf5b9d1676d8b957434c69da8e25555f2ce22"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 255,
+      "region": "aomori",
+      "title": "マチニワナイトマーケット2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.hachinohe.aomori.jp/kanko_eventjoho/matsuri_event/22722.html",
+          "final_url": "https://www.city.hachinohe.aomori.jp/kanko_eventjoho/matsuri_event/22722.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:35.466980+00:00",
+          "sha256": "b024d56a2f78ecd85c3b85501af8281fe63c5addf63edf551121e74cc922add9"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-255",
+      "added_event_ids": [
+        "evt-hold-b4-255"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 256,
+      "region": "aomori",
+      "title": "十和田湖冬物語",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/event/detail_8175.html",
+          "final_url": "https://aomori-tourism.com/event/detail_8175.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:46.167381+00:00",
+          "sha256": "2087bff400fd690487d844f58da067eb7a94228658222cece761ca9068acd7a5"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-256",
+      "added_event_ids": [
+        "evt-hold-b4-256"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 257,
+      "region": "aomori",
+      "title": "津軽鉄道 ストーブ列車",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tsutetsu.com/lp",
+          "final_url": "https://tsutetsu.com/lp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:06.303275+00:00",
+          "sha256": "190de961df788e90dab169c3563dae5960e00ba819e02bd59b761fc582df4f06"
+        },
+        {
+          "url": "https://aomori-tourism.com/spot/detail_1768.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_1768.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:06.937442+00:00",
+          "sha256": "254464bb741ffbe71a3a1a4a6e2d047965cf93a9a696ec32375374780866c5c6"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-257",
+      "added_event_ids": [
+        "evt-hold-b4-257"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 258,
+      "region": "aomori",
+      "title": "はちのへシネマウィーク ―2026 街に灯を―",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://fest26.shiromado.com/",
+          "final_url": "https://fest26.shiromado.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:07.875772+00:00",
+          "sha256": "b2a40f782454fd3fe2517b142ede4509a37dacc7fa3dbd1eec1f5c4fe1b8bcae"
+        },
+        {
+          "url": "https://fest26.shiromado.com/presenters/gonohe-kids-cinema/",
+          "final_url": "https://fest26.shiromado.com/presenters/gonohe-kids-cinema/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:34:28.131016+00:00",
+          "sha256": "95730d9903fe6bc8b912541bcf7560261bb6ef1250359fb564a95858e3a19bd6"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-258",
+      "added_event_ids": [
+        "evt-hold-b4-258"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 259,
+      "region": "aomori",
+      "title": "アーツ・トワダ ウインターイルミネーション",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_3973.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_3973.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:08.347289+00:00",
+          "sha256": "c1c15e2243be7d9e8fad0ffcde6d00166d0803d42d5789b6bd42081056c45978"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-259",
+      "added_event_ids": [
+        "evt-hold-b4-259"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 260,
+      "region": "aomori",
+      "title": "弘前城雪燈籠まつり",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2026/2/6～11で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_1828.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_1828.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:46.768829+00:00",
+          "sha256": "8287994d3634c0cf53578f3f69a57e4dc23033fea8943b1c25c41fea841ca9ae"
+        }
+      ]
+    },
+    {
+      "index": 261,
+      "region": "aomori",
+      "title": "八戸えんぶり",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2026/2/17～20で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/aomori-hakodate-spot/detail_7167.html",
+          "final_url": "https://aomori-tourism.com/aomori-hakodate-spot/detail_7167.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:47.486237+00:00",
+          "sha256": "164b1a0be63c7e01abab090f1352baff209ef9d57305683b53177e88fd23d0e7"
+        }
+      ]
+    },
+    {
+      "index": 262,
+      "region": "aomori",
+      "title": "冬の田んぼアート",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2025/1/24～26で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_7227.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_7227.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:48.047525+00:00",
+          "sha256": "cb4385d3940143deea95e891899ea5143f7e69e01b6627b7efe13e2b6764a4fc"
+        }
+      ]
+    },
+    {
+      "index": 263,
+      "region": "aomori",
+      "title": "冬に咲くさくらライトアップ",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/event/detail_8176.html",
+          "final_url": "https://aomori-tourism.com/event/detail_8176.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:29:48.758140+00:00",
+          "sha256": "51290cdcfa418339effedc614a388dd138fcb2f22269e003ab27c135432d5669"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-263",
+      "added_event_ids": [
+        "evt-hold-b4-263"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 264,
+      "region": "aomori",
+      "title": "クリスマスマーケット2026 in アスパム",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.aomori-kanko.or.jp/aspam/event.html",
+          "final_url": "https://www.aomori-kanko.or.jp/aspam/event.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:09.083200+00:00",
+          "sha256": "a4817050e13329fefa349ce9ffc4c5a73bdf06686cb22bc8d344ab4ccee8991f"
+        },
+        {
+          "url": "https://www.aomori-kanko.or.jp/aspam/christmas-market/",
+          "final_url": "https://www.aomori-kanko.or.jp/aspam/christmas-market/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:32.867424+00:00",
+          "sha256": "6fddfbe95a69551592f4b1d821dfa77a84f90ba9e2c9910270d5056b398d1dd0"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-264",
+      "added_event_ids": [
+        "evt-hold-b4-264"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 265,
+      "region": "aomori",
+      "title": "全日本ずぐり回し選手権大会",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2026/2/7で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/event/detail_2284.html",
+          "final_url": "https://aomori-tourism.com/event/detail_2284.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:31.797108+00:00",
+          "sha256": "e00951f327ab05eae4292188369c8638bdc5414462c05625a1a1c934f150c691"
+        }
+      ]
+    },
+    {
+      "index": 266,
+      "region": "aomori",
+      "title": "津軽くろいしみんなの雪だるま",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2026年2月で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_4683.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_4683.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:32.408589+00:00",
+          "sha256": "80c421f30a30ecafe92de4cddbfb9d62f3fdf2e880bb2dd57d15f0b3c4c198d3"
+        }
+      ]
+    },
+    {
+      "index": 267,
+      "region": "aomori",
+      "title": "シチジャム",
+      "disposition": "still_hold",
+      "reason": "七戸町観光協会の現行トップとイベント一覧を確認したが、シチジャムの開催年・日付を確認できない。",
+      "sources_checked": [
+        {
+          "url": "https://www.shichinohe-kankou.jp/",
+          "final_url": "https://www.shichinohe-kankou.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:23.450156+00:00",
+          "sha256": "48a182b07f472b5d136984ad44b9e0bbaa9c06bece5289ec132961a6b9d1f7dc"
+        },
+        {
+          "url": "https://www.shichinohe-kankou.jp/category/event/",
+          "final_url": "https://www.shichinohe-kankou.jp/category/event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:34:32.875117+00:00",
+          "sha256": "deb87318c85c4fb04cd2fc2756ae45d3c1aaf9df3c5340849867694c6faa4b4c"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 268,
+      "region": "aomori",
+      "title": "たっこにんにくまつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/event/detail_8572.html",
+          "final_url": "https://aomori-tourism.com/event/detail_8572.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:53.494364+00:00",
+          "sha256": "1a6d2be041573128e76ce6fc8af2cc9bf4336435a2d4bf20d033d8dd54eff1a6"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-268",
+      "added_event_ids": [
+        "evt-hold-b4-268"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 269,
+      "region": "aomori",
+      "title": "あおもり灯りと紙のページェント",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2025/12/12～2026/2/15で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/kankou/1005278/1005296/1005298.html",
+          "final_url": "https://www.city.aomori.aomori.jp/bunka_sports_kankou/kankou/1005278/1005296/1005298.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:11.608877+00:00",
+          "sha256": "3f28b26ed58141a5ea75620c8ec8a281526e374ecb04012ef9e79a4ab30a9698"
+        }
+      ]
+    },
+    {
+      "index": 270,
+      "region": "aomori",
+      "title": "乳穂ヶ滝ライトアップ",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2025/2/1～16で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_1831.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_1831.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:54.518453+00:00",
+          "sha256": "ba6571777e1a8d517d0a1cdfb208368c942f3c5c80d5152dbc9d5b1fa96cf407"
+        }
+      ]
+    },
+    {
+      "index": 271,
+      "region": "aomori",
+      "title": "あおもり雪灯りまつり",
+      "disposition": "past",
+      "reason": "公式に掲載された当該開催は2024/2/3で終了済み。未発表の次回日程を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/event/detail_8701.html",
+          "final_url": "https://aomori-tourism.com/event/detail_8701.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:30:54.928984+00:00",
+          "sha256": "86394416dbe79eba64670ad209c3e8533e94f02df322ea487e8a76c90f606c1f"
+        }
+      ]
+    },
+    {
+      "index": 272,
+      "region": "aomori",
+      "title": "ペンギンウォッチング～ペンギンの暮らし～",
+      "disposition": "still_hold",
+      "reason": "浅虫水族館の公式トップと2026年度イベントカレンダーで当該ペンギンウォッチングの日程を確認できない。報道の10月日程を公式根拠として流用しない。",
+      "sources_checked": [
+        {
+          "url": "https://asamushi-aqua.com/",
+          "final_url": "https://asamushi-aqua.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:12.015293+00:00",
+          "sha256": "ec4a0ac6e4ba2d1a83e418a3e7216eb32d5e965796461171be27c7af1546eeaf"
+        },
+        {
+          "url": "https://asamushi-aqua.com/event-calendar",
+          "final_url": "https://asamushi-aqua.com/event-calendar",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:25.376088+00:00",
+          "sha256": "13c0abf8f2d59f279abe6a5426f50f1b65213276a44b203837b71ed78e9ce88a"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 273,
+      "region": "aomori",
+      "title": "鉄道の日フェア2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.hirosaki-kanko.or.jp/cat_index.html",
+          "final_url": "https://www.hirosaki-kanko.or.jp/cat_index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:12.384866+00:00",
+          "sha256": "af959c558428529af544e8027f09382297a7fbd06adc7ffd11dade773c462cc0"
+        },
+        {
+          "url": "https://www.hirosaki-kanko.or.jp/details.html?id=CNT00409141525391153",
+          "final_url": "https://www.hirosaki-kanko.or.jp/details.html?id=CNT00409141525391153",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:25.724668+00:00",
+          "sha256": "c456b9e1c37e6f5161ef33607fd858e4265379b5798ad738e006ba12267ffc18"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-273",
+      "added_event_ids": [
+        "evt-hold-b4-273"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 274,
+      "region": "aomori",
+      "title": "平川市猿賀公園 紅葉まつり",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/topics/",
+          "final_url": "https://hirakawa-kankou.com/topics/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:23.884231+00:00",
+          "sha256": "bd32322978068408162a38b5b057a4bdb39d0969af8e5a596174bb1a56bb604c"
+        },
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:45.603384+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-274",
+      "added_event_ids": [
+        "evt-hold-b4-274"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 275,
+      "region": "aomori",
+      "title": "フリーダム 像と生きる",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/exhibitions/tsubaki_noboru/",
+          "final_url": "https://towadaartcenter.com/exhibitions/tsubaki_noboru/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:31:24.651156+00:00",
+          "sha256": "7e8f9d6f56ef4ce9a259c02b384f256d579f3b16d721d6b0aa180c89d7eadb52"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-275",
+      "added_event_ids": [
+        "evt-hold-b4-275"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 276,
+      "region": "aomori",
+      "title": "椿昇 フリーダムー像(ゾウ)と生きる",
+      "disposition": "duplicate",
+      "reason": "同一会期・会場・公式URLの椿昇展。別表記の同じ展覧会。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/exhibitions/tsubaki_noboru/",
+          "final_url": "https://towadaartcenter.com/exhibitions/tsubaki_noboru/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:23.078088+00:00",
+          "sha256": "12169e56d2702d808f6dd2b7ec243f354aa8ddaca9ca98fc2e7e8119334037ab"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-275",
+      "matched_event_ids": [
+        "evt-hold-b4-275"
+      ]
+    },
+    {
+      "index": 277,
+      "region": "aomori",
+      "title": "五所川原歩行者天国2026",
+      "disposition": "past",
+      "reason": "公式の2026/10/31開催は終了済み。",
+      "sources_checked": [
+        {
+          "url": "https://www.go-kankou.jp/news/",
+          "final_url": "https://www.go-kankou.jp/news/",
+          "http_status": null,
+          "checked_at": "2026-11-01T03:35:23.767409+00:00",
+          "sha256": null
+        },
+        {
+          "url": "http://www.go-kankou.jp/news/",
+          "final_url": "http://www.go-kankou.jp/news/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:34.021328+00:00",
+          "sha256": "bfaf7d88357e3c17328b113cf6063bb4692aabaaa9a8a85d6cd31f1f7f335cfb"
+        },
+        {
+          "url": "http://www.go-kankou.jp/newses/%e3%80%9010-31%e5%9c%9f%e3%80%8c%e4%ba%94%e6%89%80%e5%b7%9d%e5%8e%9f%e6%ad%a9%e8%a1%8c%e8%80%85%e5%a4%a9%e5%9b%bd2026%e3%80%8d%e9%96%8b%e5%82%ac%e3%81%ae%e3%81%8a%e7%9f%a5%e3%82%89%e3%81%9b%ef%bc%81/",
+          "final_url": "http://www.go-kankou.jp/newses/%E3%80%9010-31%E5%9C%9F%E3%80%8C%E4%BA%94%E6%89%80%E5%B7%9D%E5%8E%9F%E6%AD%A9%E8%A1%8C%E8%80%85%E5%A4%A9%E5%9B%BD2026%E3%80%8D%E9%96%8B%E5%82%AC%E3%81%AE%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B%EF%BC%81/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:53.544010+00:00",
+          "sha256": "2de73f79de3de1ed9f0942f5f23de412a431c21768f6df2781fa96fb38dce1c2"
+        }
+      ]
+    },
+    {
+      "index": 278,
+      "region": "aomori",
+      "title": "外ヶ浜まつり2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://r.goope.jp/sotogahama/info/6966117",
+          "final_url": "https://r.goope.jp/sotogahama/info/6966117",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:24.110373+00:00",
+          "sha256": "829e6ab3c8eae2e2fa19fe756b5b075955418a89cab63c2587d90493fb4d49ff"
+        },
+        {
+          "url": "https://www.town.sotogahama.lg.jp/oshirase/",
+          "final_url": "https://www.town.sotogahama.lg.jp/oshirase/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:35.218499+00:00",
+          "sha256": "42d166eeebf0a0ab428d643aa31f76a2997dedebf860cfbc412e1002dd8e601a"
+        },
+        {
+          "url": "https://www.town.sotogahama.lg.jp/oshirase/news/sotogahama_matsuri2026.html",
+          "final_url": "https://www.town.sotogahama.lg.jp/oshirase/news/sotogahama_matsuri2026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:50.061412+00:00",
+          "sha256": "59dbfee065bf9e3e5c24f4b4897c2c86f0a4b3b313749443fce8090ab4958e00"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-278",
+      "added_event_ids": [
+        "evt-hold-b4-278"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 279,
+      "region": "aomori",
+      "title": "ふじさき「秋のわくわくフェスタ」",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.fujisaki-kanko.jp/9000.html",
+          "final_url": "https://www.fujisaki-kanko.jp/9000.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:35.862849+00:00",
+          "sha256": "340e25e83805ae83528efa0e0f9598eae3a71514b71f8fcbea72d450fa69fdeb"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-279",
+      "added_event_ids": [
+        "evt-hold-b4-279"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 280,
+      "region": "aomori",
+      "title": "ひろさきりんごハロウィン2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://www.hirosakigeijyutu.com/hirosakiringohalloween2026",
+          "final_url": "https://www.hirosakigeijyutu.com/hirosakiringohalloween2026",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:36.718894+00:00",
+          "sha256": "4f05b8c980da33030ed36db8a736cb7516b7eb613a958ef79d5f332f1c6946ff"
+        },
+        {
+          "url": "https://www.hirosakigeijyutu.com/home/hirosakiringohalloween2026",
+          "final_url": "https://www.hirosakigeijyutu.com/home/hirosakiringohalloween2026",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:50.536929+00:00",
+          "sha256": "b5e37a6f1452a9aabf1e1dd9e7f2a1bf7135b10518f590d0e92abb48ad03155b"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-280",
+      "added_event_ids": [
+        "evt-hold-b4-280"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 281,
+      "region": "aomori",
+      "title": "伊奈かっぺい十三日の金曜日",
+      "disposition": "still_hold",
+      "reason": "公式案内は18:30開演の夜間トーク・ライブのみ。子ども・家族向けの内容や若年児向けの参加案内を確認できない。",
+      "sources_checked": [
+        {
+          "url": "https://columbia.jp/artist-info/kappei/live/",
+          "final_url": "https://columbia.jp/artist-info/kappei/live/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:51.505389+00:00",
+          "sha256": "988653c4a1ac50504077c8c650ab4d731c5e34f27df4862e9d800d66ae4a9603"
+        },
+        {
+          "url": "https://columbia.jp/artist-info/kappei/live/94342.html",
+          "final_url": "https://columbia.jp/artist-info/kappei/live/94342.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:10.411893+00:00",
+          "sha256": "f3bf6f5f3c1e367657e2ba975959728a6d6bb82f4a4450e8a9c88ed6ca5b57c4"
+        }
+      ],
+      "reason_code": "NOT_FAMILY_SUITABLE"
+    },
+    {
+      "index": 282,
+      "region": "aomori",
+      "title": "グライダーの操縦を体験（11月）",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://kokukagaku.jp/event/",
+          "final_url": "https://kokukagaku.jp/event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:10.819647+00:00",
+          "sha256": "6b3db4937d308d9ad35def055f7a848a37152da29a66f0043eb22036d4a50877"
+        },
+        {
+          "url": "https://kokukagaku.jp/event/11317/",
+          "final_url": "https://kokukagaku.jp/event/11317/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:50.622484+00:00",
+          "sha256": "700b46b3b2e48d129b3952c7794ac21f05a12a1999354c2cef79de8ea57c79e0"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-282",
+      "added_event_ids": [
+        "evt-hold-b4-282"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 283,
+      "region": "aomori",
+      "title": "ごのへdeランタンフェスティバル2026",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aomori-tourism.com/spot/detail_8992.html",
+          "final_url": "https://aomori-tourism.com/spot/detail_8992.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:37.977776+00:00",
+          "sha256": "d3a0d5851ef731b7eaddb5c7562818bd70d2325995073669fae75aa841e8ea40"
+        },
+        {
+          "url": "https://www.gonohe-kankou.jp/topics/topics-3649/",
+          "final_url": "https://www.gonohe-kankou.jp/topics/topics-3649/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:51.883268+00:00",
+          "sha256": "f44995285c65eb689337ae75811318c24d9b486b187c14a6389bce2e02f5fafb"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-283",
+      "added_event_ids": [
+        "evt-hold-b4-283"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 284,
+      "region": "aomori",
+      "title": "フォトロゲイニング大会 in 六ヶ所",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://photorogaining.com/event/",
+          "final_url": "https://photorogaining.com/event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:38.486277+00:00",
+          "sha256": "b4fa645fc64870689abe15ac35bf09e0bc86dee24dcf25573b6890ee670cdcd0"
+        },
+        {
+          "url": "https://photorogaining.com/event/4542/",
+          "final_url": "https://photorogaining.com/event/4542/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:52.404413+00:00",
+          "sha256": "5768ba2d76c85b2e15d4ce97224ac866864fadaf7570664d3b3e0f2e5b5f9306"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-284",
+      "added_event_ids": [
+        "evt-hold-b4-284"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 285,
+      "region": "aomori",
+      "title": "【八戸市】イーハトーブシアター【真昼の星めぐり】theMusical",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://hachi-kokaido.com/2026/08/11.html",
+          "final_url": "https://hachi-kokaido.com/2026/08/11.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:35:52.907886+00:00",
+          "sha256": "589ea71044cb35ab5f3d75e1f0366fa0eb87312d8d8508cc234a5884a1479b42"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-285",
+      "added_event_ids": [
+        "evt-hold-b4-285"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 286,
+      "region": "aomori",
+      "title": "くろいち2026　秋ノ刻",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://tsugarudensho.com/",
+          "final_url": "https://tsugarudensho.com/",
+          "http_status": 403,
+          "checked_at": "2026-11-01T03:36:11.262648+00:00",
+          "sha256": "e20f73547fca6226013459034d9a32a7e63b8c588154aff1c851266f8c1ff498"
+        },
+        {
+          "url": "https://kuroishi.or.jp/archives/category/news",
+          "final_url": "https://kuroishi.or.jp/archives/category/news",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:28.186147+00:00",
+          "sha256": "9dcdbcce6e115a28f7b0983d91d3e7afb9eb7f7764132682a7a5a233ca55d169"
+        },
+        {
+          "url": "https://kuroishi.or.jp/wp-content/uploads/2026/08/2026_Kuroichi_1_page-0001.jpg",
+          "final_url": "https://kuroishi.or.jp/wp-content/uploads/2026/08/2026_Kuroichi_1_page-0001.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:32.303074+00:00",
+          "sha256": "93407a8638ae2b632bf5bdf5f5f460584058625edd5a9dbb8ff0a8f516cb6ad4"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-286",
+      "added_event_ids": [
+        "evt-hold-b4-286"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 287,
+      "region": "aomori",
+      "title": "アロマフェア in八戸〜ODEKAKE 2026〜",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://aromafairhachinohe.wixsite.com/home/odekake2026",
+          "final_url": "https://aromafairhachinohe.wixsite.com/home/odekake2026",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:12.105363+00:00",
+          "sha256": "7b1051e3917f93735767289adecb5aa03fe1a5fc30071326fda05c936c31fe64"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-287",
+      "added_event_ids": [
+        "evt-hold-b4-287"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 288,
+      "region": "aomori",
+      "title": "猿賀ルチャー祭り",
+      "disposition": "duplicate",
+      "reason": "同じ公式ページで紅葉まつりのメインイベントとして案内された10/31・11/1の猿賀ルチャー。親イベントに内容を反映済み。",
+      "sources_checked": [
+        {
+          "url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "final_url": "https://hirakawa-kankou.com/2026/09/21/saruka-autumn-leanes-fes2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:18.190758+00:00",
+          "sha256": "03ab29ebcfe3a3a0d9d3d31ebfef5571c6bb62c5fb065b48fa0dcb2d029cf3e6"
+        }
+      ],
+      "matched_event_id": "evt-hold-b4-274",
+      "matched_event_ids": [
+        "evt-hold-b4-274"
+      ]
+    },
+    {
+      "index": 289,
+      "region": "aomori",
+      "title": "第2回 骨董市",
+      "disposition": "still_hold",
+      "reason": "観光協会本文・公式掲載チラシに11/14・15を確認するが開催年の明記がない。投稿年だけから2026年と推定しない。施設サイトは403。",
+      "sources_checked": [
+        {
+          "url": "https://tsugarudensho.com/",
+          "final_url": "https://tsugarudensho.com/",
+          "http_status": 403,
+          "checked_at": "2026-11-01T03:36:19.083009+00:00",
+          "sha256": "6200b801094a63a405ffdc3bfa74c3fe79c9103d490d6695eb50931d901a39a6"
+        },
+        {
+          "url": "https://denshokokeshi.com/kokeshidensho/",
+          "final_url": "https://denshokokeshi.com/kokeshidensho/",
+          "http_status": 404,
+          "checked_at": "2026-11-01T03:36:28.738652+00:00",
+          "sha256": "9298e4be7f29a26bff43f8550ca4ca1fac5ef4d2e348279240023443d99a4b29"
+        },
+        {
+          "url": "https://kuroishi.or.jp/archives/category/news",
+          "final_url": "https://kuroishi.or.jp/archives/category/news",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:51.081182+00:00",
+          "sha256": "9dcdbcce6e115a28f7b0983d91d3e7afb9eb7f7764132682a7a5a233ca55d169"
+        },
+        {
+          "url": "https://kuroishi.or.jp/wp-content/uploads/2026/10/densyou_kottouichi.png",
+          "final_url": "https://kuroishi.or.jp/wp-content/uploads/2026/10/densyou_kottouichi.png",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:32.750685+00:00",
+          "sha256": "e0ab22fa896adf835cb436e3ef7702e12e222a59c819945eea7104c60c34b21f"
+        }
+      ],
+      "reason_code": "START_DATE_UNCONFIRMED"
+    },
+    {
+      "index": 290,
+      "region": "aomori",
+      "title": "ワークショップイベント「アトリエ ルディック」11/19、21、22",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://misawaworkshop.jimdofree.com/",
+          "final_url": "https://misawaworkshop.jimdofree.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:30.121245+00:00",
+          "sha256": "f90a3e6ad1bbdcef6731c50677e8e8469d8d5699e37f1548332c3388d6004226"
+        },
+        {
+          "url": "https://misawaworkshop.jimdofree.com/11月19日-木-のワークショップ/",
+          "final_url": "https://misawaworkshop.jimdofree.com/11%E6%9C%8819%E6%97%A5-%E6%9C%A8-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:13.240235+00:00",
+          "sha256": "e9bc02e6483029738cac1e4c672f970d540c76486074bfbc6096a36af4d511b1"
+        },
+        {
+          "url": "https://misawaworkshop.jimdofree.com/出店ご希望の方へ/",
+          "final_url": "https://misawaworkshop.jimdofree.com/%E5%87%BA%E5%BA%97%E3%81%94%E5%B8%8C%E6%9C%9B%E3%81%AE%E6%96%B9%E3%81%B8/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:33.212145+00:00",
+          "sha256": "7f2945a71c85d0412c22d8b77e8e7d6a983705dfa1d4d315215d5eec223c12d7"
+        },
+        {
+          "url": "https://misawaworkshop.jimdofree.com/11月21日-土-のワークショップ/",
+          "final_url": "https://misawaworkshop.jimdofree.com/11%E6%9C%8821%E6%97%A5-%E5%9C%9F-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:34.110531+00:00",
+          "sha256": "08a5f410ba629393172d0b1b56dee1de4b964ede1d5c00ecec799a6b92a283be"
+        },
+        {
+          "url": "https://misawaworkshop.jimdofree.com/11月22日-日-のワークショップ/",
+          "final_url": "https://misawaworkshop.jimdofree.com/11%E6%9C%8822%E6%97%A5-%E6%97%A5-%E3%81%AE%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%B7%E3%83%A7%E3%83%83%E3%83%97/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:35.190248+00:00",
+          "sha256": "8cc410be6649125cfca5b1106b92ca6da59964efc03627a7f876fe0a40bd1502"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-290-19",
+      "added_event_ids": [
+        "evt-hold-b4-290-19",
+        "evt-hold-b4-290-21",
+        "evt-hold-b4-290-22"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 291,
+      "region": "aomori",
+      "title": "冬の奥入瀬ナイトツアー（市街地・奥入瀬渓流温泉発着）",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://frozen-oirase.com/plan001.html",
+          "final_url": "https://frozen-oirase.com/plan001.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:31.131657+00:00",
+          "sha256": "3629cf0a8467dfa47ab0a20f866f423951b9e07326699fc8057b5e63bfbe710c"
+        },
+        {
+          "url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/810890",
+          "final_url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/810890",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:51.631130+00:00",
+          "sha256": "2bc4e63db6837a344b4e308b1a803e89b3e00815a62439ad985f221a85988bf8"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-291",
+      "added_event_ids": [
+        "evt-hold-b4-291"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 292,
+      "region": "aomori",
+      "title": "冬の奥入瀬ナイトツアー（十和田湖発着）",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://frozen-oirase.com/plan002.html",
+          "final_url": "https://frozen-oirase.com/plan002.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:31.863598+00:00",
+          "sha256": "72f24d2c78b0fdf17dc591dbb32d012897c029bc50ec791c05fb2620b061edea"
+        },
+        {
+          "url": "https://frozen-oirase.com/plan003.html",
+          "final_url": "https://frozen-oirase.com/plan003.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:36.416421+00:00",
+          "sha256": "56a8bf69c4b3cec36a7a3258a19b0ece06c7d511231d09493962fe3dd25df559"
+        },
+        {
+          "url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/792023",
+          "final_url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/792023",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:52.875258+00:00",
+          "sha256": "cf4795c35643d883a65ebd8d19ec6512b9c538643c3fec10ba1d2913236f5b6b"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-292",
+      "added_event_ids": [
+        "evt-hold-b4-292"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 293,
+      "region": "aomori",
+      "title": "冬の奥入瀬デイタイムツアー",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://frozen-oirase.com/plan003.html",
+          "final_url": "https://frozen-oirase.com/plan003.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:32.558146+00:00",
+          "sha256": "56a8bf69c4b3cec36a7a3258a19b0ece06c7d511231d09493962fe3dd25df559"
+        },
+        {
+          "url": "https://frozen-oirase.com/plan002.html",
+          "final_url": "https://frozen-oirase.com/plan002.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:37.095829+00:00",
+          "sha256": "72f24d2c78b0fdf17dc591dbb32d012897c029bc50ec791c05fb2620b061edea"
+        },
+        {
+          "url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/792006",
+          "final_url": "https://widgets.bokun.io/online-sales/79947ef5-7f89-48d8-8dff-e4331c6817ce/experience/792006",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:53.467686+00:00",
+          "sha256": "457b75d4e1f3f15cafab37c86a1ce754a0092c26ad52a1c70d3de8e3268c9a68"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-293",
+      "added_event_ids": [
+        "evt-hold-b4-293"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 294,
+      "region": "aomori",
+      "title": "スティーヴ・ビショップ 建物をめぐる3つのフィルム",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/exhibitions/",
+          "final_url": "https://towadaartcenter.com/exhibitions/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:59.336016+00:00",
+          "sha256": "d148f6afd6cdcf84c6cb15c09a2257d86e25a6e36bcd1109807feca3529b89e0"
+        },
+        {
+          "url": "https://towadaartcenter.com/exhibitions/steve_bishop/",
+          "final_url": "https://towadaartcenter.com/exhibitions/steve_bishop/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:14.505836+00:00",
+          "sha256": "ca8cfb7ba5f1b470d2c9200bdb68a05f9dda68cfd2ad3329423f7f675acd9943"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-294",
+      "added_event_ids": [
+        "evt-hold-b4-294"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 295,
+      "region": "aomori",
+      "title": "KUSAMA FOREVER 草間彌生氏を偲んで",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/exhibitions/",
+          "final_url": "https://towadaartcenter.com/exhibitions/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:36:59.952673+00:00",
+          "sha256": "d148f6afd6cdcf84c6cb15c09a2257d86e25a6e36bcd1109807feca3529b89e0"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/kusama-forever/",
+          "final_url": "https://towadaartcenter.com/events/kusama-forever/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:15.148988+00:00",
+          "sha256": "41117d46749f8e0c42f442f1a80e1b076d53389b20b0a0c69d6b6c4d82b45972"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-295",
+      "added_event_ids": [
+        "evt-hold-b4-295"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 296,
+      "region": "aomori",
+      "title": "miu.labo こけし絵付けワークショップ",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://denshokokeshi.com/kokeshidensho/",
+          "final_url": "https://denshokokeshi.com/kokeshidensho/",
+          "http_status": 404,
+          "checked_at": "2026-11-01T03:37:00.305939+00:00",
+          "sha256": "9298e4be7f29a26bff43f8550ca4ca1fac5ef4d2e348279240023443d99a4b29"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/taps-events_1107_2026/",
+          "final_url": "https://towadaartcenter.com/events/taps-events_1107_2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:15.649065+00:00",
+          "sha256": "fcb4da331d42679a9df7183ce4411bba74c4e0ea98d7a767d2aed30b7f0b0645"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-296",
+      "added_event_ids": [
+        "evt-hold-b4-296"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 297,
+      "region": "aomori",
+      "title": "手話通訳付 常設展ギャラリートーク 11/8",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:00.918545+00:00",
+          "sha256": "5a5228e79b7fd57a631851a24f66d82b3fe0f241bc0fe0f95f048974ad5b6c59"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/permanentcollection_talk_support_261108/",
+          "final_url": "https://towadaartcenter.com/events/permanentcollection_talk_support_261108/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:16.202654+00:00",
+          "sha256": "f6259daaf716c6ab044f8d254ced8b1913a9997c5c09102c6627b3eadadca742"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-297",
+      "added_event_ids": [
+        "evt-hold-b4-297"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 298,
+      "region": "aomori",
+      "title": "常設展市民無料デー 11/10",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:01.797491+00:00",
+          "sha256": "5a5228e79b7fd57a631851a24f66d82b3fe0f241bc0fe0f95f048974ad5b6c59"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/towada_residents_day1110/",
+          "final_url": "https://towadaartcenter.com/events/towada_residents_day1110/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:16.781743+00:00",
+          "sha256": "dfa076435e06387f2ce7ff60d1963b48cf24bdb09467818a10054c2684ad6356"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-298",
+      "added_event_ids": [
+        "evt-hold-b4-298"
+      ],
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 299,
+      "region": "aomori",
+      "title": "光の橋でげんびさんぽ",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:02.335999+00:00",
+          "sha256": "5a5228e79b7fd57a631851a24f66d82b3fe0f241bc0fe0f95f048974ad5b6c59"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/bridgeoflight_genbisanpo_261115/",
+          "final_url": "https://towadaartcenter.com/events/bridgeoflight_genbisanpo_261115/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:17.450540+00:00",
+          "sha256": "c6255dcd8dca01cafb8784dea8319afd1761f7bf8b8a18686cdb6f1b1dd91b12"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-299",
+      "added_event_ids": [
+        "evt-hold-b4-299"
+      ],
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 300,
+      "region": "aomori",
+      "title": "スティーヴ・ビショップ展 懇親会 12/3",
+      "disposition": "added",
+      "reason": "公式に開催日・会場・内容を確認。記載のない情報は固定文言で明示して公開。",
+      "sources_checked": [
+        {
+          "url": "https://towadaartcenter.com/events/",
+          "final_url": "https://towadaartcenter.com/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:02.840018+00:00",
+          "sha256": "5a5228e79b7fd57a631851a24f66d82b3fe0f241bc0fe0f95f048974ad5b6c59"
+        },
+        {
+          "url": "https://towadaartcenter.com/events/taps-events_1203_2026/",
+          "final_url": "https://towadaartcenter.com/events/taps-events_1203_2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T03:37:17.981524+00:00",
+          "sha256": "76bbb4a7d23a6ab17786d74db4beb25be64a06dea652c37324a42ba68fcc8bc4"
+        }
+      ],
+      "added_event_id": "evt-hold-b4-300",
+      "added_event_ids": [
+        "evt-hold-b4-300"
+      ],
+      "participability": "通常参加可能"
     }
   ]
 }
