@@ -2,18 +2,18 @@
   "mission_id": "MEM-EVT-OPS-HOLD-REPUBLISH-B3-20261101",
   "executed_in_this_mission": true,
   "prior_run_numbers_reused_as_execution": false,
-  "executed_at": "2026-11-01T01:17:14.935993+00:00",
+  "executed_at": "2026-11-01T01:30:16.226636+00:00",
   "evidence_process_started_at": "2026-11-01T00:51:54.580725+00:00",
   "baseline": "31de5d6fceba60b2f4e4c8d7b6d116b518401891",
   "status": "IN_PROGRESS",
   "aggregate": {
-    "total": 200,
-    "added": 155,
-    "duplicate": 14,
+    "total": 300,
+    "added": 202,
+    "duplicate": 17,
     "past": 0,
-    "still_hold": 27,
-    "not_event": 4,
-    "events_added": 156,
+    "still_hold": 60,
+    "not_event": 21,
+    "events_added": 204,
     "events_changed_by_bounded_fixes": 0,
     "metadata_total_events_corrected": true
   },
@@ -25,12 +25,15 @@
       "not_event": 1
     },
     "saitama": {
-      "added": 34,
-      "still_hold": 11,
-      "duplicate": 4,
-      "not_event": 3
+      "added": 79,
+      "still_hold": 25,
+      "duplicate": 7,
+      "not_event": 20
     },
-    "shimane": {},
+    "shimane": {
+      "still_hold": 19,
+      "added": 2
+    },
     "yamagata": {}
   },
   "candidates": [
@@ -4300,6 +4303,2535 @@
       ],
       "added_event_id": "evt-hold-b3-200",
       "participability": "通常参加可能"
+    },
+    {
+      "index": 201,
+      "region": "saitama",
+      "title": "プラザノースdeクリスマス",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.plazanorth.jp/events/",
+          "final_url": "https://www.plazanorth.jp/events/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:30.068551+00:00",
+          "sha256": "83e1a14c334e0e0b300da5f270febe051d2f687aa4abe8a4955d3d26378333ae"
+        },
+        {
+          "url": "https://www.plazanorth.jp/events/2026/09/-de-25.php",
+          "final_url": "https://www.plazanorth.jp/events/2026/09/-de-25.php",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:18:09.381130+00:00",
+          "sha256": "406dd68ae1790ffcb84af4d9121fc536908155370129b43733e80e92b9c36fac"
+        },
+        {
+          "url": "https://www.plazanorth.jp/events/2026/09/-de-26.php",
+          "final_url": "https://www.plazanorth.jp/events/2026/09/-de-26.php",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:20.910353+00:00",
+          "sha256": "24ff05c98ef3c6403d3b42c3f3841563fd26dd48a06d95853a94a5ce621c1a7f"
+        },
+        {
+          "url": "https://www.plazanorth.jp/events/a87f592799e4a1c953be3e7e04ccf5b9e5663ccd.jpg",
+          "final_url": "https://www.plazanorth.jp/events/a87f592799e4a1c953be3e7e04ccf5b9e5663ccd.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:42.346879+00:00",
+          "sha256": "0b98cb63e669885d7dcee97f81b64ec32ab94e743fb03666d59b0377594b4770"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-201",
+      "participability": "通常参加可能",
+      "added_event_ids": [
+        "evt-hold-b3-201",
+        "evt-hold-b3-201-2"
+      ]
+    },
+    {
+      "index": 202,
+      "region": "saitama",
+      "title": "令和8年度「本庄まつり」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.honjo-kanko.jp/topics/none/20261014_10704/",
+          "final_url": "https://www.honjo-kanko.jp/topics/none/20261014_10704/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:30.648270+00:00",
+          "sha256": "661aaa73caef783c58a0f5e85be1066c4bac9279dd843250799e59111d1e0c97"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-202",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 203,
+      "region": "saitama",
+      "title": "イオンレイクタウン スポットコンサート　国際ハープフェスティバル2026－草加市",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://soka-bunka.jp/harpfestival/",
+          "final_url": "https://soka-bunka.jp/harpfestival/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:31.482854+00:00",
+          "sha256": "e73798825512290e8d31c9c377ae6c2f84c618464275aa95590519d46f746760"
+        },
+        {
+          "url": "https://soka-bunka.jp/pages/358/",
+          "final_url": "https://soka-bunka.jp/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:18:11.317785+00:00",
+          "sha256": "e0785a6d60acd34a89302628b330ab8f2da102af0bb82b08460d9c06d23ad197"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-203",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 204,
+      "region": "saitama",
+      "title": "川口×絶品グルメ鍋祭り2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://zeppin-yatai.com/kawaguchi/",
+          "final_url": "https://zeppin-yatai.com/kawaguchi/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:32.769925+00:00",
+          "sha256": "9772eccd03ca193ef280a33ec6ac5c6674ecb14640075cfcbcd5d0a7bd4a02b3"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-204",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 205,
+      "region": "saitama",
+      "title": "KAWAGOE WORLD WINE FESTA 2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kawagoe-world-wine-festa-3.jimdosite.com/",
+          "final_url": "https://kawagoe-world-wine-festa-3.jimdosite.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:33.531685+00:00",
+          "sha256": "b4eaf122ccc8bd5c10fd752b2e06ecbf2231f3309b004e2d94f4e5356ae37c8f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-205",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 206,
+      "region": "saitama",
+      "title": "レバーハープ教室　国際ハープフェスティバル2026－草加市",
+      "disposition": "still_hold",
+      "reason": "公式の初心者教室は小学校4年生以上が対象。幼児は参加対象外のため、幼児連れ家族向けの新規参加イベントとして保留。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://soka-bunka.jp/harpfestival/",
+          "final_url": "https://soka-bunka.jp/harpfestival/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:34.171399+00:00",
+          "sha256": "8497826df2e9c830dc1cc9a1fd5e548a85c69493410c07aa89b830be36452983"
+        },
+        {
+          "url": "https://soka-bunka.jp/pages/358/",
+          "final_url": "https://soka-bunka.jp/pages/358/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:18:32.199442+00:00",
+          "sha256": "68a3e1bdd604a42f5bf5ecd63a6ad011fceed6d6c5fa6fac11d5a7f217fd7150"
+        }
+      ]
+    },
+    {
+      "index": 207,
+      "region": "saitama",
+      "title": "謎解き冒険ラリー不思議ハンターin大宮第二公園",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.npo-tashizan.jp",
+          "final_url": "https://www.npo-tashizan.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:34.921582+00:00",
+          "sha256": "0842b17d8d9b34d7ee2c291a08712fd7478c8408cb28b61f6add6156079c931b"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-207",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 208,
+      "region": "saitama",
+      "title": "ハワイアンフェス2026 in サクラタウン",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://tokorozawa-sakuratown.com/event_categories/hawaiianfes2026.html",
+          "final_url": "https://tokorozawa-sakuratown.com/event_categories/hawaiianfes2026.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:35.573857+00:00",
+          "sha256": "0e4c276baa961deeb709d703d99d8a919821995a6c756f5d344de8ae81fada10"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-208",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 209,
+      "region": "saitama",
+      "title": "令和8年度「こだま秋まつり」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.honjo-kanko.jp/topics/none/20261014_10709/",
+          "final_url": "https://www.honjo-kanko.jp/topics/none/20261014_10709/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:36.589197+00:00",
+          "sha256": "edc8f36235951867f2a234d5e801632668abbe53c9ceef22c01ade96d3b9d4bf"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-209",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 210,
+      "region": "saitama",
+      "title": "謎解き冒険ラリー不思議ハンターin大宮第三公園",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.npo-tashizan.jp",
+          "final_url": "https://www.npo-tashizan.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:37.744304+00:00",
+          "sha256": "0842b17d8d9b34d7ee2c291a08712fd7478c8408cb28b61f6add6156079c931b"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-210",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 211,
+      "region": "saitama",
+      "title": "第72回星川夜市 ～HOSHIKAWA Night Bazar～",
+      "disposition": "still_hold",
+      "reason": "公式が17:00〜21:00のみのナイトバザールと明記。幼児向け昼間の参加プログラムがない夜間限定候補として保留。出店受付終了とは区別。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.hoshikawayoichi.com/wp/",
+          "final_url": "https://www.hoshikawayoichi.com/wp/",
+          "http_status": 404,
+          "checked_at": "2026-11-01T01:17:49.648972+00:00",
+          "sha256": "13b2d1fc8e14e4d2c90f707d03920cd8d0d8ed8a6aab1a77e3f059541c41a3da"
+        },
+        {
+          "url": "https://www.hoshikawayoichi.com/news/8093",
+          "final_url": "https://www.hoshikawayoichi.com/news/8093",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:18:25.140487+00:00",
+          "sha256": "eb927ebf50fd01a4d550cac70e0b5fc8fccc7469afff64749d698f111472d93c"
+        },
+        {
+          "url": "https://forms.gle/peV7KGzpQFSLodnr8",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSeISX1nrC2H0QQXhlo_ZSsZfrrhIMhK-D3vGG7qLTRwKO1PKQ/closedform",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:55.300677+00:00",
+          "sha256": "95f5988d52133c3dad4e6a7bf1a5aa67c21deefa14d3d4fda201f553c03cb0e6"
+        },
+        {
+          "url": "https://www.hoshikawayoichi.com/",
+          "final_url": "https://www.hoshikawayoichi.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:04.239235+00:00",
+          "sha256": "9b4c8136a7f569ac73efe6133250be7415d511d506cad616537fbfae4db587dc"
+        }
+      ]
+    },
+    {
+      "index": 212,
+      "region": "saitama",
+      "title": "大宮けいりん『チャリフェス』",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.keirin-saitama.jp/omiya/topics/20261123/",
+          "final_url": "https://www.keirin-saitama.jp/omiya/topics/20261123/",
+          "http_status": 503,
+          "checked_at": "2026-11-01T01:17:50.955977+00:00",
+          "sha256": "5830d8aa21c3e048f7ff326c65951a7acfbaab8e116c0f75c8e6edd29e68522a"
+        },
+        {
+          "url": "https://keirin-saitama-info.jp/event/index.html",
+          "final_url": "https://keirin-saitama-info.jp/event/index.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:20.841718+00:00",
+          "sha256": "065278426a8f3147b42650d86171de716c041946a2c4cf6f9e442095eede635e"
+        },
+        {
+          "url": "https://keirin-saitama-info.jp",
+          "final_url": "https://keirin-saitama-info.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:18:29.460273+00:00",
+          "sha256": "992ae6331d2fd4e19e97f2f72e11f1bcc06dd1f74b2e70e687cf8e6228dea89f"
+        },
+        {
+          "url": "https://keirin-saitama-info.jp/event/img/チャリフェス.jpg",
+          "final_url": "https://keirin-saitama-info.jp/event/img/%E3%83%81%E3%83%A3%E3%83%AA%E3%83%95%E3%82%A7%E3%82%B9.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:54.854496+00:00",
+          "sha256": "d7b298c5fcf63f700c5e3fdfa13531d102b449f1b56d42fec388a0060e3ef03f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-212",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 213,
+      "region": "saitama",
+      "title": "ママハピEXPO@イオンモール川口",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.mamahapi.jp/event/kawaguchi_20261106/",
+          "final_url": "https://www.mamahapi.jp/event/kawaguchi_20261106/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:51.321920+00:00",
+          "sha256": "b90d3138c5994181af6e93bc4346811b5efbfb72a614c7ea20f8174de05add3e"
+        },
+        {
+          "url": "https://www.mamahapi.jp/wordpress/wp-content/uploads/2026/09/mh_kawaguchi_top-1024x1024.jpg",
+          "final_url": "https://www.mamahapi.jp/wordpress/wp-content/uploads/2026/09/mh_kawaguchi_top-1024x1024.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:22.656114+00:00",
+          "sha256": "64811475d590cc01d6e08936e36b5abd7470551ca17ec49e43cb8476e4fb18b2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-213",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 214,
+      "region": "saitama",
+      "title": "かすかべ音楽祭2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kasukabephil.or.jp/next-concert/",
+          "final_url": "https://kasukabephil.or.jp/next-concert/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:53.930453+00:00",
+          "sha256": "98b1f33aaed0fc525700751eb4e6737d4ade3d66e54830a701c95dba67230f11"
+        },
+        {
+          "url": "https://ticket.kasukabephil.or.jp/",
+          "final_url": "https://ticket.kasukabephil.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:54.410527+00:00",
+          "sha256": "8407c6c54fd4389e6446076441bae7ba1964ecdd347512c6811940e2831daea8"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-214",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 215,
+      "region": "saitama",
+      "title": "首都圏まん中！東松山・比企観光スタンプラリー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://area.jaf.or.jp/drive/stamp-rally/kanto/saitama_higamatsuhiki_stamp-rally_no1634",
+          "final_url": "https://area.jaf.or.jp/drive/stamp-rally/kanto/saitama_higamatsuhiki_stamp-rally_no1634",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:54.944387+00:00",
+          "sha256": "d83cb15f9b844e7309f1a451f166e5624eb6aae8677fb82faf1923d35b7aa02f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-215",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 216,
+      "region": "saitama",
+      "title": "お十夜・人形供養祭",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0311e619022/",
+          "final_url": "https://www.walkerplus.com/event/ar0311e619022/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:55.646035+00:00",
+          "sha256": "4e32896cbddc9fc749971ad6fd919cc50b2d8326cc02abe60488c309276a4d48"
+        },
+        {
+          "url": "https://konosu-kanko.jp/event/oju-ya/",
+          "final_url": "https://konosu-kanko.jp/event/oju-ya/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:05.449784+00:00",
+          "sha256": "8e6620a21f972e00677a31bcaafec8c1d3c638400a8236b8cf0a8e35048609cc"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-216",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 217,
+      "region": "saitama",
+      "title": "キーウ・クラシック・バレエ　くるみ割り人形ー全幕ー",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0311e608189/",
+          "final_url": "https://www.walkerplus.com/event/ar0311e608189/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:56.560751+00:00",
+          "sha256": "b09b2cb6af33b7711d0b067ee3b34ea992e6f44198ed0c78eee3fa0d89f90c88"
+        },
+        {
+          "url": "https://www.niiza-kaikan.jp/event/7579/",
+          "final_url": "https://www.niiza-kaikan.jp/event/7579/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:07.300081+00:00",
+          "sha256": "4c7b614dca4b7d0f595c9df68bbb248e350b035101b184dd618f58830f68ec2a"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-217",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 218,
+      "region": "saitama",
+      "title": "COCOON CITY Christmas Market 2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://christmasmarket.jp/202611-cocooncity/",
+          "final_url": "https://christmasmarket.jp/202611-cocooncity/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:57.605169+00:00",
+          "sha256": "16c3be01b9c530ccae0eaee33776f6a4fe771e8420c668a007a4634df9e56424"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-218",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 219,
+      "region": "saitama",
+      "title": "桜エコ・フェスタ2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://sakura-kc.saitama.jp/kankyo/event/post_id=5425",
+          "final_url": "https://sakura-kc.saitama.jp/kankyo/event/post_id=5425",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:58.213953+00:00",
+          "sha256": "b7b44c7b0788e1a8ea0e38681b7540ae386bf583a39f42073acad0b4f4150f0f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-219",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 220,
+      "region": "saitama",
+      "title": "いぬのおまつり×権現堂CAMPフェスタ2026＠幸手権現堂2号公園",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://inutowatashi.wixsite.com/home",
+          "final_url": "https://inutowatashi.wixsite.com/home",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:17:59.527555+00:00",
+          "sha256": "26645fe328eea4f5ca3dd8316ae00b2368bd53ab6a40a8d7975398f6ecf82d9b"
+        },
+        {
+          "url": "https://inutowatashi.wixsite.com/home/%E8%A4%87%E8%A3%BD-%E5%87%BA%E5%BA%97%E5%8B%9F%E9%9B%86-%E3%83%AC%E3%82%A4%E3%82%AF%E8%A6%8B%E7%94%B0%E6%96%B9%E9%81%BA%E8%B7%A1%E5%85%AC%E5%9C%92",
+          "final_url": "https://inutowatashi.wixsite.com/home/%E8%A4%87%E8%A3%BD-%E5%87%BA%E5%BA%97%E5%8B%9F%E9%9B%86-%E3%83%AC%E3%82%A4%E3%82%AF%E8%A6%8B%E7%94%B0%E6%96%B9%E9%81%BA%E8%B7%A1%E5%85%AC%E5%9C%92",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:23.666265+00:00",
+          "sha256": "a594ad112cdd149ab935ca7dfd5847af22fd8020f37858f5266d61331fe1fda8"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-220",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 221,
+      "region": "saitama",
+      "title": "53ニケーション（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0311e614654/",
+          "final_url": "https://www.walkerplus.com/event/ar0311e614654/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:44.250059+00:00",
+          "sha256": "f1637ae1531cb9e4e33d85e11197c1d05398786643120c8a9cee853085389a24"
+        },
+        {
+          "url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3895304/",
+          "final_url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3895304/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:43.963927+00:00",
+          "sha256": "fb427d7e23d70f41da76f20b48e886b682fc55d8355c2d33f0e175435da7ded2"
+        },
+        {
+          "url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3895302/",
+          "final_url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3895302/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:22.767262+00:00",
+          "sha256": "b53c7172164e7424c1247d94ea13424c63bce7cbe1e2013f87a3fa5243e504fe"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-221",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 222,
+      "region": "saitama",
+      "title": "第15回 深谷ねぎグランプリ",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "http://www.michinoeki-okabe.jp/",
+          "final_url": "https://www.michinoeki-okabe.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:46.164904+00:00",
+          "sha256": "85940b081c8723b724bceb9a6886fb99692f4cff78d1f6b914a453b67c18ffa0"
+        },
+        {
+          "url": "https://www.michinoeki-okabe.jp/information/6174.html",
+          "final_url": "https://www.michinoeki-okabe.jp/information/6174.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:21.448629+00:00",
+          "sha256": "3d160951393d3ad3b73bf445cccbcd9826af88a9dbf3bea5769dac85e5a234c4"
+        },
+        {
+          "url": "https://www.michinoeki-okabe.jp/wp-content/uploads/2026/10/07645257f0f8459d990936f06ad1d45f-e1792904286734.jpg",
+          "final_url": "https://www.michinoeki-okabe.jp/wp-content/uploads/2026/10/07645257f0f8459d990936f06ad1d45f-e1792904286734.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:44.750666+00:00",
+          "sha256": "93a566b0c995e5a54fb58aeb9b945c2e37a29036ed5ad723aaeb1ca0c92e43eb"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-222",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 223,
+      "region": "saitama",
+      "title": "所沢ハンドメイドマーケット",
+      "disposition": "still_hold",
+      "reason": "主催プロフィールと最新記事を再取得。10/24〜25の市民フェスティバル出店紹介のみで、候補の今後の独立マーケットの当年開始日を確認できない。記事投稿日を開催年・日付として流用しない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.ameba.jp/profile/general/handmade-saitama/",
+          "final_url": "https://www.ameba.jp/profile/general/handmade-saitama/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:46.973761+00:00",
+          "sha256": "7d4271c81d09ed08464206d1ecf20cb47de4f695ebed68ce3293f80a92b81e0e"
+        },
+        {
+          "url": "https://ameblo.jp/handmade-saitama/entry-12982595647.html",
+          "final_url": "https://ameblo.jp/handmade-saitama/entry-12982595647.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:22.185687+00:00",
+          "sha256": "cbf674204356e66c99cca1597067655661b4003e822339e6b6976555ac7826f4"
+        }
+      ]
+    },
+    {
+      "index": 224,
+      "region": "saitama",
+      "title": "2026埼玉県民の日特別企画",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.pref.saitama.lg.jp/cess/event/2026kenminnohi/20261114event.html?from=eventbank",
+          "final_url": "https://www.pref.saitama.lg.jp/cess/event/2026kenminnohi/20261114event.html?from=eventbank",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:47.802581+00:00",
+          "sha256": "6ac9e5d513e3b011074f8e1caf3625e7f0bbd94616d1c1a628c89c74f60f15f1"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-224",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 225,
+      "region": "saitama",
+      "title": "さんフェス鴻巣 ～第39回 鴻巣市産業祭～",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.kounosu.saitama.jp/site/event/",
+          "final_url": "https://www.city.kounosu.saitama.jp/site/event/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:19:48.455115+00:00",
+          "sha256": "64102d725cb26bbd2db846a1ab39115c47def288258579eae82f8eda8fa9cdf2"
+        },
+        {
+          "url": "https://www.pref.saitama.lg.jp/saitama-wassyoi/enjoy/news081022.html",
+          "final_url": "https://www.pref.saitama.lg.jp/saitama-wassyoi/enjoy/news081022.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:20:35.976704+00:00",
+          "sha256": "bc7fdc1a908a6ba17f764d2c2860847791b861cd0eefd19c4d035cb9048f75e7"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-225",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 226,
+      "region": "saitama",
+      "title": "ふかや花園プレミアム・アウトレット　ウィンターイルミネーション",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.premiumoutlets.co.jp/fukayahanazono/",
+          "final_url": "https://www.premiumoutlets.co.jp/fukayahanazono/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:09.180049+00:00",
+          "sha256": "e5c62ed2dfb9dfc2bb2a63ce1e44bfa3ddf5a04e72aa3347984a0b09d50a56cb"
+        },
+        {
+          "url": "https://www.premiumoutlets.co.jp/fukayahanazono/events/news16734.html",
+          "final_url": "https://www.premiumoutlets.co.jp/fukayahanazono/events/news16734.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:17.505884+00:00",
+          "sha256": "5cb1f9cf07ffba65740fa6f565aa06e6ddd770187f210fb31f9dcff8c48efd1e"
+        },
+        {
+          "url": "https://www.premiumoutlets.co.jp/fukayahanazono/sp/202611/",
+          "final_url": "https://www.premiumoutlets.co.jp/fukayahanazono/sp/202611/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:53.142204+00:00",
+          "sha256": "7433ff212c9337060cfe4860a7f68d7289fa022f9454776d0c7a247bb5d9e0f3"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000801.000009047.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000801.000009047.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:24:08.168482+00:00",
+          "sha256": "b5e2a48d174f00ffa2597ffc5eb9c977983d3409ca4557cdbf70703fa7485d9f"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-226",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 227,
+      "region": "saitama",
+      "title": "53ニケーション（12月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.walkerplus.com/event/ar0311e622068/",
+          "final_url": "https://www.walkerplus.com/event/ar0311e622068/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:09.779185+00:00",
+          "sha256": "4b50bb601c9d32731a45f9d4fadf51a6b70f27a6733f3b030d62f5f0e26e152f"
+        },
+        {
+          "url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3932791/",
+          "final_url": "https://www.kokuchpro.com/event/82d5230c14640bba90403ea4b3ccefa5/3932791/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:52.184455+00:00",
+          "sha256": "45e87a4b57e25f1f244c6107ff7a19d67e4d370511163e6f00e0d4c4da61c608"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-227",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 228,
+      "region": "saitama",
+      "title": "第141回岩槻安穏朝市",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.iwatsukin.com/",
+          "final_url": "https://www.iwatsukin.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:10.630567+00:00",
+          "sha256": "6b07bf982e43eed819b57faa4a0b181f431b8ec7eaa40b805bd7326c5813580c"
+        },
+        {
+          "url": "https://iwatsukiannon.jimdofree.com",
+          "final_url": "https://iwatsukiannon.jimdofree.com/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:36.865898+00:00",
+          "sha256": "efbc4cfe57992c3479c6b000d0e6a021870ff08f315c9a57ee3cc1722c81637e"
+        },
+        {
+          "url": "https://image.jimcdn.com/app/cms/image/transf/dimension=794x10000:format=jpg/path/s0d7dece2b41a1c87/image/id5f3070fbe644558/version/1767545954/image.jpg",
+          "final_url": "https://image.jimcdn.com/app/cms/image/transf/dimension=794x10000:format=jpg/path/s0d7dece2b41a1c87/image/id5f3070fbe644558/version/1767545954/image.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:24:36.454842+00:00",
+          "sha256": "6c46ffaaf1aae06324c71707e36172f4ee97806df4b32f401a0c16755d2bff30"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-228",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 229,
+      "region": "saitama",
+      "title": "気軽にミュージック　vol.4「冬を彩るヴァイオリンとピアノの 名曲コンサート」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kfp.or.jp/",
+          "final_url": "https://www.kfp.or.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:11.654587+00:00",
+          "sha256": "56db6b6d0997f24b7d7e79257de87711cfa701245c373772c398e54074168930"
+        },
+        {
+          "url": "https://www.kfp.or.jp/info/yamabuki/20433",
+          "final_url": "https://www.kfp.or.jp/info/yamabuki/20433",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:50.943046+00:00",
+          "sha256": "573515f416350c143a5fb1791abccbfae516d17a64685ad8c23d4a9f6e51ddbe"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-229",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 230,
+      "region": "saitama",
+      "title": "秋期企画展「ぼくらの理科室 科学館！」",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026-11-01開始・施設514川口市立科学館が一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "http://www.kawaguchi.science.museum/floor/archive_event/26sciencefes11.html",
+          "final_url": "http://www.kawaguchi.science.museum/floor/archive_event/26sciencefes11.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:13.312346+00:00",
+          "sha256": "99488c45aad2c2e688f87c32e67e85415cd0b9f6a88436a7d5a15d63b39636c5"
+        }
+      ],
+      "matched_event_id": "evt-514-202611-sciencefair"
+    },
+    {
+      "index": 231,
+      "region": "saitama",
+      "title": "プラネタリウムキッズアワー　11月・12月のテーマ 「冬の星座とプレアデス神話」",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026-11-01開始・施設514川口市立科学館プラネタリウムが一致。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "http://www.kawaguchi.science.museum/planet/kids.html",
+          "final_url": "http://www.kawaguchi.science.museum/planet/kids.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:13.536010+00:00",
+          "sha256": "5102fad08b5b20b27313fa3d2dabf717a741460ca18678c5f8b00bf35b961479"
+        },
+        {
+          "url": "http://www.kawaguchi.science.museum/planet/index.html#anchor_program",
+          "final_url": "http://www.kawaguchi.science.museum/planet/index.html#anchor_program",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:24:36.904675+00:00",
+          "sha256": "9983501816f43b75d7c30fb570ef47c90e40020d83fde78eb889a8e50373ac13"
+        }
+      ],
+      "matched_event_id": "evt-514-202611-kidswinter"
+    },
+    {
+      "index": 232,
+      "region": "saitama",
+      "title": "禅寺で修行体験（坐禅・法話・写経・精進料理・修行体験）（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-shogakuji-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-shogakuji-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:13.688948+00:00",
+          "sha256": "3714077c545a5bb64b18a932cb2c7a2052b3833590c09c04a3f2f78d664c290b"
+        },
+        {
+          "url": "https://hanno-tourism.jp/news/ecotour-akihuyu",
+          "final_url": "https://hanno-tourism.jp/news/ecotour-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:08.309536+00:00",
+          "sha256": "35ccee5604319fcc2d53a7fe069cbb3a36b0371b298f2d4c66905c0ba2624a69"
+        },
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:49.823695+00:00",
+          "sha256": "ec9718fce4b68050a6ee073935cf1dd1c9f2aa0a0658b2c9a35e5ee0867686a3"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-232",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 233,
+      "region": "saitama",
+      "title": "飯能のジビエを学ぶ！いただく命に感謝するツアー（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-logcamp-gibier/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-logcamp-gibier/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:14.483791+00:00",
+          "sha256": "a5245a3abce77d25641ba345319f6bb1123d82014f67dee95d30a2e40e56300f"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-233",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 234,
+      "region": "saitama",
+      "title": "ちょこっとお手軽ツアー～天覧山～（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tyokottotenranzan-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tyokottotenranzan-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:15.395125+00:00",
+          "sha256": "f971495f5bcc7088368bc6c2a207405115e606f74e182936796621d33508a88a"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-234",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 235,
+      "region": "saitama",
+      "title": "木の家探訪～森から家へ～第3回「大工技術と木組み」",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/kinokenntikujuku-3/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/kinokenntikujuku-3/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:16.310539+00:00",
+          "sha256": "d721fce07e160ddb41b34c8350d3afab6c584eb105cf4730040c723a1b5ff0a3"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-235",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 236,
+      "region": "saitama",
+      "title": "紅葉の山と川とまちぐるり散歩～天覧山とせせらぎ遊歩道と店蔵～",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-moridon-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-moridon-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:27.280524+00:00",
+          "sha256": "dbde8bde65bf680cf280eafbe371cc23cdb14f292a9c9b47cfb389a180ce129e"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-236",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 237,
+      "region": "saitama",
+      "title": "里山を五感で味わう～二八そば打ち体験をしよう！！～（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tairakuri-soba/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tairakuri-soba/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:27.929071+00:00",
+          "sha256": "37156b7fdfa38a81f60ec621e0b6d47802039e376d7d477b3ed5aee335d35bee"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-237",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 238,
+      "region": "saitama",
+      "title": "里山を五感で味わう～こんにゃく手作り体験をしよう！！！～（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tairakuri-konnyaku-2/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tairakuri-konnyaku-2/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:28.568181+00:00",
+          "sha256": "d781b5cca218efcc5b376cbce597f30b0ecd6bc80ebb930991fe906637ad3547"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-238",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 239,
+      "region": "saitama",
+      "title": "ユガテの森で秋の味覚を味わう",
+      "disposition": "still_hold",
+      "reason": "公式行程は集合9:30・解散14:00、開催概要と2026チラシは9:00〜14:30。開始・終了時刻が一致せず推測で補わない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/kirakukai-yugate-aki/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/kirakukai-yugate-aki/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:29.407674+00:00",
+          "sha256": "88c21fe7ebe3c01c188f28507ba27d4b2844d49bd4fd108c342f4583baa16fec"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ]
+    },
+    {
+      "index": 240,
+      "region": "saitama",
+      "title": "アオジシ谷でお米づくり！秋の収穫祭編",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-akinosyuukaku/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-akinosyuukaku/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:30.056575+00:00",
+          "sha256": "46795e92a174acf1354bf07b9983d6204331974a72c40ab8cb51230be074ca73"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-240",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 241,
+      "region": "saitama",
+      "title": "飯能にくらすサンショウウオの生態を学ぼう！産卵地の保全作業編",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-hanno-sansyouo/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-hanno-sansyouo/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:30.928758+00:00",
+          "sha256": "862617df948e018fbc4f5de333033155ad07c33fe69449cc758f63825a2c46bc"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-241",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 242,
+      "region": "saitama",
+      "title": "メッツァで生き物保全活動！トウキョウサンショウウオを守ろう",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-mtsua-sansyouo-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/morimana-mtsua-sansyouo-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:31.891293+00:00",
+          "sha256": "88ac46e58491704a198538e46ae4c2cca66689655c2e96c28c201afe71240d1e"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-242",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 243,
+      "region": "saitama",
+      "title": "秋のお散歩マーケット",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/osampo-aki/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/osampo-aki/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:32.960718+00:00",
+          "sha256": "b3f8cb6495ccb824896503b70f9341c95e38fd685ec421354a0e6df595c8bd53"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-243",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 244,
+      "region": "saitama",
+      "title": "森のまち飯能　秋の菌ちゃん畑づくり体験（11月）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tanetsuchi-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-tanetsuchi-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:33.877767+00:00",
+          "sha256": "c839b641f941e8c9624d6df6e81bb61580016655203bc7b49b7980e7e1810810"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-244",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 245,
+      "region": "saitama",
+      "title": "カナディアンカヌー初級講習＠名栗湖～ゆったり湖を楽しもう～（11月）",
+      "disposition": "still_hold",
+      "reason": "公式行程のアンケート記入後終了は12:10、開催概要と2026チラシの終了は12:20。時刻の不整合を保留。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-naguricanoe-canoesyokyu-akihuyu/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-naguricanoe-canoesyokyu-akihuyu/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:34.830467+00:00",
+          "sha256": "2740c8466d2026c23f11a1d91f85a82047d4685423ed9a91d3a2ee6f8bbcf7b4"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ]
+    },
+    {
+      "index": 246,
+      "region": "saitama",
+      "title": "はじめてのカナディアンカヌー初級講習＠名栗湖～湖をゆったり満喫～（手作りピザランチ付き）",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-naguricanoe-canoe/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-naguricanoe-canoe/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:55.160511+00:00",
+          "sha256": "93908270ac521e315bd71433855890ed043ea0d1e1ee226a81487c6e842acc69"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-246",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 247,
+      "region": "saitama",
+      "title": "里山トレジャーハンター！～大自然の素材でリース作り",
+      "disposition": "still_hold",
+      "reason": "公式行程で14:30にアンケート後修了、その次に13:00リース作り開始、14:40作品発表と時系列が逆転。開催時刻の不整合を推測で修正しない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://hanno-tourism.jp/hanno-eco/tour/ec-morimana-treasurehunter/",
+          "final_url": "https://hanno-tourism.jp/hanno-eco/tour/ec-morimana-treasurehunter/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:55.881808+00:00",
+          "sha256": "1838893c5df8478f732bbbe212243a0d4c435cd96baed1f524130b1f66ba4caa"
+        },
+        {
+          "url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "final_url": "https://hanno-tourism.jp/wp/wp-content/uploads/2026/10/94f7759e81ce36e9c80b0fc1b3e4d8f9.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:23:34.583443+00:00",
+          "sha256": "8291e1862d00a612faf3e23c9ffee899cda26b8bc1679ca654650c0a511db1d2"
+        }
+      ]
+    },
+    {
+      "index": 248,
+      "region": "saitama",
+      "title": "志木駅東口駅前イルミネーション",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://kanko-shiki.com/archives/5214",
+          "final_url": "https://kanko-shiki.com/archives/5214",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:56.609657+00:00",
+          "sha256": "54fe1f5adbad2c98dcc0fc53f176c7c43e198806f28f1421cb46d306c14f7a52"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-248",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 249,
+      "region": "saitama",
+      "title": "オペラ『椿姫姫』伊奈町公演",
+      "disposition": "still_hold",
+      "reason": "出演者本人の公式告知が未就学児入場不可と明記。幼児は参加不能。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://note.com/hajimetenor/n/nce9cc1e670f0",
+          "final_url": "https://note.com/hajimetenor/n/nce9cc1e670f0",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:57.875899+00:00",
+          "sha256": "731bb7098abac66cd26e6fc0a8d22924fd42bca90d220d008cf7006fa979aaf4"
+        }
+      ]
+    },
+    {
+      "index": 250,
+      "region": "saitama",
+      "title": "光と森のStory最終章「スターライトイルミネーション」",
+      "disposition": "still_hold",
+      "reason": "公式の旧イベントURLを再取得したが、イベント一覧の不正なURLに転送され、本文はloading表示のみ。同公園の現行サイトも個別告知本文が取得できず当年開始日を確認できない。",
+      "reason_code": "OFFICIAL_PAGE_UNREADABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.shinrinkoen.jp/event/2022120925.html",
+          "final_url": "https://www.shinrinkoen.jp/?p=we-page-eventlist&eventlist=26085&type=event&nav=none2022120925.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:22:58.651195+00:00",
+          "sha256": "8c2d1652c32324eceffce40d4a064161d68704d17fa32496d8e4c937a110556d"
+        }
+      ]
+    },
+    {
+      "index": 251,
+      "region": "saitama",
+      "title": "防災車中泊　開催します",
+      "disposition": "still_hold",
+      "reason": "主催の宿泊体験ページを再取得。新規入場は10/31 10:00〜12:00に完了が必須で、現在11/1には参加開始できない。祭りの日帰り来場は181と分離。",
+      "reason_code": "ENTRY_WINDOW_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/oomiya2-3/event/009/009382.html",
+          "final_url": "https://www.parks.or.jp/oomiya2-3/event/009/009382.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:10.169722+00:00",
+          "sha256": "544630f985fcabdde78557f453a367cfc419bcfc5d2e1540ec249262e4781395"
+        },
+        {
+          "url": "https://cheeruprv.jp/oomiya2026",
+          "final_url": "https://cheeruprv.jp/oomiya2026/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:54.696983+00:00",
+          "sha256": "3a6db0dc0590889acc256bfbd748abb1f28adf0eac21bf0a3a0556add912986a"
+        }
+      ]
+    },
+    {
+      "index": 252,
+      "region": "saitama",
+      "title": "令和８年度イベント一覧（１０月～１２月）",
+      "disposition": "not_event",
+      "reason": "公式添付は第一駐車場の行為許可・利用団体カレンダー。ページの10/1〜12/31は一覧の掲載範囲で、一つの参加イベントの開催期間ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/shirakobatosuijo/event/009/009377.html",
+          "final_url": "https://www.parks.or.jp/shirakobatosuijo/event/009/009377.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:10.633389+00:00",
+          "sha256": "d839b0d5e21bdc386095ddbd8fdb40187168f8771cabf625bebfbd4838d7ec5e"
+        },
+        {
+          "url": "https://www.parks.or.jp/shirakobatosuijo/event/files/9377/009377/att_0000001.jpg",
+          "final_url": "https://www.parks.or.jp/shirakobatosuijo/event/files/9377/009377/att_0000001.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:50.415537+00:00",
+          "sha256": "8d6d11dda4f3f50defad6d59c1e06930f37fa385b11b8dad75741912cc5f378b"
+        }
+      ]
+    },
+    {
+      "index": 253,
+      "region": "saitama",
+      "title": "アートフェスタ2026「watch! Animal sign」",
+      "disposition": "duplicate",
+      "reason": "公式URL・2026-10-01開始・施設519こども動物自然公園の作品展示が一致。リース教室も既存evt-f9-519-wreath-2026。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/009/009309.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/009/009309.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:11.226080+00:00",
+          "sha256": "2cdfefd96e0b074f617c6174ff1833b012b15d5a9ef45000c5bf745418553b7a"
+        }
+      ],
+      "matched_event_id": "evt-519-202610-artfesta"
+    },
+    {
+      "index": 254,
+      "region": "saitama",
+      "title": "パークゴルフ大会　開催日のお知らせ",
+      "disposition": "still_hold",
+      "reason": "公式本文は9/17〜3/31を開催日とするが添付の大会日程は9/15、10/20、12/15等で、どの実開催日を指すかが本文と一致しない。年間一覧の日付を開始日に流用しない。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/yoshimi/event/009/009312.html",
+          "final_url": "https://www.parks.or.jp/yoshimi/event/009/009312.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:11.635063+00:00",
+          "sha256": "dda0f1a8b535c6e9b32caa2cad26c1c6e00b6d5692008afa8a82591d28b1f720"
+        },
+        {
+          "url": "https://www.parks.or.jp/yoshimi/event/files/9312/009312/att_0000001.png",
+          "final_url": "https://www.parks.or.jp/yoshimi/event/files/9312/009312/att_0000001.png",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:50.861051+00:00",
+          "sha256": "75cd8a16089b2bc06cfe3fcdb5a122ef2483aa2203a089f909ff3bd5a427c7fc"
+        }
+      ]
+    },
+    {
+      "index": 255,
+      "region": "saitama",
+      "title": "🍂秋まつり🍂",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/kazohanasaki/event/009/009297.html",
+          "final_url": "https://www.parks.or.jp/kazohanasaki/event/009/009297.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:12.064534+00:00",
+          "sha256": "a468c3c14a285d8e8dd149235b435b69fcfa10079d81e47eee5cd1f2a07a3ddb"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-255",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 256,
+      "region": "saitama",
+      "title": "【イベント】ヨガ教室（ほんわかヨガ）〈春季・秋季第二水曜開催！！〉",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/tokorozawa-kokuu/event/009/009287.html",
+          "final_url": "https://www.parks.or.jp/tokorozawa-kokuu/event/009/009287.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:12.727727+00:00",
+          "sha256": "8774538933051d0a8a44bf5ab858a0e0e425744f6e77186fdde8caeff1392cd4"
+        },
+        {
+          "url": "https://www.parks.or.jp/tokorozawa-kokuu/event/files/9287/009287/att_0000004.png",
+          "final_url": "https://www.parks.or.jp/tokorozawa-kokuu/event/files/9287/009287/att_0000004.png",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:51.418198+00:00",
+          "sha256": "8d234de1202129b1f9858d8cca2f0506c153920e7632d1400f7e5541e2e31f51"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-256",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 257,
+      "region": "saitama",
+      "title": "あおぞらヨガ（秋）参加者募集中",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/oomiya2-3/event/009/009152.html",
+          "final_url": "https://www.parks.or.jp/oomiya2-3/event/009/009152.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:13.397892+00:00",
+          "sha256": "05c68fa0858c945b514382c709dc899cbe090b85e89786b02ed0e36468f01ff7"
+        },
+        {
+          "url": "https://www.parks.or.jp/oomiya2-3/event/files/9152/009152/att_0000001.jpg",
+          "final_url": "https://www.parks.or.jp/oomiya2-3/event/files/9152/009152/att_0000001.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:51.966432+00:00",
+          "sha256": "ba65f3039015683efedb6983462b613842780455a963f16b735f9da47f34fdcd"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-257",
+      "participability": "条件付き参加可能"
+    },
+    {
+      "index": 258,
+      "region": "saitama",
+      "title": "プレーパークinたかもとヘルスパーク",
+      "disposition": "still_hold",
+      "reason": "本文は毎月第2日曜とするが公式チラシは11月のみ11/22（第4週予定）と記載。11月開催日が矛盾し推測で選ばない。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/koshigaya/event/008/008975.html",
+          "final_url": "https://www.parks.or.jp/koshigaya/event/008/008975.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:13.991616+00:00",
+          "sha256": "bb0339b02c5e7726c5377aaa35581681468354af376a8362806a3859133e8a21"
+        },
+        {
+          "url": "https://www.parks.or.jp/koshigaya/event/files/8975/008975/att_0000001.jpg",
+          "final_url": "https://www.parks.or.jp/koshigaya/event/files/8975/008975/att_0000001.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:52.479478+00:00",
+          "sha256": "94f61a08b86c58f482c287b50d3c06855982098e81eb9f5d182fa76d35f6e0ca"
+        }
+      ]
+    },
+    {
+      "index": 259,
+      "region": "saitama",
+      "title": "【イベント】ヨガ教室（リフレッシュヨガ）〈春季・秋季第三土曜日に開催！〉",
+      "disposition": "still_hold",
+      "reason": "公式本文の2026/11/14（第2土曜）と、タイトル・チラシの第3土曜が矛盾。開催日を推測で選ばない。",
+      "reason_code": "OFFICIAL_DATE_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/tokorozawa-kokuu/event/008/008873.html",
+          "final_url": "https://www.parks.or.jp/tokorozawa-kokuu/event/008/008873.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:14.479097+00:00",
+          "sha256": "ed128854792fa3d2520316bf120fa26702fad2329cf61f22f3a5a96010cc541a"
+        },
+        {
+          "url": "https://www.parks.or.jp/tokorozawa-kokuu/event/files/8873/008873/att_0000006.jpg",
+          "final_url": "https://www.parks.or.jp/tokorozawa-kokuu/event/files/8873/008873/att_0000006.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:53.178058+00:00",
+          "sha256": "259d7f287bace33140f4c3e3077f4c7fb1707b73881c1f227a2cebd5e4fe9712"
+        }
+      ]
+    },
+    {
+      "index": 260,
+      "region": "saitama",
+      "title": "令和8年度 スポ文講座",
+      "disposition": "still_hold",
+      "reason": "幼児も参加可能な11/29親子コンサートは定員到達で受付終了と公式が明記。残る11/3ラグビー教室は小学生以上、10/24メイク教室は終了。年間一覧の4/1を新イベント開始日に流用しない。",
+      "reason_code": "APPLICATION_CLOSED",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/kumagaya/event/008/008793.html",
+          "final_url": "https://www.parks.or.jp/kumagaya/event/008/008793.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:15.096332+00:00",
+          "sha256": "85ddeb0d7af67d4fbd7b1d686cd4891c6e9489bc32fac64c56fb3bf336f79446"
+        },
+        {
+          "url": "https://www.parks.or.jp/kumagaya/event/files/8793/008793/att_0000031.jpg",
+          "final_url": "https://www.parks.or.jp/kumagaya/event/files/8793/008793/att_0000031.jpg",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:54.026534+00:00",
+          "sha256": "224eecbed8a357fd0ecc3f72b04db9ed72fa8fff0bf3572526c6bceda8e6f89d"
+        }
+      ]
+    },
+    {
+      "index": 261,
+      "region": "saitama",
+      "title": "ウサギのコンタクト",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のウサギのコンタクト。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:33.305310+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 262,
+      "region": "saitama",
+      "title": "テンジクネズミのコンタクト",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のテンジクネズミのコンタクト。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:33.706650+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 263,
+      "region": "saitama",
+      "title": "乳しぼり体験",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中の乳しぼり体験。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:34.069724+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 264,
+      "region": "saitama",
+      "title": "乗馬体験",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中の乗馬体験。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:34.423751+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 265,
+      "region": "saitama",
+      "title": "大人乗馬",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中の大人乗馬。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:34.766838+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 266,
+      "region": "saitama",
+      "title": "ヤギのエサやり体験",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のヤギのエサやり体験。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:35.126665+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 267,
+      "region": "saitama",
+      "title": "ペンギンのランチタイム",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のペンギンのランチタイム。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:35.527601+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 268,
+      "region": "saitama",
+      "title": "ポニーのエサやり体験",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のポニーのエサやり体験。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:36.200421+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 269,
+      "region": "saitama",
+      "title": "工作教室",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中の工作教室。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:36.928007+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 270,
+      "region": "saitama",
+      "title": "キーパーガイド",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のキーパーガイド。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:37.679177+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 271,
+      "region": "saitama",
+      "title": "こどもの城DAY「かみしばい」",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のこどもの城DAY「かみしばい」。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:26:59.943631+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 272,
+      "region": "saitama",
+      "title": "バターづくり体験",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」サービス案内中のバターづくり体験。毎日・曜日別の恒常サービスで、ページの1/1〜12/29は一覧の掲載期間。一つの特定日イベントの開催日として流用しない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:00.432313+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 273,
+      "region": "saitama",
+      "title": "エンリッチメントデー",
+      "disposition": "still_hold",
+      "reason": "公式一覧でエンリッチメントデーの実施日・時刻・場所がいずれも未定。通年一覧の1/1を当該イベント開始日に流用できない。",
+      "reason_code": "START_DATE_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:00.894767+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 274,
+      "region": "saitama",
+      "title": "ZOOミーティング",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」案内中のZOOミーティング。毎月の恒常ガイドサービスで、1/1〜12/29は一覧の掲載範囲。特別開催日ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:01.275444+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 275,
+      "region": "saitama",
+      "title": "園長ガイド",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」案内中の園長ガイド。毎月の恒常ガイドサービスで、1/1〜12/29は一覧の掲載範囲。特別開催日ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:01.659632+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 276,
+      "region": "saitama",
+      "title": "スペシャルガイド",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」案内中のスペシャルガイド。定期の恒常ガイドサービスで、1/1〜12/29は一覧の掲載範囲。特別開催日ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:02.024027+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 277,
+      "region": "saitama",
+      "title": "やとっこガイド",
+      "disposition": "not_event",
+      "reason": "公式の通年「体験・定例イベント」案内中のやとっこガイド。定期の恒常ガイドサービスで、1/1〜12/29は一覧の掲載範囲。特別開催日ではない。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "final_url": "https://www.parks.or.jp/sczoo/event/003/003266.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:02.452682+00:00",
+          "sha256": "f162d9f397b78cb47c0628ccb2134d4608c90ceedb70174a907e76671ff39ce7"
+        }
+      ]
+    },
+    {
+      "index": 278,
+      "region": "saitama",
+      "title": "小川町商工祭",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kankou-ogawa.com/washifesmanth.html",
+          "final_url": "https://www.kankou-ogawa.com/washifesmanth.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:03.094361+00:00",
+          "sha256": "6c09d948e310bb7501c0effff405e4002ee65b2fb7521204f3aaa31852989110"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-278",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 279,
+      "region": "saitama",
+      "title": "小川町農業祭",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.kankou-ogawa.com/washifesmanth.html",
+          "final_url": "https://www.kankou-ogawa.com/washifesmanth.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:03.771987+00:00",
+          "sha256": "6c09d948e310bb7501c0effff405e4002ee65b2fb7521204f3aaa31852989110"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-279",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 280,
+      "region": "shimane",
+      "title": "【１１月１日】島根県内の戦争・銃後体験記録データベース構築講座　※新規参加者募集中！",
+      "disposition": "still_hold",
+      "reason": "公式内容は学生・一般が戦争手記を読んで書誌情報を転記し研究データベースを構築する専門的作業講座。幼児向け家族参加プログラムではない。",
+      "reason_code": "NOT_FAMILY_SUITABLE",
+      "sources_checked": [
+        {
+          "url": "https://www.library.pref.shimane.lg.jp/information/2026/10/post-7.html",
+          "final_url": "https://www.library.pref.shimane.lg.jp/information/2026/10/post-7.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:42.117396+00:00",
+          "sha256": "9b24357a6ad03cf3792218d76a669cf16203fad0e5807656297cabef8b0ba16a"
+        }
+      ]
+    },
+    {
+      "index": 281,
+      "region": "shimane",
+      "title": "11月14日（土）にお話の会を開催します",
+      "disposition": "still_hold",
+      "reason": "当該公式本文は11月14日と曜日のみで開催年を明記していない。URLの2026や記事掲載日から開催年を推定しない。",
+      "reason_code": "START_DATE_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.library.pref.shimane.lg.jp/information/2026/10/11-1.html",
+          "final_url": "https://www.library.pref.shimane.lg.jp/information/2026/10/11-1.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:42.840665+00:00",
+          "sha256": "d2f07c541b6b3462dc327b9f4d98dc41b268800e060f2ece0d3bcd667d9ec54c"
+        }
+      ]
+    },
+    {
+      "index": 282,
+      "region": "shimane",
+      "title": "11月11日（水）に親子で絵本を読む会を開催します",
+      "disposition": "still_hold",
+      "reason": "当該公式本文・添付チラシは11月11日と曜日のみで開催年を明記していない。URLの2026や記事掲載日から開催年を推定しない。",
+      "reason_code": "START_DATE_YEAR_UNCONFIRMED",
+      "sources_checked": [
+        {
+          "url": "https://www.library.pref.shimane.lg.jp/information/2026/10/post-48.html",
+          "final_url": "https://www.library.pref.shimane.lg.jp/information/2026/10/post-48.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:43.307499+00:00",
+          "sha256": "8e1e7b856a3a9d64c3ae3063f7347a38d6b87ce117f8eddab470c5cb5be1e87a"
+        },
+        {
+          "url": "https://www.library.pref.shimane.lg.jp/information/8604b31e5bc9bcbfa5685255441f6ac7.pdf",
+          "final_url": "https://www.library.pref.shimane.lg.jp/information/8604b31e5bc9bcbfa5685255441f6ac7.pdf",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:24.765974+00:00",
+          "sha256": "a7655264a28c21de36435af686cc4d98e1513b5433480032debd090e712ed800"
+        }
+      ]
+    },
+    {
+      "index": 283,
+      "region": "shimane",
+      "title": "アクアート2026 うみ・いろ・かたち展",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www1.pref.shimane.lg.jp/press_release/2026/crjeluiqdeld.html",
+          "final_url": "https://www1.pref.shimane.lg.jp/press_release/2026/crjeluiqdeld.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:43.803427+00:00",
+          "sha256": "e2a1fe2f5b01a50411146a2cd8611f03a5de42dcc948e43ac90d663797c8c55c"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-283",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 284,
+      "region": "shimane",
+      "title": "まつえ環境フェスティバル2026",
+      "disposition": "added",
+      "reason": "公式一次情報で開催年・日付・会場・内容を確認。未掲載項目は所定の注記で公開。",
+      "reason_code": null,
+      "sources_checked": [
+        {
+          "url": "https://www.city.matsue.lg.jp/event/17092.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/17092.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:44.796204+00:00",
+          "sha256": "219235551bbc64c32ce80468fd42dc8b3ec5b272a51642688d69a4db323ad1aa"
+        }
+      ],
+      "added_event_id": "evt-hold-b3-284",
+      "participability": "通常参加可能"
+    },
+    {
+      "index": 285,
+      "region": "shimane",
+      "title": "11月8日（日曜日）開催！「子育ての日ファミリーイベント」",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 286,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：マジック/ものまねステージ",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        }
+      ]
+    },
+    {
+      "index": 287,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：親子リズム運動ステージ",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:47.197986+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 288,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：紙芝居パフォーマンス",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:47.812571+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 289,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：チアリーディング",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:48.523308+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 290,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：琴・尺八・日本舞踊",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:47.974121+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 291,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：運動あそび",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:48.484238+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 292,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：県大おはなしレストラン",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:48.958057+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 293,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：こども生け花体験",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:49.435920+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 294,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：フラワーフォトブース",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:49.864751+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 295,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：出張あいあいぼっくす",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:50.298236+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 296,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：新聞紙あそび・こども縁日",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:50.831616+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 297,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：しじみちゃん缶バッジ",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:51.416990+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 298,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：どうぶつふれあいコーナー",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:51.947764+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 299,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：こども商店街",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:52.603424+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
+    },
+    {
+      "index": 300,
+      "region": "shimane",
+      "title": "ぐんぐんフェス：まつえのおいしいおみせやさん",
+      "disposition": "still_hold",
+      "reason": "2026/11/8の市公式告知と特設サイトの当年日付画像は9:30〜15:00。一方、同サイトの表示タイムテーブルは15:45質疑・16:00閉会と記載。会期内の開催時刻が矛盾し、過年度残存と推定して消し込まない。",
+      "reason_code": "OFFICIAL_TIME_CONFLICT",
+      "sources_checked": [
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:28:53.109521+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        },
+        {
+          "url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "final_url": "https://kosodatenohi.jp/wp-content/themes/kosodatenohi_2025/img/header-date.webp",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:29:43.279722+00:00",
+          "sha256": "c4cd8c64d86df010df065aab16de56988b86643a02d5a10f2bfdd491b792a09d"
+        },
+        {
+          "url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "final_url": "https://www.city.matsue.lg.jp/event/24254.html",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:45.714334+00:00",
+          "sha256": "fcf7e087d173ca2ecd26bd6228abaf3d04184fae3fd59912dcafe9d08c1d20e9"
+        },
+        {
+          "url": "https://kosodatenohi.jp/",
+          "final_url": "https://kosodatenohi.jp/",
+          "http_status": 200,
+          "checked_at": "2026-11-01T01:27:46.362944+00:00",
+          "sha256": "31458c6e0f4a951cbbe75b937e99056140d0768269c3dd055ec9494df912c845"
+        }
+      ]
     }
   ]
 }
