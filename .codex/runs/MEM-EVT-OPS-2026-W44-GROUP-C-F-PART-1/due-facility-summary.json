@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-02T13:19:46.633707+00:00",
+  "executed_at": "2026-11-02T13:40:30.531063+00:00",
   "process_started_at": "2026-11-02T12:39:37.1535387Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -47,12 +47,12 @@
     2046
   ],
   "aggregate": {
-    "total": 20,
-    "no_current_or_future_event": 1,
-    "candidate_found_added": 5,
+    "total": 30,
+    "no_current_or_future_event": 3,
+    "candidate_found_added": 11,
     "candidate_found_duplicate": 1,
     "candidate_found_hold": 4,
-    "source_unresolved": 9
+    "source_unresolved": 11
   },
   "per_region": {
     "aichi": {
@@ -2328,12 +2328,12 @@
         961,
         1031
       ],
-      "total": 12,
+      "total": 13,
       "no_current_or_future_event": 1,
       "candidate_found_added": 1,
       "candidate_found_duplicate": 1,
       "candidate_found_hold": 3,
-      "source_unresolved": 6,
+      "source_unresolved": 7,
       "sources_checked": [
         {
           "url": "https://www.kosodate-niigata.com/eki/",
@@ -2624,6 +2624,21 @@
           "url": "https://www.gigo.co.jp/shops/a-shibata",
           "status": 200,
           "checked_at": "2026-11-02T13:19:43.715943+00:00"
+        },
+        {
+          "url": "https://www.city.gosen.niigata.jp/",
+          "status": "unreachable",
+          "checked_at": "2026-11-02T13:20:05.672854+00:00"
+        },
+        {
+          "url": "https://www.city.gosen.niigata.jp/",
+          "status": "unreachable",
+          "checked_at": "2026-11-02T13:24:45.427617+00:00"
+        },
+        {
+          "url": "https://www.city.gosen.lg.jp/childcare_education/7/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T13:24:46.736017+00:00"
         }
       ],
       "facilities": [
@@ -3300,6 +3315,38 @@
           "candidate_decisions": [],
           "added_event_ids": [],
           "updated_event_ids": []
+        },
+        {
+          "facility_id": 1031,
+          "disposition": "source_unresolved",
+          "reason": "登録ドメインは再試行もTLS不一致。現行五泉市の施設・公園一覧に当該名称を特定できず、五頭の別施設やラポルテへ同名推測で結び付けない。",
+          "sources_checked": [
+            {
+              "url": "https://www.city.gosen.niigata.jp/",
+              "status": "unreachable",
+              "checked_at": "2026-11-02T13:20:05.672854+00:00"
+            },
+            {
+              "url": "https://www.city.gosen.niigata.jp/",
+              "status": "unreachable",
+              "checked_at": "2026-11-02T13:24:45.427617+00:00"
+            },
+            {
+              "url": "https://www.city.gosen.lg.jp/childcare_education/7/index.html",
+              "status": 200,
+              "checked_at": "2026-11-02T13:24:46.736017+00:00"
+            }
+          ],
+          "existing_event_decisions": [],
+          "candidate_holds": [
+            {
+              "candidate": "登録施設の公式イベント面",
+              "reason": "現行市公式一覧と登録施設名の同一性が確認できない。施設データ修正は本Mission範囲外。"
+            }
+          ],
+          "candidate_decisions": [],
+          "added_event_ids": [],
+          "updated_event_ids": []
         }
       ],
       "existing_event_holds": []
@@ -3308,28 +3355,155 @@
       "facility_ids": [
         2853
       ],
-      "total": 0,
-      "no_current_or_future_event": 0,
+      "total": 1,
+      "no_current_or_future_event": 1,
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": [],
+      "sources_checked": [
+        {
+          "url": "https://www.visit-oita.jp/spots/detail/9163",
+          "status": 500,
+          "checked_at": "2026-11-02T13:24:58.025528+00:00"
+        },
+        {
+          "url": "https://www.visit-oita.jp/spots/detail/9163",
+          "status": 500,
+          "checked_at": "2026-11-02T13:25:10.805354+00:00"
+        },
+        {
+          "url": "https://www.visit-oita.jp/spots/detail/8607",
+          "status": 200,
+          "checked_at": "2026-11-02T13:25:19.870115+00:00"
+        },
+        {
+          "url": "https://sato-no-tabi.jp/introduce/%E5%B7%9D%E4%B8%8A%E6%B8%93%E8%B0%B7/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:25:33.931989+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 2853,
+          "disposition": "no_current_or_future_event",
+          "reason": "県公式とリンク先の観光協会個別面を読了。新緑・紅葉・登山等の通年自然景観案内のみで、日付を定めた催事は掲載なし。景観見頃をイベント化しない。",
+          "sources_checked": [
+            {
+              "url": "https://www.visit-oita.jp/spots/detail/9163",
+              "status": 500,
+              "checked_at": "2026-11-02T13:24:58.025528+00:00"
+            },
+            {
+              "url": "https://www.visit-oita.jp/spots/detail/9163",
+              "status": 500,
+              "checked_at": "2026-11-02T13:25:10.805354+00:00"
+            },
+            {
+              "url": "https://www.visit-oita.jp/spots/detail/8607",
+              "status": 200,
+              "checked_at": "2026-11-02T13:25:19.870115+00:00"
+            },
+            {
+              "url": "https://sato-no-tabi.jp/introduce/%E5%B7%9D%E4%B8%8A%E6%B8%93%E8%B0%B7/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:25:33.931989+00:00"
+            }
+          ],
+          "existing_event_decisions": [],
+          "candidate_holds": [],
+          "candidate_decisions": [],
+          "added_event_ids": [],
+          "updated_event_ids": []
+        }
+      ],
       "existing_event_holds": []
     },
     "osaka": {
       "facility_ids": [
         1427
       ],
-      "total": 0,
+      "total": 1,
       "no_current_or_future_event": 0,
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": [],
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://www.osaka-museum.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:25:50.929043+00:00"
+        },
+        {
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-11-02T13:26:06.368285+00:00"
+        },
+        {
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-11-02T13:26:29.355742+00:00"
+        },
+        {
+          "url": "https://www.brh.co.jp/event/",
+          "status": 503,
+          "checked_at": "2026-11-02T13:26:30.463164+00:00"
+        },
+        {
+          "url": "https://www.brh.co.jp/event_lecture/",
+          "status": 503,
+          "checked_at": "2026-11-02T13:26:44.206080+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 1427,
+          "disposition": "source_unresolved",
+          "reason": "公式は再試行・催し一覧とも緊急メンテナンス503、再開時期未定。検索上の候補を公式本文で確認できず採用しない。",
+          "sources_checked": [
+            {
+              "url": "https://www.osaka-museum.com/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:25:50.929043+00:00"
+            },
+            {
+              "url": "https://www.brh.co.jp/",
+              "status": 503,
+              "checked_at": "2026-11-02T13:26:06.368285+00:00"
+            },
+            {
+              "url": "https://www.brh.co.jp/",
+              "status": 503,
+              "checked_at": "2026-11-02T13:26:29.355742+00:00"
+            },
+            {
+              "url": "https://www.brh.co.jp/event/",
+              "status": 503,
+              "checked_at": "2026-11-02T13:26:30.463164+00:00"
+            },
+            {
+              "url": "https://www.brh.co.jp/event_lecture/",
+              "status": 503,
+              "checked_at": "2026-11-02T13:26:44.206080+00:00"
+            }
+          ],
+          "existing_event_decisions": [],
+          "candidate_holds": [
+            {
+              "candidate": "食草園―チョウと食草が出会う場所―",
+              "reason": "公式催し面が一時休止503のため現行日程・参加経路の確認不能。検索情報を採用根拠にしない。"
+            },
+            {
+              "candidate": "マリア・ズィビラ・メーリアン スリナム産昆虫変態図譜展",
+              "reason": "公式催し面が一時休止503のため現行日程・参加経路の確認不能。検索情報を採用根拠にしない。"
+            }
+          ],
+          "candidate_decisions": [],
+          "added_event_ids": [],
+          "updated_event_ids": []
+        }
+      ],
       "existing_event_holds": []
     },
     "shizuoka": {
@@ -3352,15 +3526,2071 @@
         2043,
         2046
       ],
-      "total": 0,
-      "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "total": 7,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 6,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": [],
-      "existing_event_holds": []
+      "sources_checked": [
+        {
+          "url": "https://izu-animal-kingdom.com/events/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:26:47.521816+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:26:58.637232+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/information/information-6147/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:00.052461+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/events-2986/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:01.463225+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/events-4293/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:02.661888+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/events-4483/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:03.758424+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:34.702366+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5892/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:36.069961+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-6041/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:37.173218+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5708/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:54.014060+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5455/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:55.274118+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5526/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:27:56.610981+00:00"
+        },
+        {
+          "url": "https://www.makaino.com/event/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:28:34.152029+00:00"
+        },
+        {
+          "url": "https://www.makaino.com/news/261017/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:28:52.782422+00:00"
+        },
+        {
+          "url": "https://www.makaino.com/news/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab26%e5%86%ac/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:29:25.185723+00:00"
+        },
+        {
+          "url": "https://www.makaino.com/blog/12%e6%9c%88%e3%81%8b%e3%82%89%ef%bc%81%e3%80%8c%e5%86%ac%e3%81%ae%e3%81%82%e3%81%ae%e4%bc%81%e7%94%bb%e3%80%8d%e3%81%8c%e5%be%a9%e6%b4%bb%ef%bc%81%ef%bc%81/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:29:26.967355+00:00"
+        },
+        {
+          "url": "https://www.makaino.com/wp/wp-content/uploads/2026/10/87697cfb7813b6f5fc6b7d3c961cb1f8.pdf",
+          "status": 200,
+          "checked_at": "2026-11-02T13:29:45.113518+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/event/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:25.371136+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:37.003496+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/program/month/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:38.297764+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/program/schedule/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:39.581968+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261003_3845.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:40.819456+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261102_3879.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:57.055537+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261028_3876.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:58.306517+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261021_3873.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:30:59.419092+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20260905_3819.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:31:00.599751+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20260926_3820.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:31:01.760833+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20260829_3782.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:31:02.997439+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261004_3848.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:31:04.175625+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/news/20261007_3860.php",
+          "status": 404,
+          "checked_at": "2026-11-02T13:31:05.249855+00:00"
+        },
+        {
+          "url": "https://www.kodomo.or.jp/information/20261007_3853.php",
+          "status": 200,
+          "checked_at": "2026-11-02T13:31:32.402670+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:22.561029+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:33.910457+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:35.596269+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info/page/2",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:47.106589+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info/page/3",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:48.681578+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info/page/4",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:49.802338+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info/page/5",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:51.129302+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event-info/page/6",
+          "status": 200,
+          "checked_at": "2026-11-02T13:32:52.320278+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21308",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:06.195603+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21329",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:07.458746+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21271",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:08.665384+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21351",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:09.859045+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21340",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:11.005886+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21330",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:12.167641+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21257",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:13.369525+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22450",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:14.561972+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21359",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:15.704030+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21363",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:16.930738+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21309",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:18.211177+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21267",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:19.346507+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21280",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:20.476433+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21331",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:21.715227+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22452",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:22.960102+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21266",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:24.264045+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22453",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:25.422048+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21268",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:26.533577+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21352",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:27.991842+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21339",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:29.494005+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21332",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:30.635971+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21310",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:31.784093+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22457",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:33.148936+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21260",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:34.441430+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22454",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:35.643177+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21286",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:36.796032+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21290",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:38.064795+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21311",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:39.282728+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22458",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:40.521750+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21317",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:41.744778+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21258",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:42.900336+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/22455",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:44.024174+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21326",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:45.257895+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21358",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:46.457600+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21279",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:47.617616+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21259",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:48.765801+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21338",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:49.990667+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/event/21350",
+          "status": 200,
+          "checked_at": "2026-11-02T13:33:51.113381+00:00"
+        },
+        {
+          "url": "https://www.enshunada.com/news/22475",
+          "status": 200,
+          "checked_at": "2026-11-02T13:34:20.945589+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:20.023775+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/d905146c-4265-4bfb-91a4-f3f0135df01d",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:41.628857+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/c527c6d9-0dba-498a-a288-d8f936525f06",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:43.329117+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/29ada85a-563c-4c0a-bcb3-b26f388d21cb",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:44.804916+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/ad425949-db6c-4668-9bdd-a4650885fb97",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:46.334076+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/190afe86-bee5-4571-9df8-3b2aa7ef7db1",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:47.713730+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/5e0d19be-686f-4f22-8019-6fcecb7657de",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:49.138886+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/413ccb22-7e93-437a-bec3-16be6aae7ab6",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:50.654732+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/e76ce315-4eb7-47a7-8176-04ae0c5fb2c0",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:52.207305+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/4447b8dc-8b37-4cc8-af75-237d1d6ebdb3",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:54.223629+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/1acb8134-8eec-4700-845b-18c798ee5fd9",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:55.697755+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/8156a0ed-031e-4f3b-93ea-e53cf85fcf59",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:57.291869+00:00"
+        },
+        {
+          "url": "https://hamamatsushitoro.aeonmall.jp/event/8bbffa91-03a9-47a7-b66a-4b23e808b435",
+          "status": 200,
+          "checked_at": "2026-11-02T13:35:58.849673+00:00"
+        },
+        {
+          "url": "https://www.village-v.co.jp/popup/029873/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:36:16.693021+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/information/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:12.538384+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:28.747053+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/information/post-9133/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:30.234927+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/information/post-9058/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:31.521757+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/information/post-10715/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:32.912638+00:00"
+        },
+        {
+          "url": "https://www.nijinosato.com/information/post-10689/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:34.223038+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:37:48.625795+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202611.png",
+          "status": 200,
+          "checked_at": "2026-11-02T13:38:38.991984+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202612.png",
+          "status": 200,
+          "checked_at": "2026-11-02T13:38:40.157003+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202701.png",
+          "status": 200,
+          "checked_at": "2026-11-02T13:38:41.461146+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202702.png",
+          "status": 200,
+          "checked_at": "2026-11-02T13:38:42.750346+00:00"
+        },
+        {
+          "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202703.png",
+          "status": 200,
+          "checked_at": "2026-11-02T13:38:44.100408+00:00"
+        },
+        {
+          "url": "https://mentai-park.com/izu/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:39:48.664041+00:00"
+        },
+        {
+          "url": "https://mentai-park.com/news/izu/14808/",
+          "status": 200,
+          "checked_at": "2026-11-02T13:40:05.678395+00:00"
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 11,
+          "disposition": "candidate_found_added",
+          "reason": "日付付き今週スケジュール3件、11月カピバラ公開1件を採用。既存5件を終了解消、獣医体験は公式訂正に基づき10/31へ訂正。生誕祭・朝ツアー・夏休みカードラリーは過去限定。",
+          "sources_checked": [
+            {
+              "url": "https://izu-animal-kingdom.com/events/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:26:47.521816+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:26:58.637232+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/information/information-6147/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:00.052461+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/events/events-2986/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:01.463225+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/events/events-4293/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:02.661888+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/events/events-4483/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:03.758424+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:34.702366+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5892/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:36.069961+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-6041/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:37.173218+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5708/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:54.014060+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5455/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:55.274118+00:00"
+            },
+            {
+              "url": "https://izu-animal-kingdom.com/news-and-topics/news-and-topics-5526/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:27:56.610981+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-11-w38-capybara-september",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-11-202610-f10-01",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-11-202610-f10-02",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-11-202610-f10-03",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-11-202610-f10-04",
+              "decision": "official-date-correction-ended"
+            },
+            {
+              "event_id": "evt-11-202610-f10-05",
+              "decision": "ended"
+            }
+          ],
+          "candidate_holds": [],
+          "candidate_decisions": [
+            {
+              "candidate": "夏休みカードラリー・生誕祭・モーニングツアー",
+              "disposition": "past_not_added",
+              "reason": "今年の夏休み・8月・9月限定、未来開催を推定しない"
+            }
+          ],
+          "added_event_ids": [
+            "evt-11-w44-rhino",
+            "evt-11-w44-tiger",
+            "evt-11-w44-giraffe",
+            "evt-11-w44-capybara-nov"
+          ],
+          "updated_event_ids": [
+            "evt-11-202610-f10-01",
+            "evt-11-202610-f10-02",
+            "evt-11-202610-f10-03",
+            "evt-11-202610-f10-04",
+            "evt-11-202610-f10-05"
+          ]
+        },
+        {
+          "facility_id": 16,
+          "disposition": "candidate_found_added",
+          "reason": "秋の既存9件を終了解消。冬限定肉まん体験を追加。PDF全行を読了、引き馬・トラクター・ヤギ・乳しぼり等は通年通常提供のため別の新規催事化をしない。",
+          "sources_checked": [
+            {
+              "url": "https://www.makaino.com/event/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:28:34.152029+00:00"
+            },
+            {
+              "url": "https://www.makaino.com/news/261017/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:28:52.782422+00:00"
+            },
+            {
+              "url": "https://www.makaino.com/news/%e3%82%a4%e3%83%99%e3%83%b3%e3%83%88%e3%82%b9%e3%82%b1%e3%82%b8%e3%83%a5%e3%83%bc%e3%83%ab26%e5%86%ac/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:29:25.185723+00:00"
+            },
+            {
+              "url": "https://www.makaino.com/blog/12%e6%9c%88%e3%81%8b%e3%82%89%ef%bc%81%e3%80%8c%e5%86%ac%e3%81%ae%e3%81%82%e3%81%ae%e4%bc%81%e7%94%bb%e3%80%8d%e3%81%8c%e5%be%a9%e6%b4%bb%ef%bc%81%ef%bc%81/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:29:26.967355+00:00"
+            },
+            {
+              "url": "https://www.makaino.com/wp/wp-content/uploads/2026/10/87697cfb7813b6f5fc6b7d3c961cb1f8.pdf",
+              "status": 200,
+              "checked_at": "2026-11-02T13:29:45.113518+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-16-w38-sheep",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-milking",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-calf",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-butter",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-ice",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-cookie",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-kids-farm",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-w38-sausage",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-16-202610-f10-01",
+              "decision": "ended"
+            }
+          ],
+          "candidate_holds": [
+            {
+              "candidate": "牧場でこんにちは（12月復活予告）",
+              "reason": "打合せ中の予告で、開催日の範囲が未公表。過去写真から期間を推測しない。"
+            },
+            {
+              "candidate": "年賀状・羊のフォトスポット（11月開始予告）",
+              "reason": "開始月の予告のみで確定日程・終了日未公表。"
+            }
+          ],
+          "candidate_decisions": [
+            {
+              "candidate": "サツマイモ掘り10/31・11/1",
+              "disposition": "past_not_added"
+            },
+            {
+              "candidate": "羊放牧・乳しぼり・仔牛ミルク・キッズファーム・羊かけっこ・引き馬・トラクター・ヤギ散歩・バター・クッキー・ソーセージ・スポーツ",
+              "disposition": "ordinary_program_not_separate_new_event",
+              "reason": "通常提供の冬時間割。限定企画の肉まんは別途採用。"
+            }
+          ],
+          "added_event_ids": [
+            "evt-16-w44-winter-meat-buns"
+          ],
+          "updated_event_ids": [
+            "evt-16-w38-sheep",
+            "evt-16-w38-milking",
+            "evt-16-w38-calf",
+            "evt-16-w38-butter",
+            "evt-16-w38-ice",
+            "evt-16-w38-cookie",
+            "evt-16-w38-kids-farm",
+            "evt-16-w38-sausage",
+            "evt-16-202610-f10-01"
+          ]
+        },
+        {
+          "facility_id": 22,
+          "disposition": "candidate_found_added",
+          "reason": "既存21件を個別判定。11/8体操中止・終了分を解消、現在6件の確認／1件の既存HOLD。新規3件採用。市デジタルラリーは既存evt-w44d2-shizuoka-3da6590b17の会場として重複。カヌー・乗馬は通常営業、ポッカールは今季終了。",
+          "sources_checked": [
+            {
+              "url": "https://www.kodomo.or.jp/event/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:25.371136+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:37.003496+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/program/month/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:38.297764+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/program/schedule/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:39.581968+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261003_3845.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:40.819456+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261102_3879.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:57.055537+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261028_3876.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:58.306517+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261021_3873.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:59.419092+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20260905_3819.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:31:00.599751+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20260926_3820.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:31:01.760833+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20260829_3782.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:31:02.997439+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261004_3848.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:31:04.175625+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261007_3860.php",
+              "status": 404,
+              "checked_at": "2026-11-02T13:31:05.249855+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/information/20261007_3853.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:31:32.402670+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-22-w38-dinosaur",
+              "decision": "reconfirmed"
+            },
+            {
+              "event_id": "evt-22-w38-splash",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-art",
+              "decision": "candidate-level-HOLD"
+            },
+            {
+              "event_id": "evt-22-w38-science",
+              "decision": "reconfirmed"
+            },
+            {
+              "event_id": "evt-22-w38-music-science",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-soccer",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-22-w38-gym",
+              "decision": "remaining-occurrence-cancelled"
+            },
+            {
+              "event_id": "evt-22-w38-disc",
+              "decision": "reconfirmed"
+            },
+            {
+              "event_id": "evt-22-w38-nordic",
+              "decision": "reconfirmed"
+            },
+            {
+              "event_id": "evt-22-w38-working-cars",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-vet",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-animal-welfare",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-disc-festival",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-22-w38-sports",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-september-crafts",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-outdoor-market",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-w38-marche",
+              "decision": "reconfirmed"
+            },
+            {
+              "event_id": "evt-22-w38-drawing",
+              "decision": "already-ended-or-cancelled-unchanged"
+            },
+            {
+              "event_id": "evt-22-202610-f10-01",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-22-202610-f10-02",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-22-202610-f10-03",
+              "decision": "ended"
+            }
+          ],
+          "candidate_holds": [
+            {
+              "candidate": "ススキの迷路",
+              "reason": "終了は11月中旬予定としか記載されず、現行必須end_dateを推測しない。"
+            },
+            {
+              "candidate": "ニジマス釣り（11/3まで）",
+              "reason": "同公式の月間面は9:30～15:00/14:30最終、詳細は9:30～14:30/14:00最終で不一致。showakinen限定優先規則は他サイトに適用しない。"
+            },
+            {
+              "candidate": "親子リトミック教室",
+              "reason": "開催日調整中"
+            },
+            {
+              "candidate": "富士山こどもの国サロン",
+              "reason": "開催日調整中"
+            },
+            {
+              "candidate": "11/15アート教室の追加開催",
+              "reason": "年間予定11/22と11/15マルシェ告知が不一致。既存eventもHOLD。"
+            },
+            {
+              "candidate": "食欲の秋イベント",
+              "reason": "11/15マルシェの同時催事名のみ、内容を確定できない。"
+            }
+          ],
+          "candidate_decisions": [
+            {
+              "candidate": "富士市デジタルスタンプラリー／会場景品交換・フォトスポット",
+              "disposition": "duplicate",
+              "event_id": "evt-w44d2-shizuoka-3da6590b17"
+            },
+            {
+              "candidate": "体操11/8",
+              "disposition": "cancelled-not-added"
+            },
+            {
+              "candidate": "サッカー・親子理科・ディスク祭・10月各催事",
+              "disposition": "past-not-added"
+            }
+          ],
+          "added_event_ids": [
+            "evt-22-w44-nov-workshops",
+            "evt-22-w44-lesson-expo",
+            "evt-22-w44-sweetpotato"
+          ],
+          "updated_event_ids": [
+            "evt-22-w38-dinosaur",
+            "evt-22-w38-science",
+            "evt-22-w38-soccer",
+            "evt-22-w38-gym",
+            "evt-22-w38-disc",
+            "evt-22-w38-nordic",
+            "evt-22-w38-disc-festival",
+            "evt-22-w38-marche",
+            "evt-22-202610-f10-01",
+            "evt-22-202610-f10-02",
+            "evt-22-202610-f10-03"
+          ]
+        },
+        {
+          "facility_id": 26,
+          "disposition": "candidate_found_added",
+          "reason": "公式今後一覧全6ページ32候補と既存25件を個別判定。現在シリーズの出典・日程を現行各回へ更新、新規4シリーズ追加。野鳥写真展は本日閉園済み。",
+          "sources_checked": [
+            {
+              "url": "https://www.enshunada.com/event/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:22.561029+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:33.910457+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:35.596269+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info/page/2",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:47.106589+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info/page/3",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:48.681578+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info/page/4",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:49.802338+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info/page/5",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:51.129302+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event-info/page/6",
+              "status": 200,
+              "checked_at": "2026-11-02T13:32:52.320278+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21308",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:06.195603+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21329",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:07.458746+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21271",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:08.665384+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21351",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:09.859045+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21340",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:11.005886+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21330",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:12.167641+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21257",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:13.369525+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22450",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:14.561972+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21359",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:15.704030+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21363",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:16.930738+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21309",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:18.211177+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21267",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:19.346507+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21280",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:20.476433+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21331",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:21.715227+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22452",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:22.960102+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21266",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:24.264045+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22453",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:25.422048+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21268",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:26.533577+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21352",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:27.991842+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21339",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:29.494005+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21332",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:30.635971+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21310",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:31.784093+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22457",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:33.148936+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21260",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:34.441430+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22454",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:35.643177+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21286",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:36.796032+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21290",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:38.064795+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21311",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:39.282728+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22458",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:40.521750+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21317",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:41.744778+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21258",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:42.900336+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/22455",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:44.024174+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21326",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:45.257895+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21358",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:46.457600+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21279",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:47.617616+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21259",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:48.765801+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21338",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:49.990667+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/event/21350",
+              "status": 200,
+              "checked_at": "2026-11-02T13:33:51.113381+00:00"
+            },
+            {
+              "url": "https://www.enshunada.com/news/22475",
+              "status": 200,
+              "checked_at": "2026-11-02T13:34:20.945589+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-26-202607-01",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-202607-02",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-202607-03",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-202607-04",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-w38-nordic",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21329",
+                "https://www.enshunada.com/event/21330",
+                "https://www.enshunada.com/event/21331",
+                "https://www.enshunada.com/event/21332",
+                "https://www.enshunada.com/event/21317"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-moon",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-w38-night2",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-w38-dog",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-26-w38-craft-halloween",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-w38-craft-christmas",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21308"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-craft-newyear",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21309"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-art",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21359"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-succulent",
+              "decision": "already-ended"
+            },
+            {
+              "event_id": "evt-26-w38-flower",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21271"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-tree",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21267"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-wreath",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21266"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-kadomatsu",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21268"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-mulle",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21280"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-knyttana",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-26-w38-nature",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-26-w38-bird",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21257",
+                "https://www.enshunada.com/event/21260",
+                "https://www.enshunada.com/event/21258"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-stars",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21340",
+                "https://www.enshunada.com/event/21339",
+                "https://www.enshunada.com/event/22457",
+                "https://www.enshunada.com/event/22458"
+              ]
+            },
+            {
+              "event_id": "evt-26-w38-bonita",
+              "decision": "ended"
+            },
+            {
+              "event_id": "evt-26-202610-f10-01",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21351",
+                "https://www.enshunada.com/event/21352"
+              ]
+            },
+            {
+              "event_id": "evt-26-202701-f10-02",
+              "decision": "reconfirmed-current-individual-pages",
+              "sources": [
+                "https://www.enshunada.com/event/21310"
+              ]
+            }
+          ],
+          "candidate_holds": [
+            {
+              "candidate": "いきいきストレッチ11/23",
+              "reason": "公式対象はシニア（中高年）。家族向け新規採用対象外。"
+            }
+          ],
+          "candidate_decisions": [
+            {
+              "candidate": "クラフト体験(クリスマス飾り)",
+              "date": "2026-11-08",
+              "url": "https://www.enshunada.com/event/21308",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "ノルディックウォーク体験",
+              "date": "2026-11-12",
+              "url": "https://www.enshunada.com/event/21329",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "お花の寄せ植え体験",
+              "date": "2026-11-14",
+              "url": "https://www.enshunada.com/event/21271",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "クッブ体験会",
+              "date": "2026-11-15",
+              "url": "https://www.enshunada.com/event/21351",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "星空観望会～石人の星公園で深宇宙を観よう～",
+              "date": "2026-11-16",
+              "url": "https://www.enshunada.com/event/21340",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "ノルディックウォーク体験",
+              "date": "2026-11-21",
+              "url": "https://www.enshunada.com/event/21330",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "バードウォッチング",
+              "date": "2026-11-22",
+              "url": "https://www.enshunada.com/event/21257",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "にこにこフリーマーケット",
+              "date": "2026-11-22",
+              "url": "https://www.enshunada.com/event/22450",
+              "disposition": "added"
+            },
+            {
+              "candidate": "簡単なアート体験",
+              "date": "2026-11-23",
+              "url": "https://www.enshunada.com/event/21359",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "いきいきストレッチ",
+              "date": "2026-11-23",
+              "url": "https://www.enshunada.com/event/21363",
+              "disposition": "hold-age"
+            },
+            {
+              "candidate": "クラフト体験(お正月飾り 紙粘土で作る干支)",
+              "date": "2026-12-05",
+              "url": "https://www.enshunada.com/event/21309",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "クリスマスツリー作り",
+              "date": "2026-12-06",
+              "url": "https://www.enshunada.com/event/21267",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "森のムッレ教室",
+              "date": "2026-12-06",
+              "url": "https://www.enshunada.com/event/21280",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "ノルディックウォーク体験",
+              "date": "2026-12-10",
+              "url": "https://www.enshunada.com/event/21331",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "にこにこフリーマーケット",
+              "date": "2026-12-12",
+              "url": "https://www.enshunada.com/event/22452",
+              "disposition": "added"
+            },
+            {
+              "candidate": "クリスマスリース作り",
+              "date": "2026-12-13",
+              "url": "https://www.enshunada.com/event/21266",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "にこにこフリーマーケット",
+              "date": "2026-12-13",
+              "url": "https://www.enshunada.com/event/22453",
+              "disposition": "added"
+            },
+            {
+              "candidate": "門松作り",
+              "date": "2026-12-20",
+              "url": "https://www.enshunada.com/event/21268",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "クッブ体験会",
+              "date": "2026-12-20",
+              "url": "https://www.enshunada.com/event/21352",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "星空観望会～石人の星公園で深宇宙を観よう～",
+              "date": "2026-12-21",
+              "url": "https://www.enshunada.com/event/21339",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "ノルディックウォーク体験",
+              "date": "2027-01-16",
+              "url": "https://www.enshunada.com/event/21332",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "クラフト体験(バレンタインアレンジ・ステンシル体験：木製プレート)",
+              "date": "2027-01-17",
+              "url": "https://www.enshunada.com/event/21310",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "星空観望会～石人の星公園で深宇宙を観よう～",
+              "date": "2027-01-18",
+              "url": "https://www.enshunada.com/event/22457",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "バードウォッチング",
+              "date": "2027-01-24",
+              "url": "https://www.enshunada.com/event/21260",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "にこにこフリーマーケット",
+              "date": "2027-01-24",
+              "url": "https://www.enshunada.com/event/22454",
+              "disposition": "added"
+            },
+            {
+              "candidate": "森のクニュータナ教室",
+              "date": "2027-02-07",
+              "url": "https://www.enshunada.com/event/21286",
+              "disposition": "added"
+            },
+            {
+              "candidate": "ネイチャーゲーム",
+              "date": "2027-02-07",
+              "url": "https://www.enshunada.com/event/21290",
+              "disposition": "added"
+            },
+            {
+              "candidate": "クラフト体験(おひな様飾り)",
+              "date": "2027-02-14",
+              "url": "https://www.enshunada.com/event/21311",
+              "disposition": "added"
+            },
+            {
+              "candidate": "星空観望会～石人の星公園で深宇宙を観よう～",
+              "date": "2027-02-15",
+              "url": "https://www.enshunada.com/event/22458",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "ノルディックウォーク体験",
+              "date": "2027-02-20",
+              "url": "https://www.enshunada.com/event/21317",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "バードウォッチング",
+              "date": "2027-02-21",
+              "url": "https://www.enshunada.com/event/21258",
+              "disposition": "duplicate-existing-series"
+            },
+            {
+              "candidate": "にこにこフリーマーケット",
+              "date": "2027-02-21",
+              "url": "https://www.enshunada.com/event/22455",
+              "disposition": "added"
+            }
+          ],
+          "added_event_ids": [
+            "evt-26-w44-flea",
+            "evt-26-w44-knyttana-feb",
+            "evt-26-w44-nature-feb",
+            "evt-26-w44-hina-craft"
+          ],
+          "updated_event_ids": [
+            "evt-26-w38-nordic",
+            "evt-26-w38-dog",
+            "evt-26-w38-craft-christmas",
+            "evt-26-w38-craft-newyear",
+            "evt-26-w38-art",
+            "evt-26-w38-flower",
+            "evt-26-w38-tree",
+            "evt-26-w38-wreath",
+            "evt-26-w38-kadomatsu",
+            "evt-26-w38-mulle",
+            "evt-26-w38-knyttana",
+            "evt-26-w38-nature",
+            "evt-26-w38-bird",
+            "evt-26-w38-stars",
+            "evt-26-w38-bonita",
+            "evt-26-202610-f10-01",
+            "evt-26-202701-f10-02"
+          ]
+        },
+        {
+          "facility_id": 37,
+          "disposition": "candidate_found_added",
+          "reason": "一覧26件を判定し8件追加。既存6件終了、1件はメッセージ受付終了と展示継続へ更新。周年祭は販売・過去ハロウィン中心、BlackFridayFesはComingSoon、抽選応募等は館内親子催事にしない。",
+          "sources_checked": [
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:20.023775+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/d905146c-4265-4bfb-91a4-f3f0135df01d",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:41.628857+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/c527c6d9-0dba-498a-a288-d8f936525f06",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:43.329117+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/29ada85a-563c-4c0a-bcb3-b26f388d21cb",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:44.804916+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/ad425949-db6c-4668-9bdd-a4650885fb97",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:46.334076+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/190afe86-bee5-4571-9df8-3b2aa7ef7db1",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:47.713730+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/5e0d19be-686f-4f22-8019-6fcecb7657de",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:49.138886+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/413ccb22-7e93-437a-bec3-16be6aae7ab6",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:50.654732+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/e76ce315-4eb7-47a7-8176-04ae0c5fb2c0",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:52.207305+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/4447b8dc-8b37-4cc8-af75-237d1d6ebdb3",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:54.223629+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/1acb8134-8eec-4700-845b-18c798ee5fd9",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:55.697755+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/8156a0ed-031e-4f3b-93ea-e53cf85fcf59",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:57.291869+00:00"
+            },
+            {
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/8bbffa91-03a9-47a7-b66a-4b23e808b435",
+              "status": 200,
+              "checked_at": "2026-11-02T13:35:58.849673+00:00"
+            },
+            {
+              "url": "https://www.village-v.co.jp/popup/029873/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:36:16.693021+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-37-w38-classic",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-37-w38-shinchan",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-37-w38-calpis",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-37-w38-snorlax-caravan",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-37-w38-singingbirds",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-37-202610-f10-01",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-02",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-03",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-04",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-05",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-06",
+              "decision": "updated"
+            },
+            {
+              "event_id": "evt-37-202610-f10-07",
+              "decision": "updated"
+            }
+          ],
+          "candidate_holds": [
+            {
+              "candidate": "Molto piacereライブ11/6",
+              "reason": "19時から約1時間のみ。乳幼児の家族向け新規候補には採用しない。"
+            },
+            {
+              "candidate": "超！BLACK FRIDAY Fes",
+              "reason": "Coming Soonのみで館内プログラム・参加内容を特定できない。"
+            }
+          ],
+          "candidate_decisions": [
+            {
+              "candidate": "開催中 22周年祭 2026/10/30 (金) - 2026/11/03 (火)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/d905146c-4265-4bfb-91a4-f3f0135df01d",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 iAEON 5th Anniversary開催中 2026/09/01 (火) - 2026/11/30 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/b5e59095-f59c-404e-9a6f-8415a820df6e",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 三遠ネオフェニックス　ホーム開幕戦カウントダウンイベント 2026/10/16 (金) - 2026/12/04 (金)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/c527c6d9-0dba-498a-a288-d8f936525f06",
+              "disposition": "duplicate",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 ベネッセ×イオンモール　合計10,000組に抽選でプレゼント！ 家族でいっしょに楽しもう！キャンペーン2026 2026/10/02 (金) - 2026/11/08 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/abe3221d-e184-4bf5-9eeb-0fd0f37e1af6",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 スイーツカーニバル 2026/10/30 (金) - 2026/11/09 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/6691cf06-749f-47e0-965e-93478556e4c2",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 スイーツポケット【卵丸(らんまる)】 2026/10/30 (金) - 2026/11/09 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/6c9ab24a-2683-4ec4-b73a-46cb8e0fc46d",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 ＆Creators 2026/10/30 (金) - 2026/11/10 (火)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/35a96b3a-dd18-40d6-a98f-3422098557f8",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 ロボットプラネット 2026/10/31 (土) - 2026/11/03 (火)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/29ada85a-563c-4c0a-bcb3-b26f388d21cb",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 【終了しました】しなこグッズが抽選で当たる！475プレゼントキャンペーン 毎日",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/7e2b3c47-cd09-4128-b3b7-2cc2d063bcae",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "開催中 【終了しました】お買物クーポンプレゼント 毎日",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/9a0b75d4-d681-488e-bbe8-3a3e561de5f4",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 クリスマスツリー点灯式 2026/11/06 (金)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/ad425949-db6c-4668-9bdd-a4650885fb97",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 【ロッキン主催ライブ】Molto piacere（モルトピアチェーレ） 2026/11/06 (金)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/190afe86-bee5-4571-9df8-3b2aa7ef7db1",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 ストライダーアドベンチャーワールド 2026/11/07 (土)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/5e0d19be-686f-4f22-8019-6fcecb7657de",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 アルイテイコウ 浜松編 2026/11/08 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/413ccb22-7e93-437a-bec3-16be6aae7ab6",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 食欲の秋だよ！！“銀だこソースたこ焼食べ放題”開催決定！ 2026/11/24 (火) - 2026/11/27 (金)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/7309c958-cf64-404b-b9e4-74083599a2f3",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 超！BLACK FRIDAY Fes 2026/11/20 (金) - 2026/11/30 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/e76ce315-4eb7-47a7-8176-04ae0c5fb2c0",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 イオンドリームキャンペーン 2026/11/20 (金) - 2026/11/30 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/fd4c27e3-35c2-42ba-b26d-a6051a3074bb",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 イオンモール×めっちゃカメレオン 2026/11/20 (金) - 2026/11/30 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/4447b8dc-8b37-4cc8-af75-237d1d6ebdb3",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 はままつフルーツパーク時之栖　開園30周年記念ロゴマーク展示 2026/11/09 (月) - 2026/11/15 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/1acb8134-8eec-4700-845b-18c798ee5fd9",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 ruinas OUTLET 期間限定OPEN！！ 2026/11/10 (火) - 2026/11/15 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/670316b8-88a8-4c47-9583-1c9a78612042",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 トミカ・プラレールのイベント「ニコニコ！のりものランド」開催！ 2026/11/13 (金) - 2026/11/23 (月)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/8156a0ed-031e-4f3b-93ea-e53cf85fcf59",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 欲張れ青春！4校(至高)の味をくらいつくせ！！ 2026/11/08 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/8bbffa91-03a9-47a7-b66a-4b23e808b435",
+              "disposition": "added",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 アメリカンワッフル催事販売 2026/11/10 (火) - 2026/11/18 (水)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/268ff93b-5eec-415f-9269-9c6e6d9a5949",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 「赤坂食べ門」今朝漬けた“朝漬け”キムチ 期間限定販売 2026/11/14 (土) - 2026/11/15 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/8aeefaac-1c4b-4387-951b-55bddd8cd59b",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 献血 2026/11/15 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/51ba8063-2f7b-40f4-bd63-3fb2e17c51aa",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            },
+            {
+              "candidate": "予告 SIXPAD期間限定体験受注会 2026/11/17 (火) - 2026/11/29 (日)",
+              "url": "https://hamamatsushitoro.aeonmall.jp/event/96a6126a-9815-4b90-b91d-820fdd2df520",
+              "disposition": "not-family-outing-program",
+              "reason": "個別内容または公式一覧の明示内容により判定。販売・抽選応募・クーポン・献血・商談は独立した親子催事として採用しない。"
+            }
+          ],
+          "added_event_ids": [
+            "evt-37-w44-tree-light",
+            "evt-37-w44-strider",
+            "evt-37-w44-miuzic",
+            "evt-37-w44-chameleon",
+            "evt-37-w44-fruit-logo",
+            "evt-37-w44-tomica",
+            "evt-37-w44-robots",
+            "evt-37-w44-highschool"
+          ],
+          "updated_event_ids": [
+            "evt-37-202610-f10-02",
+            "evt-37-202610-f10-03",
+            "evt-37-202610-f10-04",
+            "evt-37-202610-f10-05",
+            "evt-37-202610-f10-06",
+            "evt-37-202610-f10-07",
+            "evt-37-202610-f10-01"
+          ]
+        },
+        {
+          "facility_id": 47,
+          "disposition": "candidate_found_added",
+          "reason": "公式ニュース・主催特設・開催カレンダーを確認し、スタンプラリーと秋ライトアップ（花火・演奏を包含）2件追加。既存3件は全て終了済み。リースと野菜企画は過去、紅葉見頃案内を催事化しない。",
+          "sources_checked": [
+            {
+              "url": "https://www.nijinosato.com/information/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:12.538384+00:00"
+            },
+            {
+              "url": "https://www.nijinosato.com/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:28.747053+00:00"
+            },
+            {
+              "url": "https://www.nijinosato.com/information/post-9133/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:30.234927+00:00"
+            },
+            {
+              "url": "https://www.nijinosato.com/information/post-9058/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:31.521757+00:00"
+            },
+            {
+              "url": "https://www.nijinosato.com/information/post-10715/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:32.912638+00:00"
+            },
+            {
+              "url": "https://www.nijinosato.com/information/post-10689/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:34.223038+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:37:48.625795+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202611.png",
+              "status": 200,
+              "checked_at": "2026-11-02T13:38:38.991984+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202612.png",
+              "status": 200,
+              "checked_at": "2026-11-02T13:38:40.157003+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202701.png",
+              "status": 200,
+              "checked_at": "2026-11-02T13:38:41.461146+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202702.png",
+              "status": 200,
+              "checked_at": "2026-11-02T13:38:42.750346+00:00"
+            },
+            {
+              "url": "https://nijinosato-illumination.com/wp-content/uploads/2026/09/202703.png",
+              "status": 200,
+              "checked_at": "2026-11-02T13:38:44.100408+00:00"
+            }
+          ],
+          "existing_event_decisions": [
+            {
+              "event_id": "evt-47-w38-child-market",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-47-w38-whistle",
+              "decision": "already-ended-unchanged"
+            },
+            {
+              "event_id": "evt-47-w38-sl-photo",
+              "decision": "already-ended-unchanged"
+            }
+          ],
+          "candidate_holds": [
+            {
+              "candidate": "迷宮の森 生物災害11/3",
+              "reason": "夜の恐怖演出・ウイルス感染ホラーで幼児向きと判断できない。"
+            },
+            {
+              "candidate": "イルミtheナイト2026（秋期間外の全冬期掲載）",
+              "reason": "公式3月カレンダーの21・22が同じ日曜欄に併記され月曜欄が欠落。数値日程の暦位置を推測せず全冬期の新規掲載を保留。秋11/7～12/13は日付・全日開催が別途明確なので採用。"
+            },
+            {
+              "candidate": "ロムニーバス夜間料金案内",
+              "reason": "同じ公式特設内に大人100/小人50円と大人300/小人無料の両記載。どちらも断定せず主催者確認が必要。"
+            }
+          ],
+          "candidate_decisions": [],
+          "added_event_ids": [
+            "evt-47-w44-maple-lights",
+            "evt-47-w44-photo-stamps"
+          ],
+          "updated_event_ids": []
+        },
+        {
+          "facility_id": 48,
+          "disposition": "no_current_or_future_event",
+          "reason": "施設公式の新着と館内案内を読了。福引大会は8/9までの過去開催、送料割引はオンライン販売。現在の日付付き館内親子催事はなし。工場見学・遊び場・足湯は通常提供でイベント化しない。",
+          "sources_checked": [
+            {
+              "url": "https://mentai-park.com/izu/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:39:48.664041+00:00"
+            },
+            {
+              "url": "https://mentai-park.com/news/izu/14808/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:40:05.678395+00:00"
+            }
+          ],
+          "existing_event_decisions": [],
+          "candidate_holds": [],
+          "candidate_decisions": [
+            {
+              "candidate": "福引大会",
+              "disposition": "past-not-added",
+              "reason": "8/9終了"
+            },
+            {
+              "candidate": "送料割引",
+              "disposition": "online-retail-not-outing"
+            }
+          ],
+          "added_event_ids": [],
+          "updated_event_ids": []
+        }
+      ],
+      "existing_event_holds": [
+        {
+          "facility_id": 22,
+          "event_id": "evt-22-w38-art",
+          "reason": "年間予定は11/22、11/2更新の11/15マルシェ告知は同日にアートなワークショップ開催と記載。日時の同一性を確定できない。",
+          "sources_checked": [
+            {
+              "url": "https://www.kodomo.or.jp/program/schedule/",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:39.581968+00:00"
+            },
+            {
+              "url": "https://www.kodomo.or.jp/news/20261102_3879.php",
+              "status": 200,
+              "checked_at": "2026-11-02T13:30:57.055537+00:00"
+            }
+          ]
+        }
+      ]
     }
   },
   "validation_corrections": [
