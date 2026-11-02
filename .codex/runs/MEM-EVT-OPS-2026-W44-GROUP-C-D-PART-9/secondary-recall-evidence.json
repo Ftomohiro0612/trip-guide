@@ -9222,6 +9222,22 @@
           "page_title": "田楽座　茅野公演のチケット情報｜LivePocket（ライブポケット）",
           "text_sha256": "b0255b712304db8f4081fa764f510642fe4e3f0b6d88bd8515352d2be03c0468",
           "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://docs.google.com/forms/d/1ntSam6dSNnvCUqIqcMQHWVZ25P8J9HxrZ6flI1YbMj4/edit",
+          "status": 200,
+          "checked_at": "2026-11-02T01:26:21.452588+00:00",
+          "page_title": "第９回どんどこ!　巨大紙相撲大会　参加申込",
+          "text_sha256": "496ceebd5f6f8e34b45b568f5079c2b13946da8fc7c32a6430cc858cc59b73ca",
+          "source_type": "area_event_calendar"
+        },
+        {
+          "url": "https://barakura-shop.stores.jp/items/6acc9bc15b54b80158aa4828",
+          "status": 403,
+          "checked_at": "2026-11-02T01:40:18.370108+00:00",
+          "page_title": "Captcha Challenge - STORES",
+          "text_sha256": "10616121b8b3e9723461a960d2019ca5b545fc833181b620e4a7be125307bb4e",
+          "source_type": "area_event_calendar"
         }
       ],
       "candidates": [
@@ -10054,9 +10070,10 @@
         {
           "title": "花結び　香り袋づくり体験",
           "source_url": "https://www.walkerplus.com/event/ar0420e616530/",
-          "disposition": "hold",
-          "reason": "二次媒体の個別詳細を再取得したがHTTP429の制限が継続。公式へのリンクが取得できず、この回の日付・会場・公式根拠を確認できない（同一ソース群の限定HOLD）。",
-          "discovery_url": "https://www.walkerplus.com/event/ar0420e616530/"
+          "disposition": "duplicate_or_already_present",
+          "reason": "後続ファミリー面から主催者公式の個別ページを確認し同一回を追加済み",
+          "discovery_url": "https://www.walkerplus.com/event/ar0420e616530/",
+          "event_id": "evt-w44d9-nagano-family-scent"
         },
         {
           "title": "高峰高原の紅葉",
@@ -10452,7 +10469,7 @@
           "title": "Celeste ～Women’ｓ Ensemble～",
           "source_url": "https://www.walkerplus.com/event/ar0420e620863/",
           "disposition": "hold",
-          "reason": "二次媒体の個別詳細を再取得したがHTTP429の制限が継続。公式へのリンクが取得できず、この回の日付・会場・公式根拠を確認できない（同一ソース群の限定HOLD）。",
+          "reason": "主催者公式年表で11/21・会場・料金・家族向け演目を確認したが、指定販売先が403/Captchaで現在の有料券の受付を読めない。",
           "discovery_url": "https://www.walkerplus.com/event/ar0420e620863/"
         },
         {
@@ -11479,8 +11496,8 @@
       ],
       "candidates_found": 305,
       "added": 21,
-      "duplicate_or_already_present": 68,
-      "hold": 189,
+      "duplicate_or_already_present": 69,
+      "hold": 188,
       "stale_false": 27,
       "pages_fetched": 26,
       "paging_stop_reason": "listing_exhausted"
