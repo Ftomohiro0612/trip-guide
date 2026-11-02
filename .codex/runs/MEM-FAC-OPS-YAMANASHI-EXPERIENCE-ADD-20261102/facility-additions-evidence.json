@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-FAC-OPS-YAMANASHI-EXPERIENCE-ADD-20261102",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-02T04:13:35.316Z",
+  "executed_at": "2026-11-02T04:39:05.061751+00:00",
   "process_started_at": "2026-11-02T03:20:51Z",
   "candidate_pool_count": 62,
   "scope": "yamanashi only; one-off outside monthly rotation",
@@ -2647,7 +2647,7 @@
         "within_100m": [],
         "conclusion": "not duplicate; independent physical destination"
       },
-      "reason": "廃校の教室と校庭で、道志の木材や食材を使ったものづくりと食育を楽しめる体験館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "reason": "廃校の教室と校庭で、道志の木材や食材を使ったものづくりと食育を楽しめる体験館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。 村観光公式は住所を道志村2176、営業時間8:30～17:30（体験9～17）と掲載。一方、現行運営公式aboutは2167番地を明記し時刻の記載なし。県教育旅行は2167・9～17時だが2021/3/24時点。運営の2167番地を採用し、営業時間の数値は旧/別掲載から転記せず公式記載なし・要確認とした。",
       "sources_checked": [
         {
           "url": "https://www.minamototaikenkan.com/",
@@ -2666,7 +2666,22 @@
           "status": 200,
           "checked_at": "2026-11-02T03:24:34.849208+00:00",
           "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.doshi-kanko.jp/tourist-facility-information/minamototaikenkan/",
+          "status": 200,
+          "checked_at": "2026-11-02T04:15:32.261638+00:00",
+          "used_to_verify": "運営公式との住所・営業時間の不一致および県掲載時点の照合。村観光公式は住所を道志村2176、営業時間8:30～17:30（体験9～17）と掲載。一方、現行運営公式aboutは2167番地を明記し時刻の記載なし。県教育旅行は2167・9～17時だが2021/3/24時点。運営の2167番地を採用し、営業時間の数値は旧/別掲載から転記せず公式記載なし・要確認とした。"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_1105.html",
+          "status": 200,
+          "checked_at": "2026-11-02T04:15:32.264105+00:00",
+          "used_to_verify": "運営公式との住所・営業時間の不一致および県掲載時点の照合。村観光公式は住所を道志村2176、営業時間8:30～17:30（体験9～17）と掲載。一方、現行運営公式aboutは2167番地を明記し時刻の記載なし。県教育旅行は2167・9～17時だが2021/3/24時点。運営の2167番地を採用し、営業時間の数値は旧/別掲載から転記せず公式記載なし・要確認とした。"
         }
+      ],
+      "source_disagreements": [
+        "村観光公式は住所を道志村2176、営業時間8:30～17:30（体験9～17）と掲載。一方、現行運営公式aboutは2167番地を明記し時刻の記載なし。県教育旅行は2167・9～17時だが2021/3/24時点。運営の2167番地を採用し、営業時間の数値は旧/別掲載から転記せず公式記載なし・要確認とした。"
       ]
     },
     {
@@ -2927,5 +2942,126 @@
         }
       ]
     }
-  ]
+  ],
+  "verification": {
+    "npm_ci": {
+      "exit_code": 0
+    },
+    "direct_build": {
+      "command": "npm run build",
+      "exit_code": 0,
+      "integration_baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+      "built_head": "7715cd06",
+      "static_pages": 6254,
+      "recorded_at": "2026-11-02T04:20:18.510460+00:00"
+    },
+    "cloudflare_full_build": {
+      "command": "npm run cf:build",
+      "exit_code": 0,
+      "integration_baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+      "built_head": "7715cd06",
+      "static_pages": 6254,
+      "runtime_canon_files": 15,
+      "env_restored_unchanged": true,
+      "recorded_at": "2026-11-02T04:33:21.552106+00:00"
+    },
+    "facility_content_contract": {
+      "facility_count": 6086,
+      "issues": 0
+    },
+    "new_facility_data_quality_audit": {
+      "new_record_high_medium": [],
+      "audited_ids": [
+        8315,
+        8316,
+        8317,
+        8318,
+        8319,
+        8320,
+        8321,
+        8322,
+        8323,
+        8324,
+        8325,
+        8326,
+        8327,
+        8328,
+        8329,
+        8330,
+        8331,
+        8332,
+        8333,
+        8334,
+        8335,
+        8336,
+        8337,
+        8338,
+        8339,
+        8340,
+        8341,
+        8342,
+        8343,
+        8344,
+        8345,
+        8346,
+        8347,
+        8348,
+        8349,
+        8350,
+        8351,
+        8352,
+        8353,
+        8354,
+        8355,
+        8356,
+        8357,
+        8358,
+        8359,
+        8360
+      ]
+    },
+    "preview": {
+      "result": "PASS",
+      "checked_at": "2026-11-02T04:36:16.692335+00:00",
+      "details_checked": 46,
+      "all_name_address_category_fee_hours_age_official_links": true,
+      "listing": {
+        "status": 200,
+        "all_added_present": true,
+        "unique_facility_links": 217,
+        "console_errors": [],
+        "page_errors": []
+      },
+      "search": {
+        "all_46_api_results": true,
+        "all_46_rendered_search_pages": true
+      },
+      "map_api": {
+        "all_46_coordinates_match": true,
+        "total": 217
+      },
+      "viewport_widths": [
+        375,
+        1280
+      ],
+      "overflow": false,
+      "console_errors": [],
+      "page_errors": [],
+      "visual_spot_checks": [
+        "facility-8315 mobile hero and Google map pin",
+        "facility-8328",
+        "facility-8346",
+        "facility-8360"
+      ]
+    },
+    "scope_gate": {
+      "integration_baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+      "existing_facility_records_unchanged": 6040,
+      "existing_registry_rows_unchanged": 4680,
+      "events_equal_to_origin_main": true,
+      "rotation_state_untouched": true,
+      "changed_file_allowlist_only": true
+    },
+    "env_local_restored_unchanged": true
+  }
 }
