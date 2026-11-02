@@ -1,0 +1,570 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-D-PART-10",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-02T03:59:27.027952+00:00",
+  "horizon_end_date": "2026-12-28",
+  "per_region": {
+    "iwate": {
+      "sources_checked": [
+        {
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "status": 200,
+          "checked_at": "2026-11-02T02:22:27.589682+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "NPO法人盛岡まち並み塾",
+          "multi_venue_basis": "大慈清水御休み処・もりおか町家物語館・大慈寺・八百倉町家・青龍水など複数会場の10/17～11/16共通会期と各企画を主催者が公表。"
+        },
+        {
+          "url": "https://www.pref.iwate.jp/event/bunka/1099165.html",
+          "status": 200,
+          "checked_at": "2026-11-02T02:22:57.932563+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "岩手県・東北文化の日実行連携",
+          "multi_venue_basis": "博物館・図書館・科学館など県内各市の複数施設で関連企画を展開する県公式参加案内。",
+          "host_shared_with_registry_reason": "県庁ホストだが単独施設ページではなく、盛岡・宮古・大船渡ほか多数会場にまたがる県域事業の参加施設一覧。"
+        }
+      ],
+      "candidates_found": 15,
+      "added": 0,
+      "duplicate_or_already_present": 4,
+      "hold": 11,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "木津屋本店 建築見学",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "会期10/17～11/16に対して10/3開催が併記され、全5回の回別日程を確定できない。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "建築技術者交流会",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "建築関係技術者対象かつ10/29締切経過。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "久昌寺 夜の禅体験",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "18:30～20:00の坐禅・写経。幼児向け内容の裏付けなし。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "あさ開 試飲体験＆酒蔵見学",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "有料の酒類試飲を主目的とする企画で家族・幼児対象外。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "原藍染りゅうた 五感体験",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "応募締切10/20経過。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "かだって語り場",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "呉服店店主のモーニングサロン。家族向け参加価値の公式裏付けなし。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "盛岡町家でご飯会・ラジオ公開収録",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "19～21時の社会人交流企画。幼児向け内容なし。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "盛岡市都市景観シンポジウム",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "90分の専門講演・クロストークで子ども・家族の企画ではない。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "大慈寺地区の都市景観賞受賞建築パネル展",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "同一公式URL・同日開催の別プログラムが既存重複検証に衝突。未承認の検証例外を追加せず、独立プログラムの例外承認をPM判断待ちとして保留。",
+          "category": "municipal_regional",
+          "withheld_event_id": "evt-w44d10-iwate-20261102-65937214",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "もりおか町家物語館 館内まるごとツアー",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runのseasonal_new_arrival単位で同会場・同日程を追加済み。",
+          "event_id": "evt-w44d10-iwate-20261102-28f5f74d",
+          "participability": "条件付き参加可能",
+          "category": "municipal_regional",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "大慈寺 本堂見学と般若心経の中国語読み",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runのseasonal_new_arrival単位で同会場・同日程を追加済み。",
+          "event_id": "evt-w44d10-iwate-20261108-6555014e",
+          "participability": "通常参加可能",
+          "category": "municipal_regional",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "南部点刻工房オープンday",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runのseasonal_new_arrival単位で同会場・同日程を追加済み。",
+          "event_id": "evt-w44d10-iwate-20261103-414ed0fe",
+          "participability": "通常参加可能",
+          "category": "municipal_regional",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "青龍水 定例井戸掃除オープンday",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runのseasonal_new_arrival単位で同会場・同日程を追加済み。",
+          "event_id": "evt-w44d10-iwate-20261104-b383af1b",
+          "participability": "通常参加可能",
+          "category": "municipal_regional",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "町家朝食堂特別営業 大慈清水で炊いた中華粥",
+          "url": "https://www.machinamijuku.org/our-community-design",
+          "disposition": "hold",
+          "reason": "同一公式URL・同日開催の別プログラムが既存重複検証に衝突。未承認の検証例外を追加せず、独立プログラムの例外承認をPM判断待ちとして保留。",
+          "category": "municipal_regional",
+          "withheld_event_id": "evt-w44d10-iwate-20261103-867dd8d2",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "東北文化の日2026 岩手県参加キャンペーン",
+          "url": "https://www.pref.iwate.jp/event/bunka/1099165.html",
+          "disposition": "hold",
+          "reason": "施設ごとに無料日・企画が異なるため、10/31～11/29を一律の各館無料会期として掲載しない。地域リンクのみの包括候補は個別開催日・会場の特定を要する。",
+          "report_category": "facility_hosted"
+        }
+      ]
+    },
+    "niigata": {
+      "sources_checked": [
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:41.401805+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/about/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:42.745821+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/yokosho/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.556347+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.556928+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/sakuraimeri/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.557407+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/nac/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.558006+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/umeda/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.559395+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/kawashima/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:59.559955+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/k-press/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:12:00.875605+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/kyousen/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:12:00.877159+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://select-type.com/rsv/?id=8UvF6SclY_s&c_id=446159&mode=1&ym=2026-11&w_flg=1",
+          "status": 200,
+          "checked_at": "2026-11-02T03:12:23.308579+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "GOSEN KNIT FES 2026実行委員会",
+          "multi_venue_basis": "五泉市内8工場・LOOP＆LOOP・五泉駅前を掲載する主催者の複数会場シリーズ。"
+        },
+        {
+          "url": "https://www.humming-tour.jp/%E5%9B%BD%E5%86%85%E3%83%84%E3%82%A2%E3%83%BC/488-002-20261121-%E4%BA%94%E6%B3%89/#gsc.tab=0",
+          "status": 200,
+          "checked_at": "2026-11-02T03:13:05.438803+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "ハミングツアー",
+          "multi_venue_basis": "複数の観光地・工場を巡る公式の五泉ニットフェス連携ツアー。"
+        },
+        {
+          "url": "https://utsuwatokurashi.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:43.613167+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "器と暮らし市プロジェクト",
+          "multi_venue_basis": "東京・大阪・愛知・新潟の複数会場を展開する同一主催シリーズ。"
+        },
+        {
+          "url": "https://utsuwatokurashi.jp/niigata/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:44.048345+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "器と暮らし市プロジェクト",
+          "multi_venue_basis": "東京・大阪・愛知・新潟の複数会場を展開する同一主催シリーズ。"
+        },
+        {
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:11:44.453342+00:00",
+          "source_type": "organizer_event_series",
+          "organizer_name": "湯沢町観光まちづくり機構",
+          "multi_venue_basis": "湯沢町内12回・複数スキー場の冬花火公式スケジュール。",
+          "host_shared_with_registry_reason": "単一スキー場の施設ページではなく町内の複数スキー場にまたがる主催者シリーズを集約。"
+        }
+      ],
+      "candidates_found": 35,
+      "added": 7,
+      "duplicate_or_already_present": 15,
+      "hold": 13,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "横正機業場 絹織物工場見学",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/yokosho/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-b376a54a",
+          "participability": "条件付き参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "サイフク 工場見学フリーコース",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-e9a4088b",
+          "participability": "通常参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "桜井メリヤス工場 自由見学",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/sakuraimeri/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-1eaa3cef",
+          "participability": "通常参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "ナック ニット工場見学",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/nac/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-4e390be8",
+          "participability": "条件付き参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "ウメダニット 工場見学",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/umeda/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-d14dabdd",
+          "participability": "条件付き参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "共同精練染色工業 工場見学",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/kyousen/",
+          "disposition": "added",
+          "reason": "主催者の会場別プログラムと公式予約画面を照合。予約不要または受付中の回のみ掲載。",
+          "event_id": "evt-w44d10-niigata-20261121-f0330815",
+          "participability": "条件付き参加可能",
+          "category": "facility_hosted",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "川島 工場見学・柄出し体験",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/kawashima/",
+          "disposition": "hold",
+          "reason": "全回キャンセル待ち。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "カイヌマプレス 工場見学・体験",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/k-press/",
+          "disposition": "hold",
+          "reason": "全回キャンセル待ち。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "サイフク お土産付きコース",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "disposition": "hold",
+          "reason": "11/21 10時はキャンセル待ち。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "サイフク ニットデザイン体験",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "disposition": "hold",
+          "reason": "予約フォームで全回受付締切。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "サイフク トークショー",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "disposition": "hold",
+          "reason": "受付中だが同一URL・同日別企画の重複検証例外が未承認。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "SAIFUKU SHOP ニット工場の糸あそび",
+          "url": "https://gosenknit.or.jp/knitfes-2026/openfactory/saifuku/",
+          "disposition": "hold",
+          "reason": "受付中だが同一URL・同日別会場企画の重複検証例外が未承認。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "五泉ニットフェス 一般会場",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "added",
+          "reason": "主催者で会場名と日程が確定。時刻・料金の不記載は固定注記。",
+          "event_id": "evt-w44d10-niigata-20261121-da009cd3",
+          "participability": "通常参加可能",
+          "category": "regional",
+          "report_category": "municipal_regional"
+        },
+        {
+          "title": "アパレルドッグ トークライブ",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "hold",
+          "reason": "座席鑑賞券はキャンセル待ち。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "地元フードコラボ",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "フェス一般会場の構成企画として掲載済み。",
+          "event_id": "evt-w44d10-niigata-20261121-da009cd3",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "図書館 繊維企画展",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "hold",
+          "reason": "会場は図書館だが具体的会期を公式で確定できない。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "ニット残糸ワークショップ",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "hold",
+          "reason": "準備中で具体的会場・受付経路未確定。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "村松分校アート展",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "フェス一般会場の構成企画として掲載済み。",
+          "event_id": "evt-w44d10-niigata-20261121-da009cd3",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "つなぐマーケット",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "hold",
+          "reason": "具体的開催日・会場・受付経路が未確定。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "TGCステージ衣装 特別解説",
+          "url": "https://gosenknit.or.jp/knitfes-2026/",
+          "disposition": "hold",
+          "reason": "予約画面には11/22 14時とあるが具体的会場を確認できない。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "五泉日帰りバスツアー",
+          "url": "https://www.humming-tour.jp/%E5%9B%BD%E5%86%85%E3%83%84%E3%82%A2%E3%83%BC/488-002-20261121-%E4%BA%94%E6%B3%89/#gsc.tab=0",
+          "disposition": "hold",
+          "reason": "ツアー運営者公式が満席・キャンセル待ちと明記。予約表のバス枠受付中とは一致せず、当該ツアーだけ保留。",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "新潟みなと陶器市",
+          "url": "https://utsuwatokurashi.jp/niigata/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者の当年会期・会場・雨天条件が新着追加のIDと一致。",
+          "event_id": "evt-w44d10-niigata-20261107-47392f7c",
+          "report_category": "facility_hosted"
+        },
+        {
+          "title": "【湯沢冬花火】中里スノーウッドスキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270101-fb76df0b",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】湯沢中里スノーリゾート",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270101-3b9c738c",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】湯沢パークスキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270110-18f25b2b",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】GALA湯沢スキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270123-7dd3662a",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】神立スノーリゾート",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270213-d3a786af",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】岩原スキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270213-bbd56692",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】湯沢高原スキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270227-f9529615",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】かぐらスキー場（みつまたステーション）",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270227-fecf4117",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】一本杉スノーパーク",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270313-9349c717",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】苗場スキー場",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270313-cf8e3c81",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "【湯沢冬花火】かぐらスキー場（田代ステーション）",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20270313-6d9681c5",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "湯沢冬花火2027",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "主催者シリーズの開催日・スキー場名が個別の県公式掲載と一致。",
+          "event_id": "evt-w44d10-niigata-20261231-061bc36b",
+          "report_category": "fireworks_festivals_seasonal"
+        },
+        {
+          "title": "湯沢冬花火 NASPA大晦日",
+          "url": "https://www.e-yuzawa.gr.jp/event_p/yuzawa_winterfireworks_schedule/",
+          "disposition": "hold",
+          "reason": "22時開始の深夜花火。幼児連れの参加対象に適さない。",
+          "report_category": "fireworks_festivals_seasonal"
+        }
+      ]
+    }
+  }
+}
