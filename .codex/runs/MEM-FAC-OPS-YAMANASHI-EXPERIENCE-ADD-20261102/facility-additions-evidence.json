@@ -1,0 +1,2931 @@
+{
+  "mission_id": "MEM-FAC-OPS-YAMANASHI-EXPERIENCE-ADD-20261102",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-02T04:13:35.316Z",
+  "process_started_at": "2026-11-02T03:20:51Z",
+  "candidate_pool_count": 62,
+  "scope": "yamanashi only; one-off outside monthly rotation",
+  "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+  "summary": {
+    "added": 46,
+    "held_existing_policy": 2,
+    "hold": 13,
+    "duplicate": 1
+  },
+  "coverage_stamp_resync": {
+    "facility_canon_count": 6086,
+    "facility_canon_sha256": "1790a355cf350708c0ca1c814ed95d4c9c5afe1e552ee006d0489e97466ba1aa",
+    "algorithm": "SHA-256(JSON.stringify(parsed entire facilities_data object))",
+    "files": 4
+  },
+  "registry_rows_added": 46,
+  "existing_facility_records_unchanged": 6040,
+  "existing_registry_rows_unchanged": 4680,
+  "precedents": {
+    "camping": [
+      1115,
+      1118,
+      7579
+    ],
+    "historical_house": [
+      8218,
+      8146
+    ],
+    "winery_learning": [
+      8213
+    ],
+    "fishing": [
+      3445,
+      6091
+    ],
+    "museum_within_existing_park": "Y90 duplicate192; E29/Y159 registration granularity held"
+  },
+  "per_candidate": [
+    {
+      "candidate_id": "Y115",
+      "name": "上野原市営マス釣場(旧秋山マス釣場)",
+      "disposition": "added",
+      "assigned_facility_id": 8321,
+      "slug": "facility-8321",
+      "category_id": "experience",
+      "address": "山梨県上野原市秋山7637",
+      "official_url": "https://www.uenohara-fishing.jp/",
+      "data_conventions": {
+        "adult_fee": "高校生以上 入場1,000円、放流8匹2,000円・貸竿300円等別",
+        "child_fee": "小学生以上 入場500円、放流料等別",
+        "hours": "通年8:30～17:00。水曜休場（8月無休）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "上野原市営マス釣場(旧秋山マス釣場) 山梨県上野原市秋山7637",
+        "checked_at": "2026-11-02T03:32:18.929Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0201 山梨県上野原市秋山栗谷７６３７",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5693095,
+        "longitude": 139.0746304
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "貸切の渓流区画で、道具の貸出を使い家族でマス釣りに挑戦できる釣り場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。候補のhakken-uenohara.jpは観光案内と無関係の内容になっていたため採用せず、市公式が案内する現運営サイトを採用。",
+      "sources_checked": [
+        {
+          "url": "https://www.hakken-uenohara.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.416396+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.uenohara-fishing.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.072593+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.city.uenohara.yamanashi.jp/site/kankou/1018589.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.073013+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E28",
+      "name": "シルクの里公園",
+      "disposition": "added",
+      "assigned_facility_id": 8334,
+      "slug": "facility-8334",
+      "category_id": "park",
+      "address": "山梨県中央市大鳥居1619-1",
+      "official_url": "https://silknosato.com/park/",
+      "data_conventions": {
+        "adult_fee": "無料",
+        "child_fee": "無料",
+        "hours": "4～9月9:00～18:00、10～3月9:00～17:00",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "シルクの里公園 山梨県中央市大鳥居1619-1",
+        "checked_at": "2026-11-02T03:32:19.257Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-1513 山梨県中央市大鳥居１６１９−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5614265,
+        "longitude": 138.5527998
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "ふわふわドーム「まゆの丘」と芝生で、体を動かして遊べるシルクの里の公園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/kankou_bunka/kankou_spot/2766.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.417339+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://silknosato.com/park/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.188991+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://silknosato.com/park"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y94",
+      "name": "シルクふれんどりぃ",
+      "disposition": "held_existing_policy",
+      "reason": "温泉・日帰り入浴を主とする複合施設。体験工房への言い換えで既存の温浴HOLDを解除しない",
+      "sources_checked": [
+        {
+          "url": "https://silknosato.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.418223+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E29",
+      "name": "中央市豊富郷土資料館",
+      "disposition": "hold",
+      "reason": "シルクの里公園の中核施設として同じ敷地・住所に所在。今回追加する公園E28との親子施設の登録粒度をPM判断へ（既存施設は編集しない）",
+      "sources_checked": [
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/kankou_bunka/kankou_spot/2767.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.418814+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://silknosato.com/museum/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.189635+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。",
+          "final_url": "https://silknosato.com/museum"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E26",
+      "name": "道の駅とよとみ",
+      "disposition": "hold",
+      "reason": "取得した市・運営案内は直売・飲食中心で、継続して子どもが参加できる具体的体験・展示内容を確認できない",
+      "sources_checked": [
+        {
+          "url": "https://www.city.chuo.yamanashi.jp/kankou_bunka/kankou_spot/2764.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.419269+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://michinoeki-toyotomi.com/access/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.073813+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E66",
+      "name": "奥秋テント村",
+      "disposition": "added",
+      "assigned_facility_id": 8352,
+      "slug": "facility-8352",
+      "category_id": "nature-park",
+      "address": "山梨県北都留郡丹波山村1900",
+      "official_url": "https://tabayama.info/hang-out/camp/okuakitent/",
+      "data_conventions": {
+        "adult_fee": "1泊1人1,000円＋テント・駐車料",
+        "child_fee": "1泊1人500円＋テント等（子どもの年齢区分は要確認）",
+        "hours": "3月中旬～11月中旬。チェックイン等の時刻は取得本文に記載なし",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "奥秋テント村 山梨県北都留郡丹波山村1900",
+        "checked_at": "2026-11-02T03:32:19.576Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒409-0300 山梨県北都留郡丹波山村１９００",
+        "location_type": "ROOFTOP",
+        "latitude": 35.7939025,
+        "longitude": 138.9107203
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "丹波川沿いの静かなテントサイトで、家族のキャンプと自然散策を楽しめる施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。観光推進機構の個別施設ページで所在地・家族利用・営業期を確認。掲載日2020/4/22、料金は同ページ掲載値であり予約時の再確認が必要。キャンプ場の既存precedent id1115/1118/7579に従いnature-park。",
+      "sources_checked": [
+        {
+          "url": "https://tabayama.info/hang-out/camp/okuakitent/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:13.419671+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E63",
+      "name": "甲武キャンプ村",
+      "disposition": "added",
+      "assigned_facility_id": 8353,
+      "slug": "facility-8353",
+      "category_id": "nature-park",
+      "address": "山梨県北都留郡丹波山村400",
+      "official_url": "https://tabayama-kobu.jp/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "8:00～18:00、12月頃～4月頃休業",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "甲武キャンプ村 山梨県北都留郡丹波山村400",
+        "checked_at": "2026-11-02T03:32:19.719Z",
+        "selected_result": 1,
+        "formatted_address": "日本、〒409-0300 山梨県北都留郡丹波山村 ４００",
+        "location_type": "GEOMETRIC_CENTER",
+        "latitude": 35.787346,
+        "longitude": 138.931796
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "丹波川に沿う広場とバンガローで、家族の野外活動を楽しめるキャンプ村。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://tabayama-kobu.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:14.320051+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y182",
+      "name": "アフリカンアートミュージアム",
+      "disposition": "added",
+      "assigned_facility_id": 8329,
+      "slug": "facility-8329",
+      "category_id": "art-museum",
+      "address": "山梨県北杜市長坂町中丸1712-7",
+      "official_url": "https://www.africanartmuseum.jp/",
+      "data_conventions": {
+        "adult_fee": "一般800円、学生700円",
+        "child_fee": "保護者同伴の小学生無料（未就学児の区分は要確認）",
+        "hours": "9:30～17:00（入館16:30まで）、祝日以外の火・水曜休館。12～3月冬期休館。2026/11/20～22臨時休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "アフリカンアートミュージアム 山梨県北杜市長坂町中丸1712-7",
+        "checked_at": "2026-11-02T03:32:19.868Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒408-0036 山梨県北杜市長坂町中丸１７１２−７",
+        "location_type": "ROOFTOP",
+        "latitude": 35.8239055,
+        "longitude": 138.3601475
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "アフリカの仮面や立像、楽器などの造形を観察できる八ヶ岳南麓の美術館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id art-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://x.com/AfricanartM2010",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:14.398515+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:35.582632+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/about.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.253578+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/visiting.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:08.503744+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y239",
+      "name": "オートキャンプ場　ウッドペッカー",
+      "disposition": "added",
+      "assigned_facility_id": 8354,
+      "slug": "facility-8354",
+      "category_id": "nature-park",
+      "address": "山梨県北杜市須玉町上津金2449-5",
+      "official_url": "https://www.woodpecker-cs.com/",
+      "data_conventions": {
+        "adult_fee": "1泊入場料1,000円＋車1台スペース料3,000円＋1組環境料400円",
+        "child_fee": "1泊入場料600円（3歳未満無料、サイト等別）",
+        "hours": "デイキャンプ11:00～15:00。宿泊チェックイン等は予約時に要確認",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "オートキャンプ場　ウッドペッカー 山梨県北杜市須玉町上津金2449-5",
+        "checked_at": "2026-11-02T03:32:20.011Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒407-0321 山梨県北杜市須玉町上津金２４４９−５",
+        "location_type": "ROOFTOP",
+        "latitude": 35.867012,
+        "longitude": 138.442497
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "林間の区画で家族キャンプをしながら、星空や自然観察にも親しめるキャンプ場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.woodpecker-cs.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:14.400318+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.woodpecker-cs.com/event/67",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:08.505925+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.woodpecker-cs.com/access",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.025502+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.woodpecker-cs.com/price/18",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.976862+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y244",
+      "name": "ジョイフィールド in Tsugane",
+      "disposition": "hold",
+      "reason": "運営住所は上津金147だがGoogleは上津金の地域中心点と下津金の施設地点のみ。番地に一致する座標を確定できない",
+      "sources_checked": [
+        {
+          "url": "https://www6.nns.ne.jp/~joy-field/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:14.795240+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www6.nns.ne.jp/~joy-field/service.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.813196+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y45",
+      "name": "ホワイトサドル",
+      "disposition": "added",
+      "assigned_facility_id": 8325,
+      "slug": "facility-8325",
+      "category_id": "experience",
+      "address": "山梨県北杜市白州町大坊665",
+      "official_url": "https://whitesaddle.com/",
+      "data_conventions": {
+        "adult_fee": "ホーストレッキング60分12,500円～（シーズン料金あり）",
+        "child_fee": "子ども別料金の記載なし。小学生以下は保護者も参加",
+        "hours": "9:30～17:00。予約方法・休業日は運営へ要確認",
+        "target_age": "6歳～、小学生以下だけの申込不可、体重85kgまで",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "ホワイトサドル 北杜市白州町大坊665",
+        "checked_at": "2026-11-02T03:32:20.282Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒408-0314 山梨県北杜市白州町大坊６６５",
+        "location_type": "ROOFTOP",
+        "latitude": 35.7719983,
+        "longitude": 138.3151134
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "6歳から自分で馬を操作し、甲斐駒ケ岳山麓を進む乗馬体験の拠点。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://whitesaddle.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.190424+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://whitesaddle.com/pages/27/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.849095+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://whitesaddle.com/publics/index/26/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.978427+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://whitesaddle.com/pages/26/"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y159",
+      "name": "北杜市金田一春彦記念図書館",
+      "disposition": "hold",
+      "reason": "児童書・ことばの資料館の価値は確認したが、既存いずみフレンドパークid8281と住所・連絡先を共有。隣接施設として別登録する粒度のPM判断が必要",
+      "sources_checked": [
+        {
+          "url": "https://www.lib.city-hokuto.ed.jp/kindaichi/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.296967+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.lib.city-hokuto.ed.jp/library-guide/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.190114+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y200",
+      "name": "田舎暮らし体験ハウス なかや",
+      "disposition": "hold",
+      "reason": "予約制の古民家体験は案内されるが、運営サイトは2010年の内容中心で現在の体験受付・営業継続を確認できない",
+      "sources_checked": [
+        {
+          "url": "https://www.tsugane.jp/bunka/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.299244+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.tsugane.jp/bunka/council.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.074007+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_0971.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.940574+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y99",
+      "name": "農事組合法人ブルーベリー明野",
+      "disposition": "added",
+      "assigned_facility_id": 8327,
+      "slug": "facility-8327",
+      "category_id": "fruit-picking",
+      "address": "山梨県北杜市明野町浅尾5638",
+      "official_url": "https://www.bbakeno.com/",
+      "data_conventions": {
+        "adult_fee": "2,000円（お土産パック付き）",
+        "child_fee": "3歳～小学生1,500円（お土産パックなし）",
+        "hours": "6月中旬～8月下旬9:00～17:00（受付16:00まで）",
+        "target_age": "3歳～小学生の子ども料金あり",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "農事組合法人ブルーベリー明野 山梨県北杜市明野町浅尾5638",
+        "checked_at": "2026-11-02T03:32:20.558Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒408-0201 山梨県北杜市明野町浅尾５６３８",
+        "location_type": "ROOFTOP",
+        "latitude": 35.7805836,
+        "longitude": 138.4606112
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "品種を替えながら夏の摘み取りを楽しめる、約3,000本のブルーベリー農園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id fruit-picking に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.bbakeno.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.341989+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://bbakeno.com/blueberry_picking/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.673809+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y142",
+      "name": "高根クラインガルテン",
+      "disposition": "added",
+      "assigned_facility_id": 8335,
+      "slug": "facility-8335",
+      "category_id": "experience",
+      "address": "山梨県北杜市高根町蔵原1655",
+      "official_url": "https://www.city.hokuto.yamanashi.jp/docs/1959.html",
+      "data_conventions": {
+        "adult_fee": "ほうとう作り1,800円、すいとん作り1,600円",
+        "child_fee": "子ども別料金の記載なし（要確認）",
+        "hours": "9:00～17:00、火曜休館。ほうとう・すいとん作りは通年・4名～、要予約",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "高根クラインガルテン 北杜市高根町蔵原1655",
+        "checked_at": "2026-11-02T03:32:20.702Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒408-0013 山梨県北杜市高根町藏原１６５５",
+        "location_type": "ROOFTOP",
+        "latitude": 35.816175,
+        "longitude": 138.417755
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "ほうとうやすいとん作りと季節の農園体験を選べる都市交流型の農園施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。県教育旅行ページは2021/3/24時点のほうとう1,500円・5名～・8:30開館。現行市公式の1,800円・4名～・9:00を採用。",
+      "sources_checked": [
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_1038.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.736367+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.city.hokuto.yamanashi.jp/docs/1959.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.758415+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y213",
+      "name": "黒井健絵本ハウス",
+      "disposition": "added",
+      "assigned_facility_id": 8328,
+      "slug": "facility-8328",
+      "category_id": "art-museum",
+      "address": "山梨県北杜市高根町清里朝日ヶ丘3545-937",
+      "official_url": "https://kenoffice.jp/",
+      "data_conventions": {
+        "adult_fee": "高校生以上700円",
+        "child_fee": "小中学生300円",
+        "hours": "10:00～17:30（入館17:00まで）。火・水曜定休（祝日等例外あり）、12～3月末冬期休館",
+        "target_age": "小中学生の観覧料金あり",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "黒井健絵本ハウス 山梨県北杜市高根町清里 3545-937",
+        "checked_at": "2026-11-02T03:32:20.843Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒407-0301 山梨県北杜市高根町清里３５４５−９３７",
+        "location_type": "ROOFTOP",
+        "latitude": 35.8958807,
+        "longitude": 138.4378572
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "「ころわん」などを描く絵本画家の原画を、清里で鑑賞できる私設ギャラリー。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id art-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://kenoffice.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.825535+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y98",
+      "name": "南アルプス市乗馬センター",
+      "disposition": "added",
+      "assigned_facility_id": 8326,
+      "slug": "facility-8326",
+      "category_id": "experience",
+      "address": "山梨県南アルプス市塩前888",
+      "official_url": "https://minamialpsjyoba.ehoh.net/index.html",
+      "data_conventions": {
+        "adult_fee": "ひき馬2周1,250円、親子ひき馬1,650円",
+        "child_fee": "一般中学生以下 ひき馬2周620円（障がい児310円）",
+        "hours": "9:00～17:00、受付午前11:45まで・午後16:30まで。火・水曜休館",
+        "target_age": "未就学児は保護者と親子ひき馬可能。コース別条件あり",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "南アルプス市乗馬センター 南アルプス市塩前888",
+        "checked_at": "2026-11-02T03:32:20.973Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-0231 山梨県南アルプス市塩前８８８",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6601392,
+        "longitude": 138.424941
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "親子ひき馬や小動物とのふれあいで、馬と過ごす楽しさを知る乗馬福祉公園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://minamialpsjyoba.ehoh.net/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:15.869555+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://minamialpsjyoba.ehoh.net/guide/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.580389+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y216",
+      "name": "安藤家住宅",
+      "disposition": "added",
+      "assigned_facility_id": 8336,
+      "slug": "facility-8336",
+      "category_id": "museum",
+      "address": "山梨県南アルプス市西南湖4302",
+      "official_url": "https://www.city.minami-alps.yamanashi.jp/sisetsu/shisetsu/bunkazai-ando/",
+      "data_conventions": {
+        "adult_fee": "大学生以上300円",
+        "child_fee": "小中高生100円、未就学児無料（土曜日は小中学生等無料）",
+        "hours": "9:00～16:30（入館16:00まで）。火曜・祝日翌日（例外あり）、12/27～1/7休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "安藤家住宅 山梨県南アルプス市西南湖4302",
+        "checked_at": "2026-11-02T03:32:21.113Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-0411 山梨県南アルプス市西南湖４３０２",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5885658,
+        "longitude": 138.4842834
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "江戸時代の名主の家に入り、約300年前の住まいと暮らしを観察できる文化財。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.city.minami-alps.yamanashi.jp/sisetsu/shisetsu/bunkazai-ando/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:16.459548+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y250",
+      "name": "奈良子釣りセンター",
+      "disposition": "added",
+      "assigned_facility_id": 8322,
+      "slug": "facility-8322",
+      "category_id": "experience",
+      "address": "山梨県大月市七保町奈良子10",
+      "official_url": "https://www.narago.jp/index.html",
+      "data_conventions": {
+        "adult_fee": "ニジマス1日3,800円／90分2,700円（貸竿・餌別）",
+        "child_fee": "小学生以下 ニジマス1日3,000円／90分1,100円（貸竿・餌別）",
+        "hours": "6:30～17:00、最終受付14:00、エサ釣り場16:00まで。休業日は運営の休業案内による",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "奈良子釣りセンター 山梨県大月市七保町奈良子10",
+        "checked_at": "2026-11-02T03:32:21.256Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒409-0625 山梨県大月市七保町奈良子１０",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6608646,
+        "longitude": 138.9493978
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "渓流を区切った貸切スペースで、子どももエサ釣りを始められる管理釣り場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.narago.jp/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:16.508955+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.narago.jp/esa.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.190574+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.narago.jp/access.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.190946+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y65",
+      "name": "渓谷せせらぎの宿　金の森山荘",
+      "disposition": "hold",
+      "reason": "日帰り家族の釣り・BBQ価値は運営料金表で確認したが、運営サイト本文に所在地番地を確認できない。候補住所の運営一次情報による確定に至らない",
+      "sources_checked": [
+        {
+          "url": "https://kananomori.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:16.966070+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://kananomori.com/price.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.691957+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://kananomori.com/inn.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.288734+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y23",
+      "name": "山梨県富士山科学研究所",
+      "disposition": "added",
+      "assigned_facility_id": 8317,
+      "slug": "facility-8317",
+      "category_id": "science-museum",
+      "address": "山梨県富士吉田市上吉田字剣丸尾5597-1",
+      "official_url": "https://www.mfri.pref.yamanashi.jp/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "9:00～17:00（入館16:30まで）。年末年始・臨時点検日休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "山梨県富士山科学研究所 山梨県富士吉田市上吉田字剣丸尾5597-1",
+        "checked_at": "2026-11-02T03:32:21.552Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒403-0005 山梨県富士吉田市上吉田剣丸尾５５９７−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.4528682,
+        "longitude": 138.7621021
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "研究員監修の富士山展示と溶岩の森で、火山と自然を学べる研究所の一般公開施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.mfri.pref.yamanashi.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.167150+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.mfri.pref.yamanashi.jp/shisetsu.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.850049+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.mfri.pref.yamanashi.jp/access.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.850586+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y160",
+      "name": "環境省生物多様性センター",
+      "disposition": "added",
+      "assigned_facility_id": 8318,
+      "slug": "facility-8318",
+      "category_id": "science-museum",
+      "address": "山梨県富士吉田市上吉田剣丸尾5597-1",
+      "official_url": "https://www.biodic.go.jp/",
+      "data_conventions": {
+        "adult_fee": "入館無料",
+        "child_fee": "入館無料",
+        "hours": "9:00～17:00。12～4月の土日祝と12/29～1/3休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "環境省生物多様性センター 山梨県富士吉田市上吉田剣丸尾5597-1",
+        "checked_at": "2026-11-02T03:32:21.707Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒403-0005 山梨県富士吉田市上吉田剣丸尾５５９７−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.455946,
+        "longitude": 138.762835
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "生きものの標本と参加型クイズで、生物多様性を家族で学べる展示施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.biodic.go.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.171495+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.biodic.go.jp/center/tenji.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.254913+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.biodic.go.jp/center/koutu.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.255184+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.biodic.go.jp/center/kengaku.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:36:09.212030+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.biodic.go.jp/center_outline.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.289343+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y214",
+      "name": "ふるさと体験教室　つくたべかん",
+      "disposition": "hold",
+      "reason": "現行運営公式が体験料理教室・みみ作りを受付休止中と明記。現状は食事・物販のみのため追加しない",
+      "sources_checked": [
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_0104.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.338915+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.michinoeki-fujikawa.jp/tukutabe/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:08.504342+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y71",
+      "name": "平林交流の里　みさき耕舎",
+      "disposition": "added",
+      "assigned_facility_id": 8337,
+      "slug": "facility-8337",
+      "category_id": "experience",
+      "address": "山梨県南巨摩郡富士川町平林2335-1",
+      "official_url": "https://www.town.fujikawa.yamanashi.jp/kanko/docs_kanko/2023090700351/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "9:00～16:00（食堂11:30～15:00）。火曜定休（祝日は翌日）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "平林交流の里　みさき耕舎 山梨県南巨摩郡富士川町平林2335-1",
+        "checked_at": "2026-11-02T03:32:21.849Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-0514 山梨県南巨摩郡富士川町平林２３３５−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5778778,
+        "longitude": 138.4079889
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "平林の里山で、そばやうどん・ほうとうの手作りを体験できる交流施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。県教育旅行の1,578円は2021/3/24時点。現行町ページの料金を確認できないため転記せず要確認とする。",
+      "sources_checked": [
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/v_0058.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.437185+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.town.fujikawa.yamanashi.jp/kanko/docs_kanko/2023090700351/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.035042+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.town.fujikawa.yamanashi.jp/kanko/docs_kanko/2023090700269/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.909876+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.town.fujikawa.yamanashi.jp/kanko/docs_kanko/2023090700320/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.486075+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y120",
+      "name": "森の教室",
+      "disposition": "added",
+      "assigned_facility_id": 8316,
+      "slug": "facility-8316",
+      "category_id": "science-museum",
+      "address": "山梨県南巨摩郡富士川町最勝寺2290-1",
+      "official_url": "https://www.yamanashi-bunka.or.jp/mori-kyoshitsu",
+      "data_conventions": {
+        "adult_fee": "入館無料（工作材料費別）",
+        "child_fee": "入館無料（糸のこ工作1枚50円、壁掛け1つ200円）",
+        "hours": "9:00～17:00（入館16:30まで）。月曜休館（祝日は翌日、7～8月無休）、12/29～1/3休館",
+        "target_age": "小さな子ども向け木のおもちゃ室あり。工作の年齢条件は要確認",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "森の教室 山梨県南巨摩郡富士川町最勝寺2290-1",
+        "checked_at": "2026-11-02T03:32:21.985Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-0502 山梨県南巨摩郡富士川町最勝寺２２９０−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5585933,
+        "longitude": 138.447857
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "木のおもちゃと森林展示、常設の糸のこ工作で木に親しめる学習施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.yamanashi-bunka.or.jp/mori-kyoshitsu",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.554710+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yamanashi-bunka.or.jp/mori-kyoshitsu/guide",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.850912+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y266",
+      "name": "ニューブリッヂキャンプ場",
+      "disposition": "added",
+      "assigned_facility_id": 8355,
+      "slug": "facility-8355",
+      "category_id": "nature-park",
+      "address": "山梨県南都留郡富士河口湖町小立島原1200",
+      "official_url": "https://www.fujigoko.tv/newbridge/",
+      "data_conventions": {
+        "adult_fee": "宿泊場内料 中学生以上880円＋サイト代等",
+        "child_fee": "宿泊場内料 小学生660円、1歳以上幼児440円＋サイト代等",
+        "hours": "受付8:00～21:00。宿泊13:00～翌10:00、デイキャンプ8:00～17:00、不定休",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "ニューブリッヂキャンプ場 山梨県南都留郡富士河口湖町小立島原1200",
+        "checked_at": "2026-11-02T03:32:22.100Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0302 山梨県南都留郡富士河口湖町小立 島原1200",
+        "location_type": "GEOMETRIC_CENTER",
+        "latitude": 35.5097656,
+        "longitude": 138.7619084
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "河口湖畔近くの林間で、日帰りの野外炊事とテント泊を選べるキャンプ場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.fujigoko.tv/newbridge/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:17.897017+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.fujigoko.tv/newbridge/fee",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.073641+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://www.fujigoko.tv/newbridge/fee/"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y261",
+      "name": "体験工房DEGU",
+      "disposition": "added",
+      "assigned_facility_id": 8331,
+      "slug": "facility-8331",
+      "category_id": "craft",
+      "address": "山梨県南都留郡富士河口湖町小立2221",
+      "official_url": "https://www.kawaguchiko.ne.jp/~yamasa/",
+      "data_conventions": {
+        "adult_fee": "手びねり4,000円、電動ろくろ5,000円（送料別）",
+        "child_fee": "子ども別料金は現行講師案内に記載なし（要確認）",
+        "hours": "予約制、開始時刻は相談。定休日なし（講師個展等で対応不可の場合あり）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "体験工房DEGU 山梨県南都留郡富士河口湖町小立2221",
+        "checked_at": "2026-11-02T03:32:22.251Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0302 山梨県南都留郡富士河口湖町小立２２２１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5039095,
+        "longitude": 138.7454082
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "作家の指導で手びねり・電動ろくろ・練り込みに取り組める河口湖の工房。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。工房旧ページの手びねり3,300円・電動ろくろ4,300円ではなく、講師現行ページの4,000円・5,000円を採用。旧県教育旅行ページは2020/9/1時点の掲載で現在料金には使わない。",
+      "sources_checked": [
+        {
+          "url": "https://www.kawaguchiko.ne.jp/~yamasa/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:18.257364+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yuko-tsuji.info/taiken.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:57.095597+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yuko-tsuji.info/access.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.675431+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_0753.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.853524+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y164",
+      "name": "河口湖ハーブ館",
+      "disposition": "added",
+      "assigned_facility_id": 8338,
+      "slug": "facility-8338",
+      "category_id": "craft",
+      "address": "山梨県南都留郡富士河口湖町船津6713-18",
+      "official_url": "https://www.fkchannel.jp/facility-04",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "2026年11月売店9:00～17:45、体験受付9:00～11:00・14:00～16:30（必ず予約）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "河口湖ハーブ館 山梨県南都留郡富士河口湖町船津6713-18",
+        "checked_at": "2026-11-02T03:32:22.384Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0301 山梨県南都留郡富士河口湖町船津６７１３−１８",
+        "location_type": "ROOFTOP",
+        "latitude": 35.507446,
+        "longitude": 138.7619357
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "ドライフラワーのリースやハーバリウムを、子どもも作れる河口湖畔の体験拠点。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。2026/11/1運営告知の受付縮小・事前予約必須を採用。固定の料金・対象年齢の数値は取得本文に記載なし。",
+      "sources_checked": [
+        {
+          "url": "https://www.fkchannel.jp/facility-04",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:18.334221+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y116",
+      "name": "清水国明の森と湖の楽園",
+      "disposition": "added",
+      "assigned_facility_id": 8339,
+      "slug": "facility-8339",
+      "category_id": "experience",
+      "address": "山梨県南都留郡富士河口湖町小立5606",
+      "official_url": "https://rakuen-kawaguchiko.com/",
+      "data_conventions": {
+        "adult_fee": "宝探し4名4,000円、クラフト各1セット1,100円",
+        "child_fee": "子ども別料金の記載なし（プログラム・セット単位）",
+        "hours": "受付8:00～21:00。日帰り体験は予約制、開始時間は要確認",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "清水国明の森と湖の楽園 山梨県南都留郡富士河口湖町小立5606",
+        "checked_at": "2026-11-02T03:32:22.521Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0302 山梨県南都留郡富士河口湖町小立５６０６",
+        "location_type": "ROOFTOP",
+        "latitude": 35.478297,
+        "longitude": 138.749759
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "森の宝探しや自然素材のクラフトを日帰りでも予約できる体験型キャンプ施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://workshopresort.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:18.367596+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://rakuen-kawaguchiko.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.773293+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y270",
+      "name": "紅葉台キャンプ場",
+      "disposition": "added",
+      "assigned_facility_id": 8356,
+      "slug": "facility-8356",
+      "category_id": "nature-park",
+      "address": "山梨県南都留郡富士河口湖町西湖2202",
+      "official_url": "https://www.koyodai.info/",
+      "data_conventions": {
+        "adult_fee": "テント1張1泊2,000円＋大人1,000円",
+        "child_fee": "テント利用 小学生以下1泊800円（サイト代別）",
+        "hours": "7:00～21:00。宿泊13:00～翌11:00、17時以降到着は連絡",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "紅葉台キャンプ場 山梨県南都留郡富士河口湖町西湖2202",
+        "checked_at": "2026-11-02T03:32:22.644Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖２２０２",
+        "location_type": "ROOFTOP",
+        "latitude": 35.4919982,
+        "longitude": 138.6854668
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "西湖の湖畔で、テント・バンガローと日帰りキャンプを楽しめる野外施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。サウナの紹介は採用対象にせず、既存キャンプ場precedentに基づく野外活動施設として登録。",
+      "sources_checked": [
+        {
+          "url": "https://www.koyodai.info/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:18.372538+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.koyodai.info/price.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.173427+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.koyodai.info/access.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.175734+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y42",
+      "name": "西湖いやしの里根場",
+      "disposition": "added",
+      "assigned_facility_id": 8340,
+      "slug": "facility-8340",
+      "category_id": "experience",
+      "address": "山梨県南都留郡富士河口湖町西湖根場2710",
+      "official_url": "https://saikoiyashinosatonenba.jp/",
+      "data_conventions": {
+        "adult_fee": "高校生以上 入場500円（体験別）",
+        "child_fee": "小中学生 入場250円（体験別）",
+        "hours": "3～11月9:00～17:00（入場16:30まで）、12～2月9:30～16:30（入場16:00まで）。年中無休・臨時休館あり",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "西湖いやしの里根場 山梨県南都留郡富士河口湖町西湖根場2710",
+        "checked_at": "2026-11-02T03:32:22.752Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖 根場 ２７１０",
+        "location_type": "GEOMETRIC_CENTER",
+        "latitude": 35.5050023,
+        "longitude": 138.6614772
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "茅葺き家屋をめぐり、工芸や昔の暮らしに触れられる西湖の集落型体験施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://saikoiyashinosatonenba.jp/shop/hinomiya/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:18.739077+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://saikoiyashinosatonenba.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.016302+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://saikoiyashinosatonenba.jp/price/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.161304+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y31",
+      "name": "西湖キャンプビレッジ「ノーム」",
+      "disposition": "added",
+      "assigned_facility_id": 8357,
+      "slug": "facility-8357",
+      "category_id": "nature-park",
+      "address": "山梨県南都留郡富士河口湖町西湖1030",
+      "official_url": "https://gnome.hamayouresort.com/",
+      "data_conventions": {
+        "adult_fee": "湖畔サイト1泊7,700円～、林間サイト9,350円～（定員・条件別）",
+        "child_fee": "区画・プラン単位。子ども別料金の記載なし",
+        "hours": "チェックイン・アウト等の時刻は取得したページに記載なし（要確認）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "西湖キャンプビレッジ「ノーム」 山梨県南都留郡富士河口湖町西湖1030",
+        "checked_at": "2026-11-02T03:32:22.878Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖１０３０",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5033219,
+        "longitude": 138.6833607
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "西湖北岸の林間や湖畔で、家族のキャンプと水辺の自然体験を楽しめる施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://gnome.hamayouresort.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.065168+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://gnome.hamayouresort.com/facility/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.342782+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y0",
+      "name": "西湖ネイチャーセンター",
+      "disposition": "added",
+      "assigned_facility_id": 8341,
+      "slug": "facility-8341",
+      "category_id": "science-museum",
+      "address": "山梨県南都留郡富士河口湖町西湖2068",
+      "official_url": "https://fujisan.ne.jp/sightseeing/3753/",
+      "data_conventions": {
+        "adult_fee": "入館350円",
+        "child_fee": "小人200円",
+        "hours": "3～11月9:00～17:00無休、12～2月9:30～16:30水曜休館。洞窟12/1～3/19休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "西湖ネイチャーセンター 山梨県南都留郡富士河口湖町西湖2068",
+        "checked_at": "2026-11-02T03:32:22.998Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖２０６８",
+        "location_type": "ROOFTOP",
+        "latitude": 35.4941866,
+        "longitude": 138.6717664
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "クニマスや富士山麓の自然を展示で学べる、西湖湖畔の自然学習施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://fujisan.ne.jp/sightseeing/3753/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.125777+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y272",
+      "name": "西湖津原キャンプ場",
+      "disposition": "added",
+      "assigned_facility_id": 8358,
+      "slug": "facility-8358",
+      "category_id": "nature-park",
+      "address": "山梨県南都留郡富士河口湖町西湖2299",
+      "official_url": "https://tsuhara-camp.jp/",
+      "data_conventions": {
+        "adult_fee": "オートキャンプ1名1,500円／日帰り1名1,000円",
+        "child_fee": "4歳～小学生：宿泊1,000円／日帰り500円（公式は3歳未満無料と記載、3歳区分は要確認）",
+        "hours": "テント受付原則8:00（混雑時変更）、宿泊退出翌11:00・日帰り退出17:00",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "西湖津原キャンプ場 山梨県南都留郡富士河口湖町西湖2299",
+        "checked_at": "2026-11-02T03:32:23.128Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖２２９９",
+        "location_type": "ROOFTOP",
+        "latitude": 35.49897300000001,
+        "longitude": 138.698817
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "湖畔・林間のキャンプと日帰り利用を選べる、西湖の野外活動拠点。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。候補の旧住所は西湖351。運営アクセスページは西湖2299を明記しカーナビ指定も同住所のため現運営住所を採用。3歳の料金を推定しない。",
+      "sources_checked": [
+        {
+          "url": "https://tsuhara-camp.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.329129+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://tsuhara-camp.jp/access",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.519427+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://tsuhara-camp.jp/access/"
+        },
+        {
+          "url": "https://tsuhara-camp.jp/price",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.177606+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://tsuhara-camp.jp/price/"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y264",
+      "name": "観岳園キャンプ場",
+      "disposition": "added",
+      "assigned_facility_id": 8359,
+      "slug": "facility-8359",
+      "category_id": "nature-park",
+      "address": "山梨県南都留郡富士河口湖町西湖1131",
+      "official_url": "https://www.kangakuen.com/",
+      "data_conventions": {
+        "adult_fee": "デーキャンプ1人1,000円＋駐車500円",
+        "child_fee": "4歳以上 デーキャンプ1人1,000円（4歳未満の区分は要確認）",
+        "hours": "デーキャンプ9:00～17:00。2026/11/23まで、2027年3月下旬再開予定",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "観岳園キャンプ場 山梨県南都留郡富士河口湖町西湖1131",
+        "checked_at": "2026-11-02T03:32:23.242Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0332 山梨県南都留郡富士河口湖町西湖１１３１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.503047,
+        "longitude": 138.682055
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "西湖畔と山側のサイトで、家族のテント泊やデーキャンプを楽しめる施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id nature-park に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.kangakuen.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.373328+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.kangakuen.com/page002.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.622463+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y18",
+      "name": "郷土料理体験教室　富士家",
+      "disposition": "hold",
+      "reason": "候補の現行URLは激辛調味料の専門店・すりだね体験。旧郷土料理教室との同一性と子ども向け参加内容を確認できない",
+      "sources_checked": [
+        {
+          "url": "https://yoshidanoudon-suridane.net/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.836215+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E377",
+      "name": "小菅フィッシングヴィレッジ",
+      "disposition": "added",
+      "assigned_facility_id": 8323,
+      "slug": "facility-8323",
+      "category_id": "experience",
+      "address": "山梨県北都留郡小菅村4383",
+      "official_url": "https://www.fishingvillage.jp/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "3～11月7:00～17:00（受付15:00まで）、12～2月8:00～16:00（受付14:00まで）。冬季火曜定休・年末年始休業あり",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "小菅フィッシングヴィレッジ 山梨県北都留郡小菅村4383",
+        "checked_at": "2026-11-02T03:32:23.359Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒409-0211 山梨県北都留郡小菅村池尻４３８３",
+        "location_type": "ROOFTOP",
+        "latitude": 35.7591825,
+        "longitude": 138.9459936
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "多摩源流の小菅川でエサ釣りとバーベキューを楽しめる常設施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.fishingvillage.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.839697+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y180",
+      "name": "カールプレックスフジ",
+      "disposition": "added",
+      "assigned_facility_id": 8342,
+      "slug": "facility-8342",
+      "category_id": "experience",
+      "address": "山梨県南都留郡山中湖村山中三本柏木293-18",
+      "official_url": "https://scctokyo.jp/wordpress/",
+      "data_conventions": {
+        "adult_fee": "営業時間内の合流予約3時間1名8,000円（用具・指導込み）",
+        "child_fee": "小人料金なし。入場人数分の料金が必要",
+        "hours": "土日祝の営業時間内は個人合流予約可。平日等は人数に応じた一律料金。固定開始時刻は要確認",
+        "target_age": "3歳～（初心者体験コース）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "カールプレックスフジ 山梨県南都留郡山中湖村山中三本柏木293-18",
+        "checked_at": "2026-11-02T03:32:23.470Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0501 山梨県南都留郡山中湖村山中２９３−１８",
+        "location_type": "ROOFTOP",
+        "latitude": 35.4105855,
+        "longitude": 138.8419447
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "3歳から家族で参加できる、通年型の屋内カーリング体験施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://x.com/Curlplex_Fuji",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:19.963083+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://scctokyo.jp/wordpress/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.916311+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://scctokyo.jp/wordpress/taiken/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.668601+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://scctokyo.jp/wordpress/access/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.671501+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y175",
+      "name": "クラフトの里ダラスヴィレッジ",
+      "disposition": "added",
+      "assigned_facility_id": 8343,
+      "slug": "facility-8343",
+      "category_id": "craft",
+      "address": "山梨県南都留郡山中湖村平野479-29",
+      "official_url": "https://www.yyjam.com/dallas",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "クラフト工房10:00～18:00（冬期変動あり）。木曜定休（GW・8～9月中旬・年末年始は無休）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "クラフトの里ダラスヴィレッジ 山梨県南都留郡山中湖村平野479-29",
+        "checked_at": "2026-11-02T03:32:23.593Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0502 山梨県南都留郡山中湖村平野４７９−２９",
+        "location_type": "ROOFTOP",
+        "latitude": 35.41696719999999,
+        "longitude": 138.9019989
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "吹きガラスから陶芸、万華鏡まで選べる山中湖畔のクラフト工房。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。候補のminneは施設の利用案内を掲載していないため採用せず、運営公式ホームページを採用。料金・予約要否・最低年齢の本文記載なし。",
+      "sources_checked": [
+        {
+          "url": "https://minne.com/@dallasv?_session_init=1",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.172913+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yyjam.com/dallas",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.254714+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y96",
+      "name": "忍野スカイスポーツ倶楽部",
+      "disposition": "hold",
+      "reason": "初心者・子どもの飛行体験は確認したが、ハンググライダー専門施設の公開precedentが施設正本にない。no precedent: needs PM decision",
+      "sources_checked": [
+        {
+          "url": "https://www.oshinoskysports.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.299438+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y55",
+      "name": "雨畑硯の里　硯匠庵",
+      "disposition": "hold",
+      "reason": "公式観光協会・候補住所は雨畑709-1だがGoogleの施設結果は701-1。運営ドメインはTLS接続失敗で住所矛盾を解消できない",
+      "sources_checked": [
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/v_0043.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.596997+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://hayakawakankou.jp/archives/spot/kenshouan/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:56.628452+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://amehata.suzurinosato.com/",
+          "status": "error",
+          "checked_at": "2026-11-02T03:31:21.171523+00:00",
+          "used_to_verify": "取得可否。本文を事実の根拠に使わない。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y289",
+      "name": "信玄公宝物館",
+      "disposition": "added",
+      "assigned_facility_id": 8344,
+      "slug": "facility-8344",
+      "category_id": "museum",
+      "address": "山梨県甲州市塩山小屋敷2280",
+      "official_url": "https://shingen.iooo.jp/",
+      "data_conventions": {
+        "adult_fee": "一般500円",
+        "child_fee": "小中学生100円",
+        "hours": "10:00～16:00（受付15:30まで）。木曜休館、年末年始は問い合わせ",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "信玄公宝物館 甲州市塩山小屋敷2280",
+        "checked_at": "2026-11-02T03:32:23.828Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒404-0053 山梨県甲州市塩山小屋敷２２８０",
+        "location_type": "ROOFTOP",
+        "latitude": 35.7294237,
+        "longitude": 138.7143446
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "武田信玄ゆかりの宝物や歴史資料を見学できる、恵林寺山内の歴史博物館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://shingen.iooo.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.656228+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y73",
+      "name": "葡萄工房ワイングラス館",
+      "disposition": "added",
+      "assigned_facility_id": 8345,
+      "slug": "facility-8345",
+      "category_id": "craft",
+      "address": "山梨県甲州市勝沼町休息1709",
+      "official_url": "https://www.tanzawa-net.co.jp/shop/133/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "9:30～17:30、年中無休",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "葡萄工房ワイングラス館 山梨県甲州市勝沼休息1709",
+        "checked_at": "2026-11-02T03:32:23.954Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒409-1304 山梨県甲州市勝沼町休息１７０９",
+        "location_type": "ROOFTOP",
+        "latitude": 35.679382,
+        "longitude": 138.718381
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "ガラスを削る模様付けやジェルキャンドル作りを楽しめる勝沼の体験工房併設店。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.tanzawa-net.co.jp/shop/133/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.775478+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y8",
+      "name": "米倉山太陽光発電所PR施設　「ゆめソーラー館やまなし」",
+      "disposition": "added",
+      "assigned_facility_id": 8346,
+      "slug": "facility-8346",
+      "category_id": "science-museum",
+      "address": "山梨県甲府市下向山町3443-1",
+      "official_url": "https://www.pref.yamanashi.jp/newene-sys/komekurayama_prshisetsu.html",
+      "data_conventions": {
+        "adult_fee": "入館無料",
+        "child_fee": "入館無料",
+        "hours": "9:30～16:30（入館16:00まで）。月曜（祝日は翌日、GW例外あり）、12/29～1/3休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "米倉山太陽光発電所PR施設　「ゆめソーラー館やまなし」 山梨県甲府市下向山町3443-1",
+        "checked_at": "2026-11-02T03:32:24.077Z",
+        "selected_result": 1,
+        "formatted_address": "日本、〒400-1507 山梨県甲府市下向山町３４４３−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5829574,
+        "longitude": 138.5751822
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "タッチパネルや模型で水素と再生可能エネルギーを学べる米倉山のPR施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。候補名のゆめソーラー館やまなしではなく、現行県公式名称の米倉山次世代エネルギーPR施設「きらっと」を採用。",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamanashi.jp/newene-sys/komekurayama_prshisetsu.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:20.999282+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y102",
+      "name": "発電総合制御所(クリーンエネルギーセンター)",
+      "disposition": "added",
+      "assigned_facility_id": 8347,
+      "slug": "facility-8347",
+      "category_id": "science-museum",
+      "address": "山梨県甲斐市竜王新町2277-3",
+      "official_url": "https://www.pref.yamanashi.jp/hatsuden/index_2.html",
+      "data_conventions": {
+        "adult_fee": "見学・体験無料",
+        "child_fee": "見学・体験無料",
+        "hours": "10:00～16:00（入館15:30まで）。月曜（祝日・県民の日は翌日）、年末年始休館",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "発電総合制御所(クリーンエネルギーセンター) 甲斐市竜王新町2277-3",
+        "checked_at": "2026-11-02T03:32:24.223Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒400-0111 山梨県甲斐市竜王新町２２７７−３",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6763236,
+        "longitude": 138.5072714
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "水力発電の仕組みやクリーンエネルギーを常設展示で学べる広報施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id science-museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamanashi.jp/hatsuden/index_2.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:21.002646+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/hatsuden/tenzishisetsu/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:36:09.211735+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/hatsuden/169_003.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:36:09.212264+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y161",
+      "name": "マルサマルシェクッキングスタジオ",
+      "disposition": "hold",
+      "reason": "旧候補は一宮町末木238、現行運営は境川町三椚140。新拠点の家族体験は確認できるが旧拠点との移転・同一性を公式本文で解消できない",
+      "sources_checked": [
+        {
+          "url": "https://www.instagram.com/marusamarche/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:21.256214+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.marusa-marche.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:14.001370+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.marusa-marche.com/about.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.171067+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://www.marusa-marche.com/experience.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:08.505023+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y153",
+      "name": "モンデ酒造株式会社",
+      "disposition": "added",
+      "assigned_facility_id": 8348,
+      "slug": "facility-8348",
+      "category_id": "experience",
+      "address": "山梨県笛吹市石和町市部476番地",
+      "official_url": "https://www.mondewinery.co.jp/tour_private",
+      "data_conventions": {
+        "adult_fee": "20歳以上500円",
+        "child_fee": "20歳未満無料（20歳以上の同伴必須）",
+        "hours": "平日10:30・14:30開始、約30分。土日祝・年末年始休止、2日前まで要予約",
+        "target_age": "20歳未満は成人同伴。未成年へのワイン提供なし",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "モンデ酒造株式会社 山梨県笛吹市石和町市部476番地",
+        "checked_at": "2026-11-02T03:32:24.345Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒406-0031 山梨県笛吹市石和町市部４７６",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6527702,
+        "longitude": 138.6376538
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "製造工程や貯蔵庫をガラス越しに見学し、ワイン造りの仕事を学べる醸造施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.mondewinery.co.jp/tour_private",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:21.531671+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。",
+          "final_url": "https://www.mondewinery.co.jp/tour_private/"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y54",
+      "name": "夢焼　天功窯",
+      "disposition": "added",
+      "assigned_facility_id": 8330,
+      "slug": "facility-8330",
+      "category_id": "craft",
+      "address": "山梨県笛吹市御坂町成田639-4",
+      "official_url": "https://www.tenkogama.com/index.html",
+      "data_conventions": {
+        "adult_fee": "一日体験1人3,600円（材料・焼成込み、送料別）",
+        "child_fee": "一日体験1人3,600円（子ども別料金の記載なし）",
+        "hours": "体験約1時間30分～2時間、電話予約制。体験の開始時間・休業日の記載なし",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "夢焼　天功窯 山梨県笛吹市御坂町成田639-4",
+        "checked_at": "2026-11-02T03:32:24.468Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒406-0801 山梨県笛吹市御坂町成田６３９−４",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6372729,
+        "longitude": 138.6552858
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "女性窯元の指導で、粘土から器を形にする一日陶芸体験の工房。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.tenkogama.com/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.044872+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.tenkogama.com/taiken.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.745330+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y107",
+      "name": "御坂農園グレープハウス",
+      "disposition": "added",
+      "assigned_facility_id": 8360,
+      "slug": "facility-8360",
+      "category_id": "fruit-picking",
+      "address": "山梨県笛吹市御坂町夏目原656-1",
+      "official_url": "https://misakanoen.co.jp/?tid=1&mode=f20",
+      "data_conventions": {
+        "adult_fee": "ぶどう狩り1,800円／シャインマスカット2,500円",
+        "child_fee": "小学生以上は大人同額、3歳～未就学1,500円／シャインマスカット2,000円",
+        "hours": "2026年ぶどう7月下旬～11/15、9:00～16:00。桃6/20～8月上旬、完全予約制",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "御坂農園グレープハウス 山梨県笛吹市御坂町夏目原656-1",
+        "checked_at": "2026-11-02T03:32:24.583Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒406-0804 山梨県笛吹市御坂町夏目原６５６−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.62669100000001,
+        "longitude": 138.6595173
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "秋まで続くぶどう狩りや桃の収穫を、個人家族で予約できる御坂の観光農園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id fruit-picking に適合。元のジャム体験ページは20名以上だが、果物狩りページで個人家族の料金・予約経路・2026年の開催を確認。団体限定のジャム作りは個人体験として案内しない。",
+      "sources_checked": [
+        {
+          "url": "https://misakanoen.co.jp/?mode=f7",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.046188+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://misakanoen.co.jp/?tid=1&mode=f20",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.288269+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://misakanoen.co.jp/?tid=1&mode=f2",
+          "status": 200,
+          "checked_at": "2026-11-02T03:47:07.637416+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://misakanoen.co.jp/?tid=1&mode=f3",
+          "status": 200,
+          "checked_at": "2026-11-02T03:47:07.638034+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y34",
+      "name": "浅間園",
+      "disposition": "added",
+      "assigned_facility_id": 8349,
+      "slug": "facility-8349",
+      "category_id": "fruit-picking",
+      "address": "山梨県笛吹市一宮町東新居600",
+      "official_url": "https://www.ykj.or.jp/asamaen/index.html",
+      "data_conventions": {
+        "adult_fee": "桃狩り個人1,900円（税込）",
+        "child_fee": "4歳～小学生1,700円（税込）、3歳以下無料",
+        "hours": "桃狩り8:30～14:30最終受付、40分食べ放題、要予約。季節ごとの収穫期に営業",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "浅間園 山梨県笛吹市一宮町東新居600",
+        "checked_at": "2026-11-02T03:32:24.723Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒405-0069 山梨県笛吹市一宮町東新居６００",
+        "location_type": "ROOFTOP",
+        "latitude": 35.6375,
+        "longitude": 138.705
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "桃やぶどうを畑で摘み取れる、一宮のバリアフリー観光農園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id fruit-picking に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.ykj.or.jp/asamaen/index.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.049049+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.ykj.or.jp/asamaen/momogari.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.289557+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.ykj.or.jp/asamaen/Grape.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.290032+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y77",
+      "name": "あしたば硝子工房",
+      "disposition": "added",
+      "assigned_facility_id": 8332,
+      "slug": "facility-8332",
+      "category_id": "craft",
+      "address": "山梨県南都留郡西桂町下暮地2865",
+      "official_url": "https://ashitaba-glass.jp/",
+      "data_conventions": {
+        "adult_fee": "吹きガラス透明3,400円～、色付き3,900円～／PW1,400円（送料別）",
+        "child_fee": "子ども別料金の記載なし。PW体験1,400円（送料別）",
+        "hours": "予約制。固定の営業時間・定休日は取得した体験ページに記載なし",
+        "target_age": "吹きガラスは小さな子どもも大人と制作可。PW体験も小さな子ども参加可",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "あしたば硝子工房 山梨県南都留郡西桂町下暮地2865",
+        "checked_at": "2026-11-02T03:32:24.849Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒403-0021 山梨県南都留郡西桂町下暮地２８６５",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5300892,
+        "longitude": 138.8417259
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "親子の吹きガラスと小さな子ども向けガラスアクセサリー作りを選べる工房。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id craft に適合。候補の旧住所は下暮地3066。運営公式は2024年11月の新工房での再開を告知し、現住所を下暮地2865と掲載。現工房の住所を採用。",
+      "sources_checked": [
+        {
+          "url": "https://www.instagram.com/yasu_ashitabaglass/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.349375+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://ashitaba-glass.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.254039+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://ashitaba-glass.jp/access/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:55.254417+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://ashitaba-glass.jp/workshop/blown-glass/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:44.987420+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://ashitaba-glass.jp/workshop/pw-accessories/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.014380+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E47",
+      "name": "わっぱファーム",
+      "disposition": "added",
+      "assigned_facility_id": 8333,
+      "slug": "facility-8333",
+      "category_id": "experience",
+      "address": "山梨県南都留郡西桂町小沼池の頭2869",
+      "official_url": "https://wappa-farm.com/",
+      "data_conventions": {
+        "adult_fee": "1人2,500円（体験料・税込）",
+        "child_fee": "1人2,500円（子ども別料金の記載なし）",
+        "hours": "2026年秋冬10:30～11:30、13:00～14:00。前日23:30まで予約、約50分",
+        "target_age": "収穫ばさみを安全に使えること",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "わっぱファーム 山梨県南都留郡西桂町小沼池の頭2869",
+        "checked_at": "2026-11-02T03:32:24.959Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒403-0022 山梨県南都留郡西桂町小沼２８６９",
+        "location_type": "ROOFTOP",
+        "latitude": 35.51707409999999,
+        "longitude": 138.8413787
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "富士山麓の畑で、その時期の野菜を自分で収穫できる小さな農園。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://wappa-farm.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.595783+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://wappa-farm.com/experience/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:14.264497+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://wappa-farm.com/access/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:14.446981+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y207",
+      "name": "みのぶゆばの里",
+      "disposition": "added",
+      "assigned_facility_id": 8350,
+      "slug": "facility-8350",
+      "category_id": "experience",
+      "address": "山梨県南巨摩郡身延町相又425-1",
+      "official_url": "https://www.minobuyuba.jp/experience/",
+      "data_conventions": {
+        "adult_fee": "取得した公式ページに記載なし（要確認）",
+        "child_fee": "取得した公式ページに記載なし（要確認）",
+        "hours": "ゆばの館9:30～17:00。火曜・12/31～1/1休館。体験開始時刻は要確認",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "みのぶゆばの里 南巨摩郡身延町相又425-1",
+        "checked_at": "2026-11-02T03:32:25.081Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒409-2536 山梨県南巨摩郡身延町相又４２５−１",
+        "location_type": "ROOFTOP",
+        "latitude": 35.3524734,
+        "longitude": 138.4214567
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "豆乳からゆばを引き上げる職人の技を、自分で試せる食の体験施設。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。県教育旅行ページの最低5名・家族対象を確認。ただし料金1,000円は2014年1月時点と明記、掲載自体2021/3/24時点のため現行料金へ転記せず要確認。",
+      "sources_checked": [
+        {
+          "url": "https://www.minobuyuba.jp/experience/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.719120+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.minobuyuba.jp/facility/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:27:57.253436+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.yamanashi-kankou.jp/kyoiku/taiken/t_0026.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:34:45.788121+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y90",
+      "name": "富士川・切り絵の森美術館",
+      "disposition": "duplicate",
+      "existing_facility_id": 192,
+      "reason": "富士川クラフトパーク内の美術館。同じ所在地・運営URLを持つ既存id192の内包施設",
+      "sources_checked": [
+        {
+          "url": "https://www.kirienomori.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.800712+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y47",
+      "name": "本栖湖アクティビティセンター",
+      "disposition": "hold",
+      "reason": "公式案内は本栖湖でのガイドツアー・宿泊・レンタルの拠点。施設自体の常設展示や個人家族向けの独立した目的地価値を確認できない",
+      "sources_checked": [
+        {
+          "url": "https://www.eco-motosuko.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:22.937773+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y172",
+      "name": "みなもと体験館 道志・久保分校",
+      "disposition": "added",
+      "assigned_facility_id": 8315,
+      "slug": "facility-8315",
+      "category_id": "experience",
+      "address": "山梨県南都留郡道志村2167番地",
+      "official_url": "https://www.minamototaikenkan.com/",
+      "data_conventions": {
+        "adult_fee": "高校生以上500円＋プログラム材料費",
+        "child_fee": "4歳以上300円＋プログラム材料費",
+        "hours": "営業時間の記載なし。通年予約制、火曜休館（祝日は翌日）",
+        "target_age": "4歳以上の子ども料金あり。小さな子ども向け木工作品あり",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "みなもと体験館 道志・久保分校 山梨県南都留郡道志村2167番地",
+        "checked_at": "2026-11-02T03:32:25.196Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒402-0203 山梨県南都留郡道志村久保２１６７",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5356907,
+        "longitude": 139.0841939
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "廃校の教室と校庭で、道志の木材や食材を使ったものづくりと食育を楽しめる体験館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.minamototaikenkan.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:23.599269+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.minamototaikenkan.com/about/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.848086+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://www.minamototaikenkan.com/activities/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.849208+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E36",
+      "name": "水源の森キャンプ・ランド",
+      "disposition": "hold",
+      "reason": "村観光ページに住所はあるが、存在する運営公式の本文は住所を掲載せず施設案内リンクはサーバーエラー。運営自身の住所確認に至らない",
+      "sources_checked": [
+        {
+          "url": "https://www.doshi-kanko.jp/tourist-facility-information/campland/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:23.640777+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://doshisuigen-mori.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:29:09.661519+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        },
+        {
+          "url": "https://doshisuigen-mori.com/about/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:31:21.172131+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E35",
+      "name": "道志の湯",
+      "disposition": "held_existing_policy",
+      "reason": "温泉・日帰り入浴施設はOwnerが明示的に対象外とした既存HOLD",
+      "sources_checked": [
+        {
+          "url": "https://www.doshi-kanko.jp/tourist-facility-information/doushinoyu/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:23.733320+00:00",
+          "used_to_verify": "候補の実在性・家族向け内容・営業状態・住所・既存施設との関係を判定するために確認。結論はreason参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "E39",
+      "name": "道志川渓流フィッシングセンター",
+      "disposition": "added",
+      "assigned_facility_id": 8319,
+      "slug": "facility-8319",
+      "category_id": "experience",
+      "address": "山梨県南都留郡道志村東神地9237",
+      "official_url": "https://r.goope.jp/doushigyokyou/",
+      "data_conventions": {
+        "adult_fee": "ニジマス3,800円（1kg約6匹）、釣り具一式1,500円等",
+        "child_fee": "家族4名（大人2・子ども2）竿2本・餌・魚7匹の例5,000円～",
+        "hours": "3～11月8:30～17:00。12～2月冬季休業。月別定休は運営案内参照",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "道志川渓流フィッシングセンター 山梨県南都留郡道志村9237",
+        "checked_at": "2026-11-02T03:32:25.428Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒402-0217 山梨県南都留郡道志村東神地９２３７",
+        "location_type": "ROOFTOP",
+        "latitude": 35.510155,
+        "longitude": 139.00005
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "初心者や家族が渓流の区画で釣り、魚を焼いて味わえる道志川の管理釣り場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。村観光ページは冬季土日営業・年末年始休業とするが、運営公式の冬季休業と月別木曜休業を優先。",
+      "sources_checked": [
+        {
+          "url": "https://www.doshi-kanko.jp/tourist-facility-information/fishingcenter/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:23.938043+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://r.goope.jp/doushigyokyou/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:24:34.852397+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y251",
+      "name": "BerryPark in FISH ON！鹿留",
+      "disposition": "added",
+      "assigned_facility_id": 8320,
+      "slug": "facility-8320",
+      "category_id": "experience",
+      "address": "山梨県都留市鹿留1543",
+      "official_url": "https://www.sisidome.jp/",
+      "data_conventions": {
+        "adult_fee": "エサ釣りニジマス1日券3,500円",
+        "child_fee": "エサ釣りニジマス1日券 小学生以下3,100円",
+        "hours": "3～11月6:00～19:30、12～2月6:00～17:00（パインレイク別）。エサ釣り1日券6:00～17:00",
+        "target_age": "小学生以下料金あり。具体的な最低年齢は公式で要確認",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "BerryPark in FISH ON！鹿留 山梨県都留市鹿留1543",
+        "checked_at": "2026-11-02T03:32:25.548Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒402-0032 山梨県都留市鹿留１５４３",
+        "location_type": "ROOFTOP",
+        "latitude": 35.5077572,
+        "longitude": 138.8912072
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "湖と河川の多彩なエリアで、初心者もエサ釣りを楽しめる都留の管理釣り場。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://www.sisidome.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:24.112757+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y295",
+      "name": "韮崎市民俗資料館",
+      "disposition": "added",
+      "assigned_facility_id": 8351,
+      "slug": "facility-8351",
+      "category_id": "museum",
+      "address": "山梨県韮崎市藤井町南下條786-3",
+      "official_url": "https://niramin01.blog.fc2.com/",
+      "data_conventions": {
+        "adult_fee": "入館無料",
+        "child_fee": "入館無料",
+        "hours": "火・水・金～日9:00～16:30、木13:00～16:30。月曜・祝日振替・年末年始等休館（2026年の最新休館表優先）",
+        "target_age": "子どもと保護者（対象年齢の詳細は公式で要確認）",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "韮崎市民俗資料館 韮崎市藤井町南下條786-3",
+        "checked_at": "2026-11-02T03:32:25.678Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒407-0004 山梨県韮崎市藤井町南下條７８６−３",
+        "location_type": "ROOFTOP",
+        "latitude": 35.719412,
+        "longitude": 138.443604
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "韮崎の暮らしの道具や文化を見ながら、地域の歴史を学べる民俗資料館。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id museum に適合。",
+      "sources_checked": [
+        {
+          "url": "https://niramin01.blog.fc2.com/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:24.318858+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-entry-707.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:45:16.289067+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-entry-607.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:47:07.638490+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-entry-608.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:48:41.322161+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    },
+    {
+      "candidate_id": "Y178",
+      "name": "パディーフィールド",
+      "disposition": "added",
+      "assigned_facility_id": 8324,
+      "slug": "facility-8324",
+      "category_id": "experience",
+      "address": "山梨県南都留郡鳴沢村11100-86",
+      "official_url": "https://paddyfield.jp/",
+      "data_conventions": {
+        "adult_fee": "引馬1周1,650円、親子引馬2,200円",
+        "child_fee": "引馬1周1,650円（3歳～）、体験乗馬10分3,300円（5歳～）",
+        "hours": "9:00～17:00。月曜定休（祝日は翌平日）",
+        "target_age": "引馬3歳～、体験乗馬5歳～、引馬外乗6歳～",
+        "image": "null; existing addition convention"
+      },
+      "geocoding": {
+        "query": "パディーフィールド 山梨県南都留郡鳴沢村11100-86",
+        "checked_at": "2026-11-02T03:32:25.789Z",
+        "selected_result": 0,
+        "formatted_address": "日本、〒401-0320 山梨県南都留郡鳴沢村１１１００−８６",
+        "location_type": "ROOFTOP",
+        "latitude": 35.4734597,
+        "longitude": 138.6766967
+      },
+      "duplicate_check": {
+        "baseline": "050a5004dd1702618a18477ff0f6310221d8f561",
+        "compared_fields": [
+          "name",
+          "search_aliases",
+          "address",
+          "url/domain",
+          "coordinates"
+        ],
+        "within_100m": [],
+        "conclusion": "not duplicate; independent physical destination"
+      },
+      "reason": "3歳からの引馬と親子引馬で、富士山麓の馬に触れられる乗馬クラブ。今回取得した公式の名称・住所・営業/季節案内・個人家族向け内容を確認し、origin/mainの全施設の名称・別名・住所・URL/domain・座標と比較して非重複。既存category_id experience に適合。",
+      "sources_checked": [
+        {
+          "url": "https://paddyfield.jp/",
+          "status": 200,
+          "checked_at": "2026-11-02T03:23:24.344930+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        },
+        {
+          "url": "https://paddyfield.jp/horse-riding.html",
+          "status": 200,
+          "checked_at": "2026-11-02T03:26:13.914606+00:00",
+          "used_to_verify": "名称・所在地・常設の体験/展示・家族の利用経路と営業案内の照合。採用した内容・不一致・未記載項目はreasonおよびdata_conventions参照。"
+        }
+      ]
+    }
+  ]
+}
