@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-02T14:09:07.271228+00:00",
+  "executed_at": "2026-11-02T14:09:46.286441+00:00",
   "process_started_at": "2026-11-02T12:39:37.1535387Z",
   "prior_run_numbers_reused_as_execution": false,
   "due_facility_ids": [
@@ -49,9 +49,9 @@
   "aggregate": {
     "total": 40,
     "no_current_or_future_event": 3,
-    "candidate_found_added": 20,
+    "candidate_found_added": 19,
     "candidate_found_duplicate": 2,
-    "candidate_found_hold": 4,
+    "candidate_found_hold": 5,
     "source_unresolved": 11
   },
   "per_region": {
@@ -1088,7 +1088,7 @@
         {
           "facility_id": 740,
           "disposition": "candidate_found_added",
-          "reason": "11月一覧55候補を全件個別取得・内容評価。過去日3件、受付終了等、別会場、個別開催未定、既存重複を個別解決。後発の市公式全面再開発表が旧避難所の注記を明示的に解消。既存現行2件再確認。",
+          "reason": "11月一覧55候補を全件個別取得・内容評価。過去日4件、受付終了等、別会場、個別開催未定、既存重複を個別解決。後発の市公式全面再開発表が旧避難所の注記を明示的に解消。既存現行2件再確認。",
           "sources_checked": [
             {
               "url": "https://kodomo-koryukan.jp/event/",
@@ -3528,9 +3528,9 @@
       ],
       "total": 17,
       "no_current_or_future_event": 1,
-      "candidate_found_added": 15,
+      "candidate_found_added": 14,
       "candidate_found_duplicate": 1,
-      "candidate_found_hold": 0,
+      "candidate_found_hold": 1,
       "source_unresolved": 0,
       "sources_checked": [
         {
@@ -6687,8 +6687,8 @@
         },
         {
           "facility_id": 186,
-          "disposition": "candidate_found_added",
-          "reason": "親施設として今回の全園公式を再fetch。現行コラボ1件を再確認、グリーティングは終了のまま。ナイト花火1件追加。サンセットは特別な開催プログラムのない景観と来場特典、得旅/県民招待/勝負めしは販売・割引案内で独立催事化しない。",
+          "disposition": "candidate_found_hold",
+          "reason": "シナモロール既存企画を再確認。ナイトスカイウォークは公式内の日付矛盾を最終照合で確認し追加を撤回。冬企画の開催日未公表・指定席残席未確認と併せ限定HOLD。",
           "sources_checked": [
             {
               "url": "https://mishima-skywalk.jp/event/",
@@ -6758,6 +6758,17 @@
             {
               "candidate": "花火指定席のリアルタイム残席",
               "reason": "公式販売先KKdayが403。指定席残数は未確認、在庫保証せず公式の販売中告知と自由観覧経路を記載。"
+            },
+            {
+              "title": "ナイトスカイウォーク 花火ショー",
+              "reason": "公式の可視画像・一覧は2026年11月7・8日だが、同じ公式ページの画像altは10月11日(土)・12日(日)と異なる数値日付。優先順位を推測せず追加を撤回しHOLD。",
+              "source_urls": [
+                "https://mishima-skywalk.jp/nightskywalk/",
+                "https://mishima-skywalk.jp/event/",
+                "https://mishima-skywalk.jp/nightskywalk/assets/img/_2609/ttl_01.png",
+                "https://mishima-skywalk.jp/nightskywalk/assets/img/_2609/main_2_pc.jpg",
+                "https://mishima-skywalk.jp/nightskywalk/assets/img/_2609/info_1.jpg?25091101"
+              ]
             }
           ],
           "candidate_decisions": [
@@ -6770,9 +6781,7 @@
               "disposition": "retail-discount-not-event"
             }
           ],
-          "added_event_ids": [
-            "evt-186-w44-night-fireworks"
-          ],
+          "added_event_ids": [],
           "updated_event_ids": [
             "evt-186-w38-cinnamon-spots"
           ]
@@ -8829,6 +8838,12 @@
     {
       "executed_at": "2026-11-02T12:51:19.278132+00:00",
       "reason": "First two facilities corrected immediately after first validator: two end-date-unknown candidates HOLD; new-year subprograms combined; no extra source fetch or inherited evidence."
+    },
+    {
+      "corrected_at": "2026-11-02T14:09:46.286392+00:00",
+      "facility_id": 186,
+      "reason": "公式の可視画像・一覧は2026年11月7・8日だが、同じ公式ページの画像altは10月11日(土)・12日(日)と異なる数値日付。優先順位を推測せず追加を撤回しHOLD。",
+      "removed_unpublished_candidate_id": "evt-186-w44-night-fireworks"
     }
   ]
 }
