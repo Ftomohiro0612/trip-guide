@@ -1,0 +1,2291 @@
+{
+  "mission_id": "MEM-EVT-OPS-CORRECTION-A-20261103",
+  "executed_in_this_mission": true,
+  "process_started_at": "2026-11-03T06:05:14.7768795Z",
+  "executed_at": "2026-11-03T07:31:43.712909+00:00",
+  "baseline_product_main": "ab1ef1cd8b4684866ceae32f2641e995b5493f4f",
+  "aggregate_counts": {
+    "A1": {
+      "records_checked": 30,
+      "changed_records": 6,
+      "decisions": {
+        "keep": 21,
+        "keep_original": 3,
+        "withdraw_draft": 6
+      }
+    },
+    "A2": {
+      "records_checked": 1,
+      "changed_records": 1,
+      "decisions": {
+        "metadata_count_corrected": 1
+      }
+    },
+    "A3": {
+      "records_checked": 1,
+      "changed_records": 1,
+      "decisions": {
+        "replace_latest_note_keep_cancelled": 1
+      }
+    },
+    "A4": {
+      "records_checked": 56,
+      "changed_records": 3,
+      "decisions": {
+        "i_free_explicit": 53,
+        "iii_fee_not_stated": 3,
+        "ii_fee_corrected": 0
+      }
+    },
+    "A5": {
+      "records_checked": 1,
+      "changed_records": 1,
+      "decisions": {
+        "superseded": 1
+      }
+    }
+  },
+  "final_events_count": 13829,
+  "metadata_total_events": 13829,
+  "event_order_preserved": true,
+  "added": 0,
+  "deleted": 0,
+  "validator_exceptions_changed": false,
+  "changed_event_fields": {
+    "evt-22-w38-gym": [
+      "source_notes"
+    ],
+    "evt-miyagi-d1-20261026-16314ce9": [
+      "source_notes",
+      "status"
+    ],
+    "evt-w44d4-hiroshima-dreamination": [
+      "price_label",
+      "is_free"
+    ],
+    "evt-w44d4-hiroshima-ooinoko": [
+      "price_label",
+      "is_free"
+    ],
+    "evt-w44d5-shiga-family-imazu74": [
+      "price_label",
+      "is_free"
+    ],
+    "evt-w44d6-chiba-taibusa-camp2027": [
+      "source_notes",
+      "status"
+    ],
+    "evt-w44d7-aichi-pokemon": [
+      "source_notes",
+      "status"
+    ],
+    "evt-w44d9-nagano-tour-fungi": [
+      "source_notes",
+      "status"
+    ],
+    "evt-w44d9-nagano-org-dance": [
+      "source_notes",
+      "status"
+    ],
+    "evt-w44d10-niigata-20261017-efd3d768": [
+      "source_notes",
+      "status"
+    ]
+  },
+  "bounded_fixes": [
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d6-chiba-taibusa-camp2027",
+      "decision": "withdraw_draft",
+      "reason": "公式の同一イベントを再確認。既存 evt-764-w38-camp-mar を維持し重複掲載を取り下げ。",
+      "before": {
+        "status": "scheduled",
+        "source_notes": "2026-11-02 MEM-EVT-OPS-2026-W44-GROUP-C-D-PART-6で公式一次情報を実取得。日付・会場・プログラムを確認。参加条件は各ラベル・概要に記載。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-11-02 MEM-EVT-OPS-2026-W44-GROUP-C-D-PART-6で公式一次情報を実取得。日付・会場・プログラムを確認。参加条件は各ラベル・概要に記載。 2026-11-03 Correction A: 公式の同一イベントを再確認。既存 evt-764-w38-camp-mar を維持し重複掲載を取り下げ。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://taibusa.jp/eventguidance/event.cgi?id=12870265",
+          "final_url": "https://taibusa.jp/eventguidance/event.cgi?id=12870265",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:05.683Z",
+          "quoted_passage": "ファミリーキャンプ教室／2027年3月20日 (土) 〜 2027年3月21日 (日)／12：30～翌11：30／1組（3名まで）19,800円／定員7組",
+          "retrieval": "headless Chromium",
+          "response_sha256": "eb9bcfdc454bc5945961a53302332933089f98f8c966ee26f257494628d447b3",
+          "official_event_number": "12870265"
+        },
+        {
+          "url": "https://taibusa-misaki.jp/eventguidance/event.cgi?id=12870265",
+          "final_url": "https://taibusa-misaki.jp/eventguidance/event.cgi?id=12870265",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:37.817Z",
+          "quoted_passage": "ファミリーキャンプ教室／2027年3月20日 (土) 〜 2027年3月21日 (日)／12：30～翌11：30／1組（3名まで）19,800円／定員7組",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e024f1e5260ad267639cf4bce96ad11c01dab9c09a081e96777225a9b2eed03a",
+          "official_event_number": "12870265"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-764-w38-camp-mar",
+      "decision": "keep_original",
+      "reason": "公式の同一イベントを再確認。既存掲載を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://taibusa.jp/eventguidance/event.cgi?id=12870265",
+          "final_url": "https://taibusa.jp/eventguidance/event.cgi?id=12870265",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:05.683Z",
+          "quoted_passage": "ファミリーキャンプ教室／2027年3月20日 (土) 〜 2027年3月21日 (日)／12：30～翌11：30／1組（3名まで）19,800円／定員7組",
+          "retrieval": "headless Chromium",
+          "response_sha256": "eb9bcfdc454bc5945961a53302332933089f98f8c966ee26f257494628d447b3",
+          "official_event_number": "12870265"
+        },
+        {
+          "url": "https://taibusa-misaki.jp/eventguidance/event.cgi?id=12870265",
+          "final_url": "https://taibusa-misaki.jp/eventguidance/event.cgi?id=12870265",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:37.817Z",
+          "quoted_passage": "ファミリーキャンプ教室／2027年3月20日 (土) 〜 2027年3月21日 (日)／12：30～翌11：30／1組（3名まで）19,800円／定員7組",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e024f1e5260ad267639cf4bce96ad11c01dab9c09a081e96777225a9b2eed03a",
+          "official_event_number": "12870265"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d7-aichi-pokemon",
+      "decision": "withdraw_draft",
+      "reason": "公式の同一イベントを再確認。既存 evt-1731-20261027-f2-pokemon を維持し重複掲載を取り下げ。",
+      "before": {
+        "status": "ongoing",
+        "source_notes": "2026-11-02に当Missionで公式一次情報を新規取得し、日付・会場・内容・参加経路を確認。交通規制・最新変更告知は公式に記載なし。通常参加可能。条件付き参加可能（当日券の混雑整理）。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-11-02に当Missionで公式一次情報を新規取得し、日付・会場・内容・参加経路を確認。交通規制・最新変更告知は公式に記載なし。通常参加可能。条件付き参加可能（当日券の混雑整理）。 2026-11-03 Correction A: 公式の同一イベントを再確認。既存 evt-1731-20261027-f2-pokemon を維持し重複掲載を取り下げ。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/",
+          "final_url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:43.591Z",
+          "quoted_passage": "特別企画展「ポケモン天文台」",
+          "retrieval": "headless Chromium",
+          "response_sha256": "565604c99c08e0e16739f362cd370bc5427e2ecbeb61a00d0a33d5daf3b747b5"
+        },
+        {
+          "url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/index.html",
+          "final_url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:16.142Z",
+          "quoted_passage": "特別企画展「ポケモン天文台」",
+          "retrieval": "headless Chromium",
+          "response_sha256": "1a783466d72ff0cbb3dc1910c7e74f7975768f86148f33564cdade3433d6ff2a"
+        }
+      ],
+      "equivalence_evidence": {
+        "fresh_official_rendered_page_text_equal": true,
+        "url_difference": "index.html suffix only"
+      }
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-1731-20261027-f2-pokemon",
+      "decision": "keep_original",
+      "reason": "公式の同一イベントを再確認。既存掲載を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/",
+          "final_url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:43.591Z",
+          "quoted_passage": "特別企画展「ポケモン天文台」",
+          "retrieval": "headless Chromium",
+          "response_sha256": "565604c99c08e0e16739f362cd370bc5427e2ecbeb61a00d0a33d5daf3b747b5"
+        },
+        {
+          "url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/index.html",
+          "final_url": "https://www.toyohaku.gr.jp/sizensi/03event/tokuten/pokemon/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:16.142Z",
+          "quoted_passage": "特別企画展「ポケモン天文台」",
+          "retrieval": "headless Chromium",
+          "response_sha256": "1a783466d72ff0cbb3dc1910c7e74f7975768f86148f33564cdade3433d6ff2a"
+        }
+      ],
+      "equivalence_evidence": {
+        "fresh_official_rendered_page_text_equal": true,
+        "url_difference": "index.html suffix only"
+      }
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d10-niigata-20261017-efd3d768",
+      "decision": "withdraw_draft",
+      "reason": "公式の同一イベントを再確認。既存 evt-639-w38-train-photo を維持し重複掲載を取り下げ。",
+      "before": {
+        "status": "ongoing",
+        "source_notes": "2026-11-02に本Missionで公式の開催日・会場・参加方法を確認。記載のない条件は各欄に明示。雨天・荒天時の扱いは公式に記載なし。主催者・公式サイトで要確認 最新の変更は開催前に公式で要確認。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-11-02に本Missionで公式の開催日・会場・参加方法を確認。記載のない条件は各欄に明示。雨天・荒天時の扱いは公式に記載なし。主催者・公式サイトで要確認 最新の変更は開催前に公式で要確認。 2026-11-03 Correction A: 公式の同一イベントを再確認。既存 evt-639-w38-train-photo を維持し重複掲載を取り下げ。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "http://www.ncnrm.com/event/trains-photographs-gallery-2026/",
+          "final_url": "http://www.ncnrm.com/event/trains-photographs-gallery-2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:34.858Z",
+          "quoted_passage": "鉄×フォトギャラリー2026／2026年10月17日(土)～2026年11月16日(月)／9:30～17:00（入館は16:30まで）／鉄道資料館2階多目的ホール",
+          "retrieval": "headless Chromium",
+          "response_sha256": "001466a9091de4469e4e929155ca125388e1dd4c3d6aec9e1a2ffc6768cf3d14"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000642.000021357.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000642.000021357.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:19.897Z",
+          "quoted_passage": "鉄×フォトギャラリー2026／入 館 料 ：一般390円、高校・大学生260円、小・中学生130円",
+          "retrieval": "headless Chromium",
+          "response_sha256": "0d623698dba89c85c180d78471adb3f42760e90a2332ece15fe3ede264d7bd1b"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-639-w38-train-photo",
+      "decision": "keep_original",
+      "reason": "公式の同一イベントを再確認。既存掲載を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "http://www.ncnrm.com/event/trains-photographs-gallery-2026/",
+          "final_url": "http://www.ncnrm.com/event/trains-photographs-gallery-2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:34.858Z",
+          "quoted_passage": "鉄×フォトギャラリー2026／2026年10月17日(土)～2026年11月16日(月)／9:30～17:00（入館は16:30まで）／鉄道資料館2階多目的ホール",
+          "retrieval": "headless Chromium",
+          "response_sha256": "001466a9091de4469e4e929155ca125388e1dd4c3d6aec9e1a2ffc6768cf3d14"
+        },
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000642.000021357.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000642.000021357.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:19.897Z",
+          "quoted_passage": "鉄×フォトギャラリー2026／入 館 料 ：一般390円、高校・大学生260円、小・中学生130円",
+          "retrieval": "headless Chromium",
+          "response_sha256": "0d623698dba89c85c180d78471adb3f42760e90a2332ece15fe3ede264d7bd1b"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-miyagi-d1-20261026-16314ce9",
+      "decision": "withdraw_draft",
+      "reason": "公式に「11月15日開催分は申込を締め切りました」「お申込み者以外の参加はできません」と明記。当日参加経路なし。",
+      "before": {
+        "status": "scheduled",
+        "source_notes": "2026-10-26に公式一次情報で開催日・会場・時間・料金・参加方法を確認。11月15日分のみ。A10組・B15名。12月5日と1月9日は申込開始前のためこの行に含めない。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-10-26に公式一次情報で開催日・会場・時間・料金・参加方法を確認。11月15日分のみ。A10組・B15名。12月5日と1月9日は申込開始前のためこの行に含めない。 2026-11-03 Correction A: 公式に「11月15日開催分は申込を締め切りました」「お申込み者以外の参加はできません」と明記。当日参加経路なし。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.pref.miyagi.jp/soshiki/bijyutu/education20261002.html",
+          "final_url": "https://www.pref.miyagi.jp/soshiki/bijyutu/education20261002.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:37.818Z",
+          "quoted_passage": "※11月15日開催分は申込を締め切りました／お申込み者以外の参加はできません。",
+          "retrieval": "headless Chromium",
+          "response_sha256": "6a33a9ee885e286c69f95c69d5e0ab2a00b6bfd3a99400676d75cd3306dd552d"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-pref-uchu-market",
+      "decision": "keep",
+      "reason": "市場への直接来場と予約体験を区別。公式に杉玉・駒打ちの電話予約案内があり、全体の申込終了表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://prtimes.jp/main/html/rd/p/000000002.000185464.html",
+          "final_url": "https://prtimes.jp/main/html/rd/p/000000002.000185464.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:35.200Z",
+          "quoted_passage": "【長野県小谷村】秋の味覚と地域の人に出会う「雨中の縁日2026」を10月25日から開催／文化祭での子ども縁日、南小谷駅前の歩行者天国マルシェ、名産館前の軽トラ朝市。杉玉づくりや椎茸の駒打ち体験など、秋の小谷を楽しむ3つの催しを開催します。／雨中の縁日実行委員会は、長野県小谷村で「雨中の縁日2026」を開催します。2026年10月25日（日）の小谷村文化祭でのプレ開催を皮切りに、11月8日（日）には南小谷駅前の歩行者天国マルシェ、11月14日（土）には名産館前の軽トラ朝市を実施します。／「雨中の縁日2026」のプレ開催として、小谷村文化祭に出店します。当日は子どもが楽しめるストラックアウトを開催します。景品として、小谷の畑で育った採れたての秋野菜や駄菓子などを用意しています。小谷村文化祭とあわせてお楽しみください。／イベント②11月8日 　南小谷駅前で歩行者天国マルシェを開催",
+          "retrieval": "headless Chromium",
+          "response_sha256": "bb01cf5a79671e404de7aa9c9408f9bf2c16b45b130ec8a3f96a499b928ebeab"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-pref-shinpei-xmas",
+      "decision": "keep",
+      "reason": "公式は電話申込期間11/1～12/5、定員100名と案内。終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.nakayama-takano-kinenkan.com/20250506141428",
+          "final_url": "https://www.nakayama-takano-kinenkan.com/20250506141428",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:35.793Z",
+          "quoted_passage": "観覧予約票（一般用）／第一展示室貸出申請書／令和 ８年１2月６ 日（日曜日）午前11時から午後５時まで「クリスマスコンサート」開催のため通常観覧ができません。／中野町(現 中野市)出身の日本画家 菊池啓月の作品を展示します。／会  　場　中山晋平記念館 第二展示室",
+          "retrieval": "headless Chromium",
+          "response_sha256": "7414a44f23ce46bd0cdfc5a1220b4421e2fb30acc32908b4b3c8fc59517f66b0"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-soba",
+      "decision": "keep",
+      "reason": "公式の募集締切は11/4。今回取得時点で期限前、満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23140",
+          "final_url": "https://db.go-nagano.net/topics_detail11/id=23140",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:36.043Z",
+          "quoted_passage": "「戸隠のそば職人と一緒に作ろう!戸隠そば打ち体験」を開催!／初心者でも安心してご参加いただけます。／募集締切 11 月4 日（水） 定員に達し次第締め切ります／開催日\t2026-11-11～2026-11-11／開催時間\t9:30～12:30",
+          "retrieval": "headless Chromium",
+          "response_sha256": "8355e5b37bec3145721d924c37e81c8f878a5896daf4e07b27c3225da973fd13"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-fungi",
+      "decision": "withdraw_draft",
+      "reason": "公式の11/14森の家周辺コース個別ページに「満員御礼」。要予約の15名企画で別の参加経路なし。",
+      "before": {
+        "status": "scheduled",
+        "source_notes": "2026-11-02に公式一次情報で開催日・会場・内容を確認。採取物の食用安全性を保証する催しではない。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-11-02に公式一次情報で開催日・会場・内容を確認。採取物の食用安全性を保証する催しではない。 2026-11-03 Correction A: 公式の11/14森の家周辺コース個別ページに「満員御礼」。要予約の15名企画で別の参加経路なし。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.iiyama-ouendan.net/2026/09/20577/",
+          "final_url": "https://www.iiyama-ouendan.net/2026/09/20577/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:18.180Z",
+          "quoted_passage": "定員：15名（要予約）",
+          "retrieval": "headless Chromium",
+          "response_sha256": "bb6b98f91cabcc82f532cf1060eb8c3fca6fe16099dc8da4b0c0b2f70325e771"
+        },
+        {
+          "url": "https://nabekura.net/experience/experience-4819/",
+          "final_url": "https://nabekura.net/experience/experience-4819/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:20:14.189Z",
+          "quoted_passage": "【満員御礼】なべくら高原キノコ観察会（森の家周辺）／〈開催日〉11/14",
+          "retrieval": "headless Chromium",
+          "response_sha256": "24b2c6f7c2b465d4322dbec08fa7a7a06f88b2c2afc20b0e5bbf39e8ed16bc3e"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-ebisu",
+      "decision": "keep",
+      "reason": "無料観覧エリアの当日入場経路あり。有料席・駐車場の予約とは別。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.nagano-ebisukou.jp/",
+          "final_url": "https://www.nagano-ebisukou.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:45.052Z",
+          "quoted_passage": "交通・アクセス（駐車場予約）／お知らせ 花火殻拾いへの参加協力について／お知らせ 公式駐車場は「アキッパ」より事前予約！！／お知らせ ドローンショー開催決定 presented by 大塚製薬",
+          "retrieval": "headless Chromium",
+          "response_sha256": "7f03a99039e3334c2acf2d25bd2a4a20b3e6428b883e3287ef3c1b7c5f72771f"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-kotoba",
+      "decision": "keep",
+      "reason": "来館して鑑賞する展覧会。作品募集の終了を展示観覧の受付終了とは扱わない。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://db.go-nagano.net/topics_detail11/id=23006",
+          "final_url": "https://db.go-nagano.net/topics_detail11/id=23006",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:03.989Z",
+          "quoted_passage": "応募作品は選考の上、館内で展示されます。／参加者特典として、オリジナル一筆箋のプレゼントもありますよ。／ぜひお気軽にご参加ください。／展示期間：2026年8月8日（土）～12月15日（火）／開催日\t2026-07-16～2026-12-15",
+          "retrieval": "headless Chromium",
+          "response_sha256": "5180f37f9bd7b59c4e6de21c91c6de97b2c1fd14f2bcc36693746513c3175f9d"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-tekuteku",
+      "decision": "keep",
+      "reason": "公式に直接来場、森の探検隊は予約不要・先着と案内。イベント全体の受付終了表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://nabekura.net/tekufes2026/",
+          "final_url": "https://nabekura.net/tekufes2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:20.653Z",
+          "quoted_passage": "開催／入場無料、雨天時は一部縮小開催／去年から規模を拡大して開催！／もちろん去年に引き続き、黄葉のブナ林を楽しめるツアーも開催予定。／■両日開催",
+          "retrieval": "headless Chromium",
+          "response_sha256": "15f6dbcebfef8cab5b887ba54822a6251cc7651573bdafd4b60951df2f9e9006"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-chambara",
+      "decision": "keep",
+      "reason": "公式に事前の参加予約なしと明記。抽選の可能性は事前受付終了と異なる。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://ueda.ario.jp/event/2500006775/",
+          "final_url": "https://ueda.ario.jp/event/2500006775/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:09.773Z",
+          "quoted_passage": "テナント出店を検討中の方はこちら \t催事開催はこちら／※事前の参加予約はおこないません。／※参加人数を制限する場合がございますので、予めご了承ください。／（上田城跡公園 やぐら下芝生広場 特設ステージにて開催予定）／ウィッグユキ大展示試着・即売会",
+          "retrieval": "headless Chromium",
+          "response_sha256": "696c96372c8b6af70620cee0db659f7e1d42b80b9d947a3acbd133dc45f3ed9c"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-tour-miraifes",
+      "decision": "keep",
+      "reason": "公式現行イベント案内に全体の受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://miraifesueda.jp/",
+          "final_url": "https://miraifesueda.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:14.613Z",
+          "quoted_passage": "上田市立美術館【美術館２階展示室】／9/19㈯～12/6㈰9:00～17:00（最終入場は16:30まで）　主催：和紙がおりなす日本の美展実行委員会／上田市立美術館コレクション展Ⅱ・山本鼎コレクション展示／9/19㈯～12/6㈰9:00～17:00（最終入場は16:30まで）　主催：上田市",
+          "retrieval": "headless Chromium",
+          "response_sha256": "3a68abdd751aa319d2dc49e543560ad54305974886c8c1a078468028a61f1029"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-org-dance",
+      "decision": "withdraw_draft",
+      "reason": "公式が案内する申込フォームに「このフォームの回答の収集は終了しました。」。他の参加受付経路の明記なし。",
+      "before": {
+        "status": "scheduled",
+        "source_notes": "2026-11-02に公式一次情報で開催日・会場・内容を確認。2月の別会場・公演参加はこのカードに含めない。タオル・上履き・飲み物を持参。リンク先単館詳細は404だったが、主催団体の現行本文で日付・会場・募集・単発参加を直接確認。"
+      },
+      "after": {
+        "status": "draft",
+        "source_notes": "2026-11-02に公式一次情報で開催日・会場・内容を確認。2月の別会場・公演参加はこのカードに含めない。タオル・上履き・飲み物を持参。リンク先単館詳細は404だったが、主催団体の現行本文で日付・会場・募集・単発参加を直接確認。 2026-11-03 Correction A: 公式が案内する申込フォームに「このフォームの回答の収集は終了しました。」。他の参加受付経路の明記なし。 公開対象から除外（draft）。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://naganobunka.or.jp/event/matsubun/3223/",
+          "final_url": "https://naganobunka.or.jp/event/matsubun/3223/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:19.332Z",
+          "quoted_passage": "取り扱い プレイガイド https://forms.cloud.microsoft/r/W3z0Z7W5BM／■定員 20名(先着順)",
+          "retrieval": "headless Chromium",
+          "response_sha256": "550cf836625fc59159bd5db54775fbc16c4123eeb36900ff67c431f11c526678"
+        },
+        {
+          "url": "https://forms.cloud.microsoft/r/W3z0Z7W5BM",
+          "final_url": "https://forms.cloud.microsoft/pages/responsepage.aspx?id=27NpKQZY2ESJcPOGfM9JJ1Gi-X5CGshNoTgJmrHHJQNURUNYOTZLN09TTDZIV0FLNkJENlVPSzdFWCQlQCN0PWcu&route=shorturl",
+          "status": 200,
+          "checked_at": "2026-11-03T06:20:14.193Z",
+          "quoted_passage": "このフォームの回答の収集は終了しました。",
+          "retrieval": "headless Chromium",
+          "response_sha256": "7e5f4c985f5bea924367dcf903fc49e0301ffab4f64bb7de5547a518650bbd64"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-cat-story",
+      "decision": "keep",
+      "reason": "公式に電話予約・定員30人と案内。受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "http://morinoouchi.com/news/261019.html",
+          "final_url": "http://morinoouchi.com/news/261019.html",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:23.922Z",
+          "quoted_passage": "企画展示／開催場所●絵本美術館 森のおうち／参加費●大人2000円（中学生から）／定員●30人（要予約）／【展示作品】",
+          "retrieval": "headless Chromium",
+          "response_sha256": "9b9edf076b9f815f420f657efc6e832c6769c099318200d4a80cd476d4a3b1eb"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-erz-carol",
+      "decision": "keep",
+      "reason": "公式に該当催事のご予約不要と明記。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://museen.org/news/3971/",
+          "final_url": "https://museen.org/news/3971/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:24.021Z",
+          "quoted_passage": "開催情報／会場には、グラウプナー（Graupner Holzminiaturen）の明るい色鮮やかな作品や、クーネルト（Kuhnert GmbH）の白木調のオーナメントなど、木のぬくもりを感じる飾りが並びます。また、エルツ地方の工芸品に加え、ドイツのガラスやレースのオーナメント、北欧のクリスマス飾りなども展示します。クリスマスを彩る風習や文化に触れながら、それぞれの飾りに込められた魅力にご注目ください。／ご参加いただいた方の中から抽選で６名様に、ヴェント＆キューンのお人形をプレゼント！／日時：2026年10月10日（土）～2026年12月25日（金）　ご予約不要／日時：2026年12月20日（日）13時より、15分程度　ご予約不要",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e44c632bafa7033fd2d696912b7a07f94d26aba7dbb410699976e5c6333dca56"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-erz-pickle",
+      "decision": "keep",
+      "reason": "公式に該当催事のご予約不要と明記。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://museen.org/news/3971/",
+          "final_url": "https://museen.org/news/3971/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:24.021Z",
+          "quoted_passage": "開催情報／会場には、グラウプナー（Graupner Holzminiaturen）の明るい色鮮やかな作品や、クーネルト（Kuhnert GmbH）の白木調のオーナメントなど、木のぬくもりを感じる飾りが並びます。また、エルツ地方の工芸品に加え、ドイツのガラスやレースのオーナメント、北欧のクリスマス飾りなども展示します。クリスマスを彩る風習や文化に触れながら、それぞれの飾りに込められた魅力にご注目ください。／ご参加いただいた方の中から抽選で６名様に、ヴェント＆キューンのお人形をプレゼント！／日時：2026年10月10日（土）～2026年12月25日（金）　ご予約不要／日時：2026年12月20日（日）13時より、15分程度　ご予約不要",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e44c632bafa7033fd2d696912b7a07f94d26aba7dbb410699976e5c6333dca56"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-erz-light",
+      "decision": "keep",
+      "reason": "公式に該当催事のご予約不要と明記。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://museen.org/news/3971/",
+          "final_url": "https://museen.org/news/3971/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:24.021Z",
+          "quoted_passage": "開催情報／会場には、グラウプナー（Graupner Holzminiaturen）の明るい色鮮やかな作品や、クーネルト（Kuhnert GmbH）の白木調のオーナメントなど、木のぬくもりを感じる飾りが並びます。また、エルツ地方の工芸品に加え、ドイツのガラスやレースのオーナメント、北欧のクリスマス飾りなども展示します。クリスマスを彩る風習や文化に触れながら、それぞれの飾りに込められた魅力にご注目ください。／ご参加いただいた方の中から抽選で６名様に、ヴェント＆キューンのお人形をプレゼント！／日時：2026年10月10日（土）～2026年12月25日（金）　ご予約不要／日時：2026年12月20日（日）13時より、15分程度　ご予約不要",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e44c632bafa7033fd2d696912b7a07f94d26aba7dbb410699976e5c6333dca56"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-erz-newyear",
+      "decision": "keep",
+      "reason": "公式に該当催事のご予約不要と明記。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://museen.org/news/3971/",
+          "final_url": "https://museen.org/news/3971/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:24.021Z",
+          "quoted_passage": "開催情報／会場には、グラウプナー（Graupner Holzminiaturen）の明るい色鮮やかな作品や、クーネルト（Kuhnert GmbH）の白木調のオーナメントなど、木のぬくもりを感じる飾りが並びます。また、エルツ地方の工芸品に加え、ドイツのガラスやレースのオーナメント、北欧のクリスマス飾りなども展示します。クリスマスを彩る風習や文化に触れながら、それぞれの飾りに込められた魅力にご注目ください。／ご参加いただいた方の中から抽選で６名様に、ヴェント＆キューンのお人形をプレゼント！／日時：2026年10月10日（土）～2026年12月25日（金）　ご予約不要／日時：2026年12月20日（日）13時より、15分程度　ご予約不要",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e44c632bafa7033fd2d696912b7a07f94d26aba7dbb410699976e5c6333dca56"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-peter-talk",
+      "decision": "keep",
+      "reason": "公式現行案内で受付終了・満員表示なし。通常来館の企画を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://museen.org/news/3846/",
+          "final_url": "https://museen.org/news/3846/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:28.344Z",
+          "quoted_passage": "開催情報／・春展「ピーターと、家族と生活のおはなし」（開催期間：2026年3月14日～6月22日）／・夏展「ピーターと、ねことねずみのおはなし、ときどきカエル」（開催期間：2026年6月27日～10月19日）／参加人数：40名様まで／参加者の方には、以下のものが配布されます。",
+          "retrieval": "headless Chromium",
+          "response_sha256": "8cb3fc9db0014bfd86b217cf9a3a80a2a893c58a263ff2cd63409a203178fc17"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-area-barakura-leaf",
+      "decision": "keep",
+      "reason": "公式に10/23～11/8の落葉ハンティングと案内。参加受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://barakura.co.jp/event-calendar",
+          "final_url": "https://barakura.co.jp/event-calendar",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:31.117Z",
+          "quoted_passage": "◆ 開催中イベント ◆／毎年、晩秋のガーデンで行われている素敵劇な展示会。今年のテーマは『ワインとマリアージュ』／ワークショップも開催！／入場無料　※バラクラ入園料が別途必要／蓼科高原で圧巻の品揃えのペルシャ絨毯展 開催！　7/6（月）～",
+          "retrieval": "headless Chromium",
+          "response_sha256": "72d49ab60f28728171dc7cab8c40b1c6151db443af47568f907f7c9381836af5"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-uchida",
+      "decision": "keep",
+      "reason": "公式Google申込フォーム本文と入力項目を取得。受付終了表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://docs.google.com/forms/d/e/1FAIpQLSelQSzlILaLQf6BYrkJ9s8KnmmqYvU5z4y4UXgOcIQd1w3Caw/viewform",
+          "final_url": "https://docs.google.com/forms/d/e/1FAIpQLSelQSzlILaLQf6BYrkJ9s8KnmmqYvU5z4y4UXgOcIQd1w3Caw/viewform",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:35.961Z",
+          "quoted_passage": "参加申込フォーム／参加費：無料（3歳以上のお子さまを託児スペースでお預かりします）／申込方法：本申込フォームから参加者ごとにご記入下さい／1. 申込は参加者ごと、申込先着順とし、定員に達した時点で締切とします。／2. お申込の際に、ご提供頂いた個人情報について、講演開催に必要な範囲で利用し、講演以外の目的には使用しません。 また、講演中に撮影した写真・動画の一部をSNSなどでの活動報告に使用する場合があります。",
+          "retrieval": "headless Chromium",
+          "response_sha256": "2780174df9cd9ae148201f52e2808572b82910e72cd056603cbbe67c76db4b63"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-baseball",
+      "decision": "keep",
+      "reason": "公式の応募締切11/11は今回取得時点で期限前。入退場自由、受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://beyondoh-playkids.jp/202611",
+          "final_url": "https://beyondoh-playkids.jp/202611",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:20.988Z",
+          "quoted_passage": "入場／※イベント初参加の方 　　　　　　　　のみ／※初参加の方を対象／入場無料、入退場は自由！ ご家族みなさまでお越しください／参加申込",
+          "retrieval": "headless Chromium",
+          "response_sha256": "6f976a0cd7bab6f2bcdafa04bc7d8ca9d99f4190c79ca276387717a5b45c0248"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-mamamatsuri",
+      "decision": "keep",
+      "reason": "公式に来場予約するリンクを掲載。全体の受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.mamamatsuri.com",
+          "final_url": "https://www.mamamatsuri.com/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:25.557Z",
+          "quoted_passage": "来場には事前予約が必須です！／事前予約をして、イベント当日に来場プレゼントをもらっちゃおう！／来場予約する／▶︎  予約はこちら／▶︎  予約はこちら",
+          "retrieval": "headless Chromium",
+          "response_sha256": "25d5192fb98ca5c5a04ea80ce4fdeef8a987ab8a74bd5306a99d19a581ebc7a9"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-scent",
+      "decision": "keep",
+      "reason": "公式に予約不要の体験として案内。受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://tanakahonke.org/event/%e8%8a%b1%e7%b5%90%e3%81%b3%e9%a6%99%e3%82%8a%e8%a2%8b%e3%81%a5%e3%81%8f%e3%82%8a%e4%bd%93%e9%a8%93/",
+          "final_url": "https://tanakahonke.org/event/%e8%8a%b1%e7%b5%90%e3%81%b3%e9%a6%99%e3%82%8a%e8%a2%8b%e3%81%a5%e3%81%8f%e3%82%8a%e4%bd%93%e9%a8%93/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:50.114Z",
+          "quoted_passage": "開催予定 予約不要／どなたでも、お気軽にご参加いただけます。／開催情報／開催日／田中本家博物館　（香り袋づくり体験だけご参加の場合、入館料はかかりません）",
+          "retrieval": "headless Chromium",
+          "response_sha256": "3fc078f0bd9d56e08714f7b0306d34ff1eb5a43b63c629547cfced6b0715534f"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-tsumago-ice",
+      "decision": "keep",
+      "reason": "公式の祭り案内に参加受付終了・満員表示なし。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://tsumago.jp/akarimatsuri_2026/",
+          "final_url": "https://tsumago.jp/akarimatsuri_2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:13:56.765Z",
+          "quoted_passage": "南木曽町では、今年も妻籠宿で開催する予定です。／開催日時：令和8年12月26日（土）午後5時30分　点火／開催場所：南木曽町・妻籠宿（宿場内）",
+          "retrieval": "headless Chromium",
+          "response_sha256": "eb34bdef5b7535ba6a32f53d6a42bc63c2b0fc858ffe438b7ea7efc862daaab1"
+        }
+      ]
+    },
+    {
+      "item_id": "A1",
+      "event_id": "evt-w44d9-nagano-family-dengaku",
+      "decision": "keep",
+      "reason": "主催者公式チケットページで一般・ペア・U25・S席がいずれも販売中。販売受付期間は11/22 23:59まで。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://livepocket.jp/e/8x-f1",
+          "final_url": "https://livepocket.jp/e/8x-f1",
+          "status": 200,
+          "checked_at": "2026-11-03T06:41:51.412Z",
+          "quoted_passage": "受付・チケット情報／販売中／先着販売受付／販売受付期間 2026年5月16日(土) 17:02〜2026年11月22日(日) 23:59／一般 販売中 ¥3,500（税込）",
+          "retrieval": "real headless Chromium",
+          "response_sha256": "e89d70d8c95cf02969eac5681a0d3db1ce577aebdb49d6ab86c4416a70fe63dc"
+        }
+      ]
+    },
+    {
+      "item_id": "A3",
+      "event_id": "evt-22-w38-gym",
+      "decision": "replace_latest_note_keep_cancelled",
+      "reason": "現行baselineのメモは「D。」のみではなくF-1の全文が存在。最新部分を公式の具体的中止表記へ置換。中止理由の詳細は公式に記載なし。",
+      "before": {
+        "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。こどもホール。各回幼児7名、小学生10名。両方の回への参加不可。 2026-11-03 MEM-EVT-OPS F-1: 公式月間・年間・新着詳細を照合。確認できた現行4件の鮮度更新、過去日程終了、11/8体操中止を反映。日程・定員の内部不一致は既存イベントHOLD。"
+      },
+      "after": {
+        "source_notes": "2026-09-14に公式ページで日程・内容・会場・参加条件を確認。こどもホール。各回幼児7名、小学生10名。両方の回への参加不可。 2026-11-03 Correction A: 公式「年間体験プログラム」の体操教室欄に「【中止】2026年11月08日」と明記されていることを再確認。11月8日の中止を維持。中止理由の詳細は公式に記載なし。"
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.kodomo.or.jp/program/schedule/",
+          "final_url": "https://www.kodomo.or.jp/program/schedule/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:30.209Z",
+          "quoted_passage": "体操教室／【中止】2026年11月08日",
+          "retrieval": "headless Chromium",
+          "response_sha256": "16eab060e067150cbc652192379c8cbd0ef238c1ad65be417aee0bf9b6b4aebf"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d4-hiroshima-dreamination",
+      "decision": "iii_fee_not_stated",
+      "reason": "公式資料で無料・有料の明記を確認できず。固定の未記載表示へ修正。",
+      "before": {
+        "price_label": "無料",
+        "is_free": true
+      },
+      "after": {
+        "price_label": "料金は公式に記載なし",
+        "is_free": null
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.dreamination.com/",
+          "final_url": "https://www.dreamination.com/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:50.801Z",
+          "quoted_passage": "令和8年12月4日(金)～令和9年1月24日(日)",
+          "retrieval": "headless Chromium",
+          "response_sha256": "a3e8a2c16615d102956967f3fd848491191c66386ddf342d2239fb599da56919"
+        },
+        {
+          "url": "https://www.dreamination.com/summary/",
+          "final_url": "https://www.dreamination.com/summary/",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:26.640Z",
+          "quoted_passage": "名称 ひろしまドリミネーション2026／平和大通りなどの市内中心部でライトアップを展開する。",
+          "retrieval": "headless Chromium",
+          "response_sha256": "06fd6990da32be8888338892d8f8024a51e60d4a72e371c9489571e6e51ba127"
+        },
+        {
+          "url": "https://www.dreamination.com/pdf/2026_midokoro.pdf",
+          "final_url": "https://www.dreamination.com/pdf/2026_midokoro.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:28.585Z",
+          "quoted_passage": "ひろしまドリミネーション2026",
+          "retrieval": "official binary download",
+          "response_sha256": "30830364c335444058246705c18454710d448f8321066a9e39ad286debe90c0f",
+          "fee_review": "公式トップ・開催概要・見どころPDF全体に料金記載なし"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d4-hiroshima-ooinoko",
+      "decision": "iii_fee_not_stated",
+      "reason": "公式資料で無料・有料の明記を確認できず。固定の未記載表示へ修正。",
+      "before": {
+        "price_label": "観覧無料、屋台の飲食は別途",
+        "is_free": true
+      },
+      "after": {
+        "price_label": "料金は公式に記載なし",
+        "is_free": null
+      },
+      "sources_checked": [
+        {
+          "url": "http://www.cetra.jp/ooinoko/2026chirashi.pdf",
+          "final_url": "http://www.cetra.jp/ooinoko/2026chirashi.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:51.412Z",
+          "quoted_passage": "大いのこ祭／11月7日（土）8日（日）／袋町公園",
+          "retrieval": "official binary download",
+          "response_sha256": "eaab0c788fcdd329f388359c55ee5c0c2d522f22b9b706b53710d2e69e7f3a40",
+          "pdf_page": 1,
+          "fee_review": "チラシ全体に料金記載なし"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-family-imazu74",
+      "decision": "iii_fee_not_stated",
+      "reason": "公式資料で無料・有料の明記を確認できず。固定の未記載表示へ修正。",
+      "before": {
+        "price_label": "入場無料",
+        "is_free": true
+      },
+      "after": {
+        "price_label": "料金は公式に記載なし",
+        "is_free": null
+      },
+      "sources_checked": [
+        {
+          "url": "https://www.mod.go.jp/gsdf/mae/3d/imadu/poster.png",
+          "final_url": "https://www.mod.go.jp/gsdf/mae/3d/imadu/poster.png",
+          "status": 200,
+          "checked_at": "2026-11-03T06:09:56.334Z",
+          "quoted_passage": "今津駐屯地 創立74周年記念行事／令和8年11月7日（土）／開場時間07:50～14:00",
+          "retrieval": "official binary download",
+          "response_sha256": "00f02c72406d435fe6151bc63651eadea1ccf08d74df7793f607b8ea4a8e149b",
+          "image_read": true,
+          "fee_review": "公式ポスター全体に料金記載なし"
+        },
+        {
+          "url": "https://www.mod.go.jp/gsdf/mae/3d/imadu/event.html",
+          "final_url": "https://www.mod.go.jp/gsdf/mae/3d/imadu/event.html",
+          "status": 403,
+          "checked_at": "2026-11-03T06:20:14.194Z",
+          "quoted_passage": "www.mod.go.jp\nセキュリティ検証の実行\n\nこの Web サイトは、悪意のあるボットから保護するためにセキュリティ サービスを使用しています。このページは、Web サイトがボットではないことを確認している間に表示されます。\n\nなぜ検証に時間がかかるのでしょうか?\n\nご使用のコンピュータが古い場合やインターネット接続が遅い場合、検証に時間がかかることがあります。\n\n次にすべきこと:\n\n少しお待ちください。ページを更新するとセキュリティ検証が再開され、時間がかかる場合があります。\nそれでも検証が完了しない場合は、このページを更新してください。\nページを更新してもこのページから進まない場合は、Cloudflare のトラブルシューティング ドキュメントを参照して詳しいヘルプを入手してください。\nRay ID: a54945a24cdf1d54\nCloudflare によるパフォーマンスとセキュリティ\nプライバシー",
+          "retrieval": "real headless Chromium",
+          "limitation": "公式HTMLは403。取得成功した公式ポスターを料金判定の根拠とした。"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-family-general-hospital",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.pref.shiga.lg.jp/documents/29319/20261002164826.pdf",
+          "final_url": "https://www.pref.shiga.lg.jp/documents/29319/20261002164826.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:01.333Z",
+          "quoted_passage": "申込不要 参加無料",
+          "retrieval": "official binary download",
+          "response_sha256": "5f781aeeda0d4ae701f48f22a44cb21c6792cd8ebd83afbc9e4841aab64b6094",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-family-komorebi",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://kusatsu.aeonmall.jp/event/08af079e-2aa8-486b-aaaf-3214ed98df94",
+          "final_url": "https://kusatsu.aeonmall.jp/event/08af079e-2aa8-486b-aaaf-3214ed98df94",
+          "status": 200,
+          "checked_at": "2026-11-03T06:18:30.011Z",
+          "quoted_passage": "【費用】無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "3e9ddf6cd459b706bb0dc57574b42892e6ea5c847cd832d62cc33d0c4fe80f1a"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-family-kuromi",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://kusatsu.aeonmall.jp/event/b5b01d5f-bdc8-4771-9dfa-5b73ccfc191f",
+          "final_url": "https://kusatsu.aeonmall.jp/event/b5b01d5f-bdc8-4771-9dfa-5b73ccfc191f",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:05.420Z",
+          "quoted_passage": "観覧無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "9b124eaaa4abde12699f84956d9e18f3eaf1d04d5d2020be8c941b3ba3eabf9c"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d6-gifu-ikeda-kids43",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.town.gifu-ikeda.lg.jp/kankou/cmsfiles/contents/0000003/3716/202610251748.pdf",
+          "final_url": "https://www.town.gifu-ikeda.lg.jp/kankou/cmsfiles/contents/0000003/3716/202610251748.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.522Z",
+          "quoted_passage": "★ 参加費なし ＆ ★ 参加賞・景品あるよ～!!",
+          "retrieval": "official binary download",
+          "response_sha256": "bae15c977d7b15c40ccbcdabaf72487bd948742f493881461b02f90648368973",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d6-gifu-takayama-library-fair",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.library.takayama.gifu.jp/wysiwyg/image/download/25/1024/biggest",
+          "final_url": "https://www.library.takayama.gifu.jp/wysiwyg/image/download/25/1024/biggest",
+          "status": 200,
+          "checked_at": "2026-11-03T06:18:27.777Z",
+          "quoted_passage": "秋の図書館は展示・イベントがもりだくさん！すべて参加無料です！",
+          "retrieval": "official binary download",
+          "response_sha256": "3a52e6f7c60892efc347a74bb286e67c3bfdfd7abeb02a11559453bed538abff",
+          "image_read": true
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-1-aaff25",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=1_earth-diver-%e5%88%a5%e5%ba%9c%e4%b8%ad%e5%a4%ae%e5%b8%82%e5%a0%b4-1947",
+          "final_url": "https://www.beppuartmonth.com/?programs=1_earth-diver-%e5%88%a5%e5%ba%9c%e4%b8%ad%e5%a4%ae%e5%b8%82%e5%a0%b4-1947",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:37.830Z",
+          "quoted_passage": "料金\t無料 (冊子をご希望の方は500円)",
+          "retrieval": "headless Chromium",
+          "response_sha256": "fd9fff6818da08191f3f61bfceac33ba3635102a42e1c77c0633d24a4a994886"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-16-ad9b0e",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=16_music-cafe-%e3%81%82%e3%82%8a%e3%81%8c%e3%81%a8%e8%8f%9c",
+          "final_url": "https://www.beppuartmonth.com/?programs=16_music-cafe-%e3%81%82%e3%82%8a%e3%81%8c%e3%81%a8%e8%8f%9c",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:44.345Z",
+          "quoted_passage": "料金\t入場料無料／ライブ投げ銭、各イベントや食事には料金設定あり",
+          "retrieval": "headless Chromium",
+          "response_sha256": "d16f6c432325401b9c43a5b3dd9c8ed338c99f495b04a72754424603ee7d8608"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-48-92fa2f",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=48_fujihiro-shiraishi-2026",
+          "final_url": "https://www.beppuartmonth.com/?programs=48_fujihiro-shiraishi-2026",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:50.339Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "398336dad7d7c475abd6a9b149c06d7fd1386d32cf1495c3aef6c45b0ac8751f"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-79-d27efd",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=79_%e5%b7%a1%e3%82%8b%e6%99%82%e9%96%93%e3%81%a8%e3%80%80%e7%b7%91%e3%81%ae%e5%af%be%e8%a9%b1",
+          "final_url": "https://www.beppuartmonth.com/?programs=79_%e5%b7%a1%e3%82%8b%e6%99%82%e9%96%93%e3%81%a8%e3%80%80%e7%b7%91%e3%81%ae%e5%af%be%e8%a9%b1",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:43.944Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "9596b552a93773e425270d8c56f1382b07ea186b9492a1ba2e73d64e96d3c142"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-94-355a08",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=94_%e5%92%8c%e3%81%ae%e9%9f%b3%e8%89%b2%e3%81%ab%e3%81%a4%e3%81%a4%e3%81%be%e3%82%8c%e3%81%a6",
+          "final_url": "https://www.beppuartmonth.com/?programs=94_%e5%92%8c%e3%81%ae%e9%9f%b3%e8%89%b2%e3%81%ab%e3%81%a4%e3%81%a4%e3%81%be%e3%82%8c%e3%81%a6",
+          "status": 200,
+          "checked_at": "2026-11-03T06:14:55.686Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "e700b9ce2684850c48912a2f7b200b16679318f33d5dc3e135c581d7c8d4df4b"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-113-59d992",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=113_%e4%bd%95%e5%80%8b%e3%81%82%e3%81%a4%e3%82%81%e3%82%88%e3%81%86-bam%e3%83%95%e3%82%a9%e3%83%88%e3%83%a9%e3%83%aa%e3%83%bc",
+          "final_url": "https://www.beppuartmonth.com/?programs=113_%e4%bd%95%e5%80%8b%e3%81%82%e3%81%a4%e3%82%81%e3%82%88%e3%81%86-bam%e3%83%95%e3%82%a9%e3%83%88%e3%83%a9%e3%83%aa%e3%83%bc",
+          "status": 200,
+          "checked_at": "2026-11-03T06:10:59.417Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "7ac6d45ff91579981dbb4df15df1a09f7889ca311a778b9cf08e0798894191c5"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-121-bf9880",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=121_%e6%a2%85%e7%94%b0%e5%93%b2%e4%b9%9f%e3%80%8eo%e6%bb%9e%e3%80%8f",
+          "final_url": "https://www.beppuartmonth.com/?programs=121_%e6%a2%85%e7%94%b0%e5%93%b2%e4%b9%9f%e3%80%8eo%e6%bb%9e%e3%80%8f",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:03.232Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "cce8d3357f92f2031dd5af0c215938fb02bedab10e23cec8362d8d705973268b"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-125-f87f37",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=125_%e7%94%ba%e3%81%98%e3%82%85%e3%81%86%e7%be%8e%e8%a1%93%e9%a4%a8%e4%ba%8b%e6%a5%ad%e3%80%8e%e5%a3%81%e7%94%bb%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%80%8f",
+          "final_url": "https://www.beppuartmonth.com/?programs=125_%e7%94%ba%e3%81%98%e3%82%85%e3%81%86%e7%be%8e%e8%a1%93%e9%a4%a8%e4%ba%8b%e6%a5%ad%e3%80%8e%e5%a3%81%e7%94%bb%e3%83%97%e3%83%ad%e3%82%b8%e3%82%a7%e3%82%af%e3%83%88%e3%80%8f",
+          "status": 200,
+          "checked_at": "2026-11-03T06:11:14.056Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "9684778539ff148aa204985f013c81c57caa416ee00036155ee3e774e48db900"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-30bf91",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-1-%e6%b8%a9%e6%b3%89%e8%8a%b1%e6%9d%9f%ef%bc%88o",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-1-%e6%b8%a9%e6%b3%89%e8%8a%b1%e6%9d%9f%ef%bc%88o",
+          "status": 200,
+          "checked_at": "2026-11-03T06:11:23.204Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "791856dcecae7182c3fd6abb0568c68d9133fa95156cc474257148097975ed79"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-920f46",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-2-space-%e2%85%a1",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-2-space-%e2%85%a1",
+          "status": 200,
+          "checked_at": "2026-11-03T06:11:31.476Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "f049b9e264eb71b07bf2a5c3f515da00b8c6b6a8bb19c8ad5d8471627aeebdbe"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-0ce249",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-3-%e6%a4%8d%e7%89%a9%e5%85%83%e6%b0%97%e7%82%89-2",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-3-%e6%a4%8d%e7%89%a9%e5%85%83%e6%b0%97%e7%82%89-2",
+          "status": 200,
+          "checked_at": "2026-11-03T06:11:44.684Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "40c395f13b4297d03801a631e470851b07fa31234d103af054bb45914d811c91"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-2699f2",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-4-before-we-come-after-we-came",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-4-before-we-come-after-we-came",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:05.397Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "a9a294d723c8195ad64e1254201e5f169fb53975c20a2e7a61a2a2bbcf869ce6"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-f68f87",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-5bluebird-sign%ef%bc%8f%e9%9d%92%e3%81%84",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-5bluebird-sign%ef%bc%8f%e9%9d%92%e3%81%84",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:01.695Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "1007507b02cb43da451a007e8bbf29acc814d0b2e0db3d364fe9c233437a64c5"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-126-de3bb4",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-6%e3%82%a6%e3%82%a9%e3%83%bc%e3%82%bf%e3%83%bc",
+          "final_url": "https://www.beppuartmonth.com/?programs=126_alternative-state%e3%81%ae%e3%82%a2%e3%83%bc%e3%83%88%e4%bd%9c%e5%93%81%e3%82%92%e3%82%81%e3%81%90%e3%82%8d%e3%81%86%ef%bc%81alternative-state-6%e3%82%a6%e3%82%a9%e3%83%bc%e3%82%bf%e3%83%bc",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:07.857Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "95078a38faca34689d0e742a2918ef6429af5eaf408d520892ae6f58f81cba4d"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-127-de60c9",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=127_alternative-state-%e9%80%a3%e7%92%b0%e3%81%99%e3%82%8b%e9%9f%b3%e3%81%a8%e8%a8%80%e8%91%89%e3%81%ae%e5%85%ab%e3%81%a4%e3%81%ae%e6%96%ad%e7%89%87",
+          "final_url": "https://www.beppuartmonth.com/?programs=127_alternative-state-%e9%80%a3%e7%92%b0%e3%81%99%e3%82%8b%e9%9f%b3%e3%81%a8%e8%a8%80%e8%91%89%e3%81%ae%e5%85%ab%e3%81%a4%e3%81%ae%e6%96%ad%e7%89%87",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:18.016Z",
+          "quoted_passage": "料金\t無料 ※鑑賞時の通信費は利用者負担",
+          "retrieval": "headless Chromium",
+          "response_sha256": "70e9c252903d1c0111e75085ce2e826777ee6937e6ba824b36467073d4ba528b"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-oita-w44d11-bam-129-d81b5f",
+      "decision": "i_free_explicit",
+      "reason": "公式に無料の明記あり。既存料金表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.beppuartmonth.com/?programs=129_alternative-state-%e6%a0%97%e6%9e%97-%e9%9a%86%e3%80%8e%e6%a4%8d%e7%89%a9%e5%85%83%e6%b0%97%e7%82%89%e3%80%8f%e3%81%8a%e4%b8%96%e8%a9%b1%e4%bd%93%e9%a8%93%e4%bc%9a-2",
+          "final_url": "https://www.beppuartmonth.com/?programs=129_alternative-state-%e6%a0%97%e6%9e%97-%e9%9a%86%e3%80%8e%e6%a4%8d%e7%89%a9%e5%85%83%e6%b0%97%e7%82%89%e3%80%8f%e3%81%8a%e4%b8%96%e8%a9%b1%e4%bd%93%e9%a8%93%e4%bc%9a-2",
+          "status": 200,
+          "checked_at": "2026-11-03T06:12:22.760Z",
+          "quoted_passage": "料金\t無料",
+          "retrieval": "headless Chromium",
+          "response_sha256": "0b6c3801b83171a6a0fd7a764710f57c79080de412544f23486d863077c00fc8"
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-0",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「レッツ・トライ人口登はん壁」／参加費等「なし」／開催場所「比良げんき村」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-1",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「ふわふわファミリーのつどい 「おもちゃの広場」」／参加費等「なし」／開催場所「木戸公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-9",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「オリンピアンの運動教室」／参加費等「なし」／開催場所「伊香立コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-12",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「すくすくまあむ」／参加費等「なし」／開催場所「真野公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 1
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-14",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「絵本の読み聞かせ」／参加費等「なし」／開催場所「堅田コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-17",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「のびっこひろば」／参加費等「なし」／開催場所「仰木コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-19",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「まんまるしっぽ③ 0歳児の部屋①」／参加費等「なし」／開催場所「仰木の里公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-20",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「まんまるしっぽ③ 0歳児の部屋②」／参加費等「なし」／開催場所「仰木の里公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-24",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「木の人形をつくろう」／参加費等「なし」／開催場所「雄琴湖岸緑地」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-25",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「親子ひろば「ゆずっこ」」／参加費等「なし」／開催場所「雄琴公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-27",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「親子ひろばひよっこ⑦」／参加費等「なし」／開催場所「日吉台公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 2
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-30",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「坂本学区文化祭」／参加費等「なし」／開催場所「坂本コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 3
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-31",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「さかもと赤ちゃんひろば」／参加費等「なし」／開催場所「坂本コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 3
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-33",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「下阪本学区秋まつり」／参加費等「なし」／開催場所「下阪本小学校グラウンド」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 3
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-34",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「エンジェルさろん」／参加費等「なし」／開催場所「下阪本コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 3
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-35",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「親子ふれあい教室①② ～ベビーマッサージ&絵本の読み聞かせ～」／参加費等「なし」／開催場所「唐崎公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 3
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-42",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「急須でお茶を楽しみましょう」／参加費等「なし」／開催場所「山中比叡平\nコミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 4
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-45",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「子育て広場「さくらくらぶ」」／参加費等「なし」／開催場所「長等コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 4
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-49",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「わくわく！放課後こうみんかん」／参加費等「なし」／開催場所「逢坂公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 4
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-53",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「そよかぜコンサート」／参加費等「なし」／開催場所「中央公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-54",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「おやこ広場」／参加費等「なし」／開催場所「中央公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-58",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「すくすくサロン」／参加費等「なし」／開催場所「平野コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-60",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「ベビーマッサージ」／参加費等「なし」／開催場所「富士見コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-61",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「あのね なあに」／参加費等「なし」／開催場所「富士見コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-63",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「おはなしポケット」／参加費等「なし」／開催場所「晴嵐コミュニティセンター」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 5
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-66",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「みんなであそぼー 人形劇を楽しもう②」／参加費等「なし」／開催場所「石山公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 6
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-82",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「里山であそぼう」／参加費等「なし」／開催場所「一ノ谷方面」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-83",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「公民館オータムコンサート」／参加費等「なし」／開催場所「青山公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-85",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「お茶席体験」／参加費等「なし」／開催場所「青山公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-88",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「親子でリトミック＆パネルシアター」／参加費等「なし」／開催場所「瀬田公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 7
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-96",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「大津管弦楽団ココサトリオ FamilyConcert」／参加費等「なし」／開催場所「瀬田東公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 8
+        }
+      ]
+    },
+    {
+      "item_id": "A4",
+      "event_id": "evt-w44d5-shiga-otsu-community-102",
+      "decision": "i_free_explicit",
+      "reason": "現在取得・画像確認した公式予定表の該当行は参加費等「なし」と明記。空欄ではないため既存無料表示を維持。",
+      "before": {},
+      "after": {},
+      "sources_checked": [
+        {
+          "url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "final_url": "https://www.city.otsu.lg.jp/material/files/group/59/R811.pdf",
+          "status": 200,
+          "checked_at": "2026-11-03T06:15:29.874Z",
+          "quoted_passage": "講座「大津公民館2026文化祭」／参加費等「なし」／開催場所「大津公民館」",
+          "retrieval": "official binary download",
+          "response_sha256": "f9d5b79877d451334bb4abd529574986ae0c52d6fe616eb1cbed31431dfa3f92",
+          "pdf_page": 8
+        }
+      ]
+    },
+    {
+      "item_id": "A2",
+      "event_id": null,
+      "decision": "metadata_count_corrected",
+      "reason": "最新origin/mainをベースに全変更後の配列長を再集計。",
+      "before": {
+        "metadata.total_events": 13792
+      },
+      "after": {
+        "metadata.total_events": 13829
+      },
+      "sources_checked": []
+    },
+    {
+      "item_id": "A5",
+      "event_id": null,
+      "decision": "superseded",
+      "reason": "PR #256の未マージ・main非包含を確認後、#257によるsupersededコメントを付けてCLOSED。指定台帳行のみSUPERSEDEDへ変更しMemory mainへpush・remote read-back完了。",
+      "before": {
+        "pr_256.state": "OPEN",
+        "ledger_status": "REQUESTED"
+      },
+      "after": {
+        "pr_256.state": "CLOSED",
+        "ledger_status": "SUPERSEDED"
+      },
+      "sources_checked": [
+        {
+          "url": "https://github.com/Ftomohiro0612/trip-guide/pull/256",
+          "final_url": "https://github.com/Ftomohiro0612/trip-guide/pull/256",
+          "status": 200,
+          "checked_at": "2026-11-03T06:22:55.277825+00:00",
+          "quoted_passage": "{\"headRefOid\": \"01aa640940890b140f6f297c2a09be0924698b1d\", \"mergedAt\": null, \"state\": \"CLOSED\", \"url\": \"https://github.com/Ftomohiro0612/trip-guide/pull/256\"}"
+        }
+      ],
+      "action_id": "MEM-ACT-EVT-OPS-W44-C-F1-PROD-20261102-01AA640",
+      "memory_head": "b57adc365d8ae55e8e2200bbedf5bedb0e9e5acf"
+    }
+  ],
+  "bounded_observations": [
+    "A3 baseline already contains a full F-1 source note, rather than only D。; replaced only its latest entry with an explicit official cancellation citation.",
+    "The current freshly fetched Otsu PDF explicitly states なし in all 32 checked 参加費等 cells; older PM notes are not used as evidence.",
+    "The 16 Beppu program URLs in Product use official beppuartmonth.com, not the .jp spelling in the prompt.",
+    "Nagano scope is the 23 application/ticket-suggesting rows actually added by PR #251 (all 41 additions screened); older pre-D9 kickoff/tour records are outside this work unit."
+  ],
+  "validation": {
+    "baseline_tests": {
+      "total": 89,
+      "passed": 86,
+      "failed": 3,
+      "failures": [
+        "current canon at fixed 2026-07-21 date remains deterministic and clean",
+        "Summer Hub fixed-date list paginates all types together in groups of 20",
+        "Summer event anchors resolve later pages and ignore invalid hashes safely"
+      ]
+    },
+    "candidate_tests": {
+      "total": 89,
+      "passed": 86,
+      "failed": 3,
+      "same_failures_as_exact_baseline": true
+    },
+    "events_validate": {
+      "errors": 0
+    },
+    "regular_events_validate": {
+      "errors": 0,
+      "approved_exceptions": 468,
+      "baseline_exception_set_unchanged": true
+    },
+    "npm_run_build": {
+      "exit_code": 0,
+      "direct_execution": true,
+      "static_pages": 6305
+    },
+    "npm_run_cf_build": {
+      "exit_code": 0,
+      "full_build": true,
+      "static_pages": 6305,
+      "runtime_canon_files": 15
+    },
+    "preview": {
+      "result": "BLOCKED",
+      "viewport_width": 375,
+      "regions": {
+        "niigata": {
+          "pages": 17,
+          "cards": 323
+        },
+        "chiba": {
+          "pages": 22,
+          "cards": 435
+        },
+        "aichi": {
+          "pages": 25,
+          "cards": 487
+        },
+        "miyagi": {
+          "pages": 10,
+          "cards": 185
+        },
+        "nagano": {
+          "pages": 12,
+          "cards": 221
+        },
+        "tottori": {
+          "pages": 5,
+          "cards": 95
+        },
+        "hiroshima": {
+          "pages": 20,
+          "cards": 390
+        },
+        "shiga": {
+          "pages": 15,
+          "cards": 300
+        },
+        "gifu": {
+          "pages": 6,
+          "cards": 119
+        },
+        "osaka": {
+          "pages": 22,
+          "cards": 425
+        },
+        "oita": {
+          "pages": 10,
+          "cards": 194
+        },
+        "shizuoka": {
+          "pages": 28,
+          "cards": 556
+        }
+      },
+      "pages_total": 192,
+      "cards_total": 3730,
+      "withdrawn_targets_absent": [
+        "evt-w44d6-chiba-taibusa-camp2027",
+        "evt-w44d7-aichi-pokemon",
+        "evt-w44d10-niigata-20261017-efd3d768",
+        "evt-miyagi-d1-20261026-16314ce9",
+        "evt-w44d9-nagano-tour-fungi",
+        "evt-w44d9-nagano-org-dance"
+      ],
+      "retained_originals_present": [
+        "evt-764-w38-camp-mar",
+        "evt-1731-20261027-f2-pokemon",
+        "evt-639-w38-train-photo"
+      ],
+      "corrected_fee_wording_present": [
+        "evt-w44d4-hiroshima-dreamination",
+        "evt-w44d4-hiroshima-ooinoko",
+        "evt-w44d5-shiga-family-imazu74"
+      ],
+      "cancelled_gym_absent": true,
+      "browser_page_errors": 0,
+      "browser_console_errors": 0,
+      "mobile_overflow_findings": [
+        {
+          "page": 8,
+          "preview_scroll_width": 486,
+          "production_scroll_width": 486,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-51",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 128
+        },
+        {
+          "page": 10,
+          "preview_scroll_width": 614,
+          "production_scroll_width": 614,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-26",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 142
+        },
+        {
+          "page": 11,
+          "preview_scroll_width": 497,
+          "production_scroll_width": 497,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-115",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 96
+        },
+        {
+          "page": 12,
+          "preview_scroll_width": 774,
+          "production_scroll_width": 774,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-14",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 166
+        },
+        {
+          "page": 14,
+          "preview_scroll_width": 468,
+          "production_scroll_width": 468,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-57",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 168
+        },
+        {
+          "page": 15,
+          "preview_scroll_width": 528,
+          "production_scroll_width": 528,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-15",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 129
+        }
+      ]
+    }
+  },
+  "nagano_identification": {
+    "pr": 251,
+    "added_nagano_rows": 41,
+    "application_or_ticket_suggesting_rows_fetched": 23,
+    "other_public_admission_rows_screened": 18
+  },
+  "scope_verification": {
+    "events_array_count": 13829,
+    "metadata_total_events": 13829,
+    "event_order_preserved": true,
+    "added": 0,
+    "deleted": 0,
+    "changed_event_records": 10,
+    "only_authorized_fields_changed": true,
+    "event_data_sha256": "26fec5d11f7f2decce91c94612e00d4746b3af63e5568321025034bcb036b973",
+    "unchanged_regular_validator_baseline_sha256": "89278c312a1dec9063766cab0186a5c68d44817dbb96815027880f304abd50e3",
+    "all_recorded_fetches_after_process_start": true
+  },
+  "outcome": "cannot-continue",
+  "blocking_findings": [
+    {
+      "id": "PREVIEW-MOBILE-OVERFLOW-OUTSIDE-CORRECTION-A",
+      "classification": "systemic UI constraint outside authorized event/field envelope",
+      "reason": "Existing reservation badges containing long unbroken official application URLs overflow at 375px. The six representative event records and both EventCard/EventFilterBar components are byte-for-byte unchanged from baseline. All six widths reproduce identically on current live Production. Fixing the UI or these other reservation fields is explicitly prohibited in this Mission.",
+      "checked_at": "2026-11-03T07:28:02.422Z",
+      "preview_url": "http://localhost:8787/events/hiroshima",
+      "production_url": "https://memorips.com/events/hiroshima",
+      "pages": [
+        {
+          "page": 8,
+          "preview_scroll_width": 486,
+          "production_scroll_width": 486,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-51",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 128
+        },
+        {
+          "page": 10,
+          "preview_scroll_width": 614,
+          "production_scroll_width": 614,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-26",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 142
+        },
+        {
+          "page": 11,
+          "preview_scroll_width": 497,
+          "production_scroll_width": 497,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-115",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 96
+        },
+        {
+          "page": 12,
+          "preview_scroll_width": 774,
+          "production_scroll_width": 774,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-14",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 166
+        },
+        {
+          "page": 14,
+          "preview_scroll_width": 468,
+          "production_scroll_width": 468,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-57",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 168
+        },
+        {
+          "page": 15,
+          "preview_scroll_width": 528,
+          "production_scroll_width": 528,
+          "viewport": 375,
+          "representative_event_id": "evt-w44d4-hiroshima-factory-15",
+          "reservation_label_unchanged": true,
+          "badge_overflow_wrap": "normal",
+          "badge_class": "rounded-md px-2.5 py-1 text-xs font-bold bg-sky-50 text-sky-700",
+          "unbroken_token_length": 129
+        }
+      ],
+      "required_pm_action": "Assign a separate bounded UI/wrapping fix, then have Correction A release validation resumed. No authorization to change UI or out-of-scope reservation fields is inferred."
+    }
+  ],
+  "release": {
+    "product_merge_executed": false,
+    "cf_deploy_invocations": 0,
+    "correction_a_production_ledger_row_created": false,
+    "sentinel_result": "NOT_RUN",
+    "sentinel_reason": "No Production deploy: mobile Preview gate failed. No standalone Production Sentinel run is performed.",
+    "stop_reason": "Systemic mobile overflow requires UI or out-of-scope event-field changes; cannot repair within A1-A5."
+  }
+}
