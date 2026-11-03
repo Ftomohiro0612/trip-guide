@@ -999,7 +999,13 @@
           ],
           "notes": "公式新着・11～12月イベント面と個別詳細を確認。もくようマルシェは10月の物販割引キャンペーンで、日付付き家族向け特別企画ではない。既存シンクロアスリートは購入条件を含め更新済み。"
         }
-      ]
+      ],
+      "candidate_counts": {
+        "found": 67,
+        "duplicate": 22,
+        "added": 13,
+        "hold": 32
+      }
     },
     "tokyo": {
       "facility_ids": [
@@ -5672,9 +5678,9 @@
             },
             {
               "title": "宇宙クルーズ11/4・5",
-              "disposition": "duplicate",
+              "disposition": "hold",
               "event_id": "evt-247-voyager-cruise-2026",
-              "reason": "既存シリーズの一部。SNSで各日実施は確認したが全期末の確認は503のためHOLD継続"
+              "reason": "新規取得の公式SNSは特定日の上映を示すが、旧広域期間全体の再確認には至らない。既存IDは鮮度フィルタで非表示のためrendered duplicateとは数えず、公式サイト503のsource-family HOLDを継続。"
             }
           ],
           "notes": "登録カレンダーは2回503、secondaryなし。公式トップも503で10/22からのサイト全閉鎖告知。公式が誘導するX・Instagramをfallback確認。X日別投稿と既存フォーム3件は読め、6件だけ真正に更新。未確認9件は各候補source-family HOLD。登録URLの200-399成功がないためregistry freshnessは更新しない。"
@@ -5694,8 +5700,8 @@
             {
               "title": "スライムLAB 秋のスライムづくり",
               "event_id": "evt-248-w38-2026-10",
-              "disposition": "duplicate",
-              "reason": "公式本文で再確認（旧スライムは10/31終了に解決）"
+              "disposition": "hold",
+              "reason": "公式詳細で10月31日終了と判明。既存レコードの終了日/statusを訂正済みで現在表示のduplicateとは数えない。過去イベントの追加なし。"
             },
             {
               "title": "アスくんがいっぱい！100体かくれんぼ",
@@ -6382,9 +6388,9 @@
             },
             {
               "title": "LIFEいのち 合唱参加者募集（練習3回・本公演）",
-              "disposition": "duplicate",
+              "disposition": "hold",
               "event_id": "evt-254-w38-choir",
-              "reason": "同じ公式URLの既存掲載。今回個別ページで再確認。"
+              "reason": "既存IDは鮮度期限切れで非表示。今回の公式一覧では合唱参加者募集の受付終了を確認。新規参加経路がないためHOLD。"
             },
             {
               "title": "ギャラク de リトミック（全7回）",
@@ -7172,7 +7178,13 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_counts": {
+        "found": 511,
+        "duplicate": 137,
+        "hold": 207,
+        "added": 167
+      }
     }
   },
   "prior_run_numbers_reused_as_execution": false
