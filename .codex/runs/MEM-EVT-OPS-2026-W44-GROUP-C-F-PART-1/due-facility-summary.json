@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-03T02:14:00.874450+00:00",
+  "executed_at": "2026-11-03T02:19:41.283869+00:00",
   "due_facility_ids": [
     1695,
     1713,
@@ -292,7 +292,22 @@
           "status": 200,
           "checked_at": "2026-11-03T01:24:10.465573+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "added": 22,
+        "covered_by_broader_listing": 1,
+        "duplicate": 5,
+        "past_not_added": 2,
+        "not_event": 2,
+        "hold": 10
+      },
+      "event_changes": {
+        "added": 22,
+        "updated_current": 5,
+        "ended": 3,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "chiba": {
       "facility_ids": [
@@ -852,7 +867,20 @@
           "status": 404,
           "checked_at": "2026-11-03T01:30:04.557909+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "past_not_added": 4,
+        "added": 41,
+        "hold": 52,
+        "duplicate": 1
+      },
+      "event_changes": {
+        "added": 41,
+        "updated_current": 2,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "kanagawa": {
       "facility_ids": [
@@ -890,7 +918,18 @@
           "status": 503,
           "checked_at": "2026-11-03T01:30:20.653665+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "past_inventory_unchanged": 15,
+        "hold": 8
+      },
+      "event_changes": {
+        "added": 0,
+        "updated_current": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "kyoto": {
       "facility_ids": [
@@ -928,7 +967,18 @@
           "status": 200,
           "checked_at": "2026-11-03T01:30:52.947530+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "hold": 3,
+        "not_event": 1
+      },
+      "event_changes": {
+        "added": 0,
+        "updated_current": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "niigata": {
       "facility_ids": [
@@ -1294,7 +1344,19 @@
           "status": 200,
           "checked_at": "2026-11-03T01:40:59.553801+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "hold": 35,
+        "not_event": 2,
+        "past_not_added": 1
+      },
+      "event_changes": {
+        "added": 0,
+        "updated_current": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "oita": {
       "facility_ids": [
@@ -1332,7 +1394,17 @@
           "status": 200,
           "checked_at": "2026-11-03T01:41:42.642252+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "not_event": 1
+      },
+      "event_changes": {
+        "added": 0,
+        "updated_current": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "osaka": {
       "facility_ids": [
@@ -1365,7 +1437,15 @@
           "status": 200,
           "checked_at": "2026-11-03T01:44:56.585047+00:00"
         }
-      ]
+      ],
+      "candidate_dispositions": {},
+      "event_changes": {
+        "added": 0,
+        "updated_current": 0,
+        "ended": 0,
+        "cancelled": 0,
+        "deleted": 0
+      }
     },
     "shizuoka": {
       "facility_ids": [
@@ -3300,7 +3380,30 @@
             }
           ]
         }
-      ]
+      ],
+      "candidate_dispositions": {
+        "existing_updated": 4,
+        "added": 67,
+        "ended": 52,
+        "past": 5,
+        "covered_by_broader_listing": 24,
+        "hold": 58,
+        "duplicate": 13,
+        "not_event": 27,
+        "existing_reconfirmed": 36,
+        "cancelled": 1,
+        "cancelled_not_added": 2,
+        "routed_to_due_facility_186": 1,
+        "past_or_standing": 1,
+        "stale_false": 1
+      },
+      "event_changes": {
+        "added": 68,
+        "updated_current": 48,
+        "ended": 53,
+        "cancelled": 1,
+        "deleted": 0
+      }
     }
   },
   "facilities": [
@@ -7163,7 +7266,7 @@
       "existing_events": [
         {
           "event_id": "evt-11-w38-capybara-september",
-          "action": "reconfirmed_or_corrected"
+          "action": "ended"
         },
         {
           "event_id": "evt-11-202610-f10-01",
@@ -11281,5 +11384,13 @@
       "reason": "公式トップ全体、個別イベント20件と体験教室61ページ、当年11-12月号・秋チラシを内容照合。確定した公開体験を追加、既存現行8件を再確認。自転車受付等の矛盾と開始日前・開始日不明は個別HOLD。",
       "completed_at": "2026-11-03T02:14:00.874416+00:00"
     }
-  ]
+  ],
+  "product_changes": {
+    "added": 131,
+    "updated_current": 55,
+    "ended": 56,
+    "cancelled": 1,
+    "deleted": 0
+  },
+  "registry_rows_advanced": 23
 }
