@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-03T02:19:41.283869+00:00",
+  "executed_at": "2026-11-03T02:28:06.047188+00:00",
   "due_facility_ids": [
     1695,
     1713,
@@ -3218,6 +3218,16 @@
           "url": "https://63155a77.form.kintoneapp.com/public/cae2abf3ab9a3f09b8c2a1d946bd4efdc9dcf896a138b31697d89d2c0b65cef6",
           "status": 200,
           "checked_at": "2026-11-03T02:12:09.555524+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/",
+          "status": 200,
+          "checked_at": "2026-11-03T02:27:14.339388+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/events-4483/",
+          "status": 200,
+          "checked_at": "2026-11-03T02:27:14.944423+00:00"
         }
       ],
       "existing_event_holds": [
@@ -3382,9 +3392,9 @@
         }
       ],
       "candidate_dispositions": {
+        "ended": 53,
         "existing_updated": 4,
         "added": 67,
-        "ended": 52,
         "past": 5,
         "covered_by_broader_listing": 24,
         "hold": 58,
@@ -3399,7 +3409,7 @@
       },
       "event_changes": {
         "added": 68,
-        "updated_current": 48,
+        "updated_current": 49,
         "ended": 53,
         "cancelled": 1,
         "deleted": 0
@@ -3605,7 +3615,7 @@
         {
           "title": "ラッキーアトラクション",
           "disposition": "covered_by_broader_listing",
-          "event_id": "evt-1695-w44-lucky-attraction",
+          "event_id": "evt-1695-w44-bingo",
           "participability": "通常参加可能",
           "official_url": "https://www.japan-monkeypark.jp/special/2026autumn/img/img_other05.png",
           "reason": "同じ新年企画のビンゴと統合。共通URL同日衝突の例外を自己追加しない。"
@@ -7221,14 +7231,24 @@
           "url": "https://izu-animal-kingdom.com/news-and-topics/",
           "status": 200,
           "checked_at": "2026-11-03T01:45:20.423719+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/",
+          "status": 200,
+          "checked_at": "2026-11-03T02:27:14.339388+00:00"
+        },
+        {
+          "url": "https://izu-animal-kingdom.com/events/events-4483/",
+          "status": 200,
+          "checked_at": "2026-11-03T02:27:14.944423+00:00"
         }
       ],
       "candidates": [
         {
           "title": "カピバラ ランド 9月の公開",
-          "disposition": "existing_updated",
+          "disposition": "ended",
           "event_id": "evt-11-w38-capybara-september",
-          "reason": "公式週間日程11/3〜9と詳細条件を再確認"
+          "reason": "9月公開は終了。11月公開は当月の別記録として登録。"
         },
         {
           "title": "サイにさわりなサイ（10/17～23公表分）",
@@ -7261,6 +7281,12 @@
           "title": "ホワイトタイガー2歳記念生誕祭",
           "disposition": "past",
           "reason": "9/12終了・予約完売"
+        },
+        {
+          "title": "キリンを見上げるガイド（11/3～9公表分）",
+          "disposition": "existing_updated",
+          "event_id": "evt-11-202610-f10-03",
+          "reason": "本runの公式週間日程・個別詳細を照合。14:30、1組1,000円、キリンのテラス。"
         }
       ],
       "existing_events": [
@@ -7283,10 +7309,14 @@
         {
           "event_id": "evt-11-202610-f10-05",
           "action": "ended"
+        },
+        {
+          "event_id": "evt-11-202610-f10-03",
+          "action": "reconfirmed_or_corrected"
         }
       ],
       "disposition": "candidate_found_added",
-      "reason": "公式週間日程・詳細・変更告知を照合。3動物体験を11/3〜9公表分へ更新、獣医体験は10/31へ訂正し終了、旧10月カピバラ公開は終了。",
+      "reason": "公式週間日程・詳細・変更告知を照合。サイ・ホワイトタイガー・キリンの3体験を11/3〜9公表分へ更新、獣医体験は10/31へ訂正し終了、9月・10月のカピバラ公開は終了。11月公開を別記録で追加。",
       "completed_at": "2026-11-03T01:45:41.445624+00:00"
     },
     {
@@ -11387,7 +11417,7 @@
   ],
   "product_changes": {
     "added": 131,
-    "updated_current": 55,
+    "updated_current": 56,
     "ended": 56,
     "cancelled": 1,
     "deleted": 0
