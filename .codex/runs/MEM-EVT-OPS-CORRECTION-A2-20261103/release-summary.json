@@ -1,0 +1,121 @@
+{
+  "mission_id": "MEM-EVT-OPS-CORRECTION-A2-20261103",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-03T08:13:08.846128+00:00",
+  "outcome": "cannot-continue",
+  "release_gate": "Repository tests contain five assertion failures; only the three accepted historical fixture failures are permitted by the Mission. Two additional failures reproduce on exact unchanged main and cannot be fixed within the CSS-only scope.",
+  "stages": [
+    {
+      "stage": 1,
+      "outcome": "cannot-continue",
+      "pr": 261,
+      "pr_state": "DRAFT",
+      "branch": "codex/event-card-badge-wrap-20261103",
+      "baseline_sha": "ab1ef1cd8b4684866ceae32f2641e995b5493f4f",
+      "candidate_sha": "d72172e6235504bf466037455ad12bcde6978753",
+      "candidate_validated_for_release": false,
+      "merged_sha": null,
+      "cloudflare_version": null,
+      "production_deploy_executed": false,
+      "deploy_action_ledger_row": null,
+      "diff": "diff --git a/components/EventCard.tsx b/components/EventCard.tsx\nindex 51afae09..ed26166c 100644\n--- a/components/EventCard.tsx\n+++ b/components/EventCard.tsx\n@@ -101 +101 @@ export default function EventCard({\n-                  className={`rounded-md px-2.5 py-1 text-xs font-bold ${item.color}`}\n+                  className={`min-w-0 rounded-md px-2.5 py-1 text-xs font-bold [overflow-wrap:anywhere] ${item.color}`}\ndiff --git a/components/FacilityEventCard.tsx b/components/FacilityEventCard.tsx\nindex 0ecb3eac..2fda1141 100644\n--- a/components/FacilityEventCard.tsx\n+++ b/components/FacilityEventCard.tsx\n@@ -64 +64 @@ export default function FacilityEventCard({ view }: { view: EventView }) {\n-              className={`rounded-md px-2 py-1 text-xs font-bold leading-relaxed ${item.color}`}\n+              className={`min-w-0 rounded-md px-2 py-1 text-xs font-bold leading-relaxed [overflow-wrap:anywhere] ${item.color}`}\n",
+      "validation": {
+        "lint": {
+          "exit_code": 0,
+          "errors": 0,
+          "warnings": 2
+        },
+        "event_validators": {
+          "errors": [
+            0,
+            0
+          ],
+          "approved_exceptions": 468,
+          "exception_set_changed": false,
+          "baseline_sha256": "89278c312a1dec9063766cab0186a5c68d44817dbb96815027880f304abd50e3"
+        },
+        "next_compilation": "passed",
+        "next_typescript": "passed",
+        "build": "interrupted during static generation after test gate was confirmed blocked; not a successful full build",
+        "cf_build": "not_run",
+        "repository_test_sweep": {
+          "initial_tests": 247,
+          "initial_passed": 240,
+          "initial_failed": 7,
+          "initial_runner_errors": 2,
+          "runner_errors_resolved": "The two extensionless TypeScript test files pass 11/11 using repository-external tsx.",
+          "assertion_failures": 5
+        },
+        "baseline_reproduction": {
+          "sha": "ab1ef1cd8b4684866ceae32f2641e995b5493f4f",
+          "accepted_historical_failures": [
+            "scripts/test-event-facility-crosslinks.mjs:336: 427 !== 429",
+            "scripts/test-summer-hub.mjs:738: 38 !== 42",
+            "scripts/test-summer-hub.mjs:816: undefined.event"
+          ],
+          "additional_failures": [
+            "scripts/test-facility-pagination.mjs:311: assert.ok(tagMapIndex > -1)",
+            "scripts/test-unified-facility-area-filter.mjs:164: legacy rain tag remains in serialized facility data"
+          ],
+          "all_five_reproduced_in_this_process": true
+        }
+      },
+      "preview_results": {
+        "executed": false,
+        "pages_checked": 0,
+        "max_scrollWidth": null,
+        "reported_six_hiroshima_pages_verified_fixed": false,
+        "short_label_375_1280_verified": false
+      },
+      "production_results": {
+        "executed": false,
+        "pages_checked": 0,
+        "max_scrollWidth": null
+      },
+      "sentinel": {
+        "executed": false,
+        "result": "NOT_RUN",
+        "blocking": null
+      }
+    },
+    {
+      "stage": 2,
+      "outcome": "not_started_stage1_not_succeeded",
+      "pr": 260,
+      "candidate_sha": null,
+      "merged_sha": null,
+      "cloudflare_version": null,
+      "production_deploy_executed": false,
+      "deploy_action_ledger_row": null,
+      "ten_changed_record_confirmation": "not_run; Stage 2 was not started",
+      "preview_results": {
+        "executed": false,
+        "pages_checked": 0,
+        "max_scrollWidth": null
+      },
+      "production_results": {
+        "executed": false,
+        "pages_checked": 0,
+        "max_scrollWidth": null
+      },
+      "sentinel": {
+        "executed": false,
+        "result": "NOT_RUN",
+        "blocking": null
+      }
+    }
+  ],
+  "current_stage1_event_data": {
+    "events_array_count": 13829,
+    "metadata_total_events": 13792,
+    "data_unchanged_from_main": true,
+    "correction_a_metadata_fix_released": false
+  },
+  "original_correction_summary": "untouched; Correction A branch was not modified",
+  "cleanup": {
+    "own_preview_started": false,
+    "own_build_stopped": true,
+    "temporary_public_only_env_removed": false,
+    "env_cleanup_blocker": "Automatic approval review rejected literal-path .env.local deletion: blocked by policy."
+  }
+}

@@ -61,7 +61,7 @@ export default function FacilityEventCard({ view }: { view: EventView }) {
           {labels.map((item) => (
             <span
               key={item.key}
-              className={`rounded-md px-2 py-1 text-xs font-bold leading-relaxed ${item.color}`}
+              className={`min-w-0 rounded-md px-2 py-1 text-xs font-bold leading-relaxed [overflow-wrap:anywhere] ${item.color}`}
             >
               {item.label}
             </span>
