@@ -1,0 +1,432 @@
+{
+  "mission_id": "MEM-EVT-OPS-CORRECTION-A3-20261103",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-03T12:18:37.851565+00:00",
+  "outcome": "COMPLETED",
+  "supersedes": ".codex/runs/MEM-EVT-OPS-CORRECTION-A2-20261103/release-summary.json",
+  "stages": [
+    {
+      "pr": 261,
+      "candidate_sha": "d9ff74d4d68b6f93f7cb176b931c36c53cc17439",
+      "baseline_sha": "dd30c1f256790c2ae3b3898b2bd03cef7b987156",
+      "action_id": "MEM-ACT-EVT-OPS-CORRECTION-A2-UI-PROD-20261103-d9ff74d",
+      "validation": {
+        "state": "passed",
+        "baseline_sha": "dd30c1f256790c2ae3b3898b2bd03cef7b987156",
+        "upstream_merge": "PR262; 72 new upstream event records preserved; no authored data edits",
+        "repository_assertion_failures": 5,
+        "assertion_values_match_baseline": true,
+        "node_discovery": {
+          "tests": 265,
+          "passed": 253,
+          "assertion_failures": 5,
+          "typescript_runner_errors": 7
+        },
+        "external_tsx": {
+          "files": 7,
+          "tests": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "baseline_test_file": "baseline-dd30-tests.txt",
+        "candidate_test_file": "stage1-dd30-tests.txt",
+        "build_attempts": [
+          {
+            "attempt": 1,
+            "exit": 0,
+            "static_pages": 6305,
+            "static_generation_minutes": 9.7,
+            "completed_at": "2026-11-03T09:58:35.663193+00:00"
+          }
+        ],
+        "lint_exit": 0,
+        "lint_existing_warnings": 2,
+        "lint_command": "npm run lint -- --ignore-pattern .open-next/** --ignore-pattern .wrangler/**",
+        "typecheck_exit": 0,
+        "build_exit": 0,
+        "cf_build_attempts": [
+          {
+            "attempt": 1,
+            "exit": 0,
+            "static_pages": 6305,
+            "static_generation_minutes": 10.3,
+            "runtime_canon_files": 15,
+            "completed_at": "2026-11-03T10:17:34.169993+00:00"
+          }
+        ],
+        "cf_build_exit": 0,
+        "event_validator_errors": 0,
+        "regular_event_validator_errors": 0,
+        "unchanged_approved_exceptions": 468,
+        "generated_sitemap_lastmod_only_restored": true,
+        "completed_at": "2026-11-03T10:23:04.352765+00:00"
+      },
+      "updated_at": "2026-11-03T09:44:39.232991+00:00",
+      "source_diff": "diff --git a/components/EventCard.tsx b/components/EventCard.tsx\nindex 51afae09..ed26166c 100644\n--- a/components/EventCard.tsx\n+++ b/components/EventCard.tsx\n@@ -101 +101 @@ export default function EventCard({\n-                  className={`rounded-md px-2.5 py-1 text-xs font-bold ${item.color}`}\n+                  className={`min-w-0 rounded-md px-2.5 py-1 text-xs font-bold [overflow-wrap:anywhere] ${item.color}`}\ndiff --git a/components/FacilityEventCard.tsx b/components/FacilityEventCard.tsx\nindex 0ecb3eac..2fda1141 100644\n--- a/components/FacilityEventCard.tsx\n+++ b/components/FacilityEventCard.tsx\n@@ -64 +64 @@ export default function FacilityEventCard({ view }: { view: EventView }) {\n-              className={`rounded-md px-2 py-1 text-xs font-bold leading-relaxed ${item.color}`}\n+              className={`min-w-0 rounded-md px-2 py-1 text-xs font-bold leading-relaxed [overflow-wrap:anywhere] ${item.color}`}\n",
+      "merged_sha": "79a50066f4506914628dd3f46b99a8736f7fa132",
+      "candidate_to_merge_tree_diff_empty": true,
+      "deploy_attempted": true,
+      "deploy_started_at": "2026-11-03T10:24:28.576811+00:00",
+      "deployment_artifacts": "Fully validated candidate Cloudflare build; entire merged tree identical",
+      "deploy_exit": 0,
+      "cloudflare_version": "250656b4-a5a3-4ae8-a7bb-08b17f37adc7",
+      "deployment_id": "7a31c3ed-680e-4401-b2f4-95e849d3c7b8",
+      "deployment_created_at": "2026-11-03T10:27:13.400275Z",
+      "deployment_percentage": 100,
+      "deploy_completed_at": "2026-11-03T10:27:49.010386+00:00",
+      "outcome": "SUCCEEDED",
+      "completed_at": "2026-11-03T10:35:17.025834+00:00",
+      "preview": {
+        "source_sha": "d9ff74d4d68b6f93f7cb176b931c36c53cc17439",
+        "checked_at": "2026-11-03T10:18:00.030Z",
+        "completed_at": "2026-11-03T10:22:25.191Z",
+        "regions": 47,
+        "pages": 492,
+        "cards": 9419,
+        "max_scrollWidth": 375,
+        "viewport": 375,
+        "browser_errors": 0,
+        "console_errors": 0,
+        "overflow": [],
+        "blocking": []
+      },
+      "production": {
+        "source_sha": "79a50066f4506914628dd3f46b99a8736f7fa132",
+        "checked_at": "2026-11-03T10:27:48.607Z",
+        "completed_at": "2026-11-03T10:32:46.004Z",
+        "regions": 47,
+        "pages": 492,
+        "cards": 9419,
+        "max_scrollWidth": 375,
+        "viewport": 375,
+        "browser_errors": 0,
+        "console_errors": 0,
+        "overflow": [],
+        "blocking": []
+      },
+      "sentinel": {
+        "result": "GREEN",
+        "blocking_count": 0,
+        "completed_at": "2026-11-03T10:33:53.888Z",
+        "checks": 55,
+        "www": {
+          "status": 301,
+          "location": "https://memorips.com/"
+        }
+      }
+    },
+    {
+      "pr": 260,
+      "candidate_sha": "984a623cab0315179ba8ae06e64195a9f068a071",
+      "baseline_sha": "ca0054243d28ac285346c95e2eb9812869202f5e",
+      "events_count": 13957,
+      "metadata_total_events": 13957,
+      "action_id": "MEM-ACT-EVT-OPS-CORRECTION-A-PROD-20261103-984a623",
+      "validation": {
+        "state": "passed",
+        "lint_exit": 0,
+        "lint_existing_warnings": 2,
+        "lint_command": "npm run lint -- --ignore-pattern .open-next/** --ignore-pattern .wrangler/**",
+        "typecheck_exit": 0,
+        "repository_assertion_failures": 5,
+        "assertion_values_match_baseline": true,
+        "node_discovery": {
+          "tests": 265,
+          "passed": 253,
+          "assertion_failures": 5,
+          "typescript_runner_errors": 7
+        },
+        "external_tsx": {
+          "files": 7,
+          "tests": 24,
+          "passed": 24,
+          "failed": 0
+        },
+        "baseline_test_file": "baseline-stage2-ca005-tests.txt",
+        "candidate_test_file": "stage2-ca005-tests.txt",
+        "validators": {
+          "events": {
+            "errors": 0,
+            "base_events": 13957
+          },
+          "regular_events": {
+            "errors": 0,
+            "base_events": 13957,
+            "approved_exceptions": 468,
+            "findings": 468,
+            "stale_approved_exceptions": 0,
+            "unbaselined_violations": 0
+          }
+        },
+        "event_validator_errors": 0,
+        "regular_event_validator_errors": 0,
+        "unchanged_approved_exceptions": 468,
+        "build_exit": 0,
+        "build_attempts": [
+          {
+            "attempt": 1,
+            "exit": 0,
+            "static_pages": 6305,
+            "static_generation_minutes": 9.9,
+            "completed_at": "2026-11-03T11:39:57.574288+00:00"
+          }
+        ],
+        "cf_build_attempts": [
+          {
+            "attempt": 1,
+            "exit": 0,
+            "static_pages": 6305,
+            "static_generation_minutes": 9.9,
+            "runtime_canon_files": 15,
+            "completed_at": "2026-11-03T11:58:18.612745+00:00"
+          }
+        ],
+        "cf_build_exit": 0,
+        "generated_sitemap_lastmod_only_restored": true,
+        "completed_at": "2026-11-03T12:03:32.227230+00:00"
+      },
+      "merged_sha": "e6c52e605ab9f8b8a8f17b3043aa893eebea267b",
+      "candidate_to_merge_tree_diff_empty": true,
+      "deploy_attempted": true,
+      "deploy_started_at": "2026-11-03T12:04:55.649586+00:00",
+      "deployment_artifacts": "Fully validated candidate Cloudflare build; entire merged tree identical",
+      "deploy_exit": 0,
+      "cloudflare_version": "d3af3187-0b57-4ac0-b94f-caeb4fec6865",
+      "deployment_id": "f5af884c-b409-4ef5-bbfe-f4dc7eecfcb7",
+      "deployment_created_at": "2026-11-03T12:08:07.568442Z",
+      "deployment_percentage": 100,
+      "deploy_completed_at": "2026-11-03T12:09:06.985537+00:00",
+      "outcome": "SUCCEEDED",
+      "completed_at": "2026-11-03T12:17:58.900119+00:00",
+      "preview": {
+        "source_sha": "984a623cab0315179ba8ae06e64195a9f068a071",
+        "checked_at": "2026-11-03T11:58:45.527Z",
+        "completed_at": "2026-11-03T12:03:12.302Z",
+        "regions": 47,
+        "pages": 496,
+        "cards": 9469,
+        "max_scrollWidth": 375,
+        "viewport": 375,
+        "browser_errors": 0,
+        "console_errors": 0,
+        "overflow": [],
+        "blocking": [],
+        "withdrawn_absent": [
+          "evt-w44d6-chiba-taibusa-camp2027",
+          "evt-w44d7-aichi-pokemon",
+          "evt-w44d10-niigata-20261017-efd3d768",
+          "evt-miyagi-d1-20261026-16314ce9",
+          "evt-w44d9-nagano-tour-fungi",
+          "evt-w44d9-nagano-org-dance"
+        ],
+        "corrected_fees": [
+          "evt-w44d4-hiroshima-dreamination",
+          "evt-w44d4-hiroshima-ooinoko",
+          "evt-w44d5-shiga-family-imazu74"
+        ],
+        "cancelled_gym_absent": true
+      },
+      "production": {
+        "source_sha": "e6c52e605ab9f8b8a8f17b3043aa893eebea267b",
+        "checked_at": "2026-11-03T12:09:06.313Z",
+        "completed_at": "2026-11-03T12:15:30.016Z",
+        "regions": 47,
+        "pages": 496,
+        "cards": 9469,
+        "max_scrollWidth": 375,
+        "viewport": 375,
+        "browser_errors": 0,
+        "console_errors": 0,
+        "overflow": [],
+        "blocking": [],
+        "withdrawn_absent": [
+          "evt-w44d6-chiba-taibusa-camp2027",
+          "evt-w44d7-aichi-pokemon",
+          "evt-w44d10-niigata-20261017-efd3d768",
+          "evt-miyagi-d1-20261026-16314ce9",
+          "evt-w44d9-nagano-tour-fungi",
+          "evt-w44d9-nagano-org-dance"
+        ],
+        "corrected_fees": [
+          "evt-w44d4-hiroshima-dreamination",
+          "evt-w44d4-hiroshima-ooinoko",
+          "evt-w44d5-shiga-family-imazu74"
+        ],
+        "cancelled_gym_absent": true
+      },
+      "sentinel": {
+        "result": "GREEN",
+        "blocking_count": 0,
+        "completed_at": "2026-11-03T12:17:15.456Z",
+        "checks": 55,
+        "www": {
+          "status": 301,
+          "location": "https://memorips.com/"
+        }
+      }
+    }
+  ],
+  "short_label_visual_comparison": {
+    "mission_id": "MEM-EVT-OPS-CORRECTION-A3-20261103",
+    "checked_at": "2026-11-03T10:18:18.317Z",
+    "checks": [
+      {
+        "width": 375,
+        "id": "evt-767-w38-nests-eggs",
+        "unchanged_geometry": true,
+        "identical_png": true
+      },
+      {
+        "width": 1280,
+        "id": "evt-767-w38-nests-eggs",
+        "unchanged_geometry": true,
+        "identical_png": true
+      }
+    ]
+  },
+  "correction_scope": {
+    "mission_id": "MEM-EVT-OPS-CORRECTION-A3-20261103",
+    "checked_at": "2026-11-03T11:24:21.160374+00:00",
+    "baseline_sha": "ca0054243d28ac285346c95e2eb9812869202f5e",
+    "added_ids": [],
+    "removed_ids": [],
+    "array_order_unchanged": true,
+    "events_count": 13957,
+    "metadata_total_events": 13957,
+    "metadata_at_accepted_candidate": 13829,
+    "metadata_changed_fields": [
+      "total_events"
+    ],
+    "changed_records": [
+      {
+        "id": "evt-22-w38-gym",
+        "changed_fields": [
+          "source_notes"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-miyagi-d1-20261026-16314ce9",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d4-hiroshima-dreamination",
+        "changed_fields": [
+          "is_free",
+          "price_label"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d4-hiroshima-ooinoko",
+        "changed_fields": [
+          "is_free",
+          "price_label"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d5-shiga-family-imazu74",
+        "changed_fields": [
+          "is_free",
+          "price_label"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d6-chiba-taibusa-camp2027",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d7-aichi-pokemon",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d9-nagano-tour-fungi",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d9-nagano-org-dance",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      },
+      {
+        "id": "evt-w44d10-niigata-20261017-efd3d768",
+        "changed_fields": [
+          "source_notes",
+          "status"
+        ],
+        "identical_to_accepted_correction": true
+      }
+    ],
+    "withdraw_draft": [
+      "evt-w44d6-chiba-taibusa-camp2027",
+      "evt-w44d7-aichi-pokemon",
+      "evt-w44d10-niigata-20261017-efd3d768",
+      "evt-miyagi-d1-20261026-16314ce9",
+      "evt-w44d9-nagano-tour-fungi",
+      "evt-w44d9-nagano-org-dance"
+    ],
+    "fee_not_stated": [
+      "evt-w44d4-hiroshima-dreamination",
+      "evt-w44d4-hiroshima-ooinoko",
+      "evt-w44d5-shiga-family-imazu74"
+    ],
+    "gym_note_replacement": "evt-22-w38-gym",
+    "correction_evidence_sha256": "6541c3f05e4d0a143501107665e97c9bd568ffe94892338286ae891a8d4d40d3",
+    "correction_evidence_unchanged": true,
+    "exception_set_unchanged": true,
+    "main_relative_product_files": [
+      ".codex/runs/MEM-EVT-OPS-CORRECTION-A-20261103/correction-summary.json",
+      "data/events_data.json"
+    ],
+    "metadata_baseline_total_events": 13792,
+    "metadata_before_this_resync": 13901
+  },
+  "cleanup": {
+    "checked_at": "2026-11-03T12:18:37.231350+00:00",
+    "env_file": ".env.local",
+    "env_deleted": false,
+    "env_backup_present": false,
+    "env_deletion_blocked_by_automatic_approval_review": true,
+    "env_deletion_rejection": "Literal-path Remove-Item was rejected: blocked by policy",
+    "pm_operations_pending": [
+      "Delete the public-only worktree .env.local; no alternate deletion attempted"
+    ],
+    "own_preview_stopped": true,
+    "preview_listeners": 0,
+    "env_contents_displayed": false
+  },
+  "pm_decisions_needed": [],
+  "prior_run_execution_reused": false,
+  "research_decisions_reused_as_authorized": true,
+  "upstream_merges_preserved": [
+    {
+      "pr": 262,
+      "additional_events": 72
+    },
+    {
+      "pr": 263,
+      "additional_events": 56
+    }
+  ]
+}
