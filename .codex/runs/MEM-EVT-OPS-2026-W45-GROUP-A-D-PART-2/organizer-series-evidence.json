@@ -1,0 +1,200 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-D-PART-2",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-03T09:46:37.655986+00:00",
+  "horizon_end_date": "2026-12-29",
+  "per_region": {
+    "ehime": {
+      "sources_checked": [
+        {
+          "url": "https://www.koransha.com/ballet/tchaikovsky/",
+          "status": 200,
+          "checked_at": "2026-11-03T09:46:37.656018+00:00",
+          "organizer_name": "光藍社 チャイコフスキー・バレエ劇場",
+          "multi_venue_basis": "全国複数ホールを巡る公演日程、松山市民会館を含む"
+        },
+        {
+          "url": "https://tvconanten-30th.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T09:46:38.695496+00:00",
+          "organizer_name": "放送30周年 名探偵コナン展実行委員会",
+          "multi_venue_basis": "全国複数都市・会場を巡回する展覧会。松山会場あり"
+        },
+        {
+          "url": "https://www.kinashiten.com/",
+          "status": 200,
+          "checked_at": "2026-11-03T09:46:39.910146+00:00",
+          "organizer_name": "木梨憲武展実行委員会",
+          "multi_venue_basis": "全国複数美術館巡回、愛媛新居浜会場を含む"
+        },
+        {
+          "url": "https://www.koransha.com/ballet/tchaikovsky/",
+          "status": 200,
+          "checked_at": "2026-11-03T09:46:59.912765+00:00",
+          "organizer_name": "光藍社",
+          "multi_venue_basis": "全国複数ホールのバレエ公演"
+        },
+        {
+          "url": "https://tvconanten-30th.jp/matsuyama_venue.html",
+          "status": 200,
+          "checked_at": "2026-11-03T09:47:00.679071+00:00",
+          "organizer_name": "名探偵コナン展実行委員会",
+          "multi_venue_basis": "東京・鳥取・松山等の複数会場巡回公式展"
+        }
+      ],
+      "candidates_found": 3,
+      "added": 0,
+      "duplicate_or_already_present": 3,
+      "hold": 0,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "くるみ割り人形 松山",
+          "event_id": "evt-ehime-202612-nutcracker",
+          "url": "https://www.koransha.com/ballet/tchaikovsky/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "organizer_event_series",
+          "existing_event_id": "evt-ehime-202612-nutcracker",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
+        },
+        {
+          "title": "放送30周年名探偵コナン展 松山",
+          "event_id": "evt-ehime-202610-conan30",
+          "url": "https://tvconanten-30th.jp/matsuyama_venue.html",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "organizer_event_series",
+          "existing_event_id": "evt-ehime-202610-conan30",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
+        },
+        {
+          "title": "木梨憲武展 新居浜",
+          "event_id": "evt-w45d2-kinashi",
+          "url": "https://www.kinashiten.com/",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式開催日・会場・内容を照合し、同一イベントの上記IDに包含。このプロセスで最終Cloudflare Previewの全ページを巡回し、当該カードの実表示を確認。",
+          "source_type": "organizer_event_series",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
+        }
+      ],
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
+    },
+    "shizuoka": {
+      "sources_checked": [
+        {
+          "url": "https://splawars.com/",
+          "status": 200,
+          "checked_at": "2026-11-03T10:13:08.069037+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "公式スケジュールが複数県・複数会場を扱う水遊びイベントシリーズ。既存source_notesから発見。"
+        },
+        {
+          "url": "https://iwata-onpaku.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T10:13:32.789674+00:00",
+          "organizer_name": "いわたおんぱく実行委員会",
+          "multi_venue_basis": "磐田市内の農園・和食店・工場・神社など複数会場の体験を主催する公式シリーズ。観光一覧から発見。"
+        },
+        {
+          "url": "https://iwata-onpaku.jp/program/program-1979/",
+          "status": 200,
+          "checked_at": "2026-11-03T10:13:33.800939+00:00",
+          "organizer_name": "いわたおんぱく実行委員会",
+          "multi_venue_basis": "磐田市内の農園・和食店・工場・神社など複数会場の体験を主催する公式シリーズ。観光一覧から発見。"
+        },
+        {
+          "url": "https://iwata-onpaku.jp/program/program-2041/",
+          "status": 200,
+          "checked_at": "2026-11-03T10:13:34.718016+00:00",
+          "organizer_name": "いわたおんぱく実行委員会",
+          "multi_venue_basis": "磐田市内の農園・和食店・工場・神社など複数会場の体験を主催する公式シリーズ。観光一覧から発見。"
+        },
+        {
+          "url": "https://iwata-onpaku.jp/program/program-2055/",
+          "status": 200,
+          "checked_at": "2026-11-03T10:13:35.645486+00:00",
+          "organizer_name": "いわたおんぱく実行委員会",
+          "multi_venue_basis": "磐田市内の農園・和食店・工場・神社など複数会場の体験を主催する公式シリーズ。観光一覧から発見。"
+        }
+      ],
+      "candidates_found": 9,
+      "added": 3,
+      "duplicate_or_already_present": 0,
+      "hold": 6,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "いわたおんぱく 食と農の物語！海老芋収穫体験と海老芋料理",
+          "url": "https://iwata-onpaku.jp/program/program-1979/",
+          "disposition": "added",
+          "event_id": "evt-w45d2-shizuoka-ebimo",
+          "reason": "2026年度公式の実施条件と受付中の申込経路を確認。",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "いわたおんぱく スズハル工場見学＆木箱づくり体験",
+          "url": "https://iwata-onpaku.jp/program/program-2041/",
+          "disposition": "added",
+          "event_id": "evt-w45d2-shizuoka-suzuharu",
+          "reason": "2026年度公式の実施条件と受付中の申込経路を確認。",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "いわたおんぱく 自分だけのしめ縄作りと鎌田神明宮",
+          "url": "https://iwata-onpaku.jp/program/program-2055/",
+          "disposition": "added",
+          "event_id": "evt-w45d2-shizuoka-shimenawa",
+          "reason": "2026年度公式の実施条件と受付中の申込経路を確認。",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 焼津PORTERS 6/14",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 大浜公園6/21",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 用宗漁港7/12",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 川の駅8/30",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 大浜公園9/19中止",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 浜名湖ガーデンパーク9/22",
+          "url": "https://splawars.com/",
+          "disposition": "hold",
+          "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
+    }
+  }
+}
