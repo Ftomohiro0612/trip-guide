@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W44-GROUP-C-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-03T03:24:07.820612+00:00",
+  "executed_at": "2026-11-03T03:38:31.971919+00:00",
   "due_facility_ids": [
     2050,
     2051,
@@ -36,8 +36,8 @@
   "aggregate": {
     "total": 29,
     "no_current_or_future_event": 1,
-    "candidate_found_added": 4,
-    "candidate_found_duplicate": 2,
+    "candidate_found_added": 11,
+    "candidate_found_duplicate": 5,
     "candidate_found_hold": 3,
     "source_unresolved": 0
   },
@@ -59,7 +59,7 @@
       "total": 11,
       "no_current_or_future_event": 1,
       "candidate_found_added": 4,
-      "candidate_found_duplicate": 2,
+      "candidate_found_duplicate": 3,
       "candidate_found_hold": 3,
       "source_unresolved": 0,
       "sources_checked": [
@@ -506,6 +506,42 @@
           "status": 404,
           "checked_at": "2026-11-03T03:24:06.114718+00:00",
           "facility_id": 2085
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/topics/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:21.651819+00:00",
+          "facility_id": 6882
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/topics/8330/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:22.266348+00:00",
+          "facility_id": 6882
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/event/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:30.881373+00:00",
+          "facility_id": 6882
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:31.618504+00:00",
+          "facility_id": 6882
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/event/8368/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:42.163903+00:00",
+          "facility_id": 6882
+        },
+        {
+          "url": "https://kadode-ooigawa.jp/event/6530/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:42.908138+00:00",
+          "facility_id": 6882
         }
       ],
       "facilities": [
@@ -949,6 +985,25 @@
             }
           ],
           "notes": "トップ・イベント面と公式SNSを確認。常設の創作・アウトドア体験はイベントの新規登録にしない。旧ナビ?page_id=44は404、公式/event/で補完。"
+        },
+        {
+          "facility_id": 6882,
+          "completed_at": "2026-11-03T03:24:53.748830+00:00",
+          "verified": true,
+          "disposition": "candidate_found_duplicate",
+          "candidates": [
+            {
+              "title": "RIDE TO KADODE-MUSUBI2026（シンクロアスリート・トークほか）",
+              "disposition": "duplicate",
+              "event_id": "evt-f11-6882-synchro"
+            },
+            {
+              "title": "MEMORIAL chocolates 11/3",
+              "disposition": "hold",
+              "reason": "メイドアイドルのライブ。子ども向けまたは親子で参加する企画の公式根拠がなく家族適合性をPM確認。"
+            }
+          ],
+          "notes": "公式新着・11～12月イベント面と個別詳細を確認。もくようマルシェは10月の物販割引キャンペーンで、日付付き家族向け特別企画ではない。既存シンクロアスリートは購入条件を含め更新済み。"
         }
       ]
     },
@@ -975,12 +1030,1846 @@
       ],
       "total": 18,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
-      "candidate_found_duplicate": 0,
+      "candidate_found_added": 7,
+      "candidate_found_duplicate": 2,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "url": "https://tokyo-joypolis.com/event/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:55.358104+00:00",
+          "facility_id": 217
+        },
+        {
+          "url": "https://tokyo-joypolis.com/event/sidem_jp2026/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:55.842778+00:00",
+          "facility_id": 217
+        },
+        {
+          "url": "https://tokyo-joypolis.com/event/hololive_jp2026/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:24:56.305649+00:00",
+          "facility_id": 217
+        },
+        {
+          "url": "https://tokyo-joypolis.com/event/30th_anniversary/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:07.279158+00:00",
+          "facility_id": 217
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/event",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:28.478269+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/enji-day",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:30.850457+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/18558",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:32.462412+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/18665",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:33.783386+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/18623",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:35.071078+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/18708",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:45.657816+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/grand/18683",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:46.939201+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/grand/18702",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:47.639236+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/event?page=1",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:48.837678+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.kidzania.jp/tokyo/news/event?page=2",
+          "status": 200,
+          "checked_at": "2026-11-03T03:25:50.766414+00:00",
+          "facility_id": 219
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/events/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:19.311268+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.tokyobayesg.metro.tokyo.lg.jp/children/workshop.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:19.787002+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:29.497073+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/exhibitions/spexhibition/henshinten.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:40.039990+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/news/general/202610084778.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:40.423717+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/events/_assets/json/2026/ja.json",
+          "status": 200,
+          "checked_at": "2026-11-03T03:26:50.716328+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://www.miraikan.jst.go.jp/events/_assets/json/2027/ja.json",
+          "status": 404,
+          "checked_at": "2026-11-03T03:26:51.061153+00:00",
+          "facility_id": 221
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:17.800094+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20261022.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:18.314561+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/info/20261004.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:24.329879+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20261021.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:24.770934+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20261001.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:25.105636+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20260930.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:25.500317+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20260731.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:25.853367+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20261026.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:26.185754+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20260917_2.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:26.567881+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://event.bandainamco-am.co.jp/namja/yamabukimaturi/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:35.824348+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://event.bandainamco-am.co.jp/namja/haikyunekoma/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:36.306743+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://event.bandainamco-am.co.jp/namja/stmy_2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:36.696274+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/events/20260726.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:37.008029+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/info/20260410_1.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:37.486547+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://bandainamco-am.co.jp/tp/namja/NEWS/info/20260410_3.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:27:37.820640+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://calendar.google.com/calendar/ical/ubrgmujpv8ldcgmlis0nv7pgjo%40group.calendar.google.com/public/basic.ics",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:02.119549+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://calendar.google.com/calendar/ical/namjatown01%40gmail.com/public/basic.ics",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:02.842736+00:00",
+          "facility_id": 223
+        },
+        {
+          "url": "https://sunshinecity.jp/aquarium/event_performance/event/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:49.299719+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://sunshinecity.jp/file/aquarium/zannen/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:49.738555+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://sunshinecity.jp/file/aquarium/sexy/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:50.114788+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://sunshinecity.jp/aquarium/event_performance/event/entry-38802.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:28:50.491456+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://sunshinecity.jp/aquarium/js/event.js",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:27.115320+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://sunshinecity.jp/aquarium/js/event.js",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:34.001379+00:00",
+          "facility_id": 224
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:50.891878+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/news/11819/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:51.351158+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/13487/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:51.746041+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/13700/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:52.184924+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/news/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:29:58.362145+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/api/event/event-list.jsp?id=2718",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:06.096902+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/api/event/event-list.jsp?id=2718",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:16.993888+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/news/13685/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:19.797695+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/news/zooschool/2026_03/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:20.469024+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/news/10785/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:21.028025+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/12293/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:32.302749+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/13537/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:32.689807+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/11635/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:33.029294+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-rabbit/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:33.466203+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-asian-elephant/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:34.141092+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-arctic-animals/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:34.845751+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-waterside-birds/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:35.652396+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-ptarmigan/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:36.478589+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-mysteries-of-reptiles/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:37.289595+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-birds-of-prey/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:45.173586+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-monkeys-of-the-world/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:45.584476+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-squirrel-friends/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:46.018172+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/animal-guide-african-herbivores/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:46.515018+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-five-questions-west/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:46.964778+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-giraffe/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:47.809590+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-bird-of-prey/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:48.602274+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-secretarybird/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:49.545264+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/spotguide-reptiles/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:50.428746+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/ueno/events/picture-coloring-book/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:30:51.455533+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/api/event/event-list.jsp?id=2718",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:28.211573+00:00",
+          "facility_id": 225
+        },
+        {
+          "url": "https://www.kahaku.go.jp/events/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:43.742096+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005115.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:44.101778+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/tenji-event/nid00003997.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:44.423137+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005112.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:44.776184+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005625.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:45.096999+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005626.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:45.441492+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005623.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:45.769618+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005624.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:46.109173+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005690.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:46.630340+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005621.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:47.164321+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005622.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:47.599161+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00004089.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:48.101121+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005620.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:48.617249+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005682.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:49.203383+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005618.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:49.757160+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005619.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:50.190102+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005616.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:50.683117+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005617.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:31:51.212417+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/json/air_query/air_query_api.php",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:29.666987+00:00",
+          "facility_id": 226,
+          "method": "POST",
+          "parameters": {
+            "cache_id": "news00000062",
+            "setting_file": "nbb00000062.json",
+            "block_file": "nabi00157731.json",
+            "count": "200",
+            "access_url": "https://www.kahaku.go.jp/events/",
+            "not_ues_cache": "true"
+          }
+        },
+        {
+          "url": "https://www.kahaku.go.jp/tenji/exhibitions.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:50.989188+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005770.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:51.316284+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005771.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:51.638209+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005767.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:52.019148+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005769.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:52.389177+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005766.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:52.696706+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005768.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:53.040632+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005765.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:53.500355+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005763.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:54.006639+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005764.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:54.563448+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005761.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:55.103625+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005762.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:34:55.610238+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005114.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:03.287099+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005168.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:03.685526+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005113.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:04.006798+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005101.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:04.407060+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005099.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:04.751130+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005705.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:05.108442+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005688.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:05.436092+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/json/air_query/air_query_api.php",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:13.343121+00:00",
+          "facility_id": 226,
+          "method": "POST",
+          "parameters": {
+            "cache_id": "news00000070",
+            "setting_file": "nbb00000070.json",
+            "block_file": "nabi00216474.json",
+            "count": "100",
+            "access_url": "https://www.kahaku.go.jp/tenji/exhibitions.html",
+            "not_ues_cache": "true"
+          }
+        },
+        {
+          "url": "https://www.ikimono-sei.jp/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:19.538737+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.ikimono-sei.jp/ticket.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:25.757214+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.ikimono-sei.jp/outline.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:26.159228+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005624.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:26.494848+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.kahaku.go.jp/event/nid00005690.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:35:26.784723+00:00",
+          "facility_id": 226
+        },
+        {
+          "url": "https://www.hanayashiki.net/event_this/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:08.480019+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/Halloween2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:08.961965+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:14.552684+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/stage/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:15.010270+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/archives/20261129/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:23.463541+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/archives/0e8d558de2cabb0a728b11e0b8b4b752862a5c99/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:23.892421+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/json/2026/event1.json",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:32.280146+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/json/2026/event2.json",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:32.634914+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/json/2027/event1.json",
+          "status": 404,
+          "checked_at": "2026-11-03T03:36:32.965329+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/json/2027/event2.json",
+          "status": 404,
+          "checked_at": "2026-11-03T03:36:33.384426+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/charactershow202611/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:44.627880+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/kaienyakou/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:45.059624+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/cojicoji/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:45.439809+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/comebackdomdom2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:45.897064+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/BlackFriday2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:46.303815+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/events/event/uruwashi2026/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:36:46.688640+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.hanayashiki.net/assets_c/2026/10/91230305a5bc5a3a423ca3ed745088279be3e2e5-thumb-1000xauto-4007.jpg",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:01.082317+00:00",
+          "facility_id": 227
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:34.705846+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/news/11197/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:35.290634+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13509/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:36.068964+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13604/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:36.560082+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13605/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:37.040879+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/news/13566/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:37.702550+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:46.512382+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/news/13819/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:46.997002+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/news/11919/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:47.924848+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/news/4184/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:48.381311+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/api/event/event-list.jsp?id=3004",
+          "status": 200,
+          "checked_at": "2026-11-03T03:37:53.889406+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/guided-tour-1/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:38:02.593512+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13828/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:38:03.137484+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13829/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:38:03.953161+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/13830/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:38:05.010479+00:00",
+          "facility_id": 230
+        },
+        {
+          "url": "https://www.tokyo-zoo.net/kasai/events/guided-tour-2/index.html",
+          "status": 200,
+          "checked_at": "2026-11-03T03:38:13.386053+00:00",
+          "facility_id": 230
+        }
+      ],
+      "facilities": [
+        {
+          "facility_id": 217,
+          "completed_at": "2026-11-03T03:25:21.861483+00:00",
+          "verified": true,
+          "disposition": "candidate_found_duplicate",
+          "candidates": [
+            {
+              "title": "SideM通常コラボ",
+              "disposition": "duplicate",
+              "event_id": "evt-217-sidem-20260912"
+            },
+            {
+              "title": "holoX通常ミニライブ・コラボ",
+              "disposition": "duplicate",
+              "event_id": "evt-217-20261016-hololive"
+            },
+            {
+              "title": "30周年イヤー企画",
+              "disposition": "hold",
+              "reason": "一覧は2026/7/12～2027/7/11、詳細は2026年7月～2027年6月と記載。期間が一致しないため新規イベント化をHOLD。新アトラクション常設化は登録しない。"
+            },
+            {
+              "title": "SideM12/5閉館後貸切上映",
+              "disposition": "hold",
+              "reason": "19:45開演・閉館後のスタンディング上映。幼児向けでない時間帯。通常上映の既存レコードとは別企画。"
+            },
+            {
+              "title": "ホロ×マッチ11/21・11/28・12/12・12/19",
+              "disposition": "hold",
+              "reason": "タレントとの1分対話・8,500円別券のファン向け個別企画。幼児向け適合性の公式根拠なし。通常ミニライブは掲載維持。"
+            },
+            {
+              "title": "holoX12/26・27爆音貸切上映",
+              "disposition": "hold",
+              "reason": "閉館後20:30～21:30の爆音スタンディング上演で幼児向けでない。"
+            }
+          ]
+        },
+        {
+          "facility_id": 219,
+          "completed_at": "2026-11-03T03:26:12.471765+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "Welcome！園児DAY ― 保護者もいっしょに体験",
+              "disposition": "duplicate",
+              "event_id": "evt-219-enjiday-20261127"
+            },
+            {
+              "title": "ファスナーウィーク 2026",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-219-20261023-0cd635b9"
+            },
+            {
+              "title": "Exciting Week with SEIKO",
+              "disposition": "duplicate",
+              "event_id": "evt-219-20261120-seiko"
+            },
+            {
+              "title": "TAX WEEK 2026",
+              "disposition": "duplicate",
+              "event_id": "evt-219-20261111-tax"
+            },
+            {
+              "title": "ウィンター2026-2027",
+              "disposition": "duplicate",
+              "event_id": "evt-tokyo-w44d1-caa1326502"
+            },
+            {
+              "title": "B･KidZanianクイズラリー（東京）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-219-quiz",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "プロフェス2027 東京1/11",
+              "disposition": "hold",
+              "reason": "11/6 10時予約開始前。プロフェッショナル会員と保護者限定。"
+            },
+            {
+              "title": "Out of KidZania 北九州",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania 焼津",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania サッカースタジアム",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania 佐賀",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania さくらインターネット",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania 那覇",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania 熊本",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            },
+            {
+              "title": "Out of KidZania SUPER FORMULA",
+              "disposition": "hold",
+              "reason": "共通公式一覧で発見した東京施設外の企画。本F-2の指定施設範囲外として保留し、施設外の調査・登録に拡大しない。"
+            }
+          ],
+          "notes": "現行一覧3ページと対象の詳細を確認。過去イベントまでページ送り、他都市Out of企画は範囲外と明記。"
+        },
+        {
+          "facility_id": 221,
+          "completed_at": "2026-11-03T03:27:11.018833+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "特別展「変身」―からだが変わる。わたしが変わる。",
+              "disposition": "added",
+              "event_id": "evt-w44f2-221-henshin",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "香りってなんだ？",
+              "disposition": "duplicate",
+              "event_id": "evt-221-20261115-kaorium"
+            },
+            {
+              "title": "親子でさぐる核融合11/29",
+              "disposition": "hold",
+              "reason": "那珂研究所（茨城県）現地開催、指定施設221外。"
+            },
+            {
+              "title": "秩父バスツアー11/28",
+              "disposition": "hold",
+              "reason": "埼玉現地開催・10/25申込終了。"
+            },
+            {
+              "title": "俳句と自然11/22・2/7",
+              "disposition": "hold",
+              "reason": "曳舟会場または会場調整中、高校生以上推奨。指定施設外。"
+            },
+            {
+              "title": "お台場生き物シン発見11/8",
+              "disposition": "hold",
+              "reason": "青海公園現地開催、10/28受付終了、施設221外。"
+            },
+            {
+              "title": "ロボット未来創造センター12月",
+              "disposition": "hold",
+              "reason": "文京区開催、中高生向け、日付未定。施設外。"
+            },
+            {
+              "title": "地球飯11/14ワークショップ",
+              "disposition": "hold",
+              "reason": "高知巡回展会場、指定施設外。"
+            },
+            {
+              "title": "地球飯11/14解説ツアー",
+              "disposition": "hold",
+              "reason": "高知巡回展会場、指定施設外。"
+            },
+            {
+              "title": "スーパー発電菌",
+              "disposition": "hold",
+              "reason": "中高生グループ対象オンライン企画・5/29申込終了。"
+            },
+            {
+              "title": "みんなの肝臓リサーチ",
+              "disposition": "hold",
+              "reason": "研究参加プログラムで通常の親子おでかけイベントではない。"
+            }
+          ],
+          "notes": "JSテンプレートだけでイベントなしと判断せず配信元2026年公式JSONを取得して全未来項目を評価。2027 JSON未公開を公式特別展告知で補完。"
+        },
+        {
+          "facility_id": 223,
+          "completed_at": "2026-11-03T03:28:38.541634+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "山吹祭り in NAMJATOWN",
+              "disposition": "added",
+              "event_id": "evt-w44f2-223-yamabuki",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "ハイキュー!! in NAMJATOWN 音駒祭り",
+              "disposition": "added",
+              "event_id": "evt-w44f2-223-haikyu",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "スタンドマイヒーローズ in NAMJATOWN Pop’n Pastel Sugar",
+              "disposition": "added",
+              "event_id": "evt-w44f2-223-stmy",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "おそろいコーデグリーティング キラキラ祭",
+              "disposition": "added",
+              "event_id": "evt-w44f2-223-coordinate",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "嘘のテーマパーク",
+              "disposition": "duplicate",
+              "event_id": "evt-223-20261025-f15-edc4f669"
+            },
+            {
+              "title": "秋のたまパレ！",
+              "disposition": "hold",
+              "reason": "10/17～12/20の土日祝と全20回予定が一致せず、具体日程はカレンダー参照。連日開催を推測せずHOLD。"
+            },
+            {
+              "title": "桜蘭高校ホスト部",
+              "disposition": "hold",
+              "reason": "本文開始2027/11/13～終了2027/1/11で時間順に矛盾。タイトルは11/13～1/11。年を推測訂正せずHOLD。"
+            },
+            {
+              "title": "ナンジャパーティー",
+              "disposition": "hold",
+              "reason": "公開カレンダーICSに具体イベント0件。本文に開催日なし、日付を確定できない。"
+            },
+            {
+              "title": "闇街＆怨霊フェス",
+              "disposition": "hold",
+              "reason": "20:30閉館後または16時以降の恐怖演出で幼児向けでない。"
+            },
+            {
+              "title": "Vtuberフルーツポット",
+              "disposition": "hold",
+              "reason": "等身大パネルのファン向け展示。子ども向け体験の公式根拠なし。"
+            },
+            {
+              "title": "あかね噺フォーチューンラテ",
+              "disposition": "hold",
+              "reason": "コラボ飲料販売のみ。現地の家族向け体験企画の公式根拠なし。"
+            }
+          ]
+        },
+        {
+          "facility_id": 224,
+          "completed_at": "2026-11-03T03:29:44.603323+00:00",
+          "verified": true,
+          "disposition": "candidate_found_duplicate",
+          "candidates": [
+            {
+              "title": "特別展 ざんねんないきもの展3",
+              "disposition": "duplicate",
+              "event_id": "evt-224-zannen-202609"
+            },
+            {
+              "title": "夜のサンシャイン水族館 まだまだ♡性いっぱい展",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-224-20260911-16e81514"
+            },
+            {
+              "title": "11月11日はタチウオの日 制定記念イベント",
+              "disposition": "duplicate",
+              "event_id": "evt-224-20261025-f15-ef0c2041"
+            }
+          ],
+          "notes": "配信データの全現行3催事と特設詳細を確認。常設エサカプセル販売は新規イベント化しない。性いっぱい展は既存レコードの会期のみ再確認、関連R18プラネタリウムは別施設・成人限定のため登録しない。"
+        },
+        {
+          "facility_id": 225,
+          "completed_at": "2026-11-03T03:31:32.234797+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "動物ガイド：アメリカバク（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-11635",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：ウサギ（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-rabbit",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：アジアゾウ（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-asian-elephant",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：北極圏の動物（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-arctic-animals",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：水辺の鳥たち（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-waterside-birds",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：ライチョウ（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-ptarmigan",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：爬虫類のふしぎ（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-mysteries-of-reptiles",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：狩りをする鳥（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-birds-of-prey",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：世界のサル（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-monkeys-of-the-world",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：リスの仲間たち（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-squirrel-friends",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "動物ガイド：アフリカの草食動物（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-animal-guide-african-herbivores",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：五つの質問（西園）（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-five-questions-west",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：キリン（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-giraffe",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：猛禽（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-bird-of-prey",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：ヘビクイワシ（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-secretarybird",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "スポットガイド：爬虫類（11月）",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-spotguide-reptiles",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "講演会 カモシカっておもしろい！",
+              "disposition": "added",
+              "event_id": "evt-w44f2-225-serow",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "企画展示 カメカメエブリバディ",
+              "disposition": "duplicate",
+              "event_id": "evt-225-turtles-20251118"
+            },
+            {
+              "title": "東京文化財ウィーク 解説カードの配布",
+              "disposition": "duplicate",
+              "event_id": "evt-225-20261025-f15-6ffaf992"
+            },
+            {
+              "title": "スポットガイドフェスタ2026",
+              "disposition": "duplicate",
+              "event_id": "evt-225-20261025-f15-3529acb9"
+            },
+            {
+              "title": "ライチョウビンゴ",
+              "disposition": "hold",
+              "reason": "詳細は7/28～用紙終了まで、APIは12/31までの機械的配列。配布継続と正確な終了期間を確認できずHOLD。"
+            },
+            {
+              "title": "アイアイエンボススタンプ",
+              "disposition": "hold",
+              "reason": "詳細は11月中旬、APIは11/20終了。終了日の公式表現が一致しないため日を推測せずHOLD。"
+            },
+            {
+              "title": "絵本とぬりえを楽しむお部屋",
+              "disposition": "hold",
+              "reason": "本文は土日・11/28～29休止、APIは全日配列。具体開催日の食い違いをHOLD。"
+            },
+            {
+              "title": "うえのZOOスクール11/7・8",
+              "disposition": "hold",
+              "reason": "9/30受付終了。"
+            },
+            {
+              "title": "ハシビロカート",
+              "disposition": "hold",
+              "reason": "常設運行で日付付き催事ではない。"
+            },
+            {
+              "title": "モルモットとなかよし",
+              "disposition": "hold",
+              "reason": "常設体験で具体的期間なし。"
+            }
+          ],
+          "notes": "公式ニュースとカレンダー配信の全現行項目を確認。16ガイドを個別詳細まで実読。配信と本文が矛盾する候補はHOLD。"
+        },
+        {
+          "facility_id": 226,
+          "completed_at": "2026-11-03T03:36:03.039330+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "私が見た湯川秀樹と朝永振一郎",
+              "event_id": "evt-226-w38-05115",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "野口英世生誕150年記念企画展「感染症への挑戦：過去・現在・未来」",
+              "event_id": "evt-226-w38-03997",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "電力用遮断器および開閉装置の系統化調査",
+              "event_id": "evt-226-w38-05112",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "シダの胞子はどこまで飛ぶ？",
+              "event_id": "evt-226-20261025-f15-ef97dd9f",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "科学技術史から見る物理学と人工知能（AI）",
+              "event_id": "evt-226-20261025-f15-74ff18f8",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "海藻の多様性",
+              "event_id": "evt-226-20261025-f15-90e95fcb",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "地質と植物のつながりを調べる",
+              "event_id": "evt-226-20261025-f15-95375212",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "企画展関連イベント 映画「なぜ新型ウイルスが次々と世界を襲うのか」上映会",
+              "event_id": "evt-226-20261025-f15-62a3e760",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "自然がつくる模様の話",
+              "event_id": "evt-226-20261025-f15-46c7c2cf",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "日本館建物ガイド",
+              "event_id": "evt-226-20261025-f15-696c07cc",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "地球は特別な惑星か？",
+              "event_id": "evt-226-20261025-f15-729e0495",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "日本列島を造る岩石",
+              "event_id": "evt-226-20261025-f15-7c434151",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "Music Program TOKYO まちなかコンサート 芸術の秋、音楽さんぽ",
+              "event_id": "evt-226-20261025-f15-730bb108",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "コケ植物の性",
+              "event_id": "evt-226-20261025-f15-5dd95d10",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "天文ニュースサーベイ",
+              "event_id": "evt-226-20261025-f15-d5c47264",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "イモリの求愛のはなし",
+              "event_id": "evt-226-20261025-f15-6b0ce124",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "150年前に採集された植物化石の産地を探る",
+              "event_id": "evt-226-20261025-f15-8b267901",
+              "disposition": "duplicate",
+              "reason": "公式詳細を本Missionで再確認"
+            },
+            {
+              "title": "貝の性：ラブ・ダートって何？",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05770",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "救荒植物の話",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05771",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "モグラが性転換するって、本当？？",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05767",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "2026年きのこ10大ニュース",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05769",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "チョウやガのオスとメス",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05766",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "♦ライト♦ チリも積もれば山となる",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05768",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "企画展のみどころ",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05765",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "ヒトデの腕の数は５本？",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05763",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "2026年度のエジプト調査に関して",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05764",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "クモの性に関するネタ",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05761",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "オオナマケモノ化石の発掘",
+              "disposition": "added",
+              "event_id": "evt-w44f2-226-05762",
+              "participability": "条件付き参加可能",
+              "reason": "当日先着受付の参加経路を公式確認"
+            },
+            {
+              "title": "夜の天体観望公開（12月）",
+              "event_id": "evt-w44f2-226-observation1204",
+              "disposition": "added",
+              "participability": "条件付き参加可能",
+              "reason": "未就学児を含め参加可能、申込受付期間内"
+            },
+            {
+              "title": "特別展 生きものたちの性",
+              "event_id": "evt-w44f2-226-ikimonosei",
+              "disposition": "added",
+              "participability": "通常参加可能",
+              "reason": "未就学児無料・小学生以下保護者同伴の通常観覧経路がある科学展。内容注意を明記"
+            },
+            {
+              "title": "感染症への挑戦 講演会12/12",
+              "disposition": "hold",
+              "reason": "ページ上部の日程9/23と本文12/12が矛盾、かつ受付開始11/5前"
+            },
+            {
+              "title": "混酸シリカゲルを用いるトルエンのニトロ化",
+              "disposition": "hold",
+              "reason": "大学生以上の教員向け実験、幼児連れの参加対象外"
+            },
+            {
+              "title": "博物館標本学12/5",
+              "disposition": "hold",
+              "reason": "中学生以上の溶媒を使う実習、幼児向けではない"
+            },
+            {
+              "title": "早期地震警報システムの系統化調査",
+              "disposition": "hold",
+              "reason": "高校生以上の専門講座"
+            },
+            {
+              "title": "夜の天体観望公開11/6",
+              "disposition": "hold",
+              "reason": "10/12申込終了"
+            },
+            {
+              "title": "NORNACシンポジウム",
+              "disposition": "hold",
+              "reason": "一般の現地参加不可、オンラインのみ"
+            },
+            {
+              "title": "筑波実験植物園 世界植物紀行12/13",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "自然教育園かいぼり12/6",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "筑波実験植物園カシワイ12/5",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "筑波実験植物園つながりの植物学11/28",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "筑波実験植物園冬の野鳥11/28",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "自然教育園クラゲ11/22",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "自然教育園旅するタネ11/8",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "筑波実験植物園コシガヤホシクサ11/7",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "筑波実験植物園手話11/3",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "自然教育園ツアー11/7,14,15,21,28",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "野口英世記念館福島の展覧会",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            },
+            {
+              "title": "上野の森美術館シンシナティ美術館展",
+              "disposition": "hold",
+              "reason": "共有公式一覧・関連リンクで別会場を確認。本F-2の施設226の範囲外のため別施設の採用作業へ展開しない"
+            }
+          ],
+          "notes": "既存17件全てを今回の公式詳細と照合。12月のトーク11件、観望会、特別展を追加。公式APIの一覧全200件から現在・未来を個別評価。過去日程は新規対象外。"
+        },
+        {
+          "facility_id": 227,
+          "completed_at": "2026-11-03T03:37:29.404737+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "花やしきのハロウィン2026",
+              "disposition": "duplicate",
+              "event_id": "evt-supp1-227-20260930-9e9b4460",
+              "reason": "本文と2026年配信カレンダーで11/3までを再確認"
+            },
+            {
+              "title": "レジェンド仮面ライダーショー",
+              "disposition": "added",
+              "event_id": "evt-w44f2-227-rider",
+              "participability": "通常参加可能",
+              "reason": "公式の現地参加経路を確認。不記載項目は注記"
+            },
+            {
+              "title": "帰ってきた！ドムドム×花やしき2026",
+              "disposition": "added",
+              "event_id": "evt-w44f2-227-domdom",
+              "participability": "通常参加可能",
+              "reason": "公式の現地参加経路を確認。不記載項目は注記"
+            },
+            {
+              "title": "花やしきのブラックフライデー2026",
+              "disposition": "added",
+              "event_id": "evt-w44f2-227-blackfriday",
+              "participability": "通常参加可能",
+              "reason": "公式の現地参加経路を確認。不記載項目は注記"
+            },
+            {
+              "title": "COJI-COJI×浅草花やしき 花やしきヘビューン",
+              "disposition": "added",
+              "event_id": "evt-w44f2-227-coji",
+              "participability": "条件付き参加可能",
+              "reason": "公式の現地参加経路を確認。不記載項目は注記"
+            },
+            {
+              "title": "浅草怪宴夜行",
+              "disposition": "hold",
+              "reason": "夜間没入型ホラーで幼児向けの参加適合性を確認できない"
+            },
+            {
+              "title": "うるわしの宵の月応援キャンペーン",
+              "disposition": "hold",
+              "reason": "割引クーポン・SNS抽選のみで独立した家族向け現地プログラムはない"
+            },
+            {
+              "title": "酉の市 熊手持参入園無料",
+              "disposition": "hold",
+              "reason": "入園割引条件の案内のみ。祭り本体は本施設のイベントとして登録しない"
+            },
+            {
+              "title": "11/29貸切イベント",
+              "disposition": "hold",
+              "reason": "非公開貸切で一般参加経路がない"
+            },
+            {
+              "title": "ハナハナフェスティバル11月",
+              "disposition": "hold",
+              "reason": "公式ステージ本文は10～11月とだけ記し具体開催日を確認できない"
+            },
+            {
+              "title": "ドムドムスペシャルチケット11/8",
+              "disposition": "hold",
+              "reason": "本文は11/8(金)と記載し実暦と不一致。通常ラリーには影響せず、この日時指定券の条件だけHOLD"
+            }
+          ],
+          "notes": "公式本文、トップ新着、ステージ、2026年JSON二種を個別照合。2027配信は404。画像のみの仮面ライダー公式告知も実際に閲覧。過去7月公演・夏やしき等は終了済みで新規対象外。"
+        },
+        {
+          "facility_id": 230,
+          "completed_at": "2026-11-03T03:38:31.971873+00:00",
+          "verified": true,
+          "disposition": "candidate_found_added",
+          "candidates": [
+            {
+              "title": "クワイエットアワー しずかを楽しむ水族園",
+              "event_id": "evt-230-quiet-202609",
+              "disposition": "duplicate",
+              "reason": "今回の公式詳細で再確認"
+            },
+            {
+              "title": "東京文化財ウィーク 解説カードの配布",
+              "event_id": "evt-230-20261025-f15-6ffaf992",
+              "disposition": "duplicate",
+              "reason": "今回の公式詳細で再確認"
+            },
+            {
+              "title": "南アフリカ領マリオン島の海鳥 映像上映",
+              "event_id": "evt-230-20261025-f15-6d7d6425",
+              "disposition": "duplicate",
+              "reason": "今回の公式詳細で再確認"
+            },
+            {
+              "title": "スタッフトーク 水族園の海鳥のおはなし",
+              "event_id": "evt-230-20261025-f15-3bf18537",
+              "disposition": "duplicate",
+              "reason": "今回の公式詳細で再確認"
+            },
+            {
+              "title": "海の学び舎「すし」が教えてくれる生き物と食文化",
+              "event_id": "evt-230-20261025-f15-b6920f78",
+              "disposition": "duplicate",
+              "reason": "今回の公式詳細で再確認"
+            },
+            {
+              "title": "海鳥イベント つどえ オロロ～ン！",
+              "event_id": "evt-w44f2-230-ororon",
+              "disposition": "added",
+              "participability": "条件付き参加可能",
+              "reason": "公式で当日参加経路を確認"
+            },
+            {
+              "title": "ガイドツアー 生き物のふしぎ発見（11月平日）",
+              "event_id": "evt-w44f2-230-guide11",
+              "disposition": "added",
+              "participability": "条件付き参加可能",
+              "reason": "公式で当日参加経路を確認"
+            },
+            {
+              "title": "特設展示イキモノマヂカ",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "情報資料室",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "エサの時間ペンギン午前・午後",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "エサの時間海鳥午前・午後",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "マグロスポット午前・午後",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "イキモノマヂカ解説午前・午後",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "スポットしおだまり",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "エサの時間マグロ",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "スポットウミホタル",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "土日祝の水槽裏側ツアー",
+              "disposition": "hold",
+              "reason": "常設・定例プログラムで日付付き開催期間の開始日が公式に定まらない。今週を任意の開始日としてイベント化しない"
+            },
+            {
+              "title": "ドリームデイ2027/1/6",
+              "disposition": "hold",
+              "reason": "延期日と日中予定のみ告知。特別参加枠の募集開始前で現地参加経路をまだ確認できない。詳細は12月初旬公表予定"
+            }
+          ],
+          "notes": "既存5件全件照合。10/27の公式締切延長を反映。新着・当日カレンダーAPI・中止告知を確認し、オロロンのトーク2回と物産展は同一企画1件に集約。"
+        }
+      ]
     }
   }
 }
