@@ -44,35 +44,41 @@
       ],
       "candidates_found": 3,
       "added": 0,
-      "duplicate_or_already_present": 0,
-      "hold": 3,
+      "duplicate_or_already_present": 3,
+      "hold": 0,
       "stale_false": 0,
       "candidates": [
         {
           "title": "くるみ割り人形 松山",
           "event_id": "evt-ehime-202612-nutcracker",
           "url": "https://www.koransha.com/ballet/tchaikovsky/",
-          "disposition": "hold",
-          "reason": "既存レコードあり。現行公式内容は確認済み。実レンダリング確認待ち。",
-          "source_type": "organizer_event_series"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "organizer_event_series",
+          "existing_event_id": "evt-ehime-202612-nutcracker",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "放送30周年名探偵コナン展 松山",
           "event_id": "evt-ehime-202610-conan30",
           "url": "https://tvconanten-30th.jp/matsuyama_venue.html",
-          "disposition": "hold",
-          "reason": "既存レコードあり。現行公式内容は確認済み。実レンダリング確認待ち。",
-          "source_type": "organizer_event_series"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "organizer_event_series",
+          "existing_event_id": "evt-ehime-202610-conan30",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "木梨憲武展 新居浜",
           "event_id": "evt-w45d2-kinashi",
           "url": "https://www.kinashiten.com/",
-          "disposition": "hold",
-          "reason": "既存レコードあり。現行公式内容は確認済み。実レンダリング確認待ち。",
-          "source_type": "organizer_event_series"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式開催日・会場・内容を照合し、同一イベントの上記IDに包含。このプロセスで最終Cloudflare Previewの全ページを巡回し、当該カードの実表示を確認。",
+          "source_type": "organizer_event_series",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         }
-      ]
+      ],
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
     },
     "shizuoka": {
       "sources_checked": [
@@ -187,7 +193,8 @@
           "reason": "公式全日程で終了または中止済み。静岡の将来開催は掲載なし。過去分追加なし。",
           "source_type": "organizer_event_series"
         }
-      ]
+      ],
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
     }
   }
 }

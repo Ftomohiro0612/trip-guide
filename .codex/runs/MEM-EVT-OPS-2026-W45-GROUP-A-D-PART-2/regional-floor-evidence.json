@@ -627,8 +627,8 @@
       ],
       "candidates_found": 320,
       "added": 18,
-      "duplicate_or_already_present": 0,
-      "hold": 302,
+      "duplicate_or_already_present": 6,
+      "hold": 296,
       "stale_false": 0,
       "candidates": [
         {
@@ -695,25 +695,31 @@
           "title": "特別展「伊予松山城 城郭・御殿・城下町」",
           "url": "https://www.pref.ehime.jp/page/156562.html",
           "event_id": "evt-3076-202609-matsuyamajo",
-          "disposition": "hold",
-          "reason": "公式日付・会場は既存一致。今回の時点で実レンダリング未確認のためduplicate計上しない。",
-          "source_type": "prefecture_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "prefecture_official",
+          "existing_event_id": "evt-3076-202609-matsuyamajo",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "テーマ展「馬 人と暮らしてきた動物」",
           "url": "https://www.pref.ehime.jp/page/156754.html",
           "event_id": "evt-3076-202609-horse",
-          "disposition": "hold",
-          "reason": "公式日付・会場は既存一致。今回の時点で実レンダリング未確認のためduplicate計上しない。",
-          "source_type": "prefecture_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "prefecture_official",
+          "existing_event_id": "evt-3076-202609-horse",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "特別展「WHO ARE WE 観察と発見の生物学 Vol.01 哺乳類」",
           "url": "https://www.pref.ehime.jp/page/154972.html",
           "event_id": "evt-3063-202610-whoarewe",
-          "disposition": "hold",
-          "reason": "公式日付・会場は既存一致。今回の時点で実レンダリング未確認のためduplicate計上しない。",
-          "source_type": "prefecture_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "prefecture_official",
+          "existing_event_id": "evt-3063-202610-whoarewe",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "港湾保安対策総合訓練",
@@ -887,23 +893,29 @@
         {
           "title": "つなぐ駅まちひだまり木工市",
           "event_id": "evt-ehime-202611-hidamari",
-          "disposition": "hold",
-          "reason": "既存データと公式確認一致。実レンダリング確認待ち。",
-          "source_type": "municipal_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "municipal_official",
+          "existing_event_id": "evt-ehime-202611-hidamari",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "坂の上の雲第19回企画展",
           "event_id": "evt-ehime-202602-sakanoue19",
-          "disposition": "hold",
-          "reason": "既存データと公式確認一致。実レンダリング確認待ち。",
-          "source_type": "municipal_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "municipal_official",
+          "existing_event_id": "evt-ehime-202602-sakanoue19",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "ピアノコンサート",
           "event_id": "evt-ehime-202611-machinaka-piano",
-          "disposition": "hold",
-          "reason": "既存データと公式確認一致。実レンダリング確認待ち。",
-          "source_type": "municipal_official"
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式の開催回・会場と既存IDを個別照合。このrunでProduction全ページを実ブラウザ巡回し当該IDを表示確認。",
+          "source_type": "municipal_official",
+          "existing_event_id": "evt-ehime-202611-machinaka-piano",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "木梨憲武展―TOUCH SERENDIPITY―意味ある偶然",
@@ -3312,7 +3324,8 @@
           "reason": "四季の案内は2024年更新の恒例時期のみ。今回の現在未来の確定開催日未確認。",
           "source_type": "festival_fireworks"
         }
-      ]
+      ],
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
     },
     "shizuoka": {
       "sources_checked": [
@@ -4729,8 +4742,8 @@
       ],
       "candidates_found": 145,
       "added": 11,
-      "duplicate_or_already_present": 0,
-      "hold": 134,
+      "duplicate_or_already_present": 50,
+      "hold": 84,
       "stale_false": 0,
       "candidates": [
         {
@@ -4862,10 +4875,11 @@
         {
           "title": "土木の日イベント",
           "url": "https://www.pref.shizuoka.jp/machizukuri/dobokujimusho/shimodadoboku/1066636/1086297.html",
-          "disposition": "hold",
-          "reason": "既存ID evt-shizuoka-20261107-doboku と日時・会場・無料申込不要が一致。実レンダリング確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "existing_event_id": "evt-shizuoka-20261107-doboku",
-          "source_type": "prefecture_official"
+          "source_type": "prefecture_official",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "鳥獣被害対策技術指導者育成研修",
@@ -4910,44 +4924,48 @@
         {
           "title": "第3回アヒルパーティー",
           "url": "https://loco.kufu.jp//shizuoka/events/2858",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://takumishuku.jp/news/duck-party2026_3rd/",
           "existing_event_id": "evt-f11-2042-duck-party",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "第8回 和菓子バル",
           "url": "https://loco.kufu.jp//shizuoka/events/2918",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.shimada.shizuoka.jp/shimahaku/docs/912375075.html",
           "existing_event_id": "evt-w44d2-shizuoka-a91a9260c9",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "【要申込】市制75周年記念事業　気候変動・地球温暖化対策講演会",
           "url": "https://loco.kufu.jp//shizuoka/events/2881",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.yaizu.lg.jp/event/kankyo/info-00636.html",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-shizuoka-20261107-weather"
+          "existing_event_id": "evt-shizuoka-20261107-weather",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "11/7（土）焚き火deひととき（第6回）",
           "url": "https://loco.kufu.jp//shizuoka/events/2955",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.momozawa.fun/wp/news/8647/",
           "existing_event_id": "evt-w44d2-shizuoka-64d31835f6",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "てあとろんデー！vol.17",
           "url": "https://loco.kufu.jp//shizuoka/events/2914",
           "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "reason": "公式の一部プログラムは既存IDにあるが、広い催し全体と同一視しない。他プログラムの今回日程・参加枠を確認できずHOLD。",
           "official_lead": "https://forms.gle/UjgGF9A1BkVZNzXd7",
           "existing_event_id": "evt-shizuoka-w43-theatron-straw",
           "source_type": "tourism_board"
@@ -4981,11 +4999,12 @@
         {
           "title": "FUJI マキヤ感謝フェスタ 2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2919",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.makiya-group.co.jp/event/2026makiya-thanksgiving-festival/",
           "existing_event_id": "evt-w44d2-shizuoka-3af7bcb971",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "THE PORT MARCHE vol.4",
@@ -5022,11 +5041,12 @@
         {
           "title": "グランシップ リサイタル・シリーズ 中川優芽花 ピアノ・リサイタル",
           "url": "https://loco.kufu.jp//shizuoka/events/2936",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.granship.or.jp/visitors/event/detail.php?id=3603",
           "existing_event_id": "evt-d2-shizuoka-9f12b10e",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "三保松原を元気に！松葉かき＆紙漉き体験",
@@ -5071,11 +5091,12 @@
         {
           "title": "国際交流フェスタ はあとふるYaizu2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2907",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.yaizu.lg.jp/event/info-00659.html",
           "existing_event_id": "evt-w44d2-shizuoka-78f790ba4b",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "足流療術師範の美來さんによる出張リラクゼーション「足流療術＋よもぎ蒸し」【202...",
@@ -5088,11 +5109,12 @@
         {
           "title": "こどもたちのための静フィルクリスマスコンサート",
           "url": "https://loco.kufu.jp//shizuoka/events/2937",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.granship.or.jp/visitors/event/detail.php?id=3640",
           "existing_event_id": "evt-d2-shizuoka-078c99d9",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "焚き火×ヨガ×コーヒーで最高なひとときを",
@@ -5137,11 +5159,12 @@
         {
           "title": "きかんしゃトーマスファミリーミュージカル　ソドー島の１ばんはだれだ",
           "url": "https://loco.kufu.jp//shizuoka/events/2865",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.tv-sdt.co.jp/event/?seq=827",
           "existing_event_id": "evt-shizuoka-20261213-thomas",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "富士山花火 vs スピードウェイ2027",
@@ -5154,74 +5177,82 @@
         {
           "title": "企画展 10/100（ヒャクブンノジュウ）",
           "url": "https://loco.kufu.jp//shizuoka/events/2520",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.fujimu100.jp/exhibition/planning/14429/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-41-202610-f15-ten-front"
+          "existing_event_id": "evt-41-202610-f15-ten-front",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "小泉八雲が愛した小さな生きもの",
           "url": "https://loco.kufu.jp//shizuoka/events/2519",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.fujimu100.jp/exhibition/planning/14427/",
           "existing_event_id": "evt-41-202610-f15-yakumo",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "ながはま特設市【2026年秋】",
           "url": "https://loco.kufu.jp//shizuoka/events/2714",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.ataminews.gr.jp/event/202",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-w44d2-shizuoka-63c6b709be"
+          "existing_event_id": "evt-w44d2-shizuoka-63c6b709be",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "匠宿の特別な体験展",
           "url": "https://loco.kufu.jp//shizuoka/events/2725",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://takumishuku.jp/",
           "existing_event_id": "evt-2042-w38-special-exhibition",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "大道芸ワールドカップin静岡2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2903",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://daidogei.com/",
           "existing_event_id": "evt-shizuoka-w43-daidogei",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "三島スカイウォーク×シナモロール 第一弾",
           "url": "https://loco.kufu.jp//shizuoka/events/2769",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://mishima-skywalk.jp/cinnamon/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-186-w38-cinnamon-spots"
+          "existing_event_id": "evt-186-w38-cinnamon-spots",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "富士山からよみとく、〈日本〉のかたち",
           "url": "https://loco.kufu.jp//shizuoka/events/2675",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://mtfuji-whc.jp/",
           "existing_event_id": "evt-shizuoka-w43-fuji-japan",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "どりふ商店",
           "url": "https://loco.kufu.jp//shizuoka/events/2878",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://shizuoka.parco.jp/pnews/detail/?id=37417",
           "existing_event_id": "evt-w44d2-shizuoka-030ed8648c",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "Axanthic UROKO × 駿府の工房 匠宿　爬虫類ふれあい【2026年1...",
@@ -5235,7 +5266,7 @@
           "title": "RIDE TO KADODE -MUSUBI 2026-",
           "url": "https://loco.kufu.jp//shizuoka/events/2904",
           "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "reason": "公式の一部プログラムは既存IDにあるが、広い催し全体と同一視しない。他プログラムの今回日程・参加枠を確認できずHOLD。",
           "official_lead": "https://kadode-ooigawa.jp/topics/8330/",
           "source_type": "tourism_board",
           "existing_event_id": "evt-f11-6882-synchro"
@@ -5243,20 +5274,22 @@
         {
           "title": "SCM2026静岡キャラクターモデラーズ展示会",
           "url": "https://loco.kufu.jp//shizuoka/events/2941",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.hobbysquare.jp/archives/7697",
           "existing_event_id": "evt-42-202610-f15-scm",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "アークラ大サーカス 2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2960",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.xn--cckslyv9zped9563g.com/",
           "existing_event_id": "evt-d2-shizuoka-c7f673d6",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "クロススポーツパーク in ららぽーと沼津",
@@ -5289,29 +5322,32 @@
         {
           "title": "清水港マグロまつり 2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2922",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://maguro-haku.com/",
           "existing_event_id": "evt-w44d2-shizuoka-c3853fede0",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "お客さんが欲しがるものを作ったら売れた！展",
           "url": "https://loco.kufu.jp//shizuoka/events/2849",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.c-c-c.or.jp/schedule/uretaten2026",
           "existing_event_id": "evt-w44d2-shizuoka-c044280e77",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "HARAIZUMI ART DAYS！2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2886",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://haraizumiart.com/artdays/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-w44d2-shizuoka-d7daa79a24"
+          "existing_event_id": "evt-w44d2-shizuoka-d7daa79a24",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "魚フェス（ととフェス）",
@@ -5340,38 +5376,42 @@
         {
           "title": "富士山レトロマーケット",
           "url": "https://loco.kufu.jp//shizuoka/events/2946",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://forms.gle/6gE2BBVWnP722YDY8",
           "existing_event_id": "evt-w44d2-shizuoka-c9625270d4",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "熱海海上花火大会 【2026年秋季】",
           "url": "https://loco.kufu.jp//shizuoka/events/2584",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.ataminews.gr.jp/event/8/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-shizuoka-atami-autumn-20261025"
+          "existing_event_id": "evt-shizuoka-atami-autumn-20261025",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "第13回おもしろサボテン品評会",
           "url": "https://loco.kufu.jp//shizuoka/events/2884",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://shaboten.co.jp/press/7561/",
           "existing_event_id": "evt-14-202610-f10-01",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "猫愛に包まれる―秋野不矩から現代作家による猫たち―",
           "url": "https://loco.kufu.jp//shizuoka/events/2827",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.akinofuku-museum.jp/exhibition/%e7%8c%ab%e6%84%9b%e3%81%ab%e5%8c%85%e3%81%be%e3%82%8c%e3%82%8b%e2%80%95%e7%a7%8b%e9%87%8e%e4%b8%8d%e7%9f%a9%e3%81%8b%e3%82%89%e7%8f%be%e4%bb%a3%e4%bd%9c%e5%ae%b6%e3%81%ab%e3%82%88%e3%82%8b%e7%8c%ab/",
           "existing_event_id": "evt-shizuoka-akino-cats-20261010",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "ART³ CAMP in atago 2026",
@@ -5392,20 +5432,22 @@
         {
           "title": "修善寺 虹の郷　打ち上げ花火",
           "url": "https://loco.kufu.jp//shizuoka/events/2872",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://nijinosato-illumination.com/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-47-w44-illumi"
+          "existing_event_id": "evt-47-w44-illumi",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "収蔵品展「とろり志戸呂焼～土と色が織りなす物語～」",
           "url": "https://loco.kufu.jp//shizuoka/events/2828",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://logoform.jp/form/imZT/1693695",
           "existing_event_id": "evt-shizuoka-shidoro-20261010",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "郷土博物館体験学習のご案内",
@@ -5418,11 +5460,12 @@
         {
           "title": "文学館特別展「藤枝の日本画家 松本高明展 VOL.2」",
           "url": "https://loco.kufu.jp//shizuoka/events/2896",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.fujieda.shizuoka.jp/kyodomuse/1/802/26171.html",
           "existing_event_id": "evt-shizuoka-matsumoto-20261017",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "細野高原 秋のすすき観賞会 2026",
@@ -5443,83 +5486,92 @@
         {
           "title": "イシグロフィッシングフェスタ in 浜名湖",
           "url": "https://loco.kufu.jp//shizuoka/events/2854",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.ishiguro-gr.com/iff2026/",
           "existing_event_id": "evt-w44d2-shizuoka-ccae505d18",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "ダイナソーアドベンチャーツアー 富士山こどもの国",
           "url": "https://loco.kufu.jp//shizuoka/events/2568",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.kodomo.or.jp/news/20260629_3644.php",
           "existing_event_id": "evt-22-w38-dinosaur",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "富士市デジタルスタンプラリー",
           "url": "https://loco.kufu.jp//shizuoka/events/2873",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.fuji.shizuoka.jp/1005330000/event/p008282.html",
           "existing_event_id": "evt-w44d2-shizuoka-3da6590b17",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "XR GATE at 松坂屋静岡店",
           "url": "https://loco.kufu.jp//shizuoka/events/2845",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.matsuzakaya.co.jp/shizuoka/topics/2610_xr_gate_shizuoka.html",
           "existing_event_id": "evt-d2-shizuoka-d5dc729e",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "収蔵品展「海野光弘 描いた手、描かれた手」",
           "url": "https://loco.kufu.jp//shizuoka/events/2800",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.city.shimada.shizuoka.jp/shimahaku/docs/908781528.html",
           "existing_event_id": "evt-shizuoka-unno-hands-20260905",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "第18回 紙のアートフェスティバル2026 大谷理佳子展",
           "url": "https://loco.kufu.jp//shizuoka/events/2829",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://fuji-paperart.jp/exhibition.html",
           "existing_event_id": "evt-shizuoka-paper-otani-20261006",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "第40回 熱海梅園もみじまつり",
           "url": "https://loco.kufu.jp//shizuoka/events/2895",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.ataminews.gr.jp/event/148/",
           "existing_event_id": "evt-w44d2-shizuoka-101b4343a3",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "SPAC秋のシーズン2026-2027 #2『ニホンジン』",
           "url": "https://loco.kufu.jp//shizuoka/events/2939",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://spac.or.jp/26_autumn/nihonjin2026",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-shizuoka-20261128-nihonjin"
+          "existing_event_id": "evt-shizuoka-20261128-nihonjin",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "エコパココフリーマーケット",
           "url": "https://loco.kufu.jp//shizuoka/events/2761",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.ecopa.jp/event2/fleamarket",
           "existing_event_id": "evt-2061-w38-flea",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "シュトレンマルシェ",
@@ -5548,11 +5600,12 @@
         {
           "title": "開館45周年記念展　街角に息づく芹沢デザイン",
           "url": "https://loco.kufu.jp//shizuoka/events/2844",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.seribi.jp/exhibition.html",
           "existing_event_id": "evt-shizuoka-w43-serizawa",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "ちいかわレストラン “討伐フェア” ドリンクスタンド／ちいかわレストラン グッズ...",
@@ -5565,11 +5618,12 @@
         {
           "title": "修善寺 虹の郷　もみじライトアップ",
           "url": "https://loco.kufu.jp//shizuoka/events/2871",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://nijinosato-illumination.com/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-47-w44-illumi"
+          "existing_event_id": "evt-47-w44-illumi",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "GO OUT CAMP 冬 2026 / GO OUT JIMNY CAMP 2...",
@@ -5592,29 +5646,32 @@
         {
           "title": "佐野美術館創立60周年・三島市制85周年 記念　 隙あらば猫　町田尚子絵本原画展",
           "url": "https://loco.kufu.jp//shizuoka/events/2826",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://sanobi.or.jp/exhibition/machida-naoko_2026/",
           "existing_event_id": "evt-shizuoka-machida-cats-20261024",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "公募展2026入選者展覧会 佐貫絢郁個展「物たち、絵たち」",
           "url": "https://loco.kufu.jp//shizuoka/events/2925",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.c-c-c.or.jp/schedule/sanuki",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-w44d2-shizuoka-c134c46af9"
+          "existing_event_id": "evt-w44d2-shizuoka-c134c46af9",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "公募展2026入選者展覧会 渡辺忠典個展「RE-SHAPING TOOLS」",
           "url": "https://loco.kufu.jp//shizuoka/events/2923",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://www.c-c-c.or.jp/schedule/watanabe",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-w44d2-shizuoka-c37f3a1ddd"
+          "existing_event_id": "evt-w44d2-shizuoka-c37f3a1ddd",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "いわたおんぱく 2026",
@@ -5653,11 +5710,12 @@
         {
           "title": "「こびとさがし＆ごしゅいんめぐり」in浜名湖パルパル",
           "url": "https://loco.kufu.jp//shizuoka/events/2900",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://pal2.co.jp/events/kobitos",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-2-202610-f10-01"
+          "existing_event_id": "evt-2-202610-f10-01",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "伊東温泉 竹あかり",
@@ -5694,11 +5752,12 @@
         {
           "title": "まるっと定置網展",
           "url": "https://loco.kufu.jp//shizuoka/events/2530",
-          "disposition": "hold",
-          "reason": "既存候補あり。二次資料から一次と実描画の照合待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://shimoda-aquarium.com",
           "existing_event_id": "evt-17-w38-fixed-net",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "伊東温泉　温州みかん狩り",
@@ -5727,11 +5786,12 @@
         {
           "title": "熱海海上花火大会 【2026年冬季】",
           "url": "https://loco.kufu.jp//shizuoka/events/2585",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "冬季2026年12月6日・12月25日の熱海海上花火大会として公式日程・会場と既存冬季IDを照合。秋季10月25日シリーズとは別。全ページ巡回で既存冬季カードの実表示を確認。",
           "official_lead": "https://www.ataminews.gr.jp/event/8/",
           "source_type": "tourism_board",
-          "existing_event_id": "evt-shizuoka-atami-autumn-20261025"
+          "existing_event_id": "evt-shizuoka-atami-winter-20261206",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "MANTEN 1059 ILLUMINATION",
@@ -5814,11 +5874,12 @@
         {
           "title": "虹の郷イルミtheナイト2026",
           "url": "https://loco.kufu.jp//shizuoka/events/2870",
-          "disposition": "hold",
-          "reason": "公式リンクと既存レコードの照合済み。実描画確認待ち。",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
           "official_lead": "https://nijinosato-illumination.com/",
           "existing_event_id": "evt-47-w44-illumi",
-          "source_type": "tourism_board"
+          "source_type": "tourism_board",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "2028-11-02 CHECK 【11月2日更新】令和８年度 静岡インバウンドガイド研修(基礎研修) 研修生 再募集について",
@@ -5879,18 +5940,20 @@
         {
           "title": "熱海海上花火大会2026秋季",
           "url": "https://www.ataminews.gr.jp/event/8/",
-          "disposition": "hold",
+          "disposition": "duplicate_or_already_present",
           "existing_event_id": "evt-shizuoka-atami-autumn-20261025",
-          "reason": "11/8・11/23の開催と既存シリーズの一次照合済み。描画確認待ち。",
-          "source_type": "festival_fireworks"
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
+          "source_type": "festival_fireworks",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "熱海海上花火大会2026冬季・2027年2月",
           "url": "https://www.ataminews.gr.jp/event/8/",
-          "disposition": "hold",
+          "disposition": "duplicate_or_already_present",
           "existing_event_id": "evt-shizuoka-atami-winter-20261206",
-          "reason": "12/6・12/25・2/21と既存シリーズの一次照合済み。描画確認待ち。",
-          "source_type": "festival_fireworks"
+          "reason": "同じ会場・開催回・公式発表を既存IDへ照合。2026-11-03このプロセスの実ブラウザでProduction全ページを巡回し、そのIDのカードを実表示確認。",
+          "source_type": "festival_fireworks",
+          "rendered_verification": "all-page Cloudflare Preview 2026-11-03"
         },
         {
           "title": "熱海海上花火大会2027年度",
@@ -5930,7 +5993,8 @@
           "source_type": "festival_fireworks"
         }
       ],
-      "calendar_archive_filter": "event.js 192件中、2026-11-03以降の開催日を持つ20件を評価。過去のみの172件は追加対象外。"
+      "calendar_archive_filter": "event.js 192件中、2026-11-03以降の開催日を持つ20件を評価。過去のみの172件は追加対象外。",
+      "rendered_duplicate_check": "Final Cloudflare Preview all pages 2026-11-03; only actual visible IDs counted as duplicates."
     }
   }
 }
