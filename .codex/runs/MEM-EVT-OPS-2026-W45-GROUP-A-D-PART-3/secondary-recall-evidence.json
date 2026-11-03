@@ -806,9 +806,9 @@
       ],
       "candidates_found": 120,
       "added": 15,
-      "duplicate_or_already_present": 34,
+      "duplicate_or_already_present": 32,
       "hold": 71,
-      "stale_false": 0,
+      "stale_false": 2,
       "candidates": [
         {
           "title": "プラントピア　秋の満喫まつり",
@@ -851,7 +851,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-yorumoade",
           "reason": "表記違いの同一ライトアップ。会場・期間が同じ。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "花の展示温室 ハロウィンガーデン",
@@ -900,7 +901,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-7889",
           "reason": "県・主催公式または同run公式確認済の同会場・同企画・同期間。merged render最終確認対象。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "写真展「秀吉と越前の武将たち」",
@@ -942,7 +944,7 @@
           "listing_page": "https://www.walkerplus.com/event_list/ar0518/2.html",
           "disposition": "added",
           "event_id": "evt-fukui-recall-w45-616804",
-          "classification": "施設開催イベント",
+          "classification": "花火／祭り・季節行事",
           "participability": "通常参加可能",
           "source_type": "area_event_calendar"
         },
@@ -953,7 +955,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-yorumoade",
           "reason": "表記違いの同一ライトアップ。会場・期間が同じ。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "親子で楽しむクラフト作り「ミッドナイトハロウィン」",
@@ -988,7 +991,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-8433",
           "reason": "県・主催公式または同run公式確認済の同会場・同企画・同期間。merged render最終確認対象。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "恐竜化石発見30周年記念企画展「九頭竜の恐竜たち」",
@@ -1030,7 +1034,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-5740",
           "reason": "県・主催公式または同run公式確認済の同会場・同企画・同期間。merged render最終確認対象。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "【紅葉・見ごろ】越前町立福井総合植物園　プラントピア",
@@ -1044,10 +1049,12 @@
           "title": "特別展「竜脚類～大地を揺るがした地上最大の生き物～」",
           "url": "https://www.walkerplus.com/event/ar0518e605829/",
           "listing_page": "https://www.walkerplus.com/event_list/ar0518/3.html",
-          "disposition": "duplicate_or_already_present",
+          "disposition": "stale_false",
           "event_id": "evt-fukui-sauropod-20260710",
-          "reason": "県・主催公式または同run公式確認済の同会場・同企画・同期間。merged render最終確認対象。",
-          "source_type": "area_event_calendar"
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-fukui-sauropod-20260710"
         },
         {
           "title": "嚮陽渓命名170年記念展「与衆同楽－ともに作り、ともに楽しむ西山公園－」",
@@ -1113,7 +1120,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-5236",
           "reason": "県・主催公式または同run公式確認済の同会場・同企画・同期間。merged render最終確認対象。",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "【花・見ごろ】越前町立福井総合植物園　プラントピア　サザンカ",
@@ -1227,7 +1235,8 @@
           "previous_disposition": "hold",
           "previous_hold_reason": "美術館公式で会期は確認したが、今回取得した一覧は対象展示本文を省略しており現行展示の完全な会場・入場条件確認を未完了。",
           "event_id": "evt-fukui-family-w45-611653",
-          "related_event_ids": []
+          "related_event_ids": [],
+          "classification": "施設開催イベント"
         },
         {
           "title": "花の展示温室 　クリスマスガーデン",
@@ -1262,7 +1271,7 @@
           "disposition": "added",
           "event_id": "evt-fukui-recall-w45-620589",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "source_type": "area_event_calendar"
         },
         {
@@ -1287,7 +1296,7 @@
           "listing_page": "https://www.walkerplus.com/event_list/ar0518/6.html",
           "disposition": "added",
           "event_id": "evt-fukui-recall-w45-621870",
-          "classification": "施設開催イベント",
+          "classification": "自治体・地域イベント",
           "participability": "通常参加可能",
           "source_type": "area_event_calendar"
         },
@@ -1298,7 +1307,7 @@
           "disposition": "added",
           "event_id": "evt-fukui-recall-w45-602677",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "source_type": "area_event_calendar"
         },
         {
@@ -1341,7 +1350,7 @@
           "disposition": "added",
           "event_id": "evt-fukui-recall-w45-622454",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "source_type": "area_event_calendar"
         },
         {
@@ -1446,9 +1455,12 @@
           "title": "竜脚類～大地を揺るがした地上最大の生き物～",
           "url": "https://iko-yo.net/event_lites/detail/25302",
           "listing_page": "https://iko-yo.net/events?prefecture_ids%5B%5D=18",
-          "disposition": "duplicate_or_already_present",
+          "disposition": "stale_false",
           "event_id": "evt-fukui-sauropod-20260710",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-fukui-sauropod-20260710",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。"
         },
         {
           "title": "第75回2026たけふ菊人形",
@@ -1484,7 +1496,7 @@
           "listing_page": "https://iko-yo.net/events?prefecture_ids%5B%5D=18",
           "disposition": "added",
           "event_id": "evt-fukui-family-w45-605126",
-          "classification": "施設開催イベント",
+          "classification": "花火／祭り・季節行事",
           "participability": "通常参加可能",
           "source_type": "family_event_portal"
         },
@@ -1503,7 +1515,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-486317",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "施設開催イベント"
         },
         {
           "title": "蘇洞門めぐり遊覧船",
@@ -1528,7 +1541,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-yorumoade",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "施設開催イベント"
         },
         {
           "title": "つなぐサバイチ！鯖街道デジタルスタンプラリー2026",
@@ -1536,7 +1550,7 @@
           "listing_page": "https://iko-yo.net/events?page=2&prefecture_ids%5B%5D=18",
           "disposition": "added",
           "event_id": "evt-fukui-family-w45-597010",
-          "classification": "施設開催イベント",
+          "classification": "自治体・地域イベント",
           "participability": "通常参加可能",
           "source_type": "family_event_portal"
         },
@@ -1667,7 +1681,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-620589",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "施設開催イベント"
         },
         {
           "title": "はじめてのクリティカルシンキング　 AIのある世界を生き抜く思考力",
@@ -1684,7 +1699,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-618366",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "施設開催イベント"
         },
         {
           "title": "いけだ食の文化祭2026",
@@ -1693,7 +1709,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-8433",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "季節の調理体験",
@@ -1718,7 +1735,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-w45d3-5236",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "あわら灯源郷",
@@ -1735,7 +1753,8 @@
           "disposition": "duplicate_or_already_present",
           "event_id": "evt-fukui-recall-w45-621870",
           "reason": "会場・日程・企画を照合した既存または今回追加済レコード。merged render確認対象。",
-          "source_type": "family_event_portal"
+          "source_type": "family_event_portal",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "北府駅発　架空鉄道　星空列車",
@@ -1769,7 +1788,8 @@
           "previous_disposition": "hold",
           "previous_hold_reason": "公式日程あり。公式のカレンダー開始9時と個別回10時/14時の対応・現行受付確認を確定できず。",
           "event_id": "evt-fukui-w45d3-kokedama",
-          "related_event_ids": []
+          "related_event_ids": [],
+          "classification": "施設開催イベント"
         },
         {
           "title": "茶盆点全6回",
@@ -10206,13 +10226,48 @@
           "checked_at": "2026-11-03T15:46:32.611352+00:00",
           "source_type": "family_event_portal",
           "title": "official dinosaur race schedule PDF"
+        },
+        {
+          "url": "https://www.enjoytokyo.jp/event/list/pref14/26/",
+          "status": 200,
+          "checked_at": "2026-11-03T16:05:18.144725+00:00",
+          "source_type": "area_event_calendar",
+          "title": "神奈川のイベント：26ページ目"
+        },
+        {
+          "url": "https://www.enjoytokyo.jp/event/list/pref14/27/",
+          "status": 200,
+          "checked_at": "2026-11-03T16:05:18.145206+00:00",
+          "source_type": "area_event_calendar",
+          "title": "神奈川のイベント：27ページ目"
+        },
+        {
+          "url": "https://www.enjoytokyo.jp/event/list/pref14/28/",
+          "status": 200,
+          "checked_at": "2026-11-03T16:05:18.145552+00:00",
+          "source_type": "area_event_calendar",
+          "title": "神奈川のイベント：28ページ目"
+        },
+        {
+          "url": "https://www.enjoytokyo.jp/event/list/pref14/29/",
+          "status": 200,
+          "checked_at": "2026-11-03T16:05:18.145862+00:00",
+          "source_type": "area_event_calendar",
+          "title": "神奈川のイベント：29ページ目"
+        },
+        {
+          "url": "https://www.enjoytokyo.jp/event/list/pref14/30/",
+          "status": 200,
+          "checked_at": "2026-11-03T16:05:18.146225+00:00",
+          "source_type": "area_event_calendar",
+          "title": "神奈川のイベント：30ページ目"
         }
       ],
       "candidates_found": 662,
       "added": 83,
-      "duplicate_or_already_present": 146,
-      "hold": 388,
-      "stale_false": 45,
+      "duplicate_or_already_present": 135,
+      "hold": 389,
+      "stale_false": 55,
       "candidates": [
         {
           "title": "第10回 つくい湖湖上祭 絆が描く未来への光〜10年の軌跡、その先へ〜",
@@ -10504,10 +10559,12 @@
           "official_urls_checked": [
             "https://www.furusatofair.com/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-1005-w38-furusato",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-1005-w38-furusato"
         },
         {
           "title": "印象派モネと浮世絵［モネを魅了した、日本の美］",
@@ -10537,10 +10594,12 @@
           "official_urls_checked": [
             "https://enoshima-seacandle.com/event/shonan-candle/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-w44d3-shonan-candle",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-w44d3-shonan-candle"
         },
         {
           "title": "ワンダリアハロウィン2026",
@@ -10564,7 +10623,8 @@
           "source_type": "area_event_calendar",
           "previous_disposition": "hold",
           "previous_hold_reason": "公式リンクは取得したが、HTTP失敗または日付・会場を読める本文がない。取得状態: 200/0文字",
-          "event_id": "evt-kanagawa-w45d3-family-eric-carle"
+          "event_id": "evt-kanagawa-w45d3-family-eric-carle",
+          "classification": "施設開催イベント"
         },
         {
           "title": "VIE presents ZEN NIGHT KAMAKURA",
@@ -10613,7 +10673,7 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-10",
           "classification": "花火／祭り・季節行事",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/1327324/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
           "source_type": "area_event_calendar"
@@ -10680,7 +10740,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
           "event_id": "evt-kanagawa-w45d3-kougei-expo",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "小田原フラワーガーデン「秋のローズフェスタ」",
@@ -10740,7 +10801,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
           "event_id": "evt-kanagawa-w45d3-ebina-lights",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "第77回 肉肉パーク 藤沢市 神台公園",
@@ -10838,7 +10900,8 @@
           "source_type": "area_event_calendar",
           "previous_disposition": "hold",
           "previous_hold_reason": "公式リンクは取得したが、HTTP失敗または日付・会場を読める本文がない。取得状態: 200/36文字",
-          "event_id": "evt-kanagawa-w45d3-family-nobinobi"
+          "event_id": "evt-kanagawa-w45d3-family-nobinobi",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "お月見アフタヌーンティー　with 祇園辻利",
@@ -10918,10 +10981,12 @@
           "official_urls_checked": [
             "http://www.hakoneyumoto.com/event/121"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-w44d3-hakone-daimyo",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-w44d3-hakone-daimyo"
         },
         {
           "title": "箱根ガラスの森美術館 秋のイベント",
@@ -11002,7 +11067,8 @@
           "source_type": "area_event_calendar",
           "previous_disposition": "hold",
           "previous_hold_reason": "公式リンクは取得したが、HTTP失敗または日付・会場を読める本文がない。取得状態: 200/0文字",
-          "event_id": "evt-kanagawa-w45d3-family-muchu-kobito"
+          "event_id": "evt-kanagawa-w45d3-family-muchu-kobito",
+          "classification": "施設開催イベント"
         },
         {
           "title": "市制施行55周年えびな市民まつり2026",
@@ -11245,7 +11311,7 @@
           "url": "https://www.city.yokohama.lg.jp/naka/shokai/helloyokohama/2026.html",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-71",
-          "classification": "自治体・地域イベント",
+          "classification": "花火／祭り・季節行事",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/1096526/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -11389,8 +11455,8 @@
           "url": "https://www.hama-midorinokyokai.or.jp/park/mitsuzawa/details/yokohama-2026-1.php",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-85",
-          "classification": "自治体・地域イベント",
-          "participability": "条件付き参加可能",
+          "classification": "施設開催イベント",
+          "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2088511/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
           "source_type": "area_event_calendar"
@@ -11430,7 +11496,7 @@
           "url": "https://iz8a1.hp.peraichi.com",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-89",
-          "classification": "自治体・地域イベント",
+          "classification": "施設開催イベント",
           "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2088536/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -11529,7 +11595,8 @@
           "source_type": "area_event_calendar",
           "previous_disposition": "hold",
           "previous_hold_reason": "公式リンクは取得したが、HTTP失敗または日付・会場を読める本文がない。取得状態: 200/25文字",
-          "event_id": "evt-kanagawa-w45d3-family-uchu"
+          "event_id": "evt-kanagawa-w45d3-family-uchu",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "小田原・箱根 クラフトビールフェス 2026",
@@ -11570,7 +11637,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
           "event_id": "evt-kanagawa-w45d3-atsugi-daidogei",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "声優朗読劇　フォアレーゼン ～太陽が、痛いほどいっぱい～",
@@ -11700,7 +11768,7 @@
           "url": "https://www.city.odawara.kanagawa.jp/kanko/event/NOV/kikkaten-c.html",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-115",
-          "classification": "花火／祭り・季節行事",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2089556/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -11722,10 +11790,12 @@
           "official_urls_checked": [
             "https://zounohana.com/events/post-13224/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-w44d3-recall-82",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-w44d3-recall-82"
         },
         {
           "title": "箱根小涌園×『俺たちの箱根駅伝』",
@@ -11784,7 +11854,7 @@
           "url": "https://www.customs.go.jp/yokohama/choushakoukai20261128.html",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-123",
-          "classification": "自治体・地域イベント",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2089476/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -11851,10 +11921,12 @@
           "official_urls_checked": [
             "https://www.nihonminkaen.jp/event/minkaen-festival"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-794-w40f4-festival",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-794-w40f4-festival"
         },
         {
           "title": "緊急指令！ウルトラマルチバース 地球防衛大作戦 in 横浜赤レンガ倉庫",
@@ -12265,7 +12337,7 @@
           "url": "https://naitouen.com/mikan/",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-170",
-          "classification": "花火／祭り・季節行事",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2087492/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -12330,7 +12402,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
           "event_id": "evt-kanagawa-w45d3-recall-238",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "実りのかたち -Autumn Art Selection-",
@@ -12554,7 +12627,7 @@
           "url": "https://kids-fm.jp/event/521/",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-198",
-          "classification": "施設開催イベント",
+          "classification": "自治体・地域イベント",
           "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2087200/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -12586,10 +12659,12 @@
           "official_urls_checked": [
             "https://artazamino.jp/event/contemporary17"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-w44d3-recall-87",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-w44d3-recall-87"
         },
         {
           "title": "大磯町郷土資料館企画展「政界の奥座敷・大磯～大磯に集った政治家たち～」",
@@ -12692,7 +12767,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式同一会場の年付き日程表を確認。追加したシリーズ内の該当月・開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-187",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "みぞのくちワイン会　肉とワインの会",
@@ -12709,7 +12785,7 @@
           "url": "https://minatonoart.jp/",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-213",
-          "classification": "自治体・地域イベント",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2043409/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -13032,7 +13108,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式同一会場の年付き日程表を確認。追加したシリーズ内の該当月・開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-393",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "青木さやかさんと語る「母と私、そのあいだ」",
@@ -13120,10 +13197,12 @@
           "official_urls_checked": [
             "https://enoshima-seacandle.com/event/shonan-candle/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-w44d3-shonan-candle",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-w44d3-shonan-candle"
         },
         {
           "title": "〈共催〉お囃子プロジェクトinかなっくホール 新春ライブ2027",
@@ -13328,7 +13407,7 @@
           "url": "https://www.kawasaki-hp.org/dance-medicalseminar/",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-273",
-          "classification": "自治体・地域イベント",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2089513/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -13405,7 +13484,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同一公演名・日時・会場、公式の同一抽選参加経路を確認。",
           "event_id": "evt-kanagawa-w45d3-recall-240",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "全国小児がんチャリティコンサート in 横浜",
@@ -13453,7 +13533,7 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-285",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2089398/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
           "source_type": "area_event_calendar"
@@ -13529,7 +13609,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式同一会場の年付き日程表を確認。追加したシリーズ内の該当月・開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-136",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "「第44回 横浜市招待国際ピアノ演奏会」プレイベント 出演者によるミニ・コンサート",
@@ -13689,10 +13770,12 @@
           "official_urls_checked": [
             "https://xn--i8s3qt0huor17hbct8ub4z7cxwk.jp/archives/15259"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-d3-recall-182-2026",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-d3-recall-182-2026"
         },
         {
           "title": "AUN J クラシック・オーケストラによる 日本の伝統楽器を楽しむファミリーコンサート",
@@ -13700,10 +13783,12 @@
           "official_urls_checked": [
             "https://www.kannaihall.jp/detals/002852.php"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-d3-recall-150-2026",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-d3-recall-150-2026"
         },
         {
           "title": "クリスマス限定 グラスアート「ステンドグラス風クリスマスランプ」",
@@ -14275,10 +14360,12 @@
           "official_urls_checked": [
             "https://salonconcert.com/concert-event/261103asahi/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "同一企画名・公式URLまたは会場・開催回を既存IDと照合。最終の可視カード検証対象。",
+          "disposition": "stale_false",
+          "reason": "初回照合では既存開催回を確認したが、完了検証日の2026-11-04時点で公式開催期間が終了。現在の公開対象として重複数には計上しない。",
           "event_id": "evt-kanagawa-d3-recall-175-2026",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present",
+          "previous_event_id": "evt-kanagawa-d3-recall-175-2026"
         },
         {
           "title": "ワイン飲みつつ常備菜作る会",
@@ -14767,10 +14854,11 @@
           "official_urls_checked": [
             "https://www.taromuseum.jp/"
           ],
-          "disposition": "duplicate_or_already_present",
-          "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
+          "disposition": "hold",
+          "reason": "既存IDは存在するが、完了検証時の公開条件（状態／30日鮮度）を満たさない。表示済みの重複としては扱わず、公式再確認を要する候補として保留。",
           "event_id": "evt-kanagawa-w38-verification-taro-toddler",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "previous_disposition": "duplicate_or_already_present"
         },
         {
           "title": "第1回UPRUN二子玉川多摩川マラソン",
@@ -14899,7 +14987,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式の同じ秋冬予約フォームにある同一会場・同一シリーズの該当日。",
           "event_id": "evt-kanagawa-w45d3-recall-378",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "クリスマス/アヴェ・マリア エリザベート弦楽アンサンブル（茅ヶ崎）",
@@ -15150,7 +15239,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式同一会場の年付き日程表を確認。追加したシリーズ内の該当月・開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-432",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "自治体・地域イベント"
         },
         {
           "title": "お話と音楽でたのしむ 「くるみわり人形」 ミニクリスマスコンサート",
@@ -15516,7 +15606,7 @@
           "url": "https://hikawamaru.nyk.com/event/captain_tour_202611.html",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-488",
-          "classification": "施設開催イベント",
+          "classification": "自治体・地域イベント",
           "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2088401/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -15638,7 +15728,7 @@
           "url": "https://www.pref.kanagawa.jp/docs/yi4/dentougeinou/saijiki26.html",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-500",
-          "classification": "自治体・地域イベント",
+          "classification": "施設開催イベント",
           "participability": "通常参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2087348/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
@@ -15736,7 +15826,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同じ公式日程表・同じ会場の連続開催。追加したシリーズの該当開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-246",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "たかつワインスクール　スーパープレミアムワイン編",
@@ -15818,7 +15909,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同じ公式日程表・同じ会場の連続開催。追加したシリーズの該当開催日に含まれる。",
           "event_id": "evt-kanagawa-w45d3-recall-246",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "名曲サロンシリーズ Vol.47 大澤　理菜子  ヴァイオリンコンサート",
@@ -15937,7 +16029,7 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-529",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2090280/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
           "source_type": "area_event_calendar"
@@ -15948,7 +16040,7 @@
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-recall-530",
           "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "participability": "条件付き参加可能",
           "secondary_url": "https://www.enjoytokyo.jp/event/2090243/",
           "reason": "本実行で取得した公式一次本文に基づく開催日・会場・内容・参加経路の確認。",
           "source_type": "area_event_calendar"
@@ -16096,7 +16188,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式の同じ秋冬予約フォームにある同一会場・同一シリーズの該当日。",
           "event_id": "evt-kanagawa-w45d3-recall-378",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "サイレントシネマ＆活弁ワールド 片岡千恵蔵主演「放浪三昧」、キートン主演「キートン将軍」",
@@ -16128,7 +16221,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "公式の同じ秋冬予約フォームにある同一会場・同一シリーズの該当日。",
           "event_id": "evt-kanagawa-w45d3-recall-378",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "施設開催イベント"
         },
         {
           "title": "お花屋さんの素材でつくるラージコスモス",
@@ -16202,7 +16296,8 @@
           "disposition": "duplicate_or_already_present",
           "reason": "企画名・開催回・会場を既存IDと照合。最終の実表示検証対象。",
           "event_id": "evt-kanagawa-w45d3-recall-71",
-          "source_type": "area_event_calendar"
+          "source_type": "area_event_calendar",
+          "classification": "花火／祭り・季節行事"
         },
         {
           "title": "大山紅葉ライトアップ",
@@ -16472,7 +16567,7 @@
           "disposition": "duplicate_or_already_present",
           "reason": "同一開催回・会場・公式URLを既存IDと照合。最終の可視カード検証対象。",
           "event_id": "evt-kanagawa-w45d3-recall-28",
-          "classification": "施設開催イベント",
+          "classification": "花火／祭り・季節行事",
           "source_type": "family_event_portal"
         },
         {
@@ -16593,7 +16688,7 @@
           "url": "https://nobinobi-fes.com/",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-family-nobinobi",
-          "classification": "花火／祭り・季節行事",
+          "classification": "自治体・地域イベント",
           "participability": "条件付き参加可能",
           "reason": "2026-11-04に取得した公式一次本文・ブラウザー表示・公式画像の会期、会場、参加経路に基づく。",
           "secondary_url": "https://kids.rurubu.jp/article/152079/2/",
@@ -16659,8 +16754,8 @@
           "url": "https://www.odakyu-sc.com/so-ss/eventcampaign/detail/167",
           "disposition": "added",
           "event_id": "evt-kanagawa-w45d3-family-stesc",
-          "classification": "施設開催イベント",
-          "participability": "通常参加可能",
+          "classification": "花火／祭り・季節行事",
+          "participability": "条件付き参加可能",
           "reason": "2026-11-04に取得した公式一次本文・ブラウザー表示・公式画像の会期、会場、参加経路に基づく。",
           "secondary_url": "https://kids.rurubu.jp/article/152079/2/",
           "source_type": "family_event_portal"
@@ -16937,7 +17032,21 @@
       ],
       "pages_fetched": 51,
       "paging_stop_reason": "listing_exhausted",
-      "paging_note": "花火Walker4ページ、EnjoyTokyo本体38ページで565件を全照合。12月補助検索1ページ、るるぶKids全3ページ、キッズイベントの現行ホームと地域該当3記事、公式12月カレンダーを実取得。特集は3ページで終了、以降のページリンクなし。"
+      "paging_note": "花火Walker4ページ、EnjoyTokyo本体38ページで565件を全照合。12月補助検索1ページ、るるぶKids全3ページ、キッズイベントの現行ホームと地域該当3記事、公式12月カレンダーを実取得。特集は3ページで終了、以降のページリンクなし。",
+      "facility_candidate_signals": [
+        {
+          "venue_name": "内藤園",
+          "official_url": "https://naitouen.com/mikan/",
+          "reason": "公式が運営する果樹園の季節の収穫体験。貸会場の一日催事ではなく、既存施設データの名称・公式ドメイン照合では同園なし。住所等の施設登録条件は未審査のため、既存MEM-FAC-OPS候補経路へ引継ぎ。EventOpsでは施設追加しない。",
+          "disposition": "route_to_existing_facility_candidate_intake"
+        },
+        {
+          "venue_name": "Muchu Planet ユニクロパーク 横浜ベイサイド",
+          "facility_id": 8306,
+          "reason": "施設データ上の既存IDを確認。新規施設候補として重複登録しない。",
+          "disposition": "already_registered"
+        }
+      ]
     }
   }
 }
