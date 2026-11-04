@@ -1717,6 +1717,13 @@
           "checked_at": "2026-11-04T16:58:10.430816+00:00",
           "facility_id": 8351,
           "content_sha256": "a4d26c75ecf00ecf4e627ca8b9795b4eb85ece359fa9f8b579bcff979f55dfad"
+        },
+        {
+          "url": "https://www.kagakukan.pref.yamanashi.jp/event/info.php?no=1425",
+          "status": 200,
+          "checked_at": "2026-11-04T17:05:09.686261+00:00",
+          "facility_id": 136,
+          "content_sha256": "7027fe37646b233d9fe2e654e628af409ee762fd10d0d6c715a49c362e37106f"
         }
       ],
       "facilities": [
@@ -2657,5 +2664,8 @@
       }
     }
   },
-  "execution_notes": "Exactly the 25 dispatched due facilities were executed sequentially in this process; no previous-run research was reused. Dispatch states 58 existing current/future events; exact start-HEAD data contains 54 still current/future at 2026-11-05 JST, all freshly reconfirmed. Four additional planetarium records ended 2026-11-03, before this process started; no freshness was invented for expired records. No facility data, schema, UI or eligibility edits. Failed primary sources at 121 and 2118 were retried with official fallbacks and not freshness-stamped."
+  "execution_notes": "Exactly the 25 dispatched due facilities were executed sequentially in this process; no previous-run research was reused. Dispatch states 58 existing current/future events; exact start-HEAD data contains 54 still current/future at 2026-11-05 JST, all freshly reconfirmed. Four additional planetarium records ended 2026-11-03, before this process started; no freshness was invented for expired records. No facility data, schema, UI or eligibility edits. Failed primary sources at 121 and 2118 were retried with official fallbacks and not freshness-stamped.",
+  "final_qa_notes": [
+    "After all 25 sequential completion rows, the unchanged expired record evt-136-w38-2026-1425 was additionally fetched as a final trace QA: git textual diff alignment includes its unchanged URL among added lines. The official detail confirms 2026-10-03 through 2026-10-31. No Product edit or freshness claim was made for this expired record."
+  ]
 }
