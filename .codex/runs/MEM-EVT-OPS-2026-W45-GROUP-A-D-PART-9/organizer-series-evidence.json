@@ -1,0 +1,893 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-D-PART-9",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-04T08:28:43.133683+00:00",
+  "horizon_end_date": "2026-12-30",
+  "per_region": {
+    "kagawa": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.kagawa.lg.jp/kenkyoui/toshokan/20261020.html",
+          "status": 200,
+          "checked_at": "2026-11-04T08:28:42.691975+00:00",
+          "organizer_name": "香川県立図書館",
+          "multi_venue_basis": "県内24公共図書館の展示・22館スタンプラリーを主催し複数会場の日程を公開",
+          "host_shared_with_registry_reason": "単独施設巡回ではなく、掲載企画の主催者として上記の複数会場の日程を公開している",
+          "content_sha256": "b1083969176690b05c360da23342c2ec86c866acbafef7cd8b667a177b99ae73",
+          "page_title": "香川県内公共図書館連携企画「＃つながる図書館～タイトルが気になる本～」を実施します。｜香川県教育委員会"
+        },
+        {
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "status": 200,
+          "checked_at": "2026-11-04T08:28:43.139426+00:00",
+          "organizer_name": "高松市歴史資料館",
+          "multi_venue_basis": "写真パネル展を病院・まなびCAN・IKODE・市美術館の4会場で巡回",
+          "host_shared_with_registry_reason": "単独施設巡回ではなく、掲載企画の主催者として上記の複数会場の日程を公開している",
+          "content_sha256": "20b163d1cfbd97b08245798d75fc7d1a5e3288a9fc8832ea0c466dc0dbb80f5b",
+          "page_title": "出張！パネル展示「写真でみる ちょっとむかしの高松」｜高松市"
+        },
+        {
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/rekish_up20261023.html",
+          "status": 200,
+          "checked_at": "2026-11-04T08:28:43.612276+00:00",
+          "organizer_name": "高松市歴史資料館",
+          "multi_venue_basis": "古墳パネル展をまなびCAN・IKODE・県立図書館に巡回",
+          "host_shared_with_registry_reason": "単独施設巡回ではなく、掲載企画の主催者として上記の複数会場の日程を公開している",
+          "content_sha256": "5dbba4751e049f87a9ed81a599ab9395f2c62d35c7bce0f02e3f92997b5ccc75",
+          "page_title": "R8年度 出張！パネル展示「しりたい　いきたい　高松と古墳」｜高松市"
+        },
+        {
+          "url": "https://sanukigeo.org/",
+          "status": 200,
+          "checked_at": "2026-11-04T08:28:43.975686+00:00",
+          "organizer_name": "讃岐ジオパーク構想推進準備委員会",
+          "multi_venue_basis": "直島・丸亀・国分寺・満濃池など複数会場のジオツアー主催",
+          "host_shared_with_registry_reason": "単独施設巡回ではなく、掲載企画の主催者として上記の複数会場の日程を公開している",
+          "content_sha256": "6fec3899a8b81ed6b0e4d0701255b6a4515e286fc95ca5bcbcaa5252a2e931b4",
+          "page_title": "讃岐ジオパーク構想推進準備委員会"
+        }
+      ],
+      "candidates_found": 13,
+      "added": 0,
+      "duplicate_or_already_present": 9,
+      "hold": 4,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "＃つながる図書館 タイトルが気になる本（県立図書館展示）",
+          "url": "https://www.pref.kagawa.lg.jp/kenkyoui/toshokan/20261020.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20261020-7291965",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "写真でみる ちょっとむかしの高松（高松市立みんなの病院）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20261110-bdafc06",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "写真でみる ちょっとむかしの高松（高松市生涯学習センターまなびCAN）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20261202-6f56ef9",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "写真でみる ちょっとむかしの高松（市民交流プラザIKODE瓦町）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20270109-6d0f11e",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "写真でみる ちょっとむかしの高松（高松市美術館）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20270220-7ce7fe2",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "しりたい いきたい 高松と古墳（高松市生涯学習センターまなびCAN）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/rekish_up20261023.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20261111-4cd5262",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "しりたい いきたい 高松と古墳（高松市生涯学習センターまなびCAN）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/rekish_up20261023.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20270203-4cd5262",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "しりたい いきたい 高松と古墳（市民交流プラザIKODE瓦町）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/rekish_up20261023.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20270306-9832930",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "しりたい いきたい 高松と古墳（香川県立図書館）",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/rekish_up20261023.html",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-kagawa-20270316-c4230d9",
+          "reason": "今回先行単位で追加済み。主催者の新規fetchと一致",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "＃つながる図書館 県立以外23館の展示",
+          "url": "https://www.pref.kagawa.lg.jp/kenkyoui/toshokan/20261020.html",
+          "disposition": "hold",
+          "reason": "各館で押印・展示期間が異なると明記。県立の期間を他会場へ転用できない、会場ごとの日付確認待ち",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "＃つながる図書館 22館スタンプラリー",
+          "url": "https://www.pref.kagawa.lg.jp/kenkyoui/toshokan/20261020.html",
+          "disposition": "hold",
+          "reason": "押印期間が各館ごとに異なり統一開始日なし。単一会場・日付として安全に登録不可",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "写真探偵！ちょっとむかしの高松を調査しよう",
+          "url": "https://www.city.takamatsu.kagawa.jp/kurashi/kosodate/bunka/rekishi/s_tenji_r8_syasin.html",
+          "disposition": "hold",
+          "reason": "2026-08-08ワークショップ終了と明記。過去追加しない",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "讃岐ジオパーク主催の未掲載追加企画",
+          "url": "https://sanukigeo.org/",
+          "disposition": "hold",
+          "reason": "主催者WebがJSシェルのみを返し日程本文を取得できない。現在runの観光協会・県公式で個別確認した企画以外は採用しない。取得経路のPM確認対象",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "completed_units": [
+        {
+          "source_type": "organizer_event_series",
+          "completed_at": "2026-11-04T08:29:42.255693+00:00",
+          "note": "source_notes/地域公式から複数館連携・巡回2系列・ジオ主催を特定。4実fetch。県立展示と巡回8会場は同run追加済み、会場別日付未確定・JS本文不可を個別HOLD"
+        }
+      ]
+    },
+    "yamanashi": {
+      "sources_checked": [
+        {
+          "url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "status": 200,
+          "checked_at": "2026-11-04T09:03:37.821900+00:00",
+          "organizer_name": "山梨県 県民の日記念行事",
+          "multi_venue_basis": "県・市町村が参加する複数会場の無料開放を共通の県民の日に公式一覧掲載",
+          "host_shared_with_registry_reason": "pref.yamanashi.jpは単館イベントでなく全県の複数施設の開放を共同告知",
+          "content_sha256": "a33159026a51c49251c955f405185a9b68530fa158510f030f7d5f65dfed639e"
+        },
+        {
+          "url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "status": 200,
+          "checked_at": "2026-11-04T09:03:38.480325+00:00",
+          "organizer_name": "山梨県 県民の日記念行事",
+          "multi_venue_basis": "県・市町村が参加する複数会場の無料開放を共通の県民の日に公式一覧掲載",
+          "host_shared_with_registry_reason": "pref.yamanashi.jpは単館イベントでなく全県の複数施設の開放を共同告知",
+          "content_sha256": "bfc1b4be9f4b6eaba75f9605afa2e257866aae02438a4c0dfde7cf0b4bae1c26"
+        },
+        {
+          "url": "https://splawars.com/#schedule",
+          "status": 200,
+          "checked_at": "2026-11-04T09:03:39.173573+00:00",
+          "organizer_name": "SPLAWARS",
+          "multi_venue_basis": "フルーツ公園・クラフトパーク等複数会場の巡回水遊び企画",
+          "host_shared_with_registry_reason": "単館ページでなく複数の会場を共同企画として告知",
+          "content_sha256": "7b9a932cb1b93f96a2cb6f2b497609abe84bd7598a0963c1065d1fe2d582524a",
+          "page_title": "SPLAWARS｜夏の水鉄砲バトルイベント公式サイト | びしょ濡れ上等！親子で戦う水バトルフェス！撃て！逃げろ！びしょ濡れになれ！"
+        },
+        {
+          "url": "https://kofucci.or.jp/news/20261015/",
+          "status": 200,
+          "checked_at": "2026-11-04T09:03:40.094770+00:00",
+          "organizer_name": "山梨ジュエリープロジェクト",
+          "multi_venue_basis": "県庁・新館・25店舗の工房で複数会場にまたがる共通2日間のイベント",
+          "host_shared_with_registry_reason": "単館ページでなく複数の会場を共同企画として告知",
+          "content_sha256": "d31dd0b1eeb9d8148c8820803d3d7e43b9ab1a73a2b8b6d19ae68f6d9faf9ca1",
+          "page_title": "【11/7～8】やまなしJEWELRY Week 2026の開催について｜甲府商工会議所"
+        }
+      ],
+      "candidates_found": 80,
+      "added": 0,
+      "duplicate_or_already_present": 35,
+      "hold": 45,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "県民の日無料開放 男女共同参画推進センター（ぴゅあ総合）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 やまなし地域づくり交流センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "コワーキングの施設利用料免除で子ども向け公開催事ではない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 リニア見学センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 森林公園金川の森",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 清里の森",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 武田の杜保健休養林",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-takeda-forest"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 スタートアップ支援センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "コワーキングの施設利用料免除で子ども向け公開催事ではない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-pref-art"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨県立文学館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 山梨県立博物館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 考古博物館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 八代射撃場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "射撃場利用で幼児の家族おでかけに適さない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 飯田野球場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 緑が丘スポーツ公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 小瀬スポーツ公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 富士北麓公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 御勅使南公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 やまなしパラスポーツセンター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 富士湧水の里水族館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-springs-aquarium"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨県立フラワーセンター ハイジの村",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "participability": "通常参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 笛吹川フルーツ公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 富士川クラフトパーク",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 桂川ウェルネスパーク",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 丘の公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kiyosato-oka"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 青少年センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 科学館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnohimuryoukaihouken.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-136-20261026-17"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 甲府市緑が丘スポーツ公園 ふじでんスタジアム（競技場）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 甲府市緑が丘スポーツ公園 ふじでん庭球場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 甲府市緑が丘スポーツ公園 エフ・ジェイ緑が丘フィールド（球技場）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨市老人健康福祉センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "高齢者向け健康福祉施設の利用料免除。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨市民総合体育館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-yamanashi-gym"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨市屋内温水プール",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-yamanashi-pool"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山梨市牧丘B&G海洋センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 大月市郷土資料館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-otsuki-museum"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 韮崎大村美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-nirasaki-omura"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 南アルプス市芦安山岳館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-ashiyasu"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 重要文化財安藤家住宅",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-ando-house"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 北杜市郷土資料館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-hokuto-history"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 北杜市考古資料館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-hokuto-archaeology"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 浅川伯教・巧兄弟資料館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-asakawa-brothers"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 平田家住宅",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-hirata-house"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 双葉B&G海洋センター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 八田家書院",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-hatta-house"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 春日居郷土館・小川正子記念館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kasugai"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 青楓美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-seifu-art"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 飯田蛇笏・龍太記念館 山廬",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-sanro"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 重要文化財旧高野家住宅（甘草屋敷）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kanzo-house"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 宮光園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-miyakoen"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 中央市総合防災公園 スポーツ広場・サッカー場・芝生広場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 中央市豊富郷土資料館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-toyotomi-history"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 歌舞伎文化公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kabuki-park"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 遅沢スポーツ広場 （ﾀｰｹﾞｯﾄﾊﾞｰﾄﾞｺﾞﾙﾌ、ﾊﾟｰｸｺﾞﾙﾌ、ｸﾞﾗｳﾝﾄﾞｺﾞﾙﾌ）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 アルカディアスポーツセンター",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 アルカディアテニスコート",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 アルカディア野球場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 アルカディア運動場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-arcadia-field"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 近藤浩一路記念南部町立美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kondo-art"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 風土伝承館 杉浦医院",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-sugiura-clinic"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 道志の湯",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-doshi-bath"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 岡田紅陽写真美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-okada-photo"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 小池邦夫絵手紙美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-koike-etegami"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山中湖花の都公園",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-hananomiyako"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 山中湖文学の森 三島由紀夫文学館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-mishima-literature"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 河口湖美術館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kawaguchiko-art"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 河口湖ミューズ館",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-kawaguchiko-muse"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 西湖いやしの里根場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "duplicate_or_already_present",
+          "event_ids": [
+            "evt-corrb-yamanashi-kenmin-nenba"
+          ],
+          "reason": "11月20日の共通開放日・同会場と照合。条件は表の対象・範囲に限る。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 西湖ネイチャーセンター（クニマス展示館・西湖コウモリ穴）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 河口湖フィールドセンター 船津胎内樹型",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "participability": "条件付き参加可能",
+          "source_type": "organizer_event_series",
+          "reason": "既存の県民の日無料開放PDFに対する重複検証例外の範囲を拡張するため、例外追加のPM判断まで今回の新規8会場は未掲載。公式日付・会場は確認済み。"
+        },
+        {
+          "title": "県民の日無料開放 第一スポーツ広場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 第二スポーツ広場",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 レクレーション広場（グラウンド）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "県民の日無料開放 レクレーション広場（テニスコート）",
+          "source_url": "https://www.pref.yamanashi.jp/documents/122504/r8kenminnnohimuryoukaihou3.pdf",
+          "disposition": "hold",
+          "reason": "指定運動施設・部屋・区画の使用料免除で、一般の親子が来場できる公開プログラムの根拠をこの一覧から確認できない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 農の駅ハッピーパーク7月5日延期",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS 農の駅ハッピーパーク7月26日終了",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS フルーツ公園8月8・9日終了",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS クラフトパーク8月22日終了",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS フルーツ公園9月20日中止",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "SPLAWARS フルーツ公園9月21日中止",
+          "source_url": "https://splawars.com/#schedule",
+          "disposition": "hold",
+          "reason": "現行公式スケジュールに現在未来の山梨開催なし。過去分の追加・再登録は行わない。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "JEWELRY Week 県庁・防災新館会場",
+          "source_url": "https://kofucci.or.jp/news/20261015/",
+          "disposition": "duplicate_or_already_present",
+          "event_id": "evt-w45-d9-yamanashi-20261107-32ddadd",
+          "reason": "複数会場シリーズのうち確定した県庁会場分をregionalで追加済み。",
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "JEWELRY Week 工房巡り25店舗",
+          "source_url": "https://kofucci.or.jp/news/20261015/",
+          "disposition": "hold",
+          "reason": "個別店舗・体験日・参加可能な具体会場を本一覧だけから確認できない。独立施設価値の判断が必要な店はFacilityOps側の既存候補パイプラインで扱い、このMissionで施設追加しない。",
+          "source_type": "organizer_event_series"
+        }
+      ],
+      "completed_units": [
+        {
+          "source_type": "organizer_event_series",
+          "completed_at": "2026-11-04T09:05:53.435550+00:00",
+          "note": "既存source_notesのSPLAWARS、県民の日2PDF全表と現行新着からJEWELRYの複数会場を確認。PDF全6頁をレンダー目視。"
+        }
+      ]
+    }
+  }
+}
