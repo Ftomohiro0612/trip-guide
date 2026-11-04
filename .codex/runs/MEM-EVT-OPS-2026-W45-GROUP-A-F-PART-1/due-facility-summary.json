@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-04T15:25:18.746270+00:00",
+  "executed_at": "2026-11-04T16:00:05.080951+00:00",
   "due_facility_ids": [
     6933,
     6934,
@@ -53,10 +53,10 @@
     "candidate_found_hold": 1,
     "source_unresolved": 9,
     "event_additions": 59,
-    "existing_events_updated": 15,
+    "existing_events_updated": 14,
     "ended_resolutions": 3,
     "events_deleted": 0,
-    "hold_encounter_count": 66
+    "hold_encounter_count": 67
   },
   "per_region": {
     "chiba": {
@@ -4956,7 +4956,15 @@
               "content_sha256": "dd3abf651b489a4f8f0695178b0df0001ca48505a66cd23d240e05abaafdd1f1"
             }
           ],
-          "candidate_hold_count": 4
+          "candidate_hold_count": 4,
+          "existing_event_dispositions": [
+            {
+              "event_id": "evt-w44d2-shizuoka-86b97a40b9",
+              "title": "どまん中ふくろい 全国だんごまつり2026",
+              "disposition": "past_at_start_unchanged",
+              "reason": "既存のfacility_id:null・法多山会場記録をタイトル/会場でも照合。11/3終了でMission開始時点では過去。新規登録や再確認日更新をしない。"
+            }
+          ]
         }
       ],
       "event_additions": 26,
@@ -5889,9 +5897,42 @@
               "final_url": "https://www.tamarokuto.or.jp/event/index.html?c=event&info=3699&day=2026-11-07",
               "title": "多摩六都科学館―プラネタリウムと観察・実験・工作でDo！サイエンス （東京都西東京市）",
               "content_sha256": "2c96c69fab3f31eba427f28c2f3a5539ae6a8fea89027704407e3bbe0207558e"
+            },
+            {
+              "url": "https://x.com/pegaroku/status/2117934901999628788",
+              "status": 200,
+              "checked_at": "2026-11-04T15:43:21.321613+00:00",
+              "facility_id": 247,
+              "final_url": "https://x.com/pegaroku/status/2117934901999628788",
+              "title": "ペガロク（多摩六都科学館） on X: \"【11/7(土)のプログラム】\n●投影スケジュール\n10:30~ キッズプラネタリウム「ペガロク きまぐれ宇宙旅行」\n11:50~ 大型映像「恐竜新世界」\n13:10~ 全編生解説プラネタリウム「宇宙クルーズ2026 追跡！ボイジャー１号」\n14:30~ 大型映像 「VOYAGER 終わりなき旅」\n15:50~ 全編生解説プラネタリウム「宇宙クルーズ2026 追跡！ボイジャー１号」\n\n各回定員220人。\n観覧券は当日9:30より、先着順で販売します（チケットの販売は16：00まで）\n\n●みんなで実験！しくみラボ\n時間：11:00～12:00,13:3… / X",
+              "content_sha256": "5d1ddcda7954437c17d008ea39e29a3ca17c8dd9a52f70204c39c602328ba7bb"
+            },
+            {
+              "facility_id": 247,
+              "url": "https://pbs.twimg.com/media/HWRbva6bAAAVVRS?format=webp&name=large",
+              "status": 200,
+              "checked_at": "2026-11-04T15:43:29.718788+00:00",
+              "content_sha256": "db61f2f8786372df44d6ff87c72a096b28ccb46f357c64dc5dd898b25cbca8d2",
+              "content_type": "image/webp"
+            },
+            {
+              "facility_id": 247,
+              "url": "https://pbs.twimg.com/media/HWRbvauaYAAwejq?format=webp&name=large",
+              "status": 200,
+              "checked_at": "2026-11-04T15:43:31.660795+00:00",
+              "content_sha256": "543538f874576571f8c8efa0b4aa756a341f4109b89064bb2ea0905127dd827a",
+              "content_type": "image/webp"
+            },
+            {
+              "facility_id": 247,
+              "url": "https://pbs.twimg.com/media/HWRbvavbQAAq0PY?format=webp&name=large",
+              "status": 200,
+              "checked_at": "2026-11-04T15:43:33.752114+00:00",
+              "content_sha256": "9ed776d23976545ed40e5af3c801684f6096dd1b397a3aff2d491e1088645463",
+              "content_type": "image/webp"
             }
           ],
-          "candidate_hold_count": 12
+          "candidate_hold_count": 13
         },
         {
           "disposition": "candidate_found_duplicate",
@@ -6025,8 +6066,8 @@
         }
       ],
       "event_additions": 5,
-      "existing_events_updated": 5,
-      "hold_encounter_count": 14
+      "existing_events_updated": 4,
+      "hold_encounter_count": 15
     }
   },
   "incidental_fetches_excluded_from_facility_evidence": [
@@ -6570,6 +6611,14 @@
     },
     {
       "region": "tokyo",
+      "facility_id": 247,
+      "facility_name": "多摩六都科学館",
+      "title": "みんなで実験！しくみラボ 静電気",
+      "event_id": "evt-247-static-2026",
+      "reason": "今回公式11/7投稿は一般名しくみラボのみ。添付3画像も実施日・利用料金・交通案内で個別テーマ静電気は再確認できない。公式個別ページは503。テーマを確認したように鮮度を進めず既存記録を維持。"
+    },
+    {
+      "region": "tokyo",
       "facility_id": 873,
       "facility_name": "江戸東京たてもの園",
       "event_id": "evt-873-musashino-collection-2026",
@@ -6584,5 +6633,17 @@
       "title": "伝統工芸の実演 秋冬の職人技",
       "reason": "施設公式公開停止。11〜12月の個別実演予定を今回確認できず、再確認済みとはしない。"
     }
-  ]
+  ],
+  "source_fetch_record_count": 230,
+  "application_data_sha256": "95c636b2a88e91fb3705f21d33dc6b8aba5e8e9dc19fe90f31bdae3bb6f5b005",
+  "verification": {
+    "installed_f_part_evidence_gate": "passed",
+    "genuinely_patrolled_facilities": 31,
+    "event_validator_errors": 0,
+    "regular_event_validator_errors": 0,
+    "event_tests_passed": 81,
+    "event_tests_total": 84,
+    "baseline_identical_historical_test_failures": 3,
+    "application_inputs_locked": true
+  }
 }
