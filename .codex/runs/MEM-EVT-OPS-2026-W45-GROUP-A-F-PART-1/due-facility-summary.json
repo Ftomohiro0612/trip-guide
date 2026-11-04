@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-F-PART-1",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-04T14:26:14.510090+00:00",
+  "executed_at": "2026-11-04T15:21:53.591868+00:00",
   "due_facility_ids": [
     6933,
     6934,
@@ -51,7 +51,12 @@
     "candidate_found_added": 18,
     "candidate_found_duplicate": 5,
     "candidate_found_hold": 1,
-    "source_unresolved": 9
+    "source_unresolved": 9,
+    "event_additions": 59,
+    "existing_events_updated": 15,
+    "ended_resolutions": 3,
+    "events_deleted": 0,
+    "hold_encounter_count": 40
   },
   "per_region": {
     "chiba": {
@@ -480,7 +485,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 0,
+      "existing_events_updated": 1,
+      "hold_encounter_count": 0
     },
     "fukui": {
       "facility_ids": [
@@ -608,7 +616,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 0,
+      "existing_events_updated": 0,
+      "hold_encounter_count": 0
     },
     "fukuoka": {
       "facility_ids": [
@@ -1362,7 +1373,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 6,
+      "existing_events_updated": 4,
+      "hold_encounter_count": 0
     },
     "hokkaido": {
       "facility_ids": [
@@ -1449,7 +1463,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 1,
+      "existing_events_updated": 0,
+      "hold_encounter_count": 0
     },
     "ishikawa": {
       "facility_ids": [
@@ -1547,7 +1564,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 0,
+      "existing_events_updated": 0,
+      "hold_encounter_count": 0
     },
     "kagawa": {
       "facility_ids": [
@@ -1609,7 +1629,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 0,
+      "existing_events_updated": 0,
+      "hold_encounter_count": 0
     },
     "kanagawa": {
       "facility_ids": [
@@ -2211,7 +2234,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 1,
+      "existing_events_updated": 4,
+      "hold_encounter_count": 0
     },
     "osaka": {
       "facility_ids": [
@@ -2638,7 +2664,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 20,
+      "existing_events_updated": 0,
+      "hold_encounter_count": 0
     },
     "shizuoka": {
       "facility_ids": [
@@ -4392,9 +4421,8 @@
         },
         {
           "disposition": "candidate_found_added",
-          "reason": "公式令和8年度予定PDFの11月以降全件を月別画像・テキストで確認。18件追加。過去日程と通年朝採り市・地域の一般年中行事は新規の特定イベントにしない。",
+          "reason": "公式年度計画を全表画像と本文で評価。13件追加、共通URL同日衝突の5企画・4回はHOLD。過去・通年・一般年中行事は追加しない。",
           "added_event_ids": [
-            "evt-w45f1-8386-ebisu",
             "evt-w45f1-8386-play",
             "evt-w45f1-8386-soba",
             "evt-w45f1-8386-wagashi",
@@ -4402,23 +4430,75 @@
             "evt-w45f1-8386-yearend",
             "evt-w45f1-8386-seven",
             "evt-w45f1-8386-newyear",
-            "evt-w45f1-8386-lion",
             "evt-w45f1-8386-dried",
             "evt-w45f1-8386-miso",
             "evt-w45f1-8386-ginjo",
             "evt-w45f1-8386-patch",
-            "evt-w45f1-8386-origami",
             "evt-w45f1-8386-spring",
-            "evt-w45f1-8386-pastry",
-            "evt-w45f1-8386-trex",
             "evt-w45f1-8386-festival"
           ],
           "participability": {
             "通常参加可能": 0,
-            "条件付き参加可能": 18,
+            "条件付き参加可能": 13,
             "受付終了・参加不能": 0
           },
-          "candidate_holds": [],
+          "candidate_holds": [
+            {
+              "title": "とうもんの里 えびす講料理",
+              "dates": [
+                "2026-11-14"
+              ],
+              "reason": "公式年間計画の共通URL・同日に別企画があり、採用にはPMの個別validator例外承認が必要。例外を自己追加せずHOLD。"
+            },
+            {
+              "title": "とうもんの里 獅子舞がやってくる・むかし話の会",
+              "dates": [
+                "2027-01-09"
+              ],
+              "reason": "公式年間計画の共通URL・同日に別企画があり、採用にはPMの個別validator例外承認が必要。例外を自己追加せずHOLD。"
+            },
+            {
+              "title": "とうもんの里 折り紙でお雛様",
+              "dates": [
+                "2027-02-14"
+              ],
+              "reason": "公式年間計画の共通URL・同日に別企画があり、採用にはPMの個別validator例外承認が必要。例外を自己追加せずHOLD。"
+            },
+            {
+              "title": "とうもんの里 季節の洋菓子",
+              "dates": [
+                "2027-03-20"
+              ],
+              "reason": "公式年間計画の共通URL・同日に別企画があり、採用にはPMの個別validator例外承認が必要。例外を自己追加せずHOLD。"
+            },
+            {
+              "title": "とうもんの里 ティラノサウルスがやってくる",
+              "dates": [
+                "2027-03-20"
+              ],
+              "reason": "公式年間計画の共通URL・同日に別企画があり、採用にはPMの個別validator例外承認が必要。例外を自己追加せずHOLD。"
+            },
+            {
+              "title": "とうもんの里 田舎味噌づくり",
+              "date": "2027-01-17",
+              "reason": "同じ公式年間計画URLの別企画と同日。未承認validator例外を追加せず当該回だけHOLD。"
+            },
+            {
+              "title": "とうもんの里 吟醸風味噌づくり",
+              "date": "2027-02-14",
+              "reason": "同じ公式年間計画URLの別企画と同日。未承認validator例外を追加せず当該回だけHOLD。"
+            },
+            {
+              "title": "とうもんの里 吟醸風味噌づくり",
+              "date": "2027-02-21",
+              "reason": "同じ公式年間計画URLの別企画と同日。未承認validator例外を追加せず当該回だけHOLD。"
+            },
+            {
+              "title": "とうもんの里 吟醸風味噌づくり",
+              "date": "2027-03-14",
+              "reason": "同じ公式年間計画URLの別企画と同日。未承認validator例外を追加せず当該回だけHOLD。"
+            }
+          ],
           "all_candidate_dates_reviewed": true,
           "facility_id": 8386,
           "facility_name": "とうもんの里",
@@ -4841,7 +4921,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 26,
+      "existing_events_updated": 1,
+      "hold_encounter_count": 26
     },
     "tokyo": {
       "facility_ids": [
@@ -5116,7 +5199,7 @@
       "facilities": [
         {
           "disposition": "candidate_found_added",
-          "reason": "公式本体503を再試行・トップ確認後、公式SNSとそこから主催者teketを新規取得。5件追加・5既存更新。その他既存は全件判定し休止中の個別内容はHOLD。未取得の会期を延長しない。",
+          "reason": "公式本体503後、公式SNS・主催者teketを新規取得。5件追加・4既存更新。恐竜新世界の追加11/7回は未承認URL同日例外が必要なためHOLD。その他既存も全件判定。",
           "added_event_ids": [
             "evt-w45f1-247-kids",
             "evt-w45f1-247-hokuto",
@@ -5125,7 +5208,6 @@
             "evt-w45f1-247-mizuki"
           ],
           "updated_event_ids": [
-            "evt-247-202611-f3-dino",
             "evt-247-202611-f3-voyager-film",
             "evt-247-voyager-cruise-2026",
             "evt-247-garnet-2026",
@@ -5184,6 +5266,10 @@
               "title": "分光器でいろいろな光をわけてみよう",
               "event_id": "evt-247-202611-f3-spectroscope",
               "reason": "公式本体が全ページ503休止。公式SNS/主催者一覧にこの個別行事の全期間・現状を確定する情報なし。フォーム3件もサービスの予定メンテナンス503で読めない。推測更新しない。"
+            },
+            {
+              "title": "大型映像 恐竜新世界11/7回",
+              "reason": "公式11/7投稿は取得済みだが、既存VOYAGERと同一URL・同日の別企画となり新たなvalidator例外が必要。未承認例外を追加せず、この追加上映回をHOLDし既存11/3記録は基準のまま維持。"
             }
           ],
           "existing_event_dispositions": [
@@ -5346,8 +5432,8 @@
             {
               "event_id": "evt-247-202611-f3-dino",
               "title": "大型映像「恐竜新世界」",
-              "disposition": "reconfirmed_updated",
-              "reason": "公式の新規日別告知で同名プログラムを再確認。"
+              "disposition": "past_unchanged_new_occurrence_hold",
+              "reason": "既存11/3は過去のまま。追加11/7回は別候補HOLD。"
             },
             {
               "event_id": "evt-247-202611-f3-voyager-film",
@@ -5716,7 +5802,10 @@
             }
           ]
         }
-      ]
+      ],
+      "event_additions": 5,
+      "existing_events_updated": 5,
+      "hold_encounter_count": 14
     }
   },
   "incidental_fetches_excluded_from_facility_evidence": [
@@ -5740,5 +5829,8 @@
       "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484",
       "reason": "Unrelated operator homepage fetched inadvertently; not used for this facility."
     }
-  ]
+  ],
+  "process_started_at": "2026-11-04T14:24:16.4452205Z",
+  "run_date": "2026-11-04",
+  "post_patrol_validation_resolution": "All 40 facility completion rows retained in original order. New-source URL/date collisions requiring PM exception approval were moved to bounded HOLD during QA; no validator exceptions added. Two facility/venue field mistakes corrected. Adjacent shared-site detail supplied missing handprint times during facility8375 patrol."
 }
