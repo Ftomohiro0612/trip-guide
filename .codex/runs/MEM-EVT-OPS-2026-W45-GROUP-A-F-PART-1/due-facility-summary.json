@@ -46,12 +46,12 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 20,
+    "total": 30,
     "no_current_or_future_event": 5,
-    "candidate_found_added": 5,
-    "candidate_found_duplicate": 3,
+    "candidate_found_added": 12,
+    "candidate_found_duplicate": 4,
     "candidate_found_hold": 0,
-    "source_unresolved": 7
+    "source_unresolved": 9
   },
   "per_region": {
     "chiba": {
@@ -1616,12 +1616,13 @@
         859,
         8306,
         8307,
-        8308
+        8308,
+        8309
       ],
-      "total": 4,
+      "total": 5,
       "no_current_or_future_event": 0,
       "candidate_found_added": 1,
-      "candidate_found_duplicate": 2,
+      "candidate_found_duplicate": 3,
       "candidate_found_hold": 0,
       "source_unresolved": 1,
       "sources_checked": [
@@ -1750,6 +1751,33 @@
           "status": 200,
           "checked_at": "2026-11-04T14:42:34.733568+00:00",
           "facility_id": 8308,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        },
+        {
+          "url": "https://litpla.com/space/toylo_yamatotsuruma/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:43:18.702659+00:00",
+          "facility_id": 8309,
+          "final_url": "https://litpla.com/space/toylo_yamatotsuruma/",
+          "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドー大和鶴間 | リトルプラネット / LittlePlanet",
+          "content_sha256": "3fb3dc3fd0b9796f3725400e6ee32c5bd9a19fe1ad0f58c6445f2232943cdc30"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:43:21.168219+00:00",
+          "facility_id": 8309,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:43:22.621993+00:00",
+          "facility_id": 8309,
           "final_url": "https://litpla.com/event/sunsunkidstv/",
           "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
           "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
@@ -2133,30 +2161,1646 @@
               "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
             }
           ]
+        },
+        {
+          "disposition": "candidate_found_duplicate",
+          "reason": "当施設順で公式3面を実取得し、既存会場名レコードの会期・10:00〜19:00営業・当日券経路を再確認し確認日更新。merged setとlive kanagawa HTTP200の既存IDを確認。終了済企画と通常体験は追加対象外。",
+          "existing_events": [
+            {
+              "event_id": "evt-kanagawa-w40d4-sunsun-yamatotsuruma",
+              "disposition": "refreshed"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（大和鶴間）",
+              "disposition": "duplicate",
+              "event_id": "evt-kanagawa-w40d4-sunsun-yamatotsuruma"
+            }
+          ],
+          "facility_id": 8309,
+          "facility_name": "TOYLO PARK powered by リトルプラネット イトーヨーカドー大和鶴間",
+          "completed_at": "2026-11-04T14:43:43.740029+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/toylo_yamatotsuruma/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:43:18.702659+00:00",
+              "facility_id": 8309,
+              "final_url": "https://litpla.com/space/toylo_yamatotsuruma/",
+              "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドー大和鶴間 | リトルプラネット / LittlePlanet",
+              "content_sha256": "3fb3dc3fd0b9796f3725400e6ee32c5bd9a19fe1ad0f58c6445f2232943cdc30"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:43:21.168219+00:00",
+              "facility_id": 8309,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:43:22.621993+00:00",
+              "facility_id": 8309,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
         }
       ]
     },
     "osaka": {
-      "facility_ids": [],
-      "total": 0,
+      "facility_ids": [
+        1427,
+        8301,
+        8311
+      ],
+      "total": 3,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "candidate_found_added": 2,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:43:51.301857+00:00",
+          "facility_id": 1427,
+          "final_url": "https://www.brh.co.jp/",
+          "title": "Webサイト一時休止のお知らせ",
+          "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+        },
+        {
+          "url": "https://www.brh.co.jp/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:44:01.712929+00:00",
+          "facility_id": 1427,
+          "final_url": "https://www.brh.co.jp/",
+          "title": "Webサイト一時休止のお知らせ",
+          "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+        },
+        {
+          "url": "https://www.brh.co.jp/event/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:44:03.476811+00:00",
+          "facility_id": 1427,
+          "final_url": "https://www.brh.co.jp/event/",
+          "title": "Webサイト一時休止のお知らせ",
+          "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:15.681156+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/",
+          "title": "あそびのせかい 大阪国際空港店のご案内",
+          "content_sha256": "eac7c796db68e3d7da2cb663525c336f108597cdf567ef5d920ed9340807fd57"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:25.549672+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/",
+          "title": "",
+          "content_sha256": "ec1d6fbd69edd9864202ac02c8c85bf3f6d8ec22a224501a09a1431e01823050"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10053/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:30.592406+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10053/",
+          "title": "予約制「あかちゃんエクササイズ」",
+          "content_sha256": "84d9916ab521d024c5f2aeb6b9d4100012d6c357a41ac26a61b4ea9037aa2a92"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10050/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:32.212831+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10050/",
+          "title": "予約制「1歳のお誕生日会」",
+          "content_sha256": "fa8d55323a4ded3b091a48cc3a56de9e8c68ee9c41071aed4196d7a590f53147"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10051/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:44.781730+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10051/",
+          "title": "予約制「ハイハイチャレンジ」",
+          "content_sha256": "74360fdc72f17475a660b7fb05a122012f654eadc950c728fca13245f7a11ed2"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10052/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:44:46.448505+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10052/",
+          "title": "予約制「1歳のお誕生日会」",
+          "content_sha256": "465a52f35f31a0f18d7d72879e79cfc07643323053fa79bdd8002d15b969a9a9"
+        },
+        {
+          "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/blog/10062/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:45:14.899249+00:00",
+          "facility_id": 8301,
+          "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/blog/10062/",
+          "title": "あそびのせかい 大阪国際空港店のご案内",
+          "content_sha256": "23cf634fa4862b73091a2ba821d8e04d652ae78612271912a5bb9f1cce7bdbc0"
+        },
+        {
+          "facility_id": 8301,
+          "url": "https://kidokid.bornelund.co.jp/contents/uploads/sites/175/2026/11/2dc04222f2cbd40ed6d3b82e49189c0c.png",
+          "status": 200,
+          "checked_at": "2026-11-04T14:45:45.841582+00:00",
+          "content_sha256": "90dff997683530f7635d8df185b61be8da64a7abcebc21c29168468e4157a809",
+          "content_type": "image/png"
+        },
+        {
+          "url": "https://litpla.com/space/toylo_abeno/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:47:11.790627+00:00",
+          "facility_id": 8311,
+          "final_url": "https://litpla.com/space/toylo_abeno/",
+          "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの | リトルプラネット / LittlePlanet",
+          "content_sha256": "b8c3ac530cf7e8e4f259b9187924d7e5e103fbf9d7e950c2f2aade32155e9695"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:47:13.448436+00:00",
+          "facility_id": 8311,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:47:14.898789+00:00",
+          "facility_id": 8311,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "公式トップを2回、公式イベント経路を代替で実取得。全て503のWebサイト一時休止告知で再開未定。企画本文が読めず候補を推測しない。既存0件、registry確認日を変更しない。",
+          "existing_events": [],
+          "candidates": [],
+          "facility_id": 1427,
+          "facility_name": "JT生命誌研究館",
+          "completed_at": "2026-11-04T14:44:04.841146+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.brh.co.jp/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:43:51.301857+00:00",
+              "facility_id": 1427,
+              "final_url": "https://www.brh.co.jp/",
+              "title": "Webサイト一時休止のお知らせ",
+              "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+            },
+            {
+              "url": "https://www.brh.co.jp/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:44:01.712929+00:00",
+              "facility_id": 1427,
+              "final_url": "https://www.brh.co.jp/",
+              "title": "Webサイト一時休止のお知らせ",
+              "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+            },
+            {
+              "url": "https://www.brh.co.jp/event/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:44:03.476811+00:00",
+              "facility_id": 1427,
+              "final_url": "https://www.brh.co.jp/event/",
+              "title": "Webサイト一時休止のお知らせ",
+              "content_sha256": "8557ff98fa608da942c7bfc6e9c053245ce1af7738803d3344b2bd3c66d5b4ce"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "店舗・全イベント一覧・予約制4回の個別詳細・11月4日更新ブログ・公式カレンダー画像を内容評価。今後の月間プログラムを19レコード（同一企画の複数日をoccurrence_datesに統合）追加。11月5日と11日の画像11時はブログの明示的訂正14時を適用。11月4日回は本Mission開始時すでに終了時刻を過ぎたため追加しない。通常＋Summerと会場・日付・URLで重複なし。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "event_id": "evt-w45f1-8301-touch",
+              "title": "ふれあいあそび（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-mag",
+              "title": "マグフォーマーであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-clay",
+              "title": "かんてんネンドで混色あそび（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-coaster",
+              "title": "ハマビーズでコースターづくり（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-wakuwaku",
+              "title": "わくわくタイム（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-exercise",
+              "title": "あかちゃんエクササイズ（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-books",
+              "title": "絵本を楽しもう お話し会（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-birthday",
+              "title": "1歳のお誕生日会（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-sort",
+              "title": "ソリトソーターであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-debut",
+              "title": "キドキドデビュー（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-prints",
+              "title": "手形・足型アート（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-crawl",
+              "title": "ハイハイチャレンジ（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-tug",
+              "title": "つなひきであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-balls",
+              "title": "玉入れであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-parachute",
+              "title": "パラシュートであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-babyball",
+              "title": "ボールあそび（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-firstclay",
+              "title": "初めてのネンドあそび（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-ball",
+              "title": "ボールであそぼう！（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "event_id": "evt-w45f1-8301-christmas",
+              "title": "ハマビーズでクリスマスオーナメントづくり（大阪国際空港店）",
+              "disposition": "added",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "11月4日 ハイハイチャレンジ",
+              "disposition": "past_at_start",
+              "reason": "11時〜12時の回は23:24JSTの開始時点で終了。バックフィルしない。"
+            }
+          ],
+          "facility_id": 8301,
+          "facility_name": "ボーネルンド キドキド 大阪国際空港店",
+          "completed_at": "2026-11-04T14:46:58.680380+00:00",
+          "sources_checked": [
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:15.681156+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/",
+              "title": "あそびのせかい 大阪国際空港店のご案内",
+              "content_sha256": "eac7c796db68e3d7da2cb663525c336f108597cdf567ef5d920ed9340807fd57"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:25.549672+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/",
+              "title": "",
+              "content_sha256": "ec1d6fbd69edd9864202ac02c8c85bf3f6d8ec22a224501a09a1431e01823050"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10053/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:30.592406+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10053/",
+              "title": "予約制「あかちゃんエクササイズ」",
+              "content_sha256": "84d9916ab521d024c5f2aeb6b9d4100012d6c357a41ac26a61b4ea9037aa2a92"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10050/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:32.212831+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10050/",
+              "title": "予約制「1歳のお誕生日会」",
+              "content_sha256": "fa8d55323a4ded3b091a48cc3a56de9e8c68ee9c41071aed4196d7a590f53147"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10051/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:44.781730+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10051/",
+              "title": "予約制「ハイハイチャレンジ」",
+              "content_sha256": "74360fdc72f17475a660b7fb05a122012f654eadc950c728fca13245f7a11ed2"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10052/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:44:46.448505+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/events/10052/",
+              "title": "予約制「1歳のお誕生日会」",
+              "content_sha256": "465a52f35f31a0f18d7d72879e79cfc07643323053fa79bdd8002d15b969a9a9"
+            },
+            {
+              "url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/blog/10062/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:45:14.899249+00:00",
+              "facility_id": 8301,
+              "final_url": "https://kidokid.bornelund.co.jp/oosaka-kokusai-kukou/blog/10062/",
+              "title": "あそびのせかい 大阪国際空港店のご案内",
+              "content_sha256": "23cf634fa4862b73091a2ba821d8e04d652ae78612271912a5bb9f1cce7bdbc0"
+            },
+            {
+              "facility_id": 8301,
+              "url": "https://kidokid.bornelund.co.jp/contents/uploads/sites/175/2026/11/2dc04222f2cbd40ed6d3b82e49189c0c.png",
+              "status": 200,
+              "checked_at": "2026-11-04T14:45:45.841582+00:00",
+              "content_sha256": "90dff997683530f7635d8df185b61be8da64a7abcebc21c29168468e4157a809",
+              "content_type": "image/png"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "当施設順で店舗・期間告知・特設を新規取得。あべの対象・11月9日〜1月6日・当日券・保護者条件を確認し1件追加。通常＋Summerに同会場の同企画なし。他の告知は終了済企画・過去休館・割引・常設ワークショップ。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（あべの）",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8311-sunsun",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 8311,
+          "facility_name": "TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの",
+          "completed_at": "2026-11-04T14:47:28.607570+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/toylo_abeno/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:47:11.790627+00:00",
+              "facility_id": 8311,
+              "final_url": "https://litpla.com/space/toylo_abeno/",
+              "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドーあべの | リトルプラネット / LittlePlanet",
+              "content_sha256": "b8c3ac530cf7e8e4f259b9187924d7e5e103fbf9d7e950c2f2aade32155e9695"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:47:13.448436+00:00",
+              "facility_id": 8311,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:47:14.898789+00:00",
+              "facility_id": 8311,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
+        }
+      ]
     },
     "shizuoka": {
-      "facility_ids": [],
-      "total": 0,
+      "facility_ids": [
+        2041,
+        8370,
+        8371,
+        8372,
+        8373,
+        8374
+      ],
+      "total": 6,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "candidate_found_added": 5,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://sumpu-castlepark.com/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:47:37.044532+00:00",
+          "facility_id": 2041,
+          "final_url": "https://sumpu-castlepark.com/",
+          "title": "駿府城公園｜メンテナンス中のご案内",
+          "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+        },
+        {
+          "url": "https://sumpu-castlepark.com/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:47:50.035793+00:00",
+          "facility_id": 2041,
+          "final_url": "https://sumpu-castlepark.com/",
+          "title": "駿府城公園｜メンテナンス中のご案内",
+          "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+        },
+        {
+          "url": "https://sumpu-castlepark.com/info/archives/3478/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:47:51.288216+00:00",
+          "facility_id": 2041,
+          "final_url": "https://sumpu-castlepark.com/info/archives/3478/",
+          "title": "駿府城公園｜メンテナンス中のご案内",
+          "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+        },
+        {
+          "url": "https://sumpu-castlepark.com/info/archives/3458/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:47:52.592851+00:00",
+          "facility_id": 2041,
+          "final_url": "https://sumpu-castlepark.com/info/archives/3458/",
+          "title": "駿府城公園｜メンテナンス中のご案内",
+          "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=355",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:02.147055+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=355",
+          "title": "���邠��T�����I�@�x�{�����̂܂�������",
+          "content_sha256": "f89c07bc01b2ba92a6b6d7d8c0fcb90ff5bbe7f530b1a89b18efc88e886794b5"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:03.571401+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+          "title": "�����Z���s�[�u��",
+          "content_sha256": "bef6a723c7a5c3feb710daafecba6e46fb53627e47fafec0ad391311ffab80e0"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=557",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:04.948163+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=557",
+          "title": "�g�t�R�뉀�����@�g�t�̃����`��",
+          "content_sha256": "ea559b103c345f66d81609e3f696633b64335698e31024ab2967029fea2178b1"
+        },
+        {
+          "url": "https://www.instagram.com/sumpucastlepark/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:37.082256+00:00",
+          "facility_id": 2041,
+          "final_url": "https://www.instagram.com/sumpucastlepark/",
+          "title": "駿府城公園 (@sumpucastlepark) • Instagram photos and videos",
+          "content_sha256": "4d9e1347a12396baa8c75bb215a43ee7a999d42dba16fe91027d0c2a7731628b"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=369",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:38.901223+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=369",
+          "title": "���_�������̌�",
+          "content_sha256": "84acba5d7111e1f1a430660706836da1a484ed2f4fa3d1c64daaaa4ac5b38767"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:40.171634+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+          "title": "�~�j�������Ă݂悤�I",
+          "content_sha256": "6c4bab6e4793a522736b247b406a2568de0454fae1851a0584a29159bab5ced0"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=598",
+          "status": 200,
+          "checked_at": "2026-11-04T14:48:41.483940+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=598",
+          "title": "�����ŐS�Ɛg�̂𒲂��郈�K",
+          "content_sha256": "840ccd1b6bc5ffb7f02af54242a922bcae05b7b46cf6b5788f77aa69edb0631b"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+          "status": 200,
+          "checked_at": "2026-11-04T14:49:22.891754+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+          "title": "ミニ畳を作ってみよう！",
+          "content_sha256": "6c4bab6e4793a522736b247b406a2568de0454fae1851a0584a29159bab5ced0"
+        },
+        {
+          "url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+          "status": 200,
+          "checked_at": "2026-11-04T14:49:24.282687+00:00",
+          "facility_id": 2041,
+          "final_url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+          "title": "書道セラピー講座",
+          "content_sha256": "bef6a723c7a5c3feb710daafecba6e46fb53627e47fafec0ad391311ffab80e0"
+        },
+        {
+          "url": "https://sumpu-castlepark.com/info/archives/3434/",
+          "status": 503,
+          "checked_at": "2026-11-04T14:49:25.828085+00:00",
+          "facility_id": 2041,
+          "final_url": "https://sumpu-castlepark.com/info/archives/3434/",
+          "title": "駿府城公園｜メンテナンス中のご案内",
+          "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+        },
+        {
+          "url": "https://asagiri-foodpark.com/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:49:57.507390+00:00",
+          "facility_id": 8370,
+          "final_url": "https://asagiri-foodpark.com/",
+          "title": "あさぎりフードパーク",
+          "content_sha256": "3f7a39b01a2d779ef24f58e603f09822053254530b880f604b4df00377642cee"
+        },
+        {
+          "url": "https://asagiri-foodpark.com/event/2026/11/1128292026.html",
+          "status": 200,
+          "checked_at": "2026-11-04T14:50:08.965301+00:00",
+          "facility_id": 8370,
+          "final_url": "https://asagiri-foodpark.com/event/2026/11/1128292026.html",
+          "title": "【11/28(土)･29(日)開催　さつまいもフェスタ2026】 - イベント情報／あさぎりフードパーク",
+          "content_sha256": "9193e00f657803bd090218d07f775c21104998e9390bb77b9c1ad4e7f695bfdd"
+        },
+        {
+          "url": "https://asagiri-foodpark.com/event/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:50:10.329119+00:00",
+          "facility_id": 8370,
+          "final_url": "https://asagiri-foodpark.com/event/",
+          "title": "イベント情報／あさぎりフードパーク [1/10]",
+          "content_sha256": "13bf9d0aa7a693931af9ce5406966f6e7286aa62b0da0a15f1b80d0601009de8"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:50:48.488999+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/",
+          "title": "磐田市新造形創造館",
+          "content_sha256": "3a68541caf703235c6e90ec602198b9de75ac082eb88d757f940fad5340916f9"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/news/2026_11gallery/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:00.944512+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/news/2026_11gallery/",
+          "title": "10月ギャラリー　加倉井秀昭 【幾何学の嗜好】開催のご案内 | 磐田市新造形創造館",
+          "content_sha256": "28cacc3850618a732244baa2b2a5c1349bb9147eb17fad82368aab456e37839c"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/workshop/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:02.520217+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/workshop/",
+          "title": "ショップ | 磐田市新造形創造館",
+          "content_sha256": "07a570540c45cfcd270a435ae72abb13bba095b851393b564d07aa61019170e3"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/news/glassworkshop2025/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:16.964789+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/news/glassworkshop2025/",
+          "title": "【GLASS WORKSHOP 2026 加倉井 秀昭】開催のご案内 | 磐田市新造形創造館",
+          "content_sha256": "eb6a2dafb4bdb3049b415bae81ecdaaf3e4a3a77d1972c3ce4927ef569592b56"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/project/2026-1-3/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:28.908604+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/project/2026-1-3/",
+          "title": "季節限定体験　10・11・12月　ミルフィオリ（小学１年生～） | 磐田市新造形創造館",
+          "content_sha256": "f22487dc0d7fe80503a10f17b5d5567d98dddf209f969286f8a4cbd9d3f9f2a3"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/news/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:30.360546+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/news/",
+          "title": "お知らせ | 磐田市新造形創造館",
+          "content_sha256": "224fc7b18082849bbbcda9677ac30685b01a009ce1b5ab16481d4d36dd5b4349"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/news/xmasevent2026store/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:44.313618+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/news/xmasevent2026store/",
+          "title": "クリマスマスイベント2026 マルシェ出店者募集 ＊締め切りました 。　　 | 磐田市新造形創造館",
+          "content_sha256": "f45d6fae817259829fc741309c712abcf24427a3d327e2c5c29d8ac8221003c0"
+        },
+        {
+          "url": "https://www.iwata-souzoukan.jp/news/システムメンテナンスのため申込フォームを一時/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:51:45.812614+00:00",
+          "facility_id": 8371,
+          "final_url": "https://www.iwata-souzoukan.jp/news/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%9F%E3%82%81%E7%94%B3%E8%BE%BC%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E4%B8%80%E6%99%82/",
+          "title": "システムメンテナンスのため 申込フォームを一時停止しております。 | 磐田市新造形創造館",
+          "content_sha256": "25bb3cb3595ee77354d4a8fb0422744df79de78e03d808a646760ae55772e502"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:52:36.700052+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/",
+          "title": "磐田市香りの博物館",
+          "content_sha256": "ce1d6a39f516ec2f5a87b926d3c7448906cb31e78596b06ad42fd8c929851174"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/news/342/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:52:47.414672+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/news/342/",
+          "title": "磐田市香りの博物館｜香りの博物館アフタヌーンコンサート開催",
+          "content_sha256": "25591324fbf9a09ee9e1e5259373c14259e262000c246322714d935c24d5b58d"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/news/339/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:52:48.900937+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/news/339/",
+          "title": "磐田市香りの博物館｜「花房さくら作品解説＆サイン会」参加について",
+          "content_sha256": "24093e2ec540b68c9233a8e6188bd48fab4fee3a36803b14ffc1cdf37e26f766"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/event/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:53:00.340938+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/event/",
+          "title": "磐田市香りの博物館｜イベント",
+          "content_sha256": "a5f4cee2865db61856f172a03aeb3a974ce266857ae97394984ecb9121e17a59"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/gallery/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:53:19.310553+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/gallery/",
+          "title": "磐田市香りの博物館｜企画展｜現在開催中の企画展",
+          "content_sha256": "3228bcc8450177c5e8b4bb69fcda0f56e08cb71c011a45e5a5c6062098c611a5"
+        },
+        {
+          "url": "https://www.iwata-kaori.jp/gallery/next/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:53:20.870473+00:00",
+          "facility_id": 8372,
+          "final_url": "https://www.iwata-kaori.jp/gallery/next/",
+          "title": "磐田市香りの博物館｜企画展｜次回開催予定の企画展",
+          "content_sha256": "c08bef58d90c59a3b61e9c478358c61a66f27bb3d5f98cc2652c117eb39ed28d"
+        },
+        {
+          "url": "https://kiwicountry.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:01.199705+00:00",
+          "facility_id": 8373,
+          "final_url": "https://kiwicountry.jp/",
+          "title": "キウイフルーツカントリーJapan | 静岡県掛川市の日本最大級の体験型キウイ農園",
+          "content_sha256": "987841be634a078b46c9e4a701a475c17a86ec5755470d7b5087a50846ed2ef1"
+        },
+        {
+          "url": "https://kiwicountry.jp/news/notice/2026-10/c9bf9e66bf0c",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:11.693690+00:00",
+          "facility_id": 8373,
+          "final_url": "https://kiwicountry.jp/news/notice/2026-10/c9bf9e66bf0c",
+          "title": "🥝🥝ヘルマンハープ体験ワークショップ🎵 | キウイフルーツカントリーJapan",
+          "content_sha256": "ba9bc942d6894765547dea75bd19781a46a9e2c9909c2c5476bdff3f5448d925"
+        },
+        {
+          "url": "https://kiwicountry.jp/news/notice/2026-11/c95cbf44d41d",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:13.482847+00:00",
+          "facility_id": 8373,
+          "final_url": "https://kiwicountry.jp/news/notice/2026-11/c95cbf44d41d",
+          "title": "🥝 キウイカントリー50周年特別企画 🥝🍮 瀬川シェフのスイーツデイ 第9弾 🍮 | キウイフルーツカントリーJapan",
+          "content_sha256": "d942f381ff0367ab0a1a123ffd8b28ee51cf75aa9554baaa9f38e0c6e584374b"
+        },
+        {
+          "url": "https://kiwicountry.jp/news/notice/2026-09/2b01cde36d42",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:15.006750+00:00",
+          "facility_id": 8373,
+          "final_url": "https://kiwicountry.jp/news/notice/2026-09/2b01cde36d42",
+          "title": "今年もキウイの収穫始まるよ～🥳🥝✨ | キウイフルーツカントリーJapan",
+          "content_sha256": "53c4a72d1ac1bb8bf14c86746ad5fc8c7a128c2e4044ff7181b482ab94945223"
+        },
+        {
+          "url": "https://kiwicountry.jp/news/notice/2026-11/c12da5ed77a8",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:16.609430+00:00",
+          "facility_id": 8373,
+          "final_url": "https://kiwicountry.jp/news/notice/2026-11/c12da5ed77a8",
+          "title": "🍃 今年のお茶摘み体験は11月15日(日)まで！ 🍃 | キウイフルーツカントリーJapan",
+          "content_sha256": "c1e1a5887ed54cc4f8e1a385bf47471d6fe8aed893b73aa96b06c01fc10d684a"
+        },
+        {
+          "url": "https://tol-app.jp/s/hoshinooto",
+          "status": 200,
+          "checked_at": "2026-11-04T14:54:40.147828+00:00",
+          "facility_id": 8373,
+          "final_url": "https://tol-app.jp/s/hoshinooto",
+          "title": "ヘルマンハープ教室　星の音 | freee予約",
+          "content_sha256": "25cb34994efc85d04f65f8193327eb7e30bc44decd75e65190f18905f051aed4"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:58:51.470123+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/",
+          "title": "ニュース | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "df442f4047a235f7e40ac50687bc8705d7120996694f69161fa80e9001ca40c3"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8562",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:26.221033+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8562/",
+          "title": "【桃沢の五つの鳥居～幻の炎を探せ～】謎解きウォークラリー | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "8020999526889b6c48d33bb11bf6328352991e9f41bce8cddfbe0847b22295ec"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8698",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:30.431072+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8698/",
+          "title": "11月イベント情報 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "6c5ebab915002b74072f674e84c8dc46669a4df35cc9fb2b635afe2bf57f9052"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8647",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:34.178505+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8647/",
+          "title": "11/7（土）焚き火deひととき（第6回） | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "bca2c5108fe5427a09873cb393d15166937e13319cf1386b8b7ff10e05d7ea3e"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8646",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:38.385245+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8646/",
+          "title": "11/15(日)　MOMOZAWA×TULLY’S～coffee in the outdoors～ | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "b4bf0cd8c717c6b5dbe5027bb0ecb7cf3856d66a79b7f998a92f4768c55c4436"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8596",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:42.536102+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8596/",
+          "title": "2026/11.22(日)　足流療術師範の美來さんによる出張リラクゼーション「足流療術＋よもぎ蒸し」 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "ba13f663867458e45634daf9d83e9dc93c12670b36dff98280ddd4ed73cd3df5"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8645",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:46.513362+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8645/",
+          "title": "11/23（月祝）焚き火×ヨガ×コーヒーで最高なひとときを | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "be9b2b1493549c98e0daa2d5f4d2c64758f45b3a2979617352751b3c1ba6c0a5"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/8641",
+          "status": 200,
+          "checked_at": "2026-11-04T14:59:50.162668+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/8641/",
+          "title": "11月29日（日）「桃チャレ〜バターチキンカレー作り＆ピザ窯でチーズナン作り～」 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "c944aac38f8c25cce29fdcdc03030e8b6431fad49d35296e7c60843e2ee00578"
+        },
+        {
+          "url": "https://www.momozawa.fun/news/26/",
+          "status": 200,
+          "checked_at": "2026-11-04T15:00:02.510659+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/news/26/",
+          "title": "絵画の日 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "af5f3b575f32e8251ad8851a97b5569153757d47534efbea3948d875cb722343"
+        },
+        {
+          "url": "https://www.momozawa.fun/wp/news/4397/",
+          "status": 200,
+          "checked_at": "2026-11-04T15:00:06.812555+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/wp/news/4397/",
+          "title": "日本画の日 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "f96eed1a1778b9999a01b04c5cb5de34b6ec5d96786cd1fd2c2869b194cf8439"
+        },
+        {
+          "url": "https://www.momozawa.fun/news/2607/",
+          "status": 200,
+          "checked_at": "2026-11-04T15:00:10.512355+00:00",
+          "facility_id": 8374,
+          "final_url": "https://www.momozawa.fun/news/2607/",
+          "title": "桃沢工芸村で楽しめる陶芸体験 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+          "content_sha256": "63cd4279b246974853f3a1ab8d67d96d73a859ba9a2430a42d9faf968358b217"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "公式トップ2回＋既存現行3件の詳細経路はいずれも同じ503代替案内。公式から直接リンクされた6申込フォームとInstagramを取得したが、日程の年・個別会場の十分な当run一次根拠が得られない。既存現行3件と新規5件をsource-family HOLDとしProduct・registry確認日を据え置く。既存過去5件は再確認済とは主張しない。",
+          "existing_events": [
+            {
+              "event_id": "evt-2041-202608-01",
+              "title": "寺子屋駿府城 夏休み特別企画",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-2041-w38-armor",
+              "title": "戦国武者の甲冑を作ってみよう！",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-2041-w38-moss",
+              "title": "茶室で苔玉を作ろう",
+              "disposition": "hold_source_details_unavailable"
+            },
+            {
+              "event_id": "evt-2041-w38-yoga",
+              "title": "茶室で心と体を調えるヨガと点茶体験",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-2041-w38-calligraphy",
+              "title": "秋の書道セラピー講座",
+              "disposition": "hold_source_details_unavailable"
+            },
+            {
+              "event_id": "evt-2041-w38-tea",
+              "title": "羅漢会茶会 茶席体験会",
+              "disposition": "hold_source_details_unavailable"
+            },
+            {
+              "event_id": "evt-f11-2041-armor-photo",
+              "title": "戦国甲冑隊がやってくる！",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-f11-2041-lunch-tea",
+              "title": "紅葉山庭園「味わい、学び、満たされる」贅沢なランチ会",
+              "disposition": "past_at_start_not_reverified"
+            }
+          ],
+          "candidates": [
+            {
+              "event_id": "evt-2041-w38-moss",
+              "title": "茶室で苔玉を作ろう",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "event_id": "evt-2041-w38-calligraphy",
+              "title": "秋の書道セラピー講座",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "event_id": "evt-2041-w38-tea",
+              "title": "羅漢会茶会 茶席体験会",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "title": "駿府お茶のまちを巡る（11/14）",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "title": "紅葉のランチ会（12/4・5・6）",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "title": "お神酒口作り体験（12/12）",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "title": "ミニ畳を作ってみよう（12/12）",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            },
+            {
+              "title": "茶室で心と身体を調えるヨガ（12/13）",
+              "disposition": "hold",
+              "reason": "公式メンテナンス代替ページは月日・申込先のみで開催年・個別会場を確定できる詳細なし。公式が詳細参照先とするInstagramはログイン画面のみ。フォームは取得できたが完全な日程・会場の裏付けにならない。時間・料金不記載だけをHOLD理由にしない。"
+            }
+          ],
+          "facility_id": 2041,
+          "facility_name": "駿府城公園",
+          "completed_at": "2026-11-04T14:49:47.356670+00:00",
+          "sources_checked": [
+            {
+              "url": "https://sumpu-castlepark.com/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:47:37.044532+00:00",
+              "facility_id": 2041,
+              "final_url": "https://sumpu-castlepark.com/",
+              "title": "駿府城公園｜メンテナンス中のご案内",
+              "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+            },
+            {
+              "url": "https://sumpu-castlepark.com/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:47:50.035793+00:00",
+              "facility_id": 2041,
+              "final_url": "https://sumpu-castlepark.com/",
+              "title": "駿府城公園｜メンテナンス中のご案内",
+              "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+            },
+            {
+              "url": "https://sumpu-castlepark.com/info/archives/3478/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:47:51.288216+00:00",
+              "facility_id": 2041,
+              "final_url": "https://sumpu-castlepark.com/info/archives/3478/",
+              "title": "駿府城公園｜メンテナンス中のご案内",
+              "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+            },
+            {
+              "url": "https://sumpu-castlepark.com/info/archives/3458/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:47:52.592851+00:00",
+              "facility_id": 2041,
+              "final_url": "https://sumpu-castlepark.com/info/archives/3458/",
+              "title": "駿府城公園｜メンテナンス中のご案内",
+              "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=355",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:02.147055+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=355",
+              "title": "���邠��T�����I�@�x�{�����̂܂�������",
+              "content_sha256": "f89c07bc01b2ba92a6b6d7d8c0fcb90ff5bbe7f530b1a89b18efc88e886794b5"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:03.571401+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+              "title": "�����Z���s�[�u��",
+              "content_sha256": "bef6a723c7a5c3feb710daafecba6e46fb53627e47fafec0ad391311ffab80e0"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=557",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:04.948163+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=557",
+              "title": "�g�t�R�뉀�����@�g�t�̃����`��",
+              "content_sha256": "ea559b103c345f66d81609e3f696633b64335698e31024ab2967029fea2178b1"
+            },
+            {
+              "url": "https://www.instagram.com/sumpucastlepark/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:37.082256+00:00",
+              "facility_id": 2041,
+              "final_url": "https://www.instagram.com/sumpucastlepark/",
+              "title": "駿府城公園 (@sumpucastlepark) • Instagram photos and videos",
+              "content_sha256": "4d9e1347a12396baa8c75bb215a43ee7a999d42dba16fe91027d0c2a7731628b"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=369",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:38.901223+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=369",
+              "title": "���_�������̌�",
+              "content_sha256": "84acba5d7111e1f1a430660706836da1a484ed2f4fa3d1c64daaaa4ac5b38767"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:40.171634+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+              "title": "�~�j�������Ă݂悤�I",
+              "content_sha256": "6c4bab6e4793a522736b247b406a2568de0454fae1851a0584a29159bab5ced0"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=598",
+              "status": 200,
+              "checked_at": "2026-11-04T14:48:41.483940+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=598",
+              "title": "�����ŐS�Ɛg�̂𒲂��郈�K",
+              "content_sha256": "840ccd1b6bc5ffb7f02af54242a922bcae05b7b46cf6b5788f77aa69edb0631b"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+              "status": 200,
+              "checked_at": "2026-11-04T14:49:22.891754+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=521",
+              "title": "ミニ畳を作ってみよう！",
+              "content_sha256": "6c4bab6e4793a522736b247b406a2568de0454fae1851a0584a29159bab5ced0"
+            },
+            {
+              "url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+              "status": 200,
+              "checked_at": "2026-11-04T14:49:24.282687+00:00",
+              "facility_id": 2041,
+              "final_url": "https://24auto.biz/s-ppc/regires.php?tno=681",
+              "title": "書道セラピー講座",
+              "content_sha256": "bef6a723c7a5c3feb710daafecba6e46fb53627e47fafec0ad391311ffab80e0"
+            },
+            {
+              "url": "https://sumpu-castlepark.com/info/archives/3434/",
+              "status": 503,
+              "checked_at": "2026-11-04T14:49:25.828085+00:00",
+              "facility_id": 2041,
+              "final_url": "https://sumpu-castlepark.com/info/archives/3434/",
+              "title": "駿府城公園｜メンテナンス中のご案内",
+              "content_sha256": "30eb32f218386b5e0e37ff686afa0a2909166c09410ec81f0d8a0faa07daca84"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式トップ・新着・イベント一覧（2025年まで遡るページ1）と現行11月1日詳細を確認。今後の催しは11月28・29日さつまいもフェスタのみ、1件追加。日付・会場・来場経路あり、時間・料金等の不記載は注記。過去の祭り・通常商品案内は追加しない。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "さつまいもフェスタ2026",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8370-sweetpotato",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 8370,
+          "facility_name": "あさぎりフードパーク",
+          "completed_at": "2026-11-04T14:50:40.623643+00:00",
+          "sources_checked": [
+            {
+              "url": "https://asagiri-foodpark.com/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:49:57.507390+00:00",
+              "facility_id": 8370,
+              "final_url": "https://asagiri-foodpark.com/",
+              "title": "あさぎりフードパーク",
+              "content_sha256": "3f7a39b01a2d779ef24f58e603f09822053254530b880f604b4df00377642cee"
+            },
+            {
+              "url": "https://asagiri-foodpark.com/event/2026/11/1128292026.html",
+              "status": 200,
+              "checked_at": "2026-11-04T14:50:08.965301+00:00",
+              "facility_id": 8370,
+              "final_url": "https://asagiri-foodpark.com/event/2026/11/1128292026.html",
+              "title": "【11/28(土)･29(日)開催　さつまいもフェスタ2026】 - イベント情報／あさぎりフードパーク",
+              "content_sha256": "9193e00f657803bd090218d07f775c21104998e9390bb77b9c1ad4e7f695bfdd"
+            },
+            {
+              "url": "https://asagiri-foodpark.com/event/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:50:10.329119+00:00",
+              "facility_id": 8370,
+              "final_url": "https://asagiri-foodpark.com/event/",
+              "title": "イベント情報／あさぎりフードパーク [1/10]",
+              "content_sha256": "13bf9d0aa7a693931af9ce5406966f6e7286aa62b0da0a15f1b80d0601009de8"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式新着・展示詳細・講座・季節体験・申込停止案内・クリスマス告知を内容確認。予約不要OPEN DAYと一般来場クリスマスの2件を追加。10月見出しと11月会期の矛盾した展示、日単位の開催開始を確定できない季節体験、受付終了の専門講座は各HOLD。常設体験と終了済10月行事は追加しない。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "GLASS WORKSHOP OPEN DAY 一般見学",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8371-open-day",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "クリスマスイベント2026",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8371-christmas",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "加倉井秀昭 幾何学の嗜好",
+              "disposition": "hold",
+              "reason": "同じ公式詳細の見出しは10月ギャラリー、会期は2026年11月7〜29日と不一致。showakinen専用の詳細優先規則を適用せず保留。"
+            },
+            {
+              "title": "季節限定ミルフィオリ",
+              "disposition": "hold",
+              "reason": "10・11・12月の月指定と電話予約のみで、開催年を含む正確なstart_date・最終実施日を確定できない。通常体験の開始日を創作しない。"
+            },
+            {
+              "title": "GLASS WORKSHOP 2026 専門受講",
+              "disposition": "hold",
+              "reason": "吹きガラス経験1年以上が対象、応募期間8月17日終了。一般見学の予約不要経路とは別。"
+            }
+          ],
+          "facility_id": 8371,
+          "facility_name": "磐田市新造形創造館",
+          "completed_at": "2026-11-04T14:52:26.408374+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.iwata-souzoukan.jp/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:50:48.488999+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/",
+              "title": "磐田市新造形創造館",
+              "content_sha256": "3a68541caf703235c6e90ec602198b9de75ac082eb88d757f940fad5340916f9"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/news/2026_11gallery/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:00.944512+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/news/2026_11gallery/",
+              "title": "10月ギャラリー　加倉井秀昭 【幾何学の嗜好】開催のご案内 | 磐田市新造形創造館",
+              "content_sha256": "28cacc3850618a732244baa2b2a5c1349bb9147eb17fad82368aab456e37839c"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/workshop/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:02.520217+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/workshop/",
+              "title": "ショップ | 磐田市新造形創造館",
+              "content_sha256": "07a570540c45cfcd270a435ae72abb13bba095b851393b564d07aa61019170e3"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/news/glassworkshop2025/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:16.964789+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/news/glassworkshop2025/",
+              "title": "【GLASS WORKSHOP 2026 加倉井 秀昭】開催のご案内 | 磐田市新造形創造館",
+              "content_sha256": "eb6a2dafb4bdb3049b415bae81ecdaaf3e4a3a77d1972c3ce4927ef569592b56"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/project/2026-1-3/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:28.908604+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/project/2026-1-3/",
+              "title": "季節限定体験　10・11・12月　ミルフィオリ（小学１年生～） | 磐田市新造形創造館",
+              "content_sha256": "f22487dc0d7fe80503a10f17b5d5567d98dddf209f969286f8a4cbd9d3f9f2a3"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/news/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:30.360546+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/news/",
+              "title": "お知らせ | 磐田市新造形創造館",
+              "content_sha256": "224fc7b18082849bbbcda9677ac30685b01a009ce1b5ab16481d4d36dd5b4349"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/news/xmasevent2026store/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:44.313618+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/news/xmasevent2026store/",
+              "title": "クリマスマスイベント2026 マルシェ出店者募集 ＊締め切りました 。　　 | 磐田市新造形創造館",
+              "content_sha256": "f45d6fae817259829fc741309c712abcf24427a3d327e2c5c29d8ac8221003c0"
+            },
+            {
+              "url": "https://www.iwata-souzoukan.jp/news/システムメンテナンスのため申込フォームを一時/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:51:45.812614+00:00",
+              "facility_id": 8371,
+              "final_url": "https://www.iwata-souzoukan.jp/news/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E3%83%A1%E3%83%B3%E3%83%86%E3%83%8A%E3%83%B3%E3%82%B9%E3%81%AE%E3%81%9F%E3%82%81%E7%94%B3%E8%BE%BC%E3%83%95%E3%82%A9%E3%83%BC%E3%83%A0%E3%82%92%E4%B8%80%E6%99%82/",
+              "title": "システムメンテナンスのため 申込フォームを一時停止しております。 | 磐田市新造形創造館",
+              "content_sha256": "25bb3cb3595ee77354d4a8fb0422744df79de78e03d808a646760ae55772e502"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式現行展・次回展・行事一覧・新着詳細を確認。木彫ねこ展と11月22日解説サイン会の2件追加。次回展欄は空。1月17日コンサートは11月14日受付開始前につきHOLD。過去の講座と常設調香体験は新規登録しない。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "花房さくら木彫ねこ展",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8372-cats",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "花房さくら作品解説＆サイン会",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8372-talk",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "2027年1月17日 香りの博物館アフタヌーンコンサート",
+              "disposition": "hold",
+              "reason": "公式の唯一のチケット受付開始は2026年11月14日10時、今run時点では受付前。"
+            }
+          ],
+          "facility_id": 8372,
+          "facility_name": "磐田市香りの博物館",
+          "completed_at": "2026-11-04T14:53:52.821700+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.iwata-kaori.jp/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:52:36.700052+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/",
+              "title": "磐田市香りの博物館",
+              "content_sha256": "ce1d6a39f516ec2f5a87b926d3c7448906cb31e78596b06ad42fd8c929851174"
+            },
+            {
+              "url": "https://www.iwata-kaori.jp/news/342/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:52:47.414672+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/news/342/",
+              "title": "磐田市香りの博物館｜香りの博物館アフタヌーンコンサート開催",
+              "content_sha256": "25591324fbf9a09ee9e1e5259373c14259e262000c246322714d935c24d5b58d"
+            },
+            {
+              "url": "https://www.iwata-kaori.jp/news/339/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:52:48.900937+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/news/339/",
+              "title": "磐田市香りの博物館｜「花房さくら作品解説＆サイン会」参加について",
+              "content_sha256": "24093e2ec540b68c9233a8e6188bd48fab4fee3a36803b14ffc1cdf37e26f766"
+            },
+            {
+              "url": "https://www.iwata-kaori.jp/event/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:53:00.340938+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/event/",
+              "title": "磐田市香りの博物館｜イベント",
+              "content_sha256": "a5f4cee2865db61856f172a03aeb3a974ce266857ae97394984ecb9121e17a59"
+            },
+            {
+              "url": "https://www.iwata-kaori.jp/gallery/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:53:19.310553+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/gallery/",
+              "title": "磐田市香りの博物館｜企画展｜現在開催中の企画展",
+              "content_sha256": "3228bcc8450177c5e8b4bb69fcda0f56e08cb71c011a45e5a5c6062098c611a5"
+            },
+            {
+              "url": "https://www.iwata-kaori.jp/gallery/next/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:53:20.870473+00:00",
+              "facility_id": 8372,
+              "final_url": "https://www.iwata-kaori.jp/gallery/next/",
+              "title": "磐田市香りの博物館｜企画展｜次回開催予定の企画展",
+              "content_sha256": "c08bef58d90c59a3b61e9c478358c61a66f27bb3d5f98cc2652c117eb39ed28d"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式最新4記事とハープの公式予約先を個別取得。11月22日ハープと11月7・8日周年スイーツの2件を追加。茶摘みは開始日が不明、収穫は終了日の粒度が月のみで現行schemaの正確な公開期間を確定できずHOLD。常設食べ比べ・農業AIセミナー（事業者向け）・他会場への出店はこの施設の親子イベントに転用しない。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "ヘルマンハープ体験ワークショップ",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8373-harp",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "50周年スイーツデイ第9弾",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8373-sweets",
+              "participability": "条件付き参加可能"
+            },
+            {
+              "title": "お茶摘み体験（11月15日まで）",
+              "disposition": "hold",
+              "reason": "公式告知に終了日だけがあり正確なstart_dateが確認できない。"
+            },
+            {
+              "title": "キウイ収穫体験（10月2日開始・1月まで）",
+              "disposition": "hold",
+              "reason": "公式は終了を1月までとのみ記載。正確な最終実施日が確認できず、過去start_date＋end_date:nullでは現行日付フィルターが終了扱いとなるため推測の日付を入れず保留。"
+            }
+          ],
+          "facility_id": 8373,
+          "facility_name": "キウイフルーツカントリーJapan",
+          "completed_at": "2026-11-04T14:55:32.575884+00:00",
+          "sources_checked": [
+            {
+              "url": "https://kiwicountry.jp/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:01.199705+00:00",
+              "facility_id": 8373,
+              "final_url": "https://kiwicountry.jp/",
+              "title": "キウイフルーツカントリーJapan | 静岡県掛川市の日本最大級の体験型キウイ農園",
+              "content_sha256": "987841be634a078b46c9e4a701a475c17a86ec5755470d7b5087a50846ed2ef1"
+            },
+            {
+              "url": "https://kiwicountry.jp/news/notice/2026-10/c9bf9e66bf0c",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:11.693690+00:00",
+              "facility_id": 8373,
+              "final_url": "https://kiwicountry.jp/news/notice/2026-10/c9bf9e66bf0c",
+              "title": "🥝🥝ヘルマンハープ体験ワークショップ🎵 | キウイフルーツカントリーJapan",
+              "content_sha256": "ba9bc942d6894765547dea75bd19781a46a9e2c9909c2c5476bdff3f5448d925"
+            },
+            {
+              "url": "https://kiwicountry.jp/news/notice/2026-11/c95cbf44d41d",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:13.482847+00:00",
+              "facility_id": 8373,
+              "final_url": "https://kiwicountry.jp/news/notice/2026-11/c95cbf44d41d",
+              "title": "🥝 キウイカントリー50周年特別企画 🥝🍮 瀬川シェフのスイーツデイ 第9弾 🍮 | キウイフルーツカントリーJapan",
+              "content_sha256": "d942f381ff0367ab0a1a123ffd8b28ee51cf75aa9554baaa9f38e0c6e584374b"
+            },
+            {
+              "url": "https://kiwicountry.jp/news/notice/2026-09/2b01cde36d42",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:15.006750+00:00",
+              "facility_id": 8373,
+              "final_url": "https://kiwicountry.jp/news/notice/2026-09/2b01cde36d42",
+              "title": "今年もキウイの収穫始まるよ～🥳🥝✨ | キウイフルーツカントリーJapan",
+              "content_sha256": "53c4a72d1ac1bb8bf14c86746ad5fc8c7a128c2e4044ff7181b482ab94945223"
+            },
+            {
+              "url": "https://kiwicountry.jp/news/notice/2026-11/c12da5ed77a8",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:16.609430+00:00",
+              "facility_id": 8373,
+              "final_url": "https://kiwicountry.jp/news/notice/2026-11/c12da5ed77a8",
+              "title": "🍃 今年のお茶摘み体験は11月15日(日)まで！ 🍃 | キウイフルーツカントリーJapan",
+              "content_sha256": "c1e1a5887ed54cc4f8e1a385bf47471d6fe8aed893b73aa96b06c01fc10d684a"
+            },
+            {
+              "url": "https://tol-app.jp/s/hoshinooto",
+              "status": 200,
+              "checked_at": "2026-11-04T14:54:40.147828+00:00",
+              "facility_id": 8373,
+              "final_url": "https://tol-app.jp/s/hoshinooto",
+              "title": "ヘルマンハープ教室　星の音 | freee予約",
+              "content_sha256": "25cb34994efc85d04f65f8193327eb7e30bc44decd75e65190f18905f051aed4"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "公式11月予定と陶芸案内で赤ちゃん手形11/20・22を確認し追加。工芸村の成人講座と別会場の催しも個別判定。",
+          "added_event_ids": [
+            "evt-w45f1-8374-handprint"
+          ],
+          "participability": {
+            "通常参加可能": 0,
+            "条件付き参加可能": 1,
+            "受付終了・参加不能": 0
+          },
+          "candidate_holds": [
+            {
+              "title": "絵画の日（11/11）",
+              "reason": "高校生以上対象で幼い子ども向けではない。"
+            },
+            {
+              "title": "日本画の日（11/25）",
+              "reason": "高校生以上対象で幼い子ども向けではない。"
+            },
+            {
+              "title": "足流療術・よもぎ蒸し（11/22）",
+              "reason": "高校生以上の施術で幼い子ども向けではない。"
+            },
+            {
+              "title": "TULLYSコーヒー（11/15）・焚き火ヨガ（11/23）",
+              "reason": "別会場の野外活動センターで高校生以上対象。工芸村へ紐付けない。"
+            },
+            {
+              "title": "桃チャレ11/29",
+              "reason": "別会場の野外活動センター。予約は11/15開始で現時点未開始。"
+            }
+          ],
+          "other_candidates": [
+            {
+              "title": "五つの鳥居ウォークラリー",
+              "disposition": "out_of_scope",
+              "reason": "野外活動センターの常設体験で開催期間の記載なし。工芸村のイベントではない。"
+            },
+            {
+              "title": "焚き火deひととき11/7",
+              "disposition": "duplicate",
+              "event_id": "evt-w44d2-shizuoka-64d31835f6",
+              "reason": "別会場の既存イベントと日付・会場・公式URL一致。工芸村には再登録しない。"
+            },
+            {
+              "title": "こもれ陽ヨガ11/28",
+              "disposition": "out_of_scope",
+              "reason": "野外活動センター会場で工芸村ではない。"
+            },
+            {
+              "title": "随時陶芸各メニュー",
+              "disposition": "not_dated_event",
+              "reason": "通年の体験メニュー。開催日がある赤ちゃん手形のみイベント化。"
+            }
+          ],
+          "facility_id": 8374,
+          "facility_name": "桃沢工芸村",
+          "completed_at": "2026-11-04T15:00:44.095317+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.momozawa.fun/wp/news/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:58:51.470123+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/",
+              "title": "ニュース | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "df442f4047a235f7e40ac50687bc8705d7120996694f69161fa80e9001ca40c3"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8562",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:26.221033+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8562/",
+              "title": "【桃沢の五つの鳥居～幻の炎を探せ～】謎解きウォークラリー | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "8020999526889b6c48d33bb11bf6328352991e9f41bce8cddfbe0847b22295ec"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8698",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:30.431072+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8698/",
+              "title": "11月イベント情報 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "6c5ebab915002b74072f674e84c8dc46669a4df35cc9fb2b635afe2bf57f9052"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8647",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:34.178505+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8647/",
+              "title": "11/7（土）焚き火deひととき（第6回） | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "bca2c5108fe5427a09873cb393d15166937e13319cf1386b8b7ff10e05d7ea3e"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8646",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:38.385245+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8646/",
+              "title": "11/15(日)　MOMOZAWA×TULLY’S～coffee in the outdoors～ | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "b4bf0cd8c717c6b5dbe5027bb0ecb7cf3856d66a79b7f998a92f4768c55c4436"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8596",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:42.536102+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8596/",
+              "title": "2026/11.22(日)　足流療術師範の美來さんによる出張リラクゼーション「足流療術＋よもぎ蒸し」 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "ba13f663867458e45634daf9d83e9dc93c12670b36dff98280ddd4ed73cd3df5"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8645",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:46.513362+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8645/",
+              "title": "11/23（月祝）焚き火×ヨガ×コーヒーで最高なひとときを | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "be9b2b1493549c98e0daa2d5f4d2c64758f45b3a2979617352751b3c1ba6c0a5"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/8641",
+              "status": 200,
+              "checked_at": "2026-11-04T14:59:50.162668+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/8641/",
+              "title": "11月29日（日）「桃チャレ〜バターチキンカレー作り＆ピザ窯でチーズナン作り～」 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "c944aac38f8c25cce29fdcdc03030e8b6431fad49d35296e7c60843e2ee00578"
+            },
+            {
+              "url": "https://www.momozawa.fun/news/26/",
+              "status": 200,
+              "checked_at": "2026-11-04T15:00:02.510659+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/news/26/",
+              "title": "絵画の日 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "af5f3b575f32e8251ad8851a97b5569153757d47534efbea3948d875cb722343"
+            },
+            {
+              "url": "https://www.momozawa.fun/wp/news/4397/",
+              "status": 200,
+              "checked_at": "2026-11-04T15:00:06.812555+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/wp/news/4397/",
+              "title": "日本画の日 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "f96eed1a1778b9999a01b04c5cb5de34b6ec5d96786cd1fd2c2869b194cf8439"
+            },
+            {
+              "url": "https://www.momozawa.fun/news/2607/",
+              "status": 200,
+              "checked_at": "2026-11-04T15:00:10.512355+00:00",
+              "facility_id": 8374,
+              "final_url": "https://www.momozawa.fun/news/2607/",
+              "title": "桃沢工芸村で楽しめる陶芸体験 | 桃沢野外活動センター 桃沢キャンプ場 桃沢工芸村 桃沢グラウンド",
+              "content_sha256": "63cd4279b246974853f3a1ab8d67d96d73a859ba9a2430a42d9faf968358b217"
+            }
+          ]
+        }
+      ]
     },
     "tokyo": {
       "facility_ids": [],
