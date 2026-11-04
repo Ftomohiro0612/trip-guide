@@ -46,12 +46,12 @@
   ],
   "prior_run_numbers_reused_as_execution": false,
   "aggregate": {
-    "total": 10,
-    "no_current_or_future_event": 3,
-    "candidate_found_added": 2,
-    "candidate_found_duplicate": 1,
+    "total": 20,
+    "no_current_or_future_event": 5,
+    "candidate_found_added": 5,
+    "candidate_found_duplicate": 3,
     "candidate_found_hold": 0,
-    "source_unresolved": 4
+    "source_unresolved": 7
   },
   "per_region": {
     "chiba": {
@@ -614,14 +614,17 @@
       "facility_ids": [
         1809,
         1810,
-        1819
+        1819,
+        1889,
+        8291,
+        8312
       ],
-      "total": 3,
-      "no_current_or_future_event": 0,
-      "candidate_found_added": 2,
+      "total": 6,
+      "no_current_or_future_event": 1,
+      "candidate_found_added": 3,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 1,
+      "source_unresolved": 2,
       "sources_checked": [
         {
           "url": "https://robosquare.city.fukuoka.lg.jp/",
@@ -841,6 +844,78 @@
           "final_url": "https://www.kmnh.jp/event/list/archives/",
           "title": "イベント | 北九州市立自然史・歴史博物館【いのちのたび博物館】",
           "content_sha256": "8a930b176c0f6f8b94eec0174ed7b72efede8ccd62ea08c08c4d3298ea6bba78"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:36:08.784379+00:00",
+          "facility_id": 1889,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:36:10.623047+00:00",
+          "facility_id": 1889,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/news/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:36:12.236955+00:00",
+          "facility_id": 1889,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/news/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://thekids.co.jp/shop/reganet_dazaifu/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:36:29.383098+00:00",
+          "facility_id": 8291,
+          "final_url": "https://thekids.co.jp/shop/reganet_dazaifu/",
+          "title": "めっちゃ楽しい室内遊園地｜The Kids福岡レガネット太宰府店  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+          "content_sha256": "4d4e121227ab8f6db5f2cb224f6df8b38fa20678221449ed16b18c77bae4ea13"
+        },
+        {
+          "url": "https://thekids.co.jp/category/event",
+          "status": 200,
+          "checked_at": "2026-11-04T14:36:30.948272+00:00",
+          "facility_id": 8291,
+          "final_url": "https://thekids.co.jp/category/event/",
+          "title": "イベント  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+          "content_sha256": "3a8e6984c35f462cc6107b0d25be9fdf6aede2395b2ef5a519a2823477af1afc"
+        },
+        {
+          "url": "https://litpla.com/space/youmetown_kurume/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:36:53.964033+00:00",
+          "facility_id": 8312,
+          "final_url": "https://litpla.com/space/youmetown_kurume/",
+          "title": "リトルプラネット ゆめタウン久留米 | リトルプラネット / LittlePlanet",
+          "content_sha256": "5308f4b24529c9507ae65e1bb4abd0f18050c051815920a50f07aa8a2eb6ac39"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:36:56.403144+00:00",
+          "facility_id": 8312,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:36:57.856023+00:00",
+          "facility_id": 8312,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
         }
       ],
       "facilities": [
@@ -1174,52 +1249,892 @@
               "content_sha256": "8a930b176c0f6f8b94eec0174ed7b72efede8ccd62ea08c08c4d3298ea6bba78"
             }
           ]
+        },
+        {
+          "disposition": "source_unresolved",
+          "reason": "registry公式トップ2回と公式ニュースの代替を各実取得。すべて404の全サイト緊急メンテナンス告知で福岡店の企画本文を確認できない。既存イベント0件、新規候補を推測せずregistry日付を据え置く。",
+          "existing_events": [],
+          "candidates": [],
+          "facility_id": 1889,
+          "facility_name": "ちきゅうのにわ 福岡店",
+          "completed_at": "2026-11-04T14:36:20.898921+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:36:08.784379+00:00",
+              "facility_id": 1889,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            },
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:36:10.623047+00:00",
+              "facility_id": 1889,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            },
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/news/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:36:12.236955+00:00",
+              "facility_id": 1889,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/news/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            }
+          ]
+        },
+        {
+          "disposition": "no_current_or_future_event",
+          "reason": "店舗公式本文に現在お知らせはありません、通常遊具・料金のみ。公式イベント分類最新は2025年の他店で、太宰府店の現在未来の催しなし。過年度の他店節分を転用しない。",
+          "existing_events": [],
+          "candidates": [],
+          "facility_id": 8291,
+          "facility_name": "The Kids福岡レガネット太宰府店",
+          "completed_at": "2026-11-04T14:36:39.873986+00:00",
+          "sources_checked": [
+            {
+              "url": "https://thekids.co.jp/shop/reganet_dazaifu/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:36:29.383098+00:00",
+              "facility_id": 8291,
+              "final_url": "https://thekids.co.jp/shop/reganet_dazaifu/",
+              "title": "めっちゃ楽しい室内遊園地｜The Kids福岡レガネット太宰府店  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+              "content_sha256": "4d4e121227ab8f6db5f2cb224f6df8b38fa20678221449ed16b18c77bae4ea13"
+            },
+            {
+              "url": "https://thekids.co.jp/category/event",
+              "status": 200,
+              "checked_at": "2026-11-04T14:36:30.948272+00:00",
+              "facility_id": 8291,
+              "final_url": "https://thekids.co.jp/category/event/",
+              "title": "イベント  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+              "content_sha256": "3a8e6984c35f462cc6107b0d25be9fdf6aede2395b2ef5a519a2823477af1afc"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "店舗、公式告知、コラボ特設を本施設用に新規取得。11月9日〜1月6日開催と久留米対象、通常有料入場・当日券を確認し1件追加。通常＋Summerを照合して久留米の同企画なし。その他の掲示は終了済企画・過去の清掃・常設体験。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（久留米）",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8312-sunsun",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 8312,
+          "facility_name": "リトルプラネット ゆめタウン久留米",
+          "completed_at": "2026-11-04T14:37:35.492601+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/youmetown_kurume/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:36:53.964033+00:00",
+              "facility_id": 8312,
+              "final_url": "https://litpla.com/space/youmetown_kurume/",
+              "title": "リトルプラネット ゆめタウン久留米 | リトルプラネット / LittlePlanet",
+              "content_sha256": "5308f4b24529c9507ae65e1bb4abd0f18050c051815920a50f07aa8a2eb6ac39"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:36:56.403144+00:00",
+              "facility_id": 8312,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:36:57.856023+00:00",
+              "facility_id": 8312,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
         }
       ]
     },
     "hokkaido": {
-      "facility_ids": [],
-      "total": 0,
+      "facility_ids": [
+        8303
+      ],
+      "total": 1,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
+      "candidate_found_added": 1,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "url": "https://litpla.com/space/aeonmall_sapporonaebo/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:37:48.591951+00:00",
+          "facility_id": 8303,
+          "final_url": "https://litpla.com/space/aeonmall_sapporonaebo/",
+          "title": "リトルプラネット イオンモール札幌苗穂 | リトルプラネット / LittlePlanet",
+          "content_sha256": "543a91dad9c00eb014e5694d16d2090739ee4d238a612da0f7212d2c691ee043"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:37:51.150009+00:00",
+          "facility_id": 8303,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:37:52.684153+00:00",
+          "facility_id": 8303,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "candidate_found_added",
+          "reason": "当施設の順番で店舗・期間告知・コラボ特設を再取得。札幌苗穂の対象掲載と通常有料入場を確認、新規1件追加。通常＋Summerに同企画なし。その他は終了済企画、過去の営業時間変更、常設体験のみ。北海道のprefecture unresolved状態は変更しない。",
+          "existing_events": [],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（札幌苗穂）",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8303-sunsun",
+              "participability": "通常参加可能"
+            }
+          ],
+          "facility_id": 8303,
+          "facility_name": "リトルプラネット イオンモール札幌苗穂",
+          "completed_at": "2026-11-04T14:38:26.438132+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/aeonmall_sapporonaebo/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:37:48.591951+00:00",
+              "facility_id": 8303,
+              "final_url": "https://litpla.com/space/aeonmall_sapporonaebo/",
+              "title": "リトルプラネット イオンモール札幌苗穂 | リトルプラネット / LittlePlanet",
+              "content_sha256": "543a91dad9c00eb014e5694d16d2090739ee4d238a612da0f7212d2c691ee043"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:37:51.150009+00:00",
+              "facility_id": 8303,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:37:52.684153+00:00",
+              "facility_id": 8303,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
+        }
+      ]
     },
     "ishikawa": {
-      "facility_ids": [],
-      "total": 0,
+      "facility_ids": [
+        6952
+      ],
+      "total": 1,
       "no_current_or_future_event": 0,
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:38:39.587506+00:00",
+          "facility_id": 6952,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:38:41.282583+00:00",
+          "facility_id": 6952,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/news/pricerevision202607/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:38:42.668672+00:00",
+          "facility_id": 6952,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/news/pricerevision202607/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        },
+        {
+          "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "status": 404,
+          "checked_at": "2026-11-04T14:38:44.188016+00:00",
+          "facility_id": 6952,
+          "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+          "title": "システム障害に関するお詫びとお知らせ",
+          "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "白山公式2回、registry副URLの料金改定告知、公式トップを実取得。全て404の全サイトシステム障害告知。企画の本文と日付が読めないため候補を推測せず、registry確認日を更新しない。既存イベント0件。",
+          "existing_events": [],
+          "candidates": [],
+          "facility_id": 6952,
+          "facility_name": "ちきゅうのにわ 白山店",
+          "completed_at": "2026-11-04T14:38:45.657674+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:38:39.587506+00:00",
+              "facility_id": 6952,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            },
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:38:41.282583+00:00",
+              "facility_id": 6952,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/hakusan/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            },
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/news/pricerevision202607/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:38:42.668672+00:00",
+              "facility_id": 6952,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/news/pricerevision202607/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            },
+            {
+              "url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "status": 404,
+              "checked_at": "2026-11-04T14:38:44.188016+00:00",
+              "facility_id": 6952,
+              "final_url": "https://www.fantasy.co.jp/chikyunoniwa/",
+              "title": "システム障害に関するお詫びとお知らせ",
+              "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484"
+            }
+          ]
+        }
+      ]
     },
     "kagawa": {
-      "facility_ids": [],
-      "total": 0,
-      "no_current_or_future_event": 0,
+      "facility_ids": [
+        8290
+      ],
+      "total": 1,
+      "no_current_or_future_event": 1,
       "candidate_found_added": 0,
       "candidate_found_duplicate": 0,
       "candidate_found_hold": 0,
       "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "sources_checked": [
+        {
+          "url": "https://thekids.co.jp/shop/am-takamatsu/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:38:54.335233+00:00",
+          "facility_id": 8290,
+          "final_url": "https://thekids.co.jp/shop/am-takamatsu/",
+          "title": "めっちゃ楽しい室内遊園地｜The Kidsイオンモール高松店  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+          "content_sha256": "6d826d93a2c491c2ac3f69871cad6be33bd9d525514228b7c0ec52a16947f67a"
+        },
+        {
+          "url": "https://thekids.co.jp/category/event",
+          "status": 200,
+          "checked_at": "2026-11-04T14:38:55.895443+00:00",
+          "facility_id": 8290,
+          "final_url": "https://thekids.co.jp/category/event/",
+          "title": "イベント  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+          "content_sha256": "3a8e6984c35f462cc6107b0d25be9fdf6aede2395b2ef5a519a2823477af1afc"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "no_current_or_future_event",
+          "reason": "店舗本文に現在お知らせはありません。公式イベント分類は最新でも2025年の他店で、高松店の現在未来の催しなし。常設遊具や通常料金区分をイベント化しない。",
+          "existing_events": [],
+          "candidates": [],
+          "facility_id": 8290,
+          "facility_name": "The Kidsイオンモール高松店",
+          "completed_at": "2026-11-04T14:39:06.367280+00:00",
+          "sources_checked": [
+            {
+              "url": "https://thekids.co.jp/shop/am-takamatsu/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:38:54.335233+00:00",
+              "facility_id": 8290,
+              "final_url": "https://thekids.co.jp/shop/am-takamatsu/",
+              "title": "めっちゃ楽しい室内遊園地｜The Kidsイオンモール高松店  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+              "content_sha256": "6d826d93a2c491c2ac3f69871cad6be33bd9d525514228b7c0ec52a16947f67a"
+            },
+            {
+              "url": "https://thekids.co.jp/category/event",
+              "status": 200,
+              "checked_at": "2026-11-04T14:38:55.895443+00:00",
+              "facility_id": 8290,
+              "final_url": "https://thekids.co.jp/category/event/",
+              "title": "イベント  |  ザキッズ(The Kids)｜めっちゃ楽しい子供の室内遊び場",
+              "content_sha256": "3a8e6984c35f462cc6107b0d25be9fdf6aede2395b2ef5a519a2823477af1afc"
+            }
+          ]
+        }
+      ]
     },
     "kanagawa": {
-      "facility_ids": [],
-      "total": 0,
+      "facility_ids": [
+        859,
+        8306,
+        8307,
+        8308
+      ],
+      "total": 4,
       "no_current_or_future_event": 0,
-      "candidate_found_added": 0,
-      "candidate_found_duplicate": 0,
+      "candidate_found_added": 1,
+      "candidate_found_duplicate": 2,
       "candidate_found_hold": 0,
-      "source_unresolved": 0,
-      "sources_checked": [],
-      "facilities": []
+      "source_unresolved": 1,
+      "sources_checked": [
+        {
+          "url": "https://www.fcofuna-kanagawa.jp/events",
+          "status": "error",
+          "checked_at": "2026-11-04T14:39:14.473612+00:00",
+          "facility_id": 859,
+          "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: /events (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+        },
+        {
+          "url": "https://www.fcofuna-kanagawa.jp/events",
+          "status": "error",
+          "checked_at": "2026-11-04T14:39:28.204654+00:00",
+          "facility_id": 859,
+          "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: /events (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+        },
+        {
+          "url": "http://www.fcofuna-kanagawa.jp/events",
+          "status": 503,
+          "checked_at": "2026-11-04T14:39:29.438724+00:00",
+          "facility_id": 859,
+          "final_url": "http://www.fcofuna-kanagawa.jp/events",
+          "title": "メンテナンス中です",
+          "content_sha256": "eb70eecb3d7ce5915ad3d958366a4857948c6620fd3899ec4f32094b3fb0b5cf"
+        },
+        {
+          "url": "https://www.fcofuna-kanagawa.jp/",
+          "status": "error",
+          "checked_at": "2026-11-04T14:39:30.548936+00:00",
+          "facility_id": 859,
+          "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+        },
+        {
+          "url": "https://litpla.com/space/muchu-yokohamabayside/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:40:01.136327+00:00",
+          "facility_id": 8306,
+          "final_url": "https://litpla.com/space/muchu-yokohamabayside/",
+          "title": "Muchu Planet ユニクロパーク 横浜ベイサイド | リトルプラネット / LittlePlanet",
+          "content_sha256": "54fea56008b25c86cb66828bef3f31affbe12442615dd5938552b93a822d54cd"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:40:02.714410+00:00",
+          "facility_id": 8306,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:40:04.120002+00:00",
+          "facility_id": 8306,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        },
+        {
+          "url": "https://litpla.com/news/press/kobito-collab-26/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:40:13.466884+00:00",
+          "facility_id": 8306,
+          "final_url": "https://litpla.com/news/press/kobito-collab-26/",
+          "title": "「こびとづかん」× Muchu Planet！横浜・越谷で10/27より限定コラボ開催！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "f4e20143dad23b5793e745ea69ae395d57549c9412bf10b40fd19582025c582b"
+        },
+        {
+          "url": "https://litpla.com/news/press/muchu-yokohamabay-grandopening/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:40:15.167430+00:00",
+          "facility_id": 8306,
+          "final_url": "https://litpla.com/news/press/muchu-yokohamabay-grandopening/",
+          "title": "【NEW OPEN】“本と遊び”が融合！「Muchu Planet ユニクロパーク 横浜ベイサイド」が誕生！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "86e770e27e02244ba7a67948e9772923bd5b648633eaf23a85faad76ea6eb842"
+        },
+        {
+          "url": "https://litpla.com/space/toylo_yokohama/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:41:01.805779+00:00",
+          "facility_id": 8307,
+          "final_url": "https://litpla.com/space/toylo_yokohama/",
+          "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜 | リトルプラネット / LittlePlanet",
+          "content_sha256": "a014e752cd2c9eb0d1d8e07c98be2285fb557eda133471a8cb76bc15942cd533"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:41:03.554210+00:00",
+          "facility_id": 8307,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:41:05.231361+00:00",
+          "facility_id": 8307,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        },
+        {
+          "url": "https://litpla.com/space/toylo_musashikosugi/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:42:31.535700+00:00",
+          "facility_id": 8308,
+          "final_url": "https://litpla.com/space/toylo_musashikosugi/",
+          "title": "TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉 | リトルプラネット / LittlePlanet",
+          "content_sha256": "157f329603b04d39c129fe2cc233c4dae3555cbc2acbec16efa8ee25a2f0fab3"
+        },
+        {
+          "url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:42:33.191030+00:00",
+          "facility_id": 8308,
+          "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+          "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+          "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+        },
+        {
+          "url": "https://litpla.com/event/sunsunkidstv/",
+          "status": 200,
+          "checked_at": "2026-11-04T14:42:34.733568+00:00",
+          "facility_id": 8308,
+          "final_url": "https://litpla.com/event/sunsunkidstv/",
+          "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+          "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+        }
+      ],
+      "facilities": [
+        {
+          "disposition": "source_unresolved",
+          "reason": "公式eventsをHTTPSで2回試行して証明書チェーンエラー。HTTPの同ページは503メンテナンス。公式トップもTLS失敗。現在未来8件は本文再確認不可としてsource-family HOLD、Product・registry確認日は変更しない。終了日が過去の15件も今runに再確認したとは主張せず据え置く。",
+          "existing_events": [
+            {
+              "event_id": "evt-859-202607-01",
+              "title": "みつばちを知ろう! ミツバチ内検・採蜜見学会",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-202607-02",
+              "title": "わくわく おどろき! ピンホール写真体験教室",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-202608-01",
+              "title": "食虫植物教室",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-gourd-exhibit",
+              "title": "ヒョウタン展～人類の原器～",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-autumn-photo",
+              "title": "フラワーセンター四季 写真展",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-flower-gift",
+              "title": "敬老の日・花鉢プレゼント",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-moss-bonsai",
+              "title": "秋のこけ玉盆栽つくり",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-digital-camera",
+              "title": "デジカメ教室 花をもっと素敵に撮ろう",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w38-colored-pencil",
+              "title": "色鉛筆植物画教室",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-cactus",
+              "title": "サボテン・多肉植物展",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-pressed",
+              "title": "押花作品展",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-orchid",
+              "title": "秋の洋らん展",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-bonsai",
+              "title": "秋の盆栽展",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-kanran",
+              "title": "寒蘭展",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-rose-yamamoto",
+              "title": "山本健生によるバラのガイドツアー",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-director",
+              "title": "園長さんぽ",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-rose-tamaki",
+              "title": "玉置一裕によるバラのガイドツアー",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-quiz",
+              "title": "かながわブランドクイズ",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-clarinet",
+              "title": "フラワーコンサート～もっと知ろう！クラリネット",
+              "disposition": "past_at_start_not_reverified"
+            },
+            {
+              "event_id": "evt-859-w40f4-ensemble",
+              "title": "フラワーコンサート Vol.19",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-kumade",
+              "title": "つまみ細工教室 干支の熊手づくり",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-pressed-art",
+              "title": "押し花アート教室",
+              "disposition": "hold_source_unreadable"
+            },
+            {
+              "event_id": "evt-859-w40f4-wreath",
+              "title": "クリスマスリース作り",
+              "disposition": "hold_source_unreadable"
+            }
+          ],
+          "candidates": [
+            {
+              "event_id": "evt-859-w40f4-bonsai",
+              "title": "秋の盆栽展",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-kanran",
+              "title": "寒蘭展",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-director",
+              "title": "園長さんぽ",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-rose-tamaki",
+              "title": "玉置一裕によるバラのガイドツアー",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-ensemble",
+              "title": "フラワーコンサート Vol.19",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-kumade",
+              "title": "つまみ細工教室 干支の熊手づくり",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-pressed-art",
+              "title": "押し花アート教室",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            },
+            {
+              "event_id": "evt-859-w40f4-wreath",
+              "title": "クリスマスリース作り",
+              "disposition": "hold",
+              "reason": "公式サイトのTLS不備・HTTP503メンテナンスで再確認不能。fcofuna-kanagawa.jp source-family HOLD。"
+            }
+          ],
+          "facility_id": 859,
+          "facility_name": "大船フラワーセンター",
+          "completed_at": "2026-11-04T14:39:49.841400+00:00",
+          "sources_checked": [
+            {
+              "url": "https://www.fcofuna-kanagawa.jp/events",
+              "status": "error",
+              "checked_at": "2026-11-04T14:39:14.473612+00:00",
+              "facility_id": 859,
+              "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: /events (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+            },
+            {
+              "url": "https://www.fcofuna-kanagawa.jp/events",
+              "status": "error",
+              "checked_at": "2026-11-04T14:39:28.204654+00:00",
+              "facility_id": 859,
+              "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: /events (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+            },
+            {
+              "url": "http://www.fcofuna-kanagawa.jp/events",
+              "status": 503,
+              "checked_at": "2026-11-04T14:39:29.438724+00:00",
+              "facility_id": 859,
+              "final_url": "http://www.fcofuna-kanagawa.jp/events",
+              "title": "メンテナンス中です",
+              "content_sha256": "eb70eecb3d7ce5915ad3d958366a4857948c6620fd3899ec4f32094b3fb0b5cf"
+            },
+            {
+              "url": "https://www.fcofuna-kanagawa.jp/",
+              "status": "error",
+              "checked_at": "2026-11-04T14:39:30.548936+00:00",
+              "facility_id": 859,
+              "error": "HTTPSConnectionPool(host='www.fcofuna-kanagawa.jp', port=443): Max retries exceeded with url: / (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILED] certificate verify failed: unable to get local issuer certificate (_ssl.c:1081)')))"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_added",
+          "reason": "店舗と2つのコラボ詳細・開業告知を内容確認。サンサン1件を追加、こびとづかんは既存会場名レコードと同一でメモ更新。10月27日のプレオープンも通常利用可能と明記されており開業日との矛盾なし。こびとの紙相撲と回遊は同一既存企画の部分内容、缶バッジは他店限定。",
+          "existing_events": [
+            {
+              "event_id": "evt-kanagawa-w45d3-family-muchu-kobito",
+              "disposition": "reconfirmed_same_run_date_notes_updated"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（Muchu横浜ベイサイド）",
+              "disposition": "added",
+              "event_id": "evt-w45f1-8306-sunsun",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "こびとづかん×Muchu Planet（横浜ベイサイド）",
+              "disposition": "duplicate",
+              "event_id": "evt-kanagawa-w45d3-family-muchu-kobito",
+              "reason": "merged setとlive kanagawa HTTP200本文の既存IDを確認。"
+            }
+          ],
+          "facility_id": 8306,
+          "facility_name": "Muchu Planet ユニクロパーク 横浜ベイサイド",
+          "completed_at": "2026-11-04T14:40:50.607346+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/muchu-yokohamabayside/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:40:01.136327+00:00",
+              "facility_id": 8306,
+              "final_url": "https://litpla.com/space/muchu-yokohamabayside/",
+              "title": "Muchu Planet ユニクロパーク 横浜ベイサイド | リトルプラネット / LittlePlanet",
+              "content_sha256": "54fea56008b25c86cb66828bef3f31affbe12442615dd5938552b93a822d54cd"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:40:02.714410+00:00",
+              "facility_id": 8306,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:40:04.120002+00:00",
+              "facility_id": 8306,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            },
+            {
+              "url": "https://litpla.com/news/press/kobito-collab-26/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:40:13.466884+00:00",
+              "facility_id": 8306,
+              "final_url": "https://litpla.com/news/press/kobito-collab-26/",
+              "title": "「こびとづかん」× Muchu Planet！横浜・越谷で10/27より限定コラボ開催！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "f4e20143dad23b5793e745ea69ae395d57549c9412bf10b40fd19582025c582b"
+            },
+            {
+              "url": "https://litpla.com/news/press/muchu-yokohamabay-grandopening/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:40:15.167430+00:00",
+              "facility_id": 8306,
+              "final_url": "https://litpla.com/news/press/muchu-yokohamabay-grandopening/",
+              "title": "【NEW OPEN】“本と遊び”が融合！「Muchu Planet ユニクロパーク 横浜ベイサイド」が誕生！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "86e770e27e02244ba7a67948e9772923bd5b648633eaf23a85faad76ea6eb842"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_duplicate",
+          "reason": "11月9日〜1月6日コラボはvenue_nameで既存掲載。merged set＋live kanagawa HTTP200のIDを確認。店舗・告知・特設を当施設順で実取得し確認日更新。常設ワークショップ・割引・過去休館は新規イベントにしない。",
+          "existing_events": [
+            {
+              "event_id": "evt-kanagawa-w40d4-sunsun-yokohama",
+              "disposition": "refreshed"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（ららぽーと横浜）",
+              "disposition": "duplicate",
+              "event_id": "evt-kanagawa-w40d4-sunsun-yokohama"
+            }
+          ],
+          "facility_id": 8307,
+          "facility_name": "TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜",
+          "completed_at": "2026-11-04T14:42:19.575803+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/toylo_yokohama/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:41:01.805779+00:00",
+              "facility_id": 8307,
+              "final_url": "https://litpla.com/space/toylo_yokohama/",
+              "title": "TOYLO PARK powered by リトルプラネット イトーヨーカドー ららぽーと横浜 | リトルプラネット / LittlePlanet",
+              "content_sha256": "a014e752cd2c9eb0d1d8e07c98be2285fb557eda133471a8cb76bc15942cd533"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:41:03.554210+00:00",
+              "facility_id": 8307,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:41:05.231361+00:00",
+              "facility_id": 8307,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
+        },
+        {
+          "disposition": "candidate_found_duplicate",
+          "reason": "店舗と企画公式を当施設順で再取得しサンサン既存会場名レコードを再確認・確認日更新。merged setとlive kanagawa HTTP200のIDを照合。現在の特別企画は同コラボ、他は終了済告知・過去休館・常設体験。",
+          "existing_events": [
+            {
+              "event_id": "evt-kanagawa-w40d4-sunsun-musashikosugi",
+              "disposition": "refreshed"
+            }
+          ],
+          "candidates": [
+            {
+              "title": "サンサンキッズTV みんなで！あそびパーティ2026（武蔵小杉）",
+              "disposition": "duplicate",
+              "event_id": "evt-kanagawa-w40d4-sunsun-musashikosugi"
+            }
+          ],
+          "facility_id": 8308,
+          "facility_name": "TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉",
+          "completed_at": "2026-11-04T14:42:54.672014+00:00",
+          "sources_checked": [
+            {
+              "url": "https://litpla.com/space/toylo_musashikosugi/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:42:31.535700+00:00",
+              "facility_id": 8308,
+              "final_url": "https://litpla.com/space/toylo_musashikosugi/",
+              "title": "TOYLO PARK powered by リトルプラネット グランツリー武蔵小杉 | リトルプラネット / LittlePlanet",
+              "content_sha256": "157f329603b04d39c129fe2cc233c4dae3555cbc2acbec16efa8ee25a2f0fab3"
+            },
+            {
+              "url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:42:33.191030+00:00",
+              "facility_id": 8308,
+              "final_url": "https://litpla.com/news/press/202610-sunsun-info/",
+              "title": "【予告】11/9（月）からサンサンキッズTVとコラボ決定！早割クーポンも！ | リトルプラネット / LittlePlanet",
+              "content_sha256": "207f571a6a5ac22607b303b0a4fd4c99c64b35e33c52b58748236510de7c3271"
+            },
+            {
+              "url": "https://litpla.com/event/sunsunkidstv/",
+              "status": 200,
+              "checked_at": "2026-11-04T14:42:34.733568+00:00",
+              "facility_id": 8308,
+              "final_url": "https://litpla.com/event/sunsunkidstv/",
+              "title": "リトルプラネット×サンサンキッズTV みんなで！あそびパーティ | リトルプラネット / LittlePlanet",
+              "content_sha256": "de654d3c8b4d01c7b45d5cbeaa9254cf6b7b0a90780dc0040a97d126f31f212f"
+            }
+          ]
+        }
+      ]
     },
     "osaka": {
       "facility_ids": [],
@@ -1265,6 +2180,16 @@
       "title": "福井県の速報、総合ニュースサイト | 福井新聞ONLINE | 福井新聞社",
       "content_sha256": "4f9af85d12c95af26ff994e0d239ebc4ea3b796001877a01c58f31adb7b0e3d3",
       "reason": "Unrelated homepage fetched inadvertently; no event or registry fact relies on it."
+    },
+    {
+      "url": "https://www.fantasy.co.jp/",
+      "status": 404,
+      "checked_at": "2026-11-04T14:36:41.986043+00:00",
+      "facility_id": 8312,
+      "final_url": "https://www.fantasy.co.jp/",
+      "title": "システム障害に関するお詫びとお知らせ",
+      "content_sha256": "3c1399cd51c8b313dee0de1dbeffc2bb0283c5097a09d2c0a7fe0b33bf4bd484",
+      "reason": "Unrelated operator homepage fetched inadvertently; not used for this facility."
     }
   ]
 }
