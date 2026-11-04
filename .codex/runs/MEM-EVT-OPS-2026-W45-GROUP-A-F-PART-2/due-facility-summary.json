@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-F-PART-2",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-04T16:54:37.251297+00:00",
+  "executed_at": "2026-11-04T16:59:11.709613+00:00",
   "due_facility_ids": [
     8302,
     8304,
@@ -31,12 +31,20 @@
   ],
   "prior_run_evidence_reused": false,
   "aggregate": {
-    "total": 20,
-    "no_current_or_future_event": 4,
-    "candidate_found_added": 11,
+    "total": 25,
+    "no_current_or_future_event": 6,
+    "candidate_found_added": 13,
     "candidate_found_duplicate": 1,
-    "candidate_found_hold": 2,
-    "source_unresolved": 2
+    "candidate_found_hold": 3,
+    "source_unresolved": 2,
+    "candidate_totals": {
+      "added": 36,
+      "duplicate": 55,
+      "hold": 27
+    },
+    "added_events": 36,
+    "updated_existing_events": 54,
+    "registry_freshness_rows": 23
   },
   "per_region": {
     "tokyo": {
@@ -326,7 +334,15 @@
           "updated_event_ids": [],
           "completed_at": "2026-11-04T16:32:35.304214+00:00"
         }
-      ]
+      ],
+      "candidate_totals": {
+        "added": 14,
+        "found": 14
+      },
+      "participability_added": {
+        "通常参加可能": 8,
+        "条件付き参加可能": 6
+      }
     },
     "yamaguchi": {
       "facility_ids": [
@@ -356,7 +372,11 @@
           "updated_event_ids": [],
           "completed_at": "2026-11-04T16:32:45.819652+00:00"
         }
-      ]
+      ],
+      "candidate_totals": {
+        "found": 0
+      },
+      "participability_added": {}
     },
     "yamanashi": {
       "facility_ids": [
@@ -383,10 +403,10 @@
         8351
       ],
       "total": 21,
-      "no_current_or_future_event": 3,
-      "candidate_found_added": 8,
+      "no_current_or_future_event": 5,
+      "candidate_found_added": 10,
       "candidate_found_duplicate": 1,
-      "candidate_found_hold": 2,
+      "candidate_found_hold": 3,
       "source_unresolved": 2,
       "sources_checked": [
         {
@@ -1564,6 +1584,139 @@
           "checked_at": "2026-11-04T16:50:49.763040+00:00",
           "facility_id": 8320,
           "content_sha256": "e7c4430fbc3ee993c04449b4749259a047f3e8e80dc5a8f2e89f962d470a73e0"
+        },
+        {
+          "url": "https://kenoffice.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:54:51.408667+00:00",
+          "facility_id": 8328,
+          "content_sha256": "e3224ab47aca76b135199326e1a460178cd45e0f810e9d83fab723e15d426378"
+        },
+        {
+          "url": "https://kenoffice.jp/exhibition/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:54:57.249022+00:00",
+          "facility_id": 8328,
+          "content_sha256": "f4e6066cfa6959bb3f10116384048fe151f46875119dc2a234d9ace5069b5233"
+        },
+        {
+          "url": "https://kenoffice.jp/info/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:54:57.709490+00:00",
+          "facility_id": 8328,
+          "content_sha256": "38fca0b1d0f1746c1abb080ba0035b7e30e67212cfb031686a22595b06345724"
+        },
+        {
+          "url": "https://kenoffice.jp/topics/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:54:58.097379+00:00",
+          "facility_id": 8328,
+          "content_sha256": "6db4f1d0db24a5b677532b04c280ff5744cec31ab74d1a0f044d2605d7f32ed4"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:18.230291+00:00",
+          "facility_id": 8329,
+          "content_sha256": "9621a952012b94d9af07dd2f3c2a644cf65cc89521564b2fa361b7eef670063f"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/news_260831.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:28.712430+00:00",
+          "facility_id": 8329,
+          "content_sha256": "70c882cdb508cef978d26e0b50ed6d8991f80ecce32fd411a8c5730863d4232c"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/visiting.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:35.692001+00:00",
+          "facility_id": 8329,
+          "content_sha256": "ec137d5cf403bbd7f5fca4ba738aed7e010ed2523f3e6852a3cbffd1cf39cae1"
+        },
+        {
+          "url": "https://www.africanartmuseum.jp/lecture.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:36.063394+00:00",
+          "facility_id": 8329,
+          "content_sha256": "9407ef0f44b82ab9ce9ba7fe5f545059d864d9253b0dd9c2813444e2313654f1"
+        },
+        {
+          "url": "https://www.fkchannel.jp/facility-04",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:51.741657+00:00",
+          "facility_id": 8338,
+          "content_sha256": "a85bfbced74a4ce6097f2ce000a1a69f4914baf9065aabc4b78d6d43050b8c57"
+        },
+        {
+          "url": "https://www.fkchannel.jp/class",
+          "status": 200,
+          "checked_at": "2026-11-04T16:55:58.359629+00:00",
+          "facility_id": 8338,
+          "content_sha256": "15f1e69724e2cf9e20dae7aa4677ca613aaebba86c177a38b7216b1f8f89da60"
+        },
+        {
+          "url": "https://www.fkchannel.jp/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:56:01.925655+00:00",
+          "facility_id": 8338,
+          "content_sha256": "2d0f72e3cf3f4170489258599ea379178aa149e8a8182ba584055d497293c7e2"
+        },
+        {
+          "url": "https://rakuen-kawaguchiko.com/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:56:15.078455+00:00",
+          "facility_id": 8339,
+          "content_sha256": "a44b2c1c25b62bd650aa8808dffaf18c815d2f1bc62adca829010a0aa665bd88"
+        },
+        {
+          "url": "https://rakuen-kawaguchiko.com/events/",
+          "status": "timeout",
+          "checked_at": "2026-11-04T16:56:22.395419+00:00",
+          "facility_id": 8339,
+          "content_sha256": "7f8dc22a74f824e43dccff3692a35198d6ea76482c78502e11fbc783e665f767"
+        },
+        {
+          "url": "https://rakuen-kawaguchiko.com/topics/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:57:02.747869+00:00",
+          "facility_id": 8339,
+          "content_sha256": "f0dbf2626775ce42b0f99b5e1daa7d4fdb59a8603ad58c6c25f85d14bafb3c27"
+        },
+        {
+          "url": "https://rakuen-kawaguchiko.com/events/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:57:21.344892+00:00",
+          "facility_id": 8339,
+          "content_sha256": "5f2bc6582641eb58f9c4ad36cfb7792655a836931c528eda6604635c75587e84"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/",
+          "status": 200,
+          "checked_at": "2026-11-04T16:57:36.368149+00:00",
+          "facility_id": 8351,
+          "content_sha256": "304e960b23d04f255deece97b4c2ed8feba29f55ff5b32e65c981814139d47ef"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-category-16.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:57:45.595335+00:00",
+          "facility_id": 8351,
+          "content_sha256": "44d0b153b03856789cf13213ebfae093616ff93fc5f29716cbfb8831b11a6fa7"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-category-3.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:57:46.598097+00:00",
+          "facility_id": 8351,
+          "content_sha256": "fc028608a6fea852e0bff92694c082aa9a9f5243d7c2ee46f782948a736aae3d"
+        },
+        {
+          "url": "https://niramin01.blog.fc2.com/blog-entry-812.html",
+          "status": 200,
+          "checked_at": "2026-11-04T16:58:10.430816+00:00",
+          "facility_id": 8351,
+          "content_sha256": "a4d26c75ecf00ecf4e627ca8b9795b4eb85ece359fa9f8b579bcff979f55dfad"
         }
       ],
       "facilities": [
@@ -2419,8 +2572,90 @@
           ],
           "updated_event_ids": [],
           "completed_at": "2026-11-04T16:54:37.251234+00:00"
+        },
+        {
+          "facility_id": 8328,
+          "disposition": "candidate_found_added",
+          "reason": "現在の展示・利用案内・新着一覧を確認。展示を追加し、再開未定のサイン会は日付未定HOLD。",
+          "candidates": [
+            {
+              "title": "特集：秋のころわん／2027年カレンダー原画と風景",
+              "disposition": "added",
+              "event_id": "evt-8328-20261105-01",
+              "participability": "通常参加可能"
+            },
+            {
+              "title": "黒井健サイン会",
+              "disposition": "hold",
+              "reason": "10/24は中止、11月以降は再開未定と公式利用案内に明記。開催日未定。",
+              "sources": [
+                "https://kenoffice.jp/info/"
+              ]
+            }
+          ],
+          "updated_event_ids": [],
+          "completed_at": "2026-11-04T16:55:16.941864+00:00"
+        },
+        {
+          "facility_id": 8329,
+          "disposition": "candidate_found_added",
+          "reason": "公式トップ・展覧会詳細・利用案内・美術講座ページを確認。1企画展を追加。毎週の通常ギャラリートークは展示案内に含まれる常設サービス。",
+          "candidates": [
+            {
+              "title": "FORMS OF SPIRITS―祈りのかたち",
+              "disposition": "added",
+              "event_id": "evt-8329-20261105-01",
+              "participability": "通常参加可能"
+            }
+          ],
+          "updated_event_ids": [],
+          "completed_at": "2026-11-04T16:55:50.645936+00:00"
+        },
+        {
+          "facility_id": 8338,
+          "disposition": "no_current_or_future_event",
+          "reason": "施設ページの11/1更新・体験メニュー・財団新着を確認。通常の通年リース／ハーバリウム体験・営業時間縮小・押し花カレンダー物販のみで、日付のある新規イベントはなし。施設情報は変更しない。",
+          "candidates": [],
+          "updated_event_ids": [],
+          "completed_at": "2026-11-04T16:56:13.797390+00:00"
+        },
+        {
+          "facility_id": 8339,
+          "disposition": "no_current_or_future_event",
+          "reason": "公式イベント一覧をタイムアウト後再取得し成功。4件すべて終了明記（最新2026/10/24、8/14-15、残り2025年）。新着・常設体験も確認したが日付のある今後の催しなし。",
+          "candidates": [],
+          "updated_event_ids": [],
+          "completed_at": "2026-11-04T16:57:33.069319+00:00"
+        },
+        {
+          "facility_id": 8351,
+          "disposition": "candidate_found_hold",
+          "reason": "公式ブログ最新記事・イベントカテゴリ・企画展カテゴリを確認。秋祭り10/18と夏教室は終了。富士山芸術祭への言及はあるが当施設の会期を特定できずHOLD。休館日案内・常設展示・御城印販売は期間イベントではない。",
+          "candidates": [
+            {
+              "title": "富士山芸術祭（韮崎市民俗資料館会場）",
+              "disposition": "hold",
+              "reason": "10/18秋祭り記事に同日開催中との記載のみ。当館蔵座敷での展示の開始日・終了日および11/5時点の継続を公式記事から確定できない。",
+              "sources": [
+                "https://niramin01.blog.fc2.com/blog-entry-812.html"
+              ]
+            }
+          ],
+          "updated_event_ids": [],
+          "completed_at": "2026-11-04T16:58:11.443923+00:00"
         }
-      ]
+      ],
+      "candidate_totals": {
+        "duplicate": 55,
+        "added": 22,
+        "hold": 27,
+        "found": 104
+      },
+      "participability_added": {
+        "条件付き参加可能": 6,
+        "通常参加可能": 16
+      }
     }
-  }
+  },
+  "execution_notes": "Exactly the 25 dispatched due facilities were executed sequentially in this process; no previous-run research was reused. Dispatch states 58 existing current/future events; exact start-HEAD data contains 54 still current/future at 2026-11-05 JST, all freshly reconfirmed. Four additional planetarium records ended 2026-11-03, before this process started; no freshness was invented for expired records. No facility data, schema, UI or eligibility edits. Failed primary sources at 121 and 2118 were retried with official fallbacks and not freshness-stamped."
 }
