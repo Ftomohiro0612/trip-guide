@@ -1,7 +1,7 @@
 {
   "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-A-D-PART-5",
   "executed_in_this_mission": true,
-  "executed_at": "2026-11-03T23:50:06.986500+00:00",
+  "executed_at": "2026-11-04T00:24:31.819903+00:00",
   "horizon_end_date": "2026-12-31",
   "per_region": {
     "miyazaki": {
@@ -1381,6 +1381,27 @@
           "checked_at": "2026-11-03T23:44:05.607268+00:00",
           "source_type": "seasonal_new_arrival",
           "role": "new-arrival organizer primary/application follow-up to tourism candidate; root publishes dated 新着情報"
+        },
+        {
+          "url": "https://www.miyazaki-archive.jp/museum/wp2/newsview.php?mode=d&aid=572&cid=3&cor1=adt&cad1=1&cnm1=&page=1",
+          "status": 503,
+          "checked_at": "2026-11-04T00:21:15.422068+00:00",
+          "source_type": "prefecture_official",
+          "role": "retained official URL audit after committed-diff completion gate; HTTP503 maintenance, existing factual updates use separately fetched live government alternatives"
+        },
+        {
+          "url": "https://www.miyazaki-archive.jp/bijutsu/box/riyou.html",
+          "status": 503,
+          "checked_at": "2026-11-04T00:21:15.830733+00:00",
+          "source_type": "prefecture_official",
+          "role": "retained official URL audit after committed-diff completion gate; HTTP503 maintenance, existing factual updates use separately fetched live government alternatives"
+        },
+        {
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "status": 200,
+          "checked_at": "2026-11-04T00:21:16.227591+00:00",
+          "source_type": "municipal_official",
+          "role": "retained municipal-museum official URL audit; exhibition and all five related programs judged"
         }
       ],
       "candidates": [
@@ -1925,6 +1946,27 @@
           "reason": "公式内容が式典・会議・業務研修・競技大会等で、子ども家族が参加できるおでかけ企画としての根拠なし。県外開催は今回地域対象外。"
         },
         {
+          "title": "博物館講座 近世城郭に忍び込め",
+          "url": "https://www.miyazaki-archive.jp/museum/wp2/newsview.php?mode=d&aid=572&cid=3&cor1=adt&cad1=1&cnm1=&page=1",
+          "disposition": "hold",
+          "reason": "今回実取得した県立館の旧個別URLはHTTP503のサービス停止告知。告知に講座申込の名称だけが表示され、当該回の現年開催日・会場を確定できない。日時不明の回を過去の同名講座に名寄せしない。",
+          "same_notice_at": "https://www.miyazaki-archive.jp/bijutsu/box/riyou.html"
+        },
+        {
+          "title": "博物館講座 佐土原人形絵付け体験",
+          "url": "https://www.miyazaki-archive.jp/museum/wp2/newsview.php?mode=d&aid=572&cid=3&cor1=adt&cad1=1&cnm1=&page=1",
+          "disposition": "hold",
+          "reason": "今回実取得した県立館の旧個別URLはHTTP503のサービス停止告知。告知に講座申込の名称だけが表示され、当該回の現年開催日・会場を確定できない。日時不明の回を過去の同名講座に名寄せしない。",
+          "same_notice_at": "https://www.miyazaki-archive.jp/bijutsu/box/riyou.html"
+        },
+        {
+          "title": "博物館講座 チリメンモンスター",
+          "url": "https://www.miyazaki-archive.jp/museum/wp2/newsview.php?mode=d&aid=572&cid=3&cor1=adt&cad1=1&cnm1=&page=1",
+          "disposition": "hold",
+          "reason": "今回実取得した県立館の旧個別URLはHTTP503のサービス停止告知。告知に講座申込の名称だけが表示され、当該回の現年開催日・会場を確定できない。日時不明の回を過去の同名講座に名寄せしない。",
+          "same_notice_at": "https://www.miyazaki-archive.jp/bijutsu/box/riyou.html"
+        },
+        {
           "title": "【小松台】福祉まつり 【小松台】福祉まつり",
           "url": "https://www.city.miyazaki.miyazaki.jp/life/activities/local_event/event_komatsudai/416454.html",
           "disposition": "stale_false",
@@ -2199,6 +2241,48 @@
           "url": "https://www.city.miyazaki.miyazaki.jp/culture/events/418177.html",
           "disposition": "hold",
           "reason": "一覧は2027年1月22〜25日、本文は令和8年1月22〜25日。数値年が公式内で不一致。補正せずHOLD。"
+        },
+        {
+          "title": "特別展「描く人、安彦良和」",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "duplicate_or_already_present",
+          "reason": "公式旧URLもHTTP200で2026年11月21日〜2027年3月7日・企画展示室を確認。既に別のライブ政府一次情報で鮮度更新した同一展示。",
+          "event_id": "evt-w42-d11-miyazaki-20261121-db0bf9a",
+          "duplicate_disambiguation": "同一展示ID evt-w42-d11-miyazaki-20261121-db0bf9a、延岡城・内藤記念博物館、2026-11-21〜2027-03-07。その公式会期・会場内の構成企画として照合。"
+        },
+        {
+          "title": "安彦良和展 オープニングセレモニー",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "duplicate_or_already_present",
+          "reason": "11月21日9〜9:30、同じ博物館エントランスで行う展示開幕の構成プログラム。予約不要、無料。既存の同日開幕の展示包括レコードに含む。",
+          "event_id": "evt-w42-d11-miyazaki-20261121-db0bf9a",
+          "duplicate_disambiguation": "同一展示ID evt-w42-d11-miyazaki-20261121-db0bf9a、延岡城・内藤記念博物館、2026-11-21〜2027-03-07。その公式会期・会場内の構成企画として照合。"
+        },
+        {
+          "title": "安彦良和展 ギャラリートーク",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "duplicate_or_already_present",
+          "reason": "11月28日・1月17日・2月21日13:30から同じ企画展示室で行う学芸員の展示解説。要展覧会チケット・予約不要、同じ展示包括レコードの構成企画。",
+          "event_id": "evt-w42-d11-miyazaki-20261121-db0bf9a",
+          "duplicate_disambiguation": "同一展示ID evt-w42-d11-miyazaki-20261121-db0bf9a、延岡城・内藤記念博物館、2026-11-21〜2027-03-07。その公式会期・会場内の構成企画として照合。"
+        },
+        {
+          "title": "安彦良和展 サイン会（第1期・二次募集）",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "hold",
+          "reason": "11月21日開催、二次募集11月2〜10日の抽選受付は確認。内容は展覧会図録への作家サインと当選者本人確認で、幼い子どもの体験・交流を目的とする家族向けプログラムとして確認できない。通常の展示観覧とは分離して保留。"
+        },
+        {
+          "title": "安彦良和展 トークショーⅠ",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "hold",
+          "reason": "2027年1月9日開催だが公式申込開始は11月16日9時。確認時は募集開始前。"
+        },
+        {
+          "title": "安彦良和展 特別上映会＋トークショーⅡ",
+          "url": "https://nobeoka-naito-museum.jp/?p=3734",
+          "disposition": "hold",
+          "reason": "2027年2月6日開催だが公式申込開始は12月7日9時。確認時は募集開始前。"
         },
         {
           "title": "青島ナイトアップ ～11/29日（日）",
@@ -3401,10 +3485,10 @@
       ],
       "horizon_note": "開催順の1〜2頁で2027年2月以降まで到達。3頁は過去アーカイブへ移る境界を確認し、混在する11月29日朝市も個別評価。",
       "added": 60,
-      "duplicate_or_already_present": 20,
-      "hold": 118,
+      "duplicate_or_already_present": 23,
+      "hold": 124,
       "stale_false": 111,
-      "candidates_found": 309
+      "candidates_found": 318
     },
     "osaka": {
       "sources_checked": [
