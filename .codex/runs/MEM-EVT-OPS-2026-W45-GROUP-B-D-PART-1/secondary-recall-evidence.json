@@ -10622,12 +10622,19 @@
           "status": 200,
           "checked_at": "2026-11-05T04:27:30.675352+00:00",
           "source_type": "family_event_portal"
+        },
+        {
+          "url": "https://www.tachikawa-chiikibunka.or.jp/a12-20270109/",
+          "status": 200,
+          "checked_at": "2026-11-05T04:54:52.222387+00:00",
+          "source_type": "area_event_calendar",
+          "extraction_scope": "Current event .entry-content; unrelated adult concert event-calendar modal is not this programme."
         }
       ],
       "candidates_found": 1172,
-      "added": 129,
-      "duplicate_or_already_present": 234,
-      "hold": 809,
+      "added": 130,
+      "duplicate_or_already_present": 235,
+      "hold": 807,
       "stale_false": 0,
       "candidates": [
         {
@@ -11349,7 +11356,7 @@
           "reason": "公式の開催日・会場確認。通常参加可能。",
           "event_id": "evt-w45d1b-tokyo-77f05ea7a2",
           "recall_url": "https://www.walkerplus.com/event/ar0313e618579/data.html",
-          "event_category": "facility_hosted",
+          "event_category": "municipal_regional",
           "event_prefecture": "tokyo",
           "participability": "通常参加可能"
         },
@@ -15599,7 +15606,7 @@
           "disposition": "hold",
           "reason": "同一公式URL・同一開始日の既存掲載との意味的区別に新たな重複例外の承認が必要。無断で追加しない。",
           "event_id": "evt-w45d1b-tokyo-77f05ea7a2",
-          "event_category": "facility_hosted"
+          "event_category": "municipal_regional"
         },
         {
           "title": "「扉 -border-」 大塚麻由・kopfkino・松井圭太郎",
@@ -15930,11 +15937,15 @@
         },
         {
           "title": "劇団四季ファミリーミュージカル「王様の耳はロバの耳」",
-          "url": "https://www.walkerplus.com/event/ar0313e622148/data.html",
+          "url": "https://www.tachikawa-chiikibunka.or.jp/a12-20270109/",
           "source_type": "area_event_calendar",
-          "disposition": "hold",
-          "reason": "公式に未就学児入場不可（当該公演の年齢制限確認待ち）。",
-          "event_category": "municipal_regional"
+          "disposition": "added",
+          "reason": "当該催事のentry-contentは3歳以上有料・3歳未満膝上可、11/2一般発売を明記。未就学児不可の文は別の成人コンサートを含むイベントカレンダーmodal内で、当該公演の制限ではないとDOM構造で確認。追加へ修正。",
+          "event_id": "evt-w45d1b-tokyo-c27d60a5b6",
+          "recall_url": "https://www.walkerplus.com/event/ar0313e622148/data.html",
+          "event_category": "facility_hosted",
+          "event_prefecture": "tokyo",
+          "participability": "条件付き参加可能"
         },
         {
           "title": "【紅葉・見ごろ】諏訪の谷通り",
@@ -16877,7 +16888,7 @@
           "disposition": "hold",
           "reason": "本run内で取得した公式一次情報の照合結果：同一公式URL・同一開始日の既存掲載との意味的区別に新たな重複例外の承認が必要。無断で追加しない。",
           "event_id": "evt-w45d1b-tokyo-77f05ea7a2",
-          "event_category": "facility_hosted"
+          "event_category": "municipal_regional"
         },
         {
           "title": "吉祥寺パルコMOTTAINAIフリーマーケット（12月）",
@@ -17317,7 +17328,7 @@
           "disposition": "duplicate_or_already_present",
           "reason": "本runの公式一次照合で追加済み。同じ催事・会場・開催日。",
           "event_id": "evt-w45d1b-tokyo-77f05ea7a2",
-          "event_category": "facility_hosted"
+          "event_category": "municipal_regional"
         },
         {
           "title": "没後70年 映画監督 溝口健二",
@@ -19191,9 +19202,10 @@
           "title": "劇団四季ファミリーミュージカル「王様の耳はロバの耳」",
           "url": "https://www.walkerplus.com/event/ar0313e622148/data.html",
           "source_type": "family_event_portal",
-          "disposition": "hold",
-          "reason": "本run内で取得した公式一次情報の照合結果：公式に未就学児入場不可（当該公演の年齢制限確認待ち）。",
-          "event_category": "municipal_regional"
+          "disposition": "duplicate_or_already_present",
+          "reason": "本runで当該公演本文と別公演modalを区別して公式条件を確定し、先行area単位へ追加済みの同一公演。",
+          "event_category": "facility_hosted",
+          "event_id": "evt-w45d1b-tokyo-c27d60a5b6"
         },
         {
           "title": "北條民雄 『いのちの初夜』刊行90周年記念朗読会",
@@ -20763,18 +20775,18 @@
       ],
       "pages_fetched": 118,
       "paging_stop_reason": "listing_exhausted",
-      "paging_note": "地域・家族索引とも最終57ページまで実取得。12/31以降の掲載候補も通常判定。独立した別ポータルを確認したとは主張しない。",
+      "paging_note": "地域カレンダーは親子対象の「子供と」絞り込みを主対象として全57頁を取得。一般索引初頁から浮上した追加候補も全件判定。家族単位では同じ全57頁を新規再取得。12/31以降も判定。未絞込の東京全イベント索引全頁や独立した別出版社を確認したとは主張しない。",
       "category_breakdown": {
         "fireworks_festivals_seasonal": {
           "candidates_found": 153,
           "added": 17
         },
         "municipal_regional": {
-          "candidates_found": 579,
-          "added": 40
+          "candidates_found": 581,
+          "added": 41
         },
         "facility_hosted": {
-          "candidates_found": 440,
+          "candidates_found": 438,
           "added": 72
         }
       },
