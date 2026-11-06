@@ -1,17 +1,20 @@
 "use client";
 
+import { useEventViews } from "@/components/useEventViews";
+import type { EventViewsInput } from "@/lib/event-view-payload";
+
 import { useMemo } from "react";
 import { useTokyoToday } from "@/components/useTokyoToday";
 import { refreshEventViewsForDate } from "@/lib/event-dates";
-import type { EventView } from "@/lib/events";
 
 export default function AccessTimeEventCount({
-  views,
+  views: inputViews,
   maxAgeDays,
 }: {
-  views: EventView[];
+  views: EventViewsInput;
   maxAgeDays: number;
 }) {
+  const views = useEventViews(inputViews);
   const today = useTokyoToday();
   const count = useMemo(
     () =>

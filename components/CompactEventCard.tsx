@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getEventAnchorId } from "@/lib/event-discovery";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import type { EventView } from "@/lib/events";
+import type { EventDisplayView } from "@/lib/event-view-payload";
 import type { RecommendedForTag } from "@/types/facility";
 
 export default function CompactEventCard({
@@ -11,7 +11,7 @@ export default function CompactEventCard({
 }: {
   appealTags: readonly RecommendedForTag[];
   horizontal?: boolean;
-  view: EventView;
+  view: EventDisplayView;
 }) {
   const { event } = view;
   const href = `/events?event=${encodeURIComponent(event.id)}#${getEventAnchorId(event.id)}`;

@@ -2,10 +2,10 @@
 
 import { useEffect, useState } from "react";
 import MapViewClient from "@/components/MapViewClient";
-import type { Facility } from "@/types/facility";
+import type { MapFacility } from "@/lib/map-facilities";
 
 interface Props {
-  facilities: Facility[];
+  facilities: MapFacility[];
   heading?: string;
   totalItems?: number;
   enableAreaSearch?: boolean;

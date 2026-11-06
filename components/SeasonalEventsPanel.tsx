@@ -1,5 +1,8 @@
 "use client";
 
+import { useEventViews } from "@/components/useEventViews";
+import type { EventViewsInput } from "@/lib/event-view-payload";
+
 import Link from "next/link";
 import { useMemo } from "react";
 import CompactEventCard from "@/components/CompactEventCard";
@@ -10,19 +13,19 @@ import {
   selectChildEventViews,
   selectSeasonalEventViews,
 } from "@/lib/event-discovery";
-import type { EventView } from "@/lib/events";
 
 export default function SeasonalEventsPanel({
-  views,
+  views: inputViews,
   referenceDate,
   maxAgeDays,
   placement,
 }: {
-  views: EventView[];
+  views: EventViewsInput;
   referenceDate: string;
   maxAgeDays: number;
   placement: "home" | "events";
 }) {
+  const views = useEventViews(inputViews);
   const today = useTokyoToday();
   const selection = useMemo(() => {
     const renderDate = today ?? referenceDate;

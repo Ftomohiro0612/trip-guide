@@ -13,6 +13,11 @@ const datasets = {
 };
 
 async function stageHtmlFile(sourcePath, destinationPath) {
+  const { size } = await stat(sourcePath);
+  const budget = 25 * 1024 * 1024 * 0.9;
+  if (size > budget) {
+    throw new Error(`Static page exceeds the 90% Cloudflare asset budget (${size} > ${budget} bytes): ${sourcePath}`);
+  }
   await mkdir(resolve(destinationPath, ".."), { recursive: true });
   await copyFile(sourcePath, destinationPath);
 }
@@ -176,6 +181,8 @@ export async function finalizeCloudflareWorker() {
   const manifest = {
     facilitiesMetadataPath: "",
     facilityChunkPaths: [],
+    eventsMetadataPath: "",
+    eventChunkPaths: [],
     datasetPaths: {},
   };
   const facilitiesData = canon.facilitiesData;
@@ -209,8 +216,28 @@ export async function finalizeCloudflareWorker() {
     await writeFile(resolve(assetDir, name), serialized, "utf8");
   }
 
+  // Keep the complete event canon in bounded assets, just like facilities.
+  const eventsData = canon.eventsData;
+  const eventsMetadata = JSON.stringify({ ...eventsData, events: undefined });
+  const eventsMetadataDigest = createHash("sha256")
+    .update(eventsMetadata)
+    .digest("hex")
+    .slice(0, 16);
+  const eventsMetadataName = `events-metadata-${eventsMetadataDigest}.json`;
+  manifest.eventsMetadataPath = `/_memorip-runtime/${eventsMetadataName}`;
+  await writeFile(resolve(assetDir, eventsMetadataName), eventsMetadata, "utf8");
+
+  const eventChunkSize = 1000;
+  for (let start = 0; start < eventsData.events.length; start += eventChunkSize) {
+    const serialized = JSON.stringify(eventsData.events.slice(start, start + eventChunkSize));
+    const digest = createHash("sha256").update(serialized).digest("hex").slice(0, 16);
+    const name = `events-${String(start / eventChunkSize).padStart(2, "0")}-${digest}.json`;
+    manifest.eventChunkPaths.push(`/_memorip-runtime/${name}`);
+    await writeFile(resolve(assetDir, name), serialized, "utf8");
+  }
+
   for (const [exportName, value] of Object.entries(canon)) {
-    if (exportName === "facilitiesData") continue;
+    if (exportName === "facilitiesData" || exportName === "eventsData") continue;
     const serialized = JSON.stringify(value);
     const digest = createHash("sha256")
       .update(serialized)
@@ -235,7 +262,7 @@ export async function finalizeCloudflareWorker() {
   );
 
   console.log(
-    `Staged runtime canon in ${manifest.facilityChunkPaths.length + Object.keys(manifest.datasetPaths).length + 1} files.`,
+    `Staged runtime canon in ${manifest.facilityChunkPaths.length + manifest.eventChunkPaths.length + Object.keys(manifest.datasetPaths).length + 2} files.`,
   );
 }
 

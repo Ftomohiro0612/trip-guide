@@ -1,21 +1,24 @@
 "use client";
 
+import { useEventViews } from "@/components/useEventViews";
+import type { EventViewsInput } from "@/lib/event-view-payload";
+
 import Link from "next/link";
 import { useMemo } from "react";
 import FacilityEventCard from "@/components/FacilityEventCard";
 import { useTokyoToday } from "@/components/useTokyoToday";
 import { refreshEventViewsForDate } from "@/lib/event-dates";
-import type { EventView } from "@/lib/events";
 
 export default function FacilityEventsClient({
-  views,
+  views: inputViews,
   maxAgeDays,
   prefecture,
 }: {
-  views: EventView[];
+  views: EventViewsInput;
   maxAgeDays: number;
   prefecture?: { id: string; name: string };
 }) {
+  const views = useEventViews(inputViews);
   const today = useTokyoToday();
   const currentViews = useMemo(
     () =>

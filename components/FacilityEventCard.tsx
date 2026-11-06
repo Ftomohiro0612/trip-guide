@@ -1,9 +1,9 @@
 import EventRecordButton from "@/components/EventRecordButton";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import { isPdfOfficialUrl } from "@/lib/event-urls";
-import type { EventView } from "@/lib/events";
+import type { EventDisplayView } from "@/lib/event-view-payload";
 
-export default function FacilityEventCard({ view }: { view: EventView }) {
+export default function FacilityEventCard({ view }: { view: EventDisplayView }) {
   const { event } = view;
   const officialLinkLabel =
     event.reservation === "required"
