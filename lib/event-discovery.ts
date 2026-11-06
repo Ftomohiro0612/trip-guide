@@ -1,5 +1,6 @@
 import { getNextEventDate, isThisWeekend } from "./event-dates";
-import type { EventItem, EventView } from "@/lib/events";
+import type { EventItem } from "@/lib/events";
+import type { EventDisplayView } from "@/lib/event-view-payload";
 import type { RecommendedForTag } from "@/types/facility";
 
 export const EVENT_CHILD_PICK_HORIZON_DAYS = 30;
@@ -32,7 +33,7 @@ export interface ChildEventCandidate {
   primaryTheme: string;
   reason: string;
   tier: ChildEventTier;
-  view: EventView;
+  view: EventDisplayView;
 }
 
 export interface ChildEventSelection {
@@ -157,10 +158,10 @@ export const EVENT_DISCOVERY_TYPE_RULES: readonly EventTypeRule[] = [
 ] as const;
 
 export function selectSeasonalEventViews(
-  views: readonly EventView[],
+  views: readonly EventDisplayView[],
   today: string,
   limit = 3,
-): EventView[] {
+): EventDisplayView[] {
   const eventPrefectures = new Set<string>();
 
   return views
@@ -198,7 +199,7 @@ export function selectSeasonalEventViews(
 }
 
 export function selectChildEventViews(
-  views: readonly EventView[],
+  views: readonly EventDisplayView[],
   today: string,
   excludedEventIds: ReadonlySet<string> = new Set(),
   limit = 3,
@@ -372,7 +373,7 @@ export function getEventAnchorId(eventId: string): string {
 }
 
 function scoreChildEvent(
-  view: EventView,
+  view: EventDisplayView,
   today: string,
   nextDate: string,
 ): (ChildEventCandidate & {
@@ -433,7 +434,7 @@ function compareChildCandidates(
   );
 }
 
-function getEventFacilityKey(view: EventView): string {
+function getEventFacilityKey(view: EventDisplayView): string {
   return view.event.facility_id !== null
     ? `facility:${view.event.facility_id}`
     : `venue:${view.event.prefecture}:${view.venueName ?? view.event.id}`;

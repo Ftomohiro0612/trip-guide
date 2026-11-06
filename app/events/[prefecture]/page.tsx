@@ -1,3 +1,4 @@
+import { packEventViews } from "@/lib/event-view-payload";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -47,7 +48,9 @@ export default async function PrefectureEventsPage({ params }: Props) {
   const prefectureName = getEventPrefectureLabel(prefecture);
   const today = getBuildDateString();
   const visibleEvents = getVisibleEventsByPrefecture(prefecture, today);
-  const eventViews = visibleEvents.map((event) => toEventView(event, today));
+  const eventViews = packEventViews(
+    visibleEvents.map((event) => toEventView(event, today)),
+  );
 
   return (
     <div>
@@ -94,7 +97,7 @@ export default async function PrefectureEventsPage({ params }: Props) {
       </section>
 
       <div className="mx-auto max-w-6xl px-4 py-5 sm:py-8">
-        {eventViews.length === 0 ? (
+        {visibleEvents.length === 0 ? (
           <div className="rounded-lg border border-slate-200 bg-white p-6 text-center text-sm text-slate-600">
             現在掲載中のイベントはありません。
           </div>

@@ -1,5 +1,8 @@
 "use client";
 
+import { useEventViews } from "@/components/useEventViews";
+import type { EventViewsInput } from "@/lib/event-view-payload";
+
 import { useEffect, useMemo, useRef, useState } from "react";
 import EventCard from "@/components/EventCard";
 import EventDateReservationFilters from "@/components/EventDateReservationFilters";
@@ -20,7 +23,7 @@ import {
   type EventReservationFilter,
 } from "@/lib/event-filter";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import type { EventPrefecture, EventView } from "@/lib/events";
+import type { EventPrefecture } from "@/lib/events";
 import type { RecommendedForTag } from "@/types/facility";
 
 interface PrefectureOption {
@@ -29,7 +32,7 @@ interface PrefectureOption {
 }
 
 interface EventFilterBarProps {
-  views: EventView[];
+  views: EventViewsInput;
   prefectureOptions?: PrefectureOption[];
   showPrefectureFilter?: boolean;
   showPrefectureOnCard?: boolean;
@@ -48,13 +51,14 @@ const DISCOVERY_TYPES = Object.entries(EVENT_DISCOVERY_TYPE_LABELS) as [
 ][];
 
 export default function EventFilterBar({
-  views,
+  views: inputViews,
   prefectureOptions = [],
   showPrefectureFilter = true,
   showPrefectureOnCard = true,
   maxAgeDays,
   referenceDate,
 }: EventFilterBarProps) {
+  const views = useEventViews(inputViews);
   const today = useTokyoToday();
   const eventListHeadingRef = useRef<HTMLHeadingElement>(null);
   const [currentPage, setCurrentPage] = useState(1);

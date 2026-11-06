@@ -1,3 +1,4 @@
+import { packEventViews, type PackedEventViews } from "@/lib/event-view-payload";
 import SeasonalEventsPanel from "@/components/SeasonalEventsPanel";
 import SeasonalFacilitiesPanel from "@/components/SeasonalFacilitiesPanel";
 import {
@@ -11,12 +12,16 @@ import { getTagFacilities, getTagMetaBySlug } from "@/lib/tags";
 
 export default function SeasonalOutingCta({
   placement = "home",
+  views,
+  referenceDate,
 }: {
   placement?: "home" | "events";
+  views?: PackedEventViews;
+  referenceDate?: string;
 }) {
-  const today = getBuildDateString();
-  const eventViews = getVisibleEvents(today).map((event) =>
-    toEventView(event, today),
+  const today = referenceDate ?? getBuildDateString();
+  const eventViews = views ?? packEventViews(
+    getVisibleEvents(today).map((event) => toEventView(event, today)),
   );
   const seasonalFacilities =
     placement === "home"

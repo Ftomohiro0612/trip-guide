@@ -92,7 +92,9 @@ async function ensureRuntimeCanon(env, requestUrl) {
 
   if (!runtimeCanonPromise) {
     runtimeCanonPromise = (async () => {
-      const [facilitiesMetadata, facilityChunks, datasetEntries] =
+      const [
+        facilitiesMetadata, facilityChunks, eventsMetadata, eventChunks, datasetEntries,
+      ] =
         await Promise.all([
           readRuntimeJson(
             env,
@@ -101,6 +103,12 @@ async function ensureRuntimeCanon(env, requestUrl) {
           ),
           Promise.all(
             runtimeCanonManifest.facilityChunkPaths.map((path) =>
+              readRuntimeJson(env, requestUrl, path),
+            ),
+          ),
+          readRuntimeJson(env, requestUrl, runtimeCanonManifest.eventsMetadataPath),
+          Promise.all(
+            runtimeCanonManifest.eventChunkPaths.map((path) =>
               readRuntimeJson(env, requestUrl, path),
             ),
           ),
@@ -117,6 +125,10 @@ async function ensureRuntimeCanon(env, requestUrl) {
         facilitiesData: {
           ...facilitiesMetadata,
           facilities: facilityChunks.flat(),
+        },
+        eventsData: {
+          ...eventsMetadata,
+          events: eventChunks.flat(),
         },
         ...Object.fromEntries(datasetEntries),
       };

@@ -1,21 +1,24 @@
 "use client";
 
+import { useEventViews } from "@/components/useEventViews";
+import type { EventViewsInput } from "@/lib/event-view-payload";
+
 import { useMemo } from "react";
 import ResponsiveResultsMap from "@/components/ResponsiveResultsMap";
 import { useTokyoToday } from "@/components/useTokyoToday";
 import { refreshEventViewsForDate } from "@/lib/event-dates";
-import type { EventView } from "@/lib/events";
-import type { Facility } from "@/types/facility";
+import type { MapFacility } from "@/lib/map-facilities";
 
 export default function AccessTimeEventResultsMap({
   entries,
-  views,
+  views: inputViews,
   maxAgeDays,
 }: {
-  entries: { facility: Facility; eventIds: string[] }[];
-  views: EventView[];
+  entries: { facility: MapFacility; eventIds: string[] }[];
+  views: EventViewsInput;
   maxAgeDays: number;
 }) {
+  const views = useEventViews(inputViews);
   const today = useTokyoToday();
   const facilities = useMemo(() => {
     const currentIds = new Set(

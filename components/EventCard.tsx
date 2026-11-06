@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { RECOMMENDED_FOR_TAG_META } from "@/lib/recommended-tags";
-import type { EventView } from "@/lib/events";
+import type { EventDisplayView } from "@/lib/event-view-payload";
 import { isPdfOfficialUrl } from "@/lib/event-urls";
 import TrackedOutboundLink from "@/components/TrackedOutboundLink";
 import EventRecordButton from "@/components/EventRecordButton";
 import SoudanAddButton from "@/components/SoudanAddButton";
 
 interface EventCardProps {
-  view: EventView;
+  view: EventDisplayView;
   showPrefecture?: boolean;
   showFacilityLink?: boolean;
   anchorId?: string;

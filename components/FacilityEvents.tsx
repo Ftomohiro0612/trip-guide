@@ -1,3 +1,4 @@
+import { packEventViews } from "@/lib/event-view-payload";
 import FacilityEventsClient from "@/components/FacilityEventsClient";
 import {
   EVENT_PAGE_MAX_AGE_DAYS,
@@ -33,7 +34,7 @@ export default function FacilityEvents({
 
   return (
     <FacilityEventsClient
-      views={events.map((event) => toEventView(event, today))}
+      views={packEventViews(events.map((event) => toEventView(event, today)))}
       maxAgeDays={EVENT_PAGE_MAX_AGE_DAYS}
       prefecture={prefecture && { id: prefecture.id, name: prefecture.name }}
     />

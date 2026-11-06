@@ -1,3 +1,5 @@
+import type { MapFacility } from "@/lib/map-facilities";
+import { packEventViews } from "@/lib/event-view-payload";
 import type { Metadata } from "next";
 import Link from "next/link";
 import AffiliateExperienceCta from "@/components/AffiliateExperienceCta";
@@ -25,16 +27,32 @@ export const metadata: Metadata = {
 export default function EventsIndexPage() {
   const today = getBuildDateString();
   const visibleEvents = getVisibleEvents(today);
-  const eventViews = visibleEvents.map((event) => toEventView(event, today));
+  const eventViews = packEventViews(
+    visibleEvents.map((event) => toEventView(event, today)),
+  );
   const eventFacilityMap = new Map<
     number,
-    { facility: NonNullable<ReturnType<typeof getFacilityForEvent>>; eventIds: string[] }
+    { facility: MapFacility; eventIds: string[] }
   >();
   for (const event of visibleEvents) {
     const facility = getFacilityForEvent(event);
     if (!facility) continue;
     const entry = eventFacilityMap.get(facility.id) ?? {
-      facility,
+      facility: {
+        id: facility.id,
+        slug: facility.slug,
+        name: facility.name,
+        prefecture_id: facility.prefecture_id,
+        category_id: facility.category_id,
+        latitude: facility.latitude,
+        longitude: facility.longitude,
+        closure_status: facility.closure_status,
+        image: facility.image,
+        is_free: facility.is_free,
+        rain_friendly: facility.rain_friendly,
+        target_age: facility.target_age,
+        things_to_do: facility.things_to_do,
+      },
       eventIds: [],
     };
     entry.eventIds.push(event.id);
@@ -77,7 +95,11 @@ export default function EventsIndexPage() {
           referenceDate={today}
         />
 
-        <SeasonalOutingCta placement="events" />
+        <SeasonalOutingCta
+          placement="events"
+          views={eventViews}
+          referenceDate={today}
+        />
         <div className="mt-10">
           <AffiliateExperienceCta placement="events_index" />
         </div>
