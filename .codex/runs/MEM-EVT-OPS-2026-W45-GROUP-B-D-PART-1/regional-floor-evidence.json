@@ -3275,12 +3275,18 @@
           "status": 200,
           "checked_at": "2026-11-15T20:25:46.110773+00:00",
           "source_type": "festival_fireworks"
+        },
+        {
+          "url": "https://www.city.setagaya.lg.jp/03007/17544.html",
+          "status": 200,
+          "checked_at": "2026-11-15T21:57:47.466920+00:00",
+          "source_type": "municipal_official"
         }
       ],
       "candidates_found": 779,
-      "added": 47,
-      "duplicate_or_already_present": 220,
-      "hold": 397,
+      "added": 63,
+      "duplicate_or_already_present": 226,
+      "hold": 375,
       "stale_false": 115,
       "candidates": [
         {
@@ -5309,7 +5315,7 @@
           "url": "https://www.city.setagaya.lg.jp/02087/18899.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区内在住・在勤・在学で、認知症の方を介護している家族の方 （全日程におおむね参加できる方）"
+          "reason": "Official programme content is not a young-child/family outing: 認知症家族のための「心のケア講座」（後期）（全4回）; target: 世田谷区内在住・在勤・在学で、認知症の方を介護している家族の方 （全日程におおむね参加できる方）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "代田児童館「わらべうた」",
@@ -6203,8 +6209,12 @@
           "title": "東弦巻保育園のプチひろば事業（在宅子育て支援）",
           "url": "https://www.city.setagaya.lg.jp/03007/17529.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 未就学児（保護者同伴）"
+          "disposition": "duplicate_or_already_present",
+          "reason": "The November 19 nurse talk/body measurement is the same occurrence already rendered under the linked とうつるひろば record (same nursery, date and programme).",
+          "event_ids": [
+            "evt-w45-d1-tokyo-setagaya-17544"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "池尻保育園プチひろば「いけいけと～く」",
@@ -6367,7 +6377,7 @@
           "url": "https://www.city.setagaya.lg.jp/02051/19890.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 11月11日から17日は税を考える週間です！"
+          "reason": "Official programme content is not a young-child/family outing: 11月11日から17日は税を考える週間です！; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "玉川台図書館 11月の大人のための朗読会",
@@ -6838,8 +6848,13 @@
           "title": "粕谷児童館12月「ひろばでそとあそび」",
           "url": "https://www.city.setagaya.lg.jp/03085/36979.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代まで"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 不要   関連リンク 粕谷児童館",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-a1a2cbdeb9"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "玉川台児童館 Nゲージ運転練習会",
@@ -7064,8 +7079,13 @@
           "title": "祖師谷児童館 11月そしがや工作「レザーをつかってオリジナルキーホルダーをつくろう！」",
           "url": "https://www.city.setagaya.lg.jp/03080/36447.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 11月4日（水曜日）午後3時から各回先着10人 ※午後3時の時点で定員を超えている場合は、その場で抽選になります。",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-4dab6ec454"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "烏山児童館11月ビーズの会「リスをつくろう」",
@@ -7108,8 +7128,13 @@
           "title": "桜丘児童館 ゲーム大会「ドッジボール大会」(11月18日)",
           "url": "https://www.city.setagaya.lg.jp/03066/36749.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代。先着20名。"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 令和8年11月4日（水曜日）16時30分から受付開始。   関連リンク 桜丘児童館",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-25b27f69fd"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "池尻児童館 ボッチャであそぼう！",
@@ -7221,7 +7246,7 @@
           "url": "https://www.city.setagaya.lg.jp/03084/36233.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 地域の大人の方・太鼓クラブOBOG"
+          "reason": "Official programme content is not a young-child/family outing: 上祖師谷ぱる児童館 11月の大人の太鼓; target: 地域の大人の方・太鼓クラブOBOG. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "鎌田児童館  「かまじふぁ～む」",
@@ -7315,7 +7340,7 @@
           "url": "https://www.city.setagaya.lg.jp/01012/36309.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区民で犬を飼っている方（中学生以上）"
+          "reason": "Official programme content is not a young-child/family outing: 「わんちゃんのお菓子（スコーン）作り」の参加者を募集します; target: 世田谷区民で犬を飼っている方（中学生以上）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "ふたご＆みつごちゃんあつまれ！上町児童館ぱおぱおひろば",
@@ -7421,21 +7446,22 @@
           "url": "https://www.city.setagaya.lg.jp/02243/20647.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 保育のお仕事に興味のある方"
+          "reason": "Official programme content is not a young-child/family outing: 保育士ミニ相談会＆面接会; target: 保育のお仕事に興味のある方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "天体観望会",
           "url": "https://www.city.setagaya.lg.jp/02261/17486.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 天体観望会"
+          "reason": "November 20 application is explicitly closed; January 15 applications begin December 11 and March 19 applications begin February 19. Family suitability is confirmed, but no current application/walk-in path is open.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "古着・古布回収（NPO世田谷桜丘まちづくり）",
           "url": "https://www.city.setagaya.lg.jp/01047/18494.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 古着・古布回収（NPO世田谷桜丘まちづくり）"
+          "reason": "Official programme content is not a young-child/family outing: 古着・古布回収（NPO世田谷桜丘まちづくり）; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "等々力児童館 パパも気軽に！PaPaMo",
@@ -7521,7 +7547,7 @@
           "url": "https://www.city.setagaya.lg.jp/03080/36480.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 祖師谷児童館11月TEENS企画「やき・やき・やきいも七輪で焼くうまいもん」; target: 中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "松沢児童館 月いちまつじTEENS「Go!Go!ゴーカート!!」",
@@ -7534,8 +7560,13 @@
           "title": "上北沢児童館わくわく工作「陶芸オリジナル小皿づくり」",
           "url": "https://www.city.setagaya.lg.jp/03083/36646.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生～中高生世代各回6名"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 11月10日（火曜日）午後4時から。 定員になり次第、受付を締め切ります。",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-cd0a35d56f"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "上北沢児童館 11月「電車であそぼう」",
@@ -7622,8 +7653,13 @@
           "title": "弦巻児童館 弦巻区民センターまつり「ミステリーハウス」",
           "url": "https://www.city.setagaya.lg.jp/03063/32501.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代。120名 (各回40名)"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 21日の乳幼児親子プレオープンは申込不要。22日は11月6日16時～20日にチケット申込、先着120人。",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-0254b55c9a"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "粕谷児童館 11月低学年 デイキャンプ「キャンプファイヤーをやっちゃおう！」",
@@ -7641,7 +7677,7 @@
           "url": "https://www.city.setagaya.lg.jp/01048/20455.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 北沢1～5丁目在住の中学生・高校生 または北沢中学校、富士中学校、北沢学園中学校、下北沢成徳高校、松蔭学園に通う生徒"
+          "reason": "Official programme content is not a young-child/family outing: やってみよう！昔あそびのボランティア大募集！！【北沢地区】; target: 北沢1～5丁目在住の中学生・高校生 または北沢中学校、富士中学校、北沢学園中学校、下北沢成徳高校、松蔭学園に通う生徒. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【赤堤小学校】みんなの防災フェアを実施します（松沢地区）",
@@ -7776,14 +7812,14 @@
           "url": "https://www.city.setagaya.lg.jp/03066/36750.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学6年生から中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 桜丘児童館TEENSプロジェクト「TEENS大運動会」(11月25日); target: 小学6年生から中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "フレイル予防講習会を開催します！（日赤奉仕団上馬分団主催）",
           "url": "https://www.city.setagaya.lg.jp/01012/35950.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区民（上馬地区在住の方優先）"
+          "reason": "Official programme content is not a young-child/family outing: フレイル予防講習会を開催します！（日赤奉仕団上馬分団主催）; target: 世田谷区民（上馬地区在住の方優先）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "若林児童館 11月の卓球であそぼう",
@@ -7899,21 +7935,25 @@
           "url": "https://www.city.setagaya.lg.jp/02261/17485.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 大人のための星空散歩"
+          "reason": "Official programme content is not a young-child/family outing: 大人のための星空散歩; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "令和8年度 第2回三軒茶屋町会主催「古着・古布回収」を実施します",
           "url": "https://www.city.setagaya.lg.jp/01008/19003.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 令和8年度 第2回三軒茶屋町会主催「古着・古布回収」を実施します"
+          "reason": "Official programme content is not a young-child/family outing: 令和8年度 第2回三軒茶屋町会主催「古着・古布回収」を実施します; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "北沢地域合同多胎児支援事業「ふたGOみつGOだいしゅうGO」",
           "url": "https://www.city.setagaya.lg.jp/03067/20422.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 多胎児のお子さんと保護者の方"
+          "disposition": "duplicate_or_already_present",
+          "reason": "Same 北沢地域合同多胎児支援事業 already present: November 28 10:30–12:30 at 代田区民センター地下2階多目的室; these are co-organizing child-centre announcements, not separate events.",
+          "event_ids": [
+            "evt-tokyo-w44d1-1f7835bebf"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "松沢小学校避難所運営訓練～防災フェア～を実施いたします",
@@ -7937,7 +7977,7 @@
           "url": "https://www.city.setagaya.lg.jp/03660/34639.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: どなたでもお持ち込みいただけます。"
+          "reason": "Official programme content is not a young-child/family outing: 古着・古布回収を開催します（二子玉川地区）; target: どなたでもお持ち込みいただけます。. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "ハローキャリアワーク「あなたのアイデアでイベントを盛り上げよう！」",
@@ -7972,7 +8012,7 @@
           "url": "https://www.city.setagaya.lg.jp/03084/36236.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学6年生から中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 上祖師谷ぱる児童館 TEENSプロジェクト 『秋の体力測定祭り』; target: 小学6年生から中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "上町児童館 11月の大学生とあそぼう",
@@ -8007,7 +8047,7 @@
           "url": "https://www.city.setagaya.lg.jp/03062/36376.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学6年生から中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 若林児童館 TEENSも！やきやきパーティー！; target: 小学6年生から中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "烏山児童館ハイキング「江の島　龍の恋ものがたり～スタンプ集めてラブリーチャンス～」",
@@ -8048,21 +8088,25 @@
           "url": "https://www.city.setagaya.lg.jp/03061/36837.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高校生世代"
+          "reason": "Official programme content is not a young-child/family outing: 池尻児童館　TEENSプロジェクト 突撃 TEENSばんごはん！？; target: 中高校生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【池尻地区】古着・古布回収を実施します",
           "url": "https://www.city.setagaya.lg.jp/01006/34873.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: どなたでもお越しいただけます。"
+          "reason": "Official programme content is not a young-child/family outing: 【池尻地区】古着・古布回収を実施します; target: どなたでもお越しいただけます。. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "北沢地域 合同多児支援事業「ふたご！！みつご！！！だいしゅうGO！！！！」（11月28日開催）",
           "url": "https://www.city.setagaya.lg.jp/03069/36588.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 多胎児のお子さんとその保護者、多胎児のプレママプレパパ"
+          "disposition": "duplicate_or_already_present",
+          "reason": "Same 北沢地域合同多胎児支援事業 already present: November 28 10:30–12:30 at 代田区民センター地下2階多目的室; these are co-organizing child-centre announcements, not separate events.",
+          "event_ids": [
+            "evt-tokyo-w44d1-1f7835bebf"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "せいじょう地域文化祭",
@@ -8106,14 +8150,14 @@
           "url": "https://www.city.setagaya.lg.jp/03081/36546.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高生世代 先着 15名程度"
+          "reason": "Official programme content is not a young-child/family outing: 鎌田児童館 TEENSクッキング「いい肉の日」; target: 中高生世代 先着 15名程度. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【世田谷芸術百華】「友達は欲しいのに、人と関わるのがめんどくさいのはなんでだろう？」",
           "url": "https://www.city.setagaya.lg.jp/02408/36923.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: どなたでも"
+          "reason": "Official programme content is not a young-child/family outing: 【世田谷芸術百華】「友達は欲しいのに、人と関わるのがめんどくさいのはなんでだろう？」; target: どなたでも. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "第4回上野毛地区子どもスポーツ大会(ボッチャ)を開催します",
@@ -8129,15 +8173,24 @@
           "title": "【祖師谷地区】第２３回祖師谷リサイクルフェアを開催します",
           "url": "https://www.city.setagaya.lg.jp/01026/33244.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 【祖師谷地区】第２３回祖師谷リサイクルフェアを開催します"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 直接来場。修理は各1人1点、混雑時は早めに受付終了する場合あり。",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-7a4128ed72"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "日赤祖師谷分団バザー",
           "url": "https://www.city.setagaya.lg.jp/01026/33928.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 祖師谷地区にお住いの方に限らず、どなたでもお越しください！"
+          "disposition": "duplicate_or_already_present",
+          "reason": "Same-date same-station-square co-hosted Red Cross bazaar explicitly included in the broader 第23回祖師谷リサイクルフェア record; no separate overlapping listing. Bazaar-only rain fallback is December 6 at 祖師谷まちづくりセンター; the fair itself has no postponement.",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-7a4128ed72"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "上町地区防災フェスタを開催します",
@@ -8164,7 +8217,7 @@
           "url": "https://www.city.setagaya.lg.jp/02215/35503.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区在住・在勤の方"
+          "reason": "Official programme content is not a young-child/family outing: 親亡き後への備え～精神障害のある子の将来に向けて～; target: 世田谷区在住・在勤の方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "クリスマスの寄せ植え講習会を開催します！（北沢地区）",
@@ -8301,28 +8354,29 @@
           "url": "https://www.city.setagaya.lg.jp/01026/34716.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 祖師谷地区(祖師谷1~6丁目及び千歳台1・2丁目)の方が対象です。"
+          "reason": "Official programme content is not a young-child/family outing: 寄せ植え講習会(祖師谷地区); target: 祖師谷地区(祖師谷1~6丁目及び千歳台1・2丁目)の方が対象です。. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "世田谷区赤十字奉仕団主催～献血へのご協力のお願い～（玉川せせらぎホール）",
           "url": "https://www.city.setagaya.lg.jp/02100/35749.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区赤十字奉仕団主催～献血へのご協力のお願い～（玉川せせらぎホール）"
+          "reason": "Official programme content is not a young-child/family outing: 世田谷区赤十字奉仕団主催～献血へのご協力のお願い～（玉川せせらぎホール）; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "スポーツ吹き矢体験教室を開催します",
           "url": "https://www.city.setagaya.lg.jp/01012/36457.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区民（上馬地区在住の方優先）"
+          "reason": "Official programme content is not a young-child/family outing: スポーツ吹き矢体験教室を開催します; target: 世田谷区民（上馬地区在住の方優先）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "代田南児童館 つくってだいなん「おいものつるでリースづくり」（12月3日開催）",
           "url": "https://www.city.setagaya.lg.jp/03069/36571.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生～中高生世代"
+          "reason": "Official application has not opened at this check; starts 2026-11-19. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "野沢児童館 12月の五色百人一首をしよう",
@@ -8346,7 +8400,7 @@
           "url": "https://www.city.setagaya.lg.jp/01030/online_tetsuzuki/28998.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 25名  定員を超える申込みがあった場合は抽選。砧地区（砧、大蔵、岡本）在住・在学・在勤の方優先"
+          "reason": "Official programme content is not a young-child/family outing: 歩こう会の参加者を募集します（砧地区）; target: 25名  定員を超える申込みがあった場合は抽選。砧地区（砧、大蔵、岡本）在住・在学・在勤の方優先. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "野沢児童館 12月のおもちゃでチャチャチャ（おでかけひろば）",
@@ -8409,7 +8463,7 @@
           "url": "https://www.city.setagaya.lg.jp/01047/18480.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 古着・古布回収（宮坂3丁目町会）"
+          "reason": "Official programme content is not a young-child/family outing: 古着・古布回収（宮坂3丁目町会）; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "STEAM教育講座・にちようラボ（12月）",
@@ -8435,8 +8489,13 @@
           "title": "弦巻児童館 弦巻区民センター共催・地域子ども交流事業 オープン卓球「シングルス」",
           "url": "https://www.city.setagaya.lg.jp/03063/36094.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代 25名"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 11月7日（土曜日）から申込用紙を配布します。詳しくは、申込用紙をご覧ください。  申込期間： 2026年11月07日 から 2026年12月02日",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-766962ff86"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "山野児童館　「おやだぬきの会」",
@@ -8453,8 +8512,12 @@
           "title": "弦巻児童館 弦巻区民センター共催・地域子ども交流事業 オープン卓球「シングルス大会」",
           "url": "https://www.city.setagaya.lg.jp/03063/36181.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代 25名"
+          "disposition": "duplicate_or_already_present",
+          "reason": "Same December 5 14:00–16:00 singles tournament at 弦巻区民センター体育室, same 25-person target and November 7–December 2 application; two official announcements for one occurrence.",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-766962ff86"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "【世田谷芸術百華】世田谷けやきチャリティコンサートVol.13 in下北沢",
@@ -8502,15 +8565,25 @@
           "title": "喜多見児童館　きたみ食堂",
           "url": "https://www.city.setagaya.lg.jp/03077/36877.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 乳幼児親子から小学生、中高生世代、高齢者。各回25名。"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; こどもおよび子育て家庭は11月14日（土曜日）午後1時30分から喜多見児童館にて受付。 小学生以上は参加する本人が、幼児親子は保護者の方が直接申し込みに来てください。 高齢者の方は11月16日（月曜日）から喜多見まちづくりセンターにて受付",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-9ee3ae906d"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "粕谷児童館 12月「ギターであそぼう」",
           "url": "https://www.city.setagaya.lg.jp/03085/36977.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代。各回先着6名。"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 希望する時間に当日直接来てください。   関連リンク 粕谷児童館",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-e7ccd9853e"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "「富士フェス（文化・スポーツ交流会）」を開催します（代沢地区）",
@@ -8528,14 +8601,14 @@
           "url": "https://www.city.setagaya.lg.jp/02412/32909.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 出張セミナーの内容に関心のある方"
+          "reason": "Official programme content is not a young-child/family outing: 世田谷若者総合支援センター出張セミナー; target: 出張セミナーの内容に関心のある方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "烏山地区防災塾",
           "url": "https://www.city.setagaya.lg.jp/01052/35900.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 給田、南烏山、北烏山 在住・在勤・在学の方 先着25名"
+          "reason": "Official programme content is not a young-child/family outing: 烏山地区防災塾; target: 給田、南烏山、北烏山 在住・在勤・在学の方 先着25名. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "郷土資料館 特別展記念講演（後期）「江戸の絵画を楽しむ」（事前申込必要）",
@@ -8552,7 +8625,7 @@
           "url": "https://www.city.setagaya.lg.jp/02423/37013.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 対象：どなたでも 定員：10名（先着順）"
+          "reason": "Official programme content is not a young-child/family outing: 郷土資料館 特別展記念講演（後期）「江戸の絵画を楽しむ」（追加募集）; target: 対象：どなたでも 定員：10名（先着順）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "代田南児童館 月いちTeens「くらやみ児童館であそぼう♪」（12月5日開催）",
@@ -8566,28 +8639,28 @@
           "url": "https://www.city.setagaya.lg.jp/03081/36841.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 鎌田児童館 10月のTEENS PLAY TIME; target: 中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "明るい選挙をすすめるつどい「宮崎哲弥氏講演会」",
           "url": "https://www.city.setagaya.lg.jp/02070/21477.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 明るい選挙をすすめるつどい「宮崎哲弥氏講演会」"
+          "reason": "Official programme content is not a young-child/family outing: 明るい選挙をすすめるつどい「宮崎哲弥氏講演会」; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "オウム真理教問題講演会の開催",
           "url": "https://www.city.setagaya.lg.jp/02045/18220.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区内を生活圏とする方（在住、在勤、在学のほか、通院、買い物等の利用を含みます。）"
+          "reason": "Official programme content is not a young-child/family outing: オウム真理教問題講演会の開催; target: 世田谷区内を生活圏とする方（在住、在勤、在学のほか、通院、買い物等の利用を含みます。）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "冬の寄せ植え講習会の参加者を募集します（砧地区）",
           "url": "https://www.city.setagaya.lg.jp/01030/online_tetsuzuki/29002.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 25名（定員を超える申込があった場合は抽選） ※砧地区（砧・大蔵・岡本）在住・在学・在勤の方優先"
+          "reason": "Official programme content is not a young-child/family outing: 冬の寄せ植え講習会の参加者を募集します（砧地区）; target: 25名（定員を超える申込があった場合は抽選） ※砧地区（砧・大蔵・岡本）在住・在学・在勤の方優先. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "山野児童館　12月の多胎児ひろば「ふたごちゃん・みつごちゃんこんにちは！」",
@@ -8623,7 +8696,7 @@
           "url": "https://www.city.setagaya.lg.jp/01014/36567.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: どなたでも（代沢地区在住の方優先、先着29名定員）"
+          "reason": "Official programme content is not a young-child/family outing: 【代沢地区】寄せ植え講習会; target: どなたでも（代沢地区在住の方優先、先着29名定員）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【梅丘地区】スワッグ作り講習会を実施します！",
@@ -8686,7 +8759,7 @@
           "url": "https://www.city.setagaya.lg.jp/03662/19787.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 区内在住・在勤・在学の方"
+          "reason": "Official programme content is not a young-child/family outing: 在宅療養講座『「在宅療養」を知ろう～家族がいても、ひとりでも、わたしらしく過ごすために～』開催について; target: 区内在住・在勤・在学の方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "スワッグ講習会を開催します",
@@ -8703,7 +8776,7 @@
           "url": "https://www.city.setagaya.lg.jp/01110/35462.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: どなたでもご参加いただけます。 ※先着50名"
+          "reason": "Official programme content is not a young-child/family outing: 【申込は締め切りました】せたがや自治政策研究所シンポジウム「”つながり”で考えるこれからの世田谷」開催します（11月13日更新）; target: どなたでもご参加いただけます。 ※先着50名. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "粕谷児童館 12月ようこそ児童館！マタニティ講座「じっくり！沐浴の講座」",
@@ -8808,22 +8881,27 @@
           "title": "烏山地区防災訓練を実施します",
           "url": "https://www.city.setagaya.lg.jp/02226/24173.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 烏山地区防災訓練を実施します"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 申込・予約の条件は公式に記載なし",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-eebcf33835"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "【烏山総合支所】精神講演会",
           "url": "https://www.city.setagaya.lg.jp/02229/34820.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 世田谷区内在住・在勤の方。先着25名。 （応募者多数の場合、烏山地域在住・在勤優先） ※医師に運動を止められていない方"
+          "reason": "Official programme content is not a young-child/family outing: 【烏山総合支所】精神講演会; target: 世田谷区内在住・在勤の方。先着25名。 （応募者多数の場合、烏山地域在住・在勤優先） ※医師に運動を止められていない方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【梅丘地区】防犯講座・防犯漫才を実施します！",
           "url": "https://www.city.setagaya.lg.jp/01013/36585.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 梅丘地区在住の方優先"
+          "reason": "Official programme content is not a young-child/family outing: 【梅丘地区】防犯講座・防犯漫才を実施します！; target: 梅丘地区在住の方優先. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "等々力児童館 12月の神話がたり「しめ縄づくり」",
@@ -8844,28 +8922,38 @@
           "url": "https://www.city.setagaya.lg.jp/03067/36758.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学校1年生から中高生世代各回8名程度"
+          "reason": "Official application has not opened at this check; starts 2026-12-05. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "「世田谷のボロ市」ふるさと物産展を開催します",
           "url": "https://www.city.setagaya.lg.jp/02072/20607.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 「世田谷のボロ市」ふるさと物産展を開催します"
+          "disposition": "duplicate_or_already_present",
+          "reason": "Furusato products fair is explicitly held simultaneously as part of 世田谷のボロ市; broader existing market listing updated to all four official December/January dates and this subvenue, not a separate duplicate.",
+          "event_ids": [
+            "evt-tokyo-w44d1-b65580a6ae"
+          ],
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "12月16日開催！ 認知症を知る講座「認知症の基礎知識～高齢期をすこやかに過ごすために～」",
           "url": "https://www.city.setagaya.lg.jp/02087/17750.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 区内在住、在学、在勤の方 抽選：150人（抽選結果は落選者にのみ通知）"
+          "reason": "Official programme content is not a young-child/family outing: 12月16日開催！ 認知症を知る講座「認知症の基礎知識～高齢期をすこやかに過ごすために～」; target: 区内在住、在学、在勤の方 抽選：150人（抽選結果は落選者にのみ通知）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "山野児童館　「ベーゴマ大会＆ベーゴマ体験」",
           "url": "https://www.city.setagaya.lg.jp/03079/30629.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: ベーゴマ大会：小学校1年生から中高生世代のベーゴマを自分で巻いて回せる人 ベーゴマ体験：小学校1年生から中高生世代の人ならだれでも"
+          "disposition": "added",
+          "reason": "Official December 16 16:00–17:00 beginner experience is for any elementary-school-to-teen child. Fee and experience-only reservation conditions are unstated and published as not-stated notes. Separate 15:00 tournament registration starts December 5 and is not included.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages.",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-ae46d04af2"
+          ],
+          "participability": "条件付き参加可能"
         },
         {
           "title": "野沢児童館 12月のわくわく工作",
@@ -8895,8 +8983,13 @@
           "title": "下馬保育園給食体験",
           "url": "https://www.city.setagaya.lg.jp/03024/23115.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: 未就学のお子さん（保護者同伴）"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; ご希望の方は保育園に直接電話にてお申込みください。 5名限定の予約制です。 定員になり次第締め切りとさせていただきます。  申込期間： 2026年11月11日 から 2026年11月20日",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-5282cfba81"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "野沢児童館 12月のざわプレイズ",
@@ -8951,8 +9044,13 @@
           "title": "野沢児童館 子育てサポーター講座「親子で心地のよい抱っことおんぶを体験しましょう」",
           "url": "https://www.city.setagaya.lg.jp/03064/36689.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 0歳児と保護者10組程度"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 条件付き参加可能; 2026年11月10日（火曜日）午前10時30分～ひろば内で受付開始。電話での申込は午前11時30分～",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-17f1451a83"
+          ],
+          "participability": "条件付き参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "野沢児童館 12月のざじクッキング「あんバタークリームケーキをつくろう！」",
@@ -8973,14 +9071,14 @@
           "url": "https://www.city.setagaya.lg.jp/03078/36775.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学6年生～中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 成城さくら児童館 【12月】TEENS企画「ティーンズディナーショー」; target: 小学6年生～中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "成城さくら児童館 【12月】地域懇談会",
           "url": "https://www.city.setagaya.lg.jp/03078/36819.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 地域協力者"
+          "reason": "Official programme content is not a young-child/family outing: 成城さくら児童館 【12月】地域懇談会; target: 地域協力者. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "上町児童館 世田谷地域子育てミニメッセ「なんとかなるなるみんなで子育てin上町児童館」",
@@ -8997,15 +9095,20 @@
           "title": "粕谷児童館12月「バトンをまわそう！」",
           "url": "https://www.city.setagaya.lg.jp/03085/36978.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代まで"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 当日直接開催時間までにお越しください",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-db12b2352c"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "成城さくら児童館 【12月】砧地域中高生交流事業「アゲ²チルフェスタ2026」",
           "url": "https://www.city.setagaya.lg.jp/03078/36776.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 砧地域児童館を利用している中高生世代 20人程度（先着）"
+          "reason": "Official programme content is not a young-child/family outing: 成城さくら児童館 【12月】砧地域中高生交流事業「アゲ²チルフェスタ2026」; target: 砧地域児童館を利用している中高生世代 20人程度（先着）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "等々力児童館 紅白陣地とりサバイバル！",
@@ -9019,21 +9122,26 @@
           "url": "https://www.city.setagaya.lg.jp/01047/19668.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 経堂・宮坂・桜丘地区にお住まいの方 ※経堂・宮坂・桜丘以外の地区にお住いの方は12月1日(火曜日)より受付開始"
+          "reason": "Official programme content is not a young-child/family outing: 寄せ植え講習会を開催します; target: 経堂・宮坂・桜丘地区にお住まいの方 ※経堂・宮坂・桜丘以外の地区にお住いの方は12月1日(火曜日)より受付開始. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "山野児童館　ジャグリング　チャレンジデイ！",
           "url": "https://www.city.setagaya.lg.jp/03079/29140.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学校1年生以上から中高生世代"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 当日受付",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-b039043ca9"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "2026食の安全・安心リスクコミュニケーション",
           "url": "https://www.city.setagaya.lg.jp/02245/35792.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Fetched official programme does not establish young-child/family outing suitability: どなたでもご来場いただけます。"
+          "reason": "Official programme content is not a young-child/family outing: 2026食の安全・安心リスクコミュニケーション; target: どなたでもご来場いただけます。. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "成城さくら児童館 【12月】「世界のお菓子くらべてみる？」",
@@ -9082,14 +9190,15 @@
           "url": "https://www.city.setagaya.lg.jp/03064/36694.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高生世代"
+          "reason": "Official programme content is not a young-child/family outing: 野沢児童館 TEENSプロジェクト「気配切り＆やきやき」; target: 中高生世代. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "等々力児童館 TEENSプロジェクト「かえってきたクリぼっちパーティー！クレープづくりwithからあげ」」",
           "url": "https://www.city.setagaya.lg.jp/03070/36973.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学6年生以上、中高生世代"
+          "reason": "Official application has not opened at this check; starts 2026-11-29. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "鎌田児童館  のほほんクラフト「ポンポンひつじの マスコット」",
@@ -9114,7 +9223,8 @@
           "url": "https://www.city.setagaya.lg.jp/03076/27431.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学校6年生から高校生世代 小学6年生は6時までの参加となります。詳しくは申込書をチェック！"
+          "reason": "Official application has not opened at this check; starts 2026-11-21. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "成城さくら児童館 【12月】年末大そうじ＆チャレンジクッキング 「おにぎりと豚汁！」",
@@ -9128,14 +9238,16 @@
           "url": "https://www.city.setagaya.lg.jp/03065/36882.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代"
+          "reason": "Official application has not opened at this check; starts 2026-12-05. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "粕谷児童館  12月「第２３回子どもたちと芸術家が出会う街～ウィンターホリデーコンサート～アウトリーチinせたがや」",
           "url": "https://www.city.setagaya.lg.jp/03085/36964.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: マタニティ・ 乳幼児親子・ 小学生・中高生世代・ 大人 先着50組 ※子ども向けプログラムのため大人のみの参加は制限を設けさせていただく場合もあります。"
+          "reason": "Official application has not opened at this check; starts 2026-12-08. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "等々力児童館 とどじフェス！年末バラエティショー",
@@ -9153,21 +9265,28 @@
           "url": "https://www.city.setagaya.lg.jp/03070/36974.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学3年生以上、中高生世代 10名"
+          "reason": "Official application has not opened at this check; starts 2026-12-12. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "粕谷児童館12月「かすやベーゴマ道場」",
           "url": "https://www.city.setagaya.lg.jp/03085/36983.html",
           "source_type": "municipal_official",
-          "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学1年生から中高生世代"
+          "disposition": "added",
+          "reason": "Official numeric dates, named venue and child/family content confirmed; 通常参加可能; 事前申し込み不要   関連リンク 粕谷児童館",
+          "event_ids": [
+            "evt-w45b-d1-tokyo-9297cdfff5"
+          ],
+          "participability": "通常参加可能",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "粕谷児童館12月 TEENSプロジェックト「たこパ×チョコパで年忘れ！」",
           "url": "https://www.city.setagaya.lg.jp/03085/36997.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 中高生世代"
+          "reason": "Official application has not opened at this check; starts 2026-12-05. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "鎌田児童館  年末おおそうじ",
@@ -9223,7 +9342,8 @@
           "url": "https://www.city.setagaya.lg.jp/03079/36103.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 小学校1年生から中高生世代の人各回8人程度"
+          "reason": "Official application has not opened at this check; starts 2026-12-20. Recheck after opening. The previous broad age-token classification was withdrawn; this is a participation-path HOLD.",
+          "qa_reassessment": "2026-11-16: read complete official target/programme/application sections; do not treat the token 中高生 as excluding younger ages."
         },
         {
           "title": "代田児童館 子ども夢プロジェクト「ほんのりあまいよスイーツアニマルズ～エンターテイメントステージづくりへの道～」",
@@ -9241,7 +9361,7 @@
           "url": "https://www.city.setagaya.lg.jp/01006/35743.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 先着20名（※ただし、池尻・三宿地区在住の方優先）"
+          "reason": "Official programme content is not a young-child/family outing: 【池尻・三宿地区】普通救命講習会を開催します; target: 先着20名（※ただし、池尻・三宿地区在住の方優先）. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "【予告】深沢児童館 第44回新年ふかさわ子ども大会",
@@ -9255,35 +9375,35 @@
           "url": "https://www.city.setagaya.lg.jp/02413/17487.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 子どものための養育費等個別相談会"
+          "reason": "Official programme content is not a young-child/family outing: 子どものための養育費等個別相談会; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "胃がん・大腸がん検診を実施します（若林・太子堂地区）",
           "url": "https://www.city.setagaya.lg.jp/01008/28572.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 以下の2つの条件を満たす方 ・40歳以上(令和9年3月末現在)の区民の方 ・太子堂・若林地区(太子堂1丁目～5丁目、三軒茶屋1・2丁目、若林1～5丁目)在住の方"
+          "reason": "Official programme content is not a young-child/family outing: 胃がん・大腸がん検診を実施します（若林・太子堂地区）; target: 以下の2つの条件を満たす方 ・40歳以上(令和9年3月末現在)の区民の方 ・太子堂・若林地区(太子堂1丁目～5丁目、三軒茶屋1・2丁目、若林1～5丁目)在住の方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "胃がん・大腸がん検診を実施します（太子堂・若林地区）",
           "url": "https://www.city.setagaya.lg.jp/01046/34852.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 以下の2つの条件を満たす方 ・40歳以上(令和9年3月末現在)の区民の方 ・太子堂・若林地区(太子堂1丁目～5丁目、三軒茶屋1・2丁目、若林1～5丁目)在住の方"
+          "reason": "Official programme content is not a young-child/family outing: 胃がん・大腸がん検診を実施します（太子堂・若林地区）; target: 以下の2つの条件を満たす方 ・40歳以上(令和9年3月末現在)の区民の方 ・太子堂・若林地区(太子堂1丁目～5丁目、三軒茶屋1・2丁目、若林1～5丁目)在住の方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "普通救命講習会を実施します(祖師谷地区)",
           "url": "https://www.city.setagaya.lg.jp/01026/21632.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 区内在住の方で初めて応急手当を学ぶ方、再講習を受ける方"
+          "reason": "Official programme content is not a young-child/family outing: 普通救命講習会を実施します(祖師谷地区); target: 区内在住の方で初めて応急手当を学ぶ方、再講習を受ける方. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "世田谷区赤十字奉仕団～献血ご協力のお願い（成城ホール）",
           "url": "https://www.city.setagaya.lg.jp/02100/35974.html",
           "source_type": "municipal_official",
           "disposition": "hold",
-          "reason": "Official programme is outside young-child/family outing eligibility: 世田谷区赤十字奉仕団～献血ご協力のお願い（成城ホール）"
+          "reason": "Official programme content is not a young-child/family outing: 世田谷区赤十字奉仕団～献血ご協力のお願い（成城ホール）; target: not specified. Administrative/medical/support services, adult specialist lectures, recruitment or explicitly teens-focused programmes are not adopted as child outing events. No age exclusion is inferred solely from the token 中高生."
         },
         {
           "title": "東京下町回遊　竹あかり",
