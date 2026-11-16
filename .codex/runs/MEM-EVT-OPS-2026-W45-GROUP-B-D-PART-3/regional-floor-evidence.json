@@ -8041,8 +8041,8 @@
       ],
       "candidates_found": 913,
       "added": 43,
-      "duplicate_or_already_present": 137,
-      "hold": 197,
+      "duplicate_or_already_present": 136,
+      "hold": 198,
       "stale_false": 536,
       "candidates": [
         {
@@ -8305,10 +8305,12 @@
         {
           "title": "ピーナッツレザーで小物入れをつくろう",
           "url": "https://www.pref.chiba.lg.jp/bunshin/press/2026/20261006shinsozai.html",
-          "event_id": "evt-w44d6-chiba-peanut-leather",
-          "disposition": "duplicate_or_already_present",
-          "reason": "公式の現在・未来の開催回と既存の同一会場・企画を照合しProduction全ページで実表示確認済み。",
-          "source_type": "prefecture_official"
+          "disposition": "hold",
+          "reason": "本runで公式の申込期間終了を確認し既存evt-w44d6-chiba-peanut-leatherをdraftへ変更。実表示されないため重複実表示としては数えず、参加経路終了の候補HOLDとする。",
+          "source_type": "prefecture_official",
+          "related_existing_event_ids": [
+            "evt-w44d6-chiba-peanut-leather"
+          ]
         },
         {
           "title": "ジオパーク巡回展 ミュージアムトーク",
