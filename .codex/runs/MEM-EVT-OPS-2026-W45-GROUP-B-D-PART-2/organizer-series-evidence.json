@@ -1,0 +1,942 @@
+{
+  "mission_id": "MEM-EVT-OPS-2026-W45-GROUP-B-D-PART-2",
+  "executed_in_this_mission": true,
+  "executed_at": "2026-11-15T22:47:21.335950+00:00",
+  "horizon_end_date": "2027-01-11",
+  "per_region": {
+    "osaka": {
+      "sources_checked": [
+        {
+          "url": "https://hikari-kyoen.com/area/",
+          "status": 200,
+          "checked_at": "2026-11-15T22:47:21.335966+00:00",
+          "organizer_name": "大阪・光の饗宴実行委員会",
+          "multi_venue_basis": "2026公式エリア一覧が長居植物園、JR大阪駅、梅田スカイビル、中之島、八尾、和泉、りんくう等の26企画を集約。単一施設のカレンダーではない。"
+        }
+      ],
+      "candidates_found": 26,
+      "added": 0,
+      "duplicate_or_already_present": 22,
+      "hold": 4,
+      "stale_false": 0,
+      "candidates": [
+        {
+          "title": "ボタニカルガーデン 大阪",
+          "url": "https://hikari-kyoen.com/area/program01/",
+          "source_type": "organizer_event_series",
+          "disposition": "hold",
+          "reason": "常設・通年の体験展示で、今季の開始日が定まる期間イベントではない。施設情報は本Missionの範囲外。",
+          "event_ids": []
+        },
+        {
+          "title": "Twilight Fantasy 2026",
+          "url": "https://hikari-kyoen.com/area/program02/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261105-59d6acdb"
+          ]
+        },
+        {
+          "title": "THE STARLIGHT TOWN ～黒猫ノエルと星が紡ぐ物語～",
+          "url": "https://hikari-kyoen.com/area/program03/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261113-3d6b84f6"
+          ]
+        },
+        {
+          "title": "中之島ウエスト・ スマイルアートステーション",
+          "url": "https://hikari-kyoen.com/area/program04/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261211-7a4fb616"
+          ]
+        },
+        {
+          "title": "冬の水都大阪ウィーク 中之島EAST 水辺の散歩道",
+          "url": "https://hikari-kyoen.com/area/program05/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261103-47e73727"
+          ]
+        },
+        {
+          "title": "光で愛（AI）の歌、 作れまっせ！",
+          "url": "https://hikari-kyoen.com/area/program06/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261113-053502c4"
+          ]
+        },
+        {
+          "title": "Welcoming あべてん ウィンタープレゼント 2026",
+          "url": "https://hikari-kyoen.com/area/program07/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261103-415a4d07"
+          ]
+        },
+        {
+          "title": "京橋公園ウインター イルミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program09/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261117-23af7e05"
+          ]
+        },
+        {
+          "title": "大阪府庁舎本館 竣工100周年記念 特別点灯 ～光の饗宴Ver.～",
+          "url": "https://hikari-kyoen.com/area/program26/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261218-d49dbb92"
+          ]
+        },
+        {
+          "title": "築港ベイエリア イルミネーション",
+          "url": "https://hikari-kyoen.com/area/program08/",
+          "source_type": "organizer_event_series",
+          "disposition": "hold",
+          "reason": "開始日は11月中旬との概略のみ。数値のstart_dateを一次情報で確定できない。",
+          "event_ids": []
+        },
+        {
+          "title": "いばらきイルミフェスタ灯(AKARI)",
+          "url": "https://hikari-kyoen.com/area/program10/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261127-655515ee"
+          ]
+        },
+        {
+          "title": "第28回 島本町イルミネーション",
+          "url": "https://hikari-kyoen.com/area/program11/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261201-94cddbc1"
+          ]
+        },
+        {
+          "title": "イルミナイト万博2026",
+          "url": "https://hikari-kyoen.com/area/program12/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261122-64aca577"
+          ]
+        },
+        {
+          "title": "第7回 エスコタウンイルミネーション",
+          "url": "https://hikari-kyoen.com/area/program13/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261113-5248f8f2"
+          ]
+        },
+        {
+          "title": "ロマチカイルミネーション 2026",
+          "url": "https://hikari-kyoen.com/area/program14/",
+          "source_type": "organizer_event_series",
+          "disposition": "hold",
+          "reason": "開始日は11月中旬との概略のみ。数値のstart_dateを一次情報で確定できない。",
+          "event_ids": []
+        },
+        {
+          "title": "大東市スマイルミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program15/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261128-ffeac975"
+          ]
+        },
+        {
+          "title": "堺イルミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program16/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261130-fbc5720b"
+          ]
+        },
+        {
+          "title": "瓢箪山イルミネーション 2026",
+          "url": "https://hikari-kyoen.com/area/program17/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261116-cf553e97"
+          ]
+        },
+        {
+          "title": "花の道イルミネーション",
+          "url": "https://hikari-kyoen.com/area/program18/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261205-9ed9804e"
+          ]
+        },
+        {
+          "title": "まつばらイルミ2026",
+          "url": "https://hikari-kyoen.com/area/program19/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261101-660ebcc5"
+          ]
+        },
+        {
+          "title": "日本遺産 「龍田古道・亀の瀬」光の旅路",
+          "url": "https://hikari-kyoen.com/area/program20/",
+          "source_type": "organizer_event_series",
+          "disposition": "hold",
+          "reason": "常設・通年の体験展示で、今季の開始日が定まる期間イベントではない。施設情報は本Missionの範囲外。",
+          "event_ids": []
+        },
+        {
+          "title": "LICはびきのウインター イルミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program21/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261128-660d0485"
+          ]
+        },
+        {
+          "title": "金剛きらめき イルミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program22/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261122-0936b018"
+          ]
+        },
+        {
+          "title": "イズミネーション2026",
+          "url": "https://hikari-kyoen.com/area/program23/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261106-c90a9e31"
+          ]
+        },
+        {
+          "title": "KUBOSO YORU no SEKAI ～名宝、夜にめざめる～",
+          "url": "https://hikari-kyoen.com/area/program25/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261212-db12393f"
+          ]
+        },
+        {
+          "title": "りんくう光の饗宴2026",
+          "url": "https://hikari-kyoen.com/area/program24/",
+          "source_type": "organizer_event_series",
+          "disposition": "duplicate_or_already_present",
+          "reason": "同じ公式企画・開催会場・期間を既存IDと照合。",
+          "event_ids": [
+            "evt-w45d5-osaka-20261106-6cec8bbc"
+          ]
+        }
+      ]
+    },
+    "tokushima": {
+      "sources_checked": [
+        {
+          "url": "https://nishi-awa.jp/awakoi",
+          "status": 200,
+          "checked_at": "2026-11-15T23:37:00.218485+00:00",
+          "organizer_name": "一般社団法人そらの郷・あわこい",
+          "multi_venue_basis": "美馬市・三好市・つるぎ町・東みよし町の複数会場を明記した69体験プログラム。美来工房、道の駅貞光ゆうゆう館、道の駅大歩危等を含む。"
+        },
+        {
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "status": 200,
+          "checked_at": "2026-11-15T23:37:14.295784+00:00",
+          "organizer_name": "一般社団法人そらの郷・あわこい",
+          "multi_venue_basis": "美馬市・三好市・つるぎ町・東みよし町の複数会場を明記した69体験プログラム。美来工房、道の駅貞光ゆうゆう館、道の駅大歩危等を含む。"
+        }
+      ],
+      "candidates_found": 70,
+      "added": 18,
+      "duplicate_or_already_present": 0,
+      "hold": 51,
+      "stale_false": 1,
+      "candidates": [
+        {
+          "title": "DMV×仕事猫運転士 沿線巡回キャラバン",
+          "url": "https://asatetu.com/archives/3106/",
+          "disposition": "stale_false",
+          "reason": "今回の開催地は室戸ドルフィンセンター（高知県）。本partの対象2県外なので追加しない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 10: 日本茜の時計作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 11: 日本茜の板絞り染め",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-31', 8)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 12: 日本茜のランタン作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-12"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 13: シルクストール染め",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-02-28', 8)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 14: アロマソルト作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 15: 苔テラリウム作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-15"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 16: 柚子の蒸留体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 17: 藍染め体験 Aoみっつ夢",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-17"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 18: みまから作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "開催日が「申込時相談」で、当該プログラムの開催日を確定できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 19: 古民家でピザとパエリア",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 1: 美馬灯り制作体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 20: 薬膳ランチと穀物アクセサリー",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 21: 手作りこんにゃく作り体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-09', 32)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 22: きな粉飴作り体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9), ('2027-02-14', 12), ('2027-02-28', 8)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 23: 田舎団子・そば米の郷土料理",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "開催日が「申込時相談」で、当該プログラムの開催日を確定できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 24: 醤油作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 25: 調味料7種作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-25"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 26: そば打ち体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "開催日が「申込時相談」で、当該プログラムの開催日を確定できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 27: 蕎麦道場",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-27"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 28: 甘い苺を食べて戦国武者に",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-28"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 29: いちご狩りと絶品いちご大福作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9), ('2027-01-31', 8), ('2027-02-07', 32), ('2027-02-14', 12), ('2027-02-21', 25), ('2027-02-28', 8), ('2027-03-07', 25)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 2: 小舞和傘制作体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 30: あわのわっかクッキー作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "開催日が「申込時相談」で、当該プログラムの開催日を確定できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 31: 味噌作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-17', 15), ('2027-02-23', 5)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 32: おから味噌と一汁一菜ランチを作ろう",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-32"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 33: 薬膳茶",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 34: 薬膳ランチ",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 35: こんにゃくとゆず味噌作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-31', 8)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 36: バレンタインケーキ作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-02-13', 27)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 37: アイシングクッキー作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-37"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 38: フルーツサンド作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-09', 32), ('2027-03-07', 25)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 39: そば打ち体験 蔦学園",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-39"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 3: シルクの糸繰体験とランプシェード作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 40: そば粉のガレット作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-24', 9)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 41: ハンドドリップコーヒー",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 42: うだつの町並み散策と野菜収穫体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-42"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "あわこい 43: お灸体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 44: 雪の剣山登山",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "雪山登山・雪上歩行を伴う山岳プログラムで幼児連れの参加適性を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 45: スノーピクニック",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "雪山登山・雪上歩行を伴う山岳プログラムで幼児連れの参加適性を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 46: 町並みとそうめん",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-09', 32)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 47: 東福寺名品・阿字観",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-02-14', 12)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 48: 廻踊体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42), ('2027-01-16', 17)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 49: 半田そうめんの箸入れ体験と生そうめん試食",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "平日開催だが年末年始の除外日が特定されず、最初の実施日を確定できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 4: ぬいしぼり＆藍染",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 50: マシンピラティス",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 51: ダイエットマシン",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 52: AI姿勢診断",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 53: ジオ体験と苺狩り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-01-31', 8)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 54: 合気道 東みよし",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2027-02-21', 25)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 55: 合気道 脇町",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "19時45分開始の夜間武道体験。幼児連れの参加適性を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 56: よもぎ蒸し",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 57: ボディメイク",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 58: ラジコン・ドローン",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-58"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 59: ポートレート撮影",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 5: いやしの苔盆栽作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-5"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 60: ちゃんちゃんこ家族写真",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 61: カードゲームを通じてにし阿波を知ろう",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-61"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "通常参加可能"
+        },
+        {
+          "title": "あわこい 62: ヘアケア体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "成人向け美容プログラムで幼児向け内容がなく、開催時刻も00:00〜00:00のプレースホルダー。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 63: 美容と健康",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 64: 子宮温活",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 65: よもぎボディケア",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 66: 國久真有ギャラリー",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-19', 42)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 67: ジャパン体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-67"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 68: 大人の女性の眉・ピアノ・ランチ",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "公式内容は成人向け健康・美容・専門的学習又は成人の撮影を主眼とし、子ども・家族向けの参加内容を確認できない。",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 69: Oboke photo exhibition",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-69"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 6: 清め祓う精麻飾り作り",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "hold",
+          "reason": "同一公式PDF・開催日が別プログラムと重なるため既存validatorの区別例外が必要。無承認で例外を追加せず保留。衝突: [('2026-12-27', 61)]",
+          "event_ids": [],
+          "source_type": "organizer_event_series"
+        },
+        {
+          "title": "あわこい 7: 藍染め体験",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-7"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 8: ふわふわの綿花から糸を紡ごう",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-8"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        },
+        {
+          "title": "あわこい 9: 日本茜染め",
+          "url": "https://nishi-awa.jp/nishi-awa/wp-content/uploads/2026/11/Awakoi-2026-pamphlet.pdf",
+          "disposition": "added",
+          "reason": "公式主催者が受付中。個別の開催日・会場と実在する参加経路をパンフレットで確認。",
+          "event_ids": [
+            "evt-w45d2-tokushima-awakoi-9"
+          ],
+          "source_type": "organizer_event_series",
+          "event_category": "municipal_regional",
+          "participability": "条件付き参加可能"
+        }
+      ],
+      "search_surfaces_checked": [
+        {
+          "url": "https://asatetu.com/archives/3106/",
+          "status": 200,
+          "checked_at": "2026-11-15T23:37:13.252301+00:00"
+        }
+      ]
+    }
+  }
+}
